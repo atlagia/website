@@ -12,25 +12,13 @@ export function getLangFromUrl(url: URL): string {
   const hostname = url.hostname;
   const subdomain = hostname.split('.')[0];
   
-  // Return language based on subdomain, or 'en' for main domain
-  switch (subdomain) {
-    case 'fr':
-      return 'fr';
-    case 'de':
-      return 'de';
-    case 'es':
-      return 'es';
-    case 'it':
-      return 'it';
-    case 'nl':
-      return 'nl';
-    case 'pt':
-      return 'pt';
-    case 'ar':
-      return 'ar';
-    default:
-      return 'en';
+  // Return language based on subdomain if it's a valid language
+  if (isValidLanguage(subdomain)) {
+    return subdomain;
   }
+  
+  // Default to 'en' if no valid language found
+  return 'en';
 }
 const theme = import.meta.env.THEME || 'default';
 
