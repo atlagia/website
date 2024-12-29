@@ -1,105 +1,105 @@
 {
-  "siteTitle": "MotoGear Pro - Abbigliamento Moto Premium & Accessori",
-  "siteDescription": "La tua destinazione definitiva per equipaggiamento moto premium, protezioni e accessori. Prodotti selezionati da esperti, per motociclisti.",
+  "siteTitle": "RepBag - Borse e Accessori di Lusso",
+  "siteDescription": "La tua destinazione privilegiata per borse e accessori di lusso firmati. Scopri l'eleganza e la raffinatezza attraverso la nostra collezione accuratamente selezionata.",
   "sections": [
     {
       "type": "welcomeSection",
-      "title": "Benvenuto nel Tuo Negozio Moto Definitivo",
-      "description": "Esplora equipaggiamento moto di alta qualità, accessori e consigli per alimentare la tua passione per la strada.",
-      "blogLinkText": "ACQUISTA ORA",
+      "title": "Benvenuto nella Tua Destinazione del Lusso",
+      "description": "Scopri una collezione esclusiva di borse e accessori firmati, dove l'eleganza incontra l'autenticità.",
+      "blogLinkText": "ESPLORA ORA",
       "blogLink": "/collections",
       "backgroundVideo": {
         "type": "youtube",
-        "videoId": "laZ-m8hY9YM",
-        "fallbackImage": "/images/hero-motorcycle.jpg"
+        "videoId": "sHUGodYbb2A",
+        "fallbackImage": "/images/hero-luxury.jpg"
       }
     },
     {
       "type": "bannerSection",
-      "headline": "Preparati per la Tua Prossima Avventura",
-      "description": "Scopri i nostri caschi, giacche e accessori più votati per rimanere sicuro e alla moda sulla strada.",
-      "backgroundImage": "/images/banner-motorcycle-bg.jpg",
-      "button1Text": "Acquista",
-      "button1Link": "/shop",
-      "button2Text": "Scopri di più",
+      "headline": "L'Eleganza Senza Tempo Ti Aspetta",
+      "description": "Esplora la nostra selezione accuratamente curata delle borse e degli accessori firmati più ambiti.",
+      "backgroundImage": "/images/banner-luxury-bg.jpg",
+      "button1Text": "Scopri la Collezione",
+      "button1Link": "/collections",
+      "button2Text": "La Nostra Storia",
       "button2Link": "/about"
     },
     {
       "type": "categoryGrid",
       "title": "Acquista per Categoria",
-      "description": "Trova l'equipaggiamento che si adatta al tuo stile di guida, dai caschi alle giacche, dai guanti agli stivali.",
+      "description": "Esplora la nostra vasta collezione di pezzi di lusso firmati",
       "categories": [
         {
-          "id": "helmets",
-          "name": "Caschi",
-          "description": "Caschi omologati DOT per la massima sicurezza.",
-          "image": "https://cdn.shopify.com/s/files/1/0257/4372/0495/products/98365-19EX_F.jpg?v=1703022404",
-          "link": "/collections/motorcycle-helmet"
+          "id": "totes",
+          "name": "Borse Tote",
+          "description": "Eleganti compagne quotidiane",
+          "image": "https://cdn.shopify.com/s/files/1/0921/4063/4435/files/Chanel-Black-Quilted-Aged-Calfskin-Leather-Small-Gabrielle-Backpack-Mixed-Metal-Hardware-Front_87e895fe-b50d-45a5-8e10-6c0c4a2b5ec7.webp?v=1734730675&width=800",
+          "link": "/collections/tote-bags"
         },
         {
-          "id": "jackets",
-          "name": "Giacche",
-          "description": "Giacche moto protettive e alla moda.",
-          "image": "https://cdn.shopify.com/s/files/1/0257/4372/0495/products/Triumph-Triple-Leather-Jacket-in-Black-Rider-Apparel-Ridersapparel_shop.png?v=1701469305",
-          "link": "/collections/motorcycle-jacket"
+          "id": "crossbody",
+          "name": "Borse a Tracolla",
+          "description": "Stile sofisticato a mani libere",
+          "image": "https://cdn.shopify.com/s/files/1/0921/4063/4435/files/Chanel-Black-Quilted-Caviar-Leather-Jumbo-Double-Flap-Silver-Hardware-Front_0c6c585d-2891-443e-8c68-663d9ee6c685.webp?v=1734730675&width=800",
+          "link": "/collections/crossbody-bags"
         },
         {
-          "id": "gloves",
-          "name": "Guanti",
-          "description": "Guanti resistenti per una migliore presa e controllo.",
-          "image": "https://cdn.shopify.com/s/files/1/0257/4372/0495/products/Harley-Davidsonr-Mens-Grit-Adventure-Gloves-Rider-Apparel-Ridersapparel_shop.jpg?v=1701469494&width=800",
-          "link": "/collections/motorcycle-gloves"
+          "id": "shoulder",
+          "name": "Borse a Spalla",
+          "description": "Silhouette classiche reinventate",
+          "image": "https://cdn.shopify.com/s/files/1/0921/4063/4435/files/Chanel-Black-Quilted-Caviar-Leather-Large-Shopping-Tote-Light-Gold-Hardware-Front_53e04378-4d20-43b9-95c0-4ae1a2ddcb54.webp?v=1734730678&width=1200",
+          "link": "/collections/shoulder-bags"
         }
       ]
     },
     {
       "type": "productShowcase",
-      "title": "Prodotti in Evidenza",
-      "description": "Scopri i nostri equipaggiamenti e accessori più venduti scelti dai motociclisti.",
-      "viewAllLink": "/products",
-      "collectionHandle": "fmotorcycle-riding-jacket",
+      "title": "Nuovi Arrivi",
+      "description": "Scopri le nostre ultime novità dalle più prestigiose case di moda",
+      "viewAllLink": "/new-arrivals",
+      "collectionHandle": "dior",
       "products": [
         {
-          "id": "helmet-1",
-          "name": "Casco Integrale",
-          "description": "Protezione definitiva con ventilazione avanzata.",
-          "price": "199,99",
-          "image": "/images/products/helmet-1.jpg",
-          "category": "Caschi"
+          "id": "dior-saddle",
+          "name": "Borsa Dior Saddle",
+          "description": "Silhouette iconica in pelle di vitello granata",
+          "price": "3.500,00",
+          "image": "/images/products/dior-saddle.jpg",
+          "category": "Borse a Spalla"
         },
         {
-          "id": "jacket-1",
-          "name": "Giacca in Pelle",
-          "description": "Elegante e resistente con protezioni integrate.",
-          "price": "249,99",
-          "image": "/images/products/jacket-1.jpg",
-          "category": "Giacche"
+          "id": "chanel-classic",
+          "name": "Chanel Classic Flap",
+          "description": "Eleganza senza tempo in pelle trapuntata",
+          "price": "8.800,00",
+          "image": "https://cdn.shopify.com/s/files/1/0257/4372/0495/products/chanel-classic-flap.jpg",
+          "category": "Borse a Spalla"
         }
       ]
     },
     {
       "type": "testimonialSlider",
-      "title": "Testimonianze dei Motociclisti",
+      "title": "Testimonianze dei Clienti",
       "testimonials": [
         {
           "id": "1",
-          "author": "Alex Thompson",
-          "role": "Motociclista d'Avventura",
-          "content": "L'equipaggiamento qui è di prima classe. Non mi sono mai sentito più sicuro sulla mia moto.",
+          "author": "Giulia Rossi",
+          "role": "Appassionata di Moda",
+          "content": "La qualità e l'autenticità dei loro pezzi sono impareggiabili. Un'esperienza di shopping veramente lussuosa.",
           "avatar": ""
         },
         {
           "id": "2",
-          "author": "Sofia Bianchi",
-          "role": "Appassionata di Moto Sportive",
-          "content": "Incredibile selezione di equipaggiamento protettivo. Il team del servizio clienti mi ha aiutato a trovare la vestibilità perfetta per il mio stile di guida.",
+          "author": "Isabella Conti",
+          "role": "Consulente di Stile",
+          "content": "RepBag offre una collezione eccezionale di borse firmate. La loro attenzione ai dettagli e il servizio clienti sono straordinari.",
           "avatar": ""
         },
         {
           "id": "3",
-          "author": "Marco Rossi",
-          "role": "Motociclista Touring",
-          "content": "Prodotti di qualità che resistono ai viaggi lunghi. Il mio equipaggiamento di MotoGear Pro ha superato innumerevoli avventure.",
+          "author": "Maria Bianchi",
+          "role": "Fashion Blogger",
+          "content": "Ogni pezzo che ho acquistato da RepBag ha superato le mie aspettative. La loro collezione è semplicemente magnifica.",
           "avatar": ""
         }
       ]
@@ -107,27 +107,27 @@
     {
       "type": "faqSection",
       "title": "Domande Frequenti",
-      "description": "Trova risposte alle tue domande sull'equipaggiamento moto, la sicurezza e la manutenzione.",
+      "description": "Trova risposte alle tue domande sui nostri prodotti e servizi",
       "faqs": [
         {
-          "question": "Quale tipo di moto è migliore per i principianti?",
-          "answer": "Per i principianti, consigliamo una moto leggera (250-400cc) per un equilibrio ottimale tra potenza e controllo."
+          "question": "Come posso autenticare il mio acquisto?",
+          "answer": "Ogni articolo viene fornito con un certificato di autenticità e un numero di serie unico verificabile attraverso il nostro sistema."
         },
         {
-          "question": "Come scelgo il casco giusto?",
-          "answer": "Scegli un casco omologato DOT che calzi perfettamente. Considera il tipo di casco, la ventilazione e la visibilità."
+          "question": "Qual è la vostra politica di reso?",
+          "answer": "Offriamo una politica di reso di 14 giorni per tutti gli articoli non utilizzati nelle loro condizioni originali con tutte le etichette attaccate."
         },
         {
-          "question": "Quale equipaggiamento di sicurezza è essenziale per guidare?",
-          "answer": "Gli elementi essenziali includono un casco omologato DOT, una giacca con protezioni, guanti e stivali robusti per una protezione completa."
+          "question": "Effettuate spedizioni internazionali?",
+          "answer": "Sì, forniamo spedizioni in tutto il mondo con assicurazione completa e tracciamento su tutti gli ordini."
         }
       ]
     },
     {
       "type": "emailSignupSection",
-      "title": "Rimani Aggiornato su Equipaggiamento e Consigli",
-      "description": "Iscriviti alla nostra newsletter per ricevere gli ultimi aggiornamenti sui prodotti, consigli e offerte esclusive.",
-      "backgroundImage": "/images/newsletter-motorcycle-bg.jpg",
+      "title": "Unisciti al Nostro Circolo Esclusivo",
+      "description": "Iscriviti per ricevere accesso anticipato ai nuovi arrivi, offerte esclusive e approfondimenti sul lusso.",
+      "backgroundImage": "/images/newsletter-luxury-bg.jpg",
       "formAction": "/api/subscribe",
       "submitText": "Iscriviti"
     }

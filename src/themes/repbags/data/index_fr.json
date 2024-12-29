@@ -1,23 +1,23 @@
 {
-  "siteTitle": "MotoGear Pro - Équipement Moto Premium & Accessoires",
-  "siteDescription": "Votre destination ultime pour l'équipement moto premium, les équipements de protection et les accessoires. Produits sélectionnés par des experts, pour les motards.",
+  "siteTitle": "RepBag - Sacs & Accessoires de Luxe",
+  "siteDescription": "Votre destination privilégiée pour les sacs et accessoires de créateurs de luxe. Découvrez l'élégance et le raffinement à travers notre collection soigneusement sélectionnée.",
   "sections": [
     {
       "type": "welcomeSection",
-      "title": "Alimentez Votre Passion : Libérez la Route avec MotoPlanet",
-      "description": "Plongez dans l'univers de la moto avec MotoPlanet - votre destination unique pour les actualités, les tests, les guides d'équipement et l'inspiration.",
-      "blogLinkText": "ACHETER MAINTENANT",
+      "title": "Bienvenue dans Votre Destination Luxe",
+      "description": "Découvrez une collection exquise de sacs et accessoires de créateurs, où l'élégance rencontre l'authenticité.",
+      "blogLinkText": "DÉCOUVRIR",
       "blogLink": "/collections",
       "backgroundVideo": {
         "type": "youtube",
-        "videoId": "laZ-m8hY9YM",
-        "fallbackImage": "/images/hero-motorcycle.jpg"
+        "videoId": "sHUGodYbb2A",
+        "fallbackImage": "/images/hero-luxury.jpg"
       }
     },
     {
       "type": "bannerSection",
-      "headline": "Découvrez Votre Moto Parfaite",
-      "description": "Tests d'experts, guides d'achat et conseils d'entretien - tout ce dont vous avez besoin pour prendre des décisions éclairées dans votre aventure moto.",
+      "headline": "L'Élégance Intemporelle Vous Attend",
+      "description": "Explorez notre sélection minutieusement choisie des sacs et accessoires de créateurs les plus convoités.",
       "backgroundImage": "/images/banner-bg.jpg",
       "button1Text": "Parcourir les Tests",
       "button1Link": "/reviews",
@@ -27,14 +27,14 @@
     {
       "type": "categoryGrid",
       "title": "Acheter par Catégorie",
-      "description": "Trouvez l'équipement parfait pour votre style de conduite",
+      "description": "Parcourez notre vaste collection de pièces de luxe",
       "categories": [
         {
-          "id": "helmets",
-          "name": "Casques",
-          "description": "Protection premium pour chaque motard",
-          "image": "https://cdn.shopify.com/s/files/1/0257/4372/0495/products/98365-19EX_F.jpg?v=1703022404",
-          "link": "/collections/motorcycle-helmet"
+          "id": "totes",
+          "name": "Sacs Fourre-tout",
+          "description": "Compagnons élégants du quotidien",
+          "image": "https://cdn.shopify.com/s/files/1/0921/4063/4435/files/Chanel-Black-Quilted-Aged-Calfskin-Leather-Small-Gabrielle-Backpack-Mixed-Metal-Hardware-Front_87e895fe-b50d-45a5-8e10-6c0c4a2b5ec7.webp?v=1734730675&width=800",
+          "link": "/collections/tote-bags"
         },
         {
           "id": "jackets",
@@ -86,7 +86,7 @@
         {
           "id": "gloves-1",
           "name": "Gants de Course Pro",
-          "description": "Adh��rence et protection maximales",
+          "description": "Adhérence et protection maximales",
           "price": "89,99 €",
           "image": "/images/products/gloves-1.jpg",
           "category": "Gants"
@@ -127,12 +127,31 @@
       "exploreMoreLink": "/blog"
     },
     {
+      "type": "faqSection",
+      "title": "Questions Fréquentes",
+      "description": "Trouvez les réponses à vos questions sur nos produits et services",
+      "faqs": [
+        {
+          "question": "Comment authentifier mon achat ?",
+          "answer": "Chaque article est livré avec un certificat d'authenticité et un numéro de série unique vérifiable via notre système."
+        },
+        {
+          "question": "Quelle est votre politique de retour ?",
+          "answer": "Nous offrons une politique de retour de 14 jours pour tous les articles non utilisés dans leur état d'origine avec toutes les étiquettes attachées."
+        },
+        {
+          "question": "Proposez-vous la livraison internationale ?",
+          "answer": "Oui, nous assurons la livraison mondiale avec une assurance complète et un suivi sur toutes les commandes."
+        }
+      ]
+    },
+    {
       "type": "emailSignupSection",
-      "title": "Restez Informé",
-      "description": "Abonnez-vous à notre newsletter pour recevoir les dernières actualités moto, tests d'équipement et offres exclusives.",
-      "backgroundImage": "/images/newsletter-bg.jpg",
+      "title": "Rejoignez Notre Cercle Exclusif",
+      "description": "Abonnez-vous pour recevoir un accès anticipé aux nouveautés, des offres exclusives et des informations sur le luxe.",
+      "backgroundImage": "/images/newsletter-luxury-bg.jpg",
       "formAction": "/api/subscribe",
-      "submitText": "S'abonner Maintenant"
+      "submitText": "S'abonner"
     }
   ]
 }

@@ -1,0 +1,135 @@
+{
+  "siteTitle": "RepShoes - Premium Designer & Sport Footwear",
+  "siteDescription": "Your ultimate destination for luxury and athletic footwear. Featuring collections from top brands like Dior, Gucci, Nike, Adidas, and more.",
+  "sections": [
+    {
+      "type": "welcomeSection",
+      "title": "Welcome to Your Premium Footwear Destination",
+      "description": "Discover an exclusive collection of designer and athletic shoes from the world's most prestigious brands.",
+      "blogLinkText": "SHOP NOW",
+      "blogLink": "/collections",
+      "backgroundVideo": {
+        "type": "youtube",
+        "videoId": "814hl5H4OV0",
+        "fallbackImage": "/images/hero-shoes.jpg"
+      }
+    },
+    {
+      "type": "bannerSection",
+      "headline": "Step Into Luxury & Style",
+      "description": "Browse our curated selection of designer and athletic footwear for every occasion.",
+      "backgroundImage": "/images/banner-shoes-bg.jpg",
+      "button1Text": "Shop Collection",
+      "button1Link": "/shop",
+      "button2Text": "Learn More",
+      "button2Link": "/about"
+    },
+    {
+      "type": "categoryGrid",
+      "title": "Shop by Brand",
+      "description": "Explore our extensive collection of premium footwear from leading global brands.",
+      "categories": [
+        {
+          "id": "luxury",
+          "name": "Luxury Brands",
+          "description": "Dior, Gucci, Louis Vuitton, and more",
+          "image": "https://cdn.shopify.com/s/files/1/0884/0056/0470/files/1_-_31122020_-_Gucci__Ace__Psychedelic.jpg?v=1735335150&width=1200",
+          "link": "/collections/replica-shoes"
+        },
+        {
+          "id": "athletic",
+          "name": "Athletic Brands",
+          "description": "Nike, Adidas, Jordan, and more",
+          "image": "https://cdn.shopify.com/s/files/1/0884/0056/0470/files/versace-trigreca-sneakers--vss004-0ihup.jpg?v=1735397682",
+          "link": "/collections/replica-shoes"
+        },
+        {
+          "id": "designer",
+          "name": "Designer Sneakers",
+          "description": "Limited edition and exclusive releases",
+          "image": "https://cdn.shopify.com/s/files/1/0884/0056/0470/files/dior-walkndior-sneaker--do119-48rl2.jpg?v=1735397605",
+          "link": "/collections/replica-shoes"
+        }
+      ]
+    },
+    {
+      "type": "productShowcase",
+      "title": "Featured Products",
+      "description": "Discover our most sought-after shoes and latest releases",
+      "viewAllLink": "/products",
+      "collectionHandle": "replica-shoes",
+      "products": [
+        {
+          "id": "dior-1",
+          "name": "Dior B23 High-Top Sneakers",
+          "description": "Iconic canvas sneakers with Dior Oblique pattern",
+          "price": "1,100.00",
+          "image": "/images/products/dior-b23.jpg",
+          "category": "Luxury"
+        },
+        {
+          "id": "nike-1",
+          "name": "Nike Air Jordan 1 Retro High",
+          "description": "Classic basketball sneakers in premium leather",
+          "price": "170.00",
+          "image": "/images/products/jordan1.jpg",
+          "category": "Athletic"
+        }
+      ]
+    },
+    {
+      "type": "testimonialSlider",
+      "title": "Customer Reviews",
+      "testimonials": [
+        {
+          "id": "1",
+          "author": "James Wilson",
+          "role": "Sneaker Collector",
+          "content": "The selection of limited edition sneakers is incredible. Always authentic and in perfect condition.",
+          "avatar": ""
+        },
+        {
+          "id": "2",
+          "author": "Emma Chen",
+          "role": "Fashion Enthusiast",
+          "content": "Amazing collection of designer shoes. The customer service team is incredibly knowledgeable about sizing and styles.",
+          "avatar": ""
+        },
+        {
+          "id": "3",
+          "author": "David Martinez",
+          "role": "Streetwear Enthusiast",
+          "content": "Best place to find exclusive releases and limited edition collaborations. Never disappointed with my purchases.",
+          "avatar": ""
+        }
+      ]
+    },
+    {
+      "type": "faqSection",
+      "title": "Frequently Asked Questions",
+      "description": "Find answers to common questions about our products, sizing, and services.",
+      "faqs": [
+        {
+          "question": "How can I verify the authenticity of products?",
+          "answer": "All our products come with authenticity certificates and are sourced directly from authorized retailers."
+        },
+        {
+          "question": "What's your sizing guide?",
+          "answer": "We provide detailed size charts for each brand and style. For designer shoes, we recommend going half a size up."
+        },
+        {
+          "question": "Do you offer international shipping?",
+          "answer": "Yes, we ship worldwide with tracked delivery and insurance for all orders."
+        }
+      ]
+    },
+    {
+      "type": "emailSignupSection",
+      "title": "Stay Updated on New Releases",
+      "description": "Subscribe to our newsletter for exclusive drops, latest releases, and special offers.",
+      "backgroundImage": "/images/newsletter-shoes-bg.jpg",
+      "formAction": "/api/subscribe",
+      "submitText": "Subscribe"
+    }
+  ]
+}

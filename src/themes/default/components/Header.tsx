@@ -3,6 +3,7 @@ import { ShoppingCart, Globe } from 'lucide-react';
 import Cart from './Cart';
 import { useCartStore } from '../../../store/cart';
 import { useCurrencyStore } from '../../../store/currency';
+import Search from './Search';
 
 interface HeaderProps {
   siteName: string;
@@ -25,6 +26,14 @@ interface HeaderProps {
     [key: string]: string;
   };
   styles: any;
+  apiEndpoint: string;
+  searchConfig: {
+    apiEndpoint: string;
+    lang: string;
+    placeholder: {
+      [key: string]: string;
+    };
+  };
 }
 
 export default function Header({ 
@@ -34,7 +43,9 @@ export default function Header({
   projectType, 
   currentPath,
   currencies,
-  styles 
+  styles,
+  apiEndpoint,
+  searchConfig
 }: HeaderProps) {
   // Extract initial language from current path
   const getInitialLanguage = () => {
@@ -105,6 +116,13 @@ export default function Header({
           </nav>
 
           <div className={styles.actions.wrapper}>
+            {/* Add Search component here */}
+            <Search 
+              apiEndpoint={searchConfig.apiEndpoint}
+              lang={language}
+              placeholder={searchConfig.placeholder}
+            />
+
             {/* Currency Selector */}
             <div className="relative">
               <button
@@ -181,31 +199,31 @@ export default function Header({
       </div>
       
       <div 
-        className={`${styles.actions.cart.drawer} ${
+        className={`fixed inset-y-0 right-0 w-full max-w-md bg-white shadow-xl z-[100] transform transition-transform duration-300 ease-in-out ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
         <div className="h-full flex flex-col">
-          <div className={styles.actions.cart.header}>
+          <div className="p-4 border-b">
             <div className="flex justify-between items-center">
-              <h2 className={styles.actions.cart.title}>Shopping Cart</h2>
+              <h2 className="text-lg font-medium">Shopping Cart</h2>
               <button 
                 onClick={() => setIsOpen(false)}
-                className={styles.actions.cart.closeButton}
+                className="p-2 hover:bg-gray-100 rounded-full"
                 aria-label="Close shopping cart"
               >
                 ✕
               </button>
             </div>
           </div>
-          <Cart onCheckout={() => setIsOpen(false)} />
+          <Cart onCheckout={() => setIsOpen(false)} apiEndpoint={apiEndpoint} />
         </div>
       </div>
       
-      {/* Overlay */}
+      {/* Overlay - Update z-index */}
       {isOpen && (
         <div 
-          className={styles.overlay}
+          className="fixed inset-0 bg-black bg-opacity-50 z-[90]"
           onClick={() => setIsOpen(false)}
         />
       )}

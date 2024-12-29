@@ -1,0 +1,99 @@
+---
+interface Props {
+  title: string;
+  subtitle: string;
+  products: any[];
+  backgroundImage?: string;
+  dark?: boolean;
+}
+
+const { title, subtitle, products, backgroundImage, dark = false } = Astro.props;
+---
+
+<section class="relative py-24 bg-gray-50">
+  {backgroundImage && (
+    <div 
+      class="absolute inset-0 bg-cover bg-center"
+      style={`background-image: url(${backgroundImage})`}
+    >
+      <div class="absolute inset-0 bg-white/90 backdrop-blur-sm"></div>
+    </div>
+  )}
+  
+  <div class="relative max-w-7xl mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-['Montserrat'] font-light uppercase tracking-wider mb-4 text-gray-900">
+        {title}
+      </h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto font-light leading-relaxed">
+        {subtitle}
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {products.map((product) => (
+        <a href={`/product/${product.handle}`} class="group">
+          <div class="relative aspect-square overflow-hidden bg-white rounded-sm">
+            <img
+              src={product.image}
+              alt={product.name}
+              class="w-full h-full object-cover object-center transform transition-transform duration-700 group-hover:scale-105"
+            />
+            <!-- Price Tag -->
+            <div class="absolute top-4 right-4">
+              <div class="bg-white/90 backdrop-blur-sm px-4 py-2">
+                <span class="text-sm font-['Montserrat'] font-light uppercase tracking-wider text-gray-900">
+                  {product.price}
+                </span>
+              </div>
+            </div>
+            <!-- Hover Overlay -->
+            <div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div class="absolute bottom-4 left-4 right-4">
+                <div class="bg-white/90 backdrop-blur-sm p-3 text-center transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                  <span class="text-sm font-['Montserrat'] font-light uppercase tracking-wider text-gray-900">
+                    Quick View
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-4 space-y-1">
+            <h3 class="font-['Montserrat'] font-light uppercase tracking-wider text-gray-900 group-hover:text-black transition-colors">
+              {product.name}
+            </h3>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+
+  <!-- Decorative Elements -->
+  <div class="max-w-7xl mx-auto px-4 mt-16">
+    <div class="grid grid-cols-3 gap-4">
+      <div class="h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
+      <div class="h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
+      <div class="h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Optimize performance */
+  .group {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+
+  /* Ensure smooth transitions */
+  img {
+    will-change: transform;
+  }
+
+  /* Add subtle texture to background */
+  section {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%),
+                      url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f0f0f0' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+</style> 

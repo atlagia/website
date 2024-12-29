@@ -1,0 +1,136 @@
+{
+    "siteTitle": "RepShoes - Calçados Designer & Esportivos Premium",
+    "siteDescription": "Seu destino definitivo para calçados de luxo e esportivos. Apresentando coleções das principais marcas como Dior, Gucci, Nike, Adidas e mais.",
+    "sections": [
+      {
+        "type": "welcomeSection",
+        "title": "Bem-vindo ao Seu Destino de Calçados Premium",
+        "description": "Descubra uma coleção exclusiva de calçados de designer e esportivos das marcas mais prestigiadas do mundo.",
+        "blogLinkText": "COMPRAR AGORA",
+        "blogLink": "/collections",
+        "backgroundVideo": {
+          "type": "youtube",
+          "videoId": "814hl5H4OV0",
+          "fallbackImage": "/images/hero-shoes.jpg"
+        }
+      },
+      {
+        "type": "bannerSection",
+        "headline": "Entre no Mundo do Luxo e Estilo",
+        "description": "Navegue por nossa seleção exclusiva de calçados de designer e esportivos para todas as ocasiões.",
+        "backgroundImage": "/images/banner-shoes-bg.jpg",
+        "button1Text": "Ver Coleção",
+        "button1Link": "/shop",
+        "button2Text": "Saiba Mais",
+        "button2Link": "/about"
+      },
+      {
+        "type": "categoryGrid",
+        "title": "Compre por Marca",
+        "description": "Explore nossa extensa coleção de calçados premium das principais marcas globais.",
+        "categories": [
+          {
+            "id": "luxury",
+            "name": "Marcas de Luxo",
+            "description": "Dior, Gucci, Louis Vuitton e mais",
+            "image": "https://cdn.shopify.com/s/files/1/0884/0056/0470/files/1_-_31122020_-_Gucci__Ace__Psychedelic.jpg?v=1735335150&width=1200",
+            "link": "/collections/replica-shoes"
+          },
+          {
+            "id": "athletic",
+            "name": "Marcas Esportivas",
+            "description": "Nike, Adidas, Jordan e mais",
+            "image": "https://cdn.shopify.com/s/files/1/0884/0056/0470/files/versace-trigreca-sneakers--vss004-0ihup.jpg?v=1735397682",
+            "link": "/collections/replica-shoes"
+          },
+          {
+            "id": "designer",
+            "name": "Tênis de Designer",
+            "description": "Edições limitadas e lançamentos exclusivos",
+            "image": "https://cdn.shopify.com/s/files/1/0884/0056/0470/files/dior-walkndior-sneaker--do119-48rl2.jpg?v=1735397605",
+            "link": "/collections/replica-shoes"
+          }
+        ]
+      },
+      {
+        "type": "productShowcase",
+        "title": "Produtos em Destaque",
+        "description": "Descubra nossos calçados mais procurados e últimos lançamentos",
+        "viewAllLink": "/products",
+        "collectionHandle": "replica-shoes",
+        "products": [
+          {
+            "id": "dior-1",
+            "name": "Tênis Dior B23 Cano Alto",
+            "description": "Tênis icônico em lona com padrão Dior Oblique",
+            "price": "1.100,00",
+            "image": "/images/products/dior-b23.jpg",
+            "category": "Luxury"
+          },
+          {
+            "id": "nike-1",
+            "name": "Nike Air Jordan 1 Retro High",
+            "description": "Tênis clássico de basquete em couro premium",
+            "price": "170,00",
+            "image": "/images/products/jordan1.jpg",
+            "category": "Athletic"
+          }
+        ]
+      },
+      {
+        "type": "testimonialSlider",
+        "title": "Avaliações dos Clientes",
+        "testimonials": [
+          {
+            "id": "1",
+            "author": "James Wilson",
+            "role": "Colecionador de Tênis",
+            "content": "A seleção de tênis de edição limitada é incrível. Sempre autênticos e em perfeitas condições.",
+            "avatar": ""
+          },
+          {
+            "id": "2",
+            "author": "Emma Chen",
+            "role": "Entusiasta da Moda",
+            "content": "Coleção incrível de calçados de designer. A equipe de atendimento ao cliente é extremamente conhecedora sobre tamanhos e estilos.",
+            "avatar": ""
+          },
+          {
+            "id": "3",
+            "author": "David Martinez",
+            "role": "Entusiasta do Streetwear",
+            "content": "Melhor lugar para encontrar lançamentos exclusivos e colaborações de edição limitada. Nunca me decepcionei com minhas compras.",
+            "avatar": ""
+          }
+        ]
+      },
+      {
+        "type": "faqSection",
+        "title": "Perguntas Frequentes",
+        "description": "Encontre respostas para perguntas comuns sobre nossos produtos, tamanhos e serviços.",
+        "faqs": [
+          {
+            "question": "Como posso verificar a autenticidade dos produtos?",
+            "answer": "Todos os nossos produtos vêm com certificados de autenticidade e são obtidos diretamente de revendedores autorizados."
+          },
+          {
+            "question": "Qual é o seu guia de tamanhos?",
+            "answer": "Fornecemos tabelas de tamanhos detalhadas para cada marca e estilo. Para calçados de designer, recomendamos escolher meio número acima."
+          },
+          {
+            "question": "Vocês oferecem envio internacional?",
+            "answer": "Sim, enviamos para todo o mundo com entrega rastreada e seguro para todos os pedidos."
+          }
+        ]
+      },
+      {
+        "type": "emailSignupSection",
+        "title": "Fique por Dentro dos Novos Lançamentos",
+        "description": "Assine nossa newsletter para drops exclusivos, últimos lançamentos e ofertas especiais.",
+        "backgroundImage": "/images/newsletter-shoes-bg.jpg",
+        "formAction": "/api/subscribe",
+        "submitText": "Assinar"
+      }
+    ]
+  }
+  

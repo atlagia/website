@@ -1,0 +1,141 @@
+---
+import { Button } from './ui/Button';
+
+interface Props {
+  headline: string;
+  description: string;
+  backgroundImage: string;
+  button1Text: string;
+  button1Link: string;
+  button2Text?: string;
+  button2Link?: string;
+}
+
+const { 
+  headline, 
+  description, 
+  backgroundImage,
+  button1Text,
+  button1Link,
+  button2Text,
+  button2Link
+} = Astro.props;
+---
+
+<section 
+  class="relative py-32 px-4 overflow-hidden bg-gradient-to-r from-gray-50 to-white"
+>
+  <div class="absolute inset-0 w-full h-full">
+    <!-- Background Image with Parallax -->
+    <div 
+      class="absolute inset-0 bg-cover bg-center bg-no-repeat transform scale-105"
+      style={`background-image: url(${backgroundImage});`}
+      data-parallax="true"
+    >
+    </div>
+    <!-- Elegant Overlay -->
+    <div class="absolute inset-0 bg-white/80 backdrop-blur-sm"></div>
+  </div>
+  
+  <!-- Content -->
+  <div class="relative max-w-7xl mx-auto">
+    <div class="max-w-2xl">
+      <h2 class="text-4xl md:text-5xl font-['Montserrat'] font-light uppercase tracking-wide text-gray-900 mb-6 leading-tight">
+        {headline}
+      </h2>
+      
+      <p class="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed font-light">
+        {description}
+      </p>
+      
+      <div class="flex flex-wrap gap-4">
+        <a 
+          href={button1Link}
+          class="inline-flex items-center px-8 py-3 bg-black text-white font-['Montserrat'] uppercase tracking-wide hover:bg-gray-900 transition-colors duration-300"
+        >
+          {button1Text}
+        </a>
+        
+        {button2Text && button2Link && (
+          <a 
+            href={button2Link}
+            class="inline-flex items-center px-8 py-3 border-2 border-black text-black font-['Montserrat'] uppercase tracking-wide hover:bg-black hover:text-white transition-colors duration-300"
+          >
+            {button2Text}
+          </a>
+        )}
+      </div>
+    </div>
+  </div>
+
+  <!-- Decorative Elements -->
+  <div class="absolute bottom-0 left-0 w-full">
+    <!-- Subtle Line -->
+    <div class="h-px bg-gradient-to-r from-black/5 via-black/10 to-transparent"></div>
+    <!-- Decorative Dots -->
+    <div class="flex justify-end px-8 -mt-3">
+      <div class="flex gap-2">
+        <div class="w-1.5 h-1.5 rounded-full bg-black/20"></div>
+        <div class="w-1.5 h-1.5 rounded-full bg-black/15"></div>
+        <div class="w-1.5 h-1.5 rounded-full bg-black/10"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Smooth parallax effect */
+  [data-parallax="true"] {
+    transition: transform 0.3s cubic-bezier(0.2, 0, 0.2, 1);
+  }
+
+  section {
+    perspective: 1000px;
+  }
+
+  /* Add subtle animation to buttons */
+  a {
+    position: relative;
+    overflow: hidden;
+  }
+
+  a::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.1),
+      transparent
+    );
+    transition: 0.5s;
+  }
+
+  a:hover::after {
+    left: 100%;
+  }
+</style>
+
+<script>
+  // Simple parallax effect on scroll
+  const parallaxElement = document.querySelector('[data-parallax="true"]');
+  let scrollPosition = window.pageYOffset;
+
+  function handleScroll() {
+    const currentScroll = window.pageYOffset;
+    const delta = (currentScroll - scrollPosition) * 0.1;
+    
+    if (parallaxElement) {
+      const transform = `scale(1.05) translateY(${delta}px)`;
+      parallaxElement.style.transform = transform;
+    }
+    
+    scrollPosition = currentScroll;
+  }
+
+  window.addEventListener('scroll', handleScroll);
+</script>

@@ -1,0 +1,135 @@
+{
+  "siteTitle": "RepShoes - Premium Designer & Sport Schuhe",
+  "siteDescription": "Ihre ultimative Adresse für Luxus- und Sportschuhe. Mit Kollektionen von Top-Marken wie Dior, Gucci, Nike, Adidas und mehr.",
+  "sections": [
+    {
+      "type": "welcomeSection",
+      "title": "Willkommen in Ihrer Premium-Schuh-Destination",
+      "description": "Entdecken Sie eine exklusive Kollektion von Designer- und Sportschuhen der prestigeträchtigsten Marken der Welt.",
+      "blogLinkText": "JETZT EINKAUFEN",
+      "blogLink": "/collections",
+      "backgroundVideo": {
+        "type": "youtube",
+        "videoId": "814hl5H4OV0",
+        "fallbackImage": "/images/hero-shoes.jpg"
+      }
+    },
+    {
+      "type": "bannerSection",
+      "headline": "Treten Sie ein in Luxus & Stil",
+      "description": "Durchstöbern Sie unsere kuratierte Auswahl an Designer- und Sportschuhen für jeden Anlass.",
+      "backgroundImage": "/images/banner-shoes-bg.jpg",
+      "button1Text": "Kollektion entdecken",
+      "button1Link": "/shop",
+      "button2Text": "Mehr erfahren",
+      "button2Link": "/about"
+    },
+    {
+      "type": "categoryGrid",
+      "title": "Nach Marke einkaufen",
+      "description": "Entdecken Sie unsere umfangreiche Kollektion von Premium-Schuhen führender globaler Marken.",
+      "categories": [
+        {
+          "id": "luxury",
+          "name": "Luxusmarken",
+          "description": "Dior, Gucci, Louis Vuitton und mehr",
+          "image": "https://example.com/images/luxury-shoes.jpg",
+          "link": "/collections/replica-shoes"
+        },
+        {
+          "id": "athletic",
+          "name": "Sportmarken",
+          "description": "Nike, Adidas, Jordan und mehr",
+          "image": "https://cdn.shopify.com/s/files/1/0884/0056/0470/files/versace-trigreca-sneakers--vss004-0ihup.jpg?v=1735397682",
+          "link": "/collections/replica-shoes"
+        },
+        {
+          "id": "designer",
+          "name": "Designer Sneakers",
+          "description": "Limitierte Auflagen und exklusive Releases",
+          "image": "https://cdn.shopify.com/s/files/1/0884/0056/0470/files/dior-walkndior-sneaker--do119-48rl2.jpg?v=1735397605",
+          "link": "/collections/replica-shoes"
+        }
+      ]
+    },
+    {
+      "type": "productShowcase",
+      "title": "Ausgewählte Produkte",
+      "description": "Entdecken Sie unsere begehrtesten Schuhe und neuesten Veröffentlichungen",
+      "viewAllLink": "/products",
+      "collectionHandle": "replica-shoes",
+      "products": [
+        {
+          "id": "dior-1",
+          "name": "Dior B23 High-Top Sneakers",
+          "description": "Ikonische Canvas-Sneakers mit Dior Oblique Muster",
+          "price": "1.100,00",
+          "image": "/images/products/dior-b23.jpg",
+          "category": "Luxus"
+        },
+        {
+          "id": "nike-1",
+          "name": "Nike Air Jordan 1 Retro High",
+          "description": "Klassische Basketball-Sneakers aus Premium-Leder",
+          "price": "170,00",
+          "image": "/images/products/jordan1.jpg",
+          "category": "Sport"
+        }
+      ]
+    },
+    {
+      "type": "testimonialSlider",
+      "title": "Kundenbewertungen",
+      "testimonials": [
+        {
+          "id": "1",
+          "author": "James Wilson",
+          "role": "Sneaker Sammler",
+          "content": "Die Auswahl an limitierten Sneakers ist unglaublich. Immer authentisch und in perfektem Zustand.",
+          "avatar": ""
+        },
+        {
+          "id": "2",
+          "author": "Emma Chen",
+          "role": "Mode-Enthusiastin",
+          "content": "Fantastische Kollektion von Designer-Schuhen. Das Kundenservice-Team kennt sich hervorragend mit Größen und Styles aus.",
+          "avatar": ""
+        },
+        {
+          "id": "3",
+          "author": "David Martinez",
+          "role": "Streetwear-Enthusiast",
+          "content": "Bester Ort, um exklusive Releases und limitierte Kollaborationen zu finden. Wurde noch nie von meinen Einkäufen enttäuscht.",
+          "avatar": ""
+        }
+      ]
+    },
+    {
+      "type": "faqSection",
+      "title": "Häufig gestellte Fragen",
+      "description": "Finden Sie Antworten auf häufige Fragen zu unseren Produkten, Größen und Services.",
+      "faqs": [
+        {
+          "question": "Wie kann ich die Echtheit der Produkte überprüfen?",
+          "answer": "Alle unsere Produkte kommen mit Echtheitszertifikaten und werden direkt von autorisierten Händlern bezogen."
+        },
+        {
+          "question": "Wie finde ich die richtige Größe?",
+          "answer": "Wir stellen detaillierte Größentabellen für jede Marke und jeden Stil zur Verfügung. Bei Designer-Schuhen empfehlen wir, eine halbe Größe größer zu wählen."
+        },
+        {
+          "question": "Bieten Sie internationalen Versand an?",
+          "answer": "Ja, wir versenden weltweit mit Sendungsverfolgung und Versicherung für alle Bestellungen."
+        }
+      ]
+    },
+    {
+      "type": "emailSignupSection",
+      "title": "Bleiben Sie über neue Releases informiert",
+      "description": "Abonnieren Sie unseren Newsletter für exklusive Drops, neueste Veröffentlichungen und besondere Angebote.",
+      "backgroundImage": "/images/newsletter-shoes-bg.jpg",
+      "formAction": "/api/subscribe",
+      "submitText": "Abonnieren"
+    }
+  ]
+}

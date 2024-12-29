@@ -92,7 +92,7 @@ async function fetchFromShopifyWithRedis(redisKey: string, fetchFunction: () => 
   }
 }
 
-// Update getAllProducts to use store prefix
+// Update getAllProducts to handle batched products
 export async function getAllProducts() {
   const redisKey = `${getStorePrefix()}shopify_all_products`;
   const redisCache = await getRedisData(redisKey);
@@ -123,35 +123,66 @@ export async function getAllProducts() {
 
     try {
       console.log('🔍 [MONGODB] Attempting to fetch products...');
-      const cacheData = await collection.findOne(
+      
+      // Get metadata from the main document
+      const metadata = await collection.findOne(
         { type: 'products_cache' },
-        { 
-          projection: { 
-            'products.node': {
-              id: 1,
-              title: 1,
-              handle: 1,
-              description: 1,
-              priceRange: 1,
-              'images.edges': { $slice: 1 }
-            },
-            lastUpdated: 1
-          }
-        }
+        { projection: { totalProducts: 1, totalBatches: 1, lastUpdated: 1 } }
       );
 
-      if (!cacheData?.products) {
-        console.log('📛 [MONGODB CACHE MISS] Fetching from Shopify API');
+      if (!metadata) {
+        console.log('📛 [MONGODB CACHE MISS] No metadata found');
         const products = await fetchAndSaveAllProducts(collection);
-        console.log('💾 [REDIS] Caching Shopify response');
         await setRedisData(redisKey, products, 3600);
         return products;
       }
 
-      console.log('💾 [REDIS] Caching MongoDB result');
-      await setRedisData(redisKey, cacheData.products, 3600);
-      console.log(`✅ [MONGODB CACHE HIT] Retrieved ${cacheData.products.length} products`);
-      return cacheData.products;
+      // Check if cache needs refresh
+      if (shouldRefreshCache(new Date(metadata.lastUpdated))) {
+        console.log('⏰ Cache expired, triggering refresh');
+        backgroundSyncProducts().catch(console.error);
+      }
+
+      // Fetch all batches and combine them
+      let allProducts = [];
+      for (let i = 0; i < metadata.totalBatches; i++) {
+        const batchKey = i === 0 ? 
+          { type: 'products_cache' } : 
+          { type: `products_cache_${i}` };
+
+        const batchData = await collection.findOne(
+          batchKey,
+          { 
+            projection: { 
+              'products.node': {
+                id: 1,
+                title: 1,
+                handle: 1,
+                description: 1,
+                priceRange: 1,
+                'images.edges': { $slice: 1 }
+              }
+            }
+          }
+        );
+
+        if (batchData?.products) {
+          allProducts = [...allProducts, ...batchData.products];
+          console.log(`✅ [MONGODB] Retrieved batch ${i + 1}/${metadata.totalBatches}`);
+        }
+      }
+
+      if (allProducts.length > 0) {
+        console.log('💾 [REDIS] Caching combined results');
+        await setRedisData(redisKey, allProducts, 3600);
+        console.log(`✅ [MONGODB CACHE HIT] Retrieved ${allProducts.length} products total`);
+        return allProducts;
+      }
+
+      console.log('📛 [MONGODB CACHE MISS] No products found in batches');
+      const products = await fetchAndSaveAllProducts(collection);
+      await setRedisData(redisKey, products, 3600);
+      return products;
 
     } catch (error) {
       console.error('❌ [ERROR] Error fetching products:', error);
@@ -168,7 +199,7 @@ export async function getAllProducts() {
   }
 }
 
-// Update fetchAndSaveAllProducts to handle MongoDB failure
+// Update fetchAndSaveAllProducts to handle batched saves
 async function fetchAndSaveAllProducts(collection: any | null) {
   let hasNextPage = true;
   let cursor = null;
@@ -261,19 +292,47 @@ async function fetchAndSaveAllProducts(collection: any | null) {
   if (collection) {
     try {
       console.log('💾 Saving all products to MongoDB cache');
-      await collection.updateOne(
-        { type: 'products_cache' },
-        { 
-          $set: {
-            products: allProducts,
-            lastUpdated: new Date(),
-            lastFetchStatus: 'success',
-            productCount: allProducts.length
-          }
-        },
-        { upsert: true }
-      );
-      console.log('✅ Products cache updated successfully');
+      const BATCH_SIZE = 1000;
+      const totalProducts = allProducts.length;
+      const batches = Math.ceil(totalProducts / BATCH_SIZE);
+
+      // Delete existing batches
+      await collection.deleteMany({
+        $or: [
+          { type: 'products_cache' },
+          { type: { $regex: /^products_cache_\d+$/ } }
+        ]
+      });
+
+      // Save products in batches
+      for (let i = 0; i < batches; i++) {
+        const start = i * BATCH_SIZE;
+        const end = Math.min(start + BATCH_SIZE, totalProducts);
+        const batchProducts = allProducts.slice(start, end);
+        
+        const documentKey = i === 0 ? 
+          { type: 'products_cache' } : 
+          { type: `products_cache_${i}` };
+
+        await collection.updateOne(
+          documentKey,
+          { 
+            $set: {
+              products: batchProducts,
+              lastUpdated: new Date(),
+              lastFetchStatus: 'success',
+              productCount: batchProducts.length,
+              batchIndex: i,
+              totalBatches: batches,
+              totalProducts: totalProducts
+            }
+          },
+          { upsert: true }
+        );
+        console.log(`✅ Saved batch ${i + 1}/${batches} (${batchProducts.length} products)`);
+      }
+      
+      console.log('✅ All product batches saved successfully');
     } catch (error) {
       console.error('❌ [MONGODB ERROR] Failed to save cache:', error);
       // Continue without MongoDB cache
@@ -389,7 +448,7 @@ const PRODUCT_BY_HANDLE_QUERY = `
   }
 `;
 
-// Update getProductByHandle to use store prefix
+// Update getProductByHandle to handle batched products
 export async function getProductByHandle(handle: string) {
   try {
     const redisKey = `${getStorePrefix()}shopify_product_${handle}`;
@@ -422,7 +481,7 @@ export async function getProductByHandle(handle: string) {
           product: response?.body?.data?.product,
           relatedProducts: response?.body?.data?.products?.edges || []
         };
-        await setRedisData(`shopify_product_${handle}`, result, 3600);
+        await setRedisData(redisKey, result, 3600);
         return result;
       }
 
@@ -465,7 +524,7 @@ export async function getProductByHandle(handle: string) {
       console.error('❌ [MONGODB ERROR] Falling back to Shopify:', mongoError);
       
       // Fallback to Shopify with Redis caching
-      return fetchFromShopifyWithRedis(`shopify_product_${handle}`, async () => {
+      return fetchFromShopifyWithRedis(redisKey, async () => {
         const response = await shopifyFetch({ 
           query: PRODUCT_BY_HANDLE_QUERY, 
           variables: { handle } 
@@ -550,25 +609,42 @@ export async function getProductFromCache(handle: string) {
     const dbName = getStoreName();
     const collection = client.db(dbName).collection('products');
     
-    // Use projection to only fetch the specific product
-    const cachedData = await collection.findOne(
+    // Get metadata first to know how many batches to check
+    const metadata = await collection.findOne(
       { type: 'products_cache' },
-      { 
-        projection: {
-          products: {
-            $elemMatch: { 'node.handle': handle }
-          },
-          lastUpdated: 1
-        }
-      }
+      { projection: { totalBatches: 1, lastUpdated: 1 } }
     );
 
-    if (cachedData?.products?.[0]?.node) {
-      console.log('✅ Found product in cache');
-      return cachedData.products[0].node;
+    if (!metadata?.totalBatches) {
+      console.log('❌ No metadata found in cache');
+      return null;
     }
 
-    console.log('❌ Product not found in cache');
+    // Check each batch for the product
+    for (let i = 0; i < metadata.totalBatches; i++) {
+      const batchKey = i === 0 ? 
+        { type: 'products_cache' } : 
+        { type: `products_cache_${i}` };
+
+      // Use projection to only fetch the specific product
+      const cachedData = await collection.findOne(
+        batchKey,
+        { 
+          projection: {
+            products: {
+              $elemMatch: { 'node.handle': handle }
+            }
+          }
+        }
+      );
+
+      if (cachedData?.products?.[0]?.node) {
+        console.log(`✅ Found product in batch ${i + 1}`);
+        return cachedData.products[0].node;
+      }
+    }
+
+    console.log('❌ Product not found in any batch');
     return null;
   } catch (error) {
     console.error('❌ Error accessing cache:', error);
@@ -742,7 +818,57 @@ export async function getPaginatedProducts(page: number = 1, limit: number = 20)
   }
 }
 
-// Add new function to fetch translated products
+// Update saveTranslatedProductsToMongo to handle large product sets
+async function saveTranslatedProductsToMongo(collection: any, products: any[], language: string) {
+  try {
+    const BATCH_SIZE = 1000; // Maximum products per document
+    const totalProducts = products.length;
+    const batches = Math.ceil(totalProducts / BATCH_SIZE);
+
+    console.log(`💾 [MONGODB] Saving ${totalProducts} products for ${language} in ${batches} batches`);
+
+    // Delete existing documents for this language
+    await collection.deleteMany({ 
+      language: language.toUpperCase(),
+      batchIndex: { $exists: true }
+    });
+
+    // Save products in batches
+    for (let i = 0; i < batches; i++) {
+      const start = i * BATCH_SIZE;
+      const end = Math.min(start + BATCH_SIZE, totalProducts);
+      const batchProducts = products.slice(start, end);
+      
+      const documentKey = i === 0 ? 
+        { language: language.toUpperCase() } : 
+        { language: `${language.toUpperCase()}_${i}` };
+
+      await collection.updateOne(
+        documentKey,
+        { 
+          $set: {
+            products: batchProducts,
+            lastUpdated: new Date(),
+            productCount: batchProducts.length,
+            batchIndex: i,
+            totalBatches: batches,
+            totalProducts: totalProducts
+          }
+        },
+        { upsert: true }
+      );
+
+      console.log(`✅ [MONGODB] Saved batch ${i + 1}/${batches} for ${language}`);
+    }
+
+    console.log(`✅ [MONGODB] Successfully saved all ${totalProducts} products in ${batches} batches`);
+  } catch (mongoError) {
+    console.error('❌ [MONGODB] Error saving cache:', mongoError);
+    throw mongoError;
+  }
+}
+
+// Update getPaginatedTranslatedProducts to handle batched products
 export async function getPaginatedTranslatedProducts(page: number = 1, limit: number = 20, language: string = 'EN') {
   try {
     const redisKey = `${getStorePrefix()}translated_products_${language.toLowerCase()}_page_${page}_limit_${limit}`;
@@ -754,46 +880,53 @@ export async function getPaginatedTranslatedProducts(page: number = 1, limit: nu
       console.log(`🚀 [REDIS CACHE HIT] Retrieved ${language} products page ${page}`);
       return redisCache;
     }
-    console.log(`📛 [REDIS CACHE MISS] ${language} products page ${page}`);
-    
-    // Try MongoDB first
+
+    // Try MongoDB
     const client = await connectToDatabase();
     const dbName = getStoreName();
     const collection = client.db(dbName).collection('products_language');
 
-    // Check if we have cached data for this language
-    const cachedData = await collection.findOne(
+    // Get metadata from the main language document
+    const metadata = await collection.findOne(
       { language: language.toUpperCase() },
-      { 
-        projection: {
-          products: { $slice: [(page - 1) * limit, limit] },
-          productCount: 1
-        }
-      }
+      { projection: { totalProducts: 1, totalBatches: 1 } }
     );
-    
-    if (cachedData?.products) {
-      console.log(`✅ [MONGODB] Found cached products for ${language}`);
-      
-      const result = {
-        products: cachedData.products,
-        pagination: {
-          currentPage: page,
-          totalPages: Math.ceil(cachedData.productCount / limit),
-          totalProducts: cachedData.productCount,
-          hasNextPage: page * limit < cachedData.productCount,
-          hasPreviousPage: page > 1
-        }
-      };
 
-      // Cache in Redis
-      console.log(`💾 [REDIS] Caching ${language} products page ${page}`);
-      await setRedisData(redisKey, result, 3600); // Cache for 1 hour
-      
-      return result;
+    if (metadata?.totalProducts) {
+      const BATCH_SIZE = 1000;
+      const start = (page - 1) * limit;
+      const batchIndex = Math.floor(start / BATCH_SIZE);
+      const batchOffset = start % BATCH_SIZE;
+
+      // Determine which document to query
+      const documentKey = batchIndex === 0 ? 
+        { language: language.toUpperCase() } : 
+        { language: `${language.toUpperCase()}_${batchIndex}` };
+
+      const cachedData = await collection.findOne(documentKey);
+
+      if (cachedData?.products) {
+        const paginatedProducts = cachedData.products
+          .slice(batchOffset, batchOffset + limit);
+
+        const result = {
+          products: paginatedProducts,
+          pagination: {
+            currentPage: page,
+            totalPages: Math.ceil(metadata.totalProducts / limit),
+            totalProducts: metadata.totalProducts,
+            hasNextPage: start + limit < metadata.totalProducts,
+            hasPreviousPage: page > 1
+          }
+        };
+
+        // Cache in Redis
+        await setRedisData(redisKey, result, 3600);
+        return result;
+      }
     }
 
-    // If no cache exists, we need to fetch ALL products for initial build
+    // If no cache exists, fetch ALL products
     console.log(`📛 [MONGODB] No cache found for ${language}, fetching ALL from Shopify`);
 
     let allProducts = [];
@@ -941,23 +1074,12 @@ export async function getPaginatedTranslatedProducts(page: number = 1, limit: nu
       console.log(`📦 Fetched batch ${pageCount - 1} (Total products: ${allProducts.length})`);
     }
 
-    // Save ALL products to MongoDB
+    // Save ALL products to MongoDB using the updated helper function
     try {
-      console.log(`💾 [MONGODB] Saving ${allProducts.length} products for ${language}`);
-      await collection.updateOne(
-        { language: language.toUpperCase() },
-        { 
-          $set: {
-            products: allProducts,
-            lastUpdated: new Date(),
-            productCount: allProducts.length
-          }
-        },
-        { upsert: true }
-      );
-      console.log('✅ [MONGODB] Cache updated successfully');
+      await saveTranslatedProductsToMongo(collection, allProducts, language);
     } catch (mongoError) {
-      console.error('❌ [MONGODB] Error saving cache:', mongoError);
+      console.error('❌ [MONGODB] Failed to save products:', mongoError);
+      // Continue execution even if MongoDB save fails
     }
 
     // Calculate pagination for requested page
@@ -975,10 +1097,9 @@ export async function getPaginatedTranslatedProducts(page: number = 1, limit: nu
       }
     };
 
-    // Cache paginated result in Redis
-    console.log(`💾 [REDIS] Caching ${language} products page ${page}`);
-    await setRedisData(redisKey, result, 3600); // Cache for 1 hour
-
+    // Cache in Redis
+    await setRedisData(redisKey, result, 3600);
+    
     return result;
 
   } catch (error) {
@@ -1130,41 +1251,46 @@ export async function getTranslatedProductByHandle(handle: string, language: str
     const dbName = getStoreName();
     const collection = client.db(dbName).collection('products_language');
 
-    // Find specific product and related products in one query
-    const [productResult, relatedProducts] = await Promise.all([
-      collection.findOne(
-        { 
-          language: language.toUpperCase(),
-          'products.node.handle': handle 
-        },
-        {
-          projection: {
-            'products.$': 1
+    // Get metadata first to know how many batches to check
+    const metadata = await collection.findOne(
+      { language: language.toUpperCase() },
+      { projection: { totalBatches: 1, lastUpdated: 1 } }
+    );
+
+    if (metadata?.totalBatches) {
+      // Check each batch for the product
+      for (let i = 0; i < metadata.totalBatches; i++) {
+        const batchKey = i === 0 ? 
+          { language: language.toUpperCase() } : 
+          { language: `${language.toUpperCase()}_${i}` };
+
+        // Use projection to only fetch the specific product
+        const cachedData = await collection.findOne(
+          batchKey,
+          { 
+            projection: {
+              products: {
+                $elemMatch: { 'node.handle': handle }
+              }
+            }
           }
+        );
+
+        if (cachedData?.products?.[0]?.node) {
+          console.log(`✅ [MONGODB] Found product in batch ${i + 1}`);
+          
+          const result = {
+            product: cachedData.products[0].node,
+            relatedProducts: await getRelatedTranslatedProducts(language)
+          };
+
+          // Cache in Redis
+          console.log(`💾 [REDIS] Caching ${language} product: ${handle}`);
+          await setRedisData(redisKey, result, 3600); // Cache for 1 hour
+
+          return result;
         }
-      ),
-      collection.aggregate([
-        { $match: { language: language.toUpperCase() } },
-        { $unwind: '$products' },
-        { $match: { 'products.node.handle': { $ne: handle } } },
-        { $limit: 4 },
-        { $project: { _id: 0, node: '$products.node' } }
-      ]).toArray()
-    ]);
-
-    if (productResult?.products?.[0]?.node) {
-      console.log(`✅ [MONGODB] Found ${handle} in ${language}`);
-      
-      const result = {
-        product: productResult.products[0].node,
-        relatedProducts: relatedProducts.map(item => ({ node: item.node }))
-      };
-
-      // Cache in Redis
-      console.log(`💾 [REDIS] Caching ${language} product: ${handle}`);
-      await setRedisData(redisKey, result, 3600); // Cache for 1 hour
-
-      return result;
+      }
     }
 
     console.log(`⚠️ [MONGODB] No ${language} version found for ${handle}`);
@@ -1180,7 +1306,29 @@ export async function getTranslatedProductByHandle(handle: string, language: str
       return englishVersion;
     }
 
-    throw new Error(`Product ${handle} not found in any language`);
+    // If still not found, fetch from Shopify
+    console.log('🔄 [SHOPIFY] Fetching product directly');
+    const response = await shopifyFetch({ 
+      query: TRANSLATED_PRODUCT_QUERY, 
+      variables: { 
+        handle,
+        language: language.toUpperCase()
+      } 
+    });
+
+    const product = response?.body?.data?.product;
+    const relatedProducts = response?.body?.data?.products?.edges || [];
+
+    if (!product) {
+      throw new Error(`Product ${handle} not found in any language`);
+    }
+
+    const result = { product, relatedProducts };
+
+    // Cache the result
+    await setRedisData(redisKey, result, 3600);
+
+    return result;
 
   } catch (error) {
     console.error(`❌ [ERROR] Failed to fetch ${language} product:`, {
@@ -1197,6 +1345,27 @@ export async function getTranslatedProductByHandle(handle: string, language: str
 
     throw error;
   }
+}
+
+// Helper function to get related translated products
+async function getRelatedTranslatedProducts(language: string) {
+  const client = await connectToDatabase();
+  const dbName = getStoreName();
+  const collection = client.db(dbName).collection('products_language');
+  
+  // Get first batch (main document) and take first 4 products
+  const relatedProducts = await collection.findOne(
+    { language: language.toUpperCase() },
+    { 
+      projection: { 
+        products: { 
+          $slice: 4
+        }
+      }
+    }
+  );
+  
+  return relatedProducts?.products || [];
 }
 
 // Add new function to fetch all collections
@@ -1549,4 +1718,119 @@ export async function getCollectionProducts(collectionHandle: string) {
     throw error;
   }
 }
+
+// Add this function after your existing functions
+export async function searchProducts(query: string, language: string = 'EN') {
+  try {
+    console.log('🔍 [SEARCH] Starting search for:', query);
+    
+    const redisKey = `${getStorePrefix()}search_${language.toLowerCase()}_${query.toLowerCase()}`;
+    
+    // Try Redis first
+    const redisCache = await getRedisData(redisKey);
+    if (redisCache) {
+      console.log('🚀 [REDIS CACHE HIT] Returning cached results');
+      return redisCache;
+    }
+
+    const client = await connectToDatabase();
+    const dbName = getStoreName();
+    const collection = client.db(dbName).collection('products_language');
+
+    // Get the main language document with a limit on products
+    const mainDoc = await collection.findOne(
+      { language: language.toUpperCase() },
+      { 
+        projection: {
+          products: {
+            $filter: {
+              input: "$products",
+              as: "product",
+              cond: {
+                $or: [
+                  { $regexMatch: { input: "$$product.node.title", regex: query, options: "i" } },
+                  { $regexMatch: { input: "$$product.node.vendor", regex: query, options: "i" } }
+                ]
+              }
+            }
+          },
+          totalBatches: 1
+        }
+      }
+    );
+
+    let allResults = mainDoc?.products || [];
+    
+    // If we need more results and there are more batches, check them
+    if (allResults.length < 20 && mainDoc?.totalBatches > 1) {
+      // Search additional batches in parallel
+      const batchPromises = Array.from({ length: mainDoc.totalBatches - 1 }, async (_, i) => {
+        const batchNum = i + 1;
+        const batchDoc = await collection.findOne(
+          { language: `${language.toUpperCase()}_${batchNum}` },
+          {
+            projection: {
+              products: {
+                $filter: {
+                  input: "$products",
+                  as: "product",
+                  cond: {
+                    $or: [
+                      { $regexMatch: { input: "$$product.node.title", regex: query, options: "i" } },
+                      { $regexMatch: { input: "$$product.node.vendor", regex: query, options: "i" } }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        );
+        return batchDoc?.products || [];
+      });
+
+      // Wait for all batch searches to complete
+      const batchResults = await Promise.all(batchPromises);
+      
+      // Combine results
+      allResults = [
+        ...allResults,
+        ...batchResults.flat()
+      ].slice(0, 20); // Limit to 20 results
+    }
+
+    if (allResults.length > 0) {
+      console.log(`✅ [SEARCH] Found ${allResults.length} results`);
+      
+      // Cache results
+      try {
+        await setRedisData(redisKey, allResults, 1800);
+      } catch (cacheError) {
+        console.warn('⚠️ [REDIS] Caching error:', cacheError);
+      }
+      
+      return allResults;
+    }
+
+    // If no results and not English, try English
+    if (language.toUpperCase() !== 'EN') {
+      console.log('↩️ Falling back to English search');
+      return searchProducts(query, 'EN');
+    }
+
+    return [];
+
+  } catch (error) {
+    console.error('❌ [SEARCH ERROR]', {
+      message: error.message,
+      query,
+      language
+    });
+    return language.toUpperCase() !== 'EN' ? searchProducts(query, 'EN') : [];
+  }
+}
+
+
+
+
+
 

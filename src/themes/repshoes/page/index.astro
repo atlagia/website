@@ -1,31 +1,36 @@
 ---
-import { fetchBlogPosts } from '../utils/shopifyAPI';
-import { getLangFromUrl, useTranslations, isValidLanguage } from '../utils/i18n';
+import { fetchBlogPosts } from '../../../utils/shopifyAPI';
+import { getLangFromUrl, useTranslations, isValidLanguage } from '../../../utils/i18n';
 
 const theme = import.meta.env.THEME || 'default';
-const title = import.meta.env.PUBLIC_SITE_NAME;
 
 // Properly handle dynamic imports with default exports
-const { default: BaseHead } = await import(`../themes/${theme}/components/BaseHead.astro`);
-const { default: Header } = await import(`../themes/${theme}/components/Header.astro`);
-const { default: Footer } = await import(`../themes/${theme}/components/Footer.astro`);
-const { default: Welcome } = await import(`../themes/${theme}/components/Welcome.astro`);
-const { default: Banner } = await import(`../themes/${theme}/components/Banner.astro`);
-const { default: FeaturedPosts } = await import(`../themes/${theme}/components/FeaturedPosts.astro`);
-const { default: EmailSignup } = await import(`../themes/${theme}/components/EmailSignup.astro`);
-const { default: CategoryGrid } = await import(`../themes/${theme}/components/CategoryGrid.astro`);
-const { default: ProductShowcase } = await import(`../themes/${theme}/components/ProductShowcase.astro`);
-const { default: TestimonialSlider } = await import(`../themes/${theme}/components/TestimonialSlider.astro`);
-const { default: FAQ } = await import(`../themes/${theme}/components/FaqSection.astro`);
-const { default: Video } = await import(`../themes/${theme}/components/Video.astro`);
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+const { default: Welcome } = await import(`../components/Welcome.astro`);
+const { default: Banner } = await import(`../components/Banner.astro`);
+const { default: FeaturedPosts } = await import(`../components/FeaturedPosts.astro`);
+const { default: EmailSignup } = await import(`../components/EmailSignup.astro`);
+const { default: CategoryGrid } = await import(`../components/CategoryGrid.astro`);
+const { default: ProductShowcase } = await import(`../components/ProductShowcase.astro`);
+const { default: TestimonialSlider } = await import(`../components/TestimonialSlider.astro`);
+const { default: FAQ } = await import(`../components/FaqSection.astro`);
+const { default: Video } = await import(`../components/Video.astro`);
 
 // Get the language parameter from the URL
-const lang = getLangFromUrl(Astro.url);
+const { lang } = Astro.params;
+
+// Validate language and redirect to /en if invalid
+if (!isValidLanguage(lang)) {
+  return Astro.redirect('/en');
+}
+
 const translations = await useTranslations(lang);
 const jsonData = translations.default;
 
 // Get site title and description from language-specific data
-const SITE_TITLE = jsonData.siteTitle || title ;
+const SITE_TITLE = jsonData.siteTitle || 'Bikes';
 const SITE_DESCRIPTION = jsonData.siteDescription || 'Your ultimate cosplay destination';
 
 const blogId = '82152357935';
@@ -67,7 +72,7 @@ export async function getStaticPaths() {
         return (
           <>
             {section.type === 'welcomeSection' && (
-               <Welcome
+              <Welcome
                 title={section.title}
                 description={section.description}
                 blogLink={`/${lang}${section.blogLink}`}
@@ -100,7 +105,6 @@ export async function getStaticPaths() {
               <ProductShowcase
                 title={section.title}
                 description={section.description}
-                products={section.products}
                 viewAllLink={`/${lang}${section.viewAllLink}`}
                 collectionHandle={section.collectionHandle}
                 lang={lang}

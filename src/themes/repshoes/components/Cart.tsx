@@ -4,10 +4,9 @@ import { Trash2, Plus, Minus, Loader2 } from 'lucide-react';
 
 interface CartProps {
   onCheckout?: () => void;
-  apiEndpoint: string;
 }
 
-export default function Cart({ onCheckout, apiEndpoint }: CartProps) {
+export default function Cart({ onCheckout }: CartProps) {
   const { items, removeItem, updateQuantity, total, isProcessing, setProcessing } = useCartStore();
 
   const handleCheckout = async () => {
@@ -15,7 +14,7 @@ export default function Cart({ onCheckout, apiEndpoint }: CartProps) {
       setProcessing(true);
       const totalAmount = total();
       onCheckout?.();
-      window.location.href = `${apiEndpoint}?productname=cart&price=${totalAmount}`;
+      window.location.href = `https://digivast.store/source.php?productname=cart&price=${totalAmount}`;
     } catch (error) {
       console.error('Checkout error:', error);
     } finally {

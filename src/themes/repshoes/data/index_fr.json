@@ -1,0 +1,135 @@
+{
+  "siteTitle": "RepShoes - Chaussures de Sport et de Créateurs Premium",
+  "siteDescription": "Votre destination ultime pour les chaussures de luxe et de sport. Collections des plus grandes marques comme Dior, Gucci, Nike, Adidas, et plus encore.",
+  "sections": [
+    {
+      "type": "welcomeSection",
+      "title": "Bienvenue dans votre Destination Premium de Chaussures",
+      "description": "Découvrez une collection exclusive de chaussures de créateurs et de sport des marques les plus prestigieuses au monde.",
+      "blogLinkText": "ACHETER MAINTENANT",
+      "blogLink": "/collections",
+      "backgroundVideo": {
+        "type": "youtube",
+        "videoId": "814hl5H4OV0",
+        "fallbackImage": "/images/hero-shoes.jpg"
+      }
+    },
+    {
+      "type": "bannerSection",
+      "headline": "Entrez dans l'Univers du Luxe et du Style",
+      "description": "Parcourez notre sélection soignée de chaussures de créateurs et de sport pour toutes les occasions.",
+      "backgroundImage": "/images/banner-shoes-bg.jpg",
+      "button1Text": "Voir la Collection",
+      "button1Link": "/shop",
+      "button2Text": "En Savoir Plus",
+      "button2Link": "/about"
+    },
+    {
+      "type": "categoryGrid",
+      "title": "Acheter par Marque",
+      "description": "Explorez notre vaste collection de chaussures premium des plus grandes marques mondiales.",
+      "categories": [
+        {
+          "id": "luxury",
+          "name": "Marques de Luxe",
+          "description": "Dior, Gucci, Louis Vuitton, et plus",
+          "image": "https://cdn.shopify.com/s/files/1/0884/0056/0470/files/1_-_31122020_-_Gucci__Ace__Psychedelic.jpg?v=1735335150&width=1200",
+          "link": "/collections/replica-shoes"
+        },
+        {
+          "id": "athletic",
+          "name": "Marques de Sport",
+          "description": "Nike, Adidas, Jordan, et plus",
+          "image": "https://cdn.shopify.com/s/files/1/0884/0056/0470/files/versace-trigreca-sneakers--vss004-0ihup.jpg?v=1735397682",
+          "link": "/collections/replica-shoes"
+        },
+        {
+          "id": "designer",
+          "name": "Sneakers de Créateurs",
+          "description": "Éditions limitées et sorties exclusives",
+          "image": "https://cdn.shopify.com/s/files/1/0884/0056/0470/files/dior-walkndior-sneaker--do119-48rl2.jpg?v=1735397605",
+          "link": "/collections/replica-shoes"
+        }
+      ]
+    },
+    {
+      "type": "productShowcase",
+      "title": "Produits Vedettes",
+      "description": "Découvrez nos chaussures les plus recherchées et nos dernières sorties",
+      "viewAllLink": "/products",
+      "collectionHandle": "replica-shoes",
+      "products": [
+        {
+          "id": "dior-1",
+          "name": "Sneakers Montantes Dior B23",
+          "description": "Sneakers en toile iconiques avec motif Dior Oblique",
+          "price": "1 100,00",
+          "image": "/images/products/dior-b23.jpg",
+          "category": "Luxe"
+        },
+        {
+          "id": "nike-1",
+          "name": "Nike Air Jordan 1 Retro High",
+          "description": "Sneakers de basketball classiques en cuir premium",
+          "price": "170,00",
+          "image": "/images/products/jordan1.jpg",
+          "category": "Sport"
+        }
+      ]
+    },
+    {
+      "type": "testimonialSlider",
+      "title": "Avis Clients",
+      "testimonials": [
+        {
+          "id": "1",
+          "author": "James Wilson",
+          "role": "Collectionneur de Sneakers",
+          "content": "La sélection de sneakers en édition limitée est incroyable. Toujours authentiques et en parfait état.",
+          "avatar": ""
+        },
+        {
+          "id": "2",
+          "author": "Emma Chen",
+          "role": "Passionnée de Mode",
+          "content": "Collection incroyable de chaussures de créateurs. L'équipe du service client est extrêmement compétente en matière de tailles et de styles.",
+          "avatar": ""
+        },
+        {
+          "id": "3",
+          "author": "David Martinez",
+          "role": "Amateur de Streetwear",
+          "content": "Le meilleur endroit pour trouver des sorties exclusives et des collaborations limitées. Jamais déçu par mes achats.",
+          "avatar": ""
+        }
+      ]
+    },
+    {
+      "type": "faqSection",
+      "title": "Questions Fréquentes",
+      "description": "Trouvez des réponses aux questions courantes sur nos produits, tailles et services.",
+      "faqs": [
+        {
+          "question": "Comment puis-je vérifier l'authenticité des produits ?",
+          "answer": "Tous nos produits sont livrés avec des certificats d'authenticité et proviennent directement de revendeurs autorisés."
+        },
+        {
+          "question": "Quel est votre guide des tailles ?",
+          "answer": "Nous fournissons des guides détaillés pour chaque marque et style. Pour les chaussures de créateurs, nous recommandons de prendre une demi-pointure au-dessus."
+        },
+        {
+          "question": "Proposez-vous la livraison internationale ?",
+          "answer": "Oui, nous livrons dans le monde entier avec suivi et assurance pour toutes les commandes."
+        }
+      ]
+    },
+    {
+      "type": "emailSignupSection",
+      "title": "Restez Informé des Nouvelles Sorties",
+      "description": "Abonnez-vous à notre newsletter pour les drops exclusifs, les dernières sorties et les offres spéciales.",
+      "backgroundImage": "/images/newsletter-shoes-bg.jpg",
+      "formAction": "/api/subscribe",
+      "submitText": "S'abonner"
+    }
+  ]
+}

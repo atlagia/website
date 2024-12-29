@@ -1,0 +1,49 @@
+ ---
+import Layout from '@layouts/Layoutp.astro';
+import ProductCard from '@themes/default/components/ProductCard';
+import { searchProducts } from '../../lib/shopify';
+
+const { lang } = Astro.params;
+const query = Astro.url.searchParams.get('q') || '';
+const results = await searchProducts(query);
+
+const translations = {
+  en: {
+    title: "Search Results",
+    noResults: "No products found for",
+    resultsFor: "Results for"
+  },
+  fr: {
+    title: "Résultats de recherche",
+    noResults: "Aucun produit trouvé pour",
+    resultsFor: "Résultats pour"
+  },
+  // Add more languages as needed
+};
+
+const t = translations[lang] || translations.en;
+---
+
+<Layout title={`${t.title} - ${query}`}>
+  <main class="max-w-7xl mx-auto px-4 py-8">
+    <h1 class="text-2xl font-bold mb-6">
+      {results.length > 0 ? `${t.resultsFor} "${query}"` : `${t.noResults} "${query}"`}
+    </h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+      {results.map((product) => (
+        <ProductCard
+          client:load
+          id={product.node.id}
+          title={product.node.title}
+          price={parseFloat(product.node.priceRange.minVariantPrice.amount)}
+          image={product.node.images.edges[0]?.node.url}
+          imageAlt={product.node.title}
+          description={product.node.description}
+          handle={product.node.handle}
+          lang={lang}
+        />
+      ))}
+    </div>
+  </main>
+</Layout>
