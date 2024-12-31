@@ -47,10 +47,18 @@ export default function Header({
   apiEndpoint,
   searchConfig
 }: HeaderProps) {
-  // Extract initial language from current path
+  // Extract initial language and handle path parsing
   const getInitialLanguage = () => {
-    const pathLang = currentPath.split('/')[1]; // Get language from URL path
-    return languages[pathLang] ? pathLang : 'en'; // Fallback to 'en' if invalid
+    const pathParts = currentPath.split('/');
+    // Check if path starts with a language code
+    const pathLang = pathParts[1];
+    
+    // If path doesn't start with language code (e.g., /products/...)
+    if (!languages[pathLang]) {
+      return 'en'; // Default to English
+    }
+    
+    return pathLang;
   };
 
   const { isOpen, setIsOpen, items } = useCartStore();
@@ -62,7 +70,9 @@ export default function Header({
 
   // Update language when URL changes
   useEffect(() => {
-    const pathLang = currentPath.split('/')[1];
+    const pathParts = currentPath.split('/');
+    const pathLang = pathParts[1];
+    
     if (languages[pathLang] && pathLang !== language) {
       setLanguage(pathLang);
     }
@@ -76,14 +86,25 @@ export default function Header({
 
   const currentMenuItems = getCurrentMenuItems();
 
-  // Handle language change with path update
+  // Modified language change handler
   const changeLanguage = (newLang: string) => {
     const currentLang = language;
     setLanguage(newLang);
     setShowLanguageMenu(false);
     
-    // Update URL to new language
-    const newPath = currentPath.replace(`/${currentLang}/`, `/${newLang}/`);
+    // Handle URL update with proper fallback
+    let newPath = currentPath;
+    
+    // If current path doesn't start with a language code
+    if (!currentPath.match(/^\/[a-z]{2}\//)) {
+      // Add language code to the beginning
+      newPath = `/${newLang}${currentPath}`;
+    } else {
+      // Replace existing language code
+      newPath = currentPath.replace(`/${currentLang}/`, `/${newLang}/`);
+    }
+    
+    // Update URL
     window.location.href = newPath;
     
     localStorage.setItem('preferred-language', newLang);

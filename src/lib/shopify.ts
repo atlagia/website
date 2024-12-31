@@ -821,7 +821,7 @@ export async function getPaginatedProducts(page: number = 1, limit: number = 20)
 // Update saveTranslatedProductsToMongo to handle large product sets
 async function saveTranslatedProductsToMongo(collection: any, products: any[], language: string) {
   try {
-    const BATCH_SIZE = 1000; // Maximum products per document
+    const BATCH_SIZE = 700; // Maximum products per document
     const totalProducts = products.length;
     const batches = Math.ceil(totalProducts / BATCH_SIZE);
 

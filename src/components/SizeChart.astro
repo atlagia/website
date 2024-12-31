@@ -30,6 +30,34 @@ const commonSizes = {
 function getProductType(title: string): string {
   const title_lower = title.toLowerCase();
   
+  // First priority: Check PROJECT_TYPE
+  if (PROJECT_TYPE === 'repshoes') {
+    return 'shoes';
+  }
+  
+  // Second priority: Check title for shoe-related terms
+  if (title_lower.includes('shoe') ||
+      title_lower.includes('sneaker') ||
+      title_lower.includes('trainer') ||
+      title_lower.includes('footwear') ||
+      title_lower.includes('boot') ||
+      title_lower.includes('sandal') ||
+      title_lower.includes('slipper') ||
+      title_lower.includes('loafer') ||
+      title_lower.includes('heel') ||
+      title_lower.includes('oxford') ||
+      title_lower.includes('moccasin') ||
+      title_lower.includes('espadrille') ||
+      title_lower.includes('pump') ||
+      title_lower.includes('flat') ||
+      title_lower.includes('derby') ||
+      title_lower.includes('brogue') ||
+      title_lower.includes('mule') ||
+      title_lower.includes('clog')) {
+    return 'shoes';
+  }
+  
+  // Third priority: Check for clothing terms
   if (title_lower.includes('shirt') || 
       title_lower.includes('hoodie') || 
       title_lower.includes('jacket') || 
@@ -37,9 +65,13 @@ function getProductType(title: string): string {
       title_lower.includes('vest')) {
     return 'clothing';
   }
-  // ... rest of type detection
-  return null;
+  
+  // Default fallback based on PROJECT_TYPE
+  return PROJECT_TYPE === 'shoes' ? 'shoes' : null;
 }
+
+// Get PROJECT_TYPE from environment variables at the top of the file
+const PROJECT_TYPE = import.meta.env.PROJECT_TYPE || 'default';
 
 // Get content for current language, fallback to English
 const content = sizeChartContent[language] || sizeChartContent['en'];
@@ -50,7 +82,7 @@ const chartContent = productType && content.charts[productType];
 ---
 
 {chartContent && (
-  <div class="border-t pt-8">
+  <div id="size-chart" class="border-t pt-8">
     <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />

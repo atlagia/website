@@ -14,6 +14,12 @@ const PROJECT_TYPE = import.meta.env.PROJECT_TYPE || 'default';
 function getProductCategory(title: string): string {
   const title_lower = title.toLowerCase();
   
+  // First priority: Check PROJECT_TYPE
+  if (PROJECT_TYPE === 'repshoes') {
+    return 'shoes';
+  }
+  
+  // Second priority: Check if it's a digital product
   if (PROJECT_TYPE === 'degital') {
     if (title_lower.includes('template') || title_lower.includes('theme')) {
       return 'template';
@@ -27,15 +33,53 @@ function getProductCategory(title: string): string {
     return 'digital'; // default digital fallback
   }
   
-  // Original physical product categories
-  if (title_lower.includes('jacket') || title_lower.includes('coat')) {
-    return 'jacket';
-  }
-  if (title_lower.includes('shoe') || title_lower.includes('boot')) {
+  // Third priority: Check title for shoe-related terms
+  if (title_lower.includes('shoes') || 
+      title_lower.includes('boot') ||
+      title_lower.includes('sneaker') ||
+      title_lower.includes('trainer') ||
+      title_lower.includes('footwear') ||
+      title_lower.includes('sandal') ||
+      title_lower.includes('slipper') ||
+      title_lower.includes('loafer') ||
+      title_lower.includes('heel') ||
+      title_lower.includes('oxford') ||
+      title_lower.includes('moccasin') ||
+      title_lower.includes('espadrille') ||
+      title_lower.includes('pump') ||
+      title_lower.includes('flat') ||
+      title_lower.includes('derby') ||
+      title_lower.includes('brogue') ||
+      title_lower.includes('mule') ||
+      title_lower.includes('clog')) {
     return 'shoes';
   }
   
-  return PROJECT_TYPE === 'degital' ? 'digital' : 'jacket'; // default fallback
+  // Original physical product categories
+  if (title_lower.includes('jacket') || 
+      title_lower.includes('coat') ||
+      title_lower.includes('blazer') ||
+      title_lower.includes('parka') ||
+      title_lower.includes('windbreaker') ||
+      title_lower.includes('bomber') ||
+      title_lower.includes('cardigan') ||
+      title_lower.includes('hoodie') ||
+      title_lower.includes('sweater') ||
+      title_lower.includes('pullover') ||
+      title_lower.includes('vest') ||
+      title_lower.includes('gilet') ||
+      title_lower.includes('anorak') ||
+      title_lower.includes('raincoat') ||
+      title_lower.includes('overcoat') ||
+      title_lower.includes('peacoat') ||
+      title_lower.includes('trench') ||
+      title_lower.includes('duster') ||
+      title_lower.includes('puffer') ||
+      title_lower.includes('down jacket')) {
+    return 'jacket';
+  }
+  
+  return PROJECT_TYPE === 'shoes' ? 'shoes' : 'jacket'; // default fallback
 }
 
 // Get content for current language or fallback to English
