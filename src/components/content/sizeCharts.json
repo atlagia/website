@@ -70,6 +70,242 @@
           "Breite: Messen Sie von Schulter zu Schulter",
           "Länge: Messen Sie vom höchsten Punkt der Schulter bis zum Saum"
         ]
+      },
+      "shoes": {
+        "headers": ["US", "UK", "EU", "CM"],
+        "tips": [
+          "Messen Sie Ihre Fußlänge am Abend (Füße schwellen tagsüber an)",
+          "Stehen Sie während der Messung für eine genaue Größenbestimmung",
+          "Fügen Sie 0,5 cm für eine komfortable Passform hinzu"
+        ]
+      }
+    }
+  },
+  "es": {
+    "title": "Tabla de Tallas para ",
+    "measurementTips": "Consejos de Medición",
+    "charts": {
+      "clothing": {
+        "headers": ["Talla", "Pecho (A)", "Ancho (B)", "Largo (C)"],
+        "tips": [
+          "Pecho: Mida alrededor de la parte más ancha de su pecho",
+          "Ancho: Mida de hombro a hombro",
+          "Largo: Mida desde el punto más alto del hombro hasta el dobladillo"
+        ]
+      },
+      "shoes": {
+        "headers": ["US", "UK", "EU", "CM"],
+        "tips": [
+          "Mida sus pies por la tarde (los pies se hinchan durante el día)",
+          "Manténgase de pie mientras mide para un tamaño preciso",
+          "Añada 0,5 cm para un ajuste cómodo"
+        ]
+      },
+      "gloves": {
+        "headers": ["Talla", "Ancho de Palma", "Largo", "Circunferencia"],
+        "tips": [
+          "Mida alrededor de la palma en su punto más ancho",
+          "Mida desde la muñeca hasta la punta del dedo medio",
+          "Elija una talla más grande si está entre tallas"
+        ]
+      },
+      "helmets": {
+        "headers": ["Talla", "Circunferencia de Cabeza", "Talla de Gorro"],
+        "tips": [
+          "Mida alrededor de su cabeza aproximadamente 2,5 cm por encima de las cejas",
+          "Tome varias medidas para mayor precisión",
+          "Considere el volumen del cabello al medir"
+        ]
+      }
+    }
+  },
+  "it": {
+    "title": "Tabella delle Taglie per ",
+    "measurementTips": "Consigli per la Misurazione",
+    "charts": {
+      "clothing": {
+        "headers": ["Taglia", "Petto (A)", "Larghezza (B)", "Lunghezza (C)"],
+        "tips": [
+          "Petto: Misurare intorno alla parte più ampia del petto",
+          "Larghezza: Misurare da spalla a spalla",
+          "Lunghezza: Misurare dal punto più alto della spalla all'orlo"
+        ]
+      },
+      "shoes": {
+        "headers": ["US", "UK", "EU", "CM"],
+        "tips": [
+          "Misurare i piedi la sera (i piedi si gonfiano durante il giorno)",
+          "Stare in piedi durante la misurazione per una taglia accurata",
+          "Aggiungere 0,5 cm per una calzata comoda"
+        ]
+      },
+      "gloves": {
+        "headers": ["Taglia", "Larghezza Palmo", "Lunghezza", "Circonferenza"],
+        "tips": [
+          "Misurare intorno al palmo nel punto più largo",
+          "Misurare dal polso alla punta del dito medio",
+          "Scegliere la taglia più grande se si è tra due taglie"
+        ]
+      },
+      "helmets": {
+        "headers": ["Taglia", "Circonferenza Testa", "Taglia Cappello"],
+        "tips": [
+          "Misurare intorno alla testa circa 2,5 cm sopra le sopracciglia",
+          "Prendere più misurazioni per maggiore precisione",
+          "Considerare il volume dei capelli durante la misurazione"
+        ]
+      }
+    }
+  },
+  "pt": {
+    "title": "Tabela de Tamanhos para ",
+    "measurementTips": "Dicas de Medição",
+    "charts": {
+      "clothing": {
+        "headers": ["Tamanho", "Peito (A)", "Largura (B)", "Comprimento (C)"],
+        "tips": [
+          "Peito: Meça ao redor da parte mais larga do seu peito",
+          "Largura: Meça de ombro a ombro",
+          "Comprimento: Meça do ponto mais alto do ombro até a bainha"
+        ]
+      },
+      "shoes": {
+        "headers": ["US", "UK", "EU", "CM"],
+        "tips": [
+          "Meça seus pés à noite (os pés incham durante o dia)",
+          "Fique em pé durante a medição para um tamanho preciso",
+          "Adicione 0,5 cm para um ajuste confortável"
+        ]
+      },
+      "gloves": {
+        "headers": ["Tamanho", "Largura da Palma", "Comprimento", "Circunferência"],
+        "tips": [
+          "Meça ao redor da palma no ponto mais largo",
+          "Meça do pulso até a ponta do dedo médio",
+          "Escolha o tamanho maior se estiver entre dois tamanhos"
+        ]
+      },
+      "helmets": {
+        "headers": ["Tamanho", "Circunferência da Cabeça", "Tamanho do Chapéu"],
+        "tips": [
+          "Meça ao redor da cabeça aproximadamente 2,5 cm acima das sobrancelhas",
+          "Faça várias medições para maior precisão",
+          "Considere o volume do cabelo ao medir"
+        ]
+      }
+    }
+  },
+  "nl": {
+    "title": "Maattabel voor ",
+    "measurementTips": "Meetinstructies",
+    "charts": {
+      "clothing": {
+        "headers": ["Maat", "Borst (A)", "Breedte (B)", "Lengte (C)"],
+        "tips": [
+          "Borst: Meet rond het breedste deel van uw borst",
+          "Breedte: Meet van schouder tot schouder",
+          "Lengte: Meet vanaf het hoogste punt van de schouder tot aan de zoom"
+        ]
+      },
+      "shoes": {
+        "headers": ["US", "UK", "EU", "CM"],
+        "tips": [
+          "Meet uw voeten 's avonds (voeten zwellen gedurende de dag)",
+          "Sta rechtop tijdens het meten voor een nauwkeurige maat",
+          "Voeg 0,5 cm toe voor een comfortabele pasvorm"
+        ]
+      },
+      "gloves": {
+        "headers": ["Maat", "Handpalm Breedte", "Lengte", "Omtrek"],
+        "tips": [
+          "Meet rond de handpalm op het breedste punt",
+          "Meet vanaf de pols tot de top van de middelvinger",
+          "Kies een grotere maat als u tussen twee maten zit"
+        ]
+      },
+      "helmets": {
+        "headers": ["Maat", "Hoofdomtrek", "Hoedmaat"],
+        "tips": [
+          "Meet rond uw hoofd ongeveer 2,5 cm boven uw wenkbrauwen",
+          "Neem meerdere metingen voor nauwkeurigheid",
+          "Houd rekening met haarvolume bij het meten"
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Таблица размеров для ",
+    "measurementTips": "Советы по измерению",
+    "charts": {
+      "clothing": {
+        "headers": ["Размер", "Грудь (A)", "Ширина (B)", "Длина (C)"],
+        "tips": [
+          "Грудь: Измерьте вокруг самой широкой части груди",
+          "Ширина: Измерьте от плеча до плеча",
+          "Длина: Измерьте от высшей точки плеча до нижнего края"
+        ]
+      },
+      "shoes": {
+        "headers": ["US", "UK", "EU", "СМ"],
+        "tips": [
+          "Измеряйте ноги вечером (в течение дня ноги отекают)",
+          "Измеряйте стоя для точного определения размера",
+          "Добавьте 0,5 см для комфортной посадки"
+        ]
+      },
+      "gloves": {
+        "headers": ["Размер", "Ширина ладони", "Длина", "Обхват"],
+        "tips": [
+          "Измерьте обхват ладони в самом широком месте",
+          "Измерьте от запястья до кончика среднего пальца",
+          "Если размер промежуточный, выберите больший"
+        ]
+      },
+      "helmets": {
+        "headers": ["Размер", "Обхват головы", "Размер шапки"],
+        "tips": [
+          "Измерьте окружность головы примерно в 2,5 см над бровями",
+          "Сделайте несколько измерений для точности",
+          "Учитывайте объем волос при измерении"
+        ]
+      }
+    }
+  },
+  "ar": {
+    "title": "جدول المقاسات لـ ",
+    "measurementTips": "نصائح القياس",
+    "charts": {
+      "clothing": {
+        "headers": ["المقاس", "الصدر (أ)", "العرض (ب)", "الطول (ج)"],
+        "tips": [
+          "الصدر: قم بالقياس حول أوسع جزء من الصدر",
+          "العرض: قم بالقياس من الكتف إلى الكتف",
+          "الطول: قم بالقياس من أعلى نقطة في الكتف إلى الحافة السفلية"
+        ]
+      },
+      "shoes": {
+        "headers": ["US", "UK", "EU", "سم"],
+        "tips": [
+          "قم بقياس قدميك في المساء (تتورم الأقدام خلال النهار)",
+          "قف أثناء القياس للحصول على مقاس دقيق",
+          "أضف 0.5 سم للراحة"
+        ]
+      },
+      "gloves": {
+        "headers": ["المقاس", "عرض الكف", "الطول", "المحيط"],
+        "tips": [
+          "قم بالقياس حول راحة اليد في أعرض نقطة",
+          "قم بالقياس من المعصم إلى طرف الإصبع الوسطى",
+          "اختر المقاس الأكبر إذا كان مقاسك بين مقاسين"
+        ]
+      },
+      "helmets": {
+        "headers": ["المقاس", "محيط الرأس", "مقاس القبعة"],
+        "tips": [
+          "قم بالقياس حول رأسك على بعد 2.5 سم فوق الحاجبين",
+          "خذ عدة قياسات للدقة",
+          "ضع في الاعتبار حجم الشعر عند القياس"
+        ]
       }
     }
   }

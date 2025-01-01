@@ -61,6 +61,16 @@
           "Reinforced heel",
           "Water-resistant"
         ]
+      },
+      "bag": {
+        "features": [
+          "Premium leather construction",
+          "Spacious 25L capacity",
+          "Water-resistant coating",
+          "Multiple compartments",
+          "Durable hardware",
+          "Adjustable straps"
+        ]
       }
     }
   },
@@ -87,6 +97,26 @@
           "UI/UX moderne"
         ]
       },
+      "plugin": {
+        "features": [
+          "Installation facile",
+          "Mises à jour régulières",
+          "Performance optimisée",
+          "Sécurité renforcée",
+          "Intégration API",
+          "Documentation complète"
+        ]
+      },
+      "script": {
+        "features": [
+          "Performance optimisée",
+          "Code bien documenté",
+          "Personnalisation facile",
+          "Support multi-plateformes",
+          "Mises à jour régulières",
+          "Support technique"
+        ]
+      },
       "jacket": {
         "features": [
           "Matériaux de qualité premium",
@@ -106,12 +136,62 @@
           "Talon renforcé",
           "Résistant à l'eau"
         ]
+      },
+      "bag": {
+        "features": [
+          "Construction en cuir premium",
+          "Capacité spacieuse de 25L",
+          "Revêtement hydrofuge",
+          "Compartiments multiples",
+          "Matériel durable",
+          "Sangles ajustables"
+        ]
       }
     }
   },
   "de": {
     "title": "Hauptmerkmale",
     "categories": {
+      "digital": {
+        "features": [
+          "Sofortige digitale Lieferung",
+          "Lebenslange Updates",
+          "Technische Dokumentation",
+          "Premium Support",
+          "Einfache Integration",
+          "Regelmäßige Wartung"
+        ]
+      },
+      "template": {
+        "features": [
+          "Responsives Design",
+          "Browser-übergreifend kompatibel",
+          "SEO-optimiert",
+          "Klare Code-Struktur",
+          "Einfache Anpassung",
+          "Moderne UI/UX"
+        ]
+      },
+      "plugin": {
+        "features": [
+          "Einfache Installation",
+          "Regelmäßige Updates",
+          "Leistungsoptimiert",
+          "Sicherheitsfokussiert",
+          "API-Integration",
+          "Umfangreiche Dokumentation"
+        ]
+      },
+      "script": {
+        "features": [
+          "Optimierte Leistung",
+          "Gut dokumentierter Code",
+          "Einfache Anpassung",
+          "Plattformübergreifender Support",
+          "Regelmäßige Updates",
+          "Technischer Support"
+        ]
+      },
       "jacket": {
         "features": [
           "Premium-Qualitätsmaterialien",
@@ -120,6 +200,26 @@
           "Verstellbare Kapuze",
           "Gerippte Bündchen",
           "Strapazierfähige Nähte"
+        ]
+      },
+      "bag": {
+        "features": [
+          "Premium-Lederkonstruktion",
+          "Geräumiges 25L-Volumen",
+          "Wasserabweisende Beschichtung",
+          "Mehrere Fächer",
+          "Langlebige Hardware",
+          "Verstellbare Riemen"
+        ]
+      },
+      "shoes": {
+        "features": [
+          "Premium-Leder Obermaterial",
+          "Gepolsterte Einlegesohle",
+          "Rutschfeste Gummisohle",
+          "Atmungsaktives Design",
+          "Verstärkte Ferse",
+          "Wasserabweisend"
         ]
       }
     }

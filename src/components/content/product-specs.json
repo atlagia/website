@@ -57,6 +57,14 @@
           { "label": "Weight", "value": "1500g ±50g" },
           { "label": "Ventilation", "value": "Advanced airflow system" }
         ]
+      },
+      "bag": {
+        "specs": [
+          { "label": "Material", "value": "Premium leather" },
+          { "label": "Capacity", "value": "25L" },
+          { "label": "Water Resistance", "value": "Water-resistant coating" },
+          { "label": "Care", "value": "Spot clean with mild soap" }
+        ]
       }
     }
   },
@@ -110,6 +118,14 @@
           { "label": "Origine", "value": "Fabriqué en Italie" },
           { "label": "Entretien", "value": "Nettoyer avec un nettoyant pour cuir" }
         ]
+      },
+      "bag": {
+        "specs": [
+          { "label": "Matériau", "value": "Cuir premium" },
+          { "label": "Capacité", "value": "25L" },
+          { "label": "Résistance à l'eau", "value": "Revêtement hydrofuge" },
+          { "label": "Entretien", "value": "Nettoyage ponctuel avec savon doux" }
+        ]
       }
     }
   },
@@ -154,6 +170,14 @@
           { "label": "Gewicht", "value": "220g (mittelgewicht)" },
           { "label": "Herkunft", "value": "Hergestellt in USA" },
           { "label": "Pflege", "value": "Maschinenwaschbar" }
+        ]
+      },
+      "bag": {
+        "specs": [
+          { "label": "Material", "value": "Premium-Leder" },
+          { "label": "Kapazität", "value": "25L" },
+          { "label": "Wasserbeständigkeit", "value": "Wasserabweisende Beschichtung" },
+          { "label": "Pflege", "value": "Punktuelle Reinigung mit milder Seife" }
         ]
       }
     }

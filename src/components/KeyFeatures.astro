@@ -12,12 +12,15 @@ const { productTitle, language = 'en' } = Astro.props;
 const PROJECT_TYPE = import.meta.env.PROJECT_TYPE || 'default';
 
 function getProductCategory(title: string): string {
-  const title_lower = title.toLowerCase();
-  
-  // First priority: Check PROJECT_TYPE
+  // First priority: Check PROJECT_TYPE for rep products
+  if (PROJECT_TYPE === 'repbag') {
+    return 'bag';
+  }
   if (PROJECT_TYPE === 'repshoes') {
     return 'shoes';
   }
+  
+  const title_lower = title.toLowerCase();
   
   // Second priority: Check if it's a digital product
   if (PROJECT_TYPE === 'degital') {

@@ -2,11 +2,11 @@ export const luxuryHeaderStyle = {
   wrapper: "bg-white shadow-sm sticky top-0 z-[100]",
   container: "max-w-7xl mx-auto px-4",
   nav: {
-    wrapper: "flex items-center justify-between h-16",
-    brand: "font-['Montserrat'] text-2xl font-light tracking-wide",
+    wrapper: "flex items-center justify-between w-full relative",
+    brand: "text-xl font-bold",
     menu: {
-      wrapper: "hidden md:flex space-x-8",
-      item: "font-['Montserrat'] text-sm font-light tracking-wide text-gray-700 hover:text-black"
+      wrapper: "hidden lg:flex lg:items-center lg:space-x-4",
+      item: "px-4 py-2 text-gray-700 hover:text-gray-900 transition-colors duration-200"
     }
   },
   actions: {

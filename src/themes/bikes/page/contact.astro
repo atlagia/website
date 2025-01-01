@@ -4,29 +4,48 @@ import { Mail, Phone, MapPin } from 'lucide-react';
 
 const theme = import.meta.env.THEME || 'default';
 
-// Properly handle dynamic imports with default exports
 const { default: BaseHead } = await import(`../components/BaseHead.astro`);
 const { default: Header } = await import(`../components/Header.astro`);
 const { default: Footer } = await import(`../components/Footer.astro`);
+
+// Get business information from environment variables
+const businessInfo = {
+  name: import.meta.env.PUBLIC_BUSINESS_NAME || 'GlamorFoot',
+  email: import.meta.env.PUBLIC_BUSINESS_EMAIL || 'privacy@glamorfoot.com',
+  phone: import.meta.env.PUBLIC_BUSINESS_PHONE || '+905417874673',
+  address: {
+    street: import.meta.env.PUBLIC_BUSINESS_ADDRESS || 'Osmanağa, Kuşdili Cd. 48A',
+    city: import.meta.env.PUBLIC_BUSINESS_CITY || 'Kadıköy',
+    region: import.meta.env.PUBLIC_BUSINESS_REGION || 'İstanbul',
+    country: import.meta.env.PUBLIC_BUSINESS_COUNTRY || 'Turkey',
+    postalCode: import.meta.env.PUBLIC_BUSINESS_POSTAL_CODE || '34714'
+  },
+  support: {
+    hours: import.meta.env.PUBLIC_SUPPORT_HOURS || 'Monday - Friday, 9 AM - 6 PM (GMT+3)',
+    email: import.meta.env.PUBLIC_SUPPORT_EMAIL || 'returns@glamorfoot.com'
+  }
+};
 
 const contactInfo = [
   {
     icon: Mail,
     title: 'Email',
-    content: 'support@ridwear.com',
-    link: 'mailto:support@ridwear.com'
+    content: businessInfo.support.email,
+    link: `mailto:${businessInfo.support.email}`
   },
   {
     icon: Phone,
     title: 'Phone',
-    content: '1-800-RIDWEAR',
-    link: 'tel:18007439327'
+    content: businessInfo.phone,
+    link: `tel:${businessInfo.phone}`
   },
   {
     icon: MapPin,
     title: 'Address',
-    content: '123 Rider Street, Bike City, BC 12345',
-    link: 'https://maps.google.com'
+    content: `${businessInfo.address.street}, ${businessInfo.address.city}`,
+    link: `https://maps.google.com/maps?q=${encodeURIComponent(
+      `${businessInfo.address.street}, ${businessInfo.address.city}, ${businessInfo.address.country}`
+    )}`
   }
 ];
 ---
@@ -35,8 +54,8 @@ const contactInfo = [
 <html lang="en">
   <head>
     <BaseHead 
-      title={`Contact Us | ${SITE_TITLE}`}
-      description="Get in touch with RidWear for any questions about motorcycle gear, orders, or partnerships."
+      title={`Contact Us | ${businessInfo.name}`}
+      description={`Get in touch with ${businessInfo.name} for any questions about our products, orders, or partnerships.`}
     />
   </head>
   <body>

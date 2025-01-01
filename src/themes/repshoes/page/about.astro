@@ -3,34 +3,47 @@ import { SITE_TITLE } from '../consts';
 
 const theme = import.meta.env.THEME || 'default';
 
-// Properly handle dynamic imports with default exports
 const { default: BaseHead } = await import(`../components/BaseHead.astro`);
 const { default: Header } = await import(`../components/Header.astro`);
 const { default: Footer } = await import(`../components/Footer.astro`);
+
+// Get business information from environment variables
+const businessInfo = {
+  name: import.meta.env.PUBLIC_BUSINESS_NAME || 'GlamorFoot',
+  email: import.meta.env.PUBLIC_BUSINESS_EMAIL || 'privacy@glamorfoot.com',
+  phone: import.meta.env.PUBLIC_BUSINESS_PHONE || '+905417874673',
+  address: {
+    street: import.meta.env.PUBLIC_BUSINESS_ADDRESS || 'Osmanağa, Kuşdili Cd. 48A',
+    city: import.meta.env.PUBLIC_BUSINESS_CITY || 'Kadıköy',
+    region: import.meta.env.PUBLIC_BUSINESS_REGION || 'İstanbul',
+    country: import.meta.env.PUBLIC_BUSINESS_COUNTRY || 'Turkey',
+    postalCode: import.meta.env.PUBLIC_BUSINESS_POSTAL_CODE || '34714'
+  }
+};
 
 const team = [
   {
     name: 'Sarah Johnson',
     role: 'Founder & CEO',
     image: '/images/team/sarah.jpg',
-    bio: 'Passionate motorcyclist with 15+ years of experience in the industry.'
+    bio: 'Passionate about fashion with 15+ years of experience in the industry.'
   },
   {
     name: 'Mike Rodriguez',
     role: 'Head of Product',
     image: '/images/team/mike.jpg',
-    bio: 'Former professional racer turned gear expert.'
+    bio: 'Former fashion buyer turned product expert.'
   },
   {
     name: 'Emily Chen',
     role: 'Customer Experience',
     image: '/images/team/emily.jpg',
-    bio: 'Dedicated to ensuring riders find their perfect gear match.'
+    bio: 'Dedicated to ensuring customers find their perfect style match.'
   }
 ];
 
 const stats = [
-  { value: '10K+', label: 'Happy Riders' },
+  { value: '10K+', label: 'Happy Customers' },
   { value: '1000+', label: 'Products' },
   { value: '24/7', label: 'Support' },
   { value: '50+', label: 'Brand Partners' }
@@ -41,8 +54,8 @@ const stats = [
 <html lang="en">
   <head>
     <BaseHead 
-      title={`About Us | ${SITE_TITLE}`}
-      description="Learn about RidWear's mission to provide the best motorcycle gear and create a community of passionate riders."
+      title={`About Us | ${businessInfo.name}`}
+      description={`Learn about ${businessInfo.name}'s mission to provide the best fashion products and create a community of satisfied customers.`}
     />
   </head>
   <body>
@@ -53,7 +66,7 @@ const stats = [
         <div class="max-w-7xl mx-auto">
           <h1 class="text-4xl md:text-5xl font-bold mb-6">Our Story</h1>
           <p class="text-xl text-gray-300 max-w-2xl">
-            Founded by riders, for riders. RidWear was born from a passion for motorcycling and a desire to provide fellow enthusiasts with the best gear possible.
+            Founded by fashion enthusiasts, for fashion lovers. {businessInfo.name} was born from a passion for style and a desire to provide customers with the best products possible.
           </p>
         </div>
       </section>

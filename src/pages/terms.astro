@@ -1,0 +1,154 @@
+---
+import { getLangFromUrl, useTranslations } from '../utils/i18n';
+import { Shield, Scale, Lock, FileText } from 'lucide-react';
+
+const theme = import.meta.env.THEME || 'default';
+const { default: BaseHead } = await import(`../themes/${theme}/components/BaseHead.astro`);
+const { default: Header } = await import(`../themes/${theme}/components/Header.astro`);
+const { default: Footer } = await import(`../themes/${theme}/components/Footer.astro`);
+
+// Get business information from environment variables
+const businessInfo = {
+  name: import.meta.env.PUBLIC_BUSINESS_NAME || 'GlamorFoot',
+  email: import.meta.env.PUBLIC_BUSINESS_EMAIL || 'privacy@glamorfoot.com',
+  phone: import.meta.env.PUBLIC_BUSINESS_PHONE || '+905417874673',
+  address: {
+    street: import.meta.env.PUBLIC_BUSINESS_ADDRESS || 'Osmanağa, Kuşdili Cd. 48A',
+    city: import.meta.env.PUBLIC_BUSINESS_CITY || 'Kadıköy',
+    region: import.meta.env.PUBLIC_BUSINESS_REGION || 'İstanbul',
+    country: import.meta.env.PUBLIC_BUSINESS_COUNTRY || 'Turkey',
+    postalCode: import.meta.env.PUBLIC_BUSINESS_POSTAL_CODE || '34714'
+  }
+};
+
+const lang = getLangFromUrl(Astro.url);
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <BaseHead 
+      title={`Terms & Conditions | ${businessInfo.name}`}
+      description={`Terms and conditions for using ${businessInfo.name} services`}
+    />
+  </head>
+  <body>
+    <Header />
+    <main class="max-w-4xl mx-auto px-4 py-8">
+      <h1 class="text-4xl font-bold text-center mb-8 pt-16">Terms & Conditions</h1>
+      
+      <div class="prose max-w-none">
+        <!-- Introduction -->
+        <section class="mb-12">
+          <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-8">
+            <p class="text-blue-700">
+              Last updated: {new Date().toLocaleDateString()}. Please read these terms and conditions carefully before using our services.
+            </p>
+          </div>
+
+          <h2 class="text-2xl font-semibold mb-4 flex items-center gap-2">
+            <FileText class="w-6 h-6" /> Agreement to Terms
+          </h2>
+          <p class="text-gray-600 mb-4">
+            By accessing and using {businessInfo.name}'s website and services, you agree to be bound by these Terms and Conditions, our Privacy Policy, and any other policies referenced herein.
+          </p>
+        </section>
+
+        <!-- User Responsibilities -->
+        <section class="mb-12">
+          <h2 class="text-2xl font-semibold mb-4 flex items-center gap-2">
+            <Shield class="w-6 h-6" /> User Responsibilities
+          </h2>
+          <div class="bg-white rounded-lg shadow-md p-6">
+            <h3 class="font-semibold mb-3">Account Creation and Maintenance</h3>
+            <ul class="list-disc pl-5 space-y-2 mb-6">
+              <li>You must provide accurate and complete information when creating an account</li>
+              <li>You are responsible for maintaining the confidentiality of your account credentials</li>
+              <li>You must notify us immediately of any unauthorized use of your account</li>
+              <li>You must be at least 18 years old to create an account</li>
+            </ul>
+
+            <h3 class="font-semibold mb-3">Prohibited Activities</h3>
+            <ul class="list-disc pl-5 space-y-2">
+              <li>Using the service for any illegal purpose</li>
+              <li>Attempting to gain unauthorized access to our systems</li>
+              <li>Interfering with other users' access to the service</li>
+              <li>Submitting false or misleading information</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Purchase Terms -->
+        <section class="mb-12">
+          <h2 class="text-2xl font-semibold mb-4 flex items-center gap-2">
+            <Scale class="w-6 h-6" /> Purchase Terms
+          </h2>
+          <div class="bg-white rounded-lg shadow-md p-6">
+            <h3 class="font-semibold mb-3">Order Acceptance</h3>
+            <p class="text-gray-600 mb-4">
+              All orders are subject to acceptance and availability. We reserve the right to refuse any order without stating reasons.
+            </p>
+
+            <h3 class="font-semibold mb-3">Pricing and Payment</h3>
+            <ul class="list-disc pl-5 space-y-2 mb-6">
+              <li>All prices are listed in the currency shown and include applicable taxes</li>
+              <li>Prices are subject to change without notice</li>
+              <li>Payment must be made in full at the time of purchase</li>
+              <li>We accept various payment methods as indicated during checkout</li>
+            </ul>
+
+            <h3 class="font-semibold mb-3">Shipping and Delivery</h3>
+            <p class="text-gray-600">
+              Delivery times and costs vary by location. Please refer to our shipping policy for detailed information.
+            </p>
+          </div>
+        </section>
+
+        <!-- Privacy and Security -->
+        <section class="mb-12">
+          <h2 class="text-2xl font-semibold mb-4 flex items-center gap-2">
+            <Lock class="w-6 h-6" /> Privacy and Security
+          </h2>
+          <div class="bg-white rounded-lg shadow-md p-6">
+            <p class="text-gray-600 mb-4">
+              Your privacy is important to us. Our collection and use of your personal information is governed by our Privacy Policy.
+            </p>
+            <ul class="list-disc pl-5 space-y-2">
+              <li>We use industry-standard security measures to protect your data</li>
+              <li>We do not sell or rent your personal information to third parties</li>
+              <li>You can request access to your personal data at any time</li>
+              <li>We comply with applicable data protection regulations</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Changes to Terms -->
+        <section class="mb-12">
+          <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4">
+            <h2 class="font-semibold mb-2">Changes to Terms</h2>
+            <p class="text-gray-700">
+              We reserve the right to modify these terms at any time. Changes will be effective immediately upon posting to our website. 
+              Your continued use of our services after any changes indicates your acceptance of the modified terms.
+            </p>
+          </div>
+        </section>
+
+        <!-- Contact Information -->
+        <section class="mb-12">
+          <div class="bg-gray-50 rounded-lg p-6">
+            <h2 class="text-xl font-semibold mb-4">Contact Us</h2>
+            <p class="text-gray-600">
+              If you have any questions about these Terms & Conditions, please contact us:
+            </p>
+            <ul class="mt-4 space-y-2">
+              <li>Email: <a href={`mailto:${businessInfo.email}`} class="text-blue-600 hover:underline">{businessInfo.email}</a></li>
+              <li>Phone: <a href={`tel:${businessInfo.phone}`} class="text-blue-600 hover:underline">{businessInfo.phone}</a></li>
+              <li>Address: {businessInfo.address.street}, {businessInfo.address.postalCode} {businessInfo.address.city}/{businessInfo.address.region}, {businessInfo.address.country}</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>

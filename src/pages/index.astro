@@ -1,6 +1,7 @@
 ---
 import { fetchBlogPosts } from '../utils/shopifyAPI';
 import { getLangFromUrl, useTranslations, isValidLanguage } from '../utils/i18n';
+import WhatsAppButton from '@components/WhatsAppButton.astro';
 
 const theme = import.meta.env.THEME || 'default';
 const title = import.meta.env.PUBLIC_SITE_NAME;
@@ -157,5 +158,6 @@ export async function getStaticPaths() {
       })}
     </main>
     <Footer />
+    <WhatsAppButton />
   </body>
 </html>

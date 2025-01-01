@@ -46,6 +46,7 @@ interface AddToCartProps {
   product: Product;
   language: string;
   apiEndpoint: string;
+  hasChartData?: boolean;
 }
 
 const colorMap: Record<string, { color: string; border?: boolean }> = {
@@ -130,7 +131,7 @@ if (typeof document !== 'undefined') {
   document.head.appendChild(style);
 }
 
-export default function AddToCart({ product, language, apiEndpoint }: AddToCartProps) {
+export default function AddToCart({ product, language, apiEndpoint, hasChartData = false }: AddToCartProps) {
   const [selectedOptions, setSelectedOptions] = React.useState<Record<string, string>>({});
   const [selectedVariant, setSelectedVariant] = React.useState<Variant | null>(null);
   const [isLoading, setIsLoading] = React.useState(false);
@@ -348,28 +349,30 @@ export default function AddToCart({ product, language, apiEndpoint }: AddToCartP
           </div>
         )}
 
-        {/* Size Chart Link */}
-        <button 
-          onClick={scrollToSizeChart}
-          className="inline-flex items-center text-sm text-blue-600 hover:text-blue-700 transition-colors gap-1 mb-4"
-        >
-          <svg 
-            xmlns="http://www.w3.org/2000/svg" 
-            className="h-5 w-5" 
-            fill="none" 
-            viewBox="0 0 24 24" 
-            stroke="currentColor"
+        {/* Size Chart Link - Only show if chart data exists */}
+        {hasChartData && (
+          <button 
+            onClick={scrollToSizeChart}
+            className="inline-flex items-center text-sm text-blue-600 hover:text-blue-700 transition-colors gap-1 mb-4"
           >
-            <path 
-              strokeLinecap="round" 
-              strokeLinejoin="round" 
-              strokeWidth={2} 
-              d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" 
-            />
-          </svg>
-          {translations.sizeChart}
-          <ChevronDown className="h-4 w-4" />
-        </button>
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              className="h-5 w-5" 
+              fill="none" 
+              viewBox="0 0 24 24" 
+              stroke="currentColor"
+            >
+              <path 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                strokeWidth={2} 
+                d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" 
+              />
+            </svg>
+            {translations.sizeChart}
+            <ChevronDown className="h-4 w-4" />
+          </button>
+        )}
 
         {/* Main Add to Cart Buttons */}
         <div className="space-y-3">

@@ -1,0 +1,236 @@
+---
+import { getLangFromUrl, useTranslations } from '../utils/i18n';
+import { 
+  HelpCircle, 
+  Search, 
+  Package, 
+  CreditCard, 
+  Truck, 
+  RefreshCw, 
+  Shield, 
+  Clock,
+  Phone,
+  MessageSquare
+} from 'lucide-react';
+
+const theme = import.meta.env.THEME || 'default';
+const projectType = import.meta.env.PROJECT_TYPE || 'repshoes';
+
+const { default: BaseHead } = await import(`../themes/${theme}/components/BaseHead.astro`);
+const { default: Header } = await import(`../themes/${theme}/components/Header.astro`);
+const { default: Footer } = await import(`../themes/${theme}/components/Footer.astro`);
+
+const lang = getLangFromUrl(Astro.url);
+
+// FAQ Categories and Questions
+const faqData = {
+  repshoes: {
+    shipping: {
+      icon: Truck,
+      title: "Shipping Information",
+      questions: [
+        {
+          q: "How long does shipping take?",
+          a: "Domestic shipping (Turkey) takes 1-2 business days. International shipping typically takes 5-14 business days, depending on your location and shipping method chosen."
+        },
+        {
+          q: "Do you ship worldwide?",
+          a: "Yes, we ship to most countries worldwide using reliable carriers like FedEx. Some restrictions may apply to certain locations."
+        },
+        {
+          q: "How much does shipping cost?",
+          a: "Domestic shipping within Turkey is free. International shipping costs vary based on destination and weight. The exact cost will be calculated at checkout."
+        }
+      ]
+    },
+    sizing: {
+      icon: RefreshCw,
+      title: "Sizing & Fit",
+      questions: [
+        {
+          q: "How do I find my correct shoe size?",
+          a: "We recommend measuring your feet and using our size guide to find your perfect fit. Our size chart includes US, EU, UK, and CM measurements."
+        },
+        {
+          q: "Do your shoes run true to size?",
+          a: "Our shoes generally run true to size. However, we recommend checking our detailed size guide and customer reviews for specific models."
+        },
+        {
+          q: "What if my shoes don't fit?",
+          a: "If your shoes don't fit, you can return them within 30 days of delivery, provided they're unworn and in original condition with tags attached."
+        }
+      ]
+    },
+    orders: {
+      icon: Package,
+      title: "Orders & Payment",
+      questions: [
+        {
+          q: "What payment methods do you accept?",
+          a: "We accept major credit cards, PayPal, and bank transfers. All payments are processed securely."
+        },
+        {
+          q: "Can I modify or cancel my order?",
+          a: "Orders can be modified or cancelled within 2 hours of placement. Please contact our customer service team immediately."
+        },
+        {
+          q: "Is my payment information secure?",
+          a: "Yes, we use industry-standard SSL encryption to protect your payment information."
+        }
+      ]
+    },
+    returns: {
+      icon: RefreshCw,
+      title: "Returns & Refunds",
+      questions: [
+        {
+          q: "What is your return policy?",
+          a: "We offer a 30-day return policy for unworn items in original condition with tags attached. Return shipping is free for domestic returns."
+        },
+        {
+          q: "How long do refunds take?",
+          a: "Refunds are processed within 5-7 business days after we receive your return. The amount will be credited to your original payment method."
+        },
+        {
+          q: "Do I need to pay for return shipping?",
+          a: "Domestic returns (within Turkey) are free. International customers are responsible for return shipping costs."
+        }
+      ]
+    }
+  },
+  // Add other project types here if needed
+};
+
+// Get FAQ data based on project type
+const faqs = faqData[projectType] || faqData.repshoes;
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <BaseHead 
+      title="Frequently Asked Questions | Outfit Club" 
+      description="Find answers to common questions about our products, shipping, returns, and more"
+    />
+  </head>
+  <body>
+    <Header />
+    <main class="max-w-6xl mx-auto px-4 py-8">
+      <h1 class="text-4xl font-bold text-center mb-8 pt-16">Frequently Asked Questions</h1>
+
+      <!-- Enhanced Search Bar -->
+      <div class="max-w-2xl mx-auto mb-12">
+        <div class="relative flex items-center">
+          <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+            <Search class="w-5 h-5 text-gray-400" />
+          </div>
+          <input 
+            type="text" 
+            id="faqSearch" 
+            class="w-full p-4 pl-12 pr-4 rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
+            placeholder="Search frequently asked questions..."
+          >
+        </div>
+      </div>
+
+      <!-- FAQ Categories -->
+      <div class="grid gap-8 md:grid-cols-2">
+        {Object.entries(faqs).map(([key, category]) => (
+          <div class="bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-xl font-semibold mb-6 flex items-center gap-2">
+              <category.icon class="w-6 h-6" />
+              {category.title}
+            </h2>
+            <div class="space-y-6">
+              {category.questions.map((item) => (
+                <div class="faq-item">
+                  <h3 class="font-medium text-lg mb-2">{item.q}</h3>
+                  <p class="text-gray-600">{item.a}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Still Have Questions -->
+      <div class="mt-16 text-center bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8">
+        <h2 class="text-2xl font-semibold mb-4">Still Have Questions?</h2>
+        <p class="text-gray-600 mb-6">
+          Our customer service team is here to help. Contact us through any of these channels:
+        </p>
+        <div class="grid gap-6 md:grid-cols-3 max-w-3xl mx-auto">
+          <a href="mailto:contact@outfitclub.store" class="flex items-center justify-center gap-2 p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <HelpCircle class="w-5 h-5" />
+            <span>Email Support</span>
+          </a>
+          <a href="tel:+905417874673" class="flex items-center justify-center gap-2 p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <Phone class="w-5 h-5" />
+            <span>Call Us</span>
+          </a>
+          <a href="/contact" class="flex items-center justify-center gap-2 p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <MessageSquare class="w-5 h-5" />
+            <span>Live Chat</span>
+          </a>
+        </div>
+      </div>
+    </main>
+    <Footer />
+
+    <script>
+      // FAQ Search Functionality
+      const searchInput = document.getElementById('faqSearch');
+      const faqItems = document.querySelectorAll('.faq-item');
+
+      searchInput.addEventListener('input', (e) => {
+        const searchTerm = e.target.value.toLowerCase();
+
+        faqItems.forEach(item => {
+          const question = item.querySelector('h3').textContent.toLowerCase();
+          const answer = item.querySelector('p').textContent.toLowerCase();
+          const matches = question.includes(searchTerm) || answer.includes(searchTerm);
+          
+          item.style.display = matches ? 'block' : 'none';
+          
+          // Add highlight if needed
+          if (matches && searchTerm) {
+            item.classList.add('bg-yellow-50');
+          } else {
+            item.classList.remove('bg-yellow-50');
+          }
+        });
+      });
+
+      // Add smooth transition for search highlights
+      const style = document.createElement('style');
+      style.textContent = `
+        .faq-item {
+          transition: background-color 0.3s ease;
+        }
+      `;
+      document.head.appendChild(style);
+    </script>
+
+    <style>
+      /* Add these styles to ensure proper spacing and icon alignment */
+      .relative {
+        position: relative;
+      }
+
+      input#faqSearch {
+        padding-left: 3rem;
+      }
+
+      input#faqSearch:hover {
+        border-color: #e2e8f0;
+      }
+
+      /* Ensure the search icon container is properly positioned */
+      .absolute {
+        display: flex;
+        align-items: center;
+        height: 100%;
+      }
+    </style>
+  </body>
+</html> 

@@ -4,9 +4,10 @@ import sizeChartContent from './content/sizeCharts.json';
 interface Props {
   productTitle: string;
   language: string;
+  handle?: string;
 }
 
-const { productTitle, language = 'en' } = Astro.props;
+const { productTitle, language = 'en', handle } = Astro.props;
 
 // Common size data across all languages
 const commonSizes = {
@@ -26,6 +27,20 @@ const commonSizes = {
   ],
   // ... other size arrays
 };
+
+// Function to determine if product should have size chart
+function shouldShowSizeChart(handle: string, productType: string): boolean {
+  // Add specific handle checks if needed
+  if (handle) {
+    const excludedHandles = ['accessory', 'bag', 'wallet'];
+    if (excludedHandles.some(excluded => handle.includes(excluded))) {
+      return false;
+    }
+  }
+
+  // Return true if product type has size data
+  return !!commonSizes[productType];
+}
 
 function getProductType(title: string): string {
   const title_lower = title.toLowerCase();
@@ -66,22 +81,24 @@ function getProductType(title: string): string {
     return 'clothing';
   }
   
-  // Default fallback based on PROJECT_TYPE
   return PROJECT_TYPE === 'shoes' ? 'shoes' : null;
 }
 
-// Get PROJECT_TYPE from environment variables at the top of the file
 const PROJECT_TYPE = import.meta.env.PROJECT_TYPE || 'default';
-
-// Get content for current language, fallback to English
 const content = sizeChartContent[language] || sizeChartContent['en'];
 const productType = getProductType(productTitle);
 
+// Determine if we should show the size chart
+const hasChartData = shouldShowSizeChart(handle || '', productType);
+
 // Only proceed if we have content for this product type
 const chartContent = productType && content.charts[productType];
+
+// Export hasChartData for use in parent components
+Astro.props.hasChartData = hasChartData;
 ---
 
-{chartContent && (
+{chartContent && hasChartData && (
   <div id="size-chart" class="border-t pt-8">
     <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
