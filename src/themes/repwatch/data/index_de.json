@@ -1,0 +1,121 @@
+{
+  "siteTitle": "RepWatch - Luxus-Uhrenkollektion",
+  "siteDescription": "Ihre erste Adresse für hochwertige Zeitmesser. Erleben Sie Luxus und Handwerkskunst mit unserer kuratierten Kollektion.",
+  "sections": [
+    {
+      "type": "welcomeSection",
+      "title": "Zeitlose Eleganz in Reichweite",
+      "description": "Entdecken Sie unsere exquisite Kollektion von Präzisionsuhren, wo Luxus auf Zugänglichkeit trifft. Jedes Stück wird mit akribischer Liebe zum Detail gefertigt.",
+      "blogLinkText": "KOLLEKTION ENTDECKEN",
+      "blogLink": "/collections",
+      "backgroundVideo": {
+        "type": "youtube",
+        "videoId": "YGQBm9Mnad8",
+        "fallbackImage": "/images/hero-watches.jpg"
+      }
+    },
+    {
+      "type": "bannerSection",
+      "headline": "Schweizer Präzision",
+      "description": "Erleben Sie den Höhepunkt der Uhrmacherkunst mit unserer sorgfältig ausgewählten Kollektion hochwertiger Zeitmesser.",
+      "backgroundImage": "/images/banner-watches-bg.jpg",
+      "button1Text": "Kollektion Ansehen",
+      "button1Link": "/collections",
+      "button2Text": "Mehr Erfahren",
+      "button2Link": "/about"
+    },
+    {
+      "type": "categoryGrid",
+      "title": "Entdecken Sie Unsere Kollektion",
+      "description": "Durchstöbern Sie unsere umfangreiche Auswahl an Premium-Zeitmessern",
+      "categories": [
+        {
+          "id": "rolex",
+          "name": "Rolex Kollektion",
+          "description": "Entdecken Sie unsere Premium-Auswahl an Rolex-Uhren",
+          "image": "https://cdn.shopify.com/s/files/1/0901/3506/9047/files/format_webp-130.jpg?v=1735680619&width=1200",
+          "link": "/collections/rolex"
+        },
+        {
+          "id": "Hublot",
+          "name": "Hublot",
+          "description": "Erkunden Sie die Eleganz der Hublot-Uhren",
+          "image": "https://cdn.shopify.com/s/files/1/0901/3506/9047/files/format_webp-390.jpg?v=1735689923&width=1200",
+          "link": "/collections/Hublot"
+        },
+        {
+          "id": "ap",
+          "name": "Audemars Piguet",
+          "description": "Erleben Sie die Royal Oak Kollektion und mehr",
+          "image": "https://cdn.shopify.com/s/files/1/0901/3506/9047/files/format_webp-402.jpg?v=1735691971&width=1200",
+          "link": "/collections/audemars-piguet"
+        }
+      ]
+    },
+    {
+      "type": "productShowcase",
+      "title": "Neuheiten",
+      "description": "Die neuesten Zugänge in unserer Premium-Kollektion",
+      "viewAllLink": "/new-arrivals",
+      "collectionHandle": "new-arrivals"
+    },
+    {
+      "type": "testimonialSection",
+      "title": "Kundenerfahrungen",
+      "testimonials": [
+        {
+          "id": "1",
+          "author": "James R.",
+          "role": "Verifizierter Käufer",
+          "content": "Die Liebe zum Detail und die Qualität meiner Submariner haben alle Erwartungen übertroffen. Wirklich beeindruckende Handwerkskunst.",
+          "avatar": ""
+        },
+        {
+          "id": "2",
+          "author": "Michael T.",
+          "role": "Sammler",
+          "content": "Als Uhrenliebhaber bin ich von der Präzision und Verarbeitung begeistert. Der Service war von Anfang bis Ende außergewöhnlich.",
+          "avatar": ""
+        },
+        {
+          "id": "3",
+          "author": "Sarah L.",
+          "role": "Verifizierte Käuferin",
+          "content": "Die Datejust, die ich erhalten habe, ist einfach atemberaubend. Die Qualität und die Liebe zum Detail sind bemerkenswert.",
+          "avatar": ""
+        }
+      ]
+    },
+    {
+      "type": "faqSection",
+      "title": "Häufig Gestellte Fragen",
+      "description": "Finden Sie Antworten auf häufige Fragen zu unseren Zeitmessern und Dienstleistungen",
+      "faqs": [
+        {
+          "question": "Welche Qualitätsstandards erfüllen Ihre Uhren?",
+          "answer": "Unsere Zeitmesser werden nach höchsten Standards gefertigt, mit Premium-Materialien und präzisen Uhrwerken. Jedes Stück durchläuft eine strenge Qualitätskontrolle."
+        },
+        {
+          "question": "Wie gewährleisten Sie Authentizität und Qualität?",
+          "answer": "Jede Uhr wird mit detaillierter Dokumentation geliefert und vor dem Versand von unseren Uhrmacherexperten gründlich geprüft."
+        },
+        {
+          "question": "Wie läuft der Versand- und Lieferprozess ab?",
+          "answer": "Wir bieten einen sicheren, diskreten weltweiten Versand mit vollständiger Sendungsverfolgung. Alle Pakete sind vollständig versichert und erfordern eine Unterschrift bei Lieferung."
+        },
+        {
+          "question": "Welche Garantie bieten Sie?",
+          "answer": "Unsere Uhren kommen mit einer umfassenden Garantie für Uhrwerk und Verarbeitung. Unser Servicecenter bietet engagierten Support."
+        }
+      ]
+    },
+    {
+      "type": "emailSignupSection",
+      "title": "Werden Sie VIP-Mitglied",
+      "description": "Abonnieren Sie für frühen Zugang zu Neuheiten, exklusive Angebote und Kollektions-Updates.",
+      "backgroundImage": "/images/newsletter-luxury-bg.jpg",
+      "formAction": "/api/subscribe",
+      "submitText": "Abonnieren"
+    }
+  ]
+}

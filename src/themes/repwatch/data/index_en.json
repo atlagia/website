@@ -1,0 +1,121 @@
+{
+  "siteTitle": "RepWatch - Luxury Timepiece Collection",
+  "siteDescription": "Your premier destination for high-quality timepieces. Experience luxury and craftsmanship with our curated collection.",
+  "sections": [
+    {
+      "type": "welcomeSection",
+      "title": "Timeless Elegance Within Reach",
+      "description": "Discover our exquisite collection of precision timepieces, where luxury meets accessibility. Each piece is crafted with meticulous attention to detail.",
+      "blogLinkText": "EXPLORE COLLECTION",
+      "blogLink": "/collections",
+      "backgroundVideo": {
+        "type": "youtube",
+        "videoId": "YGQBm9Mnad8",
+        "fallbackImage": "/images/hero-watches.jpg"
+      }
+    },
+    {
+      "type": "bannerSection",
+      "headline": "Swiss-Grade Precision",
+      "description": "Experience the pinnacle of watchmaking craftsmanship with our meticulously selected collection of premium timepieces.",
+      "backgroundImage": "/images/banner-watches-bg.jpg",
+      "button1Text": "Shop Collection",
+      "button1Link": "/collections",
+      "button2Text": "Learn More",
+      "button2Link": "/about"
+    },
+    {
+      "type": "categoryGrid",
+      "title": "Explore Our Collection",
+      "description": "Browse our extensive selection of premium timepieces",
+      "categories": [
+        {
+          "id": "rolex",
+          "name": "Rolex Collection",
+          "description": "Discover our premium selection of Rolex timepieces",
+          "image": "https://cdn.shopify.com/s/files/1/0901/3506/9047/files/format_webp-130.jpg?v=1735680619&width=1200",
+          "link": "/collections/rolex"
+        },
+        {
+          "id": "Hublot",
+          "name": "Hublot",
+          "description": "Explore the elegance of Hublot watches",
+          "image": "https://cdn.shopify.com/s/files/1/0901/3506/9047/files/format_webp-390.jpg?v=1735689923&width=1200",
+          "link": "/collections/Hublot"
+        },
+        {
+          "id": "ap",
+          "name": "Audemars Piguet",
+          "description": "Experience the Royal Oak collection and more",
+          "image": "https://cdn.shopify.com/s/files/1/0901/3506/9047/files/format_webp-402.jpg?v=1735691971&width=1200",
+          "link": "/collections/audemars-piguet"
+        }
+      ]
+    },
+    {
+      "type": "productShowcase",
+      "title": "New Arrivals",
+      "description": "Latest additions to our premium collection",
+      "viewAllLink": "/new-arrivals",
+      "collectionHandle": "new-arrivals"
+    },
+    {
+      "type": "testimonialSection",
+      "title": "Client Experiences",
+      "testimonials": [
+        {
+          "id": "1",
+          "author": "James R.",
+          "role": "Verified Buyer",
+          "content": "The attention to detail and quality of my Submariner exceeded all expectations. Truly impressive craftsmanship.",
+          "avatar": ""
+        },
+        {
+          "id": "2",
+          "author": "Michael T.",
+          "role": "Collector",
+          "content": "As a watch enthusiast, I'm amazed by the precision and finish. The service was exceptional from start to finish.",
+          "avatar": ""
+        },
+        {
+          "id": "3",
+          "author": "Sarah L.",
+          "role": "Verified Buyer",
+          "content": "The Datejust I received is simply stunning. The quality and attention to detail are remarkable.",
+          "avatar": ""
+        }
+      ]
+    },
+    {
+      "type": "faqSection",
+      "title": "Frequently Asked Questions",
+      "description": "Find answers to common questions about our timepieces and services",
+      "faqs": [
+        {
+          "question": "What quality standards do your timepieces meet?",
+          "answer": "Our timepieces are crafted to the highest standards, featuring premium materials and precise movements. Each piece undergoes rigorous quality control."
+        },
+        {
+          "question": "How do you ensure authenticity and quality?",
+          "answer": "Every timepiece comes with detailed documentation and undergoes thorough inspection by our expert watchmakers before shipping."
+        },
+        {
+          "question": "What is your shipping and delivery process?",
+          "answer": "We offer secure, discreet worldwide shipping with full tracking. All packages are fully insured and require signature upon delivery."
+        },
+        {
+          "question": "What warranty do you provide?",
+          "answer": "Our timepieces come with a comprehensive warranty covering movement and craftsmanship. Our service center provides dedicated support."
+        }
+      ]
+    },
+    {
+      "type": "emailSignupSection",
+      "title": "Join Our VIP Circle",
+      "description": "Subscribe to receive early access to new arrivals, exclusive offers, and collection updates.",
+      "backgroundImage": "/images/newsletter-luxury-bg.jpg",
+      "formAction": "/api/subscribe",
+      "submitText": "Subscribe"
+    }
+  ]
+}

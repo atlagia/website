@@ -1,0 +1,84 @@
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Black background -->
+  <rect 
+    x="0" 
+    y="0" 
+    width="300" 
+    height="300" 
+    fill="#000000"
+  />
+  
+  <!-- Single Bold Ring -->
+  <circle 
+    cx="150" 
+    cy="150" 
+    r="120" 
+    fill="none" 
+    stroke="#D4AF37" 
+    stroke-width="8"
+  />
+  
+  <!-- Bold Minimalist Bag -->
+  <path 
+    d="M100 120 
+       L200 120 
+       L210 220 
+       L90 220 Z" 
+    fill="#D4AF37"
+  />
+  
+  <!-- Bold Bag Handle -->
+  <path 
+    d="M110 120 
+       C110 90 190 90 190 120" 
+    fill="none" 
+    stroke="#D4AF37" 
+    stroke-width="8"
+  />
+  
+  <!-- Single Bold Accent Line -->
+  <line 
+    x1="90" 
+    y1="170" 
+    x2="210" 
+    y2="170" 
+    stroke="#000000" 
+    stroke-width="6"
+  />
+  
+  <!-- Extra Bold Store Name -->
+  <text 
+    x="150" 
+    y="100" 
+    font-family="Montserrat, sans-serif" 
+    font-size="36" 
+    font-weight="900" 
+    text-anchor="middle" 
+    fill="#D4AF37"
+  >
+    REPBAG
+  </text>
+  
+  <!-- Bold Line Separator -->
+  <line 
+    x1="100" 
+    y1="250" 
+    x2="200" 
+    y2="250" 
+    stroke="#D4AF37" 
+    stroke-width="4"
+  />
+  
+  <!-- Single Word Tagline -->
+  <text 
+    x="150" 
+    y="275" 
+    font-family="Montserrat, sans-serif" 
+    font-size="18" 
+    font-weight="800" 
+    text-anchor="middle" 
+    fill="#D4AF37"
+  >
+    LUXURY
+  </text>
+</svg>

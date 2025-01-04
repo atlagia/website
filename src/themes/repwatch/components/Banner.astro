@@ -1,0 +1,133 @@
+---
+import { Button } from './ui/Button';
+
+interface Props {
+  headline: string;
+  description: string;
+  backgroundImage: string;
+  button1Text: string;
+  button1Link: string;
+  button2Text?: string;
+  button2Link?: string;
+}
+
+const { 
+  headline, 
+  description, 
+  backgroundImage,
+  button1Text,
+  button1Link,
+  button2Text,
+  button2Link
+} = Astro.props;
+---
+
+<section 
+  class="relative py-48 px-4 overflow-hidden bg-fixed bg-cover bg-center"
+  style={`background-image: url(${backgroundImage});`}
+>
+  <!-- Dark Overlay with more sophisticated gradient -->
+  <div class="absolute inset-0 bg-gradient-to-r from-black/95 via-black/85 to-black/50"></div>
+  
+  <!-- Content -->
+  <div class="relative max-w-7xl mx-auto">
+    <div class="max-w-2xl">
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-['Oswald'] font-light uppercase tracking-[0.25em] text-white mb-8 leading-[1.2]">
+        {headline}
+      </h2>
+      
+      <p class="text-lg md:text-xl text-white/80 mb-12 leading-relaxed font-light tracking-wide max-w-xl font-['Montserrat']">
+        {description}
+      </p>
+      
+      <div class="flex flex-wrap gap-6">
+        <a 
+          href={button1Link}
+          class="inline-flex items-center px-12 py-4 border border-white/20 bg-white/10 
+                 text-white font-['Oswald'] uppercase tracking-[0.2em] text-sm 
+                 hover:bg-white hover:text-black transition-all duration-500 backdrop-blur-sm"
+        >
+          {button1Text}
+        </a>
+        
+        {button2Text && button2Link && (
+          <a 
+            href={button2Link}
+            class="inline-flex items-center px-12 py-4 border border-white/20 
+                   text-white font-['Oswald'] uppercase tracking-[0.2em] text-sm 
+                   hover:bg-white/10 backdrop-blur-sm transition-all duration-500"
+          >
+            {button2Text}
+          </a>
+        )}
+      </div>
+    </div>
+  </div>
+
+  <!-- Decorative Elements with refined styling -->
+  <div class="absolute bottom-0 left-0 w-full">
+    <div class="h-px bg-gradient-to-r from-white/20 via-white/10 to-transparent"></div>
+  </div>
+  
+  <!-- Vertical Line Decoration -->
+  <div class="absolute top-0 left-0 h-full w-px bg-gradient-to-b from-white/20 via-white/10 to-transparent"></div>
+  
+  <!-- Corner Accent with more subtle animation -->
+  <div class="absolute top-8 left-8 w-16 h-16">
+    <div class="w-full h-px bg-white/20"></div>
+    <div class="h-full w-px bg-white/20"></div>
+  </div>
+</section>
+
+<style>
+  /* Smooth text rendering */
+  h2, p {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Enhanced parallax effect */
+  section {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    will-change: transform;
+  }
+
+  /* Refined button hover effects */
+  a {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Background image optimization */
+  section {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Dark mode optimizations */
+  section {
+    color-scheme: dark;
+  }
+
+  /* Enhanced backdrop blur */
+  .backdrop-blur-sm {
+    backdrop-filter: blur(12px);
+  }
+
+  /* Subtle corner accent animation */
+  @keyframes cornerFade {
+    0% { opacity: 0.1; }
+    50% { opacity: 0.2; }
+    100% { opacity: 0.1; }
+  }
+
+  .absolute.top-8 {
+    animation: cornerFade 6s infinite;
+  }
+</style>

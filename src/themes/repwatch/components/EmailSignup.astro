@@ -1,0 +1,140 @@
+---
+import { Button } from './ui/Button';
+import { Mail } from 'lucide-react';
+
+interface Props {
+  title: string;
+  description: string;
+  backgroundImage: string;
+  formAction: string;
+  submitText: string;
+}
+
+const { title, description, backgroundImage, formAction, submitText } = Astro.props;
+---
+
+<section 
+  class="relative py-32 overflow-hidden bg-fixed bg-cover bg-center"
+  style={`background-image: url(${backgroundImage});`}
+>
+  <!-- Sophisticated Overlay -->
+  <div class="absolute inset-0 bg-gradient-to-r from-black/95 via-black/85 to-black/50"></div>
+  
+  <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+    <h2 class="text-3xl md:text-4xl font-['Oswald'] font-light uppercase tracking-[0.25em] text-white/90 mb-6">
+      {title}
+    </h2>
+    
+    <p class="text-lg text-white/70 font-light tracking-wide mb-12 max-w-2xl mx-auto font-['Montserrat']">
+      {description}
+    </p>
+
+    <!-- Newsletter Form -->
+    <form 
+      action={formAction}
+      method="POST"
+      class="max-w-md mx-auto relative"
+    >
+      <div class="flex flex-col sm:flex-row gap-4">
+        <input
+          type="email"
+          name="email"
+          required
+          placeholder="Enter your email address"
+          class="flex-1 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 
+                 text-white placeholder-white/40 focus:outline-none focus:border-white/40
+                 font-light tracking-wide text-sm transition-all duration-500"
+        />
+        <button
+          type="submit"
+          class="inline-flex items-center justify-center gap-3 px-12 py-4 bg-white/10 backdrop-blur-sm 
+                 border border-white/30 text-white font-['Oswald'] uppercase tracking-[0.2em] text-sm
+                 hover:bg-white hover:text-black transition-all duration-500 font-light group"
+        >
+          <span>{submitText}</span>
+          <Mail className="w-4 h-4 group-hover:scale-110 transition-transform duration-500" />
+        </button>
+      </div>
+
+      <!-- Decorative Corner Elements -->
+      <div class="absolute -top-6 -left-6 w-12 h-12 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+        <div class="w-full h-px bg-white/20"></div>
+        <div class="h-full w-px bg-white/20"></div>
+      </div>
+      <div class="absolute -bottom-6 -right-6 w-12 h-12 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+        <div class="w-full h-px bg-white/20"></div>
+        <div class="h-full w-px bg-white/20"></div>
+      </div>
+    </form>
+
+    <!-- Decorative Elements -->
+    <div class="absolute bottom-0 left-0 w-full">
+      <div class="h-px bg-gradient-to-r from-white/20 via-white/10 to-transparent"></div>
+    </div>
+    
+    <!-- Vertical Line Decoration -->
+    <div class="absolute top-0 left-0 h-full w-px bg-gradient-to-b from-white/20 via-white/10 to-transparent"></div>
+  </div>
+</section>
+
+<style>
+  /* Smooth text rendering */
+  h2, p {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Enhanced input focus effects */
+  input:focus {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+  }
+
+  /* Form element transitions */
+  input, button {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Dark mode optimization */
+  section {
+    color-scheme: dark;
+  }
+
+  /* Refined placeholder text */
+  input::placeholder {
+    transition: opacity 0.3s ease;
+  }
+
+  input:focus::placeholder {
+    opacity: 0.5;
+  }
+
+  /* Background parallax effect */
+  section {
+    background-attachment: fixed;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    will-change: transform;
+  }
+
+  /* Enhanced backdrop blur */
+  .backdrop-blur-sm {
+    backdrop-filter: blur(12px);
+  }
+
+  /* Button hover animation */
+  button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Corner accent animation */
+  @keyframes cornerFade {
+    0% { opacity: 0.1; }
+    50% { opacity: 0.2; }
+    100% { opacity: 0.1; }
+  }
+
+  form:hover .absolute {
+    animation: cornerFade 6s infinite;
+  }
+</style>

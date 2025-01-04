@@ -19,10 +19,23 @@ function getProductCategory(title: string): string {
   if (PROJECT_TYPE === 'repshoes') {
     return 'shoes';
   }
+  if (PROJECT_TYPE === 'repwatch') {
+    return 'watch';
+  }
   
   const title_lower = title.toLowerCase();
   
-  // Second priority: Check if it's a digital product
+  // Second priority: Check if it's a watch
+  if (title_lower.includes('watch') ||
+      title_lower.includes('timepiece') ||
+      title_lower.includes('chronograph') ||
+      title_lower.includes('wristwatch') ||
+      title_lower.includes('smartwatch') ||
+      title_lower.includes('clock')) {
+    return 'watch';
+  }
+
+  // Third priority: Check if it's a digital product
   if (PROJECT_TYPE === 'degital') {
     if (title_lower.includes('template') || title_lower.includes('theme')) {
       return 'template';

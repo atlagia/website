@@ -1,0 +1,77 @@
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Black background -->
+  <rect 
+    x="0" 
+    y="0" 
+    width="300" 
+    height="300" 
+    fill="#000000"
+  />
+  
+  <!-- Single Bold Ring -->
+  <circle 
+    cx="150" 
+    cy="150" 
+    r="120" 
+    fill="none" 
+    stroke="#D4AF37" 
+    stroke-width="8"
+  />
+  
+  <!-- Bold Minimal Hour Markers -->
+  <g stroke="#D4AF37" stroke-width="8">
+    <!-- Only 12 and 6 markers -->
+    <line x1="150" y1="50" x2="150" y2="70" />
+    <line x1="150" y1="230" x2="150" y2="250" />
+  </g>
+
+  <!-- Bold Watch Hands -->
+  <g stroke="#D4AF37">
+    <line x1="150" y1="150" x2="150" y2="90" stroke-width="8" />
+    <line x1="150" y1="150" x2="200" y2="150" stroke-width="6" />
+  </g>
+  
+  <!-- Bold Center Point -->
+  <circle 
+    cx="150" 
+    cy="150" 
+    r="12" 
+    fill="#D4AF37"
+  />
+
+  <!-- Extra Bold Store Name -->
+  <text 
+    x="150" 
+    y="100" 
+    font-family="Montserrat, sans-serif" 
+    font-size="36" 
+    font-weight="900" 
+    text-anchor="middle" 
+    fill="#D4AF37"
+  >
+    REPWATCH
+  </text>
+  
+  <!-- Bold Line Separator -->
+  <line 
+    x1="100" 
+    y1="200" 
+    x2="200" 
+    y2="200" 
+    stroke="#D4AF37" 
+    stroke-width="4"
+  />
+  
+  <!-- Single Word Tagline -->
+  <text 
+    x="150" 
+    y="225" 
+    font-family="Montserrat, sans-serif" 
+    font-size="18" 
+    font-weight="800" 
+    text-anchor="middle" 
+    fill="#D4AF37"
+  >
+    LUXURY
+  </text>
+</svg>

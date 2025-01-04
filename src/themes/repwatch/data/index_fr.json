@@ -1,0 +1,121 @@
+{
+  "siteTitle": "RepWatch - Collection de Montres de Luxe",
+  "siteDescription": "Votre destination privilégiée pour des montres de haute qualité. Découvrez le luxe et le savoir-faire à travers notre collection soigneusement sélectionnée.",
+  "sections": [
+    {
+      "type": "welcomeSection",
+      "title": "L'Élégance Intemporelle à Portée de Main",
+      "description": "Découvrez notre collection exquise de montres de précision, où le luxe rencontre l'accessibilité. Chaque pièce est fabriquée avec une attention méticuleuse aux détails.",
+      "blogLinkText": "EXPLORER LA COLLECTION",
+      "blogLink": "/collections",
+      "backgroundVideo": {
+        "type": "youtube",
+        "videoId": "YGQBm9Mnad8",
+        "fallbackImage": "/images/hero-watches.jpg"
+      }
+    },
+    {
+      "type": "bannerSection",
+      "headline": "Précision Suisse",
+      "description": "Découvrez l'excellence de l'horlogerie avec notre collection de montres premium méticuleusement sélectionnées.",
+      "backgroundImage": "/images/banner-watches-bg.jpg",
+      "button1Text": "Voir la Collection",
+      "button1Link": "/collections",
+      "button2Text": "En Savoir Plus",
+      "button2Link": "/about"
+    },
+    {
+      "type": "categoryGrid",
+      "title": "Explorez Notre Collection",
+      "description": "Parcourez notre vaste sélection de montres premium",
+      "categories": [
+        {
+          "id": "rolex",
+          "name": "Collection Rolex",
+          "description": "Découvrez notre sélection premium de montres Rolex",
+          "image": "https://cdn.shopify.com/s/files/1/0901/3506/9047/files/format_webp-130.jpg?v=1735680619&width=1200",
+          "link": "/collections/rolex"
+        },
+        {
+          "id": "Hublot",
+          "name": "Hublot",
+          "description": "Explorez l'élégance des montres Hublot",
+          "image": "https://cdn.shopify.com/s/files/1/0901/3506/9047/files/format_webp-390.jpg?v=1735689923&width=1200",
+          "link": "/collections/Hublot"
+        },
+        {
+          "id": "ap",
+          "name": "Audemars Piguet",
+          "description": "Découvrez la collection Royal Oak et plus encore",
+          "image": "https://cdn.shopify.com/s/files/1/0901/3506/9047/files/format_webp-402.jpg?v=1735691971&width=1200",
+          "link": "/collections/audemars-piguet"
+        }
+      ]
+    },
+    {
+      "type": "productShowcase",
+      "title": "Nouveautés",
+      "description": "Les dernières additions à notre collection premium",
+      "viewAllLink": "/new-arrivals",
+      "collectionHandle": "new-arrivals"
+    },
+    {
+      "type": "testimonialSection",
+      "title": "Expériences Clients",
+      "testimonials": [
+        {
+          "id": "1",
+          "author": "James R.",
+          "role": "Acheteur Vérifié",
+          "content": "L'attention aux détails et la qualité de ma Submariner ont dépassé toutes mes attentes. Un savoir-faire vraiment impressionnant.",
+          "avatar": ""
+        },
+        {
+          "id": "2",
+          "author": "Michael T.",
+          "role": "Collectionneur",
+          "content": "En tant que passionné de montres, je suis impressionné par la précision et la finition. Le service était exceptionnel du début à la fin.",
+          "avatar": ""
+        },
+        {
+          "id": "3",
+          "author": "Sarah L.",
+          "role": "Acheteuse Vérifiée",
+          "content": "La Datejust que j'ai reçue est tout simplement magnifique. La qualité et l'attention aux détails sont remarquables.",
+          "avatar": ""
+        }
+      ]
+    },
+    {
+      "type": "faqSection",
+      "title": "Questions Fréquentes",
+      "description": "Trouvez les réponses aux questions courantes sur nos montres et services",
+      "faqs": [
+        {
+          "question": "Quels standards de qualité respectent vos montres ?",
+          "answer": "Nos montres sont fabriquées selon les plus hauts standards, avec des matériaux premium et des mouvements précis. Chaque pièce subit un contrôle qualité rigoureux."
+        },
+        {
+          "question": "Comment garantissez-vous l'authenticité et la qualité ?",
+          "answer": "Chaque montre est livrée avec une documentation détaillée et fait l'objet d'une inspection minutieuse par nos horlogers experts avant l'expédition."
+        },
+        {
+          "question": "Quel est votre processus d'expédition et de livraison ?",
+          "answer": "Nous proposons une expédition mondiale sécurisée et discrète avec suivi complet. Tous les colis sont entièrement assurés et nécessitent une signature à la livraison."
+        },
+        {
+          "question": "Quelle garantie proposez-vous ?",
+          "answer": "Nos montres sont couvertes par une garantie complète couvrant le mouvement et la fabrication. Notre centre de service assure un support dédié."
+        }
+      ]
+    },
+    {
+      "type": "emailSignupSection",
+      "title": "Rejoignez Notre Cercle VIP",
+      "description": "Inscrivez-vous pour recevoir un accès anticipé aux nouveautés, des offres exclusives et des mises à jour de la collection.",
+      "backgroundImage": "/images/newsletter-luxury-bg.jpg",
+      "formAction": "/api/subscribe",
+      "submitText": "S'inscrire"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Black background -->
+  <rect 
+    x="0" 
+    y="0" 
+    width="300" 
+    height="300" 
+    fill="#000000"
+  />
+  
+  <!-- Outer clean ring -->
+  <circle 
+    cx="150" 
+    cy="150" 
+    r="140" 
+    fill="none" 
+    stroke="#D4AF37" 
+    stroke-width="3"
+  />
+  
+  <!-- Bold Minimalist Helmet -->
+  <path 
+    d="M100 140
+       C100 140, 100 180, 150 180
+       C200 180, 200 140, 200 140
+       C200 130, 180 120, 150 120
+       C120 120, 100 130, 100 140
+       Z" 
+    fill="#D4AF37"
+  />
+  
+  <!-- Bold Visor Line -->
+  <path 
+    d="M115 145
+       L185 145" 
+    stroke="#000000" 
+    stroke-width="6"
+  />
+  
+  <!-- Store name -->
+  <text 
+    x="150" 
+    y="95" 
+    font-family="Montserrat, sans-serif" 
+    font-size="26" 
+    font-weight="900" 
+    text-anchor="middle" 
+    fill="#D4AF37"
+  >
+    PERFECTMOTORIDE
+  </text>
+  
+  <!-- Bold Divider -->
+  <line 
+    x1="90" 
+    y1="210" 
+    x2="210" 
+    y2="210" 
+    stroke="#D4AF37" 
+    stroke-width="3"
+  />
+  
+  <!-- Categories in Bold -->
+  <text 
+    x="150" 
+    y="240" 
+    font-family="Montserrat, sans-serif" 
+    font-size="12" 
+    font-weight="700" 
+    text-anchor="middle" 
+    fill="#D4AF37"
+  >
+    HELMETS • JACKETS • BOOTS
+  </text>
+  
+  <!-- Minimal Decorative Elements -->
+  <circle 
+    cx="150" 
+    cy="150" 
+    r="4" 
+    fill="#000000"
+  />
+  
+  <!-- Bold Side Accents -->
+  <line 
+    x1="80" 
+    y1="150" 
+    x2="95" 
+    y2="150" 
+    stroke="#D4AF37" 
+    stroke-width="4"
+  />
+  <line 
+    x1="205" 
+    y1="150" 
+    x2="220" 
+    y2="150" 
+    stroke="#D4AF37" 
+    stroke-width="4"
+  />
+</svg>

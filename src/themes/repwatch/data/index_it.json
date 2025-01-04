@@ -1,0 +1,121 @@
+{
+  "siteTitle": "RepWatch - Collezione di Orologi di Lusso",
+  "siteDescription": "La tua destinazione principale per orologi di alta qualità. Vivi il lusso e la maestria artigianale con la nostra collezione curata.",
+  "sections": [
+    {
+      "type": "welcomeSection",
+      "title": "L'Eleganza Senza Tempo a Portata di Mano",
+      "description": "Scopri la nostra raffinata collezione di orologi di precisione, dove il lusso incontra l'accessibilità. Ogni pezzo è realizzato con meticolosa attenzione ai dettagli.",
+      "blogLinkText": "ESPLORA LA COLLEZIONE",
+      "blogLink": "/collections",
+      "backgroundVideo": {
+        "type": "youtube",
+        "videoId": "YGQBm9Mnad8",
+        "fallbackImage": "/images/hero-watches.jpg"
+      }
+    },
+    {
+      "type": "bannerSection",
+      "headline": "Precisione di Grado Svizzero",
+      "description": "Scopri l'apice dell'arte orologiera con la nostra collezione di orologi premium accuratamente selezionati.",
+      "backgroundImage": "/images/banner-watches-bg.jpg",
+      "button1Text": "Acquista Collezione",
+      "button1Link": "/collections",
+      "button2Text": "Scopri di Più",
+      "button2Link": "/about"
+    },
+    {
+      "type": "categoryGrid",
+      "title": "Esplora la Nostra Collezione",
+      "description": "Sfoglia la nostra vasta selezione di orologi premium",
+      "categories": [
+        {
+          "id": "rolex",
+          "name": "Collezione Rolex",
+          "description": "Scopri la nostra selezione premium di orologi Rolex",
+          "image": "https://cdn.shopify.com/s/files/1/0901/3506/9047/files/format_webp-130.jpg?v=1735680619&width=1200",
+          "link": "/collections/rolex"
+        },
+        {
+          "id": "Hublot",
+          "name": "Hublot",
+          "description": "Esplora l'eleganza degli orologi Hublot",
+          "image": "https://cdn.shopify.com/s/files/1/0901/3506/9047/files/format_webp-390.jpg?v=1735689923&width=1200",
+          "link": "/collections/Hublot"
+        },
+        {
+          "id": "ap",
+          "name": "Audemars Piguet",
+          "description": "Scopri la collezione Royal Oak e molto altro",
+          "image": "https://cdn.shopify.com/s/files/1/0901/3506/9047/files/format_webp-402.jpg?v=1735691971&width=1200",
+          "link": "/collections/audemars-piguet"
+        }
+      ]
+    },
+    {
+      "type": "productShowcase",
+      "title": "Nuovi Arrivi",
+      "description": "Le ultime aggiunte alla nostra collezione premium",
+      "viewAllLink": "/new-arrivals",
+      "collectionHandle": "new-arrivals"
+    },
+    {
+      "type": "testimonialSection",
+      "title": "Esperienze dei Clienti",
+      "testimonials": [
+        {
+          "id": "1",
+          "author": "James R.",
+          "role": "Acquirente Verificato",
+          "content": "L'attenzione ai dettagli e la qualità del mio Submariner hanno superato ogni aspettativa. Una manifattura davvero impressionante.",
+          "avatar": ""
+        },
+        {
+          "id": "2",
+          "author": "Michael T.",
+          "role": "Collezionista",
+          "content": "Come appassionato di orologi, sono stupito dalla precisione e dalla finitura. Il servizio è stato eccezionale dall'inizio alla fine.",
+          "avatar": ""
+        },
+        {
+          "id": "3",
+          "author": "Sarah L.",
+          "role": "Acquirente Verificato",
+          "content": "Il Datejust che ho ricevuto è semplicemente stupendo. La qualità e l'attenzione ai dettagli sono notevoli.",
+          "avatar": ""
+        }
+      ]
+    },
+    {
+      "type": "faqSection",
+      "title": "Domande Frequenti",
+      "description": "Trova risposte alle domande comuni sui nostri orologi e servizi",
+      "faqs": [
+        {
+          "question": "Quali standard di qualità soddisfano i vostri orologi?",
+          "answer": "I nostri orologi sono realizzati secondo i più alti standard, con materiali premium e movimenti precisi. Ogni pezzo viene sottoposto a rigorosi controlli di qualità."
+        },
+        {
+          "question": "Come garantite l'autenticità e la qualità?",
+          "answer": "Ogni orologio viene fornito con documentazione dettagliata e sottoposto a un'accurata ispezione dai nostri esperti orologiai prima della spedizione."
+        },
+        {
+          "question": "Qual è il vostro processo di spedizione e consegna?",
+          "answer": "Offriamo spedizioni sicure e discrete in tutto il mondo con tracciamento completo. Tutti i pacchi sono completamente assicurati e richiedono la firma alla consegna."
+        },
+        {
+          "question": "Che garanzia fornite?",
+          "answer": "I nostri orologi sono coperti da una garanzia completa che copre il movimento e la manifattura. Il nostro centro assistenza fornisce supporto dedicato."
+        }
+      ]
+    },
+    {
+      "type": "emailSignupSection",
+      "title": "Unisciti al Nostro Circolo VIP",
+      "description": "Iscriviti per ricevere accesso anticipato ai nuovi arrivi, offerte esclusive e aggiornamenti sulla collezione.",
+      "backgroundImage": "/images/newsletter-luxury-bg.jpg",
+      "formAction": "/api/subscribe",
+      "submitText": "Iscriviti"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Black background -->
+  <rect 
+    x="0" 
+    y="0" 
+    width="300" 
+    height="300" 
+    fill="#000000"
+  />
+  
+  <!-- Single Bold Ring -->
+  <circle 
+    cx="150" 
+    cy="150" 
+    r="120" 
+    fill="none" 
+    stroke="#D4AF37" 
+    stroke-width="8"
+  />
+  
+  <!-- Bold Digital Icons Group -->
+  <g fill="#D4AF37">
+    <!-- Minimalist Monitor -->
+    <rect x="90" y="130" width="40" height="30" />
+    <rect x="105" y="160" width="10" height="5" />
+    
+    <!-- Minimalist Mobile -->
+    <rect x="145" y="130" width="20" height="35" rx="3" />
+    
+    <!-- Minimalist Cart -->
+    <path d="M180 130 L190 130 L195 140 L175 140 Z" />
+    <rect x="175" y="140" width="20" height="20" />
+  </g>
+  
+  <!-- Bold Circuit Lines -->
+  <path 
+    d="M90 180 H210" 
+    stroke="#D4AF37" 
+    stroke-width="6"
+    fill="none"
+  />
+  
+  <!-- Extra Bold Store Name -->
+  <text 
+    x="150" 
+    y="100" 
+    font-family="Montserrat, sans-serif" 
+    font-size="36" 
+    font-weight="900" 
+    text-anchor="middle" 
+    fill="#D4AF37"
+  >
+    REPDIGITAL
+  </text>
+  
+  <!-- Single Word Tagline -->
+  <text 
+    x="150" 
+    y="220" 
+    font-family="Montserrat, sans-serif" 
+    font-size="18" 
+    font-weight="800" 
+    text-anchor="middle" 
+    fill="#D4AF37"
+  >
+    MARKETPLACE
+  </text>
+</svg>
