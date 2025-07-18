@@ -1,0 +1,392 @@
+---
+import { SITE_TITLE } from '../consts';
+import pkg from 'lucide-react';
+const { FileText, Shield, Scale, Globe, AlertCircle, CheckCircle } = pkg;
+
+const theme = import.meta.env.THEME || 'default';
+const lang = Astro.params.lang || 'en';
+
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+
+// Import styles - reusing the contactpage styles as a base
+const styles = await import(`../style/page/contactpage.json`);
+
+// Get business information from environment variables
+const businessInfo = {
+  name: import.meta.env.PUBLIC_BUSINESS_NAME || 'Global Shipping Solutions',
+  email: import.meta.env.PUBLIC_BUSINESS_EMAIL || 'support@sooq.network',
+  phone: import.meta.env.PUBLIC_BUSINESS_PHONE || '+1 (855) 256-4478',
+  address: {
+    street: import.meta.env.PUBLIC_BUSINESS_ADDRESS || '5301A Rivergrade Rd.',
+    city: import.meta.env.PUBLIC_BUSINESS_CITY || 'Irwindale',
+    country: import.meta.env.PUBLIC_BUSINESS_COUNTRY || 'CA 91706'
+  },
+  website: import.meta.env.PUBLIC_BUSINESS_WEBSITE || 'www.sooq.network'
+};
+
+// Define last updated date
+const lastUpdated = "June 15, 2024";
+
+// Define icon paths for each icon type
+const iconPaths = {
+  FileText: `<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline>`,
+  Shield: `<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>`,
+  Scale: `<path d="m8 3-6 6h12l-6-6Z"></path><path d="M2 9v.5a3 3 0 0 0 6 0V9"></path><path d="M16 9v.5a3 3 0 0 0 6 0V9"></path><path d="M2.5 9h19"></path><path d="M22 9v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-9"></path>`,
+  Globe: `<circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>`,
+  AlertCircle: `<circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line>`,
+  CheckCircle: `<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline>`
+};
+
+// Key terms and sections
+const termsSections = [
+  {
+    icon: "FileText",
+    title: "Terms of Service",
+    description: "The basic terms governing your use of our shipping services",
+    iconPath: iconPaths.FileText
+  },
+  {
+    icon: "Shield",
+    title: "Privacy & Security",
+    description: "How we protect your information and shipment data",
+    iconPath: iconPaths.Shield
+  },
+  {
+    icon: "Scale",
+    title: "Legal Compliance",
+    description: "Our adherence to shipping regulations and requirements",
+    iconPath: iconPaths.Scale
+  },
+  {
+    icon: "Globe",
+    title: "International Shipping",
+    description: "Special terms applicable to cross-border shipments",
+    iconPath: iconPaths.Globe
+  },
+  {
+    icon: "AlertCircle",
+    title: "Liability & Claims",
+    description: "Policies regarding lost, damaged, or delayed shipments",
+    iconPath: iconPaths.AlertCircle
+  },
+  {
+    icon: "CheckCircle",
+    title: "Service Guarantees",
+    description: "Our commitments and performance guarantees",
+    iconPath: iconPaths.CheckCircle
+  }
+];
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <BaseHead 
+      title={`Terms of Service | ${businessInfo.name}`}
+      description="Our shipping terms and conditions, service guarantees, and legal agreements."
+    />
+  </head>
+  <body>
+    <Header />
+    <main class="pt-10">
+      <!-- Hero Section -->
+      <section class={styles.hero.section}>
+        <div class="absolute inset-0 z-0">
+          <div class={styles.hero.blob1}></div>
+          <div class={styles.hero.blob2}></div>
+        </div>
+        <div class={styles.hero.container}>
+          <span class={styles.hero.subtitle}>
+            LEGAL
+          </span>
+          <h1 class={styles.hero.title}>Terms of Service</h1>
+          <p class={styles.hero.description}>
+            Please review our terms and conditions carefully. These terms govern your use of our shipping services and outline important legal information.
+          </p>
+          <p class="text-sm mt-4 text-gray-600">Last Updated: {lastUpdated}</p>
+        </div>
+      </section>
+
+      <!-- Terms Sections Overview -->
+      <section class={styles.contactOptions.section}>
+        <div class={styles.contactOptions.container}>
+          <div class={styles.contactOptions.grid}>
+            {termsSections.map(item => (
+              <a
+                href={`#${item.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
+                class={styles.contactOptions.card}
+              >
+                <div class={styles.contactOptions.cardContent}>
+                  <div class={styles.contactOptions.iconContainer}>
+                    <svg 
+                      class={styles.contactOptions.icon} 
+                      fill="none" 
+                      viewBox="0 0 24 24" 
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      set:html={item.iconPath}
+                    />
+                  </div>
+                  <h3 class={styles.contactOptions.title}>{item.title}</h3>
+                  <p class={styles.contactOptions.description}>{item.description}</p>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- Terms Content -->
+      <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <!-- Introduction -->
+          <div class="prose max-w-none">
+            <h2>Introduction</h2>
+            <p>
+              Welcome to {businessInfo.name}. These Terms of Service ("Terms") govern your use of our website, mobile applications, and shipping services (collectively, the "Services") provided by {businessInfo.name} ("we," "us," or "our"). By accessing or using our Services, you agree to be bound by these Terms.
+            </p>
+            <p>
+              Please read these Terms carefully before using our Services. If you do not agree to these Terms, you may not use our Services. By accessing or using our Services, you represent that you have read, understood, and agree to be bound by these Terms.
+            </p>
+          </div>
+
+          <!-- Terms of Service Section -->
+          <div id="terms-of-service" class="mt-12 prose max-w-none">
+            <h2>1. Terms of Service</h2>
+            <h3>1.1 Eligibility</h3>
+            <p>
+              You must be at least 18 years old to use our Services. By using our Services, you represent and warrant that you are at least 18 years old.
+            </p>
+            
+            <h3>1.2 Account Registration</h3>
+            <p>
+              To access certain features of our Services, you may be required to register for an account. You agree to provide accurate, current, and complete information during the registration process and to update such information to keep it accurate, current, and complete.
+            </p>
+            
+            <h3>1.3 Service Use</h3>
+            <p>
+              Our Services are designed to facilitate shipping of packages domestically and internationally. You may use our Services only for lawful purposes and in accordance with these Terms. You agree not to:
+            </p>
+            <ul>
+              <li>Use our Services in any way that violates applicable laws or regulations.</li>
+              <li>Ship prohibited or dangerous items without proper documentation and packaging.</li>
+              <li>Attempt to deceive or provide false information regarding shipment contents.</li>
+              <li>Use our Services to ship illegal substances or contraband.</li>
+              <li>Interfere with or disrupt the integrity or performance of our Services.</li>
+            </ul>
+          </div>
+
+          <!-- Privacy & Security Section -->
+          <div id="privacy-security" class="mt-12 prose max-w-none">
+            <h2>2. Privacy & Security</h2>
+            <p>
+              We take your privacy seriously. Our Privacy Policy describes how we collect, use, and share your personal information when you use our Services. By using our Services, you consent to our collection and use of your information as described in our Privacy Policy.
+            </p>
+            
+            <h3>2.1 Data Protection</h3>
+            <p>
+              We implement appropriate technical and organizational measures to protect your personal information from unauthorized access, disclosure, alteration, and destruction. However, no method of transmission over the internet or electronic storage is 100% secure, and we cannot guarantee absolute security.
+            </p>
+            
+            <h3>2.2 Confidentiality</h3>
+            <p>
+              We understand the sensitive nature of shipping information, including addresses, contents declarations, and tracking data. We maintain strict confidentiality of all shipping data and do not sell your information to third parties.
+            </p>
+          </div>
+
+          <!-- Legal Compliance Section -->
+          <div id="legal-compliance" class="mt-12 prose max-w-none">
+            <h2>3. Legal Compliance</h2>
+            <p>
+              Our shipping services comply with all applicable laws and regulations, including those governing international shipments, customs requirements, and prohibited items.
+            </p>
+            
+            <h3>3.1 Customs and Duties</h3>
+            <p>
+              For international shipments, you are responsible for providing accurate and complete information for customs declarations. You are also responsible for any duties, taxes, or fees imposed by customs authorities in the destination country. We do not guarantee clearance of any shipment through customs, and we are not responsible for any delays, seizures, or rejections by customs authorities.
+            </p>
+            
+            <h3>3.2 Prohibited Items</h3>
+            <p>
+              You may not use our Services to ship prohibited items, including but not limited to:
+            </p>
+            <ul>
+              <li>Illegal drugs and narcotics</li>
+              <li>Firearms, weapons, and explosives</li>
+              <li>Hazardous materials without proper documentation and packaging</li>
+              <li>Counterfeit goods</li>
+              <li>Live animals (without required permits and specialized handling)</li>
+              <li>Perishable goods (without appropriate packaging and expedited shipping)</li>
+              <li>Human remains</li>
+              <li>Cash, valuable jewelry, or precious stones (without declared value and insurance)</li>
+            </ul>
+          </div>
+
+          <!-- International Shipping Section -->
+          <div id="international-shipping" class="mt-12 prose max-w-none">
+            <h2>4. International Shipping</h2>
+            <p>
+              When using our international shipping services, you agree to comply with the laws and regulations of both the origin and destination countries. You are responsible for ensuring that your shipment can legally be imported into the destination country.
+            </p>
+            
+            <h3>4.1 Documentation</h3>
+            <p>
+              You agree to provide all necessary documentation for international shipments, including but not limited to customs declarations, commercial invoices, certificates of origin, and any other documents required by the destination country.
+            </p>
+            
+            <h3>4.2 Delivery Timelines</h3>
+            <p>
+              Delivery time estimates for international shipments are approximations and not guarantees. Various factors, including customs clearance, weather conditions, and local holidays, may affect delivery times. We are not responsible for delays caused by circumstances beyond our control.
+            </p>
+          </div>
+
+          <!-- Liability & Claims Section -->
+          <div id="liability-claims" class="mt-12 prose max-w-none">
+            <h2>5. Liability & Claims</h2>
+            <p>
+              Our liability for lost, damaged, or delayed shipments is limited as set forth in these Terms.
+            </p>
+            
+            <h3>5.1 Package Loss or Damage</h3>
+            <p>
+              In the event of loss or damage to a shipment, our liability is limited to the declared value of the shipment or $100, whichever is less, unless you have purchased additional shipping insurance. Claims for lost or damaged shipments must be submitted within 30 days of the expected delivery date.
+            </p>
+            
+            <h3>5.2 Delayed Shipments</h3>
+            <p>
+              While we strive to deliver shipments within estimated timeframes, we do not guarantee delivery times unless you have selected and paid for a guaranteed delivery service. For guaranteed delivery services, our liability for delays is limited to a refund of the shipping charges.
+            </p>
+            
+            <h3>5.3 Force Majeure</h3>
+            <p>
+              We are not liable for any failure to perform our obligations under these Terms if such failure is due to circumstances beyond our reasonable control, including but not limited to natural disasters, pandemics, civil unrest, strikes, or governmental actions.
+            </p>
+            
+            <h3>5.4 Filing a Claim</h3>
+            <p>
+              To file a claim for a lost, damaged, or delayed shipment, you must contact our customer service department at {businessInfo.email} within the applicable timeframe and provide all requested documentation, including proof of value and photographs of damaged items.
+            </p>
+          </div>
+
+          <!-- Service Guarantees Section -->
+          <div id="service-guarantees" class="mt-12 prose max-w-none">
+            <h2>6. Service Guarantees</h2>
+            <p>
+              We are committed to providing reliable, efficient shipping services. However, our service guarantees are subject to the limitations and exclusions set forth in these Terms.
+            </p>
+            
+            <h3>6.1 Delivery Guarantees</h3>
+            <p>
+              If you have selected and paid for a guaranteed delivery service and your shipment is not delivered within the guaranteed timeframe, you may be eligible for a refund of shipping charges. However, delivery guarantees do not apply if the delay is caused by:
+            </p>
+            <ul>
+              <li>Incorrect or incomplete delivery address or recipient information</li>
+              <li>Customs delays or inspection</li>
+              <li>Recipient unavailability or refusal to accept delivery</li>
+              <li>Force majeure events</li>
+              <li>Packages containing prohibited items</li>
+            </ul>
+            
+            <h3>6.2 Customer Satisfaction</h3>
+            <p>
+              We strive to provide excellent customer service. If you are not satisfied with our Services, please contact our customer service department at {businessInfo.email}, and we will work to resolve your concerns.
+            </p>
+          </div>
+
+          <!-- Changes to Terms Section -->
+          <div id="changes-to-terms" class="mt-12 prose max-w-none">
+            <h2>7. Changes to Terms</h2>
+            <p>
+              We may modify these Terms at any time by posting the revised Terms on our website. Your continued use of our Services after any such changes constitutes your acceptance of the revised Terms.
+            </p>
+            
+            <h3>7.1 Notification of Changes</h3>
+            <p>
+              We will make reasonable efforts to notify you of significant changes to these Terms through email or notifications on our website or mobile applications. However, it is your responsibility to review these Terms periodically.
+            </p>
+          </div>
+
+          <!-- Contact Information Section -->
+          <div id="contact-information" class="mt-12 prose max-w-none">
+            <h2>8. Contact Information</h2>
+            <p>
+              If you have any questions about these Terms, please contact us at:
+            </p>
+            <p>
+              {businessInfo.name}<br>
+              {businessInfo.address.street}<br>
+              {businessInfo.address.city}, {businessInfo.address.country}<br>
+              Email: {businessInfo.email}<br>
+              Phone: {businessInfo.phone}<br>
+              Website: {businessInfo.website}
+            </p>
+          </div>
+          
+          <!-- Conclusion -->
+          <div class="mt-16 border-t border-gray-200 pt-8">
+            <p class="text-gray-600 text-sm text-center">
+              By using our Services, you acknowledge that you have read, understood, and agree to be bound by these Terms.
+            </p>
+            <p class="text-gray-500 text-xs text-center mt-4">
+              Last Updated: {lastUpdated}
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style define:vars={{ 
+  blobAnimation: styles.animations.blob 
+}}>
+  @keyframes blob {
+    0% {
+      transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    }
+    33% {
+      transform: translate(-50%, -50%) scale(1.1) rotate(120deg);
+    }
+    66% {
+      transform: translate(-50%, -50%) scale(0.9) rotate(240deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1) rotate(360deg);
+    }
+  }
+
+  .animate-blob {
+    animation: blob 20s infinite linear;
+  }
+
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+
+  .backdrop-blur-sm {
+    backdrop-filter: blur(8px);
+  }
+
+  .hover\:-translate-y-0.5:hover {
+    transform: translateY(-2px);
+  }
+
+  /* Prose customizations */
+  .prose h2 {
+    color: #0891b2;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+  }
+
+  .prose h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+  }
+</style> 

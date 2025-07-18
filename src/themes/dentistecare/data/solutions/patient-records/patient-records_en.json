@@ -1,0 +1,317 @@
+{
+  "hero": {
+    "subtitle": "PRACTICE MANAGEMENT",
+    "title": "Digital Patient Records Management",
+    "description": "Streamline your practice with our secure, HIPAA-compliant digital patient records system that makes accessing and updating patient information effortless."
+  },
+  "overview": {
+    "title": "Modern Patient Information Management",
+    "description": "Our comprehensive patient records solution centralizes all patient data in one secure location, reducing paperwork and improving clinical decision-making.",
+    "features": [
+      {
+        "icon": "file-text",
+        "title": "Complete Digital Charts",
+        "description": "Access comprehensive patient history in one interface"
+      },
+      {
+        "icon": "shield",
+        "title": "HIPAA Compliant",
+        "description": "Enterprise-grade security for all patient data"
+      },
+      {
+        "icon": "tablet",
+        "title": "Mobile-Friendly",
+        "description": "Review patient information from any device"
+      },
+      {
+        "icon": "search",
+        "title": "Smart Search",
+        "description": "Find patient information instantly with powerful search"
+      }
+    ]
+  },
+  "applications": {
+    "title": "Complete Records Management",
+    "description": "A comprehensive solution that handles all aspects of patient records",
+    "problems": [
+      {
+        "title": "Medical History",
+        "description": "Easily track and update comprehensive health history",
+        "icon": "clipboard"
+      },
+      {
+        "title": "Treatment Plans",
+        "description": "Document and present treatment options digitally",
+        "icon": "layers"
+      },
+      {
+        "title": "Clinical Notes",
+        "description": "Customizable templates for fast, accurate documentation",
+        "icon": "edit-3"
+      },
+      {
+        "title": "Digital Imaging",
+        "description": "Seamless integration with radiographs and photos",
+        "icon": "image"
+      },
+      {
+        "title": "Patient Communication",
+        "description": "Document all patient interactions and consent",
+        "icon": "message-circle"
+      },
+      {
+        "title": "Insurance Information",
+        "description": "Store and verify coverage details in one place",
+        "icon": "umbrella"
+      }
+    ]
+  },
+  "process": {
+    "title": "Implementing Digital Records",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Assessment",
+        "description": "We evaluate your current record-keeping system and workflow needs"
+      },
+      {
+        "number": "02",
+        "title": "Customization",
+        "description": "Configure the system to match your practice's specific requirements"
+      },
+      {
+        "number": "03",
+        "title": "Data Migration",
+        "description": "Securely transfer existing patient records to the new system"
+      },
+      {
+        "number": "04",
+        "title": "Training",
+        "description": "Comprehensive staff training on all system features"
+      },
+      {
+        "number": "05",
+        "title": "Go Live",
+        "description": "Transition to the new system with real-time support"
+      },
+      {
+        "number": "06",
+        "title": "Ongoing Support",
+        "description": "Regular updates and continuous improvement of the system"
+      }
+    ]
+  },
+  "advantages": {
+    "title": "Business Benefits",
+    "description": "How our patient records solution transforms your practice",
+    "benefits": [
+      {
+        "title": "90% Reduction in Paperwork",
+        "description": "Eliminate paper forms and filing with full digitization",
+        "icon": "file"
+      },
+      {
+        "title": "35% Faster Patient Intake",
+        "description": "Digital forms and automated verification processes",
+        "icon": "fast-forward"
+      },
+      {
+        "title": "100% Record Availability",
+        "description": "Access patient information anytime, anywhere",
+        "icon": "cloud"
+      },
+      {
+        "title": "Improved Clinical Outcomes",
+        "description": "Better decision-making with comprehensive data",
+        "icon": "award"
+      }
+    ]
+  },
+  "features": {
+    "title": "Key Features",
+    "description": "Comprehensive tools for managing all patient information",
+    "featureList": [
+      {
+        "title": "Electronic Forms",
+        "description": "Customizable digital intake and consent forms",
+        "icon": "clipboard"
+      },
+      {
+        "title": "Document Scanning",
+        "description": "Easily digitize existing paper records",
+        "icon": "camera"
+      },
+      {
+        "title": "Clinical Templates",
+        "description": "Specialty-specific note templates for efficiency",
+        "icon": "file-text"
+      },
+      {
+        "title": "Image Management",
+        "description": "Store and view all patient images in one place",
+        "icon": "image"
+      },
+      {
+        "title": "Patient Timeline",
+        "description": "Chronological view of all patient interactions",
+        "icon": "activity"
+      },
+      {
+        "title": "E-Signatures",
+        "description": "Legal-binding electronic signature capture",
+        "icon": "edit"
+      },
+      {
+        "title": "Secure Messaging",
+        "description": "HIPAA-compliant communications within team",
+        "icon": "message-square"
+      },
+      {
+        "title": "Audit Trails",
+        "description": "Track all access and changes to patient records",
+        "icon": "list"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Pricing Options",
+    "description": "Solutions tailored to practices of all sizes",
+    "options": [
+      {
+        "name": "Essentials",
+        "price": "$129",
+        "duration": "per month",
+        "includes": [
+          "Up to 2 providers",
+          "Basic electronic forms",
+          "Digital clinical notes",
+          "Image attachment capability",
+          "Standard security features",
+          "Email support"
+        ]
+      },
+      {
+        "name": "Professional",
+        "price": "$249",
+        "duration": "per month",
+        "includes": [
+          "Up to 5 providers",
+          "All Essentials features",
+          "Advanced form customization",
+          "Document scanning tools",
+          "Clinical template library",
+          "Patient portal access",
+          "Priority support"
+        ]
+      },
+      {
+        "name": "Enterprise",
+        "price": "$399",
+        "duration": "per month",
+        "includes": [
+          "Unlimited providers",
+          "All Professional features",
+          "Custom clinical workflows",
+          "Advanced audit capabilities",
+          "Multi-location support",
+          "API access for integrations",
+          "Dedicated account manager",
+          "Enterprise-grade security"
+        ]
+      }
+    ]
+  },
+  "integration": {
+    "title": "Seamless Integration",
+    "description": "Works with your existing practice management systems",
+    "partners": [
+      {
+        "name": "Dentrix",
+        "logo": "/images/partners/dentrix.png"
+      },
+      {
+        "name": "Eaglesoft",
+        "logo": "/images/partners/eaglesoft.png"
+      },
+      {
+        "name": "Open Dental",
+        "logo": "/images/partners/opendental.png"
+      },
+      {
+        "name": "Curve Dental",
+        "logo": "/images/partners/curve.png"
+      },
+      {
+        "name": "Denticon",
+        "logo": "/images/partners/denticon.png"
+      },
+      {
+        "name": "Dentimax",
+        "logo": "/images/partners/dentimax.png"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": [
+      {
+        "question": "Is the system HIPAA compliant?",
+        "answer": "Yes, our patient records system is fully HIPAA compliant with enterprise-grade security features including encryption, access controls, and comprehensive audit trails to ensure the privacy and security of all patient information."
+      },
+      {
+        "question": "How do we transfer our existing patient records?",
+        "answer": "Our implementation team handles the entire migration process. We can import data from most practice management systems and provide tools to scan and digitize paper records with minimal disruption to your practice."
+      },
+      {
+        "question": "Can patients access their own records?",
+        "answer": "Yes, with our optional patient portal feature, you can give patients secure access to portions of their records, including treatment plans, upcoming appointments, and forms they need to complete."
+      },
+      {
+        "question": "How long does implementation take?",
+        "answer": "Typical implementation takes 2-4 weeks depending on the size of your practice and amount of historical data to migrate. Our team works around your schedule to minimize disruption to your practice operations."
+      },
+      {
+        "question": "What if we need to customize clinical templates?",
+        "answer": "All plans include some level of template customization. Our Professional and Enterprise plans offer more advanced customization options to match your exact clinical workflows and specialty requirements."
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Customer Success Stories",
+    "reviews": [
+      {
+        "name": "Dr. Amanda Peters",
+        "practice": "Lakeside Dental Group",
+        "rating": 5,
+        "comment": "Transitioning to digital records has completely transformed our practice efficiency. The customizable templates save us at least 10 minutes per patient, and having everything accessible from anywhere has been invaluable.",
+        "date": "3 months ago"
+      },
+      {
+        "name": "Dr. James Wilson",
+        "practice": "Wilson Family Dentistry",
+        "rating": 5,
+        "comment": "After 20 years of paper charts, I was hesitant to switch to digital records. The transition was much smoother than expected, and now I can't imagine practicing without this system.",
+        "date": "2 months ago"
+      },
+      {
+        "name": "Kelly Martinez",
+        "practice": "Office Manager, Smile Design Specialists",
+        "rating": 5,
+        "comment": "The reduction in paperwork has been dramatic. Our front desk staff now spends much more time on patient care instead of filing and searching for charts. The audit trail feature gives us peace of mind for compliance.",
+        "date": "1 month ago"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Transform Your Patient Records Management?",
+    "description": "Join thousands of practices that have eliminated paperwork and improved clinical documentation with our digital records system.",
+    "primaryButton": {
+      "text": "Request Demo",
+      "href": "/request-demo"
+    },
+    "secondaryButton": {
+      "text": "View Pricing",
+      "href": "/pricing"
+    }
+  }
+} 

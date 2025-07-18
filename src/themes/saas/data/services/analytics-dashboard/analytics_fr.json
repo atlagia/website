@@ -1,0 +1,192 @@
+{
+  "hero": {
+    "subtitle": "TABLEAU DE BORD ANALYTIQUE",
+    "title": "Analyses Puissantes pour des Décisions Basées sur les Données",
+    "description": "Obtenez des insights en temps réel sur la performance de votre entreprise avec notre tableau de bord analytique alimenté par l'IA. Suivez, analysez et optimisez vos métriques en un seul endroit.",
+    "image": "/images/services/analytics-dashboard.svg"
+  },
+  "benefits": {
+    "title": "Pourquoi Choisir Notre Tableau de Bord Analytique",
+    "items": [
+      {
+        "icon": "LineChart",
+        "title": "Insights en Temps Réel",
+        "description": "Surveillez vos métriques clés en temps réel avec des mises à jour en direct et des notifications instantanées.",
+        "color": "blue"
+      },
+      {
+        "icon": "Brain",
+        "title": "Analyse par IA",
+        "description": "Laissez l'IA découvrir les tendances cachées et fournir des recommandations exploitables.",
+        "color": "purple"
+      },
+      {
+        "icon": "Gauge",
+        "title": "Suivi de Performance",
+        "description": "Suivez tous vos KPIs et métriques commerciales dans un tableau de bord centralisé.",
+        "color": "green"
+      },
+      {
+        "icon": "PieChart",
+        "title": "Rapports Personnalisés",
+        "description": "Créez des rapports et des visualisations personnalisés adaptés à vos besoins.",
+        "color": "pink"
+      }
+    ]
+  },
+  "features": {
+    "title": "Fonctionnalités Analytiques Complètes",
+    "description": "Tout ce dont vous avez besoin pour comprendre et optimiser la performance de votre entreprise.",
+    "items": [
+      {
+        "title": "Tableaux de Bord Interactifs",
+        "description": "Créez des tableaux de bord personnalisés avec des widgets drag-and-drop et des données en temps réel",
+        "image": "/images/services/interactive-dashboards.svg",
+        "features": [
+          "Mises en page personnalisables",
+          "Types de visualisation multiples",
+          "Mises à jour en temps réel",
+          "Filtres interactifs"
+        ]
+      },
+      {
+        "title": "Analyses Avancées",
+        "description": "Exploitez l'IA et le machine learning pour des insights plus profonds",
+        "image": "/images/services/advanced-analytics.svg",
+        "features": [
+          "Analyses prédictives",
+          "Analyse des tendances",
+          "Détection d'anomalies",
+          "Reconnaissance de motifs"
+        ]
+      },
+      {
+        "title": "Rapports Automatisés",
+        "description": "Gagnez du temps avec la génération et la planification automatisée des rapports",
+        "image": "/images/services/automated-reporting.svg",
+        "features": [
+          "Rapports programmés",
+          "Templates personnalisés",
+          "Formats d'export multiples",
+          "Notifications par email"
+        ]
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "Comment Ça Marche",
+    "description": "Commencez avec l'analytique en quatre étapes simples",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Connectez les Sources",
+        "description": "Intégrez vos données depuis plusieurs sources et plateformes"
+      },
+      {
+        "number": "02",
+        "title": "Configurez le Tableau",
+        "description": "Configurez vos tableaux de bord et métriques personnalisés"
+      },
+      {
+        "number": "03",
+        "title": "Suivez la Performance",
+        "description": "Surveillez vos KPIs et analysez les tendances"
+      },
+      {
+        "number": "04",
+        "title": "Optimisez & Améliorez",
+        "description": "Agissez sur les insights pour améliorer la performance"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Tarification Simple et Transparente",
+    "description": "Choisissez le forfait qui correspond le mieux à vos besoins en analytique",
+    "plans": [
+      {
+        "name": "Débutant",
+        "price": "59",
+        "period": "/mois",
+        "description": "Parfait pour les petites entreprises",
+        "features": [
+          "5 tableaux de bord",
+          "Analytique de base",
+          "Mises à jour quotidiennes",
+          "Support par email"
+        ],
+        "cta": {
+          "text": "Essai Gratuit",
+          "link": "/trial"
+        }
+      },
+      {
+        "name": "Professionnel",
+        "price": "129",
+        "period": "/mois",
+        "description": "Pour les entreprises en croissance",
+        "features": [
+          "Tableaux de bord illimités",
+          "Analytique avancée",
+          "Mises à jour en temps réel",
+          "Support prioritaire"
+        ],
+        "cta": {
+          "text": "Essai Gratuit",
+          "link": "/trial"
+        },
+        "popular": true
+      },
+      {
+        "name": "Entreprise",
+        "price": "299",
+        "period": "/mois",
+        "description": "Pour les grandes organisations",
+        "features": [
+          "Solutions personnalisées",
+          "Insights alimentés par l'IA",
+          "Accès API",
+          "Support 24/7"
+        ],
+        "cta": {
+          "text": "Contacter les Ventes",
+          "link": "/contact"
+        }
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Ce Que Disent Nos Clients",
+    "items": [
+      {
+        "content": "Le tableau de bord analytique a transformé notre façon de prendre des décisions. Les insights en temps réel et les recommandations alimentées par l'IA nous ont aidés à augmenter notre efficacité de 40%.",
+        "author": "Alex Rivera",
+        "position": "Directeur des Opérations",
+        "company": "DataFlow",
+        "image": "/images/testimonials/alex.jpg"
+      },
+      {
+        "content": "Avoir toutes nos métriques en un seul endroit avec des rapports automatisés nous a fait gagner d'innombrables heures. Les options de personnalisation sont exactement ce dont nous avions besoin.",
+        "author": "Sarah Kim",
+        "position": "Responsable Analytique",
+        "company": "MetricsPro",
+        "image": "/images/testimonials/sarah.jpg"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prêt à Transformer Votre Analytique ?",
+    "description": "Rejoignez des milliers d'entreprises qui utilisent notre tableau de bord analytique pour prendre de meilleures décisions.",
+    "buttons": [
+      {
+        "text": "Essai Gratuit",
+        "link": "/trial",
+        "primary": true
+      },
+      {
+        "text": "Voir la Démo",
+        "link": "/demo",
+        "primary": false
+      }
+    ]
+  }
+} 

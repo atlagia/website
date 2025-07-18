@@ -1,0 +1,335 @@
+{
+  "hero": {
+    "subtitle": "Radiology Information System",
+    "title": "Advanced Radiology Management Solution",
+    "description": "A comprehensive radiology information system that streamlines imaging workflows, enhances reporting, and improves patient care.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Radiology Management Solution Demo"
+    },
+    "stats": [
+      {
+        "value": "45%",
+        "label": "Faster Reporting"
+      },
+      {
+        "value": "99.9%",
+        "label": "Image Quality"
+      },
+      {
+        "value": "30%",
+        "label": "Cost Reduction"
+      }
+    ]
+  },
+  "features": {
+    "subtitle": "Advanced Features",
+    "title": "Complete Radiology Management",
+    "description": "Comprehensive tools designed for modern radiology practices",
+    "categories": [
+      {
+        "name": "Imaging Workflow",
+        "description": "Streamline imaging processes and reporting"
+      },
+      {
+        "name": "Patient Care",
+        "description": "Enhance patient experience and care delivery"
+      }
+    ],
+    "items": [
+      {
+        "icon": "image",
+        "category": "Imaging",
+        "title": "PACS Integration",
+        "description": "Seamless integration with PACS systems",
+        "image": "/images/solutions/radiology/pacs.jpg",
+        "highlights": [
+          "DICOM compatibility",
+          "Multi-modality support",
+          "Image archiving",
+          "Remote access"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "DICOM compliance"
+        }
+      },
+      {
+        "icon": "file-text",
+        "category": "Reporting",
+        "title": "Smart Reporting",
+        "description": "AI-assisted reporting and structured templates",
+        "image": "/images/solutions/radiology/reporting.jpg",
+        "highlights": [
+          "Voice recognition",
+          "Template library",
+          "Critical findings",
+          "Auto-measurements"
+        ],
+        "stats": {
+          "value": "45%",
+          "label": "Faster reporting"
+        }
+      },
+      {
+        "icon": "users",
+        "category": "Workflow",
+        "title": "Workflow Optimization",
+        "description": "Efficient workflow management and scheduling",
+        "image": "/images/solutions/radiology/workflow.jpg",
+        "highlights": [
+          "Smart scheduling",
+          "Worklist management",
+          "Protocol automation",
+          "Resource allocation"
+        ],
+        "stats": {
+          "value": "35%",
+          "label": "Efficiency gain"
+        }
+      },
+      {
+        "icon": "activity",
+        "category": "Analytics",
+        "title": "Advanced Analytics",
+        "description": "Comprehensive analytics and business intelligence",
+        "image": "/images/solutions/radiology/analytics.jpg",
+        "highlights": [
+          "Performance metrics",
+          "Quality indicators",
+          "Resource utilization",
+          "Financial analytics"
+        ],
+        "stats": {
+          "value": "30%",
+          "label": "Cost reduction"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Radiology Excellence",
+    "description": "See how leading radiology practices are transforming their operations",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Radiology Success Story"
+    },
+    "testimonials": [
+      {
+        "author": "Dr. James Anderson",
+        "role": "Chief Radiologist",
+        "image": "/images/testimonials/rad1.jpg",
+        "quote": "This system has revolutionized our practice. The integrated PACS and reporting capabilities have significantly improved our efficiency."
+      },
+      {
+        "author": "Dr. Sarah Martinez",
+        "role": "Imaging Director",
+        "image": "/images/testimonials/rad2.jpg",
+        "quote": "The AI-assisted reporting and workflow optimization have helped us provide faster and more accurate diagnoses."
+      }
+    ]
+  },
+  "benefits": {
+    "subtitle": "Key Benefits",
+    "title": "Transform Your Radiology Practice",
+    "description": "Experience the advantages of a fully integrated radiology management system",
+    "items": [
+      {
+        "icon": "zap",
+        "title": "Enhanced Efficiency",
+        "description": "Streamline radiology workflows and reporting",
+        "color": "blue",
+        "stats": {
+          "value": "45%",
+          "label": "Faster TAT"
+        },
+        "highlights": [
+          "Automated workflows",
+          "Smart scheduling",
+          "Resource optimization",
+          "Quick reporting"
+        ]
+      },
+      {
+        "icon": "check-circle",
+        "title": "Quality Assurance",
+        "description": "Maintain highest standards of imaging quality",
+        "color": "green",
+        "stats": {
+          "value": "99.9%",
+          "label": "Image Quality"
+        },
+        "highlights": [
+          "Quality controls",
+          "Protocol management",
+          "Error prevention",
+          "Compliance tracking"
+        ]
+      },
+      {
+        "icon": "users",
+        "title": "Patient Care",
+        "description": "Improve patient experience and outcomes",
+        "color": "purple",
+        "stats": {
+          "value": "95%",
+          "label": "Patient Satisfaction"
+        },
+        "highlights": [
+          "Quick access",
+          "Result sharing",
+          "Patient portal",
+          "Care coordination"
+        ]
+      },
+      {
+        "icon": "shield",
+        "title": "Security & Compliance",
+        "description": "Ensure data security and regulatory compliance",
+        "color": "red",
+        "stats": {
+          "value": "100%",
+          "label": "HIPAA Compliance"
+        },
+        "highlights": [
+          "Data encryption",
+          "Access control",
+          "Audit trails",
+          "Regulatory compliance"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "subtitle": "Transparent Pricing",
+    "title": "Flexible Pricing Plans",
+    "description": "Choose the perfect plan for your radiology practice. Save up to 20% with annual billing.",
+    "billingPeriods": ["Monthly", "Yearly"],
+    "plans": [
+      {
+        "name": "Essential",
+        "highlight": "For small practices",
+        "monthlyPrice": "$999",
+        "yearlyPrice": "$9,990",
+        "yearlyDiscount": "Save $1,998/year",
+        "description": "Essential features for small practices",
+        "features": [
+          {
+            "text": "Basic PACS integration",
+            "included": true
+          },
+          {
+            "text": "Reporting templates",
+            "included": true
+          },
+          {
+            "text": "Scheduling system",
+            "included": true
+          },
+          {
+            "text": "Email support",
+            "included": true
+          },
+          {
+            "text": "Basic analytics",
+            "included": true
+          },
+          {
+            "text": "Mobile access",
+            "included": true
+          }
+        ],
+        "cta": "Get Started",
+        "popular": false
+      },
+      {
+        "name": "Professional",
+        "highlight": "Most popular for growing practices",
+        "monthlyPrice": "$1,999",
+        "yearlyPrice": "$19,990",
+        "yearlyDiscount": "Save $3,998/year",
+        "description": "Advanced features for growing practices",
+        "features": [
+          {
+            "text": "Everything in Essential, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Advanced PACS integration",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "AI-assisted reporting",
+            "included": true
+          },
+          {
+            "text": "Advanced analytics",
+            "included": true
+          },
+          {
+            "text": "Priority support",
+            "included": true
+          },
+          {
+            "text": "Multi-location support",
+            "included": true
+          }
+        ],
+        "cta": "Get Started",
+        "popular": true
+      },
+      {
+        "name": "Enterprise",
+        "highlight": "For large practices & hospitals",
+        "monthlyPrice": "Custom",
+        "yearlyPrice": "Custom",
+        "yearlyDiscount": "Contact us for special pricing",
+        "description": "Tailored solutions for large practices",
+        "features": [
+          {
+            "text": "Everything in Professional, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Custom integration support",
+            "included": true
+          },
+          {
+            "text": "Dedicated account manager",
+            "included": true
+          },
+          {
+            "text": "Advanced security features",
+            "included": true
+          },
+          {
+            "text": "Custom development",
+            "included": true
+          },
+          {
+            "text": "SLA guarantees",
+            "included": true
+          }
+        ],
+        "cta": "Contact Sales",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Transform Your Radiology Practice?",
+    "description": "Join leading radiology practices that have modernized their operations with our solution.",
+    "background": "/images/solutions/radiology/cta-background.jpg",
+    "primaryButton": {
+      "text": "Schedule a Demo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Watch Demo",
+      "link": "#showcase"
+    }
+  }
+} 

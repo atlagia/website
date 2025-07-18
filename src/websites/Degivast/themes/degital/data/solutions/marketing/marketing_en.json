@@ -1,0 +1,164 @@
+{
+  "hero": {
+    "subtitle": "Digital Marketing Solutions",
+    "title": "Transform Your Marketing with AI-Powered Automation",
+    "description": "Leverage advanced AI and automation to streamline your marketing operations and drive better results",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=example",
+      "alt": "Marketing Automation Demo"
+    },
+    "stats": [
+      {
+        "value": "300%",
+        "label": "ROI Increase"
+      },
+      {
+        "value": "10x",
+        "label": "Faster Execution"
+      },
+      {
+        "value": "24/7",
+        "label": "Campaign Monitoring"
+      }
+    ]
+  },
+  "features": {
+    "subtitle": "Powerful Features",
+    "title": "Everything You Need for Modern Marketing",
+    "description": "Our comprehensive suite of marketing tools helps you stay ahead of the competition",
+    "items": [
+      {
+        "icon": "brain",
+        "category": "AI-Powered",
+        "title": "Smart Campaign Management",
+        "description": "Automatically optimize your campaigns using AI-driven insights and recommendations",
+        "image": "/images/solutions/marketing/campaign-management.jpg",
+        "highlights": [
+          "Real-time optimization",
+          "Audience segmentation",
+          "A/B testing automation",
+          "Performance analytics"
+        ]
+      },
+      {
+        "icon": "trending-up",
+        "category": "Analytics",
+        "title": "Performance Tracking",
+        "description": "Track and analyze your marketing performance across all channels",
+        "image": "/images/solutions/marketing/performance-tracking.jpg",
+        "highlights": [
+          "Multi-channel tracking",
+          "Custom reporting",
+          "ROI analysis",
+          "Conversion tracking"
+        ]
+      },
+      {
+        "icon": "users",
+        "category": "Automation",
+        "title": "Customer Journey Automation",
+        "description": "Create personalized customer journeys that convert",
+        "image": "/images/solutions/marketing/customer-journey.jpg",
+        "highlights": [
+          "Journey mapping",
+          "Trigger-based actions",
+          "Personalization",
+          "Behavior tracking"
+        ]
+      },
+      {
+        "icon": "star",
+        "category": "Content",
+        "title": "Content Optimization",
+        "description": "Create and optimize content that resonates with your audience",
+        "image": "/images/solutions/marketing/content-optimization.jpg",
+        "highlights": [
+          "SEO optimization",
+          "Content suggestions",
+          "Engagement analysis",
+          "Automated scheduling"
+        ]
+      }
+    ]
+  },
+  "benefits": {
+    "subtitle": "Why Choose Us",
+    "title": "Transform Your Marketing Operations",
+    "description": "Experience the benefits of AI-powered marketing automation",
+    "items": [
+      {
+        "icon": "chart",
+        "color": "blue",
+        "title": "Increased Efficiency",
+        "description": "Automate repetitive tasks and focus on strategy",
+        "stats": {
+          "value": "85%",
+          "label": "Time Saved"
+        },
+        "highlights": [
+          "Workflow automation",
+          "Task management",
+          "Resource optimization"
+        ]
+      },
+      {
+        "icon": "trending-up",
+        "color": "purple",
+        "title": "Better Results",
+        "description": "Achieve better marketing results with data-driven decisions",
+        "stats": {
+          "value": "200%",
+          "label": "ROI Improvement"
+        },
+        "highlights": [
+          "Performance tracking",
+          "ROI optimization",
+          "Campaign effectiveness"
+        ]
+      },
+      {
+        "icon": "users",
+        "color": "green",
+        "title": "Customer Satisfaction",
+        "description": "Deliver personalized experiences that delight customers",
+        "stats": {
+          "value": "95%",
+          "label": "Satisfaction Rate"
+        },
+        "highlights": [
+          "Personalization",
+          "Customer feedback",
+          "Experience optimization"
+        ]
+      },
+      {
+        "icon": "brain",
+        "color": "yellow",
+        "title": "AI-Powered Insights",
+        "description": "Make smarter decisions with AI-driven recommendations",
+        "stats": {
+          "value": "24/7",
+          "label": "Real-time Analysis"
+        },
+        "highlights": [
+          "Predictive analytics",
+          "Trend analysis",
+          "Smart recommendations"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Transform Your Marketing?",
+    "description": "Join thousands of businesses using our marketing automation platform",
+    "background": "/images/solutions/marketing/cta-background.jpg",
+    "primaryButton": {
+      "text": "Get Started",
+      "link": "/signup"
+    },
+    "secondaryButton": {
+      "text": "Schedule Demo",
+      "link": "/contact"
+    }
+  }
+} 

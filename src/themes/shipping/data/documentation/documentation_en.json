@@ -1,0 +1,134 @@
+{
+  "hero": {
+    "subtitle": "DOCUMENTATION",
+    "title": "Learn How to Use Our Platform",
+    "description": "Comprehensive guides and tutorials to help you make the most of our e-commerce solutions.",
+    "searchPlaceholder": "Search documentation..."
+  },
+  "sidebar": {
+    "categories": [
+      {
+        "title": "Getting Started",
+        "icon": "Rocket",
+        "items": [
+          {
+            "title": "Quick Start Guide",
+            "link": "/docs/quick-start"
+          },
+          {
+            "title": "Platform Overview",
+            "link": "/docs/overview"
+          },
+          {
+            "title": "Account Setup",
+            "link": "/docs/account-setup"
+          }
+        ]
+      },
+      {
+        "title": "Core Features",
+        "icon": "Box",
+        "items": [
+          {
+            "title": "AI Content Generation",
+            "link": "/docs/ai-content"
+          },
+          {
+            "title": "SEO Optimization",
+            "link": "/docs/seo"
+          },
+          {
+            "title": "Analytics Dashboard",
+            "link": "/docs/analytics"
+          }
+        ]
+      },
+      {
+        "title": "Integrations",
+        "icon": "Plug",
+        "items": [
+          {
+            "title": "Shopify Integration",
+            "link": "/docs/shopify"
+          },
+          {
+            "title": "WooCommerce Setup",
+            "link": "/docs/woocommerce"
+          },
+          {
+            "title": "API Documentation",
+            "link": "/docs/api"
+          }
+        ]
+      }
+    ]
+  },
+  "featured": {
+    "title": "Featured Guides",
+    "guides": [
+      {
+        "icon": "Zap",
+        "title": "Getting Started with AI",
+        "description": "Learn how to leverage our AI tools for your e-commerce business",
+        "link": "/docs/ai-guide",
+        "color": "pink"
+      },
+      {
+        "icon": "BarChart",
+        "title": "Analytics Basics",
+        "description": "Understanding your e-commerce analytics and metrics",
+        "link": "/docs/analytics-guide",
+        "color": "blue"
+      },
+      {
+        "icon": "Settings",
+        "title": "Platform Integration",
+        "description": "Step-by-step guide to integrate with your e-commerce platform",
+        "link": "/docs/integration-guide",
+        "color": "purple"
+      }
+    ]
+  },
+  "updates": {
+    "title": "Latest Updates",
+    "description": "Stay up to date with our latest features and improvements",
+    "items": [
+      {
+        "date": "2024-03-15",
+        "title": "New AI Features Released",
+        "description": "Enhanced content generation capabilities and improved SEO suggestions",
+        "tag": "Feature"
+      },
+      {
+        "date": "2024-03-10",
+        "title": "Analytics Dashboard Update",
+        "description": "New metrics and improved visualization options",
+        "tag": "Update"
+      },
+      {
+        "date": "2024-03-05",
+        "title": "API Version 2.0",
+        "description": "New endpoints and improved performance",
+        "tag": "API"
+      }
+    ]
+  },
+  "help": {
+    "title": "Need More Help?",
+    "description": "Can't find what you're looking for? Our support team is here to help.",
+    "options": [
+      {
+        "icon": "MessageCircle",
+        "title": "Community Forum",
+        "description": "Join our community forum to get help from other users",
+        "link": "/community"
+      },
+      {
+        "icon": "Mail",
+        "title": "Contact Support",
+        "description": "Get in touch with our dedicated support team",
+        "link": "mailto:support@sooq.network"
+      }
+    ]
+  }
+} 

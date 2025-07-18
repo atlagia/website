@@ -1,0 +1,348 @@
+{
+  "pageTitle": "Soluciones",
+  "pageDescription": "Soluciones y funcionalidades específicas por industria. Encuentra las soluciones perfectas para tus necesidades empresariales.",
+  "hero": {
+    "badge": "Soluciones Específicas por Industria",
+    "title": "Soluciones Adaptadas para Cada Industria",
+    "description": "Descubre soluciones específicas por industria con funcionalidades potentes. Comienza con nuestra plataforma global y añade soluciones especializadas según tus necesidades.",
+    "cta": {
+      "text": "Contactar Ventas",
+      "href": "/contact/sales"
+    }
+  },
+  "benefits": {
+    "title": "Beneficios Clave",
+    "description": "Transforma tu empresa con nuestras soluciones integrales",
+    "items": [
+      {
+        "title": "Excelencia Operativa",
+        "icon": "Zap",
+        "description": "Optimiza operaciones y mejora la eficiencia",
+        "items": [
+          "Flujos de Trabajo Automatizados",
+          "Monitoreo en Tiempo Real",
+          "Optimización de Recursos",
+          "Automatización de Procesos"
+        ]
+      },
+      {
+        "title": "Seguridad Avanzada",
+        "icon": "Shield",
+        "description": "Seguridad y cumplimiento de nivel empresarial",
+        "items": [
+          "Cifrado de Datos",
+          "Control de Acceso",
+          "Gestión de Cumplimiento",
+          "Registro de Auditoría"
+        ]
+      },
+      {
+        "title": "Escalabilidad",
+        "icon": "Globe",
+        "description": "Crece sin limitaciones",
+        "items": [
+          "Infraestructura Cloud",
+          "Balanceo de Carga",
+          "Escalado Automático",
+          "Despliegue Global"
+        ]
+      },
+      {
+        "title": "Capacidades de Integración",
+        "icon": "Database",
+        "description": "Conéctate con tus sistemas existentes",
+        "items": [
+          "Acceso API",
+          "Integraciones Personalizadas",
+          "Soporte Webhook",
+          "Sincronización de Datos"
+        ]
+      }
+    ]
+  },
+  "industries": {
+    "title": "Industrias Disponibles",
+    "description": "Selecciona tu industria para ver soluciones especializadas",
+    "items": [
+      {
+        "name": "Salud",
+        "icon": "Stethoscope",
+        "description": "Soluciones para hospitales, clínicas y consultorios médicos",
+        "solutions": [
+          { "name": "Consultorio Médico", "link": "/solutions/medical-practice" },
+          { "name": "Hospital", "link": "/solutions/hospital" },
+          { "name": "Clínica", "link": "/solutions/clinic" },
+          { "name": "Farmacia", "link": "/solutions/pharmacy" }
+        ]
+      },
+      {
+        "name": "Manufactura",
+        "icon": "Factory",
+        "description": "Soluciones industriales y de manufactura",
+        "solutions": [
+          { "name": "Producción", "link": "/solutions/production" },
+          { "name": "Control de Calidad", "link": "/solutions/quality-control" },
+          { "name": "Cadena de Suministro", "link": "/solutions/supply-chain" },
+          { "name": "Mantenimiento", "link": "/solutions/maintenance" }
+        ]
+      },
+      {
+        "name": "Comercio Minorista",
+        "icon": "ShoppingBag",
+        "description": "Soluciones de comercio minorista y e-commerce",
+        "solutions": [
+          { "name": "Gestión de Tienda", "link": "/solutions/store-management" },
+          { "name": "E-commerce", "link": "/solutions/ecommerce" },
+          { "name": "Inventario", "link": "/solutions/inventory" },
+          { "name": "Servicio al Cliente", "link": "/solutions/customer-service" }
+        ]
+      },
+      {
+        "name": "Servicios Profesionales",
+        "icon": "Briefcase",
+        "description": "Soluciones para proveedores de servicios profesionales",
+        "solutions": [
+          { "name": "Consultoría", "link": "/solutions/consulting" },
+          { "name": "Legal", "link": "/solutions/legal" },
+          { "name": "Contabilidad", "link": "/solutions/accounting" },
+          { "name": "Bienes Raíces", "link": "/solutions/real-estate" }
+        ]
+      },
+      {
+        "name": "Educación",
+        "icon": "GraduationCap",
+        "description": "Soluciones para instituciones educativas",
+        "solutions": [
+          { "name": "Gestión Escolar", "link": "/solutions/school-management" },
+          { "name": "Servicios Estudiantiles", "link": "/solutions/student-services" },
+          { "name": "Administración", "link": "/solutions/administration" },
+          { "name": "Aprendizaje", "link": "/solutions/learning" }
+        ]
+      },
+      {
+        "name": "Bienes Raíces",
+        "icon": "Home",
+        "description": "Soluciones inmobiliarias",
+        "solutions": [
+          { "name": "Gestión de Propiedades", "link": "/solutions/property-management" },
+          { "name": "Ventas", "link": "/solutions/sales" },
+          { "name": "Alquiler", "link": "/solutions/leasing" },
+          { "name": "Mantenimiento", "link": "/solutions/maintenance" }
+        ]
+      },
+      {
+        "name": "Logística",
+        "icon": "Truck",
+        "description": "Soluciones de transporte y logística",
+        "solutions": [
+          { "name": "Gestión de Flota", "link": "/solutions/fleet-management" },
+          { "name": "Entrega", "link": "/solutions/delivery" },
+          { "name": "Almacén", "link": "/solutions/warehouse" },
+          { "name": "Seguimiento", "link": "/solutions/tracking" }
+        ]
+      },
+      {
+        "name": "Hotelería",
+        "icon": "Hotel",
+        "description": "Soluciones hoteleras y de hospitalidad",
+        "solutions": [
+          { "name": "Gestión Hotelera", "link": "/solutions/hotel-management" },
+          { "name": "Reservas", "link": "/solutions/booking" },
+          { "name": "Servicio al Huésped", "link": "/solutions/guest-services" },
+          { "name": "Operaciones", "link": "/solutions/operations" }
+        ]
+      }
+    ]
+  },
+  "successMetrics": {
+    "title": "Resultados Probados",
+    "description": "Descubre el impacto de nuestras soluciones en las empresas",
+    "items": [
+      {
+        "title": "Mejora de Eficiencia",
+        "value": "40%",
+        "description": "Mejora promedio en eficiencia operativa",
+        "icon": "Zap"
+      },
+      {
+        "title": "Reducción de Costos",
+        "value": "30%",
+        "description": "Reducción típica en costos operativos",
+        "icon": "Star"
+      },
+      {
+        "title": "Ahorro de Tiempo",
+        "value": "50%",
+        "description": "Tiempo promedio ahorrado en tareas rutinarias",
+        "icon": "Clock"
+      },
+      {
+        "title": "Satisfacción del Cliente",
+        "value": "95%",
+        "description": "Tasa promedio de satisfacción del cliente",
+        "icon": "Users"
+      }
+    ]
+  },
+  "globalFeatures": {
+    "title": "Funcionalidades de la Plataforma Global",
+    "description": "Funcionalidades principales disponibles en todas las industrias",
+    "name": "Plataforma Global",
+    "features": [
+      {
+        "category": "Capacidades de IA",
+        "items": [
+          "Operaciones Básicas de IA",
+          "Modelos Avanzados de IA",
+          "Entrenamiento Personalizado de IA",
+          "Procesamiento en Tiempo Real"
+        ]
+      },
+      {
+        "category": "Seguridad y Cumplimiento",
+        "items": [
+          "Seguridad de Nivel Empresarial",
+          "Cifrado de Datos",
+          "Control de Acceso",
+          "Gestión de Cumplimiento"
+        ]
+      },
+      {
+        "category": "Integración y API",
+        "items": [
+          "Acceso API RESTful",
+          "Integraciones Personalizadas",
+          "Soporte Webhook",
+          "Exportación/Importación de Datos"
+        ]
+      },
+      {
+        "category": "Análisis y Reportes",
+        "items": [
+          "Análisis en Tiempo Real",
+          "Reportes Personalizados",
+          "Visualización de Datos",
+          "Métricas de Rendimiento"
+        ]
+      }
+    ]
+  },
+  "integrations": {
+    "title": "Integraciones Perfectas",
+    "description": "Conéctate con tus herramientas y servicios favoritos",
+    "categories": [
+      {
+        "category": "Servicios Cloud",
+        "items": [
+          { "name": "AWS", "icon": "CloudAws" },
+          { "name": "Azure", "icon": "CloudMicrosoft" },
+          { "name": "Google Cloud", "icon": "CloudGoogle" }
+        ]
+      },
+      {
+        "category": "Software Empresarial",
+        "items": [
+          { "name": "Salesforce", "icon": "Database2" },
+          { "name": "SAP", "icon": "Building2" },
+          { "name": "Oracle", "icon": "Database" }
+        ]
+      },
+      {
+        "category": "Herramientas de Desarrollo",
+        "items": [
+          { "name": "GitHub", "icon": "Code" },
+          { "name": "Jira", "icon": "Cpu" },
+          { "name": "Slack", "icon": "MessageSquare" }
+        ]
+      }
+    ]
+  },
+  "faqs": {
+    "title": "Preguntas Frecuentes",
+    "description": "Encuentra respuestas a preguntas comunes sobre nuestras soluciones",
+    "items": [
+      {
+        "question": "¿Cómo elijo las soluciones correctas?",
+        "answer": "Nuestro equipo puede ayudarte a identificar las soluciones correctas según tus necesidades empresariales. Ofrecemos consultas gratuitas para garantizarte el mejor valor."
+      },
+      {
+        "question": "¿Puedo combinar soluciones de diferentes industrias?",
+        "answer": "Sí, puedes combinar soluciones de diferentes industrias para crear un paquete personalizado que satisfaga tus necesidades específicas. Contacta a nuestro equipo de ventas para una solución a medida."
+      },
+      {
+        "question": "¿Qué incluye la plataforma global?",
+        "answer": "La plataforma global incluye capacidades básicas de IA, análisis básico, acceso API y funcionalidades comunitarias. Las soluciones específicas por industria se construyen sobre esta base."
+      },
+      {
+        "question": "¿Cómo empiezo?",
+        "answer": "Comienza programando una consulta con nuestro equipo. Te ayudaremos a identificar las soluciones correctas y crear un plan de implementación personalizado."
+      }
+    ]
+  },
+  "implementation": {
+    "title": "Proceso de Implementación",
+    "description": "Comienza rápidamente con nuestro proceso de implementación probado",
+    "steps": [
+      {
+        "number": "1",
+        "title": "Descubrimiento",
+        "description": "Analizamos tus necesidades y creamos un plan de implementación personalizado"
+      },
+      {
+        "number": "2",
+        "title": "Configuración",
+        "description": "Configuración rápida de tus soluciones"
+      },
+      {
+        "number": "3",
+        "title": "Integración",
+        "description": "Integración perfecta con tus sistemas existentes"
+      },
+      {
+        "number": "4",
+        "title": "Lanzamiento",
+        "description": "Puesta en marcha con soporte y capacitación completos"
+      }
+    ]
+  },
+  "contact": {
+    "title": "¿Necesitas Ayuda para Elegir?",
+    "description": "Nuestro equipo está aquí para ayudarte a encontrar las soluciones perfectas para tus necesidades",
+    "options": [
+      {
+        "title": "Consulta por Industria",
+        "description": "Obtén asesoramiento experto para elegir las soluciones correctas",
+        "icon": "Building2",
+        "link": "/contact/consultation"
+      },
+      {
+        "title": "Equipo de Ventas",
+        "description": "Discute soluciones personalizadas e implementación",
+        "icon": "Users",
+        "link": "/contact/sales"
+      },
+      {
+        "title": "Soporte Técnico",
+        "description": "Obtén ayuda con la implementación y preguntas técnicas",
+        "icon": "HelpCircle",
+        "link": "/contact/support"
+      }
+    ]
+  },
+  "cta": {
+    "title": "¿Listo para Transformar tu Industria?",
+    "description": "Comienza con nuestras soluciones específicas por industria hoy.",
+    "buttons": [
+      {
+        "text": "Programar Consulta",
+        "href": "/contact/consultation",
+        "variant": "primary"
+      },
+      {
+        "text": "Contactar Ventas",
+        "href": "/contact/sales",
+        "variant": "secondary"
+      }
+    ]
+  }
+} 

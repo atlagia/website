@@ -1,0 +1,111 @@
+{
+  "hero": {
+    "subtitle": "حالة النظام",
+    "title": "لوحة تحكم حالة الخدمات",
+    "description": "معلومات في الوقت الفعلي حول حالة خدماتنا وأنظمتنا.",
+    "operational": "تعمل",
+    "degraded": "أداء متدهور",
+    "maintenance": "صيانة مجدولة"
+  },
+  "overallStatus": {
+    "title": "الحالة الإجمالية للنظام",
+    "status": "operational",
+    "statusText": "جميع الأنظمة تعمل",
+    "description": "جميع الخدمات تعمل بشكل طبيعي دون أي مشاكل تم الإبلاغ عنها.",
+    "lastUpdated": "آخر تحديث: منذ 5 دقائق"
+  },
+  "servicesTitle": "حالة الخدمات",
+  "services": [
+    {
+      "name": "تطبيق الويب",
+      "description": "التطبيق الرئيسي الموجه للعملاء",
+      "status": "operational",
+      "statusText": "تعمل",
+      "icon": "Server"
+    },
+    {
+      "name": "خدمات واجهة برمجة التطبيقات",
+      "description": "واجهة برمجة التطبيقات الخلفية والخدمات المصغرة",
+      "status": "operational",
+      "statusText": "تعمل",
+      "icon": "Cloud"
+    },
+    {
+      "name": "قاعدة البيانات",
+      "description": "قواعد البيانات الرئيسية والنسخ الاحتياطية",
+      "status": "operational",
+      "statusText": "تعمل",
+      "icon": "Database"
+    },
+    {
+      "name": "المصادقة",
+      "description": "مصادقة المستخدم والتفويض",
+      "status": "operational",
+      "statusText": "تعمل",
+      "icon": "Shield"
+    },
+    {
+      "name": "معالجة الذكاء الاصطناعي",
+      "description": "إنشاء المحتوى ومعالجته بالذكاء الاصطناعي",
+      "status": "operational",
+      "statusText": "تعمل",
+      "icon": "Zap"
+    },
+    {
+      "name": "التحليلات",
+      "description": "تحليل البيانات وإعداد التقارير",
+      "status": "operational",
+      "statusText": "تعمل",
+      "icon": "Activity"
+    }
+  ],
+  "incidentsTitle": "الحوادث الأخيرة",
+  "incidents": [
+    {
+      "title": "مشكلة في أداء قاعدة البيانات",
+      "date": "10 مارس 2024",
+      "description": "لقد واجهنا أوقات استجابة أبطأ لاستعلامات قاعدة البيانات مما أثر على بعض نقاط نهاية واجهة برمجة التطبيقات.",
+      "status": "operational",
+      "updates": [
+        {
+          "time": "10:30 صباحًا",
+          "status": "investigating",
+          "statusText": "قيد التحقيق",
+          "description": "يقوم فريق الهندسة لدينا بالتحقيق في سبب تدهور أداء قاعدة البيانات."
+        },
+        {
+          "time": "11:45 صباحًا",
+          "status": "investigating",
+          "statusText": "قيد التحقيق",
+          "description": "لقد حددنا مشكلة في تحسين الاستعلام ونحن نقوم بتنفيذ إصلاح."
+        },
+        {
+          "time": "1:15 مساءً",
+          "status": "resolved",
+          "statusText": "تم الحل",
+          "description": "تم حل المشكلة. جميع الأنظمة تعمل الآن بشكل طبيعي."
+        }
+      ]
+    },
+    {
+      "title": "صيانة مجدولة",
+      "date": "5 مارس 2024",
+      "description": "قمنا بإجراء صيانة مجدولة لترقية البنية التحتية لدينا وتحسين الأداء.",
+      "status": "operational",
+      "updates": [
+        {
+          "time": "8:00 مساءً",
+          "status": "investigating",
+          "statusText": "قيد التنفيذ",
+          "description": "بدأت نافذة الصيانة. قد تواجه بعض الخدمات انقطاعات قصيرة."
+        },
+        {
+          "time": "10:30 مساءً",
+          "status": "resolved",
+          "statusText": "مكتمل",
+          "description": "تم إكمال الصيانة بنجاح. جميع الأنظمة تعمل الآن بأداء محسن."
+        }
+      ]
+    }
+  ]
+} 

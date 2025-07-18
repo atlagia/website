@@ -1,0 +1,317 @@
+{
+  "hero": {
+    "subtitle": "CLINICAL TOOLS",
+    "title": "AI-Powered Dental Diagnostics",
+    "description": "Enhance diagnostic accuracy and efficiency with our advanced artificial intelligence platform that assists in detecting, analyzing, and documenting dental conditions."
+  },
+  "overview": {
+    "title": "Next-Generation Diagnostic Support",
+    "description": "Our AI diagnostic assistant analyzes radiographs, intraoral images, and clinical data to provide instant detection of pathologies, measurements, and treatment insights, improving diagnostic confidence and patient communication.",
+    "features": [
+      {
+        "icon": "search",
+        "title": "Automated Detection",
+        "description": "Instantly identify caries, periapical lesions, and more"
+      },
+      {
+        "icon": "bar-chart-2",
+        "title": "Clinical Measurements",
+        "description": "Precise analysis of bone levels and structures"
+      },
+      {
+        "icon": "clipboard",
+        "title": "Documentation Assistant",
+        "description": "Generate comprehensive findings reports"
+      },
+      {
+        "icon": "trending-up",
+        "title": "Progression Tracking",
+        "description": "Monitor changes in pathologies over time"
+      }
+    ]
+  },
+  "applications": {
+    "title": "Comprehensive Diagnostic Suite",
+    "description": "AI-powered tools for a wide range of diagnostic challenges",
+    "problems": [
+      {
+        "title": "Caries Detection",
+        "description": "Early identification of interproximal and occlusal caries",
+        "icon": "target"
+      },
+      {
+        "title": "Periodontal Analysis",
+        "description": "Automated bone level measurements and classification",
+        "icon": "activity"
+      },
+      {
+        "title": "Endodontic Assessment",
+        "description": "Canal identification and periapical pathology detection",
+        "icon": "thermometer"
+      },
+      {
+        "title": "Implant Planning",
+        "description": "Dimensional analysis and nerve proximity warnings",
+        "icon": "anchor"
+      },
+      {
+        "title": "Oral Pathology Screening",
+        "description": "Identification of suspicious lesions and anomalies",
+        "icon": "alert-circle"
+      },
+      {
+        "title": "Orthodontic Analysis",
+        "description": "Cephalometric measurements and growth prediction",
+        "icon": "sliders"
+      }
+    ]
+  },
+  "process": {
+    "title": "Implementation Process",
+    "steps": [
+      {
+        "number": "01",
+        "title": "System Integration",
+        "description": "Connect with your imaging and practice management system"
+      },
+      {
+        "number": "02",
+        "title": "AI Configuration",
+        "description": "Customize detection thresholds and reporting preferences"
+      },
+      {
+        "number": "03",
+        "title": "Data Migration",
+        "description": "Import historical images for baseline comparison"
+      },
+      {
+        "number": "04",
+        "title": "Team Training",
+        "description": "Comprehensive training on AI-assisted diagnostics"
+      },
+      {
+        "number": "05",
+        "title": "Workflow Integration",
+        "description": "Incorporate AI insights into clinical protocols"
+      },
+      {
+        "number": "06",
+        "title": "Continuous Learning",
+        "description": "System refinement based on practice feedback"
+      }
+    ]
+  },
+  "advantages": {
+    "title": "Clinical Benefits",
+    "description": "How AI diagnostics enhances your clinical outcomes and practice efficiency",
+    "benefits": [
+      {
+        "title": "29% More Pathologies Detected",
+        "description": "Identify conditions human eyes might miss",
+        "icon": "eye"
+      },
+      {
+        "title": "40% Time Savings",
+        "description": "Reduce diagnostic analysis time significantly",
+        "icon": "clock"
+      },
+      {
+        "title": "Increased Diagnostic Confidence",
+        "description": "AI provides valuable second opinion",
+        "icon": "shield"
+      },
+      {
+        "title": "Enhanced Patient Education",
+        "description": "Visual aids improve treatment acceptance",
+        "icon": "users"
+      }
+    ]
+  },
+  "features": {
+    "title": "Key Features",
+    "description": "Advanced AI capabilities for comprehensive diagnostic support",
+    "featureList": [
+      {
+        "title": "Multi-Modality Analysis",
+        "description": "Works with 2D, 3D, and intraoral images",
+        "icon": "layers"
+      },
+      {
+        "title": "Real-Time Processing",
+        "description": "Instant analysis as images are acquired",
+        "icon": "zap"
+      },
+      {
+        "title": "Confidence Scoring",
+        "description": "Probability indicators for each finding",
+        "icon": "percent"
+      },
+      {
+        "title": "Comparative Analysis",
+        "description": "Side-by-side comparison with previous images",
+        "icon": "columns"
+      },
+      {
+        "title": "Automatic Measurements",
+        "description": "Precise digital analysis of structures",
+        "icon": "ruler"
+      },
+      {
+        "title": "Comprehensive Reporting",
+        "description": "Detailed findings with visual annotations",
+        "icon": "file-text"
+      },
+      {
+        "title": "Patient-Friendly Visualizations",
+        "description": "Clear explanations of clinical findings",
+        "icon": "monitor"
+      },
+      {
+        "title": "Continuous Learning",
+        "description": "AI model improves with ongoing use",
+        "icon": "refresh"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Pricing Options",
+    "description": "Select the plan that fits your practice needs",
+    "options": [
+      {
+        "name": "Essentials",
+        "price": "$199",
+        "duration": "per month",
+        "includes": [
+          "Basic caries detection",
+          "Simple perio measurements",
+          "Single provider license",
+          "Up to 500 scans monthly",
+          "Standard reporting",
+          "Email support"
+        ]
+      },
+      {
+        "name": "Professional",
+        "price": "$349",
+        "duration": "per month",
+        "includes": [
+          "All Essentials features",
+          "Comprehensive pathology detection",
+          "Progression tracking",
+          "Patient education tools",
+          "Up to 5 provider licenses",
+          "Up to 2,000 scans monthly",
+          "Priority support"
+        ]
+      },
+      {
+        "name": "Enterprise",
+        "price": "$599",
+        "duration": "per month",
+        "includes": [
+          "All Professional features",
+          "Advanced AI analysis suite",
+          "Unlimited scans",
+          "Unlimited providers",
+          "Custom integration options",
+          "Multi-location support",
+          "Research-grade analytics",
+          "Dedicated AI specialist support"
+        ]
+      }
+    ]
+  },
+  "integration": {
+    "title": "Seamless Integration",
+    "description": "Works with your existing imaging systems and practice management software",
+    "partners": [
+      {
+        "name": "Dexis",
+        "logo": "/images/partners/dexis.png"
+      },
+      {
+        "name": "Carestream",
+        "logo": "/images/partners/carestream.png"
+      },
+      {
+        "name": "Planmeca",
+        "logo": "/images/partners/planmeca.png"
+      },
+      {
+        "name": "Sirona",
+        "logo": "/images/partners/sirona.png"
+      },
+      {
+        "name": "Dentrix",
+        "logo": "/images/partners/dentrix.png"
+      },
+      {
+        "name": "Open Dental",
+        "logo": "/images/partners/opendental.png"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": [
+      {
+        "question": "How accurate is the AI compared to a human dentist?",
+        "answer": "In clinical validation studies, our AI has demonstrated detection accuracy comparable to experienced dentists, with sensitivity of 91% and specificity of 94% for caries detection. For periodontal measurements, the AI achieves accuracy within 0.3mm of manual probing. However, the system is designed as a diagnostic aid, not a replacement for clinical judgment. The combination of AI analysis with dentist oversight provides the highest level of diagnostic accuracy, exceeding what either could achieve alone."
+      },
+      {
+        "question": "Does the AI system comply with regulatory requirements?",
+        "answer": "Yes, our system has received FDA clearance as a Class II medical device for diagnostic assistance in dentistry. It complies with all relevant medical device regulations and standards for safety and efficacy. The system is also HIPAA-compliant, with comprehensive data security protocols including end-to-end encryption, secure cloud storage, and strict access controls to protect patient information."
+      },
+      {
+        "question": "How does the system handle different image qualities and types?",
+        "answer": "The AI is trained on a diverse dataset of millions of dental images from various sensors, machines, and clinical settings. It can automatically compensate for variations in exposure, contrast, and positioning. The system works with standard digital radiographs (bitewings, periapicals, panoramic), CBCT volumes, and intraoral photographs. It can even enhance suboptimal images to improve diagnostic value, though best results come from quality original images."
+      },
+      {
+        "question": "Will patients accept AI-assisted diagnosis?",
+        "answer": "Patient reception has been overwhelmingly positive. In surveys, 94% of patients reported increased confidence in practices using AI diagnostic tools. The visual nature of AI findings makes it easier for patients to understand their conditions, and they appreciate the thoroughness of the technology-enhanced examination. Many practices actually use the AI technology as a practice differentiator in their marketing, highlighting their commitment to cutting-edge care."
+      },
+      {
+        "question": "How does the continuous learning aspect work?",
+        "answer": "The AI system employs a federated learning approach, where the core algorithms improve based on anonymized findings across our entire user base, while maintaining patient privacy. Your practice benefits from model improvements trained on millions of cases. Additionally, the system adapts to your practice's specific preferences over time, learning from how you interact with and modify its findings to better align with your clinical approach."
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Customer Success Stories",
+    "reviews": [
+      {
+        "name": "Dr. Rebecca Chen",
+        "practice": "Advanced Dental Diagnostics",
+        "rating": 5,
+        "comment": "The AI diagnostic system has transformed our clinical workflow. We're detecting early interproximal caries that would have been missed, and the periodontal analysis saves us significant time during exams. The visualization tools have dramatically improved patient understanding and treatment acceptance. It's like having a specialist looking over your shoulder for every diagnosis.",
+        "date": "2 months ago"
+      },
+      {
+        "name": "Dr. James Wilson",
+        "practice": "Wilson Family Dentistry",
+        "rating": 5,
+        "comment": "As a recent graduate, the AI system has been invaluable for building my diagnostic confidence. The detailed measurements and pathology detection help confirm my findings, and I've learned so much from the AI's analysis patterns. Patients are impressed by the technology, and it's helped establish my practice as cutting-edge despite being new to the community.",
+        "date": "3 months ago"
+      },
+      {
+        "name": "Dr. Maria Gonzalez",
+        "practice": "Comprehensive Dental Care",
+        "rating": 5,
+        "comment": "The efficiency gains have been remarkable. What used to take 15-20 minutes of analysis now happens instantly. We catch more pathology, document findings more thoroughly, and communicate more effectively with patients. The system paid for itself within months through increased treatment acceptance alone, not to mention the time savings for our clinical team.",
+        "date": "1 month ago"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Transform Your Diagnostic Capabilities?",
+    "description": "Join thousands of forward-thinking dental practices using AI to enhance clinical outcomes and practice efficiency.",
+    "primaryButton": {
+      "text": "Request Demo",
+      "href": "/request-demo"
+    },
+    "secondaryButton": {
+      "text": "View Pricing",
+      "href": "/pricing"
+    }
+  }
+} 

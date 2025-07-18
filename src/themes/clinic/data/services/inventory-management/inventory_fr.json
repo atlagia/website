@@ -1,0 +1,192 @@
+{
+  "hero": {
+    "subtitle": "GESTION DES STOCKS",
+    "title": "Gestion Intelligente des Stocks avec l'IA",
+    "description": "Optimisez vos opérations de stockage avec des prévisions alimentées par l'IA, l'automatisation et le suivi en temps réel pour optimiser les niveaux de stock et réduire les coûts.",
+    "image": "/images/services/inventory-management.svg"
+  },
+  "benefits": {
+    "title": "Pourquoi Choisir Notre Gestion des Stocks",
+    "items": [
+      {
+        "icon": "Brain",
+        "title": "Prévisions Intelligentes",
+        "description": "Prédiction de la demande et optimisation des niveaux de stock par IA.",
+        "color": "purple"
+      },
+      {
+        "icon": "BarChart",
+        "title": "Analyses en Temps Réel",
+        "description": "Suivi en direct et insights sur la performance des stocks.",
+        "color": "blue"
+      },
+      {
+        "icon": "RefreshCcw",
+        "title": "Réapprovisionnement Auto",
+        "description": "Commandes automatisées basées sur des règles et prévisions personnalisées.",
+        "color": "green"
+      },
+      {
+        "icon": "AlertCircle",
+        "title": "Alertes de Stock",
+        "description": "Notifications instantanées pour les stocks bas et les problèmes d'inventaire.",
+        "color": "pink"
+      }
+    ]
+  },
+  "features": {
+    "title": "Fonctionnalités de Gestion Puissantes",
+    "description": "Tout ce dont vous avez besoin pour gérer efficacement vos stocks.",
+    "items": [
+      {
+        "title": "Prévisions par IA",
+        "description": "Prédisez la demande et optimisez les niveaux de stock avec le machine learning",
+        "image": "/images/services/inventory-forecasting.svg",
+        "features": [
+          "Prédiction de la demande",
+          "Analyse saisonnière",
+          "Détection des tendances",
+          "Optimisation des stocks"
+        ]
+      },
+      {
+        "title": "Surveillance en Temps Réel",
+        "description": "Suivez vos niveaux de stock et mouvements en temps réel",
+        "image": "/images/services/inventory-monitoring.svg",
+        "features": [
+          "Suivi en direct",
+          "Support multi-sites",
+          "Historique des mouvements",
+          "Alertes personnalisées"
+        ]
+      },
+      {
+        "title": "Opérations Automatisées",
+        "description": "Optimisez les opérations de stock avec l'automatisation intelligente",
+        "image": "/images/services/inventory-automation.svg",
+        "features": [
+          "Réapprovisionnement auto",
+          "Gestion des fournisseurs",
+          "Suivi des commandes",
+          "Traitement par lots"
+        ]
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "Comment Ça Marche",
+    "description": "Commencez la gestion intelligente des stocks en quatre étapes simples",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Connectez Votre Système",
+        "description": "Intégrez vos données de stock et de ventes existantes"
+      },
+      {
+        "number": "02",
+        "title": "Définissez les Paramètres",
+        "description": "Configurez vos règles et préférences de gestion"
+      },
+      {
+        "number": "03",
+        "title": "Surveillez & Suivez",
+        "description": "Suivez les niveaux et mouvements de stock en temps réel"
+      },
+      {
+        "number": "04",
+        "title": "Optimisez & Évoluez",
+        "description": "Laissez l'IA optimiser vos opérations de stock"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Tarification Simple et Transparente",
+    "description": "Choisissez le forfait qui correspond le mieux à vos besoins en gestion des stocks",
+    "plans": [
+      {
+        "name": "Débutant",
+        "price": "89",
+        "period": "/mois",
+        "description": "Pour les petites entreprises",
+        "features": [
+          "Jusqu'à 1 000 SKUs",
+          "Prévisions de base",
+          "Mises à jour quotidiennes",
+          "Support par email"
+        ],
+        "cta": {
+          "text": "Essai Gratuit",
+          "link": "/trial"
+        }
+      },
+      {
+        "name": "Professionnel",
+        "price": "229",
+        "period": "/mois",
+        "description": "Pour les entreprises en croissance",
+        "features": [
+          "Jusqu'à 10 000 SKUs",
+          "Prévisions avancées",
+          "Mises à jour en temps réel",
+          "Support prioritaire"
+        ],
+        "cta": {
+          "text": "Essai Gratuit",
+          "link": "/trial"
+        },
+        "popular": true
+      },
+      {
+        "name": "Entreprise",
+        "price": "599",
+        "period": "/mois",
+        "description": "Pour les grandes opérations",
+        "features": [
+          "SKUs illimités",
+          "Solutions personnalisées",
+          "Accès API",
+          "Support 24/7"
+        ],
+        "cta": {
+          "text": "Contacter les Ventes",
+          "link": "/contact"
+        }
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Ce Que Disent Nos Clients",
+    "items": [
+      {
+        "content": "Les prévisions IA ont réduit nos ruptures de stock de 75% et nos coûts de stockage de 30%. Cela a complètement transformé notre gestion des stocks.",
+        "author": "David Wilson",
+        "position": "Directeur Supply Chain",
+        "company": "GlobalRetail",
+        "image": "/images/testimonials/david.jpg"
+      },
+      {
+        "content": "Le réapprovisionnement automatisé et le suivi en temps réel nous ont fait gagner d'innombrables heures et ont considérablement amélioré notre rotation des stocks.",
+        "author": "Emily Rodriguez",
+        "position": "Responsable des Opérations",
+        "company": "SupplyPro",
+        "image": "/images/testimonials/emily.jpg"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prêt à Optimiser Vos Stocks ?",
+    "description": "Rejoignez des milliers d'entreprises qui utilisent notre plateforme pour gérer leurs stocks plus intelligemment.",
+    "buttons": [
+      {
+        "text": "Essai Gratuit",
+        "link": "/trial",
+        "primary": true
+      },
+      {
+        "text": "Voir la Démo",
+        "link": "/demo",
+        "primary": false
+      }
+    ]
+  }
+} 

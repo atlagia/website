@@ -1,0 +1,249 @@
+{
+  "navigation": [
+    {
+      "name": "Branchen",
+      "href": "/industries",
+      "megaMenu": {
+        "categories": [
+          {
+            "title": "Gesundheitswesen",
+            "icon": "stethoscope",
+            "items": [
+              {
+                "name": "Arztpraxen",
+                "href": "/solutions/medical-solution"
+              },
+              {
+                "name": "Krankenhäuser",
+                "href": "/solutions/hospital-solution"
+              },
+              {
+                "name": "Kliniken",
+                "href": "/solutions/clinic-solution"
+              },
+              {
+                "name": "Apotheken",
+                "href": "/solutions/pharmacy-solution"
+              }
+            ]
+          },
+          {
+            "title": "Professionelle Dienste",
+            "icon": "briefcase",
+            "items": [
+              {
+                "name": "Zahnarztpraxen",
+                "href": "/solutions/dental-solution"
+              },
+              {
+                "name": "Tierarztpraxen",
+                "href": "/solutions/veterinary-solution"
+              },
+              {
+                "name": "Radiologiezentren",
+                "href": "/solutions/radiology-solution"
+              },
+              {
+                "name": "Labore",
+                "href": "/solutions/laboratory-solution"
+              }
+            ]
+          },
+          {
+            "title": "Einzelhandel & Handel",
+            "icon": "shopping-bag",
+            "items": [
+              {
+                "name": "E-Commerce",
+                "href": "/solutions/ecommerce-solution"
+              },
+              {
+                "name": "Einzelhandel",
+                "href": "/solutions/retail-stores"
+              },
+              {
+                "name": "Restaurants",
+                "href": "/solutions/restaurants"
+              },
+              {
+                "name": "Großhandel",
+                "href": "/solutions/wholesale"
+              }
+            ]
+          }
+        ],
+        "featured": {
+          "badge": "Neu",
+          "title": "Branchenspezifische KI-Lösungen",
+          "description": "Maßgeschneiderte KI-Automatisierung für Ihre Branche",
+          "link": {
+            "text": "Lösungen entdecken",
+            "href": "/solutions"
+          }
+        }
+      }
+    },
+    {
+      "name": "Lösungen",
+      "href": "/solutions",
+      "megaMenu": {
+        "categories": [
+          {
+            "title": "Betrieb",
+            "icon": "settings",
+            "items": [
+              {
+                "name": "Workflow-Automatisierung",
+                "href": "/solutions/workflow"
+              },
+              {
+                "name": "Dokumentenverarbeitung",
+                "href": "/solutions/documents"
+              },
+              {
+                "name": "Ressourcenplanung",
+                "href": "/solutions/planning"
+              },
+              {
+                "name": "Analysen & Berichte",
+                "href": "/solutions/analytics"
+              }
+            ]
+          },
+          {
+            "title": "Kundenerlebnis",
+            "icon": "users",
+            "items": [
+              {
+                "name": "KI-Chat-Support",
+                "href": "/solutions/chat-support"
+              },
+              {
+                "name": "Kundenanalysen",
+                "href": "/solutions/customer-analytics"
+              },
+              {
+                "name": "Personalisierung",
+                "href": "/solutions/personalization"
+              },
+              {
+                "name": "Engagement-Tools",
+                "href": "/solutions/engagement"
+              }
+            ]
+          },
+          {
+            "title": "Wachstum",
+            "icon": "trending-up",
+            "items": [
+              {
+                "name": "KI-Marketing",
+                "href": "/solutions/marketing"
+              },
+              {
+                "name": "Vertriebsintelligenz",
+                "href": "/solutions/sales"
+              },
+              {
+                "name": "Marktforschung",
+                "href": "/solutions/research"
+              },
+              {
+                "name": "Business Intelligence",
+                "href": "/solutions/intelligence"
+              }
+            ]
+          }
+        ],
+        "featured": {
+          "badge": "Featured",
+          "title": "Enterprise KI-Suite",
+          "description": "Komplette KI-Transformationsplattform",
+          "link": {
+            "text": "Mehr erfahren",
+            "href": "/enterprise"
+          }
+        }
+      }
+    },
+    {
+      "name": "Plattform",
+      "href": "/platform",
+      "megaMenu": {
+        "categories": [
+          {
+            "title": "Kernfunktionen",
+            "icon": "cpu",
+            "items": [
+              {
+                "name": "KI-Engine",
+                "href": "/platform/ai-engine"
+              },
+              {
+                "name": "Integrations-Hub",
+                "href": "/platform/integrations"
+              },
+              {
+                "name": "Sicherheit",
+                "href": "/platform/security"
+              },
+              {
+                "name": "API-Zugang",
+                "href": "/platform/api"
+              }
+            ]
+          }
+        ],
+        "featured": {
+          "badge": "Neu",
+          "title": "Entwickler-Portal",
+          "description": "Entwickeln Sie mit unserer KI-Plattform",
+          "link": {
+            "text": "Jetzt starten",
+            "href": "/developers"
+          }
+        }
+      }
+    },
+    {
+      "name": "Ressourcen",
+      "href": "/resources"
+    },
+    {
+      "name": "Preise",
+      "href": "/pricing"
+    }
+  ],
+  "auth": {
+    "signIn": {
+      "text": "Kontaktieren Sie uns",
+      "href": "/contact"
+    },
+    "getStarted": {
+      "text": "Jetzt starten",
+      "href": "/de/discuss-project"
+    }
+  },
+  "languages": [
+    {
+      "code": "en",
+      "name": "English"
+    },
+    {
+      "code": "fr",
+      "name": "Français"
+    },
+    {
+      "code": "de",
+      "name": "Deutsch"
+    },
+    {
+      "code": "es",
+      "name": "Español"
+    },
+    {
+      "code": "ar",
+      "name": "العربية"
+    }
+  ]
+} 

@@ -1,0 +1,248 @@
+---
+import styles from '../style/component/pricingSection.json';
+
+interface PricingFeature {
+  text: string;
+  included: boolean;
+}
+
+interface PricingPlan {
+  name: string;
+  price: string;
+  period: string;
+  features: PricingFeature[];
+  buttonText: string;
+  buttonLink: string;
+  isPopular?: boolean;
+  highlightedFeature?: string;
+  userLimit?: string;
+}
+
+interface Props {
+  subtitle: string;
+  title: string;
+  description: string;
+  plans: PricingPlan[];
+  insuranceInfo?: {
+    text: string;
+    providers: string[];
+  };
+  comparisonFeatures?: string[];
+}
+
+const { subtitle, title, description, plans, insuranceInfo, comparisonFeatures } = Astro.props;
+---
+
+<section class="relative py-24 px-4 overflow-hidden bg-gradient-to-b from-gray-50 to-gray-100" id="content-pricingSection">
+  <!-- Subtle Grid Pattern -->
+  <div class="absolute inset-0 bg-grid-pattern opacity-[0.03]"></div>
+  
+  <!-- Animated Background Elements -->
+  <div class="absolute inset-0 z-0 overflow-hidden">
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-bl from-[#0a91b1]/5 to-blue-500/5 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-tr from-blue-500/5 to-[#0a91b1]/5 rounded-full blur-3xl animate-blob"></div>
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto">
+    <!-- Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="inline-block px-4 py-1.5 mb-4 text-sm font-medium rounded-full bg-[#0a91b1]/20 text-[#0a91b1] backdrop-blur-sm border border-[#0a91b1]/30" id="content-subtitle">
+        {subtitle}
+      </span>
+      <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6" id="content-title">
+        {title}
+      </h2>
+      <p class="text-lg text-gray-600 leading-relaxed" id="content-description">
+        {description}
+      </p>
+    </div>
+
+    <!-- Pricing Grid -->
+    <div class="grid md:grid-cols-3 gap-8 mb-12">
+      {plans.map((plan, planIndex) => (
+        <div class={`relative rounded-2xl overflow-hidden transition-all duration-300 ${plan.isPopular ? 'shadow-xl scale-105 bg-white border-2 border-[#0a91b1]/30 z-10' : 'bg-white/90 shadow-lg border border-gray-200 hover:shadow-xl hover:-translate-y-1'}`}>
+          {plan.isPopular && (
+            <div class="absolute top-0 right-0 mt-4 mr-4 bg-[#0a91b1] text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg" id={`content-popularBadge-${planIndex}`}>
+              Most Popular
+            </div>
+          )}
+          
+          <div class="p-8">
+            <!-- Plan Header -->
+            <div class="mb-8">
+              <h3 class="text-xl font-bold text-gray-900 mb-2" id={`content-planName-${planIndex}`}>{plan.name}</h3>
+              
+              {plan.highlightedFeature && (
+                <p class="text-sm text-gray-600 mb-4">{plan.highlightedFeature}</p>
+              )}
+              
+              <div class="flex items-baseline">
+                <span class="text-4xl font-bold text-gray-900" id={`content-planPrice-${planIndex}`}>{plan.price}</span>
+                <span class="text-gray-600 ml-2" id={`content-planPeriod-${planIndex}`}>{plan.period}</span>
+              </div>
+              
+              {plan.userLimit && (
+                <div class="mt-2 inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                  </svg>
+                  {plan.userLimit}
+                </div>
+              )}
+            </div>
+
+            <!-- Features List -->
+            <ul class="space-y-4 mb-8">
+              {plan.features.map((feature, featureIndex) => (
+                <li class="flex items-start">
+                  <svg 
+                    class={`flex-shrink-0 w-5 h-5 mt-0.5 ${feature.included ? 'text-[#0a91b1]' : 'text-gray-400'}`}
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path 
+                      stroke-linecap="round" 
+                      stroke-linejoin="round" 
+                      stroke-width="2" 
+                      d={feature.included ? "M5 13l4 4L19 7" : "M6 18L18 6M6 6l12 12"}
+                    />
+                  </svg>
+                  <span class={`ml-3 ${feature.included ? 'text-gray-700' : 'text-gray-400'}`} id={`content-planFeature-${planIndex}-${featureIndex}`}>
+                    {feature.text}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            <!-- Action Button -->
+            <a
+              href={plan.buttonLink}
+              class={`block w-full text-center py-3 px-6 rounded-lg font-medium transition-all duration-300 ${plan.isPopular ? 'bg-[#0a91b1] hover:bg-[#097d99] text-white shadow-lg hover:shadow-[#0a91b1]/25' : 'bg-gray-100 hover:bg-gray-200 text-gray-800 border border-gray-200'}`}
+              id={`content-planButton-${planIndex}`}
+            >
+              {plan.buttonText}
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Features Comparison Table -->
+    {comparisonFeatures && (
+      <div class="mt-16 bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
+        <div class="px-6 py-5 border-b border-gray-200 bg-gray-50">
+          <h3 class="text-lg font-semibold text-gray-900">Feature Comparison</h3>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="min-w-full divide-y divide-gray-200">
+            <thead class="bg-gray-50">
+              <tr>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Feature</th>
+                {plans.map((plan) => (
+                  <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    {plan.name}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody class="bg-white divide-y divide-gray-200">
+              {comparisonFeatures && comparisonFeatures.map((feature, index) => (
+                <tr class={index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                  <td class="px-6 py-4 text-sm font-medium text-gray-900">{feature}</td>
+                  {plans.map((plan, planIndex) => (
+                    <td class="px-6 py-4 text-center">
+                      {plan.features[index]?.included ? (
+                        <svg class="w-5 h-5 mx-auto text-[#0a91b1]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                      ) : (
+                        <svg class="w-5 h-5 mx-auto text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                      )}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    )}
+
+    <!-- Integration Partners Section (transformed from Insurance Info) -->
+    {insuranceInfo && (
+      <div class="mt-16 bg-gray-50 rounded-xl p-6 border border-gray-200">
+        <div class="flex flex-col md:flex-row items-center justify-between">
+          <div class="mb-4 md:mb-0">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Integration Partners</h3>
+            <p class="text-gray-600" id="content-insuranceText">{insuranceInfo.text}</p>
+          </div>
+          <div class="flex flex-wrap gap-3 justify-center">
+            {insuranceInfo.providers.map((provider, index) => (
+              <div class="px-4 py-2 bg-white rounded-lg border border-gray-200 shadow-sm" id={`content-insuranceProvider-${index}`}>
+                <span class="font-medium text-gray-800">{provider}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    )}
+    
+    <!-- Money-back Guarantee -->
+    <div class="mt-12 text-center">
+      <div class="inline-flex items-center px-4 py-2 rounded-full bg-green-100 text-green-800">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+        </svg>
+        <span class="font-medium">30-Day Money-Back Guarantee</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes blob {
+    0% {
+      transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    }
+    33% {
+      transform: translate(-50%, -50%) scale(1.1) rotate(120deg);
+    }
+    66% {
+      transform: translate(-50%, -50%) scale(0.9) rotate(240deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1) rotate(360deg);
+    }
+  }
+
+  .animate-blob {
+    animation: blob 20s infinite linear;
+  }
+
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+
+  .backdrop-blur-sm {
+    backdrop-filter: blur(8px);
+  }
+
+  .hover\:-translate-y-1:hover {
+    transform: translateY(-4px);
+  }
+  
+  /* Grid Pattern Background */
+  .bg-grid-pattern {
+    background-image: 
+      linear-gradient(to right, rgba(10, 145, 177, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(10, 145, 177, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+</style> 

@@ -1,0 +1,332 @@
+{
+  "hero": {
+    "subtitle": "AI-Powered Restaurant Management",
+    "title": "Transform Your Restaurant with Intelligent Operations",
+    "description": "Experience the future of restaurant management with our comprehensive, AI-driven platform that optimizes operations, enhances customer experience, and drives growth across all aspects of your business.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "thumbnail": "/images/restaurant-hero.webp",
+      "alt": "Restaurant Management Platform Demo"
+    },
+    "stats": [
+      {
+        "value": "40%",
+        "label": "Order Processing Speed"
+      },
+      {
+        "value": "55%",
+        "label": "Customer Satisfaction"
+      },
+      {
+        "value": "30%",
+        "label": "Cost Reduction"
+      }
+    ]
+  },
+  "features": {
+    "title": "Enterprise-Grade Features",
+    "subtitle": "Next-Generation Restaurant Management",
+    "description": "Discover our comprehensive suite of advanced tools designed to revolutionize your restaurant operations. Each feature is crafted to deliver maximum efficiency and superior customer experience.",
+    "categories": [
+      {
+        "name": "Restaurant Operations",
+        "description": "Core features that streamline your daily operations"
+      },
+      {
+        "name": "Customer Experience",
+        "description": "Tools that enhance customer engagement and satisfaction"
+      }
+    ],
+    "items": [
+      {
+        "icon": "utensils",
+        "title": "Smart Order Management",
+        "description": "AI-powered order processing and kitchen management",
+        "category": "Restaurant Operations",
+        "image": "/images/features/order-management.webp",
+        "highlights": [
+          "Real-time order tracking",
+          "Kitchen display system",
+          "Order prioritization",
+          "Inventory alerts"
+        ],
+        "stats": {
+          "value": "40%",
+          "label": "Faster Processing"
+        }
+      },
+      {
+        "icon": "users",
+        "title": "Table Management",
+        "description": "Intelligent seating and reservation system",
+        "category": "Customer Experience",
+        "image": "/images/features/table-management.webp",
+        "highlights": [
+          "Smart seating allocation",
+          "Reservation management",
+          "Waitlist optimization",
+          "Table turnover tracking"
+        ],
+        "stats": {
+          "value": "35%",
+          "label": "Better Utilization"
+        }
+      },
+      {
+        "icon": "bar-chart",
+        "title": "Menu Analytics",
+        "description": "Data-driven menu optimization and pricing",
+        "category": "Restaurant Operations",
+        "image": "/images/features/menu-analytics.webp",
+        "highlights": [
+          "Dish performance analysis",
+          "Price optimization",
+          "Ingredient cost tracking",
+          "Menu engineering"
+        ],
+        "stats": {
+          "value": "25%",
+          "label": "Profit Increase"
+        }
+      },
+      {
+        "icon": "shopping-cart",
+        "title": "Delivery Integration",
+        "description": "Seamless delivery platform integration",
+        "category": "Customer Experience",
+        "image": "/images/features/delivery-integration.webp",
+        "highlights": [
+          "Multi-platform integration",
+          "Delivery tracking",
+          "Driver management",
+          "Order synchronization"
+        ],
+        "stats": {
+          "value": "45%",
+          "label": "Delivery Efficiency"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "See It In Action",
+    "description": "Watch how leading restaurants transform their operations",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "thumbnail": "/images/showcase-thumb.webp"
+    },
+    "testimonials": [
+      {
+        "author": "Chef Michael Chen",
+        "role": "Owner, Fusion Kitchen",
+        "image": "/images/testimonials/michael.webp",
+        "quote": "This platform has revolutionized our restaurant operations. We've seen a 40% increase in order processing speed and improved customer satisfaction."
+      },
+      {
+        "author": "Sarah Rodriguez",
+        "role": "Manager, Taste of Italy",
+        "image": "/images/testimonials/sarah.webp",
+        "quote": "The AI features have dramatically improved our table management and kitchen efficiency."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Transformative Benefits",
+    "subtitle": "Proven Results & Impact",
+    "description": "Experience measurable improvements across all aspects of your restaurant business with our comprehensive solution. Our platform delivers concrete results that directly impact your bottom line.",
+    "items": [
+      {
+        "title": "Operational Efficiency",
+        "description": "Streamline your restaurant operations with intelligent automation.",
+        "icon": "zap",
+        "color": "blue",
+        "stats": {
+          "value": "40%",
+          "label": "Faster Operations"
+        },
+        "highlights": [
+          "Order processing",
+          "Kitchen management",
+          "Inventory control",
+          "Staff scheduling"
+        ]
+      },
+      {
+        "title": "Customer Experience",
+        "description": "Deliver exceptional dining experiences that drive loyalty.",
+        "icon": "heart",
+        "color": "purple",
+        "stats": {
+          "value": "55%",
+          "label": "Customer Satisfaction"
+        },
+        "highlights": [
+          "Seamless ordering",
+          "Table management",
+          "Loyalty programs",
+          "Customer feedback"
+        ]
+      },
+      {
+        "title": "Cost Management",
+        "description": "Optimize costs and maximize profitability.",
+        "icon": "trending-up",
+        "color": "green",
+        "stats": {
+          "value": "30%",
+          "label": "Cost Reduction"
+        },
+        "highlights": [
+          "Inventory optimization",
+          "Waste reduction",
+          "Staff efficiency",
+          "Energy management"
+        ]
+      },
+      {
+        "title": "Business Intelligence",
+        "description": "Make data-driven decisions with advanced analytics.",
+        "icon": "chart-bar",
+        "color": "yellow",
+        "stats": {
+          "value": "85%",
+          "label": "Better Insights"
+        },
+        "highlights": [
+          "Sales analytics",
+          "Customer behavior",
+          "Menu performance",
+          "Operational metrics"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Flexible Pricing Plans",
+    "subtitle": "Transparent Pricing",
+    "description": "Choose the perfect plan for your restaurant. Save up to 20% with annual billing.",
+    "billingPeriods": ["Monthly", "Yearly"],
+    "plans": [
+      {
+        "name": "Starter",
+        "highlight": "Perfect for small restaurants",
+        "monthlyPrice": "$149",
+        "yearlyPrice": "$1,490",
+        "yearlyDiscount": "Save $298/year",
+        "description": "Essential features to start your digital transformation",
+        "features": [
+          {
+            "text": "Basic order management",
+            "included": true
+          },
+          {
+            "text": "Table management",
+            "included": true
+          },
+          {
+            "text": "Basic reporting",
+            "included": true
+          },
+          {
+            "text": "Email support",
+            "included": true
+          },
+          {
+            "text": "Mobile app access",
+            "included": true
+          }
+        ],
+        "cta": "Get Started",
+        "popular": false
+      },
+      {
+        "name": "Professional",
+        "highlight": "Most popular for growing restaurants",
+        "monthlyPrice": "$299",
+        "yearlyPrice": "$2,990",
+        "yearlyDiscount": "Save $598/year",
+        "description": "Advanced features for established restaurants",
+        "features": [
+          {
+            "text": "Everything in Starter, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "AI-powered features",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "Advanced analytics",
+            "included": true
+          },
+          {
+            "text": "Delivery integration",
+            "included": true
+          },
+          {
+            "text": "Priority support",
+            "included": true
+          },
+          {
+            "text": "API access",
+            "included": true
+          }
+        ],
+        "cta": "Get Started",
+        "popular": true
+      },
+      {
+        "name": "Enterprise",
+        "highlight": "For restaurant chains",
+        "monthlyPrice": "Custom",
+        "yearlyPrice": "Custom",
+        "yearlyDiscount": "Contact us for special pricing",
+        "description": "Tailored solutions for enterprise needs",
+        "features": [
+          {
+            "text": "Everything in Professional, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Multi-location support",
+            "included": true
+          },
+          {
+            "text": "Dedicated account manager",
+            "included": true
+          },
+          {
+            "text": "Advanced security features",
+            "included": true
+          },
+          {
+            "text": "Custom development options",
+            "included": true
+          },
+          {
+            "text": "SLA guarantees",
+            "included": true
+          }
+        ],
+        "cta": "Contact Sales",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Transform Your Restaurant?",
+    "description": "Join thousands of successful restaurants using our platform",
+    "primaryButton": {
+      "text": "Schedule a Demo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Watch Demo Video",
+      "link": "/demo-video"
+    },
+    "background": "/images/cta-background.webp"
+  }
+} 

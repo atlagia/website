@@ -1,0 +1,205 @@
+{
+  "pageTitle": "Über GiaConnect",
+  "pageDescription": "Erfahren Sie mehr über GiaConnects Mission, Werte und Engagement für die Transformation von Branchen durch innovative KI-Lösungen.",
+  "hero": {
+    "badge": "Unsere Geschichte",
+    "title": "Branchen durch KI-Innovation stärken",
+    "description": "GiaConnect ist führend in der KI-gestützten Transformation und unterstützt Unternehmen in allen Branchen dabei, Spitzentechnologie zu nutzen, um operative Exzellenz zu erreichen.",
+    "image": "/images/about/hero.jpg"
+  },
+  "mission": {
+    "title": "Unsere Mission",
+    "description": "Branchen revolutionieren, indem wir KI für Unternehmen aller Größen zugänglich, praktisch und wirkungsvoll machen.",
+    "items": [
+      {
+        "title": "Zugänglichkeit",
+        "description": "Fortschrittliche KI-Lösungen für Unternehmen aller Größen und technischen Fähigkeiten zugänglich machen",
+        "icon": "Globe"
+      },
+      {
+        "title": "Innovation",
+        "description": "Kontinuierlich die Grenzen des Möglichen mit KI-Technologie erweitern",
+        "icon": "Lightbulb"
+      },
+      {
+        "title": "Wirkung",
+        "description": "Messbare Ergebnisse und transformative Ergebnisse für unsere Kunden liefern",
+        "icon": "Target"
+      }
+    ]
+  },
+  "values": {
+    "title": "Unsere Werte",
+    "description": "Die Prinzipien, die alles leiten, was wir bei GiaConnect tun",
+    "items": [
+      {
+        "title": "Exzellenz",
+        "description": "Wir streben nach Exzellenz in allen Aspekten unserer Arbeit, von der Produktentwicklung bis zum Kundenservice",
+        "icon": "Award"
+      },
+      {
+        "title": "Integrität",
+        "description": "Wir halten die höchsten Standards für Integrität und Transparenz in allen unseren Operationen ein",
+        "icon": "Shield"
+      },
+      {
+        "title": "Innovation",
+        "description": "Wir innovieren ständig, um mit Branchentrends Schritt zu halten und sich entwickelnde Bedürfnisse zu erfüllen",
+        "icon": "Zap"
+      },
+      {
+        "title": "Partnerschaft",
+        "description": "Wir glauben an den Aufbau starker Partnerschaften mit unseren Kunden und Stakeholdern",
+        "icon": "Handshake"
+      }
+    ]
+  },
+  "team": {
+    "title": "Unser Team",
+    "description": "Lernen Sie die leidenschaftlichen Menschen hinter dem Erfolg von GiaConnect kennen",
+    "leadership": {
+      "title": "Führungsteam",
+      "members": [
+        {
+          "name": "Sarah Johnson",
+          "role": "CEO & Gründerin",
+          "bio": "Über 20 Jahre Erfahrung in KI und technologischer Innovation",
+          "image": "/images/team/sarah.jpg"
+        },
+        {
+          "name": "Michael Chen",
+          "role": "CTO",
+          "bio": "Experte für maschinelles Lernen und Unternehmensarchitektur",
+          "image": "/images/team/michael.jpg"
+        },
+        {
+          "name": "Emma Rodriguez",
+          "role": "Head of Product",
+          "bio": "Spezialistin für Produktstrategie und Innovation",
+          "image": "/images/team/emma.jpg"
+        }
+      ]
+    }
+  },
+  "history": {
+    "title": "Unser Weg",
+    "description": "Vom Startup zum Branchenführer in KI-Lösungen",
+    "timeline": [
+      {
+        "year": "2020",
+        "title": "Gründung",
+        "description": "GiaConnect wurde mit der Vision gegründet, KI-Technologie zu demokratisieren"
+      },
+      {
+        "year": "2021",
+        "title": "Erster Meilenstein",
+        "description": "Einführung unserer ersten KI-gestützten Lösung für den Gesundheitssektor"
+      },
+      {
+        "year": "2022",
+        "title": "Expansion",
+        "description": "Expansion in mehrere Branchen und Erreichung von über 100 Kunden"
+      },
+      {
+        "year": "2023",
+        "title": "Innovation",
+        "description": "Einführung fortschrittlicher KI-Modelle und Ausbau der globalen Präsenz"
+      },
+      {
+        "year": "2024",
+        "title": "Führung",
+        "description": "Anerkennung als führendes Unternehmen für KI-Lösungen in allen Branchen"
+      }
+    ]
+  },
+  "achievements": {
+    "title": "Unsere Erfolge",
+    "description": "Anerkennung und Meilensteine, die unseren Einfluss zeigen",
+    "items": [
+      {
+        "title": "Branchenpreise",
+        "description": "Mehrere Auszeichnungen für Innovation und Exzellenz in KI-Lösungen",
+        "icon": "Trophy"
+      },
+      {
+        "title": "Kundenerfolg",
+        "description": "Über 500 erfolgreiche Implementierungen in allen Branchen",
+        "icon": "Users"
+      },
+      {
+        "title": "Globale Reichweite",
+        "description": "Tätigkeit in über 20 Ländern mit einer vielfältigen Kundenbasis",
+        "icon": "Globe"
+      },
+      {
+        "title": "Innovationspatente",
+        "description": "Mehrere Patente für KI-Technologie und Methodologien",
+        "icon": "Lightbulb"
+      }
+    ]
+  },
+  "partners": {
+    "title": "Unsere Partner",
+    "description": "Zusammenarbeit mit Branchenführern für außergewöhnliche Lösungen",
+    "categories": [
+      {
+        "category": "Technologiepartner",
+        "items": [
+          { "name": "Microsoft", "logo": "/images/partners/microsoft.svg" },
+          { "name": "AWS", "logo": "/images/partners/aws.svg" },
+          { "name": "Google Cloud", "logo": "/images/partners/gcp.svg" }
+        ]
+      },
+      {
+        "category": "Branchenpartner",
+        "items": [
+          { "name": "Gesundheitsallianz", "logo": "/images/partners/healthcare.svg" },
+          { "name": "Fertigungsgruppe", "logo": "/images/partners/manufacturing.svg" },
+          { "name": "Einzelhandelskonsortium", "logo": "/images/partners/retail.svg" }
+        ]
+      }
+    ]
+  },
+  "culture": {
+    "title": "Unsere Kultur",
+    "description": "Ein Arbeitsplatz, der Innovation und Wachstum fördert",
+    "items": [
+      {
+        "title": "Innovation zuerst",
+        "description": "Wir fördern kreatives Denken und neue Ansätze zur Problemlösung",
+        "icon": "Lightbulb"
+      },
+      {
+        "title": "Kontinuierliches Lernen",
+        "description": "Wir investieren in das Wachstum und die Entwicklung unseres Teams",
+        "icon": "GraduationCap"
+      },
+      {
+        "title": "Work-Life-Balance",
+        "description": "Wir fördern ein gesundes Gleichgewicht zwischen Arbeit und Privatleben",
+        "icon": "Heart"
+      },
+      {
+        "title": "Vielfalt & Inklusion",
+        "description": "Wir feiern Vielfalt und fördern ein inklusives Umfeld",
+        "icon": "Users"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Werden Sie Teil unserer Reise",
+    "description": "Seien Sie Teil der Zukunft der KI-gestützten Innovation",
+    "buttons": [
+      {
+        "text": "Karrieren ansehen",
+        "href": "/careers",
+        "variant": "primary"
+      },
+      {
+        "text": "Kontaktieren Sie uns",
+        "href": "/contact",
+        "variant": "secondary"
+      }
+    ]
+  }
+} 

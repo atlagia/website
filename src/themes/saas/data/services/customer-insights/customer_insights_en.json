@@ -1,0 +1,192 @@
+{
+  "hero": {
+    "subtitle": "CUSTOMER INSIGHTS",
+    "title": "Understand Your Customers Better with AI",
+    "description": "Transform customer data into actionable insights with AI-powered analytics to improve engagement, retention, and lifetime value.",
+    "image": "https://cdn.atlagia.com/kepart_vector_laptop_Ai_Platform_e-commerce_Revolution_light_ba_20e77df3-d828-4fbf-b2a5-92a37fb7caa3.png"
+  },
+  "benefits": {
+    "title": "Why Choose Our Customer Insights",
+    "items": [
+      {
+        "icon": "Users",
+        "title": "Customer Segmentation",
+        "description": "AI-powered customer segmentation and behavior analysis.",
+        "color": "blue"
+      },
+      {
+        "icon": "TrendingUp",
+        "title": "Predictive Analytics",
+        "description": "Forecast customer behavior and identify opportunities.",
+        "color": "green"
+      },
+      {
+        "icon": "Heart",
+        "title": "Sentiment Analysis",
+        "description": "Real-time customer sentiment and feedback analysis.",
+        "color": "pink"
+      },
+      {
+        "icon": "Target",
+        "title": "Personalization",
+        "description": "Tailored recommendations and customer experiences.",
+        "color": "purple"
+      }
+    ]
+  },
+  "features": {
+    "title": "Powerful Insight Features",
+    "description": "Everything you need to understand and serve your customers better.",
+    "items": [
+      {
+        "title": "Advanced Customer Analytics",
+        "description": "Deep insights into customer behavior and preferences",
+        "image": "https://cdn.atlagia.com/kepart_CUSTOMER_INSIGHTS_92b74cee-feec-4bb3-a1c1-54a52b1b1527.png",
+        "features": [
+          "Behavior tracking",
+          "Purchase patterns",
+          "Customer journey mapping",
+          "Engagement metrics"
+        ]
+      },
+      {
+        "title": "Smart Segmentation",
+        "description": "AI-powered customer segmentation and targeting",
+        "image": "https://cdn.atlagia.com/kepart_CUSTOMER_INSIGHTS_0cd98b0e-a353-44da-a9b1-7482dbfd2418.png",
+        "features": [
+          "Dynamic segments",
+          "Behavioral clustering",
+          "Demographic analysis",
+          "Custom attributes"
+        ]
+      },
+      {
+        "title": "Predictive Insights",
+        "description": "Forecast customer behavior and trends",
+        "image": "https://cdn.atlagia.com/kepart_CUSTOMER_INSIGHTS_f838b0c2-1ecc-47b3-93d2-67f4f794b6b6.png",
+        "features": [
+          "Churn prediction",
+          "Lifetime value forecast",
+          "Next best action",
+          "Purchase propensity"
+        ]
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "description": "Get started with customer insights in four simple steps",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Connect Data",
+        "description": "Integrate your customer data sources"
+      },
+      {
+        "number": "02",
+        "title": "Analyze Patterns",
+        "description": "Let AI analyze customer behavior patterns"
+      },
+      {
+        "number": "03",
+        "title": "Generate Insights",
+        "description": "Get actionable insights and recommendations"
+      },
+      {
+        "number": "04",
+        "title": "Take Action",
+        "description": "Implement insights to improve customer experience"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Simple, Transparent Pricing",
+    "description": "Choose the plan that best fits your customer insight needs",
+    "plans": [
+      {
+        "name": "Starter",
+        "price": "79",
+        "period": "/month",
+        "description": "For small businesses",
+        "features": [
+          "Up to 10,000 customers",
+          "Basic analytics",
+          "Daily updates",
+          "Email support"
+        ],
+        "cta": {
+          "text": "Start Free Trial",
+          "link": "/trial"
+        }
+      },
+      {
+        "name": "Professional",
+        "price": "199",
+        "period": "/month",
+        "description": "For growing businesses",
+        "features": [
+          "Up to 100,000 customers",
+          "Advanced analytics",
+          "Real-time updates",
+          "Priority support"
+        ],
+        "cta": {
+          "text": "Start Free Trial",
+          "link": "/trial"
+        },
+        "popular": true
+      },
+      {
+        "name": "Enterprise",
+        "price": "499",
+        "period": "/month",
+        "description": "For large operations",
+        "features": [
+          "Unlimited customers",
+          "Custom solutions",
+          "API access",
+          "24/7 support"
+        ],
+        "cta": {
+          "text": "Contact Sales",
+          "link": "/contact"
+        }
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "What Our Customers Say",
+    "items": [
+      {
+        "content": "The customer insights platform has helped us increase customer retention by 40% through better understanding and targeting of our customer base.",
+        "author": "Sarah Johnson",
+        "position": "Customer Success Director",
+        "company": "RetailPro",
+        "image": "/images/testimonials/sarah.jpg"
+      },
+      {
+        "content": "The predictive analytics have transformed how we approach customer engagement. We can now anticipate customer needs before they even express them.",
+        "author": "Mark Thompson",
+        "position": "Marketing Manager",
+        "company": "TechGrowth",
+        "image": "/images/testimonials/mark.jpg"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Understand Your Customers Better?",
+    "description": "Join thousands of businesses using our platform to gain deeper customer insights.",
+    "buttons": [
+      {
+        "text": "Start Free Trial",
+        "link": "/trial",
+        "primary": true
+      },
+      {
+        "text": "Schedule Demo",
+        "link": "/demo",
+        "primary": false
+      }
+    ]
+  }
+} 

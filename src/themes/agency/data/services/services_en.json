@@ -1,0 +1,235 @@
+{
+  "pageTitle": "Our Services",
+  "pageDescription": "Explore our comprehensive range of professional services designed to help your business thrive in the digital age.",
+  "hero": {
+    "badge": "Our Services",
+    "title": "Professional Services for Your Success",
+    "description": "Discover our comprehensive range of services designed to help your business thrive in the digital age.",
+    "cta": {
+      "primary": {
+        "text": "Explore Services",
+        "href": "#services"
+      },
+      "secondary": {
+        "text": "Get Started",
+        "href": "/contact"
+      }
+    }
+  },
+  "stats": [
+    {
+      "value": "500+",
+      "label": "Projects Completed"
+    },
+    {
+      "value": "99.9%",
+      "label": "Success Rate"
+    },
+    {
+      "value": "45%",
+      "label": "Innovation Rate"
+    },
+    {
+      "value": "24/7",
+      "label": "Support"
+    }
+  ],
+  "services": [
+    {
+      "category": "Development Services",
+      "description": "Custom software development solutions for your business needs",
+      "items": [
+        {
+          "icon": "code",
+          "name": "Custom Software Development",
+          "description": "Tailored software solutions built with cutting-edge technology",
+          "features": ["Web Applications", "Mobile Apps", "Desktop Software", "API Development"],
+          "color": "blue"
+        },
+        {
+          "icon": "brain",
+          "name": "AI & Machine Learning",
+          "description": "Intelligent solutions powered by advanced AI and ML",
+          "features": ["Predictive Analytics", "Natural Language Processing", "Computer Vision", "Deep Learning"],
+          "color": "purple"
+        },
+        {
+          "icon": "database",
+          "name": "Data Engineering",
+          "description": "Comprehensive data management and analytics solutions",
+          "features": ["Data Warehousing", "ETL Pipelines", "Big Data Processing", "Data Visualization"],
+          "color": "indigo"
+        },
+        {
+          "icon": "network",
+          "name": "Cloud Solutions",
+          "description": "Scalable cloud infrastructure and services",
+          "features": ["Cloud Migration", "DevOps", "Containerization", "Serverless Architecture"],
+          "color": "cyan"
+        }
+      ]
+    },
+    {
+      "category": "Consulting Services",
+      "description": "Expert guidance for your digital transformation journey",
+      "items": [
+        {
+          "icon": "settings",
+          "name": "Digital Transformation",
+          "description": "Strategic planning and implementation of digital initiatives",
+          "features": ["Process Automation", "Digital Strategy", "Change Management", "Technology Roadmap"],
+          "color": "rose"
+        },
+        {
+          "icon": "cpu",
+          "name": "Technology Consulting",
+          "description": "Expert advice on technology selection and implementation",
+          "features": ["Architecture Design", "Security Assessment", "Performance Optimization", "Scalability Planning"],
+          "color": "amber"
+        },
+        {
+          "icon": "file-text",
+          "name": "Project Management",
+          "description": "Professional project management and delivery",
+          "features": ["Agile Development", "Risk Management", "Resource Planning", "Quality Assurance"],
+          "color": "lime"
+        },
+        {
+          "icon": "bar-chart",
+          "name": "Business Analytics",
+          "description": "Data-driven insights for business growth",
+          "features": ["Business Intelligence", "Performance Metrics", "Market Analysis", "Competitive Intelligence"],
+          "color": "green"
+        }
+      ]
+    },
+    {
+      "category": "Support Services",
+      "description": "Comprehensive support and maintenance solutions",
+      "items": [
+        {
+          "icon": "shield",
+          "name": "Security Services",
+          "description": "Enterprise-grade security solutions",
+          "features": ["Security Audits", "Penetration Testing", "Compliance Management", "Security Training"],
+          "color": "sky"
+        },
+        {
+          "icon": "clock",
+          "name": "24/7 Support",
+          "description": "Round-the-clock technical support and maintenance",
+          "features": ["Help Desk", "System Monitoring", "Incident Response", "Performance Tuning"],
+          "color": "cyan"
+        },
+        {
+          "icon": "globe",
+          "name": "Global Services",
+          "description": "International support and consulting",
+          "features": ["Multi-language Support", "Global Deployment", "Compliance Management", "Local Expertise"],
+          "color": "blue"
+        },
+        {
+          "icon": "zap",
+          "name": "Training & Workshops",
+          "description": "Comprehensive training and skill development",
+          "features": ["Technical Training", "Workshops", "Certification Programs", "Knowledge Transfer"],
+          "color": "indigo"
+        }
+      ]
+    }
+  ],
+  "features": {
+    "title": "What We Offer",
+    "description": "Our services come with comprehensive features and support",
+    "items": [
+      {
+        "icon": "code",
+        "title": "Custom Development",
+        "description": "Tailored solutions built with cutting-edge technology"
+      },
+      {
+        "icon": "database",
+        "title": "Data Management",
+        "description": "Secure and efficient data handling systems"
+      },
+      {
+        "icon": "network",
+        "title": "Integration",
+        "description": "Seamless integration with existing systems"
+      },
+      {
+        "icon": "monitor",
+        "title": "User Interface",
+        "description": "Intuitive and responsive design"
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Service Benefits",
+    "description": "Experience the advantages of working with our team.",
+    "items": [
+      {
+        "icon": "rocket",
+        "title": "Innovation",
+        "description": "Cutting-edge solutions that drive business transformation",
+        "stats": "45%",
+        "label": "Innovation Rate"
+      },
+      {
+        "icon": "target",
+        "title": "Precision",
+        "description": "Accurate and reliable service delivery",
+        "stats": "99.9%",
+        "label": "Success Rate"
+      },
+      {
+        "icon": "lightbulb",
+        "title": "Expertise",
+        "description": "Deep industry knowledge and technical expertise",
+        "stats": "3x",
+        "label": "Experience Level"
+      },
+      {
+        "icon": "users",
+        "title": "Collaboration",
+        "description": "Strong partnerships with clients and teams",
+        "stats": "96%",
+        "label": "Client Satisfaction"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "description": "Hear from businesses that have benefited from our services",
+    "items": [
+      {
+        "quote": "The team's expertise and dedication were evident throughout our project. Their innovative solutions have transformed our operations.",
+        "author": "Sarah Chen",
+        "role": "CTO, Tech Solutions",
+        "image": "/images/testimonials/sarah.jpg"
+      },
+      {
+        "quote": "Their comprehensive approach to service delivery and attention to detail made all the difference in our project's success.",
+        "author": "John Smith",
+        "role": "CEO, Digital Innovations",
+        "image": "/images/testimonials/john.jpg"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Get Started?",
+    "description": "Join hundreds of businesses that have transformed their operations with our services.",
+    "buttons": [
+      {
+        "text": "Contact Us",
+        "href": "/contact",
+        "variant": "primary"
+      },
+      {
+        "text": "Schedule a Demo",
+        "href": "/demo",
+        "variant": "secondary"
+      }
+    ]
+  }
+} 

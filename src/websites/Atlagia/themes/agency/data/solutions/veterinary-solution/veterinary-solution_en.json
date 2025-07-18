@@ -1,0 +1,335 @@
+{
+  "hero": {
+    "subtitle": "Veterinary Practice Management",
+    "title": "Complete Veterinary Management Solution",
+    "description": "A comprehensive veterinary practice management system that streamlines operations, enhances patient care, and grows your practice.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Veterinary Management Solution Demo"
+    },
+    "stats": [
+      {
+        "value": "40%",
+        "label": "Time Saved"
+      },
+      {
+        "value": "95%",
+        "label": "Client Satisfaction"
+      },
+      {
+        "value": "35%",
+        "label": "Revenue Growth"
+      }
+    ]
+  },
+  "features": {
+    "subtitle": "Advanced Features",
+    "title": "Complete Veterinary Management",
+    "description": "Comprehensive tools designed for modern veterinary practices",
+    "categories": [
+      {
+        "name": "Practice Operations",
+        "description": "Streamline daily operations and patient management"
+      },
+      {
+        "name": "Patient Care",
+        "description": "Enhance animal care and client communication"
+      }
+    ],
+    "items": [
+      {
+        "icon": "calendar",
+        "category": "Operations",
+        "title": "Smart Scheduling",
+        "description": "Efficient appointment and resource management",
+        "image": "/images/solutions/veterinary/scheduling.jpg",
+        "highlights": [
+          "Online booking",
+          "Automated reminders",
+          "Resource allocation",
+          "Multi-location support"
+        ],
+        "stats": {
+          "value": "40%",
+          "label": "Time saved"
+        }
+      },
+      {
+        "icon": "file-text",
+        "category": "Clinical",
+        "title": "Electronic Medical Records",
+        "description": "Comprehensive patient records and clinical documentation",
+        "image": "/images/solutions/veterinary/emr.jpg",
+        "highlights": [
+          "Digital records",
+          "Treatment plans",
+          "Lab integration",
+          "Prescription management"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "Digital compliance"
+        }
+      },
+      {
+        "icon": "message-circle",
+        "category": "Communication",
+        "title": "Client Engagement",
+        "description": "Enhanced client communication and engagement tools",
+        "image": "/images/solutions/veterinary/communication.jpg",
+        "highlights": [
+          "Client portal",
+          "SMS/Email updates",
+          "Appointment reminders",
+          "Educational resources"
+        ],
+        "stats": {
+          "value": "95%",
+          "label": "Client satisfaction"
+        }
+      },
+      {
+        "icon": "trending-up",
+        "category": "Business",
+        "title": "Practice Analytics",
+        "description": "Comprehensive business intelligence and reporting",
+        "image": "/images/solutions/veterinary/analytics.jpg",
+        "highlights": [
+          "Financial reports",
+          "Performance metrics",
+          "Inventory analytics",
+          "Growth insights"
+        ],
+        "stats": {
+          "value": "35%",
+          "label": "Revenue growth"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Veterinary Excellence",
+    "description": "See how leading veterinary practices are transforming their operations",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Veterinary Success Story"
+    },
+    "testimonials": [
+      {
+        "author": "Dr. Emily Roberts",
+        "role": "Practice Owner",
+        "image": "/images/testimonials/vet1.jpg",
+        "quote": "This system has transformed our practice. The integrated scheduling and client communication features have significantly improved our efficiency."
+      },
+      {
+        "author": "Dr. Mark Thompson",
+        "role": "Chief Veterinarian",
+        "image": "/images/testimonials/vet2.jpg",
+        "quote": "The electronic medical records and treatment planning tools have helped us provide better care for our patients."
+      }
+    ]
+  },
+  "benefits": {
+    "subtitle": "Key Benefits",
+    "title": "Transform Your Veterinary Practice",
+    "description": "Experience the advantages of a fully integrated veterinary management system",
+    "items": [
+      {
+        "icon": "zap",
+        "title": "Operational Excellence",
+        "description": "Streamline practice operations and workflow",
+        "color": "blue",
+        "stats": {
+          "value": "40%",
+          "label": "Time Saved"
+        },
+        "highlights": [
+          "Automated scheduling",
+          "Inventory management",
+          "Resource optimization",
+          "Task automation"
+        ]
+      },
+      {
+        "icon": "heart",
+        "title": "Enhanced Patient Care",
+        "description": "Improve animal care and treatment outcomes",
+        "color": "green",
+        "stats": {
+          "value": "98%",
+          "label": "Treatment Success"
+        },
+        "highlights": [
+          "Digital records",
+          "Treatment tracking",
+          "Lab integration",
+          "Care protocols"
+        ]
+      },
+      {
+        "icon": "users",
+        "title": "Client Satisfaction",
+        "description": "Enhance client experience and engagement",
+        "color": "purple",
+        "stats": {
+          "value": "95%",
+          "label": "Client Satisfaction"
+        },
+        "highlights": [
+          "Online booking",
+          "Client portal",
+          "Communication tools",
+          "Educational resources"
+        ]
+      },
+      {
+        "icon": "trending-up",
+        "title": "Practice Growth",
+        "description": "Drive practice growth and profitability",
+        "color": "red",
+        "stats": {
+          "value": "35%",
+          "label": "Revenue Growth"
+        },
+        "highlights": [
+          "Financial analytics",
+          "Growth insights",
+          "Marketing tools",
+          "Client retention"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "subtitle": "Transparent Pricing",
+    "title": "Flexible Pricing Plans",
+    "description": "Choose the perfect plan for your veterinary practice. Save up to 20% with annual billing.",
+    "billingPeriods": ["Monthly", "Yearly"],
+    "plans": [
+      {
+        "name": "Essential",
+        "highlight": "For small practices",
+        "monthlyPrice": "$199",
+        "yearlyPrice": "$1,990",
+        "yearlyDiscount": "Save $398/year",
+        "description": "Essential features for small practices",
+        "features": [
+          {
+            "text": "Appointment scheduling",
+            "included": true
+          },
+          {
+            "text": "Basic EMR",
+            "included": true
+          },
+          {
+            "text": "Client communications",
+            "included": true
+          },
+          {
+            "text": "Email support",
+            "included": true
+          },
+          {
+            "text": "Basic reporting",
+            "included": true
+          },
+          {
+            "text": "Mobile access",
+            "included": true
+          }
+        ],
+        "cta": "Get Started",
+        "popular": false
+      },
+      {
+        "name": "Professional",
+        "highlight": "Most popular for growing practices",
+        "monthlyPrice": "$399",
+        "yearlyPrice": "$3,990",
+        "yearlyDiscount": "Save $798/year",
+        "description": "Advanced features for growing practices",
+        "features": [
+          {
+            "text": "Everything in Essential, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Advanced EMR",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "Lab integration",
+            "included": true
+          },
+          {
+            "text": "Advanced analytics",
+            "included": true
+          },
+          {
+            "text": "Priority support",
+            "included": true
+          },
+          {
+            "text": "Multi-location support",
+            "included": true
+          }
+        ],
+        "cta": "Get Started",
+        "popular": true
+      },
+      {
+        "name": "Enterprise",
+        "highlight": "For large practices",
+        "monthlyPrice": "Custom",
+        "yearlyPrice": "Custom",
+        "yearlyDiscount": "Contact us for special pricing",
+        "description": "Tailored solutions for large practices",
+        "features": [
+          {
+            "text": "Everything in Professional, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Custom integration support",
+            "included": true
+          },
+          {
+            "text": "Dedicated account manager",
+            "included": true
+          },
+          {
+            "text": "Advanced security features",
+            "included": true
+          },
+          {
+            "text": "Custom development",
+            "included": true
+          },
+          {
+            "text": "SLA guarantees",
+            "included": true
+          }
+        ],
+        "cta": "Contact Sales",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Transform Your Veterinary Practice?",
+    "description": "Join leading veterinary practices that have modernized their operations with our solution.",
+    "background": "/images/solutions/veterinary/cta-background.jpg",
+    "primaryButton": {
+      "text": "Schedule a Demo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Watch Demo",
+      "link": "#showcase"
+    }
+  }
+} 

@@ -1,0 +1,67 @@
+{
+  "hero": {
+    "subtitle": "CONTATTACI",
+    "title": "Parliamo del Tuo Business",
+    "description": "Hai domande sulle nostre soluzioni basate sull'IA? Siamo qui per aiutarti a ottimizzare e far crescere il tuo business e-commerce."
+  },
+  "contactInfo": [
+    {
+      "icon": "Mail",
+      "title": "Email",
+      "content": "support@atalsia.com",
+      "description": "Il nostro team è qui per aiutarti.",
+      "link": "mailto:support@atalsia.com"
+    },
+    {
+      "icon": "Phone",
+      "title": "Chiamaci",
+      "content": "+1 2035 472 248",
+      "description": "Lun-Ven dalle 9:00 alle 18:00.",
+      "link": "tel:+12035472248"
+    },
+    {
+      "icon": "MapPin",
+      "title": "Ufficio",
+      "content": "Londra, Regno Unito",
+      "description": "124 City Road",
+      "link": "https://maps.google.com/maps?q=124 City Road, London, United Kingdom"
+    }
+  ],
+  "form": {
+    "title": "Inviaci un Messaggio",
+    "fields": {
+      "firstName": {
+        "label": "Nome",
+        "placeholder": "Inserisci il tuo nome"
+      },
+      "lastName": {
+        "label": "Cognome",
+        "placeholder": "Inserisci il tuo cognome"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Inserisci la tua email"
+      },
+      "subject": {
+        "label": "Oggetto",
+        "placeholder": "Inserisci l'oggetto"
+      },
+      "message": {
+        "label": "Messaggio",
+        "placeholder": "Inserisci il tuo messaggio"
+      }
+    },
+    "submitButton": "Invia Messaggio"
+  },
+  "support": {
+    "hours": {
+      "title": "Orari di Supporto",
+      "content": "Lunedì - Venerdì, 9:00 - 18:00 (GMT)"
+    },
+    "additional": {
+      "title": "Contatti Aggiuntivi",
+      "description": "Per informazioni generali:",
+      "email": "contact@atalsia.com"
+    }
+  }
+} 

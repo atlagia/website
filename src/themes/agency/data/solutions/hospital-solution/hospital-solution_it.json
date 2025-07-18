@@ -1,0 +1,335 @@
+{
+  "hero": {
+    "subtitle": "Sistema di Gestione Ospedaliera",
+    "title": "Soluzione Completa per la Gestione Ospedaliera",
+    "description": "Un sistema di gestione ospedaliera di livello enterprise che integra tutti i reparti, ottimizza l'assistenza ai pazienti e migliora le operazioni in tutta la struttura.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Demo della Soluzione di Gestione Ospedaliera"
+    },
+    "stats": [
+      {
+        "value": "97%",
+        "label": "Soddisfazione dei Pazienti"
+      },
+      {
+        "value": "45%",
+        "label": "Efficienza Operativa"
+      },
+      {
+        "value": "3.2x",
+        "label": "ROI"
+      }
+    ]
+  },
+  "features": {
+    "subtitle": "Funzionalità Enterprise",
+    "title": "Gestione Ospedaliera Completa",
+    "description": "Una suite completa di strumenti progettata per ospedali e strutture sanitarie moderne",
+    "categories": [
+      {
+        "name": "Gestione Clinica",
+        "description": "Ottimizza l'assistenza ai pazienti in tutti i reparti"
+      },
+      {
+        "name": "Operazioni Amministrative",
+        "description": "Ottimizza le operazioni ospedaliere e la gestione delle risorse"
+      }
+    ],
+    "items": [
+      {
+        "icon": "building",
+        "category": "Gestione delle Strutture",
+        "title": "Integrazione Multi-Reparto",
+        "description": "Coordinamento fluido tra reparti e strutture",
+        "image": "/images/solutions/hospital/departments.jpg",
+        "highlights": [
+          "Coordinamento dei reparti",
+          "Allocazione delle risorse",
+          "Pianificazione del personale",
+          "Gestione dei posti letto"
+        ],
+        "stats": {
+          "value": "40%",
+          "label": "Migliore utilizzo delle risorse"
+        }
+      },
+      {
+        "icon": "activity",
+        "category": "Assistenza ai Pazienti",
+        "title": "Eccellenza Clinica",
+        "description": "Sistema completo di assistenza e monitoraggio dei pazienti",
+        "image": "/images/solutions/hospital/clinical.jpg",
+        "highlights": [
+          "Sistema EMR/EHR",
+          "Percorsi clinici",
+          "Gestione delle prescrizioni",
+          "Protocolli di assistenza"
+        ],
+        "stats": {
+          "value": "55%",
+          "label": "Assistenza ai pazienti più rapida"
+        }
+      },
+      {
+        "icon": "microscope",
+        "category": "Diagnostica",
+        "title": "Diagnostica Integrata",
+        "description": "Sistemi di laboratorio e imaging connessi",
+        "image": "/images/solutions/hospital/diagnostics.jpg",
+        "highlights": [
+          "Integrazione del laboratorio",
+          "Sistema PACS",
+          "Gestione dei risultati",
+          "Imaging digitale"
+        ],
+        "stats": {
+          "value": "65%",
+          "label": "Diagnostica più rapida"
+        }
+      },
+      {
+        "icon": "chart-bar",
+        "category": "Analitica",
+        "title": "Intelligenza Ospedaliera",
+        "description": "Sistema avanzato di analisi e reportistica",
+        "image": "/images/solutions/hospital/analytics.jpg",
+        "highlights": [
+          "Metriche di performance",
+          "Analitica delle risorse",
+          "Insight finanziari",
+          "Misure di qualità"
+        ],
+        "stats": {
+          "value": "45%",
+          "label": "Migliore processo decisionale"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Eccellenza nell'Assistenza Sanitaria",
+    "description": "Scopri come gli ospedali leader stanno trasformando l'erogazione dell'assistenza sanitaria",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Storia di Successo Ospedaliera"
+    },
+    "testimonials": [
+      {
+        "author": "Dr. Robert Chen",
+        "role": "CEO dell'Ospedale",
+        "image": "/images/testimonials/ceo1.jpg",
+        "quote": "Questo sistema ha rivoluzionato il modo in cui gestiamo il nostro ospedale. L'integrazione tra i reparti ha migliorato sia l'efficienza che l'assistenza ai pazienti."
+      },
+      {
+        "author": "Dr. Sarah Thompson",
+        "role": "Primario di Reparto",
+        "image": "/images/testimonials/doctor2.jpg",
+        "quote": "Il supporto alle decisioni cliniche e la diagnostica integrata hanno migliorato significativamente la nostra capacità di fornire assistenza di qualità."
+      }
+    ]
+  },
+  "benefits": {
+    "subtitle": "Vantaggi Chiave",
+    "title": "Trasforma il Tuo Ospedale",
+    "description": "Sperimenta i vantaggi di un sistema di gestione ospedaliera completamente integrato",
+    "items": [
+      {
+        "icon": "trending-up",
+        "title": "Eccellenza Operativa",
+        "description": "Ottimizza le operazioni ospedaliere e la gestione delle risorse",
+        "color": "blue",
+        "stats": {
+          "value": "45%",
+          "label": "Efficienza Operativa"
+        },
+        "highlights": [
+          "Ottimizzazione delle risorse",
+          "Automatizzazione dei processi",
+          "Riduzione dei costi",
+          "Migliore coordinamento"
+        ]
+      },
+      {
+        "icon": "heart",
+        "title": "Assistenza ai Pazienti Migliorata",
+        "description": "Migliora i risultati e l'esperienza dei pazienti",
+        "color": "red",
+        "stats": {
+          "value": "97%",
+          "label": "Soddisfazione dei Pazienti"
+        },
+        "highlights": [
+          "Migliore coordinamento dell'assistenza",
+          "Tempi di attesa ridotti",
+          "Risultati migliorati",
+          "Coinvolgimento dei pazienti"
+        ]
+      },
+      {
+        "icon": "users",
+        "title": "Potenziamento del Personale",
+        "description": "Fornisci agli operatori sanitari strumenti migliori",
+        "color": "green",
+        "stats": {
+          "value": "50%",
+          "label": "Produttività del Personale"
+        },
+        "highlights": [
+          "Supporto alle decisioni cliniche",
+          "Documentazione semplificata",
+          "Migliore comunicazione",
+          "Accesso mobile"
+        ]
+      },
+      {
+        "icon": "shield",
+        "title": "Qualità & Conformità",
+        "description": "Mantieni i più alti standard di assistenza e conformità",
+        "color": "purple",
+        "stats": {
+          "value": "100%",
+          "label": "Conformità Normativa"
+        },
+        "highlights": [
+          "Metriche di qualità",
+          "Conformità normativa",
+          "Gestione dei rischi",
+          "Supporto audit"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "subtitle": "Prezzi Enterprise",
+    "title": "Soluzioni Enterprise Flessibili",
+    "description": "Prezzi personalizzati in base alle dimensioni e alle esigenze del tuo ospedale. Risparmia con i nostri pacchetti enterprise.",
+    "billingPeriods": ["Mensile", "Annuale"],
+    "plans": [
+      {
+        "name": "Standard",
+        "highlight": "Per piccoli ospedali",
+        "monthlyPrice": "$2,999",
+        "yearlyPrice": "$29,990",
+        "yearlyDiscount": "Risparmia $5,998/anno",
+        "description": "Funzionalità essenziali per piccoli ospedali",
+        "features": [
+          {
+            "text": "Gestione ospedaliera di base",
+            "included": true
+          },
+          {
+            "text": "Sistema EMR/EHR",
+            "included": true
+          },
+          {
+            "text": "Coordinamento dei reparti",
+            "included": true
+          },
+          {
+            "text": "Supporto standard",
+            "included": true
+          },
+          {
+            "text": "Analitica di base",
+            "included": true
+          },
+          {
+            "text": "Accesso mobile",
+            "included": true
+          }
+        ],
+        "cta": "Inizia",
+        "popular": false
+      },
+      {
+        "name": "Professionale",
+        "highlight": "Più popolare per ospedali di medie dimensioni",
+        "monthlyPrice": "$4,999",
+        "yearlyPrice": "$49,990",
+        "yearlyDiscount": "Risparmia $9,998/anno",
+        "description": "Funzionalità avanzate per ospedali in crescita",
+        "features": [
+          {
+            "text": "Tutto ciò che è incluso in Standard, più:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Percorsi clinici avanzati",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "Integrazione Laboratorio & PACS",
+            "included": true
+          },
+          {
+            "text": "Analitica avanzata",
+            "included": true
+          },
+          {
+            "text": "Supporto prioritario",
+            "included": true
+          },
+          {
+            "text": "Supporto multi-struttura",
+            "included": true
+          }
+        ],
+        "cta": "Inizia",
+        "popular": true
+      },
+      {
+        "name": "Enterprise",
+        "highlight": "Per grandi reti ospedaliere",
+        "monthlyPrice": "Personalizzato",
+        "yearlyPrice": "Personalizzato",
+        "yearlyDiscount": "Contattaci per prezzi speciali",
+        "description": "Soluzioni personalizzate per reti ospedaliere",
+        "features": [
+          {
+            "text": "Tutto ciò che è incluso in Professionale, più:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Supporto integrazione personalizzato",
+            "included": true
+          },
+          {
+            "text": "Team di successo dedicato",
+            "included": true
+          },
+          {
+            "text": "Funzionalità di sicurezza avanzate",
+            "included": true
+          },
+          {
+            "text": "Sviluppo personalizzato",
+            "included": true
+          },
+          {
+            "text": "SLA Enterprise",
+            "included": true
+          }
+        ],
+        "cta": "Contatta le Vendite",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "Pronto a Trasformare il Tuo Ospedale?",
+    "description": "Unisciti alle strutture sanitarie leader che hanno modernizzato le loro operazioni con la nostra soluzione.",
+    "background": "/images/solutions/hospital/cta-background.jpg",
+    "primaryButton": {
+      "text": "Pianifica una Demo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Guarda la Demo",
+      "link": "#showcase"
+    }
+  }
+} 

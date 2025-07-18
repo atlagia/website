@@ -1,0 +1,349 @@
+{
+  "pageTitle": "Progetti & Case Study",
+  "pageDescription": "Esplora il nostro portfolio di progetti di successo e case study in vari settori.",
+  "hero": {
+    "badge": "I Nostri Progetti",
+    "title": "Storie di Successo & Case Study",
+    "description": "Scopri come abbiamo aiutato aziende di diversi settori a trasformare le loro operazioni con le nostre soluzioni basate sull'IA.",
+    "cta": {
+      "primary": {
+        "text": "Vedi i Progetti",
+        "href": "#projects"
+      },
+      "secondary": {
+        "text": "Inizia il Tuo Progetto",
+        "href": "/contact"
+      }
+    }
+  },
+  "stats": [
+    {
+      "value": "500+",
+      "label": "Progetti Completati"
+    },
+    {
+      "value": "99.9%",
+      "label": "Tasso di Successo"
+    },
+    {
+      "value": "45%",
+      "label": "Tasso di Innovazione"
+    },
+    {
+      "value": "24/7",
+      "label": "Supporto"
+    }
+  ],
+  "projects": [
+    {
+      "category": "Sanità",
+      "description": "Trasformazione dell'assistenza sanitaria con soluzioni basate sull'IA",
+      "items": [
+        {
+          "icon": "stethoscope",
+          "name": "Gestione Ospedale Intelligente",
+          "description": "Sistema di gestione operativa ospedaliera e assistenza ai pazienti basato sull'IA",
+          "image": "/images/projects/hospital-management.webp",
+          "stats": {
+            "value": "40%",
+            "label": "Aumento Efficienza"
+          },
+          "tags": ["IA", "Sanità", "Gestione"],
+          "color": "blue"
+        },
+        {
+          "icon": "building2",
+          "name": "Automazione Clinica",
+          "description": "Operazioni cliniche e gestione pazienti automatizzate",
+          "image": "/images/projects/clinic-automation.webp",
+          "stats": {
+            "value": "55%",
+            "label": "Tempo Risparmiato"
+          },
+          "tags": ["Automazione", "Sanità", "Efficienza"],
+          "color": "indigo"
+        },
+        {
+          "icon": "pill",
+          "name": "Sistema Farmaceutico",
+          "description": "Gestione moderna delle farmacie e controllo delle scorte",
+          "image": "/images/projects/pharmacy-system.webp",
+          "stats": {
+            "value": "45%",
+            "label": "Riduzione Costi"
+          },
+          "tags": ["Farmacia", "Inventario", "Gestione"],
+          "color": "purple"
+        },
+        {
+          "icon": "tooth",
+          "name": "Studio Dentistico",
+          "description": "Soluzione completa per la gestione dello studio dentistico",
+          "image": "/images/projects/dental-practice.webp",
+          "stats": {
+            "value": "60%",
+            "label": "Soddisfazione Pazienti"
+          },
+          "tags": ["Dentistico", "Sanità", "Gestione"],
+          "color": "pink"
+        }
+      ]
+    },
+    {
+      "category": "Vendita al Dettaglio & Commercio",
+      "description": "Rivoluzionare il commercio con soluzioni intelligenti",
+      "items": [
+        {
+          "icon": "shopping-bag",
+          "name": "Piattaforma E-commerce",
+          "description": "Piattaforma e-commerce basata sull'IA con analisi intelligenti",
+          "image": "/images/projects/ecommerce-platform.webp",
+          "stats": {
+            "value": "50%",
+            "label": "Aumento Vendite"
+          },
+          "tags": ["E-commerce", "IA", "Analisi"],
+          "color": "rose"
+        },
+        {
+          "icon": "store",
+          "name": "Gestione Vendita al Dettaglio",
+          "description": "Sistema intelligente di gestione vendita al dettaglio e POS",
+          "image": "/images/projects/retail-management.webp",
+          "stats": {
+            "value": "35%",
+            "label": "Efficienza Operativa"
+          },
+          "tags": ["Vendita al Dettaglio", "POS", "Gestione"],
+          "color": "amber"
+        },
+        {
+          "icon": "warehouse",
+          "name": "Sistema all'Ingrosso",
+          "description": "Gestione efficiente del commercio all'ingrosso e della distribuzione",
+          "image": "/images/projects/wholesale-system.webp",
+          "stats": {
+            "value": "45%",
+            "label": "Ottimizzazione Scorte"
+          },
+          "tags": ["Ingrosso", "Distribuzione", "Gestione"],
+          "color": "lime"
+        },
+        {
+          "icon": "truck",
+          "name": "Piattaforma Logistica",
+          "description": "Gestione intelligente della logistica e della catena di approvvigionamento",
+          "image": "/images/projects/logistics-platform.webp",
+          "stats": {
+            "value": "40%",
+            "label": "Efficienza Consegne"
+          },
+          "tags": ["Logistica", "Catena di Approvvigionamento", "IA"],
+          "color": "green"
+        }
+      ]
+    },
+    {
+      "category": "Industria & Produzione",
+      "description": "Soluzioni intelligenti per la produzione moderna",
+      "items": [
+        {
+          "icon": "factory",
+          "name": "Fabbrica Intelligente",
+          "description": "Gestione della produzione basata sull'IA",
+          "image": "/images/projects/smart-factory.webp",
+          "stats": {
+            "value": "55%",
+            "label": "Efficienza Produttiva"
+          },
+          "tags": ["Produzione", "IA", "Automazione"],
+          "color": "sky"
+        },
+        {
+          "icon": "warehouse",
+          "name": "Controllo Scorte",
+          "description": "Sistema avanzato di gestione scorte e magazzino",
+          "image": "/images/projects/inventory-control.webp",
+          "stats": {
+            "value": "45%",
+            "label": "Ottimizzazione Scorte"
+          },
+          "tags": ["Inventario", "Magazzino", "Gestione"],
+          "color": "cyan"
+        },
+        {
+          "icon": "truck",
+          "name": "Catena di Approvvigionamento",
+          "description": "Ottimizzazione end-to-end della catena di approvvigionamento",
+          "image": "/images/projects/supply-chain.webp",
+          "stats": {
+            "value": "40%",
+            "label": "Riduzione Costi"
+          },
+          "tags": ["Catena di Approvvigionamento", "Logistica", "IA"],
+          "color": "blue"
+        },
+        {
+          "icon": "trending-up",
+          "name": "Controllo Qualità",
+          "description": "Assicurazione e controllo qualità basati sull'IA",
+          "image": "/images/projects/quality-control.webp",
+          "stats": {
+            "value": "60%",
+            "label": "Rilevamento Difetti"
+          },
+          "tags": ["Qualità", "IA", "Produzione"],
+          "color": "indigo"
+        }
+      ]
+    },
+    {
+      "category": "Servizi Professionali",
+      "description": "Miglioramento delle aziende di servizi",
+      "items": [
+        {
+          "icon": "building",
+          "name": "Piattaforma Immobiliare",
+          "description": "Sistema completo di gestione immobiliare",
+          "image": "/images/projects/real-estate.webp",
+          "stats": {
+            "value": "50%",
+            "label": "Velocità Transazioni"
+          },
+          "tags": ["Immobiliare", "Gestione", "IA"],
+          "color": "violet"
+        },
+        {
+          "icon": "graduation-cap",
+          "name": "Sistema Educativo",
+          "description": "Gestione intelligente dell'istruzione e dell'apprendimento",
+          "image": "/images/projects/education-system.webp",
+          "stats": {
+            "value": "45%",
+            "label": "Risultati Apprendimento"
+          },
+          "tags": ["Istruzione", "Apprendimento", "IA"],
+          "color": "purple"
+        },
+        {
+          "icon": "hotel",
+          "name": "Piattaforma Ospitalità",
+          "description": "Sistema completo di gestione ospitalità",
+          "image": "/images/projects/hospitality-platform.webp",
+          "stats": {
+            "value": "55%",
+            "label": "Soddisfazione Ospiti"
+          },
+          "tags": ["Ospitalità", "Gestione", "IA"],
+          "color": "fuchsia"
+        },
+        {
+          "icon": "users",
+          "name": "Servizi Professionali",
+          "description": "Gestione servizi aziendali e consulenza",
+          "image": "/images/projects/professional-services.webp",
+          "stats": {
+            "value": "40%",
+            "label": "Efficienza Servizi"
+          },
+          "tags": ["Servizi", "Consulenza", "Gestione"],
+          "color": "pink"
+        }
+      ]
+    }
+  ],
+  "features": {
+    "title": "Funzionalità dei Progetti",
+    "description": "I nostri progetti sono dotati di funzionalità e supporto completi",
+    "items": [
+      {
+        "icon": "code",
+        "title": "Sviluppo Personalizzato",
+        "description": "Soluzioni su misura costruite con tecnologie all'avanguardia"
+      },
+      {
+        "icon": "database",
+        "title": "Gestione Dati",
+        "description": "Sistemi di elaborazione dati sicuri ed efficienti"
+      },
+      {
+        "icon": "network",
+        "title": "Integrazione",
+        "description": "Integrazione perfetta con i sistemi esistenti"
+      },
+      {
+        "icon": "monitor",
+        "title": "Interfaccia Utente",
+        "description": "Design intuitivo e reattivo"
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Vantaggi dei Progetti",
+    "description": "Scopri i vantaggi di lavorare con il nostro team sui tuoi progetti.",
+    "items": [
+      {
+        "icon": "rocket",
+        "title": "Innovazione",
+        "description": "Soluzioni all'avanguardia che trasformano le aziende",
+        "stats": "45%",
+        "label": "Tasso di Innovazione"
+      },
+      {
+        "icon": "target",
+        "title": "Precisione",
+        "description": "Consegna precisa e affidabile dei progetti",
+        "stats": "99.9%",
+        "label": "Tasso di Successo"
+      },
+      {
+        "icon": "lightbulb",
+        "title": "Creatività",
+        "description": "Soluzioni uniche adattate a esigenze specifiche",
+        "stats": "3x",
+        "label": "Soluzioni Personalizzate"
+      },
+      {
+        "icon": "users",
+        "title": "Collaborazione",
+        "description": "Partenariati solidi con clienti e team",
+        "stats": "96%",
+        "label": "Soddisfazione Cliente"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Testimonianze Clienti",
+    "description": "Ascolta le aziende che hanno trasformato le loro operazioni con le nostre soluzioni",
+    "items": [
+      {
+        "quote": "La consegna del progetto è stata eccezionale. L'esperienza e la dedizione del team sono state evidenti in tutto il percorso.",
+        "author": "Dr. Sarah Chen",
+        "role": "Direttore Medico",
+        "image": "/images/testimonials/sarah.jpg"
+      },
+      {
+        "quote": "Il loro approccio innovativo e l'attenzione ai dettagli hanno fatto la differenza nel successo del nostro progetto.",
+        "author": "John Smith",
+        "role": "CEO, Tech Solutions",
+        "image": "/images/testimonials/john.jpg"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Pronto per il Tuo Progetto?",
+    "description": "Unisciti a centinaia di aziende che hanno trasformato le loro operazioni con le nostre soluzioni.",
+    "buttons": [
+      {
+        "text": "Inizia il Tuo Progetto",
+        "href": "/contact",
+        "variant": "primary"
+      },
+      {
+        "text": "Pianifica una Demo",
+        "href": "/demo",
+        "variant": "secondary"
+      }
+    ]
+  }
+} 

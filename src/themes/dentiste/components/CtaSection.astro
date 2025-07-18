@@ -1,0 +1,166 @@
+---
+import styles from '../style/component/ctaSection.json';
+
+interface Props {
+  subtitle?: string;
+  title: string;
+  description: string;
+  primaryButtonText: string;
+  primaryButtonLink: string;
+  secondaryButtonText: string;
+  secondaryButtonLink: string;
+  stats?: Array<{
+    value: string;
+    label: string;
+  }>;
+  emergencyContact?: {
+    phone: string;
+    hours: string;
+  };
+  trustIndicators?: string[];
+}
+
+const {
+  subtitle,
+  title,
+  description,
+  primaryButtonText,
+  primaryButtonLink,
+  secondaryButtonText,
+  secondaryButtonLink,
+  stats,
+  emergencyContact,
+  trustIndicators
+} = Astro.props;
+---
+
+<section class={styles.section.container} id="content-ctaSection">
+  <!-- Animated Background Elements -->
+  <div class={styles.backgroundElements.container}>
+    <div class={styles.backgroundElements.blob1}></div>
+    <div class={styles.backgroundElements.blob2}></div>
+  </div>
+
+  <div class={styles.content.container}>
+    <!-- Main Content -->
+    <div class={styles.mainContent.container}>
+      {subtitle && (
+        <span class={styles.mainContent.subtitle} id="content-subtitle">
+          {subtitle}
+        </span>
+      )}
+      <h2 class={styles.mainContent.title} id="content-title">
+        {title}
+      </h2>
+      <p class={styles.mainContent.description} id="content-description">
+        {description}
+      </p>
+      
+      <!-- Action Buttons -->
+      <div class={styles.mainContent.buttonsContainer}>
+        <a
+          href={primaryButtonLink}
+          class={styles.mainContent.primaryButton}
+          id="content-primaryButtonText"
+        >
+          {primaryButtonText}
+        </a>
+        <a
+          href={secondaryButtonLink}
+          class={styles.mainContent.secondaryButton}
+          id="content-secondaryButtonText"
+        >
+          {secondaryButtonText}
+        </a>
+      </div>
+    </div>
+
+    <!-- Stats Section -->
+    {stats && (
+      <div class={styles.statsSection.container}>
+        {stats.map((stat, index) => (
+          <div class={styles.statsSection.stat.container}>
+            <div class={styles.statsSection.stat.value} id={`content-statValue-${index}`}>
+              {stat.value}
+            </div>
+            <div class={styles.statsSection.stat.label} id={`content-statLabel-${index}`}>
+              {stat.label}
+            </div>
+          </div>
+        ))}
+      </div>
+    )}
+
+    <!-- Emergency Contact -->
+    {emergencyContact && (
+      <div class={styles.emergencyContact.container}>
+        <div class={styles.emergencyContact.card}>
+          <div class={styles.emergencyContact.title} id="content-emergencyTitle">24/7 Emergency Dental Care</div>
+          <div class={styles.emergencyContact.phone} id="content-emergencyPhone">
+            {emergencyContact.phone}
+          </div>
+          <div class={styles.emergencyContact.hours} id="content-emergencyHours">
+            {emergencyContact.hours}
+          </div>
+        </div>
+      </div>
+    )}
+
+    <!-- Trust Indicators -->
+    {trustIndicators && trustIndicators.length > 0 && (
+      <div class={styles.trustIndicators.container}>
+        {trustIndicators.map((feature, index) => (
+          <div class={styles.trustIndicators.feature.container}>
+            <svg class={styles.trustIndicators.feature.icon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span id={`content-trustIndicator-${index}`}>{feature}</span>
+          </div>
+        ))}
+      </div>
+    )}
+  </div>
+</section>
+
+<style define:vars={{ 
+  blobDuration: styles.animations.blob.duration,
+  delay2000: styles.animations.delays.delay2000,
+  delay4000: styles.animations.delays.delay4000,
+  backdropBlur: styles.effects.backdropBlur,
+  hoverTranslateY: styles.effects.hoverTranslateY
+}}>
+  @keyframes blob {
+    0% {
+      transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    }
+    33% {
+      transform: translate(-50%, -50%) scale(1.1) rotate(120deg);
+    }
+    66% {
+      transform: translate(-50%, -50%) scale(0.9) rotate(240deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1) rotate(360deg);
+    }
+  }
+
+  .animate-blob {
+    animation: blob var(--blobDuration, 20s) infinite linear;
+  }
+
+  .animation-delay-2000 {
+    animation-delay: var(--delay2000, 2s);
+  }
+
+  .animation-delay-4000 {
+    animation-delay: var(--delay4000, 4s);
+  }
+
+  .backdrop-blur-sm {
+    backdrop-filter: blur(var(--backdropBlur));
+  }
+
+  .hover\:-translate-y-0.5:hover {
+    transform: translateY(var(--hoverTranslateY));
+  }
+</style> 

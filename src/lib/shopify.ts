@@ -3,8 +3,8 @@ import { getRedisClient, getCachedData as getRedisData, setCachedData as setRedi
 import { connectToDatabase } from './mongodb';
 import { invalidatePageCache } from './cache';
 
-const domain = import.meta.env.PUBLIC_SHOPIFY_SHOP;
-const storefrontAccessToken = import.meta.env.PUBLIC_SHOPIFY_STOREFRONT_ACCESS_TOKEN;
+const domain = import.meta.env.PUBLIC_SHOPIFY_SHOP || 'masterdevo.myshopify.com';
+const storefrontAccessToken = import.meta.env.PUBLIC_SHOPIFY_STOREFRONT_ACCESS_TOKEN || '53489e2c17cf06d677fb8f02cd2a00b6';
 
 // Add store identifier to Redis key prefix
 const getStorePrefix = () => {

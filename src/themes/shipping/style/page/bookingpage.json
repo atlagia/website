@@ -1,0 +1,109 @@
+{
+  "hero": {
+    "section": "relative py-20 px-4 bg-gradient-to-b from-[#f0f9ff] via-white to-transparent overflow-hidden",
+    "blob1": "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-bl from-[#0a91b1]/10 to-blue-500/10 rounded-full blur-3xl animate-blob animation-delay-4000",
+    "blob2": "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-tr from-sky-500/10 to-[#0a91b1]/10 rounded-full blur-3xl animate-blob",
+    "container": "relative z-10 max-w-7xl mx-auto text-center",
+    "subtitle": "inline-block px-4 py-1.5 mb-4 text-sm font-medium rounded-full bg-[#0a91b1]/10 text-[#0a91b1] border border-[#0a91b1]/20",
+    "title": "text-4xl md:text-5xl font-bold text-gray-900 mb-6",
+    "description": "text-xl text-gray-600 max-w-3xl mx-auto"
+  },
+  "bookingProcess": {
+    "section": "relative py-16 px-4",
+    "container": "max-w-6xl mx-auto"
+  },
+  "progressSteps": {
+    "container": "mb-12",
+    "stepsWrapper": "flex items-center justify-between relative",
+    "step": {
+      "container": "flex-1 relative",
+      "lineConnector": "after:content-[\"\"] after:absolute after:top-1/2 after:left-1/2 after:w-full after:h-0.5 after:bg-gray-200 after:-z-10",
+      "circleWrapper": "relative flex items-center justify-center w-full",
+      "circle": {
+        "inactive": "w-10 h-10 rounded-full bg-[#0a91b1]/10 flex items-center justify-center transition-colors",
+        "active": "w-10 h-10 rounded-full bg-[#0a91b1] flex items-center justify-center transition-colors"
+      },
+      "number": {
+        "inactive": "text-[#0a91b1] font-semibold",
+        "active": "text-white font-semibold"
+      },
+      "title": "absolute mt-16 text-sm font-medium text-gray-600 whitespace-nowrap"
+    }
+  },
+  "bookingSteps": {
+    "container": "space-y-8",
+    "step": {
+      "active": "booking-step active",
+      "hidden": "booking-step hidden"
+    },
+    "card": "bg-white p-8 rounded-2xl shadow-lg border border-gray-100",
+    "title": "text-2xl font-bold text-gray-900 mb-6"
+  },
+  "serviceSelection": {
+    "grid": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",
+    "categoryTitle": "text-xl font-semibold text-gray-900",
+    "serviceOption": "block service-option",
+    "serviceRadio": "hidden service-radio",
+    "serviceCard": "p-4 rounded-xl bg-gray-50 cursor-pointer transition-all duration-300 service-card",
+    "serviceHeader": "flex justify-between items-start mb-2",
+    "serviceName": "font-semibold text-gray-900",
+    "servicePrice": "text-[#0a91b1] font-medium",
+    "serviceDescription": "text-sm text-gray-600 mb-2",
+    "serviceDuration": "flex items-center text-sm text-gray-500",
+    "durationIcon": "w-4 h-4 mr-1"
+  },
+  "dateTimeSelection": {
+    "grid": "grid grid-cols-1 md:grid-cols-2 gap-8",
+    "label": "block text-sm font-medium text-gray-700 mb-2",
+    "input": "w-full px-4 py-2.5 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0a91b1]/20 focus:border-[#0a91b1] transition-colors"
+  },
+  "personalInfo": {
+    "grid": "grid grid-cols-1 md:grid-cols-2 gap-6",
+    "label": "block text-sm font-medium text-gray-700 mb-2",
+    "input": "w-full px-4 py-2.5 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0a91b1]/20 focus:border-[#0a91b1] transition-colors"
+  },
+  "confirmation": {
+    "summary": "bg-gray-50 p-6 rounded-xl",
+    "sectionTitle": "font-semibold text-gray-900",
+    "stepsList": "space-y-2",
+    "stepItem": "flex items-start gap-2",
+    "stepIcon": "w-5 h-5 text-[#0a91b1] mt-0.5",
+    "stepText": "text-gray-600"
+  },
+  "buttons": {
+    "container": "mt-8 flex justify-between",
+    "next": "bg-[#0a91b1] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#097d99] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed",
+    "back": "px-6 py-3 rounded-lg font-semibold text-gray-700 hover:bg-gray-100 transition-colors",
+    "confirm": "bg-[#0a91b1] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#097d99] transition-all duration-300"
+  },
+  "dataVaultForm": {
+    "config": {
+      "apiBaseUrl": "http://localhost:8000/api/datavault",
+      "schemaId": 16,
+      "targetElement": "#datavault-form",
+      "styleMode": "tailwind"
+    },
+    "hideFields": ["service", "serviceId", "appointmentDate", "appointmentTime"],
+    "tailwindConfig": {
+      "formContainer": "w-full max-w-full",
+      "formGroup": "mb-4",
+      "label": "block text-sm font-medium text-gray-700 mb-2",
+      "input": "w-full px-4 py-2.5 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0a91b1]/20 focus:border-[#0a91b1] transition-colors",
+      "select": "w-full px-4 py-2.5 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0a91b1]/20 focus:border-[#0a91b1] transition-colors",
+      "textarea": "w-full px-4 py-2.5 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0a91b1]/20 focus:border-[#0a91b1] transition-colors",
+      "checkbox": "mr-2 h-4 w-4 text-[#0a91b1] focus:ring-[#0a91b1]",
+      "submitButton": "w-full md:w-auto px-6 py-3 bg-[#0a91b1] text-white rounded-lg font-semibold hover:bg-[#097d99] transition-all duration-300",
+      "errorMessage": "mt-2 text-sm text-red-600",
+      "successMessage": "mt-2 text-sm text-green-600"
+    }
+  },
+  "animations": {
+    "blob": "keyframes { 0% { transform: translate(-50%, -50%) scale(1) rotate(0deg); } 33% { transform: translate(-50%, -50%) scale(1.1) rotate(120deg); } 66% { transform: translate(-50%, -50%) scale(0.9) rotate(240deg); } 100% { transform: translate(-50%, -50%) scale(1) rotate(360deg); } }",
+    "animateBlob": "animation: blob 20s infinite linear",
+    "animationDelay4000": "animation-delay: 4s",
+    "bookingStepTransition": "transition: all 0.3s ease-in-out",
+    "serviceCardTransition": "transition: all 0.3s ease",
+    "serviceCardHover": "background-color: rgba(10, 145, 177, 0.05); transform: translateY(-1px); box-shadow: 0 2px 4px -1px rgb(10 145 177 / 0.1);",
+    "serviceCardSelected": "background-color: rgba(10, 145, 177, 0.1); border: 2px solid #0a91b1; transform: translateY(-2px); box-shadow: 0 4px 6px -1px rgb(10 145 177 / 0.1), 0 2px 4px -2px rgb(10 145 177 / 0.1);"
+  }
+} 

@@ -1,0 +1,529 @@
+---
+import { SITE_TITLE } from '../consts';
+import { Calendar, Monitor, Headset, Clock, Check, ArrowRight } from 'lucide-react';
+
+const theme = import.meta.env.THEME || 'default';
+const lang = Astro.params.lang || 'en';
+
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+
+// Import form configuration
+const { config, form } = await import('../forms/demo/config.json');
+
+// Get language-specific form configuration
+const formConfig = form[lang] || form['en']; // Fallback to English if language not found
+
+// Get business information from environment variables
+const businessInfo = {
+  name: import.meta.env.PUBLIC_BUSINESS_NAME || 'Atlagia',
+  email: import.meta.env.PUBLIC_BUSINESS_EMAIL || 'contact@atlagia.com',
+  phone: import.meta.env.PUBLIC_BUSINESS_PHONE || '+1 2035 472 248'
+};
+
+// Demo process steps
+const demoSteps = [
+  {
+    icon: Calendar,
+    title: "Schedule",
+    description: "Fill out the form to request your preferred demo date and time."
+  },
+  {
+    icon: Monitor,
+    title: "Personalized Demo",
+    description: "Our product specialist will walk you through the platform, tailored to your needs."
+  },
+  {
+    icon: Headset,
+    title: "Q&A Session",
+    description: "Get all your questions answered by our dental software experts."
+  },
+  {
+    icon: Clock,
+    title: "Free Trial Access",
+    description: "After the demo, get 14-day free access to explore on your own."
+  }
+];
+
+// Key features to highlight
+const keyFeatures = [
+  {
+    title: "AI Diagnostic Assistant",
+    description: "Leverage artificial intelligence to assist with diagnoses and treatment planning."
+  },
+  {
+    title: "WhatsApp Integration",
+    description: "Manage your practice on the go with our seamless WhatsApp integration."
+  },
+  {
+    title: "Comprehensive Analytics",
+    description: "Gain insights into your practice performance with detailed analytics."
+  },
+  {
+    title: "Patient Management",
+    description: "Streamline patient records, appointments, and communication."
+  }
+];
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <BaseHead 
+      title={`Request a Demo | ${businessInfo.name}`}
+      description="Experience how our all-in-one dental management system can transform your practice with a personalized demo."
+    />
+  </head>
+  <body>
+    <Header />
+    <main class="pt-10">
+      <!-- Hero Section -->
+      <section class="relative py-20 px-4 bg-gradient-to-b from-white to-gray-50 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-bl from-[#0a91b1]/10 to-blue-500/10 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-tr from-teal-500/10 to-[#0a91b1]/10 rounded-full blur-3xl animate-blob"></div>
+          
+          <!-- Software Grid Pattern -->
+          <div class="absolute inset-0 bg-grid-pattern opacity-[0.03]"></div>
+        </div>
+        <div class="relative max-w-7xl mx-auto text-center z-10">
+          <span class="inline-block px-4 py-1.5 mb-6 text-sm font-semibold bg-[#0a91b1]/20 text-[#0a91b1] rounded-full border border-[#0a91b1]/30 backdrop-blur-sm">FREE PERSONALIZED DEMO</span>
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">See Atlagia DentalCare in Action</h1>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            Experience how our all-in-one management system can streamline your operations, improve patient care, and increase your practice efficiency.
+          </p>
+        </div>
+      </section>
+
+      <!-- Demo Process Section -->
+      <section class="relative py-16 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4">How the Demo Works</h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">Our demo process is designed to give you a comprehensive understanding of how our platform can benefit your specific practice.</p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {demoSteps.map((step, index) => (
+              <div class="relative">
+                {index < demoSteps.length - 1 && (
+                  <div class="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-gray-200 z-0">
+                    <div class="absolute top-1/2 left-1/2 transform -translate-y-1/2 bg-white p-1 rounded-full">
+                      <ArrowRight className="w-4 h-4 text-gray-400" />
+                    </div>
+                  </div>
+                )}
+                <div class="bg-gray-50 rounded-2xl p-6 relative z-10">
+                  <div class="w-14 h-14 mb-6 rounded-xl bg-[#0a91b1]/20 flex items-center justify-center">
+                    <step.icon className="w-7 h-7 text-[#0a91b1]" />
+                  </div>
+                  <h3 class="text-xl font-semibold mb-2">{step.title}</h3>
+                  <p class="text-gray-600">{step.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- Demo Form Section -->
+      <section class="relative py-16 px-4 bg-gradient-to-b from-white to-gray-50 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-bl from-[#0a91b1]/10 to-blue-500/10 rounded-full blur-3xl animate-blob"></div>
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-tr from-blue-500/10 to-[#0a91b1]/10 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
+          
+          <!-- Software Grid Pattern -->
+          <div class="absolute inset-0 bg-grid-pattern opacity-[0.03]"></div>
+        </div>
+        <div class="max-w-7xl mx-auto relative z-10">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <!-- Left: Form -->
+            <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-200 backdrop-blur-md">
+              <h2 class="text-2xl font-bold mb-6">{formConfig.title}</h2>
+              <form id="demo-form" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {/* Text, Email, Tel inputs */}
+                  {Object.entries(formConfig.fields).map(([key, field]) => {
+                    if (["text", "email", "tel", "date"].includes(field.type)) {
+                      return (
+                        <div class={key === "practiceName" || key === "currentSoftware" ? 'md:col-span-2' : ''}>
+                          <label for={field.id} class="block text-sm font-medium text-gray-700 mb-1.5">
+                            {field.label}
+                          </label>
+                          <input
+                            type={field.type}
+                            id={field.id}
+                            name={field.id}
+                            placeholder={field.placeholder}
+                            required={field.required}
+                            class="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#0a91b1]/50 focus:border-[#0a91b1] transition-colors"
+                          />
+                        </div>
+                      )
+                    }
+                    return null;
+                  })}
+                  
+                  {/* Select inputs */}
+                  {Object.entries(formConfig.fields).map(([key, field]) => {
+                    if (field.type === "select") {
+                      return (
+                        <div>
+                          <label for={field.id} class="block text-sm font-medium text-gray-700 mb-1.5">
+                            {field.label}
+                          </label>
+                          <select
+                            id={field.id}
+                            name={field.id}
+                            required={field.required}
+                            class="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#0a91b1]/50 focus:border-[#0a91b1] transition-colors"
+                          >
+                            <option value="">Please select</option>
+                            {field.options.map(option => (
+                              <option value={option.value}>{option.label}</option>
+                            ))}
+                          </select>
+                        </div>
+                      )
+                    }
+                    return null;
+                  })}
+                  
+                  {/* Checkbox groups */}
+                  {Object.entries(formConfig.fields).map(([key, field]) => {
+                    if (field.type === "checkbox-group") {
+                      return (
+                        <div class="md:col-span-2">
+                          <label class="block text-sm font-medium text-gray-700 mb-1.5">
+                            {field.label}
+                          </label>
+                          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            {field.options.map(option => (
+                              <div class="flex items-center">
+                                <input
+                                  type="checkbox"
+                                  id={`${field.id}-${option.value}`}
+                                  name={field.id}
+                                  value={option.value}
+                                  class="rounded text-[#0a91b1] focus:ring-[#0a91b1]"
+                                />
+                                <label for={`${field.id}-${option.value}`} class="ml-2 text-sm text-gray-700">
+                                  {option.label}
+                                </label>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      )
+                    }
+                    return null;
+                  })}
+                  
+                  {/* Textarea */}
+                  {Object.entries(formConfig.fields).map(([key, field]) => {
+                    if (field.type === "textarea") {
+                      return (
+                        <div class="md:col-span-2">
+                          <label for={field.id} class="block text-sm font-medium text-gray-700 mb-1.5">
+                            {field.label}
+                          </label>
+                          <textarea
+                            id={field.id}
+                            name={field.id}
+                            rows={field.rows || 4}
+                            placeholder={field.placeholder}
+                            required={field.required}
+                            class="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#0a91b1]/50 focus:border-[#0a91b1] transition-colors"
+                          ></textarea>
+                        </div>
+                      )
+                    }
+                    return null;
+                  })}
+                </div>
+                
+                <div class="flex items-center space-x-2 text-sm text-gray-600">
+                  <input type="checkbox" id="privacy-policy" name="privacy-policy" class="rounded text-[#0a91b1] focus:ring-[#0a91b1]" required />
+                  <label for="privacy-policy">I agree to the privacy policy and terms of service</label>
+                </div>
+                
+                <button
+                  type="submit"
+                  class="w-full py-3.5 text-base font-medium text-white bg-[#0a91b1] hover:bg-[#097d99] rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-[#0a91b1]/25 focus:outline-none focus:ring-2 focus:ring-[#0a91b1]/50"
+                >
+                  {formConfig.submitButton}
+                </button>
+              </form>
+              
+              <!-- Form Icons -->
+              <div class="flex justify-between mt-8 border-t border-gray-200 pt-6">
+                <div class="flex flex-col items-center">
+                  <div class="w-10 h-10 rounded-full bg-[#0a91b1]/20 flex items-center justify-center mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#0a91b1]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <span class="text-xs text-gray-500">30-Min Demo</span>
+                </div>
+                
+                <div class="flex flex-col items-center">
+                  <div class="w-10 h-10 rounded-full bg-[#0a91b1]/20 flex items-center justify-center mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#0a91b1]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                    </svg>
+                  </div>
+                  <span class="text-xs text-gray-500">No Credit Card</span>
+                </div>
+                
+                <div class="flex flex-col items-center">
+                  <div class="w-10 h-10 rounded-full bg-[#0a91b1]/20 flex items-center justify-center mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#0a91b1]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                  </div>
+                  <span class="text-xs text-gray-500">No Obligation</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Features -->
+            <div class="space-y-8">
+              <!-- Dashboard Preview -->
+              <div class="bg-white p-6 rounded-2xl shadow-xl border border-gray-200 backdrop-blur-md">
+                <h3 class="text-xl font-bold mb-4">What You'll See in the Demo</h3>
+                <div class="relative bg-gray-50 rounded-xl p-4 overflow-hidden">
+                  <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#0a91b1] to-teal-500"></div>
+                  <div class="bg-white rounded-lg shadow-sm p-3 mb-3">
+                    <div class="flex items-center justify-between mb-2">
+                      <div class="flex items-center">
+                        <div class="w-2 h-2 bg-red-500 rounded-full mr-1"></div>
+                        <div class="w-2 h-2 bg-yellow-500 rounded-full mr-1"></div>
+                        <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+                      </div>
+                      <div class="text-xs text-gray-500">Atlagia DentalCare Dashboard</div>
+                    </div>
+                    <div class="bg-gray-50 h-32 rounded flex items-center justify-center">
+                      <span class="text-sm text-gray-400">Dashboard Preview in Demo</span>
+                    </div>
+                  </div>
+                  <div class="grid grid-cols-2 gap-3">
+                    <div class="bg-white rounded-lg shadow-sm p-3">
+                      <h4 class="text-xs font-medium text-gray-700 mb-1">Patient Management</h4>
+                      <div class="bg-gray-100 h-16 rounded"></div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-sm p-3">
+                      <h4 class="text-xs font-medium text-gray-700 mb-1">AI Diagnostics</h4>
+                      <div class="bg-gray-100 h-16 rounded"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Key Features -->
+              <div class="bg-white p-6 rounded-2xl shadow-xl border border-gray-200 backdrop-blur-md">
+                <h3 class="text-xl font-bold mb-4">Key Features</h3>
+                <div class="space-y-4">
+                  {keyFeatures.map(feature => (
+                    <div class="flex items-start">
+                      <div class="mt-1 mr-3">
+                        <Check className="w-5 h-5 text-[#0a91b1]" />
+                      </div>
+                      <div>
+                        <h4 class="font-medium text-gray-900">{feature.title}</h4>
+                        <p class="text-sm text-gray-600">{feature.description}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              
+              <!-- Testimonial -->
+              <div class="bg-gradient-to-r from-[#0a91b1] to-teal-600 p-6 rounded-2xl shadow-xl text-white">
+                <div class="flex mb-4">
+                  {[1, 2, 3, 4, 5].map(() => (
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-300" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                <p class="text-lg mb-4">"Atlagia DentalCare transformed our practice operations. The AI features and intuitive interface have saved us countless hours and improved our patient care."</p>
+                <div class="flex items-center">
+                  <div class="w-10 h-10 rounded-full bg-white mr-3"></div>
+                  <div>
+                    <p class="font-medium">Dr. Sarah Johnson</p>
+                    <p class="text-sm text-teal-100">Smile Bright Dental</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- FAQ Section -->
+      <section class="py-16 px-4 bg-white">
+        <div class="max-w-3xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
+            <p class="text-lg text-gray-600">Common questions about our demo and software</p>
+          </div>
+          
+          <div class="space-y-6">
+            <div class="bg-gray-50 rounded-xl p-6">
+              <h3 class="text-lg font-semibold mb-2">How long is the demo?</h3>
+              <p class="text-gray-600">Our demos typically last 30 minutes, with additional time for questions. We can adjust based on your schedule and needs.</p>
+            </div>
+            
+            <div class="bg-gray-50 rounded-xl p-6">
+              <h3 class="text-lg font-semibold mb-2">Do I need to prepare anything for the demo?</h3>
+              <p class="text-gray-600">No preparation is needed! Just come with your questions and specific areas of interest so we can tailor the demo to your practice needs.</p>
+            </div>
+            
+            <div class="bg-gray-50 rounded-xl p-6">
+              <h3 class="text-lg font-semibold mb-2">Can I invite my team members to the demo?</h3>
+              <p class="text-gray-600">Absolutely! We encourage you to invite key team members who will be using the software to join the demo session.</p>
+            </div>
+            
+            <div class="bg-gray-50 rounded-xl p-6">
+              <h3 class="text-lg font-semibold mb-2">What happens after the demo?</h3>
+              <p class="text-gray-600">After the demo, you'll receive access to a 14-day free trial of the platform, along with pricing information and implementation details.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <Footer />
+
+    <div id="success-message" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
+      <div class="bg-white p-8 rounded-2xl max-w-md mx-4 shadow-xl">
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">{formConfig.successMessage.title}</h3>
+        <p class="text-gray-600 mb-6">{formConfig.successMessage.description}</p>
+        <button onclick="this.parentElement.parentElement.classList.add('hidden')" class="w-full bg-[#0a91b1] text-white py-3 px-6 rounded-lg font-medium hover:bg-[#097d99] transition-all duration-300 hover:shadow-lg hover:shadow-[#0a91b1]/25">
+          {formConfig.successMessage.buttonText}
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script define:vars={{ config, businessInfo, formConfig }}>
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('demo-form');
+  const successMessage = document.getElementById('success-message');
+  
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const formData = new FormData(form);
+    const timestamp = new Date().toISOString();
+    
+    // Handle checkbox groups
+    const interests = [];
+    formData.getAll('interests').forEach(value => {
+      interests.push(value);
+    });
+    
+    // Prepare the data according to the schema
+    const submissionData = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      phone: formData.get('phone'),
+      practiceName: formData.get('practiceName'),
+      practiceSize: formData.get('practiceSize'),
+      role: formData.get('role'),
+      preferredDate: formData.get('preferredDate'),
+      interests: interests.join(', '),
+      currentSoftware: formData.get('currentSoftware') || null,
+      message: formData.get('message') || null,
+      submissionTimestamp: timestamp,
+      status: 'Pending'
+    };
+
+    // First, get the entity ID for DemoRequest
+    const schemaResponse = await fetch(
+      `${config.apiBaseUrl}/builder/schemas/${config.schemaId}/`,
+      {
+        method: 'GET',
+        headers: {
+          'X-Schema-Key-Token': config.keyToken
+        }
+      }
+    );
+    
+    const schemaData = await schemaResponse.json();
+    const demoEntity = schemaData.entities.find(entity => entity.name === 'DemoRequest');
+    
+    if (!demoEntity) {
+      throw new Error('DemoRequest entity not found in schema');
+    }
+    
+    try {
+      const response = await fetch(
+        `${config.apiBaseUrl}/builder/entities/${demoEntity.id}/entries/create/`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-Schema-Key-Token': config.keyToken
+          },
+          body: JSON.stringify({
+            data: submissionData,
+            key_token: config.keyToken
+          })
+        }
+      );
+
+      const result = await response.json();
+      
+      if (result.id) {
+        // Success
+        form.reset();
+        successMessage.classList.remove('hidden');
+      } else {
+        throw new Error(result.error || 'Failed to submit form');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      alert(formConfig.errorMessage);
+    }
+  });
+});
+</script>
+
+<style>
+  @keyframes blob {
+    0% {
+      transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    }
+    33% {
+      transform: translate(-50%, -50%) scale(1.1) rotate(120deg);
+    }
+    66% {
+      transform: translate(-50%, -50%) scale(0.9) rotate(240deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1) rotate(360deg);
+    }
+  }
+
+  .animate-blob {
+    animation: blob 20s infinite linear;
+  }
+
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+  
+  /* Grid Pattern Background */
+  .bg-grid-pattern {
+    background-image: 
+      linear-gradient(to right, rgba(10, 145, 177, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(10, 145, 177, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+  
+  .backdrop-blur-md {
+    backdrop-filter: blur(12px);
+  }
+</style> 

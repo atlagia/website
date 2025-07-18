@@ -1,0 +1,164 @@
+{
+  "hero": {
+    "subtitle": "Business Insights Platform",
+    "title": "Unlock the Power of Your Business Data",
+    "description": "Transform raw data into actionable insights with our AI-powered business intelligence platform",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=example",
+      "alt": "Business Insights Platform Demo"
+    },
+    "stats": [
+      {
+        "value": "10x",
+        "label": "Faster Decisions"
+      },
+      {
+        "value": "85%",
+        "label": "Accuracy Rate"
+      },
+      {
+        "value": "360°",
+        "label": "Business View"
+      }
+    ]
+  },
+  "features": {
+    "subtitle": "Platform Features",
+    "title": "Comprehensive Business Intelligence",
+    "description": "Get a complete view of your business with our powerful insights platform",
+    "items": [
+      {
+        "icon": "brain",
+        "category": "AI Analysis",
+        "title": "Smart Analysis",
+        "description": "AI-powered analysis of your business data and trends",
+        "image": "/images/solutions/insights/smart-analysis.jpg",
+        "highlights": [
+          "Pattern recognition",
+          "Trend analysis",
+          "Predictive insights",
+          "Anomaly detection"
+        ]
+      },
+      {
+        "icon": "insights",
+        "category": "Visualization",
+        "title": "Data Visualization",
+        "description": "Beautiful and interactive visualizations of your data",
+        "image": "/images/solutions/insights/visualization.jpg",
+        "highlights": [
+          "Interactive charts",
+          "Custom dashboards",
+          "Real-time updates",
+          "Export capabilities"
+        ]
+      },
+      {
+        "icon": "trending-up",
+        "category": "Performance",
+        "title": "Performance Tracking",
+        "description": "Monitor and optimize your business performance",
+        "image": "/images/solutions/insights/performance.jpg",
+        "highlights": [
+          "KPI tracking",
+          "Goal setting",
+          "Progress monitoring",
+          "Performance alerts"
+        ]
+      },
+      {
+        "icon": "users",
+        "category": "Collaboration",
+        "title": "Team Insights",
+        "description": "Share insights and collaborate with your team",
+        "image": "/images/solutions/insights/collaboration.jpg",
+        "highlights": [
+          "Shared dashboards",
+          "Team annotations",
+          "Collaborative analysis",
+          "Access control"
+        ]
+      }
+    ]
+  },
+  "benefits": {
+    "subtitle": "Platform Benefits",
+    "title": "Why Choose Our Insights Platform",
+    "description": "Experience the advantages of data-driven decision making",
+    "items": [
+      {
+        "icon": "brain",
+        "color": "blue",
+        "title": "Smart Decisions",
+        "description": "Make better decisions with AI-powered insights",
+        "stats": {
+          "value": "93%",
+          "label": "Decision Accuracy"
+        },
+        "highlights": [
+          "Data-driven decisions",
+          "Predictive insights",
+          "Risk assessment"
+        ]
+      },
+      {
+        "icon": "trending-up",
+        "color": "purple",
+        "title": "Business Growth",
+        "description": "Accelerate your business growth with insights",
+        "stats": {
+          "value": "40%",
+          "label": "Growth Rate"
+        },
+        "highlights": [
+          "Growth tracking",
+          "Opportunity detection",
+          "Market analysis"
+        ]
+      },
+      {
+        "icon": "chart",
+        "color": "green",
+        "title": "Operational Excellence",
+        "description": "Optimize your operations with real-time insights",
+        "stats": {
+          "value": "30%",
+          "label": "Efficiency Gain"
+        },
+        "highlights": [
+          "Process optimization",
+          "Resource allocation",
+          "Cost reduction"
+        ]
+      },
+      {
+        "icon": "users",
+        "color": "yellow",
+        "title": "Team Empowerment",
+        "description": "Empower your team with data insights",
+        "stats": {
+          "value": "100%",
+          "label": "Team Access"
+        },
+        "highlights": [
+          "Self-service analytics",
+          "Knowledge sharing",
+          "Skill development"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Transform Your Business with Data?",
+    "description": "Join leading companies using our insights platform to drive growth",
+    "background": "/images/solutions/insights/cta-background.jpg",
+    "primaryButton": {
+      "text": "Get Started",
+      "link": "/signup"
+    },
+    "secondaryButton": {
+      "text": "Request Demo",
+      "link": "/demo"
+    }
+  }
+} 

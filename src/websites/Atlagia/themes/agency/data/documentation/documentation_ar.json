@@ -1,0 +1,134 @@
+{
+  "hero": {
+    "subtitle": "التوثيق",
+    "title": "تعلم كيفية استخدام منصتنا",
+    "description": "أدلة وشروحات شاملة لمساعدتك في الاستفادة القصوى من حلول التجارة الإلكترونية لدينا.",
+    "searchPlaceholder": "البحث في التوثيق..."
+  },
+  "sidebar": {
+    "categories": [
+      {
+        "title": "البدء",
+        "icon": "Rocket",
+        "items": [
+          {
+            "title": "دليل البدء السريع",
+            "link": "/docs/quick-start"
+          },
+          {
+            "title": "نظرة عامة على المنصة",
+            "link": "/docs/overview"
+          },
+          {
+            "title": "إعداد الحساب",
+            "link": "/docs/account-setup"
+          }
+        ]
+      },
+      {
+        "title": "الميزات الأساسية",
+        "icon": "Box",
+        "items": [
+          {
+            "title": "إنشاء المحتوى بالذكاء الاصطناعي",
+            "link": "/docs/ai-content"
+          },
+          {
+            "title": "تحسين محركات البحث",
+            "link": "/docs/seo"
+          },
+          {
+            "title": "لوحة التحليلات",
+            "link": "/docs/analytics"
+          }
+        ]
+      },
+      {
+        "title": "التكاملات",
+        "icon": "Plug",
+        "items": [
+          {
+            "title": "تكامل Shopify",
+            "link": "/docs/shopify"
+          },
+          {
+            "title": "إعداد WooCommerce",
+            "link": "/docs/woocommerce"
+          },
+          {
+            "title": "توثيق واجهة برمجة التطبيقات",
+            "link": "/docs/api"
+          }
+        ]
+      }
+    ]
+  },
+  "featured": {
+    "title": "الأدلة المميزة",
+    "guides": [
+      {
+        "icon": "Zap",
+        "title": "البدء مع الذكاء الاصطناعي",
+        "description": "تعلم كيفية الاستفادة من أدوات الذكاء الاصطناعي لدينا لعملك في التجارة الإلكترونية",
+        "link": "/docs/ai-guide",
+        "color": "pink"
+      },
+      {
+        "icon": "BarChart",
+        "title": "أساسيات التحليلات",
+        "description": "فهم تحليلات التجارة الإلكترونية والمقاييس الخاصة بك",
+        "link": "/docs/analytics-guide",
+        "color": "blue"
+      },
+      {
+        "icon": "Settings",
+        "title": "تكامل المنصة",
+        "description": "دليل خطوة بخطوة للتكامل مع منصة التجارة الإلكترونية الخاصة بك",
+        "link": "/docs/integration-guide",
+        "color": "purple"
+      }
+    ]
+  },
+  "updates": {
+    "title": "آخر التحديثات",
+    "description": "ابق على اطلاع بأحدث الميزات والتحسينات لدينا",
+    "items": [
+      {
+        "date": "2024-03-15",
+        "title": "إصدار ميزات الذكاء الاصطناعي الجديدة",
+        "description": "قدرات محسنة لإنشاء المحتوى واقتراحات محسنة لتحسين محركات البحث",
+        "tag": "ميزة"
+      },
+      {
+        "date": "2024-03-10",
+        "title": "تحديث لوحة التحليلات",
+        "description": "مقاييس جديدة وخيارات تصور محسنة",
+        "tag": "تحديث"
+      },
+      {
+        "date": "2024-03-05",
+        "title": "واجهة برمجة التطبيقات الإصدار 2.0",
+        "description": "نقاط نهاية جديدة وأداء محسن",
+        "tag": "واجهة برمجة التطبيقات"
+      }
+    ]
+  },
+  "help": {
+    "title": "تحتاج إلى مزيد من المساعدة؟",
+    "description": "لا يمكنك العثور على ما تبحث عنه؟ فريق الدعم لدينا هنا للمساعدة.",
+    "options": [
+      {
+        "icon": "MessageCircle",
+        "title": "منتدى المجتمع",
+        "description": "انضم إلى منتدى مجتمعنا للحصول على المساعدة من المستخدمين الآخرين",
+        "link": "/community"
+      },
+      {
+        "icon": "Mail",
+        "title": "اتصل بالدعم",
+        "description": "تواصل مع فريق الدعم المخصص لدينا",
+        "link": "/support"
+      }
+    ]
+  }
+} 

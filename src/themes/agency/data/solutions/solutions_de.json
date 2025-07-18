@@ -1,0 +1,325 @@
+{
+  "pageTitle": "Branchenlösungen",
+  "pageDescription": "Entdecken Sie unsere umfassende Suite branchenspezifischer Lösungen, unterstützt durch künstliche Intelligenz.",
+  "hero": {
+    "badge": "Branchenlösungen",
+    "title": "Transformieren Sie Ihre Branche mit KI-gestützten Lösungen",
+    "description": "Entdecken Sie unsere umfassende Suite branchenspezifischer Lösungen, entwickelt um Ihre Geschäftsprozesse mit modernster künstlicher Intelligenz zu revolutionieren.",
+    "cta": {
+      "primary": {
+        "text": "Lösungen Erkunden",
+        "href": "#solutions"
+      },
+      "secondary": {
+        "text": "Vertrieb Kontaktieren",
+        "href": "/contact"
+      }
+    }
+  },
+  "stats": [
+    {
+      "value": "10K+",
+      "label": "Aktive Nutzer"
+    },
+    {
+      "value": "99.9%",
+      "label": "Verfügbarkeit"
+    },
+    {
+      "value": "45%",
+      "label": "Effizienzsteigerung"
+    },
+    {
+      "value": "24/7",
+      "label": "Support"
+    }
+  ],
+  "solutions": [
+    {
+      "category": "Gesundheitswesen",
+      "description": "Umfassende Lösungen für Gesundheitsdienstleister",
+      "items": [
+        {
+          "icon": "stethoscope",
+          "name": "Arztpraxen",
+          "description": "Optimieren Sie Ihre Arztpraxis mit KI-gestützter Verwaltung",
+          "href": "/solutions/medical-solution",
+          "color": "blue"
+        },
+        {
+          "icon": "hospital",
+          "name": "Krankenhäuser",
+          "description": "Vollständiges Krankenhausmanagement und Patientenversorgungssystem",
+          "href": "/solutions/hospital-solution",
+          "color": "indigo"
+        },
+        {
+          "icon": "building2",
+          "name": "Kliniken",
+          "description": "Effiziente Klinikabläufe und Patientenverwaltung",
+          "href": "/solutions/clinic-solution",
+          "color": "purple"
+        },
+        {
+          "icon": "pill",
+          "name": "Apotheken",
+          "description": "Modernes Apothekenmanagement und Bestandskontrolle",
+          "href": "/solutions/pharmacy-solution",
+          "color": "pink"
+        }
+      ]
+    },
+    {
+      "category": "Spezialisierte Versorgung",
+      "description": "Maßgeschneiderte Lösungen für spezialisierte medizinische Einrichtungen",
+      "items": [
+        {
+          "icon": "tooth",
+          "name": "Zahnarztpraxen",
+          "description": "Vollständige Lösung für die Verwaltung von Zahnarztpraxen",
+          "href": "/solutions/dental-solution",
+          "color": "cyan"
+        },
+        {
+          "icon": "radio-tower",
+          "name": "Radiologiezentren",
+          "description": "Fortschrittliches radiologisches Informationssystem",
+          "href": "/solutions/radiology-solution",
+          "color": "emerald"
+        },
+        {
+          "icon": "flask",
+          "name": "Labore",
+          "description": "Umfassendes Laborverwaltungssystem",
+          "href": "/solutions/laboratory-solution",
+          "color": "teal"
+        },
+        {
+          "icon": "dog",
+          "name": "Tierarztpraxen",
+          "description": "Vollständige Verwaltung von Tierarztpraxen",
+          "href": "/solutions/veterinary-solution",
+          "color": "orange"
+        }
+      ]
+    },
+    {
+      "category": "Einzelhandel & Handel",
+      "description": "Digitale Lösungen für moderne Einzelhandels- und E-Commerce-Unternehmen",
+      "items": [
+        {
+          "icon": "shopping-bag",
+          "name": "E-Commerce",
+          "description": "Vollständige E-Commerce-Plattform mit KI-gestützten Einblicken",
+          "href": "/solutions/ecommerce-solution",
+          "color": "rose"
+        },
+        {
+          "icon": "store",
+          "name": "Einzelhandel",
+          "description": "Intelligentes Einzelhandelsmanagement und POS-System",
+          "href": "/solutions/retail-solution",
+          "color": "amber"
+        },
+        {
+          "icon": "warehouse",
+          "name": "Großhandel",
+          "description": "Effizientes Großhandels- und Distributionsmanagement",
+          "href": "/solutions/wholesale-solution",
+          "color": "lime"
+        },
+        {
+          "icon": "truck",
+          "name": "Logistik",
+          "description": "Intelligentes Logistik- und Lieferkettenmanagement",
+          "href": "/solutions/logistics-solution",
+          "color": "green"
+        }
+      ]
+    },
+    {
+      "category": "Fertigung & Industrie",
+      "description": "Intelligente Lösungen für moderne Fertigung und industrielle Abläufe",
+      "items": [
+        {
+          "icon": "factory",
+          "name": "Fertigung",
+          "description": "Intelligentes Fertigungs- und Produktionsmanagement",
+          "href": "/solutions/manufacturing-solution",
+          "color": "sky"
+        },
+        {
+          "icon": "warehouse",
+          "name": "Bestandsverwaltung",
+          "description": "Fortschrittliches Lager- und Bestandsmanagement",
+          "href": "/solutions/inventory-solution",
+          "color": "cyan"
+        },
+        {
+          "icon": "truck",
+          "name": "Lieferkette",
+          "description": "Ende-zu-Ende-Optimierung der Lieferkette",
+          "href": "/solutions/supply-chain-solution",
+          "color": "blue"
+        },
+        {
+          "icon": "trending-up",
+          "name": "Qualitätskontrolle",
+          "description": "KI-gestützte Qualitätssicherung und -kontrolle",
+          "href": "/solutions/quality-solution",
+          "color": "indigo"
+        }
+      ]
+    },
+    {
+      "category": "Professionelle Dienstleistungen",
+      "description": "Spezialisierte Lösungen für dienstleistungsbasierte Unternehmen",
+      "items": [
+        {
+          "icon": "building",
+          "name": "Immobilien",
+          "description": "Vollständige Immobilienverwaltungsplattform",
+          "href": "/solutions/real-estate-solution",
+          "color": "violet"
+        },
+        {
+          "icon": "graduation-cap",
+          "name": "Bildung",
+          "description": "Intelligentes Bildungs- und Lernmanagement",
+          "href": "/solutions/education-solution",
+          "color": "purple"
+        },
+        {
+          "icon": "hotel",
+          "name": "Hotellerie",
+          "description": "Umfassendes Hotelmanagementsystem",
+          "href": "/solutions/hospitality-solution",
+          "color": "fuchsia"
+        },
+        {
+          "icon": "users",
+          "name": "Professionelle Dienstleistungen",
+          "description": "Verwaltung von Geschäftsdienstleistungen und Beratung",
+          "href": "/solutions/professional-solution",
+          "color": "pink"
+        }
+      ]
+    }
+  ],
+  "features": {
+    "title": "Leistungsstarke Funktionen für Jede Lösung",
+    "description": "Unsere Plattform bietet Funktionen, die Ihre Abläufe verbessern",
+    "items": [
+      {
+        "icon": "globe",
+        "title": "Globale Zugänglichkeit",
+        "description": "Greifen Sie von überall und jederzeit auf Ihre Lösung zu mit unserer Cloud-basierten Plattform"
+      },
+      {
+        "icon": "clock",
+        "title": "24/7 Support",
+        "description": "Rund um die Uhr technischer Support und Systemüberwachung"
+      },
+      {
+        "icon": "shield",
+        "title": "Datensicherheit",
+        "description": "Enterprise-Grade-Sicherheit mit Ende-zu-Ende-Verschlüsselung"
+      },
+      {
+        "icon": "zap",
+        "title": "Echtzeit-Updates",
+        "description": "Sofortige Aktualisierungen und Synchronisation auf allen Geräten"
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Vorteile für Alle Lösungen",
+    "description": "Erleben Sie die Vorteile unserer KI-gestützten Plattform für alle Branchenlösungen.",
+    "items": [
+      {
+        "icon": "brain",
+        "title": "KI-gestützte Intelligenz",
+        "description": "Fortschrittliche künstliche Intelligenz und maschinelles Lernen, die sich an Ihre spezifischen Bedürfnisse anpassen",
+        "stats": "45%",
+        "label": "Effizienzsteigerung"
+      },
+      {
+        "icon": "shield",
+        "title": "Enterprise-Sicherheit",
+        "description": "Bankenstandard-Sicherheit mit Ende-zu-Ende-Verschlüsselung und Branchenkonformität",
+        "stats": "99.9%",
+        "label": "Systemverfügbarkeit"
+      },
+      {
+        "icon": "trending-up",
+        "title": "Skalierbares Wachstum",
+        "description": "Lösungen, die mit Ihrem Unternehmen wachsen, von kleinen Praxen bis zu großen Unternehmen",
+        "stats": "3x",
+        "label": "Durchschnittliches Wachstum"
+      },
+      {
+        "icon": "users",
+        "title": "Verbesserte Erfahrung",
+        "description": "Verbesserte Erfahrung für Mitarbeiter und Kunden mit intuitiven Schnittstellen",
+        "stats": "96%",
+        "label": "Zufriedenheitsrate"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Was Unsere Kunden Sagen",
+    "description": "Hören Sie von Gesundheitsfachleuten, die ihre Praxis mit unseren Lösungen transformiert haben",
+    "items": [
+      {
+        "quote": "GiaConnect hat unsere Arbeitsweise revolutioniert. Die KI-Fähigkeiten sind wirklich bahnbrechend.",
+        "author": "Dr. Sarah Chen",
+        "role": "Medizinische Direktorin",
+        "image": "/images/testimonials/sarah.jpg"
+      },
+      {
+        "quote": "Die Effizienz und Benutzerfreundlichkeit der Plattform haben unsere Patientenversorgung deutlich verbessert.",
+        "author": "Dr. James Wilson",
+        "role": "Krankenhausadministrator",
+        "image": "/images/testimonials/james.jpg"
+      }
+    ]
+  },
+  "integrations": {
+    "title": "Funktioniert mit Ihren Lieblingswerkzeugen",
+    "description": "Nahtlose Integration mit beliebten Gesundheits- und Geschäftsanwendungen"
+  },
+  "faq": {
+    "title": "Häufig Gestellte Fragen",
+    "description": "Finden Sie Antworten auf häufige Fragen zu unseren Lösungen",
+    "items": [
+      {
+        "question": "Wie funktioniert die KI-Integration?",
+        "answer": "Unser KI-System integriert sich nahtlos in Ihre bestehenden Arbeitsabläufe und passt sich im Laufe der Zeit an Ihre spezifischen Bedürfnisse an."
+      },
+      {
+        "question": "Welche Art von Support bieten Sie an?",
+        "answer": "Wir bieten 24/7 technischen Support, regelmäßige Schulungssitzungen und dedizierte Account Manager für Enterprise-Kunden."
+      },
+      {
+        "question": "Sind meine Daten sicher?",
+        "answer": "Ja, wir implementieren Sicherheitsmaßnahmen auf Bankniveau und sind vollständig konform mit HIPAA und anderen Gesundheitsvorschriften."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Bereit, Ihr Unternehmen zu Transformieren?",
+    "description": "Schließen Sie sich Tausenden von Unternehmen an, die ihre Abläufe bereits mit unseren KI-gestützten Lösungen modernisiert haben.",
+    "buttons": [
+      {
+        "text": "Demo Planen",
+        "href": "/demo",
+        "variant": "primary"
+      },
+      {
+        "text": "Vertrieb Kontaktieren",
+        "href": "/contact",
+        "variant": "secondary"
+      }
+    ]
+  }
+} 

@@ -1,0 +1,335 @@
+{
+  "hero": {
+    "subtitle": "Gestione Pratica Veterinaria",
+    "title": "Soluzione Completa di Gestione Veterinaria",
+    "description": "Un sistema completo di gestione della pratica veterinaria che ottimizza le operazioni, migliora la cura dei pazienti e fa crescere la tua attività.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Demo della Soluzione di Gestione Veterinaria"
+    },
+    "stats": [
+      {
+        "value": "40%",
+        "label": "Tempo Risparmiato"
+      },
+      {
+        "value": "95%",
+        "label": "Soddisfazione Cliente"
+      },
+      {
+        "value": "35%",
+        "label": "Crescita dei Ricavi"
+      }
+    ]
+  },
+  "features": {
+    "subtitle": "Funzionalità Avanzate",
+    "title": "Gestione Veterinaria Completa",
+    "description": "Strumenti completi progettati per le moderne pratiche veterinarie",
+    "categories": [
+      {
+        "name": "Operazioni di Studio",
+        "description": "Ottimizzazione delle operazioni quotidiane e gestione dei pazienti"
+      },
+      {
+        "name": "Cura dei Pazienti",
+        "description": "Miglioramento della cura degli animali e della comunicazione con i clienti"
+      }
+    ],
+    "items": [
+      {
+        "icon": "calendar",
+        "category": "Operazioni",
+        "title": "Pianificazione Intelligente",
+        "description": "Gestione efficiente degli appuntamenti e delle risorse",
+        "image": "/images/solutions/veterinary/scheduling.jpg",
+        "highlights": [
+          "Prenotazione online",
+          "Promemoria automatici",
+          "Allocazione risorse",
+          "Supporto multi-sede"
+        ],
+        "stats": {
+          "value": "40%",
+          "label": "Tempo risparmiato"
+        }
+      },
+      {
+        "icon": "file-text",
+        "category": "Clinico",
+        "title": "Cartelle Cliniche Elettroniche",
+        "description": "Cartelle pazienti complete e documentazione clinica",
+        "image": "/images/solutions/veterinary/emr.jpg",
+        "highlights": [
+          "Cartelle digitali",
+          "Piani di trattamento",
+          "Integrazione laboratorio",
+          "Gestione prescrizioni"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "Conformità digitale"
+        }
+      },
+      {
+        "icon": "message-circle",
+        "category": "Comunicazione",
+        "title": "Engagement Cliente",
+        "description": "Strumenti migliorati per la comunicazione e l'engagement con i clienti",
+        "image": "/images/solutions/veterinary/communication.jpg",
+        "highlights": [
+          "Portale cliente",
+          "Aggiornamenti SMS/Email",
+          "Promemoria appuntamenti",
+          "Risorse educative"
+        ],
+        "stats": {
+          "value": "95%",
+          "label": "Soddisfazione cliente"
+        }
+      },
+      {
+        "icon": "trending-up",
+        "category": "Business",
+        "title": "Analisi dello Studio",
+        "description": "Business intelligence completa e reportistica",
+        "image": "/images/solutions/veterinary/analytics.jpg",
+        "highlights": [
+          "Report finanziari",
+          "Metriche di performance",
+          "Analisi inventario",
+          "Insight sulla crescita"
+        ],
+        "stats": {
+          "value": "35%",
+          "label": "Crescita dei ricavi"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Eccellenza Veterinaria",
+    "description": "Scopri come gli studi veterinari leader trasformano le loro operazioni",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Storia di Successo Veterinaria"
+    },
+    "testimonials": [
+      {
+        "author": "Dr. Emily Roberts",
+        "role": "Proprietaria dello Studio",
+        "image": "/images/testimonials/vet1.jpg",
+        "quote": "Questo sistema ha trasformato il nostro studio. Le funzionalità integrate di pianificazione e comunicazione con i clienti hanno migliorato significativamente la nostra efficienza."
+      },
+      {
+        "author": "Dr. Mark Thompson",
+        "role": "Veterinario Capo",
+        "image": "/images/testimonials/vet2.jpg",
+        "quote": "Le cartelle cliniche elettroniche e gli strumenti di pianificazione del trattamento ci hanno aiutato a fornire una migliore cura ai nostri pazienti."
+      }
+    ]
+  },
+  "benefits": {
+    "subtitle": "Vantaggi Chiave",
+    "title": "Trasforma il Tuo Studio Veterinario",
+    "description": "Sperimenta i vantaggi di un sistema di gestione veterinaria completamente integrato",
+    "items": [
+      {
+        "icon": "zap",
+        "title": "Eccellenza Operativa",
+        "description": "Ottimizzazione delle operazioni dello studio e del flusso di lavoro",
+        "color": "blue",
+        "stats": {
+          "value": "40%",
+          "label": "Tempo Risparmiato"
+        },
+        "highlights": [
+          "Pianificazione automatizzata",
+          "Gestione inventario",
+          "Ottimizzazione risorse",
+          "Automatizzazione attività"
+        ]
+      },
+      {
+        "icon": "heart",
+        "title": "Cura dei Pazienti Migliorata",
+        "description": "Miglioramento della cura degli animali e dei risultati del trattamento",
+        "color": "green",
+        "stats": {
+          "value": "98%",
+          "label": "Successo del Trattamento"
+        },
+        "highlights": [
+          "Cartelle digitali",
+          "Monitoraggio trattamenti",
+          "Integrazione laboratorio",
+          "Protocolli di cura"
+        ]
+      },
+      {
+        "icon": "users",
+        "title": "Soddisfazione Cliente",
+        "description": "Miglioramento dell'esperienza cliente e dell'engagement",
+        "color": "purple",
+        "stats": {
+          "value": "95%",
+          "label": "Soddisfazione Cliente"
+        },
+        "highlights": [
+          "Prenotazione online",
+          "Portale cliente",
+          "Strumenti di comunicazione",
+          "Risorse educative"
+        ]
+      },
+      {
+        "icon": "trending-up",
+        "title": "Crescita dello Studio",
+        "description": "Spinta alla crescita e alla redditività dello studio",
+        "color": "red",
+        "stats": {
+          "value": "35%",
+          "label": "Crescita dei Ricavi"
+        },
+        "highlights": [
+          "Analisi finanziarie",
+          "Insight sulla crescita",
+          "Strumenti marketing",
+          "Fidelizzazione clienti"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "subtitle": "Prezzi Trasparenti",
+    "title": "Piani di Prezzo Flessibili",
+    "description": "Scegli il piano perfetto per il tuo studio veterinario. Risparmia fino al 20% con la fatturazione annuale.",
+    "billingPeriods": ["Mensile", "Annuale"],
+    "plans": [
+      {
+        "name": "Essenziale",
+        "highlight": "Per piccoli studi",
+        "monthlyPrice": "$199",
+        "yearlyPrice": "$1,990",
+        "yearlyDiscount": "Risparmia $398/anno",
+        "description": "Funzionalità essenziali per piccoli studi",
+        "features": [
+          {
+            "text": "Pianificazione appuntamenti",
+            "included": true
+          },
+          {
+            "text": "CCE di base",
+            "included": true
+          },
+          {
+            "text": "Comunicazione clienti",
+            "included": true
+          },
+          {
+            "text": "Supporto email",
+            "included": true
+          },
+          {
+            "text": "Report di base",
+            "included": true
+          },
+          {
+            "text": "Accesso mobile",
+            "included": true
+          }
+        ],
+        "cta": "Inizia Ora",
+        "popular": false
+      },
+      {
+        "name": "Professionale",
+        "highlight": "Più popolare per studi in crescita",
+        "monthlyPrice": "$399",
+        "yearlyPrice": "$3,990",
+        "yearlyDiscount": "Risparmia $798/anno",
+        "description": "Funzionalità avanzate per studi in crescita",
+        "features": [
+          {
+            "text": "Tutto ciò che è incluso in Essenziale, più:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "CCE avanzato",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "Integrazione laboratorio",
+            "included": true
+          },
+          {
+            "text": "Analisi avanzate",
+            "included": true
+          },
+          {
+            "text": "Supporto prioritario",
+            "included": true
+          },
+          {
+            "text": "Supporto multi-sede",
+            "included": true
+          }
+        ],
+        "cta": "Inizia Ora",
+        "popular": true
+      },
+      {
+        "name": "Enterprise",
+        "highlight": "Per grandi studi",
+        "monthlyPrice": "Personalizzato",
+        "yearlyPrice": "Personalizzato",
+        "yearlyDiscount": "Contattaci per prezzi speciali",
+        "description": "Soluzioni personalizzate per grandi studi",
+        "features": [
+          {
+            "text": "Tutto ciò che è incluso in Professionale, più:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Supporto integrazione personalizzato",
+            "included": true
+          },
+          {
+            "text": "Account manager dedicato",
+            "included": true
+          },
+          {
+            "text": "Funzionalità di sicurezza avanzate",
+            "included": true
+          },
+          {
+            "text": "Sviluppo personalizzato",
+            "included": true
+          },
+          {
+            "text": "Garanzie SLA",
+            "included": true
+          }
+        ],
+        "cta": "Contatta le Vendite",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "Pronto a Trasformare il Tuo Studio Veterinario?",
+    "description": "Unisciti agli studi veterinari leader che hanno modernizzato le loro operazioni con la nostra soluzione.",
+    "background": "/images/solutions/veterinary/cta-background.jpg",
+    "primaryButton": {
+      "text": "Pianifica una Demo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Vedi la Demo",
+      "link": "#showcase"
+    }
+  }
+} 

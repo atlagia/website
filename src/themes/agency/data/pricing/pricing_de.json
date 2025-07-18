@@ -1,0 +1,348 @@
+{
+  "pageTitle": "Lösungen",
+  "pageDescription": "Branchenspezifische Lösungen und Funktionen. Finden Sie die perfekten Lösungen für Ihre Geschäftsanforderungen.",
+  "hero": {
+    "badge": "Branchenspezifische Lösungen",
+    "title": "Maßgeschneiderte Lösungen für Jede Branche",
+    "description": "Entdecken Sie branchenspezifische Lösungen mit leistungsstarken Funktionen. Beginnen Sie mit unserer globalen Plattform und fügen Sie spezialisierte Lösungen nach Bedarf hinzu.",
+    "cta": {
+      "text": "Vertrieb Kontaktieren",
+      "href": "/contact/sales"
+    }
+  },
+  "benefits": {
+    "title": "Hauptvorteile",
+    "description": "Transformieren Sie Ihr Unternehmen mit unseren umfassenden Lösungen",
+    "items": [
+      {
+        "title": "Operative Exzellenz",
+        "icon": "Zap",
+        "description": "Optimieren Sie Abläufe und steigern Sie die Effizienz",
+        "items": [
+          "Automatisierte Workflows",
+          "Echtzeit-Überwachung",
+          "Ressourcenoptimierung",
+          "Prozessautomatisierung"
+        ]
+      },
+      {
+        "title": "Erweiterte Sicherheit",
+        "icon": "Shield",
+        "description": "Enterprise-Grade Sicherheit und Compliance",
+        "items": [
+          "Datenverschlüsselung",
+          "Zugriffskontrolle",
+          "Compliance-Management",
+          "Audit-Protokollierung"
+        ]
+      },
+      {
+        "title": "Skalierbarkeit",
+        "icon": "Globe",
+        "description": "Wachsen Sie ohne Einschränkungen",
+        "items": [
+          "Cloud-Infrastruktur",
+          "Lastverteilung",
+          "Automatische Skalierung",
+          "Globales Deployment"
+        ]
+      },
+      {
+        "title": "Integrationsmöglichkeiten",
+        "icon": "Database",
+        "description": "Verbinden Sie sich mit Ihren bestehenden Systemen",
+        "items": [
+          "API-Zugang",
+          "Benutzerdefinierte Integrationen",
+          "Webhook-Unterstützung",
+          "Datensynchronisation"
+        ]
+      }
+    ]
+  },
+  "industries": {
+    "title": "Verfügbare Branchen",
+    "description": "Wählen Sie Ihre Branche, um spezialisierte Lösungen zu sehen",
+    "items": [
+      {
+        "name": "Gesundheitswesen",
+        "icon": "Stethoscope",
+        "description": "Lösungen für Krankenhäuser, Kliniken und Arztpraxen",
+        "solutions": [
+          { "name": "Arztpraxis", "link": "/solutions/medical-practice" },
+          { "name": "Krankenhaus", "link": "/solutions/hospital" },
+          { "name": "Klinik", "link": "/solutions/clinic" },
+          { "name": "Apotheke", "link": "/solutions/pharmacy" }
+        ]
+      },
+      {
+        "name": "Fertigung",
+        "icon": "Factory",
+        "description": "Industrielle und Fertigungslösungen",
+        "solutions": [
+          { "name": "Produktion", "link": "/solutions/production" },
+          { "name": "Qualitätskontrolle", "link": "/solutions/quality-control" },
+          { "name": "Lieferkette", "link": "/solutions/supply-chain" },
+          { "name": "Wartung", "link": "/solutions/maintenance" }
+        ]
+      },
+      {
+        "name": "Einzelhandel & Handel",
+        "icon": "ShoppingBag",
+        "description": "Einzelhandels- und E-Commerce-Lösungen",
+        "solutions": [
+          { "name": "Filialverwaltung", "link": "/solutions/store-management" },
+          { "name": "E-Commerce", "link": "/solutions/ecommerce" },
+          { "name": "Bestandsverwaltung", "link": "/solutions/inventory" },
+          { "name": "Kundenservice", "link": "/solutions/customer-service" }
+        ]
+      },
+      {
+        "name": "Professionelle Dienstleistungen",
+        "icon": "Briefcase",
+        "description": "Lösungen für professionelle Dienstleister",
+        "solutions": [
+          { "name": "Beratung", "link": "/solutions/consulting" },
+          { "name": "Recht", "link": "/solutions/legal" },
+          { "name": "Buchhaltung", "link": "/solutions/accounting" },
+          { "name": "Immobilien", "link": "/solutions/real-estate" }
+        ]
+      },
+      {
+        "name": "Bildung",
+        "icon": "GraduationCap",
+        "description": "Lösungen für Bildungseinrichtungen",
+        "solutions": [
+          { "name": "Schulverwaltung", "link": "/solutions/school-management" },
+          { "name": "Studentenservices", "link": "/solutions/student-services" },
+          { "name": "Verwaltung", "link": "/solutions/administration" },
+          { "name": "Lernen", "link": "/solutions/learning" }
+        ]
+      },
+      {
+        "name": "Immobilien",
+        "icon": "Home",
+        "description": "Immobilienlösungen",
+        "solutions": [
+          { "name": "Immobilienverwaltung", "link": "/solutions/property-management" },
+          { "name": "Verkauf", "link": "/solutions/sales" },
+          { "name": "Vermietung", "link": "/solutions/leasing" },
+          { "name": "Wartung", "link": "/solutions/maintenance" }
+        ]
+      },
+      {
+        "name": "Logistik",
+        "icon": "Truck",
+        "description": "Transport- und Logistiklösungen",
+        "solutions": [
+          { "name": "Fuhrparkmanagement", "link": "/solutions/fleet-management" },
+          { "name": "Lieferung", "link": "/solutions/delivery" },
+          { "name": "Lager", "link": "/solutions/warehouse" },
+          { "name": "Verfolgung", "link": "/solutions/tracking" }
+        ]
+      },
+      {
+        "name": "Hotellerie",
+        "icon": "Hotel",
+        "description": "Hotel- und Gastgewerbelösungen",
+        "solutions": [
+          { "name": "Hotelverwaltung", "link": "/solutions/hotel-management" },
+          { "name": "Buchung", "link": "/solutions/booking" },
+          { "name": "Gästeservice", "link": "/solutions/guest-services" },
+          { "name": "Betrieb", "link": "/solutions/operations" }
+        ]
+      }
+    ]
+  },
+  "successMetrics": {
+    "title": "Bewährte Ergebnisse",
+    "description": "Sehen Sie die Auswirkungen unserer Lösungen auf Unternehmen",
+    "items": [
+      {
+        "title": "Effizienzsteigerung",
+        "value": "40%",
+        "description": "Durchschnittliche Verbesserung der operativen Effizienz",
+        "icon": "Zap"
+      },
+      {
+        "title": "Kosteneinsparung",
+        "value": "30%",
+        "description": "Typische Reduzierung der Betriebskosten",
+        "icon": "Star"
+      },
+      {
+        "title": "Zeiteinsparung",
+        "value": "50%",
+        "description": "Durchschnittliche Zeitersparnis bei Routineaufgaben",
+        "icon": "Clock"
+      },
+      {
+        "title": "Kundenzufriedenheit",
+        "value": "95%",
+        "description": "Durchschnittliche Kundenzufriedenheitsrate",
+        "icon": "Users"
+      }
+    ]
+  },
+  "globalFeatures": {
+    "title": "Globale Plattformfunktionen",
+    "description": "Kernfunktionen verfügbar in allen Branchen",
+    "name": "Globale Plattform",
+    "features": [
+      {
+        "category": "KI-Fähigkeiten",
+        "items": [
+          "Grundlegende KI-Operationen",
+          "Fortgeschrittene KI-Modelle",
+          "Benutzerdefiniertes KI-Training",
+          "Echtzeitverarbeitung"
+        ]
+      },
+      {
+        "category": "Sicherheit & Compliance",
+        "items": [
+          "Enterprise-Grade Sicherheit",
+          "Datenverschlüsselung",
+          "Zugriffskontrolle",
+          "Compliance-Management"
+        ]
+      },
+      {
+        "category": "Integration & API",
+        "items": [
+          "RESTful API-Zugang",
+          "Benutzerdefinierte Integrationen",
+          "Webhook-Unterstützung",
+          "Datenexport/-import"
+        ]
+      },
+      {
+        "category": "Analyse & Berichte",
+        "items": [
+          "Echtzeit-Analyse",
+          "Benutzerdefinierte Berichte",
+          "Datenvisualisierung",
+          "Leistungsmetriken"
+        ]
+      }
+    ]
+  },
+  "integrations": {
+    "title": "Nahtlose Integrationen",
+    "description": "Verbinden Sie sich mit Ihren bevorzugten Tools und Diensten",
+    "categories": [
+      {
+        "category": "Cloud-Dienste",
+        "items": [
+          { "name": "AWS", "icon": "CloudAws" },
+          { "name": "Azure", "icon": "CloudMicrosoft" },
+          { "name": "Google Cloud", "icon": "CloudGoogle" }
+        ]
+      },
+      {
+        "category": "Enterprise-Software",
+        "items": [
+          { "name": "Salesforce", "icon": "Database2" },
+          { "name": "SAP", "icon": "Building2" },
+          { "name": "Oracle", "icon": "Database" }
+        ]
+      },
+      {
+        "category": "Entwicklungstools",
+        "items": [
+          { "name": "GitHub", "icon": "Code" },
+          { "name": "Jira", "icon": "Cpu" },
+          { "name": "Slack", "icon": "MessageSquare" }
+        ]
+      }
+    ]
+  },
+  "faqs": {
+    "title": "Häufig Gestellte Fragen",
+    "description": "Finden Sie Antworten auf häufige Fragen zu unseren Lösungen",
+    "items": [
+      {
+        "question": "Wie wähle ich die richtigen Lösungen?",
+        "answer": "Unser Team kann Ihnen helfen, die richtigen Lösungen basierend auf Ihren Geschäftsanforderungen zu identifizieren. Wir bieten kostenlose Beratungen an, um Ihnen den besten Wert zu garantieren."
+      },
+      {
+        "question": "Kann ich Lösungen aus verschiedenen Branchen kombinieren?",
+        "answer": "Ja, Sie können Lösungen aus verschiedenen Branchen kombinieren, um ein maßgeschneidertes Paket zu erstellen, das Ihren spezifischen Anforderungen entspricht. Kontaktieren Sie unser Vertriebsteam für eine angepasste Lösung."
+      },
+      {
+        "question": "Was ist in der globalen Plattform enthalten?",
+        "answer": "Die globale Plattform umfasst grundlegende KI-Fähigkeiten, Basis-Analyse, API-Zugang und Community-Funktionen. Branchenspezifische Lösungen bauen darauf auf."
+      },
+      {
+        "question": "Wie fange ich an?",
+        "answer": "Beginnen Sie mit der Planung einer Beratung mit unserem Team. Wir helfen Ihnen, die richtigen Lösungen zu identifizieren und einen maßgeschneiderten Implementierungsplan zu erstellen."
+      }
+    ]
+  },
+  "implementation": {
+    "title": "Implementierungsprozess",
+    "description": "Starten Sie schnell mit unserem bewährten Implementierungsprozess",
+    "steps": [
+      {
+        "number": "1",
+        "title": "Analyse",
+        "description": "Wir analysieren Ihre Anforderungen und erstellen einen maßgeschneiderten Implementierungsplan"
+      },
+      {
+        "number": "2",
+        "title": "Einrichtung",
+        "description": "Schnelle Einrichtung und Konfiguration Ihrer Lösungen"
+      },
+      {
+        "number": "3",
+        "title": "Integration",
+        "description": "Nahtlose Integration mit Ihren bestehenden Systemen"
+      },
+      {
+        "number": "4",
+        "title": "Start",
+        "description": "Live-Gang mit umfassender Unterstützung und Schulung"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Hilfe bei der Auswahl?",
+    "description": "Unser Team ist da, um Ihnen zu helfen, die perfekten Lösungen für Ihre Anforderungen zu finden",
+    "options": [
+      {
+        "title": "Branchenberatung",
+        "description": "Erhalten Sie Expertenberatung bei der Auswahl der richtigen Lösungen",
+        "icon": "Building2",
+        "link": "/contact/consultation"
+      },
+      {
+        "title": "Vertriebsteam",
+        "description": "Besprechen Sie maßgeschneiderte Lösungen und Implementierung",
+        "icon": "Users",
+        "link": "/contact/sales"
+      },
+      {
+        "title": "Technischer Support",
+        "description": "Erhalten Sie Hilfe bei Implementierung und technischen Fragen",
+        "icon": "HelpCircle",
+        "link": "/contact/support"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Bereit, Ihre Branche zu Transformieren?",
+    "description": "Beginnen Sie noch heute mit unseren branchenspezifischen Lösungen.",
+    "buttons": [
+      {
+        "text": "Beratung Planen",
+        "href": "/contact/consultation",
+        "variant": "primary"
+      },
+      {
+        "text": "Vertrieb Kontaktieren",
+        "href": "/contact/sales",
+        "variant": "secondary"
+      }
+    ]
+  }
+} 

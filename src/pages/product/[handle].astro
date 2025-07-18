@@ -23,7 +23,6 @@ const siteName = import.meta.env.PUBLIC_SITE_NAME;
 const hasChartData = import.meta.env.PUBLIC_HAS_CHART_DATA === true;
 const apiEndpoint = import.meta.env.VITE_API_ENDPOINT|| '/api/checkout';
 
-
 let product;
 let relatedProducts;
 let error;
@@ -630,119 +629,155 @@ const initialCurrency = 'USD'; // Or get from store/session
                     <Info className="w-6 h-6 text-blue-600" />
                     Product Details
                   </h2>
-                  <div 
-                    set:html={product.descriptionHtml} 
-                    class="
-                      text-gray-700 
-                      [&>p]:mb-6 
-                      [&>p]:leading-relaxed 
-                      [&>p]:text-base
+                  
+                  <div class="relative">
+                    <div 
+                      id="description-content"
+                      set:html={product.descriptionHtml} 
+                      class="
+                        text-gray-700 
+                        [&>p]:mb-6 
+                        [&>p]:leading-relaxed 
+                        [&>p]:text-base
 
-                      [&>h2]:text-xl 
-                      [&>h2]:font-bold 
-                      [&>h2]:text-gray-900 
-                      [&>h2]:mt-10 
-                      [&>h2]:mb-6
-                      [&>h2]:pb-2
-                      [&>h2]:border-b
-                      [&>h2]:border-gray-200
+                        [&>h2]:text-xl 
+                        [&>h2]:font-bold 
+                        [&>h2]:text-gray-900 
+                        [&>h2]:mt-10 
+                        [&>h2]:mb-6
+                        [&>h2]:pb-2
+                        [&>h2]:border-b
+                        [&>h2]:border-gray-200
 
-                      [&>h3]:text-xl 
-                      [&>h3]:font-semibold 
-                      [&>h3]:text-gray-800 
-                      [&>h3]:mt-8 
-                      [&>h3]:mb-4
-                      [&>h3]:flex
-                      [&>h3]:items-center
-                      [&>h3]:gap-2
+                        [&>h3]:text-xl 
+                        [&>h3]:font-semibold 
+                        [&>h3]:text-gray-800 
+                        [&>h3]:mt-8 
+                        [&>h3]:mb-4
+                        [&>h3]:flex
+                        [&>h3]:items-center
+                        [&>h3]:gap-2
 
-                      [&>h4]:text-lg 
-                      [&>h4]:font-semibold 
-                      [&>h4]:text-gray-800 
-                      [&>h4]:mt-6 
-                      [&>h4]:mb-3
+                        [&>h4]:text-lg 
+                        [&>h4]:font-semibold 
+                        [&>h4]:text-gray-800 
+                        [&>h4]:mt-6 
+                        [&>h4]:mb-3
 
-                      [&>ul]:list-disc 
-                      [&>ul]:ml-6 
-                      [&>ul]:mb-6 
-                      [&>ul>li]:mb-2
-                      [&>ul>li]:text-gray-700
+                        [&>ul]:list-disc 
+                        [&>ul]:ml-6 
+                        [&>ul]:mb-6 
+                        [&>ul>li]:mb-2
+                        [&>ul>li]:text-gray-700
 
-                      [&>ol]:list-decimal 
-                      [&>ol]:ml-6 
-                      [&>ol]:mb-6 
-                      [&>ol>li]:mb-2
-                      [&>ol>li]:text-gray-700
+                        [&>ol]:list-decimal 
+                        [&>ol]:ml-6 
+                        [&>ol]:mb-6 
+                        [&>ol>li]:mb-2
+                        [&>ol>li]:text-gray-700
 
-                      [&>strong]:font-bold
-                      [&>strong]:text-gray-900
+                        [&>strong]:font-bold
+                        [&>strong]:text-gray-900
 
-                      [&>em]:italic
-                      
-                      [&>a]:text-blue-600 
-                      [&>a]:underline 
-                      [&>a:hover]:text-blue-800
+                        [&>em]:italic
+                        
+                        [&>a]:text-blue-600 
+                        [&>a]:underline 
+                        [&>a:hover]:text-blue-800
 
-                      [&>blockquote]:pl-4 
-                      [&>blockquote]:border-l-4 
-                      [&>blockquote]:border-gray-200 
-                      [&>blockquote]:italic
-                      [&>blockquote]:text-gray-600
-                      [&>blockquote]:my-6
+                        [&>blockquote]:pl-4 
+                        [&>blockquote]:border-l-4 
+                        [&>blockquote]:border-gray-200 
+                        [&>blockquote]:italic
+                        [&>blockquote]:text-gray-600
+                        [&>blockquote]:my-6
 
-                      [&>img]:rounded-lg
-                      [&>img]:shadow-md
-                      [&>img]:my-4
+                        [&>img]:rounded-lg
+                        [&>img]:shadow-md
+                        [&>img]:my-4
 
-                      [&>table]:w-full
-                      [&>table]:border-collapse
-                      [&>table]:mb-6
-                      [&>table]:bg-white
-                      [&>table]:shadow-sm
-                      [&>table]:rounded-lg
-                      [&>table]:overflow-hidden
-                      [&>table]:border
-                      [&>table]:border-gray-200
+                        [&>table]:w-full
+                        [&>table]:border-collapse
+                        [&>table]:mb-6
+                        [&>table]:bg-white
+                        [&>table]:shadow-sm
+                        [&>table]:rounded-lg
+                        [&>table]:overflow-hidden
+                        [&>table]:border
+                        [&>table]:border-gray-200
 
-                      [&>table>thead]:bg-gray-50
-                      [&>table>thead>tr]:border-b
-                      [&>table>thead>tr]:border-gray-200
+                        [&>table>thead]:bg-gray-50
+                        [&>table>thead>tr]:border-b
+                        [&>table>thead>tr]:border-gray-200
 
-                      [&>table>thead>tr>th]:px-6
-                      [&>table>thead>tr>th]:py-3
-                      [&>table>thead>tr>th]:text-left
-                      [&>table>thead>tr>th]:font-semibold
-                      [&>table>thead>tr>th]:text-gray-900
-                      [&>table>thead>tr>th]:text-sm
-                      [&>table>thead>tr>th]:uppercase
-                      [&>table>thead>tr>th]:tracking-wider
+                        [&>table>thead>tr>th]:px-6
+                        [&>table>thead>tr>th]:py-3
+                        [&>table>thead>tr>th]:text-left
+                        [&>table>thead>tr>th]:font-semibold
+                        [&>table>thead>tr>th]:text-gray-900
+                        [&>table>thead>tr>th]:text-sm
+                        [&>table>thead>tr>th]:uppercase
+                        [&>table>thead>tr>th]:tracking-wider
 
-                      [&>table>tbody>tr]:border-b
-                      [&>table>tbody>tr]:border-gray-200
-                      [&>table>tbody>tr]:last:border-b-0
-                      [&>table>tbody>tr:hover]:bg-gray-50
+                        [&>table>tbody>tr]:border-b
+                        [&>table>tbody>tr]:border-gray-200
+                        [&>table>tbody>tr]:last:border-b-0
+                        [&>table>tbody>tr:hover]:bg-gray-50
 
-                      [&>table>tbody>tr>td]:px-6
-                      [&>table>tbody>tr>td]:py-4
-                      [&>table>tbody>tr>td]:text-sm
-                      [&>table>tbody>tr>td]:text-gray-700
-                      [&>table>tbody>tr>td]:whitespace-normal
+                        [&>table>tbody>tr>td]:px-6
+                        [&>table>tbody>tr>td]:py-4
+                        [&>table>tbody>tr>td]:text-sm
+                        [&>table>tbody>tr>td]:text-gray-700
+                        [&>table>tbody>tr>td]:whitespace-normal
 
-                      [&>table>tbody>tr>td:first-child]:font-medium
-                      [&>table>tbody>tr>td:first-child]:text-gray-900
+                        [&>table>tbody>tr>td:first-child]:font-medium
+                        [&>table>tbody>tr>td:first-child]:text-gray-900
 
-                      [&>table>tfoot]:bg-gray-50
-                      [&>table>tfoot>tr]:border-t
-                      [&>table>tfoot>tr]:border-gray-200
-                      [&>table>tfoot>tr>td]:px-6
-                      [&>table>tfoot>tr>td]:py-3
-                      [&>table>tfoot>tr>td]:text-sm
-                      [&>table>tfoot>tr>td]:font-semibold
+                        [&>table>tfoot]:bg-gray-50
+                        [&>table>tfoot>tr]:border-t
+                        [&>table>tfoot>tr]:border-gray-200
+                        [&>table>tfoot>tr>td]:px-6
+                        [&>table>tfoot>tr>td]:py-3
+                        [&>table>tfoot>tr>td]:text-sm
+                        [&>table>tfoot>tr>td]:font-semibold
 
-                      [&>*:first-child]:mt-0
-                      [&>*:last-child]:mb-0
-                    "
-                  />
+                        [&>*:first-child]:mt-0
+                        [&>*:last-child]:mb-0
+                        max-h-[300px]
+                        overflow-hidden
+                        transition-[max-height]
+                        duration-500
+                        ease-in-out
+                      "
+                    />
+                    
+                    <!-- Gradient Overlay -->
+                    <div 
+                      id="description-overlay"
+                      class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent pointer-events-none transition-opacity duration-300"
+                    ></div>
+                    
+                    <!-- Show More Button -->
+                    <button
+                      id="show-more-btn"
+                      class="mt-4 w-full py-2 px-4 text-sm font-medium text-gray-600 hover:text-gray-900 
+                             border border-gray-200 rounded-lg hover:bg-gray-50 transition-all duration-200
+                             flex items-center justify-center gap-2"
+                      aria-expanded="false"
+                    >
+                      <span id="show-more-text">Show More</span>
+                      <svg 
+                        id="show-more-icon"
+                        class="w-4 h-4 transition-transform duration-200"
+                        viewBox="0 0 24 24" 
+                        fill="none" 
+                        stroke="currentColor" 
+                        stroke-width="2"
+                      >
+                        <path d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+                  </div>
                 </div>
 
                 <!-- Key Features List -->
@@ -1124,5 +1159,92 @@ const initialCurrency = 'USD'; // Or get from store/session
   
   .text-yellow-400 {
     animation: starFill 0.3s ease-out forwards;
+  }
+</style>
+
+<script>
+  function initializeShowMore() {
+    const content = document.getElementById('description-content');
+    const overlay = document.getElementById('description-overlay');
+    const button = document.getElementById('show-more-btn');
+    const buttonText = document.getElementById('show-more-text');
+    const buttonIcon = document.getElementById('show-more-icon');
+    
+    if (!content || !overlay || !button || !buttonText || !buttonIcon) return;
+
+    // Check if content needs show more button
+    const needsShowMore = content.scrollHeight > 300;
+    
+    if (!needsShowMore) {
+      overlay.style.display = 'none';
+      button.style.display = 'none';
+      content.style.maxHeight = 'none';
+      return;
+    }
+
+    let isExpanded = false;
+
+    button.addEventListener('click', () => {
+      isExpanded = !isExpanded;
+      
+      if (isExpanded) {
+        // Expand
+        content.style.maxHeight = content.scrollHeight + 'px';
+        overlay.style.opacity = '0';
+        buttonText.textContent = 'Show Less';
+        buttonIcon.style.transform = 'rotate(180deg)';
+        button.setAttribute('aria-expanded', 'true');
+      } else {
+        // Collapse
+        content.style.maxHeight = '300px';
+        overlay.style.opacity = '1';
+        buttonText.textContent = 'Show More';
+        buttonIcon.style.transform = 'rotate(0)';
+        button.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Set initial state
+    content.style.maxHeight = '300px';
+    overlay.style.opacity = '1';
+    button.style.display = needsShowMore ? 'flex' : 'none';
+
+    // Add intersection observer for animation
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            content.style.opacity = '1';
+            content.style.transform = 'translateY(0)';
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(content);
+  }
+
+  // Initialize on page load
+  document.addEventListener('DOMContentLoaded', initializeShowMore);
+
+  // Re-initialize on view transitions
+  document.addEventListener('astro:page-load', initializeShowMore);
+</script>
+
+<style>
+  #description-content {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  #show-more-btn:hover #show-more-icon {
+    transform: translateY(2px);
+  }
+
+  /* Add specific transition for max-height */
+  .expanded {
+    max-height: none !important;
   }
 </style>

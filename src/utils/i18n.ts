@@ -20,17 +20,20 @@ export function getLangFromUrl(url: URL): string {
   // Default to 'en' if no valid language found
   return 'en';
 }
+
 const theme = import.meta.env.THEME || 'default';
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'default';
 
 export async function useTranslations(lang: string) {
   let translations;
   try {
-    // Dynamic import of language files
-    translations = await import(`../themes/${theme}/data/index_${lang}.json`);
+    // Correct path including themes/${theme}
+    translations = await import(`../websites/${siteName}/themes/${theme}/data/index_${lang}.json`);
     return translations;
   } catch (e) {
     console.warn(`Translation file for ${lang} not found, falling back to English`);
-    translations = await import(`../themes/${theme}/data/index_en.json`);
+    // Fallback to English using the correct path
+    translations = await import(`../websites/${siteName}/themes/${theme}/data/index_en.json`);
     return translations;
   }
 }

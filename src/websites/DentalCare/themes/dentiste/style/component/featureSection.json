@@ -1,0 +1,79 @@
+{
+  "section": {
+    "container": "relative py-20 px-4 bg-white"
+  },
+  "content": {
+    "container": "max-w-7xl mx-auto",
+    "header": {
+      "container": "text-center mb-16",
+      "title": "text-3xl md:text-4xl font-bold mb-6",
+      "subtitle": "inline-block px-4 py-1.5 mb-6 text-sm font-semibold bg-[#0a91b1]/20 text-[#0a91b1] rounded-full border border-[#0a91b1]/30",
+      "description": "text-lg text-gray-600 max-w-3xl mx-auto mb-12",
+      "divider": "w-20 h-1 bg-[#0a91b1] mx-auto"
+    }
+  },
+  "featureCard": {
+    "container": "bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300",
+    "iconContainer": "w-12 h-12 bg-[#0a91b1]/10 rounded-lg flex items-center justify-center mb-4",
+    "icon": "w-6 h-6 text-[#0a91b1]",
+    "title": "text-xl font-bold mb-3",
+    "description": "text-gray-600 mb-4",
+    "link": "inline-flex items-center text-[#0a91b1] font-medium hover:text-[#097d99]"
+  },
+  "dashboard": {
+    "container": "mb-24 relative",
+    "header": "bg-gradient-to-r from-[#0a91b1] to-[#0c7d97] p-4",
+    "content": "bg-gray-50 p-6",
+    "sidebar": "col-span-3 bg-white rounded-xl shadow-sm p-4 border border-gray-100",
+    "mainContent": "col-span-9 space-y-6",
+    "card": "bg-white rounded-xl p-4 border border-gray-100 shadow-sm"
+  },
+  "animations": {
+    "blob": {
+      "keyframes": [
+        { "transform": "translate(-50%, -50%) scale(1) rotate(0deg)", "percentage": 0 },
+        { "transform": "translate(-50%, -50%) scale(1.1) rotate(120deg)", "percentage": 33 },
+        { "transform": "translate(-50%, -50%) scale(0.9) rotate(240deg)", "percentage": 66 },
+        { "transform": "translate(-50%, -50%) scale(1) rotate(360deg)", "percentage": 100 }
+      ],
+      "duration": "20s",
+      "timing": "infinite linear"
+    },
+    "float": {
+      "keyframes": [
+        { "transform": "translateY(0)", "percentage": 0 },
+        { "transform": "translateY(-10px)", "percentage": 50 },
+        { "transform": "translateY(0)", "percentage": 100 }
+      ],
+      "duration": "6s",
+      "timing": "ease-in-out infinite"
+    },
+    "pulse": {
+      "keyframes": [
+        { "transform": "scale(0.8)", "opacity": "0.5", "percentage": 0 },
+        { "transform": "scale(1.2)", "opacity": "1", "percentage": 50 },
+        { "transform": "scale(0.8)", "opacity": "0.5", "percentage": 100 }
+      ],
+      "duration": "2s",
+      "timing": "infinite"
+    },
+    "typing": {
+      "keyframes": [
+        { "transform": "translateY(0)", "percentage": 0 },
+        { "transform": "translateY(-4px)", "percentage": 50 },
+        { "transform": "translateY(0)", "percentage": 100 }
+      ],
+      "duration": "1s",
+      "timing": "infinite ease-in-out"
+    },
+    "delays": {
+      "delay1000": "1s",
+      "delay2000": "2s",
+      "delay4000": "4s"
+    }
+  },
+  "effects": {
+    "backdropBlur": "backdrop-filter: blur(8px);",
+    "hoverTranslate": "transform: translateY(-2px);"
+  }
+} 

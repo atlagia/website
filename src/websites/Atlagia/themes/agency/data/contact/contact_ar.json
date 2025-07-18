@@ -1,0 +1,67 @@
+{
+  "hero": {
+    "subtitle": "تواصل معنا",
+    "title": "دعنا نتحدث عن عملك",
+    "description": "لديك أسئلة حول حلولنا المدعومة بالذكاء الاصطناعي؟ نحن هنا لمساعدتك في تحسين وتنمية عملك التجاري الإلكتروني."
+  },
+  "contactInfo": [
+    {
+      "icon": "Mail",
+      "title": "راسلنا",
+      "content": "support@atalsia.com",
+      "description": "فريقنا الودود هنا للمساعدة.",
+      "link": "mailto:support@atalsia.com"
+    },
+    {
+      "icon": "Phone",
+      "title": "اتصل بنا",
+      "content": "+1 2035 472 248",
+      "description": "من الاثنين إلى الجمعة من 9 صباحاً حتى 6 مساءً.",
+      "link": "tel:+12035472248"
+    },
+    {
+      "icon": "MapPin",
+      "title": "المكتب",
+      "content": "لندن، المملكة المتحدة",
+      "description": "124 شارع المدينة",
+      "link": "https://maps.google.com/maps?q=124 City Road, London, United Kingdom"
+    }
+  ],
+  "form": {
+    "title": "أرسل لنا رسالة",
+    "fields": {
+      "firstName": {
+        "label": "الاسم الأول",
+        "placeholder": "أدخل اسمك الأول"
+      },
+      "lastName": {
+        "label": "الاسم الأخير",
+        "placeholder": "أدخل اسمك الأخير"
+      },
+      "email": {
+        "label": "البريد الإلكتروني",
+        "placeholder": "أدخل بريدك الإلكتروني"
+      },
+      "subject": {
+        "label": "الموضوع",
+        "placeholder": "أدخل الموضوع"
+      },
+      "message": {
+        "label": "الرسالة",
+        "placeholder": "أدخل رسالتك"
+      }
+    },
+    "submitButton": "إرسال الرسالة"
+  },
+  "support": {
+    "hours": {
+      "title": "ساعات الدعم",
+      "content": "الاثنين - الجمعة، 9 صباحاً - 6 مساءً (بتوقيت جرينتش)"
+    },
+    "additional": {
+      "title": "معلومات اتصال إضافية",
+      "description": "للاستفسارات العامة:",
+      "email": "contact@atalsia.com"
+    }
+  }
+} 

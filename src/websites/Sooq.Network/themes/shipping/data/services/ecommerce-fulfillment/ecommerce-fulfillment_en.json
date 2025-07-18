@@ -1,0 +1,42 @@
+{
+  "hero": {
+    "title": "eCommerce Fulfillment",
+    "subtitle": "Scale Your Online Business",
+    "description": "Streamline your eCommerce operations with our end-to-end fulfillment solutions. From warehousing to picking, packing, and shipping, we handle it all so you can focus on growing your business.",
+    "heroIcon": "Package",
+    "heroAnimation": "pulse",
+    "image": ""
+  },
+  "overview": {
+    "title": "Why Choose Our eCommerce Fulfillment?",
+    "description": "Our comprehensive eCommerce fulfillment service integrates seamlessly with your online store, automating order processing and providing real-time inventory management.",
+    "features": [
+      {
+        "icon": "package",
+        "title": "Warehouse Management",
+        "description": "State-of-the-art facilities with climate control and security for safe storage of your products."
+      },
+      {
+        "icon": "barcode",
+        "title": "Order Processing",
+        "description": "Automated picking, packing, and shipping with quality checks at every step."
+      },
+      {
+        "icon": "layers",
+        "title": "Inventory Tracking",
+        "description": "Real-time inventory management with automatic restock notifications."
+      },
+      {
+        "icon": "shopping-cart",
+        "title": "Store Integration",
+        "description": "Seamless integration with major eCommerce platforms like Shopify, WooCommerce, and Amazon."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Streamline Your eCommerce Operations?",
+    "description": "Get in touch to learn how our fulfillment solutions can help you scale while reducing costs.",
+    "buttonText": "Get Started",
+    "buttonLink": "/quote"
+  }
+} 

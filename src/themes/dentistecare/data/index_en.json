@@ -1,0 +1,526 @@
+{
+  "siteTitle": "Atlagia DentalCare - All-in-One Dental Management System",
+  "siteDescription": "Complete dental management solution with integrated AI assistant, patient management, appointments, and comprehensive practice tools.",
+  "sections": [
+    {
+      "type": "welcomeSection",
+      "badge": "AI-Powered Dental Management",
+      "title": "Complete Dental Practice <span class=\"dental-highlight\">Management</span>",
+      "description": "Streamline your dental practice with our all-in-one system. Featuring integrated AI assistant, patient management, appointment scheduling, and comprehensive treatment planning tools for modern dental practices.",
+      "blogLinkText": "Explore Features",
+      "getStartedText": "Free Demo",
+      "getStartedLink": "/en/demo",
+      "blogLink": "/features",
+      "heroImage": "https://cdn.atlagia.com/Atlagia_DentalCare_Pro_Video_Request.mp4",
+      "partnerLogos": [
+        {
+          "src": "https://cdn.atlagia.com/trustpilot-logo.png",
+          "alt": "Trusted by Dental Practices"
+        },
+        {
+          "src": "https://cdn.atlagia.com/Google-Review-Logo.png",
+          "alt": "5-Star Rated"
+        }
+      ]
+    },
+    {
+      "type": "aboutSection",
+      "subtitle": "ABOUT OUR SYSTEM",
+      "title": "Modern Dental Practice Management",
+      "description": "Atlagia DentalCare Pro is a comprehensive dental practice management system designed to streamline your operations, enhance patient care, and boost practice efficiency. Our platform combines cutting-edge technology with user-friendly interfaces to transform how dental practices operate.",
+      "image": "https://cdn.atlagia.com/AI_Dental_Practice_Video_Creation.mp4",
+      "features": [
+        {
+          "title": "Simplified Practice Management",
+          "description": "Handle appointments, patient records, billing, and staff scheduling all in one intuitive interface.",
+          "icon": "<path d='M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/>"
+        },
+        {
+          "title": "AI-Powered Diagnostics",
+          "description": "Our AI assistant helps identify potential issues from X-rays and images, suggesting appropriate treatments.",
+          "icon": "<path d='M9.5 2C7.01472 2 5 4.01472 5 6.5C5 7.19871 5.14929 7.86196 5.41484 8.46384C3.43536 9.63192 2 11.6948 2 14C2 16.3981 3.4292 18.5138 5.49914 19.6573C5.1893 20.1596 5 20.7597 5 21.4C5 23.3882 6.61177 25 8.6 25C9.99469 25 11.1957 24.1955 11.7315 23H15.2685C15.8043 24.1955 17.0053 25 18.4 25C20.3882 25 22 23.3882 22 21.4C22 20.7597 21.8107 20.1596 21.5009 19.6573C23.5708 18.5138 25 16.3981 25 14C25 11.6948 23.5646 9.63192 21.5852 8.46384C21.8507 7.86196 22 7.19871 22 6.5C22 4.01472 19.9853 2 17.5 2C15.6978 2 14.1343 3.12573 13.5177 4.74856C13.1841 4.66294 12.8371 4.62 12.4824 4.62C12.1276 4.62 11.7807 4.66294 11.447 4.74856C10.8305 3.12573 9.2675 2 7.46534 2H9.5Z' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/>"
+        },
+        {
+          "title": "Patient Engagement Tools",
+          "description": "Automatic appointment reminders, customized care instructions, and a secure patient portal for better communication.",
+          "icon": "<path d='M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8z' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/>"
+        },
+        {
+          "title": "Comprehensive Analytics",
+          "description": "Track practice performance, patient retention, and financial metrics with customizable dashboards and reports.",
+          "icon": "<path d='M21 21H3V3' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/><path d='M21 9L15 15L9 9L3 15' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/>"
+        }
+      ],
+      "stats": [
+        {
+          "value": "30%",
+          "label": "Time Saved on Administration"
+        },
+        {
+          "value": "45%",
+          "label": "Improved Patient Engagement"
+        },
+        {
+          "value": "15,000+",
+          "label": "Dental Practices Using Our Software"
+        },
+        {
+          "value": "99.9%",
+          "label": "System Uptime"
+        }
+      ],
+      "experienceBadge": {
+        "value": "10+",
+        "label": "Years of Innovation"
+      },
+      "ctaButton": {
+        "text": "Schedule a Demo",
+        "link": "/demo"
+      }
+    },
+    {
+      "type": "whoWeAreSection",
+      "subtitle": "THE TEAM BEHIND THE SYSTEM",
+      "title": "Dental Experts & Software Engineers Working Together",
+      "description": "Atlagia DentalCare was developed by a team of dental professionals, software engineers, and AI specialists with a shared vision: to create the most intuitive and powerful dental practice management system. We understand the unique challenges of running a modern dental practice because we've been there.",
+      "image": "https://cdn.atlagia.com/dental-software-team.jpg",
+      "stats": [
+        {
+          "value": "15+",
+          "label": "Years in Dental Software"
+        },
+        {
+          "value": "82%",
+          "label": "Team Members with Dental Background"
+        },
+        {
+          "value": "24/7",
+          "label": "Customer Support"
+        },
+        {
+          "value": "4x",
+          "label": "Faster Implementation"
+        }
+      ],
+      "trustIndicators": [
+        {
+          "icon": "<path d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/>",
+          "text": "Industry-Leading Expertise"
+        },
+        {
+          "icon": "<path d='M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/>",
+          "text": "Dental-First Design Philosophy"
+        },
+        {
+          "icon": "<path d='M9.5 2C7.01472 2 5 4.01472 5 6.5C5 7.19871 5.14929 7.86196 5.41484 8.46384C3.43536 9.63192 2 11.6948 2 14C2 16.3981 3.4292 18.5138 5.49914 19.6573C5.1893 20.1596 5 20.7597 5 21.4C5 23.3882 6.61177 25 8.6 25C9.99469 25 11.1957 24.1955 11.7315 23H15.2685C15.8043 24.1955 17.0053 25 18.4 25C20.3882 25 22 23.3882 22 21.4C22 20.7597 21.8107 20.1596 21.5009 19.6573C23.5708 18.5138 25 16.3981 25 14C25 11.6948 23.5646 9.63192 21.5852 8.46384C21.8507 7.86196 22 7.19871 22 6.5C22 4.01472 19.9853 2 17.5 2C15.6978 2 14.1343 3.12573 13.5177 4.74856C13.1841 4.66294 12.8371 4.62 12.4824 4.62C12.1276 4.62 11.7807 4.66294 11.447 4.74856C10.8305 3.12573 9.2675 2 7.46534 2H9.5Z' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/>",
+          "text": "Continuous AI Innovation"
+        }
+      ],
+      "ctaButton": {
+        "text": "Meet Our Team",
+        "link": "/team"
+      }
+    },
+    {
+      "type": "aiAgentSection",
+      "subtitle": "AI-POWERED WORKFLOW",
+      "title": "Your Clinic's Brain, <span class='text-teal-400'>Now on WhatsApp</span>",
+      "description": "Delegate your clinic's operations to an intelligent AI assistant. Simply send a command via WhatsApp to manage appointments, access real-time analytics, or analyze patient media. It's a seamless extension of your practice, available 24/7.",
+      "features": [
+        {
+          "title": "WhatsApp Integration",
+          "description": "Manage your practice on the go. Just send a message.",
+          "icon": "whatsapp"
+        },
+        {
+          "title": "Automated Appointments",
+          "description": "Tell the AI to book a patient, and it's done.",
+          "icon": "calendar"
+        },
+        {
+          "title": "Instant Analytics",
+          "description": "Ask for your daily, weekly, or monthly performance.",
+          "icon": "analytics"
+        },
+        {
+          "title": "Multimedia Processing",
+          "description": "Analyze patient images, videos, or audio notes instantly.",
+          "icon": "multimedia"
+        }
+      ],
+      "ctaButton": {
+        "text": "See AI in Action",
+        "link": "/demo"
+      }
+    },
+    {
+      "type": "visionSection",
+      "headline": "Empowering Every Dental Practice with Intelligent, Effortless Care",
+      "description": "At Atlagia, we believe technology should empower—not replace—human expertise. Our platform bridges the gap between advanced AI and compassionate care, making world-class dental management accessible, efficient, and personal for every clinic.",
+      "illustration": "https://cdn.atlagia.com/vision-illustration-light.svg",
+      "cards": [
+        {
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='w-8 h-8' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M13 16h-1v-4h-1m4 0h-1v-4h-1m-4 0h-1v-4h-1'/></svg>",
+          "title": "Human-Centered AI",
+          "description": "AI that supports, not replaces, the expertise of dental professionals."
+        },
+        {
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='w-8 h-8' fill='none' viewBox='0 0 24 24' stroke='currentColor'><circle cx='12' cy='12' r='10' stroke-width='2'/><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8 12h8m-4-4v8'/></svg>",
+          "title": "Accessible Innovation",
+          "description": "Making advanced dental technology available to every clinic."
+        },
+        {
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='w-8 h-8' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 8v4l3 3'/></svg>",
+          "title": "Effortless Workflow",
+          "description": "Streamlining daily operations so you can focus on patient care."
+        },
+        {
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='w-8 h-8' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 17v-2a4 4 0 014-4h2a4 4 0 014 4v2'/></svg>",
+          "title": "Trusted Partnership",
+          "description": "We grow with you, supporting your practice at every step."
+        }
+      ]
+    },
+    {
+      "type": "bannerSection",
+      "subtitle": "PLATFORM OVERVIEW",
+      "headline": "All-in-One Dental Practice Management",
+      "description": "Streamline your entire dental practice with our comprehensive management system. From appointment scheduling to patient records, billing, and AI-powered diagnosis assistance.",
+      "backgroundImage": "/images/banner-bg.jpg",
+      "button1Text": "Schedule Demo",
+      "button1Link": "/demo",
+      "button2Text": "View Features",
+      "button2Link": "/features",
+      "trustBadges": [
+        "HIPAA Compliant",
+        "End-to-End Encryption",
+        "Daily Backups",
+        "24/7 Support"
+      ],
+      "cards": [
+        {
+          "title": "Patient Management",
+          "description": "Comprehensive patient records with medical history, treatment plans, and appointment tracking in one secure system.",
+          "icon": "<path d='M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8z' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/>"
+        },
+        {
+          "title": "AI Diagnostic Assistant",
+          "description": "Advanced AI algorithms to assist with diagnosis, treatment planning, and image analysis for improved patient care.",
+          "icon": "<path d='M9.5 2C7.01472 2 5 4.01472 5 6.5C5 7.19871 5.14929 7.86196 5.41484 8.46384C3.43536 9.63192 2 11.6948 2 14C2 16.3981 3.4292 18.5138 5.49914 19.6573C5.1893 20.1596 5 20.7597 5 21.4C5 23.3882 6.61177 25 8.6 25C9.99469 25 11.1957 24.1955 11.7315 23H15.2685C15.8043 24.1955 17.0053 25 18.4 25C20.3882 25 22 23.3882 22 21.4C22 20.7597 21.8107 20.1596 21.5009 19.6573C23.5708 18.5138 25 16.3981 25 14C25 11.6948 23.5646 9.63192 21.5852 8.46384C21.8507 7.86196 22 7.19871 22 6.5C22 4.01472 19.9853 2 17.5 2C15.6978 2 14.1343 3.12573 13.5177 4.74856C13.1841 4.66294 12.8371 4.62 12.4824 4.62C12.1276 4.62 11.7807 4.66294 11.447 4.74856C10.8305 3.12573 9.2675 2 7.46534 2H9.5Z' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/>"
+        },
+        {
+          "title": "Appointment Scheduling",
+          "description": "Intelligent scheduling system with automated reminders, online booking, and conflict prevention.",
+          "icon": "<rect x='3' y='4' width='18' height='18' rx='2' ry='2' stroke='currentColor' stroke-width='2'/><line x1='16' y1='2' x2='16' y2='6' stroke='currentColor' stroke-width='2' stroke-linecap='round'/><line x1='8' y1='2' x2='8' y2='6' stroke='currentColor' stroke-width='2' stroke-linecap='round'/><line x1='3' y1='10' x2='21' y2='10' stroke='currentColor' stroke-width='2' stroke-linecap='round'/>"
+        },
+        {
+          "title": "Billing & Insurance",
+          "description": "Streamlined billing processes with insurance verification, claim submission, and payment tracking.",
+          "icon": "<path d='M21 14H3' stroke='currentColor' stroke-width='2' stroke-linecap='round'/><path d='M21 6H3' stroke='currentColor' stroke-width='2' stroke-linecap='round'/><path d='M13 10H3' stroke='currentColor' stroke-width='2' stroke-linecap='round'/><path d='M13 18H3' stroke='currentColor' stroke-width='2' stroke-linecap='round'/><path d='M18 18L21 15L18 12' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/>"
+        },
+        {
+          "title": "Dental Imaging",
+          "description": "Integrated imaging solution for X-rays, intraoral photos, and 3D scans with AI-assisted analysis.",
+          "icon": "<rect x='3' y='3' width='18' height='18' rx='2' ry='2' stroke='currentColor' stroke-width='2'/><circle cx='9' cy='9' r='2' stroke='currentColor' stroke-width='2'/><path d='M21 15L15.34 9.34M13.5 7.5l-2-2' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/>"
+        },
+        {
+          "title": "Analytics & Reporting",
+          "description": "Comprehensive analytics dashboard for practice performance, patient trends, and financial insights.",
+          "icon": "<path d='M21 21H3V3' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/><path d='M21 9L15 15L9 9L3 15' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/>"
+        }
+      ]
+    },
+    {
+      "type": "benefitsSection",
+      "subtitle": "SYSTEM FEATURES",
+      "title": "Why Choose Atlagia DentalCare",
+      "description": "Our comprehensive dental management system offers powerful tools designed specifically for modern dental practices.",
+      "benefits": [
+        {
+          "title": "Intelligent Appointment System",
+          "description": "Smart scheduling with AI-powered optimization, automated reminders, and online booking capabilities to reduce no-shows by up to 30%.",
+          "icon": "<rect x='3' y='4' width='18' height='18' rx='2' ry='2' stroke='currentColor' stroke-width='2'/><line x1='16' y1='2' x2='16' y2='6' stroke='currentColor' stroke-width='2' stroke-linecap='round'/><line x1='8' y1='2' x2='8' y2='6' stroke='currentColor' stroke-width='2' stroke-linecap='round'/><line x1='3' y1='10' x2='21' y2='10' stroke='currentColor' stroke-width='2' stroke-linecap='round'/><rect x='8' y='14' width='3' height='3' rx='0.5' fill='currentColor'/>"
+        },
+        {
+          "title": "Advanced Patient Management",
+          "description": "Comprehensive patient records with complete dental history, treatment plans, digital imaging integration, and secure patient portal access.",
+          "icon": "<path d='M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8z' stroke='currentColor' stroke-width='2' stroke-linecap='round'/><circle cx='19' cy='8' r='2' stroke='currentColor' stroke-width='2'/><path d='M19 4.5V6' stroke='currentColor' stroke-width='2' stroke-linecap='round'/><path d='M19 10V11.5' stroke='currentColor' stroke-width='2' stroke-linecap='round'/><path d='M16.5 5.5L17.5 6.5' stroke='currentColor' stroke-width='2' stroke-linecap='round'/>"
+        },
+        {
+          "title": "AI-Powered Diagnosis",
+          "description": "Cutting-edge artificial intelligence that assists in image analysis, treatment planning, and clinical decision support for more accurate diagnoses.",
+          "icon": "<path d='M9.5 2C7.01472 2 5 4.01472 5 6.5C5 7.19871 5.14929 7.86196 5.41484 8.46384C3.43536 9.63192 2 11.6948 2 14C2 16.3981 3.4292 18.5138 5.49914 19.6573C5.1893 20.1596 5 20.7597 5 21.4C5 23.3882 6.61177 25 8.6 25C9.99469 25 11.1957 24.1955 11.7315 23H15.2685C15.8043 24.1955 17.0053 25 18.4 25C20.3882 25 22 23.3882 22 21.4C22 20.7597 21.8107 20.1596 21.5009 19.6573C23.5708 18.5138 25 16.3981 25 14C25 11.6948 23.5646 9.63192 21.5852 8.46384C21.8507 7.86196 22 7.19871 22 6.5C22 4.01472 19.9853 2 17.5 2C15.6978 2 14.1343 3.12573 13.5177 4.74856C13.1841 4.66294 12.8371 4.62 12.4824 4.62C12.1276 4.62 11.7807 4.66294 11.447 4.74856C10.8305 3.12573 9.2675 2 7.46534 2H9.5Z' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/>"
+        },
+        {
+          "title": "Real-time Analytics",
+          "description": "Comprehensive business intelligence with customizable dashboards, KPI tracking, and predictive analytics to optimize practice performance.",
+          "icon": "<path d='M21 21H3V3' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/><path d='M21 9L15 15L9 9L3 15' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/>"
+        },
+        {
+          "title": "Secure Cloud Storage",
+          "description": "HIPAA-compliant cloud infrastructure with end-to-end encryption, automated backups, and disaster recovery for complete data security.",
+          "icon": "<ellipse cx='12' cy='5' rx='9' ry='3' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/><path d='M21 12C21 13.66 16.97 15 12 15C7.03 15 3 13.66 3 12' stroke='currentColor' stroke-width='2'/><path d='M3 5V19C3 20.66 7.03 22 12 22C16.97 22 21 20.66 21 19V5' stroke='currentColor' stroke-width='2'/>"
+        },
+        {
+          "title": "Seamless Integrations",
+          "description": "Connect with other healthcare systems, insurance providers, and third-party applications through our open API architecture.",
+          "icon": "<path d='M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/><path d='M8 12h8' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/>"
+        }
+      ],
+      "stats": [
+        {
+          "value": "30%",
+          "label": "Reduction in Administrative Work"
+        },
+        {
+          "value": "99.9%",
+          "label": "System Uptime"
+        },
+        {
+          "value": "15,000+",
+          "label": "Dental Practices"
+        },
+        {
+          "value": "24/7",
+          "label": "Technical Support"
+        }
+      ]
+    },
+    {
+      "type": "reviewsSection",
+      "reviews": [
+        {
+          "rating": 5,
+          "content": "The team at DentCare is exceptional. They made my dental experience comfortable and stress-free. The results of my treatment exceeded my expectations!",
+          "author": "Sarah Johnson",
+          "position": "Patient"
+        },
+        {
+          "rating": 5,
+          "content": "I've never felt more at ease at a dental office. The staff is friendly, professional, and truly cares about patient comfort. Highly recommend!",
+          "author": "Michael Brown",
+          "position": "Patient"
+        },
+        {
+          "rating": 5,
+          "content": "Outstanding dental care! The modern technology and skilled team made my treatment quick and painless. My smile has never looked better!",
+          "author": "Emily Davis",
+          "position": "Patient"
+        }
+      ]
+    },
+    {
+      "type": "pricingSection",
+      "subtitle": "PRICING PLANS",
+      "title": "Choose the Right Plan for Your Practice",
+      "description": "Flexible subscription options designed to fit practices of all sizes. All plans include our core practice management features with varying levels of advanced functionality.",
+      "insuranceInfo": {
+        "text": "Our software integrates seamlessly with these major systems",
+        "providers": ["Dentrix", "Open Dental", "Eaglesoft", "Curve Dental", "Patterson"]
+      },
+      "comparisonFeatures": [
+        "Patient Records Management",
+        "Appointment Scheduling",
+        "Treatment Planning",
+        "Billing & Insurance",
+        "AI Diagnostics Assistant",
+        "Patient Portal",
+        "Multi-Location Support",
+        "Advanced Analytics"
+      ],
+      "plans": [
+        {
+          "name": "Starter",
+          "price": "$99",
+          "period": "per month",
+          "highlightedFeature": "Perfect for new or small practices",
+          "userLimit": "Up to 3 users",
+          "buttonText": "Start Free Trial",
+          "buttonLink": "/trial",
+          "features": [
+            {
+              "text": "Patient Records Management",
+              "included": true
+            },
+            {
+              "text": "Appointment Scheduling",
+              "included": true
+            },
+            {
+              "text": "Treatment Planning",
+              "included": true
+            },
+            {
+              "text": "Billing & Insurance",
+              "included": true
+            },
+            {
+              "text": "AI Diagnostics Assistant",
+              "included": false
+            },
+            {
+              "text": "Patient Portal",
+              "included": false
+            },
+            {
+              "text": "Multi-Location Support",
+              "included": false
+            },
+            {
+              "text": "Advanced Analytics",
+              "included": false
+            }
+          ]
+        },
+        {
+          "name": "Professional",
+          "price": "$249",
+          "period": "per month",
+          "isPopular": true,
+          "highlightedFeature": "Ideal for established practices",
+          "userLimit": "Up to 10 users",
+          "buttonText": "Start Free Trial",
+          "buttonLink": "/trial",
+          "features": [
+            {
+              "text": "Patient Records Management",
+              "included": true
+            },
+            {
+              "text": "Appointment Scheduling",
+              "included": true
+            },
+            {
+              "text": "Treatment Planning",
+              "included": true
+            },
+            {
+              "text": "Billing & Insurance",
+              "included": true
+            },
+            {
+              "text": "AI Diagnostics Assistant",
+              "included": true
+            },
+            {
+              "text": "Patient Portal",
+              "included": true
+            },
+            {
+              "text": "Multi-Location Support",
+              "included": false
+            },
+            {
+              "text": "Advanced Analytics",
+              "included": false
+            }
+          ]
+        },
+        {
+          "name": "Enterprise",
+          "price": "$499",
+          "period": "per month",
+          "highlightedFeature": "For growing multi-location practices",
+          "userLimit": "Unlimited users",
+          "buttonText": "Contact Sales",
+          "buttonLink": "/contact-sales",
+          "features": [
+            {
+              "text": "Patient Records Management",
+              "included": true
+            },
+            {
+              "text": "Appointment Scheduling",
+              "included": true
+            },
+            {
+              "text": "Treatment Planning",
+              "included": true
+            },
+            {
+              "text": "Billing & Insurance",
+              "included": true
+            },
+            {
+              "text": "AI Diagnostics Assistant",
+              "included": true
+            },
+            {
+              "text": "Patient Portal",
+              "included": true
+            },
+            {
+              "text": "Multi-Location Support",
+              "included": true
+            },
+            {
+              "text": "Advanced Analytics",
+              "included": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ctaSection",
+      "subtitle": "GET STARTED TODAY",
+      "title": "Transform Your Dental Practice with Atlagia DentalCare",
+      "description": "Experience how our all-in-one management system can streamline your operations, improve patient care, and increase your practice efficiency with a personalized demo.",
+      "primaryButtonText": "Schedule a Demo",
+      "primaryButtonLink": "/demo",
+      "secondaryButtonText": "View Pricing",
+      "secondaryButtonLink": "/pricing",
+      "stats": [
+        {
+          "value": "30 min",
+          "label": "Demo Duration"
+        },
+        {
+          "value": "14-day",
+          "label": "Free Trial"
+        },
+        {
+          "value": "100%",
+          "label": "No Obligation"
+        },
+        {
+          "value": "1-on-1",
+          "label": "Personalized Setup"
+        }
+      ],
+      "emergencyContact": {
+        "phone": "(555) 123-4567",
+        "hours": "Available 24/7 for technical support"
+      },
+      "trustIndicators": [
+        "No Credit Card Required",
+        "Free Implementation Support",
+        "Data Migration Assistance",
+        "Custom Training Sessions",
+        "HIPAA Compliant",
+        "Seamless Integration"
+      ]
+    },
+    {
+      "type": "emailSignupSection",
+      "subtitle": "FREE RESOURCES",
+      "title": "Enhance Your Practice Management",
+      "description": "Get exclusive access to guides, webinars, and tools designed to help you maximize efficiency and grow your dental practice with our software.",
+      "buttonText": "Get Free Resources",
+      "placeholder": "Enter your email",
+      "formType": "resource",
+      "trustBadge": {
+        "icon": "M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z",
+        "text": "Your information is secure and we'll never share it with third parties"
+      },
+      "features": [
+        "Practice efficiency guides",
+        "AI implementation strategies",
+        "Software setup tutorials",
+        "ROI calculators & tools",
+        "Patient engagement templates",
+        "Monthly webinars"
+      ]
+    }
+  ]
+}

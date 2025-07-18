@@ -1,0 +1,317 @@
+{
+  "hero": {
+    "subtitle": "PATIENT EXPERIENCE",
+    "title": "Secure Patient Portal",
+    "description": "Empower your patients with 24/7 access to their dental health information, appointment scheduling, and secure communication with your practice."
+  },
+  "overview": {
+    "title": "Modern Patient Engagement",
+    "description": "Our patient portal creates a seamless digital connection between your practice and patients, improving satisfaction, reducing administrative workload, and enhancing the quality of care.",
+    "features": [
+      {
+        "icon": "user",
+        "title": "Personal Health Records",
+        "description": "Patients access their complete dental history"
+      },
+      {
+        "icon": "calendar",
+        "title": "Appointment Management",
+        "description": "Book, reschedule, or cancel appointments online"
+      },
+      {
+        "icon": "message-square",
+        "title": "Secure Messaging",
+        "description": "HIPAA-compliant communication with your team"
+      },
+      {
+        "icon": "credit-card",
+        "title": "Online Payments",
+        "description": "Convenient bill payment and financing options"
+      }
+    ]
+  },
+  "applications": {
+    "title": "Comprehensive Patient Tools",
+    "description": "A full suite of features designed to improve the patient experience at every touchpoint",
+    "problems": [
+      {
+        "title": "Pre-Appointment Forms",
+        "description": "Digital intake and medical history updates",
+        "icon": "clipboard"
+      },
+      {
+        "title": "Treatment Plans",
+        "description": "View and accept proposed treatments",
+        "icon": "file-text"
+      },
+      {
+        "title": "Insurance Information",
+        "description": "Update and verify coverage details",
+        "icon": "shield"
+      },
+      {
+        "title": "Document Access",
+        "description": "View and download treatment records",
+        "icon": "folder"
+      },
+      {
+        "title": "Prescription Management",
+        "description": "Request refills and view medication history",
+        "icon": "pill"
+      },
+      {
+        "title": "Family Account Management",
+        "description": "Manage multiple family members from one account",
+        "icon": "users"
+      }
+    ]
+  },
+  "process": {
+    "title": "Implementation Process",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Integration Setup",
+        "description": "We connect to your practice management system"
+      },
+      {
+        "number": "02",
+        "title": "Data Migration",
+        "description": "Securely transfer patient records to the platform"
+      },
+      {
+        "number": "03",
+        "title": "Customization",
+        "description": "Configure features and branding to match your practice"
+      },
+      {
+        "number": "04",
+        "title": "Staff Training",
+        "description": "Train your team on managing the patient portal"
+      },
+      {
+        "number": "05",
+        "title": "Patient Onboarding",
+        "description": "Automated invitation process for existing patients"
+      },
+      {
+        "number": "06",
+        "title": "Ongoing Optimization",
+        "description": "Regular updates and feature enhancements"
+      }
+    ]
+  },
+  "advantages": {
+    "title": "Practice Benefits",
+    "description": "How the patient portal improves practice efficiency and patient satisfaction",
+    "benefits": [
+      {
+        "title": "60% Less Phone Traffic",
+        "description": "Reduce administrative burden with self-service options",
+        "icon": "phone-off"
+      },
+      {
+        "title": "40% Faster Collections",
+        "description": "Improve cash flow with online payment options",
+        "icon": "dollar-sign"
+      },
+      {
+        "title": "90% Paperwork Reduction",
+        "description": "Eliminate paper forms and manual data entry",
+        "icon": "trash-2"
+      },
+      {
+        "title": "25% Higher Satisfaction",
+        "description": "Meet modern patient expectations for digital access",
+        "icon": "smile"
+      }
+    ]
+  },
+  "features": {
+    "title": "Key Features",
+    "description": "Comprehensive tools for an enhanced patient experience",
+    "featureList": [
+      {
+        "title": "Mobile App Access",
+        "description": "Native iOS and Android applications",
+        "icon": "smartphone"
+      },
+      {
+        "title": "Treatment History",
+        "description": "Complete record of past procedures",
+        "icon": "file-text"
+      },
+      {
+        "title": "Digital Forms",
+        "description": "Custom forms with electronic signatures",
+        "icon": "edit"
+      },
+      {
+        "title": "Two-Way Messaging",
+        "description": "HIPAA-compliant communication platform",
+        "icon": "message-circle"
+      },
+      {
+        "title": "Appointment Reminders",
+        "description": "Automated notifications and confirmations",
+        "icon": "bell"
+      },
+      {
+        "title": "Billing & Payments",
+        "description": "View statements and pay online",
+        "icon": "credit-card"
+      },
+      {
+        "title": "Insurance Management",
+        "description": "Check benefits and update coverage",
+        "icon": "shield"
+      },
+      {
+        "title": "Educational Resources",
+        "description": "Custom content library for patient education",
+        "icon": "book-open"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Pricing Options",
+    "description": "Select the plan that fits your practice needs",
+    "options": [
+      {
+        "name": "Essentials",
+        "price": "$99",
+        "duration": "per month",
+        "includes": [
+          "Basic patient portal",
+          "Appointment scheduling",
+          "Digital forms",
+          "Secure messaging",
+          "Email support",
+          "Up to 500 active patients"
+        ]
+      },
+      {
+        "name": "Professional",
+        "price": "$199",
+        "duration": "per month",
+        "includes": [
+          "All Essentials features",
+          "Online bill payment",
+          "Treatment plan acceptance",
+          "Custom forms builder",
+          "Patient education library",
+          "Priority support",
+          "Up to 2,000 active patients"
+        ]
+      },
+      {
+        "name": "Enterprise",
+        "price": "$349",
+        "duration": "per month",
+        "includes": [
+          "All Professional features",
+          "Custom branding",
+          "Native mobile applications",
+          "Family account management",
+          "Advanced analytics",
+          "Multi-location support",
+          "Unlimited active patients",
+          "Dedicated account manager"
+        ]
+      }
+    ]
+  },
+  "integration": {
+    "title": "Seamless Integration",
+    "description": "Works with your existing practice management systems",
+    "partners": [
+      {
+        "name": "Dentrix",
+        "logo": "/images/partners/dentrix.png"
+      },
+      {
+        "name": "Eaglesoft",
+        "logo": "/images/partners/eaglesoft.png"
+      },
+      {
+        "name": "Open Dental",
+        "logo": "/images/partners/opendental.png"
+      },
+      {
+        "name": "Curve Dental",
+        "logo": "/images/partners/curve.png"
+      },
+      {
+        "name": "Denticon",
+        "logo": "/images/partners/denticon.png"
+      },
+      {
+        "name": "Dentimax",
+        "logo": "/images/partners/dentimax.png"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": [
+      {
+        "question": "How secure is the patient portal?",
+        "answer": "Our patient portal meets or exceeds all HIPAA security requirements with enterprise-grade encryption, secure authentication, and regular security audits. All data is encrypted both in transit and at rest, and we implement strict access controls. We also provide HIPAA Business Associate Agreements for all customers."
+      },
+      {
+        "question": "How do patients get access to the portal?",
+        "answer": "Patients receive an email invitation to activate their portal account. They set up secure credentials and can then access their information immediately. The system can automatically send invitations to your existing patient database during implementation, and your staff can easily send invitations to new patients at check-in."
+      },
+      {
+        "question": "Can patients see their x-rays and images?",
+        "answer": "Yes, the portal includes the ability to share radiographs, intraoral photos, and other diagnostic images with patients. You control which images are shared, and patients can view these securely through the portal. This feature is particularly valuable for treatment plan acceptance and patient education."
+      },
+      {
+        "question": "How does the messaging system work?",
+        "answer": "The secure messaging system allows two-way communication between patients and your practice. Messages are organized by conversation threads and can be routed to specific team members. Staff can respond through a dashboard interface, and patients receive notifications of new messages. All communications are archived for documentation purposes."
+      },
+      {
+        "question": "Will this integrate with our current practice management software?",
+        "answer": "Yes, our patient portal integrates with all major dental practice management systems including Dentrix, Eaglesoft, Open Dental, Curve, and more. The integration is bi-directional, meaning information updated in either system will synchronize automatically, ensuring data consistency across platforms."
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Customer Success Stories",
+    "reviews": [
+      {
+        "name": "Dr. David Wilson",
+        "practice": "Wilson Family Dentistry",
+        "rating": 5,
+        "comment": "Since implementing the patient portal, our front desk calls have decreased by over 60%. Patients love the convenience of booking appointments and completing forms online before their visit. The time savings for our staff has been remarkable, allowing us to focus on providing better care to patients in the office.",
+        "date": "2 months ago"
+      },
+      {
+        "name": "Amanda Torres",
+        "practice": "Office Manager, Bright Smile Dental Group",
+        "rating": 5,
+        "comment": "The online payment feature alone has transformed our collections process. We've reduced our accounts receivable by 30% and patients appreciate the convenience of paying their bills online. The custom forms builder has also eliminated our paper forms completely, saving time and reducing errors.",
+        "date": "3 months ago"
+      },
+      {
+        "name": "Dr. Priya Patel",
+        "practice": "Modern Dental Solutions",
+        "rating": 5,
+        "comment": "Our patients frequently comment on how much they appreciate the portal's messaging feature. They can ask questions without playing phone tag, and we can provide thoughtful responses when we have time. The treatment plan acceptance feature has also significantly improved our case acceptance rates.",
+        "date": "1 month ago"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Transform Your Patient Experience?",
+    "description": "Join thousands of dental practices using our platform to enhance patient engagement and streamline operations.",
+    "primaryButton": {
+      "text": "Request Demo",
+      "href": "/request-demo"
+    },
+    "secondaryButton": {
+      "text": "View Pricing",
+      "href": "/pricing"
+    }
+  }
+} 

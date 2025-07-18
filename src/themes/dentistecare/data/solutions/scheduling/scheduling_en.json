@@ -1,0 +1,317 @@
+{
+  "hero": {
+    "subtitle": "PRACTICE MANAGEMENT",
+    "title": "Intelligent Appointment Scheduling",
+    "description": "Streamline your dental practice with our AI-powered scheduling system that optimizes chair time, reduces no-shows, and improves patient satisfaction."
+  },
+  "overview": {
+    "title": "Simplify Practice Management",
+    "description": "Our scheduling solution eliminates double-bookings, balances provider workloads, and adapts to your unique practice workflow.",
+    "features": [
+      {
+        "icon": "calendar",
+        "title": "Smart Booking",
+        "description": "AI-powered scheduling optimizes your calendar automatically"
+      },
+      {
+        "icon": "users",
+        "title": "Multi-Provider Support",
+        "description": "Manage schedules for all providers from one interface"
+      },
+      {
+        "icon": "clock",
+        "title": "Real-Time Updates",
+        "description": "Instant synchronization across all devices and platforms"
+      },
+      {
+        "icon": "bell",
+        "title": "Automated Reminders",
+        "description": "Reduce no-shows with customized notifications"
+      }
+    ]
+  },
+  "applications": {
+    "title": "Designed for Your Practice",
+    "description": "Tailor-made scheduling solutions for dental practices of all sizes",
+    "problems": [
+      {
+        "title": "Solo Practitioners",
+        "description": "Streamline operations with limited staff",
+        "icon": "user"
+      },
+      {
+        "title": "Group Practices",
+        "description": "Coordinate multiple providers efficiently",
+        "icon": "users"
+      },
+      {
+        "title": "Specialty Clinics",
+        "description": "Handle complex procedure scheduling",
+        "icon": "stethoscope"
+      },
+      {
+        "title": "DSOs",
+        "description": "Manage scheduling across multiple locations",
+        "icon": "building"
+      },
+      {
+        "title": "Emergency Clinics",
+        "description": "Balance urgent cases with regular appointments",
+        "icon": "alert-circle"
+      },
+      {
+        "title": "Hybrid Practices",
+        "description": "Coordinate in-person and telehealth appointments",
+        "icon": "monitor"
+      }
+    ]
+  },
+  "process": {
+    "title": "How It Works",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Setup & Customization",
+        "description": "Configure your practice's workflow, appointment types, and provider schedules"
+      },
+      {
+        "number": "02",
+        "title": "Staff Training",
+        "description": "Comprehensive onboarding and training for your entire team"
+      },
+      {
+        "number": "03",
+        "title": "Patient Portal Integration",
+        "description": "Connect your online booking portal to your website and digital channels"
+      },
+      {
+        "number": "04",
+        "title": "Data Migration",
+        "description": "Import existing appointments and patient information"
+      },
+      {
+        "number": "05",
+        "title": "Go Live",
+        "description": "Launch your new scheduling system with real-time support"
+      },
+      {
+        "number": "06",
+        "title": "Optimization",
+        "description": "Regular reviews and adjustments to maximize efficiency"
+      }
+    ]
+  },
+  "advantages": {
+    "title": "Business Benefits",
+    "description": "How our scheduling solution impacts your bottom line",
+    "benefits": [
+      {
+        "title": "30% Less Chair Downtime",
+        "description": "Maximize productive hours with optimized scheduling",
+        "icon": "trending-up"
+      },
+      {
+        "title": "40% Fewer No-Shows",
+        "description": "Automated reminders and easy rescheduling",
+        "icon": "check-circle"
+      },
+      {
+        "title": "15+ Hours Saved Weekly",
+        "description": "Reduce administrative burden on your team",
+        "icon": "clock"
+      },
+      {
+        "title": "98% Patient Satisfaction",
+        "description": "Convenient booking improves experience",
+        "icon": "heart"
+      }
+    ]
+  },
+  "features": {
+    "title": "Key Features",
+    "description": "Powerful tools designed specifically for dental practices",
+    "featureList": [
+      {
+        "title": "Online Booking",
+        "description": "Let patients book 24/7 from any device",
+        "icon": "globe"
+      },
+      {
+        "title": "Chair Time Optimization",
+        "description": "Intelligent algorithms to maximize productivity",
+        "icon": "cpu"
+      },
+      {
+        "title": "Provider Preferences",
+        "description": "Set unique rules for each practitioner",
+        "icon": "settings"
+      },
+      {
+        "title": "Waitlist Management",
+        "description": "Automatically fill cancellations",
+        "icon": "list"
+      },
+      {
+        "title": "Recurring Appointments",
+        "description": "Schedule treatment series with one click",
+        "icon": "repeat"
+      },
+      {
+        "title": "Multi-Resource Booking",
+        "description": "Coordinate rooms, equipment, and staff",
+        "icon": "layers"
+      },
+      {
+        "title": "Calendar Sync",
+        "description": "Integrate with Google, Outlook, and Apple calendars",
+        "icon": "refresh"
+      },
+      {
+        "title": "Reporting & Analytics",
+        "description": "Track utilization, no-shows, and revenue metrics",
+        "icon": "bar-chart"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Flexible Pricing Options",
+    "description": "Choose the plan that fits your practice needs and budget",
+    "options": [
+      {
+        "name": "Essentials",
+        "price": "$99",
+        "duration": "per month",
+        "includes": [
+          "Up to 2 providers",
+          "Online booking portal",
+          "Basic appointment reminders",
+          "Email and chat support",
+          "Patient self-service portal",
+          "Standard reports"
+        ]
+      },
+      {
+        "name": "Professional",
+        "price": "$199",
+        "duration": "per month",
+        "includes": [
+          "Up to 5 providers",
+          "All Essentials features",
+          "Multi-channel reminders",
+          "Waitlist automation",
+          "Priority support",
+          "Advanced analytics",
+          "Custom appointment types"
+        ]
+      },
+      {
+        "name": "Enterprise",
+        "price": "$349",
+        "duration": "per month",
+        "includes": [
+          "Unlimited providers",
+          "All Professional features",
+          "Multiple location support",
+          "Custom integration options",
+          "Dedicated account manager",
+          "API access",
+          "Custom reporting",
+          "HIPAA-compliant backup"
+        ]
+      }
+    ]
+  },
+  "integration": {
+    "title": "Seamless Integration",
+    "description": "Works with your existing practice management systems",
+    "partners": [
+      {
+        "name": "Dentrix",
+        "logo": "/images/partners/dentrix.png"
+      },
+      {
+        "name": "Eaglesoft",
+        "logo": "/images/partners/eaglesoft.png"
+      },
+      {
+        "name": "Open Dental",
+        "logo": "/images/partners/opendental.png"
+      },
+      {
+        "name": "Curve Dental",
+        "logo": "/images/partners/curve.png"
+      },
+      {
+        "name": "Denticon",
+        "logo": "/images/partners/denticon.png"
+      },
+      {
+        "name": "Dentimax",
+        "logo": "/images/partners/dentimax.png"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": [
+      {
+        "question": "How long does implementation take?",
+        "answer": "Most practices are fully set up within 2 weeks. Our team handles customization, data migration, and training to ensure a smooth transition."
+      },
+      {
+        "question": "Can patients book their own appointments?",
+        "answer": "Yes, our system includes a patient-facing portal that can be integrated with your website. You control which appointment types are available for self-scheduling and can set rules for each provider."
+      },
+      {
+        "question": "Will this integrate with my existing practice management software?",
+        "answer": "We integrate with most major dental practice management systems including Dentrix, Eaglesoft, Open Dental, and more. Our team can provide compatibility information for your specific setup."
+      },
+      {
+        "question": "How are appointment reminders handled?",
+        "answer": "Our system sends automated reminders via email, SMS, or phone based on your preferences. You can customize the timing, frequency, and content of reminders, and patients can confirm or request changes with a single click."
+      },
+      {
+        "question": "What happens if I need to change my subscription level?",
+        "answer": "You can upgrade or downgrade your subscription at any time. Changes typically take effect on your next billing cycle, and our team will help ensure a smooth transition between plans."
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "What Our Customers Say",
+    "reviews": [
+      {
+        "name": "Dr. Sarah Chen",
+        "practice": "Bright Smile Dental",
+        "rating": 5,
+        "comment": "The scheduling system has transformed our practice efficiency. We've reduced no-shows by 45% and our team saves hours each day on administrative tasks.",
+        "date": "2 months ago"
+      },
+      {
+        "name": "Mark Johnson",
+        "practice": "Office Manager, Family Dental Group",
+        "rating": 5,
+        "comment": "Managing appointments for our 7 providers used to be a nightmare. Now it's streamlined and our patients love the online booking option.",
+        "date": "3 months ago"
+      },
+      {
+        "name": "Dr. Michael Rivera",
+        "practice": "Advanced Orthodontics",
+        "rating": 5,
+        "comment": "The ability to customize appointment types for different procedures has been game-changing for our specialty practice. Implementation was smooth and support has been excellent.",
+        "date": "1 month ago"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Transform Your Practice Scheduling?",
+    "description": "Join thousands of dental practices using our platform to boost efficiency and improve patient satisfaction.",
+    "primaryButton": {
+      "text": "Request Demo",
+      "href": "/request-demo"
+    },
+    "secondaryButton": {
+      "text": "View Pricing",
+      "href": "/pricing"
+    }
+  }
+} 

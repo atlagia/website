@@ -1,0 +1,116 @@
+{
+  "hero": {
+    "title": "Transform Your Business with AI-Powered Intelligence",
+    "description": "Experience seamless automation and intelligent insights with our comprehensive platform"
+  },
+  "workflowSteps": [
+    {
+      "title": "Project Creation",
+      "description": "Start by creating a new workspace for your project. Our intuitive interface guides you through setting up your project parameters and goals.",
+      "icon": "Rocket",
+      "image": "/images/platform/project-creation.webp",
+      "features": [
+        "Custom workspace setup",
+        "Goal definition",
+        "Team collaboration settings"
+      ]
+    },
+    {
+      "title": "AI-Powered Analysis",
+      "description": "Our advanced AI analyzes your requirements and provides intelligent recommendations across multiple services.",
+      "icon": "Brain",
+      "image": "/images/platform/ai-analysis.webp",
+      "features": [
+        "Real-time analysis",
+        "Smart recommendations",
+        "Performance tracking"
+      ]
+    },
+    {
+      "title": "Service Integration",
+      "description": "Seamlessly integrate various services like SEO, content generation, and e-commerce management into your workflow.",
+      "icon": "Settings",
+      "image": "/images/platform/service-integration.webp",
+      "features": [
+        "One-click integration",
+        "Cross-service synchronization",
+        "Automated workflows"
+      ]
+    },
+    {
+      "title": "Results & Optimization",
+      "description": "Monitor your progress and optimize your strategies with detailed analytics and insights.",
+      "icon": "Target",
+      "image": "/images/platform/results-dashboard.webp",
+      "features": [
+        "Real-time analytics",
+        "Performance metrics",
+        "Optimization suggestions"
+      ]
+    }
+  ],
+  "cta": {
+    "title": "Ready to Get Started?",
+    "description": "Join thousands of businesses already transforming their operations with our AI-powered platform",
+    "buttons": {
+      "primary": {
+        "text": "Get Started Free",
+        "url": "/signup"
+      },
+      "secondary": {
+        "text": "Request Demo",
+        "url": "/demo"
+      }
+    }
+  },
+  "benefits": [
+    {
+      "title": "AI-Powered Automation",
+      "description": "Automate repetitive tasks and workflows with advanced artificial intelligence",
+      "icon": "Brain"
+    },
+    {
+      "title": "Real-Time Analytics",
+      "description": "Get instant insights into your business performance with comprehensive analytics",
+      "icon": "BarChart3"
+    },
+    {
+      "title": "Global Scalability",
+      "description": "Scale your operations globally with our cloud-based infrastructure",
+      "icon": "Globe"
+    },
+    {
+      "title": "Enterprise Security",
+      "description": "Keep your data safe with enterprise-grade security and compliance",
+      "icon": "Shield"
+    },
+    {
+      "title": "24/7 Support",
+      "description": "Access round-the-clock support from our dedicated team of experts",
+      "icon": "Clock"
+    },
+    {
+      "title": "Cost Efficiency",
+      "description": "Reduce operational costs while maximizing business value",
+      "icon": "DollarSign"
+    }
+  ],
+  "successStories": [
+    {
+      "company": "TechCorp Inc.",
+      "industry": "Technology",
+      "quote": "Implementing this platform has doubled our productivity and reduced costs by 45%.",
+      "author": "Sarah Johnson",
+      "authorTitle": "CTO",
+      "authorImage": "/images/testimonials/sarah.jpg",
+      "logo": "/images/companies/techcorp.svg",
+      "rating": 5
+    }
+  ],
+  "faq": [
+    {
+      "question": "How long does it take to get started?",
+      "answer": "You can get started in minutes with our guided setup process. Our AI helps you configure everything according to your business needs."
+    }
+  ]
+} 

@@ -1,0 +1,103 @@
+{
+  "hero": {
+    "title": "Simple, transparent pricing",
+    "description": "Choose the perfect plan for your business. All plans include a 14-day free trial."
+  },
+  "billing": {
+    "monthly": "Monthly billing",
+    "yearly": "Annual billing",
+    "saveText": "Save 20%"
+  },
+  "plans": [
+    {
+      "name": "Starter",
+      "description": "Perfect for small businesses getting started with digital marketing",
+      "monthlyPrice": "$49",
+      "yearlyPrice": "$39",
+      "features": [
+        "Basic SEO optimization",
+        "Social media integration",
+        "Up to 5 pages",
+        "Basic analytics",
+        "Email support"
+      ],
+      "cta": {
+        "text": "Get Started",
+        "link": "/contact?plan=starter"
+      },
+      "popular": false
+    },
+    {
+      "name": "Professional",
+      "description": "Ideal for growing businesses needing advanced features",
+      "monthlyPrice": "$99",
+      "yearlyPrice": "$79",
+      "features": [
+        "Advanced SEO tools",
+        "Content management system",
+        "Up to 20 pages",
+        "Advanced analytics",
+        "Priority support",
+        "Custom integrations",
+        "A/B testing"
+      ],
+      "cta": {
+        "text": "Get Started",
+        "link": "/contact?plan=professional"
+      },
+      "popular": true,
+      "badge": "Most Popular"
+    },
+    {
+      "name": "Enterprise",
+      "description": "For large organizations requiring full-scale solutions",
+      "monthlyPrice": "$199",
+      "yearlyPrice": "$159",
+      "features": [
+        "Enterprise SEO suite",
+        "Unlimited pages",
+        "Custom development",
+        "Dedicated support",
+        "API access",
+        "Advanced security",
+        "Custom reporting",
+        "SLA guarantee"
+      ],
+      "cta": {
+        "text": "Contact Sales",
+        "link": "/contact?plan=enterprise"
+      },
+      "popular": false
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What payment methods do you accept?",
+      "answer": "We accept all major credit cards, PayPal, and bank transfers for annual plans."
+    },
+    {
+      "question": "Can I change plans later?",
+      "answer": "Yes, you can upgrade or downgrade your plan at any time. Changes will be reflected in your next billing cycle."
+    },
+    {
+      "question": "Is there a free trial?",
+      "answer": "Yes, we offer a 14-day free trial on all plans. No credit card required."
+    },
+    {
+      "question": "What happens after my trial ends?",
+      "answer": "After your trial ends, you can choose to subscribe to any of our plans or your account will be automatically downgraded to a limited free version."
+    }
+  ],
+  "cta": {
+    "title": "Ready to get started?",
+    "description": "Join thousands of businesses that trust our platform",
+    "primaryButton": {
+      "text": "Start Free Trial",
+      "link": "/signup"
+    },
+    "secondaryButton": {
+      "text": "Contact Sales",
+      "link": "/contact"
+    }
+  }
+} 

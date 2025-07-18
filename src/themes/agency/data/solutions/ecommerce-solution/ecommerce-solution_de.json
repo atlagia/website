@@ -1,0 +1,336 @@
+{
+  "hero": {
+    "subtitle": "KI-gestützte E-Commerce-Plattform",
+    "title": "Transformieren Sie Ihr Online-Geschäft mit intelligenter E-Commerce-Lösung",
+    "description": "Entdecken Sie die Zukunft des E-Commerce mit unserer umfassenden KI-gestützten Plattform, die Abläufe optimiert, die Kundenerfahrung verbessert und Wachstum fördert.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "thumbnail": "/images/ecommerce-hero.webp",
+      "alt": "E-Commerce-Plattform Demo"
+    },
+    "stats": [
+      {
+        "value": "45%",
+        "label": "Steigerung der Konversionsrate"
+      },
+      {
+        "value": "60%",
+        "label": "Kundenzufriedenheit"
+      },
+      {
+        "value": "40%",
+        "label": "Reduzierung der Betriebskosten"
+      }
+    ]
+  },
+  "features": {
+    "title": "Enterprise-Level Funktionen",
+    "subtitle": "E-Commerce-Management der nächsten Generation",
+    "description": "Entdecken Sie unsere umfassende Suite fortschrittlicher Tools, die entwickelt wurde, um Ihre E-Commerce-Abläufe zu revolutionieren. Jede Funktion ist darauf ausgerichtet, maximale Effizienz und überlegene Kundenerfahrung zu bieten.",
+    "categories": [
+      {
+        "name": "Shop-Management",
+        "description": "Kernfunktionen, die Ihre täglichen Abläufe optimieren"
+      },
+      {
+        "name": "Kundenerfahrung",
+        "description": "Tools, die Kundenengagement und -zufriedenheit verbessern"
+      }
+    ],
+    "items": [
+      {
+        "icon": "shopping-cart",
+        "title": "Intelligentes Bestandsmanagement",
+        "description": "KI-gestützte Bestandsoptimierung und Nachfrageprognose",
+        "category": "Shop-Management",
+        "image": "/images/features/inventory-management.webp",
+        "highlights": [
+          "Echtzeit-Bestandsverfolgung",
+          "Automatische Nachbestellung",
+          "Nachfrageprognose",
+          "Multi-Lager-Management"
+        ],
+        "stats": {
+          "value": "35%",
+          "label": "Bestandsoptimierung"
+        }
+      },
+      {
+        "icon": "users",
+        "title": "Kundenintelligenz",
+        "description": "Erweiterte Kundenanalyse und Personalisierung",
+        "category": "Kundenerfahrung",
+        "image": "/images/features/customer-intelligence.webp",
+        "highlights": [
+          "Kundensegmentierung",
+          "Verhaltensanalyse",
+          "Personalisierte Empfehlungen",
+          "Kundenreise-Mapping"
+        ],
+        "stats": {
+          "value": "45%",
+          "label": "Höheres Engagement"
+        }
+      },
+      {
+        "icon": "credit-card",
+        "title": "Intelligente Zahlungslösungen",
+        "description": "Nahtlose Zahlungsabwicklung und Betrugsprävention",
+        "category": "Shop-Management",
+        "image": "/images/features/payment-solutions.webp",
+        "highlights": [
+          "Multi-Payment-Gateway-Unterstützung",
+          "KI-gestützte Betrugserkennung",
+          "Abonnementverwaltung",
+          "Globale Zahlungsabwicklung"
+        ],
+        "stats": {
+          "value": "99.9%",
+          "label": "Erfolgreiche Transaktionen"
+        }
+      },
+      {
+        "icon": "globe",
+        "title": "Globaler Handel",
+        "description": "Multi-Währungs- und Mehrsprachigkeitsunterstützung",
+        "category": "Kundenerfahrung",
+        "image": "/images/features/global-commerce.webp",
+        "highlights": [
+          "Mehrsprachige Unterstützung",
+          "Währungsumrechnung",
+          "Internationaler Versand",
+          "Steuerliche Konformität"
+        ],
+        "stats": {
+          "value": "150+",
+          "label": "Unterstützte Länder"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Sehen Sie es in Aktion",
+    "description": "Beobachten Sie, wie führende E-Commerce-Unternehmen ihre Abläufe transformieren",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "thumbnail": "/images/showcase-thumb.webp"
+    },
+    "testimonials": [
+      {
+        "author": "Sarah Chen",
+        "role": "CEO, Fashion Forward",
+        "image": "/images/testimonials/sarah.webp",
+        "quote": "Diese Plattform hat unser Online-Geschäft revolutioniert. Wir haben eine Steigerung der Konversionsrate um 45% verzeichnet."
+      },
+      {
+        "author": "Michael Rodriguez",
+        "role": "Gründer, TechGear",
+        "image": "/images/testimonials/michael.webp",
+        "quote": "Die KI-Funktionen haben unser Bestandsmanagement und die Kundenzufriedenheit erheblich verbessert."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Transformative Vorteile",
+    "subtitle": "Bewährte Ergebnisse und Wirkung",
+    "description": "Erleben Sie messbare Verbesserungen in allen Aspekten Ihres E-Commerce-Geschäfts mit unserer umfassenden Lösung. Unsere Plattform liefert konkrete Ergebnisse, die sich direkt auf Ihre Rentabilität auswirken.",
+    "items": [
+      {
+        "title": "Umsatzwachstum",
+        "description": "Maximieren Sie Ihre Online-Verkäufe mit KI-gestützter Optimierung und Personalisierung.",
+        "icon": "trending-up",
+        "color": "green",
+        "stats": {
+          "value": "45%",
+          "label": "Steigerung der Konversionsrate"
+        },
+        "highlights": [
+          "Intelligente Preisoptimierung",
+          "Personalisierte Empfehlungen",
+          "Warenkorb-Wiederherstellung",
+          "Automatisiertes Cross-Selling"
+        ]
+      },
+      {
+        "title": "Operative Effizienz",
+        "description": "Optimieren Sie Ihre E-Commerce-Abläufe mit intelligenter Automatisierung.",
+        "icon": "zap",
+        "color": "blue",
+        "stats": {
+          "value": "40%",
+          "label": "Kostenreduzierung"
+        },
+        "highlights": [
+          "Automatisches Bestandsmanagement",
+          "Intelligente Auftragsabwicklung",
+          "Effiziente Logistik",
+          "Reduzierung manueller Arbeit"
+        ]
+      },
+      {
+        "title": "Kundenerfahrung",
+        "description": "Bieten Sie außergewöhnliche Einkaufserlebnisse, die Loyalität fördern.",
+        "icon": "heart",
+        "color": "purple",
+        "stats": {
+          "value": "60%",
+          "label": "Kundenzufriedenheit"
+        },
+        "highlights": [
+          "Personalisierter Einkauf",
+          "Nahtloser Checkout",
+          "24/7 Support",
+          "Mobile Optimierung"
+        ]
+      },
+      {
+        "title": "Marktintelligenz",
+        "description": "Treffen Sie datenbasierte Entscheidungen mit erweiterten Analysen.",
+        "icon": "chart-bar",
+        "color": "yellow",
+        "stats": {
+          "value": "85%",
+          "label": "Bessere Entscheidungen"
+        },
+        "highlights": [
+          "Markttrendanalyse",
+          "Wettbewerbsüberwachung",
+          "Kundeninsights",
+          "Performance-Metriken"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Flexible Preispläne",
+    "subtitle": "Transparente Preisgestaltung",
+    "description": "Wählen Sie den perfekten Plan für Ihr Unternehmen. Sparen Sie bis zu 20% mit jährlicher Abrechnung.",
+    "billingPeriods": ["Monatlich", "Jährlich"],
+    "plans": [
+      {
+        "name": "Starter",
+        "highlight": "Perfekt für neue Online-Shops",
+        "monthlyPrice": "$299",
+        "yearlyPrice": "$2,990",
+        "yearlyDiscount": "Sparen Sie $598/Jahr",
+        "description": "Wesentliche Funktionen für den Start Ihrer E-Commerce-Reise",
+        "features": [
+          {
+            "text": "Grundlegendes Shop-Management",
+            "included": true
+          },
+          {
+            "text": "Produktverwaltung",
+            "included": true
+          },
+          {
+            "text": "Auftragsverarbeitung",
+            "included": true
+          },
+          {
+            "text": "Grundlegende Analysen",
+            "included": true
+          },
+          {
+            "text": "E-Mail-Support",
+            "included": true
+          },
+          {
+            "text": "Mobile App-Zugang",
+            "included": true
+          }
+        ],
+        "cta": "Starten",
+        "popular": false
+      },
+      {
+        "name": "Professional",
+        "highlight": "Beliebt bei wachsenden Unternehmen",
+        "monthlyPrice": "$599",
+        "yearlyPrice": "$5,990",
+        "yearlyDiscount": "Sparen Sie $1,198/Jahr",
+        "description": "Erweiterte Funktionen für etablierte Shops",
+        "features": [
+          {
+            "text": "Alles aus Starter, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "KI-gestützte Funktionen",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "Erweiterte Analysen",
+            "included": true
+          },
+          {
+            "text": "Multi-Währungs-Unterstützung",
+            "included": true
+          },
+          {
+            "text": "Prioritäts-Support",
+            "included": true
+          },
+          {
+            "text": "API-Zugang",
+            "included": true
+          }
+        ],
+        "cta": "Starten",
+        "popular": true
+      },
+      {
+        "name": "Enterprise",
+        "highlight": "Für große E-Commerce-Operationen",
+        "monthlyPrice": "Individuell",
+        "yearlyPrice": "Individuell",
+        "yearlyDiscount": "Kontaktieren Sie uns für Sonderpreise",
+        "description": "Maßgeschneiderte Lösungen für Enterprise-Bedürfnisse",
+        "features": [
+          {
+            "text": "Alles aus Professional, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Individuelle Integrationsunterstützung",
+            "included": true
+          },
+          {
+            "text": "Dedizierter Account Manager",
+            "included": true
+          },
+          {
+            "text": "Erweiterte Sicherheitsfunktionen",
+            "included": true
+          },
+          {
+            "text": "Individuelle Entwicklungsoptionen",
+            "included": true
+          },
+          {
+            "text": "SLA-Garantien",
+            "included": true
+          }
+        ],
+        "cta": "Vertrieb kontaktieren",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "Bereit, Ihr E-Commerce-Geschäft zu transformieren?",
+    "description": "Schließen Sie sich Tausenden erfolgreicher Online-Shops an, die unsere Plattform nutzen",
+    "primaryButton": {
+      "text": "Demo planen",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Demo-Video ansehen",
+      "link": "/demo-video"
+    },
+    "background": "/images/cta-background.webp"
+  }
+} 

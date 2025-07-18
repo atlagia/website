@@ -1,0 +1,185 @@
+---
+import { getLangFromUrl, useTranslations } from '@utils/i18n';
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+
+const lang = getLangFromUrl(Astro.url);
+const translations = await useTranslations(lang);
+const jsonData = translations.default;
+
+const SITE_TITLE = jsonData.siteTitle || 'StreamVista';
+const PAGE_TITLE = 'Channel Guide | ' + SITE_TITLE;
+const PAGE_DESCRIPTION = 'Explore our extensive collection of live TV channels';
+
+// Channel categories with their respective channels
+const categories = [
+  {
+    name: 'Sports',
+    icon: '🏆',
+    channels: [
+      { name: 'ESPN', logo: '/logos/espn.png', quality: '4K' },
+      { name: 'Sky Sports', logo: '/logos/sky-sports.png', quality: 'HD' },
+      { name: 'beIN Sports', logo: '/logos/bein.png', quality: '4K' },
+      { name: 'Fox Sports', logo: '/logos/fox-sports.png', quality: 'HD' },
+      { name: 'NBA TV', logo: '/logos/nba.png', quality: '4K' },
+    ]
+  },
+  {
+    name: 'Entertainment',
+    icon: '🎬',
+    channels: [
+      { name: 'HBO', logo: '/logos/hbo.png', quality: '4K' },
+      { name: 'Netflix', logo: '/logos/netflix.png', quality: '4K' },
+      { name: 'Disney+', logo: '/logos/disney.png', quality: '4K' },
+      { name: 'AMC', logo: '/logos/amc.png', quality: 'HD' },
+      { name: 'TNT', logo: '/logos/tnt.png', quality: 'HD' },
+    ]
+  },
+  {
+    name: 'News',
+    icon: '📰',
+    channels: [
+      { name: 'CNN', logo: '/logos/cnn.png', quality: 'HD' },
+      { name: 'BBC News', logo: '/logos/bbc.png', quality: 'HD' },
+      { name: 'Al Jazeera', logo: '/logos/aljazeera.png', quality: 'HD' },
+      { name: 'Fox News', logo: '/logos/fox-news.png', quality: 'HD' },
+      { name: 'MSNBC', logo: '/logos/msnbc.png', quality: 'HD' },
+    ]
+  },
+  {
+    name: 'Movies',
+    icon: '🎥',
+    channels: [
+      { name: 'TCM', logo: '/logos/tcm.png', quality: 'HD' },
+      { name: 'Paramount', logo: '/logos/paramount.png', quality: '4K' },
+      { name: 'Cinemax', logo: '/logos/cinemax.png', quality: '4K' },
+      { name: 'Starz', logo: '/logos/starz.png', quality: 'HD' },
+      { name: 'Showtime', logo: '/logos/showtime.png', quality: '4K' },
+    ]
+  },
+  {
+    name: 'Kids',
+    icon: '🎈',
+    channels: [
+      { name: 'Nickelodeon', logo: '/logos/nick.png', quality: 'HD' },
+      { name: 'Disney Channel', logo: '/logos/disney-channel.png', quality: 'HD' },
+      { name: 'Cartoon Network', logo: '/logos/cartoon-network.png', quality: 'HD' },
+      { name: 'PBS Kids', logo: '/logos/pbs-kids.png', quality: 'HD' },
+      { name: 'Boomerang', logo: '/logos/boomerang.png', quality: 'HD' },
+    ]
+  },
+  {
+    name: 'Documentary',
+    icon: '🌍',
+    channels: [
+      { name: 'Discovery', logo: '/logos/discovery.png', quality: '4K' },
+      { name: 'National Geographic', logo: '/logos/natgeo.png', quality: '4K' },
+      { name: 'History', logo: '/logos/history.png', quality: 'HD' },
+      { name: 'Animal Planet', logo: '/logos/animal-planet.png', quality: 'HD' },
+      { name: 'Science', logo: '/logos/science.png', quality: 'HD' },
+    ]
+  }
+];
+---
+
+<!doctype html>
+<html lang={lang} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
+  <head>
+    <BaseHead title={PAGE_TITLE} description={PAGE_DESCRIPTION} />
+  </head>
+  <body class="bg-black text-white">
+    <Header />
+    <main class="pt-24"> <!-- Add 96px (24 * 4px) padding to account for header height + extra space -->
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section class="space-y-12">
+          {/* Hero Section */}
+          <div class="text-center space-y-4">
+            <h1 class="text-4xl md:text-6xl font-bold gradient-text">
+              Channel Guide
+            </h1>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+              Explore our extensive collection of premium channels from around the world.
+            </p>
+          </div>
+
+          {/* Search and Filter */}
+          <div class="glass rounded-xl p-6">
+            <div class="flex flex-col md:flex-row gap-4">
+              <div class="flex-1">
+                <input
+                  type="search"
+                  placeholder="Search channels..."
+                  class="w-full px-4 py-2 rounded-lg bg-white/10 border border-white/20 focus:border-purple-500 focus:ring-2 focus:ring-purple-500"
+                />
+              </div>
+              <div class="flex gap-4">
+                <select class="px-4 py-2 rounded-lg bg-white/10 border border-white/20 focus:border-purple-500 focus:ring-2 focus:ring-purple-500">
+                  <option value="">All Categories</option>
+                  {categories.map(cat => (
+                    <option value={cat.name.toLowerCase()}>{cat.name}</option>
+                  ))}
+                </select>
+                <select class="px-4 py-2 rounded-lg bg-white/10 border border-white/20 focus:border-purple-500 focus:ring-2 focus:ring-purple-500">
+                  <option value="">All Qualities</option>
+                  <option value="4k">4K</option>
+                  <option value="hd">HD</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          {/* Channel Categories */}
+          <div class="space-y-12">
+            {categories.map(category => (
+              <div class="space-y-6">
+                <div class="flex items-center gap-4">
+                  <span class="text-3xl">{category.icon}</span>
+                  <h2 class="text-2xl font-bold text-purple-400">{category.name}</h2>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                  {category.channels.map(channel => (
+                    <div class="glass rounded-xl p-4 hover-scale hover-glow">
+                      <div class="aspect-video bg-white/5 rounded-lg mb-4 flex items-center justify-center">
+                        <div class="text-2xl font-bold">{channel.name}</div>
+                      </div>
+                      <div class="flex items-center justify-between">
+                        <span class="text-sm text-gray-300">{channel.quality}</span>
+                        <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-500/20 text-green-400">
+                          Live
+                        </span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* CTA Section */}
+          <div class="glass rounded-2xl p-8 text-center space-y-6">
+            <h2 class="text-3xl font-bold gradient-text">Ready to Start Watching?</h2>
+            <p class="text-xl text-gray-300">
+              Get access to all channels with our premium subscription plans.
+            </p>
+            <div class="flex justify-center gap-4">
+              <a
+                href="/pricing"
+                class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg transition duration-200"
+              >
+                View Plans
+              </a>
+              <a
+                href="/signup"
+                class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-8 rounded-lg transition duration-200"
+              >
+                Start Free Trial
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html> 

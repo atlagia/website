@@ -1,0 +1,223 @@
+{
+    "pageTitle": "الموارد",
+    "pageDescription": "الوصول إلى وثائق شاملة، أدلة، دراسات حالة، والمزيد من الموارد لمساعدتك على النجاح مع منصتنا.",
+    "hero": {
+      "badge": "الموارد والوثائق",
+      "title": "موارد لمساعدتك على النجاح",
+      "description": "الوصول إلى وثائق شاملة، أدلة، دروس تعليمية، ودراسات حالة للاستفادة القصوى من منصتنا.",
+      "cta": {
+        "primary": {
+          "text": "تصفح الوثائق",
+          "href": "/docs"
+        },
+        "secondary": {
+          "text": "عرض الأدلة",
+          "href": "#guides"
+        }
+      }
+    },
+    "resourceCategories": [
+      {
+        "title": "الوثائق",
+        "icon": "Book",
+        "description": "أدلة شاملة ووثائق API",
+        "items": [
+          {
+            "title": "دليل البدء",
+            "description": "دليل سريع للمستخدمين الجدد",
+            "icon": "BookOpen",
+            "link": "/docs/getting-started",
+            "tag": "أساسي"
+          },
+          {
+            "title": "مرجع API",
+            "description": "وثائق API كاملة",
+            "icon": "FileCode",
+            "link": "/docs/api",
+            "tag": "تقني"
+          },
+          {
+            "title": "وثائق SDK",
+            "description": "أدلة SDK خاصة باللغات",
+            "icon": "FileText",
+            "link": "/docs/sdk",
+            "tag": "تطوير"
+          },
+          {
+            "title": "أدلة التكامل",
+            "description": "دروس التكامل خطوة بخطوة",
+            "icon": "ChevronRight",
+            "link": "/docs/integration",
+            "tag": "تقني"
+          }
+        ]
+      },
+      {
+        "title": "مركز التعلم",
+        "icon": "GraduationCap",
+        "description": "موارد تعليمية ودروس",
+        "items": [
+          {
+            "title": "دروس فيديو",
+            "description": "أدلة فيديو خطوة بخطوة",
+            "icon": "Video",
+            "link": "/learn/tutorials",
+            "tag": "فيديو"
+          },
+          {
+            "title": "أفضل الممارسات",
+            "description": "إرشادات التنفيذ",
+            "icon": "Star",
+            "link": "/learn/best-practices",
+            "tag": "دليل"
+          },
+          {
+            "title": "أمثلة الكود",
+            "description": "نماذج وأجزاء من الكود",
+            "icon": "FileCode",
+            "link": "/learn/examples",
+            "tag": "كود"
+          },
+          {
+            "title": "منتديات المجتمع",
+            "description": "المناقشة والدعم",
+            "icon": "MessageSquare",
+            "link": "/community",
+            "tag": "دعم"
+          }
+        ]
+      },
+      {
+        "title": "دراسات الحالة",
+        "icon": "BarChart",
+        "description": "قصص النجاح وأمثلة التنفيذ",
+        "items": [
+          {
+            "title": "نجاح الرعاية الصحية",
+            "description": "تحول الممارسة الطبية",
+            "icon": "Users",
+            "link": "/case-studies/healthcare",
+            "tag": "الرعاية الصحية"
+          },
+          {
+            "title": "ابتكار التجزئة",
+            "description": "تحسين التجارة الإلكترونية",
+            "icon": "BarChart",
+            "link": "/case-studies/retail",
+            "tag": "التجزئة"
+          },
+          {
+            "title": "التميز في التصنيع",
+            "description": "تحسين الإنتاج",
+            "icon": "Award",
+            "link": "/case-studies/manufacturing",
+            "tag": "الصناعة"
+          },
+          {
+            "title": "تحسين الخدمة",
+            "description": "تحسين خدمة العملاء",
+            "icon": "Star",
+            "link": "/case-studies/service",
+            "tag": "الخدمة"
+          }
+        ]
+      }
+    ],
+    "featuredGuides": [
+      {
+        "title": "دليل تنفيذ المنصة",
+        "description": "دليل شامل لتنفيذ منصة الذكاء الاصطناعي لدينا",
+        "image": "/images/resources/implementation.jpg",
+        "category": "دليل تقني",
+        "readTime": "15 دقيقة قراءة",
+        "link": "/guides/implementation"
+      },
+      {
+        "title": "أفضل ممارسات تكامل الذكاء الاصطناعي",
+        "description": "تعلم كيفية دمج الذكاء الاصطناعي بفعالية في سير عملك",
+        "image": "/images/resources/ai-integration.jpg",
+        "category": "أفضل الممارسات",
+        "readTime": "10 دقائق قراءة",
+        "link": "/guides/ai-integration"
+      },
+      {
+        "title": "دليل الأمان والامتثال",
+        "description": "فهم ميزات الأمان والامتثال",
+        "image": "/images/resources/security.jpg",
+        "category": "الأمان",
+        "readTime": "12 دقيقة قراءة",
+        "link": "/guides/security"
+      }
+    ],
+    "latestArticles": [
+      {
+        "title": "مستقبل الذكاء الاصطناعي في الرعاية الصحية",
+        "description": "استكشاف الاتجاهات والابتكارات القادمة",
+        "image": "/images/blog/ai-healthcare.jpg",
+        "date": "15 مارس 2024",
+        "readTime": "8 دقائق قراءة",
+        "category": "رؤى الصناعة",
+        "link": "/blog/ai-healthcare-future"
+      },
+      {
+        "title": "تحسين أداء الذكاء الاصطناعي",
+        "description": "نصائح لتعظيم كفاءة الذكاء الاصطناعي",
+        "image": "/images/blog/ai-performance.jpg",
+        "date": "10 مارس 2024",
+        "readTime": "6 دقائق قراءة",
+        "category": "تقني",
+        "link": "/blog/ai-performance"
+      },
+      {
+        "title": "أفضل ممارسات أمان الذكاء الاصطناعي",
+        "description": "الحفاظ على أمان تنفيذ الذكاء الاصطناعي",
+        "image": "/images/blog/ai-security.jpg",
+        "date": "5 مارس 2024",
+        "readTime": "7 دقائق قراءة",
+        "category": "الأمان",
+        "link": "/blog/ai-security"
+      }
+    ],
+    "downloads": [
+      {
+        "title": "نظرة عامة على المنصة",
+        "description": "دليل PDF شامل",
+        "icon": "Download",
+        "format": "PDF",
+        "size": "2.5 ميجابايت",
+        "link": "/downloads/platform-overview.pdf"
+      },
+      {
+        "title": "الورقة البيضاء التقنية",
+        "description": "مواصفات تقنية مفصلة",
+        "icon": "FileText",
+        "format": "PDF",
+        "size": "3.8 ميجابايت",
+        "link": "/downloads/technical-whitepaper.pdf"
+      },
+      {
+        "title": "دليل التنفيذ",
+        "description": "دليل الإعداد خطوة بخطوة",
+        "icon": "Book",
+        "format": "PDF",
+        "size": "1.8 ميجابايت",
+        "link": "/downloads/implementation-guide.pdf"
+      }
+    ],
+    "cta": {
+      "title": "تحتاج مساعدة؟",
+      "description": "فريق الدعم لدينا هنا لمساعدتك على النجاح مع منصتنا.",
+      "buttons": [
+        {
+          "text": "اتصل بالدعم",
+          "href": "/contact",
+          "variant": "primary"
+        },
+        {
+          "text": "انضم للمجتمع",
+          "href": "/community",
+          "variant": "secondary"
+        }
+      ]
+    }
+  }

@@ -1,0 +1,249 @@
+{
+  "navigation": [
+    {
+      "name": "Industrias",
+      "href": "/industries",
+      "megaMenu": {
+        "categories": [
+          {
+            "title": "Salud",
+            "icon": "stethoscope",
+            "items": [
+              {
+                "name": "Prácticas médicas",
+                "href": "/solutions/medical-solution"
+              },
+              {
+                "name": "Hospitales",
+                "href": "/solutions/hospital-solution"
+              },
+              {
+                "name": "Clínicas",
+                "href": "/solutions/clinic-solution"
+              },
+              {
+                "name": "Farmacias",
+                "href": "/solutions/pharmacy-solution"
+              }
+            ]
+          },
+          {
+            "title": "Servicios profesionales",
+            "icon": "briefcase",
+            "items": [
+              {
+                "name": "Prácticas dentales",
+                "href": "/solutions/dental-solution"
+              },
+              {
+                "name": "Prácticas veterinarias",
+                "href": "/solutions/veterinary-solution"
+              },
+              {
+                "name": "Centros de radiología",
+                "href": "/solutions/radiology-solution"
+              },
+              {
+                "name": "Laboratorios",
+                "href": "/solutions/laboratory-solution"
+              }
+            ]
+          },
+          {
+            "title": "Minorista y comercio",
+            "icon": "shopping-bag",
+            "items": [
+              {
+                "name": "Comercio electrónico",
+                "href": "/solutions/ecommerce-solution"
+              },
+              {
+                "name": "Tiendas minoristas",
+                "href": "/solutions/retail-stores"
+              },
+              {
+                "name": "Restaurantes",
+                "href": "/solutions/restaurants"
+              },
+              {
+                "name": "Mayorista",
+                "href": "/solutions/wholesale"
+              }
+            ]
+          }
+        ],
+        "featured": {
+          "badge": "Nuevo",
+          "title": "Soluciones de IA específicas para la industria",
+          "description": "Automatización de IA adaptada a su industria",
+          "link": {
+            "text": "Explorar soluciones",
+            "href": "/solutions"
+          }
+        }
+      }
+    },
+    {
+      "name": "Soluciones",
+      "href": "/solutions",
+      "megaMenu": {
+        "categories": [
+          {
+            "title": "Operaciones",
+            "icon": "settings",
+            "items": [
+              {
+                "name": "Automatización de flujos de trabajo",
+                "href": "/solutions/workflow"
+              },
+              {
+                "name": "Procesamiento de documentos",
+                "href": "/solutions/documents"
+              },
+              {
+                "name": "Planificación de recursos",
+                "href": "/solutions/planning"
+              },
+              {
+                "name": "Análisis e informes",
+                "href": "/solutions/analytics"
+              }
+            ]
+          },
+          {
+            "title": "Experiencia del cliente",
+            "icon": "users",
+            "items": [
+              {
+                "name": "Soporte de chat con IA",
+                "href": "/solutions/chat-support"
+              },
+              {
+                "name": "Análisis de clientes",
+                "href": "/solutions/customer-analytics"
+              },
+              {
+                "name": "Personalización",
+                "href": "/solutions/personalization"
+              },
+              {
+                "name": "Herramientas de participación",
+                "href": "/solutions/engagement"
+              }
+            ]
+          },
+          {
+            "title": "Crecimiento",
+            "icon": "trending-up",
+            "items": [
+              {
+                "name": "Marketing con IA",
+                "href": "/solutions/marketing"
+              },
+              {
+                "name": "Inteligencia de ventas",
+                "href": "/solutions/sales"
+              },
+              {
+                "name": "Investigación de mercado",
+                "href": "/solutions/research"
+              },
+              {
+                "name": "Inteligencia empresarial",
+                "href": "/solutions/intelligence"
+              }
+            ]
+          }
+        ],
+        "featured": {
+          "badge": "Destacado",
+          "title": "Suite de IA empresarial",
+          "description": "Plataforma completa de transformación con IA",
+          "link": {
+            "text": "Saber más",
+            "href": "/enterprise"
+          }
+        }
+      }
+    },
+    {
+      "name": "Plataforma",
+      "href": "/platform",
+      "megaMenu": {
+        "categories": [
+          {
+            "title": "Características principales",
+            "icon": "cpu",
+            "items": [
+              {
+                "name": "Motor de IA",
+                "href": "/platform/ai-engine"
+              },
+              {
+                "name": "Hub de integración",
+                "href": "/platform/integrations"
+              },
+              {
+                "name": "Seguridad",
+                "href": "/platform/security"
+              },
+              {
+                "name": "Acceso a API",
+                "href": "/platform/api"
+              }
+            ]
+          }
+        ],
+        "featured": {
+          "badge": "Nuevo",
+          "title": "Portal para desarrolladores",
+          "description": "Construye con nuestra plataforma de IA",
+          "link": {
+            "text": "Empezar a construir",
+            "href": "/developers"
+          }
+        }
+      }
+    },
+    {
+      "name": "Recursos",
+      "href": "/resources"
+    },
+    {
+      "name": "Precios",
+      "href": "/pricing"
+    }
+  ],
+  "auth": {
+    "signIn": {
+      "text": "Contáctenos",
+      "href": "/contact"
+    },
+    "getStarted": {
+      "text": "Comenzar",
+      "href": "/es/discuss-project"
+    }
+  },
+  "languages": [
+    {
+      "code": "en",
+      "name": "English"
+    },
+    {
+      "code": "fr",
+      "name": "Français"
+    },
+    {
+      "code": "de",
+      "name": "Deutsch"
+    },
+    {
+      "code": "es",
+      "name": "Español"
+    },
+    {
+      "code": "ar",
+      "name": "العربية"
+    }
+  ]
+} 

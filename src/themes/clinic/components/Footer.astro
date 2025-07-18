@@ -1,0 +1,102 @@
+---
+import { getLangFromUrl } from '../../../utils/i18n';
+import { Facebook, Instagram, Twitter, Linkedin, Mail, Phone, Clock, MapPin } from 'lucide-react';
+
+const currentLang = getLangFromUrl(Astro.url);
+
+// Import the language-specific footer content
+const footerData = await import(`./content/footer_${currentLang}.json`).catch(() => {
+  return import('./content/footer_en.json');
+});
+
+const { description, sections, contact, social, copyright } = footerData;
+---
+
+<footer class="bg-gray-900 text-gray-300">
+  <div class="max-w-7xl mx-auto px-4 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
+      <!-- Company Info -->
+      <div class="lg:col-span-2">
+        <h3 class="text-2xl font-bold text-white mb-4">Dental Care</h3>
+        <p class="text-gray-400 mb-8 max-w-md">{description}</p>
+        
+        <!-- Contact Info -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <MapPin class="w-5 h-5 text-cyan-400" />
+            <div>
+              <p>{contact.address.street}</p>
+              <p>{contact.address.city}, {contact.address.state} {contact.address.zip}</p>
+            </div>
+          </div>
+          
+          <div class="flex items-center gap-3">
+            <Phone class="w-5 h-5 text-cyan-400" />
+            <div>
+              <p>Main: <a href={`tel:${contact.phone.main}`} class="hover:text-cyan-400 transition-colors">{contact.phone.main}</a></p>
+              <p class="text-cyan-400">Emergency: <a href={`tel:${contact.phone.emergency}`} class="hover:text-white transition-colors">{contact.phone.emergency}</a></p>
+            </div>
+          </div>
+          
+          <div class="flex items-center gap-3">
+            <Mail class="w-5 h-5 text-cyan-400" />
+            <a href={`mailto:${contact.email}`} class="hover:text-cyan-400 transition-colors">{contact.email}</a>
+          </div>
+          
+          <div class="flex items-start gap-3">
+            <Clock class="w-5 h-5 text-cyan-400" />
+            <div class="space-y-1">
+              {contact.hours.map(schedule => (
+                <div>
+                  <p class="font-medium text-white">{schedule.days}</p>
+                  <p class="text-gray-400">{schedule.hours}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      {Object.entries(sections).map(([key, section]) => (
+        <div>
+          <h4 class="text-lg font-semibold text-white mb-6">{section.title}</h4>
+          <ul class="space-y-4">
+            {section.links.map(link => (
+              <li>
+                <a href={link.href} class="text-gray-400 hover:text-cyan-400 transition-colors">
+                  {link.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="mt-16 pt-8 border-t border-gray-800">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+        <p class="text-gray-400 text-sm text-center md:text-left">{copyright}</p>
+        
+        <!-- Social Links -->
+        <div class="flex gap-6">
+          {social.links.map(link => (
+            <a
+              href={link.href}
+              class="text-gray-400 hover:text-cyan-400 transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {link.icon === 'facebook' && <Facebook class="w-5 h-5" />}
+              {link.icon === 'instagram' && <Instagram class="w-5 h-5" />}
+              {link.icon === 'twitter' && <Twitter class="w-5 h-5" />}
+              {link.icon === 'linkedin' && <Linkedin class="w-5 h-5" />}
+              <span class="sr-only">{link.name}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,335 @@
+{
+  "hero": {
+    "subtitle": "Sistema di Gestione Clinica",
+    "title": "Ottimizza le Operazioni della Tua Clinica",
+    "description": "Una soluzione integrata di gestione clinica che combina assistenza ai pazienti, compiti amministrativi e operazioni commerciali per migliorare l'efficienza della tua pratica.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Demo della Soluzione di Gestione Clinica"
+    },
+    "stats": [
+      {
+        "value": "96%",
+        "label": "Soddisfazione dei Pazienti"
+      },
+      {
+        "value": "50%",
+        "label": "Tempo Amministrativo Risparmiato"
+      },
+      {
+        "value": "35%",
+        "label": "Aumento dei Ricavi"
+      }
+    ]
+  },
+  "features": {
+    "subtitle": "Funzionalità Complete",
+    "title": "Tutto ciò che la Tua Clinica Necessita",
+    "description": "Una suite completa di strumenti progettata per cliniche moderne",
+    "categories": [
+      {
+        "name": "Operazioni Cliniche",
+        "description": "Ottimizza l'assistenza ai pazienti e i flussi di lavoro clinici"
+      },
+      {
+        "name": "Gestione della Pratica",
+        "description": "Ottimizza le operazioni amministrative e commerciali"
+      }
+    ],
+    "items": [
+      {
+        "icon": "calendar",
+        "category": "Appuntamenti",
+        "title": "Pianificazione Intelligente",
+        "description": "Sistema di pianificazione basato su IA con promemoria automatizzati",
+        "image": "/images/solutions/clinic/scheduling.jpg",
+        "highlights": [
+          "Prenotazione online",
+          "Promemoria automatizzati",
+          "Gestione lista d'attesa",
+          "Allocazione risorse"
+        ],
+        "stats": {
+          "value": "60%",
+          "label": "Riduzione no-show"
+        }
+      },
+      {
+        "icon": "file-text",
+        "category": "Cartelle Cliniche",
+        "title": "Cartelle Cliniche Elettroniche",
+        "description": "Sistema CCE completo con documentazione semplificata",
+        "image": "/images/solutions/clinic/ehr.jpg",
+        "highlights": [
+          "Documentazione digitale",
+          "Piani di trattamento",
+          "Integrazione laboratorio",
+          "Prescrizioni elettroniche"
+        ],
+        "stats": {
+          "value": "45%",
+          "label": "Tempo risparmiato nella documentazione"
+        }
+      },
+      {
+        "icon": "credit-card",
+        "category": "Fatturazione",
+        "title": "Fatturazione Intelligente",
+        "description": "Elaborazione automatizzata di fatturazione e assicurazioni",
+        "image": "/images/solutions/clinic/billing.jpg",
+        "highlights": [
+          "Verifica assicurazioni",
+          "Elaborazione pagamenti",
+          "Gestione reclami",
+          "Report finanziari"
+        ],
+        "stats": {
+          "value": "30%",
+          "label": "Rimborsi più rapidi"
+        }
+      },
+      {
+        "icon": "activity",
+        "category": "Analisi",
+        "title": "Intelligenza di Pratica",
+        "description": "Informazioni basate sui dati per decisioni migliori",
+        "image": "/images/solutions/clinic/analytics.jpg",
+        "highlights": [
+          "Metriche di performance",
+          "Analisi pazienti",
+          "Insight finanziari",
+          "Report operativi"
+        ],
+        "stats": {
+          "value": "35%",
+          "label": "Crescita dei ricavi"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Vedilo in Azione",
+    "description": "Scopri come le principali cliniche stanno trasformando la loro pratica",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Storia di Successo della Clinica"
+    },
+    "testimonials": [
+      {
+        "author": "Dott.ssa Laura Rossi",
+        "role": "Direttrice della Clinica",
+        "image": "/images/testimonials/doctor1.jpg",
+        "quote": "Questo sistema ha trasformato il modo in cui operiamo. Il nostro personale è più efficiente e i nostri pazienti sono più soddisfatti."
+      },
+      {
+        "author": "Dott. Marco Bianchi",
+        "role": "Medico di Famiglia",
+        "image": "/images/testimonials/doctor2.jpg",
+        "quote": "Il sistema CCE è intuitivo e l'integrazione della fatturazione ha migliorato significativamente il nostro ciclo di ricavi."
+      }
+    ]
+  },
+  "benefits": {
+    "subtitle": "Vantaggi Chiave",
+    "title": "Trasforma la Tua Pratica",
+    "description": "Sperimenta i vantaggi di un sistema di gestione clinica completamente integrato",
+    "items": [
+      {
+        "icon": "clock",
+        "title": "Efficienza Temporale",
+        "description": "Riduci il carico amministrativo e concentrati sull'assistenza ai pazienti",
+        "color": "blue",
+        "stats": {
+          "value": "50%",
+          "label": "Tempo Risparmiato"
+        },
+        "highlights": [
+          "Flussi di lavoro automatizzati",
+          "Documentazione rapida",
+          "Pianificazione efficiente",
+          "Riduzione della carta"
+        ]
+      },
+      {
+        "icon": "heart",
+        "title": "Migliore Assistenza ai Pazienti",
+        "description": "Migliora l'esperienza e i risultati dei pazienti",
+        "color": "red",
+        "stats": {
+          "value": "96%",
+          "label": "Soddisfazione dei Pazienti"
+        },
+        "highlights": [
+          "Cartelle complete",
+          "Migliore follow-up",
+          "Comunicazione migliorata",
+          "Coordinamento assistenza"
+        ]
+      },
+      {
+        "icon": "trending-up",
+        "title": "Crescita della Pratica",
+        "description": "Aumenta i ricavi e ottimizza le operazioni",
+        "color": "green",
+        "stats": {
+          "value": "35%",
+          "label": "Crescita dei Ricavi"
+        },
+        "highlights": [
+          "Fatturazione ottimizzata",
+          "Costi ridotti",
+          "Migliore utilizzo",
+          "Efficienza aumentata"
+        ]
+      },
+      {
+        "icon": "shield",
+        "title": "Conformità e Sicurezza",
+        "description": "Mantieni la conformità normativa e la sicurezza dei dati",
+        "color": "purple",
+        "stats": {
+          "value": "100%",
+          "label": "Conformità HIPAA"
+        },
+        "highlights": [
+          "Conformità HIPAA",
+          "Crittografia dati",
+          "Tracciamento audit",
+          "Accesso sicuro"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "subtitle": "Prezzi Trasparenti",
+    "title": "Piani di Prezzo Flessibili",
+    "description": "Scegli il piano perfetto per la tua clinica. Risparmia fino al 20% con la fatturazione annuale.",
+    "billingPeriods": ["Mensile", "Annuale"],
+    "plans": [
+      {
+        "name": "Base",
+        "highlight": "Perfetto per piccole cliniche",
+        "monthlyPrice": "$299",
+        "yearlyPrice": "$2,990",
+        "yearlyDiscount": "Risparmia $598/anno",
+        "description": "Funzionalità essenziali per piccole pratiche",
+        "features": [
+          {
+            "text": "Pianificazione appuntamenti",
+            "included": true
+          },
+          {
+            "text": "CCE base",
+            "included": true
+          },
+          {
+            "text": "Portale paziente",
+            "included": true
+          },
+          {
+            "text": "Supporto email",
+            "included": true
+          },
+          {
+            "text": "Report base",
+            "included": true
+          },
+          {
+            "text": "Accesso mobile",
+            "included": true
+          }
+        ],
+        "cta": "Inizia Ora",
+        "popular": false
+      },
+      {
+        "name": "Professionale",
+        "highlight": "Più popolare per cliniche in crescita",
+        "monthlyPrice": "$599",
+        "yearlyPrice": "$5,990",
+        "yearlyDiscount": "Risparmia $1,198/anno",
+        "description": "Funzionalità avanzate per cliniche affermate",
+        "features": [
+          {
+            "text": "Tutto del Base, più:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Funzionalità CCE avanzate",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "Piattaforma telemedicina",
+            "included": true
+          },
+          {
+            "text": "Analisi avanzate",
+            "included": true
+          },
+          {
+            "text": "Supporto prioritario",
+            "included": true
+          },
+          {
+            "text": "Supporto multi-fornitore",
+            "included": true
+          }
+        ],
+        "cta": "Inizia Ora",
+        "popular": true
+      },
+      {
+        "name": "Enterprise",
+        "highlight": "Per grandi cliniche",
+        "monthlyPrice": "Personalizzato",
+        "yearlyPrice": "Personalizzato",
+        "yearlyDiscount": "Contattaci per prezzi speciali",
+        "description": "Soluzioni su misura per grandi pratiche",
+        "features": [
+          {
+            "text": "Tutto del Professionale, più:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Supporto integrazione personalizzata",
+            "included": true
+          },
+          {
+            "text": "Account manager dedicato",
+            "included": true
+          },
+          {
+            "text": "Funzionalità di sicurezza avanzate",
+            "included": true
+          },
+          {
+            "text": "Opzioni di sviluppo personalizzate",
+            "included": true
+          },
+          {
+            "text": "Garanzie SLA",
+            "included": true
+          }
+        ],
+        "cta": "Contatta Vendite",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "Pronto a Trasformare la Tua Clinica?",
+    "description": "Unisciti a migliaia di operatori sanitari che hanno modernizzato la loro pratica con la nostra soluzione.",
+    "background": "/images/solutions/clinic/cta-background.jpg",
+    "primaryButton": {
+      "text": "Pianifica una Demo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Guarda la Demo",
+      "link": "#showcase"
+    }
+  }
+} 

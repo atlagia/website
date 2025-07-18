@@ -1,0 +1,83 @@
+{
+  "pages": [
+    {
+      "path": "/about",
+      "name": "About",
+      "description": "Learn more about our company and mission",
+      "priority": 0.8
+    },
+    {
+      "path": "/ai-content-generator",
+      "name": "AI Content Generator",
+      "description": "Generate high-quality content with AI",
+      "priority": 0.9
+    },
+    {
+      "path": "/analytics-dashboard",
+      "name": "Analytics Dashboard",
+      "description": "Comprehensive analytics and reporting tools",
+      "priority": 0.9
+    },
+    {
+      "path": "/backlink-analyzer",
+      "name": "Backlink Analyzer",
+      "description": "Analyze and monitor your backlink profile",
+      "priority": 0.9
+    },
+    {
+      "path": "/competitor-analysis",
+      "name": "Competitor Analysis",
+      "description": "Analyze your competitors and market position",
+      "priority": 0.9
+    },
+    {
+      "path": "/contact",
+      "name": "Contact",
+      "description": "Get in touch with our team",
+      "priority": 0.8
+    },
+    {
+      "path": "/content-optimization",
+      "name": "Content Optimization",
+      "description": "Optimize your content for better performance",
+      "priority": 0.9
+    },
+    {
+      "path": "/customer-insights",
+      "name": "Customer Insights",
+      "description": "Understand your customers better",
+      "priority": 0.9
+    },
+    {
+      "path": "/documentation",
+      "name": "Documentation",
+      "description": "Technical documentation and guides",
+      "priority": 0.7
+    },
+    {
+      "path": "/email-marketing-ai",
+      "name": "Email Marketing AI",
+      "description": "AI-powered email marketing solutions",
+      "priority": 0.9
+    },
+    {
+      "path": "/pricing",
+      "name": "Pricing",
+      "description": "View our pricing plans and packages",
+      "priority": 0.8
+    },
+    {
+      "path": "/support",
+      "name": "Support",
+      "description": "Get help and support for our services",
+      "priority": 0.8
+    }
+  ],
+  "metadata": {
+    "name": "SaaS Theme",
+    "version": "1.0.0",
+    "description": "A modern SaaS website theme with multiple service pages",
+    "author": "Digivast",
+    "license": "MIT"
+  }
+} 

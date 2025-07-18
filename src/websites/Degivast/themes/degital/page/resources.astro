@@ -1,0 +1,347 @@
+---
+import { getLangFromUrl, useTranslations } from '@utils/i18n';
+import { Fragment } from 'astro';
+
+const theme = import.meta.env.THEME || 'default';
+const { lang } = Astro.params;
+
+// Import components
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+
+// Get translations
+const translations = await useTranslations(lang);
+const jsonData = translations.default;
+
+// Get site title and description
+const SITE_TITLE = 'Resources | ' + jsonData.siteTitle;
+const SITE_DESCRIPTION = 'Explore our comprehensive collection of digital marketing resources';
+
+// Icon paths mapping
+const iconPaths = {
+  'book-open': 'M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253',
+  'document': 'M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z',
+  'video': 'M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z',
+  'template': 'M4 5a2 2 0 012-2h4.586A2 2 0 0112 3.586L15.414 7A2 2 0 0116 8.414V19a2 2 0 01-2 2H6a2 2 0 01-2-2V5z'
+};
+
+// Generate static paths for all supported languages
+export async function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'fr' } },
+  ];
+}
+
+// Resource categories with their features
+const resources = [
+  {
+    name: 'Guides & Tutorials',
+    icon: 'book-open',
+    description: 'Comprehensive guides and tutorials to master digital marketing',
+    features: [
+      'Step-by-step tutorials',
+      'Best practice guides',
+      'Video walkthroughs',
+      'Case studies'
+    ],
+    link: '/resources/guides'
+  },
+  {
+    name: 'Templates',
+    icon: 'document',
+    description: 'Ready-to-use templates for your marketing campaigns',
+    features: [
+      'Social media templates',
+      'Email templates',
+      'Content calendars',
+      'Marketing plans'
+    ],
+    link: '/resources/templates'
+  },
+  {
+    name: 'Video Library',
+    icon: 'video',
+    description: 'Watch and learn from our collection of video tutorials',
+    features: [
+      'Platform tutorials',
+      'Strategy sessions',
+      'Expert interviews',
+      'Success stories'
+    ],
+    link: '/resources/videos'
+  },
+  {
+    name: 'Downloads',
+    icon: 'template',
+    description: 'Downloadable resources to enhance your marketing efforts',
+    features: [
+      'Checklists',
+      'Worksheets',
+      'Ebooks',
+      'Research reports'
+    ],
+    link: '/resources/downloads'
+  }
+];
+---
+
+<!doctype html>
+<html lang={lang} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <style>
+      .gradient-bg {
+        background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #d946ef 100%);
+      }
+      .resource-card {
+        transition: transform 0.3s ease-in-out;
+      }
+      .resource-card:hover {
+        transform: translateY(-5px);
+      }
+    </style>
+  </head>
+  <body class={lang === 'ar' ? 'rtl' : 'ltr'}>
+    <Header />
+    <main>
+      {/* Hero Section */}
+      <section class="py-20 gradient-bg text-white">
+        <div class="container mx-auto px-4">
+          <div class="max-w-3xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">
+              Resources to Power Your Growth
+            </h1>
+            <p class="text-xl opacity-90 mb-8">
+              Access our comprehensive library of guides, templates, and tools to enhance your digital marketing success.
+            </p>
+            <div class="flex justify-center gap-4">
+              <a
+                href="#explore"
+                class="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-colors"
+              >
+                Browse Resources
+              </a>
+              <a
+                href="/contact"
+                class="border-2 border-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+              >
+                Request Custom Guide
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Resources Grid */}
+      <section id="explore" class="py-20">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold mb-4">Explore Resources</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">
+              Find the perfect resources to help you achieve your marketing goals and grow your business.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-8">
+            {resources.map((resource) => (
+              <div class="resource-card bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="p-8">
+                  <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-6 w-6 text-purple-600"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d={iconPaths[resource.icon]}
+                      />
+                    </svg>
+                  </div>
+                  <h3 class="text-2xl font-semibold mb-4">{resource.name}</h3>
+                  <p class="text-gray-600 mb-6">{resource.description}</p>
+                  <ul class="space-y-3 mb-8">
+                    {resource.features.map((feature) => (
+                      <li class="flex items-center text-gray-700">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5 text-green-500 mr-3"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <a
+                    href={resource.link}
+                    class="inline-flex items-center text-purple-600 font-semibold hover:text-purple-700"
+                  >
+                    Access Resources
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5 ml-2"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+          <div class="max-w-3xl mx-auto text-center mb-16">
+            <h2 class="text-3xl font-bold mb-4">Why Use Our Resources</h2>
+            <p class="text-gray-600">
+              Our resources are designed to help you learn, implement, and succeed in your digital marketing efforts.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="text-center">
+              <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-8 w-8 text-purple-600"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold mb-4">Expert Knowledge</h3>
+              <p class="text-gray-600">
+                Created by industry experts with years of experience.
+              </p>
+            </div>
+
+            <div class="text-center">
+              <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-8 w-8 text-purple-600"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold mb-4">Always Updated</h3>
+              <p class="text-gray-600">
+                Regular updates to keep you ahead of industry trends.
+              </p>
+            </div>
+
+            <div class="text-center">
+              <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-8 w-8 text-purple-600"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold mb-4">Actionable Insights</h3>
+              <p class="text-gray-600">
+                Practical tips and strategies you can implement immediately.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section class="py-20 gradient-bg text-white">
+        <div class="container mx-auto px-4">
+          <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready to Level Up Your Marketing?</h2>
+            <p class="text-xl opacity-90 mb-8">
+              Access our complete library of resources and start improving your marketing today.
+            </p>
+            <div class="flex justify-center gap-4">
+              <a
+                href="/signup"
+                class="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-colors"
+              >
+                Get Started Free
+              </a>
+              <a
+                href="/contact"
+                class="border-2 border-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+              >
+                Talk to an Expert
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <Footer />
+
+    <script>
+      // Intersection Observer for animations
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-in');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      // Observe all sections
+      document.querySelectorAll('section').forEach(section => {
+        observer.observe(section);
+      });
+    </script>
+  </body>
+</html> 

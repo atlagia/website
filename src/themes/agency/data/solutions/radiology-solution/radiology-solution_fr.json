@@ -1,0 +1,335 @@
+{
+  "hero": {
+    "subtitle": "Système d'Information Radiologique",
+    "title": "Solution Avancée de Gestion Radiologique",
+    "description": "Un système d'information radiologique complet qui optimise les flux d'imagerie, améliore les rapports et améliore les soins aux patients.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Démo de la Solution de Gestion Radiologique"
+    },
+    "stats": [
+      {
+        "value": "45%",
+        "label": "Rapports Plus Rapides"
+      },
+      {
+        "value": "99.9%",
+        "label": "Qualité d'Image"
+      },
+      {
+        "value": "30%",
+        "label": "Réduction des Coûts"
+      }
+    ]
+  },
+  "features": {
+    "subtitle": "Fonctionnalités Avancées",
+    "title": "Gestion Complète de la Radiologie",
+    "description": "Outils complets conçus pour les pratiques radiologiques modernes",
+    "categories": [
+      {
+        "name": "Flux d'Imagerie",
+        "description": "Optimisation des processus d'imagerie et des rapports"
+      },
+      {
+        "name": "Soins aux Patients",
+        "description": "Amélioration de l'expérience patient et de la prestation des soins"
+      }
+    ],
+    "items": [
+      {
+        "icon": "image",
+        "category": "Imagerie",
+        "title": "Intégration PACS",
+        "description": "Intégration transparente avec les systèmes PACS",
+        "image": "/images/solutions/radiology/pacs.jpg",
+        "highlights": [
+          "Compatibilité DICOM",
+          "Support multi-modalités",
+          "Archivage d'images",
+          "Accès à distance"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "Conformité DICOM"
+        }
+      },
+      {
+        "icon": "file-text",
+        "category": "Rapports",
+        "title": "Rapports Intelligents",
+        "description": "Rapports assistés par IA et modèles structurés",
+        "image": "/images/solutions/radiology/reporting.jpg",
+        "highlights": [
+          "Reconnaissance vocale",
+          "Bibliothèque de modèles",
+          "Trouvailles critiques",
+          "Mesures automatiques"
+        ],
+        "stats": {
+          "value": "45%",
+          "label": "Rapports plus rapides"
+        }
+      },
+      {
+        "icon": "users",
+        "category": "Flux de Travail",
+        "title": "Optimisation des Flux",
+        "description": "Gestion et planification efficaces des flux de travail",
+        "image": "/images/solutions/radiology/workflow.jpg",
+        "highlights": [
+          "Planification intelligente",
+          "Gestion des listes de travail",
+          "Automatisation des protocoles",
+          "Allocation des ressources"
+        ],
+        "stats": {
+          "value": "35%",
+          "label": "Gain d'efficacité"
+        }
+      },
+      {
+        "icon": "activity",
+        "category": "Analytique",
+        "title": "Analytique Avancée",
+        "description": "Analyses complètes et intelligence d'affaires",
+        "image": "/images/solutions/radiology/analytics.jpg",
+        "highlights": [
+          "Métriques de performance",
+          "Indicateurs de qualité",
+          "Utilisation des ressources",
+          "Analyses financières"
+        ],
+        "stats": {
+          "value": "30%",
+          "label": "Réduction des coûts"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Excellence Radiologique en Action",
+    "description": "Découvrez comment les pratiques radiologiques leaders transforment leurs opérations",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Histoire de Succès Radiologique"
+    },
+    "testimonials": [
+      {
+        "author": "Dr. James Anderson",
+        "role": "Radiologue en Chef",
+        "image": "/images/testimonials/rad1.jpg",
+        "quote": "Ce système a révolutionné notre pratique. Les capacités intégrées PACS et de rapports ont considérablement amélioré notre efficacité."
+      },
+      {
+        "author": "Dr. Sarah Martinez",
+        "role": "Directrice de l'Imagerie",
+        "image": "/images/testimonials/rad2.jpg",
+        "quote": "Les rapports assistés par IA et l'optimisation des flux nous ont aidés à fournir des diagnostics plus rapides et plus précis."
+      }
+    ]
+  },
+  "benefits": {
+    "subtitle": "Avantages Clés",
+    "title": "Transformez Votre Pratique Radiologique",
+    "description": "Découvrez les avantages d'un système de gestion radiologique entièrement intégré",
+    "items": [
+      {
+        "icon": "zap",
+        "title": "Efficacité Améliorée",
+        "description": "Optimisation des flux radiologiques et des rapports",
+        "color": "blue",
+        "stats": {
+          "value": "45%",
+          "label": "Temps de Traitement Plus Rapide"
+        },
+        "highlights": [
+          "Flux automatisés",
+          "Planification intelligente",
+          "Optimisation des ressources",
+          "Rapports rapides"
+        ]
+      },
+      {
+        "icon": "check-circle",
+        "title": "Assurance Qualité",
+        "description": "Maintien des plus hauts standards de qualité d'image",
+        "color": "green",
+        "stats": {
+          "value": "99.9%",
+          "label": "Qualité d'Image"
+        },
+        "highlights": [
+          "Contrôles qualité",
+          "Gestion des protocoles",
+          "Prévention des erreurs",
+          "Suivi de conformité"
+        ]
+      },
+      {
+        "icon": "users",
+        "title": "Soins aux Patients",
+        "description": "Amélioration de l'expérience patient et des résultats",
+        "color": "purple",
+        "stats": {
+          "value": "95%",
+          "label": "Satisfaction des Patients"
+        },
+        "highlights": [
+          "Accès rapide",
+          "Partage des résultats",
+          "Portail patient",
+          "Coordination des soins"
+        ]
+      },
+      {
+        "icon": "shield",
+        "title": "Sécurité & Conformité",
+        "description": "Garantie de la sécurité des données et de la conformité réglementaire",
+        "color": "red",
+        "stats": {
+          "value": "100%",
+          "label": "Conformité HIPAA"
+        },
+        "highlights": [
+          "Chiffrement des données",
+          "Contrôle d'accès",
+          "Traçabilité",
+          "Conformité réglementaire"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "subtitle": "Tarification Transparente",
+    "title": "Plans de Prix Flexibles",
+    "description": "Choisissez le plan parfait pour votre pratique radiologique. Économisez jusqu'à 20% avec la facturation annuelle.",
+    "billingPeriods": ["Mensuel", "Annuel"],
+    "plans": [
+      {
+        "name": "Essentiel",
+        "highlight": "Pour les petites pratiques",
+        "monthlyPrice": "$999",
+        "yearlyPrice": "$9,990",
+        "yearlyDiscount": "Économisez $1,998/an",
+        "description": "Fonctionnalités essentielles pour les petites pratiques",
+        "features": [
+          {
+            "text": "Intégration PACS de base",
+            "included": true
+          },
+          {
+            "text": "Modèles de rapports",
+            "included": true
+          },
+          {
+            "text": "Système de planification",
+            "included": true
+          },
+          {
+            "text": "Support par email",
+            "included": true
+          },
+          {
+            "text": "Analytique de base",
+            "included": true
+          },
+          {
+            "text": "Accès mobile",
+            "included": true
+          }
+        ],
+        "cta": "Commencer",
+        "popular": false
+      },
+      {
+        "name": "Professionnel",
+        "highlight": "Plus populaire pour les pratiques en croissance",
+        "monthlyPrice": "$1,999",
+        "yearlyPrice": "$19,990",
+        "yearlyDiscount": "Économisez $3,998/an",
+        "description": "Fonctionnalités avancées pour les pratiques établies",
+        "features": [
+          {
+            "text": "Tout ce qui est inclus dans Essentiel, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Intégration PACS avancée",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "Rapports assistés par IA",
+            "included": true
+          },
+          {
+            "text": "Analytique avancée",
+            "included": true
+          },
+          {
+            "text": "Support prioritaire",
+            "included": true
+          },
+          {
+            "text": "Support multi-sites",
+            "included": true
+          }
+        ],
+        "cta": "Commencer",
+        "popular": true
+      },
+      {
+        "name": "Enterprise",
+        "highlight": "Pour les grandes pratiques & hôpitaux",
+        "monthlyPrice": "Personnalisé",
+        "yearlyPrice": "Personnalisé",
+        "yearlyDiscount": "Contactez-nous pour des prix spéciaux",
+        "description": "Solutions personnalisées pour les grandes pratiques",
+        "features": [
+          {
+            "text": "Tout ce qui est inclus dans Professionnel, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Support d'intégration personnalisé",
+            "included": true
+          },
+          {
+            "text": "Gestionnaire de compte dédié",
+            "included": true
+          },
+          {
+            "text": "Fonctionnalités de sécurité avancées",
+            "included": true
+          },
+          {
+            "text": "Développement personnalisé",
+            "included": true
+          },
+          {
+            "text": "Garanties SLA",
+            "included": true
+          }
+        ],
+        "cta": "Contacter les Ventes",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prêt à Transformer Votre Pratique Radiologique ?",
+    "description": "Rejoignez les pratiques radiologiques leaders qui ont modernisé leurs opérations avec notre solution.",
+    "background": "/images/solutions/radiology/cta-background.jpg",
+    "primaryButton": {
+      "text": "Planifier une Démo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Voir la Démo",
+      "link": "#showcase"
+    }
+  }
+} 

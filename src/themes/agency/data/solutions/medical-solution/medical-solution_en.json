@@ -1,0 +1,335 @@
+{
+  "hero": {
+    "subtitle": "Medical Practice Management",
+    "title": "Transform Your Medical Practice with Smart Technology",
+    "description": "An all-in-one solution designed specifically for medical practices, combining patient care, practice management, and advanced analytics to streamline your operations.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Medical Practice Management Solution Demo"
+    },
+    "stats": [
+      {
+        "value": "98%",
+        "label": "Patient Satisfaction"
+      },
+      {
+        "value": "40%",
+        "label": "Time Saved"
+      },
+      {
+        "value": "2.5x",
+        "label": "Revenue Growth"
+      }
+    ]
+  },
+  "features": {
+    "subtitle": "Comprehensive Features",
+    "title": "Everything You Need to Run Your Practice",
+    "description": "Our medical practice solution combines cutting-edge technology with user-friendly interfaces to enhance patient care and streamline operations.",
+    "categories": [
+      {
+        "name": "Patient Care Excellence",
+        "description": "Tools and features designed to enhance patient experience and care quality"
+      },
+      {
+        "name": "Practice Efficiency",
+        "description": "Streamline operations and reduce administrative burden"
+      }
+    ],
+    "items": [
+      {
+        "icon": "calendar",
+        "category": "Practice Management",
+        "title": "Smart Scheduling",
+        "description": "AI-powered scheduling system that optimizes appointment slots and reduces no-shows",
+        "image": "/images/solutions/medical/scheduling.jpg",
+        "highlights": [
+          "Automated appointment reminders",
+          "Multi-location support",
+          "Real-time availability",
+          "Waitlist management"
+        ],
+        "stats": {
+          "value": "50%",
+          "label": "Reduction in no-shows"
+        }
+      },
+      {
+        "icon": "users",
+        "category": "Patient Care",
+        "title": "Patient Portal",
+        "description": "Secure patient portal for appointments, communications, and medical records",
+        "image": "/images/solutions/medical/patient-portal.jpg",
+        "highlights": [
+          "Online appointment booking",
+          "Secure messaging",
+          "Test results access",
+          "Prescription renewals"
+        ],
+        "stats": {
+          "value": "92%",
+          "label": "Patient engagement"
+        }
+      },
+      {
+        "icon": "brain",
+        "category": "Clinical Tools",
+        "title": "Clinical Decision Support",
+        "description": "AI-assisted diagnosis and treatment recommendations based on latest medical research",
+        "image": "/images/solutions/medical/clinical-support.jpg",
+        "highlights": [
+          "Evidence-based guidelines",
+          "Drug interaction checks",
+          "Clinical pathways",
+          "Risk assessments"
+        ],
+        "stats": {
+          "value": "35%",
+          "label": "Faster diagnoses"
+        }
+      },
+      {
+        "icon": "chart-up",
+        "category": "Analytics",
+        "title": "Practice Analytics",
+        "description": "Comprehensive analytics and reporting for better practice management",
+        "image": "/images/solutions/medical/analytics.jpg",
+        "highlights": [
+          "Financial performance",
+          "Patient outcomes",
+          "Operational metrics",
+          "Quality measures"
+        ],
+        "stats": {
+          "value": "45%",
+          "label": "Revenue increase"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "See Our Solution in Action",
+    "description": "Watch how leading medical practices are transforming patient care with our solution",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Medical Practice Success Story"
+    },
+    "testimonials": [
+      {
+        "author": "Dr. Sarah Johnson",
+        "role": "Family Practice Director",
+        "image": "/images/testimonials/doctor1.jpg",
+        "quote": "This solution has revolutionized how we manage our practice. The efficiency gains are remarkable."
+      },
+      {
+        "author": "Dr. Michael Chen",
+        "role": "Internal Medicine Specialist",
+        "image": "/images/testimonials/doctor2.jpg",
+        "quote": "The clinical decision support tools have been invaluable in providing evidence-based care to our patients."
+      }
+    ]
+  },
+  "benefits": {
+    "subtitle": "Key Benefits",
+    "title": "Transform Your Practice",
+    "description": "Experience the advantages of a fully integrated medical practice management solution",
+    "items": [
+      {
+        "icon": "trending-up",
+        "title": "Operational Excellence",
+        "description": "Streamline your practice operations and reduce administrative overhead",
+        "color": "blue",
+        "stats": {
+          "value": "40%",
+          "label": "Efficiency Increase"
+        },
+        "highlights": [
+          "Automated workflows",
+          "Reduced paperwork",
+          "Streamlined billing",
+          "Better resource allocation"
+        ]
+      },
+      {
+        "icon": "heart",
+        "title": "Enhanced Patient Care",
+        "description": "Deliver better patient experiences and improve health outcomes",
+        "color": "purple",
+        "stats": {
+          "value": "95%",
+          "label": "Patient Satisfaction"
+        },
+        "highlights": [
+          "Personalized care plans",
+          "Better follow-up care",
+          "Improved communication",
+          "Enhanced engagement"
+        ]
+      },
+      {
+        "icon": "chart-up",
+        "title": "Financial Growth",
+        "description": "Increase revenue and improve financial performance",
+        "color": "green",
+        "stats": {
+          "value": "35%",
+          "label": "Revenue Growth"
+        },
+        "highlights": [
+          "Optimized billing",
+          "Reduced denials",
+          "Better collections",
+          "Increased profitability"
+        ]
+      },
+      {
+        "icon": "star",
+        "title": "Quality Assurance",
+        "description": "Maintain high standards of care and regulatory compliance",
+        "color": "yellow",
+        "stats": {
+          "value": "100%",
+          "label": "Compliance Rate"
+        },
+        "highlights": [
+          "HIPAA compliance",
+          "Quality metrics",
+          "Audit readiness",
+          "Risk management"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "subtitle": "Transparent Pricing",
+    "title": "Flexible Pricing Plans",
+    "description": "Choose the perfect plan for your practice. Save up to 20% with annual billing.",
+    "billingPeriods": ["Monthly", "Yearly"],
+    "plans": [
+      {
+        "name": "Starter",
+        "highlight": "Perfect for small practices",
+        "monthlyPrice": "$299",
+        "yearlyPrice": "$2,990",
+        "yearlyDiscount": "Save $598/year",
+        "description": "Essential features to start your digital transformation journey",
+        "features": [
+          {
+            "text": "Basic appointment scheduling",
+            "included": true
+          },
+          {
+            "text": "Patient portal access",
+            "included": true
+          },
+          {
+            "text": "Electronic health records",
+            "included": true
+          },
+          {
+            "text": "Email support (24/7)",
+            "included": true
+          },
+          {
+            "text": "Basic analytics",
+            "included": true
+          },
+          {
+            "text": "Mobile app access",
+            "included": true
+          }
+        ],
+        "cta": "Get Started",
+        "popular": false
+      },
+      {
+        "name": "Professional",
+        "highlight": "Most popular for growing practices",
+        "monthlyPrice": "$599",
+        "yearlyPrice": "$5,990",
+        "yearlyDiscount": "Save $1,198/year",
+        "description": "Advanced features for established practices",
+        "features": [
+          {
+            "text": "Everything in Starter, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "AI-powered clinical support",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "Multi-provider support",
+            "included": true
+          },
+          {
+            "text": "Advanced analytics dashboard",
+            "included": true
+          },
+          {
+            "text": "Priority support",
+            "included": true
+          },
+          {
+            "text": "Telehealth integration",
+            "included": true
+          }
+        ],
+        "cta": "Get Started",
+        "popular": true
+      },
+      {
+        "name": "Enterprise",
+        "highlight": "For large medical groups",
+        "monthlyPrice": "Custom",
+        "yearlyPrice": "Custom",
+        "yearlyDiscount": "Contact us for special pricing",
+        "description": "Tailored solutions for enterprise needs",
+        "features": [
+          {
+            "text": "Everything in Professional, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Custom integration support",
+            "included": true
+          },
+          {
+            "text": "Dedicated account manager",
+            "included": true
+          },
+          {
+            "text": "Advanced security features",
+            "included": true
+          },
+          {
+            "text": "Custom development options",
+            "included": true
+          },
+          {
+            "text": "SLA guarantees",
+            "included": true
+          }
+        ],
+        "cta": "Contact Sales",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Transform Your Medical Practice?",
+    "description": "Join thousands of medical professionals who have already modernized their practice with our solution.",
+    "background": "/images/solutions/medical/cta-background.jpg",
+    "primaryButton": {
+      "text": "Schedule a Demo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Watch Demo",
+      "link": "#showcase"
+    }
+  }
+} 

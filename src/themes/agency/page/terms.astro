@@ -1,0 +1,333 @@
+---
+import { SITE_TITLE } from '../consts';
+import * as LucideIcons from 'lucide-react';
+import { getLangFromUrl } from '@utils/i18n';
+
+const { 
+  Scale,
+  FileText,
+  Clock,
+  Shield,
+  Users,
+  AlertTriangle,
+  Ban,
+  BookOpen,
+  MessageSquare,
+  Globe,
+  Wallet,
+  HandShake,
+  ScrollText,
+  Gavel,
+  HelpCircle
+} = LucideIcons;
+
+const theme = import.meta.env.THEME || 'default';
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'GiaConnect';
+
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+
+// Get current language
+const currentLang = getLangFromUrl(Astro.url);
+
+const termsContent = {
+  pageTitle: "Terms & Conditions",
+  pageDescription: "Read our terms and conditions to understand your rights and responsibilities when using GiaConnect",
+  hero: {
+    badge: "Terms of Service",
+    title: "Terms & Conditions",
+    description: "Please read these terms carefully before using our services. These terms outline your rights, obligations, and the rules governing the use of GiaConnect."
+  },
+  sections: [
+    {
+      title: "General Terms",
+      icon: "Scale",
+      description: "Basic terms governing the use of our services",
+      items: [
+        {
+          title: "Agreement",
+          description: "By accessing our services, you agree to be bound by these terms and conditions.",
+          icon: "HandShake"
+        },
+        {
+          title: "Service Description",
+          description: "Overview of services provided and their intended use.",
+          icon: "FileText"
+        },
+        {
+          title: "Modifications",
+          description: "We reserve the right to modify these terms with notice to users.",
+          icon: "ScrollText"
+        }
+      ]
+    },
+    {
+      title: "User Obligations",
+      icon: "Users",
+      description: "Your responsibilities when using our services",
+      items: [
+        {
+          title: "Account Security",
+          description: "Users are responsible for maintaining the security of their accounts.",
+          icon: "Shield"
+        },
+        {
+          title: "Acceptable Use",
+          description: "Guidelines for appropriate use of our services.",
+          icon: "BookOpen"
+        },
+        {
+          title: "Prohibited Activities",
+          description: "Actions that are not permitted on our platform.",
+          icon: "Ban"
+        }
+      ]
+    },
+    {
+      title: "Service Policies",
+      icon: "Gavel",
+      description: "Policies governing our service delivery",
+      items: [
+        {
+          title: "Availability",
+          description: "Service availability and maintenance windows.",
+          icon: "Clock"
+        },
+        {
+          title: "Communication",
+          description: "How we communicate service updates and changes.",
+          icon: "MessageSquare"
+        },
+        {
+          title: "Support",
+          description: "Available support channels and response times.",
+          icon: "HelpCircle"
+        }
+      ]
+    },
+    {
+      title: "Legal Considerations",
+      icon: "Scale",
+      description: "Important legal aspects of using our service",
+      items: [
+        {
+          title: "Intellectual Property",
+          description: "Protection of our and your intellectual property rights.",
+          icon: "FileText"
+        },
+        {
+          title: "Liability",
+          description: "Limitations of liability and warranty disclaimers.",
+          icon: "AlertTriangle"
+        },
+        {
+          title: "Jurisdiction",
+          description: "Governing law and jurisdiction for disputes.",
+          icon: "Globe"
+        }
+      ]
+    },
+    {
+      title: "Commercial Terms",
+      icon: "Wallet",
+      description: "Financial and commercial aspects",
+      items: [
+        {
+          title: "Pricing",
+          description: "Current pricing structure and payment terms.",
+          icon: "Wallet"
+        },
+        {
+          title: "Refunds",
+          description: "Our refund and cancellation policies.",
+          icon: "HandShake"
+        },
+        {
+          title: "Billing",
+          description: "Billing cycles and payment processing details.",
+          icon: "Clock"
+        }
+      ]
+    }
+  ],
+  contact: {
+    title: "Legal Inquiries",
+    description: "Have questions about our terms of service?",
+    email: "legal@giaconnect.com",
+    button: {
+      text: "Contact Legal Team",
+      href: "/contact"
+    }
+  }
+};
+
+const iconMap = {
+  Scale,
+  FileText,
+  Clock,
+  Shield,
+  Users,
+  AlertTriangle,
+  Ban,
+  BookOpen,
+  MessageSquare,
+  Globe,
+  Wallet,
+  HandShake,
+  ScrollText,
+  Gavel,
+  HelpCircle
+};
+
+const getIcon = (iconName: string) => {
+  return iconMap[iconName] || Scale;
+};
+---
+
+<!doctype html>
+<html lang={currentLang} class="scroll-smooth">
+  <head>
+    <BaseHead 
+      title={`${termsContent.pageTitle} | ${siteName}`}
+      description={termsContent.pageDescription}
+    />
+  </head>
+  <body class="bg-gray-50">
+    <Header />
+    
+    <!-- Hero Section -->
+    <section class="relative min-h-[60vh] flex items-center py-20 overflow-hidden">
+      <!-- Background Effects -->
+      <div class="absolute inset-0 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
+        <div class="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(to_bottom,transparent,black,transparent)] opacity-20"></div>
+      </div>
+
+      <div class="relative container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-white/90 border border-purple-100 shadow-lg mb-8">
+            <Scale class="w-5 h-5 text-purple-600" />
+            <span class="text-base font-medium text-purple-700">{termsContent.hero.badge}</span>
+          </div>
+
+          <h1 class="text-5xl lg:text-6xl font-bold leading-tight mb-8">
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
+              {termsContent.hero.title}
+            </span>
+          </h1>
+
+          <p class="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
+            {termsContent.hero.description}
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Terms Sections -->
+    {termsContent.sections.map((section) => (
+      <section class="py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-white">
+          <div class="absolute inset-0 bg-gradient-to-br from-purple-50/50 to-blue-50/50"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 relative">
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <div class="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-purple-50 border border-purple-100 mb-4">
+              {(() => {
+                const Icon = getIcon(section.icon);
+                return <Icon class="w-5 h-5 text-purple-600" />;
+              })()}
+              <span class="text-base font-medium text-purple-700">{section.title}</span>
+            </div>
+            <h2 class="text-4xl font-bold mb-6">{section.title}</h2>
+            <p class="text-xl text-gray-600">{section.description}</p>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-8">
+            {section.items.map((item) => {
+              const Icon = getIcon(item.icon);
+              return (
+                <div class="bg-white rounded-2xl p-8 shadow-lg shadow-purple-100/20 hover:shadow-xl transition-shadow duration-300">
+                  <div class="w-12 h-12 bg-purple-50 rounded-xl flex items-center justify-center mb-6">
+                    <Icon class="w-6 h-6 text-purple-600" />
+                  </div>
+                  <h3 class="text-xl font-semibold mb-4">{item.title}</h3>
+                  <p class="text-gray-600">{item.description}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+    ))}
+
+    <!-- Contact Section -->
+    <section class="relative py-20 overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600">
+        <div class="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(to_bottom,transparent,black,transparent)] opacity-10"></div>
+      </div>
+      
+      <div class="relative container mx-auto px-4 text-center">
+        <div class="max-w-3xl mx-auto">
+          <h2 class="text-4xl font-bold text-white mb-6">{termsContent.contact.title}</h2>
+          <p class="text-xl text-white/90 mb-4">
+            {termsContent.contact.description}
+          </p>
+          <p class="text-xl text-white/90 mb-8">
+            Email us at: <a href={`mailto:${termsContent.contact.email}`} class="underline hover:text-white">{termsContent.contact.email}</a>
+          </p>
+          <div class="flex items-center justify-center">
+            <a 
+              href={termsContent.contact.button.href}
+              class="px-8 py-4 rounded-xl font-medium bg-white text-purple-600 hover:bg-gray-100 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25 hover:-translate-y-0.5"
+            >
+              {termsContent.contact.button.text}
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Footer />
+
+    <style>
+      /* Animations */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .fade-in {
+        animation: fadeIn 0.6s ease-out forwards;
+      }
+
+      /* Smooth transitions */
+      .transition-all {
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 150ms;
+      }
+
+      /* Ensure proper section spacing */
+      section {
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* Improve card aesthetics */
+      .rounded-2xl {
+        border-radius: 1rem;
+      }
+
+      .shadow-lg {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      }
+    </style>
+  </body>
+</html> 

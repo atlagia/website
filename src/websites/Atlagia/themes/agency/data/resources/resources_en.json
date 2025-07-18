@@ -1,0 +1,223 @@
+{
+  "pageTitle": "Resources",
+  "pageDescription": "Access comprehensive documentation, guides, case studies, and more resources to help you succeed with our platform.",
+  "hero": {
+    "badge": "Resources & Documentation",
+    "title": "Resources to Help You Succeed",
+    "description": "Access comprehensive documentation, guides, tutorials, and case studies to make the most of our platform.",
+    "cta": {
+      "primary": {
+        "text": "Browse Documentation",
+        "href": "/docs"
+      },
+      "secondary": {
+        "text": "View Guides",
+        "href": "#guides"
+      }
+    }
+  },
+  "resourceCategories": [
+    {
+      "title": "Documentation",
+      "icon": "Book",
+      "description": "Comprehensive guides and API documentation",
+      "items": [
+        {
+          "title": "Getting Started Guide",
+          "description": "Quick start guide for new users",
+          "icon": "BookOpen",
+          "link": "/docs/getting-started",
+          "tag": "Essential"
+        },
+        {
+          "title": "API Reference",
+          "description": "Complete API documentation",
+          "icon": "FileCode",
+          "link": "/docs/api",
+          "tag": "Technical"
+        },
+        {
+          "title": "SDK Documentation",
+          "description": "Language-specific SDK guides",
+          "icon": "FileText",
+          "link": "/docs/sdk",
+          "tag": "Development"
+        },
+        {
+          "title": "Integration Guides",
+          "description": "Step-by-step integration tutorials",
+          "icon": "ChevronRight",
+          "link": "/docs/integration",
+          "tag": "Technical"
+        }
+      ]
+    },
+    {
+      "title": "Learning Center",
+      "icon": "GraduationCap",
+      "description": "Educational resources and tutorials",
+      "items": [
+        {
+          "title": "Video Tutorials",
+          "description": "Step-by-step video guides",
+          "icon": "Video",
+          "link": "/learn/tutorials",
+          "tag": "Video"
+        },
+        {
+          "title": "Best Practices",
+          "description": "Implementation guidelines",
+          "icon": "Star",
+          "link": "/learn/best-practices",
+          "tag": "Guide"
+        },
+        {
+          "title": "Code Examples",
+          "description": "Sample code and snippets",
+          "icon": "FileCode",
+          "link": "/learn/examples",
+          "tag": "Code"
+        },
+        {
+          "title": "Community Forums",
+          "description": "Discussion and support",
+          "icon": "MessageSquare",
+          "link": "/community",
+          "tag": "Support"
+        }
+      ]
+    },
+    {
+      "title": "Case Studies",
+      "icon": "BarChart",
+      "description": "Success stories and implementation examples",
+      "items": [
+        {
+          "title": "Healthcare Success",
+          "description": "Medical practice transformation",
+          "icon": "Users",
+          "link": "/case-studies/healthcare",
+          "tag": "Healthcare"
+        },
+        {
+          "title": "Retail Innovation",
+          "description": "E-commerce optimization",
+          "icon": "BarChart",
+          "link": "/case-studies/retail",
+          "tag": "Retail"
+        },
+        {
+          "title": "Manufacturing Excellence",
+          "description": "Production optimization",
+          "icon": "Award",
+          "link": "/case-studies/manufacturing",
+          "tag": "Industry"
+        },
+        {
+          "title": "Service Enhancement",
+          "description": "Customer service improvement",
+          "icon": "Star",
+          "link": "/case-studies/service",
+          "tag": "Service"
+        }
+      ]
+    }
+  ],
+  "featuredGuides": [
+    {
+      "title": "Platform Implementation Guide",
+      "description": "Complete guide to implementing our AI platform",
+      "image": "/images/resources/implementation.jpg",
+      "category": "Technical Guide",
+      "readTime": "15 min read",
+      "link": "/guides/implementation"
+    },
+    {
+      "title": "AI Integration Best Practices",
+      "description": "Learn how to effectively integrate AI into your workflow",
+      "image": "/images/resources/ai-integration.jpg",
+      "category": "Best Practices",
+      "readTime": "10 min read",
+      "link": "/guides/ai-integration"
+    },
+    {
+      "title": "Security & Compliance Guide",
+      "description": "Understanding security features and compliance",
+      "image": "/images/resources/security.jpg",
+      "category": "Security",
+      "readTime": "12 min read",
+      "link": "/guides/security"
+    }
+  ],
+  "latestArticles": [
+    {
+      "title": "The Future of AI in Healthcare",
+      "description": "Exploring upcoming trends and innovations",
+      "image": "/images/blog/ai-healthcare.jpg",
+      "date": "Mar 15, 2024",
+      "readTime": "8 min read",
+      "category": "Industry Insights",
+      "link": "/blog/ai-healthcare-future"
+    },
+    {
+      "title": "Optimizing AI Performance",
+      "description": "Tips for maximizing AI efficiency",
+      "image": "/images/blog/ai-performance.jpg",
+      "date": "Mar 10, 2024",
+      "readTime": "6 min read",
+      "category": "Technical",
+      "link": "/blog/ai-performance"
+    },
+    {
+      "title": "AI Security Best Practices",
+      "description": "Keeping your AI implementation secure",
+      "image": "/images/blog/ai-security.jpg",
+      "date": "Mar 5, 2024",
+      "readTime": "7 min read",
+      "category": "Security",
+      "link": "/blog/ai-security"
+    }
+  ],
+  "downloads": [
+    {
+      "title": "Platform Overview",
+      "description": "Comprehensive PDF guide",
+      "icon": "Download",
+      "format": "PDF",
+      "size": "2.5 MB",
+      "link": "/downloads/platform-overview.pdf"
+    },
+    {
+      "title": "Technical Whitepaper",
+      "description": "Detailed technical specifications",
+      "icon": "FileText",
+      "format": "PDF",
+      "size": "3.8 MB",
+      "link": "/downloads/technical-whitepaper.pdf"
+    },
+    {
+      "title": "Implementation Guide",
+      "description": "Step-by-step setup guide",
+      "icon": "Book",
+      "format": "PDF",
+      "size": "1.8 MB",
+      "link": "/downloads/implementation-guide.pdf"
+    }
+  ],
+  "cta": {
+    "title": "Need Help?",
+    "description": "Our support team is here to help you succeed with our platform.",
+    "buttons": [
+      {
+        "text": "Contact Support",
+        "href": "/contact",
+        "variant": "primary"
+      },
+      {
+        "text": "Join Community",
+        "href": "/community",
+        "variant": "secondary"
+      }
+    ]
+  }
+} 

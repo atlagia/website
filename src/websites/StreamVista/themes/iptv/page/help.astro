@@ -1,0 +1,185 @@
+---
+import { getLangFromUrl, useTranslations } from '@utils/i18n';
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+
+const lang = getLangFromUrl(Astro.url);
+const translations = await useTranslations(lang);
+const jsonData = translations.default;
+
+const SITE_TITLE = jsonData.siteTitle || 'StreamVista';
+const PAGE_TITLE = 'Help Center | ' + SITE_TITLE;
+const PAGE_DESCRIPTION = 'Get help and support for StreamVista streaming service';
+---
+
+<!doctype html>
+<html lang={lang} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
+  <head>
+    <BaseHead title={PAGE_TITLE} description={PAGE_DESCRIPTION} />
+  </head>
+  <body class="bg-black text-white">
+    <Header />
+    <main class="container mx-auto px-4 py-16 max-w-6xl">
+      <section class="space-y-12">
+        {/* Hero Section */}
+        <div class="text-center space-y-4">
+          <h1 class="text-4xl md:text-6xl font-bold gradient-text">
+            Help Center
+          </h1>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            Find answers to common questions and get support for your StreamVista service.
+          </p>
+        </div>
+
+        {/* Quick Links */}
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="glass rounded-xl p-6 hover-scale hover-glow">
+            <h2 class="text-xl font-bold mb-4">Getting Started</h2>
+            <ul class="space-y-2">
+              <li>
+                <a href="#setup" class="text-purple-400 hover:text-purple-300">
+                  Setup Guide
+                </a>
+              </li>
+              <li>
+                <a href="#devices" class="text-purple-400 hover:text-purple-300">
+                  Supported Devices
+                </a>
+              </li>
+              <li>
+                <a href="#account" class="text-purple-400 hover:text-purple-300">
+                  Account Management
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="glass rounded-xl p-6 hover-scale hover-glow">
+            <h2 class="text-xl font-bold mb-4">Troubleshooting</h2>
+            <ul class="space-y-2">
+              <li>
+                <a href="#streaming" class="text-purple-400 hover:text-purple-300">
+                  Streaming Issues
+                </a>
+              </li>
+              <li>
+                <a href="#playback" class="text-purple-400 hover:text-purple-300">
+                  Playback Problems
+                </a>
+              </li>
+              <li>
+                <a href="#connection" class="text-purple-400 hover:text-purple-300">
+                  Connection Help
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="glass rounded-xl p-6 hover-scale hover-glow">
+            <h2 class="text-xl font-bold mb-4">Billing & Account</h2>
+            <ul class="space-y-2">
+              <li>
+                <a href="#billing" class="text-purple-400 hover:text-purple-300">
+                  Billing Questions
+                </a>
+              </li>
+              <li>
+                <a href="#subscription" class="text-purple-400 hover:text-purple-300">
+                  Subscription Management
+                </a>
+              </li>
+              <li>
+                <a href="#payment" class="text-purple-400 hover:text-purple-300">
+                  Payment Methods
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Help Sections */}
+        <div class="space-y-12">
+          {/* Setup Guide */}
+          <div id="setup" class="glass rounded-2xl p-8">
+            <h2 class="text-2xl font-bold mb-6">Setup Guide</h2>
+            <div class="space-y-6">
+              <div class="space-y-4">
+                <h3 class="text-xl font-semibold text-purple-400">1. Create Your Account</h3>
+                <p class="text-gray-300">
+                  Sign up for StreamVista using your email address and choose a subscription plan.
+                </p>
+              </div>
+              <div class="space-y-4">
+                <h3 class="text-xl font-semibold text-purple-400">2. Download the App</h3>
+                <p class="text-gray-300">
+                  Get the StreamVista app from your device's app store or visit our website.
+                </p>
+              </div>
+              <div class="space-y-4">
+                <h3 class="text-xl font-semibold text-purple-400">3. Sign In and Start Watching</h3>
+                <p class="text-gray-300">
+                  Log in with your account credentials and enjoy your favorite content.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Troubleshooting */}
+          <div id="streaming" class="glass rounded-2xl p-8">
+            <h2 class="text-2xl font-bold mb-6">Common Issues</h2>
+            <div class="space-y-6">
+              <div class="space-y-4">
+                <h3 class="text-xl font-semibold text-purple-400">Buffering Issues</h3>
+                <ul class="list-disc pl-6 text-gray-300 space-y-2">
+                  <li>Check your internet connection speed</li>
+                  <li>Close other applications using bandwidth</li>
+                  <li>Clear app cache and data</li>
+                  <li>Try a different server location</li>
+                </ul>
+              </div>
+              <div class="space-y-4">
+                <h3 class="text-xl font-semibold text-purple-400">Playback Errors</h3>
+                <ul class="list-disc pl-6 text-gray-300 space-y-2">
+                  <li>Update your app to the latest version</li>
+                  <li>Check device compatibility</li>
+                  <li>Verify your subscription status</li>
+                  <li>Contact support if issues persist</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Contact Support */}
+          <div class="glass rounded-2xl p-8">
+            <h2 class="text-2xl font-bold mb-6">Need More Help?</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+              <div class="space-y-4">
+                <h3 class="text-xl font-semibold text-purple-400">Live Chat Support</h3>
+                <p class="text-gray-300">
+                  Chat with our support team 24/7 for immediate assistance.
+                </p>
+                <button class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg transition duration-200">
+                  Start Chat
+                </button>
+              </div>
+              <div class="space-y-4">
+                <h3 class="text-xl font-semibold text-purple-400">Email Support</h3>
+                <p class="text-gray-300">
+                  Send us an email and we'll respond within 24 hours.
+                </p>
+                <a 
+                  href="mailto:support@streamvista.com"
+                  class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg transition duration-200"
+                >
+                  Email Us
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html> 

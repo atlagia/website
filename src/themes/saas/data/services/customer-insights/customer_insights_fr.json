@@ -1,0 +1,192 @@
+{
+  "hero": {
+    "subtitle": "INSIGHTS CLIENTS",
+    "title": "Comprenez Mieux Vos Clients avec l'IA",
+    "description": "Transformez vos données clients en insights actionnables grâce à l'analyse alimentée par l'IA pour améliorer l'engagement, la rétention et la valeur vie client.",
+    "image": "https://cdn.atlagia.com/kepart_vector_laptop_Ai_Platform_e-commerce_Revolution_light_ba_20e77df3-d828-4fbf-b2a5-92a37fb7caa3.png"
+  },
+  "benefits": {
+    "title": "Pourquoi Choisir Nos Insights Clients",
+    "items": [
+      {
+        "icon": "Users",
+        "title": "Segmentation Client",
+        "description": "Segmentation client et analyse comportementale par IA.",
+        "color": "blue"
+      },
+      {
+        "icon": "TrendingUp",
+        "title": "Analytics Prédictive",
+        "description": "Prévision du comportement client et identification des opportunités.",
+        "color": "green"
+      },
+      {
+        "icon": "Heart",
+        "title": "Analyse des Sentiments",
+        "description": "Analyse en temps réel des sentiments et retours clients.",
+        "color": "pink"
+      },
+      {
+        "icon": "Target",
+        "title": "Personnalisation",
+        "description": "Recommandations et expériences client personnalisées.",
+        "color": "purple"
+      }
+    ]
+  },
+  "features": {
+    "title": "Fonctionnalités d'Insights Puissantes",
+    "description": "Tout ce dont vous avez besoin pour comprendre et servir vos clients.",
+    "items": [
+      {
+        "title": "Analytics Client Avancée",
+        "description": "Insights approfondis sur le comportement et les préférences clients",
+        "image": "/images/services/customer-analytics.svg",
+        "features": [
+          "Suivi comportemental",
+          "Modèles d'achat",
+          "Cartographie du parcours client",
+          "Métriques d'engagement"
+        ]
+      },
+      {
+        "title": "Segmentation Intelligente",
+        "description": "Segmentation client et ciblage alimentés par l'IA",
+        "image": "/images/services/customer-segmentation.svg",
+        "features": [
+          "Segments dynamiques",
+          "Clustering comportemental",
+          "Analyse démographique",
+          "Attributs personnalisés"
+        ]
+      },
+      {
+        "title": "Insights Prédictifs",
+        "description": "Prévision du comportement client et des tendances",
+        "image": "/images/services/predictive-insights.svg",
+        "features": [
+          "Prédiction du churn",
+          "Prévision de la valeur vie",
+          "Meilleure action suivante",
+          "Propension à l'achat"
+        ]
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "Comment Ça Marche",
+    "description": "Commencez avec les insights clients en quatre étapes simples",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Connectez les Données",
+        "description": "Intégrez vos sources de données clients"
+      },
+      {
+        "number": "02",
+        "title": "Analysez les Modèles",
+        "description": "Laissez l'IA analyser les modèles comportementaux"
+      },
+      {
+        "number": "03",
+        "title": "Générez des Insights",
+        "description": "Obtenez des insights et recommandations actionnables"
+      },
+      {
+        "number": "04",
+        "title": "Passez à l'Action",
+        "description": "Implémentez les insights pour améliorer l'expérience client"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Tarification Simple et Transparente",
+    "description": "Choisissez le forfait qui correspond le mieux à vos besoins en insights clients",
+    "plans": [
+      {
+        "name": "Débutant",
+        "price": "79",
+        "period": "/mois",
+        "description": "Pour les petites entreprises",
+        "features": [
+          "Jusqu'à 10 000 clients",
+          "Analytics de base",
+          "Mises à jour quotidiennes",
+          "Support par email"
+        ],
+        "cta": {
+          "text": "Essai Gratuit",
+          "link": "/trial"
+        }
+      },
+      {
+        "name": "Professionnel",
+        "price": "199",
+        "period": "/mois",
+        "description": "Pour les entreprises en croissance",
+        "features": [
+          "Jusqu'à 100 000 clients",
+          "Analytics avancée",
+          "Mises à jour en temps réel",
+          "Support prioritaire"
+        ],
+        "cta": {
+          "text": "Essai Gratuit",
+          "link": "/trial"
+        },
+        "popular": true
+      },
+      {
+        "name": "Entreprise",
+        "price": "499",
+        "period": "/mois",
+        "description": "Pour les grandes opérations",
+        "features": [
+          "Clients illimités",
+          "Solutions personnalisées",
+          "Accès API",
+          "Support 24/7"
+        ],
+        "cta": {
+          "text": "Contacter les Ventes",
+          "link": "/contact"
+        }
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Ce Que Disent Nos Clients",
+    "items": [
+      {
+        "content": "La plateforme d'insights clients nous a aidés à augmenter la rétention client de 40% grâce à une meilleure compréhension et un meilleur ciblage de notre base client.",
+        "author": "Sarah Johnson",
+        "position": "Directrice Succès Client",
+        "company": "RetailPro",
+        "image": "/images/testimonials/sarah.jpg"
+      },
+      {
+        "content": "L'analytics prédictive a transformé notre approche de l'engagement client. Nous pouvons maintenant anticiper les besoins des clients avant même qu'ils ne les expriment.",
+        "author": "Mark Thompson",
+        "position": "Responsable Marketing",
+        "company": "TechGrowth",
+        "image": "/images/testimonials/mark.jpg"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prêt à Mieux Comprendre Vos Clients ?",
+    "description": "Rejoignez des milliers d'entreprises qui utilisent notre plateforme pour obtenir des insights clients plus profonds.",
+    "buttons": [
+      {
+        "text": "Essai Gratuit",
+        "link": "/trial",
+        "primary": true
+      },
+      {
+        "text": "Programmer une Démo",
+        "link": "/demo",
+        "primary": false
+      }
+    ]
+  }
+} 

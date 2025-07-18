@@ -1,0 +1,349 @@
+{
+  "pageTitle": "المشاريع & دراسات الحالة",
+  "pageDescription": "اكتشف محفظة مشاريعنا الناجحة ودراسات الحالة في مختلف القطاعات.",
+  "hero": {
+    "badge": "مشاريعنا",
+    "title": "قصص النجاح & دراسات الحالة",
+    "description": "اكتشف كيف ساعدنا الشركات في مختلف القطاعات على تحويل عملياتها من خلال حلولنا المدعومة بالذكاء الاصطناعي.",
+    "cta": {
+      "primary": {
+        "text": "عرض المشاريع",
+        "href": "#projects"
+      },
+      "secondary": {
+        "text": "ابدأ مشروعك",
+        "href": "/contact"
+      }
+    }
+  },
+  "stats": [
+    {
+      "value": "500+",
+      "label": "مشروع مكتمل"
+    },
+    {
+      "value": "99.9%",
+      "label": "معدل النجاح"
+    },
+    {
+      "value": "45%",
+      "label": "معدل الابتكار"
+    },
+    {
+      "value": "24/7",
+      "label": "الدعم"
+    }
+  ],
+  "projects": [
+    {
+      "category": "الرعاية الصحية",
+      "description": "تحويل الرعاية الصحية من خلال حلول الذكاء الاصطناعي",
+      "items": [
+        {
+          "icon": "stethoscope",
+          "name": "إدارة المستشفى الذكية",
+          "description": "نظام إدارة العمليات المستشفوية ورعاية المرضى المدعوم بالذكاء الاصطناعي",
+          "image": "/images/projects/hospital-management.webp",
+          "stats": {
+            "value": "40%",
+            "label": "زيادة الكفاءة"
+          },
+          "tags": ["الذكاء الاصطناعي", "الرعاية الصحية", "الإدارة"],
+          "color": "blue"
+        },
+        {
+          "icon": "building2",
+          "name": "أتمتة العيادات",
+          "description": "أتمتة العمليات السريرية وإدارة المرضى",
+          "image": "/images/projects/clinic-automation.webp",
+          "stats": {
+            "value": "55%",
+            "label": "توفير الوقت"
+          },
+          "tags": ["الأتمتة", "الرعاية الصحية", "الكفاءة"],
+          "color": "indigo"
+        },
+        {
+          "icon": "pill",
+          "name": "نظام الصيدلة",
+          "description": "إدارة حديثة للصيدليات ومراقبة المخزون",
+          "image": "/images/projects/pharmacy-system.webp",
+          "stats": {
+            "value": "45%",
+            "label": "خفض التكاليف"
+          },
+          "tags": ["الصيدلة", "المخزون", "الإدارة"],
+          "color": "purple"
+        },
+        {
+          "icon": "tooth",
+          "name": "عيادة الأسنان",
+          "description": "حل شامل لإدارة عيادة الأسنان",
+          "image": "/images/projects/dental-practice.webp",
+          "stats": {
+            "value": "60%",
+            "label": "رضا المرضى"
+          },
+          "tags": ["طب الأسنان", "الرعاية الصحية", "الإدارة"],
+          "color": "pink"
+        }
+      ]
+    },
+    {
+      "category": "التجزئة & التجارة",
+      "description": "ثورة في التجارة من خلال الحلول الذكية",
+      "items": [
+        {
+          "icon": "shopping-bag",
+          "name": "منصة التجارة الإلكترونية",
+          "description": "منصة تجارة إلكترونية مدعومة بالذكاء الاصطناعي مع تحليلات ذكية",
+          "image": "/images/projects/ecommerce-platform.webp",
+          "stats": {
+            "value": "50%",
+            "label": "زيادة المبيعات"
+          },
+          "tags": ["التجارة الإلكترونية", "الذكاء الاصطناعي", "التحليلات"],
+          "color": "rose"
+        },
+        {
+          "icon": "store",
+          "name": "إدارة التجزئة",
+          "description": "نظام ذكي لإدارة التجزئة ونقاط البيع",
+          "image": "/images/projects/retail-management.webp",
+          "stats": {
+            "value": "35%",
+            "label": "كفاءة العمليات"
+          },
+          "tags": ["التجزئة", "نقاط البيع", "الإدارة"],
+          "color": "amber"
+        },
+        {
+          "icon": "warehouse",
+          "name": "نظام الجملة",
+          "description": "إدارة فعالة للتجارة بالجملة والتوزيع",
+          "image": "/images/projects/wholesale-system.webp",
+          "stats": {
+            "value": "45%",
+            "label": "تحسين المخزون"
+          },
+          "tags": ["الجملة", "التوزيع", "الإدارة"],
+          "color": "lime"
+        },
+        {
+          "icon": "truck",
+          "name": "منصة الخدمات اللوجستية",
+          "description": "إدارة ذكية للخدمات اللوجستية وسلسلة التوريد",
+          "image": "/images/projects/logistics-platform.webp",
+          "stats": {
+            "value": "40%",
+            "label": "كفاءة التسليم"
+          },
+          "tags": ["الخدمات اللوجستية", "سلسلة التوريد", "الذكاء الاصطناعي"],
+          "color": "green"
+        }
+      ]
+    },
+    {
+      "category": "الصناعة & التصنيع",
+      "description": "حلول ذكية للتصنيع الحديث",
+      "items": [
+        {
+          "icon": "factory",
+          "name": "المصنع الذكي",
+          "description": "إدارة الإنتاج المدعومة بالذكاء الاصطناعي",
+          "image": "/images/projects/smart-factory.webp",
+          "stats": {
+            "value": "55%",
+            "label": "كفاءة الإنتاج"
+          },
+          "tags": ["الإنتاج", "الذكاء الاصطناعي", "الأتمتة"],
+          "color": "sky"
+        },
+        {
+          "icon": "warehouse",
+          "name": "مراقبة المخزون",
+          "description": "نظام متقدم لإدارة المخزون والمستودعات",
+          "image": "/images/projects/inventory-control.webp",
+          "stats": {
+            "value": "45%",
+            "label": "تحسين المخزون"
+          },
+          "tags": ["المخزون", "المستودعات", "الإدارة"],
+          "color": "cyan"
+        },
+        {
+          "icon": "truck",
+          "name": "سلسلة التوريد",
+          "description": "تحسين شامل لسلسلة التوريد",
+          "image": "/images/projects/supply-chain.webp",
+          "stats": {
+            "value": "40%",
+            "label": "خفض التكاليف"
+          },
+          "tags": ["سلسلة التوريد", "الخدمات اللوجستية", "الذكاء الاصطناعي"],
+          "color": "blue"
+        },
+        {
+          "icon": "trending-up",
+          "name": "مراقبة الجودة",
+          "description": "ضمان ومراقبة الجودة المدعومة بالذكاء الاصطناعي",
+          "image": "/images/projects/quality-control.webp",
+          "stats": {
+            "value": "60%",
+            "label": "كشف العيوب"
+          },
+          "tags": ["الجودة", "الذكاء الاصطناعي", "الإنتاج"],
+          "color": "indigo"
+        }
+      ]
+    },
+    {
+      "category": "الخدمات المهنية",
+      "description": "تحسين شركات الخدمات",
+      "items": [
+        {
+          "icon": "building",
+          "name": "منصة العقارات",
+          "description": "نظام شامل لإدارة العقارات",
+          "image": "/images/projects/real-estate.webp",
+          "stats": {
+            "value": "50%",
+            "label": "سرعة المعاملات"
+          },
+          "tags": ["العقارات", "الإدارة", "الذكاء الاصطناعي"],
+          "color": "violet"
+        },
+        {
+          "icon": "graduation-cap",
+          "name": "نظام التعليم",
+          "description": "إدارة ذكية للتعليم والتعلم",
+          "image": "/images/projects/education-system.webp",
+          "stats": {
+            "value": "45%",
+            "label": "نتائج التعلم"
+          },
+          "tags": ["التعليم", "التعلم", "الذكاء الاصطناعي"],
+          "color": "purple"
+        },
+        {
+          "icon": "hotel",
+          "name": "منصة الضيافة",
+          "description": "نظام شامل لإدارة الضيافة",
+          "image": "/images/projects/hospitality-platform.webp",
+          "stats": {
+            "value": "55%",
+            "label": "رضا الضيوف"
+          },
+          "tags": ["الضيافة", "الإدارة", "الذكاء الاصطناعي"],
+          "color": "fuchsia"
+        },
+        {
+          "icon": "users",
+          "name": "الخدمات المهنية",
+          "description": "إدارة خدمات الأعمال والاستشارات",
+          "image": "/images/projects/professional-services.webp",
+          "stats": {
+            "value": "40%",
+            "label": "كفاءة الخدمات"
+          },
+          "tags": ["الخدمات", "الاستشارات", "الإدارة"],
+          "color": "pink"
+        }
+      ]
+    }
+  ],
+  "features": {
+    "title": "مميزات المشاريع",
+    "description": "تتميز مشاريعنا بمميزات ودعم شامل",
+    "items": [
+      {
+        "icon": "code",
+        "title": "تطوير مخصص",
+        "description": "حلول مصممة خصيصاً مبنية بتقنيات متطورة"
+      },
+      {
+        "icon": "database",
+        "title": "إدارة البيانات",
+        "description": "أنظمة معالجة بيانات آمنة وفعالة"
+      },
+      {
+        "icon": "network",
+        "title": "التكامل",
+        "description": "تكامل سلس مع الأنظمة الموجودة"
+      },
+      {
+        "icon": "monitor",
+        "title": "واجهة المستخدم",
+        "description": "تصميم بديهي ومتجاوب"
+      }
+    ]
+  },
+  "benefits": {
+    "title": "مزايا المشاريع",
+    "description": "اكتشف مزايا العمل مع فريقنا على مشاريعك.",
+    "items": [
+      {
+        "icon": "rocket",
+        "title": "الابتكار",
+        "description": "حلول متطورة تحول الشركات",
+        "stats": "45%",
+        "label": "معدل الابتكار"
+      },
+      {
+        "icon": "target",
+        "title": "الدقة",
+        "description": "تسليم دقيق وموثوق للمشاريع",
+        "stats": "99.9%",
+        "label": "معدل النجاح"
+      },
+      {
+        "icon": "lightbulb",
+        "title": "الإبداع",
+        "description": "حلول فريدة مخصصة لاحتياجات محددة",
+        "stats": "3x",
+        "label": "حلول مخصصة"
+      },
+      {
+        "icon": "users",
+        "title": "التعاون",
+        "description": "شراكات قوية مع العملاء والفريق",
+        "stats": "96%",
+        "label": "رضا العملاء"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "آراء العملاء",
+    "description": "استمع إلى الشركات التي حولت عملياتها من خلال حلولنا",
+    "items": [
+      {
+        "quote": "كان تسليم المشروع استثنائياً. كان خبرة وتفاني الفريق واضحين طوال الرحلة.",
+        "author": "د. سارة تشن",
+        "role": "مدير طبي",
+        "image": "/images/testimonials/sarah.jpg"
+      },
+      {
+        "quote": "أحدث نهجهم المبتكر واهتمامهم بالتفاصيل فرقاً في نجاح مشروعنا.",
+        "author": "جون سميث",
+        "role": "الرئيس التنفيذي، حلول التقنية",
+        "image": "/images/testimonials/john.jpg"
+      }
+    ]
+  },
+  "cta": {
+    "title": "جاهز لمشروعك؟",
+    "description": "انضم إلى مئات الشركات التي حولت عملياتها من خلال حلولنا.",
+    "buttons": [
+      {
+        "text": "ابدأ مشروعك",
+        "href": "/contact",
+        "variant": "primary"
+      },
+      {
+        "text": "جدولة عرض توضيحي",
+        "href": "/demo",
+        "variant": "secondary"
+      }
+    ]
+  }
+} 

@@ -1,0 +1,223 @@
+---
+// Astro: no React, no hooks
+const chatMessages = [
+  { sender: 'doctor', text: "Book an appointment for Sarah tomorrow at 10am." },
+  { sender: 'ai', text: "Appointment booked for Sarah on Friday at 10:00am. Would you like to send her a reminder?", ai: true },
+  { sender: 'doctor', text: "Yes, send a reminder and show me my schedule for tomorrow." },
+  { sender: 'ai', text: "Reminder sent to Sarah. Here is your schedule for tomorrow: 10:00am - Sarah, 11:00am - John, 2:00pm - Emily. Need anything else?", ai: true },
+  { sender: 'doctor', text: "Show me this week's analytics." },
+  { sender: 'ai', text: "This week: 24 appointments, 3 new patients, 98% satisfaction. 📈", ai: true }
+];
+
+const features = [
+  {
+    icon: `<svg xmlns='http://www.w3.org/2000/svg' class='w-7 h-7' fill='none' viewBox='0 0 24 24' stroke='currentColor'><rect x='3' y='4' width='18' height='18' rx='2' stroke-width='2'/><path d='M16 2v4M8 2v4M3 10h18' stroke-width='2'/></svg>`,
+    title: 'Instant Booking',
+    desc: 'Book appointments in seconds with natural language.'
+  },
+  {
+    icon: `<svg xmlns='http://www.w3.org/2000/svg' class='w-7 h-7' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path d='M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V4a2 2 0 10-4 0v1.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9' stroke-width='2'/></svg>`,
+    title: 'Automated Reminders',
+    desc: 'Send reminders to patients automatically.'
+  },
+  {
+    icon: `<svg xmlns='http://www.w3.org/2000/svg' class='w-7 h-7' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path d='M3 3v18h18' stroke-width='2'/><path d='M18 17l-5-5-4 4-5-5' stroke-width='2'/></svg>`,
+    title: 'Real-time Analytics',
+    desc: 'Get instant insights and reports on your clinic.'
+  },
+  {
+    icon: `<svg xmlns='http://www.w3.org/2000/svg' class='w-7 h-7' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path d='M12 20h9' stroke-width='2'/><path d='M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z' stroke-width='2'/></svg>`,
+    title: 'Natural Language Understanding',
+    desc: 'Talk to your AI agent just like a human.'
+  }
+];
+
+const badge = 'AI-POWERED WORKFLOW';
+---
+
+<section class="relative py-24 px-4 bg-white overflow-hidden" id="whatsapp-usecase-section">
+  <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+    <!-- Left: Animated WhatsApp Chat -->
+    <div class="flex-1 w-full flex justify-center">
+      <div class="w-full max-w-md bg-[#e5ddd5] rounded-3xl shadow-xl p-0 flex flex-col relative overflow-hidden">
+        <!-- WhatsApp Header -->
+        <div class="flex items-center gap-3 px-5 py-3 bg-[#075e54] text-white rounded-t-3xl border-b border-[#075e54]/20">
+          <img src="https://cdn-icons-png.flaticon.com/512/4712/4712035.png" alt="AI Agent" class="w-10 h-10 rounded-full border-2 border-white shadow" />
+          <div class="flex flex-col text-left">
+            <span class="font-semibold text-base">AI Agent</span>
+            <span class="text-xs text-green-200">online</span>
+          </div>
+        </div>
+        <!-- Chat Body -->
+        <div class="flex-1 flex flex-col gap-4 px-6 py-6" id="chat-animation" style="min-height:340px;">
+          <!-- Messages will be injected by JS -->
+        </div>
+        <!-- Bottom Input Bar -->
+        <div class="flex items-center gap-2 px-5 py-3 bg-[#f7f7f7] border-t border-gray-200 rounded-b-3xl">
+          <input type="text" class="flex-1 rounded-full px-4 py-2 bg-white border border-gray-200 text-gray-700" placeholder="Type a message..." disabled />
+          <button class="bg-[#25d366] text-white rounded-full w-10 h-10 flex items-center justify-center shadow disabled:opacity-60" disabled>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Right: Title, Description, Features -->
+    <div class="flex-1 w-full mt-12 lg:mt-0 bg-white/80 rounded-2xl border border-gray-100 shadow-lg px-8 py-12 flex flex-col items-start relative z-10">
+      <span class="inline-block px-4 py-1.5 mb-4 text-sm font-medium rounded-full bg-[#0a91b1]/20 text-[#0a91b1] backdrop-blur-sm border border-[#0a91b1]/30">{badge}</span>
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">AI-Powered WhatsApp Assistant</h2>
+      <p class="text-lg text-gray-600 mb-8">Let your clinic run itself. Manage appointments, reminders, analytics, and more—just by chatting with your AI agent on WhatsApp. No apps, no learning curve, just results.</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
+        {features.map(f => (
+          <div class="flex items-start gap-4 bg-gray-50 rounded-xl p-5 shadow hover:shadow-md transition">
+            <div class="text-blue-500 shrink-0" set:html={f.icon}></div>
+            <div>
+              <div class="font-semibold text-gray-900 text-lg mb-1">{f.title}</div>
+              <div class="text-gray-600 text-base">{f.desc}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+const chatMsgs = [
+  { sender: 'doctor', text: "Book an appointment for Sarah tomorrow at 10am." },
+  { sender: 'ai', text: "Appointment booked for Sarah on Friday at 10:00am. Would you like to send her a reminder?", ai: true },
+  { sender: 'doctor', text: "Yes, send a reminder and show me my schedule for tomorrow." },
+  { sender: 'ai', text: "Reminder sent to Sarah. Here is your schedule for tomorrow: 10:00am - Sarah, 11:00am - John, 2:00pm - Emily. Need anything else?", ai: true },
+  { sender: 'doctor', text: "Show me this week's analytics." },
+  { sender: 'ai', text: "This week: 24 appointments, 3 new patients, 98% satisfaction. 📈", ai: true }
+];
+
+function createMsgEl(msg, isLast, showSent) {
+  const wrap = document.createElement('div');
+  wrap.className = msg.sender === 'doctor' ? 'flex justify-end' : 'flex justify-start';
+  const bubble = document.createElement('div');
+  bubble.className = msg.sender === 'doctor'
+    ? 'chat-msg bg-[#dcf8c6] text-gray-900 rounded-2xl rounded-br-sm px-4 py-2 max-w-xs shadow opacity-0 relative'
+    : 'chat-msg bg-white text-gray-900 rounded-2xl rounded-bl-sm px-4 py-2 max-w-xs shadow border border-gray-200 opacity-0 relative';
+  bubble.textContent = msg.text;
+  if (msg.sender === 'doctor' && showSent) {
+    const sent = document.createElement('span');
+    sent.className = 'absolute bottom-1 right-2 text-xs text-gray-400 flex items-center gap-1';
+    sent.innerHTML = '<svg class="inline w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>';
+    bubble.appendChild(sent);
+  }
+  wrap.appendChild(bubble);
+  return wrap;
+}
+
+function createTypingEl() {
+  const wrap = document.createElement('div');
+  wrap.className = 'flex justify-start';
+  const bubble = document.createElement('div');
+  bubble.className = 'chat-msg bg-white text-gray-900 rounded-2xl rounded-bl-sm px-4 py-2 max-w-xs shadow border border-gray-200 opacity-0 flex items-center gap-2';
+  bubble.innerHTML = `<span class="dot-typing"><span></span><span></span><span></span></span>Typing...`;
+  wrap.appendChild(bubble);
+  return wrap;
+}
+
+function startChatAnimation() {
+  const chat = document.getElementById('chat-animation');
+  // Clear any existing messages
+  chat.innerHTML = '';
+  
+  let i = 0;
+  function showNext() {
+    if (i >= chatMsgs.length) return;
+    const msg = chatMsgs[i];
+    if (msg.ai) {
+      // Show typing indicator first
+      const typingEl = createTypingEl();
+      chat.appendChild(typingEl);
+      setTimeout(() => {
+        typingEl.querySelector('.chat-msg').classList.add('opacity-100', 'animate-fadein');
+        typingEl.querySelector('.chat-msg').classList.remove('opacity-0');
+      }, 100);
+      setTimeout(() => {
+        chat.removeChild(typingEl);
+        const el = createMsgEl(msg, true, false);
+        chat.appendChild(el);
+        setTimeout(() => {
+          el.querySelector('.chat-msg').classList.add('opacity-100', 'animate-fadein');
+          el.querySelector('.chat-msg').classList.remove('opacity-0');
+        }, 100);
+        i++;
+        setTimeout(showNext, 1200);
+      }, 1200);
+    } else {
+      const el = createMsgEl(msg, true, true);
+      chat.appendChild(el);
+      setTimeout(() => {
+        el.querySelector('.chat-msg').classList.add('opacity-100', 'animate-fadein');
+        el.querySelector('.chat-msg').classList.remove('opacity-0');
+      }, 100);
+      i++;
+      setTimeout(showNext, 900);
+    }
+  }
+  showNext();
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  // Use Intersection Observer to detect when the section is visible
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      // If the section is visible and animation hasn't started yet
+      if (entry.isIntersecting) {
+        startChatAnimation();
+        // Unobserve after triggering animation once
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    // Start animation when at least 30% of the section is visible
+    threshold: 0.3
+  });
+  
+  // Observe the WhatsApp section
+  const section = document.getElementById('whatsapp-usecase-section');
+  if (section) {
+    observer.observe(section);
+  }
+});
+</script>
+
+<style>
+#chat-animation {
+  min-height: 340px;
+}
+.chat-msg {
+  transition: opacity 0.5s;
+}
+@keyframes fadein {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fadein {
+  animation: fadein 0.5s;
+}
+.dot-typing {
+  display: inline-block;
+  height: 10px;
+  vertical-align: middle;
+}
+.dot-typing span {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin: 0 1px;
+  background: #bdbdbd;
+  border-radius: 50%;
+  animation: dot-typing 1s infinite linear alternate;
+}
+.dot-typing span:nth-child(2) { animation-delay: 0.2s; }
+.dot-typing span:nth-child(3) { animation-delay: 0.4s; }
+@keyframes dot-typing {
+  0% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.3); }
+  100% { opacity: 0.3; transform: scale(1); }
+}
+</style> 

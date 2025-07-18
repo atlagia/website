@@ -1,0 +1,105 @@
+{
+  "hero": {
+    "subtitle": "DISKUTIEREN SIE IHR PROJEKT",
+    "title": "Lassen Sie uns gemeinsam etwas Großartiges schaffen",
+    "description": "Teilen Sie Ihre Projektideen mit unserem Expertenteam. Wir helfen Ihnen, Ihre Vision mit modernster Technologie und innovativen Lösungen in die Realität umzusetzen."
+  },
+  "features": {
+    "title": "Warum uns für Ihr Projekt wählen",
+    "description": "Unser Team kombiniert technische Expertise mit kreativer Problemlösung, um außergewöhnliche Ergebnisse für jedes Projekt zu liefern.",
+    "items": [
+      {
+        "icon": "Code",
+        "title": "Technische Exzellenz",
+        "description": "Unsere Entwickler sind Experten für die neuesten Technologien und Best Practices und stellen sicher, dass Ihr Projekt nach höchsten Standards entwickelt wird."
+      },
+      {
+        "icon": "Lightbulb",
+        "title": "Innovative Lösungen",
+        "description": "Wir bauen nicht nur das, was Sie verlangen – wir schlagen kreative Lösungen vor, die Ihnen vielleicht nicht eingefallen wären, und fügen Ihrem Projekt zusätzlichen Wert hinzu."
+      },
+      {
+        "icon": "Clock",
+        "title": "Termingerechte Lieferung",
+        "description": "Wir verstehen die Bedeutung von Fristen und arbeiten gewissenhaft daran, sicherzustellen, dass Ihr Projekt termingerecht abgeschlossen wird."
+      },
+      {
+        "icon": "Users",
+        "title": "Kollaborativer Ansatz",
+        "description": "Wir arbeiten während des gesamten Entwicklungsprozesses eng mit Ihnen zusammen und halten Sie in jeder Phase informiert und einbezogen."
+      },
+      {
+        "icon": "Shield",
+        "title": "Qualitätssicherung",
+        "description": "Unsere rigorosen Testprozesse stellen sicher, dass Ihr Projekt fehlerfrei ist und auf allen Plattformen einwandfrei funktioniert."
+      },
+      {
+        "icon": "TrendingUp",
+        "title": "Skalierbare Lösungen",
+        "description": "Wir entwickeln mit Blick auf die Zukunft und erstellen Lösungen, die mit Ihren Geschäftsanforderungen wachsen und sich weiterentwickeln können."
+      }
+    ]
+  },
+  "process": {
+    "title": "Unser Entwicklungsprozess",
+    "description": "Wir folgen einer bewährten Methodik, um sicherzustellen, dass Ihr Projekt effizient geliefert wird und alle Ihre Anforderungen erfüllt.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Entdeckung & Planung",
+        "description": "Wir beginnen damit, Ihr Unternehmen, Ihre Ziele und Anforderungen zu verstehen, um einen detaillierten Projektplan zu erstellen."
+      },
+      {
+        "number": "02",
+        "title": "Design & Prototyping",
+        "description": "Unsere Designer erstellen Wireframes und Prototypen, um die Benutzererfahrung vor Beginn der Entwicklung zu visualisieren."
+      },
+      {
+        "number": "03",
+        "title": "Entwicklung",
+        "description": "Unsere Entwickler bauen Ihr Projekt mit den neuesten Technologien und Best Practices, mit regelmäßigen Updates und Feedback."
+      },
+      {
+        "number": "04",
+        "title": "Tests & Qualitätssicherung",
+        "description": "Wir testen Ihr Projekt gründlich, um sicherzustellen, dass es fehlerfrei ist und auf allen Plattformen einwandfrei funktioniert."
+      },
+      {
+        "number": "05",
+        "title": "Start & Support",
+        "description": "Wir helfen Ihnen beim Start Ihres Projekts und bieten laufende Unterstützung, um seinen anhaltenden Erfolg sicherzustellen."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "description": "Finden Sie Antworten auf häufige Fragen zu unserem Projektentwicklungsprozess.",
+    "items": [
+      {
+        "question": "Wie lange dauert es, ein Projekt abzuschließen?",
+        "answer": "Projektzeitpläne variieren je nach Komplexität, Umfang und Anforderungen. Einfache Projekte könnten 4-8 Wochen dauern, während komplexere Anwendungen 3-6 Monate oder länger dauern könnten. Wir stellen nach unserer ersten Beratung einen detaillierten Zeitplan bereit."
+      },
+      {
+        "question": "Wie sieht Ihr Preismodell aus?",
+        "answer": "Wir bieten flexible Preismodelle, darunter Festpreis, Zeit und Material sowie dedizierte Teamarrangements. Der beste Ansatz hängt vom Umfang, Zeitplan und den Anforderungen Ihres Projekts ab. Wir empfehlen während unserer Beratung die am besten geeignete Option."
+      },
+      {
+        "question": "Bieten Sie Wartung und Support nach Abschluss des Projekts an?",
+        "answer": "Ja, wir bieten verschiedene Wartungs- und Support-Pakete an, um sicherzustellen, dass Ihr Projekt nach dem Start weiterhin optimal funktioniert. Diese können Fehlerbehebungen, Updates, Funktionsverbesserungen und technischen Support umfassen."
+      },
+      {
+        "question": "Wie gehen Sie mit Projektänderungen und Umfangsanpassungen um?",
+        "answer": "Wir verstehen, dass sich Anforderungen während der Entwicklung entwickeln können. Wir haben einen strukturierten Änderungsmanagementprozess, um Änderungen zu bewerten, umzusetzen und zu kommunizieren, während wir die Auswirkungen auf Zeitplan und Budget minimieren."
+      },
+      {
+        "question": "Auf welche Technologien spezialisieren Sie sich?",
+        "answer": "Unser Team ist in einer Vielzahl von Technologien versiert, darunter React, Angular, Vue.js, Node.js, Python, Java, .NET und mehr. Wir haben auch Expertise in KI/ML, Cloud-Lösungen und mobiler Entwicklung für iOS und Android."
+      }
+    ]
+  },
+  "readyToStart": {
+    "title": "Bereit loszulegen?",
+    "description": "Füllen Sie das Formular aus, um Ihr Projekt mit unserem Team zu besprechen. Wir melden uns innerhalb von 24 Stunden bei Ihnen, um eine Beratung zu planen.",
+    "buttonText": "Zum Formular"
+  }
+} 

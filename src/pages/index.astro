@@ -2,36 +2,30 @@
 import { fetchBlogPosts } from '../utils/shopifyAPI';
 import { getLangFromUrl, useTranslations, isValidLanguage } from '../utils/i18n';
 import WhatsAppButton from '@components/WhatsAppButton.astro';
+import Assistant from '@components/Assistant.astro';
 
 const theme = import.meta.env.THEME || 'default';
-const title = import.meta.env.PUBLIC_SITE_NAME;
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'default';
 
-// Properly handle dynamic imports with default exports
-const { default: BaseHead } = await import(`../themes/${theme}/components/BaseHead.astro`);
-const { default: Header } = await import(`../themes/${theme}/components/Header.astro`);
-const { default: Footer } = await import(`../themes/${theme}/components/Footer.astro`);
-const { default: Welcome } = await import(`../themes/${theme}/components/Welcome.astro`);
-const { default: Banner } = await import(`../themes/${theme}/components/Banner.astro`);
-const { default: FeaturedPosts } = await import(`../themes/${theme}/components/FeaturedPosts.astro`);
-const { default: EmailSignup } = await import(`../themes/${theme}/components/EmailSignup.astro`);
-const { default: CategoryGrid } = await import(`../themes/${theme}/components/CategoryGrid.astro`);
-const { default: ProductShowcase } = await import(`../themes/${theme}/components/ProductShowcase.astro`);
-const { default: TestimonialSlider } = await import(`../themes/${theme}/components/TestimonialSlider.astro`);
-const { default: FAQ } = await import(`../themes/${theme}/components/FaqSection.astro`);
-const { default: Video } = await import(`../themes/${theme}/components/Video.astro`);
-
-// Get the language parameter from the URL
+// Get the user's language
 const lang = getLangFromUrl(Astro.url);
-const translations = await useTranslations(lang);
+const validLang = isValidLanguage(lang) ? lang : 'en';
+
+// Import only the top-level components needed for the shell
+const { default: BaseHead } = await import(`../websites/${siteName}/themes/${theme}/components/BaseHead.astro`);
+const { default: Header } = await import(`../websites/${siteName}/themes/${theme}/components/Header.astro`);
+const { default: Footer } = await import(`../websites/${siteName}/themes/${theme}/components/Footer.astro`);
+
+// Get translations for basic page elements
+const translations = await useTranslations(validLang);
 const jsonData = translations.default;
 
 // Get site title and description from language-specific data
-const SITE_TITLE = jsonData.siteTitle || title ;
-const SITE_DESCRIPTION = jsonData.siteDescription || 'Your ultimate cosplay destination';
+const SITE_TITLE = jsonData.siteTitle || siteName;
+const SITE_DESCRIPTION = jsonData.siteDescription || 'Welcome to our site';
 
-const blogId = '82152357935';
+// Fetch blog posts
 let posts = [];
-
 try {
   posts = await fetchBlogPosts();
 } catch (error) {
@@ -53,111 +47,80 @@ export async function getStaticPaths() {
 ---
 
 <!doctype html>
-<html lang={lang}>
+<html lang={validLang} dir={validLang === 'ar' ? 'rtl' : 'ltr'}>
   <head>
     <BaseHead 
       title={SITE_TITLE} 
       description={SITE_DESCRIPTION} 
       isHomePage={true}
     />
+    <noscript>
+      <meta http-equiv="refresh" content={`0;url=/${validLang}`}>
+    </noscript>
   </head>
-  <body>
+  <body class={validLang === 'ar' ? 'rtl' : 'ltr'}>
     <Header />
-    <main>
-      {jsonData.sections?.map((section) => {
-        return (
-          <>
-            {section.type === 'welcomeSection' && (
-               <Welcome
-                title={section.title}
-                description={section.description}
-                blogLink={`/${lang}${section.blogLink}`}
-                blogLinkText={section.blogLinkText}
-                backgroundVideo={section.backgroundVideo}
-              />
-            )}
-            
-            {section.type === 'bannerSection' && (
-              <Banner
-                headline={section.headline}
-                description={section.description}
-                backgroundImage={section.backgroundImage}
-                button1Text={section.button1Text}
-                button1Link={`/${lang}${section.button1Link}`}
-                button2Text={section.button2Text}
-                button2Link={`/${lang}${section.button2Link}`}
-              />
-            )}
-            
-            {section.type === 'categoryGrid' && (
-              <CategoryGrid
-                title={section.title}
-                description={section.description}
-                categories={section.categories}
-              />
-            )}
-            
-            {section.type === 'productShowcase' && (
-              <ProductShowcase
-                title={section.title}
-                description={section.description}
-                products={section.products}
-                viewAllLink={`/${lang}${section.viewAllLink}`}
-                collectionHandle={section.collectionHandle}
-                lang={lang}
-              />
-            )}
-            
-            {section.type === 'testimonialSlider' && (
-              <TestimonialSlider
-                title={section.title}
-                testimonials={section.testimonials}
-              />
-            )}
-            
-            {section.type === 'featuredPostsSection' && (
-              <FeaturedPosts
-                title={section.title}
-                posts={posts}
-                exploreMoreLink={`/${lang}${section.exploreMoreLink}`}
-                exploreMoreText={section.exploreMoreText}
-              />
-            )}
-            
-            {section.type === 'emailSignupSection' && (
-              <EmailSignup
-                title={section.title}
-                description={section.description}
-                backgroundImage={section.backgroundImage}
-                formAction={section.formAction}
-                buttonText={section.submitText}
-              />
-            )}
-
-            {section.type === 'faqSection' && (
-              <FAQ
-                title={section.title}
-                description={section.description}
-                faqs={section.faqs}
-              />
-            )}
-
-            {section.type === 'videoSection' && (
-              <Video
-                headline={section.headline}
-                description={section.description}
-                videoUrl={section.videoUrl}
-                buttonText={section.buttonText}
-                buttonLink={`/${lang}${section.buttonLink}`}
-                headlinePosition={section.headlinePosition}
-                textPosition={section.textPosition}
-              />
-            )}
-          </>
-        );
-      })}
+    
+    <!-- Loading placeholder -->
+    <div id="main-content-placeholder" class="p-4 text-center">
+      <div class="animate-pulse flex flex-col items-center justify-center min-h-[50vh] gap-4">
+        <div class="h-8 bg-gray-200 rounded w-1/3"></div>
+        <div class="h-4 bg-gray-200 rounded w-1/2"></div>
+        <div class="h-4 bg-gray-200 rounded w-1/4"></div>
+        <div class="mt-4 h-10 bg-gray-200 rounded w-1/4"></div>
+      </div>
+    </div>
+    
+    <!-- Main content will be loaded here -->
+    <main id="main-content" style="display: none;">
+      <!-- Content will be inserted here via JavaScript -->
     </main>
+    
     <Footer />
-    <WhatsAppButton />
+    
+    <!-- Client-side script to fetch and render the language page -->
+    <script define:vars={{ validLang, theme, siteName }}>
+      (async function loadMainContent() {
+        try {
+          // Fetch the language-specific page
+          const response = await fetch(`/${validLang}`);
+          
+          if (!response.ok) {
+            throw new Error(`Failed to fetch /${validLang} page: ${response.status}`);
+          }
+          
+          const html = await response.text();
+          
+          // Create a temporary element to parse the HTML
+          const tempEl = document.createElement('div');
+          tempEl.innerHTML = html;
+          
+          // Extract main content
+          const mainContent = tempEl.querySelector('main');
+          
+          if (mainContent) {
+            // Replace placeholder with actual content
+            document.getElementById('main-content').innerHTML = mainContent.innerHTML;
+            document.getElementById('main-content').style.display = 'block';
+            document.getElementById('main-content-placeholder').style.display = 'none';
+          } else {
+            throw new Error('Could not find main content in the response');
+          }
+        } catch (error) {
+          console.error('Error loading content:', error);
+          
+          // Show error message to user
+          document.getElementById('main-content-placeholder').innerHTML = `
+            <div class="py-12 text-center">
+              <h2 class="text-xl font-semibold text-red-600 mb-2">Error Loading Content</h2>
+              <p class="mb-4">Sorry, we couldn't load the page content.</p>
+              <a href="/${validLang}" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+                Go to ${validLang.toUpperCase()} site directly
+              </a>
+            </div>
+          `;
+        }
+      })();
+    </script>
   </body>
 </html>

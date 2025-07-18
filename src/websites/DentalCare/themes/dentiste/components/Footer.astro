@@ -1,0 +1,136 @@
+---
+import { getLangFromUrl } from '@utils/i18n';
+import { Facebook, Instagram, Twitter, Linkedin, Mail, Phone, Clock, MapPin } from 'lucide-react';
+import styles from '../style/component/footerSection.json';
+
+const currentLang = getLangFromUrl(Astro.url);
+
+// Import the language-specific footer content with fallback
+const footerData = await import(`../data/footer/footer_${currentLang}.json`).catch(() => {
+  console.log(`Footer data not found for language ${currentLang}, falling back to English`);
+  return import('../data/footer/footer_en.json');
+});
+
+// Destructure with default values to prevent undefined errors
+const {
+  company = { title: 'Company', links: [] },
+  product = { title: 'Product', links: [] },
+  resources = { title: 'Resources', links: [] },
+  legal = { title: 'Legal', links: [] },
+  social = { title: 'Social', links: [] },
+  newsletter = { title: '', description: '', buttonText: '', placeholderText: '' },
+  copyright = { text: '', links: [] }
+} = footerData.default || footerData;
+
+// Organize sections for rendering
+const sections = {
+  company,
+  product,
+  resources,
+  legal
+};
+---
+
+<footer class={styles.footer.container} id="content-footer">
+  <div class={styles.content.container}>
+    <div class={styles.grid.container}>
+      <!-- Company Info -->
+      <div class={styles.companyInfo.container}>
+        <h3 class={styles.companyInfo.title} id="content-companyName">Dental Care</h3>
+        <p class={styles.companyInfo.description} id="content-companyDescription">{newsletter.description}</p>
+        
+        <!-- Newsletter Section -->
+        <div class={styles.newsletter.container}>
+          <h4 class={styles.newsletter.title} id="content-newsletterTitle">{newsletter.title}</h4>
+          <form class={styles.newsletter.form}>
+            <input
+              type="email"
+              placeholder={newsletter.placeholderText}
+              class={styles.newsletter.input}
+              id="content-newsletterInput"
+            />
+            <button
+              type="submit"
+              class={styles.newsletter.button}
+              id="content-newsletterButton"
+            >
+              {newsletter.buttonText}
+            </button>
+          </form>
+        </div>
+
+        <!-- Social Links -->
+        <div class={styles.socialLinks.container}>
+          {social.links.map((link, index) => (
+            <a
+              href={link.href}
+              class={styles.socialLinks.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              id={`content-socialLink-${index}`}
+            >
+              {link.icon === 'twitter' && <Twitter class={styles.socialLinks.icon} />}
+              {link.icon === 'linkedin' && <Linkedin class={styles.socialLinks.icon} />}
+              {link.icon === 'github' && <svg class={styles.socialLinks.icon} viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>}
+              <span class="sr-only">{link.name}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      {Object.entries(sections).map(([key, section], sectionIndex) => (
+        <div class={styles.quickLinks.container}>
+          <h4 class={styles.quickLinks.title} id={`content-sectionTitle-${sectionIndex}`}>{section.title}</h4>
+          <ul class={styles.quickLinks.list}>
+            {section.links.map((link, linkIndex) => (
+              <li class={styles.quickLinks.item}>
+                <a href={link.href} class={styles.quickLinks.link} id={`content-link-${sectionIndex}-${linkIndex}`}>
+                  {link.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class={styles.bottomBar.container}>
+      <div class={styles.bottomBar.content}>
+        <p class={styles.bottomBar.copyright} id="content-copyright">{copyright.text}</p>
+        
+        <!-- Copyright Links -->
+        <div class={styles.bottomBar.links.container}>
+          {copyright.links.map((link, index) => (
+            <a
+              href={link.href}
+              class={styles.bottomBar.links.link}
+              id={`content-copyrightLink-${index}`}
+            >
+              {link.name}
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style define:vars={{ 
+  primaryColor: styles.colors.primary,
+  primaryHoverColor: styles.colors.primaryHover,
+  primaryRingColor: styles.colors.primaryRing,
+  textPrimary: styles.colors.text.primary,
+  textSecondary: styles.colors.text.secondary,
+  textHover: styles.colors.text.hover,
+  bgPrimary: styles.colors.background.primary,
+  bgSecondary: styles.colors.background.secondary,
+  bgBorder: styles.colors.background.border
+}}>
+  /* Custom styles can be added here if needed */
+  .focus\:ring-2:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--primaryRingColor);
+  }
+</style>

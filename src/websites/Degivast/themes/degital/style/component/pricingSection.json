@@ -1,0 +1,71 @@
+{
+  "section": {
+    "container": "relative py-24 px-4 overflow-hidden bg-gradient-to-b from-white via-[#0a91b1]/5 to-white"
+  },
+  "content": {
+    "container": "relative z-10 max-w-7xl mx-auto"
+  },
+  "header": {
+    "container": "text-center mb-16",
+    "subtitle": "inline-block px-4 py-1.5 mb-4 text-sm font-medium rounded-full bg-[#0a91b1]/10 text-[#0a91b1] border border-[#0a91b1]/20",
+    "title": "text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6",
+    "description": "text-xl text-gray-600 max-w-3xl mx-auto"
+  },
+  "pricingGrid": {
+    "container": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+  },
+  "pricingCard": {
+    "container": {
+      "base": "relative bg-white rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 shadow-lg",
+      "popular": "relative bg-white rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 shadow-xl ring-2 ring-[#0a91b1]"
+    },
+    "popularBadge": "absolute top-0 right-0 bg-[#0a91b1] text-white px-4 py-1 text-sm font-medium rounded-bl-lg",
+    "content": "p-8",
+    "header": {
+      "container": "text-center pb-8 mb-8 border-b border-gray-100",
+      "title": "text-2xl font-bold text-gray-900 mb-4",
+      "priceContainer": "flex items-center justify-center mb-4",
+      "price": "text-4xl font-bold text-[#0a91b1]",
+      "period": "text-gray-500 ml-2"
+    },
+    "featuresList": {
+      "container": "space-y-4 mb-8",
+      "item": "flex items-center text-gray-600",
+      "icon": {
+        "base": "w-5 h-5 mr-3",
+        "included": "w-5 h-5 mr-3 text-[#0a91b1]",
+        "excluded": "w-5 h-5 mr-3 text-gray-400"
+      },
+      "text": {
+        "included": "text-gray-700",
+        "excluded": "text-gray-400"
+      }
+    },
+    "button": {
+      "base": "block w-full text-center px-6 py-3 rounded-lg transition-all duration-300",
+      "primary": "block w-full text-center px-6 py-3 rounded-lg transition-all duration-300 bg-[#0a91b1] text-white hover:bg-[#097d99]",
+      "secondary": "block w-full text-center px-6 py-3 rounded-lg transition-all duration-300 bg-gray-100 text-gray-900 hover:bg-gray-200"
+    }
+  },
+  "insuranceInfo": {
+    "container": "mt-16 text-center",
+    "text": "text-gray-600 mb-4",
+    "providersContainer": "flex flex-wrap justify-center gap-6",
+    "provider": "px-4 py-2 bg-white rounded-lg shadow-sm text-gray-600"
+  },
+  "colors": {
+    "primary": "#0a91b1",
+    "primaryHover": "#097d99",
+    "primaryLight": "#0a91b1/10",
+    "primaryLighter": "#0a91b1/5",
+    "primaryBorder": "#0a91b1/20"
+  },
+  "transitions": {
+    "duration": "300ms",
+    "properties": "all",
+    "timing": "ease-in-out",
+    "hover": {
+      "translateY": "-0.25rem"
+    }
+  }
+} 

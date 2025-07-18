@@ -14,13 +14,11 @@ export const GET: APIRoute = async ({ site }) => {
               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
               xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                                 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-  <!-- Static Pages Sitemap -->
+  <!-- Default (non-language prefixed) Sitemaps -->
   <sitemap>
-    <loc>${new URL('sitemap_pages.xml', site).href}</loc>
+    <loc>${new URL('sitemap_pages_default.xml', site).href}</loc>
     <lastmod>${lastmod}</lastmod>
   </sitemap>
-
-  <!-- Default (non-language prefixed) Sitemaps -->
   <sitemap>
     <loc>${new URL('sitemap_products_default.xml', site).href}</loc>
     <lastmod>${lastmod}</lastmod>
@@ -29,6 +27,12 @@ export const GET: APIRoute = async ({ site }) => {
     <loc>${new URL('sitemap_collections_default.xml', site).href}</loc>
     <lastmod>${lastmod}</lastmod>
   </sitemap>
+
+  <!-- Pages Sitemaps by Language -->
+  ${languages.map(lang => `<sitemap>
+    <loc>${new URL(`sitemap_pages_${lang}.xml`, site).href}</loc>
+    <lastmod>${lastmod}</lastmod>
+  </sitemap>`).join('\n  ')}
 
   <!-- Products Sitemaps by Language -->
   ${languages.map(lang => `<sitemap>

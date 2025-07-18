@@ -1,0 +1,131 @@
+{
+  "navigation": [
+    {
+      "name": "Products",
+      "href": "/products",
+      "megaMenu": {
+        "categories": [
+          {
+            "title": "Marketing",
+            "icon": "marketing",
+            "items": [
+              {
+                "name": "AI Content Generator",
+                "href": "/ai-content-generator"
+              },
+              {
+                "name": "Social Media Automation",
+                "href": "/social-media-automation"
+              },
+              {
+                "name": "Email Marketing AI",
+                "href": "/email-marketing-ai"
+              },
+              {
+                "name": "Analytics Dashboard",
+                "href": "/analytics-dashboard"
+              }
+            ]
+          },
+          {
+            "title": "E-commerce",
+            "icon": "ecommerce",
+            "items": [
+              {
+                "name": "Product Optimizer",
+                "href": "/product-optimization"
+              },
+              {
+                "name": "Inventory Management",
+                "href": "/inventory-management"
+              },
+              {
+                "name": "Pricing Intelligence",
+                "href": "/pricing-intelligence"
+              },
+              {
+                "name": "Customer Insights",
+                "href": "/customer-insights"
+              }
+            ]
+          },
+          {
+            "title": "SEO",
+            "icon": "seo",
+            "items": [
+              {
+                "name": "AI Keyword Research",
+                "href": "/keyword-research"
+              },
+              {
+                "name": "Content Optimization",
+                "href": "/content-optimization"
+              },
+              {
+                "name": "Backlink Analyzer",
+                "href": "/backlink-analyzer"
+              },
+              {
+                "name": "Competitor Analysis",
+                "href": "/competitor-analysis"
+              }
+            ]
+          }
+        ],
+        "featured": {
+          "badge": "New",
+          "title": "AI-Powered Universal Bulk Editor",
+          "description": "Optimize your entire catalog in minutes",
+          "link": {
+            "text": "Learn more",
+            "href": "/bulk-editor"
+          }
+        }
+      }
+    },
+    {
+      "name": "Categories",
+      "href": "/categories"
+    },
+    {
+      "name": "Documentation",
+      "href": "/documentation"
+    },
+    {
+      "name": "Support",
+      "href": "/support"
+    }
+  ],
+  "auth": {
+    "signIn": {
+      "text": "Sign In",
+      "href": "https://app.atlagia.com/login"
+    },
+    "getStarted": {
+      "text": "Get Started",
+      "href": "https://app.atlagia.com/signup"
+    }
+  },
+  "languages": [
+    {
+      "code": "en",
+      "name": "English"
+    },
+    {
+      "code": "fr",
+      "name": "Français"
+    },
+    {
+      "code": "de",
+      "name": "Deutsch"
+    },
+    {
+      "code": "it",
+      "name": "Italiano"
+    },
+    {
+      "code": "ar",
+      "name": "العربية"
+    }
+  ]
+} 

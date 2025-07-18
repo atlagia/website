@@ -1,0 +1,111 @@
+{
+  "hero": {
+    "subtitle": "SYSTEMSTATUS",
+    "title": "Service-Status-Dashboard",
+    "description": "Echtzeitinformationen über den Status unserer Dienste und Systeme.",
+    "operational": "Funktionsfähig",
+    "degraded": "Eingeschränkte Leistung",
+    "maintenance": "Geplante Wartung"
+  },
+  "overallStatus": {
+    "title": "Gesamtsystemstatus",
+    "status": "operational",
+    "statusText": "Alle Systeme funktionsfähig",
+    "description": "Alle Dienste laufen normal, ohne gemeldete Probleme.",
+    "lastUpdated": "Zuletzt aktualisiert: vor 5 Minuten"
+  },
+  "servicesTitle": "Dienststatus",
+  "services": [
+    {
+      "name": "Web-Anwendung",
+      "description": "Hauptanwendung für Kunden",
+      "status": "operational",
+      "statusText": "Funktionsfähig",
+      "icon": "Server"
+    },
+    {
+      "name": "API-Dienste",
+      "description": "Backend-API und Microservices",
+      "status": "operational",
+      "statusText": "Funktionsfähig",
+      "icon": "Cloud"
+    },
+    {
+      "name": "Datenbank",
+      "description": "Primäre und Backup-Datenbanken",
+      "status": "operational",
+      "statusText": "Funktionsfähig",
+      "icon": "Database"
+    },
+    {
+      "name": "Authentifizierung",
+      "description": "Benutzerauthentifizierung und -autorisierung",
+      "status": "operational",
+      "statusText": "Funktionsfähig",
+      "icon": "Shield"
+    },
+    {
+      "name": "KI-Verarbeitung",
+      "description": "KI-Inhaltsgenerierung und -verarbeitung",
+      "status": "operational",
+      "statusText": "Funktionsfähig",
+      "icon": "Zap"
+    },
+    {
+      "name": "Analytik",
+      "description": "Datenanalyse und Berichterstattung",
+      "status": "operational",
+      "statusText": "Funktionsfähig",
+      "icon": "Activity"
+    }
+  ],
+  "incidentsTitle": "Aktuelle Vorkommnisse",
+  "incidents": [
+    {
+      "title": "Datenbankleistungsproblem",
+      "date": "10. März 2024",
+      "description": "Wir haben langsamere Antwortzeiten für Datenbankabfragen festgestellt, die einige API-Endpunkte beeinträchtigten.",
+      "status": "operational",
+      "updates": [
+        {
+          "time": "10:30 Uhr",
+          "status": "investigating",
+          "statusText": "Untersuchung läuft",
+          "description": "Unser Engineering-Team untersucht die Ursache der Datenbankleistungsverschlechterung."
+        },
+        {
+          "time": "11:45 Uhr",
+          "status": "investigating",
+          "statusText": "Untersuchung läuft",
+          "description": "Wir haben ein Problem mit der Abfrageoptimierung identifiziert und implementieren eine Lösung."
+        },
+        {
+          "time": "13:15 Uhr",
+          "status": "resolved",
+          "statusText": "Behoben",
+          "description": "Das Problem wurde behoben. Alle Systeme laufen jetzt normal."
+        }
+      ]
+    },
+    {
+      "title": "Geplante Wartung",
+      "date": "5. März 2024",
+      "description": "Wir haben eine geplante Wartung durchgeführt, um unsere Infrastruktur zu aktualisieren und die Leistung zu verbessern.",
+      "status": "operational",
+      "updates": [
+        {
+          "time": "20:00 Uhr",
+          "status": "investigating",
+          "statusText": "In Bearbeitung",
+          "description": "Wartungsfenster gestartet. Einige Dienste können kurzzeitig unterbrochen sein."
+        },
+        {
+          "time": "22:30 Uhr",
+          "status": "resolved",
+          "statusText": "Abgeschlossen",
+          "description": "Wartung erfolgreich abgeschlossen. Alle Systeme sind jetzt mit verbesserter Leistung funktionsfähig."
+        }
+      ]
+    }
+  ]
+} 

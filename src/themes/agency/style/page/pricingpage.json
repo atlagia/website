@@ -1,0 +1,81 @@
+{
+  "hero": {
+    "section": "relative py-20 px-4 bg-gradient-to-b from-[#f0f9ff] via-white to-transparent overflow-hidden",
+    "blob1": "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-bl from-[#0a91b1]/10 to-blue-500/10 rounded-full blur-3xl animate-blob animation-delay-4000",
+    "blob2": "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-tr from-sky-500/10 to-[#0a91b1]/10 rounded-full blur-3xl animate-blob",
+    "container": "relative z-10 max-w-7xl mx-auto text-center",
+    "subtitle": "inline-block px-4 py-1.5 mb-4 text-sm font-medium rounded-full bg-[#0a91b1]/10 text-[#0a91b1] border border-[#0a91b1]/20",
+    "title": "text-4xl md:text-5xl font-bold text-gray-900 mb-6",
+    "description": "text-xl text-gray-600 max-w-3xl mx-auto"
+  },
+  "toggle": {
+    "section": "relative py-8 px-4 bg-white",
+    "container": "max-w-7xl mx-auto",
+    "wrapper": "flex justify-center items-center gap-4",
+    "monthlyText": "text-sm font-medium text-gray-500",
+    "yearlyText": "text-sm font-medium text-gray-900",
+    "discountText": "text-[#0a91b1]",
+    "toggleButton": "relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-[#0a91b1] focus:ring-offset-2 bg-[#0a91b1]",
+    "toggleCircle": "translate-x-5 pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"
+  },
+  "pricing": {
+    "section": "relative py-16 px-4 bg-white",
+    "container": "max-w-7xl mx-auto",
+    "grid": "grid grid-cols-1 md:grid-cols-3 gap-8",
+    "card": {
+      "base": "relative p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300",
+      "featured": "ring-2 ring-[#0a91b1] scale-105",
+      "normal": "border border-gray-100"
+    },
+    "badge": "absolute top-0 right-6 transform -translate-y-1/2 inline-flex px-4 py-1 rounded-full text-sm font-semibold bg-[#0a91b1] text-white",
+    "cardHeader": "text-center",
+    "cardTitle": "text-2xl font-bold text-gray-900 mb-2",
+    "cardDescription": "text-gray-600 mb-6",
+    "priceContainer": "mb-6",
+    "priceAmount": "text-4xl font-bold text-[#0a91b1]",
+    "pricePeriod": "text-gray-600",
+    "featuresList": "space-y-4 mb-8",
+    "featureItem": "flex items-center gap-3",
+    "featureIcon": "w-5 h-5 text-[#0a91b1] flex-shrink-0",
+    "featureText": "text-gray-600",
+    "ctaButton": {
+      "base": "block w-full py-3 px-6 rounded-lg text-center font-semibold transition-colors",
+      "featured": "bg-[#0a91b1] text-white hover:bg-[#097d99]",
+      "normal": "bg-gray-50 text-gray-900 hover:bg-gray-100"
+    }
+  },
+  "faq": {
+    "section": "relative py-16 px-4 bg-gradient-to-b from-white via-[#0a91b1]/5 to-white",
+    "container": "max-w-3xl mx-auto",
+    "header": "text-center mb-12",
+    "subtitle": "inline-block px-4 py-1.5 mb-4 text-sm font-medium rounded-full bg-[#0a91b1]/10 text-[#0a91b1] border border-[#0a91b1]/20",
+    "title": "text-3xl font-bold text-gray-900 mb-4",
+    "description": "text-gray-600",
+    "questionsContainer": "space-y-6",
+    "questionCard": "bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100",
+    "questionTitle": "text-lg font-semibold text-gray-900 mb-2",
+    "questionAnswer": "text-gray-600"
+  },
+  "cta": {
+    "section": "relative py-24 px-4 overflow-hidden bg-gray-900",
+    "blob1": "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-bl from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl animate-blob animation-delay-4000",
+    "blob2": "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-tr from-sky-500/10 to-cyan-500/10 rounded-full blur-3xl animate-blob",
+    "container": "relative z-10 max-w-4xl mx-auto text-center",
+    "subtitle": "inline-block px-4 py-1.5 mb-4 text-sm font-medium rounded-full bg-gray-800/50 text-cyan-400 backdrop-blur-sm border border-gray-700",
+    "title": "text-3xl md:text-4xl font-bold text-white mb-6",
+    "description": "text-xl text-gray-300 mb-8",
+    "buttonsContainer": "flex flex-col sm:flex-row justify-center gap-4",
+    "button": {
+      "base": "inline-flex items-center justify-center px-8 py-4 rounded-lg font-medium transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5",
+      "primary": "bg-cyan-600 text-white hover:bg-cyan-700 hover:shadow-cyan-500/25",
+      "secondary": "bg-gray-800/50 text-white border border-gray-700 hover:bg-gray-800/80"
+    }
+  },
+  "animations": {
+    "blob": "keyframes { 0% { transform: translate(-50%, -50%) scale(1) rotate(0deg); } 33% { transform: translate(-50%, -50%) scale(1.1) rotate(120deg); } 66% { transform: translate(-50%, -50%) scale(0.9) rotate(240deg); } 100% { transform: translate(-50%, -50%) scale(1) rotate(360deg); } }",
+    "animateBlob": "animation: blob 20s infinite linear",
+    "animationDelay4000": "animation-delay: 4s",
+    "backdropBlurSm": "backdrop-filter: blur(8px)",
+    "hoverTranslateY": "transform: translateY(-2px)"
+  }
+} 

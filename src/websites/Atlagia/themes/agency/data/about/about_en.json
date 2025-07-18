@@ -1,0 +1,205 @@
+{
+  "pageTitle": "About GiaConnect",
+  "pageDescription": "Learn about GiaConnect's mission, values, and commitment to transforming industries through innovative AI solutions.",
+  "hero": {
+    "badge": "Our Story",
+    "title": "Empowering Industries Through AI Innovation",
+    "description": "GiaConnect is at the forefront of AI-driven transformation, helping businesses across industries leverage cutting-edge technology to achieve operational excellence.",
+    "image": "/images/about/hero.jpg"
+  },
+  "mission": {
+    "title": "Our Mission",
+    "description": "To revolutionize industries by making AI accessible, practical, and impactful for businesses of all sizes.",
+    "items": [
+      {
+        "title": "Accessibility",
+        "description": "Making advanced AI solutions accessible to businesses of all sizes and technical capabilities",
+        "icon": "Globe"
+      },
+      {
+        "title": "Innovation",
+        "description": "Continuously pushing the boundaries of what's possible with AI technology",
+        "icon": "Lightbulb"
+      },
+      {
+        "title": "Impact",
+        "description": "Delivering measurable results and transformative outcomes for our clients",
+        "icon": "Target"
+      }
+    ]
+  },
+  "values": {
+    "title": "Our Values",
+    "description": "The principles that guide everything we do at GiaConnect",
+    "items": [
+      {
+        "title": "Excellence",
+        "description": "We strive for excellence in every aspect of our work, from product development to customer service",
+        "icon": "Award"
+      },
+      {
+        "title": "Integrity",
+        "description": "We maintain the highest standards of integrity and transparency in all our operations",
+        "icon": "Shield"
+      },
+      {
+        "title": "Innovation",
+        "description": "We constantly innovate to stay ahead of industry trends and meet evolving needs",
+        "icon": "Zap"
+      },
+      {
+        "title": "Partnership",
+        "description": "We believe in building strong partnerships with our clients and stakeholders",
+        "icon": "Handshake"
+      }
+    ]
+  },
+  "team": {
+    "title": "Our Team",
+    "description": "Meet the passionate individuals behind GiaConnect's success",
+    "leadership": {
+      "title": "Leadership Team",
+      "members": [
+        {
+          "name": "Sarah Johnson",
+          "role": "CEO & Founder",
+          "bio": "20+ years of experience in AI and technology innovation",
+          "image": "/images/team/sarah.jpg"
+        },
+        {
+          "name": "Michael Chen",
+          "role": "CTO",
+          "bio": "Expert in machine learning and enterprise architecture",
+          "image": "/images/team/michael.jpg"
+        },
+        {
+          "name": "Emma Rodriguez",
+          "role": "Head of Product",
+          "bio": "Product strategy and innovation specialist",
+          "image": "/images/team/emma.jpg"
+        }
+      ]
+    }
+  },
+  "history": {
+    "title": "Our Journey",
+    "description": "From startup to industry leader in AI solutions",
+    "timeline": [
+      {
+        "year": "2020",
+        "title": "Foundation",
+        "description": "GiaConnect was founded with a vision to democratize AI technology"
+      },
+      {
+        "year": "2021",
+        "title": "First Milestone",
+        "description": "Launched our first AI-powered solution for healthcare"
+      },
+      {
+        "year": "2022",
+        "title": "Expansion",
+        "description": "Expanded to multiple industries and reached 100+ clients"
+      },
+      {
+        "year": "2023",
+        "title": "Innovation",
+        "description": "Introduced advanced AI models and expanded global presence"
+      },
+      {
+        "year": "2024",
+        "title": "Leadership",
+        "description": "Recognized as a leader in AI solutions across industries"
+      }
+    ]
+  },
+  "achievements": {
+    "title": "Our Achievements",
+    "description": "Recognition and milestones that showcase our impact",
+    "items": [
+      {
+        "title": "Industry Awards",
+        "description": "Multiple awards for innovation and excellence in AI solutions",
+        "icon": "Trophy"
+      },
+      {
+        "title": "Client Success",
+        "description": "Over 500 successful implementations across industries",
+        "icon": "Users"
+      },
+      {
+        "title": "Global Reach",
+        "description": "Operating in 20+ countries with a diverse client base",
+        "icon": "Globe"
+      },
+      {
+        "title": "Innovation Patents",
+        "description": "Multiple patents for AI technology and methodologies",
+        "icon": "Lightbulb"
+      }
+    ]
+  },
+  "partners": {
+    "title": "Our Partners",
+    "description": "Working with industry leaders to deliver exceptional solutions",
+    "categories": [
+      {
+        "category": "Technology Partners",
+        "items": [
+          { "name": "Microsoft", "logo": "/images/partners/microsoft.svg" },
+          { "name": "AWS", "logo": "/images/partners/aws.svg" },
+          { "name": "Google Cloud", "logo": "/images/partners/gcp.svg" }
+        ]
+      },
+      {
+        "category": "Industry Partners",
+        "items": [
+          { "name": "Healthcare Alliance", "logo": "/images/partners/healthcare.svg" },
+          { "name": "Manufacturing Group", "logo": "/images/partners/manufacturing.svg" },
+          { "name": "Retail Consortium", "logo": "/images/partners/retail.svg" }
+        ]
+      }
+    ]
+  },
+  "culture": {
+    "title": "Our Culture",
+    "description": "A workplace that fosters innovation and growth",
+    "items": [
+      {
+        "title": "Innovation First",
+        "description": "We encourage creative thinking and novel approaches to problem-solving",
+        "icon": "Lightbulb"
+      },
+      {
+        "title": "Continuous Learning",
+        "description": "We invest in our team's growth and development",
+        "icon": "GraduationCap"
+      },
+      {
+        "title": "Work-Life Balance",
+        "description": "We promote a healthy balance between work and personal life",
+        "icon": "Heart"
+      },
+      {
+        "title": "Diversity & Inclusion",
+        "description": "We celebrate diversity and foster an inclusive environment",
+        "icon": "Users"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Join Our Journey",
+    "description": "Be part of the future of AI-driven innovation",
+    "buttons": [
+      {
+        "text": "View Careers",
+        "href": "/careers",
+        "variant": "primary"
+      },
+      {
+        "text": "Contact Us",
+        "href": "/contact",
+        "variant": "secondary"
+      }
+    ]
+  }
+} 

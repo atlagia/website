@@ -1,0 +1,230 @@
+{
+  "pageTitle": "Carriere",
+  "pageDescription": "Unisciti al nostro team di innovatori e plasma il futuro della tecnologia AI",
+  "hero": {
+    "badge": "Stiamo Assumendo",
+    "title": "Unisciti al Nostro Team di Innovatori",
+    "description": "Aiutaci a plasmare il futuro della tecnologia di intelligenza artificiale e a trasformare le industrie in tutto il mondo. Cerchiamo persone appassionate che prosperano nelle sfide e nell'innovazione.",
+    "cta": {
+      "primary": {
+        "text": "Visualizza Posizioni Aperte",
+        "href": "#open-positions"
+      },
+      "secondary": {
+        "text": "Scopri il Nostro Processo",
+        "href": "#application-process"
+      }
+    }
+  },
+  "values": {
+    "title": "I Nostri Valori",
+    "description": "Questi principi guidano tutto ciò che facciamo e definiscono la cultura della nostra azienda.",
+    "items": [
+      {
+        "title": "Innovazione",
+        "description": "Spingiamo i confini e adottiamo tecnologie all'avanguardia per risolvere problemi complessi.",
+        "icon": "lightbulb"
+      },
+      {
+        "title": "Collaborazione",
+        "description": "Crediamo nel potere di team diversificati che lavorano insieme verso obiettivi comuni.",
+        "icon": "users"
+      },
+      {
+        "title": "Eccellenza",
+        "description": "Puntiamo alla massima qualità in tutto ciò che facciamo, dal codice al servizio clienti.",
+        "icon": "award"
+      },
+      {
+        "title": "Integrità",
+        "description": "Agiamo con onestà, trasparenza e responsabilità etica in tutte le nostre decisioni.",
+        "icon": "shield"
+      }
+    ]
+  },
+  "openPositions": {
+    "title": "Posizioni Aperte",
+    "description": "Esplora le nostre attuali offerte di lavoro e trova opportunità che corrispondono alle tue competenze e obiettivi di carriera.",
+    "positions": [
+      {
+        "id": "ai-engineer",
+        "title": "Ingegnere AI",
+        "department": "Ingegneria",
+        "type": "Tempo pieno",
+        "location": "San Francisco / Remoto",
+        "description": "Progetta e implementa soluzioni AI all'avanguardia per i nostri clienti aziendali.",
+        "requirements": [
+          "5+ anni di esperienza nello sviluppo AI/ML",
+          "Solida conoscenza di TensorFlow, PyTorch o framework simili",
+          "Esperienza nell'elaborazione del linguaggio naturale o nella visione artificiale",
+          "Solide competenze di programmazione in Python",
+          "Eccellenti capacità di comunicazione"
+        ],
+        "posted": "2 settimane fa"
+      },
+      {
+        "id": "frontend-developer",
+        "title": "Sviluppatore Frontend",
+        "department": "Ingegneria",
+        "type": "Tempo pieno",
+        "location": "New York / Remoto",
+        "description": "Crea interfacce utente intuitive e responsive per le nostre piattaforme basate su AI.",
+        "requirements": [
+          "3+ anni di esperienza con React e JavaScript moderno",
+          "Competenza in TypeScript e librerie di gestione dello stato",
+          "Esperienza con design responsive e framework CSS",
+          "Comprensione degli standard di accessibilità web",
+          "Conoscenza dei framework di testing"
+        ],
+        "posted": "1 settimana fa"
+      },
+      {
+        "id": "product-manager",
+        "title": "Product Manager",
+        "department": "Prodotto",
+        "type": "Tempo pieno",
+        "location": "Remoto",
+        "description": "Guida lo sviluppo dei nostri prodotti AI dalla concezione al lancio.",
+        "requirements": [
+          "4+ anni di esperienza nella gestione di prodotti",
+          "Background in AI, SaaS o software aziendale",
+          "Forti capacità analitiche e di risoluzione dei problemi",
+          "Eccellenti capacità di gestione degli stakeholder",
+          "Background tecnico è un plus"
+        ],
+        "posted": "3 giorni fa"
+      },
+      {
+        "id": "ux-designer",
+        "title": "UX Designer",
+        "department": "Design",
+        "type": "Tempo pieno",
+        "location": "Londra / Remoto",
+        "description": "Crea design incentrati sull'utente per applicazioni AI complesse.",
+        "requirements": [
+          "3+ anni di esperienza in UX design",
+          "Portfolio solido che mostra un processo di design centrato sull'utente",
+          "Esperienza con sistemi di design e strumenti (Figma, Adobe XD)",
+          "Comprensione degli standard di accessibilità",
+          "Capacità di condurre ricerche e test con gli utenti"
+        ],
+        "posted": "1 mese fa"
+      },
+      {
+        "id": "data-scientist",
+        "title": "Data Scientist",
+        "department": "Dati",
+        "type": "Tempo pieno",
+        "location": "Remoto",
+        "description": "Analizza set di dati complessi e costruisci modelli predittivi per alimentare le nostre soluzioni AI.",
+        "requirements": [
+          "Master o PhD in Informatica, Statistica o campo correlato",
+          "Forte esperienza con algoritmi di machine learning",
+          "Competenza in Python, R o linguaggi simili",
+          "Esperienza con tecnologie di big data",
+          "Forti capacità analitiche e di problem solving"
+        ],
+        "posted": "2 settimane fa"
+      },
+      {
+        "id": "devops-engineer",
+        "title": "Ingegnere DevOps",
+        "department": "Operazioni",
+        "type": "Tempo pieno",
+        "location": "Berlino / Remoto",
+        "description": "Costruisci e mantieni la nostra infrastruttura cloud e le pipeline di deployment.",
+        "requirements": [
+          "3+ anni di esperienza in DevOps o Site Reliability Engineering",
+          "Esperienza con AWS, Azure o GCP",
+          "Conoscenza di containerizzazione e orchestrazione (Docker, Kubernetes)",
+          "Esperienza con strumenti CI/CD",
+          "Competenze di scripting e automazione"
+        ],
+        "posted": "3 settimane fa"
+      }
+    ]
+  },
+  "perks": {
+    "title": "Vantaggi e Benefit",
+    "description": "Crediamo nel prenderci cura del nostro team con benefit competitivi e un ambiente di lavoro favorevole.",
+    "items": [
+      {
+        "title": "Lavoro Flessibile",
+        "description": "Lavora da qualsiasi luogo con orari flessibili per raggiungere il miglior equilibrio tra lavoro e vita privata.",
+        "icon": "globe"
+      },
+      {
+        "title": "Compenso Competitivo",
+        "description": "Offriamo stipendi leader nel settore, opzioni azionarie e bonus basati sulle prestazioni.",
+        "icon": "dollar-sign"
+      },
+      {
+        "title": "Benefit Sanitari",
+        "description": "Assicurazione sanitaria, dentale e visiva completa per te e i tuoi familiari.",
+        "icon": "heart"
+      },
+      {
+        "title": "Sviluppo Professionale",
+        "description": "Apprendimento continuo con contributi per l'istruzione, conferenze e programmi di formazione.",
+        "icon": "graduation-cap"
+      },
+      {
+        "title": "Eventi di Team",
+        "description": "Regolari ritiri di team, eventi sociali e attività collaborative.",
+        "icon": "users"
+      },
+      {
+        "title": "Attrezzature Tecnologiche",
+        "description": "Hardware e software all'avanguardia per garantire che tu abbia gli strumenti necessari per avere successo.",
+        "icon": "laptop"
+      }
+    ]
+  },
+  "process": {
+    "title": "Il Nostro Processo di Candidatura",
+    "description": "Abbiamo progettato un processo diretto per aiutarci a trovare i migliori talenti rispettando il tuo tempo.",
+    "steps": [
+      {
+        "step": "1",
+        "title": "Revisione della Candidatura",
+        "description": "Il nostro team esamina la tua candidatura per valutare le tue qualifiche e la tua esperienza."
+      },
+      {
+        "step": "2",
+        "title": "Colloquio Iniziale",
+        "description": "Una conversazione con il nostro team di recruiting per conoscere meglio il tuo background e le tue aspirazioni."
+      },
+      {
+        "step": "3",
+        "title": "Valutazione Tecnica",
+        "description": "A seconda del ruolo, completerai una valutazione tecnica o un case study."
+      },
+      {
+        "step": "4",
+        "title": "Colloqui con il Team",
+        "description": "Incontrerai potenziali membri del team e leader per esplorare l'adattamento al team e la collaborazione."
+      },
+      {
+        "step": "5",
+        "title": "Decisione Finale",
+        "description": "Ti forniremo feedback e potenzialmente un'offerta per unirti al nostro team."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Pronto a Fare la Differenza?",
+    "description": "Unisciti al nostro team e aiuta a plasmare il futuro della tecnologia AI. Cerchiamo persone appassionate che vogliono fare la differenza.",
+    "buttons": [
+      {
+        "text": "Sfoglia Posizioni Aperte",
+        "href": "#open-positions",
+        "variant": "primary"
+      },
+      {
+        "text": "Contatta Recruiting",
+        "href": "/contact",
+        "variant": "secondary"
+      }
+    ]
+  }
+} 

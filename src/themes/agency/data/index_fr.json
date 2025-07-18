@@ -1,0 +1,676 @@
+{
+  "siteTitle": "Atlagia - Solutions Numériques Propulsées par l'IA & Agence de Développement",
+  "siteDescription": "Nous créons des solutions numériques intelligentes et développons des applications IA de pointe qui transforment les entreprises à travers les industries. Votre partenaire pour l'innovation et l'excellence numérique.",
+  "sections": [
+    {
+      "type": "welcomeSection",
+      "badge": "Agence d'Innovation Numérique",
+      "title": "Nous <span class='text-gradient'>Concevons & Développons</span> des Solutions Propulsées par l'IA pour l'Avenir Numérique",
+      "description": "Transformez votre entreprise grâce à notre expertise en développement IA, solutions logicielles sur mesure et innovation numérique. Nous sommes spécialisés dans la création de systèmes intelligents qui stimulent l'efficacité, l'automatisation et la croissance dans chaque secteur.",
+      "blogLinkText": "Explorer les Solutions",
+      "getStartedText": "Discuter de Votre Projet",
+      "getStartedLink": "/discuss-project",
+      "blogLink": "/solutions",
+      "heroImage": "https://cdn.atlagia.com/GiaConnect/images/670e6478-6043-4aec-a731-a0d4468e6d4e.png",
+      "features": [
+        {
+          "icon": "Globe",
+          "title": "Solutions Numériques",
+          "description": "Développement de logiciels sur mesure et solutions de transformation numérique"
+        },
+        {
+          "icon": "Zap",
+          "title": "Développement IA",
+          "description": "Développement de systèmes IA avancés et solutions d'apprentissage automatique"
+        },
+        {
+          "icon": "Users",
+          "title": "Solutions Industrielles",
+          "description": "Solutions spécialisées pour le e-commerce, la santé, la finance et plus"
+        },
+        {
+          "icon": "Brain",
+          "title": "Innovation Technologique",
+          "description": "Intégration de technologies de pointe et développement innovant"
+        }
+      ],
+      "partnerLogos": [
+        {
+          "src": "https://cdn.atlagia.com/GiaConnect/images/processed-3bb4b721-db62-4347-82ed-b11735f18565.png",
+          "alt": "Partenaire Shopify"
+        },
+        {
+          "src": "https://cdn.atlagia.com/GiaConnect/images/processed-d4ae1096-ccab-49e9-91f5-1d6504936092.png",
+          "alt": "Partenaire Wix"
+        },
+        {
+          "src": "https://cdn.atlagia.com/GiaConnect/images/a3550c4a-95d2-4341-9ed7-2a5de91b0b66.png",
+          "alt": "Partenaire WooCommerce"
+        }
+      ]
+    },
+    {
+      "type": "aboutSection",
+      "subtitle": "QUI NOUS SOMMES",
+      "title": "Façonner le Paysage Numérique de Demain avec l'Innovation IA",
+      "features": [
+        {
+          "icon": "ai-development",
+          "title": "Développement & Intégration IA",
+          "keywords": [
+            "Développement",
+            "Innovation",
+            "IA"
+          ],
+          "description": "Nous sommes spécialisés dans le développement et l'intégration de solutions IA de pointe qui transforment les opérations commerciales.",
+          "bullets": [
+            "Développement de modèles IA sur mesure",
+            "Intégration de l'apprentissage automatique",
+            "Traitement du langage naturel",
+            "Solutions de vision par ordinateur"
+          ],
+          "backgroundSvg": "<svg width='100%' height='100%' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='grid1' width='20' height='20' patternUnits='userSpaceOnUse'><path d='M 20 0 L 0 0 0 20' fill='none' stroke='currentColor' stroke-width='0.5' opacity='0.1'/></pattern></defs><rect width='100%' height='100%' fill='url(#grid1)'/></svg>"
+        },
+        {
+          "icon": "software-solutions",
+          "title": "Solutions Logicielles",
+          "keywords": [
+            "Logiciel",
+            "Développement",
+            "Solutions"
+          ],
+          "description": "Services de développement logiciel de bout en bout adaptés aux besoins de votre secteur.",
+          "bullets": [
+            "Développement de logiciels sur mesure",
+            "Applications web et mobiles",
+            "Solutions cloud-native",
+            "Développement et intégration d'API"
+          ],
+          "backgroundSvg": "<svg width='100%' height='100%' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='code' width='20' height='20' patternUnits='userSpaceOnUse'><path d='M 0 10 L 10 0 M 20 10 L 10 20' stroke='currentColor' stroke-width='0.5' opacity='0.1'/></pattern></defs><rect width='100%' height='100%' fill='url(#code)'/></svg>"
+        },
+        {
+          "icon": "digital-transformation",
+          "title": "Transformation Numérique",
+          "keywords": [
+            "Transformer",
+            "Innover",
+            "Croître"
+          ],
+          "description": "Guidez votre entreprise à travers une transformation numérique complète.",
+          "bullets": [
+            "Automatisation des processus",
+            "Conseil en stratégie numérique",
+            "Modernisation technologique",
+            "Solutions basées sur les données"
+          ],
+          "backgroundSvg": "<svg width='100%' height='100%' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='circuit' width='40' height='40' patternUnits='userSpaceOnUse'><circle cx='20' cy='20' r='1' fill='currentColor' opacity='0.1'/><path d='M 40 20 H 30 M 20 0 V 10' stroke='currentColor' stroke-width='0.5' opacity='0.1'/></pattern></defs><rect width='100%' height='100%' fill='url(#circuit)'/></svg>"
+        },
+        {
+          "icon": "industry-solutions",
+          "title": "Solutions Industrielles",
+          "keywords": [
+            "Spécialisé",
+            "Industrie",
+            "Expert"
+          ],
+          "description": "Solutions spécifiques à l'industrie propulsées par la technologie avancée.",
+          "bullets": [
+            "Plateformes e-commerce",
+            "Systèmes de santé",
+            "Solutions FinTech",
+            "Applications d'entreprise"
+          ],
+          "backgroundSvg": "<svg width='100%' height='100%' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='dots' width='20' height='20' patternUnits='userSpaceOnUse'><circle cx='10' cy='10' r='1' fill='currentColor' opacity='0.1'/></pattern></defs><rect width='100%' height='100%' fill='url(#dots)'/></svg>"
+        }
+      ],
+      "ctaText": "Explorer Nos Services",
+      "ctaLink": "/services"
+    },
+    {
+      "type": "whoWeAreSection",
+      "subtitle": "LEADERS DE L'INNOVATION",
+      "title": "Pionniers des Solutions IA pour l'Excellence Numérique",
+      "description": "En tant que leaders du secteur dans le développement de l'IA et la transformation numérique, nous révolutionnons la façon dont les entreprises opèrent à l'ère numérique. Notre équipe de développeurs experts et de spécialistes de l'IA crée des solutions de pointe qui stimulent l'innovation, l'efficacité et la croissance. Du développement IA sur mesure à la transformation numérique à l'échelle de l'entreprise, nous livrons des résultats qui dépassent les attentes.",
+      "image": "https://cdn.atlagia.com/GiaConnect/images/9304b8fc-6ad2-4ee5-944d-5b6472cf005b.png",
+      "stats": [
+        {
+          "value": "98%",
+          "label": "Satisfaction Client"
+        },
+        {
+          "value": "500+",
+          "label": "Projets Livrés"
+        },
+        {
+          "value": "85%",
+          "label": "Développement Plus Rapide"
+        },
+        {
+          "value": "24/7",
+          "label": "Support IA"
+        }
+      ]
+    },
+    {
+      "type": "bannerSection",
+      "subtitle": "SOLUTIONS TRANSFORMATIVES",
+      "headline": "Favoriser la Croissance des Entreprises Grâce à l'Innovation IA",
+      "description": "Découvrez comment nos solutions IA de pointe et nos services de développement experts peuvent transformer les opérations de votre entreprise et stimuler une croissance sans précédent à l'ère numérique.",
+      "backgroundImage": "/images/banner-bg.jpg",
+      "button1Text": "Explorer les Solutions",
+      "button1Link": "/solutions",
+      "button2Text": "Planifier une Démo",
+      "button2Link": "/demo",
+      "cards": [
+        {
+          "title": "Développement Propulsé par l'IA",
+          "description": "Exploitez la puissance de l'intelligence artificielle pour créer des applications plus intelligentes et plus efficaces qui s'adaptent et évoluent avec les besoins de votre entreprise."
+        },
+        {
+          "title": "Transformation Numérique",
+          "description": "Transformez votre entreprise avec des solutions numériques complètes qui simplifient les opérations et améliorent les expériences client."
+        },
+        {
+          "title": "Solutions Logicielles Sur Mesure",
+          "description": "Obtenez des solutions logicielles sur mesure qui s'alignent parfaitement avec vos objectifs commerciaux et offrent des avantages concurrentiels."
+        },
+        {
+          "title": "Cloud & DevOps",
+          "description": "Optimisez votre infrastructure avec des solutions cloud-native et des pratiques DevOps automatisées pour une efficacité et une fiabilité maximales."
+        }
+      ]
+    },
+    {
+      "type": "benefitsSection",
+      "subtitle": "POURQUOI NOUS CHOISIR",
+      "title": "Conduire l'Excellence Numérique Grâce à l'Innovation",
+      "description": "Partenaire avec nous pour transformer votre présence numérique avec une technologie de pointe et des solutions expertes",
+      "benefits": [
+        {
+          "title": "Équipe de Développement Experte",
+          "description": "Nos développeurs chevronnés et spécialistes de l'IA apportent des années d'expérience dans la création de solutions numériques sophistiquées à travers les industries."
+        },
+        {
+          "title": "Solutions Sur Mesure",
+          "description": "Nous créons des solutions sur mesure qui s'alignent parfaitement avec vos objectifs commerciaux, garantissant un impact maximal et un retour sur investissement."
+        },
+        {
+          "title": "Technologie Innovante",
+          "description": "Restez à la pointe avec notre pile technologique de pointe, y compris les dernières nouveautés en matière d'IA, de cloud computing et de frameworks de développement."
+        },
+        {
+          "title": "Méthodologie Agile",
+          "description": "Notre approche agile garantit un développement rapide, une amélioration continue et une flexibilité pour s'adapter aux besoins changeants."
+        },
+        {
+          "title": "Support Complet",
+          "description": "Du concept initial à la maintenance post-lancement, nous fournissons un support complet pour votre parcours numérique."
+        },
+        {
+          "title": "Expertise Sectorielle",
+          "description": "Une compréhension approfondie de divers secteurs nous permet de fournir des solutions qui répondent aux défis spécifiques du secteur."
+        }
+      ]
+    },
+    {
+      "type": "projectsSection",
+      "subtitle": "NOS PROJETS",
+      "title": "Transformer les Industries Grâce à l'Innovation",
+      "description": "Explorez notre portefeuille de transformations numériques réussies à travers divers secteurs.",
+      "projects": [
+        {
+          "title": "Plateforme E-commerce",
+          "category": "Commerce de Détail & E-commerce",
+          "description": "Plateforme e-commerce propulsée par l'IA avec système de recommandation avancé et gestion automatisée des stocks.",
+          "image": "https://cdn.atlagia.com/projects/ecommerce-platform.webp",
+          "stats": {
+            "conversion": "+150%",
+            "automation": "85%",
+            "efficiency": "3x"
+          },
+          "technologies": [
+            "IA/ML",
+            "React",
+            "Node.js",
+            "AWS"
+          ]
+        },
+        {
+          "title": "Système de Gestion de la Santé",
+          "category": "Santé",
+          "description": "Plateforme de santé intégrée avec gestion des patients, télémédecine et support diagnostique IA.",
+          "image": "https://cdn.atlagia.com/projects/healthcare-system.webp",
+          "stats": {
+            "efficiency": "+200%",
+            "accuracy": "99.9%",
+            "satisfaction": "98%"
+          },
+          "technologies": [
+            "Python",
+            "TensorFlow",
+            "React",
+            "Cloud"
+          ]
+        },
+        {
+          "title": "Tableau de Bord d'Analyse FinTech",
+          "category": "Finance",
+          "description": "Plateforme d'analyse financière en temps réel avec insights propulsés par l'IA et reporting automatisé.",
+          "image": "https://cdn.atlagia.com/projects/fintech-dashboard.webp",
+          "stats": {
+            "processing": "En temps réel",
+            "accuracy": "99.99%",
+            "automation": "90%"
+          },
+          "technologies": [
+            "Vue.js",
+            "Python",
+            "IA/ML",
+            "AWS"
+          ]
+        },
+        {
+          "title": "Système de Fabrication Intelligent",
+          "category": "Fabrication",
+          "description": "Système de fabrication activé par l'IoT avec maintenance prédictive et contrôle qualité automatisé.",
+          "image": "https://cdn.atlagia.com/projects/manufacturing-system.webp",
+          "stats": {
+            "downtime": "-75%",
+            "quality": "+95%",
+            "efficiency": "4x"
+          },
+          "technologies": [
+            "IoT",
+            "IA/ML",
+            "Cloud",
+            "React"
+          ]
+        }
+      ],
+      "buttonText": "Voir Tous les Projets",
+      "buttonLink": "/projects"
+    },
+    {
+      "type": "technologiesSection",
+      "subtitle": "PILE TECHNOLOGIQUE",
+      "title": "Notre Expertise Technologique",
+      "description": "Nous exploitons des technologies de pointe pour fournir des solutions exceptionnelles qui stimulent la croissance des entreprises et l'innovation.",
+      "categories": [
+        {
+          "name": "Développement Frontend",
+          "description": "Technologies web modernes pour créer des interfaces utilisateur réactives et interactives.",
+          "technologies": [
+            {
+              "name": "React",
+              "icon": "react",
+              "level": "Expert",
+              "description": "Construire des applications web dynamiques et évolutives"
+            },
+            {
+              "name": "Vue.js",
+              "icon": "vue",
+              "level": "Avancé",
+              "description": "Créer des interfaces utilisateur réactives et performantes"
+            },
+            {
+              "name": "Next.js",
+              "icon": "nextjs",
+              "level": "Expert",
+              "description": "Rendu côté serveur et génération de sites statiques"
+            },
+            {
+              "name": "TypeScript",
+              "icon": "typescript",
+              "level": "Avancé",
+              "description": "Développement JavaScript sécurisé par type"
+            }
+          ]
+        },
+        {
+          "name": "Développement Backend",
+          "description": "Technologies serveur robustes pour construire des applications évolutives.",
+          "technologies": [
+            {
+              "name": "Node.js",
+              "icon": "nodejs",
+              "level": "Expert",
+              "description": "Applications serveur haute performance"
+            },
+            {
+              "name": "Python",
+              "icon": "python",
+              "level": "Avancé",
+              "description": "Traitement des données et apprentissage automatique"
+            },
+            {
+              "name": "Go",
+              "icon": "golang",
+              "level": "Intermédiaire",
+              "description": "Services backend rapides et efficaces"
+            },
+            {
+              "name": "Java",
+              "icon": "java",
+              "level": "Avancé",
+              "description": "Applications de niveau entreprise"
+            }
+          ]
+        },
+        {
+          "name": "IA & Apprentissage Automatique",
+          "description": "Technologies IA avancées pour des solutions intelligentes.",
+          "technologies": [
+            {
+              "name": "TensorFlow",
+              "icon": "tensorflow",
+              "level": "Avancé",
+              "description": "Apprentissage profond et réseaux neuronaux"
+            },
+            {
+              "name": "PyTorch",
+              "icon": "pytorch",
+              "level": "Avancé",
+              "description": "Réseaux neuronaux dynamiques"
+            },
+            {
+              "name": "OpenAI",
+              "icon": "openai",
+              "level": "Expert",
+              "description": "Traitement du langage naturel"
+            },
+            {
+              "name": "Scikit-learn",
+              "icon": "scikit",
+              "level": "Avancé",
+              "description": "Algorithmes d'apprentissage automatique"
+            }
+          ]
+        },
+        {
+          "name": "Cloud & DevOps",
+          "description": "Infrastructure cloud et outils d'opérations de développement.",
+          "technologies": [
+            {
+              "name": "AWS",
+              "icon": "aws",
+              "level": "Expert",
+              "description": "Infrastructure et services cloud"
+            },
+            {
+              "name": "Docker",
+              "icon": "docker",
+              "level": "Avancé",
+              "description": "Containerisation et déploiement"
+            },
+            {
+              "name": "Kubernetes",
+              "icon": "kubernetes",
+              "level": "Avancé",
+              "description": "Orchestration de conteneurs"
+            },
+            {
+              "name": "CI/CD",
+              "icon": "cicd",
+              "level": "Expert",
+              "description": "Intégration et déploiement continus"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "processSection",
+      "subtitle": "NOTRE PROCESSUS",
+      "title": "Comment Nous Fournissons l'Excellence",
+      "description": "Notre processus éprouvé garantit une qualité constante et une livraison réussie des projets à chaque étape du développement.",
+      "steps": [
+        {
+          "number": "01",
+          "title": "Découverte & Planification",
+          "description": "Nous analysons vos besoins, définissons la portée du projet et créons une feuille de route détaillée pour le succès.",
+          "icon": "search"
+        },
+        {
+          "number": "02",
+          "title": "Conception & Architecture",
+          "description": "Notre équipe crée des architectures évolutives et des conceptions intuitives qui s'alignent avec vos objectifs commerciaux.",
+          "icon": "layout"
+        },
+        {
+          "number": "03",
+          "title": "Développement",
+          "description": "Nous construisons des solutions robustes en utilisant des technologies de pointe et les meilleures pratiques.",
+          "icon": "code"
+        },
+        {
+          "number": "04",
+          "title": "Test & Lancement",
+          "description": "Des tests approfondis garantissent la qualité, suivis d'un déploiement fluide et d'un support continu.",
+          "icon": "check-circle"
+        }
+      ]
+    },
+    {
+      "type": "reviewsSection",
+      "subtitle": "TÉMOIGNAGES DE CLIENTS",
+      "title": "Ce Que Disent Nos Clients",
+      "description": "Découvrez pourquoi les entreprises leaders nous font confiance pour fournir des solutions exceptionnelles alimentées par l'IA qui stimulent leur succès.",
+      "reviews": [
+        {
+          "name": "Sarah Johnson",
+          "role": "CTO",
+          "company": "TechVision Inc",
+          "image": "/images/testimonials/sarah.jpg",
+          "content": "Travailler avec cette équipe a été transformateur pour notre entreprise. Leurs solutions alimentées par l'IA ont automatisé nos processus principaux, réduisant les coûts opérationnels de 60% tout en améliorant la précision.",
+          "rating": 5
+        },
+        {
+          "name": "Michael Chen",
+          "role": "PDG",
+          "company": "InnovatePro",
+          "image": "/images/testimonials/michael.jpg",
+          "content": "Le niveau d'expertise et de professionnalisme est exceptionnel. Ils n'ont pas simplement fourni une solution; ils sont devenus des partenaires stratégiques dans notre parcours de transformation numérique.",
+          "rating": 5
+        },
+        {
+          "name": "Emily Rodriguez",
+          "role": "Directeur des Opérations",
+          "company": "GlobalTech",
+          "image": "/images/testimonials/emily.jpg",
+          "content": "Leurs solutions d'automatisation alimentées par l'IA ont révolutionné notre service client. Nous pouvons maintenant fournir un support 24/7 avec un taux de satisfaction client de 98%.",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "type": "achievementsSection",
+      "subtitle": "NOTRE IMPACT",
+      "title": "Conduire l'Excellence Numérique",
+      "description": "Notre bilan de succès parle à travers les chiffres. Voici comment nous avons aidé les entreprises à se transformer et à croître avec des solutions propulsées par l'IA.",
+      "achievements": [
+        {
+          "value": "500+",
+          "label": "Projets",
+          "description": "Solutions IA et automatisation livrées avec succès à travers divers secteurs",
+          "icon": "rocket"
+        },
+        {
+          "value": "95%",
+          "label": "Taux de Réussite",
+          "description": "Satisfaction client et taux de réalisation des projets au-dessus des normes du secteur",
+          "icon": "chart"
+        },
+        {
+          "value": "60%",
+          "label": "Réduction des Coûts",
+          "description": "Économies moyennes sur les coûts opérationnels réalisées pour nos clients",
+          "icon": "trending-up"
+        },
+        {
+          "value": "24/7",
+          "label": "Support",
+          "description": "Assistance et support technique propulsés par l'IA 24 heures sur 24, 7 jours sur 7",
+          "icon": "headphones"
+        }
+      ]
+    },
+    {
+      "type": "industryFeaturesSection",
+      "subtitle": "SOLUTIONS INDUSTRIELLES",
+      "title": "Solutions IA pour Chaque Industrie",
+      "description": "Découvrez comment la plateforme IA d'Atlaga peut transformer votre industrie spécifique avec des solutions sur mesure et des outils d'automatisation.",
+      "industries": [
+        {
+          "icon": "ShoppingCart",
+          "title": "E-commerce",
+          "description": "Rationalisez les opérations de votre boutique en ligne avec l'automatisation propulsée par l'IA et des outils d'engagement client.",
+          "features": [
+            "Gestion automatisée des stocks",
+            "Support client IA",
+            "Recommandations de produits intelligentes",
+            "Campagnes marketing automatisées"
+          ],
+          "processIcons": [
+            "Package",
+            "Bot",
+            "Users",
+            "CreditCard"
+          ]
+        },
+        {
+          "icon": "Stethoscope",
+          "title": "Santé",
+          "description": "Transformez les soins aux patients et la gestion des pratiques avec des solutions d'automatisation intelligentes.",
+          "features": [
+            "Planification automatisée des rendez-vous",
+            "Gestion des dossiers patients",
+            "Assistance diagnostique propulsée par l'IA",
+            "Automatisation des flux de travail des pratiques"
+          ],
+          "processIcons": [
+            "Calendar",
+            "FileText",
+            "Brain",
+            "StethoscopeAlt"
+          ]
+        },
+        {
+          "icon": "Briefcase",
+          "title": "Agences Numériques",
+          "description": "Évoluez les opérations de votre agence et fournissez de meilleurs résultats avec des outils propulsés par l'IA.",
+          "features": [
+            "Gestion de projet automatisée",
+            "Automatisation de la création de contenu",
+            "Automatisation des rapports clients",
+            "Optimisation des ressources"
+          ],
+          "processIcons": [
+            "PenTool",
+            "Bot",
+            "BarChart",
+            "Target"
+          ]
+        },
+        {
+          "icon": "Rocket",
+          "title": "Startups",
+          "description": "Lancez et développez votre startup plus rapidement avec des outils d'automatisation IA complets.",
+          "features": [
+            "Développement rapide de MVP",
+            "Opérations automatisées",
+            "Automatisation de la croissance",
+            "Évolutivité rentable"
+          ],
+          "processIcons": [
+            "Code",
+            "Zap",
+            "Brain",
+            "Rocket"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "automationFeaturesSection",
+      "subtitle": "AUTOMATISATION IA",
+      "title": "Transformez Votre Entreprise avec l'Automatisation IA",
+      "description": "Découvrez comment nos outils d'automatisation IA peuvent révolutionner vos opérations et stimuler la croissance dans tous les aspects de votre entreprise.",
+      "features": [
+        {
+          "icon": "Workflow",
+          "title": "Automatisation des Flux de Travail",
+          "description": "Rationalisez vos processus commerciaux avec une automatisation intelligente des flux de travail qui apprend et s'adapte à vos besoins.",
+          "metrics": [
+            {
+              "value": "70%",
+              "label": "Temps Économisé"
+            },
+            {
+              "value": "90%",
+              "label": "Réduction des Erreurs"
+            }
+          ]
+        },
+        {
+          "icon": "Headphones",
+          "title": "Service Client IA",
+          "description": "Fournissez un support client 24/7 avec des agents IA qui gèrent les demandes, résolvent les problèmes et améliorent la satisfaction.",
+          "metrics": [
+            {
+              "value": "24/7",
+              "label": "Couverture du Support"
+            },
+            {
+              "value": "85%",
+              "label": "Taux de Résolution"
+            }
+          ]
+        },
+        {
+          "icon": "Megaphone",
+          "title": "Automatisation du Marketing",
+          "description": "Automatisez vos campagnes marketing avec un ciblage propulsé par l'IA, la création de contenu et l'optimisation.",
+          "metrics": [
+            {
+              "value": "3x",
+              "label": "Augmentation du ROI"
+            },
+            {
+              "value": "60%",
+              "label": "Réduction des Coûts"
+            }
+          ]
+        },
+        {
+          "icon": "BarChart",
+          "title": "Analytique Intelligente",
+          "description": "Obtenez des insights exploitables avec des analyses propulsées par l'IA qui vous aident à prendre des décisions basées sur les données.",
+          "metrics": [
+            {
+              "value": "95%",
+              "label": "Précision"
+            },
+            {
+              "value": "50%",
+              "label": "Insights Plus Rapides"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "emailSignupSection",
+      "subtitle": "NEWSLETTER",
+      "title": "Restez Informé des Innovations IA",
+      "description": "Rejoignez notre newsletter et recevez les dernières mises à jour sur les solutions commerciales propulsées par l'IA, les insights du secteur et les offres exclusives.",
+      "buttonText": "S'inscrire Maintenant",
+      "placeholder": "Entrez votre email professionnel",
+      "features": [
+        "Insights IA hebdomadaires",
+        "Mises à jour des produits",
+        "Histoires de succès",
+        "Pas de spam, jamais"
+      ]
+    }
+  ]
+}

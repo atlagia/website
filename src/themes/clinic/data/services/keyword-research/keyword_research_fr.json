@@ -1,0 +1,192 @@
+{
+  "hero": {
+    "subtitle": "RECHERCHE DE MOTS-CLÉS PAR IA",
+    "title": "Découvrez des Mots-clés à Forte Valeur avec l'IA",
+    "description": "Exploitez la technologie IA avancée pour découvrir des mots-clés rentables, analyser l'intention de recherche et optimiser votre stratégie de contenu pour de meilleures performances SEO.",
+    "image": "https://cdn.atlagia.com/kepart_vector_laptop_Ai_Platform_e-commerce_Revolution_light_ba_c134a938-d6b2-4ff3-b7db-4019f096ca6f.png"
+  },
+  "benefits": {
+    "title": "Pourquoi Choisir Notre Recherche de Mots-clés par IA",
+    "items": [
+      {
+        "icon": "Search",
+        "title": "Découverte Intelligente",
+        "description": "Découverte de mots-clés et analyse d'opportunités par IA.",
+        "color": "blue"
+      },
+      {
+        "icon": "Target",
+        "title": "Analyse d'Intention",
+        "description": "Compréhension approfondie de l'intention de recherche.",
+        "color": "green"
+      },
+      {
+        "icon": "TrendingUp",
+        "title": "Prédiction de Tendances",
+        "description": "Prévision des tendances et variations saisonnières.",
+        "color": "purple"
+      },
+      {
+        "icon": "BarChart",
+        "title": "Analyse Concurrentielle",
+        "description": "Analyse détaillée de la concurrence et score de difficulté.",
+        "color": "pink"
+      }
+    ]
+  },
+  "features": {
+    "title": "Fonctionnalités de Recherche Puissantes",
+    "description": "Tout ce dont vous avez besoin pour maîtriser votre stratégie de mots-clés.",
+    "items": [
+      {
+        "title": "Découverte par IA",
+        "description": "Trouvez des mots-clés précieux avec le machine learning",
+        "image": "/images/services/keyword-discovery.svg",
+        "features": [
+          "Suggestions intelligentes",
+          "Opportunités long-tail",
+          "Sujets connexes",
+          "Analyse des questions"
+        ]
+      },
+      {
+        "title": "Analyse d'Intention",
+        "description": "Comprenez l'intention utilisateur et optimisez le contenu",
+        "image": "/images/services/intent-analysis.svg",
+        "features": [
+          "Classification d'intention",
+          "Cartographie du parcours",
+          "Alignement du contenu",
+          "Analyse SERP"
+        ]
+      },
+      {
+        "title": "Intelligence Concurrentielle",
+        "description": "Analysez la concurrence et trouvez des opportunités",
+        "image": "/images/services/competitive-analysis.svg",
+        "features": [
+          "Suivi des concurrents",
+          "Analyse des écarts",
+          "Difficulté de classement",
+          "Opportunités marché"
+        ]
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "Comment Ça Marche",
+    "description": "Commencez la recherche de mots-clés par IA en quatre étapes simples",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Entrez les Sujets",
+        "description": "Saisissez vos sujets ou domaines cibles"
+      },
+      {
+        "number": "02",
+        "title": "Analyse IA",
+        "description": "Laissez l'IA analyser les modèles"
+      },
+      {
+        "number": "03",
+        "title": "Obtenez des Insights",
+        "description": "Recevez des insights détaillés"
+      },
+      {
+        "number": "04",
+        "title": "Optimisez le Contenu",
+        "description": "Appliquez les insights à votre contenu"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Tarification Simple et Transparente",
+    "description": "Choisissez le forfait qui correspond le mieux à vos besoins",
+    "plans": [
+      {
+        "name": "Débutant",
+        "price": "49",
+        "period": "/mois",
+        "description": "Pour les petits sites",
+        "features": [
+          "100 mots-clés/mois",
+          "Analyse de base",
+          "Mises à jour quotidiennes",
+          "Support par email"
+        ],
+        "cta": {
+          "text": "Essai Gratuit",
+          "link": "/trial"
+        }
+      },
+      {
+        "name": "Professionnel",
+        "price": "149",
+        "period": "/mois",
+        "description": "Pour les sites en croissance",
+        "features": [
+          "1 000 mots-clés/mois",
+          "Analyse avancée",
+          "Mises à jour en temps réel",
+          "Support prioritaire"
+        ],
+        "cta": {
+          "text": "Essai Gratuit",
+          "link": "/trial"
+        },
+        "popular": true
+      },
+      {
+        "name": "Entreprise",
+        "price": "399",
+        "period": "/mois",
+        "description": "Pour les grandes opérations",
+        "features": [
+          "Mots-clés illimités",
+          "Solutions personnalisées",
+          "Accès API",
+          "Support 24/7"
+        ],
+        "cta": {
+          "text": "Contacter les Ventes",
+          "link": "/contact"
+        }
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Ce Que Disent Nos Clients",
+    "items": [
+      {
+        "content": "L'outil de recherche de mots-clés par IA nous a aidés à découvrir des opportunités inexploitées qui ont augmenté notre trafic organique de 200% en seulement 3 mois.",
+        "author": "Michael Chen",
+        "position": "Directeur SEO",
+        "company": "GrowthDigital",
+        "image": "/images/testimonials/michael.jpg"
+      },
+      {
+        "content": "La fonctionnalité d'analyse d'intention a transformé notre façon de créer du contenu. Nos taux de conversion se sont considérablement améliorés depuis que nous l'utilisons.",
+        "author": "Lisa Anderson",
+        "position": "Responsable Contenu",
+        "company": "ContentPro",
+        "image": "/images/testimonials/lisa.jpg"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prêt à Améliorer Votre Stratégie SEO ?",
+    "description": "Rejoignez des milliers d'entreprises qui utilisent notre plateforme pour découvrir des mots-clés à forte valeur.",
+    "buttons": [
+      {
+        "text": "Essai Gratuit",
+        "link": "/trial",
+        "primary": true
+      },
+      {
+        "text": "Voir la Démo",
+        "link": "/demo",
+        "primary": false
+      }
+    ]
+  }
+} 

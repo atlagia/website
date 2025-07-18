@@ -1,0 +1,259 @@
+---
+import { SITE_TITLE } from '../../consts';
+import pkg from 'lucide-react';
+const { 
+  Wand, 
+  Layers, 
+  Camera, 
+  Star, 
+  Layout, 
+  Sun, 
+  Tool, 
+  Crown, 
+  Scissors, 
+  Move,
+  Smile,
+  CheckCircle,
+  Clock,
+  ListCheck
+} = pkg;
+
+const theme = import.meta.env.THEME || 'default';
+const lang = Astro.params.lang || 'en';
+
+const { default: BaseHead } = await import(`../../components/BaseHead.astro`);
+const { default: Header } = await import(`../../components/Header.astro`);
+const { default: Footer } = await import(`../../components/Footer.astro`);
+
+// Import language-specific service data
+const serviceData = await import(`../../data/services/smile-makeover/smile-makeover_${lang}.json`);
+
+const businessInfo = {
+  name: import.meta.env.PUBLIC_BUSINESS_NAME || 'DentCare'
+};
+
+// Define icon paths
+const iconPaths = {
+  wand: `<path d="M15 4V2"/><path d="M15 16v-2"/><path d="M8 9h2"/><path d="M20 9h2"/><path d="M17.8 11.8 19 13"/><path d="M15 9h0"/><path d="M17.8 6.2 19 5"/><path d="m3 21 9-9"/><path d="M12.2 6.2 11 5"/>`,
+  layers: `<path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.91a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/>`,
+  camera: `<path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/>`,
+  star: `<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>`,
+  layout: `<rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/>`,
+  sun: `<circle cx="12" cy="12" r="5"/><path d="M12 1v2"/><path d="M12 21v2"/><path d="M4.22 4.22l1.42 1.42"/><path d="M18.36 18.36l1.42 1.42"/><path d="M1 12h2"/><path d="M21 12h2"/><path d="M4.22 19.78l1.42-1.42"/><path d="M18.36 5.64l1.42-1.42"/>`,
+  tool: `<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>`,
+  crown: `<path d="m2 4 3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14"/>`,
+  scissors: `<circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/>`,
+  move: `<polyline points="5 9 2 12 5 15"/><polyline points="9 5 12 2 15 5"/><polyline points="15 19 12 22 9 19"/><polyline points="19 9 22 12 19 15"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="12" y1="2" x2="12" y2="22"/>`,
+  smile: `<circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/>`,
+  "check-circle": `<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>`,
+  clock: `<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>`,
+  "list-check": `<line x1="10" y1="6" x2="21" y2="6"/><line x1="10" y1="12" x2="21" y2="12"/><line x1="10" y1="18" x2="21" y2="18"/><polyline points="3 6 4 7 6 5"/><polyline points="3 12 4 13 6 11"/><polyline points="3 18 4 19 6 17"/>`
+};
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <BaseHead 
+      title={`${serviceData.hero.title} | ${businessInfo.name}`}
+      description={serviceData.hero.description}
+    />
+  </head>
+  <body>
+    <Header />
+    <main class="pt-10">
+      <!-- Hero Section -->
+      <section class="relative py-20 px-4 bg-gradient-to-b from-[#f0f9ff] via-white to-transparent overflow-hidden">
+        <div class="absolute inset-0 z-0">
+          <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-bl from-[#0a91b1]/10 to-blue-500/10 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
+          <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-tr from-sky-500/10 to-[#0a91b1]/10 rounded-full blur-3xl animate-blob"></div>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto text-center">
+          <span class="inline-block px-4 py-1.5 mb-4 text-sm font-medium rounded-full bg-[#0a91b1]/10 text-[#0a91b1] border border-[#0a91b1]/20">
+            {serviceData.hero.subtitle}
+          </span>
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">{serviceData.hero.title}</h1>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            {serviceData.hero.description}
+          </p>
+        </div>
+      </section>
+
+      <!-- Treatment Options -->
+      <section class="relative py-16 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">{serviceData.treatments.title}</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">{serviceData.treatments.description}</p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {serviceData.treatments.options.map(treatment => (
+              <div class="p-6 bg-white rounded-2xl border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div class="w-12 h-12 rounded-xl bg-[#0a91b1]/10 flex items-center justify-center mb-4">
+                  <svg 
+                    class="w-6 h-6 text-[#0a91b1]"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    set:html={iconPaths[treatment.icon]}
+                  />
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">{treatment.title}</h3>
+                <p class="text-gray-600">{treatment.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- Process Steps -->
+      <section class="relative py-16 px-4 bg-gradient-to-b from-white via-[#0a91b1]/5 to-white">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">{serviceData.process.title}</h2>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
+            {serviceData.process.steps.map((step, index) => (
+              <div class="relative">
+                {index < serviceData.process.steps.length - 1 && (
+                  <div class="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2">
+                    <svg class="w-6 h-6 text-[#0a91b1]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                      <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                  </div>
+                )}
+                <div class="p-6 bg-white rounded-2xl border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300">
+                  <span class="inline-block text-3xl font-bold text-[#0a91b1] mb-4">{step.number}</span>
+                  <h3 class="text-xl font-semibold text-gray-900 mb-2">{step.title}</h3>
+                  <p class="text-gray-600">{step.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- Benefits Section -->
+      <section class="relative py-16 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">{serviceData.benefits.title}</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">{serviceData.benefits.description}</p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {serviceData.benefits.items.map(benefit => (
+              <div class="p-6 bg-white rounded-2xl border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div class="w-12 h-12 rounded-xl bg-[#0a91b1]/10 flex items-center justify-center mb-4">
+                  <svg 
+                    class="w-6 h-6 text-[#0a91b1]"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    set:html={iconPaths[benefit.icon]}
+                  />
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">{benefit.title}</h3>
+                <p class="text-gray-600">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- Financing Section -->
+      <section class="relative py-16 px-4 bg-gradient-to-b from-white via-[#0a91b1]/5 to-white">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">{serviceData.financing.title}</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">{serviceData.financing.description}</p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            {serviceData.financing.options.map(option => (
+              <div class="p-8 bg-white rounded-2xl border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300">
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">{option.name}</h3>
+                <p class="text-3xl font-bold text-[#0a91b1] mb-6">{option.price}</p>
+                <ul class="space-y-3">
+                  {option.includes.map(item => (
+                    <li class="flex items-center">
+                      <svg class="w-5 h-5 text-[#0a91b1] mr-3" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <polyline points="20 6 9 17 4 12"/>
+                      </svg>
+                      <span class="text-gray-600">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+          <div class="max-w-3xl mx-auto">
+            <h3 class="text-xl font-semibold text-center mb-6">{serviceData.financing.payment.title}</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {serviceData.financing.payment.methods.map(method => (
+                <div class="flex items-center p-4 bg-white rounded-xl shadow-sm">
+                  <svg class="w-5 h-5 text-[#0a91b1] mr-3" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  <span class="text-gray-700">{method}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="relative py-16 px-4 bg-[#0a91b1]">
+        <div class="max-w-7xl mx-auto text-center">
+          <h2 class="text-3xl font-bold text-white mb-4">{serviceData.cta.title}</h2>
+          <p class="text-xl text-white/90 max-w-3xl mx-auto mb-8">{serviceData.cta.description}</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href={serviceData.cta.primaryButton.href}
+              class="inline-block px-8 py-3 bg-white text-[#0a91b1] font-semibold rounded-full hover:bg-gray-100 transition-colors duration-300"
+            >
+              {serviceData.cta.primaryButton.text}
+            </a>
+            <a
+              href={serviceData.cta.secondaryButton.href}
+              class="inline-block px-8 py-3 bg-transparent text-white font-semibold rounded-full border-2 border-white hover:bg-white/10 transition-colors duration-300"
+            >
+              {serviceData.cta.secondaryButton.text}
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style>
+  @keyframes blob {
+    0% {
+      transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    }
+    33% {
+      transform: translate(-50%, -50%) scale(1.1) rotate(120deg);
+    }
+    66% {
+      transform: translate(-50%, -50%) scale(0.9) rotate(240deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1) rotate(360deg);
+    }
+  }
+
+  .animate-blob {
+    animation: blob 20s infinite linear;
+  }
+
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+</style> 

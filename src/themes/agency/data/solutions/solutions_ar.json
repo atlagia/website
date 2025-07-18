@@ -1,0 +1,325 @@
+{
+  "pageTitle": "حلول القطاعات",
+  "pageDescription": "اكتشف مجموعتنا الشاملة من الحلول المخصصة للقطاعات، مدعومة بالذكاء الاصطناعي.",
+  "hero": {
+    "badge": "حلول القطاعات",
+    "title": "حول قطاعك مع حلول مدعومة بالذكاء الاصطناعي",
+    "description": "اكتشف مجموعتنا الشاملة من الحلول المخصصة للقطاعات، المصممة لتحويل عملياتك باستخدام أحدث تقنيات الذكاء الاصطناعي.",
+    "cta": {
+      "primary": {
+        "text": "استكشف الحلول",
+        "href": "#solutions"
+      },
+      "secondary": {
+        "text": "تواصل مع المبيعات",
+        "href": "/contact"
+      }
+    }
+  },
+  "stats": [
+    {
+      "value": "10K+",
+      "label": "مستخدم نشط"
+    },
+    {
+      "value": "99.9%",
+      "label": "وقت التشغيل"
+    },
+    {
+      "value": "45%",
+      "label": "زيادة الكفاءة"
+    },
+    {
+      "value": "24/7",
+      "label": "الدعم"
+    }
+  ],
+  "solutions": [
+    {
+      "category": "الرعاية الصحية",
+      "description": "حلول شاملة لمقدمي خدمات الرعاية الصحية",
+      "items": [
+        {
+          "icon": "stethoscope",
+          "name": "العيادات الطبية",
+          "description": "حسن إدارة عيادتك الطبية مع إدارة مدعومة بالذكاء الاصطناعي",
+          "href": "/solutions/medical-solution",
+          "color": "blue"
+        },
+        {
+          "icon": "hospital",
+          "name": "المستشفيات",
+          "description": "نظام إدارة المستشفيات ورعاية المرضى المتكامل",
+          "href": "/solutions/hospital-solution",
+          "color": "indigo"
+        },
+        {
+          "icon": "building2",
+          "name": "العيادات",
+          "description": "عمليات عيادية فعالة وإدارة المرضى",
+          "href": "/solutions/clinic-solution",
+          "color": "purple"
+        },
+        {
+          "icon": "pill",
+          "name": "الصيدليات",
+          "description": "إدارة صيدلية حديثة ومراقبة المخزون",
+          "href": "/solutions/pharmacy-solution",
+          "color": "pink"
+        }
+      ]
+    },
+    {
+      "category": "الرعاية المتخصصة",
+      "description": "حلول مخصصة للمرافق الطبية المتخصصة",
+      "items": [
+        {
+          "icon": "tooth",
+          "name": "عيادات الأسنان",
+          "description": "حل متكامل لإدارة عيادات الأسنان",
+          "href": "/solutions/dental-solution",
+          "color": "cyan"
+        },
+        {
+          "icon": "radio-tower",
+          "name": "مراكز الأشعة",
+          "description": "نظام معلومات الأشعة المتقدم",
+          "href": "/solutions/radiology-solution",
+          "color": "emerald"
+        },
+        {
+          "icon": "flask",
+          "name": "المعامل",
+          "description": "نظام إدارة المعامل الشامل",
+          "href": "/solutions/laboratory-solution",
+          "color": "teal"
+        },
+        {
+          "icon": "dog",
+          "name": "العيادات البيطرية",
+          "description": "إدارة متكاملة للعيادات البيطرية",
+          "href": "/solutions/veterinary-solution",
+          "color": "orange"
+        }
+      ]
+    },
+    {
+      "category": "التجارة والتوزيع",
+      "description": "حلول رقمية لمؤسسات التجارة والتجارة الإلكترونية الحديثة",
+      "items": [
+        {
+          "icon": "shopping-bag",
+          "name": "التجارة الإلكترونية",
+          "description": "منصة تجارة إلكترونية متكاملة مع رؤى مدعومة بالذكاء الاصطناعي",
+          "href": "/solutions/ecommerce-solution",
+          "color": "rose"
+        },
+        {
+          "icon": "store",
+          "name": "متاجر التجزئة",
+          "description": "إدارة ذكية للتجزئة ونظام نقاط البيع",
+          "href": "/solutions/retail-solution",
+          "color": "amber"
+        },
+        {
+          "icon": "warehouse",
+          "name": "الجملة",
+          "description": "إدارة فعالة للتجارة بالجملة والتوزيع",
+          "href": "/solutions/wholesale-solution",
+          "color": "lime"
+        },
+        {
+          "icon": "truck",
+          "name": "الخدمات اللوجستية",
+          "description": "إدارة ذكية للخدمات اللوجستية وسلسلة التوريد",
+          "href": "/solutions/logistics-solution",
+          "color": "green"
+        }
+      ]
+    },
+    {
+      "category": "التصنيع والصناعة",
+      "description": "حلول ذكية للتصنيع الحديث والعمليات الصناعية",
+      "items": [
+        {
+          "icon": "factory",
+          "name": "التصنيع",
+          "description": "إدارة ذكية للإنتاج والتصنيع",
+          "href": "/solutions/manufacturing-solution",
+          "color": "sky"
+        },
+        {
+          "icon": "warehouse",
+          "name": "المخزون",
+          "description": "إدارة متقدمة للمستودعات والمخزون",
+          "href": "/solutions/inventory-solution",
+          "color": "cyan"
+        },
+        {
+          "icon": "truck",
+          "name": "سلسلة التوريد",
+          "description": "تحسين شامل لسلسلة التوريد",
+          "href": "/solutions/supply-chain-solution",
+          "color": "blue"
+        },
+        {
+          "icon": "trending-up",
+          "name": "مراقبة الجودة",
+          "description": "ضمان الجودة ومراقبتها مدعومة بالذكاء الاصطناعي",
+          "href": "/solutions/quality-solution",
+          "color": "indigo"
+        }
+      ]
+    },
+    {
+      "category": "الخدمات المهنية",
+      "description": "حلول متخصصة للشركات القائمة على الخدمات",
+      "items": [
+        {
+          "icon": "building",
+          "name": "العقارات",
+          "description": "منصة متكاملة لإدارة العقارات",
+          "href": "/solutions/real-estate-solution",
+          "color": "violet"
+        },
+        {
+          "icon": "graduation-cap",
+          "name": "التعليم",
+          "description": "إدارة ذكية للتعليم والتعلم",
+          "href": "/solutions/education-solution",
+          "color": "purple"
+        },
+        {
+          "icon": "hotel",
+          "name": "الضيافة",
+          "description": "نظام متكامل لإدارة الفنادق",
+          "href": "/solutions/hospitality-solution",
+          "color": "fuchsia"
+        },
+        {
+          "icon": "users",
+          "name": "الخدمات المهنية",
+          "description": "إدارة خدمات الأعمال والاستشارات",
+          "href": "/solutions/professional-solution",
+          "color": "pink"
+        }
+      ]
+    }
+  ],
+  "features": {
+    "title": "ميزات قوية لكل حل",
+    "description": "تأتي منصتنا مع ميزات تعزز عملياتك",
+    "items": [
+      {
+        "icon": "globe",
+        "title": "إمكانية الوصول العالمي",
+        "description": "الوصول إلى حلولك من أي مكان وفي أي وقت مع منصتنا السحابية"
+      },
+      {
+        "icon": "clock",
+        "title": "دعم على مدار الساعة",
+        "description": "دعم فني ومراقبة النظام على مدار الساعة"
+      },
+      {
+        "icon": "shield",
+        "title": "أمن البيانات",
+        "description": "أمان على مستوى المؤسسات مع تشفير من طرف إلى طرف"
+      },
+      {
+        "icon": "zap",
+        "title": "تحديثات فورية",
+        "description": "تحديثات ومزامنة فورية عبر جميع الأجهزة"
+      }
+    ]
+  },
+  "benefits": {
+    "title": "مزايا لجميع الحلول",
+    "description": "اختبر مزايا منصتنا المدعومة بالذكاء الاصطناعي لجميع حلول القطاعات.",
+    "items": [
+      {
+        "icon": "brain",
+        "title": "ذكاء مدعوم بالذكاء الاصطناعي",
+        "description": "قدرات متقدمة للذكاء الاصطناعي وتعلم الآلة تتكيف مع احتياجاتك المحددة",
+        "stats": "45%",
+        "label": "زيادة الكفاءة"
+      },
+      {
+        "icon": "shield",
+        "title": "أمن المؤسسات",
+        "description": "أمان على مستوى البنوك مع تشفير من طرف إلى طرف وامتثال لمعايير الصناعة",
+        "stats": "99.9%",
+        "label": "وقت تشغيل النظام"
+      },
+      {
+        "icon": "trending-up",
+        "title": "نمو قابل للتطوير",
+        "description": "حلول تنمو مع عملك، من الممارسات الصغيرة إلى المؤسسات الكبيرة",
+        "stats": "3x",
+        "label": "متوسط النمو"
+      },
+      {
+        "icon": "users",
+        "title": "تجربة محسنة",
+        "description": "تجربة محسنة للموظفين والعملاء مع واجهات بديهية",
+        "stats": "96%",
+        "label": "معدل الرضا"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "ماذا يقول عملاؤنا",
+    "description": "استمع إلى المتخصصين في الرعاية الصحية الذين حولوا ممارساتهم مع حلولنا",
+    "items": [
+      {
+        "quote": "حولت جيا كونكت طريقة عملنا. قدرات الذكاء الاصطناعي ثورية حقاً.",
+        "author": "د. سارة تشن",
+        "role": "مديرة طبية",
+        "image": "/images/testimonials/sarah.jpg"
+      },
+      {
+        "quote": "حسنت كفاءة وسهولة استخدام المنصة رعاية مرضانا بشكل كبير.",
+        "author": "د. جيمس ويلسون",
+        "role": "مدير المستشفى",
+        "image": "/images/testimonials/james.jpg"
+      }
+    ]
+  },
+  "integrations": {
+    "title": "يعمل مع أدواتك المفضلة",
+    "description": "تكامل سلس مع تطبيقات الرعاية الصحية والأعمال الشائعة"
+  },
+  "faq": {
+    "title": "الأسئلة الشائعة",
+    "description": "اعثر على إجابات للأسئلة الشائعة حول حلولنا",
+    "items": [
+      {
+        "question": "كيف يعمل تكامل الذكاء الاصطناعي؟",
+        "answer": "يتكامل نظام الذكاء الاصطناعي لدينا بسلاسة مع عمليات العمل الحالية، ويتعلم ويتكيف مع احتياجاتك المحددة بمرور الوقت."
+      },
+      {
+        "question": "ما نوع الدعم الذي تقدمونه؟",
+        "answer": "نقدم دعمًا فنيًا على مدار الساعة، وجلسات تدريبية منتظمة، ومديري حسابات مخصصين لعملاء المؤسسات."
+      },
+      {
+        "question": "هل بياناتي آمنة؟",
+        "answer": "نعم، نطبق إجراءات أمنية على مستوى البنوك ونمتثل بالكامل لمعايير HIPAA وغيرها من لوائح الرعاية الصحية."
+      }
+    ]
+  },
+  "cta": {
+    "title": "جاهز لتحويل عملك؟",
+    "description": "انضم إلى آلاف الشركات التي حدّثت عملياتها بالفعل مع حلولنا المدعومة بالذكاء الاصطناعي.",
+    "buttons": [
+      {
+        "text": "جدولة عرض توضيحي",
+        "href": "/demo",
+        "variant": "primary"
+      },
+      {
+        "text": "تواصل مع المبيعات",
+        "href": "/contact",
+        "variant": "secondary"
+      }
+    ]
+  }
+} 

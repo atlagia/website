@@ -1,0 +1,91 @@
+---
+interface Integration {
+  name: string;
+  logo: string;
+  description: string;
+  category: string;
+  link: string;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  integrations: Integration[];
+}
+
+const { title, description, integrations } = Astro.props;
+
+// Group integrations by category
+const groupedIntegrations = integrations.reduce((acc, integration) => {
+  if (!acc[integration.category]) {
+    acc[integration.category] = [];
+  }
+  acc[integration.category].push(integration);
+  return acc;
+}, {});
+---
+
+<section class="section-spacing bg-white">
+  <div class="container mx-auto px-4">
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+        {title}
+      </h2>
+      <p class="text-xl text-gray-600">{description}</p>
+    </div>
+
+    <!-- Integration Categories -->
+    <div class="grid gap-12">
+      {Object.entries(groupedIntegrations).map(([category, items]) => (
+        <div class="space-y-8">
+          <h3 class="text-2xl font-semibold text-gray-900">{category}</h3>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {items.map((integration: Integration) => (
+              <a 
+                href={integration.link}
+                class="group relative p-6 bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300"
+              >
+                <div class="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                
+                <div class="relative flex items-start gap-4">
+                  <div class="flex-shrink-0">
+                    <img 
+                      src={integration.logo} 
+                      alt={integration.name}
+                      class="w-12 h-12 object-contain"
+                    />
+                  </div>
+                  
+                  <div>
+                    <h4 class="text-lg font-medium text-gray-900 mb-2">
+                      {integration.name}
+                    </h4>
+                    <p class="text-gray-600">
+                      {integration.description}
+                    </p>
+                  </div>
+                </div>
+                
+                <div class="absolute bottom-6 right-6">
+                  <div class="w-6 h-6 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center transform group-hover:scale-110 transition-transform">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .section-spacing {
+    padding: 6rem 0;
+  }
+</style> 

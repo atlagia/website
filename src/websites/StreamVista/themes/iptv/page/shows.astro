@@ -1,0 +1,286 @@
+---
+import { getLangFromUrl, useTranslations } from '@utils/i18n';
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+
+const lang = getLangFromUrl(Astro.url);
+const translations = await useTranslations(lang);
+const jsonData = translations.default;
+
+const SITE_TITLE = jsonData.siteTitle || 'StreamVista';
+const PAGE_TITLE = 'TV Shows | ' + SITE_TITLE;
+const PAGE_DESCRIPTION = 'Watch your favorite TV series and shows on demand';
+
+// Sample TV shows data
+const shows = {
+  trending: [
+    {
+      title: "City Lights",
+      genre: "Drama",
+      rating: "4.9",
+      seasons: "3",
+      quality: "4K",
+      status: "New Episode",
+      image: "/shows/city-lights.jpg"
+    },
+    {
+      title: "Space Explorers",
+      genre: "Sci-Fi",
+      rating: "4.8",
+      seasons: "2",
+      quality: "4K",
+      status: "Trending",
+      image: "/shows/space-explorers.jpg"
+    },
+    {
+      title: "Detective's Code",
+      genre: "Crime",
+      rating: "4.7",
+      seasons: "4",
+      quality: "4K",
+      status: "Popular",
+      image: "/shows/detectives-code.jpg"
+    }
+  ],
+  categories: [
+    {
+      name: "Popular Series",
+      shows: [
+        {
+          title: "Medical Heroes",
+          rating: "4.6",
+          seasons: "5",
+          quality: "4K",
+          status: "Ongoing",
+          image: "/shows/medical-heroes.jpg"
+        },
+        {
+          title: "Legal Wars",
+          rating: "4.5",
+          seasons: "3",
+          quality: "HD",
+          status: "Ongoing",
+          image: "/shows/legal-wars.jpg"
+        }
+      ]
+    },
+    {
+      name: "New Releases",
+      shows: [
+        {
+          title: "Tech Valley",
+          rating: "4.7",
+          seasons: "1",
+          quality: "4K",
+          status: "New",
+          image: "/shows/tech-valley.jpg"
+        },
+        {
+          title: "Royal Dynasty",
+          rating: "4.4",
+          seasons: "1",
+          quality: "HD",
+          status: "New",
+          image: "/shows/royal-dynasty.jpg"
+        }
+      ]
+    },
+    {
+      name: "Award Winners",
+      shows: [
+        {
+          title: "The Revolution",
+          rating: "4.9",
+          seasons: "4",
+          quality: "4K",
+          status: "Complete",
+          image: "/shows/revolution.jpg"
+        },
+        {
+          title: "Mind Games",
+          rating: "4.8",
+          seasons: "3",
+          quality: "4K",
+          status: "Complete",
+          image: "/shows/mind-games.jpg"
+        }
+      ]
+    }
+  ]
+};
+
+const genres = [
+  "Action", "Comedy", "Crime", "Documentary", "Drama", "Fantasy",
+  "Horror", "Mystery", "Reality", "Romance", "Sci-Fi", "Thriller"
+];
+---
+
+<!doctype html>
+<html lang={lang} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
+  <head>
+    <BaseHead title={PAGE_TITLE} description={PAGE_DESCRIPTION} />
+  </head>
+  <body class="bg-black text-white">
+    <Header />
+    <main class="container mx-auto px-4 py-16 max-w-7xl">
+      <section class="space-y-12">
+        {/* Hero Section */}
+        <div class="text-center space-y-4">
+          <h1 class="text-4xl md:text-6xl font-bold gradient-text">
+            TV Shows
+          </h1>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            Binge-watch your favorite series with new episodes added daily.
+          </p>
+        </div>
+
+        {/* Search and Filters */}
+        <div class="glass rounded-xl p-6 space-y-6">
+          <div class="flex flex-col md:flex-row gap-4">
+            <div class="flex-1">
+              <input
+                type="search"
+                placeholder="Search TV shows..."
+                class="w-full px-4 py-2 rounded-lg bg-white/10 border border-white/20 focus:border-purple-500 focus:ring-2 focus:ring-purple-500"
+              />
+            </div>
+            <div class="flex gap-4">
+              <select class="px-4 py-2 rounded-lg bg-white/10 border border-white/20 focus:border-purple-500 focus:ring-2 focus:ring-purple-500">
+                <option value="">All Genres</option>
+                {genres.map(genre => (
+                  <option value={genre.toLowerCase()}>{genre}</option>
+                ))}
+              </select>
+              <select class="px-4 py-2 rounded-lg bg-white/10 border border-white/20 focus:border-purple-500 focus:ring-2 focus:ring-purple-500">
+                <option value="">Status</option>
+                <option value="ongoing">Ongoing</option>
+                <option value="completed">Completed</option>
+                <option value="new">New</option>
+              </select>
+              <select class="px-4 py-2 rounded-lg bg-white/10 border border-white/20 focus:border-purple-500 focus:ring-2 focus:ring-purple-500">
+                <option value="">Quality</option>
+                <option value="4k">4K</option>
+                <option value="hd">HD</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        {/* Trending Shows */}
+        <div class="space-y-6">
+          <h2 class="text-2xl font-bold text-purple-400">Trending Now</h2>
+          <div class="grid md:grid-cols-3 gap-8">
+            {shows.trending.map(show => (
+              <div class="glass rounded-xl overflow-hidden hover-scale hover-glow">
+                <div class="aspect-video bg-white/5 relative">
+                  <div class="absolute inset-0 flex items-center justify-center">
+                    <span class="text-2xl font-bold">{show.title}</span>
+                  </div>
+                  <div class="absolute top-2 right-2 bg-purple-600 text-white px-2 py-1 rounded-lg text-sm">
+                    {show.quality}
+                  </div>
+                  <div class="absolute top-2 left-2 bg-emerald-600 text-white px-2 py-1 rounded-lg text-sm">
+                    {show.status}
+                  </div>
+                </div>
+                <div class="p-4 space-y-2">
+                  <div class="flex items-center justify-between">
+                    <span class="text-sm text-gray-400">{show.genre}</span>
+                    <div class="flex items-center gap-1">
+                      <span class="text-yellow-400">★</span>
+                      <span>{show.rating}</span>
+                    </div>
+                  </div>
+                  <div class="flex items-center justify-between text-sm text-gray-400">
+                    <span>{show.seasons} Seasons</span>
+                  </div>
+                  <button class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 rounded-lg transition duration-200">
+                    Watch Now
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Show Categories */}
+        <div class="space-y-12">
+          {shows.categories.map(category => (
+            <div class="space-y-6">
+              <h2 class="text-2xl font-bold text-purple-400">{category.name}</h2>
+              <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                {category.shows.map(show => (
+                  <div class="glass rounded-xl overflow-hidden hover-scale hover-glow">
+                    <div class="aspect-[2/3] bg-white/5 relative">
+                      <div class="absolute inset-0 flex items-center justify-center text-center p-2">
+                        <span class="font-bold">{show.title}</span>
+                      </div>
+                      <div class="absolute top-2 right-2 bg-purple-600 text-white px-2 py-1 rounded-lg text-sm">
+                        {show.quality}
+                      </div>
+                      <div class="absolute top-2 left-2 bg-emerald-600 text-white px-2 py-1 rounded-lg text-sm">
+                        {show.status}
+                      </div>
+                    </div>
+                    <div class="p-3 space-y-2">
+                      <div class="flex items-center justify-between text-sm">
+                        <span>{show.seasons} Seasons</span>
+                        <div class="flex items-center gap-1">
+                          <span class="text-yellow-400">★</span>
+                          <span>{show.rating}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Schedule Section */}
+        <div class="glass rounded-2xl p-8 space-y-6">
+          <h2 class="text-2xl font-bold text-center text-purple-400">
+            Weekly Schedule
+          </h2>
+          <div class="grid md:grid-cols-7 gap-4">
+            {['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].map(day => (
+              <div class="glass rounded-xl p-4 text-center">
+                <h3 class="font-bold mb-2">{day}</h3>
+                <div class="space-y-2 text-sm text-gray-400">
+                  <p>City Lights</p>
+                  <p>Medical Heroes</p>
+                  <p>Space Explorers</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div class="glass rounded-2xl p-8 text-center space-y-6">
+          <h2 class="text-3xl font-bold gradient-text">Never Miss an Episode</h2>
+          <p class="text-xl text-gray-300">
+            Watch your favorite shows with automatic new episode alerts.
+          </p>
+          <div class="flex justify-center gap-4">
+            <a
+              href="/pricing"
+              class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg transition duration-200"
+            >
+              View Plans
+            </a>
+            <a
+              href="/signup"
+              class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-8 rounded-lg transition duration-200"
+            >
+              Start Free Trial
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html> 

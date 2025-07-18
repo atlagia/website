@@ -1,0 +1,283 @@
+{
+  "pageTitle": "Platform",
+  "pageDescription": "Explore our advanced AI platform capabilities and technical specifications.",
+  "hero": {
+    "badge": "Platform Overview",
+    "title": "Advanced AI Platform for Enterprise Innovation",
+    "description": "Discover our enterprise-grade AI platform that combines cutting-edge technology with unmatched scalability and security.",
+    "cta": {
+      "primary": {
+        "text": "Explore Features",
+        "href": "#features"
+      },
+      "secondary": {
+        "text": "View Documentation",
+        "href": "/docs"
+      }
+    }
+  },
+  "techSpecs": [
+    {
+      "title": "Processing Power",
+      "value": "100K+",
+      "unit": "requests/second"
+    },
+    {
+      "title": "Response Time",
+      "value": "<50",
+      "unit": "milliseconds"
+    },
+    {
+      "title": "Data Centers",
+      "value": "25+",
+      "unit": "global locations"
+    },
+    {
+      "title": "Model Parameters",
+      "value": "175B+",
+      "unit": "parameters"
+    }
+  ],
+  "features": [
+    {
+      "category": "Core AI Engine",
+      "description": "Advanced artificial intelligence capabilities",
+      "items": [
+        {
+          "icon": "Brain",
+          "name": "Machine Learning",
+          "description": "Advanced ML algorithms that adapt and learn from your data",
+          "highlights": [
+            "Deep Learning Models",
+            "Neural Networks",
+            "Pattern Recognition",
+            "Predictive Analytics"
+          ],
+          "stats": {
+            "value": "99.9%",
+            "label": "Accuracy Rate"
+          }
+        },
+        {
+          "icon": "Bot",
+          "name": "Natural Language",
+          "description": "Sophisticated natural language processing and understanding",
+          "highlights": [
+            "Text Analysis",
+            "Sentiment Analysis",
+            "Language Translation",
+            "Intent Recognition"
+          ],
+          "stats": {
+            "value": "45+",
+            "label": "Languages Supported"
+          }
+        },
+        {
+          "icon": "Cpu",
+          "name": "Computer Vision",
+          "description": "Advanced image and video processing capabilities",
+          "highlights": [
+            "Object Detection",
+            "Image Recognition",
+            "Video Analysis",
+            "OCR Processing"
+          ],
+          "stats": {
+            "value": "95%",
+            "label": "Detection Rate"
+          }
+        },
+        {
+          "icon": "Network",
+          "name": "Neural Networks",
+          "description": "State-of-the-art neural network architectures",
+          "highlights": [
+            "Deep Learning",
+            "Transfer Learning",
+            "Reinforcement Learning",
+            "AutoML"
+          ],
+          "stats": {
+            "value": "2x",
+            "label": "Performance Boost"
+          }
+        }
+      ]
+    },
+    {
+      "category": "Platform Infrastructure",
+      "description": "Robust and scalable technical foundation",
+      "items": [
+        {
+          "icon": "Cloud",
+          "name": "Cloud Native",
+          "description": "Built on modern cloud infrastructure for maximum scalability",
+          "highlights": [
+            "Auto-scaling",
+            "Load Balancing",
+            "Global CDN",
+            "Edge Computing"
+          ],
+          "stats": {
+            "value": "99.99%",
+            "label": "Uptime"
+          }
+        },
+        {
+          "icon": "Lock",
+          "name": "Security",
+          "description": "Enterprise-grade security and compliance measures",
+          "highlights": [
+            "End-to-end Encryption",
+            "SOC 2 Compliance",
+            "GDPR Compliance",
+            "Access Control"
+          ],
+          "stats": {
+            "value": "256-bit",
+            "label": "Encryption"
+          }
+        },
+        {
+          "icon": "Database",
+          "name": "Data Management",
+          "description": "Advanced data processing and storage capabilities",
+          "highlights": [
+            "Real-time Processing",
+            "Data Warehousing",
+            "ETL Pipeline",
+            "Data Lakes"
+          ],
+          "stats": {
+            "value": "PB",
+            "label": "Scale"
+          }
+        },
+        {
+          "icon": "Code",
+          "name": "API & Integration",
+          "description": "Comprehensive API and integration capabilities",
+          "highlights": [
+            "RESTful APIs",
+            "GraphQL Support",
+            "Webhooks",
+            "SDK Libraries"
+          ],
+          "stats": {
+            "value": "1000+",
+            "label": "API Endpoints"
+          }
+        }
+      ]
+    },
+    {
+      "category": "Development Tools",
+      "description": "Comprehensive tools for developers and businesses",
+      "items": [
+        {
+          "icon": "Settings",
+          "name": "Developer Tools",
+          "description": "Complete toolkit for developers and technical teams",
+          "highlights": [
+            "API Documentation",
+            "Testing Tools",
+            "Debug Console",
+            "Code Samples"
+          ],
+          "stats": {
+            "value": "100+",
+            "label": "Dev Tools"
+          }
+        },
+        {
+          "icon": "Layers",
+          "name": "Low-Code Builder",
+          "description": "Visual development tools for rapid deployment",
+          "highlights": [
+            "Drag-and-Drop",
+            "Visual Workflows",
+            "Templates",
+            "Custom Components"
+          ],
+          "stats": {
+            "value": "80%",
+            "label": "Time Saved"
+          }
+        },
+        {
+          "icon": "Workflow",
+          "name": "Workflow Engine",
+          "description": "Powerful workflow automation capabilities",
+          "highlights": [
+            "Visual Designer",
+            "Custom Logic",
+            "Event Triggers",
+            "Error Handling"
+          ],
+          "stats": {
+            "value": "500+",
+            "label": "Templates"
+          }
+        },
+        {
+          "icon": "LineChart",
+          "name": "Analytics & Insights",
+          "description": "Comprehensive analytics and reporting tools",
+          "highlights": [
+            "Real-time Metrics",
+            "Custom Reports",
+            "Data Visualization",
+            "Export Options"
+          ],
+          "stats": {
+            "value": "360°",
+            "label": "Data View"
+          }
+        }
+      ]
+    }
+  ],
+  "integrations": [
+    {
+      "name": "AWS",
+      "icon": "CloudAws"
+    },
+    {
+      "name": "Google Cloud",
+      "icon": "CloudGoogle"
+    },
+    {
+      "name": "Azure",
+      "icon": "CloudMicrosoft"
+    },
+    {
+      "name": "Salesforce",
+      "icon": "Building2"
+    },
+    {
+      "name": "SAP",
+      "icon": "Factory"
+    },
+    {
+      "name": "Oracle",
+      "icon": "Database2"
+    }
+  ],
+  "cta": {
+    "title": "Ready to Get Started?",
+    "description": "Experience the power of our AI platform with a personalized demo.",
+    "buttons": [
+      {
+        "text": "Schedule a Demo",
+        "href": "/demo",
+        "variant": "primary"
+      },
+      {
+        "text": "View Documentation",
+        "href": "/docs",
+        "variant": "secondary"
+      }
+    ]
+  }
+} 

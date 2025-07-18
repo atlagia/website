@@ -17,6 +17,9 @@ const { default: ProductShowcase } = await import(`../components/ProductShowcase
 const { default: TestimonialSlider } = await import(`../components/TestimonialSlider.astro`);
 const { default: FAQ } = await import(`../components/FaqSection.astro`);
 const { default: Video } = await import(`../components/Video.astro`);
+const { default: FeatureGrid } = await import(`../components/FeatureGrid.astro`);
+const { default: IntegrationShowcase } = await import(`../components/IntegrationShowcase.astro`);
+const { default: SuccessStories } = await import(`../components/SuccessStories.astro`);
 
 // Get the language parameter from the URL
 const { lang } = Astro.params;
@@ -80,6 +83,32 @@ export async function getStaticPaths() {
               />
             )}
             
+            {section.type === 'featureGrid' && (
+              <FeatureGrid
+                title={section.title}
+                description={section.description}
+                features={section.features}
+              />
+            )}
+            
+            {section.type === 'integrationShowcase' && (
+              <IntegrationShowcase
+                title={section.title}
+                description={section.description}
+                categories={section.categories}
+                benefits={section.benefits}
+              />
+            )}
+            
+            {section.type === 'successStories' && (
+              <SuccessStories
+                title={section.title}
+                description={section.description}
+                stories={section.stories}
+                platformMetrics={section.platformMetrics}
+              />
+            )}
+            
             {section.type === 'bannerSection' && (
               <Banner
                 headline={section.headline}
@@ -97,32 +126,6 @@ export async function getStaticPaths() {
                 title={section.title}
                 description={section.description}
                 categories={section.categories}
-              />
-            )}
-            
-            {section.type === 'productShowcase' && (
-              <ProductShowcase
-                title={section.title}
-                description={section.description}
-                products={section.products}
-                viewAllLink={`/${lang}${section.viewAllLink}`}
-                lang={lang}
-              />
-            )}
-            
-            {section.type === 'testimonialSlider' && (
-              <TestimonialSlider
-                title={section.title}
-                testimonials={section.testimonials}
-              />
-            )}
-            
-            {section.type === 'featuredPostsSection' && (
-              <FeaturedPosts
-                title={section.title}
-                posts={posts}
-                exploreMoreLink={`/${lang}${section.exploreMoreLink}`}
-                exploreMoreText={section.exploreMoreText}
               />
             )}
             

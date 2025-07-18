@@ -1,0 +1,348 @@
+{
+  "pageTitle": "الحلول",
+  "pageDescription": "حلول وميزات مخصصة حسب القطاع. اعثر على الحلول المثالية لاحتياجات عملك.",
+  "hero": {
+    "badge": "حلول مخصصة حسب القطاع",
+    "title": "حلول مخصصة لكل قطاع",
+    "description": "اكتشف حلولاً مخصصة حسب القطاع مع ميزات قوية. ابدأ مع منصتنا العالمية وأضف حلولاً متخصصة حسب الحاجة.",
+    "cta": {
+      "text": "اتصل بالمبيعات",
+      "href": "/contact/sales"
+    }
+  },
+  "benefits": {
+    "title": "المزايا الرئيسية",
+    "description": "حول عملك مع حلولنا الشاملة",
+    "items": [
+      {
+        "title": "التميز التشغيلي",
+        "icon": "Zap",
+        "description": "حسن العمليات وزد الكفاءة",
+        "items": [
+          "سير العمل الآلي",
+          "المراقبة في الوقت الفعلي",
+          "تحسين الموارد",
+          "أتمتة العمليات"
+        ]
+      },
+      {
+        "title": "الأمان المتقدم",
+        "icon": "Shield",
+        "description": "أمان وامتثال على مستوى المؤسسات",
+        "items": [
+          "تشفير البيانات",
+          "التحكم في الوصول",
+          "إدارة الامتثال",
+          "تسجيل التدقيق"
+        ]
+      },
+      {
+        "title": "قابلية التوسع",
+        "icon": "Globe",
+        "description": "انمُ بدون قيود",
+        "items": [
+          "البنية التحتية السحابية",
+          "موازنة الحمل",
+          "التوسع التلقائي",
+          "النشر العالمي"
+        ]
+      },
+      {
+        "title": "التكامل",
+        "icon": "Database",
+        "description": "تواصل مع أنظمتك الحالية",
+        "items": [
+          "وصول API",
+          "تكامل مخصص",
+          "دعم Webhook",
+          "مزامنة البيانات"
+        ]
+      }
+    ]
+  },
+  "industries": {
+    "title": "القطاعات المتاحة",
+    "description": "اختر قطاعك لرؤية الحلول المتخصصة",
+    "items": [
+      {
+        "name": "الرعاية الصحية",
+        "icon": "Stethoscope",
+        "description": "حلول للمستشفيات والعيادات والممارسات الطبية",
+        "solutions": [
+          { "name": "الممارسة الطبية", "link": "/solutions/medical-practice" },
+          { "name": "المستشفى", "link": "/solutions/hospital" },
+          { "name": "العيادة", "link": "/solutions/clinic" },
+          { "name": "الصيدلية", "link": "/solutions/pharmacy" }
+        ]
+      },
+      {
+        "name": "التصنيع",
+        "icon": "Factory",
+        "description": "حلول صناعية وتصنيعية",
+        "solutions": [
+          { "name": "الإنتاج", "link": "/solutions/production" },
+          { "name": "مراقبة الجودة", "link": "/solutions/quality-control" },
+          { "name": "سلسلة التوريد", "link": "/solutions/supply-chain" },
+          { "name": "الصيانة", "link": "/solutions/maintenance" }
+        ]
+      },
+      {
+        "name": "التجزئة والتجارة",
+        "icon": "ShoppingBag",
+        "description": "حلول البيع بالتجزئة والتجارة الإلكترونية",
+        "solutions": [
+          { "name": "إدارة المتجر", "link": "/solutions/store-management" },
+          { "name": "التجارة الإلكترونية", "link": "/solutions/ecommerce" },
+          { "name": "إدارة المخزون", "link": "/solutions/inventory" },
+          { "name": "خدمة العملاء", "link": "/solutions/customer-service" }
+        ]
+      },
+      {
+        "name": "الخدمات المهنية",
+        "icon": "Briefcase",
+        "description": "حلول للمهنيين",
+        "solutions": [
+          { "name": "الاستشارات", "link": "/solutions/consulting" },
+          { "name": "القانون", "link": "/solutions/legal" },
+          { "name": "المحاسبة", "link": "/solutions/accounting" },
+          { "name": "العقارات", "link": "/solutions/real-estate" }
+        ]
+      },
+      {
+        "name": "التعليم",
+        "icon": "GraduationCap",
+        "description": "حلول للمؤسسات التعليمية",
+        "solutions": [
+          { "name": "إدارة المدرسة", "link": "/solutions/school-management" },
+          { "name": "خدمات الطلاب", "link": "/solutions/student-services" },
+          { "name": "الإدارة", "link": "/solutions/administration" },
+          { "name": "التعلم", "link": "/solutions/learning" }
+        ]
+      },
+      {
+        "name": "العقارات",
+        "icon": "Home",
+        "description": "حلول العقارات",
+        "solutions": [
+          { "name": "إدارة العقارات", "link": "/solutions/property-management" },
+          { "name": "المبيعات", "link": "/solutions/sales" },
+          { "name": "الإيجار", "link": "/solutions/leasing" },
+          { "name": "الصيانة", "link": "/solutions/maintenance" }
+        ]
+      },
+      {
+        "name": "الخدمات اللوجستية",
+        "icon": "Truck",
+        "description": "حلول النقل والخدمات اللوجستية",
+        "solutions": [
+          { "name": "إدارة الأسطول", "link": "/solutions/fleet-management" },
+          { "name": "التوصيل", "link": "/solutions/delivery" },
+          { "name": "المستودع", "link": "/solutions/warehouse" },
+          { "name": "التتبع", "link": "/solutions/tracking" }
+        ]
+      },
+      {
+        "name": "الفندقة",
+        "icon": "Hotel",
+        "description": "حلول الفنادق والضيافة",
+        "solutions": [
+          { "name": "إدارة الفندق", "link": "/solutions/hotel-management" },
+          { "name": "الحجوزات", "link": "/solutions/booking" },
+          { "name": "خدمة الضيوف", "link": "/solutions/guest-services" },
+          { "name": "العمليات", "link": "/solutions/operations" }
+        ]
+      }
+    ]
+  },
+  "successMetrics": {
+    "title": "نتائج مثبتة",
+    "description": "شاهد تأثير حلولنا على الشركات",
+    "items": [
+      {
+        "title": "زيادة الكفاءة",
+        "value": "40%",
+        "description": "تحسين متوسط في الكفاءة التشغيلية",
+        "icon": "Zap"
+      },
+      {
+        "title": "خفض التكاليف",
+        "value": "30%",
+        "description": "انخفاض نموذجي في التكاليف التشغيلية",
+        "icon": "Star"
+      },
+      {
+        "title": "توفير الوقت",
+        "value": "50%",
+        "description": "متوسط توفير الوقت في المهام الروتينية",
+        "icon": "Clock"
+      },
+      {
+        "title": "رضا العملاء",
+        "value": "95%",
+        "description": "متوسط معدل رضا العملاء",
+        "icon": "Users"
+      }
+    ]
+  },
+  "globalFeatures": {
+    "title": "ميزات المنصة العالمية",
+    "description": "ميزات أساسية متاحة في جميع القطاعات",
+    "name": "المنصة العالمية",
+    "features": [
+      {
+        "category": "قدرات الذكاء الاصطناعي",
+        "items": [
+          "عمليات الذكاء الاصطناعي الأساسية",
+          "نماذج الذكاء الاصطناعي المتقدمة",
+          "تدريب الذكاء الاصطناعي المخصص",
+          "معالجة في الوقت الفعلي"
+        ]
+      },
+      {
+        "category": "الأمان والامتثال",
+        "items": [
+          "أمان على مستوى المؤسسات",
+          "تشفير البيانات",
+          "التحكم في الوصول",
+          "إدارة الامتثال"
+        ]
+      },
+      {
+        "category": "التكامل وواجهة برمجة التطبيقات",
+        "items": [
+          "وصول RESTful API",
+          "تكامل مخصص",
+          "دعم Webhook",
+          "تصدير/استيراد البيانات"
+        ]
+      },
+      {
+        "category": "التحليلات والتقارير",
+        "items": [
+          "تحليلات في الوقت الفعلي",
+          "تقارير مخصصة",
+          "تصور البيانات",
+          "مقاييس الأداء"
+        ]
+      }
+    ]
+  },
+  "integrations": {
+    "title": "تكامل سلس",
+    "description": "اتصل بأدواتك وخدماتك المفضلة",
+    "categories": [
+      {
+        "category": "خدمات السحابة",
+        "items": [
+          { "name": "AWS", "icon": "CloudAws" },
+          { "name": "Azure", "icon": "CloudMicrosoft" },
+          { "name": "Google Cloud", "icon": "CloudGoogle" }
+        ]
+      },
+      {
+        "category": "برامج المؤسسات",
+        "items": [
+          { "name": "Salesforce", "icon": "Database2" },
+          { "name": "SAP", "icon": "Building2" },
+          { "name": "Oracle", "icon": "Database" }
+        ]
+      },
+      {
+        "category": "أدوات التطوير",
+        "items": [
+          { "name": "GitHub", "icon": "Code" },
+          { "name": "Jira", "icon": "Cpu" },
+          { "name": "Slack", "icon": "MessageSquare" }
+        ]
+      }
+    ]
+  },
+  "faqs": {
+    "title": "الأسئلة الشائعة",
+    "description": "اعثر على إجابات للأسئلة الشائعة حول حلولنا",
+    "items": [
+      {
+        "question": "كيف أختار الحلول المناسبة؟",
+        "answer": "يمكن لفريقنا مساعدتك في تحديد الحلول المناسبة بناءً على احتياجات عملك. نقدم استشارات مجانية لضمان أفضل قيمة لك."
+      },
+      {
+        "question": "هل يمكنني الجمع بين حلول من قطاعات مختلفة؟",
+        "answer": "نعم، يمكنك الجمع بين حلول من قطاعات مختلفة لإنشاء حزمة مخصصة تلبي احتياجاتك المحددة. اتصل بفريق المبيعات لدينا للحصول على حل مخصص."
+      },
+      {
+        "question": "ما المدرج في المنصة العالمية؟",
+        "answer": "تتضمن المنصة العالمية قدرات الذكاء الاصطناعي الأساسية، والتحليلات الأساسية، ووصول API، وميزات المجتمع. تعتمد الحلول المخصصة حسب القطاع على هذه الأساسيات."
+      },
+      {
+        "question": "كيف أبدأ؟",
+        "answer": "ابدأ بجدولة استشارة مع فريقنا. سنساعدك في تحديد الحلول المناسبة وإنشاء خطة تنفيذ مخصصة."
+      }
+    ]
+  },
+  "implementation": {
+    "title": "عملية التنفيذ",
+    "description": "ابدأ بسرعة مع عملية التنفيذ المثبتة لدينا",
+    "steps": [
+      {
+        "number": "1",
+        "title": "التحليل",
+        "description": "نحلل احتياجاتك وننشئ خطة تنفيذ مخصصة"
+      },
+      {
+        "number": "2",
+        "title": "الإعداد",
+        "description": "إعداد سريع لحلولك"
+      },
+      {
+        "number": "3",
+        "title": "التكامل",
+        "description": "تكامل سلس مع أنظمتك الحالية"
+      },
+      {
+        "number": "4",
+        "title": "البدء",
+        "description": "بدء التشغيل مع دعم شامل وتدريب"
+      }
+    ]
+  },
+  "contact": {
+    "title": "تحتاج مساعدة في الاختيار؟",
+    "description": "فريقنا هنا لمساعدتك في العثور على الحلول المثالية لاحتياجاتك",
+    "options": [
+      {
+        "title": "استشارة قطاعية",
+        "description": "احصل على استشارة خبيرة في اختيار الحلول المناسبة",
+        "icon": "Building2",
+        "link": "/contact/consultation"
+      },
+      {
+        "title": "فريق المبيعات",
+        "description": "ناقش الحلول المخصصة والتنفيذ",
+        "icon": "Users",
+        "link": "/contact/sales"
+      },
+      {
+        "title": "الدعم الفني",
+        "description": "احصل على المساعدة في التنفيذ والأسئلة الفنية",
+        "icon": "HelpCircle",
+        "link": "/contact/support"
+      }
+    ]
+  },
+  "cta": {
+    "title": "جاهز لتحويل قطاعك؟",
+    "description": "ابدأ اليوم مع حلولنا المخصصة حسب القطاع.",
+    "buttons": [
+      {
+        "text": "جدولة استشارة",
+        "href": "/contact/consultation",
+        "variant": "primary"
+      },
+      {
+        "text": "اتصل بالمبيعات",
+        "href": "/contact/sales",
+        "variant": "secondary"
+      }
+    ]
+  }
+} 

@@ -1,0 +1,134 @@
+{
+  "hero": {
+    "subtitle": "DOKUMENTATION",
+    "title": "Lernen Sie, wie Sie unsere Plattform nutzen können",
+    "description": "Umfassende Anleitungen und Tutorials, die Ihnen helfen, das Beste aus unseren E-Commerce-Lösungen herauszuholen.",
+    "searchPlaceholder": "In der Dokumentation suchen..."
+  },
+  "sidebar": {
+    "categories": [
+      {
+        "title": "Erste Schritte",
+        "icon": "Rocket",
+        "items": [
+          {
+            "title": "Schnellstartanleitung",
+            "link": "/docs/quick-start"
+          },
+          {
+            "title": "Plattformübersicht",
+            "link": "/docs/overview"
+          },
+          {
+            "title": "Kontoeinrichtung",
+            "link": "/docs/account-setup"
+          }
+        ]
+      },
+      {
+        "title": "Kernfunktionen",
+        "icon": "Box",
+        "items": [
+          {
+            "title": "KI-Inhaltsgenerierung",
+            "link": "/docs/ai-content"
+          },
+          {
+            "title": "SEO-Optimierung",
+            "link": "/docs/seo"
+          },
+          {
+            "title": "Analytics-Dashboard",
+            "link": "/docs/analytics"
+          }
+        ]
+      },
+      {
+        "title": "Integrationen",
+        "icon": "Plug",
+        "items": [
+          {
+            "title": "Shopify-Integration",
+            "link": "/docs/shopify"
+          },
+          {
+            "title": "WooCommerce-Einrichtung",
+            "link": "/docs/woocommerce"
+          },
+          {
+            "title": "API-Dokumentation",
+            "link": "/docs/api"
+          }
+        ]
+      }
+    ]
+  },
+  "featured": {
+    "title": "Ausgewählte Anleitungen",
+    "guides": [
+      {
+        "icon": "Zap",
+        "title": "Erste Schritte mit KI",
+        "description": "Erfahren Sie, wie Sie unsere KI-Tools für Ihr E-Commerce-Geschäft nutzen können",
+        "link": "/docs/ai-guide",
+        "color": "pink"
+      },
+      {
+        "icon": "BarChart",
+        "title": "Analytics-Grundlagen",
+        "description": "Verstehen Sie Ihre E-Commerce-Analysen und Metriken",
+        "link": "/docs/analytics-guide",
+        "color": "blue"
+      },
+      {
+        "icon": "Settings",
+        "title": "Plattformintegration",
+        "description": "Schritt-für-Schritt-Anleitung zur Integration mit Ihrer E-Commerce-Plattform",
+        "link": "/docs/integration-guide",
+        "color": "purple"
+      }
+    ]
+  },
+  "updates": {
+    "title": "Neueste Aktualisierungen",
+    "description": "Bleiben Sie über unsere neuesten Funktionen und Verbesserungen auf dem Laufenden",
+    "items": [
+      {
+        "date": "2024-03-15",
+        "title": "Neue KI-Funktionen veröffentlicht",
+        "description": "Verbesserte Inhaltsgenerierung und optimierte SEO-Vorschläge",
+        "tag": "Funktion"
+      },
+      {
+        "date": "2024-03-10",
+        "title": "Analytics-Dashboard-Aktualisierung",
+        "description": "Neue Metriken und verbesserte Visualisierungsoptionen",
+        "tag": "Aktualisierung"
+      },
+      {
+        "date": "2024-03-05",
+        "title": "API Version 2.0",
+        "description": "Neue Endpunkte und verbesserte Leistung",
+        "tag": "API"
+      }
+    ]
+  },
+  "help": {
+    "title": "Benötigen Sie weitere Hilfe?",
+    "description": "Können Sie nicht finden, wonach Sie suchen? Unser Support-Team ist hier, um zu helfen.",
+    "options": [
+      {
+        "icon": "MessageCircle",
+        "title": "Community-Forum",
+        "description": "Treten Sie unserem Community-Forum bei, um Hilfe von anderen Benutzern zu erhalten",
+        "link": "/community"
+      },
+      {
+        "icon": "Mail",
+        "title": "Support kontaktieren",
+        "description": "Nehmen Sie Kontakt mit unserem engagierten Support-Team auf",
+        "link": "/support"
+      }
+    ]
+  }
+} 

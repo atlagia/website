@@ -1,0 +1,87 @@
+---
+import { getLangFromUrl, useTranslations } from '@utils/i18n';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const lang = getLangFromUrl(Astro.url);
+const translations = await useTranslations(lang);
+
+const errorMessages = {
+  en: {
+    title: "Page Not Found",
+    description: "The page you are looking for doesn't exist or has been moved.",
+    button: "Back to Home"
+  },
+  es: {
+    title: "Página No Encontrada",
+    description: "La página que buscas no existe o ha sido movida.",
+    button: "Volver al Inicio"
+  },
+  fr: {
+    title: "Page Non Trouvée",
+    description: "La page que vous recherchez n'existe pas ou a été déplacée.",
+    button: "Retour à l'Accueil"
+  },
+  de: {
+    title: "Seite Nicht Gefunden",
+    description: "Die gesuchte Seite existiert nicht oder wurde verschoben.",
+    button: "Zurück zur Startseite"
+  },
+  it: {
+    title: "Pagina Non Trovata",
+    description: "La pagina che stai cercando non esiste o è stata spostata.",
+    button: "Torna alla Home"
+  },
+  ar: {
+    title: "الصفحة غير موجودة",
+    description: "الصفحة التي تبحث عنها غير موجودة أو تم نقلها.",
+    button: "العودة إلى الرئيسية"
+  }
+};
+
+const messages = errorMessages[lang] || errorMessages.en;
+---
+
+<html lang={lang} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
+  <head>
+    <BaseHead title={messages.title} description={messages.description} />
+  </head>
+  <body class="flex min-h-screen flex-col">
+    <Header lang={lang} translations={translations} />
+    
+    <main class="flex-grow flex items-center justify-center px-6 py-24 sm:py-32 lg:px-8">
+      <div class="text-center">
+        <div class="flex justify-center mb-8">
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            class="h-24 w-24 text-yellow-500" 
+            fill="none" 
+            viewBox="0 0 24 24" 
+            stroke="currentColor" 
+            stroke-width="2"
+          >
+            <path 
+              stroke-linecap="round" 
+              stroke-linejoin="round" 
+              d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+            />
+          </svg>
+        </div>
+        <p class="text-base font-semibold text-primary">404</p>
+        <h1 class="mt-4 text-3xl font-bold tracking-tight sm:text-5xl">{messages.title}</h1>
+        <p class="mt-6 text-base leading-7 text-gray-600">{messages.description}</p>
+        <div class="mt-10 flex items-center justify-center gap-x-6">
+          <a
+            href={`/${lang}`}
+            class="rounded-md bg-primary px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+          >
+            {messages.button}
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <Footer lang={lang} translations={translations} />
+  </body>
+</html> 

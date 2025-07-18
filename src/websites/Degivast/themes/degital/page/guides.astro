@@ -1,0 +1,269 @@
+---
+import { getLangFromUrl, useTranslations } from '@utils/i18n';
+import pkg from 'lucide-react';
+const { Search, ChevronRight, Clock, Book, Users, Star } = pkg;
+
+const theme = import.meta.env.THEME || 'default';
+const { lang } = Astro.params;
+
+// Import components
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+
+// Get translations
+const translations = await useTranslations(lang);
+const jsonData = translations.default;
+
+const SITE_TITLE = `Guides & Tutorials | ${jsonData.siteTitle || 'AutomatePro'}`;
+const SITE_DESCRIPTION = 'Learn how to make the most of our platform with comprehensive guides and tutorials';
+
+// Guide categories
+const categories = [
+  {
+    title: 'Getting Started',
+    description: 'Essential guides for new users',
+    icon: '🚀',
+    guides: [
+      {
+        title: 'Platform Overview',
+        description: 'Learn the basics of our platform',
+        duration: '10 min',
+        difficulty: 'Beginner',
+        href: '/guides/platform-overview'
+      },
+      {
+        title: 'First Automation',
+        description: 'Create your first automated workflow',
+        duration: '15 min',
+        difficulty: 'Beginner',
+        href: '/guides/first-automation'
+      }
+    ]
+  },
+  {
+    title: 'Advanced Features',
+    description: 'Deep dives into advanced capabilities',
+    icon: '⚡',
+    guides: [
+      {
+        title: 'Custom Integrations',
+        description: 'Build custom integrations with our API',
+        duration: '30 min',
+        difficulty: 'Advanced',
+        href: '/guides/custom-integrations'
+      },
+      {
+        title: 'Workflow Optimization',
+        description: 'Optimize your automation workflows',
+        duration: '25 min',
+        difficulty: 'Intermediate',
+        href: '/guides/workflow-optimization'
+      }
+    ]
+  },
+  {
+    title: 'Best Practices',
+    description: 'Tips and tricks for better results',
+    icon: '✨',
+    guides: [
+      {
+        title: 'Security Guidelines',
+        description: 'Keep your automations secure',
+        duration: '20 min',
+        difficulty: 'Intermediate',
+        href: '/guides/security-guidelines'
+      },
+      {
+        title: 'Performance Tips',
+        description: 'Improve automation performance',
+        duration: '15 min',
+        difficulty: 'Intermediate',
+        href: '/guides/performance-tips'
+      }
+    ]
+  }
+];
+
+// Featured tutorials
+const featuredTutorials = [
+  {
+    title: 'Building Complex Workflows',
+    description: 'Learn how to create and manage complex automation workflows',
+    image: '/images/guides/complex-workflows.jpg',
+    duration: '45 min',
+    author: {
+      name: 'Sarah Johnson',
+      role: 'Lead Developer'
+    },
+    href: '/guides/complex-workflows'
+  },
+  {
+    title: 'Data Integration Mastery',
+    description: 'Master the art of integrating multiple data sources',
+    image: '/images/guides/data-integration.jpg',
+    duration: '35 min',
+    author: {
+      name: 'Michael Chen',
+      role: 'Integration Specialist'
+    },
+    href: '/guides/data-integration'
+  },
+  {
+    title: 'Advanced Analytics',
+    description: 'Get the most out of our analytics features',
+    image: '/images/guides/analytics.jpg',
+    duration: '30 min',
+    author: {
+      name: 'Emily Brown',
+      role: 'Analytics Expert'
+    },
+    href: '/guides/advanced-analytics'
+  }
+];
+---
+
+<!doctype html>
+<html lang={lang} class="scroll-smooth">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body class="bg-gray-50">
+    <Header />
+    
+    <!-- Hero Section -->
+    <section class="relative py-20 overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-purple-50 via-white to-blue-50"></div>
+      <div class="relative container mx-auto px-4">
+        <div class="max-w-3xl mx-auto text-center">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">Guides & Tutorials</h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Learn how to make the most of our platform with step-by-step guides
+          </p>
+          
+          <!-- Search Bar -->
+          <div class="relative max-w-2xl mx-auto">
+            <div class="absolute inset-y-0 left-4 flex items-center pointer-events-none">
+              <Search class="w-5 h-5 text-gray-400" />
+            </div>
+            <input
+              type="text"
+              placeholder="Search guides and tutorials..."
+              class="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 transition-colors"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Tutorials -->
+    <section class="py-12">
+      <div class="container mx-auto px-4">
+        <h2 class="text-2xl font-semibold mb-8">Featured Tutorials</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          {featuredTutorials.map(tutorial => (
+            <a 
+              href={tutorial.href}
+              class="group block bg-white rounded-xl border border-gray-100 overflow-hidden hover:shadow-lg transition-all duration-300"
+            >
+              <div class="aspect-video overflow-hidden">
+                <img 
+                  src={tutorial.image} 
+                  alt={tutorial.title}
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div class="p-6">
+                <div class="flex items-center gap-2 text-sm text-gray-500 mb-3">
+                  <Clock class="w-4 h-4" />
+                  <span>{tutorial.duration}</span>
+                </div>
+                <h3 class="text-lg font-semibold mb-2">{tutorial.title}</h3>
+                <p class="text-gray-600 mb-4">{tutorial.description}</p>
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-full bg-gray-200"></div>
+                  <div>
+                    <div class="text-sm font-medium">{tutorial.author.name}</div>
+                    <div class="text-xs text-gray-500">{tutorial.author.role}</div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Guide Categories -->
+    <section class="py-12">
+      <div class="container mx-auto px-4">
+        {categories.map(category => (
+          <div class="mb-12 last:mb-0">
+            <div class="flex items-center gap-3 mb-6">
+              <span class="text-2xl">{category.icon}</span>
+              <div>
+                <h2 class="text-2xl font-semibold">{category.title}</h2>
+                <p class="text-gray-600">{category.description}</p>
+              </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+              {category.guides.map(guide => (
+                <a 
+                  href={guide.href}
+                  class="flex gap-6 p-6 bg-white rounded-xl border border-gray-100 hover:border-purple-200 hover:shadow-lg transition-all duration-300"
+                >
+                  <div class="flex-grow">
+                    <h3 class="text-lg font-semibold mb-2">{guide.title}</h3>
+                    <p class="text-gray-600 mb-4">{guide.description}</p>
+                    <div class="flex items-center gap-4 text-sm text-gray-500">
+                      <div class="flex items-center gap-1">
+                        <Clock class="w-4 h-4" />
+                        <span>{guide.duration}</span>
+                      </div>
+                      <div class="flex items-center gap-1">
+                        <Book class="w-4 h-4" />
+                        <span>{guide.difficulty}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex items-center text-purple-500">
+                    <ChevronRight class="w-6 h-6" />
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Learning Path -->
+    <section class="py-12 bg-gray-900 text-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="text-3xl font-bold mb-4">Start Your Learning Path</h2>
+          <p class="text-gray-300 mb-8">
+            Follow our structured learning paths to master the platform at your own pace
+          </p>
+          <div class="flex justify-center gap-4">
+            <a 
+              href="/learning-paths/beginner"
+              class="px-6 py-3 bg-white text-gray-900 rounded-lg font-medium hover:bg-gray-100 transition-colors"
+            >
+              Start Learning
+            </a>
+            <a 
+              href="/learning-paths"
+              class="px-6 py-3 bg-gray-800 text-white rounded-lg font-medium hover:bg-gray-700 transition-colors"
+            >
+              View All Paths
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Footer />
+  </body>
+</html> 

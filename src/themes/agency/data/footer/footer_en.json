@@ -1,0 +1,184 @@
+{
+  "company": {
+    "title": "Company",
+    "links": [
+      {
+        "name": "About",
+        "href": "/about"
+      },
+      {
+        "name": "Careers",
+        "href": "/careers"
+      },
+      {
+        "name": "Press",
+        "href": "/press"
+      },
+      {
+        "name": "Blog",
+        "href": "/blog"
+      }
+    ]
+  },
+  "product": {
+    "title": "Solutions",
+    "links": [
+      {
+        "name": "Medical Practices",
+        "href": "/solutions/medical-solution"
+      },
+      {
+        "name": "Hospitals",
+        "href": "/solutions/hospital-solution"
+      },
+      {
+        "name": "Clinics",
+        "href": "/solutions/clinic-solution"
+      },
+      {
+        "name": "Pharmacies",
+        "href": "/solutions/pharmacy-solution"
+      },
+      {
+        "name": "Dental Practices",
+        "href": "/solutions/dental-solution"
+      },
+      {
+        "name": "Veterinary Practices",
+        "href": "/solutions/veterinary-solution"
+      },
+      {
+        "name": "Radiology Centers",
+        "href": "/solutions/radiology-solution"
+      },
+      {
+        "name": "Laboratories",
+        "href": "/solutions/laboratory-solution"
+      },
+      {
+        "name": "E-commerce",
+        "href": "/solutions/ecommerce-solution"
+      },
+      {
+        "name": "Retail Stores",
+        "href": "/solutions/retail-stores"
+      },
+      {
+        "name": "Restaurants",
+        "href": "/solutions/restaurants"
+      },
+      {
+        "name": "Wholesale",
+        "href": "/solutions/wholesale"
+      }
+    ]
+  },
+  "services": {
+    "title": "Services",
+    "links": [
+      {
+        "name": "Development",
+        "href": "/services/development"
+      },
+      {
+        "name": "Consulting",
+        "href": "/services/consulting"
+      },
+      {
+        "name": "Support",
+        "href": "/services/support"
+      },
+      {
+        "name": "Training",
+        "href": "/services/training"
+      }
+    ]
+  },
+  "resources": {
+    "title": "Resources",
+    "links": [
+      {
+        "name": "Documentation",
+        "href": "/documentation"
+      },
+      {
+        "name": "API Reference",
+        "href": "/api"
+      },
+      {
+        "name": "Support",
+        "href": "/support"
+      },
+      {
+        "name": "Status",
+        "href": "/status"
+      }
+    ]
+  },
+  "legal": {
+    "title": "Legal",
+    "links": [
+      {
+        "name": "Privacy",
+        "href": "/privacy"
+      },
+      {
+        "name": "Terms",
+        "href": "/terms"
+      },
+      {
+        "name": "Cookie Policy",
+        "href": "/cookie-policy"
+      }
+    ]
+  },
+  "social": {
+    "title": "Social",
+    "links": [
+      {
+        "name": "YouTube",
+        "href": "https://www.youtube.com/@Atlagia",
+        "icon": "youtube"
+      },
+      {
+        "name": "Instagram",
+        "href": "https://www.instagram.com/atlagia/",
+        "icon": "instagram"
+      },
+      {
+        "name": "Twitter",
+        "href": "https://twitter.com/atlagia",
+        "icon": "twitter"
+      },
+      {
+        "name": "LinkedIn",
+        "href": "https://linkedin.com/company/atlagia",
+        "icon": "linkedin"
+      },
+      {
+        "name": "GitHub",
+        "href": "https://github.com/atlagia",
+        "icon": "github"
+      }
+    ]
+  },
+  "newsletter": {
+    "title": "Subscribe to our newsletter",
+    "description": "Stay updated with the latest industry insights, product updates, and company news.",
+    "buttonText": "Subscribe",
+    "placeholderText": "Enter your email"
+  },
+  "copyright": {
+    "text": "© 2025 Atlagia. All rights reserved.",
+    "links": [
+      {
+        "name": "Privacy Policy",
+        "href": "/privacy"
+      },
+      {
+        "name": "Terms of Service",
+        "href": "/terms"
+      }
+    ]
+  }
+} 

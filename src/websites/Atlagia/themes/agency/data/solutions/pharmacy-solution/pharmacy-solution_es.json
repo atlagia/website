@@ -1,0 +1,335 @@
+{
+  "hero": {
+    "subtitle": "Sistema de Gestión de Farmacia",
+    "title": "Moderniza tus Operaciones Farmacéuticas",
+    "description": "Una solución completa de gestión farmacéutica que optimiza el inventario, las recetas y los servicios a pacientes garantizando el cumplimiento normativo.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Demo de la Solución de Gestión de Farmacia"
+    },
+    "stats": [
+      {
+        "value": "99.9%",
+        "label": "Precisión en Recetas"
+      },
+      {
+        "value": "45%",
+        "label": "Tiempo Ahorrado"
+      },
+      {
+        "value": "30%",
+        "label": "Reducción de Costos de Inventario"
+      }
+    ]
+  },
+  "features": {
+    "subtitle": "Características Inteligentes",
+    "title": "Gestión Completa de Farmacia",
+    "description": "Herramientas potentes diseñadas específicamente para farmacias modernas",
+    "categories": [
+      {
+        "name": "Gestión de Recetas",
+        "description": "Optimiza el proceso y la verificación de recetas"
+      },
+      {
+        "name": "Control de Inventario",
+        "description": "Optimiza los niveles de stock y reduce el desperdicio"
+      }
+    ],
+    "items": [
+      {
+        "icon": "pill",
+        "category": "Gestión de Recetas",
+        "title": "Procesamiento Inteligente de Recetas",
+        "description": "Sistema automatizado de verificación y procesamiento de recetas",
+        "image": "/images/solutions/pharmacy/prescription.jpg",
+        "highlights": [
+          "Procesamiento electrónico de recetas",
+          "Verificación de interacciones medicamentosas",
+          "Sistema de renovación automática",
+          "Verificación de seguros"
+        ],
+        "stats": {
+          "value": "99.9%",
+          "label": "Tasa de precisión"
+        }
+      },
+      {
+        "icon": "box",
+        "category": "Gestión de Inventario",
+        "title": "Inventario Inteligente",
+        "description": "Gestión y predicción de inventario impulsada por IA",
+        "image": "/images/solutions/pharmacy/inventory.jpg",
+        "highlights": [
+          "Reordenamiento automático",
+          "Seguimiento de fechas de vencimiento",
+          "Optimización de stock",
+          "Gestión de proveedores"
+        ],
+        "stats": {
+          "value": "30%",
+          "label": "Optimización de stock"
+        }
+      },
+      {
+        "icon": "users",
+        "category": "Servicios a Pacientes",
+        "title": "Portal de Atención al Paciente",
+        "description": "Plataforma digital para servicios a pacientes y comunicación",
+        "image": "/images/solutions/pharmacy/patient-care.jpg",
+        "highlights": [
+          "Solicitudes de renovación en línea",
+          "Recordatorios de medicamentos",
+          "Acceso a historiales médicos",
+          "Mensajería segura"
+        ],
+        "stats": {
+          "value": "92%",
+          "label": "Satisfacción del paciente"
+        }
+      },
+      {
+        "icon": "chart-bar",
+        "category": "Analítica",
+        "title": "Inteligencia de Negocios",
+        "description": "Análisis completo para mejores decisiones comerciales",
+        "image": "/images/solutions/pharmacy/analytics.jpg",
+        "highlights": [
+          "Análisis de ventas",
+          "Reportes de inventario",
+          "Tendencias de recetas",
+          "Perspectivas financieras"
+        ],
+        "stats": {
+          "value": "25%",
+          "label": "Aumento de ingresos"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Excelencia Farmacéutica en Acción",
+    "description": "Descubre cómo las farmacias líderes transforman sus operaciones",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Historia de Éxito Farmacéutica"
+    },
+    "testimonials": [
+      {
+        "author": "John Smith",
+        "role": "Propietario de Farmacia",
+        "image": "/images/testimonials/pharmacist1.jpg",
+        "quote": "Este sistema ha revolucionado la forma en que gestionamos recetas e inventario. Nuestra eficiencia ha mejorado drásticamente."
+      },
+      {
+        "author": "Lisa Chen",
+        "role": "Farmacéutica Jefe",
+        "image": "/images/testimonials/pharmacist2.jpg",
+        "quote": "Las verificaciones y controles automatizados han mejorado significativamente nuestra precisión y la seguridad de los pacientes."
+      }
+    ]
+  },
+  "benefits": {
+    "subtitle": "Beneficios Principales",
+    "title": "Transforma tu Farmacia",
+    "description": "Descubre las ventajas de un sistema de gestión farmacéutica completamente integrado",
+    "items": [
+      {
+        "icon": "trending-up",
+        "title": "Eficiencia Operativa",
+        "description": "Optimiza los flujos de trabajo y reduce las tareas manuales",
+        "color": "blue",
+        "stats": {
+          "value": "45%",
+          "label": "Aumento de Eficiencia"
+        },
+        "highlights": [
+          "Flujos de trabajo automatizados",
+          "Procesamiento más rápido de recetas",
+          "Operaciones optimizadas",
+          "Reducción de errores"
+        ]
+      },
+      {
+        "icon": "shield-check",
+        "title": "Seguridad Mejorada",
+        "description": "Mejora la seguridad del paciente y reduce errores de medicación",
+        "color": "red",
+        "stats": {
+          "value": "99.9%",
+          "label": "Tasa de Precisión"
+        },
+        "highlights": [
+          "Verificación de interacciones medicamentosas",
+          "Verificación de alergias",
+          "Validación de dosis",
+          "Alertas de contraindicaciones"
+        ]
+      },
+      {
+        "icon": "chart-up",
+        "title": "Crecimiento Empresarial",
+        "description": "Aumenta los ingresos y mejora la rentabilidad",
+        "color": "green",
+        "stats": {
+          "value": "30%",
+          "label": "Crecimiento de Ingresos"
+        },
+        "highlights": [
+          "Optimización de inventario",
+          "Servicios a pacientes mejorados",
+          "Mejor flujo de caja",
+          "Mejores márgenes"
+        ]
+      },
+      {
+        "icon": "users",
+        "title": "Satisfacción del Paciente",
+        "description": "Ofrece mejores experiencias a los pacientes",
+        "color": "purple",
+        "stats": {
+          "value": "92%",
+          "label": "Satisfacción del Paciente"
+        },
+        "highlights": [
+          "Servicio más rápido",
+          "Mejor comunicación",
+          "Acceso en línea",
+          "Asesoramiento farmacéutico"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "subtitle": "Precios Transparentes",
+    "title": "Planes de Precios Flexibles",
+    "description": "Elige el plan perfecto para tu farmacia. Ahorra hasta un 20% con facturación anual.",
+    "billingPeriods": ["Mensual", "Anual"],
+    "plans": [
+      {
+        "name": "Esencial",
+        "highlight": "Perfecto para farmacias independientes",
+        "monthlyPrice": "$249",
+        "yearlyPrice": "$2,490",
+        "yearlyDiscount": "Ahorra $498/año",
+        "description": "Características esenciales para pequeñas farmacias",
+        "features": [
+          {
+            "text": "Gestión básica de recetas",
+            "included": true
+          },
+          {
+            "text": "Seguimiento de inventario",
+            "included": true
+          },
+          {
+            "text": "Perfiles de pacientes",
+            "included": true
+          },
+          {
+            "text": "Soporte por email",
+            "included": true
+          },
+          {
+            "text": "Reportes básicos",
+            "included": true
+          },
+          {
+            "text": "Acceso móvil",
+            "included": true
+          }
+        ],
+        "cta": "Comenzar Ahora",
+        "popular": false
+      },
+      {
+        "name": "Profesional",
+        "highlight": "Más popular para farmacias en crecimiento",
+        "monthlyPrice": "$499",
+        "yearlyPrice": "$4,990",
+        "yearlyDiscount": "Ahorra $998/año",
+        "description": "Características avanzadas para farmacias establecidas",
+        "features": [
+          {
+            "text": "Todo lo incluido en Esencial, más:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Flujo de trabajo avanzado de recetas",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "Gestión automatizada de inventario",
+            "included": true
+          },
+          {
+            "text": "Análisis avanzados",
+            "included": true
+          },
+          {
+            "text": "Soporte prioritario",
+            "included": true
+          },
+          {
+            "text": "Soporte multi-sede",
+            "included": true
+          }
+        ],
+        "cta": "Comenzar Ahora",
+        "popular": true
+      },
+      {
+        "name": "Empresarial",
+        "highlight": "Para cadenas de farmacias",
+        "monthlyPrice": "Personalizado",
+        "yearlyPrice": "Personalizado",
+        "yearlyDiscount": "Contáctanos para precios especiales",
+        "description": "Soluciones personalizadas para cadenas de farmacias",
+        "features": [
+          {
+            "text": "Todo lo incluido en Profesional, más:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Soporte de integración personalizado",
+            "included": true
+          },
+          {
+            "text": "Gerente de cuenta dedicado",
+            "included": true
+          },
+          {
+            "text": "Características de seguridad avanzadas",
+            "included": true
+          },
+          {
+            "text": "Opciones de desarrollo personalizadas",
+            "included": true
+          },
+          {
+            "text": "Garantías SLA",
+            "included": true
+          }
+        ],
+        "cta": "Contactar Ventas",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "¿Listo para Modernizar tu Farmacia?",
+    "description": "Únete a miles de farmacias que han transformado sus operaciones con nuestra solución.",
+    "background": "/images/solutions/pharmacy/cta-background.jpg",
+    "primaryButton": {
+      "text": "Programar Demo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Ver Demo",
+      "link": "#showcase"
+    }
+  }
+} 

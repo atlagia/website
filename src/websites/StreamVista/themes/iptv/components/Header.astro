@@ -1,0 +1,116 @@
+---
+interface Props {
+  transparent?: boolean;
+}
+
+const { transparent = false } = Astro.props;
+
+// Get current URL parameters
+const { lang } = Astro.params;
+
+// Import translations (assuming we'll add these later)
+import { useTranslations } from '@utils/i18n';
+const translations = await useTranslations(lang);
+const jsonData = translations.default;
+
+// Navigation items
+const navItems = [
+  { text: 'Channels', href: `/${lang}/channels` },
+  { text: 'Movies', href: `/${lang}/movies` },
+  { text: 'TV Shows', href: `/${lang}/shows` },
+  { text: 'Packages', href: `/${lang}/packages` },
+];
+---
+
+<header class:list={[
+  'fixed w-full z-50 transition-all duration-300',
+  transparent ? 'bg-transparent' : 'bg-black/95 shadow-lg'
+]}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center py-4">
+      <!-- Logo -->
+      <a href={`/${lang}`} class="flex items-center space-x-2">
+        <span class="text-2xl font-bold bg-gradient-to-r from-purple-600 to-emerald-500 bg-clip-text text-transparent">
+          StreamVista
+        </span>
+      </a>
+
+      <!-- Navigation -->
+      <nav class="hidden md:flex items-center space-x-8">
+        {navItems.map(item => (
+          <a
+            href={item.href}
+            class="text-gray-300 hover:text-white transition-colors duration-200"
+          >
+            {item.text}
+          </a>
+        ))}
+      </nav>
+
+      <!-- Auth Buttons -->
+      <div class="flex items-center space-x-4">
+        <a
+          href={`/${lang}/login`}
+          class="text-gray-300 hover:text-white transition-colors duration-200"
+        >
+          Login
+        </a>
+        <a
+          href={`/${lang}/signup`}
+          class="bg-gradient-to-r from-purple-600 to-emerald-500 text-white px-4 py-2 rounded-lg hover:opacity-90 transition-opacity duration-200"
+        >
+          Get Started
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button
+        class="md:hidden text-gray-300 hover:text-white"
+        id="mobile-menu-button"
+        aria-label="Menu"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div
+      class="md:hidden hidden"
+      id="mobile-menu"
+    >
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        {navItems.map(item => (
+          <a
+            href={item.href}
+            class="block px-3 py-2 text-gray-300 hover:text-white transition-colors duration-200"
+          >
+            {item.text}
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Mobile menu toggle
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  mobileMenuButton?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+  });
+</script> 

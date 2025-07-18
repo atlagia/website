@@ -1,0 +1,134 @@
+{
+  "hero": {
+    "subtitle": "DOCUMENTACIÓN",
+    "title": "Aprenda a utilizar nuestra plataforma",
+    "description": "Guías y tutoriales completos para ayudarle a aprovechar al máximo nuestras soluciones de comercio electrónico.",
+    "searchPlaceholder": "Buscar en la documentación..."
+  },
+  "sidebar": {
+    "categories": [
+      {
+        "title": "Primeros pasos",
+        "icon": "Rocket",
+        "items": [
+          {
+            "title": "Guía de inicio rápido",
+            "link": "/docs/quick-start"
+          },
+          {
+            "title": "Descripción general de la plataforma",
+            "link": "/docs/overview"
+          },
+          {
+            "title": "Configuración de la cuenta",
+            "link": "/docs/account-setup"
+          }
+        ]
+      },
+      {
+        "title": "Funciones principales",
+        "icon": "Box",
+        "items": [
+          {
+            "title": "Generación de contenido con IA",
+            "link": "/docs/ai-content"
+          },
+          {
+            "title": "Optimización SEO",
+            "link": "/docs/seo"
+          },
+          {
+            "title": "Panel de análisis",
+            "link": "/docs/analytics"
+          }
+        ]
+      },
+      {
+        "title": "Integraciones",
+        "icon": "Plug",
+        "items": [
+          {
+            "title": "Integración con Shopify",
+            "link": "/docs/shopify"
+          },
+          {
+            "title": "Configuración de WooCommerce",
+            "link": "/docs/woocommerce"
+          },
+          {
+            "title": "Documentación de API",
+            "link": "/docs/api"
+          }
+        ]
+      }
+    ]
+  },
+  "featured": {
+    "title": "Guías destacadas",
+    "guides": [
+      {
+        "icon": "Zap",
+        "title": "Primeros pasos con IA",
+        "description": "Aprenda a utilizar nuestras herramientas de IA para su negocio de comercio electrónico",
+        "link": "/docs/ai-guide",
+        "color": "pink"
+      },
+      {
+        "icon": "BarChart",
+        "title": "Fundamentos de análisis",
+        "description": "Comprenda sus análisis y métricas de comercio electrónico",
+        "link": "/docs/analytics-guide",
+        "color": "blue"
+      },
+      {
+        "icon": "Settings",
+        "title": "Integración de plataforma",
+        "description": "Guía paso a paso para integrar con su plataforma de comercio electrónico",
+        "link": "/docs/integration-guide",
+        "color": "purple"
+      }
+    ]
+  },
+  "updates": {
+    "title": "Últimas actualizaciones",
+    "description": "Manténgase al día con nuestras últimas funciones y mejoras",
+    "items": [
+      {
+        "date": "2024-03-15",
+        "title": "Nuevas funciones de IA lanzadas",
+        "description": "Generación de contenido mejorada y sugerencias de SEO optimizadas",
+        "tag": "Función"
+      },
+      {
+        "date": "2024-03-10",
+        "title": "Actualización del panel de análisis",
+        "description": "Nuevas métricas y opciones de visualización mejoradas",
+        "tag": "Actualización"
+      },
+      {
+        "date": "2024-03-05",
+        "title": "API Versión 2.0",
+        "description": "Nuevos endpoints y rendimiento mejorado",
+        "tag": "API"
+      }
+    ]
+  },
+  "help": {
+    "title": "¿Necesita más ayuda?",
+    "description": "¿No puede encontrar lo que busca? Nuestro equipo de soporte está aquí para ayudar.",
+    "options": [
+      {
+        "icon": "MessageCircle",
+        "title": "Foro de la comunidad",
+        "description": "Únase a nuestro foro de la comunidad para obtener ayuda de otros usuarios",
+        "link": "/community"
+      },
+      {
+        "icon": "Mail",
+        "title": "Contactar soporte",
+        "description": "Póngase en contacto con nuestro dedicado equipo de soporte",
+        "link": "/support"
+      }
+    ]
+  }
+} 

@@ -1,0 +1,317 @@
+{
+  "hero": {
+    "subtitle": "PRACTICE MANAGEMENT",
+    "title": "Intelligent Dental Billing Solution",
+    "description": "Maximize your practice revenue with our comprehensive dental billing platform that streamlines insurance verification, claim submission, and patient payments."
+  },
+  "overview": {
+    "title": "Simplified Revenue Cycle Management",
+    "description": "Our dental billing solution handles every aspect of your financial workflow from insurance verification to collection, reducing rejected claims and accelerating payments.",
+    "features": [
+      {
+        "icon": "credit-card",
+        "title": "Insurance Management",
+        "description": "Automated verification and real-time eligibility checks"
+      },
+      {
+        "icon": "dollar-sign",
+        "title": "Patient Payments",
+        "description": "Flexible payment options and automated statements"
+      },
+      {
+        "icon": "file-text",
+        "title": "Claim Processing",
+        "description": "Error-free claims with higher acceptance rates"
+      },
+      {
+        "icon": "bar-chart-2",
+        "title": "Financial Analytics",
+        "description": "Real-time insights into practice financial health"
+      }
+    ]
+  },
+  "applications": {
+    "title": "Complete Billing Solution",
+    "description": "Comprehensive tools for every aspect of dental practice finances",
+    "problems": [
+      {
+        "title": "Insurance Verification",
+        "description": "Instant eligibility checks before appointments",
+        "icon": "check-square"
+      },
+      {
+        "title": "Claims Management",
+        "description": "Error-free submissions with tracking and follow-up",
+        "icon": "clipboard"
+      },
+      {
+        "title": "Patient Billing",
+        "description": "Clear statements and multiple payment options",
+        "icon": "credit-card"
+      },
+      {
+        "title": "Accounts Receivable",
+        "description": "Automated follow-up on unpaid balances",
+        "icon": "refresh"
+      },
+      {
+        "title": "Fee Schedule Management",
+        "description": "Easily manage and update service pricing",
+        "icon": "list"
+      },
+      {
+        "title": "Financial Reporting",
+        "description": "Comprehensive insights into practice revenue",
+        "icon": "pie-chart"
+      }
+    ]
+  },
+  "process": {
+    "title": "How It Works",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Verification",
+        "description": "Real-time insurance eligibility checks before patient visits"
+      },
+      {
+        "number": "02",
+        "title": "Treatment Planning",
+        "description": "Generate accurate cost estimates for patients"
+      },
+      {
+        "number": "03",
+        "title": "Claim Submission",
+        "description": "Auto-generated clean claims sent electronically"
+      },
+      {
+        "number": "04",
+        "title": "Payment Processing",
+        "description": "Manage insurance payments and patient portions"
+      },
+      {
+        "number": "05",
+        "title": "Follow-Up",
+        "description": "Automated tracking and follow-up on unpaid claims"
+      },
+      {
+        "number": "06",
+        "title": "Reporting",
+        "description": "Comprehensive financial analysis and projections"
+      }
+    ]
+  },
+  "advantages": {
+    "title": "Financial Benefits",
+    "description": "How our billing solution impacts your bottom line",
+    "benefits": [
+      {
+        "title": "98% Clean Claim Rate",
+        "description": "Reduce rejected claims with intelligent validation",
+        "icon": "check-circle"
+      },
+      {
+        "title": "32% Faster Payments",
+        "description": "Accelerate your cash flow with electronic processing",
+        "icon": "fast-forward"
+      },
+      {
+        "title": "25% Increase in Collections",
+        "description": "Improve collection rates with automated follow-up",
+        "icon": "trending-up"
+      },
+      {
+        "title": "15+ Hours Saved Weekly",
+        "description": "Reduce administrative burden on your team",
+        "icon": "clock"
+      }
+    ]
+  },
+  "features": {
+    "title": "Key Features",
+    "description": "Powerful tools designed for dental practice financial management",
+    "featureList": [
+      {
+        "title": "Real-Time Eligibility",
+        "description": "Instant insurance verification before appointments",
+        "icon": "check-square"
+      },
+      {
+        "title": "Treatment Estimator",
+        "description": "Accurate patient cost estimates based on coverage",
+        "icon": "calculator"
+      },
+      {
+        "title": "Electronic Claims",
+        "description": "Direct submission to over 2000+ insurance carriers",
+        "icon": "send"
+      },
+      {
+        "title": "Claim Scrubbing",
+        "description": "Automated error detection before submission",
+        "icon": "filter"
+      },
+      {
+        "title": "Payment Processing",
+        "description": "Accept all payment methods including HSA/FSA",
+        "icon": "credit-card"
+      },
+      {
+        "title": "Payment Plans",
+        "description": "Flexible recurring payment options for patients",
+        "icon": "calendar"
+      },
+      {
+        "title": "Collection Automation",
+        "description": "Smart follow-up on aging accounts receivable",
+        "icon": "bell"
+      },
+      {
+        "title": "Financial Dashboard",
+        "description": "Real-time analytics on practice financial health",
+        "icon": "bar-chart"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Pricing Options",
+    "description": "Select the plan that fits your practice needs",
+    "options": [
+      {
+        "name": "Essentials",
+        "price": "$149",
+        "duration": "per month",
+        "includes": [
+          "Up to 2 providers",
+          "Electronic claims processing",
+          "Basic eligibility verification",
+          "Patient statements",
+          "Standard payment processing",
+          "Email support"
+        ]
+      },
+      {
+        "name": "Professional",
+        "price": "$279",
+        "duration": "per month",
+        "includes": [
+          "Up to 5 providers",
+          "All Essentials features",
+          "Real-time eligibility checks",
+          "Automated claim follow-up",
+          "Patient payment portal",
+          "Custom fee schedules",
+          "Priority support"
+        ]
+      },
+      {
+        "name": "Enterprise",
+        "price": "$499",
+        "duration": "per month",
+        "includes": [
+          "Unlimited providers",
+          "All Professional features",
+          "Multi-location support",
+          "Advanced financial analytics",
+          "Custom reporting",
+          "Dedicated account manager",
+          "Revenue cycle optimization",
+          "API access for integrations"
+        ]
+      }
+    ]
+  },
+  "integration": {
+    "title": "Seamless Integration",
+    "description": "Works with your existing practice management systems",
+    "partners": [
+      {
+        "name": "Dentrix",
+        "logo": "/images/partners/dentrix.png"
+      },
+      {
+        "name": "Eaglesoft",
+        "logo": "/images/partners/eaglesoft.png"
+      },
+      {
+        "name": "Open Dental",
+        "logo": "/images/partners/opendental.png"
+      },
+      {
+        "name": "Curve Dental",
+        "logo": "/images/partners/curve.png"
+      },
+      {
+        "name": "Denticon",
+        "logo": "/images/partners/denticon.png"
+      },
+      {
+        "name": "Dentimax",
+        "logo": "/images/partners/dentimax.png"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": [
+      {
+        "question": "How does real-time insurance verification work?",
+        "answer": "Our system connects directly to insurance company databases to verify patient eligibility, benefits, and coverage details in seconds. This eliminates phone calls to insurance companies and ensures you have accurate information before treatment."
+      },
+      {
+        "question": "Can we submit claims to all insurance carriers?",
+        "answer": "Yes, our platform supports electronic submission to over 2,000 insurance carriers nationwide. For any carriers that don't accept electronic claims, we provide a print and mail service at no additional charge."
+      },
+      {
+        "question": "How does the system reduce rejected claims?",
+        "answer": "Our claim scrubbing technology checks every claim for over 100 potential errors before submission, including procedure-to-diagnosis compatibility, missing information, and insurance-specific requirements. This results in a 98% clean claim rate on first submission."
+      },
+      {
+        "question": "What payment options can we offer patients?",
+        "answer": "The system supports all major payment methods including credit/debit cards, HSA/FSA cards, ACH bank transfers, and digital wallets. You can also set up customized payment plans with automated recurring payments for larger treatment cases."
+      },
+      {
+        "question": "How long does implementation take?",
+        "answer": "Most practices are fully operational within 2 weeks. Our implementation team handles the setup of fee schedules, insurance connections, and payment processing. We also provide comprehensive training to ensure your team can maximize the system's capabilities."
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Customer Success Stories",
+    "reviews": [
+      {
+        "name": "Dr. Robert Thompson",
+        "practice": "Thompson Dental Associates",
+        "rating": 5,
+        "comment": "Since implementing this billing system, our collection rate has improved by 22% and we've reduced our accounts receivable aging by over 30 days. The automated insurance verification has saved our front desk hours of phone calls every day.",
+        "date": "2 months ago"
+      },
+      {
+        "name": "Lisa Garcia",
+        "practice": "Office Manager, Smile Solutions",
+        "rating": 5,
+        "comment": "Managing insurance claims used to be our biggest headache. Now with the automated claim submission and follow-up, we've reduced our outstanding claims by 67% and increased our cash flow significantly.",
+        "date": "3 months ago"
+      },
+      {
+        "name": "Dr. Stephanie Wong",
+        "practice": "Advanced Dental Care",
+        "rating": 5,
+        "comment": "The financial transparency this system provides has been transformative. We can now see exactly where our revenue is coming from and identify opportunities to improve. The patient estimator feature has also dramatically reduced payment discussions at checkout.",
+        "date": "1 month ago"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Maximize Your Practice Revenue?",
+    "description": "Join thousands of dental practices using our platform to streamline billing, reduce rejected claims, and accelerate payments.",
+    "primaryButton": {
+      "text": "Request Demo",
+      "href": "/request-demo"
+    },
+    "secondaryButton": {
+      "text": "View Pricing",
+      "href": "/pricing"
+    }
+  }
+} 

@@ -1,0 +1,165 @@
+{
+  "hero": {
+    "subtitle": "ONLINE BOOKING",
+    "title": "Schedule Your Dental Appointment",
+    "description": "Book your appointment in minutes with our easy-to-use online scheduling system. Choose your preferred dentist, date, and time."
+  },
+  "steps": [
+    {
+      "number": "01",
+      "title": "Select Service",
+      "description": "Choose from our range of dental services"
+    },
+    {
+      "number": "02",
+      "title": "Choose Date & Time",
+      "description": "Pick a convenient appointment slot"
+    },
+    {
+      "number": "03",
+      "title": "Patient Details",
+      "description": "Fill in your information"
+    },
+    {
+      "number": "04",
+      "title": "Confirmation",
+      "description": "Receive instant confirmation"
+    }
+  ],
+  "services": {
+    "title": "Select Your Service",
+    "description": "Choose the type of dental service you need",
+    "categories": [
+      {
+        "id": "general",
+        "title": "General Dentistry",
+        "services": [
+          {
+            "id": "checkup",
+            "name": "Dental Check-up",
+            "duration": "30 min",
+            "price": "$75",
+            "description": "Comprehensive examination and cleaning"
+          },
+          {
+            "id": "cleaning",
+            "name": "Professional Cleaning",
+            "duration": "45 min",
+            "price": "$95",
+            "description": "Deep cleaning and polishing"
+          },
+          {
+            "id": "xray",
+            "name": "Digital X-Rays",
+            "duration": "20 min",
+            "price": "$65",
+            "description": "Full mouth digital x-rays"
+          }
+        ]
+      },
+      {
+        "id": "cosmetic",
+        "title": "Cosmetic Dentistry",
+        "services": [
+          {
+            "id": "whitening",
+            "name": "Teeth Whitening",
+            "duration": "60 min",
+            "price": "$199",
+            "description": "Professional whitening treatment"
+          },
+          {
+            "id": "veneers",
+            "name": "Veneers Consultation",
+            "duration": "45 min",
+            "price": "$85",
+            "description": "Assessment and treatment planning"
+          }
+        ]
+      },
+      {
+        "id": "emergency",
+        "title": "Emergency Care",
+        "services": [
+          {
+            "id": "emergency",
+            "name": "Emergency Appointment",
+            "duration": "45 min",
+            "price": "$150",
+            "description": "Immediate care for dental emergencies"
+          }
+        ]
+      }
+    ]
+  },
+  "form": {
+    "personalInfo": {
+      "title": "Personal Information",
+      "fields": {
+        "firstName": {
+          "label": "First Name",
+          "placeholder": "Enter your first name"
+        },
+        "lastName": {
+          "label": "Last Name",
+          "placeholder": "Enter your last name"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "Enter your email"
+        },
+        "phone": {
+          "label": "Phone Number",
+          "placeholder": "Enter your phone number"
+        },
+        "dob": {
+          "label": "Date of Birth",
+          "placeholder": "Select your date of birth"
+        }
+      }
+    },
+    "appointmentInfo": {
+      "title": "Appointment Details",
+      "fields": {
+        "date": {
+          "label": "Preferred Date",
+          "placeholder": "Select preferred date"
+        },
+        "time": {
+          "label": "Preferred Time",
+          "placeholder": "Select preferred time"
+        },
+        "notes": {
+          "label": "Additional Notes",
+          "placeholder": "Any specific concerns or requirements"
+        }
+      }
+    }
+  },
+  "insurance": {
+    "title": "Insurance Information",
+    "description": "We accept most major dental insurance plans",
+    "providers": [
+      "Delta Dental",
+      "Cigna",
+      "Aetna",
+      "MetLife",
+      "Guardian"
+    ]
+  },
+  "confirmation": {
+    "title": "Booking Confirmation",
+    "description": "You'll receive an email confirmation with your appointment details",
+    "nextSteps": [
+      "Arrive 15 minutes before your appointment",
+      "Bring your ID and insurance card",
+      "Fill out new patient forms if applicable",
+      "Contact us if you need to reschedule"
+    ]
+  },
+  "policies": {
+    "cancellation": "24-hour cancellation notice required",
+    "insurance": "Please verify insurance coverage before appointment",
+    "arrival": "Please arrive 15 minutes before your scheduled time"
+  }
+} 

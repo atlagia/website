@@ -1,0 +1,249 @@
+{
+  "navigation": [
+    {
+      "name": "Industries",
+      "href": "/industries",
+      "megaMenu": {
+        "categories": [
+          {
+            "title": "Healthcare",
+            "icon": "stethoscope",
+            "items": [
+              {
+                "name": "Medical Practices",
+                "href": "/solutions/medical-solution"
+              },
+              {
+                "name": "Hospitals",
+                "href": "/solutions/hospital-solution"
+              },
+              {
+                "name": "Clinics",
+                "href": "/solutions/clinic-solution"
+              },
+              {
+                "name": "Pharmacies",
+                "href": "/solutions/pharmacy-solution"
+              }
+            ]
+          },
+          {
+            "title": "Professional Services",
+            "icon": "briefcase",
+            "items": [
+              {
+                "name": "Dental Practices",
+                "href": "/solutions/dental-solution"
+              },
+              {
+                "name": "Veterinary Practices",
+                "href": "/solutions/veterinary-solution"
+              },
+              {
+                "name": "Radiology Centers",
+                "href": "/solutions/radiology-solution"
+              },
+              {
+                "name": "Laboratories",
+                "href": "/solutions/laboratory-solution"
+              }
+            ]
+          },
+          {
+            "title": "Retail & Commerce",
+            "icon": "shopping-bag",
+            "items": [
+              {
+                "name": "E-commerce",
+                "href": "/solutions/ecommerce-solution"
+              },
+              {
+                "name": "Retail Stores",
+                "href": "/solutions/retail-stores"
+              },
+              {
+                "name": "Restaurants",
+                "href": "/solutions/restaurants"
+              },
+              {
+                "name": "Wholesale",
+                "href": "/solutions/wholesale"
+              }
+            ]
+          }
+        ],
+        "featured": {
+          "badge": "New",
+          "title": "Industry-Specific AI Solutions",
+          "description": "Tailored AI automation for your industry",
+          "link": {
+            "text": "Explore Solutions",
+            "href": "/solutions"
+          }
+        }
+      }
+    },
+    {
+      "name": "Solutions",
+      "href": "/solutions",
+      "megaMenu": {
+        "categories": [
+          {
+            "title": "Operations",
+            "icon": "settings",
+            "items": [
+              {
+                "name": "Workflow Automation",
+                "href": "/solutions/workflow"
+              },
+              {
+                "name": "Document Processing",
+                "href": "/solutions/documents"
+              },
+              {
+                "name": "Resource Planning",
+                "href": "/solutions/planning"
+              },
+              {
+                "name": "Analytics & Reports",
+                "href": "/solutions/analytics"
+              }
+            ]
+          },
+          {
+            "title": "Customer Experience",
+            "icon": "users",
+            "items": [
+              {
+                "name": "AI Chat Support",
+                "href": "/solutions/chat-support"
+              },
+              {
+                "name": "Customer Analytics",
+                "href": "/solutions/customer-analytics"
+              },
+              {
+                "name": "Personalization",
+                "href": "/solutions/personalization"
+              },
+              {
+                "name": "Engagement Tools",
+                "href": "/solutions/engagement"
+              }
+            ]
+          },
+          {
+            "title": "Growth",
+            "icon": "trending-up",
+            "items": [
+              {
+                "name": "Marketing AI",
+                "href": "/solutions/marketing"
+              },
+              {
+                "name": "Sales Intelligence",
+                "href": "/solutions/sales"
+              },
+              {
+                "name": "Market Research",
+                "href": "/solutions/research"
+              },
+              {
+                "name": "Business Intelligence",
+                "href": "/solutions/intelligence"
+              }
+            ]
+          }
+        ],
+        "featured": {
+          "badge": "Featured",
+          "title": "Enterprise AI Suite",
+          "description": "Complete AI transformation platform",
+          "link": {
+            "text": "Learn More",
+            "href": "/enterprise"
+          }
+        }
+      }
+    },
+    {
+      "name": "Platform",
+      "href": "/platform",
+      "megaMenu": {
+        "categories": [
+          {
+            "title": "Core Features",
+            "icon": "cpu",
+            "items": [
+              {
+                "name": "AI Engine",
+                "href": "/platform/ai-engine"
+              },
+              {
+                "name": "Integration Hub",
+                "href": "/platform/integrations"
+              },
+              {
+                "name": "Security",
+                "href": "/platform/security"
+              },
+              {
+                "name": "API Access",
+                "href": "/platform/api"
+              }
+            ]
+          }
+        ],
+        "featured": {
+          "badge": "New",
+          "title": "Developer Portal",
+          "description": "Build with our AI platform",
+          "link": {
+            "text": "Start Building",
+            "href": "/developers"
+          }
+        }
+      }
+    },
+    {
+      "name": "Resources",
+      "href": "/resources"
+    },
+    {
+      "name": "Pricing",
+      "href": "/pricing"
+    }
+  ],
+  "auth": {
+    "signIn": {
+      "text": "Contact Us",
+      "href": "/contact"
+    },
+    "getStarted": {
+      "text": "Get Started",
+      "href": "/en/discuss-project"
+    }
+  },
+  "languages": [
+    {
+      "code": "en",
+      "name": "English"
+    },
+    {
+      "code": "fr",
+      "name": "Français"
+    },
+    {
+      "code": "de",
+      "name": "Deutsch"
+    },
+    {
+      "code": "es",
+      "name": "Español"
+    },
+    {
+      "code": "ar",
+      "name": "العربية"
+    }
+  ]
+} 

@@ -1,0 +1,317 @@
+{
+  "hero": {
+    "subtitle": "BUSINESS GROWTH",
+    "title": "Multi-Location Dental Practice Management",
+    "description": "Seamlessly manage multiple dental offices with our comprehensive platform designed to standardize operations, centralize data, and drive consistent growth across all locations."
+  },
+  "overview": {
+    "title": "Unified Practice Management",
+    "description": "Our multi-location platform provides dental groups with the tools to coordinate operations, standardize patient care, and analyze performance across all practice locations from a centralized dashboard.",
+    "features": [
+      {
+        "icon": "globe",
+        "title": "Centralized Management",
+        "description": "Control all locations from a single platform"
+      },
+      {
+        "icon": "shuffle",
+        "title": "Cross-Location Scheduling",
+        "description": "Coordinate patients across multiple offices"
+      },
+      {
+        "icon": "bar-chart-2",
+        "title": "Group Analytics",
+        "description": "Compare performance across all locations"
+      },
+      {
+        "icon": "file-text",
+        "title": "Standardized Protocols",
+        "description": "Maintain consistent operations enterprise-wide"
+      }
+    ]
+  },
+  "applications": {
+    "title": "Complete Multi-Location Solution",
+    "description": "Comprehensive tools for managing every aspect of a dental group practice",
+    "problems": [
+      {
+        "title": "Administrative Centralization",
+        "description": "Consolidate billing, scheduling, and management",
+        "icon": "settings"
+      },
+      {
+        "title": "Provider Management",
+        "description": "Track provider schedules across all locations",
+        "icon": "users"
+      },
+      {
+        "title": "Inventory Control",
+        "description": "Coordinate supplies across multiple offices",
+        "icon": "package"
+      },
+      {
+        "title": "Financial Reporting",
+        "description": "Group-wide financial tracking and analysis",
+        "icon": "dollar-sign"
+      },
+      {
+        "title": "Quality Assurance",
+        "description": "Maintain consistent patient experience",
+        "icon": "shield"
+      },
+      {
+        "title": "Growth Management",
+        "description": "Tools for scaling and adding locations",
+        "icon": "trending-up"
+      }
+    ]
+  },
+  "process": {
+    "title": "Implementation Process",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Practice Assessment",
+        "description": "Evaluate current systems and workflows"
+      },
+      {
+        "number": "02",
+        "title": "Data Migration",
+        "description": "Consolidate information from all locations"
+      },
+      {
+        "number": "03",
+        "title": "System Integration",
+        "description": "Connect all practice locations to the platform"
+      },
+      {
+        "number": "04",
+        "title": "Team Training",
+        "description": "Train staff across all offices"
+      },
+      {
+        "number": "05",
+        "title": "Protocol Standardization",
+        "description": "Implement consistent workflows group-wide"
+      },
+      {
+        "number": "06",
+        "title": "Ongoing Optimization",
+        "description": "Continuous improvement based on analytics"
+      }
+    ]
+  },
+  "advantages": {
+    "title": "Business Benefits",
+    "description": "How our multi-location platform enhances group practice performance",
+    "benefits": [
+      {
+        "title": "32% Administrative Cost Reduction",
+        "description": "Streamline operations through centralization",
+        "icon": "dollar-sign"
+      },
+      {
+        "title": "27% Higher Production",
+        "description": "Optimize scheduling and resource allocation",
+        "icon": "trending-up"
+      },
+      {
+        "title": "95% Patient Satisfaction",
+        "description": "Deliver consistent experience across locations",
+        "icon": "smile"
+      },
+      {
+        "title": "Scalable Growth",
+        "description": "Easily integrate new practice locations",
+        "icon": "plus-circle"
+      }
+    ]
+  },
+  "features": {
+    "title": "Key Features",
+    "description": "Powerful tools for comprehensive multi-location management",
+    "featureList": [
+      {
+        "title": "Enterprise Dashboard",
+        "description": "Real-time visibility across all locations",
+        "icon": "grid"
+      },
+      {
+        "title": "Cross-Location Scheduling",
+        "description": "Book patients at any location from one system",
+        "icon": "calendar"
+      },
+      {
+        "title": "Centralized Patient Records",
+        "description": "Access records from any office location",
+        "icon": "folder"
+      },
+      {
+        "title": "Provider Management",
+        "description": "Schedule and track providers across practices",
+        "icon": "user"
+      },
+      {
+        "title": "Enterprise Reporting",
+        "description": "Consolidated reporting across all locations",
+        "icon": "bar-chart-2"
+      },
+      {
+        "title": "Inventory Management",
+        "description": "Track and transfer supplies between offices",
+        "icon": "box"
+      },
+      {
+        "title": "Location Comparison",
+        "description": "Benchmark performance between offices",
+        "icon": "git-branch"
+      },
+      {
+        "title": "Standardized Workflows",
+        "description": "Consistent protocols across all locations",
+        "icon": "check-square"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Pricing Options",
+    "description": "Select the plan that fits your practice group needs",
+    "options": [
+      {
+        "name": "Emerging Group",
+        "price": "$599",
+        "duration": "per month",
+        "includes": [
+          "Up to 3 locations",
+          "Centralized scheduling",
+          "Basic financial reporting",
+          "Patient record sharing",
+          "Standard support",
+          "Data migration assistance"
+        ]
+      },
+      {
+        "name": "Growing Group",
+        "price": "$999",
+        "duration": "per month",
+        "includes": [
+          "Up to 8 locations",
+          "All Emerging Group features",
+          "Advanced reporting and analytics",
+          "Provider management",
+          "Inventory tracking",
+          "Custom dashboards",
+          "Priority support"
+        ]
+      },
+      {
+        "name": "Enterprise",
+        "price": "Custom",
+        "duration": "pricing",
+        "includes": [
+          "Unlimited locations",
+          "All Growing Group features",
+          "Custom integrations",
+          "Advanced financial analytics",
+          "Executive dashboard",
+          "API access",
+          "Dedicated account manager",
+          "On-site implementation"
+        ]
+      }
+    ]
+  },
+  "integration": {
+    "title": "Seamless Integration",
+    "description": "Works with your existing practice management systems",
+    "partners": [
+      {
+        "name": "Dentrix Enterprise",
+        "logo": "/images/partners/dentrix.png"
+      },
+      {
+        "name": "Eaglesoft",
+        "logo": "/images/partners/eaglesoft.png"
+      },
+      {
+        "name": "Open Dental",
+        "logo": "/images/partners/opendental.png"
+      },
+      {
+        "name": "Curve Dental",
+        "logo": "/images/partners/curve.png"
+      },
+      {
+        "name": "Denticon",
+        "logo": "/images/partners/denticon.png"
+      },
+      {
+        "name": "Dentimax",
+        "logo": "/images/partners/dentimax.png"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": [
+      {
+        "question": "How does patient scheduling work across multiple locations?",
+        "answer": "Our cross-location scheduling system maintains a unified view of all provider availability across your entire practice group. Front desk staff can schedule patients at any location from a single interface, with access to the complete schedule. The system allows for location-specific rules (such as different hours or provider schedules) while maintaining a centralized view. Patients can also be transferred between locations while maintaining their complete records and history."
+      },
+      {
+        "question": "Can we maintain different fee schedules for different locations?",
+        "answer": "Yes, the platform supports location-specific fee schedules to accommodate different market conditions and patient demographics. You can maintain separate fee schedules for each location while still generating consolidated financial reports at the group level. The system also allows you to implement universal fee changes across all locations when needed, with appropriate permissions and approval workflows to control these changes."
+      },
+      {
+        "question": "How does the system help standardize clinical protocols?",
+        "description": "The platform includes a clinical protocol management module that allows you to create, distribute, and monitor standardized procedures across all locations. You can define protocols for common procedures, create standardized treatment plans, and share clinical best practices. The system tracks adherence to these protocols and highlights variations between locations, helping you maintain consistent quality of care regardless of which office a patient visits."
+      },
+      {
+        "question": "What kind of performance comparisons can we make between locations?",
+        "answer": "Our analytics dashboard enables comprehensive performance comparisons across all metrics, including production, collection, new patients, case acceptance, and more. You can compare locations side-by-side or against group averages, with the ability to normalize data based on factors like location size, provider count, or operational hours. The system automatically highlights significant variations and trends to help identify both underperforming locations and best practices that can be replicated."
+      },
+      {
+        "question": "How does the system handle the addition of a new location?",
+        "answer": "The platform includes dedicated tools for practice onboarding and integration. When adding a new location, the system guides you through a structured process including data migration, staff training, and workflow implementation. For acquisitions, we provide tools to map existing systems to your standardized procedures and gradually transition the new office to your protocols. Most new locations can be fully integrated within 2-4 weeks, with minimal disruption to patient care."
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Customer Success Stories",
+    "reviews": [
+      {
+        "name": "Dr. Robert Johnson",
+        "practice": "Smile Network Dental Group (8 locations)",
+        "rating": 5,
+        "comment": "Managing multiple locations used to require a full-time administrator for every 2-3 offices. With this platform, we've centralized operations and now run 8 locations with the same administrative team that previously handled 3. The standardized protocols have improved our clinical outcomes, and the cross-location scheduling has virtually eliminated downtime across all practices. Our group production is up 27% year-over-year.",
+        "date": "2 months ago"
+      },
+      {
+        "name": "Dr. Jennifer Martinez",
+        "practice": "Premier Dental Partners (12 locations)",
+        "rating": 5,
+        "comment": "The acquisition integration tools have been invaluable as we've grown through practice purchases. We've been able to bring new offices fully into our system within 30 days, compared to the 3-6 months it took previously. The ability to compare performance metrics between locations has helped us identify and address underperforming offices quickly. We've seen a 22% improvement in our consolidated collection ratio since implementation.",
+        "date": "3 months ago"
+      },
+      {
+        "name": "Michael Thompson",
+        "practice": "CEO, Regional Dental Management (25 locations)",
+        "rating": 5,
+        "comment": "As a DSO managing practices across three states, this platform has been transformative for our operations. The centralized inventory management alone has saved us over $200,000 annually by optimizing supply purchases and enabling transfers between locations. The standardized workflows have reduced training time for new staff by 40%, and our ability to shift providers between locations as needed has significantly improved production efficiency.",
+        "date": "1 month ago"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Streamline Your Multi-Location Dental Group?",
+    "description": "Join hundreds of dental groups using our platform to standardize operations and drive growth across all locations.",
+    "primaryButton": {
+      "text": "Request Demo",
+      "href": "/request-demo"
+    },
+    "secondaryButton": {
+      "text": "View Pricing",
+      "href": "/pricing"
+    }
+  }
+} 

@@ -1,0 +1,332 @@
+{
+  "hero": {
+    "subtitle": "Gestione all'Ingrosso Potenziata dall'IA",
+    "title": "Trasforma il Tuo Business all'Ingrosso con Operazioni Intelligenti",
+    "description": "Scopri il futuro della gestione all'ingrosso con la nostra piattaforma completa potenziata dall'IA, che ottimizza l'inventario, semplifica le operazioni e guida la crescita della tua azienda all'ingrosso.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "thumbnail": "/images/wholesale-hero.webp",
+      "alt": "Demo della Piattaforma di Gestione all'Ingrosso"
+    },
+    "stats": [
+      {
+        "value": "45%",
+        "label": "Ottimizzazione Inventario"
+      },
+      {
+        "value": "60%",
+        "label": "Velocità di Elaborazione Ordini"
+      },
+      {
+        "value": "35%",
+        "label": "Riduzione Costi"
+      }
+    ]
+  },
+  "features": {
+    "title": "Funzionalità di Livello Enterprise",
+    "subtitle": "Gestione all'Ingrosso di Nuova Generazione",
+    "description": "Scopri la nostra suite completa di strumenti avanzati, progettata per rivoluzionare le tue operazioni all'ingrosso. Ogni funzionalità è stata sviluppata per offrire massima efficienza e una superiore esperienza cliente.",
+    "categories": [
+      {
+        "name": "Operazioni all'Ingrosso",
+        "description": "Funzionalità essenziali che ottimizzano la tua operatività quotidiana"
+      },
+      {
+        "name": "Esperienza Cliente",
+        "description": "Strumenti che migliorano l'engagement e la soddisfazione dei clienti"
+      }
+    ],
+    "items": [
+      {
+        "icon": "box",
+        "title": "Gestione Intelligente dell'Inventario",
+        "description": "Ottimizzazione e previsione dell'inventario potenziata dall'IA",
+        "category": "Operazioni all'Ingrosso",
+        "image": "/images/features/inventory-management.webp",
+        "highlights": [
+          "Monitoraggio in Tempo Reale",
+          "Previsione della Domanda",
+          "Ottimizzazione Livelli di Scorta",
+          "Gestione Magazzino"
+        ],
+        "stats": {
+          "value": "45%",
+          "label": "Migliore Controllo Inventario"
+        }
+      },
+      {
+        "icon": "truck",
+        "title": "Elaborazione Ordini",
+        "description": "Gestione e elaborazione ottimizzata degli ordini",
+        "category": "Esperienza Cliente",
+        "image": "/images/features/order-processing.webp",
+        "highlights": [
+          "Elaborazione di Massa",
+          "Elaborazione Automatizzata",
+          "Integrazione Spedizioni",
+          "Monitoraggio Ordini"
+        ],
+        "stats": {
+          "value": "60%",
+          "label": "Elaborazione Più Rapida"
+        }
+      },
+      {
+        "icon": "bar-chart",
+        "title": "Analisi di Business",
+        "description": "Insight basati sui dati per le operazioni all'ingrosso",
+        "category": "Operazioni all'Ingrosso",
+        "image": "/images/features/business-analytics.webp",
+        "highlights": [
+          "Analisi delle Vendite",
+          "Insight sui Clienti",
+          "Tendenze di Mercato",
+          "Metriche di Performance"
+        ],
+        "stats": {
+          "value": "40%",
+          "label": "Migliore Decision Making"
+        }
+      },
+      {
+        "icon": "users",
+        "title": "Portale Cliente",
+        "description": "Portale self-service per i clienti all'ingrosso",
+        "category": "Esperienza Cliente",
+        "image": "/images/features/customer-portal.webp",
+        "highlights": [
+          "Storico Ordini",
+          "Catalogo Prodotti",
+          "Gestione Prezzi",
+          "Gestione Account"
+        ],
+        "stats": {
+          "value": "50%",
+          "label": "Soddisfazione Cliente"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Vedilo in Azione",
+    "description": "Osserva come i leader del settore all'ingrosso trasformano le loro operazioni",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "thumbnail": "/images/showcase-thumb.webp"
+    },
+    "testimonials": [
+      {
+        "author": "John Smith",
+        "role": "CEO, Soluzioni Globali all'Ingrosso",
+        "image": "/images/testimonials/john.webp",
+        "quote": "Questa piattaforma ha rivoluzionato le nostre operazioni all'ingrosso. Abbiamo visto un miglioramento del 45% nella gestione dell'inventario e un'elaborazione degli ordini del 60% più rapida."
+      },
+      {
+        "author": "Maria Garcia",
+        "role": "Direttore Operativo, Ingrosso Plus",
+        "image": "/images/testimonials/maria.webp",
+        "quote": "Le funzionalità IA hanno migliorato drasticamente la nostra precisione nelle previsioni e la soddisfazione dei clienti."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Vantaggi Trasformativi",
+    "subtitle": "Risultati & Impatto Provati",
+    "description": "Sperimenta miglioramenti misurabili in tutti gli aspetti della tua azienda all'ingrosso con la nostra soluzione completa. La nostra piattaforma fornisce risultati concreti che impattano direttamente sul tuo profitto.",
+    "items": [
+      {
+        "title": "Ottimizzazione Inventario",
+        "description": "Ottimizza i tuoi livelli di scorta con previsioni potenziate dall'IA.",
+        "icon": "box",
+        "color": "blue",
+        "stats": {
+          "value": "45%",
+          "label": "Migliore Controllo Inventario"
+        },
+        "highlights": [
+          "Previsione della Domanda",
+          "Ottimizzazione Inventario",
+          "Gestione Magazzino",
+          "Monitoraggio Scorte"
+        ]
+      },
+      {
+        "title": "Efficienza Operativa",
+        "description": "Ottimizza le tue operazioni all'ingrosso con l'automazione intelligente.",
+        "icon": "zap",
+        "color": "purple",
+        "stats": {
+          "value": "60%",
+          "label": "Elaborazione Più Rapida"
+        },
+        "highlights": [
+          "Elaborazione Ordini",
+          "Elaborazione Automatizzata",
+          "Integrazione Spedizioni",
+          "Gestione Documenti"
+        ]
+      },
+      {
+        "title": "Gestione Costi",
+        "description": "Ottimizza i costi e massimizza la redditività.",
+        "icon": "trending-up",
+        "color": "green",
+        "stats": {
+          "value": "35%",
+          "label": "Riduzione Costi"
+        },
+        "highlights": [
+          "Ottimizzazione Inventario",
+          "Efficienza Magazzino",
+          "Costi di Spedizione",
+          "Costi Operativi"
+        ]
+      },
+      {
+        "title": "Esperienza Cliente",
+        "description": "Offri un servizio eccezionale ai clienti all'ingrosso.",
+        "icon": "heart",
+        "color": "yellow",
+        "stats": {
+          "value": "50%",
+          "label": "Soddisfazione Cliente"
+        },
+        "highlights": [
+          "Portale Cliente",
+          "Monitoraggio Ordini",
+          "Gestione Account",
+          "Servizi di Supporto"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Piani di Prezzo Flessibili",
+    "subtitle": "Prezzi Trasparenti",
+    "description": "Scegli il piano perfetto per la tua azienda all'ingrosso. Risparmia fino al 20% con la fatturazione annuale.",
+    "billingPeriods": ["Mensile", "Annuale"],
+    "plans": [
+      {
+        "name": "Starter",
+        "highlight": "Perfetto per piccole aziende all'ingrosso",
+        "monthlyPrice": "$199",
+        "yearlyPrice": "$1,990",
+        "yearlyDiscount": "Risparmia $398/Anno",
+        "description": "Funzionalità essenziali per iniziare la tua trasformazione digitale",
+        "features": [
+          {
+            "text": "Gestione Base dell'Inventario",
+            "included": true
+          },
+          {
+            "text": "Elaborazione Ordini",
+            "included": true
+          },
+          {
+            "text": "Report di Base",
+            "included": true
+          },
+          {
+            "text": "Supporto Email",
+            "included": true
+          },
+          {
+            "text": "Accesso App Mobile",
+            "included": true
+          }
+        ],
+        "cta": "Inizia Ora",
+        "popular": false
+      },
+      {
+        "name": "Professionale",
+        "highlight": "Scelta Più Popolare per Aziende all'Ingrosso in Crescita",
+        "monthlyPrice": "$399",
+        "yearlyPrice": "$3,990",
+        "yearlyDiscount": "Risparmia $798/Anno",
+        "description": "Funzionalità avanzate per aziende all'ingrosso consolidate",
+        "features": [
+          {
+            "text": "Tutto in Starter, più:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Funzionalità IA",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "Analisi Avanzate",
+            "included": true
+          },
+          {
+            "text": "Portale Cliente",
+            "included": true
+          },
+          {
+            "text": "Supporto Prioritario",
+            "included": true
+          },
+          {
+            "text": "Accesso API",
+            "included": true
+          }
+        ],
+        "cta": "Inizia Ora",
+        "popular": true
+      },
+      {
+        "name": "Enterprise",
+        "highlight": "Per Grandi Operazioni all'Ingrosso",
+        "monthlyPrice": "Personalizzato",
+        "yearlyPrice": "Personalizzato",
+        "yearlyDiscount": "Contattaci per Prezzi Speciali",
+        "description": "Soluzioni personalizzate per esigenze enterprise",
+        "features": [
+          {
+            "text": "Tutto in Professionale, più:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Supporto Multi-Magazzino",
+            "included": true
+          },
+          {
+            "text": "Account Manager Dedicato",
+            "included": true
+          },
+          {
+            "text": "Funzionalità di Sicurezza Avanzate",
+            "included": true
+          },
+          {
+            "text": "Opzioni di Sviluppo Personalizzate",
+            "included": true
+          },
+          {
+            "text": "Garanzie SLA",
+            "included": true
+          }
+        ],
+        "cta": "Contatta le Vendite",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "Pronto a Trasformare la Tua Azienda all'Ingrosso?",
+    "description": "Unisciti a Migliaia di Aziende all'Ingrosso di Successo che Utilizzano la Nostra Piattaforma",
+    "primaryButton": {
+      "text": "Pianifica una Demo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Guarda il Video Demo",
+      "link": "/demo-video"
+    },
+    "background": "/images/cta-background.webp"
+  }
+} 

@@ -1,0 +1,335 @@
+{
+  "hero": {
+    "subtitle": "Radiologie-Informationssystem",
+    "title": "Fortschrittliche Radiologie-Management-Lösung",
+    "description": "Ein umfassendes Radiologie-Informationssystem, das Bildgebungsprozesse optimiert, die Berichterstattung verbessert und die Patientenversorgung steigert.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Radiologie-Management-Lösung Demo"
+    },
+    "stats": [
+      {
+        "value": "45%",
+        "label": "Schnellere Berichterstattung"
+      },
+      {
+        "value": "99.9%",
+        "label": "Bildqualität"
+      },
+      {
+        "value": "30%",
+        "label": "Kostenreduktion"
+      }
+    ]
+  },
+  "features": {
+    "subtitle": "Fortschrittliche Funktionen",
+    "title": "Umfassendes Radiologie-Management",
+    "description": "Umfassende Tools für moderne Radiologiepraxen",
+    "categories": [
+      {
+        "name": "Bildgebungsprozesse",
+        "description": "Optimierung von Bildgebungsprozessen und Berichterstattung"
+      },
+      {
+        "name": "Patientenversorgung",
+        "description": "Verbesserung der Patientenerfahrung und Versorgungsqualität"
+      }
+    ],
+    "items": [
+      {
+        "icon": "image",
+        "category": "Bildgebung",
+        "title": "PACS-Integration",
+        "description": "Nahtlose Integration mit PACS-Systemen",
+        "image": "/images/solutions/radiology/pacs.jpg",
+        "highlights": [
+          "DICOM-Kompatibilität",
+          "Multi-Modalitäts-Unterstützung",
+          "Bildarchivierung",
+          "Fernzugriff"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "DICOM-Konformität"
+        }
+      },
+      {
+        "icon": "file-text",
+        "category": "Berichterstattung",
+        "title": "Intelligente Berichterstattung",
+        "description": "KI-gestützte Berichterstattung und strukturierte Vorlagen",
+        "image": "/images/solutions/radiology/reporting.jpg",
+        "highlights": [
+          "Spracherkennung",
+          "Vorlagenbibliothek",
+          "Kritische Befunde",
+          "Automatische Messungen"
+        ],
+        "stats": {
+          "value": "45%",
+          "label": "Schnellere Berichterstattung"
+        }
+      },
+      {
+        "icon": "users",
+        "category": "Prozesse",
+        "title": "Prozessoptimierung",
+        "description": "Effizientes Prozessmanagement und Terminplanung",
+        "image": "/images/solutions/radiology/workflow.jpg",
+        "highlights": [
+          "Intelligente Terminplanung",
+          "Arbeitslistenverwaltung",
+          "Protokollautomatisierung",
+          "Ressourcenallokation"
+        ],
+        "stats": {
+          "value": "35%",
+          "label": "Effizienzsteigerung"
+        }
+      },
+      {
+        "icon": "activity",
+        "category": "Analytik",
+        "title": "Fortschrittliche Analytik",
+        "description": "Umfassende Analysen und Business Intelligence",
+        "image": "/images/solutions/radiology/analytics.jpg",
+        "highlights": [
+          "Leistungskennzahlen",
+          "Qualitätsindikatoren",
+          "Ressourcennutzung",
+          "Finanzanalysen"
+        ],
+        "stats": {
+          "value": "30%",
+          "label": "Kostenreduktion"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Radiologische Exzellenz",
+    "description": "Sehen Sie, wie führende Radiologiepraxen ihre Abläufe transformieren",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Radiologie-Erfolgsgeschichte"
+    },
+    "testimonials": [
+      {
+        "author": "Dr. James Anderson",
+        "role": "Chefradiologe",
+        "image": "/images/testimonials/rad1.jpg",
+        "quote": "Dieses System hat unsere Praxis revolutioniert. Die integrierten PACS- und Berichtsfunktionen haben unsere Effizienz deutlich verbessert."
+      },
+      {
+        "author": "Dr. Sarah Martinez",
+        "role": "Bildgebungsdirektorin",
+        "image": "/images/testimonials/rad2.jpg",
+        "quote": "Die KI-gestützte Berichterstattung und Prozessoptimierung haben uns geholfen, schnellere und genauere Diagnosen zu stellen."
+      }
+    ]
+  },
+  "benefits": {
+    "subtitle": "Hauptvorteile",
+    "title": "Transformieren Sie Ihre Radiologiepraxis",
+    "description": "Erleben Sie die Vorteile eines vollständig integrierten Radiologie-Management-Systems",
+    "items": [
+      {
+        "icon": "zap",
+        "title": "Verbesserte Effizienz",
+        "description": "Optimierung radiologischer Prozesse und Berichterstattung",
+        "color": "blue",
+        "stats": {
+          "value": "45%",
+          "label": "Schnellere Bearbeitungszeit"
+        },
+        "highlights": [
+          "Automatisierte Prozesse",
+          "Intelligente Terminplanung",
+          "Ressourcenoptimierung",
+          "Schnelle Berichterstattung"
+        ]
+      },
+      {
+        "icon": "check-circle",
+        "title": "Qualitätssicherung",
+        "description": "Gewährleistung höchster Bildqualitätsstandards",
+        "color": "green",
+        "stats": {
+          "value": "99.9%",
+          "label": "Bildqualität"
+        },
+        "highlights": [
+          "Qualitätskontrollen",
+          "Protokollmanagement",
+          "Fehlerprävention",
+          "Konformitätsüberwachung"
+        ]
+      },
+      {
+        "icon": "users",
+        "title": "Patientenversorgung",
+        "description": "Verbesserung der Patientenerfahrung und Ergebnisse",
+        "color": "purple",
+        "stats": {
+          "value": "95%",
+          "label": "Patientenzufriedenheit"
+        },
+        "highlights": [
+          "Schneller Zugriff",
+          "Ergebnisverteilung",
+          "Patientenportal",
+          "Versorgungskoordination"
+        ]
+      },
+      {
+        "icon": "shield",
+        "title": "Sicherheit & Konformität",
+        "description": "Gewährleistung der Datensicherheit und regulatorischen Konformität",
+        "color": "red",
+        "stats": {
+          "value": "100%",
+          "label": "HIPAA-Konformität"
+        },
+        "highlights": [
+          "Datenverschlüsselung",
+          "Zugriffskontrolle",
+          "Audit-Trails",
+          "Regulatorische Konformität"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "subtitle": "Transparente Preise",
+    "title": "Flexible Preispläne",
+    "description": "Wählen Sie den perfekten Plan für Ihre Radiologiepraxis. Sparen Sie bis zu 20% bei jährlicher Abrechnung.",
+    "billingPeriods": ["Monatlich", "Jährlich"],
+    "plans": [
+      {
+        "name": "Essentiell",
+        "highlight": "Für kleine Praxen",
+        "monthlyPrice": "$999",
+        "yearlyPrice": "$9,990",
+        "yearlyDiscount": "Sparen Sie $1,998/Jahr",
+        "description": "Grundlegende Funktionen für kleine Praxen",
+        "features": [
+          {
+            "text": "Grundlegende PACS-Integration",
+            "included": true
+          },
+          {
+            "text": "Berichtsvorlagen",
+            "included": true
+          },
+          {
+            "text": "Terminplanungssystem",
+            "included": true
+          },
+          {
+            "text": "E-Mail-Support",
+            "included": true
+          },
+          {
+            "text": "Grundlegende Analytik",
+            "included": true
+          },
+          {
+            "text": "Mobiler Zugriff",
+            "included": true
+          }
+        ],
+        "cta": "Jetzt Starten",
+        "popular": false
+      },
+      {
+        "name": "Professionell",
+        "highlight": "Beliebt bei wachsenden Praxen",
+        "monthlyPrice": "$1,999",
+        "yearlyPrice": "$19,990",
+        "yearlyDiscount": "Sparen Sie $3,998/Jahr",
+        "description": "Fortschrittliche Funktionen für etablierte Praxen",
+        "features": [
+          {
+            "text": "Alles aus Essentiell, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Fortschrittliche PACS-Integration",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "KI-gestützte Berichterstattung",
+            "included": true
+          },
+          {
+            "text": "Fortschrittliche Analytik",
+            "included": true
+          },
+          {
+            "text": "Prioritäts-Support",
+            "included": true
+          },
+          {
+            "text": "Multi-Standort-Support",
+            "included": true
+          }
+        ],
+        "cta": "Jetzt Starten",
+        "popular": true
+      },
+      {
+        "name": "Enterprise",
+        "highlight": "Für große Praxen & Krankenhäuser",
+        "monthlyPrice": "Individuell",
+        "yearlyPrice": "Individuell",
+        "yearlyDiscount": "Kontaktieren Sie uns für Sonderpreise",
+        "description": "Maßgeschneiderte Lösungen für große Praxen",
+        "features": [
+          {
+            "text": "Alles aus Professionell, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Individuelle Integrationsunterstützung",
+            "included": true
+          },
+          {
+            "text": "Dedizierter Account Manager",
+            "included": true
+          },
+          {
+            "text": "Fortschrittliche Sicherheitsfunktionen",
+            "included": true
+          },
+          {
+            "text": "Individuelle Entwicklung",
+            "included": true
+          },
+          {
+            "text": "SLA-Garantien",
+            "included": true
+          }
+        ],
+        "cta": "Vertrieb Kontaktieren",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "Bereit, Ihre Radiologiepraxis zu transformieren?",
+    "description": "Schließen Sie sich führenden Radiologiepraxen an, die ihre Abläufe mit unserer Lösung modernisiert haben.",
+    "background": "/images/solutions/radiology/cta-background.jpg",
+    "primaryButton": {
+      "text": "Demo Planen",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Demo Ansehen",
+      "link": "#showcase"
+    }
+  }
+} 

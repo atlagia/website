@@ -639,15 +639,158 @@ const { luxuryProductStyle = {} } = styles;
                   </script>
                 )}
 
-                <!-- Product Description - Optimized for Dynamic Content -->
+                <!-- Product Description - With Show More -->
                 <div class="bg-gradient-to-br from-gray-50 to-white rounded-xl p-6 shadow-sm">
                   <h2 class={luxuryProductStyle.description?.title}>
                     Product Details
                   </h2>
-                  <div 
-                    set:html={product.descriptionHtml} 
-                    class={luxuryProductStyle.description?.content}
-                  />
+                  
+                  <div class="relative">
+                    <div 
+                      id="description-content" 
+                      class="prose prose-sm max-w-none overflow-hidden transition-all duration-300"
+                      style="max-height: 200px;"
+                    >
+                      <div 
+                        set:html={product.descriptionHtml} 
+                        class="
+                          text-gray-700 
+                          [&>p]:mb-6 
+                          [&>p]:leading-relaxed 
+                          [&>p]:text-base
+
+                          [&>hr]:my-8
+                          [&>hr]:border-t
+                          [&>hr]:border-gray-200
+
+                          [&>h2]:text-xl 
+                          [&>h2]:font-bold 
+                          [&>h2]:text-gray-900 
+                          [&>h2]:mt-10 
+                          [&>h2]:mb-6
+                          [&>h2]:pb-2
+                          [&>h2]:border-b
+                          [&>h2]:border-gray-200
+
+                          [&>h3]:text-xl 
+                          [&>h3]:font-semibold 
+                          [&>h3]:text-gray-800 
+                          [&>h3]:mt-8 
+                          [&>h3]:mb-4
+                          [&>h3]:flex
+                          [&>h3]:items-center
+                          [&>h3]:gap-2
+
+                          [&>h4]:text-lg 
+                          [&>h4]:font-semibold 
+                          [&>h4]:text-gray-800 
+                          [&>h4]:mt-6 
+                          [&>h4]:mb-3
+
+                          [&>ul]:list-disc 
+                          [&>ul]:ml-6 
+                          [&>ul]:mb-6 
+                          [&>ul>li]:mb-2
+                          [&>ul>li]:text-gray-700
+
+                          [&>ol]:list-decimal 
+                          [&>ol]:ml-6 
+                          [&>ol]:mb-6 
+                          [&>ol>li]:mb-2
+                          [&>ol>li]:text-gray-700
+
+                          [&>strong]:font-bold
+                          [&>strong]:text-gray-900
+
+                          [&>em]:italic
+                          
+                          [&>a]:text-blue-600 
+                          [&>a]:underline 
+                          [&>a:hover]:text-blue-800
+
+                          [&>blockquote]:pl-4 
+                          [&>blockquote]:border-l-4 
+                          [&>blockquote]:border-gray-200 
+                          [&>blockquote]:italic
+                          [&>blockquote]:text-gray-600
+                          [&>blockquote]:my-6
+
+                          [&>img]:rounded-lg
+                          [&>img]:shadow-md
+                          [&>img]:my-4
+
+                          [&>table]:w-full
+                          [&>table]:border-collapse
+                          [&>table]:mb-6
+                          [&>table]:bg-white
+                          [&>table]:shadow-sm
+                          [&>table]:rounded-lg
+                          [&>table]:overflow-hidden
+                          [&>table]:border
+                          [&>table]:border-gray-200
+
+                          [&>table>thead]:bg-gray-50
+                          [&>table>thead>tr]:border-b
+                          [&>table>thead>tr]:border-gray-200
+
+                          [&>table>thead>tr>th]:px-6
+                          [&>table>thead>tr>th]:py-3
+                          [&>table>thead>tr>th]:text-left
+                          [&>table>thead>tr>th]:font-semibold
+                          [&>table>thead>tr>th]:text-gray-900
+                          [&>table>thead>tr>th]:text-sm
+                          [&>table>thead>tr>th]:uppercase
+                          [&>table>thead>tr>th]:tracking-wider
+
+                          [&>table>tbody>tr]:border-b
+                          [&>table>tbody>tr]:border-gray-200
+                          [&>table>tbody>tr]:last:border-b-0
+                          [&>table>tbody>tr:hover]:bg-gray-50
+
+                          [&>table>tbody>tr>td]:px-6
+                          [&>table>tbody>tr>td]:py-4
+                          [&>table>tbody>tr>td]:text-sm
+                          [&>table>tbody>tr>td]:text-gray-700
+                          [&>table>tbody>tr>td]:whitespace-normal
+
+                          [&>table>tbody>tr>td:first-child]:font-medium
+                          [&>table>tbody>tr>td:first-child]:text-gray-900
+
+                          [&>table>tfoot]:bg-gray-50
+                          [&>table>tfoot>tr]:border-t
+                          [&>table>tfoot>tr]:border-gray-200
+                          [&>table>tfoot>tr>td]:px-6
+                          [&>table>tfoot>tr>td]:py-3
+                          [&>table>tfoot>tr>td]:text-sm
+                          [&>table>tfoot>tr>td]:font-semibold
+
+                          [&>*:first-child]:mt-0
+                          [&>*:last-child]:mb-0
+                        "
+                      />
+                      <!-- Gradient Overlay -->
+                      <div 
+                        id="description-overlay"
+                        class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent"
+                      ></div>
+                    </div>
+                    
+                    <!-- Divider and Show More Button -->
+                    <div class="relative mt-4 text-center">
+                      <div class="absolute inset-0 flex items-center">
+                        <div class="w-full border-t border-gray-200"></div>
+                      </div>
+                      <button
+                        id="show-more-btn"
+                        class="relative inline-flex items-center gap-1.5 bg-white px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors duration-200 rounded-full border border-gray-200 hover:border-gray-300"
+                      >
+                        <span id="show-more-text">Show More</span>
+                        <svg id="show-more-icon" class="w-4 h-4 transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
                 </div>
 
                 <!-- Key Features List -->
@@ -1037,3 +1180,36 @@ const { luxuryProductStyle = {} } = styles;
     animation: starFill 0.3s ease-out forwards;
   }
 </style>
+
+<script>
+  const descriptionContent = document.getElementById('description-content');
+  const showMoreBtn = document.getElementById('show-more-btn');
+  const showMoreText = document.getElementById('show-more-text');
+  const showMoreIcon = document.getElementById('show-more-icon');
+  const descriptionOverlay = document.getElementById('description-overlay');
+  let isExpanded = false;
+
+  if (showMoreBtn && descriptionContent && showMoreText && showMoreIcon && descriptionOverlay) {
+    showMoreBtn.addEventListener('click', () => {
+      isExpanded = !isExpanded;
+      
+      if (isExpanded) {
+        descriptionContent.style.maxHeight = descriptionContent.scrollHeight + 'px';
+        showMoreText.textContent = 'Show Less';
+        showMoreIcon.style.transform = 'rotate(180deg)';
+        descriptionOverlay.style.opacity = '0';
+        setTimeout(() => {
+          descriptionOverlay.style.display = 'none';
+        }, 200);
+      } else {
+        descriptionContent.style.maxHeight = '200px';
+        showMoreText.textContent = 'Show More';
+        showMoreIcon.style.transform = 'rotate(0)';
+        descriptionOverlay.style.display = 'block';
+        setTimeout(() => {
+          descriptionOverlay.style.opacity = '1';
+        }, 0);
+      }
+    });
+  }
+</script>

@@ -1,0 +1,325 @@
+{
+  "pageTitle": "Solutions par Secteur",
+  "pageDescription": "Découvrez notre suite complète de solutions spécifiques à chaque secteur, propulsées par l'intelligence artificielle.",
+  "hero": {
+    "badge": "Solutions par Secteur",
+    "title": "Transformez Votre Secteur avec des Solutions Propulsées par l'IA",
+    "description": "Découvrez notre suite complète de solutions spécifiques à chaque secteur, conçues pour révolutionner vos opérations avec une intelligence artificielle de pointe.",
+    "cta": {
+      "primary": {
+        "text": "Explorer les Solutions",
+        "href": "#solutions"
+      },
+      "secondary": {
+        "text": "Contacter les Ventes",
+        "href": "/contact"
+      }
+    }
+  },
+  "stats": [
+    {
+      "value": "10K+",
+      "label": "Utilisateurs Actifs"
+    },
+    {
+      "value": "99.9%",
+      "label": "Disponibilité"
+    },
+    {
+      "value": "45%",
+      "label": "Augmentation de l'Efficacité"
+    },
+    {
+      "value": "24/7",
+      "label": "Support"
+    }
+  ],
+  "solutions": [
+    {
+      "category": "Santé",
+      "description": "Solutions complètes pour les prestataires de soins",
+      "items": [
+        {
+          "icon": "stethoscope",
+          "name": "Cabinets Médicaux",
+          "description": "Optimisez votre cabinet médical avec une gestion propulsée par l'IA",
+          "href": "/solutions/medical-solution",
+          "color": "blue"
+        },
+        {
+          "icon": "hospital",
+          "name": "Hôpitaux",
+          "description": "Système complet de gestion hospitalière et de soins aux patients",
+          "href": "/solutions/hospital-solution",
+          "color": "indigo"
+        },
+        {
+          "icon": "building2",
+          "name": "Cliniques",
+          "description": "Opérations cliniques et gestion des patients efficaces",
+          "href": "/solutions/clinic-solution",
+          "color": "purple"
+        },
+        {
+          "icon": "pill",
+          "name": "Pharmacies",
+          "description": "Gestion moderne des pharmacies et contrôle des stocks",
+          "href": "/solutions/pharmacy-solution",
+          "color": "pink"
+        }
+      ]
+    },
+    {
+      "category": "Soins Spécialisés",
+      "description": "Solutions adaptées pour les établissements médicaux spécialisés",
+      "items": [
+        {
+          "icon": "tooth",
+          "name": "Cabinets Dentaires",
+          "description": "Solution complète de gestion de cabinet dentaire",
+          "href": "/solutions/dental-solution",
+          "color": "cyan"
+        },
+        {
+          "icon": "radio-tower",
+          "name": "Centres de Radiologie",
+          "description": "Système avancé d'information radiologique",
+          "href": "/solutions/radiology-solution",
+          "color": "emerald"
+        },
+        {
+          "icon": "flask",
+          "name": "Laboratoires",
+          "description": "Système complet de gestion de laboratoire",
+          "href": "/solutions/laboratory-solution",
+          "color": "teal"
+        },
+        {
+          "icon": "dog",
+          "name": "Cliniques Vétérinaires",
+          "description": "Gestion complète de cabinet vétérinaire",
+          "href": "/solutions/veterinary-solution",
+          "color": "orange"
+        }
+      ]
+    },
+    {
+      "category": "Commerce & Distribution",
+      "description": "Solutions numériques pour les entreprises de commerce moderne et e-commerce",
+      "items": [
+        {
+          "icon": "shopping-bag",
+          "name": "E-commerce",
+          "description": "Plateforme e-commerce complète avec insights propulsés par l'IA",
+          "href": "/solutions/ecommerce-solution",
+          "color": "rose"
+        },
+        {
+          "icon": "store",
+          "name": "Magasins",
+          "description": "Gestion intelligente du commerce et système de point de vente",
+          "href": "/solutions/retail-solution",
+          "color": "amber"
+        },
+        {
+          "icon": "warehouse",
+          "name": "Commerce de Gros",
+          "description": "Gestion efficace du commerce de gros et de la distribution",
+          "href": "/solutions/wholesale-solution",
+          "color": "lime"
+        },
+        {
+          "icon": "truck",
+          "name": "Logistique",
+          "description": "Gestion intelligente de la logistique et de la chaîne d'approvisionnement",
+          "href": "/solutions/logistics-solution",
+          "color": "green"
+        }
+      ]
+    },
+    {
+      "category": "Manufacture & Industrie",
+      "description": "Solutions intelligentes pour la fabrication moderne et les opérations industrielles",
+      "items": [
+        {
+          "icon": "factory",
+          "name": "Manufacture",
+          "description": "Gestion intelligente de la fabrication et de la production",
+          "href": "/solutions/manufacturing-solution",
+          "color": "sky"
+        },
+        {
+          "icon": "warehouse",
+          "name": "Inventaire",
+          "description": "Gestion avancée des stocks et des entrepôts",
+          "href": "/solutions/inventory-solution",
+          "color": "cyan"
+        },
+        {
+          "icon": "truck",
+          "name": "Chaîne d'Approvisionnement",
+          "description": "Optimisation de bout en bout de la chaîne d'approvisionnement",
+          "href": "/solutions/supply-chain-solution",
+          "color": "blue"
+        },
+        {
+          "icon": "trending-up",
+          "name": "Contrôle Qualité",
+          "description": "Assurance et contrôle qualité propulsés par l'IA",
+          "href": "/solutions/quality-solution",
+          "color": "indigo"
+        }
+      ]
+    },
+    {
+      "category": "Services Professionnels",
+      "description": "Solutions spécialisées pour les entreprises de services",
+      "items": [
+        {
+          "icon": "building",
+          "name": "Immobilier",
+          "description": "Plateforme complète de gestion immobilière",
+          "href": "/solutions/real-estate-solution",
+          "color": "violet"
+        },
+        {
+          "icon": "graduation-cap",
+          "name": "Éducation",
+          "description": "Gestion intelligente de l'éducation et de l'apprentissage",
+          "href": "/solutions/education-solution",
+          "color": "purple"
+        },
+        {
+          "icon": "hotel",
+          "name": "Hôtellerie",
+          "description": "Système complet de gestion hôtelière",
+          "href": "/solutions/hospitality-solution",
+          "color": "fuchsia"
+        },
+        {
+          "icon": "users",
+          "name": "Services Professionnels",
+          "description": "Gestion des services et du conseil aux entreprises",
+          "href": "/solutions/professional-solution",
+          "color": "pink"
+        }
+      ]
+    }
+  ],
+  "features": {
+    "title": "Fonctionnalités Puissantes pour Chaque Solution",
+    "description": "Notre plateforme est équipée de fonctionnalités qui améliorent vos opérations",
+    "items": [
+      {
+        "icon": "globe",
+        "title": "Accessibilité Mondiale",
+        "description": "Accédez à votre solution de n'importe où, à tout moment avec notre plateforme cloud"
+      },
+      {
+        "icon": "clock",
+        "title": "Support 24/7",
+        "description": "Support technique et surveillance système en continu"
+      },
+      {
+        "icon": "shield",
+        "title": "Sécurité des Données",
+        "description": "Sécurité de niveau entreprise avec chiffrement de bout en bout"
+      },
+      {
+        "icon": "zap",
+        "title": "Mises à Jour en Temps Réel",
+        "description": "Mises à jour et synchronisation instantanées sur tous les appareils"
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Avantages pour Toutes les Solutions",
+    "description": "Découvrez les avantages de notre plateforme propulsée par l'IA pour toutes les solutions sectorielles.",
+    "items": [
+      {
+        "icon": "brain",
+        "title": "Intelligence Propulsée par l'IA",
+        "description": "Capacités avancées d'intelligence artificielle et d'apprentissage automatique qui s'adaptent à vos besoins spécifiques",
+        "stats": "45%",
+        "label": "Augmentation de l'Efficacité"
+      },
+      {
+        "icon": "shield",
+        "title": "Sécurité Entreprise",
+        "description": "Sécurité de niveau bancaire avec chiffrement de bout en bout et conformité aux normes du secteur",
+        "stats": "99.9%",
+        "label": "Disponibilité Système"
+      },
+      {
+        "icon": "trending-up",
+        "title": "Croissance Évolutive",
+        "description": "Solutions qui évoluent avec votre entreprise, des petites pratiques aux grandes entreprises",
+        "stats": "3x",
+        "label": "Croissance Moyenne"
+      },
+      {
+        "icon": "users",
+        "title": "Expérience Améliorée",
+        "description": "Expérience améliorée pour le personnel et les clients avec des interfaces intuitives",
+        "stats": "96%",
+        "label": "Taux de Satisfaction"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Ce que Disent Nos Clients",
+    "description": "Découvrez les témoignages des professionnels de santé qui ont transformé leur pratique avec nos solutions",
+    "items": [
+      {
+        "quote": "GiaConnect a transformé notre façon de fonctionner. Les capacités d'IA sont vraiment révolutionnaires.",
+        "author": "Dr. Sarah Chen",
+        "role": "Directrice Médicale",
+        "image": "/images/testimonials/sarah.jpg"
+      },
+      {
+        "quote": "L'efficacité et la facilité d'utilisation de la plateforme ont grandement amélioré nos soins aux patients.",
+        "author": "Dr. James Wilson",
+        "role": "Administrateur Hospitalier",
+        "image": "/images/testimonials/james.jpg"
+      }
+    ]
+  },
+  "integrations": {
+    "title": "Fonctionne avec Vos Outils Préférés",
+    "description": "Intégration transparente avec les applications populaires de santé et d'entreprise"
+  },
+  "faq": {
+    "title": "Questions Fréquemment Posées",
+    "description": "Trouvez des réponses aux questions courantes sur nos solutions",
+    "items": [
+      {
+        "question": "Comment fonctionne l'intégration de l'IA ?",
+        "answer": "Notre système d'IA s'intègre parfaitement à vos flux de travail existants, apprenant et s'adaptant à vos besoins spécifiques au fil du temps."
+      },
+      {
+        "question": "Quel type de support proposez-vous ?",
+        "answer": "Nous fournissons un support technique 24/7, des sessions de formation régulières et des gestionnaires de compte dédiés pour les clients entreprise."
+      },
+      {
+        "question": "Mes données sont-elles sécurisées ?",
+        "answer": "Oui, nous mettons en œuvre des mesures de sécurité de niveau bancaire et sommes entièrement conformes à la HIPAA et autres réglementations de santé."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prêt à Transformer Votre Entreprise ?",
+    "description": "Rejoignez des milliers d'entreprises qui ont déjà modernisé leurs opérations avec nos solutions propulsées par l'IA.",
+    "buttons": [
+      {
+        "text": "Planifier une Démo",
+        "href": "/demo",
+        "variant": "primary"
+      },
+      {
+        "text": "Contacter les Ventes",
+        "href": "/contact",
+        "variant": "secondary"
+      }
+    ]
+  }
+} 

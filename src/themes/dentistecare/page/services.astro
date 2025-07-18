@@ -1,0 +1,293 @@
+---
+import { SITE_TITLE } from '../consts';
+import pkg from 'lucide-react';
+const { Tooth, Sparkles, HeartPulse, Clock, Shield, Users, ArrowRight } = pkg;
+
+const theme = import.meta.env.THEME || 'default';
+const lang = Astro.params.lang || 'en';
+
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+
+// Import language-specific data
+const servicesData = await import(`../data/services/services_${lang}.json`);
+
+// Import styles
+const styles = await import(`../style/page/servicespage.json`);
+
+// Define icon paths for each icon type
+const iconPaths = {
+  Tooth: `<path d="M12 22c2.23 0 4.1-2.29 4.5-5.34C16.83 13.4 18 9.61 18 8c0-2.21-1.79-4-4-4s-4 1.79-4 4c0 1.61 1.17 5.4 1.5 8.66C11.9 19.71 13.77 22 16 22z"></path>`,
+  Sparkles: `<path d="M12 3L13.9389 8.95492H20.0111L15.0361 12.5951L16.9749 18.5501L12 14.9099L7.02513 18.5501L8.96394 12.5951L3.98894 8.95492H10.0611L12 3Z"></path>`,
+  HeartPulse: `<path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path><path d="M3.22 12H9.5l.5-1 2 4 .5-2 2 2h5.27"></path>`,
+  Clock: `<circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>`,
+  Shield: `<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>`,
+  Users: `<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path>`
+};
+
+// Default icon path
+const defaultIconPath = iconPaths.Tooth;
+
+const businessInfo = {
+  name: import.meta.env.PUBLIC_BUSINESS_NAME || 'DentCare'
+};
+
+// Map services with icon paths
+const services = servicesData.services.map(service => {
+  const iconPath = iconPaths[service.icon] || defaultIconPath;
+  return {
+    ...service,
+    iconPath
+  };
+});
+
+const stats = [
+  { value: '1000+', label: 'Happy Customers' },
+  { value: '20%', label: 'Average Increase in Sales' }
+];
+
+const awards = [
+  {
+    title: 'AI-Driven Content Generation',
+    description: 'Recognized for innovative AI content generation technology that helps businesses create engaging product descriptions.',
+    year: '2023'
+  },
+  {
+    title: 'Bulk Meta Tag Optimization',
+    description: 'Award-winning bulk optimization tools that streamline SEO workflows and improve search rankings.',
+    year: '2023'
+  },
+  {
+    title: 'Universal Bulk Editor',
+    description: 'Revolutionary bulk editing solution that helps e-commerce stores manage product modifications across multiple platforms.',
+    year: '2023'
+  },
+  {
+    title: 'Global SEO Enhancer',
+    description: 'Innovative AI-powered SEO tool that helps businesses improve their global search rankings and visibility.',
+    year: '2023'
+  }
+];
+
+const platforms = [
+  { name: 'WooCommerce', logo: '/images/platforms/woocommerce.svg' },
+  { name: 'Shopify', logo: '/images/platforms/shopify.svg' },
+  { name: 'PrestaShop', logo: '/images/platforms/prestashop.svg' },
+  { name: 'Magento', logo: '/images/platforms/magento.svg' },
+  { name: 'BigCommerce', logo: '/images/platforms/bigcommerce.svg' },
+  { name: 'Wix', logo: '/images/platforms/wix.svg' }
+];
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <BaseHead 
+      title={`Services | ${businessInfo.name}`}
+      description={servicesData.hero.description}
+    />
+  </head>
+  <body>
+    <Header />
+    <main class="pt-10">
+      <!-- Hero Section -->
+      <section class={styles.hero.section}>
+        <div class="absolute inset-0 z-0">
+          <div class={styles.hero.blob1}></div>
+          <div class={styles.hero.blob2}></div>
+        </div>
+        <div class={styles.hero.container}>
+          <div class={styles.hero.grid}>
+            <!-- Left Content -->
+            <div>
+              <span class={styles.hero.subtitle}>
+                {servicesData.hero.subtitle}
+              </span>
+              <h1 class={styles.hero.title}>{servicesData.hero.title}</h1>
+              <p class={styles.hero.description}>{servicesData.hero.description}</p>
+              
+              <!-- Stats -->
+              <div class={styles.hero.statsContainer}>
+                {servicesData.stats.map(stat => (
+                  <div>
+                    <div class={styles.hero.statValue}>{stat.value}</div>
+                    <div class={styles.hero.statLabel}>{stat.label}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <!-- Right Image -->
+            <div class={styles.hero.imageContainer}>
+              <div class={styles.hero.imageBlob1}></div>
+              <div class={styles.hero.imageBlob2}></div>
+              <img 
+                src={servicesData.hero.image}
+                alt="Dental Services"
+                class={styles.hero.image}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Grid -->
+      <section class={styles.services.section}>
+        <div class={styles.services.container}>
+          <div class={styles.services.grid}>
+            {services.map(service => (
+              <div class={styles.services.card}>
+                <div class={styles.services.iconContainer}>
+                  <svg 
+                    class={styles.services.icon} 
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    set:html={service.iconPath}
+                  />
+                </div>
+                <h3 class={styles.services.cardTitle}>{service.title}</h3>
+                <p class={styles.services.cardDescription}>{service.description}</p>
+                <img 
+                  src={service.image}
+                  alt={service.title}
+                  class={styles.services.cardImage}
+                />
+                <a href={service.link} class={styles.services.cardLink}>
+                  Learn More
+                  <svg class={styles.services.cardLinkIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- Awards Section -->
+      <section class={styles.awards.section}>
+        <div class="absolute inset-0 z-0">
+          <div class={styles.awards.blob1}></div>
+          <div class={styles.awards.blob2}></div>
+        </div>
+        <div class={styles.awards.container}>
+          <div class={styles.awards.header}>
+            <span class={styles.awards.subtitle}>
+              RECOGNITION
+            </span>
+            <h2 class={styles.awards.title}>Our Awards & Recognition</h2>
+            <p class={styles.awards.description}>
+              We're proud to be recognized for our commitment to excellence in dental care.
+            </p>
+          </div>
+          <div class={styles.awards.grid}>
+            {servicesData.awards.map((award, index) => (
+              <div class={styles.awards.card}>
+                <img 
+                  src={award.image}
+                  alt={award.title}
+                  class={styles.awards.cardImage}
+                />
+                <span class={styles.awards.cardYear}>
+                  {award.year}
+                </span>
+                <h3 class={styles.awards.cardTitle}>{award.title}</h3>
+                <p class={styles.awards.cardDescription}>{award.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- Approach Section -->
+      <section class={styles.workflow.section}>
+        <div class={styles.workflow.container}>
+          <div class={styles.workflow.grid}>
+            <div>
+              <span class={styles.workflow.subtitle}>
+                {servicesData.workflow.subtitle}
+              </span>
+              <h2 class={styles.workflow.title}>{servicesData.workflow.title}</h2>
+              <p class={styles.workflow.description}>{servicesData.workflow.description}</p>
+              <a 
+                href={servicesData.workflow.cta.link} 
+                class={styles.workflow.cta}
+              >
+                {servicesData.workflow.cta.text}
+                <svg class={styles.workflow.ctaIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+            <div class={styles.workflow.imageContainer}>
+              <div class={styles.workflow.imageBlob}></div>
+              <img 
+                src={servicesData.workflow.image}
+                alt="Patient-Centered Approach"
+                class={styles.workflow.image}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Certifications -->
+      <section class={styles.platforms.section}>
+        <div class={styles.platforms.container}>
+          <div class={styles.platforms.logoContainer}>
+            {servicesData.platforms.map(platform => (
+              <img 
+                src={platform.logo}
+                alt={platform.name}
+                class={styles.platforms.logo}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style define:vars={{ 
+  blobAnimation: styles.animations.blob 
+}}>
+  @keyframes blob {
+    0% {
+      transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    }
+    33% {
+      transform: translate(-50%, -50%) scale(1.1) rotate(120deg);
+    }
+    66% {
+      transform: translate(-50%, -50%) scale(0.9) rotate(240deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1) rotate(360deg);
+    }
+  }
+
+  .animate-blob {
+    animation: blob 20s infinite linear;
+  }
+
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+
+  .backdrop-blur-sm {
+    backdrop-filter: blur(8px);
+  }
+
+  .hover\:-translate-y-0.5:hover {
+    transform: translateY(-2px);
+  }
+</style> 

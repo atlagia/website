@@ -1,0 +1,317 @@
+{
+  "hero": {
+    "subtitle": "PATIENT EXPERIENCE",
+    "title": "Automated Patient Reminders",
+    "description": "Reduce no-shows and improve practice efficiency with customizable, multi-channel appointment reminders that keep your schedule full and your patients informed."
+  },
+  "overview": {
+    "title": "Streamlined Patient Communication",
+    "description": "Our automated reminder system sends personalized notifications through text, email, and voice calls, ensuring patients never miss appointments while reducing staff workload.",
+    "features": [
+      {
+        "icon": "bell",
+        "title": "Multi-Channel Delivery",
+        "description": "Reach patients via text, email, and phone calls"
+      },
+      {
+        "icon": "repeat",
+        "title": "Automatic Sequencing",
+        "description": "Schedule multiple reminders at optimal intervals"
+      },
+      {
+        "icon": "message-square",
+        "title": "Two-Way Messaging",
+        "description": "Patients can confirm or request rescheduling"
+      },
+      {
+        "icon": "check-circle",
+        "title": "Real-Time Tracking",
+        "description": "Monitor confirmation rates and patient responses"
+      }
+    ]
+  },
+  "applications": {
+    "title": "Beyond Appointment Reminders",
+    "description": "Comprehensive communication tools that enhance every aspect of patient engagement",
+    "problems": [
+      {
+        "title": "Appointment Notifications",
+        "description": "Automated reminders with confirmation requests",
+        "icon": "calendar"
+      },
+      {
+        "title": "Recall Management",
+        "description": "Re-engage patients due for hygiene visits",
+        "icon": "refresh"
+      },
+      {
+        "title": "Treatment Follow-ups",
+        "description": "Check on patients after procedures",
+        "icon": "activity"
+      },
+      {
+        "title": "Birthday Greetings",
+        "description": "Personalized messages to build rapport",
+        "icon": "gift"
+      },
+      {
+        "title": "Practice Announcements",
+        "description": "Keep patients informed about office updates",
+        "icon": "alert-circle"
+      },
+      {
+        "title": "Review Requests",
+        "description": "Solicit feedback from satisfied patients",
+        "icon": "star"
+      }
+    ]
+  },
+  "process": {
+    "title": "Implementation Process",
+    "steps": [
+      {
+        "number": "01",
+        "title": "System Integration",
+        "description": "Connect to your practice management software"
+      },
+      {
+        "number": "02",
+        "title": "Reminder Configuration",
+        "description": "Set up timing and content of notifications"
+      },
+      {
+        "number": "03",
+        "title": "Template Customization",
+        "description": "Personalize message templates for your practice"
+      },
+      {
+        "number": "04",
+        "title": "Staff Training",
+        "description": "Train your team on managing the system"
+      },
+      {
+        "number": "05",
+        "title": "Patient Communication",
+        "description": "Inform patients about the new reminder system"
+      },
+      {
+        "number": "06",
+        "title": "Ongoing Optimization",
+        "description": "Regular review and refinement of your reminders"
+      }
+    ]
+  },
+  "advantages": {
+    "title": "Practice Benefits",
+    "description": "How automated reminders transform your practice operations",
+    "benefits": [
+      {
+        "title": "80% Fewer No-Shows",
+        "description": "Dramatically reduce missed appointments",
+        "icon": "user-check"
+      },
+      {
+        "title": "30+ Hours Saved Monthly",
+        "description": "Eliminate manual phone calls from staff",
+        "icon": "clock"
+      },
+      {
+        "title": "15% More Production",
+        "description": "Keep your schedule full and productive",
+        "icon": "trending-up"
+      },
+      {
+        "title": "90% Patient Satisfaction",
+        "description": "Patients appreciate helpful reminders",
+        "icon": "smile"
+      }
+    ]
+  },
+  "features": {
+    "title": "Key Features",
+    "description": "Powerful tools to enhance patient communication",
+    "featureList": [
+      {
+        "title": "Smart Scheduling",
+        "description": "Send reminders at optimal times for response",
+        "icon": "clock"
+      },
+      {
+        "title": "Custom Templates",
+        "description": "Personalize messages for different appointment types",
+        "icon": "edit"
+      },
+      {
+        "title": "Automated Recall",
+        "description": "Re-engage patients due for regular visits",
+        "icon": "refresh"
+      },
+      {
+        "title": "Confirmation Tracking",
+        "description": "Monitor response rates in real time",
+        "icon": "bar-chart"
+      },
+      {
+        "title": "Language Options",
+        "description": "Multi-language support for diverse patients",
+        "icon": "globe"
+      },
+      {
+        "title": "Family Grouping",
+        "description": "Coordinate reminders for family appointments",
+        "icon": "users"
+      },
+      {
+        "title": "HIPAA Compliance",
+        "description": "Secure messaging that protects patient privacy",
+        "icon": "shield"
+      },
+      {
+        "title": "Staff Dashboard",
+        "description": "Easy-to-use interface for managing reminders",
+        "icon": "layout"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Pricing Options",
+    "description": "Select the plan that fits your practice needs",
+    "options": [
+      {
+        "name": "Essentials",
+        "price": "$99",
+        "duration": "per month",
+        "includes": [
+          "Email and text reminders",
+          "Appointment confirmations",
+          "Basic templates",
+          "Single location",
+          "Up to 500 messages/month",
+          "Email support"
+        ]
+      },
+      {
+        "name": "Professional",
+        "price": "$199",
+        "duration": "per month",
+        "includes": [
+          "All Essentials features",
+          "Voice call reminders",
+          "Two-way messaging",
+          "Custom templates",
+          "Recall management",
+          "Up to 2,000 messages/month",
+          "Priority support"
+        ]
+      },
+      {
+        "name": "Enterprise",
+        "price": "$349",
+        "duration": "per month",
+        "includes": [
+          "All Professional features",
+          "Unlimited messages",
+          "Multi-location support",
+          "Advanced analytics",
+          "Custom integrations",
+          "Post-treatment follow-ups",
+          "Review generation",
+          "Dedicated account manager"
+        ]
+      }
+    ]
+  },
+  "integration": {
+    "title": "Seamless Integration",
+    "description": "Works with your existing practice management systems",
+    "partners": [
+      {
+        "name": "Dentrix",
+        "logo": "/images/partners/dentrix.png"
+      },
+      {
+        "name": "Eaglesoft",
+        "logo": "/images/partners/eaglesoft.png"
+      },
+      {
+        "name": "Open Dental",
+        "logo": "/images/partners/opendental.png"
+      },
+      {
+        "name": "Curve Dental",
+        "logo": "/images/partners/curve.png"
+      },
+      {
+        "name": "Denticon",
+        "logo": "/images/partners/denticon.png"
+      },
+      {
+        "name": "Dentimax",
+        "logo": "/images/partners/dentimax.png"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": [
+      {
+        "question": "How do patients confirm their appointments?",
+        "answer": "Patients can confirm appointments with a simple tap in text messages or email notifications. They can also request rescheduling through the same message. For voice calls, patients can confirm by pressing a button on their keypad. All confirmations are instantly updated in your practice management software."
+      },
+      {
+        "question": "Can we customize the timing of reminders?",
+        "answer": "Absolutely. You can set multiple reminders at different intervals (e.g., 1 week, 2 days, and 2 hours before appointments). You can also customize timing based on appointment type, with longer lead times for surgical procedures and shorter for routine hygiene visits."
+      },
+      {
+        "question": "How does the system handle patients who don't respond?",
+        "answer": "The system automatically escalates through communication channels if patients don't respond. For example, if a text message isn't confirmed, the system can send an email, and then initiate a voice call. You can also configure alerts for staff to follow up personally with non-responsive patients."
+      },
+      {
+        "question": "Can we personalize the reminder messages?",
+        "answer": "Yes, all message templates are fully customizable. You can include patient names, appointment details, provider names, pre-appointment instructions, and your practice branding. Different appointment types can have different templates, and you can create seasonal variations or special messages."
+      },
+      {
+        "question": "What about patients without mobile phones or email?",
+        "answer": "The system maintains a patient communication preference database. For patients without digital access, the system can still generate automated voice calls to landlines. You can also mark certain patients for manual reminders only, and the system will alert your staff to call these patients directly."
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Customer Success Stories",
+    "reviews": [
+      {
+        "name": "Dr. Thomas Reynolds",
+        "practice": "Reynolds Family Dental",
+        "rating": 5,
+        "comment": "Before implementing this reminder system, our no-show rate was around 18%. Now it's consistently below 4%. The automated recalls have also brought back dozens of patients who had fallen out of their regular hygiene schedule. The ROI has been incredible.",
+        "date": "2 months ago"
+      },
+      {
+        "name": "Maria Gonzalez",
+        "practice": "Office Manager, Smile Design Studio",
+        "rating": 5,
+        "comment": "My front desk team used to spend at least 2 hours daily making reminder calls. Now that time is freed up for more valuable patient interactions. Patients appreciate the text reminders, and the two-way messaging feature has made rescheduling so much easier for everyone.",
+        "date": "3 months ago"
+      },
+      {
+        "name": "Dr. Sarah Kim",
+        "practice": "Parkside Pediatric Dentistry",
+        "rating": 5,
+        "comment": "The family grouping feature is perfect for our pediatric practice. Parents love getting coordinated reminders when multiple children have back-to-back appointments. The customizable templates also let us use child-friendly language that matches our practice personality.",
+        "date": "1 month ago"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Reduce No-Shows and Streamline Communication?",
+    "description": "Join thousands of dental practices using our platform to keep schedules full and patients engaged.",
+    "primaryButton": {
+      "text": "Request Demo",
+      "href": "/request-demo"
+    },
+    "secondaryButton": {
+      "text": "View Pricing",
+      "href": "/pricing"
+    }
+  }
+} 

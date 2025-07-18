@@ -1,0 +1,223 @@
+---
+import { SITE_TITLE } from '../../consts';
+import pkg from 'lucide-react';
+const { Shield, Clock, Palette, Tool, Wallet, PenTool, Droplet, MoveHorizontal, Puzzle, Activity, Heart, DollarSign, ShieldCheck, Zap } = pkg;
+
+const theme = import.meta.env.THEME || 'default';
+const lang = Astro.params.lang || 'en';
+
+const { default: BaseHead } = await import(`../../components/BaseHead.astro`);
+const { default: Header } = await import(`../../components/Header.astro`);
+const { default: Footer } = await import(`../../components/Footer.astro`);
+
+// Import language-specific service data
+const serviceData = await import(`../../data/services/bonding/bonding_${lang}.json`);
+
+const businessInfo = {
+  name: import.meta.env.PUBLIC_BUSINESS_NAME || 'DentCare'
+};
+
+// Define icon paths
+const iconPaths = {
+  clock: `<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>`,
+  palette: `<circle cx="13.5" cy="6.5" r="3.5"/><path d="M7 14c-1.5 1-3 3.5-3 5.5a5.5 5.5 0 0 0 11 0c0-2-1.5-4.5-3-5.5"/><path d="M14 6.5v10"/>`,
+  wallet: `<rect x="2" y="5" width="20" height="14" rx="2"/><path d="M16 14h.01"/>`,
+  tool: `<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>`,
+  puzzle: `<path d="M19.439 7.85c-.049.322.059.648.289.878l1.568 1.568c.47.47.706 1.087.706 1.704s-.235 1.233-.706 1.704l-1.611 1.611a.98.98 0 0 1-.837.276c-.47-.07-.802-.48-.968-.925a2.501 2.501 0 1 0-3.214 3.214c.446.166.855.497.925.968a.979.979 0 0 1-.276.837l-1.611 1.611a2.404 2.404 0 0 1-1.704.706 2.402 2.402 0 0 1-1.704-.706l-1.568-1.568a1.026 1.026 0 0 0-.877-.29c-.493.074-.84.504-1.02.968a2.5 2.5 0 1 1-3.237-3.237c.464-.18.894-.527.967-1.02a1.026 1.026 0 0 0-.289-.877l-1.568-1.568A2.402 2.402 0 0 1 1.998 12c0-.617.236-1.234.706-1.704L4.23 8.77c.24-.24.867-.676 1.915-.866-.18-.464-.527-.894-1.02-.967a2.5 2.5 0 1 1 3.237-3.237c.18.464.527.894.967 1.02.323.049.649-.059.879-.289L11.776 2.9c.47-.47 1.087-.706 1.704-.706s1.233.236 1.704.706l1.568 1.568c.23.23.556.338.879.29.493-.074.84-.504 1.02-.968a2.5 2.5 0 1 1 3.237 3.237c-.464.18-.894.527-.967 1.02z"/>`,
+  "move-horizontal": `<polyline points="18 8 22 12 18 16"/><polyline points="6 8 2 12 6 16"/><line x1="2" y1="12" x2="22" y2="12"/>`,
+  droplet: `<path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/>`,
+  "pen-tool": `<path d="m12 19 7-7 3 3-7 7-3-3z"/><path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="m2 2 7.586 7.586"/><circle cx="11" cy="11" r="2"/>`,
+  shield: `<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>`,
+  activity: `<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>`,
+  heart: `<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>`,
+  "dollar-sign": `<line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>`,
+  "shield-check": `<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/>`,
+  zap: `<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>`
+};
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <BaseHead 
+      title={`${serviceData.hero.title} | ${businessInfo.name}`}
+      description={serviceData.hero.description}
+    />
+  </head>
+  <body>
+    <Header />
+    <main class="pt-10">
+      <!-- Hero Section -->
+      <section class="relative py-20 px-4 bg-gradient-to-b from-[#f0f9ff] via-white to-transparent overflow-hidden">
+        <div class="absolute inset-0 z-0">
+          <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-bl from-[#0a91b1]/10 to-blue-500/10 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
+          <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-tr from-sky-500/10 to-[#0a91b1]/10 rounded-full blur-3xl animate-blob"></div>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto text-center">
+          <span class="inline-block px-4 py-1.5 mb-4 text-sm font-medium rounded-full bg-[#0a91b1]/10 text-[#0a91b1] border border-[#0a91b1]/20">
+            {serviceData.hero.subtitle}
+          </span>
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">{serviceData.hero.title}</h1>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            {serviceData.hero.description}
+          </p>
+        </div>
+      </section>
+
+      <!-- Applications Grid -->
+      <section class="relative py-16 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">{serviceData.applications.title}</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">{serviceData.applications.description}</p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {serviceData.applications.problems.map(problem => (
+              <div class="p-6 bg-white rounded-2xl border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div class="w-12 h-12 rounded-xl bg-[#0a91b1]/10 flex items-center justify-center mb-4">
+                  <svg 
+                    class="w-6 h-6 text-[#0a91b1]"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    set:html={iconPaths[problem.icon]}
+                  />
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">{problem.title}</h3>
+                <p class="text-gray-600">{problem.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- Process Steps -->
+      <section class="relative py-16 px-4 bg-gradient-to-b from-white via-[#0a91b1]/5 to-white">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">{serviceData.process.title}</h2>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
+            {serviceData.process.steps.map((step, index) => (
+              <div class="relative">
+                {index < serviceData.process.steps.length - 1 && (
+                  <div class="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2">
+                    <svg class="w-6 h-6 text-[#0a91b1]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                      <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                  </div>
+                )}
+                <div class="p-6 bg-white rounded-2xl border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300">
+                  <span class="inline-block text-3xl font-bold text-[#0a91b1] mb-4">{step.number}</span>
+                  <h3 class="text-xl font-semibold text-gray-900 mb-2">{step.title}</h3>
+                  <p class="text-gray-600">{step.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing Section -->
+      <section class="relative py-16 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">{serviceData.pricing.title}</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">{serviceData.pricing.description}</p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {serviceData.pricing.options.map(option => (
+              <div class="p-8 bg-white rounded-2xl border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300">
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">{option.name}</h3>
+                <p class="text-3xl font-bold text-[#0a91b1] mb-4">{option.price}</p>
+                <p class="text-gray-600 mb-2">Duration: {option.duration}</p>
+                <ul class="space-y-3 mt-6">
+                  {option.includes.map(item => (
+                    <li class="flex items-center">
+                      <svg class="w-5 h-5 text-[#0a91b1] mr-3" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <polyline points="20 6 9 17 4 12"/>
+                      </svg>
+                      <span class="text-gray-600">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- Care Instructions -->
+      <section class="relative py-16 px-4 bg-gradient-to-b from-white via-[#0a91b1]/5 to-white">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">{serviceData.care.title}</h2>
+          </div>
+          <div class="max-w-3xl mx-auto">
+            <ul class="space-y-4">
+              {serviceData.care.instructions.map(instruction => (
+                <li class="flex items-center p-4 bg-white rounded-xl shadow-sm">
+                  <svg class="w-6 h-6 text-[#0a91b1] mr-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  <span class="text-gray-700">{instruction}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="relative py-16 px-4 bg-[#0a91b1]">
+        <div class="max-w-7xl mx-auto text-center">
+          <h2 class="text-3xl font-bold text-white mb-4">{serviceData.cta.title}</h2>
+          <p class="text-xl text-white/90 max-w-3xl mx-auto mb-8">{serviceData.cta.description}</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href={serviceData.cta.primaryButton.href}
+              class="inline-block px-8 py-3 bg-white text-[#0a91b1] font-semibold rounded-full hover:bg-gray-100 transition-colors duration-300"
+            >
+              {serviceData.cta.primaryButton.text}
+            </a>
+            <a
+              href={serviceData.cta.secondaryButton.href}
+              class="inline-block px-8 py-3 bg-transparent text-white font-semibold rounded-full border-2 border-white hover:bg-white/10 transition-colors duration-300"
+            >
+              {serviceData.cta.secondaryButton.text}
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style>
+  @keyframes blob {
+    0% {
+      transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    }
+    33% {
+      transform: translate(-50%, -50%) scale(1.1) rotate(120deg);
+    }
+    66% {
+      transform: translate(-50%, -50%) scale(0.9) rotate(240deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1) rotate(360deg);
+    }
+  }
+
+  .animate-blob {
+    animation: blob 20s infinite linear;
+  }
+
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+</style> 

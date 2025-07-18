@@ -1,0 +1,103 @@
+{
+  "hero": {
+    "subtitle": "ABOUT US",
+    "title": "Empowering Business Through Intelligent Automation",
+    "description": "We're on a mission to revolutionize how businesses operate by making powerful automation accessible to everyone. Our AI-driven platform helps companies work smarter, faster, and more efficiently."
+  },
+  "mission": {
+    "subtitle": "OUR MISSION",
+    "title": "Transforming Work Through Innovation",
+    "description": "At AutomatePro, we believe that every business deserves access to powerful automation tools. We're dedicated to creating solutions that eliminate repetitive tasks, reduce errors, and free up teams to focus on what matters most - innovation and growth.",
+    "image": "https://cdn.atlagia.com/automation-mission.png",
+    "stats": [
+      {
+        "value": "10M+",
+        "label": "Tasks Automated Daily"
+      },
+      {
+        "value": "5000+",
+        "label": "Business Transformed"
+      },
+      {
+        "value": "99.9%",
+        "label": "Platform Uptime"
+      },
+      {
+        "value": "24/7",
+        "label": "Global Support"
+      }
+    ]
+  },
+  "features": {
+    "title": "Why Choose AutomatePro",
+    "description": "Our platform combines cutting-edge technology with user-friendly design to deliver powerful automation capabilities.",
+    "features": [
+      {
+        "icon": "Code",
+        "title": "No-Code Builder",
+        "description": "Create complex automation workflows without writing a single line of code. Our intuitive drag-and-drop interface makes it easy."
+      },
+      {
+        "icon": "Cpu",
+        "title": "AI-Powered Intelligence",
+        "description": "Advanced machine learning algorithms that adapt and improve your automation workflows over time."
+      },
+      {
+        "icon": "Globe",
+        "title": "Global Scale",
+        "description": "Enterprise-grade infrastructure that scales with your business needs, from startup to global enterprise."
+      },
+      {
+        "icon": "Shield",
+        "title": "Enterprise Security",
+        "description": "Bank-grade security with SOC 2 compliance, encryption at rest and in transit, and regular security audits."
+      },
+      {
+        "icon": "Zap",
+        "title": "Lightning Fast",
+        "description": "High-performance architecture ensuring your automations run at peak efficiency with minimal latency."
+      },
+      {
+        "icon": "Users",
+        "title": "Team Collaboration",
+        "description": "Built-in tools for team collaboration, version control, and workflow management."
+      }
+    ]
+  },
+  "team": {
+    "title": "Meet Our Leadership",
+    "description": "The innovative minds behind AutomatePro's mission to transform business automation.",
+    "members": [
+      {
+        "name": "Sarah Chen",
+        "role": "CEO & Co-founder",
+        "image": "https://cdn.atlagia.com/team/sarah-chen.jpg",
+        "bio": "Former AI research lead at Google, passionate about making automation accessible to all businesses."
+      },
+      {
+        "name": "Michael Rodriguez",
+        "role": "CTO",
+        "image": "https://cdn.atlagia.com/team/michael-rodriguez.jpg",
+        "bio": "20+ years in enterprise software development, specializing in scalable cloud architecture."
+      },
+      {
+        "name": "Emma Thompson",
+        "role": "Head of Product",
+        "image": "https://cdn.atlagia.com/team/emma-thompson.jpg",
+        "bio": "Product veteran from Salesforce, focused on creating intuitive user experiences."
+      },
+      {
+        "name": "David Kim",
+        "role": "Head of AI",
+        "image": "https://cdn.atlagia.com/team/david-kim.jpg",
+        "bio": "PhD in Machine Learning, leading our AI innovation and automation intelligence."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Transform Your Business?",
+    "description": "Join thousands of businesses already using AutomatePro to streamline their operations and boost productivity.",
+    "buttonText": "Start Free Trial",
+    "buttonLink": "/signup"
+  }
+} 

@@ -1,0 +1,335 @@
+{
+  "hero": {
+    "subtitle": "Gestion de Cabinet Médical",
+    "title": "Transformez Votre Cabinet Médical avec une Technologie Intelligente",
+    "description": "Une solution tout-en-un conçue spécifiquement pour les cabinets médicaux, combinant soins aux patients, gestion de cabinet et analyses avancées pour optimiser vos opérations.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Démo de la Solution de Gestion de Cabinet Médical"
+    },
+    "stats": [
+      {
+        "value": "98%",
+        "label": "Satisfaction des Patients"
+      },
+      {
+        "value": "40%",
+        "label": "Temps Économisé"
+      },
+      {
+        "value": "2.5x",
+        "label": "Croissance des Revenus"
+      }
+    ]
+  },
+  "features": {
+    "subtitle": "Fonctionnalités Complètes",
+    "title": "Tout ce dont Vous Avez Besoin pour Gérer Votre Cabinet",
+    "description": "Notre solution de gestion de cabinet médical combine une technologie de pointe avec des interfaces conviviales pour améliorer les soins aux patients et optimiser les opérations.",
+    "categories": [
+      {
+        "name": "Excellence des Soins aux Patients",
+        "description": "Outils et fonctionnalités conçus pour améliorer l'expérience patient et la qualité des soins"
+      },
+      {
+        "name": "Efficacité du Cabinet",
+        "description": "Optimisation des opérations et réduction de la charge administrative"
+      }
+    ],
+    "items": [
+      {
+        "icon": "calendar",
+        "category": "Gestion du Cabinet",
+        "title": "Planification Intelligente",
+        "description": "Système de planification assisté par IA qui optimise les créneaux horaires et réduit les rendez-vous manqués",
+        "image": "/images/solutions/medical/scheduling.jpg",
+        "highlights": [
+          "Rappels automatiques",
+          "Support multi-sites",
+          "Disponibilité en temps réel",
+          "Gestion des listes d'attente"
+        ],
+        "stats": {
+          "value": "50%",
+          "label": "Réduction des rendez-vous manqués"
+        }
+      },
+      {
+        "icon": "users",
+        "category": "Soins aux Patients",
+        "title": "Portail Patient",
+        "description": "Portail sécurisé pour les rendez-vous, la communication et les dossiers médicaux",
+        "image": "/images/solutions/medical/patient-portal.jpg",
+        "highlights": [
+          "Réservation en ligne",
+          "Messagerie sécurisée",
+          "Accès aux résultats",
+          "Renouvellement d'ordonnances"
+        ],
+        "stats": {
+          "value": "92%",
+          "label": "Engagement des patients"
+        }
+      },
+      {
+        "icon": "brain",
+        "category": "Outils Cliniques",
+        "title": "Support à la Décision Clinique",
+        "description": "Diagnostic et recommandations de traitement assistés par IA basés sur les dernières recherches médicales",
+        "image": "/images/solutions/medical/clinical-support.jpg",
+        "highlights": [
+          "Directives fondées sur des preuves",
+          "Vérification des interactions médicamenteuses",
+          "Parcours cliniques",
+          "Évaluations des risques"
+        ],
+        "stats": {
+          "value": "35%",
+          "label": "Diagnostics plus rapides"
+        }
+      },
+      {
+        "icon": "chart-up",
+        "category": "Analytique",
+        "title": "Analytique du Cabinet",
+        "description": "Analyses et rapports complets pour une meilleure gestion du cabinet",
+        "image": "/images/solutions/medical/analytics.jpg",
+        "highlights": [
+          "Performance financière",
+          "Résultats des patients",
+          "Métriques opérationnelles",
+          "Mesures de qualité"
+        ],
+        "stats": {
+          "value": "45%",
+          "label": "Augmentation des revenus"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Découvrez Notre Solution en Action",
+    "description": "Voyez comment les cabinets médicaux leaders transforment les soins aux patients avec notre solution",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Histoire de Réussite du Cabinet Médical"
+    },
+    "testimonials": [
+      {
+        "author": "Dr. Sarah Johnson",
+        "role": "Directrice de Cabinet de Médecine Générale",
+        "image": "/images/testimonials/doctor1.jpg",
+        "quote": "Cette solution a révolutionné la façon dont nous gérons notre cabinet. Les gains d'efficacité sont remarquables."
+      },
+      {
+        "author": "Dr. Michael Chen",
+        "role": "Spécialiste en Médecine Interne",
+        "image": "/images/testimonials/doctor2.jpg",
+        "quote": "Les outils d'aide à la décision clinique ont été inestimables pour fournir des soins fondés sur des preuves à nos patients."
+      }
+    ]
+  },
+  "benefits": {
+    "subtitle": "Avantages Clés",
+    "title": "Transformez Votre Cabinet",
+    "description": "Découvrez les avantages d'une solution de gestion de cabinet médical entièrement intégrée",
+    "items": [
+      {
+        "icon": "trending-up",
+        "title": "Excellence Opérationnelle",
+        "description": "Optimisez les opérations de votre cabinet et réduisez la charge administrative",
+        "color": "blue",
+        "stats": {
+          "value": "40%",
+          "label": "Augmentation de l'efficacité"
+        },
+        "highlights": [
+          "Processus automatisés",
+          "Réduction du papier",
+          "Facturation optimisée",
+          "Meilleure allocation des ressources"
+        ]
+      },
+      {
+        "icon": "heart",
+        "title": "Soins aux Patients Améliorés",
+        "description": "Offrez de meilleures expériences aux patients et améliorez les résultats de santé",
+        "color": "purple",
+        "stats": {
+          "value": "95%",
+          "label": "Satisfaction des patients"
+        },
+        "highlights": [
+          "Plans de soins personnalisés",
+          "Meilleur suivi",
+          "Communication améliorée",
+          "Engagement accru"
+        ]
+      },
+      {
+        "icon": "chart-up",
+        "title": "Croissance Financière",
+        "description": "Augmentez les revenus et améliorez la performance financière",
+        "color": "green",
+        "stats": {
+          "value": "35%",
+          "label": "Croissance des revenus"
+        },
+        "highlights": [
+          "Facturation optimisée",
+          "Réduction des refus",
+          "Meilleur recouvrement",
+          "Rentabilité accrue"
+        ]
+      },
+      {
+        "icon": "star",
+        "title": "Assurance Qualité",
+        "description": "Maintenez des normes élevées de soins et de conformité réglementaire",
+        "color": "yellow",
+        "stats": {
+          "value": "100%",
+          "label": "Taux de conformité"
+        },
+        "highlights": [
+          "Conformité HIPAA",
+          "Métriques de qualité",
+          "Préparation aux audits",
+          "Gestion des risques"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "subtitle": "Tarification Transparente",
+    "title": "Plans de Tarification Flexibles",
+    "description": "Choisissez le plan parfait pour votre cabinet. Économisez jusqu'à 20% avec la facturation annuelle.",
+    "billingPeriods": ["Mensuel", "Annuel"],
+    "plans": [
+      {
+        "name": "Débutant",
+        "highlight": "Parfait pour les petits cabinets",
+        "monthlyPrice": "$299",
+        "yearlyPrice": "$2,990",
+        "yearlyDiscount": "Économisez $598/an",
+        "description": "Fonctionnalités essentielles pour démarrer votre transformation numérique",
+        "features": [
+          {
+            "text": "Planification de base",
+            "included": true
+          },
+          {
+            "text": "Accès au portail patient",
+            "included": true
+          },
+          {
+            "text": "Dossiers médicaux électroniques",
+            "included": true
+          },
+          {
+            "text": "Support par email (24/7)",
+            "included": true
+          },
+          {
+            "text": "Analytique de base",
+            "included": true
+          },
+          {
+            "text": "Accès à l'application mobile",
+            "included": true
+          }
+        ],
+        "cta": "Commencer",
+        "popular": false
+      },
+      {
+        "name": "Professionnel",
+        "highlight": "Plus populaire pour les cabinets en croissance",
+        "monthlyPrice": "$599",
+        "yearlyPrice": "$5,990",
+        "yearlyDiscount": "Économisez $1,198/an",
+        "description": "Fonctionnalités avancées pour les cabinets établis",
+        "features": [
+          {
+            "text": "Tout ce qui est inclus dans Débutant, plus :",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Support clinique assisté par IA",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "Support multi-praticiens",
+            "included": true
+          },
+          {
+            "text": "Tableau de bord analytique avancé",
+            "included": true
+          },
+          {
+            "text": "Support prioritaire",
+            "included": true
+          },
+          {
+            "text": "Intégration télésanté",
+            "included": true
+          }
+        ],
+        "cta": "Commencer",
+        "popular": true
+      },
+      {
+        "name": "Entreprise",
+        "highlight": "Pour les grands groupes médicaux",
+        "monthlyPrice": "Personnalisé",
+        "yearlyPrice": "Personnalisé",
+        "yearlyDiscount": "Contactez-nous pour des tarifs spéciaux",
+        "description": "Solutions personnalisées pour les besoins entreprise",
+        "features": [
+          {
+            "text": "Tout ce qui est inclus dans Professionnel, plus :",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Support d'intégration personnalisé",
+            "included": true
+          },
+          {
+            "text": "Gestionnaire de compte dédié",
+            "included": true
+          },
+          {
+            "text": "Fonctionnalités de sécurité avancées",
+            "included": true
+          },
+          {
+            "text": "Options de développement personnalisées",
+            "included": true
+          },
+          {
+            "text": "Garanties SLA",
+            "included": true
+          }
+        ],
+        "cta": "Contacter les Ventes",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prêt à Transformer Votre Cabinet Médical ?",
+    "description": "Rejoignez des milliers de professionnels de santé qui ont déjà modernisé leur cabinet avec notre solution.",
+    "background": "/images/solutions/medical/cta-background.jpg",
+    "primaryButton": {
+      "text": "Planifier une Démo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Voir la Démo",
+      "link": "#showcase"
+    }
+  }
+} 

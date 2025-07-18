@@ -1,0 +1,192 @@
+{
+  "hero": {
+    "subtitle": "INTELLIGENCE DES PRIX",
+    "title": "Décisions de Prix Intelligentes avec l'IA",
+    "description": "Exploitez l'intelligence des prix alimentée par l'IA pour optimiser votre stratégie tarifaire, surveiller la concurrence et maximiser la rentabilité en temps réel.",
+    "image": "https://cdn.atlagia.com/kepart_vector_laptop_Ai_Platform_e-commerce_AI_Revolution_light_3e4c59d4-966d-419c-8475-b306aae1ac92.png"
+  },
+  "benefits": {
+    "title": "Pourquoi Choisir Notre Intelligence des Prix",
+    "items": [
+      {
+        "icon": "Brain",
+        "title": "Analyse par IA",
+        "description": "Optimisation intelligente des prix utilisant des algorithmes de machine learning.",
+        "color": "purple"
+      },
+      {
+        "icon": "Target",
+        "title": "Suivi Concurrentiel",
+        "description": "Surveillance en temps réel des stratégies de prix des concurrents.",
+        "color": "blue"
+      },
+      {
+        "icon": "TrendingUp",
+        "title": "Insights Marché",
+        "description": "Analyse approfondie du marché et prévision de la demande.",
+        "color": "green"
+      },
+      {
+        "icon": "LineChart",
+        "title": "Analytics Performance",
+        "description": "Analyse détaillée de la performance et de l'impact des prix.",
+        "color": "pink"
+      }
+    ]
+  },
+  "features": {
+    "title": "Fonctionnalités d'Intelligence Puissantes",
+    "description": "Tout ce dont vous avez besoin pour prendre des décisions de prix intelligentes.",
+    "items": [
+      {
+        "title": "Surveillance des Prix en Temps Réel",
+        "description": "Suivez les prix des concurrents et les tendances du marché en temps réel",
+        "image": "/images/services/price-monitoring.svg",
+        "features": [
+          "Suivi automatisé des prix",
+          "Analyse concurrentielle",
+          "Positionnement marché",
+          "Alertes de changement de prix"
+        ]
+      },
+      {
+        "title": "Optimisation Dynamique des Prix",
+        "description": "Optimisez les prix automatiquement selon les conditions du marché",
+        "image": "/images/services/price-optimization.svg",
+        "features": [
+          "Recommandations par IA",
+          "Prix basé sur la demande",
+          "Optimisation des marges",
+          "Règles de prix personnalisées"
+        ]
+      },
+      {
+        "title": "Analytics Avancées",
+        "description": "Insights approfondis sur la performance des prix et les tendances du marché",
+        "image": "/images/services/pricing-analytics.svg",
+        "features": [
+          "Suivi de performance",
+          "Analyse de marché",
+          "Impact sur les revenus",
+          "Prévision des tendances"
+        ]
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "Comment Ça Marche",
+    "description": "Commencez avec la tarification intelligente en quatre étapes simples",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Connectez Vos Données",
+        "description": "Intégrez vos données produits et concurrentielles"
+      },
+      {
+        "number": "02",
+        "title": "Définissez la Stratégie",
+        "description": "Définissez vos règles et objectifs de prix"
+      },
+      {
+        "number": "03",
+        "title": "Surveillez & Analysez",
+        "description": "Suivez les prix et tendances en temps réel"
+      },
+      {
+        "number": "04",
+        "title": "Optimisez & Adaptez",
+        "description": "Laissez l'IA optimiser votre stratégie de prix"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Tarification Simple et Transparente",
+    "description": "Choisissez le forfait qui correspond le mieux à vos besoins en intelligence des prix",
+    "plans": [
+      {
+        "name": "Débutant",
+        "price": "99",
+        "period": "/mois",
+        "description": "Pour les petites entreprises",
+        "features": [
+          "Jusqu'à 1 000 SKUs",
+          "Surveillance de base",
+          "Mises à jour quotidiennes",
+          "Support par email"
+        ],
+        "cta": {
+          "text": "Essai Gratuit",
+          "link": "/trial"
+        }
+      },
+      {
+        "name": "Professionnel",
+        "price": "249",
+        "period": "/mois",
+        "description": "Pour les entreprises en croissance",
+        "features": [
+          "Jusqu'à 10 000 SKUs",
+          "Analytics avancées",
+          "Mises à jour en temps réel",
+          "Support prioritaire"
+        ],
+        "cta": {
+          "text": "Essai Gratuit",
+          "link": "/trial"
+        },
+        "popular": true
+      },
+      {
+        "name": "Entreprise",
+        "price": "699",
+        "period": "/mois",
+        "description": "Pour les grandes opérations",
+        "features": [
+          "SKUs illimités",
+          "Solutions personnalisées",
+          "Accès API",
+          "Support 24/7"
+        ],
+        "cta": {
+          "text": "Contacter les Ventes",
+          "link": "/contact"
+        }
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Ce Que Disent Nos Clients",
+    "items": [
+      {
+        "content": "La plateforme d'intelligence des prix nous a aidés à augmenter nos marges bénéficiaires de 35% tout en restant compétitifs sur notre marché. Les recommandations de l'IA sont parfaites.",
+        "author": "James Anderson",
+        "position": "Directeur des Prix",
+        "company": "MarketPro",
+        "image": "/images/testimonials/james.jpg"
+      },
+      {
+        "content": "Le suivi des concurrents en temps réel et les ajustements automatiques des prix nous ont donné un avantage significatif sur notre marché. Cela a transformé notre entreprise.",
+        "author": "Sophie Chen",
+        "position": "Responsable E-commerce",
+        "company": "TechRetail",
+        "image": "/images/testimonials/sophie.jpg"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prêt à Optimiser Vos Prix ?",
+    "description": "Rejoignez des milliers d'entreprises qui utilisent notre plateforme pour prendre des décisions de prix plus intelligentes.",
+    "buttons": [
+      {
+        "text": "Essai Gratuit",
+        "link": "/trial",
+        "primary": true
+      },
+      {
+        "text": "Programmer une Démo",
+        "link": "/demo",
+        "primary": false
+      }
+    ]
+  }
+} 

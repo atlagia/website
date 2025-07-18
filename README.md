@@ -1,54 +1,198 @@
-# Astro Starter Kit: Basics
+# StreamVista IPTV Platform
 
-```sh
-npm create astro@latest -- --template basics
+A modern, multi-theme IPTV streaming platform built with Astro.js, featuring dynamic content management and responsive design.
+
+## 🚀 Features
+
+- **Multi-Theme Architecture**: Support for multiple themes (StreamVista IPTV, Dental Care, Agency, etc.)
+- **Dynamic Content**: All content driven by JSON data files for easy management
+- **Internationalization**: Multi-language support (English, French, Spanish, Italian, German, Dutch, Portuguese)
+- **Responsive Design**: Mobile-first approach with Tailwind CSS
+- **Modern UI/UX**: Dark theme with glassmorphism effects and smooth animations
+- **SEO Optimized**: Built-in SEO features and meta tag management
+- **Fast Performance**: Static site generation with Astro.js
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Astro.js](https://astro.build/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Language**: TypeScript
+- **Icons**: Lucide React
+- **Animations**: CSS animations and transitions
+- **Build Tool**: Vite
+
+## 📦 Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/streamvista-iptv.git
+   cd streamvista-iptv
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   # or
+   pnpm install
+   ```
+
+3. **Set up environment variables**
+   ```bash
+   cp .env.example .env
+   ```
+   Edit `.env` with your configuration values.
+
+4. **Start the development server**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
+   ```
+
+5. **Open your browser**
+   Navigate to `http://localhost:4321`
+
+## 🏗️ Project Structure
+
 ```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
+website/
 ├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── components/           # Shared components
+│   ├── layouts/             # Layout components
+│   ├── pages/               # Page routes
+│   ├── themes/              # Theme-specific components
+│   │   ├── agency/          # Agency theme
+│   │   ├── bikes/           # Bikes theme
+│   │   ├── clinic/          # Clinic theme
+│   │   ├── default/         # Default theme
+│   │   └── iptv/            # StreamVista IPTV theme
+│   ├── utils/               # Utility functions
+│   └── websites/            # Website configurations
+│       └── StreamVista/     # StreamVista website
+│           └── themes/
+│               └── iptv/    # IPTV theme files
+├── public/                  # Static assets
+├── scripts/                 # Build and deployment scripts
+└── stores/                  # Store configurations
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 🎨 Themes
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+### StreamVista IPTV Theme
+- **Location**: `src/websites/StreamVista/themes/iptv/`
+- **Features**: Dark theme, streaming-focused UI, channel listings, pricing plans
+- **Components**: Header, Footer, Welcome, Features, Channels, Pricing, Devices, etc.
 
-Any static assets, like images, can be placed in the `public/` directory.
+### Adding a New Theme
+1. Create a new folder in `src/themes/`
+2. Add theme configuration in `theme.json`
+3. Create components and pages
+4. Add data files for content management
 
-## 🧞 Commands
+## 🌐 Internationalization
 
-All commands are run from the root of the project, from a terminal:
+The platform supports multiple languages:
+- English (en)
+- French (fr)
+- Spanish (es)
+- Italian (it)
+- German (de)
+- Dutch (nl)
+- Portuguese (pt)
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Language files are located in `src/websites/[website]/themes/[theme]/data/`
 
-## 👀 Want to learn more?
+## 📱 Pages
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+### StreamVista IPTV Pages
+- **Home** (`/`): Landing page with hero, features, pricing
+- **Channels** (`/channels`): Channel listings and categories
+- **Movies** (`/movies`): Movie catalog and search
+- **Shows** (`/shows`): TV shows and series
+- **Packages** (`/packages`): Subscription packages and bundles
+- **Devices** (`/devices`): Supported devices and platforms
+- **About** (`/about`): About the service
+- **Contact** (`/contact`): Contact information
+- **Terms** (`/terms`): Terms of service
+- **Privacy** (`/privacy`): Privacy policy
+- **Help** (`/help`): Help and support
+
+## 🚀 Deployment
+
+### Build for Production
+```bash
+npm run build
+```
+
+### Preview Production Build
+```bash
+npm run preview
+```
+
+### Deploy to Netlify
+```bash
+npm run deploy:netlify
+```
+
+### Deploy to Vercel
+```bash
+npm run deploy:vercel
+```
+
+## 🔧 Configuration
+
+### Environment Variables
+```env
+THEME=iptv
+SITE_URL=https://streamvista.com
+ANALYTICS_ID=your-analytics-id
+```
+
+### Theme Configuration
+Edit `src/websites/StreamVista/themes/iptv/theme.json` to customize:
+- Colors and styling
+- Navigation structure
+- Page configurations
+- Component settings
+
+## 📊 Analytics
+
+The platform includes support for:
+- Google Analytics
+- Hotjar (user behavior tracking)
+
+Configure your tracking IDs in the environment variables.
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🆘 Support
+
+For support and questions:
+- Create an issue on GitHub
+- Email: support@streamvista.com
+- Documentation: [docs.streamvista.com](https://docs.streamvista.com)
+
+## 🙏 Acknowledgments
+
+- [Astro.js](https://astro.build/) - The web framework
+- [Tailwind CSS](https://tailwindcss.com/) - CSS framework
+- [Lucide](https://lucide.dev/) - Icon library
+- [Unsplash](https://unsplash.com/) - Stock photos
+
+---
+
+Made with ❤️ by the StreamVista Team

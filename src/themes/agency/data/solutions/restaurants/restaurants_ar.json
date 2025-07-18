@@ -1,0 +1,332 @@
+{
+  "hero": {
+    "subtitle": "إدارة المطاعم بالذكاء الاصطناعي",
+    "title": "حول مطعمك مع عمليات ذكية",
+    "description": "اختبر مستقبل إدارة المطاعم مع منصتنا الشاملة التي تعمل بالذكاء الاصطناعي والتي تحسن العمليات وتعزز تجربة العملاء وتدفع النمو في جميع جوانب عملك.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "thumbnail": "/images/restaurant-hero.webp",
+      "alt": "عرض منصة إدارة المطاعم"
+    },
+    "stats": [
+      {
+        "value": "40%",
+        "label": "سرعة معالجة الطلبات"
+      },
+      {
+        "value": "55%",
+        "label": "رضا العملاء"
+      },
+      {
+        "value": "30%",
+        "label": "خفض التكاليف"
+      }
+    ]
+  },
+  "features": {
+    "title": "ميزات مستوى المؤسسات",
+    "subtitle": "إدارة المطاعم من الجيل التالي",
+    "description": "اكتشف مجموعتنا الشاملة من الأدوات المتقدمة المصممة لإحداث ثورة في عمليات مطعمك. كل ميزة مصممة لتقديم أقصى كفاءة وتجربة عملاء فائقة.",
+    "categories": [
+      {
+        "name": "عمليات المطعم",
+        "description": "الميزات الأساسية التي تبسط عملياتك اليومية"
+      },
+      {
+        "name": "تجربة العملاء",
+        "description": "أدوات تعزز مشاركة العملاء ورضاهم"
+      }
+    ],
+    "items": [
+      {
+        "icon": "utensils",
+        "title": "إدارة الطلبات الذكية",
+        "description": "معالجة الطلبات وإدارة المطبخ بالذكاء الاصطناعي",
+        "category": "عمليات المطعم",
+        "image": "/images/features/order-management.webp",
+        "highlights": [
+          "تتبع الطلبات في الوقت الفعلي",
+          "نظام عرض المطبخ",
+          "أولوية الطلبات",
+          "تنبيهات المخزون"
+        ],
+        "stats": {
+          "value": "40%",
+          "label": "معالجة أسرع"
+        }
+      },
+      {
+        "icon": "users",
+        "title": "إدارة الطاولات",
+        "description": "نظام جلوس وحجز ذكي",
+        "category": "تجربة العملاء",
+        "image": "/images/features/table-management.webp",
+        "highlights": [
+          "تخصيص ذكي للجلوس",
+          "إدارة الحجوزات",
+          "تحسين قائمة الانتظار",
+          "تتبع دوران الطاولات"
+        ],
+        "stats": {
+          "value": "35%",
+          "label": "استخدام أفضل"
+        }
+      },
+      {
+        "icon": "bar-chart",
+        "title": "تحليلات القائمة",
+        "description": "تحسين القائمة والتسعير مدفوع بالبيانات",
+        "category": "عمليات المطعم",
+        "image": "/images/features/menu-analytics.webp",
+        "highlights": [
+          "تحليل أداء الأطباق",
+          "تحسين الأسعار",
+          "تتبع تكاليف المكونات",
+          "هندسة القائمة"
+        ],
+        "stats": {
+          "value": "25%",
+          "label": "زيادة الربح"
+        }
+      },
+      {
+        "icon": "shopping-cart",
+        "title": "تكامل التوصيل",
+        "description": "تكامل سلس مع منصات التوصيل",
+        "category": "تجربة العملاء",
+        "image": "/images/features/delivery-integration.webp",
+        "highlights": [
+          "تكامل متعدد المنصات",
+          "تتبع التوصيل",
+          "إدارة السائقين",
+          "مزامنة الطلبات"
+        ],
+        "stats": {
+          "value": "45%",
+          "label": "كفاءة التوصيل"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "شاهدها في العمل",
+    "description": "شاهد كيف تقوم المطاعم الرائدة بتحويل عملياتها",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "thumbnail": "/images/showcase-thumb.webp"
+    },
+    "testimonials": [
+      {
+        "author": "الشيف مايكل تشن",
+        "role": "مالك، مطبخ فيوجن",
+        "image": "/images/testimonials/michael.webp",
+        "quote": "أحدثت هذه المنصة ثورة في عمليات مطعمنا. لقد شهدنا زيادة بنسبة 40% في سرعة معالجة الطلبات وتحسين رضا العملاء."
+      },
+      {
+        "author": "سارة رودريغيز",
+        "role": "مديرة، طعم إيطاليا",
+        "image": "/images/testimonials/sarah.webp",
+        "quote": "حسنت ميزات الذكاء الاصطناعي بشكل كبير إدارة الطاولات وكفاءة المطبخ لدينا."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "فوائد تحويلية",
+    "subtitle": "نتائج وتأثير مثبت",
+    "description": "اختبر تحسينات قابلة للقياس في جميع جوانب عملك في المطعم مع حلنا الشامل. تقدم منصتنا نتائج ملموسة تؤثر مباشرة على أرباحك.",
+    "items": [
+      {
+        "title": "كفاءة العمليات",
+        "description": "تبسيط عمليات مطعمك مع الأتمتة الذكية.",
+        "icon": "zap",
+        "color": "blue",
+        "stats": {
+          "value": "40%",
+          "label": "عمليات أسرع"
+        },
+        "highlights": [
+          "معالجة الطلبات",
+          "إدارة المطبخ",
+          "التحكم في المخزون",
+          "جدولة الموظفين"
+        ]
+      },
+      {
+        "title": "تجربة العملاء",
+        "description": "تقديم تجارب طعام استثنائية تدفع الولاء.",
+        "icon": "heart",
+        "color": "purple",
+        "stats": {
+          "value": "55%",
+          "label": "رضا العملاء"
+        },
+        "highlights": [
+          "طلبات سلسة",
+          "إدارة الطاولات",
+          "برامج الولاء",
+          "تعليقات العملاء"
+        ]
+      },
+      {
+        "title": "إدارة التكاليف",
+        "description": "تحسين التكاليف وتعظيم الربحية.",
+        "icon": "trending-up",
+        "color": "green",
+        "stats": {
+          "value": "30%",
+          "label": "خفض التكاليف"
+        },
+        "highlights": [
+          "تحسين المخزون",
+          "تقليل الهدر",
+          "كفاءة الموظفين",
+          "إدارة الطاقة"
+        ]
+      },
+      {
+        "title": "ذكاء الأعمال",
+        "description": "اتخاذ قرارات مدفوعة بالبيانات مع تحليلات متقدمة.",
+        "icon": "chart-bar",
+        "color": "yellow",
+        "stats": {
+          "value": "85%",
+          "label": "رؤى أفضل"
+        },
+        "highlights": [
+          "تحليلات المبيعات",
+          "سلوك العملاء",
+          "أداء القائمة",
+          "مقاييس العمليات"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "title": "خطط تسعير مرنة",
+    "subtitle": "تسعير شفاف",
+    "description": "اختر الخطة المثالية لمطعمك. وفر حتى 20% مع الفواتير السنوية.",
+    "billingPeriods": ["شهري", "سنوي"],
+    "plans": [
+      {
+        "name": "البداية",
+        "highlight": "مثالي للمطاعم الصغيرة",
+        "monthlyPrice": "$149",
+        "yearlyPrice": "$1,490",
+        "yearlyDiscount": "وفر $298/سنة",
+        "description": "ميزات أساسية لبدء التحول الرقمي",
+        "features": [
+          {
+            "text": "إدارة الطلبات الأساسية",
+            "included": true
+          },
+          {
+            "text": "إدارة الطاولات",
+            "included": true
+          },
+          {
+            "text": "تقارير أساسية",
+            "included": true
+          },
+          {
+            "text": "دعم البريد الإلكتروني",
+            "included": true
+          },
+          {
+            "text": "وصول التطبيق المحمول",
+            "included": true
+          }
+        ],
+        "cta": "ابدأ الآن",
+        "popular": false
+      },
+      {
+        "name": "احترافي",
+        "highlight": "الأكثر شعبية للمطاعم النامية",
+        "monthlyPrice": "$299",
+        "yearlyPrice": "$2,990",
+        "yearlyDiscount": "وفر $598/سنة",
+        "description": "ميزات متقدمة للمطاعم الراسخة",
+        "features": [
+          {
+            "text": "كل ما هو متضمن في البداية، بالإضافة إلى:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "ميزات الذكاء الاصطناعي",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "تحليلات متقدمة",
+            "included": true
+          },
+          {
+            "text": "تكامل التوصيل",
+            "included": true
+          },
+          {
+            "text": "دعم ذو أولوية",
+            "included": true
+          },
+          {
+            "text": "وصول API",
+            "included": true
+          }
+        ],
+        "cta": "ابدأ الآن",
+        "popular": true
+      },
+      {
+        "name": "مؤسسة",
+        "highlight": "لسلاسل المطاعم",
+        "monthlyPrice": "مخصص",
+        "yearlyPrice": "مخصص",
+        "yearlyDiscount": "اتصل بنا للأسعار الخاصة",
+        "description": "حلول مخصصة لاحتياجات المؤسسات",
+        "features": [
+          {
+            "text": "كل ما هو متضمن في الاحترافي، بالإضافة إلى:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "دعم المواقع المتعددة",
+            "included": true
+          },
+          {
+            "text": "مدير حساب مخصص",
+            "included": true
+          },
+          {
+            "text": "ميزات أمان متقدمة",
+            "included": true
+          },
+          {
+            "text": "خيارات تطوير مخصصة",
+            "included": true
+          },
+          {
+            "text": "ضمانات SLA",
+            "included": true
+          }
+        ],
+        "cta": "اتصل بالمبيعات",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "هل أنت جاهز لتحويل مطعمك؟",
+    "description": "انضم إلى آلاف المطاعم الناجحة التي تستخدم منصتنا",
+    "primaryButton": {
+      "text": "جدولة عرض توضيحي",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "شاهد فيديو العرض",
+      "link": "/demo-video"
+    },
+    "background": "/images/cta-background.webp"
+  }
+} 

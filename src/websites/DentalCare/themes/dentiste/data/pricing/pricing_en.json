@@ -1,0 +1,188 @@
+{
+  "hero": {
+    "subtitle": "SOFTWARE PLANS",
+    "title": "Complete Dental Practice Management Software",
+    "description": "Choose the right software plan for your dental practice. From single-provider practices to multi-location groups, we have a solution that scales with your needs."
+  },
+  "billing": {
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "discount": "Save 20%"
+  },
+  "pricing": {
+    "title": "SOFTWARE PLANS",
+    "description": "Powerful practice management software designed specifically for dental practices of all sizes."
+  },
+  "plans": [
+    {
+      "name": "Essentials",
+      "description": "For solo practitioners and small practices",
+      "price": {
+        "monthly": 149,
+        "yearly": 1428
+      },
+      "featured": false,
+      "badge": "",
+      "features": [
+        "Patient Management",
+        "Appointment Scheduling",
+        "Digital Charting",
+        "Basic Reporting",
+        "ePrescriptions",
+        "Online Booking",
+        "Single Location",
+        "Up to 2 Providers",
+        "5GB Document Storage",
+        "Email Support"
+      ],
+      "cta": {
+        "text": "Get Started",
+        "link": "/request-demo"
+      }
+    },
+    {
+      "name": "Professional",
+      "description": "For established practices seeking growth",
+      "price": {
+        "monthly": 249,
+        "yearly": 2388
+      },
+      "featured": true,
+      "badge": "Most Popular",
+      "features": [
+        "All Essentials Features",
+        "Advanced Treatment Planning",
+        "Automated Patient Reminders",
+        "Insurance Verification",
+        "Advanced Analytics",
+        "Customizable Workflows",
+        "Patient Portal",
+        "Up to 5 Providers",
+        "25GB Document Storage",
+        "Priority Support",
+        "Staff Training"
+      ],
+      "cta": {
+        "text": "Get Started",
+        "link": "/request-demo"
+      }
+    },
+    {
+      "name": "Enterprise",
+      "description": "For multi-location practices and DSOs",
+      "price": {
+        "monthly": 399,
+        "yearly": 3828
+      },
+      "featured": false,
+      "badge": "",
+      "features": [
+        "All Professional Features",
+        "Multi-Location Management",
+        "Enterprise Dashboard",
+        "Custom Reporting",
+        "API Access",
+        "Advanced Security Controls",
+        "Role-Based Permissions",
+        "Unlimited Providers",
+        "Unlimited Storage",
+        "Dedicated Account Manager",
+        "On-Site Implementation",
+        "24/7 Premium Support"
+      ],
+      "cta": {
+        "text": "Contact Sales",
+        "link": "/contact"
+      }
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Can I upgrade my plan as my practice grows?",
+      "answer": "Yes, you can upgrade your plan at any time. Your data will transfer seamlessly to the new plan, and the price difference will be prorated for the remainder of your billing cycle."
+    },
+    {
+      "question": "Is training included with the software?",
+      "answer": "Basic training resources are included with all plans. The Professional plan includes comprehensive staff training sessions, while the Enterprise plan includes personalized on-site implementation and training."
+    },
+    {
+      "question": "Can I add individual solutions to my plan?",
+      "answer": "Yes, you can enhance any plan with additional specialized solutions like AI Diagnostics, Advanced Imaging, or CAD/CAM integration at additional cost. Contact our sales team for custom pricing."
+    },
+    {
+      "question": "What payment methods do you accept?",
+      "answer": "We accept all major credit cards and offer ACH payment options for yearly subscriptions. Enterprise customers may also arrange invoiced payment terms."
+    }
+  ],
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": [
+      {
+        "question": "Can I upgrade my plan as my practice grows?",
+        "answer": "Yes, you can upgrade your plan at any time. Your data will transfer seamlessly to the new plan, and the price difference will be prorated for the remainder of your billing cycle."
+      },
+      {
+        "question": "Is training included with the software?",
+        "answer": "Basic training resources are included with all plans. The Professional plan includes comprehensive staff training sessions, while the Enterprise plan includes personalized on-site implementation and training."
+      },
+      {
+        "question": "Can I add individual solutions to my plan?",
+        "answer": "Yes, you can enhance any plan with additional specialized solutions like AI Diagnostics, Advanced Imaging, or CAD/CAM integration at additional cost. Contact our sales team for custom pricing."
+      },
+      {
+        "question": "What payment methods do you accept?",
+        "answer": "We accept all major credit cards and offer ACH payment options for yearly subscriptions. Enterprise customers may also arrange invoiced payment terms."
+      },
+      {
+        "question": "Is there a contract or commitment period?",
+        "answer": "Monthly plans can be canceled at any time. Annual plans offer significant savings but require a 12-month commitment. Enterprise plans typically include custom terms based on your organization's needs."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Transform Your Dental Practice?",
+    "description": "Join thousands of dental practices using our software to streamline operations and improve patient care.",
+    "buttons": [
+      {
+        "text": "Request Demo",
+        "link": "/request-demo",
+        "primary": true
+      },
+      {
+        "text": "Contact Sales",
+        "link": "/contact",
+        "primary": false
+      }
+    ],
+    "primaryButton": {
+      "text": "Request Demo",
+      "href": "/request-demo"
+    },
+    "secondaryButton": {
+      "text": "Contact Sales",
+      "href": "/contact"
+    }
+  },
+  "integration": {
+    "title": "Seamless Integration",
+    "description": "Our software integrates with your favorite dental tools and services",
+    "partners": [
+      {
+        "name": "Dexis",
+        "logo": "/images/partners/dexis.png"
+      },
+      {
+        "name": "Carestream",
+        "logo": "/images/partners/carestream.png"
+      },
+      {
+        "name": "Planmeca",
+        "logo": "/images/partners/planmeca.png"
+      },
+      {
+        "name": "Sirona",
+        "logo": "/images/partners/sirona.png"
+      }
+    ]
+  }
+} 

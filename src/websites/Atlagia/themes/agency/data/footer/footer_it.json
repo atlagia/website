@@ -1,0 +1,179 @@
+{
+  "company": {
+    "title": "Azienda",
+    "links": [
+      {
+        "name": "Chi siamo",
+        "href": "/about"
+      },
+      {
+        "name": "Lavora con noi",
+        "href": "/careers"
+      },
+      {
+        "name": "Stampa",
+        "href": "/press"
+      },
+      {
+        "name": "Blog",
+        "href": "/blog"
+      }
+    ]
+  },
+  "product": {
+    "title": "Soluzioni",
+    "links": [
+      {
+        "name": "Studi medici",
+        "href": "/solutions/medical-solution"
+      },
+      {
+        "name": "Ospedali",
+        "href": "/solutions/hospital-solution"
+      },
+      {
+        "name": "Cliniche",
+        "href": "/solutions/clinic-solution"
+      },
+      {
+        "name": "Farmacie",
+        "href": "/solutions/pharmacy-solution"
+      },
+      {
+        "name": "Studi dentistici",
+        "href": "/solutions/dental-solution"
+      },
+      {
+        "name": "Cliniche veterinarie",
+        "href": "/solutions/veterinary-solution"
+      },
+      {
+        "name": "Centri di radiologia",
+        "href": "/solutions/radiology-solution"
+      },
+      {
+        "name": "Laboratori",
+        "href": "/solutions/laboratory-solution"
+      },
+      {
+        "name": "E-commerce",
+        "href": "/solutions/ecommerce-solution"
+      },
+      {
+        "name": "Negozi al dettaglio",
+        "href": "/solutions/retail-stores"
+      },
+      {
+        "name": "Ristoranti",
+        "href": "/solutions/restaurants"
+      },
+      {
+        "name": "Vendita all'ingrosso",
+        "href": "/solutions/wholesale"
+      }
+    ]
+  },
+  "services": {
+    "title": "Servizi",
+    "links": [
+      {
+        "name": "Sviluppo",
+        "href": "/services/development"
+      },
+      {
+        "name": "Consulenza",
+        "href": "/services/consulting"
+      },
+      {
+        "name": "Supporto",
+        "href": "/services/support"
+      },
+      {
+        "name": "Formazione",
+        "href": "/services/training"
+      }
+    ]
+  },
+  "resources": {
+    "title": "Risorse",
+    "links": [
+      {
+        "name": "Documentazione",
+        "href": "/documentation"
+      },
+      {
+        "name": "Riferimento API",
+        "href": "/api"
+      },
+      {
+        "name": "Supporto",
+        "href": "/support"
+      },
+      {
+        "name": "Stato",
+        "href": "/status"
+      }
+    ]
+  },
+  "legal": {
+    "title": "Legale",
+    "links": [
+      {
+        "name": "Privacy",
+        "href": "/privacy"
+      },
+      {
+        "name": "Termini",
+        "href": "/terms"
+      },
+      {
+        "name": "Informativa sui cookie",
+        "href": "/cookie-policy"
+      }
+    ]
+  },
+  "social": {
+    "title": "Social",
+    "links": [
+      {
+        "name": "Instagram",
+        "href": "https://www.instagram.com/atlagia/",
+        "icon": "instagram"
+      },
+      {
+        "name": "Twitter",
+        "href": "https://twitter.com/atlagia",
+        "icon": "twitter"
+      },
+      {
+        "name": "LinkedIn",
+        "href": "https://linkedin.com/company/atlagia",
+        "icon": "linkedin"
+      },
+      {
+        "name": "GitHub",
+        "href": "https://github.com/atlagia",
+        "icon": "github"
+      }
+    ]
+  },
+  "newsletter": {
+    "title": "Iscriviti alla nostra newsletter",
+    "description": "Resta aggiornato sulle ultime novità del settore, gli aggiornamenti dei prodotti e le notizie aziendali.",
+    "buttonText": "Iscriviti",
+    "placeholderText": "Inserisci la tua email"
+  },
+  "copyright": {
+    "text": "© 2025 Atlagia. Tutti i diritti riservati.",
+    "links": [
+      {
+        "name": "Informativa sulla privacy",
+        "href": "/privacy"
+      },
+      {
+        "name": "Termini di servizio",
+        "href": "/terms"
+      }
+    ]
+  }
+} 

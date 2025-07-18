@@ -1,0 +1,121 @@
+{
+  "company": {
+    "title": "Company",
+    "links": [
+      {
+        "name": "About Us",
+        "href": "/about"
+      },
+      {
+        "name": "Careers",
+        "href": "/careers"
+      },
+      {
+        "name": "Press",
+        "href": "/press"
+      },
+      {
+        "name": "Blog",
+        "href": "/blog"
+      }
+    ]
+  },
+  "product": {
+    "title": "Shipping Solutions",
+    "links": [
+      {
+        "name": "Services",
+        "href": "/services"
+      },
+      {
+        "name": "Pricing",
+        "href": "/pricing"
+      },
+      {
+        "name": "Track Package",
+        "href": "/track"
+      },
+      {
+        "name": "API Integration",
+        "href": "/services/api"
+      }
+    ]
+  },
+  "resources": {
+    "title": "Resources",
+    "links": [
+      {
+        "name": "Documentation",
+        "href": "/documentation"
+      },
+      {
+        "name": "Support",
+        "href": "/support"
+      },
+      {
+        "name": "Status",
+        "href": "/status"
+      },
+      {
+        "name": "Logistics Blog",
+        "href": "/blog"
+      }
+    ]
+  },
+  "legal": {
+    "title": "Legal",
+    "links": [
+      {
+        "name": "Privacy Policy",
+        "href": "/privacy"
+      },
+      {
+        "name": "Terms of Service",
+        "href": "/terms"
+      },
+      {
+        "name": "Cookie Policy",
+        "href": "/cookie-policy"
+      }
+    ]
+  },
+  "social": {
+    "title": "Social",
+    "links": [
+      {
+        "name": "Twitter",
+        "href": "https://twitter.com/sooqnetwork",
+        "icon": "twitter"
+      },
+      {
+        "name": "LinkedIn",
+        "href": "https://linkedin.com/company/sooqnetwork",
+        "icon": "linkedin"
+      },
+      {
+        "name": "GitHub",
+        "href": "https://github.com/sooqnetwork",
+        "icon": "github"
+      }
+    ]
+  },
+  "newsletter": {
+    "title": "Subscribe to our newsletter",
+    "description": "Get the latest shipping news, tips, and updates delivered to your inbox.",
+    "buttonText": "Subscribe",
+    "placeholderText": "Enter your email"
+  },
+  "copyright": {
+    "text": "© 2024 Sooq Network. All rights reserved.",
+    "links": [
+      {
+        "name": "Privacy Policy",
+        "href": "/privacy"
+      },
+      {
+        "name": "Terms of Service",
+        "href": "/terms"
+      }
+    ]
+  }
+} 

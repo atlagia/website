@@ -1,0 +1,332 @@
+{
+  "hero": {
+    "subtitle": "KI-gestützte Großhandelsverwaltung",
+    "title": "Transformieren Sie Ihren Großhandel mit intelligenten Operationen",
+    "description": "Erleben Sie die Zukunft der Großhandelsverwaltung mit unserer umfassenden, KI-gestützten Plattform, die den Bestand optimiert, den Betrieb rationalisiert und das Wachstum Ihres Großhandelsgeschäfts vorantreibt.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "thumbnail": "/images/wholesale-hero.webp",
+      "alt": "Großhandels-Management-Plattform Demo"
+    },
+    "stats": [
+      {
+        "value": "45%",
+        "label": "Bestandsoptimierung"
+      },
+      {
+        "value": "60%",
+        "label": "Auftragsverarbeitungsgeschwindigkeit"
+      },
+      {
+        "value": "35%",
+        "label": "Kostenreduzierung"
+      }
+    ]
+  },
+  "features": {
+    "title": "Enterprise-Grade Funktionen",
+    "subtitle": "Großhandelsverwaltung der nächsten Generation",
+    "description": "Entdecken Sie unsere umfassende Suite fortschrittlicher Tools, die entwickelt wurde, um Ihre Großhandelsoperationen zu revolutionieren. Jede Funktion wurde entwickelt, um maximale Effizienz und überlegene Kundenerfahrung zu bieten.",
+    "categories": [
+      {
+        "name": "Großhandelsoperationen",
+        "description": "Kernfunktionen, die Ihren täglichen Betrieb optimieren"
+      },
+      {
+        "name": "Kundenerfahrung",
+        "description": "Tools, die das Kundenengagement und die Zufriedenheit verbessern"
+      }
+    ],
+    "items": [
+      {
+        "icon": "box",
+        "title": "Intelligentes Bestandsmanagement",
+        "description": "KI-gestützte Bestandsoptimierung und Prognose",
+        "category": "Großhandelsoperationen",
+        "image": "/images/features/inventory-management.webp",
+        "highlights": [
+          "Echtzeit-Bestandsverfolgung",
+          "Nachfrageprognose",
+          "Bestandsniveauoptimierung",
+          "Lagerverwaltung"
+        ],
+        "stats": {
+          "value": "45%",
+          "label": "Bessere Bestandskontrolle"
+        }
+      },
+      {
+        "icon": "truck",
+        "title": "Auftragsverarbeitung",
+        "description": "Optimierte Auftragsverwaltung und Abwicklung",
+        "category": "Kundenerfahrung",
+        "image": "/images/features/order-processing.webp",
+        "highlights": [
+          "Massenauftragsverarbeitung",
+          "Automatisierte Abwicklung",
+          "Versandintegration",
+          "Auftragsverfolgung"
+        ],
+        "stats": {
+          "value": "60%",
+          "label": "Schnellere Verarbeitung"
+        }
+      },
+      {
+        "icon": "bar-chart",
+        "title": "Geschäftsanalysen",
+        "description": "Datenbasierte Einblicke für Großhandelsoperationen",
+        "category": "Großhandelsoperationen",
+        "image": "/images/features/business-analytics.webp",
+        "highlights": [
+          "Verkaufsanalysen",
+          "Kundeneinblicke",
+          "Markttrends",
+          "Leistungsmetriken"
+        ],
+        "stats": {
+          "value": "40%",
+          "label": "Bessere Entscheidungsfindung"
+        }
+      },
+      {
+        "icon": "users",
+        "title": "Kundenportal",
+        "description": "Self-Service-Portal für Großhandelskunden",
+        "category": "Kundenerfahrung",
+        "image": "/images/features/customer-portal.webp",
+        "highlights": [
+          "Auftragshistorie",
+          "Produktkatalog",
+          "Preisverwaltung",
+          "Kontoverwaltung"
+        ],
+        "stats": {
+          "value": "50%",
+          "label": "Kundenzufriedenheit"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Sehen Sie es in Aktion",
+    "description": "Beobachten Sie, wie führende Großhandelsunternehmen ihre Operationen transformieren",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "thumbnail": "/images/showcase-thumb.webp"
+    },
+    "testimonials": [
+      {
+        "author": "John Smith",
+        "role": "CEO, Global Wholesale Solutions",
+        "image": "/images/testimonials/john.webp",
+        "quote": "Diese Plattform hat unsere Großhandelsoperationen revolutioniert. Wir haben eine Verbesserung von 45% im Bestandsmanagement und 60% schnellere Auftragsverarbeitung gesehen."
+      },
+      {
+        "author": "Maria Garcia",
+        "role": "Operationsdirektorin, Wholesale Plus",
+        "image": "/images/testimonials/maria.webp",
+        "quote": "Die KI-Funktionen haben unsere Prognosegenauigkeit und Kundenzufriedenheit dramatisch verbessert."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Transformative Vorteile",
+    "subtitle": "Bewährte Ergebnisse & Wirkung",
+    "description": "Erleben Sie messbare Verbesserungen in allen Aspekten Ihres Großhandelsgeschäfts mit unserer umfassenden Lösung. Unsere Plattform liefert konkrete Ergebnisse, die sich direkt auf Ihr Endergebnis auswirken.",
+    "items": [
+      {
+        "title": "Bestandsoptimierung",
+        "description": "Optimieren Sie Ihre Bestandsniveaus mit KI-gestützter Prognose.",
+        "icon": "box",
+        "color": "blue",
+        "stats": {
+          "value": "45%",
+          "label": "Bessere Bestandskontrolle"
+        },
+        "highlights": [
+          "Nachfrageprognose",
+          "Bestandsoptimierung",
+          "Lagerverwaltung",
+          "Bestandsverfolgung"
+        ]
+      },
+      {
+        "title": "Operative Effizienz",
+        "description": "Optimieren Sie Ihre Großhandelsoperationen mit intelligenter Automatisierung.",
+        "icon": "zap",
+        "color": "purple",
+        "stats": {
+          "value": "60%",
+          "label": "Schnellere Verarbeitung"
+        },
+        "highlights": [
+          "Auftragsverarbeitung",
+          "Automatisierte Abwicklung",
+          "Versandintegration",
+          "Dokumentenverwaltung"
+        ]
+      },
+      {
+        "title": "Kostenmanagement",
+        "description": "Optimieren Sie Kosten und maximieren Sie die Rentabilität.",
+        "icon": "trending-up",
+        "color": "green",
+        "stats": {
+          "value": "35%",
+          "label": "Kostenreduzierung"
+        },
+        "highlights": [
+          "Bestandsoptimierung",
+          "Lagereffizienz",
+          "Versandkosten",
+          "Betriebskosten"
+        ]
+      },
+      {
+        "title": "Kundenerfahrung",
+        "description": "Bieten Sie außergewöhnlichen Service für Großhandelskunden.",
+        "icon": "heart",
+        "color": "yellow",
+        "stats": {
+          "value": "50%",
+          "label": "Kundenzufriedenheit"
+        },
+        "highlights": [
+          "Kundenportal",
+          "Auftragsverfolgung",
+          "Kontoverwaltung",
+          "Support-Services"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Flexible Preispläne",
+    "subtitle": "Transparente Preise",
+    "description": "Wählen Sie den perfekten Plan für Ihr Großhandelsgeschäft. Sparen Sie bis zu 20% bei jährlicher Abrechnung.",
+    "billingPeriods": ["Monatlich", "Jährlich"],
+    "plans": [
+      {
+        "name": "Starter",
+        "highlight": "Perfekt für kleine Großhandelsunternehmen",
+        "monthlyPrice": "$199",
+        "yearlyPrice": "$1,990",
+        "yearlyDiscount": "Sparen Sie $398/Jahr",
+        "description": "Wesentliche Funktionen für den Start Ihrer digitalen Transformation",
+        "features": [
+          {
+            "text": "Grundlegendes Bestandsmanagement",
+            "included": true
+          },
+          {
+            "text": "Auftragsverarbeitung",
+            "included": true
+          },
+          {
+            "text": "Grundlegende Berichterstattung",
+            "included": true
+          },
+          {
+            "text": "E-Mail-Support",
+            "included": true
+          },
+          {
+            "text": "Mobile App-Zugang",
+            "included": true
+          }
+        ],
+        "cta": "Jetzt Starten",
+        "popular": false
+      },
+      {
+        "name": "Professional",
+        "highlight": "Beliebteste Wahl für wachsende Großhandelsunternehmen",
+        "monthlyPrice": "$399",
+        "yearlyPrice": "$3,990",
+        "yearlyDiscount": "Sparen Sie $798/Jahr",
+        "description": "Erweiterte Funktionen für etablierte Großhandelsunternehmen",
+        "features": [
+          {
+            "text": "Alles in Starter, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "KI-gestützte Funktionen",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "Erweiterte Analysen",
+            "included": true
+          },
+          {
+            "text": "Kundenportal",
+            "included": true
+          },
+          {
+            "text": "Prioritäts-Support",
+            "included": true
+          },
+          {
+            "text": "API-Zugang",
+            "included": true
+          }
+        ],
+        "cta": "Jetzt Starten",
+        "popular": true
+      },
+      {
+        "name": "Enterprise",
+        "highlight": "Für große Großhandelsoperationen",
+        "monthlyPrice": "Individuell",
+        "yearlyPrice": "Individuell",
+        "yearlyDiscount": "Kontaktieren Sie uns für Sonderpreise",
+        "description": "Maßgeschneiderte Lösungen für Enterprise-Bedürfnisse",
+        "features": [
+          {
+            "text": "Alles in Professional, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Multi-Lager-Unterstützung",
+            "included": true
+          },
+          {
+            "text": "Dedizierter Account Manager",
+            "included": true
+          },
+          {
+            "text": "Erweiterte Sicherheitsfunktionen",
+            "included": true
+          },
+          {
+            "text": "Individuelle Entwicklungsoptionen",
+            "included": true
+          },
+          {
+            "text": "SLA-Garantien",
+            "included": true
+          }
+        ],
+        "cta": "Vertrieb kontaktieren",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "Bereit, Ihr Großhandelsgeschäft zu transformieren?",
+    "description": "Schließen Sie sich Tausenden erfolgreicher Großhandelsunternehmen an, die unsere Plattform nutzen",
+    "primaryButton": {
+      "text": "Demo vereinbaren",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Demo-Video ansehen",
+      "link": "/demo-video"
+    },
+    "background": "/images/cta-background.webp"
+  }
+} 

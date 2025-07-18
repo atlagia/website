@@ -1,0 +1,335 @@
+{
+  "hero": {
+    "subtitle": "Gestión de Consultorio Médico",
+    "title": "Transforma tu Consultorio Médico con Tecnología Inteligente",
+    "description": "Una solución integral diseñada específicamente para consultorios médicos, que combina atención al paciente, gestión del consultorio y análisis avanzados para optimizar tus operaciones.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Demo de la Solución de Gestión de Consultorio Médico"
+    },
+    "stats": [
+      {
+        "value": "98%",
+        "label": "Satisfacción del Paciente"
+      },
+      {
+        "value": "40%",
+        "label": "Tiempo Ahorrado"
+      },
+      {
+        "value": "2.5x",
+        "label": "Crecimiento de Ingresos"
+      }
+    ]
+  },
+  "features": {
+    "subtitle": "Características Integrales",
+    "title": "Todo lo que Necesitas para Gestionar tu Consultorio",
+    "description": "Nuestra solución de gestión de consultorio médico combina tecnología de vanguardia con interfaces fáciles de usar para mejorar la atención al paciente y optimizar las operaciones.",
+    "categories": [
+      {
+        "name": "Excelencia en la Atención al Paciente",
+        "description": "Herramientas y características diseñadas para mejorar la experiencia del paciente y la calidad de la atención"
+      },
+      {
+        "name": "Eficiencia del Consultorio",
+        "description": "Optimización de operaciones y reducción de la carga administrativa"
+      }
+    ],
+    "items": [
+      {
+        "icon": "calendar",
+        "category": "Gestión del Consultorio",
+        "title": "Programación Inteligente",
+        "description": "Sistema de programación asistido por IA que optimiza los horarios de citas y reduce las ausencias",
+        "image": "/images/solutions/medical/scheduling.jpg",
+        "highlights": [
+          "Recordatorios automáticos",
+          "Soporte multi-sede",
+          "Disponibilidad en tiempo real",
+          "Gestión de lista de espera"
+        ],
+        "stats": {
+          "value": "50%",
+          "label": "Reducción de ausencias"
+        }
+      },
+      {
+        "icon": "users",
+        "category": "Atención al Paciente",
+        "title": "Portal del Paciente",
+        "description": "Portal seguro para citas, comunicaciones y registros médicos",
+        "image": "/images/solutions/medical/patient-portal.jpg",
+        "highlights": [
+          "Reserva en línea",
+          "Mensajería segura",
+          "Acceso a resultados",
+          "Renovación de recetas"
+        ],
+        "stats": {
+          "value": "92%",
+          "label": "Compromiso del paciente"
+        }
+      },
+      {
+        "icon": "brain",
+        "category": "Herramientas Clínicas",
+        "title": "Soporte para Decisiones Clínicas",
+        "description": "Diagnóstico y recomendaciones de tratamiento asistidos por IA basados en las últimas investigaciones médicas",
+        "image": "/images/solutions/medical/clinical-support.jpg",
+        "highlights": [
+          "Guías basadas en evidencia",
+          "Verificación de interacciones medicamentosas",
+          "Vías clínicas",
+          "Evaluaciones de riesgo"
+        ],
+        "stats": {
+          "value": "35%",
+          "label": "Diagnósticos más rápidos"
+        }
+      },
+      {
+        "icon": "chart-up",
+        "category": "Analítica",
+        "title": "Analítica del Consultorio",
+        "description": "Análisis y reportes completos para una mejor gestión del consultorio",
+        "image": "/images/solutions/medical/analytics.jpg",
+        "highlights": [
+          "Rendimiento financiero",
+          "Resultados de pacientes",
+          "Métricas operativas",
+          "Medidas de calidad"
+        ],
+        "stats": {
+          "value": "45%",
+          "label": "Aumento de ingresos"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Descubre Nuestra Solución en Acción",
+    "description": "Mira cómo los consultorios médicos líderes están transformando la atención al paciente con nuestra solución",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Historia de Éxito del Consultorio Médico"
+    },
+    "testimonials": [
+      {
+        "author": "Dra. Sarah Johnson",
+        "role": "Directora de Consultorio de Medicina General",
+        "image": "/images/testimonials/doctor1.jpg",
+        "quote": "Esta solución ha revolucionado la forma en que gestionamos nuestro consultorio. Las mejoras en eficiencia son notables."
+      },
+      {
+        "author": "Dr. Michael Chen",
+        "role": "Especialista en Medicina Interna",
+        "image": "/images/testimonials/doctor2.jpg",
+        "quote": "Las herramientas de soporte para decisiones clínicas han sido invaluables para proporcionar atención basada en evidencia a nuestros pacientes."
+      }
+    ]
+  },
+  "benefits": {
+    "subtitle": "Beneficios Clave",
+    "title": "Transforma tu Consultorio",
+    "description": "Descubre las ventajas de una solución integral de gestión de consultorio médico",
+    "items": [
+      {
+        "icon": "trending-up",
+        "title": "Excelencia Operativa",
+        "description": "Optimiza las operaciones de tu consultorio y reduce la carga administrativa",
+        "color": "blue",
+        "stats": {
+          "value": "40%",
+          "label": "Aumento de eficiencia"
+        },
+        "highlights": [
+          "Procesos automatizados",
+          "Reducción de papel",
+          "Facturación optimizada",
+          "Mejor asignación de recursos"
+        ]
+      },
+      {
+        "icon": "heart",
+        "title": "Atención al Paciente Mejorada",
+        "description": "Ofrece mejores experiencias a los pacientes y mejora los resultados de salud",
+        "color": "purple",
+        "stats": {
+          "value": "95%",
+          "label": "Satisfacción del paciente"
+        },
+        "highlights": [
+          "Planes de atención personalizados",
+          "Mejor seguimiento",
+          "Comunicación mejorada",
+          "Mayor compromiso"
+        ]
+      },
+      {
+        "icon": "chart-up",
+        "title": "Crecimiento Financiero",
+        "description": "Aumenta los ingresos y mejora el rendimiento financiero",
+        "color": "green",
+        "stats": {
+          "value": "35%",
+          "label": "Crecimiento de ingresos"
+        },
+        "highlights": [
+          "Facturación optimizada",
+          "Reducción de rechazos",
+          "Mejor cobranza",
+          "Mayor rentabilidad"
+        ]
+      },
+      {
+        "icon": "star",
+        "title": "Garantía de Calidad",
+        "description": "Mantén altos estándares de atención y cumplimiento normativo",
+        "color": "yellow",
+        "stats": {
+          "value": "100%",
+          "label": "Tasa de cumplimiento"
+        },
+        "highlights": [
+          "Cumplimiento HIPAA",
+          "Métricas de calidad",
+          "Preparación para auditorías",
+          "Gestión de riesgos"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "subtitle": "Precios Transparentes",
+    "title": "Planes de Precios Flexibles",
+    "description": "Elige el plan perfecto para tu consultorio. Ahorra hasta un 20% con facturación anual.",
+    "billingPeriods": ["Mensual", "Anual"],
+    "plans": [
+      {
+        "name": "Básico",
+        "highlight": "Perfecto para consultorios pequeños",
+        "monthlyPrice": "$299",
+        "yearlyPrice": "$2,990",
+        "yearlyDiscount": "Ahorra $598/año",
+        "description": "Características esenciales para comenzar tu viaje de transformación digital",
+        "features": [
+          {
+            "text": "Programación básica de citas",
+            "included": true
+          },
+          {
+            "text": "Acceso al portal del paciente",
+            "included": true
+          },
+          {
+            "text": "Registros médicos electrónicos",
+            "included": true
+          },
+          {
+            "text": "Soporte por email (24/7)",
+            "included": true
+          },
+          {
+            "text": "Analítica básica",
+            "included": true
+          },
+          {
+            "text": "Acceso a la aplicación móvil",
+            "included": true
+          }
+        ],
+        "cta": "Comenzar Ahora",
+        "popular": false
+      },
+      {
+        "name": "Profesional",
+        "highlight": "Más popular para consultorios en crecimiento",
+        "monthlyPrice": "$599",
+        "yearlyPrice": "$5,990",
+        "yearlyDiscount": "Ahorra $1,198/año",
+        "description": "Características avanzadas para consultorios establecidos",
+        "features": [
+          {
+            "text": "Todo lo incluido en Básico, más:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Soporte clínico asistido por IA",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "Soporte multi-médicos",
+            "included": true
+          },
+          {
+            "text": "Panel de analítica avanzado",
+            "included": true
+          },
+          {
+            "text": "Soporte prioritario",
+            "included": true
+          },
+          {
+            "text": "Integración de telesalud",
+            "included": true
+          }
+        ],
+        "cta": "Comenzar Ahora",
+        "popular": true
+      },
+      {
+        "name": "Empresarial",
+        "highlight": "Para grandes grupos médicos",
+        "monthlyPrice": "Personalizado",
+        "yearlyPrice": "Personalizado",
+        "yearlyDiscount": "Contáctanos para precios especiales",
+        "description": "Soluciones personalizadas para necesidades empresariales",
+        "features": [
+          {
+            "text": "Todo lo incluido en Profesional, más:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Soporte de integración personalizado",
+            "included": true
+          },
+          {
+            "text": "Gerente de cuenta dedicado",
+            "included": true
+          },
+          {
+            "text": "Características de seguridad avanzadas",
+            "included": true
+          },
+          {
+            "text": "Opciones de desarrollo personalizadas",
+            "included": true
+          },
+          {
+            "text": "Garantías SLA",
+            "included": true
+          }
+        ],
+        "cta": "Contactar Ventas",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "¿Listo para Transformar tu Consultorio Médico?",
+    "description": "Únete a miles de profesionales médicos que ya han modernizado su consultorio con nuestra solución.",
+    "background": "/images/solutions/medical/cta-background.jpg",
+    "primaryButton": {
+      "text": "Programar una Demo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Ver la Demo",
+      "link": "#showcase"
+    }
+  }
+} 

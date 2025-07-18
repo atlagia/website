@@ -1,0 +1,192 @@
+{
+  "hero": {
+    "subtitle": "GÉNÉRATEUR DE CONTENU IA",
+    "title": "Créez du Contenu E-commerce Engageant en Quelques Secondes",
+    "description": "Transformez vos descriptions de produits, textes marketing et contenu SEO avec nos outils avancés de génération de contenu par IA.",
+    "image": "https://cdn.atlagia.com/kepart_vector_laptop_Ai_Platform_e-commerce_AI_Revolution_light_e5f8c01c-64de-42b5-8936-c09ade10d40b.png"
+  },
+  "benefits": {
+    "title": "Pourquoi Choisir Notre Générateur de Contenu IA",
+    "items": [
+      {
+        "icon": "Zap",
+        "title": "Génération Ultra Rapide",
+        "description": "Générez du contenu de haute qualité en quelques secondes, pas en heures. Gagnez un temps précieux tout en maintenant la qualité.",
+        "color": "yellow"
+      },
+      {
+        "icon": "Brain",
+        "title": "Intelligence Artificielle",
+        "description": "Exploitez des algorithmes d'apprentissage automatique avancés entraînés sur du contenu e-commerce performant.",
+        "color": "blue"
+      },
+      {
+        "icon": "Target",
+        "title": "Optimisé pour le SEO",
+        "description": "Chaque contenu est automatiquement optimisé pour les moteurs de recherche et la conversion.",
+        "color": "green"
+      },
+      {
+        "icon": "Languages",
+        "title": "Support Multilingue",
+        "description": "Générez du contenu en plusieurs langues pour atteindre efficacement les marchés mondiaux.",
+        "color": "purple"
+      }
+    ]
+  },
+  "features": {
+    "title": "Fonctionnalités Puissantes pour le Succès E-commerce",
+    "description": "Notre générateur de contenu IA est spécialement conçu pour les entreprises e-commerce, avec des fonctionnalités qui vous aident à vendre plus efficacement.",
+    "items": [
+      {
+        "title": "Descriptions de Produits",
+        "description": "Générez des descriptions de produits convaincantes qui mettent en valeur les caractéristiques et avantages clés",
+        "image": "/images/services/product-descriptions.svg",
+        "features": [
+          "Extraction automatique des caractéristiques",
+          "Contenu axé sur les bénéfices",
+          "Ton et style personnalisables",
+          "Descriptions optimisées SEO"
+        ]
+      },
+      {
+        "title": "Textes Marketing",
+        "description": "Créez du contenu marketing persuasif pour vos campagnes et promotions",
+        "image": "/images/services/marketing-copy.svg",
+        "features": [
+          "Contenu pour campagnes email",
+          "Posts réseaux sociaux",
+          "Génération de textes publicitaires",
+          "Contenu promotionnel"
+        ]
+      },
+      {
+        "title": "Contenu SEO",
+        "description": "Générez du contenu optimisé pour les moteurs de recherche qui se classe et convertit",
+        "image": "/images/services/seo-content.svg",
+        "features": [
+          "Optimisation des mots-clés",
+          "Méta descriptions",
+          "Descriptions de catégories",
+          "Génération d'articles de blog"
+        ]
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "Comment Ça Marche",
+    "description": "Commencez avec notre générateur de contenu IA en quelques étapes simples",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Saisissez Votre Produit",
+        "description": "Entrez les détails de votre produit ou importez votre contenu existant"
+      },
+      {
+        "number": "02",
+        "title": "Sélectionnez les Paramètres",
+        "description": "Choisissez vos préférences de ton, style et public cible"
+      },
+      {
+        "number": "03",
+        "title": "Générez le Contenu",
+        "description": "Laissez notre IA créer du contenu optimisé en quelques secondes"
+      },
+      {
+        "number": "04",
+        "title": "Révisez et Éditez",
+        "description": "Affinez le contenu généré selon vos besoins"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Tarification Simple et Transparente",
+    "description": "Choisissez le forfait qui correspond le mieux à vos besoins en génération de contenu",
+    "plans": [
+      {
+        "name": "Débutant",
+        "price": "29",
+        "period": "/mois",
+        "description": "Parfait pour les petites boutiques",
+        "features": [
+          "10 000 mots par mois",
+          "Templates de base",
+          "Support standard",
+          "1 utilisateur"
+        ],
+        "cta": {
+          "text": "Essai Gratuit",
+          "link": "/trial"
+        }
+      },
+      {
+        "name": "Professionnel",
+        "price": "79",
+        "period": "/mois",
+        "description": "Pour les entreprises en croissance",
+        "features": [
+          "50 000 mots par mois",
+          "Templates avancés",
+          "Support prioritaire",
+          "3 utilisateurs"
+        ],
+        "cta": {
+          "text": "Essai Gratuit",
+          "link": "/trial"
+        },
+        "popular": true
+      },
+      {
+        "name": "Entreprise",
+        "price": "199",
+        "period": "/mois",
+        "description": "Pour les grandes opérations",
+        "features": [
+          "Mots illimités",
+          "Templates personnalisés",
+          "Support 24/7",
+          "Utilisateurs illimités"
+        ],
+        "cta": {
+          "text": "Contacter les Ventes",
+          "link": "/contact"
+        }
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Ce Que Disent Nos Clients",
+    "items": [
+      {
+        "content": "Le générateur de contenu IA a révolutionné notre façon de créer des descriptions de produits. Ce qui prenait des heures ne prend maintenant que quelques minutes, et la qualité est toujours excellente.",
+        "author": "Sarah Johnson",
+        "position": "Responsable E-commerce",
+        "company": "StyleBoutique",
+        "image": "/images/testimonials/sarah.jpg"
+      },
+      {
+        "content": "Nous avons constaté une augmentation de 40% des taux de conversion de nos pages produits depuis l'utilisation du générateur de contenu IA. L'optimisation SEO est particulièrement impressionnante.",
+        "author": "Michael Chen",
+        "position": "Directeur Marketing Digital",
+        "company": "TechGear",
+        "image": "/images/testimonials/michael.jpg"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prêt à Transformer Votre Contenu E-commerce ?",
+    "description": "Rejoignez des milliers d'entreprises e-commerce prospères utilisant notre générateur de contenu IA.",
+    "buttons": [
+      {
+        "text": "Essai Gratuit",
+        "link": "/trial",
+        "primary": true
+      },
+      {
+        "text": "Voir la Démo",
+        "link": "/demo",
+        "primary": false
+      }
+    ]
+  }
+} 

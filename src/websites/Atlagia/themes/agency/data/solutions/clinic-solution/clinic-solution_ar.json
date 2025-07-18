@@ -1,0 +1,335 @@
+{
+  "hero": {
+    "subtitle": "نظام إدارة العيادة",
+    "title": "حسن عمليات عيادتك",
+    "description": "حل متكامل لإدارة العيادة يجمع بين رعاية المرضى والمهام الإدارية والعمليات التجارية لتحسين كفاءة ممارستك.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "عرض توضيحي لحل إدارة العيادة"
+    },
+    "stats": [
+      {
+        "value": "96%",
+        "label": "رضا المرضى"
+      },
+      {
+        "value": "50%",
+        "label": "توفير الوقت الإداري"
+      },
+      {
+        "value": "35%",
+        "label": "زيادة الإيرادات"
+      }
+    ]
+  },
+  "features": {
+    "subtitle": "ميزات شاملة",
+    "title": "كل ما تحتاجه عيادتك",
+    "description": "مجموعة كاملة من الأدوات مصممة للعيادات الحديثة",
+    "categories": [
+      {
+        "name": "العمليات السريرية",
+        "description": "حسن رعاية المرضى وسير العمل السريري"
+      },
+      {
+        "name": "إدارة الممارسة",
+        "description": "حسن العمليات الإدارية والتجارية"
+      }
+    ],
+    "items": [
+      {
+        "icon": "calendar",
+        "category": "المواعيد",
+        "title": "جدولة ذكية",
+        "description": "نظام جدولة مدعوم بالذكاء الاصطناعي مع تذكيرات تلقائية",
+        "image": "/images/solutions/clinic/scheduling.jpg",
+        "highlights": [
+          "حجز عبر الإنترنت",
+          "تذكيرات تلقائية",
+          "إدارة قائمة الانتظار",
+          "تخصيص الموارد"
+        ],
+        "stats": {
+          "value": "60%",
+          "label": "تقليل حالات عدم الحضور"
+        }
+      },
+      {
+        "icon": "file-text",
+        "category": "السجلات الطبية",
+        "title": "السجل الطبي الإلكتروني",
+        "description": "نظام سجل طبي إلكتروني كامل مع توثيق مبسط",
+        "image": "/images/solutions/clinic/ehr.jpg",
+        "highlights": [
+          "توثيق رقمي",
+          "خطط العلاج",
+          "تكامل المختبر",
+          "وصفات طبية إلكترونية"
+        ],
+        "stats": {
+          "value": "45%",
+          "label": "توفير الوقت في التوثيق"
+        }
+      },
+      {
+        "icon": "credit-card",
+        "category": "الفواتير",
+        "title": "فواتير ذكية",
+        "description": "معالجة آلية للفواتير والتأمين",
+        "image": "/images/solutions/clinic/billing.jpg",
+        "highlights": [
+          "التحقق من التأمين",
+          "معالجة المدفوعات",
+          "إدارة المطالبات",
+          "تقارير مالية"
+        ],
+        "stats": {
+          "value": "30%",
+          "label": "استردادات أسرع"
+        }
+      },
+      {
+        "icon": "activity",
+        "category": "التحليلات",
+        "title": "ذكاء الممارسة",
+        "description": "معلومات قائمة على البيانات لاتخاذ قرارات أفضل",
+        "image": "/images/solutions/clinic/analytics.jpg",
+        "highlights": [
+          "مقاييس الأداء",
+          "تحليل المرضى",
+          "رؤى مالية",
+          "تقارير تشغيلية"
+        ],
+        "stats": {
+          "value": "35%",
+          "label": "نمو الإيرادات"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "شاهدها في العمل",
+    "description": "اكتشف كيف تقوم العيادات الرائدة بتحويل ممارساتها",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "قصة نجاح العيادة"
+    },
+    "testimonials": [
+      {
+        "author": "د. سارة أحمد",
+        "role": "مديرة العيادة",
+        "image": "/images/testimonials/doctor1.jpg",
+        "quote": "حول هذا النظام طريقة عملنا. أصبح فريقنا أكثر كفاءة ومرضانا أكثر رضا."
+      },
+      {
+        "author": "د. محمد خالد",
+        "role": "طبيب أسرة",
+        "image": "/images/testimonials/doctor2.jpg",
+        "quote": "نظام السجل الطبي الإلكتروني بديهي وساعد تكامل الفواتير في تحسين دورة الإيرادات لدينا بشكل كبير."
+      }
+    ]
+  },
+  "benefits": {
+    "subtitle": "المزايا الرئيسية",
+    "title": "حول ممارستك",
+    "description": "اختبر مزايا نظام إدارة العيادة المتكامل بالكامل",
+    "items": [
+      {
+        "icon": "clock",
+        "title": "كفاءة الوقت",
+        "description": "قلل العبء الإداري وركز على رعاية المرضى",
+        "color": "blue",
+        "stats": {
+          "value": "50%",
+          "label": "توفير الوقت"
+        },
+        "highlights": [
+          "عمليات آلية",
+          "توثيق سريع",
+          "جدولة فعالة",
+          "تقليل الأوراق"
+        ]
+      },
+      {
+        "icon": "heart",
+        "title": "رعاية أفضل للمرضى",
+        "description": "حسن تجربة ونتائج المرضى",
+        "color": "red",
+        "stats": {
+          "value": "96%",
+          "label": "رضا المرضى"
+        },
+        "highlights": [
+          "سجلات كاملة",
+          "متابعة أفضل",
+          "تواصل محسن",
+          "تنسيق الرعاية"
+        ]
+      },
+      {
+        "icon": "trending-up",
+        "title": "نمو الممارسة",
+        "description": "زِد الإيرادات وحسن العمليات",
+        "color": "green",
+        "stats": {
+          "value": "35%",
+          "label": "نمو الإيرادات"
+        },
+        "highlights": [
+          "فواتير محسنة",
+          "تكاليف مخفضة",
+          "استخدام أفضل",
+          "كفاءة متزايدة"
+        ]
+      },
+      {
+        "icon": "shield",
+        "title": "الامتثال والأمان",
+        "description": "حافظ على الامتثال التنظيمي وأمان البيانات",
+        "color": "purple",
+        "stats": {
+          "value": "100%",
+          "label": "امتثال HIPAA"
+        },
+        "highlights": [
+          "امتثال HIPAA",
+          "تشفير البيانات",
+          "تتبع التدقيق",
+          "وصول آمن"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "subtitle": "أسعار شفافة",
+    "title": "خطط أسعار مرنة",
+    "description": "اختر الخطة المثالية لعيادتك. وفر حتى 20% مع الفواتير السنوية.",
+    "billingPeriods": ["شهري", "سنوي"],
+    "plans": [
+      {
+        "name": "أساسي",
+        "highlight": "مثالي للعيادات الصغيرة",
+        "monthlyPrice": "$299",
+        "yearlyPrice": "$2,990",
+        "yearlyDiscount": "وفر $598/سنة",
+        "description": "ميزات أساسية للممارسات الصغيرة",
+        "features": [
+          {
+            "text": "جدولة المواعيد",
+            "included": true
+          },
+          {
+            "text": "سجل طبي إلكتروني أساسي",
+            "included": true
+          },
+          {
+            "text": "بوابة المريض",
+            "included": true
+          },
+          {
+            "text": "دعم عبر البريد الإلكتروني",
+            "included": true
+          },
+          {
+            "text": "تقارير أساسية",
+            "included": true
+          },
+          {
+            "text": "وصول عبر الجوال",
+            "included": true
+          }
+        ],
+        "cta": "ابدأ الآن",
+        "popular": false
+      },
+      {
+        "name": "احترافي",
+        "highlight": "الأكثر شعبية للعيادات النامية",
+        "monthlyPrice": "$599",
+        "yearlyPrice": "$5,990",
+        "yearlyDiscount": "وفر $1,198/سنة",
+        "description": "ميزات متقدمة للعيادات الراسخة",
+        "features": [
+          {
+            "text": "كل ما في الأساسي، بالإضافة إلى:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "ميزات متقدمة للسجل الطبي الإلكتروني",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "منصة الطب عن بعد",
+            "included": true
+          },
+          {
+            "text": "تحليلات متقدمة",
+            "included": true
+          },
+          {
+            "text": "دعم ذو أولوية",
+            "included": true
+          },
+          {
+            "text": "دعم متعدد المزودين",
+            "included": true
+          }
+        ],
+        "cta": "ابدأ الآن",
+        "popular": true
+      },
+      {
+        "name": "مؤسسة",
+        "highlight": "للعيادات الكبيرة",
+        "monthlyPrice": "مخصص",
+        "yearlyPrice": "مخصص",
+        "yearlyDiscount": "اتصل بنا للأسعار الخاصة",
+        "description": "حلول مخصصة للممارسات الكبيرة",
+        "features": [
+          {
+            "text": "كل ما في الاحترافي، بالإضافة إلى:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "دعم تكامل مخصص",
+            "included": true
+          },
+          {
+            "text": "مدير حساب مخصص",
+            "included": true
+          },
+          {
+            "text": "ميزات أمان متقدمة",
+            "included": true
+          },
+          {
+            "text": "خيارات تطوير مخصصة",
+            "included": true
+          },
+          {
+            "text": "ضمانات SLA",
+            "included": true
+          }
+        ],
+        "cta": "اتصل بالمبيعات",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "جاهز لتحويل عيادتك؟",
+    "description": "انضم إلى آلاف مقدمي الرعاية الصحية الذين حدّثوا ممارساتهم مع حلنا.",
+    "background": "/images/solutions/clinic/cta-background.jpg",
+    "primaryButton": {
+      "text": "جدولة عرض توضيحي",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "شاهد العرض التوضيحي",
+      "link": "#showcase"
+    }
+  }
+} 

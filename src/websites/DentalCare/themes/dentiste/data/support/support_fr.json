@@ -1,0 +1,112 @@
+{
+  "hero": {
+    "subtitle": "SUPPORT CLIENT",
+    "title": "Nous Sommes Là Pour Vous Aider à Réussir",
+    "description": "Obtenez le support dont vous avez besoin pour tirer le meilleur parti de votre entreprise e-commerce avec nos ressources complètes et notre équipe dédiée."
+  },
+  "categories": [
+    {
+      "icon": "Book",
+      "title": "Documentation",
+      "description": "Guides et tutoriels complets pour vous aider à démarrer et à tirer le meilleur parti de notre plateforme.",
+      "link": "/docs",
+      "color": "pink"
+    },
+    {
+      "icon": "Video",
+      "title": "Tutoriels Vidéo",
+      "description": "Guides vidéo étape par étape vous montrant comment utiliser nos fonctionnalités efficacement.",
+      "link": "/tutorials",
+      "color": "blue"
+    },
+    {
+      "icon": "MessageCircle",
+      "title": "Forum Communautaire",
+      "description": "Connectez-vous avec d'autres utilisateurs, partagez vos expériences et obtenez des conseils de la communauté.",
+      "link": "/community",
+      "color": "purple"
+    },
+    {
+      "icon": "LifeBuoy",
+      "title": "Support Technique",
+      "description": "Obtenez une assistance directe de notre équipe technique pour tout problème rencontré.",
+      "link": "/technical-support",
+      "color": "orange"
+    }
+  ],
+  "faq": {
+    "title": "Questions Fréquentes",
+    "description": "Trouvez des réponses rapides aux questions courantes sur notre plateforme et nos services.",
+    "categories": [
+      {
+        "title": "Premiers Pas",
+        "questions": [
+          {
+            "question": "Comment configurer mon compte ?",
+            "answer": "La configuration de votre compte est simple. Cliquez sur le bouton 'Commencer', remplissez vos informations et suivez le processus d'intégration. Nous vous guiderons à chaque étape."
+          },
+          {
+            "question": "Quelles plateformes supportez-vous ?",
+            "answer": "Nous prenons en charge toutes les principales plateformes e-commerce, notamment Shopify, WooCommerce, Magento, PrestaShop et plus encore. Consultez notre page d'intégration pour la liste complète."
+          }
+        ]
+      },
+      {
+        "title": "Facturation & Plans",
+        "questions": [
+          {
+            "question": "Puis-je changer de plan plus tard ?",
+            "answer": "Oui, vous pouvez surclasser ou déclasser votre plan à tout moment. Les changements prendront effet lors de votre prochain cycle de facturation."
+          },
+          {
+            "question": "Proposez-vous des remboursements ?",
+            "answer": "Nous offrons une garantie de remboursement de 14 jours si vous n'êtes pas satisfait de notre service. Contactez notre équipe de support pour traiter votre remboursement."
+          }
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "title": "Encore Besoin d'Aide ?",
+    "description": "Notre équipe de support est disponible pour vous aider avec toutes vos questions ou préoccupations.",
+    "options": [
+      {
+        "icon": "Mail",
+        "title": "Support Email",
+        "description": "Obtenez de l'aide par email sous 24 heures",
+        "action": "Envoyer un Email",
+        "link": "mailto:support@atalsia.com"
+      },
+      {
+        "icon": "MessageSquare",
+        "title": "Chat en Direct",
+        "description": "Chattez avec notre équipe de support en temps réel",
+        "action": "Démarrer le Chat",
+        "link": "#chat"
+      }
+    ]
+  },
+  "resources": {
+    "title": "Ressources Additionnelles",
+    "items": [
+      {
+        "icon": "FileText",
+        "title": "Documentation API",
+        "description": "Documentation technique détaillée pour les développeurs",
+        "link": "/api-docs"
+      },
+      {
+        "icon": "BookOpen",
+        "title": "Base de Connaissances",
+        "description": "Articles et guides approfondis",
+        "link": "/knowledge-base"
+      },
+      {
+        "icon": "Calendar",
+        "title": "Webinaires",
+        "description": "Sessions de formation et ateliers en direct",
+        "link": "/webinars"
+      }
+    ]
+  }
+} 

@@ -1,0 +1,121 @@
+{
+  "hero": {
+    "subtitle": "PLANS TARIFAIRES",
+    "title": "Choisissez le Plan Adapté à Votre Entreprise",
+    "description": "Tarification transparente sans frais cachés. Tous les plans incluent nos fonctionnalités principales alimentées par l'IA pour vous aider à croître."
+  },
+  "billing": {
+    "monthly": "Mensuel",
+    "yearly": "Annuel",
+    "discount": "Économisez 20%"
+  },
+  "plans": [
+    {
+      "name": "Débutant",
+      "description": "Parfait pour les petites entreprises e-commerce",
+      "price": {
+        "monthly": 29,
+        "yearly": 290
+      },
+      "featured": false,
+      "features": [
+        "Génération de Contenu IA (5k mots/mois)",
+        "Outils SEO de Base",
+        "Optimisation des Produits",
+        "Support par Email",
+        "2 Membres d'Équipe",
+        "Tableau de Bord Analytique",
+        "Accès API"
+      ],
+      "cta": {
+        "text": "Commencer",
+        "link": "/get-started"
+      }
+    },
+    {
+      "name": "Professionnel",
+      "description": "Idéal pour les entreprises en croissance",
+      "price": {
+        "monthly": 79,
+        "yearly": 790
+      },
+      "featured": true,
+      "badge": "Populaire",
+      "features": [
+        "Génération de Contenu IA (20k mots/mois)",
+        "Suite SEO Avancée",
+        "Optimisation Produits & Stocks",
+        "Support Prioritaire",
+        "5 Membres d'Équipe",
+        "Analytiques Avancées",
+        "Accès API",
+        "Intégrations Personnalisées",
+        "Éditeur en Masse",
+        "Tests A/B"
+      ],
+      "cta": {
+        "text": "Commencer",
+        "link": "/get-started"
+      }
+    },
+    {
+      "name": "Entreprise",
+      "description": "Pour les opérations à grande échelle",
+      "price": {
+        "monthly": 199,
+        "yearly": 1990
+      },
+      "featured": false,
+      "features": [
+        "Génération de Contenu IA Illimitée",
+        "Outils SEO Entreprise",
+        "Optimisation Suite Complète",
+        "Support Prioritaire 24/7",
+        "Membres d'Équipe Illimités",
+        "Analytiques Personnalisées",
+        "Accès API Premium",
+        "Développement Sur Mesure",
+        "Opérations en Masse Avancées",
+        "Gestion Multi-boutiques"
+      ],
+      "cta": {
+        "text": "Commencer",
+        "link": "/get-started"
+      }
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Puis-je changer de plan plus tard ?",
+      "answer": "Oui, vous pouvez surclasser ou déclasser votre plan à tout moment. Les changements seront reflétés dans votre prochain cycle de facturation."
+    },
+    {
+      "question": "Quels modes de paiement acceptez-vous ?",
+      "answer": "Nous acceptons toutes les principales cartes de crédit, PayPal et les virements bancaires pour les clients entreprise."
+    },
+    {
+      "question": "Y a-t-il un essai gratuit ?",
+      "answer": "Oui, nous offrons un essai gratuit de 14 jours sur tous les plans. Aucune carte de crédit n'est requise."
+    },
+    {
+      "question": "Que se passe-t-il après la fin de mon essai ?",
+      "answer": "Après la fin de votre essai, vous pouvez choisir de vous abonner à l'un de nos plans ou votre compte sera automatiquement rétrogradé vers notre niveau gratuit limité."
+    }
+  ],
+  "cta": {
+    "title": "Encore des Questions ?",
+    "description": "Notre équipe est là pour vous aider à trouver le plan parfait pour les besoins de votre entreprise.",
+    "buttons": [
+      {
+        "text": "Contacter les Ventes",
+        "link": "/contact",
+        "primary": true
+      },
+      {
+        "text": "Demander une Démo",
+        "link": "/demo",
+        "primary": false
+      }
+    ]
+  }
+} 

@@ -1,0 +1,192 @@
+{
+  "hero": {
+    "subtitle": "AI KEYWORD RESEARCH",
+    "title": "Discover High-Value Keywords with AI",
+    "description": "Leverage advanced AI technology to uncover profitable keywords, analyze search intent, and optimize your content strategy for better SEO performance.",
+    "image": "https://cdn.atlagia.com/kepart_vector_laptop_Ai_Platform_e-commerce_Revolution_light_ba_c134a938-d6b2-4ff3-b7db-4019f096ca6f.png"
+  },
+  "benefits": {
+    "title": "Why Choose Our AI Keyword Research",
+    "items": [
+      {
+        "icon": "Search",
+        "title": "Smart Discovery",
+        "description": "AI-powered keyword discovery and opportunity analysis.",
+        "color": "blue"
+      },
+      {
+        "icon": "Target",
+        "title": "Intent Analysis",
+        "description": "Deep understanding of search intent and user behavior.",
+        "color": "green"
+      },
+      {
+        "icon": "TrendingUp",
+        "title": "Trend Prediction",
+        "description": "Forecast keyword trends and seasonal variations.",
+        "color": "purple"
+      },
+      {
+        "icon": "BarChart",
+        "title": "Competition Analysis",
+        "description": "Detailed competitive analysis and difficulty scoring.",
+        "color": "pink"
+      }
+    ]
+  },
+  "features": {
+    "title": "Powerful Research Features",
+    "description": "Everything you need to master your keyword strategy.",
+    "items": [
+      {
+        "title": "AI Keyword Discovery",
+        "description": "Find valuable keywords with machine learning",
+        "image": "https://cdn.atlagia.com/kepart_VECTOR_fa59d2a1-24df-458f-bcd3-4d3b640bc0a5.png",
+        "features": [
+          "Smart suggestions",
+          "Long-tail opportunities",
+          "Related topics",
+          "Question analysis"
+        ]
+      },
+      {
+        "title": "Search Intent Analysis",
+        "description": "Understand user intent and optimize content accordingly",
+        "image": "https://cdn.atlagia.com/kepart_VECTOR_33c602ca-88fc-463d-84eb-9550a3064eb9.png",
+        "features": [
+          "Intent classification",
+          "User journey mapping",
+          "Content alignment",
+          "SERP analysis"
+        ]
+      },
+      {
+        "title": "Competitive Intelligence",
+        "description": "Analyze competitors and find opportunities",
+        "image": "https://cdn.atlagia.com/kepart_VECTOR_1b085a79-08d1-4646-8a27-26f74af5bb55.png",
+        "features": [
+          "Competitor tracking",
+          "Gap analysis",
+          "Ranking difficulty",
+          "Market opportunities"
+        ]
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "description": "Get started with AI keyword research in four simple steps",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Enter Topics",
+        "description": "Input your target topics or domains"
+      },
+      {
+        "number": "02",
+        "title": "AI Analysis",
+        "description": "Let AI analyze search patterns"
+      },
+      {
+        "number": "03",
+        "title": "Get Insights",
+        "description": "Receive detailed keyword insights"
+      },
+      {
+        "number": "04",
+        "title": "Optimize Content",
+        "description": "Apply insights to your content"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Simple, Transparent Pricing",
+    "description": "Choose the plan that best fits your keyword research needs",
+    "plans": [
+      {
+        "name": "Starter",
+        "price": "49",
+        "period": "/month",
+        "description": "For small websites",
+        "features": [
+          "100 keywords/month",
+          "Basic analysis",
+          "Daily updates",
+          "Email support"
+        ],
+        "cta": {
+          "text": "Start Free Trial",
+          "link": "/trial"
+        }
+      },
+      {
+        "name": "Professional",
+        "price": "149",
+        "period": "/month",
+        "description": "For growing websites",
+        "features": [
+          "1,000 keywords/month",
+          "Advanced analysis",
+          "Real-time updates",
+          "Priority support"
+        ],
+        "cta": {
+          "text": "Start Free Trial",
+          "link": "/trial"
+        },
+        "popular": true
+      },
+      {
+        "name": "Enterprise",
+        "price": "399",
+        "period": "/month",
+        "description": "For large operations",
+        "features": [
+          "Unlimited keywords",
+          "Custom solutions",
+          "API access",
+          "24/7 support"
+        ],
+        "cta": {
+          "text": "Contact Sales",
+          "link": "/contact"
+        }
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "What Our Customers Say",
+    "items": [
+      {
+        "content": "The AI keyword research tool has helped us discover untapped opportunities that increased our organic traffic by 200% in just 3 months.",
+        "author": "Michael Chen",
+        "position": "SEO Director",
+        "company": "GrowthDigital",
+        "image": "/images/testimonials/michael.jpg"
+      },
+      {
+        "content": "The intent analysis feature has transformed how we create content. Our conversion rates have improved significantly since we started using it.",
+        "author": "Lisa Anderson",
+        "position": "Content Manager",
+        "company": "ContentPro",
+        "image": "/images/testimonials/lisa.jpg"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Improve Your SEO Strategy?",
+    "description": "Join thousands of businesses using our platform to discover high-value keywords.",
+    "buttons": [
+      {
+        "text": "Start Free Trial",
+        "link": "/trial",
+        "primary": true
+      },
+      {
+        "text": "Watch Demo",
+        "link": "/demo",
+        "primary": false
+      }
+    ]
+  }
+} 

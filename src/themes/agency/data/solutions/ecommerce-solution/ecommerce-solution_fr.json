@@ -1,0 +1,336 @@
+{
+  "hero": {
+    "subtitle": "Plateforme E-commerce Propulsée par l'IA",
+    "title": "Transformez Votre Entreprise en Ligne avec le Commerce Intelligent",
+    "description": "Découvrez l'avenir du e-commerce avec notre plateforme complète propulsée par l'IA qui optimise les opérations, améliore l'expérience client et stimule la croissance.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "thumbnail": "/images/ecommerce-hero.webp",
+      "alt": "Démo de la Plateforme E-commerce"
+    },
+    "stats": [
+      {
+        "value": "45%",
+        "label": "Augmentation du Taux de Conversion"
+      },
+      {
+        "value": "60%",
+        "label": "Satisfaction Client"
+      },
+      {
+        "value": "40%",
+        "label": "Réduction des Coûts Opérationnels"
+      }
+    ]
+  },
+  "features": {
+    "title": "Fonctionnalités de Niveau Entreprise",
+    "subtitle": "Gestion E-commerce de Nouvelle Génération",
+    "description": "Découvrez notre suite complète d'outils avancés conçus pour révolutionner vos opérations e-commerce. Chaque fonctionnalité est conçue pour offrir une efficacité maximale et une expérience client supérieure.",
+    "categories": [
+      {
+        "name": "Gestion de la Boutique",
+        "description": "Fonctionnalités principales qui optimisent vos opérations quotidiennes"
+      },
+      {
+        "name": "Expérience Client",
+        "description": "Outils qui améliorent l'engagement et la satisfaction des clients"
+      }
+    ],
+    "items": [
+      {
+        "icon": "shopping-cart",
+        "title": "Gestion Intelligente des Stocks",
+        "description": "Optimisation des stocks propulsée par l'IA et prévision de la demande",
+        "category": "Gestion de la Boutique",
+        "image": "/images/features/inventory-management.webp",
+        "highlights": [
+          "Suivi des stocks en temps réel",
+          "Réapprovisionnement automatique",
+          "Prévision de la demande",
+          "Gestion multi-entrepôts"
+        ],
+        "stats": {
+          "value": "35%",
+          "label": "Optimisation des Stocks"
+        }
+      },
+      {
+        "icon": "users",
+        "title": "Intelligence Client",
+        "description": "Analyses client avancées et personnalisation",
+        "category": "Expérience Client",
+        "image": "/images/features/customer-intelligence.webp",
+        "highlights": [
+          "Segmentation client",
+          "Analyses comportementales",
+          "Recommandations personnalisées",
+          "Cartographie du parcours client"
+        ],
+        "stats": {
+          "value": "45%",
+          "label": "Engagement Supérieur"
+        }
+      },
+      {
+        "icon": "credit-card",
+        "title": "Solutions de Paiement Intelligentes",
+        "description": "Traitement des paiements fluide et prévention de la fraude",
+        "category": "Gestion de la Boutique",
+        "image": "/images/features/payment-solutions.webp",
+        "highlights": [
+          "Support multi-passerelles de paiement",
+          "Détection de fraude par IA",
+          "Gestion des abonnements",
+          "Traitement des paiements mondiaux"
+        ],
+        "stats": {
+          "value": "99.9%",
+          "label": "Succès des Transactions"
+        }
+      },
+      {
+        "icon": "globe",
+        "title": "Commerce Mondial",
+        "description": "Support multi-devises et multi-langues",
+        "category": "Expérience Client",
+        "image": "/images/features/global-commerce.webp",
+        "highlights": [
+          "Support multi-langues",
+          "Conversion de devises",
+          "Expédition internationale",
+          "Conformité fiscale"
+        ],
+        "stats": {
+          "value": "150+",
+          "label": "Pays Supportés"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Voyez-le en Action",
+    "description": "Regardez comment les entreprises e-commerce leaders transforment leurs opérations",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "thumbnail": "/images/showcase-thumb.webp"
+    },
+    "testimonials": [
+      {
+        "author": "Sarah Chen",
+        "role": "PDG, Fashion Forward",
+        "image": "/images/testimonials/sarah.webp",
+        "quote": "Cette plateforme a révolutionné notre activité en ligne. Nous avons constaté une augmentation de 45% des taux de conversion."
+      },
+      {
+        "author": "Michael Rodriguez",
+        "role": "Fondateur, TechGear",
+        "image": "/images/testimonials/michael.webp",
+        "quote": "Les fonctionnalités IA ont considérablement amélioré notre gestion des stocks et la satisfaction de nos clients."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Bénéfices Transformateurs",
+    "subtitle": "Résultats et Impact Prouvés",
+    "description": "Découvrez des améliorations mesurables dans tous les aspects de votre activité e-commerce avec notre solution complète. Notre plateforme fournit des résultats concrets qui impactent directement votre rentabilité.",
+    "items": [
+      {
+        "title": "Croissance des Revenus",
+        "description": "Maximisez vos ventes en ligne avec l'optimisation et la personnalisation propulsées par l'IA.",
+        "icon": "trending-up",
+        "color": "green",
+        "stats": {
+          "value": "45%",
+          "label": "Augmentation du Taux de Conversion"
+        },
+        "highlights": [
+          "Optimisation intelligente des prix",
+          "Recommandations personnalisées",
+          "Récupération des paniers abandonnés",
+          "Cross-selling automatisé"
+        ]
+      },
+      {
+        "title": "Efficacité Opérationnelle",
+        "description": "Optimisez vos opérations e-commerce avec l'automatisation intelligente.",
+        "icon": "zap",
+        "color": "blue",
+        "stats": {
+          "value": "40%",
+          "label": "Réduction des Coûts"
+        },
+        "highlights": [
+          "Gestion automatique des stocks",
+          "Exécution intelligente des commandes",
+          "Logistique efficace",
+          "Réduction du travail manuel"
+        ]
+      },
+      {
+        "title": "Expérience Client",
+        "description": "Offrez des expériences d'achat exceptionnelles qui stimulent la fidélité.",
+        "icon": "heart",
+        "color": "purple",
+        "stats": {
+          "value": "60%",
+          "label": "Satisfaction Client"
+        },
+        "highlights": [
+          "Shopping personnalisé",
+          "Checkout fluide",
+          "Support 24/7",
+          "Optimisation mobile"
+        ]
+      },
+      {
+        "title": "Intelligence Marché",
+        "description": "Prenez des décisions basées sur les données avec des analyses avancées.",
+        "icon": "chart-bar",
+        "color": "yellow",
+        "stats": {
+          "value": "85%",
+          "label": "Meilleures Décisions"
+        },
+        "highlights": [
+          "Analyse des tendances du marché",
+          "Suivi des concurrents",
+          "Insights clients",
+          "Métriques de performance"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Plans de Prix Flexibles",
+    "subtitle": "Tarification Transparente",
+    "description": "Choisissez le plan parfait pour votre entreprise. Économisez jusqu'à 20% avec la facturation annuelle.",
+    "billingPeriods": ["Mensuel", "Annuel"],
+    "plans": [
+      {
+        "name": "Débutant",
+        "highlight": "Parfait pour les nouvelles boutiques en ligne",
+        "monthlyPrice": "$299",
+        "yearlyPrice": "$2,990",
+        "yearlyDiscount": "Économisez $598/an",
+        "description": "Fonctionnalités essentielles pour démarrer votre voyage e-commerce",
+        "features": [
+          {
+            "text": "Gestion basique de la boutique",
+            "included": true
+          },
+          {
+            "text": "Gestion des produits",
+            "included": true
+          },
+          {
+            "text": "Traitement des commandes",
+            "included": true
+          },
+          {
+            "text": "Analyses basiques",
+            "included": true
+          },
+          {
+            "text": "Support par email",
+            "included": true
+          },
+          {
+            "text": "Accès à l'application mobile",
+            "included": true
+          }
+        ],
+        "cta": "Commencer",
+        "popular": false
+      },
+      {
+        "name": "Professionnel",
+        "highlight": "Plus populaire pour les entreprises en croissance",
+        "monthlyPrice": "$599",
+        "yearlyPrice": "$5,990",
+        "yearlyDiscount": "Économisez $1,198/an",
+        "description": "Fonctionnalités avancées pour les boutiques établies",
+        "features": [
+          {
+            "text": "Tout ce qui est inclus dans Débutant, plus :",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Fonctionnalités propulsées par l'IA",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "Analyses avancées",
+            "included": true
+          },
+          {
+            "text": "Support multi-devises",
+            "included": true
+          },
+          {
+            "text": "Support prioritaire",
+            "included": true
+          },
+          {
+            "text": "Accès API",
+            "included": true
+          }
+        ],
+        "cta": "Commencer",
+        "popular": true
+      },
+      {
+        "name": "Entreprise",
+        "highlight": "Pour les grandes opérations e-commerce",
+        "monthlyPrice": "Personnalisé",
+        "yearlyPrice": "Personnalisé",
+        "yearlyDiscount": "Contactez-nous pour des tarifs spéciaux",
+        "description": "Solutions adaptées aux besoins entreprise",
+        "features": [
+          {
+            "text": "Tout ce qui est inclus dans Professionnel, plus :",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Support d'intégration personnalisé",
+            "included": true
+          },
+          {
+            "text": "Gestionnaire de compte dédié",
+            "included": true
+          },
+          {
+            "text": "Fonctionnalités de sécurité avancées",
+            "included": true
+          },
+          {
+            "text": "Options de développement personnalisées",
+            "included": true
+          },
+          {
+            "text": "Garanties SLA",
+            "included": true
+          }
+        ],
+        "cta": "Contacter les Ventes",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prêt à Transformer Votre Entreprise E-commerce ?",
+    "description": "Rejoignez des milliers de boutiques en ligne réussies utilisant notre plateforme",
+    "primaryButton": {
+      "text": "Planifier une Démo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Regarder la Vidéo Démo",
+      "link": "/demo-video"
+    },
+    "background": "/images/cta-background.webp"
+  }
+} 

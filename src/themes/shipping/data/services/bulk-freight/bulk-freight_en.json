@@ -1,0 +1,42 @@
+{
+  "hero": {
+    "title": "Bulk Freight Shipping",
+    "subtitle": "Efficient, Scalable, and Cost-Effective Logistics",
+    "description": "Move large volumes of goods with our specialized bulk freight solutions. Ideal for businesses needing reliable, scalable, and cost-effective shipping for heavy or oversized cargo.",
+    "heroIcon": "Truck",
+    "heroAnimation": "animate-float",
+    "image": ""
+  },
+  "overview": {
+    "title": "Why Choose Bulk Freight?",
+    "description": "Our Bulk Freight service is designed for businesses that require the transportation of large, heavy, or oversized shipments. Benefit from dedicated logistics, real-time tracking, and tailored solutions for your unique needs.",
+    "features": [
+      {
+        "icon": "truck",
+        "title": "Heavy & Oversized Cargo",
+        "description": "Transport goods of any size or weight with our robust fleet and experienced team."
+      },
+      {
+        "icon": "package",
+        "title": "Custom Packaging",
+        "description": "We provide specialized packaging to ensure your bulk shipments are secure and protected."
+      },
+      {
+        "icon": "route",
+        "title": "Optimized Routes",
+        "description": "Benefit from efficient route planning for timely and cost-effective deliveries."
+      },
+      {
+        "icon": "shield",
+        "title": "Cargo Protection",
+        "description": "Comprehensive insurance and handling for peace of mind during transit."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Ship Bulk Freight?",
+    "description": "Contact us for a custom quote and discover how our bulk freight solutions can streamline your logistics.",
+    "buttonText": "Request a Quote",
+    "buttonLink": "/quote"
+  }
+} 

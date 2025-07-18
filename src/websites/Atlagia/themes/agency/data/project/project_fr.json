@@ -1,0 +1,105 @@
+{
+  "hero": {
+    "subtitle": "DISCUTEZ DE VOTRE PROJET",
+    "title": "Construisons Ensemble Quelque Chose d'Extraordinaire",
+    "description": "Partagez vos idées de projet avec notre équipe d'experts. Nous vous aiderons à transformer votre vision en réalité avec des technologies de pointe et des solutions innovantes."
+  },
+  "features": {
+    "title": "Pourquoi Nous Choisir pour Votre Projet",
+    "description": "Notre équipe combine expertise technique et résolution créative de problèmes pour offrir des résultats exceptionnels pour chaque projet.",
+    "items": [
+      {
+        "icon": "Code",
+        "title": "Excellence Technique",
+        "description": "Nos développeurs sont experts dans les dernières technologies et meilleures pratiques, garantissant que votre projet est construit selon les normes les plus élevées."
+      },
+      {
+        "icon": "Lightbulb",
+        "title": "Solutions Innovantes",
+        "description": "Nous ne construisons pas seulement ce que vous demandez—nous suggérons des solutions créatives qui ne vous auraient peut-être pas traversé l'esprit, ajoutant une valeur supplémentaire à votre projet."
+      },
+      {
+        "icon": "Clock",
+        "title": "Livraison à Temps",
+        "description": "Nous comprenons l'importance des délais et travaillons assidûment pour garantir que votre projet est terminé dans les délais."
+      },
+      {
+        "icon": "Users",
+        "title": "Approche Collaborative",
+        "description": "Nous travaillons en étroite collaboration avec vous tout au long du processus de développement, vous tenant informé et impliqué à chaque étape."
+      },
+      {
+        "icon": "Shield",
+        "title": "Assurance Qualité",
+        "description": "Nos processus de test rigoureux garantissent que votre projet est exempt de bugs et fonctionne parfaitement sur toutes les plateformes."
+      },
+      {
+        "icon": "TrendingUp",
+        "title": "Solutions Évolutives",
+        "description": "Nous construisons en pensant à l'avenir, créant des solutions qui peuvent évoluer avec les besoins de votre entreprise."
+      }
+    ]
+  },
+  "process": {
+    "title": "Notre Processus de Développement",
+    "description": "Nous suivons une méthodologie éprouvée pour garantir que votre projet est livré efficacement et répond à toutes vos exigences.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Découverte et Planification",
+        "description": "Nous commençons par comprendre votre entreprise, vos objectifs et vos exigences pour créer un plan de projet détaillé."
+      },
+      {
+        "number": "02",
+        "title": "Conception et Prototypage",
+        "description": "Nos designers créent des maquettes et des prototypes pour visualiser l'expérience utilisateur avant le début du développement."
+      },
+      {
+        "number": "03",
+        "title": "Développement",
+        "description": "Nos développeurs construisent votre projet en utilisant les dernières technologies et meilleures pratiques, avec des mises à jour et des retours réguliers."
+      },
+      {
+        "number": "04",
+        "title": "Tests et Assurance Qualité",
+        "description": "Nous testons minutieusement votre projet pour garantir qu'il est exempt de bugs et fonctionne parfaitement sur toutes les plateformes."
+      },
+      {
+        "number": "05",
+        "title": "Lancement et Support",
+        "description": "Nous vous aidons à lancer votre projet et fournissons un support continu pour garantir son succès."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Questions Fréquemment Posées",
+    "description": "Trouvez des réponses aux questions courantes sur notre processus de développement de projet.",
+    "items": [
+      {
+        "question": "Combien de temps faut-il pour terminer un projet ?",
+        "answer": "Les délais de projet varient selon la complexité, la portée et les exigences. Les projets simples peuvent prendre 4 à 8 semaines, tandis que les applications plus complexes peuvent prendre 3 à 6 mois ou plus. Nous fournirons une estimation détaillée des délais après notre consultation initiale."
+      },
+      {
+        "question": "Quel est votre modèle de tarification ?",
+        "answer": "Nous proposons des modèles de tarification flexibles, notamment à prix fixe, temps et matériaux, et arrangements d'équipe dédiée. La meilleure approche dépend de la portée, du calendrier et des exigences de votre projet. Nous recommanderons l'option la plus appropriée lors de notre consultation."
+      },
+      {
+        "question": "Proposez-vous une maintenance et un support après l'achèvement du projet ?",
+        "answer": "Oui, nous proposons divers forfaits de maintenance et de support pour garantir que votre projet continue de fonctionner de manière optimale après son lancement. Ceux-ci peuvent inclure la correction de bugs, des mises à jour, des améliorations de fonctionnalités et un support technique."
+      },
+      {
+        "question": "Comment gérez-vous les changements de projet et les ajustements de portée ?",
+        "answer": "Nous comprenons que les exigences peuvent évoluer pendant le développement. Nous avons un processus structuré de gestion des changements pour évaluer, mettre en œuvre et communiquer les changements tout en minimisant l'impact sur le calendrier et le budget."
+      },
+      {
+        "question": "Quelles technologies maîtrisez-vous ?",
+        "answer": "Notre équipe est compétente dans un large éventail de technologies, notamment React, Angular, Vue.js, Node.js, Python, Java, .NET, et plus encore. Nous avons également une expertise en IA/ML, solutions cloud et développement mobile pour iOS et Android."
+      }
+    ]
+  },
+  "readyToStart": {
+    "title": "Prêt à commencer ?",
+    "description": "Remplissez le formulaire pour discuter de votre projet avec notre équipe. Nous vous recontacterons dans les 24 heures pour planifier une consultation.",
+    "buttonText": "Aller au formulaire"
+  }
+} 

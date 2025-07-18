@@ -1,0 +1,240 @@
+{
+  "hero": {
+    "subtitle": "GUM HEALTH SPECIALISTS",
+    "title": "Periodontal Treatment",
+    "description": "Expert care for gum disease and periodontal health, ensuring the strong foundation your smile needs."
+  },
+  "overview": {
+    "title": "Comprehensive Gum Care",
+    "description": "Our advanced periodontal treatments address all stages of gum disease, from early gingivitis to advanced periodontitis.",
+    "features": [
+      {
+        "icon": "activity",
+        "title": "Early Detection",
+        "description": "Advanced screening technology"
+      },
+      {
+        "icon": "shield",
+        "title": "Prevention Focus",
+        "description": "Proactive gum care"
+      },
+      {
+        "icon": "target",
+        "title": "Precise Treatment",
+        "description": "Minimally invasive procedures"
+      },
+      {
+        "icon": "heart",
+        "title": "Ongoing Care",
+        "description": "Long-term health maintenance"
+      }
+    ]
+  },
+  "services": {
+    "title": "Our Periodontal Services",
+    "description": "Comprehensive treatments for all aspects of gum health",
+    "treatments": [
+      {
+        "name": "Scaling & Root Planing",
+        "description": "Deep cleaning below the gumline",
+        "features": [
+          "Removes plaque and tartar",
+          "Smooths root surfaces",
+          "Reduces inflammation",
+          "Promotes healing"
+        ],
+        "price": "From $200 per quadrant",
+        "duration": "1-2 hours"
+      },
+      {
+        "name": "Gum Grafting",
+        "description": "Restore receded gum tissue",
+        "features": [
+          "Covers exposed roots",
+          "Prevents further recession",
+          "Improves aesthetics",
+          "Reduces sensitivity"
+        ],
+        "price": "From $700 per site",
+        "duration": "1-2 hours"
+      },
+      {
+        "name": "Laser Therapy",
+        "description": "Advanced gum disease treatment",
+        "features": [
+          "Minimally invasive",
+          "Faster healing",
+          "Less discomfort",
+          "Precise treatment"
+        ],
+        "price": "From $500 per session",
+        "duration": "30-60 minutes"
+      }
+    ]
+  },
+  "conditions": {
+    "title": "Conditions We Treat",
+    "description": "Comprehensive care for various periodontal conditions",
+    "issues": [
+      {
+        "title": "Gingivitis",
+        "description": "Early stage gum disease",
+        "icon": "alert-circle"
+      },
+      {
+        "title": "Periodontitis",
+        "description": "Advanced gum disease",
+        "icon": "alert-triangle"
+      },
+      {
+        "title": "Gum Recession",
+        "description": "Exposed tooth roots",
+        "icon": "arrow-down"
+      },
+      {
+        "title": "Gummy Smile",
+        "description": "Excess gum tissue",
+        "icon": "scissors"
+      },
+      {
+        "title": "Crown Lengthening",
+        "description": "Restore proper tooth proportion",
+        "icon": "maximize"
+      },
+      {
+        "title": "Bone Loss",
+        "description": "Periodontal bone grafting",
+        "icon": "layers"
+      }
+    ]
+  },
+  "process": {
+    "title": "Treatment Process",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Assessment",
+        "description": "Comprehensive periodontal examination"
+      },
+      {
+        "number": "02",
+        "title": "Diagnosis",
+        "description": "Detailed analysis and imaging"
+      },
+      {
+        "number": "03",
+        "title": "Treatment Plan",
+        "description": "Customized care strategy"
+      },
+      {
+        "number": "04",
+        "title": "Treatment",
+        "description": "Expert periodontal care"
+      },
+      {
+        "number": "05",
+        "title": "Maintenance",
+        "description": "Long-term health monitoring"
+      }
+    ]
+  },
+  "technology": {
+    "title": "Advanced Periodontal Technology",
+    "description": "State-of-the-art tools for optimal treatment",
+    "features": [
+      {
+        "title": "Digital Imaging",
+        "description": "Precise diagnosis and planning",
+        "icon": "camera"
+      },
+      {
+        "title": "Laser Treatment",
+        "description": "Minimally invasive care",
+        "icon": "zap"
+      },
+      {
+        "title": "3D Mapping",
+        "description": "Detailed treatment visualization",
+        "icon": "box"
+      },
+      {
+        "title": "Ultrasonic Cleaning",
+        "description": "Gentle, effective cleaning",
+        "icon": "waves"
+      }
+    ]
+  },
+  "prevention": {
+    "title": "Preventive Care",
+    "description": "Maintain your periodontal health",
+    "tips": [
+      "Regular professional cleanings",
+      "Proper brushing technique",
+      "Daily flossing",
+      "Healthy diet choices",
+      "Regular check-ups",
+      "Early intervention"
+    ]
+  },
+  "faq": {
+    "title": "Common Questions",
+    "questions": [
+      {
+        "question": "Is periodontal treatment painful?",
+        "answer": "Most procedures are performed with local anesthesia to ensure your comfort. Any post-treatment discomfort is typically mild and manageable with over-the-counter pain medication."
+      },
+      {
+        "question": "How long does treatment take?",
+        "answer": "Treatment duration varies depending on the condition and procedure. Initial therapy may take 2-4 visits, while maintenance visits are typically scheduled every 3-4 months."
+      },
+      {
+        "question": "Can gum disease be cured?",
+        "answer": "While early-stage gum disease can be reversed, advanced periodontitis requires ongoing management. With proper treatment and maintenance, the condition can be effectively controlled."
+      },
+      {
+        "question": "How often should I have periodontal maintenance?",
+        "answer": "Most patients benefit from maintenance visits every 3-4 months, though this may vary based on individual needs and risk factors."
+      }
+    ]
+  },
+  "insurance": {
+    "title": "Insurance & Payment Options",
+    "description": "Making periodontal care accessible",
+    "options": [
+      "Most dental insurance accepted",
+      "Flexible payment plans",
+      "Care Credit financing",
+      "Health savings accounts",
+      "Multiple payment methods"
+    ]
+  },
+  "testimonials": {
+    "title": "Patient Experiences",
+    "reviews": [
+      {
+        "name": "Michael S.",
+        "rating": 5,
+        "comment": "The periodontal treatment has completely transformed my oral health. Professional team and excellent results!",
+        "date": "2 weeks ago"
+      },
+      {
+        "name": "Patricia L.",
+        "rating": 5,
+        "comment": "Finally found relief from gum problems. The maintenance program keeps everything healthy.",
+        "date": "1 month ago"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Protect Your Gum Health",
+    "description": "Schedule your periodontal consultation today for expert gum care.",
+    "primaryButton": {
+      "text": "Book Consultation",
+      "href": "/booking"
+    },
+    "secondaryButton": {
+      "text": "Learn More",
+      "href": "/contact"
+    }
+  }
+} 

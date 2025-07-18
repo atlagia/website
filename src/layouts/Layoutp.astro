@@ -528,6 +528,18 @@ const searchConfig = {
     ru: "Поиск товаров..."
   }
 };
+
+// Payment configuration
+const paymentConfig = {
+  method: import.meta.env.PUBLIC_PAYMENT_METHOD || 'default',
+  hoodpay: {
+    apiUrl: import.meta.env.HOODPAY_API_URL,
+    businessId: import.meta.env.HOODPAY_BUSINESS_ID,
+    authToken: import.meta.env.HOODPAY_AUTH_TOKEN,
+    redirectUrl: `${import.meta.env.DOMAINE}${import.meta.env.HOODPAY_REDIRECT_URL}`
+  }
+};
+
 ---
 
 <!doctype html>
@@ -556,6 +568,7 @@ const searchConfig = {
       styles={headerStyles}
       apiEndpoint={import.meta.env.VITE_API_ENDPOINT}
       searchConfig={searchConfig}
+      paymentConfig={paymentConfig}
     />
     <slot />
     <Footer />

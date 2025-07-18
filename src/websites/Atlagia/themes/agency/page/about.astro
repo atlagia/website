@@ -1,0 +1,527 @@
+---
+import { SITE_TITLE } from '../consts';
+import * as LucideIcons from 'lucide-react';
+import { getLangFromUrl } from '@utils/i18n';
+import { FaMicrosoft, FaAws, FaGoogle, FaHospital, FaIndustry, FaStore } from 'react-icons/fa';
+
+const { 
+  Lightbulb, 
+  Shield, 
+  Zap, 
+  Link, 
+  Users, 
+  Target, 
+  Heart, 
+  Globe, 
+  Clock, 
+  Award, 
+  Building2, 
+  Handshake, 
+  Sparkles, 
+  Coffee, 
+  Trophy, 
+  Calendar,
+  Star,
+  ArrowRight,
+  GraduationCap
+} = LucideIcons;
+
+const theme = import.meta.env.THEME || 'default';
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'GiaConnect';
+
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+
+// Get current language and load appropriate content
+const currentLang = getLangFromUrl(Astro.url);
+const aboutData = await import(`../data/about/about_${currentLang}.json`).catch(() => 
+  import(`../data/about/about_en.json`)
+);
+
+const {
+  pageTitle,
+  pageDescription,
+  hero,
+  mission,
+  values,
+  team,
+  history,
+  achievements,
+  partners,
+  culture,
+  cta
+} = aboutData;
+
+const iconMap = {
+  lightbulb: Lightbulb,
+  shield: Shield,
+  zap: Zap,
+  link: Link,
+  users: Users,
+  target: Target,
+  heart: Heart,
+  globe: Globe,
+  clock: Clock,
+  award: Award,
+  building2: Building2,
+  handshake: Handshake,
+  sparkles: Sparkles,
+  coffee: Coffee,
+  trophy: Trophy,
+  calendar: Calendar,
+  star: Star,
+  'graduation-cap': GraduationCap
+};
+
+const getIcon = (iconName: string) => {
+  return iconMap[iconName.toLowerCase()] || Globe;
+};
+
+// Partner icon mapping
+const partnerIconMap = {
+  'Microsoft': FaMicrosoft,
+  'AWS': FaAws,
+  'Google Cloud': FaGoogle,
+  'Healthcare Alliance': FaHospital,
+  'Manufacturing Group': FaIndustry,
+  'Retail Consortium': FaStore
+};
+
+// Function to get partner icon
+const getPartnerIcon = (name: string) => {
+  return partnerIconMap[name] || Globe;
+};
+---
+
+<!doctype html>
+<html lang={currentLang} class="scroll-smooth">
+  <head>
+    <BaseHead 
+      title={`${pageTitle} | ${siteName}`}
+      description={pageDescription}
+    />
+  </head>
+  <body class="bg-gray-50">
+    <Header />
+    
+    <!-- Hero Section -->
+    <section class="relative min-h-[80vh] flex items-center py-20 overflow-hidden">
+      <!-- Background Effects -->
+      <div class="absolute inset-0 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
+        <div class="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(to_bottom,transparent,black,transparent)] opacity-20"></div>
+      </div>
+
+      <div class="relative container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 border border-purple-100 shadow-lg mb-8">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute h-full w-full rounded-full bg-purple-400 opacity-75"></span>
+              <span class="rounded-full h-2 w-2 bg-purple-500"></span>
+            </span>
+            <span class="text-sm font-medium text-purple-700">{hero.badge}</span>
+          </div>
+
+          <h1 class="text-5xl lg:text-6xl font-bold leading-tight mb-8">
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
+              {hero.title}
+            </span>
+          </h1>
+
+          <p class="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
+            {hero.description}
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="py-24 bg-white relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-purple-50/50 to-blue-50/50"></div>
+      <div class="container mx-auto px-4 relative">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-50 border border-purple-100 mb-4">
+            <span class="text-sm font-medium text-purple-700">{mission.title}</span>
+          </div>
+          <h2 class="text-4xl font-bold mb-6">{mission.title}</h2>
+          <p class="text-xl text-gray-600">{mission.description}</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          {mission.items.map((item) => {
+            const Icon = getIcon(item.icon);
+            return (
+              <div class="bg-white rounded-2xl p-8 shadow-lg shadow-gray-100/50 hover:shadow-xl transition-shadow duration-300">
+                <div class="w-12 h-12 bg-purple-50 rounded-xl flex items-center justify-center mb-6">
+                  <Icon class="w-6 h-6 text-purple-600" />
+                </div>
+                <h3 class="text-xl font-semibold mb-4">{item.title}</h3>
+                <p class="text-gray-600">{item.description}</p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="py-32 relative overflow-hidden">
+      <!-- Background Effects -->
+      <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900">
+        <div class="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(to_bottom,transparent,black,transparent)] opacity-10"></div>
+      </div>
+
+      <div class="container mx-auto px-4 relative">
+        <div class="text-center max-w-3xl mx-auto mb-20">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-4">
+            <span class="text-sm font-medium text-white">{values.title}</span>
+          </div>
+          <h2 class="text-4xl lg:text-5xl font-bold mb-6 text-white">{values.title}</h2>
+          <p class="text-xl text-gray-300">{values.description}</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {values.items.map((item) => {
+            const Icon = getIcon(item.icon);
+            return (
+              <div class="group relative transform hover:-translate-y-2 transition-all duration-500">
+                <!-- Card Glow Effect -->
+                <div class="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-blue-600 rounded-3xl blur opacity-30 group-hover:opacity-100 transition duration-500"></div>
+                
+                <!-- Card Content -->
+                <div class="relative h-full bg-white/10 backdrop-blur-sm border border-white/20 rounded-3xl p-8">
+                  <div class="w-12 h-12 bg-purple-50 rounded-xl flex items-center justify-center mb-6">
+                    <Icon class="w-6 h-6 text-white" />
+                  </div>
+                  <h3 class="text-xl font-semibold mb-4 text-white">{item.title}</h3>
+                  <p class="text-gray-300">{item.description}</p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-24 bg-white relative overflow-hidden">
+      <div class="absolute inset-0">
+        <div class="absolute inset-0 bg-gradient-to-br from-purple-50 via-white to-blue-50 opacity-90"></div>
+        <div class="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(to_bottom,transparent,black,transparent)] opacity-10"></div>
+      </div>
+      
+      <div class="container mx-auto px-4 relative">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-50 border border-purple-100 mb-4">
+            <Star class="w-4 h-4 text-purple-600" />
+            <span class="text-sm font-medium text-purple-700">{team.title}</span>
+          </div>
+          <h2 class="text-4xl font-bold mb-6">{team.title}</h2>
+          <p class="text-xl text-gray-600">{team.description}</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          {team.leadership.members.map((member) => (
+            <div class="bg-white rounded-2xl p-8 shadow-lg shadow-purple-100/20">
+              <div class="flex flex-col items-center text-center">
+                <img 
+                  src={member.image} 
+                  alt={member.name}
+                  class="w-32 h-32 rounded-full object-cover mb-6"
+                />
+                <div>
+                  <div class="font-semibold text-gray-900 text-xl mb-1">{member.name}</div>
+                  <div class="text-purple-600 mb-2">{member.role}</div>
+                  <p class="text-gray-600">{member.bio}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- History Section -->
+    <section class="py-32 relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900">
+        <div class="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(to_bottom,transparent,black,transparent)] opacity-10"></div>
+      </div>
+
+      <div class="container mx-auto px-4 relative">
+        <div class="text-center max-w-3xl mx-auto mb-20">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-4">
+            <span class="text-sm font-medium text-white">{history.title}</span>
+          </div>
+          <h2 class="text-4xl lg:text-5xl font-bold mb-6 text-white">{history.title}</h2>
+          <p class="text-xl text-gray-300">{history.description}</p>
+        </div>
+
+        <div class="relative">
+          <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-white/20"></div>
+          <div class="space-y-12">
+            {history.timeline.map((item) => (
+              <div class="relative">
+                <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-purple-500 rounded-full"></div>
+                <div class="ml-8 md:ml-0 md:w-1/2 md:ml-auto pl-8 md:pl-12">
+                  <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
+                    <span class="text-purple-400 font-semibold">{item.year}</span>
+                    <h3 class="text-xl font-semibold mb-2 text-white">{item.title}</h3>
+                    <p class="text-gray-300">{item.description}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="py-24 bg-white relative overflow-hidden">
+      <div class="absolute inset-0">
+        <div class="absolute inset-0 bg-gradient-to-br from-purple-50 via-white to-blue-50 opacity-90"></div>
+        <div class="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(to_bottom,transparent,black,transparent)] opacity-10"></div>
+      </div>
+      
+      <div class="container mx-auto px-4 relative">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-50 border border-purple-100 mb-4">
+            <Trophy class="w-4 h-4 text-purple-600" />
+            <span class="text-sm font-medium text-purple-700">{achievements.title}</span>
+          </div>
+          <h2 class="text-4xl font-bold mb-6">{achievements.title}</h2>
+          <p class="text-xl text-gray-600">{achievements.description}</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {achievements.items.map((item) => {
+            const Icon = getIcon(item.icon);
+            return (
+              <div class="bg-white rounded-2xl p-8 shadow-lg shadow-purple-100/20">
+                <div class="w-12 h-12 bg-purple-50 rounded-xl flex items-center justify-center mb-6">
+                  <Icon class="w-6 h-6 text-purple-600" />
+                </div>
+                <h3 class="text-xl font-semibold mb-4">{item.title}</h3>
+                <p class="text-gray-600">{item.description}</p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="py-32 relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900">
+        <div class="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(to_bottom,transparent,black,transparent)] opacity-10"></div>
+      </div>
+
+      <div class="container mx-auto px-4 relative">
+        <div class="text-center max-w-3xl mx-auto mb-20">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-4">
+            <Handshake class="w-4 h-4 text-white" />
+            <span class="text-sm font-medium text-white">{partners.title}</span>
+          </div>
+          <h2 class="text-4xl lg:text-5xl font-bold mb-6 text-white">{partners.title}</h2>
+          <p class="text-xl text-gray-300">{partners.description}</p>
+        </div>
+
+        {partners.categories.map((category) => (
+          <div class="mb-16">
+            <h3 class="text-2xl font-semibold mb-8 text-center text-white">{category.category}</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+              {category.items.map((partner) => {
+                const PartnerIcon = getPartnerIcon(partner.name);
+                return (
+                  <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 flex flex-col items-center justify-center gap-4 hover:bg-white/20 transition-all duration-300 group">
+                    <div class="[&>*]:text-white [&>*]:w-20 [&>*]:h-20">
+                      <PartnerIcon />
+                    </div>
+                    <span class="text-white/90 group-hover:text-white font-medium transition-colors text-lg">{partner.name}</span>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Culture Section -->
+    <section class="py-24 bg-white relative overflow-hidden">
+      <div class="absolute inset-0">
+        <div class="absolute inset-0 bg-gradient-to-br from-purple-50 via-white to-blue-50 opacity-90"></div>
+        <div class="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(to_bottom,transparent,black,transparent)] opacity-10"></div>
+      </div>
+      
+      <div class="container mx-auto px-4 relative">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-50 border border-purple-100 mb-4">
+            <Heart class="w-4 h-4 text-purple-600" />
+            <span class="text-sm font-medium text-purple-700">{culture.title}</span>
+          </div>
+          <h2 class="text-4xl font-bold mb-6">{culture.title}</h2>
+          <p class="text-xl text-gray-600">{culture.description}</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {culture.items.map((item) => {
+            const Icon = getIcon(item.icon);
+            return (
+              <div class="bg-white rounded-2xl p-8 shadow-lg shadow-purple-100/20">
+                <div class="w-12 h-12 bg-purple-50 rounded-xl flex items-center justify-center mb-6">
+                  <Icon class="w-6 h-6 text-purple-600" />
+                </div>
+                <h3 class="text-xl font-semibold mb-4">{item.title}</h3>
+                <p class="text-gray-600">{item.description}</p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="relative py-20 overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600">
+        <div class="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(to_bottom,transparent,black,transparent)] opacity-10"></div>
+      </div>
+      
+      <div class="relative container mx-auto px-4 text-center">
+        <div class="max-w-3xl mx-auto">
+          <h2 class="text-4xl font-bold text-white mb-6">{cta.title}</h2>
+          <p class="text-xl text-white/90 mb-8">
+            {cta.description}
+          </p>
+          <div class="flex items-center justify-center gap-4">
+            {cta.buttons.map((button) => (
+              <a 
+                href={button.href}
+                class={`px-8 py-4 rounded-xl font-medium transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25 hover:-translate-y-0.5 ${
+                  button.variant === 'primary' 
+                    ? 'bg-white text-purple-600 hover:bg-gray-100' 
+                    : 'bg-white/10 text-white hover:bg-white/20'
+                }`}
+              >
+                {button.text}
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Footer />
+
+    <script>
+      // Add smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+
+      // Add intersection observer for fade-in animations
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+          }
+        });
+      }, {
+        threshold: 0.1
+      });
+
+      // Observe all sections
+      document.querySelectorAll('section').forEach(section => {
+        observer.observe(section);
+      });
+    </script>
+  </body>
+</html>
+
+<style>
+  /* Animations */
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 0.4; }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 4s ease-in-out infinite;
+  }
+
+  .fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  /* Smooth transitions */
+  .transition-all {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+
+  /* Hover effects */
+  .hover\:scale-105:hover {
+    transform: scale(1.05);
+  }
+
+  .hover\:-translate-y-1:hover {
+    transform: translateY(-0.25rem);
+  }
+
+  /* Additional animations */
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .slide-in {
+    animation: slideIn 0.5s ease-out forwards;
+  }
+
+  /* Ensure proper section spacing */
+  section {
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Improve card aesthetics */
+  .rounded-2xl {
+    border-radius: 1rem;
+  }
+
+  .shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+</style> 

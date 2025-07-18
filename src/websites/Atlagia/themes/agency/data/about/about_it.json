@@ -1,0 +1,205 @@
+{
+  "pageTitle": "Chi Siamo",
+  "pageDescription": "Scopri la missione, i valori e l'impegno di GiaConnect nella trasformazione delle industrie attraverso soluzioni IA innovative.",
+  "hero": {
+    "badge": "La Nostra Storia",
+    "title": "Potenziamo le Industrie Attraverso l'Innovazione IA",
+    "description": "GiaConnect è all'avanguardia nella trasformazione guidata dall'IA, aiutando le aziende di tutti i settori a sfruttare tecnologie all'avanguardia per raggiungere l'eccellenza operativa.",
+    "image": "/images/about/hero.jpg"
+  },
+  "mission": {
+    "title": "La Nostra Missione",
+    "description": "Rivoluzionare le industrie rendendo l'IA accessibile, pratica e impattante per le aziende di tutte le dimensioni.",
+    "items": [
+      {
+        "title": "Accessibilità",
+        "description": "Rendere le soluzioni IA avanzate accessibili alle aziende di tutte le dimensioni e capacità tecniche",
+        "icon": "Globe"
+      },
+      {
+        "title": "Innovazione",
+        "description": "Spingere continuamente i limiti del possibile con la tecnologia IA",
+        "icon": "Lightbulb"
+      },
+      {
+        "title": "Impatto",
+        "description": "Fornire risultati misurabili e trasformazioni per i nostri clienti",
+        "icon": "Target"
+      }
+    ]
+  },
+  "values": {
+    "title": "I Nostri Valori",
+    "description": "I principi che guidano tutto ciò che facciamo in GiaConnect",
+    "items": [
+      {
+        "title": "Eccellenza",
+        "description": "Miriamo all'eccellenza in tutti gli aspetti del nostro lavoro, dallo sviluppo del prodotto al servizio clienti",
+        "icon": "Award"
+      },
+      {
+        "title": "Integrità",
+        "description": "Manteniamo i più alti standard di integrità e trasparenza in tutte le nostre operazioni",
+        "icon": "Shield"
+      },
+      {
+        "title": "Innovazione",
+        "description": "Innoviamo costantemente per rimanere al passo con le tendenze del settore e soddisfare le esigenze in evoluzione",
+        "icon": "Zap"
+      },
+      {
+        "title": "Partenariato",
+        "description": "Crediamo nella costruzione di partnership solide con i nostri clienti e stakeholder",
+        "icon": "Handshake"
+      }
+    ]
+  },
+  "team": {
+    "title": "Il Nostro Team",
+    "description": "Conosci le persone appassionate dietro il successo di GiaConnect",
+    "leadership": {
+      "title": "Team di Leadership",
+      "members": [
+        {
+          "name": "Sarah Johnson",
+          "role": "CEO & Fondatrice",
+          "bio": "Oltre 20 anni di esperienza in IA e innovazione tecnologica",
+          "image": "/images/team/sarah.jpg"
+        },
+        {
+          "name": "Michael Chen",
+          "role": "CTO",
+          "bio": "Esperto in machine learning e architettura aziendale",
+          "image": "/images/team/michael.jpg"
+        },
+        {
+          "name": "Emma Rodriguez",
+          "role": "Head of Product",
+          "bio": "Specialista in strategia del prodotto e innovazione",
+          "image": "/images/team/emma.jpg"
+        }
+      ]
+    }
+  },
+  "history": {
+    "title": "La Nostra Storia",
+    "description": "Dalla startup al leader nelle soluzioni IA",
+    "timeline": [
+      {
+        "year": "2020",
+        "title": "Fondazione",
+        "description": "GiaConnect è stata fondata con la visione di democratizzare la tecnologia IA"
+      },
+      {
+        "year": "2021",
+        "title": "Primo Traguardo",
+        "description": "Lancio della nostra prima soluzione basata su IA per il settore sanitario"
+      },
+      {
+        "year": "2022",
+        "title": "Espansione",
+        "description": "Espansione in più settori e raggiungimento di oltre 100 clienti"
+      },
+      {
+        "year": "2023",
+        "title": "Innovazione",
+        "description": "Introduzione di modelli IA avanzati ed espansione della presenza globale"
+      },
+      {
+        "year": "2024",
+        "title": "Leadership",
+        "description": "Riconoscimento come leader nelle soluzioni IA in tutti i settori"
+      }
+    ]
+  },
+  "achievements": {
+    "title": "I Nostri Successi",
+    "description": "Riconoscimenti e traguardi che dimostrano il nostro impatto",
+    "items": [
+      {
+        "title": "Premi del Settore",
+        "description": "Numerosi premi per l'innovazione e l'eccellenza nelle soluzioni IA",
+        "icon": "Trophy"
+      },
+      {
+        "title": "Successo Cliente",
+        "description": "Oltre 500 implementazioni di successo in tutti i settori",
+        "icon": "Users"
+      },
+      {
+        "title": "Portata Globale",
+        "description": "Operazioni in oltre 20 paesi con una base clienti diversificata",
+        "icon": "Globe"
+      },
+      {
+        "title": "Brevetto Innovativo",
+        "description": "Numerosi brevetti per la tecnologia IA e le metodologie",
+        "icon": "Lightbulb"
+      }
+    ]
+  },
+  "partners": {
+    "title": "I Nostri Partner",
+    "description": "Collaborazione con i leader del settore per soluzioni eccezionali",
+    "categories": [
+      {
+        "category": "Partner Tecnologici",
+        "items": [
+          { "name": "Microsoft", "logo": "/images/partners/microsoft.svg" },
+          { "name": "AWS", "logo": "/images/partners/aws.svg" },
+          { "name": "Google Cloud", "logo": "/images/partners/gcp.svg" }
+        ]
+      },
+      {
+        "category": "Partner di Settore",
+        "items": [
+          { "name": "Alleanza Sanitaria", "logo": "/images/partners/healthcare.svg" },
+          { "name": "Gruppo Manifatturiero", "logo": "/images/partners/manufacturing.svg" },
+          { "name": "Consorzio Retail", "logo": "/images/partners/retail.svg" }
+        ]
+      }
+    ]
+  },
+  "culture": {
+    "title": "La Nostra Cultura",
+    "description": "Un posto di lavoro che promuove l'innovazione e la crescita",
+    "items": [
+      {
+        "title": "Innovazione Prima di Tutto",
+        "description": "Promuoviamo il pensiero creativo e nuovi approcci alla risoluzione dei problemi",
+        "icon": "Lightbulb"
+      },
+      {
+        "title": "Apprendimento Continuo",
+        "description": "Investiamo nella crescita e nello sviluppo del nostro team",
+        "icon": "GraduationCap"
+      },
+      {
+        "title": "Equilibrio Lavoro-Vita",
+        "description": "Promuoviamo un sano equilibrio tra lavoro e vita privata",
+        "icon": "Heart"
+      },
+      {
+        "title": "Diversità & Inclusione",
+        "description": "Celebriamo la diversità e promuoviamo un ambiente inclusivo",
+        "icon": "Users"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Unisciti al Nostro Viaggio",
+    "description": "Sii parte del futuro dell'innovazione guidata dall'IA",
+    "buttons": [
+      {
+        "text": "Vedi Carriere",
+        "href": "/careers",
+        "variant": "primary"
+      },
+      {
+        "text": "Contattaci",
+        "href": "/contact",
+        "variant": "secondary"
+      }
+    ]
+  }
+} 

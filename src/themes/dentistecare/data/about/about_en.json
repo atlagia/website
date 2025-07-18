@@ -1,0 +1,95 @@
+{
+  "hero": {
+    "subtitle": "ABOUT US",
+    "title": "Exceptional Dental Care for Your Entire Family",
+    "description": "Learn about our commitment to providing high-quality dental care in a comfortable and welcoming environment."
+  },
+  "welcome": {
+    "subtitle": "WELCOME TO DENTCARE",
+    "title": "Modern Dental Care with a Personal Touch",
+    "description": "At DentCare, we combine advanced technology with compassionate care to provide exceptional dental services. Our commitment to excellence ensures that every patient receives personalized attention and the highest quality treatment.",
+    "image": "https://cdn.atlagia.com/kepart_A_professional_and_inviting_dental_clinic_banner_featuri_ff02d49f-09d7-4eec-80dd-7dfc5f60a122.png",
+    "features": [
+      {
+        "icon": "Tooth",
+        "title": "Preventive Dentistry",
+        "description": "Regular check-ups and cleanings to maintain your oral health and prevent future dental problems.",
+        "color": "cyan"
+      },
+      {
+        "icon": "HeartPulse",
+        "title": "Emergency Dental Care",
+        "description": "24/7 emergency dental services when you need them most, with quick response and effective treatment.",
+        "color": "cyan"
+      }
+    ]
+  },
+  "certifications": [
+    {
+      "name": "American Dental Association",
+      "logo": "https://cdn.atlagia.com/ada-logo.png"
+    },
+    {
+      "name": "Academy of General Dentistry",
+      "logo": "https://cdn.atlagia.com/agd-logo.png"
+    },
+    {
+      "name": "American Academy of Pediatric Dentistry",
+      "logo": "https://cdn.atlagia.com/aapd-logo.png"
+    },
+    {
+      "name": "American Academy of Cosmetic Dentistry",
+      "logo": "https://cdn.atlagia.com/aacd-logo.png"
+    }
+  ],
+  "team": {
+    "subtitle": "OUR TEAM",
+    "title": "Meet Our Expert Dental Professionals",
+    "description": "Our team of experienced dentists and dental professionals is dedicated to providing the highest quality care for you and your family. With advanced training and a commitment to continuing education, we stay at the forefront of modern dentistry.",
+    "image": "https://cdn.atlagia.com/kepart_A_professional_and_inviting_dental_clinic_banner_featuri_907c15b6-9c8d-4170-b8e0-1855b2ad6506.png",
+    "stats": [
+      {
+        "number": "15+",
+        "title": "Years of Experience"
+      },
+      {
+        "number": "10k+",
+        "title": "Happy Patients"
+      },
+      {
+        "number": "25+",
+        "title": "Dental Procedures"
+      },
+      {
+        "number": "12+",
+        "title": "Expert Dentists"
+      }
+    ],
+    "cta": {
+      "text": "Meet Our Team",
+      "link": "/team"
+    }
+  },
+  "testimonials": {
+    "title": "What Our Patients Say",
+    "description": "Discover firsthand experiences from our satisfied patients who have received exceptional dental care at DentCare.",
+    "cta": {
+      "text": "Book an Appointment",
+      "link": "/appointment"
+    },
+    "items": [
+      {
+        "content": "The team at DentCare is exceptional. They made my dental experience comfortable and stress-free. The results of my treatment exceeded my expectations!",
+        "name": "Sarah Thompson",
+        "position": "Patient",
+        "image": "/images/testimonials/sarah.jpg"
+      },
+      {
+        "content": "I've never felt more at ease at a dental office. The staff is friendly, professional, and truly cares about patient comfort. Highly recommend!",
+        "name": "Michael Chen",
+        "position": "Patient",
+        "image": "/images/testimonials/michael.jpg"
+      }
+    ]
+  }
+} 

@@ -1,0 +1,111 @@
+{
+  "hero": {
+    "subtitle": "SYSTEM STATUS",
+    "title": "Service Status Dashboard",
+    "description": "Real-time information about the status of our services and systems.",
+    "operational": "Operational",
+    "degraded": "Degraded Performance",
+    "maintenance": "Scheduled Maintenance"
+  },
+  "overallStatus": {
+    "title": "Overall System Status",
+    "status": "operational",
+    "statusText": "All Systems Operational",
+    "description": "All services are running normally with no reported issues.",
+    "lastUpdated": "Last updated: 5 minutes ago"
+  },
+  "servicesTitle": "Service Status",
+  "services": [
+    {
+      "name": "Web Application",
+      "description": "Main customer-facing web application",
+      "status": "operational",
+      "statusText": "Operational",
+      "icon": "Server"
+    },
+    {
+      "name": "API Services",
+      "description": "Backend API and microservices",
+      "status": "operational",
+      "statusText": "Operational",
+      "icon": "Cloud"
+    },
+    {
+      "name": "Database",
+      "description": "Primary and backup databases",
+      "status": "operational",
+      "statusText": "Operational",
+      "icon": "Database"
+    },
+    {
+      "name": "Authentication",
+      "description": "User authentication and authorization",
+      "status": "operational",
+      "statusText": "Operational",
+      "icon": "Shield"
+    },
+    {
+      "name": "AI Processing",
+      "description": "AI content generation and processing",
+      "status": "operational",
+      "statusText": "Operational",
+      "icon": "Zap"
+    },
+    {
+      "name": "Analytics",
+      "description": "Data analytics and reporting",
+      "status": "operational",
+      "statusText": "Operational",
+      "icon": "Activity"
+    }
+  ],
+  "incidentsTitle": "Recent Incidents",
+  "incidents": [
+    {
+      "title": "Database Performance Issue",
+      "date": "March 10, 2024",
+      "description": "We experienced slower response times for database queries affecting some API endpoints.",
+      "status": "operational",
+      "updates": [
+        {
+          "time": "10:30 AM",
+          "status": "investigating",
+          "statusText": "Investigating",
+          "description": "Our engineering team is investigating the cause of the database performance degradation."
+        },
+        {
+          "time": "11:45 AM",
+          "status": "investigating",
+          "statusText": "Investigating",
+          "description": "We've identified a query optimization issue and are implementing a fix."
+        },
+        {
+          "time": "1:15 PM",
+          "status": "resolved",
+          "statusText": "Resolved",
+          "description": "The issue has been resolved. All systems are now operating normally."
+        }
+      ]
+    },
+    {
+      "title": "Scheduled Maintenance",
+      "date": "March 5, 2024",
+      "description": "We performed scheduled maintenance to upgrade our infrastructure and improve performance.",
+      "status": "operational",
+      "updates": [
+        {
+          "time": "8:00 PM",
+          "status": "investigating",
+          "statusText": "In Progress",
+          "description": "Maintenance window started. Some services may experience brief interruptions."
+        },
+        {
+          "time": "10:30 PM",
+          "status": "resolved",
+          "statusText": "Completed",
+          "description": "Maintenance completed successfully. All systems are now operational with improved performance."
+        }
+      ]
+    }
+  ]
+} 

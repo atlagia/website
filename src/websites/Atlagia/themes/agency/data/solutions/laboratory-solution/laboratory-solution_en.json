@@ -1,0 +1,335 @@
+{
+  "hero": {
+    "subtitle": "Laboratory Information System",
+    "title": "Modern Laboratory Management Solution",
+    "description": "A comprehensive laboratory information system that streamlines sample processing, ensures accuracy, and accelerates result delivery.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Laboratory Management Solution Demo"
+    },
+    "stats": [
+      {
+        "value": "99.9%",
+        "label": "Test Accuracy"
+      },
+      {
+        "value": "60%",
+        "label": "Faster Processing"
+      },
+      {
+        "value": "40%",
+        "label": "Cost Reduction"
+      }
+    ]
+  },
+  "features": {
+    "subtitle": "Advanced Features",
+    "title": "Complete Laboratory Management",
+    "description": "Comprehensive tools designed for modern clinical and research laboratories",
+    "categories": [
+      {
+        "name": "Sample Management",
+        "description": "Track and manage samples throughout their lifecycle"
+      },
+      {
+        "name": "Testing Workflow",
+        "description": "Streamline testing processes and quality control"
+      }
+    ],
+    "items": [
+      {
+        "icon": "test-tube",
+        "category": "Sample Processing",
+        "title": "Sample Tracking System",
+        "description": "Complete sample lifecycle management and tracking",
+        "image": "/images/solutions/laboratory/samples.jpg",
+        "highlights": [
+          "Barcode integration",
+          "Chain of custody",
+          "Storage management",
+          "Sample history"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "Sample traceability"
+        }
+      },
+      {
+        "icon": "clipboard-check",
+        "category": "Quality Control",
+        "title": "Quality Assurance",
+        "description": "Comprehensive quality control and validation system",
+        "image": "/images/solutions/laboratory/quality.jpg",
+        "highlights": [
+          "QC protocols",
+          "Validation rules",
+          "Compliance tracking",
+          "Audit trails"
+        ],
+        "stats": {
+          "value": "99.9%",
+          "label": "Test accuracy"
+        }
+      },
+      {
+        "icon": "microscope",
+        "category": "Testing",
+        "title": "Test Management",
+        "description": "Efficient test processing and result management",
+        "image": "/images/solutions/laboratory/testing.jpg",
+        "highlights": [
+          "Test workflows",
+          "Result validation",
+          "Reference ranges",
+          "Batch processing"
+        ],
+        "stats": {
+          "value": "60%",
+          "label": "Faster processing"
+        }
+      },
+      {
+        "icon": "chart-bar",
+        "category": "Analytics",
+        "title": "Lab Analytics",
+        "description": "Comprehensive analytics and reporting system",
+        "image": "/images/solutions/laboratory/analytics.jpg",
+        "highlights": [
+          "Performance metrics",
+          "Workload analysis",
+          "Quality indicators",
+          "Cost analysis"
+        ],
+        "stats": {
+          "value": "40%",
+          "label": "Cost reduction"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Laboratory Excellence",
+    "description": "See how leading laboratories are transforming their operations",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Laboratory Success Story"
+    },
+    "testimonials": [
+      {
+        "author": "Dr. Michael Lee",
+        "role": "Laboratory Director",
+        "image": "/images/testimonials/lab1.jpg",
+        "quote": "This system has revolutionized our laboratory operations. The automation and tracking capabilities have significantly improved our efficiency."
+      },
+      {
+        "author": "Dr. Emma Wilson",
+        "role": "Quality Manager",
+        "image": "/images/testimonials/lab2.jpg",
+        "quote": "The quality control features have helped us maintain the highest standards of accuracy and compliance."
+      }
+    ]
+  },
+  "benefits": {
+    "subtitle": "Key Benefits",
+    "title": "Transform Your Laboratory",
+    "description": "Experience the advantages of a fully integrated laboratory management system",
+    "items": [
+      {
+        "icon": "trending-up",
+        "title": "Operational Excellence",
+        "description": "Streamline laboratory operations and workflow",
+        "color": "blue",
+        "stats": {
+          "value": "60%",
+          "label": "Efficiency Increase"
+        },
+        "highlights": [
+          "Automated workflows",
+          "Faster processing",
+          "Resource optimization",
+          "Cost reduction"
+        ]
+      },
+      {
+        "icon": "check-circle",
+        "title": "Quality Assurance",
+        "description": "Maintain highest standards of accuracy",
+        "color": "green",
+        "stats": {
+          "value": "99.9%",
+          "label": "Test Accuracy"
+        },
+        "highlights": [
+          "Quality controls",
+          "Validation rules",
+          "Error prevention",
+          "Compliance tracking"
+        ]
+      },
+      {
+        "icon": "clock",
+        "title": "Time Efficiency",
+        "description": "Reduce turnaround time and improve productivity",
+        "color": "purple",
+        "stats": {
+          "value": "50%",
+          "label": "Faster TAT"
+        },
+        "highlights": [
+          "Quick processing",
+          "Automated reporting",
+          "Batch handling",
+          "Priority management"
+        ]
+      },
+      {
+        "icon": "shield",
+        "title": "Compliance & Security",
+        "description": "Ensure regulatory compliance and data security",
+        "color": "red",
+        "stats": {
+          "value": "100%",
+          "label": "Compliance Rate"
+        },
+        "highlights": [
+          "Regulatory compliance",
+          "Data security",
+          "Audit trails",
+          "Access control"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "subtitle": "Transparent Pricing",
+    "title": "Flexible Pricing Plans",
+    "description": "Choose the perfect plan for your laboratory. Save up to 20% with annual billing.",
+    "billingPeriods": ["Monthly", "Yearly"],
+    "plans": [
+      {
+        "name": "Essential",
+        "highlight": "For small laboratories",
+        "monthlyPrice": "$499",
+        "yearlyPrice": "$4,990",
+        "yearlyDiscount": "Save $998/year",
+        "description": "Essential features for small labs",
+        "features": [
+          {
+            "text": "Basic sample tracking",
+            "included": true
+          },
+          {
+            "text": "Test management",
+            "included": true
+          },
+          {
+            "text": "Quality control",
+            "included": true
+          },
+          {
+            "text": "Email support",
+            "included": true
+          },
+          {
+            "text": "Basic reporting",
+            "included": true
+          },
+          {
+            "text": "Mobile access",
+            "included": true
+          }
+        ],
+        "cta": "Get Started",
+        "popular": false
+      },
+      {
+        "name": "Professional",
+        "highlight": "Most popular for mid-size labs",
+        "monthlyPrice": "$999",
+        "yearlyPrice": "$9,990",
+        "yearlyDiscount": "Save $1,998/year",
+        "description": "Advanced features for growing labs",
+        "features": [
+          {
+            "text": "Everything in Essential, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Advanced automation",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "Instrument integration",
+            "included": true
+          },
+          {
+            "text": "Advanced analytics",
+            "included": true
+          },
+          {
+            "text": "Priority support",
+            "included": true
+          },
+          {
+            "text": "Multi-location support",
+            "included": true
+          }
+        ],
+        "cta": "Get Started",
+        "popular": true
+      },
+      {
+        "name": "Enterprise",
+        "highlight": "For large laboratories",
+        "monthlyPrice": "Custom",
+        "yearlyPrice": "Custom",
+        "yearlyDiscount": "Contact us for special pricing",
+        "description": "Tailored solutions for large labs",
+        "features": [
+          {
+            "text": "Everything in Professional, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Custom integration support",
+            "included": true
+          },
+          {
+            "text": "Dedicated account manager",
+            "included": true
+          },
+          {
+            "text": "Advanced security features",
+            "included": true
+          },
+          {
+            "text": "Custom development",
+            "included": true
+          },
+          {
+            "text": "SLA guarantees",
+            "included": true
+          }
+        ],
+        "cta": "Contact Sales",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Transform Your Laboratory?",
+    "description": "Join leading laboratories that have modernized their operations with our solution.",
+    "background": "/images/solutions/laboratory/cta-background.jpg",
+    "primaryButton": {
+      "text": "Schedule a Demo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Watch Demo",
+      "link": "#showcase"
+    }
+  }
+} 

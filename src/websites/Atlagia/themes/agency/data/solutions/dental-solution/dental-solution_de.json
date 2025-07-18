@@ -1,0 +1,336 @@
+{
+  "hero": {
+    "subtitle": "Zahnarztpraxis-Management der nächsten Generation",
+    "title": "Transformieren Sie Ihre Zahnarztpraxis mit KI-gestützten Lösungen",
+    "description": "Erleben Sie die Zukunft des Zahnarztpraxis-Managements mit unserer umfassenden, KI-gestützten Plattform, die Abläufe optimiert und die Patientenversorgung verbessert.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "thumbnail": "/images/dental-hero.webp",
+      "alt": "Demo Zahnarztpraxis-Management"
+    },
+    "stats": [
+      {
+        "value": "98%",
+        "label": "Patientenzufriedenheit"
+      },
+      {
+        "value": "75%",
+        "label": "Zeitersparnis"
+      },
+      {
+        "value": "50%",
+        "label": "Kostenreduktion"
+      }
+    ]
+  },
+  "features": {
+    "title": "Enterprise-Level Funktionen",
+    "subtitle": "Zahnarztpraxis-Management der nächsten Generation",
+    "description": "Entdecken Sie unsere umfassende Suite fortschrittlicher Tools, entwickelt um Ihr Zahnarztpraxis-Management zu revolutionieren. Jede Funktion ist darauf ausgerichtet, maximale Effizienz und überlegene Patientenversorgung zu bieten.",
+    "categories": [
+      {
+        "name": "Praxis-Management",
+        "description": "Kernfunktionen, die Ihre täglichen Abläufe optimieren"
+      },
+      {
+        "name": "Patientenerfahrung",
+        "description": "Tools, die das Patientenerlebnis und die Zufriedenheit verbessern"
+      }
+    ],
+    "items": [
+      {
+        "icon": "globe",
+        "title": "Professioneller Website-Builder",
+        "description": "Erstellen Sie beeindruckende, konversionsoptimierte Websites mit integrierten SEO- und Buchungsfunktionen.",
+        "category": "Praxis-Management",
+        "image": "/images/features/website-builder.webp",
+        "highlights": [
+          "Drag-and-Drop-Builder mit Premium-Vorlagen",
+          "Mobile-First responsives Design-System",
+          "Integrierte Online-Buchung & Zahlungen",
+          "Fortgeschrittenes SEO-Optimierungs-Toolkit"
+        ],
+        "stats": {
+          "value": "250%",
+          "label": "Buchungszunahme"
+        }
+      },
+      {
+        "icon": "calendar",
+        "title": "Intelligente Terminplanung",
+        "description": "KI-gestützte Terminverwaltung, die die Effizienz Ihrer Praxis maximiert.",
+        "category": "Praxis-Management",
+        "image": "/images/features/scheduling.webp",
+        "highlights": [
+          "Intelligente Konfliktlösung mit KI-Optimierung",
+          "Multi-Provider Kalendersynchronisation",
+          "Automatisierte Patienten-Erinnerungen & Bestätigungen",
+          "Ressourcen- & Raumverwaltung"
+        ],
+        "stats": {
+          "value": "89%",
+          "label": "Weniger No-Shows"
+        }
+      },
+      {
+        "icon": "users",
+        "title": "Patienten-Management-Suite",
+        "description": "Umfassendes Patientenbeziehungsmanagement mit fortschrittlicher Analyse.",
+        "category": "Patientenerfahrung",
+        "image": "/images/features/patient-management.webp",
+        "highlights": [
+          "Digitale Patientenakten mit intelligenter Suche",
+          "Behandlungsplanung & Fortschrittsverfolgung",
+          "Integrierte Abrechnung & Versicherungsverwaltung",
+          "Patienten-Kommunikationsportal"
+        ],
+        "stats": {
+          "value": "95%",
+          "label": "Patientenbindung"
+        }
+      },
+      {
+        "icon": "brain",
+        "title": "KI-Klinischer Assistent",
+        "description": "Fortgeschrittene KI-Tools für Diagnoseunterstützung und Behandlungsplanung.",
+        "category": "Patientenerfahrung",
+        "image": "/images/features/ai-assistant.webp",
+        "highlights": [
+          "KI-gestützte Bildanalyse & Diagnostik",
+          "Personalisierte Behandlungsempfehlungen",
+          "Echtzeit-Risikobewertungstools",
+          "Automatisierte klinische Dokumentation"
+        ],
+        "stats": {
+          "value": "45%",
+          "label": "Schnellere Diagnose"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "In Aktion Sehen",
+    "description": "Sehen Sie, wie führende Zahnarztpraxen ihre Abläufe transformieren",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "thumbnail": "/images/showcase-thumb.webp"
+    },
+    "testimonials": [
+      {
+        "author": "Dr. Sarah Chen",
+        "role": "Leitende Zahnärztin, Bright Smile Dental",
+        "image": "/images/testimonials/sarah.webp",
+        "quote": "Diese Plattform hat unsere Arbeitsweise revolutioniert. Wir haben eine 40%ige Effizienzsteigerung festgestellt."
+      },
+      {
+        "author": "Dr. Michael Rodriguez",
+        "role": "Inhaber, Advanced Dental Care",
+        "image": "/images/testimonials/michael.webp",
+        "quote": "Die KI-Funktionen haben unsere Diagnosegenauigkeit und Patientenzufriedenheit dramatisch verbessert."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Transformative Vorteile",
+    "subtitle": "Bewährte Ergebnisse & Wirkung",
+    "description": "Erleben Sie messbare Verbesserungen in allen Aspekten Ihrer Praxis mit unserer umfassenden Lösung. Unsere Plattform liefert konkrete Ergebnisse, die sich direkt auf Ihre Gewinnmarge auswirken.",
+    "items": [
+      {
+        "title": "Operative Exzellenz",
+        "description": "Optimieren Sie Ihre Praxisabläufe mit KI-gestützter Automatisierung, reduzieren Sie Verwaltungskosten und verbessern Sie die Mitarbeitereffizienz.",
+        "icon": "chart-up",
+        "color": "blue",
+        "stats": {
+          "value": "75%",
+          "label": "Reduzierung der Verwaltungsarbeit"
+        },
+        "highlights": [
+          "Automatisierte Workflow-Verwaltung",
+          "Intelligente Ressourcenallokation",
+          "Reduzierter Papierkram",
+          "Optimierte Prozesse"
+        ]
+      },
+      {
+        "title": "Verbesserte Patientenerfahrung",
+        "description": "Bieten Sie außergewöhnliche Patientenversorgung durch digitale Innovation und personalisierte Interaktionen, die Erwartungen übertreffen.",
+        "icon": "heart",
+        "color": "purple",
+        "stats": {
+          "value": "98%",
+          "label": "Patientenzufriedenheit"
+        },
+        "highlights": [
+          "Digitale Terminbuchung",
+          "Automatisierte Erinnerungen",
+          "Online-Patientenportal",
+          "Nahtlose Kommunikation"
+        ]
+      },
+      {
+        "title": "Umsatzwachstum",
+        "description": "Maximieren Sie die finanzielle Performance Ihrer Praxis durch intelligente Terminplanung und optimierte Ressourcennutzung.",
+        "icon": "trending-up",
+        "color": "green",
+        "stats": {
+          "value": "35%",
+          "label": "Umsatzsteigerung"
+        },
+        "highlights": [
+          "Optimierte Terminplanung",
+          "Reduzierte No-Shows",
+          "Erhöhte Buchungen",
+          "Bessere Ressourcennutzung"
+        ]
+      },
+      {
+        "title": "Klinische Exzellenz",
+        "description": "Verbessern Sie Ihre klinischen Fähigkeiten mit KI-gestützten Diagnose- und Behandlungsplanungstools.",
+        "icon": "star",
+        "color": "yellow",
+        "stats": {
+          "value": "50%",
+          "label": "Effizienzgewinn"
+        },
+        "highlights": [
+          "KI-gestützte Diagnostik",
+          "Behandlungsplanung",
+          "Klinische Dokumentation",
+          "Qualitätssicherung"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Flexible Preispläne",
+    "subtitle": "Transparente Preisgestaltung",
+    "description": "Wählen Sie den perfekten Plan für Ihre Praxis. Sparen Sie bis zu 20% bei jährlicher Abrechnung.",
+    "billingPeriods": ["Monatlich", "Jährlich"],
+    "plans": [
+      {
+        "name": "Starter",
+        "highlight": "Perfekt für neue Praxen",
+        "monthlyPrice": "$199",
+        "yearlyPrice": "$1,990",
+        "yearlyDiscount": "Sparen Sie $398/Jahr",
+        "description": "Wesentliche Funktionen für den Start Ihrer digitalen Transformation",
+        "features": [
+          {
+            "text": "Grundlegende Terminplanung",
+            "included": true
+          },
+          {
+            "text": "Zugang zum Patientenportal",
+            "included": true
+          },
+          {
+            "text": "Digitale Aktenverwaltung",
+            "included": true
+          },
+          {
+            "text": "E-Mail-Support (24/7)",
+            "included": true
+          },
+          {
+            "text": "Grundlegende Analysen",
+            "included": true
+          },
+          {
+            "text": "Zugang zur mobilen App",
+            "included": true
+          }
+        ],
+        "cta": "Jetzt Starten",
+        "popular": false
+      },
+      {
+        "name": "Professional",
+        "highlight": "Beliebt bei etablierten Praxen",
+        "monthlyPrice": "$399",
+        "yearlyPrice": "$3,990",
+        "yearlyDiscount": "Sparen Sie $798/Jahr",
+        "description": "Fortgeschrittene Funktionen für wachsende Praxen",
+        "features": [
+          {
+            "text": "Alles aus Starter, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Fortgeschrittene KI-Funktionen",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "Multi-Provider-Unterstützung",
+            "included": true
+          },
+          {
+            "text": "Anpassbares Analyse-Dashboard",
+            "included": true
+          },
+          {
+            "text": "Prioritäts-Support",
+            "included": true
+          },
+          {
+            "text": "API-Zugang",
+            "included": true
+          }
+        ],
+        "cta": "Jetzt Starten",
+        "popular": true
+      },
+      {
+        "name": "Enterprise",
+        "highlight": "Für große Praxen und DSOs",
+        "monthlyPrice": "Individuell",
+        "yearlyPrice": "Individuell",
+        "yearlyDiscount": "Kontaktieren Sie uns für Sonderpreise",
+        "description": "Maßgeschneiderte Lösungen für Unternehmensbedürfnisse",
+        "features": [
+          {
+            "text": "Alles aus Professional, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Individuelle Integrationsunterstützung",
+            "included": true
+          },
+          {
+            "text": "Dedizierter Account Manager",
+            "included": true
+          },
+          {
+            "text": "Fortgeschrittene Sicherheitsfunktionen",
+            "included": true
+          },
+          {
+            "text": "Individuelle Entwicklungsoptionen",
+            "included": true
+          },
+          {
+            "text": "SLA-Garantien",
+            "included": true
+          }
+        ],
+        "cta": "Vertrieb Kontaktieren",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "Bereit, Ihre Praxis zu Transformieren?",
+    "description": "Schließen Sie sich Tausenden erfolgreicher Zahnarztpraxen an, die unsere Plattform nutzen",
+    "primaryButton": {
+      "text": "Demo Planen",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Demo-Video Ansehen",
+      "link": "/demo-video"
+    },
+    "background": "/images/cta-background.webp"
+  }
+} 

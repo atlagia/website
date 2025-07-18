@@ -1,0 +1,249 @@
+{
+  "navigation": [
+    {
+      "name": "القطاعات",
+      "href": "/industries",
+      "megaMenu": {
+        "categories": [
+          {
+            "title": "الرعاية الصحية",
+            "icon": "stethoscope",
+            "items": [
+              {
+                "name": "العيادات الطبية",
+                "href": "/solutions/medical-solution"
+              },
+              {
+                "name": "المستشفيات",
+                "href": "/solutions/hospital-solution"
+              },
+              {
+                "name": "العيادات",
+                "href": "/solutions/clinic-solution"
+              },
+              {
+                "name": "الصيدليات",
+                "href": "/solutions/pharmacy-solution"
+              }
+            ]
+          },
+          {
+            "title": "الخدمات المهنية",
+            "icon": "briefcase",
+            "items": [
+              {
+                "name": "عيادات الأسنان",
+                "href": "/solutions/dental-solution"
+              },
+              {
+                "name": "العيادات البيطرية",
+                "href": "/solutions/veterinary-solution"
+              },
+              {
+                "name": "مراكز الأشعة",
+                "href": "/solutions/radiology-solution"
+              },
+              {
+                "name": "المختبرات",
+                "href": "/solutions/laboratory-solution"
+              }
+            ]
+          },
+          {
+            "title": "التجارة والتوزيع",
+            "icon": "shopping-bag",
+            "items": [
+              {
+                "name": "التجارة الإلكترونية",
+                "href": "/solutions/ecommerce-solution"
+              },
+              {
+                "name": "متاجر التجزئة",
+                "href": "/solutions/retail-stores"
+              },
+              {
+                "name": "المطاعم",
+                "href": "/solutions/restaurants"
+              },
+              {
+                "name": "تجارة الجملة",
+                "href": "/solutions/wholesale"
+              }
+            ]
+          }
+        ],
+        "featured": {
+          "badge": "جديد",
+          "title": "حلول ذكاء اصطناعي حسب القطاع",
+          "description": "أتمتة ذكية مخصصة لقطاعك",
+          "link": {
+            "text": "استكشف الحلول",
+            "href": "/solutions"
+          }
+        }
+      }
+    },
+    {
+      "name": "الحلول",
+      "href": "/solutions",
+      "megaMenu": {
+        "categories": [
+          {
+            "title": "العمليات",
+            "icon": "settings",
+            "items": [
+              {
+                "name": "أتمتة سير العمل",
+                "href": "/solutions/workflow"
+              },
+              {
+                "name": "معالجة المستندات",
+                "href": "/solutions/documents"
+              },
+              {
+                "name": "تخطيط الموارد",
+                "href": "/solutions/planning"
+              },
+              {
+                "name": "التحليلات والتقارير",
+                "href": "/solutions/analytics"
+              }
+            ]
+          },
+          {
+            "title": "تجربة العملاء",
+            "icon": "users",
+            "items": [
+              {
+                "name": "دعم ذكي",
+                "href": "/solutions/chat-support"
+              },
+              {
+                "name": "تحليلات العملاء",
+                "href": "/solutions/customer-analytics"
+              },
+              {
+                "name": "التخصيص",
+                "href": "/solutions/personalization"
+              },
+              {
+                "name": "أدوات المشاركة",
+                "href": "/solutions/engagement"
+              }
+            ]
+          },
+          {
+            "title": "النمو",
+            "icon": "trending-up",
+            "items": [
+              {
+                "name": "التسويق الذكي",
+                "href": "/solutions/marketing"
+              },
+              {
+                "name": "ذكاء المبيعات",
+                "href": "/solutions/sales"
+              },
+              {
+                "name": "دراسات السوق",
+                "href": "/solutions/research"
+              },
+              {
+                "name": "ذكاء الأعمال",
+                "href": "/solutions/intelligence"
+              }
+            ]
+          }
+        ],
+        "featured": {
+          "badge": "مميز",
+          "title": "حزمة ذكاء اصطناعي للمؤسسات",
+          "description": "منصة تحول ذكاء اصطناعي متكاملة",
+          "link": {
+            "text": "اعرف المزيد",
+            "href": "/enterprise"
+          }
+        }
+      }
+    },
+    {
+      "name": "المنصة",
+      "href": "/platform",
+      "megaMenu": {
+        "categories": [
+          {
+            "title": "الميزات الأساسية",
+            "icon": "cpu",
+            "items": [
+              {
+                "name": "محرك الذكاء الاصطناعي",
+                "href": "/platform/ai-engine"
+              },
+              {
+                "name": "مركز التكامل",
+                "href": "/platform/integrations"
+              },
+              {
+                "name": "الأمان",
+                "href": "/platform/security"
+              },
+              {
+                "name": "الوصول إلى واجهة برمجة التطبيقات",
+                "href": "/platform/api"
+              }
+            ]
+          }
+        ],
+        "featured": {
+          "badge": "جديد",
+          "title": "بوابة المطورين",
+          "description": "طور باستخدام منصة الذكاء الاصطناعي لدينا",
+          "link": {
+            "text": "ابدأ الآن",
+            "href": "/developers"
+          }
+        }
+      }
+    },
+    {
+      "name": "الموارد",
+      "href": "/resources"
+    },
+    {
+      "name": "الأسعار",
+      "href": "/pricing"
+    }
+  ],
+  "auth": {
+    "signIn": {
+      "text": "تواصل معنا",
+      "href": "/contact"
+    },
+    "getStarted": {
+      "text": "ابدأ الآن",
+      "href": "/ar/discuss-project"
+    }
+  },
+  "languages": [
+    {
+      "code": "en",
+      "name": "English"
+    },
+    {
+      "code": "fr",
+      "name": "Français"
+    },
+    {
+      "code": "de",
+      "name": "Deutsch"
+    },
+    {
+      "code": "es",
+      "name": "Español"
+    },
+    {
+      "code": "ar",
+      "name": "العربية"
+    }
+  ]
+} 

@@ -1,0 +1,134 @@
+---
+interface Props {
+  subtitle: string;
+  title: string;
+  description: string;
+  buttonText: string;
+  buttonLink: string;
+  image: string;
+  recentPosts?: Array<{
+    title: string;
+    excerpt: string;
+    date: string;
+    category: string;
+  }>;
+}
+
+const { 
+  subtitle, 
+  title, 
+  description, 
+  buttonText, 
+  buttonLink, 
+  image,
+  recentPosts = []
+} = Astro.props;
+---
+
+<section class="relative py-24 px-4 overflow-hidden bg-gradient-to-b from-white via-blue-50/30 to-white">
+  <div class="relative z-10 max-w-7xl mx-auto">
+    <div class="flex flex-col lg:flex-row items-center gap-16">
+      <!-- Content Section -->
+      <div class="flex-1">
+        <span class="inline-block px-4 py-1.5 mb-4 text-sm font-medium rounded-full bg-blue-50 text-blue-600 border border-blue-100">
+          {subtitle}
+        </span>
+        
+        <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
+          {title}
+        </h2>
+        
+        <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+          {description}
+        </p>
+
+        <!-- Recent Blog Posts Preview -->
+        {recentPosts.length > 0 && (
+          <div class="space-y-6 mb-8">
+            {recentPosts.slice(0, 3).map((post) => (
+              <div class="group flex gap-6 items-start p-4 rounded-xl hover:bg-blue-50/50 transition-colors duration-300">
+                <div class="flex-shrink-0">
+                  <div class="w-16 h-16 rounded-lg bg-blue-100 flex items-center justify-center text-blue-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9.5a2 2 0 00-2-2h-2"/>
+                    </svg>
+                  </div>
+                </div>
+                <div>
+                  <span class="text-sm text-blue-600 font-medium mb-1 block">
+                    {post.category}
+                  </span>
+                  <h3 class="text-lg font-semibold text-gray-900 mb-1 group-hover:text-blue-600 transition-colors">
+                    {post.title}
+                  </h3>
+                  <p class="text-gray-600 text-sm line-clamp-2">
+                    {post.excerpt}
+                  </p>
+                  <span class="text-sm text-gray-500 mt-2 block">
+                    {post.date}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+
+        <a
+          href={buttonLink}
+          class="inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
+        >
+          {buttonText}
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Image Section -->
+      <div class="flex-1 relative">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-teal-500/10 rounded-3xl blur-2xl transform rotate-3"></div>
+        <div class="relative bg-white p-4 rounded-2xl shadow-xl">
+          <img 
+            src={image}
+            alt="Dental Health Blog"
+            class="w-full rounded-xl"
+          />
+          <!-- Decorative Elements -->
+          <div class="absolute -top-4 -right-4 w-20 h-20 bg-blue-50 rounded-full"></div>
+          <div class="absolute -bottom-4 -left-4 w-20 h-20 bg-teal-50 rounded-full"></div>
+        </div>
+
+        <!-- Featured Categories -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-4">
+          {['Dental Tips', 'Oral Health', 'Treatments'].map((category) => (
+            <span class="px-4 py-2 bg-white/90 backdrop-blur-sm rounded-full text-sm font-medium text-blue-600 shadow-lg">
+              {category}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Smooth transitions */
+  .transition-all {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+  }
+
+  /* Hover translations */
+  .hover\:-translate-y-0.5:hover {
+    transform: translateY(-2px);
+  }
+
+  /* Text truncation */
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style> 

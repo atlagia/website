@@ -1,0 +1,182 @@
+{
+  "hero": {
+    "subtitle": "API DOCUMENTATION",
+    "title": "Integrate with Our Platform",
+    "description": "Comprehensive API documentation to help you integrate our e-commerce solutions into your applications.",
+    "searchPlaceholder": "Search API documentation..."
+  },
+  "sidebar": {
+    "categories": [
+      {
+        "title": "Getting Started",
+        "icon": "Code",
+        "items": [
+          {
+            "title": "Authentication",
+            "link": "/api/auth"
+          },
+          {
+            "title": "API Overview",
+            "link": "/api/overview"
+          },
+          {
+            "title": "Rate Limits",
+            "link": "/api/rate-limits"
+          }
+        ]
+      },
+      {
+        "title": "Core Endpoints",
+        "icon": "Terminal",
+        "items": [
+          {
+            "title": "Products API",
+            "link": "/api/products"
+          },
+          {
+            "title": "Orders API",
+            "link": "/api/orders"
+          },
+          {
+            "title": "Customers API",
+            "link": "/api/customers"
+          }
+        ]
+      },
+      {
+        "title": "Advanced Features",
+        "icon": "Box",
+        "items": [
+          {
+            "title": "Webhooks",
+            "link": "/api/webhooks"
+          },
+          {
+            "title": "Analytics API",
+            "link": "/api/analytics"
+          },
+          {
+            "title": "AI Integration",
+            "link": "/api/ai"
+          }
+        ]
+      },
+      {
+        "title": "Security",
+        "icon": "Shield",
+        "items": [
+          {
+            "title": "API Keys",
+            "link": "/api/keys"
+          },
+          {
+            "title": "OAuth 2.0",
+            "link": "/api/oauth"
+          },
+          {
+            "title": "Data Encryption",
+            "link": "/api/encryption"
+          }
+        ]
+      }
+    ]
+  },
+  "featured": {
+    "title": "Featured Guides",
+    "guides": [
+      {
+        "icon": "Zap",
+        "title": "Quick Start Guide",
+        "description": "Get up and running with our API in minutes",
+        "link": "/api/quick-start",
+        "color": "pink"
+      },
+      {
+        "icon": "Database",
+        "title": "Data Models",
+        "description": "Understanding our data structures and relationships",
+        "link": "/api/data-models",
+        "color": "blue"
+      },
+      {
+        "icon": "Settings",
+        "title": "Integration Patterns",
+        "description": "Common patterns for integrating with our platform",
+        "link": "/api/integration-patterns",
+        "color": "purple"
+      }
+    ]
+  },
+  "endpoints": {
+    "title": "Popular Endpoints",
+    "description": "Explore our most commonly used API endpoints",
+    "items": [
+      {
+        "method": "GET",
+        "path": "/api/v1/products",
+        "title": "List Products",
+        "description": "Retrieve a list of products with optional filtering and pagination"
+      },
+      {
+        "method": "POST",
+        "path": "/api/v1/orders",
+        "title": "Create Order",
+        "description": "Create a new order with line items and customer information"
+      },
+      {
+        "method": "GET",
+        "path": "/api/v1/customers/{id}",
+        "title": "Get Customer",
+        "description": "Retrieve detailed information about a specific customer"
+      },
+      {
+        "method": "PUT",
+        "path": "/api/v1/products/{id}",
+        "title": "Update Product",
+        "description": "Update an existing product's information and attributes"
+      }
+    ]
+  },
+  "updates": {
+    "title": "Latest Updates",
+    "description": "Stay up to date with our latest API features and improvements",
+    "items": [
+      {
+        "date": "2024-03-15",
+        "title": "New Webhook Events",
+        "description": "Added support for order status changes and inventory updates",
+        "tag": "Feature"
+      },
+      {
+        "date": "2024-03-10",
+        "title": "API Version 2.0 Beta",
+        "description": "Introducing our next-generation API with improved performance and new endpoints",
+        "tag": "Update"
+      },
+      {
+        "date": "2024-03-05",
+        "title": "Enhanced Authentication",
+        "description": "Added support for OAuth 2.0 with refresh tokens and improved security",
+        "tag": "Security"
+      }
+    ]
+  },
+  "help": {
+    "title": "Need More Help?",
+    "description": "Can't find what you're looking for? Our developer support team is here to help.",
+    "options": [
+      {
+        "icon": "MessageCircle",
+        "title": "Developer Forum",
+        "description": "Join our developer community to get help from other developers",
+        "link": "/api/community"
+      },
+      {
+        "icon": "Mail",
+        "title": "Contact API Support",
+        "description": "Get in touch with our dedicated API support team",
+        "link": "/api/support"
+      }
+    ]
+  }
+} 

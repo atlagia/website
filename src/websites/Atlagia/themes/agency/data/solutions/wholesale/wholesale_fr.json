@@ -1,0 +1,332 @@
+{
+  "hero": {
+    "subtitle": "Gestion de Gros Assistée par IA",
+    "title": "Transformez Votre Commerce de Gros avec des Opérations Intelligentes",
+    "description": "Découvrez l'avenir de la gestion de gros avec notre plateforme complète assistée par IA, qui optimise l'inventaire, rationalise les opérations et propulse la croissance de votre entreprise de gros.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "thumbnail": "/images/wholesale-hero.webp",
+      "alt": "Démo de la Plateforme de Gestion de Gros"
+    },
+    "stats": [
+      {
+        "value": "45%",
+        "label": "Optimisation des Stocks"
+      },
+      {
+        "value": "60%",
+        "label": "Vitesse de Traitement des Commandes"
+      },
+      {
+        "value": "35%",
+        "label": "Réduction des Coûts"
+      }
+    ]
+  },
+  "features": {
+    "title": "Fonctionnalités de Niveau Entreprise",
+    "subtitle": "Gestion de Gros de Nouvelle Génération",
+    "description": "Découvrez notre suite complète d'outils avancés, conçue pour révolutionner vos opérations de gros. Chaque fonctionnalité a été développée pour offrir une efficacité maximale et une expérience client supérieure.",
+    "categories": [
+      {
+        "name": "Opérations de Gros",
+        "description": "Fonctionnalités essentielles qui optimisent votre exploitation quotidienne"
+      },
+      {
+        "name": "Expérience Client",
+        "description": "Outils qui améliorent l'engagement et la satisfaction des clients"
+      }
+    ],
+    "items": [
+      {
+        "icon": "box",
+        "title": "Gestion Intelligente des Stocks",
+        "description": "Optimisation et prévision des stocks assistée par IA",
+        "category": "Opérations de Gros",
+        "image": "/images/features/inventory-management.webp",
+        "highlights": [
+          "Suivi en Temps Réel",
+          "Prévision de la Demande",
+          "Optimisation des Niveaux de Stock",
+          "Gestion des Entrepôts"
+        ],
+        "stats": {
+          "value": "45%",
+          "label": "Meilleur Contrôle des Stocks"
+        }
+      },
+      {
+        "icon": "truck",
+        "title": "Traitement des Commandes",
+        "description": "Gestion et traitement optimisés des commandes",
+        "category": "Expérience Client",
+        "image": "/images/features/order-processing.webp",
+        "highlights": [
+          "Traitement en Masse",
+          "Traitement Automatisé",
+          "Intégration Expédition",
+          "Suivi des Commandes"
+        ],
+        "stats": {
+          "value": "60%",
+          "label": "Traitement Plus Rapide"
+        }
+      },
+      {
+        "icon": "bar-chart",
+        "title": "Analyses Commerciales",
+        "description": "Aperçus basés sur les données pour les opérations de gros",
+        "category": "Opérations de Gros",
+        "image": "/images/features/business-analytics.webp",
+        "highlights": [
+          "Analyses des Ventes",
+          "Aperçus Clients",
+          "Tendances du Marché",
+          "Métriques de Performance"
+        ],
+        "stats": {
+          "value": "40%",
+          "label": "Meilleure Prise de Décision"
+        }
+      },
+      {
+        "icon": "users",
+        "title": "Portail Client",
+        "description": "Portail self-service pour les clients de gros",
+        "category": "Expérience Client",
+        "image": "/images/features/customer-portal.webp",
+        "highlights": [
+          "Historique des Commandes",
+          "Catalogue de Produits",
+          "Gestion des Prix",
+          "Gestion des Comptes"
+        ],
+        "stats": {
+          "value": "50%",
+          "label": "Satisfaction Client"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Voyez-le en Action",
+    "description": "Observez comment les leaders du commerce de gros transforment leurs opérations",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "thumbnail": "/images/showcase-thumb.webp"
+    },
+    "testimonials": [
+      {
+        "author": "John Smith",
+        "role": "PDG, Solutions de Gros Globales",
+        "image": "/images/testimonials/john.webp",
+        "quote": "Cette plateforme a révolutionné nos opérations de gros. Nous avons constaté une amélioration de 45% dans la gestion des stocks et 60% plus rapide dans le traitement des commandes."
+      },
+      {
+        "author": "Maria Garcia",
+        "role": "Directrice des Opérations, Gros Plus",
+        "image": "/images/testimonials/maria.webp",
+        "quote": "Les fonctionnalités IA ont considérablement amélioré notre précision de prévision et la satisfaction des clients."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Avantages Transformateurs",
+    "subtitle": "Résultats & Impact Prouvés",
+    "description": "Découvrez des améliorations mesurables dans tous les aspects de votre entreprise de gros avec notre solution complète. Notre plateforme fournit des résultats concrets qui impactent directement votre résultat net.",
+    "items": [
+      {
+        "title": "Optimisation des Stocks",
+        "description": "Optimisez vos niveaux de stock avec la prévision assistée par IA.",
+        "icon": "box",
+        "color": "blue",
+        "stats": {
+          "value": "45%",
+          "label": "Meilleur Contrôle des Stocks"
+        },
+        "highlights": [
+          "Prévision de la Demande",
+          "Optimisation des Stocks",
+          "Gestion des Entrepôts",
+          "Suivi des Stocks"
+        ]
+      },
+      {
+        "title": "Efficacité Opérationnelle",
+        "description": "Optimisez vos opérations de gros avec l'automatisation intelligente.",
+        "icon": "zap",
+        "color": "purple",
+        "stats": {
+          "value": "60%",
+          "label": "Traitement Plus Rapide"
+        },
+        "highlights": [
+          "Traitement des Commandes",
+          "Traitement Automatisé",
+          "Intégration Expédition",
+          "Gestion des Documents"
+        ]
+      },
+      {
+        "title": "Gestion des Coûts",
+        "description": "Optimisez les coûts et maximisez la rentabilité.",
+        "icon": "trending-up",
+        "color": "green",
+        "stats": {
+          "value": "35%",
+          "label": "Réduction des Coûts"
+        },
+        "highlights": [
+          "Optimisation des Stocks",
+          "Efficacité des Entrepôts",
+          "Coûts d'Expédition",
+          "Coûts Opérationnels"
+        ]
+      },
+      {
+        "title": "Expérience Client",
+        "description": "Offrez un service exceptionnel aux clients de gros.",
+        "icon": "heart",
+        "color": "yellow",
+        "stats": {
+          "value": "50%",
+          "label": "Satisfaction Client"
+        },
+        "highlights": [
+          "Portail Client",
+          "Suivi des Commandes",
+          "Gestion des Comptes",
+          "Services de Support"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Plans de Prix Flexibles",
+    "subtitle": "Prix Transparents",
+    "description": "Choisissez le plan parfait pour votre entreprise de gros. Économisez jusqu'à 20% avec la facturation annuelle.",
+    "billingPeriods": ["Mensuel", "Annuel"],
+    "plans": [
+      {
+        "name": "Démarrage",
+        "highlight": "Parfait pour les petites entreprises de gros",
+        "monthlyPrice": "$199",
+        "yearlyPrice": "$1,990",
+        "yearlyDiscount": "Économisez $398/An",
+        "description": "Fonctionnalités essentielles pour démarrer votre transformation numérique",
+        "features": [
+          {
+            "text": "Gestion de Base des Stocks",
+            "included": true
+          },
+          {
+            "text": "Traitement des Commandes",
+            "included": true
+          },
+          {
+            "text": "Rapports de Base",
+            "included": true
+          },
+          {
+            "text": "Support par Email",
+            "included": true
+          },
+          {
+            "text": "Accès à l'Application Mobile",
+            "included": true
+          }
+        ],
+        "cta": "Commencer Maintenant",
+        "popular": false
+      },
+      {
+        "name": "Professionnel",
+        "highlight": "Choix le Plus Populaire pour les Entreprises de Gros en Croissance",
+        "monthlyPrice": "$399",
+        "yearlyPrice": "$3,990",
+        "yearlyDiscount": "Économisez $798/An",
+        "description": "Fonctionnalités avancées pour les entreprises de gros établies",
+        "features": [
+          {
+            "text": "Tout dans Démarrage, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Fonctionnalités IA",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "Analyses Avancées",
+            "included": true
+          },
+          {
+            "text": "Portail Client",
+            "included": true
+          },
+          {
+            "text": "Support Prioritaire",
+            "included": true
+          },
+          {
+            "text": "Accès API",
+            "included": true
+          }
+        ],
+        "cta": "Commencer Maintenant",
+        "popular": true
+      },
+      {
+        "name": "Entreprise",
+        "highlight": "Pour les Grandes Opérations de Gros",
+        "monthlyPrice": "Sur Mesure",
+        "yearlyPrice": "Sur Mesure",
+        "yearlyDiscount": "Contactez-nous pour des Prix Spéciaux",
+        "description": "Solutions personnalisées pour les besoins entreprise",
+        "features": [
+          {
+            "text": "Tout dans Professionnel, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Support Multi-Entrepôts",
+            "included": true
+          },
+          {
+            "text": "Gestionnaire de Compte Dédié",
+            "included": true
+          },
+          {
+            "text": "Fonctionnalités de Sécurité Avancées",
+            "included": true
+          },
+          {
+            "text": "Options de Développement Personnalisées",
+            "included": true
+          },
+          {
+            "text": "Garanties SLA",
+            "included": true
+          }
+        ],
+        "cta": "Contacter les Ventes",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prêt à Transformer Votre Entreprise de Gros ?",
+    "description": "Rejoignez des Milliers d'Entreprises de Gros Réussies qui Utilisent Notre Plateforme",
+    "primaryButton": {
+      "text": "Planifier une Démo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Regarder la Vidéo de Démo",
+      "link": "/demo-video"
+    },
+    "background": "/images/cta-background.webp"
+  }
+} 

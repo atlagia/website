@@ -1,0 +1,121 @@
+{
+  "hero": {
+    "subtitle": "DENTAL PLANS",
+    "title": "Affordable Dental Care for Your Family",
+    "description": "Choose from our range of dental plans designed to provide comprehensive care at affordable prices. No hidden fees, just transparent pricing for quality dental care."
+  },
+  "billing": {
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "discount": "Save 15%"
+  },
+  "plans": [
+    {
+      "name": "Basic Care",
+      "description": "Essential dental care for individuals",
+      "price": {
+        "monthly": 29,
+        "yearly": 290
+      },
+      "featured": false,
+      "features": [
+        "Regular Check-ups (2/year)",
+        "Basic Cleanings",
+        "Digital X-Rays",
+        "Fluoride Treatments",
+        "Emergency Exams",
+        "Oral Cancer Screenings",
+        "Dental Hygiene Guidance"
+      ],
+      "cta": {
+        "text": "Choose Plan",
+        "link": "/appointment"
+      }
+    },
+    {
+      "name": "Family Care",
+      "description": "Complete care for the whole family",
+      "price": {
+        "monthly": 79,
+        "yearly": 790
+      },
+      "featured": true,
+      "badge": "Most Popular",
+      "features": [
+        "All Basic Care Features",
+        "Family Coverage (up to 4 members)",
+        "Comprehensive Exams",
+        "Deep Cleanings",
+        "Fillings & Simple Extractions",
+        "Sealants for Children",
+        "15% Discount on Additional Treatments",
+        "Priority Scheduling",
+        "Dental Emergency Care",
+        "Personalized Treatment Plans"
+      ],
+      "cta": {
+        "text": "Choose Plan",
+        "link": "/appointment"
+      }
+    },
+    {
+      "name": "Premium Care",
+      "description": "Advanced dental care with cosmetic options",
+      "price": {
+        "monthly": 149,
+        "yearly": 1490
+      },
+      "featured": false,
+      "features": [
+        "All Family Care Features",
+        "Unlimited Family Members",
+        "Advanced Cosmetic Procedures",
+        "Teeth Whitening (2/year)",
+        "Crowns & Bridges",
+        "Root Canal Therapy",
+        "Dental Implant Consultations",
+        "Orthodontic Evaluations",
+        "25% Discount on Additional Treatments",
+        "24/7 Emergency Dental Support"
+      ],
+      "cta": {
+        "text": "Choose Plan",
+        "link": "/appointment"
+      }
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Are there any additional fees?",
+      "answer": "No, our plans are transparent with no hidden fees. Any treatment not covered by your plan will be clearly explained with costs before proceeding."
+    },
+    {
+      "question": "Do you accept dental insurance?",
+      "answer": "Yes, we accept most major dental insurance plans. Our team will help you maximize your benefits and minimize out-of-pocket expenses."
+    },
+    {
+      "question": "Can I change my plan later?",
+      "answer": "Yes, you can upgrade or downgrade your plan at any time. Changes will be reflected in your next billing cycle."
+    },
+    {
+      "question": "What payment methods do you accept?",
+      "answer": "We accept all major credit cards, cash, checks, and offer flexible payment plans through CareCredit for larger treatments."
+    }
+  ],
+  "cta": {
+    "title": "Have Questions About Our Dental Plans?",
+    "description": "Our friendly team is here to help you find the perfect dental plan for you and your family.",
+    "buttons": [
+      {
+        "text": "Contact Us",
+        "link": "/contact",
+        "primary": true
+      },
+      {
+        "text": "Book Consultation",
+        "link": "/appointment",
+        "primary": false
+      }
+    ]
+  }
+} 

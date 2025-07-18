@@ -1,0 +1,335 @@
+{
+  "hero": {
+    "subtitle": "Laborinformationssystem",
+    "title": "Moderne Laborverwaltungslösung",
+    "description": "Ein umfassendes Laborinformationssystem, das die Probenverarbeitung optimiert, Genauigkeit gewährleistet und die Ergebnislieferung beschleunigt.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Laborverwaltungslösung Demo"
+    },
+    "stats": [
+      {
+        "value": "99.9%",
+        "label": "Testgenauigkeit"
+      },
+      {
+        "value": "60%",
+        "label": "Schnellere Verarbeitung"
+      },
+      {
+        "value": "40%",
+        "label": "Kosteneinsparung"
+      }
+    ]
+  },
+  "features": {
+    "subtitle": "Fortgeschrittene Funktionen",
+    "title": "Vollständige Laborverwaltung",
+    "description": "Umfassende Tools für moderne klinische und Forschungslabore",
+    "categories": [
+      {
+        "name": "Probenverwaltung",
+        "description": "Verfolgen und verwalten Sie Proben während ihres gesamten Lebenszyklus"
+      },
+      {
+        "name": "Testablauf",
+        "description": "Optimieren Sie Testprozesse und Qualitätskontrolle"
+      }
+    ],
+    "items": [
+      {
+        "icon": "test-tube",
+        "category": "Probenverarbeitung",
+        "title": "Probenverfolgungssystem",
+        "description": "Vollständige Probenlebenszyklusverwaltung und -verfolgung",
+        "image": "/images/solutions/laboratory/samples.jpg",
+        "highlights": [
+          "Barcode-Integration",
+          "Probenkette",
+          "Lagerverwaltung",
+          "Probenhistorie"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "Probenrückverfolgbarkeit"
+        }
+      },
+      {
+        "icon": "clipboard-check",
+        "category": "Qualitätskontrolle",
+        "title": "Qualitätssicherung",
+        "description": "Umfassendes Qualitätskontroll- und Validierungssystem",
+        "image": "/images/solutions/laboratory/quality.jpg",
+        "highlights": [
+          "QC-Protokolle",
+          "Validierungsregeln",
+          "Compliance-Verfolgung",
+          "Audit-Trails"
+        ],
+        "stats": {
+          "value": "99.9%",
+          "label": "Testgenauigkeit"
+        }
+      },
+      {
+        "icon": "microscope",
+        "category": "Testen",
+        "title": "Testverwaltung",
+        "description": "Effiziente Testverarbeitung und Ergebnisverwaltung",
+        "image": "/images/solutions/laboratory/testing.jpg",
+        "highlights": [
+          "Testabläufe",
+          "Ergebnisvalidierung",
+          "Referenzbereiche",
+          "Batch-Verarbeitung"
+        ],
+        "stats": {
+          "value": "60%",
+          "label": "Schnellere Verarbeitung"
+        }
+      },
+      {
+        "icon": "chart-bar",
+        "category": "Analytik",
+        "title": "Laboranalytik",
+        "description": "Umfassendes Analyse- und Berichtssystem",
+        "image": "/images/solutions/laboratory/analytics.jpg",
+        "highlights": [
+          "Leistungsmetriken",
+          "Arbeitslastanalyse",
+          "Qualitätsindikatoren",
+          "Kostenanalyse"
+        ],
+        "stats": {
+          "value": "40%",
+          "label": "Kosteneinsparung"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Laborexzellenz",
+    "description": "Sehen Sie, wie führende Labore ihre Operationen transformieren",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Labor-Erfolgsgeschichte"
+    },
+    "testimonials": [
+      {
+        "author": "Dr. Michael Lee",
+        "role": "Laborleiter",
+        "image": "/images/testimonials/lab1.jpg",
+        "quote": "Dieses System hat unsere Laboroperationen revolutioniert. Die Automatisierungs- und Verfolgungsfunktionen haben unsere Effizienz erheblich verbessert."
+      },
+      {
+        "author": "Dr. Emma Wilson",
+        "role": "Qualitätsmanagerin",
+        "image": "/images/testimonials/lab2.jpg",
+        "quote": "Die Qualitätskontrollfunktionen haben uns geholfen, die höchsten Standards an Genauigkeit und Compliance zu gewährleisten."
+      }
+    ]
+  },
+  "benefits": {
+    "subtitle": "Hauptvorteile",
+    "title": "Transformieren Sie Ihr Labor",
+    "description": "Erleben Sie die Vorteile eines vollständig integrierten Laborverwaltungssystems",
+    "items": [
+      {
+        "icon": "trending-up",
+        "title": "Operative Exzellenz",
+        "description": "Optimieren Sie Laboroperationen und Workflows",
+        "color": "blue",
+        "stats": {
+          "value": "60%",
+          "label": "Effizienzsteigerung"
+        },
+        "highlights": [
+          "Automatisierte Workflows",
+          "Schnellere Verarbeitung",
+          "Ressourcenoptimierung",
+          "Kosteneinsparung"
+        ]
+      },
+      {
+        "icon": "check-circle",
+        "title": "Qualitätssicherung",
+        "description": "Behalten Sie die höchsten Genauigkeitsstandards bei",
+        "color": "green",
+        "stats": {
+          "value": "99.9%",
+          "label": "Testgenauigkeit"
+        },
+        "highlights": [
+          "Qualitätskontrollen",
+          "Validierungsregeln",
+          "Fehlerprävention",
+          "Compliance-Verfolgung"
+        ]
+      },
+      {
+        "icon": "clock",
+        "title": "Zeiteffizienz",
+        "description": "Reduzieren Sie die Durchlaufzeit und verbessern Sie die Produktivität",
+        "color": "purple",
+        "stats": {
+          "value": "50%",
+          "label": "Schnellere TAT"
+        },
+        "highlights": [
+          "Schnelle Verarbeitung",
+          "Automatisierte Berichterstattung",
+          "Batch-Verarbeitung",
+          "Prioritätsverwaltung"
+        ]
+      },
+      {
+        "icon": "shield",
+        "title": "Compliance & Sicherheit",
+        "description": "Gewährleisten Sie regulatorische Compliance und Datensicherheit",
+        "color": "red",
+        "stats": {
+          "value": "100%",
+          "label": "Compliance-Rate"
+        },
+        "highlights": [
+          "Regulatorische Compliance",
+          "Datensicherheit",
+          "Audit-Trails",
+          "Zugriffskontrolle"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "subtitle": "Transparente Preisgestaltung",
+    "title": "Flexible Preispläne",
+    "description": "Wählen Sie den perfekten Plan für Ihr Labor. Sparen Sie bis zu 20% bei jährlicher Abrechnung.",
+    "billingPeriods": ["Monatlich", "Jährlich"],
+    "plans": [
+      {
+        "name": "Essential",
+        "highlight": "Für kleine Labore",
+        "monthlyPrice": "$499",
+        "yearlyPrice": "$4,990",
+        "yearlyDiscount": "Sparen Sie $998/Jahr",
+        "description": "Wesentliche Funktionen für kleine Labore",
+        "features": [
+          {
+            "text": "Grundlegende Probenverfolgung",
+            "included": true
+          },
+          {
+            "text": "Testverwaltung",
+            "included": true
+          },
+          {
+            "text": "Qualitätskontrolle",
+            "included": true
+          },
+          {
+            "text": "E-Mail-Support",
+            "included": true
+          },
+          {
+            "text": "Grundlegende Berichterstattung",
+            "included": true
+          },
+          {
+            "text": "Mobiler Zugang",
+            "included": true
+          }
+        ],
+        "cta": "Jetzt Starten",
+        "popular": false
+      },
+      {
+        "name": "Professional",
+        "highlight": "Beliebt für mittelgroße Labore",
+        "monthlyPrice": "$999",
+        "yearlyPrice": "$9,990",
+        "yearlyDiscount": "Sparen Sie $1,998/Jahr",
+        "description": "Fortgeschrittene Funktionen für wachsende Labore",
+        "features": [
+          {
+            "text": "Alles in Essential, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Fortgeschrittene Automatisierung",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "Geräteintegration",
+            "included": true
+          },
+          {
+            "text": "Fortgeschrittene Analytik",
+            "included": true
+          },
+          {
+            "text": "Prioritäts-Support",
+            "included": true
+          },
+          {
+            "text": "Multi-Standort-Support",
+            "included": true
+          }
+        ],
+        "cta": "Jetzt Starten",
+        "popular": true
+      },
+      {
+        "name": "Enterprise",
+        "highlight": "Für große Labore",
+        "monthlyPrice": "Individuell",
+        "yearlyPrice": "Individuell",
+        "yearlyDiscount": "Kontaktieren Sie uns für Sonderpreise",
+        "description": "Maßgeschneiderte Lösungen für große Labore",
+        "features": [
+          {
+            "text": "Alles in Professional, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Individuelle Integrationsunterstützung",
+            "included": true
+          },
+          {
+            "text": "Dedizierter Account Manager",
+            "included": true
+          },
+          {
+            "text": "Fortgeschrittene Sicherheitsfunktionen",
+            "included": true
+          },
+          {
+            "text": "Individuelle Entwicklung",
+            "included": true
+          },
+          {
+            "text": "SLA-Garantien",
+            "included": true
+          }
+        ],
+        "cta": "Vertrieb kontaktieren",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "Bereit, Ihr Labor zu transformieren?",
+    "description": "Schließen Sie sich führenden Laboren an, die ihre Operationen mit unserer Lösung modernisiert haben.",
+    "background": "/images/solutions/laboratory/cta-background.jpg",
+    "primaryButton": {
+      "text": "Demo planen",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Demo ansehen",
+      "link": "#showcase"
+    }
+  }
+} 

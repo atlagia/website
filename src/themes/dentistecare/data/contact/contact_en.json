@@ -1,0 +1,67 @@
+{
+  "hero": {
+    "subtitle": "CONTACT US",
+    "title": "We're Here For Your Dental Needs",
+    "description": "Have questions about our dental services or want to schedule an appointment? Our friendly team is ready to assist you with all your dental care needs."
+  },
+  "contactInfo": [
+    {
+      "icon": "Mail",
+      "title": "Email Us",
+      "content": "info@dentcare.com",
+      "description": "Our team responds within 24 hours.",
+      "link": "mailto:info@dentcare.com"
+    },
+    {
+      "icon": "Phone",
+      "title": "Call Us",
+      "content": "+1 (555) 123-4567",
+      "description": "Mon-Fri: 8am-6pm, Sat: 9am-2pm",
+      "link": "tel:+15551234567"
+    },
+    {
+      "icon": "MapPin",
+      "title": "Visit Our Clinic",
+      "content": "123 Dental Avenue, Suite 200",
+      "description": "New York, NY 10001",
+      "link": "https://maps.google.com/maps?q=123 Dental Avenue, New York, NY 10001"
+    }
+  ],
+  "form": {
+    "title": "Request an Appointment",
+    "fields": {
+      "firstName": {
+        "label": "First Name",
+        "placeholder": "Enter your first name"
+      },
+      "lastName": {
+        "label": "Last Name",
+        "placeholder": "Enter your last name"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Enter your email"
+      },
+      "subject": {
+        "label": "Reason for Visit",
+        "placeholder": "e.g., Cleaning, Consultation, Emergency"
+      },
+      "message": {
+        "label": "Additional Information",
+        "placeholder": "Please share any specific concerns or preferred appointment times"
+      }
+    },
+    "submitButton": "Request Appointment"
+  },
+  "support": {
+    "hours": {
+      "title": "Clinic Hours",
+      "content": "Monday - Friday: 8:00 AM - 6:00 PM\nSaturday: 9:00 AM - 2:00 PM\nSunday: Closed (Emergency Services Available)"
+    },
+    "additional": {
+      "title": "Emergency Dental Care",
+      "description": "For dental emergencies, please call our emergency line:",
+      "email": "+1 (555) 911-DENT"
+    }
+  }
+} 

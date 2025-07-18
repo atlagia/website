@@ -1,0 +1,336 @@
+{
+  "hero": {
+    "subtitle": "Gestione Odontoiatrica di Nuova Generazione",
+    "title": "Trasforma il Tuo Studio Dentistico con Soluzioni Basate sull'IA",
+    "description": "Scopri il futuro della gestione dello studio dentistico con la nostra piattaforma completa basata sull'IA che semplifica le operazioni e migliora l'assistenza ai pazienti.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "thumbnail": "/images/dental-hero.webp",
+      "alt": "Demo Gestione Studio Dentistico"
+    },
+    "stats": [
+      {
+        "value": "98%",
+        "label": "Soddisfazione dei Pazienti"
+      },
+      {
+        "value": "75%",
+        "label": "Tempo Risparmiato"
+      },
+      {
+        "value": "50%",
+        "label": "Riduzione dei Costi"
+      }
+    ]
+  },
+  "features": {
+    "title": "Funzionalità di Livello Enterprise",
+    "subtitle": "Gestione Studio di Nuova Generazione",
+    "description": "Scopri la nostra suite completa di strumenti avanzati progettati per rivoluzionare la gestione del tuo studio dentistico. Ogni funzionalità è progettata per offrire massima efficienza e assistenza superiore ai pazienti.",
+    "categories": [
+      {
+        "name": "Gestione Studio",
+        "description": "Funzionalità principali che semplificano le tue operazioni quotidiane"
+      },
+      {
+        "name": "Esperienza Paziente",
+        "description": "Strumenti che migliorano l'engagement e la soddisfazione dei pazienti"
+      }
+    ],
+    "items": [
+      {
+        "icon": "globe",
+        "title": "Costruttore di Siti Web Professionale",
+        "description": "Crea siti web impressionanti ottimizzati per la conversione con funzionalità SEO e prenotazioni integrate.",
+        "category": "Gestione Studio",
+        "image": "/images/features/website-builder.webp",
+        "highlights": [
+          "Costruttore drag-and-drop con modelli premium",
+          "Sistema di design responsive mobile-first",
+          "Prenotazioni e pagamenti online integrati",
+          "Kit di strumenti di ottimizzazione SEO avanzato"
+        ],
+        "stats": {
+          "value": "250%",
+          "label": "Aumento delle Prenotazioni"
+        }
+      },
+      {
+        "icon": "calendar",
+        "title": "Pianificazione Intelligente",
+        "description": "Gestione degli appuntamenti basata sull'IA che massimizza l'efficienza del tuo studio.",
+        "category": "Gestione Studio",
+        "image": "/images/features/scheduling.webp",
+        "highlights": [
+          "Risoluzione intelligente dei conflitti con ottimizzazione IA",
+          "Sincronizzazione del calendario multi-operatore",
+          "Promemoria e conferme automatiche ai pazienti",
+          "Gestione dell'allocazione delle risorse e delle sale"
+        ],
+        "stats": {
+          "value": "89%",
+          "label": "Meno Mancate Visite"
+        }
+      },
+      {
+        "icon": "users",
+        "title": "Suite di Gestione Pazienti",
+        "description": "Gestione completa delle relazioni con i pazienti con analisi avanzate.",
+        "category": "Esperienza Paziente",
+        "image": "/images/features/patient-management.webp",
+        "highlights": [
+          "Cartelle cliniche digitali con ricerca intelligente",
+          "Pianificazione e monitoraggio dei trattamenti",
+          "Gestione integrata delle fatture e delle assicurazioni",
+          "Portale di comunicazione paziente"
+        ],
+        "stats": {
+          "value": "95%",
+          "label": "Fidelizzazione dei Pazienti"
+        }
+      },
+      {
+        "icon": "brain",
+        "title": "Assistente Clinico IA",
+        "description": "Strumenti IA avanzati per il supporto alla diagnosi e alla pianificazione dei trattamenti.",
+        "category": "Esperienza Paziente",
+        "image": "/images/features/ai-assistant.webp",
+        "highlights": [
+          "Analisi delle immagini e diagnostica basata sull'IA",
+          "Raccomandazioni di trattamento personalizzate",
+          "Strumenti di valutazione del rischio in tempo reale",
+          "Documentazione clinica automatizzata"
+        ],
+        "stats": {
+          "value": "45%",
+          "label": "Diagnosi Più Rapida"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Vedilo in Azione",
+    "description": "Guarda come gli studi dentistici leader trasformano le loro operazioni",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "thumbnail": "/images/showcase-thumb.webp"
+    },
+    "testimonials": [
+      {
+        "author": "Dr. Sarah Chen",
+        "role": "Dentista Responsabile, Studio Bright Smile",
+        "image": "/images/testimonials/sarah.webp",
+        "quote": "Questa piattaforma ha rivoluzionato il modo in cui operiamo. Abbiamo registrato un aumento del 40% nell'efficienza."
+      },
+      {
+        "author": "Dr. Michael Rodriguez",
+        "role": "Proprietario, Studio Advanced Dental Care",
+        "image": "/images/testimonials/michael.webp",
+        "quote": "Le funzionalità IA hanno migliorato drasticamente la precisione delle nostre diagnosi e la soddisfazione dei pazienti."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Benefici Trasformativi",
+    "subtitle": "Risultati e Impatto Provati",
+    "description": "Sperimenta miglioramenti misurabili in tutti gli aspetti del tuo studio con la nostra soluzione completa. La nostra piattaforma fornisce risultati concreti che impattano direttamente sul tuo profitto.",
+    "items": [
+      {
+        "title": "Eccellenza Operativa",
+        "description": "Semplifica le operazioni del tuo studio con l'automazione basata sull'IA, riducendo i costi amministrativi e migliorando l'efficienza del personale.",
+        "icon": "chart-up",
+        "color": "blue",
+        "stats": {
+          "value": "75%",
+          "label": "Riduzione del Lavoro Amministrativo"
+        },
+        "highlights": [
+          "Gestione dei flussi di lavoro automatizzata",
+          "Allocazione intelligente delle risorse",
+          "Riduzione della carta",
+          "Processi semplificati"
+        ]
+      },
+      {
+        "title": "Esperienza Paziente Migliorata",
+        "description": "Offri un'assistenza eccezionale ai pazienti attraverso l'innovazione digitale e le interazioni personalizzate che superano le aspettative.",
+        "icon": "heart",
+        "color": "purple",
+        "stats": {
+          "value": "98%",
+          "label": "Soddisfazione dei Pazienti"
+        },
+        "highlights": [
+          "Prenotazione appuntamenti digitale",
+          "Promemoria automatizzati",
+          "Portale paziente online",
+          "Comunicazione fluida"
+        ]
+      },
+      {
+        "title": "Crescita dei Ricavi",
+        "description": "Massimizza le performance finanziarie del tuo studio con la pianificazione intelligente e l'utilizzo ottimizzato delle risorse.",
+        "icon": "trending-up",
+        "color": "green",
+        "stats": {
+          "value": "35%",
+          "label": "Aumento dei Ricavi"
+        },
+        "highlights": [
+          "Pianificazione ottimizzata",
+          "Riduzione delle mancate visite",
+          "Aumento delle prenotazioni",
+          "Migliore utilizzo delle risorse"
+        ]
+      },
+      {
+        "title": "Eccellenza Clinica",
+        "description": "Migliora le tue capacità cliniche con strumenti di diagnosi e pianificazione dei trattamenti basati sull'IA.",
+        "icon": "star",
+        "color": "yellow",
+        "stats": {
+          "value": "50%",
+          "label": "Guadagno in Efficienza"
+        },
+        "highlights": [
+          "Diagnostica basata sull'IA",
+          "Pianificazione dei trattamenti",
+          "Documentazione clinica",
+          "Assicurazione della qualità"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Piani di Prezzo Flessibili",
+    "subtitle": "Prezzi Trasparenti",
+    "description": "Scegli il piano perfetto per il tuo studio. Risparmia fino al 20% con la fatturazione annuale.",
+    "billingPeriods": ["Mensile", "Annuale"],
+    "plans": [
+      {
+        "name": "Starter",
+        "highlight": "Perfetto per nuovi studi",
+        "monthlyPrice": "$199",
+        "yearlyPrice": "$1,990",
+        "yearlyDiscount": "Risparmia $398/anno",
+        "description": "Funzionalità essenziali per iniziare il tuo viaggio di trasformazione digitale",
+        "features": [
+          {
+            "text": "Pianificazione appuntamenti base",
+            "included": true
+          },
+          {
+            "text": "Accesso al portale paziente",
+            "included": true
+          },
+          {
+            "text": "Gestione cartelle digitali",
+            "included": true
+          },
+          {
+            "text": "Supporto email (24/7)",
+            "included": true
+          },
+          {
+            "text": "Analisi base",
+            "included": true
+          },
+          {
+            "text": "Accesso app mobile",
+            "included": true
+          }
+        ],
+        "cta": "Inizia Ora",
+        "popular": false
+      },
+      {
+        "name": "Professional",
+        "highlight": "Più popolare per studi affermati",
+        "monthlyPrice": "$399",
+        "yearlyPrice": "$3,990",
+        "yearlyDiscount": "Risparmia $798/anno",
+        "description": "Funzionalità avanzate per studi in crescita",
+        "features": [
+          {
+            "text": "Tutto ciò che è incluso in Starter, più:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Funzionalità IA avanzate",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "Supporto multi-operatore",
+            "included": true
+          },
+          {
+            "text": "Dashboard analisi personalizzata",
+            "included": true
+          },
+          {
+            "text": "Supporto prioritario",
+            "included": true
+          },
+          {
+            "text": "Accesso API",
+            "included": true
+          }
+        ],
+        "cta": "Inizia Ora",
+        "popular": true
+      },
+      {
+        "name": "Enterprise",
+        "highlight": "Per grandi studi e DSO",
+        "monthlyPrice": "Personalizzato",
+        "yearlyPrice": "Personalizzato",
+        "yearlyDiscount": "Contattaci per prezzi speciali",
+        "description": "Soluzioni su misura per le esigenze aziendali",
+        "features": [
+          {
+            "text": "Tutto ciò che è incluso in Professional, più:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Supporto integrazione personalizzato",
+            "included": true
+          },
+          {
+            "text": "Account manager dedicato",
+            "included": true
+          },
+          {
+            "text": "Funzionalità di sicurezza avanzate",
+            "included": true
+          },
+          {
+            "text": "Opzioni di sviluppo personalizzate",
+            "included": true
+          },
+          {
+            "text": "Garanzie SLA",
+            "included": true
+          }
+        ],
+        "cta": "Contatta le Vendite",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "Pronto a Trasformare il Tuo Studio?",
+    "description": "Unisciti a migliaia di studi dentistici di successo che utilizzano la nostra piattaforma",
+    "primaryButton": {
+      "text": "Pianifica una Demo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Guarda il Video Demo",
+      "link": "/demo-video"
+    },
+    "background": "/images/cta-background.webp"
+  }
+} 

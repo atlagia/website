@@ -1,0 +1,75 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  team: {
+    name: string;
+    role: string;
+    image: string;
+    bio: string;
+    social: {
+      twitter?: string;
+      facebook?: string;
+      instagram?: string;
+      linkedin?: string;
+    };
+  }[];
+}
+
+const { title, description, team } = Astro.props;
+---
+
+<section class="py-20 bg-gray-50" id="content-teamSection">
+  <div class="container mx-auto px-4">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4" id="content-title">{title}</h2>
+      <p class="text-gray-600" id="content-description">{description}</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {
+        team.map((member, index) => (
+          <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+            <div class="relative">
+              <img 
+                src={member.image} 
+                alt={`${member.name} - ${member.role}`} 
+                class="w-full aspect-square object-cover"
+                id={`content-teamMemberImage-${index}`}
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
+                <div class="p-4 w-full flex justify-center space-x-3">
+                  {member.social.facebook && (
+                    <a href={member.social.facebook} class="text-white hover:text-blue-300 transition-colors" id={`content-teamMemberFacebook-${index}`}>
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                  )}
+                  {member.social.twitter && (
+                    <a href={member.social.twitter} class="text-white hover:text-blue-300 transition-colors" id={`content-teamMemberTwitter-${index}`}>
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                  )}
+                  {member.social.instagram && (
+                    <a href={member.social.instagram} class="text-white hover:text-blue-300 transition-colors" id={`content-teamMemberInstagram-${index}`}>
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                  )}
+                  {member.social.linkedin && (
+                    <a href={member.social.linkedin} class="text-white hover:text-blue-300 transition-colors" id={`content-teamMemberLinkedin-${index}`}>
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                  )}
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-1" id={`content-teamMemberName-${index}`}>{member.name}</h3>
+              <p class="text-blue-600 mb-3" id={`content-teamMemberRole-${index}`}>{member.role}</p>
+              <p class="text-gray-600 text-sm" id={`content-teamMemberBio-${index}`}>{member.bio}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section> 

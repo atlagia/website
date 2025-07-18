@@ -1,0 +1,209 @@
+{
+  "hero": {
+    "title": "Dental Practice Resources",
+    "subtitle": "KNOWLEDGE CENTER",
+    "description": "Access guides, tutorials, and expert insights to help you maximize your dental practice management with Atlagia DentalCare."
+  },
+  "categories": [
+    {
+      "title": "Getting Started",
+      "description": "Essential guides to set up and configure your Atlagia DentalCare system",
+      "icon": "BookOpen",
+      "color": "blue",
+      "resources": [
+        {
+          "title": "Quick Start Guide",
+          "description": "Step-by-step instructions for setting up your practice management system",
+          "icon": "FileText",
+          "link": "/resources/quick-start"
+        },
+        {
+          "title": "System Requirements",
+          "description": "Hardware and network specifications for optimal performance",
+          "icon": "Server",
+          "link": "/resources/system-requirements"
+        },
+        {
+          "title": "Data Migration Guide",
+          "description": "Transfer your existing patient and practice data to Atlagia DentalCare",
+          "icon": "Database",
+          "link": "/resources/data-migration"
+        }
+      ]
+    },
+    {
+      "title": "Video Tutorials",
+      "description": "Watch step-by-step demonstrations of key features and workflows",
+      "icon": "Video",
+      "color": "pink",
+      "resources": [
+        {
+          "title": "Appointment Management",
+          "description": "Learn how to schedule, modify, and optimize your appointment calendar",
+          "icon": "Calendar",
+          "link": "/resources/video-appointments"
+        },
+        {
+          "title": "Patient Records",
+          "description": "Create and manage comprehensive digital patient files",
+          "icon": "Users",
+          "link": "/resources/video-patients"
+        },
+        {
+          "title": "AI Assistant Features",
+          "description": "Leverage AI capabilities for diagnosis and treatment planning",
+          "icon": "Brain",
+          "link": "/resources/video-ai-assistant"
+        }
+      ]
+    },
+    {
+      "title": "Best Practices",
+      "description": "Expert recommendations to optimize your dental practice workflows",
+      "icon": "CheckCircle",
+      "color": "green",
+      "resources": [
+        {
+          "title": "Front Office Efficiency",
+          "description": "Streamline patient check-in and administrative processes",
+          "icon": "ClipboardList",
+          "link": "/resources/best-practices-front-office"
+        },
+        {
+          "title": "Treatment Planning",
+          "description": "Create comprehensive and patient-friendly treatment plans",
+          "icon": "Layers",
+          "link": "/resources/best-practices-treatment"
+        },
+        {
+          "title": "Financial Management",
+          "description": "Optimize billing, insurance, and payment collection",
+          "icon": "DollarSign",
+          "link": "/resources/best-practices-financial"
+        }
+      ]
+    },
+    {
+      "title": "Updates & Release Notes",
+      "description": "Stay informed about the latest features and improvements",
+      "icon": "Bell",
+      "color": "amber",
+      "resources": [
+        {
+          "title": "Latest Release (v2.4)",
+          "description": "New features and enhancements in our latest software update",
+          "icon": "Star",
+          "link": "/resources/release-notes-v2-4"
+        },
+        {
+          "title": "Upcoming Features",
+          "description": "Preview of features in development and our product roadmap",
+          "icon": "Map",
+          "link": "/resources/upcoming-features"
+        },
+        {
+          "title": "Change Log",
+          "description": "Complete history of software updates and improvements",
+          "icon": "ListChecks",
+          "link": "/resources/change-log"
+        }
+      ]
+    }
+  ],
+  "downloadableResources": {
+    "title": "Downloadable Resources",
+    "description": "Access templates, guides, and tools to enhance your practice management",
+    "resources": [
+      {
+        "title": "Patient Forms Bundle",
+        "description": "Customizable intake, consent, and HIPAA forms",
+        "icon": "FileText",
+        "link": "/downloads/patient-forms-bundle.zip"
+      },
+      {
+        "title": "Practice Analytics Templates",
+        "description": "Excel templates for tracking key practice metrics",
+        "icon": "BarChart",
+        "link": "/downloads/analytics-templates.zip"
+      },
+      {
+        "title": "Staff Training Manual",
+        "description": "Comprehensive guide for training your team on Atlagia DentalCare",
+        "icon": "GraduationCap",
+        "link": "/downloads/staff-training-manual.pdf"
+      },
+      {
+        "title": "Marketing Materials",
+        "description": "Patient education materials and social media templates",
+        "icon": "Share2",
+        "link": "/downloads/marketing-materials.zip"
+      },
+      {
+        "title": "HIPAA Compliance Checklist",
+        "description": "Ensure your practice meets all security requirements",
+        "icon": "Shield",
+        "link": "/downloads/hipaa-checklist.pdf"
+      },
+      {
+        "title": "Treatment Plan Templates",
+        "description": "Standardized templates for common dental procedures",
+        "icon": "ClipboardList",
+        "link": "/downloads/treatment-templates.zip"
+      }
+    ]
+  },
+  "webinars": {
+    "title": "Upcoming Webinars",
+    "description": "Join live training sessions and Q&A with our experts",
+    "events": [
+      {
+        "title": "AI Diagnostics Masterclass",
+        "date": "April 15, 2024",
+        "time": "2:00 PM EST",
+        "host": "Dr. Emily Chen, DDS",
+        "description": "Learn how to leverage AI for accurate diagnosis and treatment planning",
+        "registrationLink": "/webinars/ai-diagnostics"
+      },
+      {
+        "title": "Maximizing Practice Revenue",
+        "date": "April 22, 2024",
+        "time": "1:00 PM EST",
+        "host": "Mark Johnson, Practice Management Consultant",
+        "description": "Strategies to optimize scheduling, billing, and patient retention",
+        "registrationLink": "/webinars/revenue-optimization"
+      },
+      {
+        "title": "Patient Communication Strategies",
+        "date": "May 3, 2024",
+        "time": "11:00 AM EST",
+        "host": "Sarah Williams, Patient Experience Director",
+        "description": "Enhance patient engagement through effective digital communication",
+        "registrationLink": "/webinars/patient-communication"
+      }
+    ]
+  },
+  "supportSection": {
+    "title": "Need Additional Help?",
+    "description": "Our support team is available to assist you with any questions",
+    "options": [
+      {
+        "title": "Live Chat Support",
+        "description": "Chat with our technical support team in real-time",
+        "icon": "MessageCircle",
+        "link": "/support"
+      },
+      {
+        "title": "Schedule a Training Session",
+        "description": "Book a one-on-one training with our product specialists",
+        "icon": "Calendar",
+        "link": "/training"
+      },
+      {
+        "title": "Submit a Support Ticket",
+        "description": "Get help with complex technical issues",
+        "icon": "LifeBuoy",
+        "link": "/support/ticket"
+      }
+    ]
+  }
+} 

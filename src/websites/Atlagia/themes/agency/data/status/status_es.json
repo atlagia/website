@@ -1,0 +1,111 @@
+{
+  "hero": {
+    "subtitle": "ESTADO DEL SISTEMA",
+    "title": "Panel de Estado de Servicios",
+    "description": "Información en tiempo real sobre el estado de nuestros servicios y sistemas.",
+    "operational": "Operativo",
+    "degraded": "Rendimiento Degradado",
+    "maintenance": "Mantenimiento Programado"
+  },
+  "overallStatus": {
+    "title": "Estado General del Sistema",
+    "status": "operational",
+    "statusText": "Todos los Sistemas Operativos",
+    "description": "Todos los servicios funcionan normalmente sin problemas reportados.",
+    "lastUpdated": "Última actualización: hace 5 minutos"
+  },
+  "servicesTitle": "Estado de Servicios",
+  "services": [
+    {
+      "name": "Aplicación Web",
+      "description": "Aplicación web principal orientada al cliente",
+      "status": "operational",
+      "statusText": "Operativo",
+      "icon": "Server"
+    },
+    {
+      "name": "Servicios API",
+      "description": "API backend y microservicios",
+      "status": "operational",
+      "statusText": "Operativo",
+      "icon": "Cloud"
+    },
+    {
+      "name": "Base de Datos",
+      "description": "Bases de datos principales y de respaldo",
+      "status": "operational",
+      "statusText": "Operativo",
+      "icon": "Database"
+    },
+    {
+      "name": "Autenticación",
+      "description": "Autenticación y autorización de usuarios",
+      "status": "operational",
+      "statusText": "Operativo",
+      "icon": "Shield"
+    },
+    {
+      "name": "Procesamiento IA",
+      "description": "Generación y procesamiento de contenido con IA",
+      "status": "operational",
+      "statusText": "Operativo",
+      "icon": "Zap"
+    },
+    {
+      "name": "Análisis",
+      "description": "Análisis de datos e informes",
+      "status": "operational",
+      "statusText": "Operativo",
+      "icon": "Activity"
+    }
+  ],
+  "incidentsTitle": "Incidentes Recientes",
+  "incidents": [
+    {
+      "title": "Problema de Rendimiento de Base de Datos",
+      "date": "10 de marzo de 2024",
+      "description": "Experimentamos tiempos de respuesta más lentos para consultas de base de datos que afectaron algunos endpoints de API.",
+      "status": "operational",
+      "updates": [
+        {
+          "time": "10:30 AM",
+          "status": "investigating",
+          "statusText": "Investigando",
+          "description": "Nuestro equipo de ingeniería está investigando la causa de la degradación del rendimiento de la base de datos."
+        },
+        {
+          "time": "11:45 AM",
+          "status": "investigating",
+          "statusText": "Investigando",
+          "description": "Hemos identificado un problema de optimización de consultas y estamos implementando una solución."
+        },
+        {
+          "time": "1:15 PM",
+          "status": "resolved",
+          "statusText": "Resuelto",
+          "description": "El problema ha sido resuelto. Todos los sistemas están ahora funcionando normalmente."
+        }
+      ]
+    },
+    {
+      "title": "Mantenimiento Programado",
+      "date": "5 de marzo de 2024",
+      "description": "Realizamos un mantenimiento programado para actualizar nuestra infraestructura y mejorar el rendimiento.",
+      "status": "operational",
+      "updates": [
+        {
+          "time": "8:00 PM",
+          "status": "investigating",
+          "statusText": "En Progreso",
+          "description": "Ventana de mantenimiento iniciada. Algunos servicios pueden experimentar interrupciones breves."
+        },
+        {
+          "time": "10:30 PM",
+          "status": "resolved",
+          "statusText": "Completado",
+          "description": "Mantenimiento completado con éxito. Todos los sistemas están ahora operativos con rendimiento mejorado."
+        }
+      ]
+    }
+  ]
+} 

@@ -1,0 +1,230 @@
+{
+  "pageTitle": "Karriere",
+  "pageDescription": "Schließen Sie sich unserem Team von Innovatoren an und gestalten Sie die Zukunft der KI-Technologie",
+  "hero": {
+    "badge": "Wir stellen ein",
+    "title": "Werden Sie Teil unseres Innovationsteams",
+    "description": "Helfen Sie uns, die Zukunft der KI-Technologie zu gestalten und Branchen weltweit zu transformieren. Wir suchen leidenschaftliche Menschen, die bei Herausforderungen und Innovation aufblühen.",
+    "cta": {
+      "primary": {
+        "text": "Offene Stellen ansehen",
+        "href": "#open-positions"
+      },
+      "secondary": {
+        "text": "Über unseren Prozess",
+        "href": "#application-process"
+      }
+    }
+  },
+  "values": {
+    "title": "Unsere Werte",
+    "description": "Diese Prinzipien leiten alles, was wir tun, und definieren unsere Unternehmenskultur.",
+    "items": [
+      {
+        "title": "Innovation",
+        "description": "Wir überschreiten Grenzen und nutzen modernste Technologien, um komplexe Probleme zu lösen.",
+        "icon": "lightbulb"
+      },
+      {
+        "title": "Zusammenarbeit",
+        "description": "Wir glauben an die Kraft vielfältiger Teams, die gemeinsam auf gemeinsame Ziele hinarbeiten.",
+        "icon": "users"
+      },
+      {
+        "title": "Exzellenz",
+        "description": "Wir streben nach höchster Qualität in allem, was wir tun, vom Code bis zum Kundenservice.",
+        "icon": "award"
+      },
+      {
+        "title": "Integrität",
+        "description": "Wir handeln mit Ehrlichkeit, Transparenz und ethischer Verantwortung in allen unseren Entscheidungen.",
+        "icon": "shield"
+      }
+    ]
+  },
+  "openPositions": {
+    "title": "Offene Stellen",
+    "description": "Entdecken Sie unsere aktuellen Stellenangebote und finden Sie Möglichkeiten, die Ihren Fähigkeiten und Karrierezielen entsprechen.",
+    "positions": [
+      {
+        "id": "ai-engineer",
+        "title": "KI-Ingenieur",
+        "department": "Engineering",
+        "type": "Vollzeit",
+        "location": "San Francisco / Remote",
+        "description": "Entwerfen und implementieren Sie modernste KI-Lösungen für unsere Unternehmenskunden.",
+        "requirements": [
+          "5+ Jahre Erfahrung in KI/ML-Entwicklung",
+          "Fundierte Kenntnisse in TensorFlow, PyTorch oder ähnlichen Frameworks",
+          "Erfahrung mit natürlicher Sprachverarbeitung oder Computer Vision",
+          "Solide Programmierkenntnisse in Python",
+          "Ausgezeichnete Kommunikationsfähigkeiten"
+        ],
+        "posted": "vor 2 Wochen"
+      },
+      {
+        "id": "frontend-developer",
+        "title": "Frontend-Entwickler",
+        "department": "Engineering",
+        "type": "Vollzeit",
+        "location": "New York / Remote",
+        "description": "Erstellen Sie intuitive und responsive Benutzeroberflächen für unsere KI-gestützten Plattformen.",
+        "requirements": [
+          "3+ Jahre Erfahrung mit React und modernem JavaScript",
+          "Kompetenz in TypeScript und State-Management-Bibliotheken",
+          "Erfahrung mit responsivem Design und CSS-Frameworks",
+          "Verständnis von Web-Accessibility-Standards",
+          "Kenntnisse in Testing-Frameworks"
+        ],
+        "posted": "vor 1 Woche"
+      },
+      {
+        "id": "product-manager",
+        "title": "Produktmanager",
+        "department": "Produkt",
+        "type": "Vollzeit",
+        "location": "Remote",
+        "description": "Leiten Sie die Entwicklung unserer KI-Produkte von der Konzeption bis zur Markteinführung.",
+        "requirements": [
+          "4+ Jahre Erfahrung im Produktmanagement",
+          "Hintergrund in KI, SaaS oder Unternehmenssoftware",
+          "Starke analytische und Problemlösungsfähigkeiten",
+          "Exzellente Stakeholder-Management-Fähigkeiten",
+          "Technischer Hintergrund ist ein Plus"
+        ],
+        "posted": "vor 3 Tagen"
+      },
+      {
+        "id": "ux-designer",
+        "title": "UX-Designer",
+        "department": "Design",
+        "type": "Vollzeit",
+        "location": "London / Remote",
+        "description": "Erstellen Sie nutzerzentrierte Designs für komplexe KI-Anwendungen.",
+        "requirements": [
+          "3+ Jahre Erfahrung im UX-Design",
+          "Starkes Portfolio, das nutzerzentrierte Designprozesse demonstriert",
+          "Erfahrung mit Designsystemen und Tools (Figma, Adobe XD)",
+          "Verständnis von Accessibility-Standards",
+          "Fähigkeit, Nutzerforschung und Tests durchzuführen"
+        ],
+        "posted": "vor 1 Monat"
+      },
+      {
+        "id": "data-scientist",
+        "title": "Data Scientist",
+        "department": "Daten",
+        "type": "Vollzeit",
+        "location": "Remote",
+        "description": "Analysieren Sie komplexe Datensätze und erstellen Sie prädiktive Modelle für unsere KI-Lösungen.",
+        "requirements": [
+          "Master oder Promotion in Informatik, Statistik oder verwandtem Bereich",
+          "Umfangreiche Erfahrung mit Machine-Learning-Algorithmen",
+          "Beherrschung von Python, R oder ähnlichen Sprachen",
+          "Erfahrung mit Big-Data-Technologien",
+          "Starke analytische und Problemlösungsfähigkeiten"
+        ],
+        "posted": "vor 2 Wochen"
+      },
+      {
+        "id": "devops-engineer",
+        "title": "DevOps-Ingenieur",
+        "department": "Operations",
+        "type": "Vollzeit",
+        "location": "Berlin / Remote",
+        "description": "Bauen und warten Sie unsere Cloud-Infrastruktur und Deployment-Pipelines.",
+        "requirements": [
+          "3+ Jahre Erfahrung in DevOps oder Site Reliability Engineering",
+          "Erfahrung mit AWS, Azure oder GCP",
+          "Kenntnisse in Containerisierung und Orchestrierung (Docker, Kubernetes)",
+          "Erfahrung mit CI/CD-Tools",
+          "Scripting- und Automatisierungsfähigkeiten"
+        ],
+        "posted": "vor 3 Wochen"
+      }
+    ]
+  },
+  "perks": {
+    "title": "Vorteile & Benefits",
+    "description": "Wir glauben daran, uns um unser Team zu kümmern, mit wettbewerbsfähigen Benefits und einer unterstützenden Arbeitsumgebung.",
+    "items": [
+      {
+        "title": "Flexibles Arbeiten",
+        "description": "Arbeiten Sie von überall mit flexiblen Arbeitszeiten, um Ihre beste Work-Life-Balance zu erreichen.",
+        "icon": "globe"
+      },
+      {
+        "title": "Wettbewerbsfähige Vergütung",
+        "description": "Wir bieten branchenführende Gehälter, Aktienbeteiligungen und leistungsbezogene Boni.",
+        "icon": "dollar-sign"
+      },
+      {
+        "title": "Gesundheitsleistungen",
+        "description": "Umfassende Kranken-, Zahn- und Sehhilfeversicherung für Sie und Ihre Angehörigen.",
+        "icon": "heart"
+      },
+      {
+        "title": "Berufliche Entwicklung",
+        "description": "Kontinuierliches Lernen mit Bildungszuschüssen, Konferenzen und Schulungsprogrammen.",
+        "icon": "graduation-cap"
+      },
+      {
+        "title": "Team-Events",
+        "description": "Regelmäßige Teamausflüge, soziale Veranstaltungen und gemeinsame Aktivitäten.",
+        "icon": "users"
+      },
+      {
+        "title": "Technische Ausstattung",
+        "description": "Neueste Hardware und Software, um sicherzustellen, dass Sie die benötigten Tools zum Erfolg haben.",
+        "icon": "laptop"
+      }
+    ]
+  },
+  "process": {
+    "title": "Unser Bewerbungsprozess",
+    "description": "Wir haben einen übersichtlichen Prozess entwickelt, um die besten Talente zu finden und dabei Ihre Zeit zu respektieren.",
+    "steps": [
+      {
+        "step": "1",
+        "title": "Bewerbungsprüfung",
+        "description": "Unser Team prüft Ihre Bewerbung, um Ihre Qualifikationen und Erfahrungen zu bewerten."
+      },
+      {
+        "step": "2",
+        "title": "Erstes Gespräch",
+        "description": "Ein Gespräch mit unserem Recruiting-Team, um mehr über Ihren Hintergrund und Ihre Ziele zu erfahren."
+      },
+      {
+        "step": "3",
+        "title": "Technische Bewertung",
+        "description": "Je nach Position absolvieren Sie eine technische Bewertung oder eine Fallstudie."
+      },
+      {
+        "step": "4",
+        "title": "Team-Interviews",
+        "description": "Treffen Sie potenzielle Teammitglieder und Führungskräfte, um die Teampassung und Zusammenarbeit zu erkunden."
+      },
+      {
+        "step": "5",
+        "title": "Endgültige Entscheidung",
+        "description": "Wir geben Ihnen Feedback und unterbreiten möglicherweise ein Angebot, unserem Team beizutreten."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Bereit, etwas zu bewirken?",
+    "description": "Werden Sie Teil unseres Teams und helfen Sie, die Zukunft der KI-Technologie zu gestalten. Wir suchen leidenschaftliche Menschen, die etwas bewirken wollen.",
+    "buttons": [
+      {
+        "text": "Offene Stellen durchsuchen",
+        "href": "#open-positions",
+        "variant": "primary"
+      },
+      {
+        "text": "Recruiting kontaktieren",
+        "href": "/contact",
+        "variant": "secondary"
+      }
+    ]
+  }
+} 

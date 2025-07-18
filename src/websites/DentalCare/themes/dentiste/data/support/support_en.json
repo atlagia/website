@@ -1,0 +1,112 @@
+{
+  "hero": {
+    "subtitle": "CUSTOMER SUPPORT",
+    "title": "We're Here to Help You Succeed",
+    "description": "Get the support you need to make the most of your e-commerce business with our comprehensive resources and dedicated team."
+  },
+  "categories": [
+    {
+      "icon": "Book",
+      "title": "Documentation",
+      "description": "Comprehensive guides and tutorials to help you get started and make the most of our platform.",
+      "link": "/docs",
+      "color": "pink"
+    },
+    {
+      "icon": "Video",
+      "title": "Video Tutorials",
+      "description": "Step-by-step video guides showing you how to use our features effectively.",
+      "link": "/tutorials",
+      "color": "blue"
+    },
+    {
+      "icon": "MessageCircle",
+      "title": "Community Forum",
+      "description": "Connect with other users, share experiences, and get advice from the community.",
+      "link": "/community",
+      "color": "purple"
+    },
+    {
+      "icon": "LifeBuoy",
+      "title": "Technical Support",
+      "description": "Get direct assistance from our technical team for any issues you encounter.",
+      "link": "/technical-support",
+      "color": "orange"
+    }
+  ],
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "description": "Find quick answers to common questions about our platform and services.",
+    "categories": [
+      {
+        "title": "Getting Started",
+        "questions": [
+          {
+            "question": "How do I set up my account?",
+            "answer": "Setting up your account is simple. Just click the 'Get Started' button, fill in your details, and follow the onboarding process. We'll guide you through each step."
+          },
+          {
+            "question": "What platforms do you support?",
+            "answer": "We support all major e-commerce platforms including Shopify, WooCommerce, Magento, PrestaShop, and more. Check our integration page for the full list."
+          }
+        ]
+      },
+      {
+        "title": "Billing & Plans",
+        "questions": [
+          {
+            "question": "Can I change my plan later?",
+            "answer": "Yes, you can upgrade or downgrade your plan at any time. Changes will take effect in your next billing cycle."
+          },
+          {
+            "question": "Do you offer refunds?",
+            "answer": "We offer a 14-day money-back guarantee if you're not satisfied with our service. Contact our support team to process your refund."
+          }
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "title": "Still Need Help?",
+    "description": "Our support team is available to assist you with any questions or concerns.",
+    "options": [
+      {
+        "icon": "Mail",
+        "title": "Email Support",
+        "description": "Get help via email within 24 hours",
+        "action": "Send Email",
+        "link": "mailto:support@atalsia.com"
+      },
+      {
+        "icon": "MessageSquare",
+        "title": "Live Chat",
+        "description": "Chat with our support team in real-time",
+        "action": "Start Chat",
+        "link": "#chat"
+      }
+    ]
+  },
+  "resources": {
+    "title": "Additional Resources",
+    "items": [
+      {
+        "icon": "FileText",
+        "title": "API Documentation",
+        "description": "Detailed technical documentation for developers",
+        "link": "/api-docs"
+      },
+      {
+        "icon": "BookOpen",
+        "title": "Knowledge Base",
+        "description": "In-depth articles and guides",
+        "link": "/knowledge-base"
+      },
+      {
+        "icon": "Calendar",
+        "title": "Webinars",
+        "description": "Live training sessions and workshops",
+        "link": "/webinars"
+      }
+    ]
+  }
+} 

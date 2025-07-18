@@ -1,0 +1,223 @@
+{
+  "siteTitle": "StreamVista",
+  "siteDescription": "Premium IPTV Streaming Service",
+  "sections": [
+    {
+      "type": "welcome",
+      "title": "Your Ultimate Entertainment",
+      "description": "Access thousands of live TV channels, movies, and shows from around the world. Stream in HD quality on any device, anytime.",
+      "stats": {
+        "channels": "1000+",
+        "movies": "5000+",
+        "shows": "500+"
+      },
+      "cta": {
+        "primary": {
+          "text": "Start Watching",
+          "link": "/signup"
+        },
+        "secondary": {
+          "text": "View Channels",
+          "link": "/channels"
+        }
+      }
+    },
+    {
+      "type": "features",
+      "title": "Why Choose StreamVista",
+      "description": "Experience the future of television with our cutting-edge IPTV service",
+      "features": [
+        {
+          "icon": "speed",
+          "title": "Ultra-Fast Streaming",
+          "description": "Enjoy buffer-free streaming with our optimized servers worldwide"
+        },
+        {
+          "icon": "quality",
+          "title": "HD & 4K Quality",
+          "description": "Crystal clear picture quality with support for HD and 4K content"
+        },
+        {
+          "icon": "device",
+          "title": "Multi-Device Support",
+          "description": "Watch on Smart TV, phone, tablet, or computer simultaneously"
+        },
+        {
+          "icon": "record",
+          "title": "Cloud DVR",
+          "description": "Record your favorite shows and watch them anytime"
+        },
+        {
+          "icon": "channels",
+          "title": "Premium Channels",
+          "description": "Access to premium sports, entertainment, and news channels"
+        },
+        {
+          "icon": "support",
+          "title": "24/7 Support",
+          "description": "Round-the-clock customer support for uninterrupted entertainment"
+        }
+      ]
+    },
+    {
+      "type": "channels",
+      "title": "Popular Channels",
+      "description": "Discover a world of entertainment with our diverse channel lineup",
+      "categories": [
+        {
+          "name": "Sports",
+          "channels": ["ESPN", "Sky Sports", "beIN Sports", "Fox Sports"]
+        },
+        {
+          "name": "Entertainment",
+          "channels": ["HBO", "Netflix", "Disney+", "Amazon Prime"]
+        },
+        {
+          "name": "News",
+          "channels": ["CNN", "BBC", "Al Jazeera", "Fox News"]
+        },
+        {
+          "name": "Kids",
+          "channels": ["Nickelodeon", "Disney Channel", "Cartoon Network"]
+        }
+      ]
+    },
+    {
+      "type": "pricing",
+      "title": "Choose Your Plan",
+      "description": "Find the perfect plan for your entertainment needs",
+      "plans": [
+        {
+          "name": "Basic",
+          "price": "9.99",
+          "duration": "month",
+          "features": [
+            "500+ Live Channels",
+            "1000+ Movies",
+            "HD Quality",
+            "2 Devices",
+            "7-Day Replay"
+          ],
+          "isPopular": false
+        },
+        {
+          "name": "Premium",
+          "price": "19.99",
+          "duration": "month",
+          "features": [
+            "1000+ Live Channels",
+            "5000+ Movies",
+            "4K Quality",
+            "4 Devices",
+            "30-Day Replay",
+            "Cloud DVR"
+          ],
+          "isPopular": true
+        },
+        {
+          "name": "Ultimate",
+          "price": "29.99",
+          "duration": "month",
+          "features": [
+            "All Premium Features",
+            "Unlimited Devices",
+            "90-Day Replay",
+            "Priority Support",
+            "PPV Events Included"
+          ],
+          "isPopular": false
+        }
+      ]
+    },
+    {
+      "type": "devices",
+      "title": "Watch Anywhere",
+      "description": "Stream your favorite content on any device",
+      "devices": [
+        {
+          "name": "Smart TV",
+          "icon": "tv",
+          "platforms": ["Samsung", "LG", "Android TV", "Apple TV"]
+        },
+        {
+          "name": "Mobile",
+          "icon": "mobile",
+          "platforms": ["iOS", "Android"]
+        },
+        {
+          "name": "Computer",
+          "icon": "computer",
+          "platforms": ["Windows", "Mac", "Linux"]
+        },
+        {
+          "name": "Gaming Console",
+          "icon": "gaming",
+          "platforms": ["PlayStation", "Xbox"]
+        }
+      ]
+    },
+    {
+      "type": "testimonials",
+      "title": "What Our Customers Say",
+      "description": "Join thousands of satisfied StreamVista users worldwide",
+      "testimonials": [
+        {
+          "name": "John D.",
+          "location": "United States",
+          "rating": 5,
+          "comment": "Best IPTV service I've ever used. The quality is outstanding!"
+        },
+        {
+          "name": "Sarah M.",
+          "location": "United Kingdom",
+          "rating": 5,
+          "comment": "Amazing channel selection and the streaming is always smooth."
+        },
+        {
+          "name": "Ahmed K.",
+          "location": "UAE",
+          "rating": 5,
+          "comment": "Great international channels and excellent customer support."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "title": "Frequently Asked Questions",
+      "description": "Find answers to common questions about StreamVista",
+      "questions": [
+        {
+          "question": "What is IPTV?",
+          "answer": "IPTV (Internet Protocol Television) delivers television content over Internet Protocol networks. It offers a more convenient and flexible way to watch TV compared to traditional cable or satellite services."
+        },
+        {
+          "question": "How many devices can I connect?",
+          "answer": "Depending on your subscription plan, you can connect between 2 to unlimited devices simultaneously."
+        },
+        {
+          "question": "Do you offer a money-back guarantee?",
+          "answer": "Yes, we offer a 30-day money-back guarantee if you're not completely satisfied with our service."
+        },
+        {
+          "question": "What internet speed do I need?",
+          "answer": "We recommend a minimum internet speed of 10 Mbps for HD streaming and 25 Mbps for 4K content."
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "title": "Ready to Start Streaming?",
+      "description": "Join millions of satisfied users and start watching your favorite content today",
+      "button": {
+        "text": "Get Started Now",
+        "link": "/signup"
+      },
+      "features": [
+        "No Contract Required",
+        "30-Day Money Back Guarantee",
+        "24/7 Customer Support",
+        "Instant Access"
+      ]
+    }
+  ]
+}

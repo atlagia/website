@@ -1,0 +1,335 @@
+{
+  "hero": {
+    "subtitle": "Gestione Studio Medico",
+    "title": "Trasforma il Tuo Studio Medico con Tecnologia Intelligente",
+    "description": "Una soluzione all-in-one progettata specificamente per gli studi medici, che combina assistenza ai pazienti, gestione dello studio e analisi avanzate per ottimizzare le tue operazioni.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Demo della Soluzione di Gestione Studio Medico"
+    },
+    "stats": [
+      {
+        "value": "98%",
+        "label": "Soddisfazione dei Pazienti"
+      },
+      {
+        "value": "40%",
+        "label": "Tempo Risparmiato"
+      },
+      {
+        "value": "2.5x",
+        "label": "Crescita dei Ricavi"
+      }
+    ]
+  },
+  "features": {
+    "subtitle": "Funzionalità Complete",
+    "title": "Tutto ciò che Ti Serve per Gestire il Tuo Studio",
+    "description": "La nostra soluzione di gestione studio medico combina tecnologia all'avanguardia con interfacce user-friendly per migliorare l'assistenza ai pazienti e ottimizzare le operazioni.",
+    "categories": [
+      {
+        "name": "Eccellenza nell'Assistenza ai Pazienti",
+        "description": "Strumenti e funzionalità progettati per migliorare l'esperienza del paziente e la qualità delle cure"
+      },
+      {
+        "name": "Efficienza dello Studio",
+        "description": "Ottimizzazione delle operazioni e riduzione del carico amministrativo"
+      }
+    ],
+    "items": [
+      {
+        "icon": "calendar",
+        "category": "Gestione Studio",
+        "title": "Pianificazione Intelligente",
+        "description": "Sistema di pianificazione assistito dall'IA che ottimizza gli slot degli appuntamenti e riduce le mancate visite",
+        "image": "/images/solutions/medical/scheduling.jpg",
+        "highlights": [
+          "Promemoria automatici",
+          "Supporto multi-sede",
+          "Disponibilità in tempo reale",
+          "Gestione lista d'attesa"
+        ],
+        "stats": {
+          "value": "50%",
+          "label": "Riduzione mancate visite"
+        }
+      },
+      {
+        "icon": "users",
+        "category": "Assistenza ai Pazienti",
+        "title": "Portale Paziente",
+        "description": "Portale sicuro per appuntamenti, comunicazioni e cartelle cliniche",
+        "image": "/images/solutions/medical/patient-portal.jpg",
+        "highlights": [
+          "Prenotazione online",
+          "Messaggistica sicura",
+          "Accesso ai risultati",
+          "Rinnovo prescrizioni"
+        ],
+        "stats": {
+          "value": "92%",
+          "label": "Coinvolgimento pazienti"
+        }
+      },
+      {
+        "icon": "brain",
+        "category": "Strumenti Clinici",
+        "title": "Supporto Decisionale Clinico",
+        "description": "Diagnosi e raccomandazioni terapeutiche assistite dall'IA basate sulle ultime ricerche mediche",
+        "image": "/images/solutions/medical/clinical-support.jpg",
+        "highlights": [
+          "Linee guida basate su evidenze",
+          "Controllo interazioni farmacologiche",
+          "Percorsi clinici",
+          "Valutazioni del rischio"
+        ],
+        "stats": {
+          "value": "35%",
+          "label": "Diagnosi più rapide"
+        }
+      },
+      {
+        "icon": "chart-up",
+        "category": "Analitica",
+        "title": "Analitica dello Studio",
+        "description": "Analisi e report completi per una migliore gestione dello studio",
+        "image": "/images/solutions/medical/analytics.jpg",
+        "highlights": [
+          "Performance finanziaria",
+          "Risultati dei pazienti",
+          "Metriche operative",
+          "Misure di qualità"
+        ],
+        "stats": {
+          "value": "45%",
+          "label": "Aumento dei ricavi"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Scopri la Nostra Soluzione in Azione",
+    "description": "Guarda come gli studi medici leader stanno trasformando l'assistenza ai pazienti con la nostra soluzione",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Storia di Successo dello Studio Medico"
+    },
+    "testimonials": [
+      {
+        "author": "Dr. Sarah Johnson",
+        "role": "Direttrice Studio di Medicina Generale",
+        "image": "/images/testimonials/doctor1.jpg",
+        "quote": "Questa soluzione ha rivoluzionato il modo in cui gestiamo il nostro studio. I guadagni in efficienza sono notevoli."
+      },
+      {
+        "author": "Dr. Michael Chen",
+        "role": "Specialista in Medicina Interna",
+        "image": "/images/testimonials/doctor2.jpg",
+        "quote": "Gli strumenti di supporto decisionale clinico sono stati inestimabili per fornire cure basate su evidenze ai nostri pazienti."
+      }
+    ]
+  },
+  "benefits": {
+    "subtitle": "Vantaggi Chiave",
+    "title": "Trasforma il Tuo Studio",
+    "description": "Scopri i vantaggi di una soluzione di gestione studio medico completamente integrata",
+    "items": [
+      {
+        "icon": "trending-up",
+        "title": "Eccellenza Operativa",
+        "description": "Ottimizza le operazioni del tuo studio e riduci il carico amministrativo",
+        "color": "blue",
+        "stats": {
+          "value": "40%",
+          "label": "Aumento efficienza"
+        },
+        "highlights": [
+          "Processi automatizzati",
+          "Riduzione carta",
+          "Fatturazione ottimizzata",
+          "Migliore allocazione risorse"
+        ]
+      },
+      {
+        "icon": "heart",
+        "title": "Assistenza ai Pazienti Migliorata",
+        "description": "Offri esperienze migliori ai pazienti e migliora i risultati sanitari",
+        "color": "purple",
+        "stats": {
+          "value": "95%",
+          "label": "Soddisfazione pazienti"
+        },
+        "highlights": [
+          "Piani di cura personalizzati",
+          "Migliore follow-up",
+          "Comunicazione migliorata",
+          "Coinvolgimento aumentato"
+        ]
+      },
+      {
+        "icon": "chart-up",
+        "title": "Crescita Finanziaria",
+        "description": "Aumenta i ricavi e migliora la performance finanziaria",
+        "color": "green",
+        "stats": {
+          "value": "35%",
+          "label": "Crescita ricavi"
+        },
+        "highlights": [
+          "Fatturazione ottimizzata",
+          "Riduzione rifiuti",
+          "Migliore incasso",
+          "Redditività aumentata"
+        ]
+      },
+      {
+        "icon": "star",
+        "title": "Garanzia di Qualità",
+        "description": "Mantieni standard elevati di cura e conformità normativa",
+        "color": "yellow",
+        "stats": {
+          "value": "100%",
+          "label": "Tasso di conformità"
+        },
+        "highlights": [
+          "Conformità HIPAA",
+          "Metriche di qualità",
+          "Prontezza audit",
+          "Gestione del rischio"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "subtitle": "Prezzi Trasparenti",
+    "title": "Piani di Prezzi Flessibili",
+    "description": "Scegli il piano perfetto per il tuo studio. Risparmia fino al 20% con la fatturazione annuale.",
+    "billingPeriods": ["Mensile", "Annuale"],
+    "plans": [
+      {
+        "name": "Base",
+        "highlight": "Perfetto per piccoli studi",
+        "monthlyPrice": "$299",
+        "yearlyPrice": "$2,990",
+        "yearlyDiscount": "Risparmia $598/anno",
+        "description": "Funzionalità essenziali per iniziare il tuo viaggio di trasformazione digitale",
+        "features": [
+          {
+            "text": "Pianificazione appuntamenti base",
+            "included": true
+          },
+          {
+            "text": "Accesso portale paziente",
+            "included": true
+          },
+          {
+            "text": "Cartelle cliniche elettroniche",
+            "included": true
+          },
+          {
+            "text": "Supporto email (24/7)",
+            "included": true
+          },
+          {
+            "text": "Analitica base",
+            "included": true
+          },
+          {
+            "text": "Accesso app mobile",
+            "included": true
+          }
+        ],
+        "cta": "Inizia Ora",
+        "popular": false
+      },
+      {
+        "name": "Professionale",
+        "highlight": "Più popolare per studi in crescita",
+        "monthlyPrice": "$599",
+        "yearlyPrice": "$5,990",
+        "yearlyDiscount": "Risparmia $1,198/anno",
+        "description": "Funzionalità avanzate per studi consolidati",
+        "features": [
+          {
+            "text": "Tutto ciò che è incluso in Base, più:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Supporto clinico assistito da IA",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "Supporto multi-medici",
+            "included": true
+          },
+          {
+            "text": "Dashboard analitica avanzata",
+            "included": true
+          },
+          {
+            "text": "Supporto prioritario",
+            "included": true
+          },
+          {
+            "text": "Integrazione telemedicina",
+            "included": true
+          }
+        ],
+        "cta": "Inizia Ora",
+        "popular": true
+      },
+      {
+        "name": "Enterprise",
+        "highlight": "Per grandi gruppi medici",
+        "monthlyPrice": "Personalizzato",
+        "yearlyPrice": "Personalizzato",
+        "yearlyDiscount": "Contattaci per prezzi speciali",
+        "description": "Soluzioni personalizzate per esigenze enterprise",
+        "features": [
+          {
+            "text": "Tutto ciò che è incluso in Professionale, più:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Supporto integrazione personalizzato",
+            "included": true
+          },
+          {
+            "text": "Account manager dedicato",
+            "included": true
+          },
+          {
+            "text": "Funzionalità di sicurezza avanzate",
+            "included": true
+          },
+          {
+            "text": "Opzioni sviluppo personalizzate",
+            "included": true
+          },
+          {
+            "text": "Garanzie SLA",
+            "included": true
+          }
+        ],
+        "cta": "Contatta Vendite",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "Pronto a Trasformare il Tuo Studio Medico?",
+    "description": "Unisciti a migliaia di professionisti medici che hanno già modernizzato il loro studio con la nostra soluzione.",
+    "background": "/images/solutions/medical/cta-background.jpg",
+    "primaryButton": {
+      "text": "Pianifica una Demo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Guarda la Demo",
+      "link": "#showcase"
+    }
+  }
+} 

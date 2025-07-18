@@ -1,0 +1,112 @@
+{
+  "config": {
+    "apiBaseUrl": "http://localhost:8000/api/datavault",
+    "schemaId": 42,
+    "entityName": "DemoRequestSubmission",
+    "keyToken": "01a0ff72-989b-4349-b5b7-953d4baf53c7"
+  },
+  "form": {
+    "en": {
+      "title": "Schedule Your Personalized Demo",
+      "fields": {
+        "name": {
+          "id": "name",
+          "type": "text",
+          "label": "Full Name",
+          "placeholder": "Your full name",
+          "required": true
+        },
+        "email": {
+          "id": "email",
+          "type": "email",
+          "label": "Work Email",
+          "placeholder": "Your work email address",
+          "required": true
+        },
+        "phone": {
+          "id": "phone",
+          "type": "tel",
+          "label": "Phone Number",
+          "placeholder": "Your phone number",
+          "required": true
+        },
+        "practiceName": {
+          "id": "practiceName",
+          "type": "text",
+          "label": "Practice Name",
+          "placeholder": "Your dental practice name",
+          "required": true
+        },
+        "practiceSize": {
+          "id": "practiceSize",
+          "type": "select",
+          "label": "Practice Size",
+          "required": true,
+          "options": [
+            { "value": "solo", "label": "Solo Practice (1 dentist)" },
+            { "value": "small", "label": "Small Practice (2-5 dentists)" },
+            { "value": "medium", "label": "Medium Practice (6-10 dentists)" },
+            { "value": "large", "label": "Large Practice/DSO (10+ dentists)" }
+          ]
+        },
+        "role": {
+          "id": "role",
+          "type": "select",
+          "label": "Your Role",
+          "required": true,
+          "options": [
+            { "value": "dentist-owner", "label": "Dentist & Practice Owner" },
+            { "value": "dentist", "label": "Dentist (non-owner)" },
+            { "value": "office-manager", "label": "Office Manager" },
+            { "value": "administrator", "label": "Administrator" },
+            { "value": "other", "label": "Other" }
+          ]
+        },
+        "preferredDate": {
+          "id": "preferredDate",
+          "type": "date",
+          "label": "Preferred Demo Date",
+          "placeholder": "Select a date",
+          "required": true
+        },
+        "interests": {
+          "id": "interests",
+          "type": "checkbox-group",
+          "label": "Areas of Interest",
+          "required": true,
+          "options": [
+            { "value": "patient-management", "label": "Patient Management" },
+            { "value": "ai-diagnostics", "label": "AI Diagnostic Assistant" },
+            { "value": "scheduling", "label": "Appointment Scheduling" },
+            { "value": "billing", "label": "Billing & Insurance" },
+            { "value": "imaging", "label": "Dental Imaging Integration" },
+            { "value": "analytics", "label": "Analytics & Reporting" },
+            { "value": "whatsapp", "label": "WhatsApp Integration" }
+          ]
+        },
+        "currentSoftware": {
+          "id": "currentSoftware",
+          "type": "text",
+          "label": "Current Software (if any)",
+          "placeholder": "Software you're currently using",
+          "required": false
+        },
+        "message": {
+          "id": "message",
+          "type": "textarea",
+          "label": "Additional Information",
+          "placeholder": "Tell us about your specific needs or questions",
+          "required": false,
+          "rows": 4
+        }
+      },
+      "submitButton": "Request Demo",
+      "successMessage": {
+        "title": "Demo Request Received!",
+        "description": "Thank you for your interest in Atlagia DentalCare. One of our product specialists will contact you within 24 hours to schedule your personalized demo.",
+        "buttonText": "Close"
+      },
+      "errorMessage": "Sorry, there was an error submitting your demo request. Please try again or contact us directly."
+    }
+  }
+} 

@@ -1,0 +1,303 @@
+---
+import { SITE_TITLE } from '../consts';
+import { CheckCircle, AlertCircle, Clock, Server, Database, Cloud, Shield, Zap, Activity, RefreshCw } from 'lucide-react';
+
+const theme = import.meta.env.THEME || 'default';
+const lang = Astro.params.lang || 'en';
+
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+
+// Import language-specific status data
+const statusData = await import(`../data/status/status_${lang}.json`);
+
+const businessInfo = {
+  name: import.meta.env.PUBLIC_BUSINESS_NAME || 'Atlasia'
+};
+
+// Map icon strings to actual components
+const iconMap = {
+  Server,
+  Database,
+  Cloud,
+  Shield,
+  Zap,
+  Activity
+};
+
+// Map status indicators with actual icon components
+const statusIndicators = {
+  operational: CheckCircle,
+  degraded: AlertCircle,
+  maintenance: Clock
+};
+
+// Map services with actual icon components
+const services = statusData.services.map(service => ({
+  ...service,
+  icon: iconMap[service.icon]
+}));
+
+// Map incidents with actual icon components
+const incidents = statusData.incidents.map(incident => ({
+  ...incident,
+  icon: statusIndicators[incident.status]
+}));
+
+// Generate schema markup for status page
+const statusSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: `Status | ${businessInfo.name}`,
+  description: statusData.hero?.description || "Current status of our services and systems",
+  publisher: {
+    "@type": "Organization",
+    name: businessInfo.name,
+    logo: {
+      "@type": "ImageObject",
+      url: new URL("/logo.png", Astro.url)
+    }
+  },
+  datePublished: new Date().toISOString(),
+  dateModified: new Date().toISOString()
+};
+
+// Generate schema for services
+const servicesSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Service Status",
+  itemListElement: services.map((service, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    item: {
+      "@type": "Service",
+      name: service.name,
+      description: service.description,
+      status: service.status
+    }
+  }))
+};
+
+// Generate schema for incidents
+const incidentsSchema = statusData.incidents?.length ? {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Incidents",
+  itemListElement: incidents.map((incident, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    item: {
+      "@type": "Event",
+      name: incident.title,
+      description: incident.description,
+      startDate: incident.date
+    }
+  }))
+} : null;
+
+// Combine all schemas
+const schemaMarkup = [
+  statusSchema,
+  servicesSchema,
+  incidentsSchema
+].filter(Boolean);
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <BaseHead 
+      title={`Status | ${businessInfo.name}`}
+      description={statusData.hero?.description || "Current status of our services and systems"}
+      type="website"
+      schemaMarkup={schemaMarkup}
+    />
+  </head>
+  <body>
+    <Header />
+    <main class="pt-10">
+      <!-- Hero Section -->
+      <section class="relative py-20 px-4 bg-[#f9faff] overflow-hidden">
+        <div class="absolute inset-0">
+          <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-bl from-green-500/10 to-blue-500/10 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
+          <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-tr from-cyan-500/10 to-teal-500/10 rounded-full blur-3xl animate-blob"></div>
+        </div>
+        <div class="relative max-w-7xl mx-auto text-center">
+          <span class="inline-block px-4 py-1.5 mb-6 text-sm font-semibold rounded-full bg-green-50 text-green-600">{statusData.hero.subtitle}</span>
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">{statusData.hero.title}</h1>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+            {statusData.hero.description}
+          </p>
+          <div class="flex items-center justify-center gap-4">
+            <div class="flex items-center gap-2">
+              <CheckCircle className="w-5 h-5 text-green-500" />
+              <span class="text-sm font-medium text-gray-700">{statusData.hero.operational}</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <AlertCircle className="w-5 h-5 text-amber-500" />
+              <span class="text-sm font-medium text-gray-700">{statusData.hero.degraded}</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <Clock className="w-5 h-5 text-blue-500" />
+              <span class="text-sm font-medium text-gray-700">{statusData.hero.maintenance}</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Main Status Content -->
+      <section class="relative py-16 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+          <!-- Overall Status -->
+          <div class="mb-12">
+            <div class="flex items-center justify-between mb-6">
+              <h2 class="text-2xl font-bold">{statusData.overallStatus.title}</h2>
+              <div class="flex items-center gap-2 text-sm text-gray-500">
+                <RefreshCw className="w-4 h-4" />
+                <span>{statusData.overallStatus.lastUpdated}</span>
+              </div>
+            </div>
+            <div class="p-6 bg-[#f9faff] rounded-xl">
+              <div class="flex items-center gap-4">
+                <div class={`w-16 h-16 rounded-xl flex items-center justify-center ${
+                  statusData.overallStatus.status === 'operational' ? 'bg-green-50' : 
+                  statusData.overallStatus.status === 'degraded' ? 'bg-amber-50' : 'bg-blue-50'
+                }`}>
+                  {statusData.overallStatus.status === 'operational' ? (
+                    <CheckCircle className="w-8 h-8 text-green-500" />
+                  ) : statusData.overallStatus.status === 'degraded' ? (
+                    <AlertCircle className="w-8 h-8 text-amber-500" />
+                  ) : (
+                    <Clock className="w-8 h-8 text-blue-500" />
+                  )}
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold mb-1">{statusData.overallStatus.statusText}</h3>
+                  <p class="text-gray-600">{statusData.overallStatus.description}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Services Status -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold mb-6">{statusData.servicesTitle}</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {services.map(service => (
+                <div class="p-6 bg-[#f9faff] rounded-xl">
+                  <div class="flex items-start gap-4">
+                    <div class={`w-12 h-12 rounded-xl flex items-center justify-center ${
+                      service.status === 'operational' ? 'bg-green-50' : 
+                      service.status === 'degraded' ? 'bg-amber-50' : 'bg-blue-50'
+                    }`}>
+                      <service.icon className={`w-6 h-6 ${
+                        service.status === 'operational' ? 'text-green-500' : 
+                        service.status === 'degraded' ? 'text-amber-500' : 'text-blue-500'
+                      }`} />
+                    </div>
+                    <div class="flex-1">
+                      <div class="flex items-center justify-between mb-1">
+                        <h3 class="font-semibold">{service.name}</h3>
+                        <span class={`px-2 py-1 text-xs font-medium rounded-full ${
+                          service.status === 'operational' ? 'bg-green-50 text-green-600' : 
+                          service.status === 'degraded' ? 'bg-amber-50 text-amber-600' : 'bg-blue-50 text-blue-600'
+                        }`}>
+                          {service.statusText}
+                        </span>
+                      </div>
+                      <p class="text-sm text-gray-600">{service.description}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- Recent Incidents -->
+          {incidents.length > 0 && (
+            <div>
+              <h2 class="text-2xl font-bold mb-6">{statusData.incidentsTitle}</h2>
+              <div class="space-y-6">
+                {incidents.map(incident => (
+                  <div class="p-6 bg-[#f9faff] rounded-xl">
+                    <div class="flex items-start gap-4">
+                      <div class={`w-12 h-12 rounded-xl flex items-center justify-center ${
+                        incident.status === 'operational' ? 'bg-green-50' : 
+                        incident.status === 'degraded' ? 'bg-amber-50' : 'bg-blue-50'
+                      }`}>
+                        <incident.icon className={`w-6 h-6 ${
+                          incident.status === 'operational' ? 'text-green-500' : 
+                          incident.status === 'degraded' ? 'text-amber-500' : 'text-blue-500'
+                        }`} />
+                      </div>
+                      <div class="flex-1">
+                        <div class="flex items-center justify-between mb-2">
+                          <h3 class="font-semibold">{incident.title}</h3>
+                          <span class="text-sm text-gray-500">{incident.date}</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">{incident.description}</p>
+                        {incident.updates && incident.updates.length > 0 && (
+                          <div class="space-y-3">
+                            {incident.updates.map(update => (
+                              <div class="pl-4 border-l-2 border-gray-200">
+                                <div class="flex items-center gap-2 mb-1">
+                                  <span class="text-sm font-medium">{update.time}</span>
+                                  <span class={`px-2 py-0.5 text-xs font-medium rounded-full ${
+                                    update.status === 'resolved' ? 'bg-green-50 text-green-600' : 
+                                    update.status === 'investigating' ? 'bg-amber-50 text-amber-600' : 'bg-blue-50 text-blue-600'
+                                  }`}>
+                                    {update.statusText}
+                                  </span>
+                                </div>
+                                <p class="text-sm text-gray-600">{update.description}</p>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style>
+  .bg-navy-900 {
+    background-color: #0a0b1e;
+  }
+  .bg-navy-800 {
+    background-color: #12132d;
+  }
+
+  @keyframes blob {
+    0% {
+      transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    }
+    33% {
+      transform: translate(-50%, -50%) scale(1.1) rotate(120deg);
+    }
+    66% {
+      transform: translate(-50%, -50%) scale(0.9) rotate(240deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1) rotate(360deg);
+    }
+  }
+
+  .animate-blob {
+    animation: blob 20s infinite linear;
+  }
+
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+</style> 

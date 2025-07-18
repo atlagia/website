@@ -1,0 +1,351 @@
+{
+  "siteTitle": "ShipEase - Global Shipping Solutions",
+  "siteDescription": "Experience fast, reliable, and affordable shipping with ShipEase. We provide comprehensive logistics and eCommerce shipping services worldwide.",
+  "sections": [
+    {
+      "type": "welcomeSection",
+      "badge": "Expert Shipping Services",
+      "title": "Your Package, Our <span class=\"dental-highlight\">Priority</span>",
+      "description": "ShipEase delivers your packages safely and on time, every time. From local deliveries to international freight, our advanced logistics network ensures your shipments reach their destination quickly and securely.",
+      "blogLinkText": "Our Services",
+      "getStartedText": "Get a Quote",
+      "getStartedLink": "/en/quote",
+      "blogLink": "/services",
+      "heroImage": "https://cdn.atlagia.com/SooqConnect/images/97b95366-9399-46f8-ab73-adf03f1c02f3.png",
+      "partnerLogos": [
+        {
+          "src": "https://cdn.atlagia.com/SooqConnect/images/962ef229-105a-4b80-91e3-a334ca9f8f31.png",
+          "alt": "FedEx Partner"
+        },
+        {
+          "src": "https://cdn.atlagia.com/SooqConnect/images/bdf05120-229a-4931-b0b3-2b3692be4c3f.png",
+          "alt": "DHL Partner"
+        }
+      ]
+    },
+    {
+      "type": "aboutSection",
+      "subtitle": "ABOUT US",
+      "title": "Modern Shipping Solutions for Your Business",
+      "description": "At ShipEase, we combine advanced technology with a global logistics network to provide exceptional shipping services. Our commitment to reliability and transparency ensures your business can scale with confidence.",
+      "image": "https://cdn.atlagia.com/website_images/recraft-9da3b900-c056-4520-9580-b92ee413f88c.png",
+      "features": [
+        {
+          "title": "Global Reach",
+          "description": "Ship to over 200 countries with our trusted carrier partners."
+        },
+        {
+          "title": "Real-Time Tracking",
+          "description": "Monitor your shipments every step of the way with live updates."
+        },
+        {
+          "title": "Flexible Solutions",
+          "description": "From small parcels to bulk freight, we handle it all."
+        }
+      ],
+      "stats": [
+        {
+          "value": "10+",
+          "label": "Years Experience"
+        },
+        {
+          "value": "50k+",
+          "label": "Shipments Delivered"
+        }
+      ],
+      "experienceBadge": {
+        "value": "10+",
+        "label": "Years in Logistics"
+      },
+      "ctaButton": {
+        "text": "Contact Us",
+        "link": "/contact"
+      }
+    },
+    {
+      "type": "whoWeAreSection",
+      "subtitle": "WHO WE ARE",
+      "title": "Your Trusted Shipping Partner",
+      "description": "ShipEase is dedicated to providing reliable, cost-effective shipping for businesses and individuals. Our experienced team and advanced technology ensure your packages are always in good hands.",
+      "image": "https://cdn.atlagia.com/website_images/recraft-0950d8e4-2910-412f-89bf-65da3fecad56.png",
+      "stats": [
+        {
+          "value": "100K+",
+          "label": "Happy Customers"
+        },
+        {
+          "value": "99%",
+          "label": "On-Time Delivery"
+        }
+      ],
+      "trustIndicators": [
+        {
+          "icon": "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z",
+          "text": "Licensed & Insured"
+        },
+        {
+          "icon": "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z",
+          "text": "24/7 Customer Support"
+        }
+      ],
+      "ctaButton": {
+        "text": "Learn More About Us",
+        "link": "/about"
+      }
+    },
+    {
+      "type": "bannerSection",
+      "subtitle": "OUR EXPERTISE",
+      "headline": "Advanced eCommerce Shipping",
+      "description": "Seamless integration with your online store. Fast, affordable, and trackable shipping for your customers.",
+      "backgroundImage": "/images/shipping-banner-bg.jpg",
+      "button1Text": "Integrate Now",
+      "button1Link": "/integrations",
+      "button2Text": "Get Started",
+      "button2Link": "/quote",
+      "trustBadges": [
+        "Global Coverage",
+        "Real-Time Tracking",
+        "Customs Clearance",
+        "Insurance Options"
+      ],
+      "cards": [
+        {
+          "title": "Express Delivery",
+          "description": "Next-day and two-day shipping options for urgent deliveries."
+        },
+        {
+          "title": "Bulk Freight",
+          "description": "Affordable solutions for large and heavy shipments."
+        },
+        {
+          "title": "eCommerce Integration",
+          "description": "Connect your store and automate shipping with our API."
+        },
+        {
+          "title": "Customs Handling",
+          "description": "We manage all paperwork and customs clearance for you."
+        },
+        {
+          "title": "Insurance Protection",
+          "description": "Optional insurance for peace of mind on every shipment."
+        },
+        {
+          "title": "Returns Management",
+          "description": "Easy returns and reverse logistics for your customers."
+        }
+      ]
+    },
+    {
+      "type": "benefitsSection",
+      "subtitle": "BENEFITS",
+      "title": "Why Choose ShipEase?",
+      "description": "Experience the Difference in Modern Shipping",
+      "benefits": [
+        {
+          "title": "Global Network",
+          "description": "Ship anywhere in the world with our extensive carrier partnerships."
+        },
+        {
+          "title": "Transparent Pricing",
+          "description": "No hidden fees. Get instant quotes and clear billing."
+        },
+        {
+          "title": "Dedicated Support",
+          "description": "Our team is here to help you 24/7, every step of the way."
+        }
+      ],
+      "stats": [
+        {
+          "value": "10+",
+          "label": "Years Experience"
+        },
+        {
+          "value": "50k+",
+          "label": "Shipments Delivered"
+        },
+        {
+          "value": "200+",
+          "label": "Countries Served"
+        },
+        {
+          "value": "99%",
+          "label": "On-Time Delivery"
+        }
+      ]
+    },
+    {
+      "type": "reviewsSection",
+      "reviews": [
+        {
+          "rating": 5,
+          "content": "ShipEase made our international shipping effortless. The tracking and support are top-notch!",
+          "author": "Alex Carter",
+          "position": "eCommerce Manager"
+        },
+        {
+          "rating": 5,
+          "content": "Fast, reliable, and affordable. Our customers love the quick delivery times.",
+          "author": "Priya Singh",
+          "position": "Online Store Owner"
+        },
+        {
+          "rating": 5,
+          "content": "The integration with our website was seamless. Highly recommended for any business shipping products.",
+          "author": "Liam Chen",
+          "position": "Logistics Lead"
+        }
+      ]
+    },
+    {
+      "type": "pricingSection",
+      "subtitle": "OUR PLANS",
+      "title": "Flexible Shipping Plans",
+      "description": "Choose the perfect shipping plan for your business. All plans include tracking, support, and global coverage. Volume discounts available.",
+      "insuranceInfo": {
+        "text": "We offer shipment insurance for added peace of mind",
+        "providers": [
+          "FedEx",
+          "DHL",
+          "UPS",
+          "TNT"
+        ]
+      },
+      "plans": [
+        {
+          "name": "Starter",
+          "price": "Free",
+          "period": "No Monthly Fee",
+          "buttonText": "Start Shipping",
+          "buttonLink": "/plans",
+          "features": [
+            {
+              "text": "Pay-as-you-go rates",
+              "included": true
+            },
+            {
+              "text": "Basic Tracking",
+              "included": true
+            },
+            {
+              "text": "Email Support",
+              "included": true
+            }
+          ]
+        },
+        {
+          "name": "Business",
+          "price": "$49",
+          "period": "Per Month",
+          "buttonText": "Choose Plan",
+          "buttonLink": "/plans",
+          "features": [
+            {
+              "text": "Discounted Shipping Rates",
+              "included": true
+            },
+            {
+              "text": "Advanced Tracking",
+              "included": true
+            },
+            {
+              "text": "API Access",
+              "included": true
+            },
+            {
+              "text": "Priority Support",
+              "included": true
+            }
+          ]
+        },
+        {
+          "name": "Enterprise",
+          "price": "Custom",
+          "period": "Contact Us",
+          "isPopular": true,
+          "buttonText": "Contact Sales",
+          "buttonLink": "/contact",
+          "features": [
+            {
+              "text": "Custom Integrations",
+              "included": true
+            },
+            {
+              "text": "Dedicated Account Manager",
+              "included": true
+            },
+            {
+              "text": "Bulk Discounts",
+              "included": true
+            },
+            {
+              "text": "All Business Features",
+              "included": true
+            },
+            {
+              "text": "Custom Solutions",
+              "included": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ctaSection",
+      "subtitle": "GET STARTED",
+      "title": "Start Shipping with ShipEase Today",
+      "description": "Sign up now and experience fast, reliable, and affordable shipping for your business. Special offers for new customers!",
+      "primaryButtonText": "Get a Quote",
+      "primaryButtonLink": "/quote",
+      "secondaryButtonText": "Contact Us",
+      "secondaryButtonLink": "/contact",
+      "stats": [
+        {
+          "value": "100K+",
+          "label": "Shipments Delivered"
+        },
+        {
+          "value": "200+",
+          "label": "Countries Served"
+        },
+        {
+          "value": "99%",
+          "label": "On-Time Delivery"
+        },
+        {
+          "value": "24/7",
+          "label": "Support"
+        }
+      ],
+      "emergencyContact": {
+        "phone": "(800) 555-1234",
+        "hours": "Available 24/7 for urgent shipments"
+      },
+      "trustIndicators": [
+        "Instant Quotes",
+        "Global Network",
+        "Insurance Options",
+        "Dedicated Support"
+      ]
+    },
+    {
+      "type": "emailSignupSection",
+      "subtitle": "STAY CONNECTED",
+      "title": "Join Our Shipping Newsletter",
+      "description": "Subscribe to receive shipping tips, special offers, and updates from ShipEase.",
+      "buttonText": "Subscribe",
+      "placeholder": "Enter your email",
+      "formType": "newsletter",
+      "trustBadge": {
+        "icon": "M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z",
+        "text": "Your information is secure and encrypted"
+      },
+      "features": [
+        "Shipping tips",
+        "Special offers",
+        "Tracking updates",
+        "New services"
+      ]
+    }
+  ]
+}

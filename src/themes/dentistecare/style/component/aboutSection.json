@@ -1,0 +1,104 @@
+{
+  "heroSection": {
+    "container": "relative py-20 px-4 bg-[#f9faff] overflow-hidden",
+    "backgroundElements": {
+      "container": "absolute inset-0",
+      "blob1": "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-bl from-purple-500/10 to-blue-500/10 rounded-full blur-3xl animate-blob animation-delay-4000",
+      "blob2": "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-tr from-pink-500/10 to-cyan-500/10 rounded-full blur-3xl animate-blob"
+    },
+    "content": {
+      "container": "relative max-w-7xl mx-auto text-center",
+      "subtitle": "inline-block px-4 py-1.5 mb-6 text-sm font-semibold rounded-full bg-pink-50 text-pink-600",
+      "title": "text-4xl md:text-5xl font-bold mb-6",
+      "description": "text-xl text-gray-600 max-w-2xl mx-auto"
+    }
+  },
+  "welcomeSection": {
+    "container": "relative py-20 px-4 bg-white",
+    "innerContainer": "max-w-7xl mx-auto",
+    "grid": "grid grid-cols-1 lg:grid-cols-2 gap-16 items-center",
+    "content": {
+      "subtitle": "text-sm font-semibold text-gray-600 mb-4 block",
+      "title": "text-3xl md:text-4xl font-bold mb-6",
+      "description": "text-gray-600 mb-12",
+      "featuresContainer": "space-y-8",
+      "feature": {
+        "container": "flex gap-4",
+        "iconContainer": "w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0",
+        "icon": "w-6 h-6",
+        "title": "text-lg font-semibold mb-2",
+        "description": "text-gray-600"
+      }
+    },
+    "image": {
+      "container": "",
+      "img": "w-full h-auto rounded-2xl shadow-lg"
+    }
+  },
+  "platformSection": {
+    "container": "relative py-16 px-4 bg-[#f9faff]",
+    "innerContainer": "max-w-7xl mx-auto",
+    "logosContainer": "flex flex-wrap justify-center items-center gap-12 opacity-60",
+    "logo": "h-8 w-auto"
+  },
+  "innovationSection": {
+    "container": "relative py-20 px-4 bg-white",
+    "innerContainer": "max-w-7xl mx-auto",
+    "grid": "grid grid-cols-1 lg:grid-cols-2 gap-16 items-center",
+    "image": {
+      "container": "",
+      "img": "w-full h-auto rounded-2xl"
+    },
+    "content": {
+      "subtitle": "text-sm font-semibold text-gray-600 mb-4 block",
+      "title": "text-3xl md:text-4xl font-bold mb-6",
+      "description": "text-gray-600 mb-8",
+      "milestonesContainer": "grid grid-cols-2 gap-8 mb-8",
+      "milestone": {
+        "number": "text-4xl font-bold text-pink-600 mb-2",
+        "title": "font-semibold"
+      },
+      "cta": "inline-flex items-center gap-2 text-navy-900 font-semibold hover:text-pink-600 transition-colors",
+      "ctaIcon": "w-4 h-4"
+    }
+  },
+  "testimonialsSection": {
+    "container": "relative py-20 px-4 bg-[#f9faff]",
+    "innerContainer": "max-w-7xl mx-auto",
+    "header": {
+      "container": "text-center mb-16",
+      "title": "text-3xl md:text-4xl font-bold mb-4",
+      "description": "text-xl text-gray-600 max-w-2xl mx-auto"
+    },
+    "testimonialsGrid": "grid grid-cols-1 md:grid-cols-2 gap-8",
+    "testimonial": {
+      "container": "bg-white p-8 rounded-2xl",
+      "content": "text-gray-600 mb-6",
+      "authorContainer": "flex items-center gap-4",
+      "authorImage": "w-12 h-12 rounded-full",
+      "authorName": "font-semibold",
+      "authorPosition": "text-sm text-gray-600"
+    },
+    "ctaContainer": "text-center mt-12",
+    "cta": "inline-flex items-center px-6 py-3 rounded-lg bg-navy-900 text-white font-semibold hover:bg-navy-800 transition-colors"
+  },
+  "colors": {
+    "navy900": "#0a0b1e",
+    "navy800": "#12132d"
+  },
+  "animations": {
+    "blob": {
+      "keyframes": [
+        { "transform": "translate(-50%, -50%) scale(1) rotate(0deg)", "percentage": 0 },
+        { "transform": "translate(-50%, -50%) scale(1.1) rotate(120deg)", "percentage": 33 },
+        { "transform": "translate(-50%, -50%) scale(0.9) rotate(240deg)", "percentage": 66 },
+        { "transform": "translate(-50%, -50%) scale(1) rotate(360deg)", "percentage": 100 }
+      ],
+      "duration": "20s",
+      "timing": "infinite linear"
+    },
+    "delays": {
+      "delay4000": "4s"
+    }
+  }
+} 

@@ -1,0 +1,182 @@
+{
+  "hero": {
+    "subtitle": "DOCUMENTATION API",
+    "title": "Intégrez Notre Plateforme",
+    "description": "Documentation API complète pour vous aider à intégrer nos solutions e-commerce dans vos applications.",
+    "searchPlaceholder": "Rechercher dans la documentation API..."
+  },
+  "sidebar": {
+    "categories": [
+      {
+        "title": "Premiers Pas",
+        "icon": "Code",
+        "items": [
+          {
+            "title": "Authentification",
+            "link": "/api/auth"
+          },
+          {
+            "title": "Aperçu de l'API",
+            "link": "/api/overview"
+          },
+          {
+            "title": "Limites de Taux",
+            "link": "/api/rate-limits"
+          }
+        ]
+      },
+      {
+        "title": "Points de Terminaison Principaux",
+        "icon": "Terminal",
+        "items": [
+          {
+            "title": "API Produits",
+            "link": "/api/products"
+          },
+          {
+            "title": "API Commandes",
+            "link": "/api/orders"
+          },
+          {
+            "title": "API Clients",
+            "link": "/api/customers"
+          }
+        ]
+      },
+      {
+        "title": "Fonctionnalités Avancées",
+        "icon": "Box",
+        "items": [
+          {
+            "title": "Webhooks",
+            "link": "/api/webhooks"
+          },
+          {
+            "title": "API Analytique",
+            "link": "/api/analytics"
+          },
+          {
+            "title": "Intégration IA",
+            "link": "/api/ai"
+          }
+        ]
+      },
+      {
+        "title": "Sécurité",
+        "icon": "Shield",
+        "items": [
+          {
+            "title": "Clés API",
+            "link": "/api/keys"
+          },
+          {
+            "title": "OAuth 2.0",
+            "link": "/api/oauth"
+          },
+          {
+            "title": "Chiffrement des Données",
+            "link": "/api/encryption"
+          }
+        ]
+      }
+    ]
+  },
+  "featured": {
+    "title": "Guides Vedettes",
+    "guides": [
+      {
+        "icon": "Zap",
+        "title": "Guide de Démarrage Rapide",
+        "description": "Commencez à utiliser notre API en quelques minutes",
+        "link": "/api/quick-start",
+        "color": "pink"
+      },
+      {
+        "icon": "Database",
+        "title": "Modèles de Données",
+        "description": "Comprendre nos structures de données et relations",
+        "link": "/api/data-models",
+        "color": "blue"
+      },
+      {
+        "icon": "Settings",
+        "title": "Modèles d'Intégration",
+        "description": "Modèles courants pour intégrer avec notre plateforme",
+        "link": "/api/integration-patterns",
+        "color": "purple"
+      }
+    ]
+  },
+  "endpoints": {
+    "title": "Points de Terminaison Populaires",
+    "description": "Explorez nos points de terminaison API les plus utilisés",
+    "items": [
+      {
+        "method": "GET",
+        "path": "/api/v1/products",
+        "title": "Liste des Produits",
+        "description": "Récupérer une liste de produits avec filtrage optionnel et pagination"
+      },
+      {
+        "method": "POST",
+        "path": "/api/v1/orders",
+        "title": "Créer une Commande",
+        "description": "Créer une nouvelle commande avec articles et informations client"
+      },
+      {
+        "method": "GET",
+        "path": "/api/v1/customers/{id}",
+        "title": "Obtenir un Client",
+        "description": "Récupérer des informations détaillées sur un client spécifique"
+      },
+      {
+        "method": "PUT",
+        "path": "/api/v1/products/{id}",
+        "title": "Mettre à Jour un Produit",
+        "description": "Mettre à jour les informations et attributs d'un produit existant"
+      }
+    ]
+  },
+  "updates": {
+    "title": "Dernières Mises à Jour",
+    "description": "Restez à jour avec nos dernières fonctionnalités et améliorations API",
+    "items": [
+      {
+        "date": "2024-03-15",
+        "title": "Nouveaux Événements Webhook",
+        "description": "Ajout de la prise en charge des changements d'état des commandes et des mises à jour d'inventaire",
+        "tag": "Fonctionnalité"
+      },
+      {
+        "date": "2024-03-10",
+        "title": "API Version 2.0 Beta",
+        "description": "Présentation de notre API de nouvelle génération avec des performances améliorées et de nouveaux points de terminaison",
+        "tag": "Mise à Jour"
+      },
+      {
+        "date": "2024-03-05",
+        "title": "Authentification Améliorée",
+        "description": "Ajout de la prise en charge d'OAuth 2.0 avec tokens de rafraîchissement et sécurité améliorée",
+        "tag": "Sécurité"
+      }
+    ]
+  },
+  "help": {
+    "title": "Besoin d'Aide ?",
+    "description": "Vous ne trouvez pas ce que vous cherchez ? Notre équipe de support développeur est là pour vous aider.",
+    "options": [
+      {
+        "icon": "MessageCircle",
+        "title": "Forum Développeur",
+        "description": "Rejoignez notre communauté de développeurs pour obtenir l'aide d'autres développeurs",
+        "link": "/api/community"
+      },
+      {
+        "icon": "Mail",
+        "title": "Contacter le Support API",
+        "description": "Contactez notre équipe de support API dédiée",
+        "link": "/api/support"
+      }
+    ]
+  }
+} 

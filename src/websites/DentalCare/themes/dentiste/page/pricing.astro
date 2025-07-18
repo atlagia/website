@@ -1,0 +1,324 @@
+---
+import { SITE_TITLE } from '../consts';
+import pkg from 'lucide-react';
+const { Check } = pkg;
+
+const theme = import.meta.env.THEME || 'default';
+const lang = Astro.params.lang || 'en';
+const solutionParam = Astro.url.searchParams.get('solution');
+
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+
+// Import language-specific pricing data
+const pricingData = await import(`../data/pricing/pricing_${lang}.json`);
+
+// Import solution-specific pricing if provided
+let solutionData = null;
+let isSolution = false;
+
+if (solutionParam) {
+  try {
+    solutionData = await import(`../data/solutions/${solutionParam}/${solutionParam}_${lang}.json`);
+    isSolution = true;
+  } catch (e) {
+    console.error(`Failed to load solution data for ${solutionParam}: ${e}`);
+  }
+}
+
+// Use solution pricing if available, otherwise use general pricing
+const displayData = isSolution && solutionData ? solutionData : pricingData;
+
+// Import styles
+const styles = await import(`../style/page/pricingpage.json`);
+
+const businessInfo = {
+  name: import.meta.env.PUBLIC_BUSINESS_NAME || 'DentCare'
+};
+
+// State for billing period (can be enhanced with client-side JS)
+const billingPeriod = 'monthly';
+
+// Format pricing display for different data structures
+const formatPrice = (plan) => {
+  if (isSolution) {
+    return plan.price; // Solution pricing is already formatted as string like "$199"
+  } else {
+    return `$${plan.price[billingPeriod]}`; // General pricing is numeric and needs format
+  }
+};
+
+const pageTitle = isSolution ? `${solutionData.hero.title} Pricing` : 'Pricing';
+const plans = isSolution ? displayData.pricing.options : displayData.plans;
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <BaseHead 
+      title={`${pageTitle} | ${businessInfo.name}`}
+      description={displayData.hero.description}
+    />
+  </head>
+  <body>
+    <Header />
+    <main class="pt-10">
+      <!-- Hero Section -->
+      <section class={styles.hero.section}>
+        <div class="absolute inset-0 z-0">
+          <div class={styles.hero.blob1}></div>
+          <div class={styles.hero.blob2}></div>
+        </div>
+        <div class={styles.hero.container}>
+          <span class={styles.hero.subtitle}>
+            {isSolution ? displayData.pricing.title : displayData.hero.subtitle}
+          </span>
+          <h1 class={styles.hero.title}>
+            {isSolution ? `${displayData.hero.title} Pricing` : displayData.hero.title}
+          </h1>
+          <p class={styles.hero.description}>
+            {isSolution ? displayData.pricing.description : displayData.hero.description}
+          </p>
+        </div>
+      </section>
+
+      <!-- Pricing Toggle - Only show for general pricing -->
+      {!isSolution && (
+        <section class={styles.toggle.section}>
+          <div class={styles.toggle.container}>
+            <div class={styles.toggle.wrapper}>
+              <span class={styles.toggle.monthlyText}>{pricingData.billing.monthly}</span>
+              <button class={styles.toggle.toggleButton}>
+                <span class={styles.toggle.toggleCircle}></span>
+              </button>
+              <span class={styles.toggle.yearlyText}>
+                {pricingData.billing.yearly} 
+                <span class={styles.toggle.discountText}>({pricingData.billing.discount})</span>
+              </span>
+            </div>
+          </div>
+        </section>
+      )}
+
+      <!-- Solutions Toggle - If showing solution pricing -->
+      {isSolution && (
+        <section class={styles.toggle.section}>
+          <div class={styles.toggle.container}>
+            <div class="text-center mb-8">
+              <a href="/pricing" class="text-primary hover:text-primary-dark transition-colors">
+                ← Back to General Pricing
+              </a>
+            </div>
+          </div>
+        </section>
+      )}
+
+      <!-- Pricing Cards -->
+      <section class={styles.pricing.section}>
+        <div class={styles.pricing.container}>
+          <div class={styles.pricing.grid}>
+            {plans.map((plan, index) => (
+              <div class={`${styles.pricing.card.base} ${
+                (isSolution && index === 1) || (!isSolution && plan.featured) 
+                  ? styles.pricing.card.featured 
+                  : styles.pricing.card.normal
+              }`}>
+                {((isSolution && index === 1) || (!isSolution && plan.featured)) && (
+                  <span class={styles.pricing.badge}>
+                    {isSolution ? "Popular" : plan.badge}
+                  </span>
+                )}
+                <div class={styles.pricing.cardHeader}>
+                  <h3 class={styles.pricing.cardTitle}>{plan.name}</h3>
+                  <p class={styles.pricing.cardDescription}>
+                    {isSolution ? '' : plan.description}
+                  </p>
+                  <div class={styles.pricing.priceContainer}>
+                    <span class={styles.pricing.priceAmount}>
+                      {isSolution ? plan.price : `$${plan.price[billingPeriod]}`}
+                    </span>
+                    <span class={styles.pricing.pricePeriod}>
+                      {isSolution ? `/${plan.duration}` : `/${pricingData.billing[billingPeriod].toLowerCase()}`}
+                    </span>
+                  </div>
+                </div>
+                <ul class={styles.pricing.featuresList}>
+                  {(isSolution ? plan.includes : plan.features).map(feature => (
+                    <li class={styles.pricing.featureItem}>
+                      <svg class={styles.pricing.featureIcon} fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 13l4 4L19 7"></path>
+                      </svg>
+                      <span class={styles.pricing.featureText}>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href={isSolution ? "/request-demo" : plan.cta.link}
+                  class={`${styles.pricing.ctaButton.base} ${
+                    (isSolution && index === 1) || (!isSolution && plan.featured)
+                      ? styles.pricing.ctaButton.featured
+                      : styles.pricing.ctaButton.normal
+                  }`}
+                >
+                  {isSolution ? "Request Demo" : plan.cta.text}
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQs -->
+      <section class={styles.faq.section}>
+        <div class={styles.faq.container}>
+          <div class={styles.faq.header}>
+            <span class={styles.faq.subtitle}>
+              FAQ
+            </span>
+            <h2 class={styles.faq.title}>Frequently Asked Questions</h2>
+            <p class={styles.faq.description}>
+              {isSolution 
+                ? `Find answers to common questions about our ${displayData.hero.title}.` 
+                : "Find answers to common questions about our dental plans."}
+            </p>
+          </div>
+          <div class={styles.faq.questionsContainer}>
+            {(isSolution ? displayData.faq.questions : displayData.faqs).map(faq => (
+              <div class={styles.faq.questionCard}>
+                <h3 class={styles.faq.questionTitle}>{faq.question}</h3>
+                <p class={styles.faq.questionAnswer}>{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class={styles.cta.section}>
+        <div class="absolute inset-0 z-0">
+          <div class={styles.cta.blob1}></div>
+          <div class={styles.cta.blob2}></div>
+        </div>
+        <div class={styles.cta.container}>
+          <span class={styles.cta.subtitle}>
+            GET STARTED
+          </span>
+          <h2 class={styles.cta.title}>
+            {isSolution ? displayData.cta.title : displayData.cta.title}
+          </h2>
+          <p class={styles.cta.description}>
+            {isSolution ? displayData.cta.description : displayData.cta.description}
+          </p>
+          <div class={styles.cta.buttonsContainer}>
+            {isSolution ? (
+              <>
+                <a
+                  href={displayData.cta.primaryButton.href}
+                  class={`${styles.cta.button.base} ${styles.cta.button.primary}`}
+                >
+                  {displayData.cta.primaryButton.text}
+                </a>
+                <a
+                  href={displayData.cta.secondaryButton.href}
+                  class={`${styles.cta.button.base} ${styles.cta.button.secondary}`}
+                >
+                  {displayData.cta.secondaryButton.text}
+                </a>
+              </>
+            ) : (
+              displayData.cta.buttons.map(button => (
+                <a
+                  href={button.link}
+                  class={`${styles.cta.button.base} ${
+                    button.primary
+                      ? styles.cta.button.primary
+                      : styles.cta.button.secondary
+                  }`}
+                >
+                  {button.text}
+                </a>
+              ))
+            )}
+          </div>
+        </div>
+      </section>
+
+      <!-- Solutions List - Only show on general pricing page -->
+      {!isSolution && (
+        <section class={`${styles.pricing.section} pb-20`}>
+          <div class={styles.pricing.container}>
+            <div class="text-center mb-12">
+              <h2 class="text-3xl font-bold text-gray-900">Explore Our Solution Pricing</h2>
+              <p class="mt-4 text-lg text-gray-600">View detailed pricing for our specialized dental practice solutions</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                { id: "ai-diagnostics", name: "AI Diagnostics" },
+                { id: "analytics", name: "Practice Analytics" },
+                { id: "cad-cam", name: "CAD/CAM" },
+                { id: "imaging", name: "Dental Imaging" },
+                { id: "inventory", name: "Inventory Management" },
+                { id: "marketing", name: "Dental Marketing" },
+                { id: "online-booking", name: "Online Booking" },
+                { id: "patient-portal", name: "Patient Portal" },
+                { id: "reminders", name: "Patient Reminders" },
+                { id: "reputation", name: "Reputation Management" },
+                { id: "sleep-dentistry-module", name: "Sleep Dentistry" },
+                { id: "treatment-planning", name: "Treatment Planning" },
+                { id: "virtual-consults", name: "Virtual Consultations" },
+                { id: "multi-location", name: "Multi-Location Management" }
+              ].map(solution => (
+                <a 
+                  href={`/pricing?solution=${solution.id}`}
+                  class="block p-6 bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
+                >
+                  <h3 class="text-xl font-semibold text-gray-900">{solution.name}</h3>
+                  <p class="mt-2 text-gray-600">View detailed pricing options</p>
+                  <div class="mt-4 text-primary font-medium">See pricing →</div>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style define:vars={{ 
+  blobAnimation: styles.animations.blob 
+}}>
+  @keyframes blob {
+    0% {
+      transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    }
+    33% {
+      transform: translate(-50%, -50%) scale(1.1) rotate(120deg);
+    }
+    66% {
+      transform: translate(-50%, -50%) scale(0.9) rotate(240deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1) rotate(360deg);
+    }
+  }
+
+  .animate-blob {
+    animation: blob 20s infinite linear;
+  }
+
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+
+  .backdrop-blur-sm {
+    backdrop-filter: blur(8px);
+  }
+
+  .hover\:-translate-y-0.5:hover {
+    transform: translateY(-2px);
+  }
+</style> 

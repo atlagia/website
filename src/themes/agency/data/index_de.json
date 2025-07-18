@@ -1,0 +1,676 @@
+{
+  "siteTitle": "Atlagia - KI-gestützte Digitale Lösungen & Entwicklungsagentur",
+  "siteDescription": "Wir entwickeln intelligente digitale Lösungen und fortschrittliche KI-Anwendungen, die Unternehmen in verschiedenen Branchen transformieren. Ihr Partner für Innovation und digitale Exzellenz.",
+  "sections": [
+    {
+      "type": "welcomeSection",
+      "badge": "Agentur für Digitale Innovation",
+      "title": "Wir <span class='text-gradient'>Entwerfen & Entwickeln</span> KI-gestützte Lösungen für die Digitale Zukunft",
+      "description": "Transformieren Sie Ihr Unternehmen mit unserer Expertise in der KI-Entwicklung, maßgeschneiderten Softwarelösungen und digitaler Innovation. Wir sind spezialisiert auf die Erstellung intelligenter Systeme, die Effizienz, Automatisierung und Wachstum in jeder Branche vorantreiben.",
+      "blogLinkText": "Lösungen Entdecken",
+      "getStartedText": "Ihr Projekt Besprechen",
+      "getStartedLink": "/discuss-project",
+      "blogLink": "/solutions",
+      "heroImage": "https://cdn.atlagia.com/GiaConnect/images/670e6478-6043-4aec-a731-a0d4468e6d4e.png",
+      "features": [
+        {
+          "icon": "Globe",
+          "title": "Digitale Lösungen",
+          "description": "Maßgeschneiderte Softwareentwicklung und digitale Transformationslösungen"
+        },
+        {
+          "icon": "Zap",
+          "title": "KI-Entwicklung",
+          "description": "Entwicklung fortschrittlicher KI-Systeme und maschineller Lernlösungen"
+        },
+        {
+          "icon": "Users",
+          "title": "Branchenspezifische Lösungen",
+          "description": "Spezialisierte Lösungen für E-Commerce, Gesundheitswesen, Finanzen und mehr"
+        },
+        {
+          "icon": "Brain",
+          "title": "Technologische Innovation",
+          "description": "Integration modernster Technologien und innovative Entwicklung"
+        }
+      ],
+      "partnerLogos": [
+        {
+          "src": "https://cdn.atlagia.com/GiaConnect/images/processed-3bb4b721-db62-4347-82ed-b11735f18565.png",
+          "alt": "Shopify Partner"
+        },
+        {
+          "src": "https://cdn.atlagia.com/GiaConnect/images/processed-d4ae1096-ccab-49e9-91f5-1d6504936092.png",
+          "alt": "Wix Partner"
+        },
+        {
+          "src": "https://cdn.atlagia.com/GiaConnect/images/a3550c4a-95d2-4341-9ed7-2a5de91b0b66.png",
+          "alt": "WooCommerce Partner"
+        }
+      ]
+    },
+    {
+      "type": "aboutSection",
+      "subtitle": "WER WIR SIND",
+      "title": "Gestaltung der Digitalen Landschaft von Morgen mit KI-Innovation",
+      "features": [
+        {
+          "icon": "ai-development",
+          "title": "KI-Entwicklung & Integration",
+          "keywords": [
+            "Entwicklung",
+            "Innovation",
+            "KI"
+          ],
+          "description": "Wir sind spezialisiert auf die Entwicklung und Integration modernster KI-Lösungen, die Geschäftsabläufe transformieren.",
+          "bullets": [
+            "Entwicklung maßgeschneiderter KI-Modelle",
+            "Integration maschinellen Lernens",
+            "Verarbeitung natürlicher Sprache",
+            "Lösungen für Computer Vision"
+          ],
+          "backgroundSvg": "<svg width='100%' height='100%' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='grid1' width='20' height='20' patternUnits='userSpaceOnUse'><path d='M 20 0 L 0 0 0 20' fill='none' stroke='currentColor' stroke-width='0.5' opacity='0.1'/></pattern></defs><rect width='100%' height='100%' fill='url(#grid1)'/></svg>"
+        },
+        {
+          "icon": "software-solutions",
+          "title": "Softwarelösungen",
+          "keywords": [
+            "Software",
+            "Entwicklung",
+            "Lösungen"
+          ],
+          "description": "End-to-End-Softwareentwicklungsdienste, die auf die Bedürfnisse Ihrer Branche zugeschnitten sind.",
+          "bullets": [
+            "Maßgeschneiderte Softwareentwicklung",
+            "Web- & mobile Anwendungen",
+            "Cloud-native Lösungen",
+            "API-Entwicklung & Integration"
+          ],
+          "backgroundSvg": "<svg width='100%' height='100%' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='code' width='20' height='20' patternUnits='userSpaceOnUse'><path d='M 0 10 L 10 0 M 20 10 L 10 20' stroke='currentColor' stroke-width='0.5' opacity='0.1'/></pattern></defs><rect width='100%' height='100%' fill='url(#code)'/></svg>"
+        },
+        {
+          "icon": "digital-transformation",
+          "title": "Digitale Transformation",
+          "keywords": [
+            "Transformieren",
+            "Innovieren",
+            "Wachsen"
+          ],
+          "description": "Führen Sie Ihr Unternehmen durch eine umfassende digitale Transformation.",
+          "bullets": [
+            "Prozessautomatisierung",
+            "Beratung zur digitalen Strategie",
+            "Technologiemodernisierung",
+            "Datengetriebene Lösungen"
+          ],
+          "backgroundSvg": "<svg width='100%' height='100%' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='circuit' width='40' height='40' patternUnits='userSpaceOnUse'><circle cx='20' cy='20' r='1' fill='currentColor' opacity='0.1'/><path d='M 40 20 H 30 M 20 0 V 10' stroke='currentColor' stroke-width='0.5' opacity='0.1'/></pattern></defs><rect width='100%' height='100%' fill='url(#circuit)'/></svg>"
+        },
+        {
+          "icon": "industry-solutions",
+          "title": "Branchenspezifische Lösungen",
+          "keywords": [
+            "Spezialisiert",
+            "Branche",
+            "Experte"
+          ],
+          "description": "Branchenspezifische Lösungen, die durch fortschrittliche Technologie unterstützt werden.",
+          "bullets": [
+            "E-Commerce-Plattformen",
+            "Gesundheitssysteme",
+            "FinTech-Lösungen",
+            "Unternehmensanwendungen"
+          ],
+          "backgroundSvg": "<svg width='100%' height='100%' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='dots' width='20' height='20' patternUnits='userSpaceOnUse'><circle cx='10' cy='10' r='1' fill='currentColor' opacity='0.1'/></pattern></defs><rect width='100%' height='100%' fill='url(#dots)'/></svg>"
+        }
+      ],
+      "ctaText": "Unsere Dienstleistungen Entdecken",
+      "ctaLink": "/services"
+    },
+    {
+      "type": "whoWeAreSection",
+      "subtitle": "INNOVATIONSFÜHRER",
+      "title": "Pionierarbeit bei KI-Lösungen für Digitale Exzellenz",
+      "description": "Als Branchenführer in der KI-Entwicklung und digitalen Transformation revolutionieren wir die Art und Weise, wie Unternehmen im digitalen Zeitalter operieren. Unser Team aus erfahrenen Entwicklern und KI-Spezialisten erstellt modernste Lösungen, die Innovation, Effizienz und Wachstum vorantreiben. Von der maßgeschneiderten KI-Entwicklung bis zur digitalen Transformation im Unternehmensmaßstab liefern wir Ergebnisse, die die Erwartungen übertreffen.",
+      "image": "https://cdn.atlagia.com/GiaConnect/images/9304b8fc-6ad2-4ee5-944d-5b6472cf005b.png",
+      "stats": [
+        {
+          "value": "98%",
+          "label": "Kundenzufriedenheit"
+        },
+        {
+          "value": "500+",
+          "label": "Projekte Geliefert"
+        },
+        {
+          "value": "85%",
+          "label": "Schnellere Entwicklung"
+        },
+        {
+          "value": "24/7",
+          "label": "KI-Support"
+        }
+      ]
+    },
+    {
+      "type": "bannerSection",
+      "subtitle": "TRANSFORMATIVE LÖSUNGEN",
+      "headline": "Unternehmenswachstum Durch KI-Innovation Fördern",
+      "description": "Entdecken Sie, wie unsere modernsten KI-Lösungen und Expertendienstleistungen Ihre Geschäftsabläufe transformieren und beispielloses Wachstum im digitalen Zeitalter vorantreiben können.",
+      "backgroundImage": "/images/banner-bg.jpg",
+      "button1Text": "Lösungen Entdecken",
+      "button1Link": "/solutions",
+      "button2Text": "Demo Planen",
+      "button2Link": "/demo",
+      "cards": [
+        {
+          "title": "KI-gestützte Entwicklung",
+          "description": "Nutzen Sie die Kraft der künstlichen Intelligenz, um intelligentere, effizientere Anwendungen zu erstellen, die sich an die Bedürfnisse Ihres Unternehmens anpassen und skalieren."
+        },
+        {
+          "title": "Digitale Transformation",
+          "description": "Transformieren Sie Ihr Unternehmen mit umfassenden digitalen Lösungen, die Abläufe optimieren und Kundenerfahrungen verbessern."
+        },
+        {
+          "title": "Maßgeschneiderte Softwarelösungen",
+          "description": "Erhalten Sie maßgeschneiderte Softwarelösungen, die perfekt auf Ihre Geschäftsziele abgestimmt sind und Wettbewerbsvorteile bieten."
+        },
+        {
+          "title": "Cloud & DevOps",
+          "description": "Optimieren Sie Ihre Infrastruktur mit cloud-nativen Lösungen und automatisierten DevOps-Praktiken für maximale Effizienz und Zuverlässigkeit."
+        }
+      ]
+    },
+    {
+      "type": "benefitsSection",
+      "subtitle": "WARUM UNS WÄHLEN",
+      "title": "Digitale Exzellenz Durch Innovation Vorantreiben",
+      "description": "Partnern Sie mit uns, um Ihre digitale Präsenz mit modernster Technologie und Expertenlösungen zu transformieren",
+      "benefits": [
+        {
+          "title": "Expertenentwicklungsteam",
+          "description": "Unsere erfahrenen Entwickler und KI-Spezialisten bringen jahrelange Erfahrung in der Erstellung anspruchsvoller digitaler Lösungen über Branchen hinweg mit."
+        },
+        {
+          "title": "Maßgeschneiderte Lösungen",
+          "description": "Wir entwickeln maßgeschneiderte Lösungen, die perfekt auf Ihre Geschäftsziele abgestimmt sind und maximalen Einfluss und ROI gewährleisten."
+        },
+        {
+          "title": "Innovative Technologie",
+          "description": "Bleiben Sie mit unserem modernsten Technologiestack, einschließlich der neuesten Entwicklungen in KI, Cloud-Computing und Entwicklungsframeworks, an der Spitze."
+        },
+        {
+          "title": "Agile Methodik",
+          "description": "Unser agiler Ansatz gewährleistet schnelle Entwicklung, kontinuierliche Verbesserung und Flexibilität, um sich an sich ändernde Bedürfnisse anzupassen."
+        },
+        {
+          "title": "Umfassender Support",
+          "description": "Vom ersten Konzept bis zur Wartung nach dem Start bieten wir umfassende Unterstützung für Ihre digitale Reise."
+        },
+        {
+          "title": "Branchenspezifische Expertise",
+          "description": "Ein tiefes Verständnis verschiedener Branchen ermöglicht es uns, Lösungen zu liefern, die branchenspezifische Herausforderungen adressieren."
+        }
+      ]
+    },
+    {
+      "type": "projectsSection",
+      "subtitle": "UNSERE PROJEKTE",
+      "title": "Branchen Durch Innovation Transformieren",
+      "description": "Entdecken Sie unser Portfolio erfolgreicher digitaler Transformationen in verschiedenen Branchen.",
+      "projects": [
+        {
+          "title": "E-Commerce-Plattform",
+          "category": "Einzelhandel & E-Commerce",
+          "description": "KI-gestützte E-Commerce-Plattform mit fortschrittlichem Empfehlungssystem und automatisierter Bestandsverwaltung.",
+          "image": "https://cdn.atlagia.com/projects/ecommerce-platform.webp",
+          "stats": {
+            "conversion": "+150%",
+            "automation": "85%",
+            "efficiency": "3x"
+          },
+          "technologies": [
+            "KI/ML",
+            "React",
+            "Node.js",
+            "AWS"
+          ]
+        },
+        {
+          "title": "Gesundheitsmanagementsystem",
+          "category": "Gesundheitswesen",
+          "description": "Integrierte Gesundheitsplattform mit Patientenmanagement, Telemedizin und KI-Diagnoseunterstützung.",
+          "image": "https://cdn.atlagia.com/projects/healthcare-system.webp",
+          "stats": {
+            "efficiency": "+200%",
+            "accuracy": "99.9%",
+            "satisfaction": "98%"
+          },
+          "technologies": [
+            "Python",
+            "TensorFlow",
+            "React",
+            "Cloud"
+          ]
+        },
+        {
+          "title": "FinTech-Analyse-Dashboard",
+          "category": "Finanzen",
+          "description": "Echtzeit-Finanzanalyseplattform mit KI-gesteuerten Einblicken und automatisierter Berichterstattung.",
+          "image": "https://cdn.atlagia.com/projects/fintech-dashboard.webp",
+          "stats": {
+            "processing": "Echtzeit",
+            "accuracy": "99.99%",
+            "automation": "90%"
+          },
+          "technologies": [
+            "Vue.js",
+            "Python",
+            "KI/ML",
+            "AWS"
+          ]
+        },
+        {
+          "title": "Intelligentes Fertigungssystem",
+          "category": "Fertigung",
+          "description": "IoT-fähiges Fertigungssystem mit vorausschauender Wartung und automatisierter Qualitätskontrolle.",
+          "image": "https://cdn.atlagia.com/projects/manufacturing-system.webp",
+          "stats": {
+            "downtime": "-75%",
+            "quality": "+95%",
+            "efficiency": "4x"
+          },
+          "technologies": [
+            "IoT",
+            "KI/ML",
+            "Cloud",
+            "React"
+          ]
+        }
+      ],
+      "buttonText": "Alle Projekte Ansehen",
+      "buttonLink": "/projects"
+    },
+    {
+      "type": "technologiesSection",
+      "subtitle": "TECH STACK",
+      "title": "Unsere Technologische Expertise",
+      "description": "Wir nutzen modernste Technologien, um außergewöhnliche Lösungen zu liefern, die Unternehmenswachstum und Innovation vorantreiben.",
+      "categories": [
+        {
+          "name": "Frontend-Entwicklung",
+          "description": "Moderne Webtechnologien zur Erstellung reaktionsschneller und interaktiver Benutzeroberflächen.",
+          "technologies": [
+            {
+              "name": "React",
+              "icon": "react",
+              "level": "Experte",
+              "description": "Erstellung dynamischer und skalierbarer Webanwendungen"
+            },
+            {
+              "name": "Vue.js",
+              "icon": "vue",
+              "level": "Fortgeschritten",
+              "description": "Erstellung reaktiver und leistungsstarker Benutzeroberflächen"
+            },
+            {
+              "name": "Next.js",
+              "icon": "nextjs",
+              "level": "Experte",
+              "description": "Serverseitiges Rendering und statische Seitengenerierung"
+            },
+            {
+              "name": "TypeScript",
+              "icon": "typescript",
+              "level": "Fortgeschritten",
+              "description": "Typensichere JavaScript-Entwicklung"
+            }
+          ]
+        },
+        {
+          "name": "Backend-Entwicklung",
+          "description": "Robuste serverseitige Technologien zum Aufbau skalierbarer Anwendungen.",
+          "technologies": [
+            {
+              "name": "Node.js",
+              "icon": "nodejs",
+              "level": "Experte",
+              "description": "Hochleistungsfähige serverseitige Anwendungen"
+            },
+            {
+              "name": "Python",
+              "icon": "python",
+              "level": "Fortgeschritten",
+              "description": "Datenverarbeitung und maschinelles Lernen"
+            },
+            {
+              "name": "Go",
+              "icon": "golang",
+              "level": "Mittelstufe",
+              "description": "Schnelle und effiziente Backend-Dienste"
+            },
+            {
+              "name": "Java",
+              "icon": "java",
+              "level": "Fortgeschritten",
+              "description": "Unternehmensanwendungen"
+            }
+          ]
+        },
+        {
+          "name": "KI & Maschinelles Lernen",
+          "description": "Fortschrittliche KI-Technologien für intelligente Lösungen.",
+          "technologies": [
+            {
+              "name": "TensorFlow",
+              "icon": "tensorflow",
+              "level": "Fortgeschritten",
+              "description": "Tiefes Lernen und neuronale Netze"
+            },
+            {
+              "name": "PyTorch",
+              "icon": "pytorch",
+              "level": "Fortgeschritten",
+              "description": "Dynamische neuronale Netze"
+            },
+            {
+              "name": "OpenAI",
+              "icon": "openai",
+              "level": "Experte",
+              "description": "Verarbeitung natürlicher Sprache"
+            },
+            {
+              "name": "Scikit-learn",
+              "icon": "scikit",
+              "level": "Fortgeschritten",
+              "description": "Algorithmen des maschinellen Lernens"
+            }
+          ]
+        },
+        {
+          "name": "Cloud & DevOps",
+          "description": "Cloud-Infrastruktur und Entwicklungsoperationstools.",
+          "technologies": [
+            {
+              "name": "AWS",
+              "icon": "aws",
+              "level": "Experte",
+              "description": "Cloud-Infrastruktur und -Dienste"
+            },
+            {
+              "name": "Docker",
+              "icon": "docker",
+              "level": "Fortgeschritten",
+              "description": "Containerisierung und Bereitstellung"
+            },
+            {
+              "name": "Kubernetes",
+              "icon": "kubernetes",
+              "level": "Fortgeschritten",
+              "description": "Container-Orchestrierung"
+            },
+            {
+              "name": "CI/CD",
+              "icon": "cicd",
+              "level": "Experte",
+              "description": "Kontinuierliche Integration und Bereitstellung"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "processSection",
+      "subtitle": "UNSER PROZESS",
+      "title": "Wie Wir Exzellenz Liefern",
+      "description": "Unser bewährter Prozess stellt durch jede Entwicklungsphase hinweg konsistente Qualität und erfolgreiche Projektlieferung sicher.",
+      "steps": [
+        {
+          "number": "01",
+          "title": "Entdeckung & Planung",
+          "description": "Wir analysieren Ihre Anforderungen, definieren den Projektumfang und erstellen eine detaillierte Roadmap für den Erfolg.",
+          "icon": "search"
+        },
+        {
+          "number": "02",
+          "title": "Design & Architektur",
+          "description": "Unser Team erstellt skalierbare Architekturen und intuitive Designs, die mit Ihren Geschäftszielen übereinstimmen.",
+          "icon": "layout"
+        },
+        {
+          "number": "03",
+          "title": "Entwicklung",
+          "description": "Wir bauen robuste Lösungen mit modernsten Technologien und Best Practices.",
+          "icon": "code"
+        },
+        {
+          "number": "04",
+          "title": "Testen & Starten",
+          "description": "Gründliche Tests gewährleisten Qualität, gefolgt von einer reibungslosen Bereitstellung und kontinuierlichem Support.",
+          "icon": "check-circle"
+        }
+      ]
+    },
+    {
+      "type": "reviewsSection",
+      "subtitle": "KUNDENBEWERTUNGEN",
+      "title": "Was Unsere Kunden Sagen",
+      "description": "Entdecken Sie, warum führende Unternehmen uns vertrauen, um außergewöhnliche KI-gestützte Lösungen zu liefern, die ihren Erfolg vorantreiben.",
+      "reviews": [
+        {
+          "name": "Sarah Johnson",
+          "role": "CTO",
+          "company": "TechVision Inc",
+          "image": "/images/testimonials/sarah.jpg",
+          "content": "Die Zusammenarbeit mit diesem Team war transformativ für unser Unternehmen. Ihre KI-gestützten Lösungen haben unsere Kernprozesse automatisiert und die Betriebskosten um 60% reduziert, während gleichzeitig die Genauigkeit verbessert wurde.",
+          "rating": 5
+        },
+        {
+          "name": "Michael Chen",
+          "role": "CEO",
+          "company": "InnovatePro",
+          "image": "/images/testimonials/michael.jpg",
+          "content": "Das Niveau an Expertise und Professionalität ist außergewöhnlich. Sie haben nicht nur eine Lösung geliefert; sie sind strategische Partner in unserer digitalen Transformationsreise geworden.",
+          "rating": 5
+        },
+        {
+          "name": "Emily Rodriguez",
+          "role": "Geschäftsführerin",
+          "company": "GlobalTech",
+          "image": "/images/testimonials/emily.jpg",
+          "content": "Ihre KI-gestützten Automatisierungslösungen haben unseren Kundenservice revolutioniert. Wir können jetzt 24/7 Support mit einer Kundenzufriedenheitsrate von 98% anbieten.",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "type": "achievementsSection",
+      "subtitle": "UNSER EINFLUSS",
+      "title": "Digitale Exzellenz Vorantreiben",
+      "description": "Unser Erfolgsausweis spricht durch Zahlen. So haben wir Unternehmen geholfen, sich zu transformieren und mit KI-gestützten Lösungen zu wachsen.",
+      "achievements": [
+        {
+          "value": "500+",
+          "label": "Projekte",
+          "description": "Erfolgreich gelieferte KI- und Automatisierungslösungen in verschiedenen Branchen",
+          "icon": "rocket"
+        },
+        {
+          "value": "95%",
+          "label": "Erfolgsquote",
+          "description": "Kundenzufriedenheit und Projektabschlussrate über den Branchenstandards",
+          "icon": "chart"
+        },
+        {
+          "value": "60%",
+          "label": "Kostenreduktion",
+          "description": "Durchschnittliche Einsparungen bei den Betriebskosten für unsere Kunden",
+          "icon": "trending-up"
+        },
+        {
+          "value": "24/7",
+          "label": "Support",
+          "description": "Rund-um-die-Uhr KI-gestützte Unterstützung und technischer Support",
+          "icon": "headphones"
+        }
+      ]
+    },
+    {
+      "type": "industryFeaturesSection",
+      "subtitle": "BRANCHENLÖSUNGEN",
+      "title": "KI-Lösungen für Jede Branche",
+      "description": "Entdecken Sie, wie die KI-Plattform von Atlaga Ihre spezifische Branche mit maßgeschneiderten Lösungen und Automatisierungstools transformieren kann.",
+      "industries": [
+        {
+          "icon": "ShoppingCart",
+          "title": "E-Commerce",
+          "description": "Optimieren Sie die Abläufe Ihres Online-Shops mit KI-gestützter Automatisierung und Kundenbindungstools.",
+          "features": [
+            "Automatisierte Bestandsverwaltung",
+            "KI-Kundensupport",
+            "Intelligente Produktempfehlungen",
+            "Automatisierte Marketingkampagnen"
+          ],
+          "processIcons": [
+            "Package",
+            "Bot",
+            "Users",
+            "CreditCard"
+          ]
+        },
+        {
+          "icon": "Stethoscope",
+          "title": "Gesundheitswesen",
+          "description": "Transformieren Sie die Patientenversorgung und das Praxismanagement mit intelligenten Automatisierungslösungen.",
+          "features": [
+            "Automatisierte Terminplanung",
+            "Patientenaktenverwaltung",
+            "KI-gestützte Diagnostikunterstützung",
+            "Automatisierung von Praxisabläufen"
+          ],
+          "processIcons": [
+            "Calendar",
+            "FileText",
+            "Brain",
+            "StethoscopeAlt"
+          ]
+        },
+        {
+          "icon": "Briefcase",
+          "title": "Digitale Agenturen",
+          "description": "Skalieren Sie Ihre Agenturabläufe und liefern Sie bessere Ergebnisse mit KI-gestützten Tools.",
+          "features": [
+            "Automatisiertes Projektmanagement",
+            "Automatisierung der Inhaltserstellung",
+            "Automatisierung der Kundenberichterstattung",
+            "Ressourcenoptimierung"
+          ],
+          "processIcons": [
+            "PenTool",
+            "Bot",
+            "BarChart",
+            "Target"
+          ]
+        },
+        {
+          "icon": "Rocket",
+          "title": "Startups",
+          "description": "Starten und skalieren Sie Ihr Startup schneller mit umfassenden KI-Automatisierungstools.",
+          "features": [
+            "Schnelle MVP-Entwicklung",
+            "Automatisierte Abläufe",
+            "Wachstumsautomatisierung",
+            "Kosteneffiziente Skalierung"
+          ],
+          "processIcons": [
+            "Code",
+            "Zap",
+            "Brain",
+            "Rocket"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "automationFeaturesSection",
+      "subtitle": "KI-AUTOMATISIERUNG",
+      "title": "Transformieren Sie Ihr Unternehmen mit KI-Automatisierung",
+      "description": "Entdecken Sie, wie unsere KI-Automatisierungstools Ihre Abläufe revolutionieren und Wachstum in jedem Aspekt Ihres Unternehmens vorantreiben können.",
+      "features": [
+        {
+          "icon": "Workflow",
+          "title": "Workflow-Automatisierung",
+          "description": "Optimieren Sie Ihre Geschäftsprozesse mit intelligenter Workflow-Automatisierung, die lernt und sich an Ihre Bedürfnisse anpasst.",
+          "metrics": [
+            {
+              "value": "70%",
+              "label": "Zeitersparnis"
+            },
+            {
+              "value": "90%",
+              "label": "Fehlerreduktion"
+            }
+          ]
+        },
+        {
+          "icon": "Headphones",
+          "title": "KI-Kundendienst",
+          "description": "Bieten Sie 24/7 Kundensupport mit KI-Agenten, die Anfragen bearbeiten, Probleme lösen und die Zufriedenheit verbessern.",
+          "metrics": [
+            {
+              "value": "24/7",
+              "label": "Supportabdeckung"
+            },
+            {
+              "value": "85%",
+              "label": "Lösungsrate"
+            }
+          ]
+        },
+        {
+          "icon": "Megaphone",
+          "title": "Marketing-Automatisierung",
+          "description": "Automatisieren Sie Ihre Marketingkampagnen mit KI-gestütztem Targeting, Inhaltserstellung und Optimierung.",
+          "metrics": [
+            {
+              "value": "3x",
+              "label": "ROI-Steigerung"
+            },
+            {
+              "value": "60%",
+              "label": "Kostenreduktion"
+            }
+          ]
+        },
+        {
+          "icon": "BarChart",
+          "title": "Intelligente Analytik",
+          "description": "Erhalten Sie umsetzbare Einblicke mit KI-gestützter Analytik, die Ihnen hilft, datengetriebene Entscheidungen zu treffen.",
+          "metrics": [
+            {
+              "value": "95%",
+              "label": "Genauigkeit"
+            },
+            {
+              "value": "50%",
+              "label": "Schnellere Einblicke"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "emailSignupSection",
+      "subtitle": "NEWSLETTER",
+      "title": "Bleiben Sie über KI-Innovationen auf dem Laufenden",
+      "description": "Abonnieren Sie unseren Newsletter und erhalten Sie die neuesten Updates zu KI-gestützten Geschäftslösungen, Brancheneinblicken und exklusiven Angeboten.",
+      "buttonText": "Jetzt Abonnieren",
+      "placeholder": "Geben Sie Ihre Arbeits-E-Mail ein",
+      "features": [
+        "Wöchentliche KI-Einblicke",
+        "Produktaktualisierungen",
+        "Erfolgsgeschichten",
+        "Kein Spam, versprochen"
+      ]
+    }
+  ]
+}

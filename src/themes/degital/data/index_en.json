@@ -10,6 +10,136 @@
       "blogLink": "/blog"
     },
     {
+      "type": "featureGrid",
+      "title": "Powerful Features for Your Success",
+      "description": "Explore our comprehensive set of features designed to enhance your digital workflow",
+      "features": [
+        {
+          "title": "AI Automation",
+          "description": "Leverage advanced AI to automate repetitive tasks and boost productivity",
+          "icon": "robot",
+          "category": "automation",
+          "gradient": "from-blue-500 to-purple-500"
+        },
+        {
+          "title": "Analytics Dashboard",
+          "description": "Get real-time insights with our comprehensive analytics suite",
+          "icon": "chart",
+          "category": "analytics",
+          "gradient": "from-green-500 to-emerald-500"
+        },
+        {
+          "title": "Workflow Builder",
+          "description": "Create custom workflows with our intuitive drag-and-drop builder",
+          "icon": "workflow",
+          "category": "productivity",
+          "gradient": "from-orange-500 to-red-500"
+        },
+        {
+          "title": "Team Collaboration",
+          "description": "Work seamlessly with your team in real-time",
+          "icon": "users",
+          "category": "collaboration",
+          "gradient": "from-pink-500 to-rose-500"
+        }
+      ]
+    },
+    {
+      "type": "integrationShowcase",
+      "title": "Seamless Integrations",
+      "description": "Connect with your favorite tools and services",
+      "categories": [
+        {
+          "name": "CRM",
+          "integrations": ["Salesforce", "HubSpot", "Zoho"],
+          "icon": "crm"
+        },
+        {
+          "name": "Marketing",
+          "integrations": ["Mailchimp", "Klaviyo", "SendGrid"],
+          "icon": "marketing"
+        },
+        {
+          "name": "Productivity",
+          "integrations": ["Slack", "Asana", "Trello"],
+          "icon": "productivity"
+        },
+        {
+          "name": "Finance",
+          "integrations": ["Stripe", "PayPal", "QuickBooks"],
+          "icon": "finance"
+        }
+      ],
+      "benefits": [
+        {
+          "title": "Quick Setup",
+          "description": "Connect your tools in minutes with our guided setup process"
+        },
+        {
+          "title": "Seamless Sync",
+          "description": "Real-time data synchronization across all your platforms"
+        },
+        {
+          "title": "Expand Your Ecosystem",
+          "description": "Access hundreds of integrations to scale your workflow"
+        }
+      ]
+    },
+    {
+      "type": "successStories",
+      "title": "Customer Success Stories",
+      "description": "See how businesses are transforming with our platform",
+      "stories": [
+        {
+          "company": "TechCorp Inc.",
+          "logo": "/images/companies/techcorp.svg",
+          "quote": "Increased productivity by 300% using the automation features",
+          "author": "Sarah Johnson",
+          "role": "CTO",
+          "metrics": {
+            "value": "300%",
+            "label": "Productivity Increase"
+          }
+        },
+        {
+          "company": "Global Solutions",
+          "logo": "/images/companies/globalsolutions.svg",
+          "quote": "Reduced manual work by 75% with integrated workflows",
+          "author": "Michael Chen",
+          "role": "Operations Director",
+          "metrics": {
+            "value": "75%",
+            "label": "Manual Work Reduced"
+          }
+        },
+        {
+          "company": "StartupX",
+          "logo": "/images/companies/startupx.svg",
+          "quote": "Scaled our operations 5x with zero additional headcount",
+          "author": "Emily Rodriguez",
+          "role": "Founder & CEO",
+          "metrics": {
+            "value": "5x",
+            "label": "Operations Scaled"
+          }
+        }
+      ],
+      "platformMetrics": [
+        {
+          "value": "1M+",
+          "label": "Tasks Automated"
+        },
+        {
+          "value": "500+",
+          "label": "Active Clients"
+        },
+        {
+          "value": "99.9%",
+          "label": "Platform Uptime"
+        }
+      ]
+    },
+    {
       "type": "bannerSection",
       "headline": "Premium Digital Products at Your Fingertips",
       "description": "Browse our curated collection of high-quality digital products. Verified creators, secure purchases, instant downloads.",
@@ -46,53 +176,6 @@
           "link": "/collections/digital-assets"
         }
       ]
-    },
-    {
-      "type": "productShowcase",
-      "title": "Trending Products",
-      "description": "Most popular digital products this week",
-      "viewAllLink": "/catalog",
-      "products": [
-        {
-          "id": "software-1",
-          "name": "Project Management Pro",
-          "description": "Complete project management solution",
-          "price": "99.99",
-          "image": "/images/products/pm-software.jpg",
-          "category": "Software"
-        },
-        {
-          "id": "template-1",
-          "name": "E-commerce Starter Kit",
-          "description": "Complete online store template",
-          "price": "59.99",
-          "image": "/images/products/ecommerce-template.jpg",
-          "category": "Templates"
-        },
-        {
-          "id": "asset-1",
-          "name": "Icon Master Collection",
-          "description": "5000+ premium vector icons",
-          "price": "39.99",
-          "image": "/images/products/icon-pack.jpg",
-          "category": "Digital Assets"
-        },
-        {
-          "id": "software-2",
-          "name": "SEO Toolkit Plus",
-          "description": "Advanced SEO analysis suite",
-          "price": "129.99",
-          "image": "/images/products/seo-toolkit.jpg",
-          "category": "Software"
-        }
-      ]
-    },
-    {
-      "type": "featuredPostsSection",
-      "title": "Digital Product Insights",
-      "description": "Latest news, tutorials, and tips from the digital product world",
-      "exploreMoreText": "View All Posts",
-      "exploreMoreLink": "/blog"
     },
     {
       "type": "emailSignupSection",

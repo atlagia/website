@@ -1,0 +1,345 @@
+---
+import { SITE_TITLE } from '../consts';
+import * as LucideIcons from 'lucide-react';
+import { getLangFromUrl } from '@utils/i18n';
+
+const {
+  Book,
+  FileText,
+  Video,
+  Users,
+  Newspaper,
+  GraduationCap,
+  Download,
+  ChevronRight,
+  ArrowRight,
+  PlayCircle,
+  Star,
+  BookOpen,
+  FileCode,
+  MessageSquare,
+  BarChart,
+  Award
+} = LucideIcons;
+
+const theme = import.meta.env.THEME || 'default';
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'GiaConnect';
+
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+
+// Get current language from URL
+const currentLang = getLangFromUrl(Astro.url);
+
+// Import language-specific data
+const resourcesData = await import(`../data/resources/resources_${currentLang}.json`).catch(() => {
+  // Fallback to English if language file doesn't exist
+  return import(`../data/resources/resources_en.json`);
+});
+
+const {
+  pageTitle,
+  pageDescription,
+  hero,
+  resourceCategories,
+  featuredGuides,
+  latestArticles,
+  downloads,
+  cta
+} = resourcesData;
+
+// Map icon strings to actual icon components
+const getIcon = (iconName) => LucideIcons[iconName];
+
+---
+
+<!doctype html>
+<html lang={currentLang} class="scroll-smooth" dir={currentLang === 'ar' ? 'rtl' : 'ltr'}>
+  <head>
+    <BaseHead 
+      title={`${pageTitle} | ${siteName}`}
+      description={pageDescription}
+    />
+  </head>
+  <body class="bg-gray-50">
+    <Header />
+    
+    <!-- Hero Section -->
+    <section class="relative py-20 overflow-hidden">
+      <!-- Background Effects -->
+      <div class="absolute inset-0 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
+        <div class="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(to_bottom,transparent,black,transparent)] opacity-20"></div>
+      </div>
+
+      <div class="relative container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 border border-purple-100 shadow-lg mb-8">
+            <span class="text-sm font-medium text-purple-700">{hero.badge}</span>
+          </div>
+
+          <h1 class="text-5xl lg:text-6xl font-bold leading-tight mb-8">
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
+              {hero.title}
+            </span>
+          </h1>
+
+          <p class="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
+            {hero.description}
+          </p>
+
+          <div class="flex items-center justify-center gap-4">
+            <a 
+              href={hero.cta.primary.href}
+              class="px-8 py-4 rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 text-white font-medium hover:from-purple-700 hover:to-blue-700 transition-all duration-300"
+            >
+              {hero.cta.primary.text}
+            </a>
+            <a 
+              href={hero.cta.secondary.href}
+              class="px-8 py-4 rounded-xl bg-white text-gray-700 font-medium hover:bg-gray-50 transition-all duration-300"
+            >
+              {hero.cta.secondary.text}
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resource Categories -->
+    <section class="py-24 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {resourceCategories.map((category) => {
+            const CategoryIcon = getIcon(category.icon);
+            return (
+              <div class="space-y-8">
+                <div class="flex items-start gap-4">
+                  <div class="w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center flex-shrink-0">
+                    <CategoryIcon class="w-6 h-6 text-purple-600" />
+                  </div>
+                  <div>
+                    <h2 class="text-2xl font-bold mb-2">{category.title}</h2>
+                    <p class="text-gray-600">{category.description}</p>
+                  </div>
+                </div>
+
+                <div class="grid gap-4">
+                  {category.items.map((item) => {
+                    const ItemIcon = getIcon(item.icon);
+                    return (
+                      <a 
+                        href={item.link}
+                        class="group p-6 bg-gray-50 rounded-2xl hover:bg-white hover:shadow-lg transition-all duration-300"
+                      >
+                        <div class="flex items-start gap-4">
+                          <div class="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center flex-shrink-0">
+                            <ItemIcon class="w-5 h-5 text-purple-600" />
+                          </div>
+                          <div>
+                            <div class="flex items-center gap-2 mb-1">
+                              <h3 class="font-semibold group-hover:text-purple-600 transition-colors">
+                                {item.title}
+                              </h3>
+                              <span class="text-xs px-2 py-1 rounded-full bg-purple-100 text-purple-700">
+                                {item.tag}
+                              </span>
+                            </div>
+                            <p class="text-sm text-gray-600">{item.description}</p>
+                          </div>
+                        </div>
+                      </a>
+                    );
+                  })}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Guides -->
+    <section id="guides" class="py-24 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-4xl font-bold mb-6">{featuredGuides[0].category}</h2>
+          <p class="text-xl text-gray-600">{pageDescription}</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {featuredGuides.map((guide) => (
+            <a 
+              href={guide.link}
+              class="group bg-white rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300"
+            >
+              <div class="relative h-48 overflow-hidden">
+                <img 
+                  src={guide.image}
+                  alt={guide.title}
+                  class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div class="p-6">
+                <div class="flex items-center gap-2 mb-4">
+                  <span class="text-xs px-2 py-1 rounded-full bg-purple-100 text-purple-700">
+                    {guide.category}
+                  </span>
+                  <span class="text-sm text-gray-500">{guide.readTime}</span>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 group-hover:text-purple-600 transition-colors">
+                  {guide.title}
+                </h3>
+                <p class="text-gray-600">{guide.description}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest Articles -->
+    <section class="py-24 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-4xl font-bold mb-6">{latestArticles[0].category}</h2>
+          <p class="text-xl text-gray-600">{pageDescription}</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {latestArticles.map((article) => (
+            <a 
+              href={article.link}
+              class="group bg-gray-50 rounded-2xl overflow-hidden hover:bg-white hover:shadow-xl transition-all duration-300"
+            >
+              <div class="relative h-48 overflow-hidden">
+                <img 
+                  src={article.image}
+                  alt={article.title}
+                  class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div class="p-6">
+                <div class="flex items-center justify-between mb-4">
+                  <span class="text-xs px-2 py-1 rounded-full bg-purple-100 text-purple-700">
+                    {article.category}
+                  </span>
+                  <span class="text-sm text-gray-500">{article.date}</span>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 group-hover:text-purple-600 transition-colors">
+                  {article.title}
+                </h3>
+                <p class="text-gray-600 mb-4">{article.description}</p>
+                <div class="flex items-center text-sm text-gray-500">
+                  <span>{article.readTime}</span>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Downloads Section -->
+    <section class="py-24 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-4xl font-bold mb-6">{downloads[0].title}</h2>
+          <p class="text-xl text-gray-600">{pageDescription}</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          {downloads.map((item) => {
+            const ItemIcon = getIcon(item.icon);
+            return (
+              <a 
+                href={item.link}
+                class="group p-6 bg-white rounded-2xl hover:shadow-xl transition-all duration-300"
+              >
+                <div class="flex items-start gap-4">
+                  <div class="w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center flex-shrink-0">
+                    <ItemIcon class="w-6 h-6 text-purple-600" />
+                  </div>
+                  <div>
+                    <h3 class="font-semibold group-hover:text-purple-600 transition-colors mb-1">
+                      {item.title}
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-2">{item.description}</p>
+                    <div class="flex items-center gap-2 text-sm text-gray-500">
+                      <span>{item.format}</span>
+                      <span>•</span>
+                      <span>{item.size}</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="relative py-20 overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600">
+        <div class="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(to_bottom,transparent,black,transparent)] opacity-10"></div>
+      </div>
+      
+      <div class="relative container mx-auto px-4 text-center">
+        <div class="max-w-3xl mx-auto">
+          <h2 class="text-4xl font-bold text-white mb-6">{cta.title}</h2>
+          <p class="text-xl text-white/90 mb-8">
+            {cta.description}
+          </p>
+          <div class="flex items-center justify-center gap-4">
+            {cta.buttons.map((button) => (
+              <a 
+                href={button.href}
+                class={`px-8 py-4 rounded-xl ${
+                  button.variant === 'primary'
+                    ? 'bg-white text-purple-600 hover:bg-gray-100'
+                    : 'bg-white/10 text-white hover:bg-white/20'
+                } font-medium transition-all duration-300`}
+              >
+                {button.text}
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Footer />
+  </body>
+</html>
+
+<style>
+  /* Animations */
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  /* Hover effects */
+  .hover\:scale-105:hover {
+    transform: scale(1.05);
+  }
+
+  .hover\:-translate-y-1:hover {
+    transform: translateY(-0.25rem);
+  }
+
+  /* RTL Support */
+  [dir="rtl"] .from-blue-600 {
+    --tw-gradient-from: theme('colors.purple.600');
+    --tw-gradient-to: theme('colors.blue.600');
+  }
+
+  [dir="rtl"] .to-purple-600 {
+    --tw-gradient-to: theme('colors.blue.600');
+  }
+</style> 

@@ -1,0 +1,332 @@
+{
+  "hero": {
+    "subtitle": "Gestión Mayorista Impulsada por IA",
+    "title": "Transforma tu Negocio Mayorista con Operaciones Inteligentes",
+    "description": "Descubre el futuro de la gestión mayorista con nuestra plataforma completa impulsada por IA, que optimiza el inventario, simplifica las operaciones e impulsa el crecimiento de tu empresa mayorista.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "thumbnail": "/images/wholesale-hero.webp",
+      "alt": "Demo de la Plataforma de Gestión Mayorista"
+    },
+    "stats": [
+      {
+        "value": "45%",
+        "label": "Optimización de Inventario"
+      },
+      {
+        "value": "60%",
+        "label": "Velocidad de Procesamiento de Pedidos"
+      },
+      {
+        "value": "35%",
+        "label": "Reducción de Costos"
+      }
+    ]
+  },
+  "features": {
+    "title": "Funcionalidades de Nivel Empresarial",
+    "subtitle": "Gestión Mayorista de Nueva Generación",
+    "description": "Descubre nuestra suite completa de herramientas avanzadas, diseñada para revolucionar tus operaciones mayoristas. Cada funcionalidad ha sido desarrollada para ofrecer máxima eficiencia y una experiencia superior al cliente.",
+    "categories": [
+      {
+        "name": "Operaciones Mayoristas",
+        "description": "Funcionalidades esenciales que optimizan tu operación diaria"
+      },
+      {
+        "name": "Experiencia del Cliente",
+        "description": "Herramientas que mejoran el engagement y la satisfacción del cliente"
+      }
+    ],
+    "items": [
+      {
+        "icon": "box",
+        "title": "Gestión Inteligente de Inventario",
+        "description": "Optimización y previsión de inventario impulsada por IA",
+        "category": "Operaciones Mayoristas",
+        "image": "/images/features/inventory-management.webp",
+        "highlights": [
+          "Monitoreo en Tiempo Real",
+          "Previsión de Demanda",
+          "Optimización de Niveles de Stock",
+          "Gestión de Almacén"
+        ],
+        "stats": {
+          "value": "45%",
+          "label": "Mejor Control de Inventario"
+        }
+      },
+      {
+        "icon": "truck",
+        "title": "Procesamiento de Pedidos",
+        "description": "Gestión y procesamiento optimizado de pedidos",
+        "category": "Experiencia del Cliente",
+        "image": "/images/features/order-processing.webp",
+        "highlights": [
+          "Procesamiento por Lotes",
+          "Procesamiento Automatizado",
+          "Integración de Envíos",
+          "Seguimiento de Pedidos"
+        ],
+        "stats": {
+          "value": "60%",
+          "label": "Procesamiento Más Rápido"
+        }
+      },
+      {
+        "icon": "bar-chart",
+        "title": "Análisis de Negocio",
+        "description": "Insights basados en datos para operaciones mayoristas",
+        "category": "Operaciones Mayoristas",
+        "image": "/images/features/business-analytics.webp",
+        "highlights": [
+          "Análisis de Ventas",
+          "Insights de Clientes",
+          "Tendencias de Mercado",
+          "Métricas de Rendimiento"
+        ],
+        "stats": {
+          "value": "40%",
+          "label": "Mejor Toma de Decisiones"
+        }
+      },
+      {
+        "icon": "users",
+        "title": "Portal del Cliente",
+        "description": "Portal de autoservicio para clientes mayoristas",
+        "category": "Experiencia del Cliente",
+        "image": "/images/features/customer-portal.webp",
+        "highlights": [
+          "Historial de Pedidos",
+          "Catálogo de Productos",
+          "Gestión de Precios",
+          "Gestión de Cuentas"
+        ],
+        "stats": {
+          "value": "50%",
+          "label": "Satisfacción del Cliente"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Véalo en Acción",
+    "description": "Observe cómo los líderes del sector mayorista transforman sus operaciones",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "thumbnail": "/images/showcase-thumb.webp"
+    },
+    "testimonials": [
+      {
+        "author": "John Smith",
+        "role": "CEO, Soluciones Mayoristas Globales",
+        "image": "/images/testimonials/john.webp",
+        "quote": "Esta plataforma ha revolucionado nuestras operaciones mayoristas. Hemos visto una mejora del 45% en la gestión de inventario y un procesamiento de pedidos un 60% más rápido."
+      },
+      {
+        "author": "Maria Garcia",
+        "role": "Directora de Operaciones, Mayorista Plus",
+        "image": "/images/testimonials/maria.webp",
+        "quote": "Las funcionalidades de IA han mejorado drásticamente nuestra precisión en previsiones y la satisfacción del cliente."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Beneficios Transformadores",
+    "subtitle": "Resultados e Impacto Comprobados",
+    "description": "Experimenta mejoras medibles en todos los aspectos de tu empresa mayorista con nuestra solución completa. Nuestra plataforma proporciona resultados concretos que impactan directamente en tu resultado final.",
+    "items": [
+      {
+        "title": "Optimización de Inventario",
+        "description": "Optimiza tus niveles de stock con previsiones impulsadas por IA.",
+        "icon": "box",
+        "color": "blue",
+        "stats": {
+          "value": "45%",
+          "label": "Mejor Control de Inventario"
+        },
+        "highlights": [
+          "Previsión de Demanda",
+          "Optimización de Inventario",
+          "Gestión de Almacén",
+          "Seguimiento de Stock"
+        ]
+      },
+      {
+        "title": "Eficiencia Operativa",
+        "description": "Optimiza tus operaciones mayoristas con automatización inteligente.",
+        "icon": "zap",
+        "color": "purple",
+        "stats": {
+          "value": "60%",
+          "label": "Procesamiento Más Rápido"
+        },
+        "highlights": [
+          "Procesamiento de Pedidos",
+          "Procesamiento Automatizado",
+          "Integración de Envíos",
+          "Gestión de Documentos"
+        ]
+      },
+      {
+        "title": "Gestión de Costos",
+        "description": "Optimiza costos y maximiza la rentabilidad.",
+        "icon": "trending-up",
+        "color": "green",
+        "stats": {
+          "value": "35%",
+          "label": "Reducción de Costos"
+        },
+        "highlights": [
+          "Optimización de Inventario",
+          "Eficiencia de Almacén",
+          "Costos de Envío",
+          "Costos Operativos"
+        ]
+      },
+      {
+        "title": "Experiencia del Cliente",
+        "description": "Ofrece un servicio excepcional a los clientes mayoristas.",
+        "icon": "heart",
+        "color": "yellow",
+        "stats": {
+          "value": "50%",
+          "label": "Satisfacción del Cliente"
+        },
+        "highlights": [
+          "Portal del Cliente",
+          "Seguimiento de Pedidos",
+          "Gestión de Cuentas",
+          "Servicios de Soporte"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Planes de Precios Flexibles",
+    "subtitle": "Precios Transparentes",
+    "description": "Elige el plan perfecto para tu empresa mayorista. Ahorra hasta un 20% con facturación anual.",
+    "billingPeriods": ["Mensual", "Anual"],
+    "plans": [
+      {
+        "name": "Inicial",
+        "highlight": "Perfecto para pequeñas empresas mayoristas",
+        "monthlyPrice": "$199",
+        "yearlyPrice": "$1,990",
+        "yearlyDiscount": "Ahorra $398/Año",
+        "description": "Funcionalidades esenciales para comenzar tu transformación digital",
+        "features": [
+          {
+            "text": "Gestión Básica de Inventario",
+            "included": true
+          },
+          {
+            "text": "Procesamiento de Pedidos",
+            "included": true
+          },
+          {
+            "text": "Informes Básicos",
+            "included": true
+          },
+          {
+            "text": "Soporte por Email",
+            "included": true
+          },
+          {
+            "text": "Acceso a App Móvil",
+            "included": true
+          }
+        ],
+        "cta": "Comenzar Ahora",
+        "popular": false
+      },
+      {
+        "name": "Profesional",
+        "highlight": "Opción Más Popular para Empresas Mayoristas en Crecimiento",
+        "monthlyPrice": "$399",
+        "yearlyPrice": "$3,990",
+        "yearlyDiscount": "Ahorra $798/Año",
+        "description": "Funcionalidades avanzadas para empresas mayoristas establecidas",
+        "features": [
+          {
+            "text": "Todo en Inicial, más:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Funcionalidades IA",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "Análisis Avanzados",
+            "included": true
+          },
+          {
+            "text": "Portal del Cliente",
+            "included": true
+          },
+          {
+            "text": "Soporte Prioritario",
+            "included": true
+          },
+          {
+            "text": "Acceso API",
+            "included": true
+          }
+        ],
+        "cta": "Comenzar Ahora",
+        "popular": true
+      },
+      {
+        "name": "Empresarial",
+        "highlight": "Para Grandes Operaciones Mayoristas",
+        "monthlyPrice": "Personalizado",
+        "yearlyPrice": "Personalizado",
+        "yearlyDiscount": "Contáctanos para Precios Especiales",
+        "description": "Soluciones personalizadas para necesidades empresariales",
+        "features": [
+          {
+            "text": "Todo en Profesional, más:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Soporte Multi-Almacén",
+            "included": true
+          },
+          {
+            "text": "Gerente de Cuenta Dedicado",
+            "included": true
+          },
+          {
+            "text": "Funcionalidades de Seguridad Avanzadas",
+            "included": true
+          },
+          {
+            "text": "Opciones de Desarrollo Personalizadas",
+            "included": true
+          },
+          {
+            "text": "Garantías SLA",
+            "included": true
+          }
+        ],
+        "cta": "Contactar Ventas",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "¿Listo para Transformar tu Empresa Mayorista?",
+    "description": "Únete a Miles de Empresas Mayoristas Exitosas que Utilizan Nuestra Plataforma",
+    "primaryButton": {
+      "text": "Programar Demo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Ver Video Demo",
+      "link": "/demo-video"
+    },
+    "background": "/images/cta-background.webp"
+  }
+} 

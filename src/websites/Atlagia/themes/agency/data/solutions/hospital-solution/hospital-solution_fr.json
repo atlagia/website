@@ -1,0 +1,335 @@
+{
+  "hero": {
+    "subtitle": "Système de Gestion Hospitalière",
+    "title": "Solution Complète de Gestion Hospitalière",
+    "description": "Un système de gestion hospitalière de niveau entreprise qui intègre tous les départements, optimise les soins aux patients et améliore les opérations dans l'ensemble de votre établissement.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Démo de la Solution de Gestion Hospitalière"
+    },
+    "stats": [
+      {
+        "value": "97%",
+        "label": "Satisfaction des Patients"
+      },
+      {
+        "value": "45%",
+        "label": "Efficacité Opérationnelle"
+      },
+      {
+        "value": "3.2x",
+        "label": "ROI"
+      }
+    ]
+  },
+  "features": {
+    "subtitle": "Fonctionnalités Entreprise",
+    "title": "Gestion Hospitalière Complète",
+    "description": "Une suite complète d'outils conçue pour les hôpitaux et établissements de santé modernes",
+    "categories": [
+      {
+        "name": "Gestion Clinique",
+        "description": "Optimisez les soins aux patients dans tous les départements"
+      },
+      {
+        "name": "Opérations Administratives",
+        "description": "Optimisez les opérations hospitalières et la gestion des ressources"
+      }
+    ],
+    "items": [
+      {
+        "icon": "building",
+        "category": "Gestion des Installations",
+        "title": "Intégration Multi-Départements",
+        "description": "Coordination fluide entre les départements et les installations",
+        "image": "/images/solutions/hospital/departments.jpg",
+        "highlights": [
+          "Coordination des départements",
+          "Allocation des ressources",
+          "Planification du personnel",
+          "Gestion des lits"
+        ],
+        "stats": {
+          "value": "40%",
+          "label": "Meilleure utilisation des ressources"
+        }
+      },
+      {
+        "icon": "activity",
+        "category": "Soins aux Patients",
+        "title": "Excellence Clinique",
+        "description": "Système complet de soins et de surveillance des patients",
+        "image": "/images/solutions/hospital/clinical.jpg",
+        "highlights": [
+          "Système DME/DSE",
+          "Parcours cliniques",
+          "Gestion des ordonnances",
+          "Protocoles de soins"
+        ],
+        "stats": {
+          "value": "55%",
+          "label": "Soins aux patients plus rapides"
+        }
+      },
+      {
+        "icon": "microscope",
+        "category": "Diagnostic",
+        "title": "Diagnostic Intégré",
+        "description": "Systèmes de laboratoire et d'imagerie connectés",
+        "image": "/images/solutions/hospital/diagnostics.jpg",
+        "highlights": [
+          "Intégration du laboratoire",
+          "Système PACS",
+          "Gestion des résultats",
+          "Imagerie numérique"
+        ],
+        "stats": {
+          "value": "65%",
+          "label": "Diagnostic plus rapide"
+        }
+      },
+      {
+        "icon": "chart-bar",
+        "category": "Analytique",
+        "title": "Intelligence Hospitalière",
+        "description": "Système avancé d'analyse et de rapports",
+        "image": "/images/solutions/hospital/analytics.jpg",
+        "highlights": [
+          "Métriques de performance",
+          "Analytique des ressources",
+          "Aperçus financiers",
+          "Mesures de qualité"
+        ],
+        "stats": {
+          "value": "45%",
+          "label": "Meilleure prise de décision"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Excellence en Soins de Santé",
+    "description": "Découvrez comment les hôpitaux leaders transforment la prestation des soins de santé",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Histoire de Réussite Hospitalière"
+    },
+    "testimonials": [
+      {
+        "author": "Dr. Robert Chen",
+        "role": "PDG de l'Hôpital",
+        "image": "/images/testimonials/ceo1.jpg",
+        "quote": "Ce système a révolutionné la façon dont nous gérons notre hôpital. L'intégration entre les départements a amélioré à la fois l'efficacité et les soins aux patients."
+      },
+      {
+        "author": "Dr. Sarah Thompson",
+        "role": "Chef de Service",
+        "image": "/images/testimonials/doctor2.jpg",
+        "quote": "L'aide à la décision clinique et le diagnostic intégré ont considérablement amélioré notre capacité à fournir des soins de qualité."
+      }
+    ]
+  },
+  "benefits": {
+    "subtitle": "Avantages Clés",
+    "title": "Transformez Votre Hôpital",
+    "description": "Découvrez les avantages d'un système de gestion hospitalière entièrement intégré",
+    "items": [
+      {
+        "icon": "trending-up",
+        "title": "Excellence Opérationnelle",
+        "description": "Optimisez les opérations hospitalières et la gestion des ressources",
+        "color": "blue",
+        "stats": {
+          "value": "45%",
+          "label": "Efficacité Opérationnelle"
+        },
+        "highlights": [
+          "Optimisation des ressources",
+          "Automatisation des processus",
+          "Réduction des coûts",
+          "Meilleure coordination"
+        ]
+      },
+      {
+        "icon": "heart",
+        "title": "Soins aux Patients Améliorés",
+        "description": "Améliorez les résultats et l'expérience des patients",
+        "color": "red",
+        "stats": {
+          "value": "97%",
+          "label": "Satisfaction des Patients"
+        },
+        "highlights": [
+          "Meilleure coordination des soins",
+          "Temps d'attente réduits",
+          "Résultats améliorés",
+          "Engagement des patients"
+        ]
+      },
+      {
+        "icon": "users",
+        "title": "Autonomisation du Personnel",
+        "description": "Donnez aux prestataires de soins de meilleurs outils",
+        "color": "green",
+        "stats": {
+          "value": "50%",
+          "label": "Productivité du Personnel"
+        },
+        "highlights": [
+          "Aide à la décision clinique",
+          "Documentation simplifiée",
+          "Meilleure communication",
+          "Accès mobile"
+        ]
+      },
+      {
+        "icon": "shield",
+        "title": "Qualité & Conformité",
+        "description": "Maintenez les plus hauts standards de soins et de conformité",
+        "color": "purple",
+        "stats": {
+          "value": "100%",
+          "label": "Conformité Réglementaire"
+        },
+        "highlights": [
+          "Métriques de qualité",
+          "Conformité réglementaire",
+          "Gestion des risques",
+          "Support d'audit"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "subtitle": "Tarification Entreprise",
+    "title": "Solutions Entreprise Flexibles",
+    "description": "Tarification personnalisée basée sur la taille et les besoins de votre hôpital. Économisez avec nos forfaits entreprise.",
+    "billingPeriods": ["Mensuel", "Annuel"],
+    "plans": [
+      {
+        "name": "Standard",
+        "highlight": "Pour les petits hôpitaux",
+        "monthlyPrice": "$2,999",
+        "yearlyPrice": "$29,990",
+        "yearlyDiscount": "Économisez $5,998/an",
+        "description": "Fonctionnalités essentielles pour les petits hôpitaux",
+        "features": [
+          {
+            "text": "Gestion hospitalière de base",
+            "included": true
+          },
+          {
+            "text": "Système DME/DSE",
+            "included": true
+          },
+          {
+            "text": "Coordination des départements",
+            "included": true
+          },
+          {
+            "text": "Support standard",
+            "included": true
+          },
+          {
+            "text": "Analytique de base",
+            "included": true
+          },
+          {
+            "text": "Accès mobile",
+            "included": true
+          }
+        ],
+        "cta": "Commencer",
+        "popular": false
+      },
+      {
+        "name": "Professionnel",
+        "highlight": "Plus populaire pour les hôpitaux de taille moyenne",
+        "monthlyPrice": "$4,999",
+        "yearlyPrice": "$49,990",
+        "yearlyDiscount": "Économisez $9,998/an",
+        "description": "Fonctionnalités avancées pour les hôpitaux en croissance",
+        "features": [
+          {
+            "text": "Tout ce qui est inclus dans Standard, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Parcours cliniques avancés",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "Intégration Laboratoire & PACS",
+            "included": true
+          },
+          {
+            "text": "Analytique avancée",
+            "included": true
+          },
+          {
+            "text": "Support prioritaire",
+            "included": true
+          },
+          {
+            "text": "Support multi-établissements",
+            "included": true
+          }
+        ],
+        "cta": "Commencer",
+        "popular": true
+      },
+      {
+        "name": "Entreprise",
+        "highlight": "Pour les grands réseaux hospitaliers",
+        "monthlyPrice": "Personnalisé",
+        "yearlyPrice": "Personnalisé",
+        "yearlyDiscount": "Contactez-nous pour des tarifs spéciaux",
+        "description": "Solutions personnalisées pour les réseaux hospitaliers",
+        "features": [
+          {
+            "text": "Tout ce qui est inclus dans Professionnel, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Support d'intégration personnalisé",
+            "included": true
+          },
+          {
+            "text": "Équipe de succès dédiée",
+            "included": true
+          },
+          {
+            "text": "Fonctionnalités de sécurité avancées",
+            "included": true
+          },
+          {
+            "text": "Développement personnalisé",
+            "included": true
+          },
+          {
+            "text": "SLA Entreprise",
+            "included": true
+          }
+        ],
+        "cta": "Contacter les Ventes",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prêt à Transformer Votre Hôpital ?",
+    "description": "Rejoignez les établissements de santé leaders qui ont modernisé leurs opérations avec notre solution.",
+    "background": "/images/solutions/hospital/cta-background.jpg",
+    "primaryButton": {
+      "text": "Planifier une Démo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Voir la Démo",
+      "link": "#showcase"
+    }
+  }
+} 

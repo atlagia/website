@@ -1,0 +1,673 @@
+{
+  "siteTitle": "Atlagia - AI-Powered Digital Solutions & Development Agency",
+  "siteDescription": "We craft intelligent digital solutions and develop cutting-edge AI applications that transform businesses across industries. Your partner for innovation and digital excellence.",
+  "sections": [
+    {
+      "type": "welcomeSection",
+      "badge": "Digital Innovation Agency",
+      "title": "We <span class='text-gradient'>Design & Develop</span> AI-Powered Solutions for the Digital Future",
+      "description": "Transform your business with our expertise in AI development, custom software solutions, and digital innovation. We specialize in creating intelligent systems that drive efficiency, automation, and growth across every industry.",
+      "blogLinkText": "Explore Solutions",
+      "getStartedText": "Discuss Your Project",
+      "getStartedLink": "/discuss-project",
+      "blogLink": "/solutions",
+      "heroImage": "https://cdn.atlagia.com/GiaConnect/images/670e6478-6043-4aec-a731-a0d4468e6d4e.png",
+      "features": [
+        {
+          "icon": "Globe",
+          "title": "Digital Solutions",
+          "description": "Custom software development and digital transformation solutions"
+        },
+        {
+          "icon": "Zap",
+          "title": "AI Development",
+          "description": "Advanced AI systems and machine learning solutions development"
+        },
+        {
+          "icon": "Users",
+          "title": "Industry Solutions",
+          "description": "Specialized solutions for e-commerce, healthcare, finance, and more"
+        },
+        {
+          "icon": "Brain",
+          "title": "Tech Innovation",
+          "description": "Cutting-edge technology integration and innovative development"
+        }
+      ],
+      "partnerLogos": [
+        {
+          "src": "https://cdn.atlagia.com/GiaConnect/images/processed-3bb4b721-db62-4347-82ed-b11735f18565.png",
+          "alt": "Shopify Partner"
+        },
+        {
+          "src": "https://cdn.atlagia.com/GiaConnect/images/processed-d4ae1096-ccab-49e9-91f5-1d6504936092.png",
+          "alt": "Wix Partner"
+        },
+        {
+          "src": "https://cdn.atlagia.com/GiaConnect/images/a3550c4a-95d2-4341-9ed7-2a5de91b0b66.png",
+          "alt": "WooCommerce Partner"
+        }
+      ]
+    },
+    {
+      "type": "aboutSection",
+      "subtitle": "WHO WE ARE",
+      "title": "Crafting Tomorrow's Digital Landscape with AI Innovation",
+      "features": [
+        {
+          "icon": "ai-development",
+          "title": "AI Development & Integration",
+          "keywords": [
+            "Development",
+            "Innovation",
+            "AI"
+          ],
+          "description": "We specialize in developing and integrating cutting-edge AI solutions that transform business operations.",
+          "bullets": [
+            "Custom AI model development",
+            "Machine learning integration",
+            "Natural language processing",
+            "Computer vision solutions"
+          ],
+          "backgroundSvg": "<svg width='100%' height='100%' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='grid1' width='20' height='20' patternUnits='userSpaceOnUse'><path d='M 20 0 L 0 0 0 20' fill='none' stroke='currentColor' stroke-width='0.5' opacity='0.1'/></pattern></defs><rect width='100%' height='100%' fill='url(#grid1)'/></svg>"
+        },
+        {
+          "icon": "software-solutions",
+          "title": "Software Solutions",
+          "keywords": [
+            "Software",
+            "Development",
+            "Solutions"
+          ],
+          "description": "End-to-end software development services tailored to your industry needs.",
+          "bullets": [
+            "Custom software development",
+            "Web & mobile applications",
+            "Cloud-native solutions",
+            "API development & integration"
+          ],
+          "backgroundSvg": "<svg width='100%' height='100%' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='code' width='20' height='20' patternUnits='userSpaceOnUse'><path d='M 0 10 L 10 0 M 20 10 L 10 20' stroke='currentColor' stroke-width='0.5' opacity='0.1'/></pattern></defs><rect width='100%' height='100%' fill='url(#code)'/></svg>"
+        },
+        {
+          "icon": "digital-transformation",
+          "title": "Digital Transformation",
+          "keywords": [
+            "Transform",
+            "Innovate",
+            "Grow"
+          ],
+          "description": "Guide your business through comprehensive digital transformation.",
+          "bullets": [
+            "Process automation",
+            "Digital strategy consulting",
+            "Technology modernization",
+            "Data-driven solutions"
+          ],
+          "backgroundSvg": "<svg width='100%' height='100%' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='circuit' width='40' height='40' patternUnits='userSpaceOnUse'><circle cx='20' cy='20' r='1' fill='currentColor' opacity='0.1'/><path d='M 40 20 H 30 M 20 0 V 10' stroke='currentColor' stroke-width='0.5' opacity='0.1'/></pattern></defs><rect width='100%' height='100%' fill='url(#circuit)'/></svg>"
+        },
+        {
+          "icon": "industry-solutions",
+          "title": "Industry Solutions",
+          "keywords": [
+            "Specialized",
+            "Industry",
+            "Expert"
+          ],
+          "description": "Industry-specific solutions powered by advanced technology.",
+          "bullets": [
+            "E-commerce platforms",
+            "Healthcare systems",
+            "FinTech solutions",
+            "Enterprise applications"
+          ],
+          "backgroundSvg": "<svg width='100%' height='100%' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='dots' width='20' height='20' patternUnits='userSpaceOnUse'><circle cx='10' cy='10' r='1' fill='currentColor' opacity='0.1'/></pattern></defs><rect width='100%' height='100%' fill='url(#dots)'/></svg>"
+        }
+      ],
+      "ctaText": "Explore Our Services",
+      "ctaLink": "/services"
+    },
+    {
+      "type": "whoWeAreSection",
+      "subtitle": "INNOVATION LEADERS",
+      "title": "Pioneering AI Solutions for Digital Excellence",
+      "description": "As industry leaders in AI development and digital transformation, we're revolutionizing how businesses operate in the digital age. Our team of expert developers and AI specialists creates cutting-edge solutions that drive innovation, efficiency, and growth. From custom AI development to enterprise-scale digital transformation, we deliver results that exceed expectations.",
+      "image": "https://cdn.atlagia.com/GiaConnect/images/9304b8fc-6ad2-4ee5-944d-5b6472cf005b.png",
+      "stats": [
+        {
+          "value": "98%",
+          "label": "Client Satisfaction"
+        },
+        {
+          "value": "500+",
+          "label": "Projects Delivered"
+        },
+        {
+          "value": "85%",
+          "label": "Faster Development"
+        },
+        {
+          "value": "24/7",
+          "label": "AI Support"
+        }
+      ]
+    },
+    {
+      "type": "bannerSection",
+      "subtitle": "TRANSFORMATIVE SOLUTIONS",
+      "headline": "Empowering Business Growth Through AI Innovation",
+      "description": "Discover how our cutting-edge AI solutions and expert development services can transform your business operations and drive unprecedented growth in the digital age.",
+      "backgroundImage": "/images/banner-bg.jpg",
+      "button1Text": "Explore Solutions",
+      "button1Link": "/solutions",
+      "button2Text": "Schedule Demo",
+      "button2Link": "/demo",
+      "cards": [
+        {
+          "title": "AI-Powered Development",
+          "description": "Leverage the power of artificial intelligence to build smarter, more efficient applications that adapt and scale with your business needs."
+        },
+        {
+          "title": "Digital Transformation",
+          "description": "Transform your business with comprehensive digital solutions that streamline operations and enhance customer experiences."
+        },
+        {
+          "title": "Custom Software Solutions",
+          "description": "Get tailored software solutions that perfectly align with your business objectives and provide competitive advantages."
+        },
+        {
+          "title": "Cloud & DevOps",
+          "description": "Optimize your infrastructure with cloud-native solutions and automated DevOps practices for maximum efficiency and reliability."
+        }
+      ]
+    },
+    {
+      "type": "benefitsSection",
+      "subtitle": "WHY CHOOSE US",
+      "title": "Driving Digital Excellence Through Innovation",
+      "description": "Partner with us to transform your digital presence with cutting-edge technology and expert solutions",
+      "benefits": [
+        {
+          "title": "Expert Development Team",
+          "description": "Our seasoned developers and AI specialists bring years of experience in creating sophisticated digital solutions across industries."
+        },
+        {
+          "title": "Custom Solutions",
+          "description": "We craft tailored solutions that perfectly align with your business goals, ensuring maximum impact and ROI."
+        },
+        {
+          "title": "Innovative Technology",
+          "description": "Stay ahead with our cutting-edge tech stack, including the latest in AI, cloud computing, and development frameworks."
+        },
+        {
+          "title": "Agile Methodology",
+          "description": "Our agile approach ensures rapid development, continuous improvement, and flexibility to adapt to changing needs."
+        },
+        {
+          "title": "Comprehensive Support",
+          "description": "From initial concept to post-launch maintenance, we provide end-to-end support for your digital journey."
+        },
+        {
+          "title": "Industry Expertise",
+          "description": "Deep understanding of various industries allows us to deliver solutions that address sector-specific challenges."
+        }
+      ]
+    },
+    {
+      "type": "projectsSection",
+      "subtitle": "OUR PROJECTS",
+      "title": "Transforming Industries Through Innovation",
+      "description": "Explore our portfolio of successful digital transformations across various industries.",
+      "projects": [
+        {
+          "title": "E-commerce Platform",
+          "category": "Retail & E-commerce",
+          "description": "AI-powered e-commerce platform with advanced recommendation system and automated inventory management.",
+          "image": "https://cdn.atlagia.com/projects/ecommerce-platform.webp",
+          "stats": {
+            "conversion": "+150%",
+            "automation": "85%",
+            "efficiency": "3x"
+          },
+          "technologies": [
+            "AI/ML",
+            "React",
+            "Node.js",
+            "AWS"
+          ]
+        },
+        {
+          "title": "Healthcare Management System",
+          "category": "Healthcare",
+          "description": "Integrated healthcare platform with patient management, telemedicine, and AI diagnostics support.",
+          "image": "https://cdn.atlagia.com/projects/healthcare-system.webp",
+          "stats": {
+            "efficiency": "+200%",
+            "accuracy": "99.9%",
+            "satisfaction": "98%"
+          },
+          "technologies": [
+            "Python",
+            "TensorFlow",
+            "React",
+            "Cloud"
+          ]
+        },
+        {
+          "title": "FinTech Analytics Dashboard",
+          "category": "Finance",
+          "description": "Real-time financial analytics platform with AI-driven insights and automated reporting.",
+          "image": "https://cdn.atlagia.com/projects/fintech-dashboard.webp",
+          "stats": {
+            "processing": "Real-time",
+            "accuracy": "99.99%",
+            "automation": "90%"
+          },
+          "technologies": [
+            "Vue.js",
+            "Python",
+            "AI/ML",
+            "AWS"
+          ]
+        },
+        {
+          "title": "Smart Manufacturing System",
+          "category": "Manufacturing",
+          "description": "IoT-enabled manufacturing system with predictive maintenance and automated quality control.",
+          "image": "https://cdn.atlagia.com/projects/manufacturing-system.webp",
+          "stats": {
+            "downtime": "-75%",
+            "quality": "+95%",
+            "efficiency": "4x"
+          },
+          "technologies": [
+            "IoT",
+            "AI/ML",
+            "Cloud",
+            "React"
+          ]
+        }
+      ],
+      "buttonText": "View All Projects",
+      "buttonLink": "/projects"
+    },
+    {
+      "type": "technologiesSection",
+      "subtitle": "TECH STACK",
+      "title": "Our Technology Expertise",
+      "description": "We leverage cutting-edge technologies to deliver exceptional solutions that drive business growth and innovation.",
+      "categories": [
+        {
+          "name": "Frontend Development",
+          "description": "Modern web technologies for creating responsive and interactive user interfaces.",
+          "technologies": [
+            {
+              "name": "React",
+              "icon": "react",
+              "level": "Expert",
+              "description": "Building dynamic and scalable web applications"
+            },
+            {
+              "name": "Vue.js",
+              "icon": "vue",
+              "level": "Advanced",
+              "description": "Creating reactive and performant user interfaces"
+            },
+            {
+              "name": "Next.js",
+              "icon": "nextjs",
+              "level": "Expert",
+              "description": "Server-side rendering and static site generation"
+            },
+            {
+              "name": "TypeScript",
+              "icon": "typescript",
+              "level": "Advanced",
+              "description": "Type-safe JavaScript development"
+            }
+          ]
+        },
+        {
+          "name": "Backend Development",
+          "description": "Robust server-side technologies for building scalable applications.",
+          "technologies": [
+            {
+              "name": "Node.js",
+              "icon": "nodejs",
+              "level": "Expert",
+              "description": "High-performance server-side applications"
+            },
+            {
+              "name": "Python",
+              "icon": "python",
+              "level": "Advanced",
+              "description": "Data processing and machine learning"
+            },
+            {
+              "name": "Go",
+              "icon": "golang",
+              "level": "Intermediate",
+              "description": "Fast and efficient backend services"
+            },
+            {
+              "name": "Java",
+              "icon": "java",
+              "level": "Advanced",
+              "description": "Enterprise-grade applications"
+            }
+          ]
+        },
+        {
+          "name": "AI & Machine Learning",
+          "description": "Advanced AI technologies for intelligent solutions.",
+          "technologies": [
+            {
+              "name": "TensorFlow",
+              "icon": "tensorflow",
+              "level": "Advanced",
+              "description": "Deep learning and neural networks"
+            },
+            {
+              "name": "PyTorch",
+              "icon": "pytorch",
+              "level": "Advanced",
+              "description": "Dynamic neural networks"
+            },
+            {
+              "name": "OpenAI",
+              "icon": "openai",
+              "level": "Expert",
+              "description": "Natural language processing"
+            },
+            {
+              "name": "Scikit-learn",
+              "icon": "scikit",
+              "level": "Advanced",
+              "description": "Machine learning algorithms"
+            }
+          ]
+        },
+        {
+          "name": "Cloud & DevOps",
+          "description": "Cloud infrastructure and development operations tools.",
+          "technologies": [
+            {
+              "name": "AWS",
+              "icon": "aws",
+              "level": "Expert",
+              "description": "Cloud infrastructure and services"
+            },
+            {
+              "name": "Docker",
+              "icon": "docker",
+              "level": "Advanced",
+              "description": "Containerization and deployment"
+            },
+            {
+              "name": "Kubernetes",
+              "icon": "kubernetes",
+              "level": "Advanced",
+              "description": "Container orchestration"
+            },
+            {
+              "name": "CI/CD",
+              "icon": "cicd",
+              "level": "Expert",
+              "description": "Continuous integration and deployment"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "processSection",
+      "subtitle": "OUR PROCESS",
+      "title": "How We Deliver Excellence",
+      "description": "Our proven process ensures consistent quality and successful project delivery through every stage of development.",
+      "steps": [
+        {
+          "number": "01",
+          "title": "Discovery & Planning",
+          "description": "We analyze your requirements, define project scope, and create a detailed roadmap for success.",
+          "icon": "search"
+        },
+        {
+          "number": "02",
+          "title": "Design & Architecture",
+          "description": "Our team creates scalable architecture and intuitive designs that align with your business goals.",
+          "icon": "layout"
+        },
+        {
+          "number": "03",
+          "title": "Development",
+          "description": "We build robust solutions using cutting-edge technologies and best practices.",
+          "icon": "code"
+        },
+        {
+          "number": "04",
+          "title": "Testing & Launch",
+          "description": "Thorough testing ensures quality, followed by smooth deployment and ongoing support.",
+          "icon": "check-circle"
+        }
+      ]
+    },
+    {
+      "type": "reviewsSection",
+      "reviews": [
+        {
+          "name": "Sarah Johnson",
+          "role": "CTO",
+          "company": "TechVision Inc",
+          "image": "/images/testimonials/sarah.jpg",
+          "content": "Working with this team has been transformative for our business. Their AI solutions have automated our core processes, reducing operational costs by 60% while improving accuracy.",
+          "rating": 5
+        },
+        {
+          "name": "Michael Chen",
+          "role": "CEO",
+          "company": "InnovatePro",
+          "image": "/images/testimonials/michael.jpg",
+          "content": "The level of expertise and professionalism is outstanding. They didn't just provide a solution; they became strategic partners in our digital transformation journey.",
+          "rating": 5
+        },
+        {
+          "name": "Emily Rodriguez",
+          "role": "Director of Operations",
+          "company": "GlobalTech",
+          "image": "/images/testimonials/emily.jpg",
+          "content": "Their AI-powered automation solutions have revolutionized our customer service. We're now able to provide 24/7 support with 98% customer satisfaction.",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "type": "achievementsSection",
+      "subtitle": "OUR IMPACT",
+      "title": "Driving Digital Excellence",
+      "description": "Our track record of success speaks through numbers. Here's how we've helped businesses transform and grow with AI-powered solutions.",
+      "achievements": [
+        {
+          "value": "500+",
+          "label": "Projects",
+          "description": "Successfully delivered AI and automation solutions across various industries",
+          "icon": "rocket"
+        },
+        {
+          "value": "95%",
+          "label": "Success Rate",
+          "description": "Client satisfaction and project completion rate above industry standards",
+          "icon": "chart"
+        },
+        {
+          "value": "60%",
+          "label": "Cost Reduction",
+          "description": "Average operational cost savings achieved for our clients",
+          "icon": "trending-up"
+        },
+        {
+          "value": "24/7",
+          "label": "Support",
+          "description": "Round-the-clock AI-powered assistance and technical support",
+          "icon": "headphones"
+        }
+      ]
+    },
+    {
+      "type": "industryFeaturesSection",
+      "subtitle": "INDUSTRY SOLUTIONS",
+      "title": "AI Solutions for Every Industry",
+      "description": "Discover how Atlaga's AI platform can transform your specific industry with tailored solutions and automation tools.",
+      "industries": [
+        {
+          "icon": "ShoppingCart",
+          "title": "E-commerce",
+          "description": "Streamline your online store operations with AI-powered automation and customer engagement tools.",
+          "features": [
+            "Automated inventory management",
+            "AI customer support",
+            "Smart product recommendations",
+            "Automated marketing campaigns"
+          ],
+          "processIcons": [
+            "Package",
+            "Bot",
+            "Users",
+            "CreditCard"
+          ]
+        },
+        {
+          "icon": "Stethoscope",
+          "title": "Healthcare",
+          "description": "Transform patient care and practice management with intelligent automation solutions.",
+          "features": [
+            "Automated appointment scheduling",
+            "Patient record management",
+            "AI-powered diagnostics assistance",
+            "Practice workflow automation"
+          ],
+          "processIcons": [
+            "Calendar",
+            "FileText",
+            "Brain",
+            "StethoscopeAlt"
+          ]
+        },
+        {
+          "icon": "Briefcase",
+          "title": "Digital Agencies",
+          "description": "Scale your agency operations and deliver better results with AI-powered tools.",
+          "features": [
+            "Automated project management",
+            "Content creation automation",
+            "Client reporting automation",
+            "Resource optimization"
+          ],
+          "processIcons": [
+            "PenTool",
+            "Bot",
+            "BarChart",
+            "Target"
+          ]
+        },
+        {
+          "icon": "Rocket",
+          "title": "Startups",
+          "description": "Launch and scale your startup faster with comprehensive AI automation tools.",
+          "features": [
+            "Quick MVP development",
+            "Automated operations",
+            "Growth automation",
+            "Cost-effective scaling"
+          ],
+          "processIcons": [
+            "Code",
+            "Zap",
+            "Brain",
+            "Rocket"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "automationFeaturesSection",
+      "subtitle": "AI AUTOMATION",
+      "title": "Transform Your Business with AI Automation",
+      "description": "Discover how our AI automation tools can revolutionize your operations and drive growth across every aspect of your business.",
+      "features": [
+        {
+          "icon": "Workflow",
+          "title": "Workflow Automation",
+          "description": "Streamline your business processes with intelligent workflow automation that learns and adapts to your needs.",
+          "metrics": [
+            {
+              "value": "70%",
+              "label": "Time Saved"
+            },
+            {
+              "value": "90%",
+              "label": "Error Reduction"
+            }
+          ]
+        },
+        {
+          "icon": "Headphones",
+          "title": "Customer Service AI",
+          "description": "Provide 24/7 customer support with AI agents that handle inquiries, resolve issues, and improve satisfaction.",
+          "metrics": [
+            {
+              "value": "24/7",
+              "label": "Support Coverage"
+            },
+            {
+              "value": "85%",
+              "label": "Resolution Rate"
+            }
+          ]
+        },
+        {
+          "icon": "Megaphone",
+          "title": "Marketing Automation",
+          "description": "Automate your marketing campaigns with AI-powered targeting, content creation, and optimization.",
+          "metrics": [
+            {
+              "value": "3x",
+              "label": "ROI Increase"
+            },
+            {
+              "value": "60%",
+              "label": "Cost Reduction"
+            }
+          ]
+        },
+        {
+          "icon": "BarChart",
+          "title": "Smart Analytics",
+          "description": "Get actionable insights with AI-powered analytics that help you make data-driven decisions.",
+          "metrics": [
+            {
+              "value": "95%",
+              "label": "Accuracy"
+            },
+            {
+              "value": "50%",
+              "label": "Faster Insights"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "emailSignupSection",
+      "subtitle": "NEWSLETTER",
+      "title": "Stay Updated with AI Innovations",
+      "description": "Join our newsletter and get the latest updates on AI-powered business solutions, industry insights, and exclusive offers.",
+      "buttonText": "Subscribe Now",
+      "placeholder": "Enter your work email",
+      "features": [
+        "Weekly AI insights",
+        "Product updates",
+        "Success stories",
+        "No spam, ever"
+      ]
+    }
+  ]
+}

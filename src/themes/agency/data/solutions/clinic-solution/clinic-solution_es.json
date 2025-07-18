@@ -1,0 +1,335 @@
+{
+  "hero": {
+    "subtitle": "Sistema de Gestión de Clínicas",
+    "title": "Optimiza las Operaciones de tu Clínica",
+    "description": "Una solución integrada de gestión de clínicas que combina la atención al paciente, las tareas administrativas y las operaciones comerciales para mejorar la eficiencia de tu práctica.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Demo de la Solución de Gestión de Clínicas"
+    },
+    "stats": [
+      {
+        "value": "96%",
+        "label": "Satisfacción del Paciente"
+      },
+      {
+        "value": "50%",
+        "label": "Tiempo Administrativo Ahorrado"
+      },
+      {
+        "value": "35%",
+        "label": "Aumento de Ingresos"
+      }
+    ]
+  },
+  "features": {
+    "subtitle": "Características Integrales",
+    "title": "Todo lo que tu Clínica Necesita",
+    "description": "Un conjunto completo de herramientas diseñadas para clínicas modernas",
+    "categories": [
+      {
+        "name": "Operaciones Clínicas",
+        "description": "Optimiza la atención al paciente y los flujos de trabajo clínicos"
+      },
+      {
+        "name": "Gestión de la Práctica",
+        "description": "Optimiza las operaciones administrativas y comerciales"
+      }
+    ],
+    "items": [
+      {
+        "icon": "calendar",
+        "category": "Citas",
+        "title": "Programación Inteligente",
+        "description": "Sistema de programación impulsado por IA con recordatorios automatizados",
+        "image": "/images/solutions/clinic/scheduling.jpg",
+        "highlights": [
+          "Reserva en línea",
+          "Recordatorios automatizados",
+          "Gestión de lista de espera",
+          "Asignación de recursos"
+        ],
+        "stats": {
+          "value": "60%",
+          "label": "Reducción de no presentados"
+        }
+      },
+      {
+        "icon": "file-text",
+        "category": "Registros Clínicos",
+        "title": "Historiales Electrónicos",
+        "description": "Sistema integral de EHR con documentación fácil",
+        "image": "/images/solutions/clinic/ehr.jpg",
+        "highlights": [
+          "Registro digital",
+          "Planes de tratamiento",
+          "Integración con laboratorio",
+          "Recetas electrónicas"
+        ],
+        "stats": {
+          "value": "45%",
+          "label": "Tiempo ahorrado en documentación"
+        }
+      },
+      {
+        "icon": "credit-card",
+        "category": "Facturación",
+        "title": "Facturación Inteligente",
+        "description": "Procesamiento automatizado de facturación y seguros",
+        "image": "/images/solutions/clinic/billing.jpg",
+        "highlights": [
+          "Verificación de seguros",
+          "Procesamiento de pagos",
+          "Gestión de reclamaciones",
+          "Informes financieros"
+        ],
+        "stats": {
+          "value": "30%",
+          "label": "Reembolsos más rápidos"
+        }
+      },
+      {
+        "icon": "activity",
+        "category": "Análisis",
+        "title": "Inteligencia de Práctica",
+        "description": "Información basada en datos para una mejor toma de decisiones",
+        "image": "/images/solutions/clinic/analytics.jpg",
+        "highlights": [
+          "Métricas de rendimiento",
+          "Análisis de pacientes",
+          "Perspectivas financieras",
+          "Informes operativos"
+        ],
+        "stats": {
+          "value": "35%",
+          "label": "Crecimiento de ingresos"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Véalo en Acción",
+    "description": "Observe cómo las principales clínicas están transformando su práctica",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Historia de Éxito de Clínica"
+    },
+    "testimonials": [
+      {
+        "author": "Dra. María Rodríguez",
+        "role": "Directora de Clínica",
+        "image": "/images/testimonials/doctor1.jpg",
+        "quote": "Este sistema ha transformado la forma en que operamos. Nuestro personal es más eficiente y nuestros pacientes están más satisfechos."
+      },
+      {
+        "author": "Dr. Carlos Martínez",
+        "role": "Médico de Familia",
+        "image": "/images/testimonials/doctor2.jpg",
+        "quote": "El sistema EHR es intuitivo y la integración de facturación ha mejorado significativamente nuestro ciclo de ingresos."
+      }
+    ]
+  },
+  "benefits": {
+    "subtitle": "Beneficios Clave",
+    "title": "Transforma tu Práctica",
+    "description": "Experimenta las ventajas de un sistema de gestión de clínicas totalmente integrado",
+    "items": [
+      {
+        "icon": "clock",
+        "title": "Eficiencia de Tiempo",
+        "description": "Reduce la carga administrativa y enfócate en la atención al paciente",
+        "color": "blue",
+        "stats": {
+          "value": "50%",
+          "label": "Tiempo Ahorrado"
+        },
+        "highlights": [
+          "Flujos de trabajo automatizados",
+          "Documentación rápida",
+          "Programación eficiente",
+          "Reducción de papeleo"
+        ]
+      },
+      {
+        "icon": "heart",
+        "title": "Mejor Atención al Paciente",
+        "description": "Mejora la experiencia y los resultados del paciente",
+        "color": "red",
+        "stats": {
+          "value": "96%",
+          "label": "Satisfacción del Paciente"
+        },
+        "highlights": [
+          "Registros completos",
+          "Mejor seguimiento",
+          "Comunicación mejorada",
+          "Coordinación de cuidados"
+        ]
+      },
+      {
+        "icon": "trending-up",
+        "title": "Crecimiento de la Práctica",
+        "description": "Aumenta los ingresos y optimiza las operaciones",
+        "color": "green",
+        "stats": {
+          "value": "35%",
+          "label": "Crecimiento de Ingresos"
+        },
+        "highlights": [
+          "Facturación optimizada",
+          "Costos reducidos",
+          "Mejor utilización",
+          "Mayor eficiencia"
+        ]
+      },
+      {
+        "icon": "shield",
+        "title": "Cumplimiento y Seguridad",
+        "description": "Mantén el cumplimiento normativo y la seguridad de datos",
+        "color": "purple",
+        "stats": {
+          "value": "100%",
+          "label": "Cumplimiento HIPAA"
+        },
+        "highlights": [
+          "Cumplimiento HIPAA",
+          "Encriptación de datos",
+          "Rastreo de auditoría",
+          "Acceso seguro"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "subtitle": "Precios Transparentes",
+    "title": "Planes de Precios Flexibles",
+    "description": "Elige el plan perfecto para tu clínica. Ahorra hasta un 20% con facturación anual.",
+    "billingPeriods": ["Mensual", "Anual"],
+    "plans": [
+      {
+        "name": "Básico",
+        "highlight": "Perfecto para clínicas pequeñas",
+        "monthlyPrice": "$299",
+        "yearlyPrice": "$2,990",
+        "yearlyDiscount": "Ahorra $598/año",
+        "description": "Características esenciales para prácticas pequeñas",
+        "features": [
+          {
+            "text": "Programación de citas",
+            "included": true
+          },
+          {
+            "text": "EHR básico",
+            "included": true
+          },
+          {
+            "text": "Portal del paciente",
+            "included": true
+          },
+          {
+            "text": "Soporte por correo",
+            "included": true
+          },
+          {
+            "text": "Informes básicos",
+            "included": true
+          },
+          {
+            "text": "Acceso móvil",
+            "included": true
+          }
+        ],
+        "cta": "Comenzar",
+        "popular": false
+      },
+      {
+        "name": "Profesional",
+        "highlight": "Más popular para clínicas en crecimiento",
+        "monthlyPrice": "$599",
+        "yearlyPrice": "$5,990",
+        "yearlyDiscount": "Ahorra $1,198/año",
+        "description": "Características avanzadas para clínicas establecidas",
+        "features": [
+          {
+            "text": "Todo lo de Básico, más:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Características avanzadas de EHR",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "Plataforma de telesalud",
+            "included": true
+          },
+          {
+            "text": "Análisis avanzado",
+            "included": true
+          },
+          {
+            "text": "Soporte prioritario",
+            "included": true
+          },
+          {
+            "text": "Soporte multi-proveedor",
+            "included": true
+          }
+        ],
+        "cta": "Comenzar",
+        "popular": true
+      },
+      {
+        "name": "Empresarial",
+        "highlight": "Para clínicas grandes",
+        "monthlyPrice": "Personalizado",
+        "yearlyPrice": "Personalizado",
+        "yearlyDiscount": "Contáctanos para precios especiales",
+        "description": "Soluciones adaptadas para prácticas grandes",
+        "features": [
+          {
+            "text": "Todo lo de Profesional, más:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Soporte de integración personalizada",
+            "included": true
+          },
+          {
+            "text": "Gerente de cuenta dedicado",
+            "included": true
+          },
+          {
+            "text": "Características avanzadas de seguridad",
+            "included": true
+          },
+          {
+            "text": "Opciones de desarrollo personalizado",
+            "included": true
+          },
+          {
+            "text": "Garantías SLA",
+            "included": true
+          }
+        ],
+        "cta": "Contactar Ventas",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "¿Listo para Transformar tu Clínica?",
+    "description": "Únete a miles de proveedores de atención médica que han modernizado su práctica con nuestra solución.",
+    "background": "/images/solutions/clinic/cta-background.jpg",
+    "primaryButton": {
+      "text": "Programar una Demo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Ver Demo",
+      "link": "#showcase"
+    }
+  }
+} 

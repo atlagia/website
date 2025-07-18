@@ -1,0 +1,335 @@
+{
+  "hero": {
+    "subtitle": "Sistema di Gestione Farmacia",
+    "title": "Modernizza le Tue Operazioni Farmaceutiche",
+    "description": "Una soluzione completa di gestione farmacia che ottimizza l'inventario, le prescrizioni e i servizi ai pazienti garantendo la conformità normativa.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Demo Soluzione di Gestione Farmacia"
+    },
+    "stats": [
+      {
+        "value": "99.9%",
+        "label": "Precisione Prescrizioni"
+      },
+      {
+        "value": "45%",
+        "label": "Tempo Risparmiato"
+      },
+      {
+        "value": "30%",
+        "label": "Riduzione Costi Inventario"
+      }
+    ]
+  },
+  "features": {
+    "subtitle": "Funzionalità Intelligenti",
+    "title": "Gestione Completa Farmacia",
+    "description": "Strumenti potenti progettati specificamente per le farmacie moderne",
+    "categories": [
+      {
+        "name": "Gestione Prescrizioni",
+        "description": "Ottimizza il processo e la verifica delle prescrizioni"
+      },
+      {
+        "name": "Controllo Inventario",
+        "description": "Ottimizza i livelli di stock e riduci gli sprechi"
+      }
+    ],
+    "items": [
+      {
+        "icon": "pill",
+        "category": "Gestione Prescrizioni",
+        "title": "Elaborazione Intelligente Prescrizioni",
+        "description": "Sistema automatizzato di verifica ed elaborazione prescrizioni",
+        "image": "/images/solutions/pharmacy/prescription.jpg",
+        "highlights": [
+          "Gestione elettronica prescrizioni",
+          "Controllo interazioni farmacologiche",
+          "Sistema rinnovo automatico",
+          "Verifica assicurazioni"
+        ],
+        "stats": {
+          "value": "99.9%",
+          "label": "Tasso di precisione"
+        }
+      },
+      {
+        "icon": "box",
+        "category": "Gestione Inventario",
+        "title": "Inventario Intelligente",
+        "description": "Gestione e previsione inventario supportata da IA",
+        "image": "/images/solutions/pharmacy/inventory.jpg",
+        "highlights": [
+          "Riordino automatico",
+          "Monitoraggio scadenze",
+          "Ottimizzazione stock",
+          "Gestione fornitori"
+        ],
+        "stats": {
+          "value": "30%",
+          "label": "Ottimizzazione stock"
+        }
+      },
+      {
+        "icon": "users",
+        "category": "Servizi ai Pazienti",
+        "title": "Portale Assistenza Pazienti",
+        "description": "Piattaforma digitale per servizi ai pazienti e comunicazione",
+        "image": "/images/solutions/pharmacy/patient-care.jpg",
+        "highlights": [
+          "Richieste rinnovo online",
+          "Promemoria farmaci",
+          "Accesso cartelle cliniche",
+          "Messaggistica sicura"
+        ],
+        "stats": {
+          "value": "92%",
+          "label": "Soddisfazione pazienti"
+        }
+      },
+      {
+        "icon": "chart-bar",
+        "category": "Analitica",
+        "title": "Business Intelligence",
+        "description": "Analisi complete per decisioni commerciali migliori",
+        "image": "/images/solutions/pharmacy/analytics.jpg",
+        "highlights": [
+          "Analisi vendite",
+          "Report inventario",
+          "Tendenze prescrizioni",
+          "Insight finanziari"
+        ],
+        "stats": {
+          "value": "25%",
+          "label": "Aumento ricavi"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Eccellenza Farmaceutica in Azione",
+    "description": "Scopri come le farmacie leader trasformano le loro operazioni",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Storia di Successo Farmaceutica"
+    },
+    "testimonials": [
+      {
+        "author": "John Smith",
+        "role": "Proprietario Farmacia",
+        "image": "/images/testimonials/pharmacist1.jpg",
+        "quote": "Questo sistema ha rivoluzionato il modo in cui gestiamo prescrizioni e inventario. La nostra efficienza è migliorata drasticamente."
+      },
+      {
+        "author": "Lisa Chen",
+        "role": "Farmacista Capo",
+        "image": "/images/testimonials/pharmacist2.jpg",
+        "quote": "I controlli e le verifiche automatizzati hanno migliorato notevolmente la nostra precisione e la sicurezza dei pazienti."
+      }
+    ]
+  },
+  "benefits": {
+    "subtitle": "Vantaggi Principali",
+    "title": "Trasforma la Tua Farmacia",
+    "description": "Scopri i vantaggi di un sistema di gestione farmacia completamente integrato",
+    "items": [
+      {
+        "icon": "trending-up",
+        "title": "Efficienza Operativa",
+        "description": "Ottimizza i flussi di lavoro e riduci le attività manuali",
+        "color": "blue",
+        "stats": {
+          "value": "45%",
+          "label": "Aumento Efficienza"
+        },
+        "highlights": [
+          "Flussi di lavoro automatizzati",
+          "Elaborazione prescrizioni più veloce",
+          "Operazioni ottimizzate",
+          "Riduzione errori"
+        ]
+      },
+      {
+        "icon": "shield-check",
+        "title": "Sicurezza Migliorata",
+        "description": "Migliora la sicurezza dei pazienti e riduci gli errori di somministrazione",
+        "color": "red",
+        "stats": {
+          "value": "99.9%",
+          "label": "Tasso di Precisione"
+        },
+        "highlights": [
+          "Controllo interazioni farmacologiche",
+          "Verifica allergie",
+          "Validazione dosaggi",
+          "Avvisi controindicazioni"
+        ]
+      },
+      {
+        "icon": "chart-up",
+        "title": "Crescita Aziendale",
+        "description": "Aumenta i ricavi e migliora la redditività",
+        "color": "green",
+        "stats": {
+          "value": "30%",
+          "label": "Crescita Ricavi"
+        },
+        "highlights": [
+          "Ottimizzazione inventario",
+          "Servizi pazienti migliorati",
+          "Migliore flusso di cassa",
+          "Margini migliori"
+        ]
+      },
+      {
+        "icon": "users",
+        "title": "Soddisfazione Pazienti",
+        "description": "Offri esperienze migliori ai pazienti",
+        "color": "purple",
+        "stats": {
+          "value": "92%",
+          "label": "Soddisfazione Pazienti"
+        },
+        "highlights": [
+          "Servizio più veloce",
+          "Migliore comunicazione",
+          "Accesso online",
+          "Consulenza farmaci"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "subtitle": "Prezzi Trasparenti",
+    "title": "Piani di Prezzo Flessibili",
+    "description": "Scegli il piano perfetto per la tua farmacia. Risparmia fino al 20% con la fatturazione annuale.",
+    "billingPeriods": ["Mensile", "Annuale"],
+    "plans": [
+      {
+        "name": "Essenziale",
+        "highlight": "Perfetto per farmacie indipendenti",
+        "monthlyPrice": "$249",
+        "yearlyPrice": "$2,490",
+        "yearlyDiscount": "Risparmia $498/anno",
+        "description": "Funzionalità essenziali per piccole farmacie",
+        "features": [
+          {
+            "text": "Gestione base prescrizioni",
+            "included": true
+          },
+          {
+            "text": "Monitoraggio inventario",
+            "included": true
+          },
+          {
+            "text": "Profili pazienti",
+            "included": true
+          },
+          {
+            "text": "Supporto email",
+            "included": true
+          },
+          {
+            "text": "Report base",
+            "included": true
+          },
+          {
+            "text": "Accesso mobile",
+            "included": true
+          }
+        ],
+        "cta": "Inizia Ora",
+        "popular": false
+      },
+      {
+        "name": "Professionale",
+        "highlight": "Più popolare per farmacie in crescita",
+        "monthlyPrice": "$499",
+        "yearlyPrice": "$4,990",
+        "yearlyDiscount": "Risparmia $998/anno",
+        "description": "Funzionalità avanzate per farmacie consolidate",
+        "features": [
+          {
+            "text": "Tutto ciò che è incluso in Essenziale, più:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Workflow avanzato prescrizioni",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "Gestione inventario automatizzata",
+            "included": true
+          },
+          {
+            "text": "Analisi avanzate",
+            "included": true
+          },
+          {
+            "text": "Supporto prioritario",
+            "included": true
+          },
+          {
+            "text": "Supporto multi-sede",
+            "included": true
+          }
+        ],
+        "cta": "Inizia Ora",
+        "popular": true
+      },
+      {
+        "name": "Enterprise",
+        "highlight": "Per catene di farmacie",
+        "monthlyPrice": "Personalizzato",
+        "yearlyPrice": "Personalizzato",
+        "yearlyDiscount": "Contattaci per prezzi speciali",
+        "description": "Soluzioni personalizzate per catene di farmacie",
+        "features": [
+          {
+            "text": "Tutto ciò che è incluso in Professionale, più:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Supporto integrazione personalizzato",
+            "included": true
+          },
+          {
+            "text": "Account manager dedicato",
+            "included": true
+          },
+          {
+            "text": "Funzionalità sicurezza avanzate",
+            "included": true
+          },
+          {
+            "text": "Opzioni sviluppo personalizzate",
+            "included": true
+          },
+          {
+            "text": "Garanzie SLA",
+            "included": true
+          }
+        ],
+        "cta": "Contatta Vendite",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "Pronto a Modernizzare la Tua Farmacia?",
+    "description": "Unisciti a migliaia di farmacie che hanno trasformato le loro operazioni con la nostra soluzione.",
+    "background": "/images/solutions/pharmacy/cta-background.jpg",
+    "primaryButton": {
+      "text": "Pianifica una Demo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Guarda la Demo",
+      "link": "#showcase"
+    }
+  }
+} 

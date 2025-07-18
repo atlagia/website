@@ -1,0 +1,336 @@
+{
+  "hero": {
+    "subtitle": "Gestione del Commercio Alimentata dall'IA",
+    "title": "Trasforma il Tuo Negozio con Operazioni Intelligenti",
+    "description": "Scopri il futuro del commercio al dettaglio con la nostra piattaforma completa, alimentata dall'IA, che ottimizza le operazioni del negozio, migliora l'esperienza cliente e guida la crescita su tutti i canali.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "thumbnail": "/images/retail-hero.webp",
+      "alt": "Demo della Piattaforma di Gestione del Commercio"
+    },
+    "stats": [
+      {
+        "value": "35%",
+        "label": "Aumento delle Vendite"
+      },
+      {
+        "value": "50%",
+        "label": "Ottimizzazione del Magazzino"
+      },
+      {
+        "value": "45%",
+        "label": "Soddisfazione Cliente"
+      }
+    ]
+  },
+  "features": {
+    "title": "Funzionalità di Livello Enterprise",
+    "subtitle": "Gestione del Commercio di Nuova Generazione",
+    "description": "Scopri la nostra suite completa di strumenti avanzati progettata per rivoluzionare le tue operazioni commerciali. Ogni funzionalità è realizzata per offrire massima efficienza e un'esperienza cliente superiore.",
+    "categories": [
+      {
+        "name": "Operazioni del Negozio",
+        "description": "Funzionalità principali che ottimizzano le tue operazioni quotidiane"
+      },
+      {
+        "name": "Esperienza Cliente",
+        "description": "Strumenti che migliorano l'engagement e la soddisfazione dei clienti"
+      }
+    ],
+    "items": [
+      {
+        "icon": "store",
+        "title": "Gestione Intelligente del Negozio",
+        "description": "Operazioni del negozio e gestione del personale alimentate dall'IA",
+        "category": "Operazioni del Negozio",
+        "image": "/images/features/store-management.webp",
+        "highlights": [
+          "Ottimizzazione degli orari",
+          "Gestione delle attività",
+          "Monitoraggio delle prestazioni",
+          "Analisi del negozio"
+        ],
+        "stats": {
+          "value": "30%",
+          "label": "Efficienza Operativa"
+        }
+      },
+      {
+        "icon": "shopping-bag",
+        "title": "Commercio Omnicanale",
+        "description": "Integrazione fluida su tutti i canali di vendita",
+        "category": "Esperienza Cliente",
+        "image": "/images/features/omnichannel.webp",
+        "highlights": [
+          "Gestione unificata del magazzino",
+          "Gestione ordini multicanale",
+          "Sincronizzazione dati clienti",
+          "Prezzi coerenti"
+        ],
+        "stats": {
+          "value": "40%",
+          "label": "Integrazione dei Canali"
+        }
+      },
+      {
+        "icon": "bar-chart",
+        "title": "Analisi Avanzata",
+        "description": "Insight basati sui dati per decisioni migliori",
+        "category": "Operazioni del Negozio",
+        "image": "/images/features/analytics.webp",
+        "highlights": [
+          "Previsioni delle vendite",
+          "Analisi del comportamento cliente",
+          "Metriche di prestazione",
+          "Identificazione delle tendenze"
+        ],
+        "stats": {
+          "value": "85%",
+          "label": "Decisioni Migliori"
+        }
+      },
+      {
+        "icon": "users",
+        "title": "Engagement Cliente",
+        "description": "Miglioramento della fedeltà e della fidelizzazione dei clienti",
+        "category": "Esperienza Cliente",
+        "image": "/images/features/customer-engagement.webp",
+        "highlights": [
+          "Gestione programmi fedeltà",
+          "Marketing personalizzato",
+          "Feedback clienti",
+          "Monitoraggio engagement"
+        ],
+        "stats": {
+          "value": "45%",
+          "label": "Fidelizzazione Cliente"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Vedilo in Azione",
+    "description": "Scopri come le aziende leader del commercio trasformano le loro operazioni",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "thumbnail": "/images/showcase-thumb.webp"
+    },
+    "testimonials": [
+      {
+        "author": "Emma Thompson",
+        "role": "Direttrice del Negozio, Fashion Forward",
+        "image": "/images/testimonials/emma.webp",
+        "quote": "Questa piattaforma ha rivoluzionato le nostre operazioni commerciali. Abbiamo registrato un aumento del 35% delle vendite e un miglioramento della soddisfazione cliente."
+      },
+      {
+        "author": "David Chen",
+        "role": "Direttore Operativo, TechRetail",
+        "image": "/images/testimonials/david.webp",
+        "quote": "Le funzionalità IA hanno migliorato drasticamente la nostra gestione del magazzino e l'efficienza del personale."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Vantaggi Trasformativi",
+    "subtitle": "Risultati & Impatto Provati",
+    "description": "Sperimenta miglioramenti misurabili in tutti gli aspetti del tuo business commerciale con la nostra soluzione completa. La nostra piattaforma fornisce risultati concreti che impattano direttamente sul tuo profitto.",
+    "items": [
+      {
+        "title": "Crescita delle Vendite",
+        "description": "Massimizza le tue vendite con l'ottimizzazione alimentata dall'IA.",
+        "icon": "trending-up",
+        "color": "green",
+        "stats": {
+          "value": "35%",
+          "label": "Aumento delle Vendite"
+        },
+        "highlights": [
+          "Ottimizzazione intelligente dei prezzi",
+          "Opportunità di vendita incrociata",
+          "Ottimizzazione del magazzino",
+          "Prestazioni del personale"
+        ]
+      },
+      {
+        "title": "Eccellenza Operativa",
+        "description": "Ottimizza le tue operazioni commerciali con l'automazione intelligente.",
+        "icon": "zap",
+        "color": "blue",
+        "stats": {
+          "value": "50%",
+          "label": "Guadagno di Efficienza"
+        },
+        "highlights": [
+          "Pianificazione automatizzata",
+          "Gestione delle attività",
+          "Controllo del magazzino",
+          "Ottimizzazione dei processi"
+        ]
+      },
+      {
+        "title": "Esperienza Cliente",
+        "description": "Offri esperienze di acquisto eccezionali che favoriscono la fedeltà.",
+        "icon": "heart",
+        "color": "purple",
+        "stats": {
+          "value": "45%",
+          "label": "Soddisfazione Cliente"
+        },
+        "highlights": [
+          "Servizio personalizzato",
+          "Checkout fluido",
+          "Programmi fedeltà",
+          "Feedback clienti"
+        ]
+      },
+      {
+        "title": "Intelligenza dei Dati",
+        "description": "Prendi decisioni basate sui dati con analisi avanzate.",
+        "icon": "chart-bar",
+        "color": "yellow",
+        "stats": {
+          "value": "85%",
+          "label": "Insight Migliori"
+        },
+        "highlights": [
+          "Analisi delle vendite",
+          "Comportamento cliente",
+          "Tendenze del magazzino",
+          "Metriche di prestazione"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Piani di Prezzo Flessibili",
+    "subtitle": "Prezzi Trasparenti",
+    "description": "Scegli il piano perfetto per il tuo business. Risparmia fino al 20% con la fatturazione annuale.",
+    "billingPeriods": ["Mensile", "Annuale"],
+    "plans": [
+      {
+        "name": "Base",
+        "highlight": "Perfetto per i piccoli negozi",
+        "monthlyPrice": "$199",
+        "yearlyPrice": "$1,990",
+        "yearlyDiscount": "Risparmia $398/anno",
+        "description": "Funzionalità essenziali per iniziare la tua trasformazione digitale",
+        "features": [
+          {
+            "text": "Gestione base del negozio",
+            "included": true
+          },
+          {
+            "text": "Monitoraggio del magazzino",
+            "included": true
+          },
+          {
+            "text": "Report delle vendite",
+            "included": true
+          },
+          {
+            "text": "Analisi base",
+            "included": true
+          },
+          {
+            "text": "Supporto email",
+            "included": true
+          },
+          {
+            "text": "Accesso app mobile",
+            "included": true
+          }
+        ],
+        "cta": "Inizia Ora",
+        "popular": false
+      },
+      {
+        "name": "Professionale",
+        "highlight": "Più popolare per i negozi in crescita",
+        "monthlyPrice": "$399",
+        "yearlyPrice": "$3,990",
+        "yearlyDiscount": "Risparmia $798/anno",
+        "description": "Funzionalità avanzate per negozi affermati",
+        "features": [
+          {
+            "text": "Tutto ciò che è incluso in Base, più:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Funzionalità alimentate dall'IA",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "Analisi avanzata",
+            "included": true
+          },
+          {
+            "text": "Supporto multi-negozio",
+            "included": true
+          },
+          {
+            "text": "Supporto prioritario",
+            "included": true
+          },
+          {
+            "text": "Accesso API",
+            "included": true
+          }
+        ],
+        "cta": "Inizia Ora",
+        "popular": true
+      },
+      {
+        "name": "Enterprise",
+        "highlight": "Per le grandi catene di negozi",
+        "monthlyPrice": "Personalizzato",
+        "yearlyPrice": "Personalizzato",
+        "yearlyDiscount": "Contattaci per prezzi speciali",
+        "description": "Soluzioni su misura per le esigenze enterprise",
+        "features": [
+          {
+            "text": "Tutto ciò che è incluso in Professionale, più:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Supporto integrazione personalizzato",
+            "included": true
+          },
+          {
+            "text": "Account manager dedicato",
+            "included": true
+          },
+          {
+            "text": "Funzionalità di sicurezza avanzate",
+            "included": true
+          },
+          {
+            "text": "Opzioni di sviluppo personalizzate",
+            "included": true
+          },
+          {
+            "text": "Garanzie SLA",
+            "included": true
+          }
+        ],
+        "cta": "Contatta le Vendite",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "Pronto a Trasformare il Tuo Negozio?",
+    "description": "Unisciti a migliaia di negozi di successo che utilizzano la nostra piattaforma",
+    "primaryButton": {
+      "text": "Pianifica una Demo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Guarda il Video Demo",
+      "link": "/demo-video"
+    },
+    "background": "/images/cta-background.webp"
+  }
+} 

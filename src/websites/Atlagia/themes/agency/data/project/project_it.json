@@ -1,0 +1,105 @@
+{
+  "hero": {
+    "subtitle": "Discuti il tuo progetto",
+    "title": "Costruiamo qualcosa di straordinario insieme",
+    "description": "Condividi le tue idee di progetto con il nostro team di esperti. Ti aiuteremo a trasformare la tua visione in realtà utilizzando le ultime tecnologie e soluzioni innovative."
+  },
+  "features": {
+    "title": "Perché scegliere noi per il tuo progetto",
+    "description": "Il nostro team combina competenza tecnica e problem-solving creativo per fornire risultati eccezionali per ogni progetto.",
+    "items": [
+      {
+        "icon": "Code",
+        "title": "Eccellenza tecnica",
+        "description": "I nostri sviluppatori sono esperti nelle ultime tecnologie e best practice, garantendo che il tuo progetto sia costruito secondo i più alti standard."
+      },
+      {
+        "icon": "Lightbulb",
+        "title": "Soluzioni innovative",
+        "description": "Non costruiamo solo quello che chiedi - proponiamo soluzioni creative che potresti non aver considerato, aggiungendo valore extra al tuo progetto."
+      },
+      {
+        "icon": "Clock",
+        "title": "Consegna puntuale",
+        "description": "Comprendiamo l'importanza delle scadenze e lavoriamo duramente per garantire il completamento del tuo progetto nei tempi previsti."
+      },
+      {
+        "icon": "Users",
+        "title": "Approccio collaborativo",
+        "description": "Lavoriamo a stretto contatto con te durante tutto il processo di sviluppo, mantenendoti informato e coinvolto in ogni fase."
+      },
+      {
+        "icon": "Shield",
+        "title": "Garanzia di qualità",
+        "description": "I nostri rigorosi processi di test assicurano che il tuo progetto sia privo di errori e funzioni perfettamente su tutte le piattaforme."
+      },
+      {
+        "icon": "TrendingUp",
+        "title": "Soluzioni scalabili",
+        "description": "Costruiamo pensando al futuro, creando soluzioni che possono crescere ed evolversi con le esigenze della tua attività."
+      }
+    ]
+  },
+  "process": {
+    "title": "Il nostro processo di sviluppo",
+    "description": "Seguiamo una metodologia collaudata per garantire la consegna efficiente del tuo progetto e soddisfare tutti i tuoi requisiti.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Scoperta e pianificazione",
+        "description": "Iniziamo comprendendo la tua attività, i tuoi obiettivi e i tuoi requisiti per creare un piano di progetto dettagliato."
+      },
+      {
+        "number": "02",
+        "title": "Design e prototipazione",
+        "description": "I nostri designer creano wireframe e prototipi per visualizzare l'esperienza utente prima dell'inizio dello sviluppo."
+      },
+      {
+        "number": "03",
+        "title": "Sviluppo",
+        "description": "I nostri sviluppatori costruiscono il tuo progetto utilizzando le ultime tecnologie e best practice, con aggiornamenti e feedback regolari."
+      },
+      {
+        "number": "04",
+        "title": "Test e garanzia di qualità",
+        "description": "Testiamo accuratamente il tuo progetto per garantire che sia privo di errori e funzioni perfettamente su tutte le piattaforme."
+      },
+      {
+        "number": "05",
+        "title": "Lancio e supporto",
+        "description": "Ti aiutiamo a lanciare il tuo progetto e forniamo supporto continuo per garantire il suo successo a lungo termine."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Domande frequenti",
+    "description": "Trova risposte alle domande comuni sul nostro processo di sviluppo del progetto.",
+    "items": [
+      {
+        "question": "Quanto tempo ci vuole per completare un progetto?",
+        "answer": "I tempi del progetto variano in base alla complessità, all'ambito e ai requisiti. I progetti semplici possono richiedere 4-8 settimane, mentre le applicazioni più complesse possono richiedere 3-6 mesi o più. Forniremo una stima dettagliata della tempistica dopo la nostra consultazione iniziale."
+      },
+      {
+        "question": "Qual è il vostro modello di pricing?",
+        "answer": "Offriamo modelli di pricing flessibili che includono prezzo fisso, tempo e materiali, e accordi di team dedicati. L'approccio migliore dipende dall'ambito del tuo progetto, dalla tempistica e dai requisiti. Raccomanderemo l'opzione più adatta durante la nostra consultazione."
+      },
+      {
+        "question": "Offrite manutenzione e supporto dopo il completamento del progetto?",
+        "answer": "Sì, offriamo vari pacchetti di manutenzione e supporto per garantire che il tuo progetto continui a funzionare perfettamente dopo il lancio. Questo può includere correzioni di bug, aggiornamenti, miglioramenti delle funzionalità e supporto tecnico."
+      },
+      {
+        "question": "Come gestite i cambiamenti del progetto e le modifiche dell'ambito?",
+        "answer": "Comprendiamo che i requisiti possono evolversi durante lo sviluppo. Abbiamo un processo strutturato di gestione del cambiamento per valutare, implementare e comunicare i cambiamenti minimizzando l'impatto sulla tempistica e sul budget."
+      },
+      {
+        "question": "Quali sono le tecnologie in cui siete specializzati?",
+        "answer": "Il nostro team è esperto in un'ampia gamma di tecnologie tra cui React, Angular, Vue.js, Node.js, Python, Java, .NET e altro ancora. Abbiamo anche esperienza in AI/ML, soluzioni cloud e sviluppo mobile per iOS e Android."
+      }
+    ]
+  },
+  "readyToStart": {
+    "title": "Pronto per iniziare?",
+    "description": "Compila il modulo per discutere il tuo progetto con il nostro team. Ti ricontatteremo entro 24 ore per programmare una consulenza.",
+    "buttonText": "Vai al modulo"
+  }
+} 

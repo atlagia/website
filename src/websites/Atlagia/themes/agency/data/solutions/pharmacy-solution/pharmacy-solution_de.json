@@ -1,0 +1,335 @@
+{
+  "hero": {
+    "subtitle": "Apotheken-Managementsystem",
+    "title": "Modernisieren Sie Ihre Apothekenbetriebe",
+    "description": "Eine umfassende Apothekenmanagement-Lösung, die Bestand, Rezepte und Patientenbetreuung optimiert und gleichzeitig die Einhaltung gesetzlicher Vorschriften gewährleistet.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Apothekenmanagement-Lösung Demo"
+    },
+    "stats": [
+      {
+        "value": "99.9%",
+        "label": "Rezeptgenauigkeit"
+      },
+      {
+        "value": "45%",
+        "label": "Zeitersparnis"
+      },
+      {
+        "value": "30%",
+        "label": "Bestandskostenreduktion"
+      }
+    ]
+  },
+  "features": {
+    "subtitle": "Intelligente Funktionen",
+    "title": "Vollständiges Apothekenmanagement",
+    "description": "Leistungsstarke Tools speziell für moderne Apotheken",
+    "categories": [
+      {
+        "name": "Rezeptverwaltung",
+        "description": "Optimieren Sie die Rezeptverarbeitung und -prüfung"
+      },
+      {
+        "name": "Bestandskontrolle",
+        "description": "Optimieren Sie die Lagerbestände und reduzieren Sie Abfälle"
+      }
+    ],
+    "items": [
+      {
+        "icon": "pill",
+        "category": "Rezeptverwaltung",
+        "title": "Intelligente Rezeptverarbeitung",
+        "description": "Automatisiertes Rezeptprüfungs- und Verarbeitungssystem",
+        "image": "/images/solutions/pharmacy/prescription.jpg",
+        "highlights": [
+          "Elektronische Rezeptverarbeitung",
+          "Arzneimittelinteraktionsprüfung",
+          "Automatisches Nachfüllsystem",
+          "Versicherungsprüfung"
+        ],
+        "stats": {
+          "value": "99.9%",
+          "label": "Genauigkeitsrate"
+        }
+      },
+      {
+        "icon": "box",
+        "category": "Bestandsverwaltung",
+        "title": "Intelligenter Bestand",
+        "description": "KI-gestützte Bestandsverwaltung und Prognose",
+        "image": "/images/solutions/pharmacy/inventory.jpg",
+        "highlights": [
+          "Automatische Nachbestellung",
+          "Ablaufverfolgung",
+          "Bestandsoptimierung",
+          "Lieferantenverwaltung"
+        ],
+        "stats": {
+          "value": "30%",
+          "label": "Bestandsoptimierung"
+        }
+      },
+      {
+        "icon": "users",
+        "category": "Patientenservice",
+        "title": "Patientenportal",
+        "description": "Digitale Plattform für Patientenbetreuung und Kommunikation",
+        "image": "/images/solutions/pharmacy/patient-care.jpg",
+        "highlights": [
+          "Online-Nachfüllanfragen",
+          "Medikamentenerinnerungen",
+          "Gesundheitsaktenzugang",
+          "Sichere Nachrichten"
+        ],
+        "stats": {
+          "value": "92%",
+          "label": "Patientenzufriedenheit"
+        }
+      },
+      {
+        "icon": "chart-bar",
+        "category": "Analytik",
+        "title": "Business Intelligence",
+        "description": "Umfassende Analysen für bessere Geschäftsentscheidungen",
+        "image": "/images/solutions/pharmacy/analytics.jpg",
+        "highlights": [
+          "Verkaufsanalysen",
+          "Bestandsberichte",
+          "Rezepttrends",
+          "Finanzielle Einblicke"
+        ],
+        "stats": {
+          "value": "25%",
+          "label": "Umsatzsteigerung"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Apothekenexzellenz in Aktion",
+    "description": "Sehen Sie, wie führende Apotheken ihre Betriebe transformieren",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Apotheken-Erfolgsgeschichte"
+    },
+    "testimonials": [
+      {
+        "author": "John Smith",
+        "role": "Apothekeninhaber",
+        "image": "/images/testimonials/pharmacist1.jpg",
+        "quote": "Dieses System hat die Art und Weise revolutioniert, wie wir Rezepte und Bestand verwalten. Unsere Effizienz hat sich dramatisch verbessert."
+      },
+      {
+        "author": "Lisa Chen",
+        "role": "Leitende Apothekerin",
+        "image": "/images/testimonials/pharmacist2.jpg",
+        "quote": "Die automatisierten Prüfungen und Kontrollen haben unsere Genauigkeit und Patientensicherheit erheblich verbessert."
+      }
+    ]
+  },
+  "benefits": {
+    "subtitle": "Hauptvorteile",
+    "title": "Transformieren Sie Ihre Apotheke",
+    "description": "Erleben Sie die Vorteile eines vollständig integrierten Apothekenmanagementsystems",
+    "items": [
+      {
+        "icon": "trending-up",
+        "title": "Operative Effizienz",
+        "description": "Optimieren Sie Arbeitsabläufe und reduzieren Sie manuelle Aufgaben",
+        "color": "blue",
+        "stats": {
+          "value": "45%",
+          "label": "Effizienzsteigerung"
+        },
+        "highlights": [
+          "Automatisierte Arbeitsabläufe",
+          "Schnellere Rezeptverarbeitung",
+          "Optimierte Abläufe",
+          "Reduzierte Fehler"
+        ]
+      },
+      {
+        "icon": "shield-check",
+        "title": "Verbesserte Sicherheit",
+        "description": "Verbessern Sie die Patientensicherheit und reduzieren Sie Medikationsfehler",
+        "color": "red",
+        "stats": {
+          "value": "99.9%",
+          "label": "Genauigkeitsrate"
+        },
+        "highlights": [
+          "Arzneimittelinteraktionsprüfungen",
+          "Allergieverifizierung",
+          "Dosierungsvalidierung",
+          "Kontraindikationswarnungen"
+        ]
+      },
+      {
+        "icon": "chart-up",
+        "title": "Geschäftswachstum",
+        "description": "Steigern Sie den Umsatz und verbessern Sie die Rentabilität",
+        "color": "green",
+        "stats": {
+          "value": "30%",
+          "label": "Umsatzwachstum"
+        },
+        "highlights": [
+          "Bestandsoptimierung",
+          "Verbesserter Patientenservice",
+          "Verbesserter Cashflow",
+          "Bessere Margen"
+        ]
+      },
+      {
+        "icon": "users",
+        "title": "Patientenzufriedenheit",
+        "description": "Bieten Sie bessere Patientenerfahrungen",
+        "color": "purple",
+        "stats": {
+          "value": "92%",
+          "label": "Patientenzufriedenheit"
+        },
+        "highlights": [
+          "Schnellerer Service",
+          "Bessere Kommunikation",
+          "Online-Zugang",
+          "Medikamentenberatung"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "subtitle": "Transparente Preise",
+    "title": "Flexible Preispläne",
+    "description": "Wählen Sie den perfekten Plan für Ihre Apotheke. Sparen Sie bis zu 20% bei jährlicher Abrechnung.",
+    "billingPeriods": ["Monatlich", "Jährlich"],
+    "plans": [
+      {
+        "name": "Essential",
+        "highlight": "Perfekt für unabhängige Apotheken",
+        "monthlyPrice": "$249",
+        "yearlyPrice": "$2,490",
+        "yearlyDiscount": "Sparen Sie $498/Jahr",
+        "description": "Grundlegende Funktionen für kleine Apotheken",
+        "features": [
+          {
+            "text": "Grundlegende Rezeptverwaltung",
+            "included": true
+          },
+          {
+            "text": "Bestandsverfolgung",
+            "included": true
+          },
+          {
+            "text": "Patientenprofile",
+            "included": true
+          },
+          {
+            "text": "E-Mail-Support",
+            "included": true
+          },
+          {
+            "text": "Grundlegende Berichte",
+            "included": true
+          },
+          {
+            "text": "Mobiler Zugang",
+            "included": true
+          }
+        ],
+        "cta": "Jetzt Starten",
+        "popular": false
+      },
+      {
+        "name": "Professional",
+        "highlight": "Beliebt bei wachsenden Apotheken",
+        "monthlyPrice": "$499",
+        "yearlyPrice": "$4,990",
+        "yearlyDiscount": "Sparen Sie $998/Jahr",
+        "description": "Erweiterte Funktionen für etablierte Apotheken",
+        "features": [
+          {
+            "text": "Alles aus Essential, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Erweiterter Rezeptworkflow",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "Automatisierte Bestandsverwaltung",
+            "included": true
+          },
+          {
+            "text": "Erweiterte Analysen",
+            "included": true
+          },
+          {
+            "text": "Prioritäts-Support",
+            "included": true
+          },
+          {
+            "text": "Multi-Standort-Unterstützung",
+            "included": true
+          }
+        ],
+        "cta": "Jetzt Starten",
+        "popular": true
+      },
+      {
+        "name": "Enterprise",
+        "highlight": "Für Apothekenketten",
+        "monthlyPrice": "Individuell",
+        "yearlyPrice": "Individuell",
+        "yearlyDiscount": "Kontaktieren Sie uns für Sonderpreise",
+        "description": "Maßgeschneiderte Lösungen für Apothekenketten",
+        "features": [
+          {
+            "text": "Alles aus Professional, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Individuelle Integrationsunterstützung",
+            "included": true
+          },
+          {
+            "text": "Dedizierter Account Manager",
+            "included": true
+          },
+          {
+            "text": "Erweiterte Sicherheitsfunktionen",
+            "included": true
+          },
+          {
+            "text": "Individuelle Entwicklungsoptionen",
+            "included": true
+          },
+          {
+            "text": "SLA-Garantien",
+            "included": true
+          }
+        ],
+        "cta": "Vertrieb kontaktieren",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "Bereit, Ihre Apotheke zu modernisieren?",
+    "description": "Schließen Sie sich Tausenden von Apotheken an, die ihre Betriebe mit unserer Lösung transformiert haben.",
+    "background": "/images/solutions/pharmacy/cta-background.jpg",
+    "primaryButton": {
+      "text": "Demo vereinbaren",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Demo ansehen",
+      "link": "#showcase"
+    }
+  }
+} 

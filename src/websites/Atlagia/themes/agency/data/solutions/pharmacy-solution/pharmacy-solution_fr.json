@@ -1,0 +1,335 @@
+{
+  "hero": {
+    "subtitle": "Système de Gestion de Pharmacie",
+    "title": "Modernisez Vos Opérations Pharmaceutiques",
+    "description": "Une solution complète de gestion de pharmacie qui optimise l'inventaire, les ordonnances et les services aux patients tout en assurant la conformité réglementaire.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Démo de la Solution de Gestion de Pharmacie"
+    },
+    "stats": [
+      {
+        "value": "99.9%",
+        "label": "Précision des Ordonnances"
+      },
+      {
+        "value": "45%",
+        "label": "Temps Économisé"
+      },
+      {
+        "value": "30%",
+        "label": "Réduction des Coûts d'Inventaire"
+      }
+    ]
+  },
+  "features": {
+    "subtitle": "Fonctionnalités Intelligentes",
+    "title": "Gestion Complète de Pharmacie",
+    "description": "Des outils puissants conçus spécifiquement pour les pharmacies modernes",
+    "categories": [
+      {
+        "name": "Gestion des Ordonnances",
+        "description": "Optimisez le traitement et la vérification des ordonnances"
+      },
+      {
+        "name": "Contrôle des Stocks",
+        "description": "Optimisez les niveaux de stock et réduisez le gaspillage"
+      }
+    ],
+    "items": [
+      {
+        "icon": "pill",
+        "category": "Gestion des Ordonnances",
+        "title": "Traitement Intelligent des Ordonnances",
+        "description": "Système automatisé de vérification et de traitement des ordonnances",
+        "image": "/images/solutions/pharmacy/prescription.jpg",
+        "highlights": [
+          "Traitement électronique des ordonnances",
+          "Vérification des interactions médicamenteuses",
+          "Système de renouvellement automatique",
+          "Vérification des assurances"
+        ],
+        "stats": {
+          "value": "99.9%",
+          "label": "Taux de précision"
+        }
+      },
+      {
+        "icon": "box",
+        "category": "Gestion des Stocks",
+        "title": "Inventaire Intelligent",
+        "description": "Gestion et prévision des stocks assistée par IA",
+        "image": "/images/solutions/pharmacy/inventory.jpg",
+        "highlights": [
+          "Réapprovisionnement automatique",
+          "Suivi des dates d'expiration",
+          "Optimisation des stocks",
+          "Gestion des fournisseurs"
+        ],
+        "stats": {
+          "value": "30%",
+          "label": "Optimisation des stocks"
+        }
+      },
+      {
+        "icon": "users",
+        "category": "Services aux Patients",
+        "title": "Portail de Soins aux Patients",
+        "description": "Plateforme numérique pour les services aux patients et la communication",
+        "image": "/images/solutions/pharmacy/patient-care.jpg",
+        "highlights": [
+          "Demandes de renouvellement en ligne",
+          "Rappels de médicaments",
+          "Accès aux dossiers de santé",
+          "Messagerie sécurisée"
+        ],
+        "stats": {
+          "value": "92%",
+          "label": "Satisfaction des patients"
+        }
+      },
+      {
+        "icon": "chart-bar",
+        "category": "Analytique",
+        "title": "Intelligence d'Affaires",
+        "description": "Analyses complètes pour de meilleures décisions commerciales",
+        "image": "/images/solutions/pharmacy/analytics.jpg",
+        "highlights": [
+          "Analyses des ventes",
+          "Rapports d'inventaire",
+          "Tendances des ordonnances",
+          "Aperçus financiers"
+        ],
+        "stats": {
+          "value": "25%",
+          "label": "Augmentation des revenus"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Excellence Pharmaceutique en Action",
+    "description": "Découvrez comment les pharmacies leaders transforment leurs opérations",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Histoire de Réussite Pharmaceutique"
+    },
+    "testimonials": [
+      {
+        "author": "John Smith",
+        "role": "Propriétaire de Pharmacie",
+        "image": "/images/testimonials/pharmacist1.jpg",
+        "quote": "Ce système a révolutionné la façon dont nous gérons les ordonnances et l'inventaire. Notre efficacité s'est considérablement améliorée."
+      },
+      {
+        "author": "Lisa Chen",
+        "role": "Pharmacienne en Chef",
+        "image": "/images/testimonials/pharmacist2.jpg",
+        "quote": "Les vérifications et contrôles automatisés ont grandement amélioré notre précision et la sécurité des patients."
+      }
+    ]
+  },
+  "benefits": {
+    "subtitle": "Avantages Clés",
+    "title": "Transformez Votre Pharmacie",
+    "description": "Découvrez les avantages d'un système de gestion de pharmacie entièrement intégré",
+    "items": [
+      {
+        "icon": "trending-up",
+        "title": "Efficacité Opérationnelle",
+        "description": "Optimisez les flux de travail et réduisez les tâches manuelles",
+        "color": "blue",
+        "stats": {
+          "value": "45%",
+          "label": "Augmentation de l'Efficacité"
+        },
+        "highlights": [
+          "Flux de travail automatisés",
+          "Traitement plus rapide des ordonnances",
+          "Opérations optimisées",
+          "Réduction des erreurs"
+        ]
+      },
+      {
+        "icon": "shield-check",
+        "title": "Sécurité Améliorée",
+        "description": "Améliorez la sécurité des patients et réduisez les erreurs de médication",
+        "color": "red",
+        "stats": {
+          "value": "99.9%",
+          "label": "Taux de Précision"
+        },
+        "highlights": [
+          "Vérification des interactions médicamenteuses",
+          "Vérification des allergies",
+          "Validation des dosages",
+          "Alertes de contre-indications"
+        ]
+      },
+      {
+        "icon": "chart-up",
+        "title": "Croissance Commerciale",
+        "description": "Augmentez les revenus et améliorez la rentabilité",
+        "color": "green",
+        "stats": {
+          "value": "30%",
+          "label": "Croissance des Revenus"
+        },
+        "highlights": [
+          "Optimisation des stocks",
+          "Services aux patients améliorés",
+          "Meilleur flux de trésorerie",
+          "Meilleures marges"
+        ]
+      },
+      {
+        "icon": "users",
+        "title": "Satisfaction des Patients",
+        "description": "Offrez de meilleures expériences aux patients",
+        "color": "purple",
+        "stats": {
+          "value": "92%",
+          "label": "Satisfaction des Patients"
+        },
+        "highlights": [
+          "Service plus rapide",
+          "Meilleure communication",
+          "Accès en ligne",
+          "Conseils sur les médicaments"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "subtitle": "Tarification Transparente",
+    "title": "Plans de Prix Flexibles",
+    "description": "Choisissez le plan parfait pour votre pharmacie. Économisez jusqu'à 20% avec la facturation annuelle.",
+    "billingPeriods": ["Mensuel", "Annuel"],
+    "plans": [
+      {
+        "name": "Essentiel",
+        "highlight": "Parfait pour les pharmacies indépendantes",
+        "monthlyPrice": "$249",
+        "yearlyPrice": "$2,490",
+        "yearlyDiscount": "Économisez $498/an",
+        "description": "Fonctionnalités essentielles pour les petites pharmacies",
+        "features": [
+          {
+            "text": "Gestion basique des ordonnances",
+            "included": true
+          },
+          {
+            "text": "Suivi des stocks",
+            "included": true
+          },
+          {
+            "text": "Profils des patients",
+            "included": true
+          },
+          {
+            "text": "Support par email",
+            "included": true
+          },
+          {
+            "text": "Rapports de base",
+            "included": true
+          },
+          {
+            "text": "Accès mobile",
+            "included": true
+          }
+        ],
+        "cta": "Commencer",
+        "popular": false
+      },
+      {
+        "name": "Professionnel",
+        "highlight": "Plus populaire pour les pharmacies en croissance",
+        "monthlyPrice": "$499",
+        "yearlyPrice": "$4,990",
+        "yearlyDiscount": "Économisez $998/an",
+        "description": "Fonctionnalités avancées pour les pharmacies établies",
+        "features": [
+          {
+            "text": "Tout ce qui est inclus dans Essentiel, plus :",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Workflow avancé des ordonnances",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "Gestion automatisée des stocks",
+            "included": true
+          },
+          {
+            "text": "Analyses avancées",
+            "included": true
+          },
+          {
+            "text": "Support prioritaire",
+            "included": true
+          },
+          {
+            "text": "Support multi-sites",
+            "included": true
+          }
+        ],
+        "cta": "Commencer",
+        "popular": true
+      },
+      {
+        "name": "Entreprise",
+        "highlight": "Pour les chaînes de pharmacies",
+        "monthlyPrice": "Sur mesure",
+        "yearlyPrice": "Sur mesure",
+        "yearlyDiscount": "Contactez-nous pour des tarifs spéciaux",
+        "description": "Solutions personnalisées pour les chaînes de pharmacies",
+        "features": [
+          {
+            "text": "Tout ce qui est inclus dans Professionnel, plus :",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Support d'intégration personnalisé",
+            "included": true
+          },
+          {
+            "text": "Gestionnaire de compte dédié",
+            "included": true
+          },
+          {
+            "text": "Fonctionnalités de sécurité avancées",
+            "included": true
+          },
+          {
+            "text": "Options de développement personnalisées",
+            "included": true
+          },
+          {
+            "text": "Garanties SLA",
+            "included": true
+          }
+        ],
+        "cta": "Contacter les Ventes",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prêt à Moderniser Votre Pharmacie ?",
+    "description": "Rejoignez des milliers de pharmacies qui ont transformé leurs opérations avec notre solution.",
+    "background": "/images/solutions/pharmacy/cta-background.jpg",
+    "primaryButton": {
+      "text": "Planifier une Démo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Voir la Démo",
+      "link": "#showcase"
+    }
+  }
+} 

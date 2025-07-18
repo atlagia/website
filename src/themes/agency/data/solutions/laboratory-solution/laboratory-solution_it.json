@@ -1,0 +1,335 @@
+{
+  "hero": {
+    "subtitle": "Sistema Informativo di Laboratorio",
+    "title": "Soluzione Moderna per la Gestione del Laboratorio",
+    "description": "Un sistema informativo di laboratorio completo che ottimizza l'elaborazione dei campioni, garantisce precisione e accelera la consegna dei risultati.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Demo della Soluzione di Gestione del Laboratorio"
+    },
+    "stats": [
+      {
+        "value": "99.9%",
+        "label": "Precisione dei Test"
+      },
+      {
+        "value": "60%",
+        "label": "Elaborazione Più Rapida"
+      },
+      {
+        "value": "40%",
+        "label": "Riduzione dei Costi"
+      }
+    ]
+  },
+  "features": {
+    "subtitle": "Funzionalità Avanzate",
+    "title": "Gestione Completa del Laboratorio",
+    "description": "Strumenti completi progettati per laboratori clinici e di ricerca moderni",
+    "categories": [
+      {
+        "name": "Gestione dei Campioni",
+        "description": "Monitora e gestisci i campioni durante tutto il loro ciclo di vita"
+      },
+      {
+        "name": "Flusso di Lavoro dei Test",
+        "description": "Ottimizza i processi di test e il controllo qualità"
+      }
+    ],
+    "items": [
+      {
+        "icon": "test-tube",
+        "category": "Elaborazione dei Campioni",
+        "title": "Sistema di Tracciamento dei Campioni",
+        "description": "Gestione e monitoraggio completo del ciclo di vita dei campioni",
+        "image": "/images/solutions/laboratory/samples.jpg",
+        "highlights": [
+          "Integrazione codici a barre",
+          "Catena di custodia",
+          "Gestione dello stoccaggio",
+          "Storico dei campioni"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "Tracciabilità dei campioni"
+        }
+      },
+      {
+        "icon": "clipboard-check",
+        "category": "Controllo Qualità",
+        "title": "Garanzia di Qualità",
+        "description": "Sistema completo di controllo qualità e validazione",
+        "image": "/images/solutions/laboratory/quality.jpg",
+        "highlights": [
+          "Protocolli QC",
+          "Regole di validazione",
+          "Monitoraggio conformità",
+          "Tracciabilità audit"
+        ],
+        "stats": {
+          "value": "99.9%",
+          "label": "Precisione dei test"
+        }
+      },
+      {
+        "icon": "microscope",
+        "category": "Test",
+        "title": "Gestione dei Test",
+        "description": "Elaborazione efficiente dei test e gestione dei risultati",
+        "image": "/images/solutions/laboratory/testing.jpg",
+        "highlights": [
+          "Flussi di lavoro dei test",
+          "Validazione risultati",
+          "Intervalli di riferimento",
+          "Elaborazione batch"
+        ],
+        "stats": {
+          "value": "60%",
+          "label": "Elaborazione più rapida"
+        }
+      },
+      {
+        "icon": "chart-bar",
+        "category": "Analisi",
+        "title": "Analisi di Laboratorio",
+        "description": "Sistema completo di analisi e reportistica",
+        "image": "/images/solutions/laboratory/analytics.jpg",
+        "highlights": [
+          "Metriche di performance",
+          "Analisi del carico di lavoro",
+          "Indicatori di qualità",
+          "Analisi dei costi"
+        ],
+        "stats": {
+          "value": "40%",
+          "label": "Riduzione dei costi"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Eccellenza di Laboratorio",
+    "description": "Scopri come i laboratori leader stanno trasformando le loro operazioni",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Storia di Successo del Laboratorio"
+    },
+    "testimonials": [
+      {
+        "author": "Dr. Michael Lee",
+        "role": "Direttore del Laboratorio",
+        "image": "/images/testimonials/lab1.jpg",
+        "quote": "Questo sistema ha rivoluzionato le nostre operazioni di laboratorio. Le capacità di automazione e monitoraggio hanno migliorato significativamente la nostra efficienza."
+      },
+      {
+        "author": "Dr. Emma Wilson",
+        "role": "Responsabile Qualità",
+        "image": "/images/testimonials/lab2.jpg",
+        "quote": "Le funzionalità di controllo qualità ci hanno aiutato a mantenere i più alti standard di precisione e conformità."
+      }
+    ]
+  },
+  "benefits": {
+    "subtitle": "Vantaggi Principali",
+    "title": "Trasforma il Tuo Laboratorio",
+    "description": "Scopri i vantaggi di un sistema di gestione del laboratorio completamente integrato",
+    "items": [
+      {
+        "icon": "trending-up",
+        "title": "Eccellenza Operativa",
+        "description": "Ottimizza le operazioni e i flussi di lavoro del laboratorio",
+        "color": "blue",
+        "stats": {
+          "value": "60%",
+          "label": "Aumento dell'efficienza"
+        },
+        "highlights": [
+          "Flussi di lavoro automatizzati",
+          "Elaborazione più rapida",
+          "Ottimizzazione delle risorse",
+          "Riduzione dei costi"
+        ]
+      },
+      {
+        "icon": "check-circle",
+        "title": "Garanzia di Qualità",
+        "description": "Mantieni i più alti standard di precisione",
+        "color": "green",
+        "stats": {
+          "value": "99.9%",
+          "label": "Precisione dei test"
+        },
+        "highlights": [
+          "Controlli qualità",
+          "Regole di validazione",
+          "Prevenzione errori",
+          "Monitoraggio conformità"
+        ]
+      },
+      {
+        "icon": "clock",
+        "title": "Efficienza Temporale",
+        "description": "Riduci i tempi di elaborazione e migliora la produttività",
+        "color": "purple",
+        "stats": {
+          "value": "50%",
+          "label": "TAT più rapido"
+        },
+        "highlights": [
+          "Elaborazione rapida",
+          "Reportistica automatizzata",
+          "Elaborazione batch",
+          "Gestione priorità"
+        ]
+      },
+      {
+        "icon": "shield",
+        "title": "Conformità & Sicurezza",
+        "description": "Garantisci la conformità normativa e la sicurezza dei dati",
+        "color": "red",
+        "stats": {
+          "value": "100%",
+          "label": "Tasso di conformità"
+        },
+        "highlights": [
+          "Conformità normativa",
+          "Sicurezza dei dati",
+          "Tracciabilità audit",
+          "Controllo accessi"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "subtitle": "Prezzi Trasparenti",
+    "title": "Piani di Prezzi Flessibili",
+    "description": "Scegli il piano perfetto per il tuo laboratorio. Risparmia fino al 20% con la fatturazione annuale.",
+    "billingPeriods": ["Mensile", "Annuale"],
+    "plans": [
+      {
+        "name": "Essenziale",
+        "highlight": "Per piccoli laboratori",
+        "monthlyPrice": "$499",
+        "yearlyPrice": "$4,990",
+        "yearlyDiscount": "Risparmia $998/anno",
+        "description": "Funzionalità essenziali per piccoli laboratori",
+        "features": [
+          {
+            "text": "Tracciamento base dei campioni",
+            "included": true
+          },
+          {
+            "text": "Gestione dei test",
+            "included": true
+          },
+          {
+            "text": "Controllo qualità",
+            "included": true
+          },
+          {
+            "text": "Supporto email",
+            "included": true
+          },
+          {
+            "text": "Reportistica base",
+            "included": true
+          },
+          {
+            "text": "Accesso mobile",
+            "included": true
+          }
+        ],
+        "cta": "Inizia Ora",
+        "popular": false
+      },
+      {
+        "name": "Professionale",
+        "highlight": "Più popolare per laboratori di medie dimensioni",
+        "monthlyPrice": "$999",
+        "yearlyPrice": "$9,990",
+        "yearlyDiscount": "Risparmia $1,998/anno",
+        "description": "Funzionalità avanzate per laboratori in crescita",
+        "features": [
+          {
+            "text": "Tutto ciò che è incluso in Essenziale, più:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Automazione avanzata",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "Integrazione strumenti",
+            "included": true
+          },
+          {
+            "text": "Analisi avanzata",
+            "included": true
+          },
+          {
+            "text": "Supporto prioritario",
+            "included": true
+          },
+          {
+            "text": "Supporto multi-sede",
+            "included": true
+          }
+        ],
+        "cta": "Inizia Ora",
+        "popular": true
+      },
+      {
+        "name": "Enterprise",
+        "highlight": "Per grandi laboratori",
+        "monthlyPrice": "Personalizzato",
+        "yearlyPrice": "Personalizzato",
+        "yearlyDiscount": "Contattaci per prezzi speciali",
+        "description": "Soluzioni personalizzate per grandi laboratori",
+        "features": [
+          {
+            "text": "Tutto ciò che è incluso in Professionale, più:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Supporto integrazione personalizzato",
+            "included": true
+          },
+          {
+            "text": "Account manager dedicato",
+            "included": true
+          },
+          {
+            "text": "Funzionalità di sicurezza avanzate",
+            "included": true
+          },
+          {
+            "text": "Sviluppo personalizzato",
+            "included": true
+          },
+          {
+            "text": "Garanzie SLA",
+            "included": true
+          }
+        ],
+        "cta": "Contatta le Vendite",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "Pronto a Trasformare il Tuo Laboratorio?",
+    "description": "Unisciti ai laboratori leader che hanno modernizzato le loro operazioni con la nostra soluzione.",
+    "background": "/images/solutions/laboratory/cta-background.jpg",
+    "primaryButton": {
+      "text": "Pianifica una Demo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Guarda la Demo",
+      "link": "#showcase"
+    }
+  }
+} 

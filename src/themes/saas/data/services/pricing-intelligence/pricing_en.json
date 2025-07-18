@@ -1,0 +1,192 @@
+{
+  "hero": {
+    "subtitle": "PRICING INTELLIGENCE",
+    "title": "Smart Pricing Decisions with AI",
+    "description": "Leverage AI-powered pricing intelligence to optimize your pricing strategy, monitor competitors, and maximize profitability in real-time.",
+    "image": "https://cdn.atlagia.com/kepart_vector_laptop_Ai_Platform_e-commerce_AI_Revolution_light_3e4c59d4-966d-419c-8475-b306aae1ac92.png"
+  },
+  "benefits": {
+    "title": "Why Choose Our Pricing Intelligence",
+    "items": [
+      {
+        "icon": "Brain",
+        "title": "AI-Powered Analysis",
+        "description": "Smart price optimization using machine learning algorithms.",
+        "color": "purple"
+      },
+      {
+        "icon": "Target",
+        "title": "Competitor Tracking",
+        "description": "Real-time monitoring of competitor pricing strategies.",
+        "color": "blue"
+      },
+      {
+        "icon": "TrendingUp",
+        "title": "Market Insights",
+        "description": "Deep market analysis and demand forecasting.",
+        "color": "green"
+      },
+      {
+        "icon": "LineChart",
+        "title": "Performance Analytics",
+        "description": "Detailed pricing performance and impact analysis.",
+        "color": "pink"
+      }
+    ]
+  },
+  "features": {
+    "title": "Powerful Intelligence Features",
+    "description": "Everything you need to make smart pricing decisions.",
+    "items": [
+      {
+        "title": "Real-time Price Monitoring",
+        "description": "Track competitor prices and market trends in real-time",
+        "image": "https://cdn.atlagia.com/kepart_vector_653e359a-db98-48bd-a798-8586ca496b95.png",
+        "features": [
+          "Automated price tracking",
+          "Competitor analysis",
+          "Market positioning",
+          "Price change alerts"
+        ]
+      },
+      {
+        "title": "Dynamic Price Optimization",
+        "description": "Optimize prices automatically based on market conditions",
+        "image": "https://cdn.atlagia.com/kepart_vector_02138d90-5373-4e6f-9cfb-3a13e84f049b.png",
+        "features": [
+          "AI-driven recommendations",
+          "Demand-based pricing",
+          "Margin optimization",
+          "Custom pricing rules"
+        ]
+      },
+      {
+        "title": "Advanced Analytics",
+        "description": "Deep insights into pricing performance and market trends",
+        "image": "https://cdn.atlagia.com/kepart_vector_a430586b-e4da-4b8d-ad0e-1c4ae323009e.png",
+        "features": [
+          "Performance tracking",
+          "Market analysis",
+          "Revenue impact",
+          "Trend forecasting"
+        ]
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "description": "Get started with intelligent pricing in four simple steps",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Connect Your Data",
+        "description": "Integrate your product and competitor data"
+      },
+      {
+        "number": "02",
+        "title": "Set Strategy",
+        "description": "Define your pricing rules and objectives"
+      },
+      {
+        "number": "03",
+        "title": "Monitor & Analyze",
+        "description": "Track prices and market trends in real-time"
+      },
+      {
+        "number": "04",
+        "title": "Optimize & Adapt",
+        "description": "Let AI optimize your pricing strategy"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Simple, Transparent Pricing",
+    "description": "Choose the plan that best fits your pricing intelligence needs",
+    "plans": [
+      {
+        "name": "Starter",
+        "price": "99",
+        "period": "/month",
+        "description": "For small businesses",
+        "features": [
+          "Up to 1,000 SKUs",
+          "Basic monitoring",
+          "Daily updates",
+          "Email support"
+        ],
+        "cta": {
+          "text": "Start Free Trial",
+          "link": "/trial"
+        }
+      },
+      {
+        "name": "Professional",
+        "price": "249",
+        "period": "/month",
+        "description": "For growing businesses",
+        "features": [
+          "Up to 10,000 SKUs",
+          "Advanced analytics",
+          "Real-time updates",
+          "Priority support"
+        ],
+        "cta": {
+          "text": "Start Free Trial",
+          "link": "/trial"
+        },
+        "popular": true
+      },
+      {
+        "name": "Enterprise",
+        "price": "699",
+        "period": "/month",
+        "description": "For large operations",
+        "features": [
+          "Unlimited SKUs",
+          "Custom solutions",
+          "API access",
+          "24/7 support"
+        ],
+        "cta": {
+          "text": "Contact Sales",
+          "link": "/contact"
+        }
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "What Our Customers Say",
+    "items": [
+      {
+        "content": "The pricing intelligence platform has helped us increase our profit margins by 35% while staying competitive in our market. The AI recommendations are spot-on.",
+        "author": "James Anderson",
+        "position": "Pricing Director",
+        "company": "MarketPro",
+        "image": "/images/testimonials/james.jpg"
+      },
+      {
+        "content": "Real-time competitor tracking and automated price adjustments have given us a significant edge in our market. It's been a game-changer for our business.",
+        "author": "Sophie Chen",
+        "position": "E-commerce Manager",
+        "company": "TechRetail",
+        "image": "/images/testimonials/sophie.jpg"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Optimize Your Pricing?",
+    "description": "Join thousands of businesses using our platform to make smarter pricing decisions.",
+    "buttons": [
+      {
+        "text": "Start Free Trial",
+        "link": "/trial",
+        "primary": true
+      },
+      {
+        "text": "Schedule Demo",
+        "link": "/demo",
+        "primary": false
+      }
+    ]
+  }
+} 

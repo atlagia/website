@@ -1,0 +1,192 @@
+{
+  "hero": {
+    "subtitle": "PRODUCT OPTIMIZATION",
+    "title": "Optimize Your Products with AI-Driven Insights",
+    "description": "Leverage AI and machine learning to optimize your product listings, pricing, and inventory management for maximum performance and profitability.",
+    "image": "https://cdn.atlagia.com/kepart_vector_laptop_Ai_Platform_e-commerce_Revolution_light_ba_58b8fb11-e9be-4aa1-af68-d415d2b0130c.png"
+  },
+  "benefits": {
+    "title": "Why Choose Our Product Optimization",
+    "items": [
+      {
+        "icon": "Target",
+        "title": "Smart Pricing",
+        "description": "Dynamic pricing strategies based on market data, competition, and demand patterns.",
+        "color": "blue"
+      },
+      {
+        "icon": "Search",
+        "title": "SEO Optimization",
+        "description": "AI-powered product listing optimization for better search visibility and conversion.",
+        "color": "green"
+      },
+      {
+        "icon": "BarChart",
+        "title": "Performance Tracking",
+        "description": "Real-time monitoring of product performance metrics and competitive analysis.",
+        "color": "purple"
+      },
+      {
+        "icon": "Box",
+        "title": "Inventory Management",
+        "description": "Smart inventory forecasting and optimization to prevent stockouts and overstock.",
+        "color": "pink"
+      }
+    ]
+  },
+  "features": {
+    "title": "Powerful Optimization Features",
+    "description": "Everything you need to maximize your product performance and profitability.",
+    "items": [
+      {
+        "title": "AI-Powered Price Optimization",
+        "description": "Optimize your pricing strategy with advanced AI algorithms",
+        "image": "https://cdn.atlagia.com/kepart_products_optimizer_f4db3692-d5d0-4ff2-9f47-2da13e67d0c8.png",
+        "features": [
+          "Dynamic pricing",
+          "Competitor monitoring",
+          "Demand forecasting",
+          "Profit margin optimization"
+        ]
+      },
+      {
+        "title": "Listing Optimization",
+        "description": "Enhance your product listings for maximum visibility and conversion",
+        "image": "https://cdn.atlagia.com/kepart_products_optimizer_ed18916a-2b2f-43ab-ba04-447083102dc2.png",
+        "features": [
+          "SEO optimization",
+          "Content enhancement",
+          "Image optimization",
+          "A/B testing"
+        ]
+      },
+      {
+        "title": "Inventory Intelligence",
+        "description": "Smart inventory management and forecasting",
+        "image": "https://cdn.atlagia.com/kepart_products_optimizer_5d085429-21f5-479a-b80c-6c03e4066cc2.png",
+        "features": [
+          "Demand prediction",
+          "Stock level optimization",
+          "Reorder automation",
+          "Seasonal planning"
+        ]
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "description": "Get started with product optimization in four simple steps",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Connect Your Store",
+        "description": "Integrate your e-commerce platform and product data"
+      },
+      {
+        "number": "02",
+        "title": "Set Goals",
+        "description": "Define your optimization objectives and constraints"
+      },
+      {
+        "number": "03",
+        "title": "Analyze & Optimize",
+        "description": "Let AI analyze and optimize your products"
+      },
+      {
+        "number": "04",
+        "title": "Monitor & Adjust",
+        "description": "Track performance and fine-tune strategies"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Simple, Transparent Pricing",
+    "description": "Choose the plan that best fits your optimization needs",
+    "plans": [
+      {
+        "name": "Starter",
+        "price": "79",
+        "period": "/month",
+        "description": "Perfect for small stores",
+        "features": [
+          "Up to 100 products",
+          "Basic optimization",
+          "Daily updates",
+          "Email support"
+        ],
+        "cta": {
+          "text": "Start Free Trial",
+          "link": "/trial"
+        }
+      },
+      {
+        "name": "Professional",
+        "price": "199",
+        "period": "/month",
+        "description": "For growing businesses",
+        "features": [
+          "Up to 1000 products",
+          "Advanced optimization",
+          "Real-time updates",
+          "Priority support"
+        ],
+        "cta": {
+          "text": "Start Free Trial",
+          "link": "/trial"
+        },
+        "popular": true
+      },
+      {
+        "name": "Enterprise",
+        "price": "499",
+        "period": "/month",
+        "description": "For large catalogs",
+        "features": [
+          "Unlimited products",
+          "Custom solutions",
+          "API access",
+          "24/7 support"
+        ],
+        "cta": {
+          "text": "Contact Sales",
+          "link": "/contact"
+        }
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "What Our Customers Say",
+    "items": [
+      {
+        "content": "The AI-powered pricing optimization has increased our profit margins by 25% while maintaining competitive prices. It's been a game-changer for our business.",
+        "author": "Michael Chen",
+        "position": "E-commerce Director",
+        "company": "TechRetail",
+        "image": "/images/testimonials/michael.jpg"
+      },
+      {
+        "content": "The inventory forecasting has eliminated stockouts and reduced our holding costs by 30%. The ROI has been incredible.",
+        "author": "Lisa Thompson",
+        "position": "Operations Manager",
+        "company": "StyleStore",
+        "image": "/images/testimonials/lisa.jpg"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Optimize Your Products?",
+    "description": "Join thousands of businesses using our platform to maximize their product performance.",
+    "buttons": [
+      {
+        "text": "Start Free Trial",
+        "link": "/trial",
+        "primary": true
+      },
+      {
+        "text": "Schedule Demo",
+        "link": "/demo",
+        "primary": false
+      }
+    ]
+  }
+} 

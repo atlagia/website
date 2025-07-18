@@ -1,0 +1,192 @@
+{
+  "hero": {
+    "subtitle": "ANALYTICS DASHBOARD",
+    "title": "Powerful Analytics for Data-Driven Decisions",
+    "description": "Get real-time insights into your business performance with our AI-powered analytics dashboard. Track, analyze, and optimize your metrics in one place.",
+    "image": "https://cdn.atlagia.com/kepart_ector_laptop_Ai_Platform_Advertising_e-commerce_AI_Revol_d7c31ca4-ab0e-43b5-85f8-866327702d3c.png"
+  },
+  "benefits": {
+    "title": "Why Choose Our Analytics Dashboard",
+    "items": [
+      {
+        "icon": "LineChart",
+        "title": "Real-Time Insights",
+        "description": "Monitor your key metrics in real-time with live data updates and instant notifications.",
+        "color": "blue"
+      },
+      {
+        "icon": "Brain",
+        "title": "AI-Powered Analysis",
+        "description": "Let AI uncover hidden patterns and provide actionable recommendations.",
+        "color": "purple"
+      },
+      {
+        "icon": "Gauge",
+        "title": "Performance Tracking",
+        "description": "Track all your KPIs and business metrics in one centralized dashboard.",
+        "color": "green"
+      },
+      {
+        "icon": "PieChart",
+        "title": "Custom Reports",
+        "description": "Create customized reports and visualizations tailored to your needs.",
+        "color": "pink"
+      }
+    ]
+  },
+  "features": {
+    "title": "Comprehensive Analytics Features",
+    "description": "Everything you need to understand and optimize your business performance.",
+    "items": [
+      {
+        "title": "Interactive Dashboards",
+        "description": "Create custom dashboards with drag-and-drop widgets and real-time data",
+        "image": "https://cdn.atlagia.com/kepart_Futuristic_abstract_infographic_illustrating_AI-driven_s_572d3482-15de-4b0b-97a3-66151c10ddcc.png",
+        "features": [
+          "Customizable layouts",
+          "Multiple visualization types",
+          "Real-time updates",
+          "Interactive filters"
+        ]
+      },
+      {
+        "title": "Advanced Analytics",
+        "description": "Leverage AI and machine learning for deeper insights",
+        "image": "https://cdn.atlagia.com/kepart_Futuristic_abstract_infographic_illustrating_AI-driven_s_c3ada442-c3d7-433c-9a07-24e83d58a9f5.png",
+        "features": [
+          "Predictive analytics",
+          "Trend analysis",
+          "Anomaly detection",
+          "Pattern recognition"
+        ]
+      },
+      {
+        "title": "Automated Reporting",
+        "description": "Save time with automated report generation and scheduling",
+        "image": "https://cdn.atlagia.com/kepart_Futuristic_abstract_infographic_illustrating_AI-driven_s_f4054122-83ef-476f-9fa5-bc2177b8c8ca.png",
+        "features": [
+          "Scheduled reports",
+          "Custom templates",
+          "Multiple export formats",
+          "Email notifications"
+        ]
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "description": "Get started with analytics in four simple steps",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Connect Data Sources",
+        "description": "Integrate your data from multiple sources and platforms"
+      },
+      {
+        "number": "02",
+        "title": "Configure Dashboard",
+        "description": "Set up your custom dashboards and metrics"
+      },
+      {
+        "number": "03",
+        "title": "Track Performance",
+        "description": "Monitor your KPIs and analyze trends"
+      },
+      {
+        "number": "04",
+        "title": "Optimize & Improve",
+        "description": "Act on insights to improve performance"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Simple, Transparent Pricing",
+    "description": "Choose the plan that best fits your analytics needs",
+    "plans": [
+      {
+        "name": "Starter",
+        "price": "59",
+        "period": "/month",
+        "description": "Perfect for small businesses",
+        "features": [
+          "5 dashboards",
+          "Basic analytics",
+          "Daily updates",
+          "Email support"
+        ],
+        "cta": {
+          "text": "Start Free Trial",
+          "link": "/trial"
+        }
+      },
+      {
+        "name": "Professional",
+        "price": "129",
+        "period": "/month",
+        "description": "For growing businesses",
+        "features": [
+          "Unlimited dashboards",
+          "Advanced analytics",
+          "Real-time updates",
+          "Priority support"
+        ],
+        "cta": {
+          "text": "Start Free Trial",
+          "link": "/trial"
+        },
+        "popular": true
+      },
+      {
+        "name": "Enterprise",
+        "price": "299",
+        "period": "/month",
+        "description": "For large organizations",
+        "features": [
+          "Custom solutions",
+          "AI-powered insights",
+          "API access",
+          "24/7 support"
+        ],
+        "cta": {
+          "text": "Contact Sales",
+          "link": "/contact"
+        }
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "What Our Customers Say",
+    "items": [
+      {
+        "content": "The analytics dashboard has transformed how we make decisions. The real-time insights and AI-powered recommendations have helped us increase our efficiency by 40%.",
+        "author": "Alex Rivera",
+        "position": "Operations Director",
+        "company": "DataFlow",
+        "image": "/images/testimonials/alex.jpg"
+      },
+      {
+        "content": "Having all our metrics in one place with automated reporting has saved us countless hours. The customization options are exactly what we needed.",
+        "author": "Sarah Kim",
+        "position": "Analytics Manager",
+        "company": "MetricsPro",
+        "image": "/images/testimonials/sarah.jpg"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Transform Your Analytics?",
+    "description": "Join thousands of businesses using our analytics dashboard to make better decisions.",
+    "buttons": [
+      {
+        "text": "Start Free Trial",
+        "link": "/trial",
+        "primary": true
+      },
+      {
+        "text": "View Demo",
+        "link": "/demo",
+        "primary": false
+      }
+    ]
+  }
+} 

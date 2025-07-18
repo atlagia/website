@@ -1,0 +1,349 @@
+{
+  "pageTitle": "Projects & Case Studies",
+  "pageDescription": "Explore our portfolio of successful projects and case studies across various industries.",
+  "hero": {
+    "badge": "Our Projects",
+    "title": "Success Stories & Case Studies",
+    "description": "Discover how we've helped businesses across industries transform their operations with our AI-powered solutions.",
+    "cta": {
+      "primary": {
+        "text": "View Projects",
+        "href": "#projects"
+      },
+      "secondary": {
+        "text": "Start Your Project",
+        "href": "/contact"
+      }
+    }
+  },
+  "stats": [
+    {
+      "value": "500+",
+      "label": "Projects Completed"
+    },
+    {
+      "value": "99.9%",
+      "label": "Success Rate"
+    },
+    {
+      "value": "45%",
+      "label": "Innovation Rate"
+    },
+    {
+      "value": "24/7",
+      "label": "Support"
+    }
+  ],
+  "projects": [
+    {
+      "category": "Healthcare",
+      "description": "Transforming healthcare delivery with AI-powered solutions",
+      "items": [
+        {
+          "icon": "stethoscope",
+          "name": "Smart Hospital Management",
+          "description": "AI-powered hospital operations and patient care system",
+          "image": "/images/projects/hospital-management.webp",
+          "stats": {
+            "value": "40%",
+            "label": "Efficiency Increase"
+          },
+          "tags": ["AI", "Healthcare", "Management"],
+          "color": "blue"
+        },
+        {
+          "icon": "building2",
+          "name": "Clinic Automation",
+          "description": "Automated clinic operations and patient management",
+          "image": "/images/projects/clinic-automation.webp",
+          "stats": {
+            "value": "55%",
+            "label": "Time Saved"
+          },
+          "tags": ["Automation", "Healthcare", "Efficiency"],
+          "color": "indigo"
+        },
+        {
+          "icon": "pill",
+          "name": "Pharmacy System",
+          "description": "Modern pharmacy management and inventory control",
+          "image": "/images/projects/pharmacy-system.webp",
+          "stats": {
+            "value": "45%",
+            "label": "Cost Reduction"
+          },
+          "tags": ["Pharmacy", "Inventory", "Management"],
+          "color": "purple"
+        },
+        {
+          "icon": "tooth",
+          "name": "Dental Practice",
+          "description": "Complete dental practice management solution",
+          "image": "/images/projects/dental-practice.webp",
+          "stats": {
+            "value": "60%",
+            "label": "Patient Satisfaction"
+          },
+          "tags": ["Dental", "Healthcare", "Management"],
+          "color": "pink"
+        }
+      ]
+    },
+    {
+      "category": "Retail & Commerce",
+      "description": "Revolutionizing retail with intelligent solutions",
+      "items": [
+        {
+          "icon": "shopping-bag",
+          "name": "E-commerce Platform",
+          "description": "AI-driven e-commerce platform with smart insights",
+          "image": "/images/projects/ecommerce-platform.webp",
+          "stats": {
+            "value": "50%",
+            "label": "Sales Increase"
+          },
+          "tags": ["E-commerce", "AI", "Analytics"],
+          "color": "rose"
+        },
+        {
+          "icon": "store",
+          "name": "Retail Management",
+          "description": "Smart retail management and POS system",
+          "image": "/images/projects/retail-management.webp",
+          "stats": {
+            "value": "35%",
+            "label": "Operational Efficiency"
+          },
+          "tags": ["Retail", "POS", "Management"],
+          "color": "amber"
+        },
+        {
+          "icon": "warehouse",
+          "name": "Wholesale System",
+          "description": "Efficient wholesale and distribution management",
+          "image": "/images/projects/wholesale-system.webp",
+          "stats": {
+            "value": "45%",
+            "label": "Inventory Optimization"
+          },
+          "tags": ["Wholesale", "Distribution", "Management"],
+          "color": "lime"
+        },
+        {
+          "icon": "truck",
+          "name": "Logistics Platform",
+          "description": "Intelligent logistics and supply chain management",
+          "image": "/images/projects/logistics-platform.webp",
+          "stats": {
+            "value": "40%",
+            "label": "Delivery Efficiency"
+          },
+          "tags": ["Logistics", "Supply Chain", "AI"],
+          "color": "green"
+        }
+      ]
+    },
+    {
+      "category": "Manufacturing & Industry",
+      "description": "Smart solutions for modern manufacturing",
+      "items": [
+        {
+          "icon": "factory",
+          "name": "Smart Factory",
+          "description": "AI-powered manufacturing and production management",
+          "image": "/images/projects/smart-factory.webp",
+          "stats": {
+            "value": "55%",
+            "label": "Production Efficiency"
+          },
+          "tags": ["Manufacturing", "AI", "Automation"],
+          "color": "sky"
+        },
+        {
+          "icon": "warehouse",
+          "name": "Inventory Control",
+          "description": "Advanced inventory and warehouse management",
+          "image": "/images/projects/inventory-control.webp",
+          "stats": {
+            "value": "45%",
+            "label": "Stock Optimization"
+          },
+          "tags": ["Inventory", "Warehouse", "Management"],
+          "color": "cyan"
+        },
+        {
+          "icon": "truck",
+          "name": "Supply Chain",
+          "description": "End-to-end supply chain optimization",
+          "image": "/images/projects/supply-chain.webp",
+          "stats": {
+            "value": "40%",
+            "label": "Cost Reduction"
+          },
+          "tags": ["Supply Chain", "Logistics", "AI"],
+          "color": "blue"
+        },
+        {
+          "icon": "trending-up",
+          "name": "Quality Control",
+          "description": "AI-powered quality assurance and control",
+          "image": "/images/projects/quality-control.webp",
+          "stats": {
+            "value": "60%",
+            "label": "Defect Detection"
+          },
+          "tags": ["Quality", "AI", "Manufacturing"],
+          "color": "indigo"
+        }
+      ]
+    },
+    {
+      "category": "Professional Services",
+      "description": "Enhancing service-based businesses",
+      "items": [
+        {
+          "icon": "building",
+          "name": "Real Estate Platform",
+          "description": "Complete real estate management system",
+          "image": "/images/projects/real-estate.webp",
+          "stats": {
+            "value": "50%",
+            "label": "Transaction Speed"
+          },
+          "tags": ["Real Estate", "Management", "AI"],
+          "color": "violet"
+        },
+        {
+          "icon": "graduation-cap",
+          "name": "Education System",
+          "description": "Smart education and learning management",
+          "image": "/images/projects/education-system.webp",
+          "stats": {
+            "value": "45%",
+            "label": "Learning Outcomes"
+          },
+          "tags": ["Education", "Learning", "AI"],
+          "color": "purple"
+        },
+        {
+          "icon": "hotel",
+          "name": "Hospitality Platform",
+          "description": "Comprehensive hospitality management system",
+          "image": "/images/projects/hospitality-platform.webp",
+          "stats": {
+            "value": "55%",
+            "label": "Guest Satisfaction"
+          },
+          "tags": ["Hospitality", "Management", "AI"],
+          "color": "fuchsia"
+        },
+        {
+          "icon": "users",
+          "name": "Professional Services",
+          "description": "Business services and consulting management",
+          "image": "/images/projects/professional-services.webp",
+          "stats": {
+            "value": "40%",
+            "label": "Service Efficiency"
+          },
+          "tags": ["Services", "Consulting", "Management"],
+          "color": "pink"
+        }
+      ]
+    }
+  ],
+  "features": {
+    "title": "Project Features",
+    "description": "Our projects come with comprehensive features and support",
+    "items": [
+      {
+        "icon": "code",
+        "title": "Custom Development",
+        "description": "Tailored solutions built with cutting-edge technology"
+      },
+      {
+        "icon": "database",
+        "title": "Data Management",
+        "description": "Secure and efficient data handling systems"
+      },
+      {
+        "icon": "network",
+        "title": "Integration",
+        "description": "Seamless integration with existing systems"
+      },
+      {
+        "icon": "monitor",
+        "title": "User Interface",
+        "description": "Intuitive and responsive design"
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Project Benefits",
+    "description": "Experience the advantages of working with our team on your projects.",
+    "items": [
+      {
+        "icon": "rocket",
+        "title": "Innovation",
+        "description": "Cutting-edge solutions that drive business transformation",
+        "stats": "45%",
+        "label": "Innovation Rate"
+      },
+      {
+        "icon": "target",
+        "title": "Precision",
+        "description": "Accurate and reliable project delivery",
+        "stats": "99.9%",
+        "label": "Success Rate"
+      },
+      {
+        "icon": "lightbulb",
+        "title": "Creativity",
+        "description": "Unique solutions tailored to specific needs",
+        "stats": "3x",
+        "label": "Custom Solutions"
+      },
+      {
+        "icon": "users",
+        "title": "Collaboration",
+        "description": "Strong partnerships with clients and teams",
+        "stats": "96%",
+        "label": "Client Satisfaction"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Client Testimonials",
+    "description": "Hear from businesses that have transformed their operations with our solutions",
+    "items": [
+      {
+        "quote": "The project delivery was exceptional. The team's expertise and dedication were evident throughout.",
+        "author": "Dr. Sarah Chen",
+        "role": "Medical Director",
+        "image": "/images/testimonials/sarah.jpg"
+      },
+      {
+        "quote": "Their innovative approach and attention to detail made all the difference in our project's success.",
+        "author": "John Smith",
+        "role": "CEO, Tech Solutions",
+        "image": "/images/testimonials/john.jpg"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Start Your Project?",
+    "description": "Join hundreds of businesses that have transformed their operations with our solutions.",
+    "buttons": [
+      {
+        "text": "Start Your Project",
+        "href": "/contact",
+        "variant": "primary"
+      },
+      {
+        "text": "Schedule a Demo",
+        "href": "/demo",
+        "variant": "secondary"
+      }
+    ]
+  }
+} 

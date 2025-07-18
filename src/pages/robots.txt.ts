@@ -13,8 +13,10 @@ Allow: /
 
 # Sitemaps
 Sitemap: ${new URL('sitemap.xml', site).href}
-${languages.map(lang => `Sitemap: ${new URL(`sitemap_products_${lang}.xml`, site).href}
+${languages.map(lang => `Sitemap: ${new URL(`sitemap_pages_${lang}.xml`, site).href}
+Sitemap: ${new URL(`sitemap_products_${lang}.xml`, site).href}
 Sitemap: ${new URL(`sitemap_collections_${lang}.xml`, site).href}`).join('\n')}
+
 
 # Crawl-delay
 Crawl-delay: 10

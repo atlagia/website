@@ -1,0 +1,332 @@
+{
+  "hero": {
+    "subtitle": "AI-Powered Wholesale Management",
+    "title": "Transform Your Wholesale Business with Intelligent Operations",
+    "description": "Experience the future of wholesale management with our comprehensive, AI-driven platform that optimizes inventory, streamlines operations, and drives growth across your wholesale business.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "thumbnail": "/images/wholesale-hero.webp",
+      "alt": "Wholesale Management Platform Demo"
+    },
+    "stats": [
+      {
+        "value": "45%",
+        "label": "Inventory Optimization"
+      },
+      {
+        "value": "60%",
+        "label": "Order Processing Speed"
+      },
+      {
+        "value": "35%",
+        "label": "Cost Reduction"
+      }
+    ]
+  },
+  "features": {
+    "title": "Enterprise-Grade Features",
+    "subtitle": "Next-Generation Wholesale Management",
+    "description": "Discover our comprehensive suite of advanced tools designed to revolutionize your wholesale operations. Each feature is crafted to deliver maximum efficiency and superior customer experience.",
+    "categories": [
+      {
+        "name": "Wholesale Operations",
+        "description": "Core features that streamline your daily operations"
+      },
+      {
+        "name": "Customer Experience",
+        "description": "Tools that enhance customer engagement and satisfaction"
+      }
+    ],
+    "items": [
+      {
+        "icon": "box",
+        "title": "Smart Inventory Management",
+        "description": "AI-powered inventory optimization and forecasting",
+        "category": "Wholesale Operations",
+        "image": "/images/features/inventory-management.webp",
+        "highlights": [
+          "Real-time inventory tracking",
+          "Demand forecasting",
+          "Stock level optimization",
+          "Warehouse management"
+        ],
+        "stats": {
+          "value": "45%",
+          "label": "Better Stock Control"
+        }
+      },
+      {
+        "icon": "truck",
+        "title": "Order Processing",
+        "description": "Streamlined order management and fulfillment",
+        "category": "Customer Experience",
+        "image": "/images/features/order-processing.webp",
+        "highlights": [
+          "Bulk order processing",
+          "Automated fulfillment",
+          "Shipping integration",
+          "Order tracking"
+        ],
+        "stats": {
+          "value": "60%",
+          "label": "Faster Processing"
+        }
+      },
+      {
+        "icon": "bar-chart",
+        "title": "Business Analytics",
+        "description": "Data-driven insights for wholesale operations",
+        "category": "Wholesale Operations",
+        "image": "/images/features/business-analytics.webp",
+        "highlights": [
+          "Sales analytics",
+          "Customer insights",
+          "Market trends",
+          "Performance metrics"
+        ],
+        "stats": {
+          "value": "40%",
+          "label": "Better Decision Making"
+        }
+      },
+      {
+        "icon": "users",
+        "title": "Customer Portal",
+        "description": "Self-service portal for wholesale customers",
+        "category": "Customer Experience",
+        "image": "/images/features/customer-portal.webp",
+        "highlights": [
+          "Order history",
+          "Product catalog",
+          "Pricing management",
+          "Account management"
+        ],
+        "stats": {
+          "value": "50%",
+          "label": "Customer Satisfaction"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "See It In Action",
+    "description": "Watch how leading wholesale businesses transform their operations",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "thumbnail": "/images/showcase-thumb.webp"
+    },
+    "testimonials": [
+      {
+        "author": "John Smith",
+        "role": "CEO, Global Wholesale Solutions",
+        "image": "/images/testimonials/john.webp",
+        "quote": "This platform has revolutionized our wholesale operations. We've seen a 45% improvement in inventory management and 60% faster order processing."
+      },
+      {
+        "author": "Maria Garcia",
+        "role": "Operations Director, Wholesale Plus",
+        "image": "/images/testimonials/maria.webp",
+        "quote": "The AI features have dramatically improved our forecasting accuracy and customer satisfaction."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Transformative Benefits",
+    "subtitle": "Proven Results & Impact",
+    "description": "Experience measurable improvements across all aspects of your wholesale business with our comprehensive solution. Our platform delivers concrete results that directly impact your bottom line.",
+    "items": [
+      {
+        "title": "Inventory Optimization",
+        "description": "Optimize your inventory levels with AI-powered forecasting.",
+        "icon": "box",
+        "color": "blue",
+        "stats": {
+          "value": "45%",
+          "label": "Better Stock Control"
+        },
+        "highlights": [
+          "Demand forecasting",
+          "Stock optimization",
+          "Warehouse management",
+          "Inventory tracking"
+        ]
+      },
+      {
+        "title": "Operational Efficiency",
+        "description": "Streamline your wholesale operations with intelligent automation.",
+        "icon": "zap",
+        "color": "purple",
+        "stats": {
+          "value": "60%",
+          "label": "Faster Processing"
+        },
+        "highlights": [
+          "Order processing",
+          "Fulfillment automation",
+          "Shipping integration",
+          "Document management"
+        ]
+      },
+      {
+        "title": "Cost Management",
+        "description": "Optimize costs and maximize profitability.",
+        "icon": "trending-up",
+        "color": "green",
+        "stats": {
+          "value": "35%",
+          "label": "Cost Reduction"
+        },
+        "highlights": [
+          "Inventory optimization",
+          "Warehouse efficiency",
+          "Shipping costs",
+          "Operational costs"
+        ]
+      },
+      {
+        "title": "Customer Experience",
+        "description": "Deliver exceptional service to wholesale customers.",
+        "icon": "heart",
+        "color": "yellow",
+        "stats": {
+          "value": "50%",
+          "label": "Customer Satisfaction"
+        },
+        "highlights": [
+          "Customer portal",
+          "Order tracking",
+          "Account management",
+          "Support services"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Flexible Pricing Plans",
+    "subtitle": "Transparent Pricing",
+    "description": "Choose the perfect plan for your wholesale business. Save up to 20% with annual billing.",
+    "billingPeriods": ["Monthly", "Yearly"],
+    "plans": [
+      {
+        "name": "Starter",
+        "highlight": "Perfect for small wholesale businesses",
+        "monthlyPrice": "$199",
+        "yearlyPrice": "$1,990",
+        "yearlyDiscount": "Save $398/year",
+        "description": "Essential features to start your digital transformation",
+        "features": [
+          {
+            "text": "Basic inventory management",
+            "included": true
+          },
+          {
+            "text": "Order processing",
+            "included": true
+          },
+          {
+            "text": "Basic reporting",
+            "included": true
+          },
+          {
+            "text": "Email support",
+            "included": true
+          },
+          {
+            "text": "Mobile app access",
+            "included": true
+          }
+        ],
+        "cta": "Get Started",
+        "popular": false
+      },
+      {
+        "name": "Professional",
+        "highlight": "Most popular for growing wholesale businesses",
+        "monthlyPrice": "$399",
+        "yearlyPrice": "$3,990",
+        "yearlyDiscount": "Save $798/year",
+        "description": "Advanced features for established wholesale businesses",
+        "features": [
+          {
+            "text": "Everything in Starter, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "AI-powered features",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "Advanced analytics",
+            "included": true
+          },
+          {
+            "text": "Customer portal",
+            "included": true
+          },
+          {
+            "text": "Priority support",
+            "included": true
+          },
+          {
+            "text": "API access",
+            "included": true
+          }
+        ],
+        "cta": "Get Started",
+        "popular": true
+      },
+      {
+        "name": "Enterprise",
+        "highlight": "For large wholesale operations",
+        "monthlyPrice": "Custom",
+        "yearlyPrice": "Custom",
+        "yearlyDiscount": "Contact us for special pricing",
+        "description": "Tailored solutions for enterprise needs",
+        "features": [
+          {
+            "text": "Everything in Professional, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Multi-warehouse support",
+            "included": true
+          },
+          {
+            "text": "Dedicated account manager",
+            "included": true
+          },
+          {
+            "text": "Advanced security features",
+            "included": true
+          },
+          {
+            "text": "Custom development options",
+            "included": true
+          },
+          {
+            "text": "SLA guarantees",
+            "included": true
+          }
+        ],
+        "cta": "Contact Sales",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Transform Your Wholesale Business?",
+    "description": "Join thousands of successful wholesale businesses using our platform",
+    "primaryButton": {
+      "text": "Schedule a Demo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Watch Demo Video",
+      "link": "/demo-video"
+    },
+    "background": "/images/cta-background.webp"
+  }
+} 

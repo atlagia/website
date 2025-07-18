@@ -1,0 +1,335 @@
+{
+  "hero": {
+    "subtitle": "Pharmacy Management System",
+    "title": "Modernize Your Pharmacy Operations",
+    "description": "A comprehensive pharmacy management solution that streamlines inventory, prescriptions, and patient services while ensuring regulatory compliance.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Pharmacy Management Solution Demo"
+    },
+    "stats": [
+      {
+        "value": "99.9%",
+        "label": "Prescription Accuracy"
+      },
+      {
+        "value": "45%",
+        "label": "Time Saved"
+      },
+      {
+        "value": "30%",
+        "label": "Inventory Cost Reduction"
+      }
+    ]
+  },
+  "features": {
+    "subtitle": "Smart Features",
+    "title": "Complete Pharmacy Management",
+    "description": "Powerful tools designed specifically for modern pharmacies",
+    "categories": [
+      {
+        "name": "Prescription Management",
+        "description": "Streamline prescription processing and verification"
+      },
+      {
+        "name": "Inventory Control",
+        "description": "Optimize stock levels and reduce waste"
+      }
+    ],
+    "items": [
+      {
+        "icon": "pill",
+        "category": "Prescription Management",
+        "title": "Smart Prescription Processing",
+        "description": "Automated prescription verification and processing system",
+        "image": "/images/solutions/pharmacy/prescription.jpg",
+        "highlights": [
+          "Electronic prescription handling",
+          "Drug interaction checking",
+          "Automated refill system",
+          "Insurance verification"
+        ],
+        "stats": {
+          "value": "99.9%",
+          "label": "Accuracy rate"
+        }
+      },
+      {
+        "icon": "box",
+        "category": "Inventory Management",
+        "title": "Intelligent Inventory",
+        "description": "AI-powered inventory management and forecasting",
+        "image": "/images/solutions/pharmacy/inventory.jpg",
+        "highlights": [
+          "Automated reordering",
+          "Expiry tracking",
+          "Stock optimization",
+          "Supplier management"
+        ],
+        "stats": {
+          "value": "30%",
+          "label": "Stock optimization"
+        }
+      },
+      {
+        "icon": "users",
+        "category": "Patient Services",
+        "title": "Patient Care Portal",
+        "description": "Digital platform for patient services and communication",
+        "image": "/images/solutions/pharmacy/patient-care.jpg",
+        "highlights": [
+          "Online refill requests",
+          "Medication reminders",
+          "Health records access",
+          "Secure messaging"
+        ],
+        "stats": {
+          "value": "92%",
+          "label": "Patient satisfaction"
+        }
+      },
+      {
+        "icon": "chart-bar",
+        "category": "Analytics",
+        "title": "Business Intelligence",
+        "description": "Comprehensive analytics for better business decisions",
+        "image": "/images/solutions/pharmacy/analytics.jpg",
+        "highlights": [
+          "Sales analytics",
+          "Inventory reports",
+          "Prescription trends",
+          "Financial insights"
+        ],
+        "stats": {
+          "value": "25%",
+          "label": "Revenue increase"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Pharmacy Excellence in Action",
+    "description": "See how leading pharmacies are transforming their operations",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Pharmacy Success Story"
+    },
+    "testimonials": [
+      {
+        "author": "John Smith",
+        "role": "Pharmacy Owner",
+        "image": "/images/testimonials/pharmacist1.jpg",
+        "quote": "This system has revolutionized how we manage prescriptions and inventory. Our efficiency has improved dramatically."
+      },
+      {
+        "author": "Lisa Chen",
+        "role": "Head Pharmacist",
+        "image": "/images/testimonials/pharmacist2.jpg",
+        "quote": "The automated checks and balances have greatly improved our accuracy and patient safety."
+      }
+    ]
+  },
+  "benefits": {
+    "subtitle": "Key Benefits",
+    "title": "Transform Your Pharmacy",
+    "description": "Experience the advantages of a fully integrated pharmacy management system",
+    "items": [
+      {
+        "icon": "trending-up",
+        "title": "Operational Efficiency",
+        "description": "Streamline workflows and reduce manual tasks",
+        "color": "blue",
+        "stats": {
+          "value": "45%",
+          "label": "Efficiency Increase"
+        },
+        "highlights": [
+          "Automated workflows",
+          "Faster prescription processing",
+          "Streamlined operations",
+          "Reduced errors"
+        ]
+      },
+      {
+        "icon": "shield-check",
+        "title": "Enhanced Safety",
+        "description": "Improve patient safety and reduce medication errors",
+        "color": "red",
+        "stats": {
+          "value": "99.9%",
+          "label": "Accuracy Rate"
+        },
+        "highlights": [
+          "Drug interaction checks",
+          "Allergy verification",
+          "Dosage validation",
+          "Contraindication alerts"
+        ]
+      },
+      {
+        "icon": "chart-up",
+        "title": "Business Growth",
+        "description": "Increase revenue and improve profitability",
+        "color": "green",
+        "stats": {
+          "value": "30%",
+          "label": "Revenue Growth"
+        },
+        "highlights": [
+          "Inventory optimization",
+          "Enhanced patient services",
+          "Improved cash flow",
+          "Better margins"
+        ]
+      },
+      {
+        "icon": "users",
+        "title": "Patient Satisfaction",
+        "description": "Deliver better patient experiences",
+        "color": "purple",
+        "stats": {
+          "value": "92%",
+          "label": "Patient Satisfaction"
+        },
+        "highlights": [
+          "Faster service",
+          "Better communication",
+          "Online access",
+          "Medication guidance"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "subtitle": "Transparent Pricing",
+    "title": "Flexible Pricing Plans",
+    "description": "Choose the perfect plan for your pharmacy. Save up to 20% with annual billing.",
+    "billingPeriods": ["Monthly", "Yearly"],
+    "plans": [
+      {
+        "name": "Essential",
+        "highlight": "Perfect for independent pharmacies",
+        "monthlyPrice": "$249",
+        "yearlyPrice": "$2,490",
+        "yearlyDiscount": "Save $498/year",
+        "description": "Essential features for small pharmacies",
+        "features": [
+          {
+            "text": "Basic prescription management",
+            "included": true
+          },
+          {
+            "text": "Inventory tracking",
+            "included": true
+          },
+          {
+            "text": "Patient profiles",
+            "included": true
+          },
+          {
+            "text": "Email support",
+            "included": true
+          },
+          {
+            "text": "Basic reporting",
+            "included": true
+          },
+          {
+            "text": "Mobile access",
+            "included": true
+          }
+        ],
+        "cta": "Get Started",
+        "popular": false
+      },
+      {
+        "name": "Professional",
+        "highlight": "Most popular for growing pharmacies",
+        "monthlyPrice": "$499",
+        "yearlyPrice": "$4,990",
+        "yearlyDiscount": "Save $998/year",
+        "description": "Advanced features for established pharmacies",
+        "features": [
+          {
+            "text": "Everything in Essential, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Advanced prescription workflow",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "Automated inventory management",
+            "included": true
+          },
+          {
+            "text": "Advanced analytics",
+            "included": true
+          },
+          {
+            "text": "Priority support",
+            "included": true
+          },
+          {
+            "text": "Multi-location support",
+            "included": true
+          }
+        ],
+        "cta": "Get Started",
+        "popular": true
+      },
+      {
+        "name": "Enterprise",
+        "highlight": "For pharmacy chains",
+        "monthlyPrice": "Custom",
+        "yearlyPrice": "Custom",
+        "yearlyDiscount": "Contact us for special pricing",
+        "description": "Tailored solutions for pharmacy chains",
+        "features": [
+          {
+            "text": "Everything in Professional, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Custom integration support",
+            "included": true
+          },
+          {
+            "text": "Dedicated account manager",
+            "included": true
+          },
+          {
+            "text": "Advanced security features",
+            "included": true
+          },
+          {
+            "text": "Custom development options",
+            "included": true
+          },
+          {
+            "text": "SLA guarantees",
+            "included": true
+          }
+        ],
+        "cta": "Contact Sales",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Modernize Your Pharmacy?",
+    "description": "Join thousands of pharmacies that have transformed their operations with our solution.",
+    "background": "/images/solutions/pharmacy/cta-background.jpg",
+    "primaryButton": {
+      "text": "Schedule a Demo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Watch Demo",
+      "link": "#showcase"
+    }
+  }
+} 

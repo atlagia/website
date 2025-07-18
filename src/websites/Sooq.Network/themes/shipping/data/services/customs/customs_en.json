@@ -1,0 +1,42 @@
+{
+  "hero": {
+    "title": "Customs Clearance",
+    "subtitle": "Hassle-Free International Shipping",
+    "description": "Navigate complex customs regulations with ease. Our customs clearance service ensures your international shipments pass through borders smoothly, with all documentation and compliance handled by experts.",
+    "heroIcon": "Flag",
+    "heroAnimation": "pulse",
+    "image": ""
+  },
+  "overview": {
+    "title": "Why Choose Our Customs Clearance?",
+    "description": "Our customs experts manage the entire clearance process, from documentation preparation to duty payment and regulatory compliance, ensuring your shipments move across borders without delays.",
+    "features": [
+      {
+        "icon": "file-text",
+        "title": "Documentation Preparation",
+        "description": "Expert preparation of all required customs documents for any destination country."
+      },
+      {
+        "icon": "calculator",
+        "title": "Duty & Tax Calculation",
+        "description": "Accurate calculation and management of all import duties, taxes, and fees."
+      },
+      {
+        "icon": "check-circle",
+        "title": "Compliance Management",
+        "description": "Ensuring all shipments meet regulatory requirements and trade restrictions."
+      },
+      {
+        "icon": "clock",
+        "title": "Expedited Clearance",
+        "description": "Fast-track processing to minimize delays at customs checkpoints."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ship Internationally with Confidence",
+    "description": "Let our customs experts handle the complexity of international shipping regulations.",
+    "buttonText": "Get Started",
+    "buttonLink": "/quote"
+  }
+} 

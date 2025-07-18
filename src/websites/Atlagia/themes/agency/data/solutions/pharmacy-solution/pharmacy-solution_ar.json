@@ -1,0 +1,335 @@
+{
+  "hero": {
+    "subtitle": "نظام إدارة الصيدلية",
+    "title": "حدّث عمليات صيدليتك",
+    "description": "حل شامل لإدارة الصيدلية يبسط المخزون والوصفات الطبية وخدمات المرضى مع ضمان الامتثال التنظيمي.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "عرض حل إدارة الصيدلية"
+    },
+    "stats": [
+      {
+        "value": "99.9%",
+        "label": "دقة الوصفات الطبية"
+      },
+      {
+        "value": "45%",
+        "label": "وقت محفوظ"
+      },
+      {
+        "value": "30%",
+        "label": "تقليل تكلفة المخزون"
+      }
+    ]
+  },
+  "features": {
+    "subtitle": "ميزات ذكية",
+    "title": "إدارة صيدلية متكاملة",
+    "description": "أدوات قوية مصممة خصيصاً للصيدليات الحديثة",
+    "categories": [
+      {
+        "name": "إدارة الوصفات الطبية",
+        "description": "تبسيط معالجة والتحقق من الوصفات الطبية"
+      },
+      {
+        "name": "التحكم في المخزون",
+        "description": "تحسين مستويات المخزون وتقليل الهدر"
+      }
+    ],
+    "items": [
+      {
+        "icon": "pill",
+        "category": "إدارة الوصفات الطبية",
+        "title": "معالجة ذكية للوصفات",
+        "description": "نظام آلي للتحقق من الوصفات الطبية ومعالجتها",
+        "image": "/images/solutions/pharmacy/prescription.jpg",
+        "highlights": [
+          "معالجة الوصفات الإلكترونية",
+          "فحص التفاعلات الدوائية",
+          "نظام تجديد تلقائي",
+          "التحقق من التأمين"
+        ],
+        "stats": {
+          "value": "99.9%",
+          "label": "معدل الدقة"
+        }
+      },
+      {
+        "icon": "box",
+        "category": "إدارة المخزون",
+        "title": "مخزون ذكي",
+        "description": "إدارة وتنبؤ بالمخزون مدعوم بالذكاء الاصطناعي",
+        "image": "/images/solutions/pharmacy/inventory.jpg",
+        "highlights": [
+          "إعادة الطلب التلقائية",
+          "تتبع تاريخ الصلاحية",
+          "تحسين المخزون",
+          "إدارة الموردين"
+        ],
+        "stats": {
+          "value": "30%",
+          "label": "تحسين المخزون"
+        }
+      },
+      {
+        "icon": "users",
+        "category": "خدمات المرضى",
+        "title": "بوابة رعاية المرضى",
+        "description": "منصة رقمية لخدمات المرضى والتواصل",
+        "image": "/images/solutions/pharmacy/patient-care.jpg",
+        "highlights": [
+          "طلبات تجديد إلكترونية",
+          "تذكيرات الأدوية",
+          "الوصول إلى السجلات الصحية",
+          "رسائل آمنة"
+        ],
+        "stats": {
+          "value": "92%",
+          "label": "رضا المرضى"
+        }
+      },
+      {
+        "icon": "chart-bar",
+        "category": "التحليلات",
+        "title": "ذكاء الأعمال",
+        "description": "تحليلات شاملة لاتخاذ قرارات تجارية أفضل",
+        "image": "/images/solutions/pharmacy/analytics.jpg",
+        "highlights": [
+          "تحليلات المبيعات",
+          "تقارير المخزون",
+          "اتجاهات الوصفات",
+          "رؤى مالية"
+        ],
+        "stats": {
+          "value": "25%",
+          "label": "زيادة الإيرادات"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "تميز الصيدلية في العمل",
+    "description": "شاهد كيف تقوم الصيدليات الرائدة بتحويل عملياتها",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "قصة نجاح الصيدلية"
+    },
+    "testimonials": [
+      {
+        "author": "جون سميث",
+        "role": "مالك الصيدلية",
+        "image": "/images/testimonials/pharmacist1.jpg",
+        "quote": "أحدث هذا النظام ثورة في طريقة إدارة الوصفات الطبية والمخزون. تحسنت كفاءتنا بشكل كبير."
+      },
+      {
+        "author": "ليزا تشن",
+        "role": "رئيسة الصيادلة",
+        "image": "/images/testimonials/pharmacist2.jpg",
+        "quote": "حسّنت عمليات الفحص والتحقق الآلية دقتنا وسلامة المرضى بشكل كبير."
+      }
+    ]
+  },
+  "benefits": {
+    "subtitle": "المزايا الرئيسية",
+    "title": "حوّل صيدليتك",
+    "description": "اختبر مزايا نظام إدارة صيدلية متكامل بالكامل",
+    "items": [
+      {
+        "icon": "trending-up",
+        "title": "كفاءة تشغيلية",
+        "description": "تبسيط سير العمل وتقليل المهام اليدوية",
+        "color": "blue",
+        "stats": {
+          "value": "45%",
+          "label": "زيادة الكفاءة"
+        },
+        "highlights": [
+          "عمليات آلية",
+          "معالجة أسرع للوصفات",
+          "عمليات مبسطة",
+          "تقليل الأخطاء"
+        ]
+      },
+      {
+        "icon": "shield-check",
+        "title": "سلامة معززة",
+        "description": "تحسين سلامة المرضى وتقليل أخطاء الأدوية",
+        "color": "red",
+        "stats": {
+          "value": "99.9%",
+          "label": "معدل الدقة"
+        },
+        "highlights": [
+          "فحص التفاعلات الدوائية",
+          "التحقق من الحساسية",
+          "التحقق من الجرعات",
+          "تنبيهات موانع الاستخدام"
+        ]
+      },
+      {
+        "icon": "chart-up",
+        "title": "نمو الأعمال",
+        "description": "زيادة الإيرادات وتحسين الربحية",
+        "color": "green",
+        "stats": {
+          "value": "30%",
+          "label": "نمو الإيرادات"
+        },
+        "highlights": [
+          "تحسين المخزون",
+          "خدمات مرضى معززة",
+          "تحسين التدفق النقدي",
+          "هوامش أفضل"
+        ]
+      },
+      {
+        "icon": "users",
+        "title": "رضا المرضى",
+        "description": "تقديم تجارب أفضل للمرضى",
+        "color": "purple",
+        "stats": {
+          "value": "92%",
+          "label": "رضا المرضى"
+        },
+        "highlights": [
+          "خدمة أسرع",
+          "تواصل أفضل",
+          "وصول عبر الإنترنت",
+          "توجيه الأدوية"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "subtitle": "أسعار شفافة",
+    "title": "خطط أسعار مرنة",
+    "description": "اختر الخطة المثالية لصيدليتك. وفر حتى 20% مع الفواتير السنوية.",
+    "billingPeriods": ["شهري", "سنوي"],
+    "plans": [
+      {
+        "name": "أساسي",
+        "highlight": "مثالي للصيدليات المستقلة",
+        "monthlyPrice": "$249",
+        "yearlyPrice": "$2,490",
+        "yearlyDiscount": "وفر $498/سنة",
+        "description": "ميزات أساسية للصيدليات الصغيرة",
+        "features": [
+          {
+            "text": "إدارة أساسية للوصفات",
+            "included": true
+          },
+          {
+            "text": "تتبع المخزون",
+            "included": true
+          },
+          {
+            "text": "ملفات المرضى",
+            "included": true
+          },
+          {
+            "text": "دعم البريد الإلكتروني",
+            "included": true
+          },
+          {
+            "text": "تقارير أساسية",
+            "included": true
+          },
+          {
+            "text": "وصول عبر الجوال",
+            "included": true
+          }
+        ],
+        "cta": "ابدأ الآن",
+        "popular": false
+      },
+      {
+        "name": "احترافي",
+        "highlight": "الأكثر شعبية للصيدليات النامية",
+        "monthlyPrice": "$499",
+        "yearlyPrice": "$4,990",
+        "yearlyDiscount": "وفر $998/سنة",
+        "description": "ميزات متقدمة للصيدليات الراسخة",
+        "features": [
+          {
+            "text": "كل ما هو متضمن في الأساسي، بالإضافة إلى:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "سير عمل متقدم للوصفات",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "إدارة مخزون آلية",
+            "included": true
+          },
+          {
+            "text": "تحليلات متقدمة",
+            "included": true
+          },
+          {
+            "text": "دعم ذو أولوية",
+            "included": true
+          },
+          {
+            "text": "دعم متعدد المواقع",
+            "included": true
+          }
+        ],
+        "cta": "ابدأ الآن",
+        "popular": true
+      },
+      {
+        "name": "مؤسسة",
+        "highlight": "لسلاسل الصيدليات",
+        "monthlyPrice": "مخصص",
+        "yearlyPrice": "مخصص",
+        "yearlyDiscount": "اتصل بنا للأسعار الخاصة",
+        "description": "حلول مخصصة لسلاسل الصيدليات",
+        "features": [
+          {
+            "text": "كل ما هو متضمن في الاحترافي، بالإضافة إلى:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "دعم تكامل مخصص",
+            "included": true
+          },
+          {
+            "text": "مدير حساب مخصص",
+            "included": true
+          },
+          {
+            "text": "ميزات أمان متقدمة",
+            "included": true
+          },
+          {
+            "text": "خيارات تطوير مخصصة",
+            "included": true
+          },
+          {
+            "text": "ضمانات مستوى الخدمة",
+            "included": true
+          }
+        ],
+        "cta": "اتصل بالمبيعات",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "هل أنت جاهز لتحديث صيدليتك؟",
+    "description": "انضم إلى آلاف الصيدليات التي حولت عملياتها مع حلنا.",
+    "background": "/images/solutions/pharmacy/cta-background.jpg",
+    "primaryButton": {
+      "text": "جدولة عرض توضيحي",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "شاهد العرض التوضيحي",
+      "link": "#showcase"
+    }
+  }
+} 

@@ -1,0 +1,192 @@
+{
+  "hero": {
+    "subtitle": "AI CONTENT GENERATOR",
+    "title": "Create Engaging E-commerce Content in Seconds",
+    "description": "Transform your product descriptions, marketing copy, and SEO content with our advanced AI content generation tools.",
+    "image": "https://cdn.atlagia.com/kepart_vector_laptop_Ai_Platform_e-commerce_AI_Revolution_light_e5f8c01c-64de-42b5-8936-c09ade10d40b.png"
+  },
+  "benefits": {
+    "title": "Why Choose Our AI Content Generator",
+    "items": [
+      {
+        "icon": "Zap",
+        "title": "Lightning Fast Generation",
+        "description": "Generate high-quality content in seconds, not hours. Save valuable time while maintaining quality.",
+        "color": "yellow"
+      },
+      {
+        "icon": "Brain",
+        "title": "AI-Powered Intelligence",
+        "description": "Leverage advanced machine learning algorithms trained on successful e-commerce content.",
+        "color": "blue"
+      },
+      {
+        "icon": "Target",
+        "title": "SEO Optimized",
+        "description": "Every piece of content is automatically optimized for search engines and conversion.",
+        "color": "green"
+      },
+      {
+        "icon": "Languages",
+        "title": "Multi-Language Support",
+        "description": "Generate content in multiple languages to reach global markets effectively.",
+        "color": "purple"
+      }
+    ]
+  },
+  "features": {
+    "title": "Powerful Features for E-commerce Success",
+    "description": "Our AI content generator is specifically designed for e-commerce businesses, with features that help you sell more effectively.",
+    "items": [
+      {
+        "title": "Product Descriptions",
+        "description": "Generate compelling product descriptions that highlight key features and benefits",
+        "image": "https://cdn.atlagia.com/kepart_Advanced_SEO_Enhancement_Tools_vector_icon_70ca261b-4383-4eef-9c46-f8c588d20e32.webp",
+        "features": [
+          "Automatic feature extraction",
+          "Benefit-focused content",
+          "Customizable tone and style",
+          "SEO-optimized descriptions"
+        ]
+      },
+      {
+        "title": "Marketing Copy",
+        "description": "Create persuasive marketing content for your campaigns and promotions",
+        "image": "https://cdn.atlagia.com/kepart_Advanced_SEO_Enhancement_Tools_vector_icon_3b40ab52-b2d6-4780-8367-9827e7f8f6ca.webp",
+        "features": [
+          "Email campaign content",
+          "Social media posts",
+          "Ad copy generation",
+          "Promotional content"
+        ]
+      },
+      {
+        "title": "SEO Content",
+        "description": "Generate search engine optimized content that ranks and converts",
+        "image": "https://cdn.atlagia.com/kepart_Advanced_SEO_Enhancement_Tools_vector_4475473e-5640-4e03-8170-ba8502ff660e.webp",
+        "features": [
+          "Keyword optimization",
+          "Meta descriptions",
+          "Category descriptions",
+          "Blog post generation"
+        ]
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "description": "Get started with our AI content generator in just a few simple steps",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Input Your Product",
+        "description": "Enter your product details or upload your existing content"
+      },
+      {
+        "number": "02",
+        "title": "Select Parameters",
+        "description": "Choose your tone, style, and target audience preferences"
+      },
+      {
+        "number": "03",
+        "title": "Generate Content",
+        "description": "Let our AI create optimized content in seconds"
+      },
+      {
+        "number": "04",
+        "title": "Review & Edit",
+        "description": "Fine-tune the generated content to match your needs"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Simple, Transparent Pricing",
+    "description": "Choose the plan that best fits your content generation needs",
+    "plans": [
+      {
+        "name": "Starter",
+        "price": "29",
+        "period": "/month",
+        "description": "Perfect for small stores",
+        "features": [
+          "10,000 words per month",
+          "Basic templates",
+          "Standard support",
+          "1 user"
+        ],
+        "cta": {
+          "text": "Start Free Trial",
+          "link": "/trial"
+        }
+      },
+      {
+        "name": "Professional",
+        "price": "79",
+        "period": "/month",
+        "description": "For growing businesses",
+        "features": [
+          "50,000 words per month",
+          "Advanced templates",
+          "Priority support",
+          "3 users"
+        ],
+        "cta": {
+          "text": "Start Free Trial",
+          "link": "/trial"
+        },
+        "popular": true
+      },
+      {
+        "name": "Enterprise",
+        "price": "199",
+        "period": "/month",
+        "description": "For large operations",
+        "features": [
+          "Unlimited words",
+          "Custom templates",
+          "24/7 support",
+          "Unlimited users"
+        ],
+        "cta": {
+          "text": "Contact Sales",
+          "link": "/contact"
+        }
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "What Our Customers Say",
+    "items": [
+      {
+        "content": "The AI content generator has revolutionized how we create product descriptions. What used to take hours now takes minutes, and the quality is consistently excellent.",
+        "author": "Sarah Johnson",
+        "position": "E-commerce Manager",
+        "company": "StyleBoutique",
+        "image": "/images/testimonials/sarah.jpg"
+      },
+      {
+        "content": "We've seen a 40% increase in our product page conversion rates since using the AI content generator. The SEO optimization is particularly impressive.",
+        "author": "Michael Chen",
+        "position": "Digital Marketing Director",
+        "company": "TechGear",
+        "image": "/images/testimonials/michael.jpg"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Transform Your E-commerce Content?",
+    "description": "Join thousands of successful e-commerce businesses using our AI content generator.",
+    "buttons": [
+      {
+        "text": "Start Free Trial",
+        "link": "/trial",
+        "primary": true
+      },
+      {
+        "text": "View Demo",
+        "link": "/demo",
+        "primary": false
+      }
+    ]
+  }
+} 

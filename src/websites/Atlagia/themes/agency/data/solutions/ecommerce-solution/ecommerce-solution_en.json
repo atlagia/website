@@ -1,0 +1,336 @@
+{
+  "hero": {
+    "subtitle": "AI-Powered E-commerce Platform",
+    "title": "Transform Your Online Business with Intelligent Commerce",
+    "description": "Experience the future of e-commerce with our comprehensive, AI-driven platform that optimizes operations, enhances customer experience, and drives growth.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "thumbnail": "/images/ecommerce-hero.webp",
+      "alt": "E-commerce Platform Demo"
+    },
+    "stats": [
+      {
+        "value": "45%",
+        "label": "Conversion Rate Increase"
+      },
+      {
+        "value": "60%",
+        "label": "Customer Satisfaction"
+      },
+      {
+        "value": "40%",
+        "label": "Operational Cost Reduction"
+      }
+    ]
+  },
+  "features": {
+    "title": "Enterprise-Grade Features",
+    "subtitle": "Next-Generation E-commerce Management",
+    "description": "Discover our comprehensive suite of advanced tools designed to revolutionize your e-commerce operations. Each feature is crafted to deliver maximum efficiency and superior customer experience.",
+    "categories": [
+      {
+        "name": "Store Management",
+        "description": "Core features that streamline your daily operations"
+      },
+      {
+        "name": "Customer Experience",
+        "description": "Tools that enhance customer engagement and satisfaction"
+      }
+    ],
+    "items": [
+      {
+        "icon": "shopping-cart",
+        "title": "Smart Inventory Management",
+        "description": "AI-powered inventory optimization and demand forecasting",
+        "category": "Store Management",
+        "image": "/images/features/inventory-management.webp",
+        "highlights": [
+          "Real-time inventory tracking",
+          "Automated reordering",
+          "Demand forecasting",
+          "Multi-warehouse management"
+        ],
+        "stats": {
+          "value": "35%",
+          "label": "Stock Optimization"
+        }
+      },
+      {
+        "icon": "users",
+        "title": "Customer Intelligence",
+        "description": "Advanced customer analytics and personalization",
+        "category": "Customer Experience",
+        "image": "/images/features/customer-intelligence.webp",
+        "highlights": [
+          "Customer segmentation",
+          "Behavioral analytics",
+          "Personalized recommendations",
+          "Customer journey mapping"
+        ],
+        "stats": {
+          "value": "45%",
+          "label": "Higher Engagement"
+        }
+      },
+      {
+        "icon": "credit-card",
+        "title": "Smart Payment Solutions",
+        "description": "Seamless payment processing and fraud prevention",
+        "category": "Store Management",
+        "image": "/images/features/payment-solutions.webp",
+        "highlights": [
+          "Multi-payment gateway support",
+          "AI fraud detection",
+          "Subscription management",
+          "Global payment processing"
+        ],
+        "stats": {
+          "value": "99.9%",
+          "label": "Transaction Success"
+        }
+      },
+      {
+        "icon": "globe",
+        "title": "Global Commerce",
+        "description": "Multi-currency and multi-language support",
+        "category": "Customer Experience",
+        "image": "/images/features/global-commerce.webp",
+        "highlights": [
+          "Multi-language support",
+          "Currency conversion",
+          "International shipping",
+          "Tax compliance"
+        ],
+        "stats": {
+          "value": "150+",
+          "label": "Countries Supported"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "See It In Action",
+    "description": "Watch how leading e-commerce businesses transform their operations",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "thumbnail": "/images/showcase-thumb.webp"
+    },
+    "testimonials": [
+      {
+        "author": "Sarah Chen",
+        "role": "CEO, Fashion Forward",
+        "image": "/images/testimonials/sarah.webp",
+        "quote": "This platform has revolutionized our online business. We've seen a 45% increase in conversion rates."
+      },
+      {
+        "author": "Michael Rodriguez",
+        "role": "Founder, TechGear",
+        "image": "/images/testimonials/michael.webp",
+        "quote": "The AI features have dramatically improved our inventory management and customer satisfaction."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Transformative Benefits",
+    "subtitle": "Proven Results & Impact",
+    "description": "Experience measurable improvements across all aspects of your e-commerce business with our comprehensive solution. Our platform delivers concrete results that directly impact your bottom line.",
+    "items": [
+      {
+        "title": "Revenue Growth",
+        "description": "Maximize your online sales with AI-powered optimization and personalization.",
+        "icon": "trending-up",
+        "color": "green",
+        "stats": {
+          "value": "45%",
+          "label": "Conversion Rate Increase"
+        },
+        "highlights": [
+          "Smart pricing optimization",
+          "Personalized recommendations",
+          "Cart abandonment recovery",
+          "Cross-selling automation"
+        ]
+      },
+      {
+        "title": "Operational Efficiency",
+        "description": "Streamline your e-commerce operations with intelligent automation.",
+        "icon": "zap",
+        "color": "blue",
+        "stats": {
+          "value": "40%",
+          "label": "Cost Reduction"
+        },
+        "highlights": [
+          "Automated inventory management",
+          "Smart order fulfillment",
+          "Efficient logistics",
+          "Reduced manual work"
+        ]
+      },
+      {
+        "title": "Customer Experience",
+        "description": "Deliver exceptional shopping experiences that drive loyalty.",
+        "icon": "heart",
+        "color": "purple",
+        "stats": {
+          "value": "60%",
+          "label": "Customer Satisfaction"
+        },
+        "highlights": [
+          "Personalized shopping",
+          "Seamless checkout",
+          "24/7 support",
+          "Mobile optimization"
+        ]
+      },
+      {
+        "title": "Market Intelligence",
+        "description": "Make data-driven decisions with advanced analytics.",
+        "icon": "chart-bar",
+        "color": "yellow",
+        "stats": {
+          "value": "85%",
+          "label": "Better Decision Making"
+        },
+        "highlights": [
+          "Market trend analysis",
+          "Competitor tracking",
+          "Customer insights",
+          "Performance metrics"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Flexible Pricing Plans",
+    "subtitle": "Transparent Pricing",
+    "description": "Choose the perfect plan for your business. Save up to 20% with annual billing.",
+    "billingPeriods": ["Monthly", "Yearly"],
+    "plans": [
+      {
+        "name": "Starter",
+        "highlight": "Perfect for new online stores",
+        "monthlyPrice": "$299",
+        "yearlyPrice": "$2,990",
+        "yearlyDiscount": "Save $598/year",
+        "description": "Essential features to start your e-commerce journey",
+        "features": [
+          {
+            "text": "Basic store management",
+            "included": true
+          },
+          {
+            "text": "Product management",
+            "included": true
+          },
+          {
+            "text": "Order processing",
+            "included": true
+          },
+          {
+            "text": "Basic analytics",
+            "included": true
+          },
+          {
+            "text": "Email support",
+            "included": true
+          },
+          {
+            "text": "Mobile app access",
+            "included": true
+          }
+        ],
+        "cta": "Get Started",
+        "popular": false
+      },
+      {
+        "name": "Professional",
+        "highlight": "Most popular for growing businesses",
+        "monthlyPrice": "$599",
+        "yearlyPrice": "$5,990",
+        "yearlyDiscount": "Save $1,198/year",
+        "description": "Advanced features for established stores",
+        "features": [
+          {
+            "text": "Everything in Starter, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "AI-powered features",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "Advanced analytics",
+            "included": true
+          },
+          {
+            "text": "Multi-currency support",
+            "included": true
+          },
+          {
+            "text": "Priority support",
+            "included": true
+          },
+          {
+            "text": "API access",
+            "included": true
+          }
+        ],
+        "cta": "Get Started",
+        "popular": true
+      },
+      {
+        "name": "Enterprise",
+        "highlight": "For large e-commerce operations",
+        "monthlyPrice": "Custom",
+        "yearlyPrice": "Custom",
+        "yearlyDiscount": "Contact us for special pricing",
+        "description": "Tailored solutions for enterprise needs",
+        "features": [
+          {
+            "text": "Everything in Professional, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Custom integration support",
+            "included": true
+          },
+          {
+            "text": "Dedicated account manager",
+            "included": true
+          },
+          {
+            "text": "Advanced security features",
+            "included": true
+          },
+          {
+            "text": "Custom development options",
+            "included": true
+          },
+          {
+            "text": "SLA guarantees",
+            "included": true
+          }
+        ],
+        "cta": "Contact Sales",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Transform Your E-commerce Business?",
+    "description": "Join thousands of successful online stores using our platform",
+    "primaryButton": {
+      "text": "Schedule a Demo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Watch Demo Video",
+      "link": "/demo-video"
+    },
+    "background": "/images/cta-background.webp"
+  }
+} 

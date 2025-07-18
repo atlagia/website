@@ -1,0 +1,132 @@
+---
+interface Review {
+  rating: number;
+  content: string;
+  author: string;
+  position: string;
+}
+
+interface Props {
+  reviews: Review[];
+}
+
+const { reviews } = Astro.props;
+---
+
+<section class="relative py-24 px-4 overflow-hidden bg-navy-900">
+  <!-- Animated Background Elements -->
+  <div class="absolute inset-0 z-0">
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-bl from-purple-500/10 to-blue-500/10 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-tr from-pink-500/10 to-cyan-500/10 rounded-full blur-3xl animate-blob"></div>
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto">
+    <!-- Reviews Slider -->
+    <div class="reviews-slider">
+      <div class="flex gap-8 overflow-x-auto snap-x snap-mandatory pb-8 hide-scrollbar">
+        {reviews.map((review, index) => (
+          <div class="flex-shrink-0 w-full md:w-1/3 snap-center">
+            <div class="bg-navy-800/50 backdrop-blur-sm p-8 rounded-2xl hover:bg-navy-800/80 transition-all duration-300 hover:shadow-xl border border-gray-800">
+              <!-- Rating Stars -->
+              <div class="flex gap-1 mb-6">
+                {Array.from({ length: review.rating }).map((_, starIndex) => (
+                  <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" id={`content-review-${index}-star-${starIndex}`}>
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                  </svg>
+                ))}
+              </div>
+
+              <!-- Review Content -->
+              <p class="text-gray-300 mb-6 leading-relaxed" id={`content-review-${index}-content`}>
+                {review.content}
+              </p>
+
+              <!-- Author Info -->
+              <div>
+                <h4 class="font-bold text-white mb-1" id={`content-review-${index}-author`}>{review.author}</h4>
+                <p class="text-gray-400 text-sm" id={`content-review-${index}-position`}>{review.position}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Navigation Dots -->
+      <div class="flex justify-center gap-2 mt-8">
+        {reviews.map((_, index) => (
+          <button
+            class="w-2 h-2 rounded-full bg-gray-700 hover:bg-gray-600 transition-colors duration-300 focus:outline-none data-[active=true]:bg-pink-500"
+            data-index={index}
+            aria-label={`Go to slide ${index + 1}`}
+            id={`content-review-dot-${index}`}
+          />
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  @keyframes blob {
+    0% {
+      transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    }
+    33% {
+      transform: translate(-50%, -50%) scale(1.1) rotate(120deg);
+    }
+    66% {
+      transform: translate(-50%, -50%) scale(0.9) rotate(240deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1) rotate(360deg);
+    }
+  }
+
+  .animate-blob {
+    animation: blob 20s infinite linear;
+  }
+
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+
+  .bg-navy-900 {
+    background-color: #0a0b1e;
+  }
+  .bg-navy-800 {
+    background-color: #12132d;
+  }
+  .bg-navy-700 {
+    background-color: #1a1b3f;
+  }
+</style>
+
+<script>
+  // Initialize slider functionality
+  const slider = document.querySelector('.reviews-slider');
+  const slides = slider?.querySelectorAll('.snap-center');
+  const dots = slider?.querySelectorAll('button[data-index]');
+
+  dots?.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      slides?.[index].scrollIntoView({ behavior: 'smooth', inline: 'center' });
+      dots.forEach(d => d.setAttribute('data-active', 'false'));
+      dot.setAttribute('data-active', 'true');
+    });
+  });
+
+  // Set first dot as active initially
+  dots?.[0]?.setAttribute('data-active', 'true');
+</script> 

@@ -1,0 +1,335 @@
+{
+  "hero": {
+    "subtitle": "Veterinärpraxis-Management",
+    "title": "Komplette Veterinär-Management-Lösung",
+    "description": "Ein umfassendes System zur Verwaltung von Tierarztpraxen, das den Betrieb optimiert, die Patientenversorgung verbessert und Ihre Praxis wachsen lässt.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Veterinär-Management-Lösung Demo"
+    },
+    "stats": [
+      {
+        "value": "40%",
+        "label": "Zeitersparnis"
+      },
+      {
+        "value": "95%",
+        "label": "Kundenzufriedenheit"
+      },
+      {
+        "value": "35%",
+        "label": "Umsatzwachstum"
+      }
+    ]
+  },
+  "features": {
+    "subtitle": "Erweiterte Funktionen",
+    "title": "Komplettes Veterinär-Management",
+    "description": "Umfassende Tools für moderne Tierarztpraxen",
+    "categories": [
+      {
+        "name": "Praxisabläufe",
+        "description": "Optimierung des täglichen Betriebs und der Patientenverwaltung"
+      },
+      {
+        "name": "Patientenversorgung",
+        "description": "Verbesserung der Tierpflege und Kundenkommunikation"
+      }
+    ],
+    "items": [
+      {
+        "icon": "calendar",
+        "category": "Betrieb",
+        "title": "Intelligente Terminplanung",
+        "description": "Effiziente Termin- und Ressourcenverwaltung",
+        "image": "/images/solutions/veterinary/scheduling.jpg",
+        "highlights": [
+          "Online-Buchung",
+          "Automatische Erinnerungen",
+          "Ressourcenallokation",
+          "Multi-Standort-Unterstützung"
+        ],
+        "stats": {
+          "value": "40%",
+          "label": "Zeitersparnis"
+        }
+      },
+      {
+        "icon": "file-text",
+        "category": "Klinisch",
+        "title": "Elektronische Patientenakten",
+        "description": "Umfassende Patientenakten und klinische Dokumentation",
+        "image": "/images/solutions/veterinary/emr.jpg",
+        "highlights": [
+          "Digitale Akten",
+          "Behandlungspläne",
+          "Laborintegration",
+          "Rezeptverwaltung"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "Digitale Konformität"
+        }
+      },
+      {
+        "icon": "message-circle",
+        "category": "Kommunikation",
+        "title": "Kundenengagement",
+        "description": "Verbesserte Kundenkommunikation und Engagement-Tools",
+        "image": "/images/solutions/veterinary/communication.jpg",
+        "highlights": [
+          "Kundenportal",
+          "SMS/E-Mail-Updates",
+          "Terminerinnerungen",
+          "Bildungsressourcen"
+        ],
+        "stats": {
+          "value": "95%",
+          "label": "Kundenzufriedenheit"
+        }
+      },
+      {
+        "icon": "trending-up",
+        "category": "Geschäft",
+        "title": "Praxisanalysen",
+        "description": "Umfassende Geschäftsintelligenz und Berichterstattung",
+        "image": "/images/solutions/veterinary/analytics.jpg",
+        "highlights": [
+          "Finanzberichte",
+          "Leistungsmetriken",
+          "Bestandsanalysen",
+          "Wachstumseinblicke"
+        ],
+        "stats": {
+          "value": "35%",
+          "label": "Umsatzwachstum"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Veterinärexzellenz",
+    "description": "Sehen Sie, wie führende Tierarztpraxen ihre Abläufe transformieren",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Veterinär-Erfolgsgeschichte"
+    },
+    "testimonials": [
+      {
+        "author": "Dr. Emily Roberts",
+        "role": "Praxisinhaberin",
+        "image": "/images/testimonials/vet1.jpg",
+        "quote": "Dieses System hat unsere Praxis transformiert. Die integrierten Terminplanungs- und Kundenkommunikationsfunktionen haben unsere Effizienz deutlich verbessert."
+      },
+      {
+        "author": "Dr. Mark Thompson",
+        "role": "Cheftierarzt",
+        "image": "/images/testimonials/vet2.jpg",
+        "quote": "Die elektronischen Patientenakten und Behandlungsplanungstools haben uns geholfen, bessere Pflege für unsere Patienten zu gewährleisten."
+      }
+    ]
+  },
+  "benefits": {
+    "subtitle": "Hauptvorteile",
+    "title": "Transformieren Sie Ihre Tierarztpraxis",
+    "description": "Erleben Sie die Vorteile eines vollständig integrierten Veterinär-Management-Systems",
+    "items": [
+      {
+        "icon": "zap",
+        "title": "Betriebliche Exzellenz",
+        "description": "Optimierung der Praxisabläufe und des Workflows",
+        "color": "blue",
+        "stats": {
+          "value": "40%",
+          "label": "Zeitersparnis"
+        },
+        "highlights": [
+          "Automatisierte Terminplanung",
+          "Bestandsverwaltung",
+          "Ressourcenoptimierung",
+          "Aufgabenautomatisierung"
+        ]
+      },
+      {
+        "icon": "heart",
+        "title": "Verbesserte Patientenversorgung",
+        "description": "Verbesserung der Tierpflege und Behandlungsergebnisse",
+        "color": "green",
+        "stats": {
+          "value": "98%",
+          "label": "Behandlungserfolg"
+        },
+        "highlights": [
+          "Digitale Akten",
+          "Behandlungsverfolgung",
+          "Laborintegration",
+          "Pflegeprotokolle"
+        ]
+      },
+      {
+        "icon": "users",
+        "title": "Kundenzufriedenheit",
+        "description": "Verbesserung der Kundenerfahrung und des Engagements",
+        "color": "purple",
+        "stats": {
+          "value": "95%",
+          "label": "Kundenzufriedenheit"
+        },
+        "highlights": [
+          "Online-Buchung",
+          "Kundenportal",
+          "Kommunikationstools",
+          "Bildungsressourcen"
+        ]
+      },
+      {
+        "icon": "trending-up",
+        "title": "Praxiswachstum",
+        "description": "Förderung des Praxiswachstums und der Rentabilität",
+        "color": "red",
+        "stats": {
+          "value": "35%",
+          "label": "Umsatzwachstum"
+        },
+        "highlights": [
+          "Finanzanalysen",
+          "Wachstumseinblicke",
+          "Marketing-Tools",
+          "Kundenbindung"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "subtitle": "Transparente Preise",
+    "title": "Flexible Preispläne",
+    "description": "Wählen Sie den perfekten Plan für Ihre Tierarztpraxis. Sparen Sie bis zu 20% bei jährlicher Abrechnung.",
+    "billingPeriods": ["Monatlich", "Jährlich"],
+    "plans": [
+      {
+        "name": "Essentiell",
+        "highlight": "Für kleine Praxen",
+        "monthlyPrice": "$199",
+        "yearlyPrice": "$1,990",
+        "yearlyDiscount": "Sparen Sie $398/Jahr",
+        "description": "Grundlegende Funktionen für kleine Praxen",
+        "features": [
+          {
+            "text": "Terminplanung",
+            "included": true
+          },
+          {
+            "text": "Grundlegende EMR",
+            "included": true
+          },
+          {
+            "text": "Kundenkommunikation",
+            "included": true
+          },
+          {
+            "text": "E-Mail-Support",
+            "included": true
+          },
+          {
+            "text": "Grundlegende Berichte",
+            "included": true
+          },
+          {
+            "text": "Mobiler Zugang",
+            "included": true
+          }
+        ],
+        "cta": "Jetzt Starten",
+        "popular": false
+      },
+      {
+        "name": "Professionell",
+        "highlight": "Beliebteste Wahl für wachsende Praxen",
+        "monthlyPrice": "$399",
+        "yearlyPrice": "$3,990",
+        "yearlyDiscount": "Sparen Sie $798/Jahr",
+        "description": "Erweiterte Funktionen für wachsende Praxen",
+        "features": [
+          {
+            "text": "Alles in Essentiell, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Erweiterte EMR",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "Laborintegration",
+            "included": true
+          },
+          {
+            "text": "Erweiterte Analysen",
+            "included": true
+          },
+          {
+            "text": "Prioritäts-Support",
+            "included": true
+          },
+          {
+            "text": "Multi-Standort-Unterstützung",
+            "included": true
+          }
+        ],
+        "cta": "Jetzt Starten",
+        "popular": true
+      },
+      {
+        "name": "Enterprise",
+        "highlight": "Für große Praxen",
+        "monthlyPrice": "Individuell",
+        "yearlyPrice": "Individuell",
+        "yearlyDiscount": "Kontaktieren Sie uns für Sonderpreise",
+        "description": "Maßgeschneiderte Lösungen für große Praxen",
+        "features": [
+          {
+            "text": "Alles in Professionell, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Individuelle Integrationsunterstützung",
+            "included": true
+          },
+          {
+            "text": "Dedizierter Account Manager",
+            "included": true
+          },
+          {
+            "text": "Erweiterte Sicherheitsfunktionen",
+            "included": true
+          },
+          {
+            "text": "Individuelle Entwicklung",
+            "included": true
+          },
+          {
+            "text": "SLA-Garantien",
+            "included": true
+          }
+        ],
+        "cta": "Vertrieb kontaktieren",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "Bereit, Ihre Tierarztpraxis zu transformieren?",
+    "description": "Schließen Sie sich führenden Tierarztpraxen an, die ihre Abläufe mit unserer Lösung modernisiert haben.",
+    "background": "/images/solutions/veterinary/cta-background.jpg",
+    "primaryButton": {
+      "text": "Demo vereinbaren",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Demo ansehen",
+      "link": "#showcase"
+    }
+  }
+} 

@@ -1,0 +1,320 @@
+{
+  "hero": {
+    "subtitle": "CLINICAL TOOLS",
+    "title": "Integrated Dental CAD/CAM Solution",
+    "description": "Transform your restorative workflow with our comprehensive digital design and manufacturing platform that delivers precision restorations in a single visit."
+  },
+  "overview": {
+    "title": "Complete Digital Restoration Workflow",
+    "description": "Our CAD/CAM system combines powerful intraoral scanning, intuitive design software, and precision milling to deliver exceptional restorations while reducing lab costs and treatment time.",
+    "features": [
+      {
+        "icon": "camera",
+        "title": "High-Precision Scanning",
+        "description": "Capture detailed digital impressions in minutes"
+      },
+      {
+        "icon": "edit-3",
+        "title": "Intuitive Design Software",
+        "description": "Create restorations with guided automation"
+      },
+      {
+        "icon": "settings",
+        "title": "In-Office Milling",
+        "description": "Produce restorations with micron-level precision"
+      },
+      {
+        "icon": "clock",
+        "title": "Same-Day Delivery",
+        "description": "Complete restorations in a single appointment"
+      }
+    ]
+  },
+  "applications": {
+    "title": "Comprehensive Restorative Solutions",
+    "description": "Digital design and manufacturing for a wide range of dental restorations",
+    "problems": [
+      {
+        "title": "Single-Unit Crowns",
+        "description": "Precision-fit crowns in under an hour",
+        "icon": "circle"
+      },
+      {
+        "title": "Inlays & Onlays",
+        "description": "Conservative restorations with optimal fit",
+        "icon": "triangle"
+      },
+      {
+        "title": "Veneers",
+        "description": "Esthetic anterior restorations with detailed control",
+        "icon": "square"
+      },
+      {
+        "title": "Implant Abutments",
+        "description": "Custom abutments and screw-retained crowns",
+        "icon": "anchor"
+      },
+      {
+        "title": "Bridges",
+        "description": "Multi-unit fixed prosthetics up to 5 units",
+        "icon": "link"
+      },
+      {
+        "title": "Surgical Guides",
+        "description": "Precise guides for implant placement",
+        "icon": "map"
+      }
+    ]
+  },
+  "process": {
+    "title": "Digital Workflow Process",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Digital Impression",
+        "description": "Capture precise digital scans of the prepared teeth"
+      },
+      {
+        "number": "02",
+        "title": "Automated Design",
+        "description": "AI-assisted design proposal with custom adjustments"
+      },
+      {
+        "number": "03",
+        "title": "Material Selection",
+        "description": "Choose from a range of ceramic and composite blocks"
+      },
+      {
+        "number": "04",
+        "title": "Precision Milling",
+        "description": "Computer-controlled manufacturing of the restoration"
+      },
+      {
+        "number": "05",
+        "title": "Finishing & Polishing",
+        "description": "Final touches for optimal esthetics and function"
+      },
+      {
+        "number": "06",
+        "title": "Same-Day Delivery",
+        "description": "Place the final restoration in a single appointment"
+      }
+    ]
+  },
+  "advantages": {
+    "title": "Practice Benefits",
+    "description": "How CAD/CAM technology transforms your clinical workflow and practice profitability",
+    "benefits": [
+      {
+        "title": "35% Increased Production",
+        "description": "Complete more restorative procedures efficiently",
+        "icon": "trending-up"
+      },
+      {
+        "title": "60% Reduced Lab Costs",
+        "description": "Bring outsourced lab work in-house",
+        "icon": "dollar-sign"
+      },
+      {
+        "title": "Single-Visit Treatment",
+        "description": "Eliminate multiple appointments and temporaries",
+        "icon": "clock"
+      },
+      {
+        "title": "Superior Patient Experience",
+        "description": "No impression material and faster treatment",
+        "icon": "smile"
+      }
+    ]
+  },
+  "features": {
+    "title": "Key Features",
+    "description": "Advanced tools for efficient digital restorative dentistry",
+    "featureList": [
+      {
+        "title": "Powder-Free Scanning",
+        "description": "Full-color scanning without contrast powder",
+        "icon": "camera"
+      },
+      {
+        "title": "Automated Margin Detection",
+        "description": "AI-assisted identification of preparation margins",
+        "icon": "search"
+      },
+      {
+        "title": "Virtual Articulation",
+        "description": "Digital analysis of occlusal relationships",
+        "icon": "refresh"
+      },
+      {
+        "title": "Bio-Copy Function",
+        "description": "Replicate existing tooth morphology precisely",
+        "icon": "copy"
+      },
+      {
+        "title": "Smile Design Integration",
+        "description": "Connect esthetic planning with final restoration",
+        "icon": "image"
+      },
+      {
+        "title": "Multi-Material Options",
+        "description": "Wide range of ceramics, composites, and metals",
+        "icon": "layers"
+      },
+      {
+        "title": "Cloud Integration",
+        "description": "Secure case storage and lab collaboration",
+        "icon": "cloud"
+      },
+      {
+        "title": "Open Architecture",
+        "description": "Export files in standard STL format",
+        "icon": "unlock"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "System Options",
+    "description": "Select the configuration that fits your practice needs",
+    "options": [
+      {
+        "name": "Essentials",
+        "price": "$59,995",
+        "duration": "or $1,199/month",
+        "includes": [
+          "High-precision intraoral scanner",
+          "Basic design software",
+          "Compact milling unit",
+          "Starter material kit",
+          "Installation and training",
+          "1-year warranty",
+          "Basic support package"
+        ]
+      },
+      {
+        "name": "Professional",
+        "price": "$89,995",
+        "duration": "or $1,799/month",
+        "includes": [
+          "Premium high-speed scanner",
+          "Advanced design software",
+          "5-axis milling unit",
+          "Expanded material options",
+          "Comprehensive training program",
+          "3-year extended warranty",
+          "Priority support",
+          "Annual software updates"
+        ]
+      },
+      {
+        "name": "Enterprise",
+        "price": "$129,995",
+        "duration": "or $2,599/month",
+        "includes": [
+          "Multiple scanner units",
+          "Complete design software suite",
+          "High-volume production mill",
+          "Optional glazing furnace",
+          "Complete material library",
+          "5-year comprehensive warranty",
+          "Dedicated support specialist",
+          "Advanced clinical training",
+          "Lab connection capabilities"
+        ]
+      }
+    ]
+  },
+  "integration": {
+    "title": "Complete Integration",
+    "description": "Seamlessly connects with your existing digital workflow",
+    "partners": [
+      {
+        "name": "Dentrix",
+        "logo": "/images/partners/dentrix.png"
+      },
+      {
+        "name": "Eaglesoft",
+        "logo": "/images/partners/eaglesoft.png"
+      },
+      {
+        "name": "Open Dental",
+        "logo": "/images/partners/opendental.png"
+      },
+      {
+        "name": "3Shape",
+        "logo": "/images/partners/3shape.png"
+      },
+      {
+        "name": "exocad",
+        "logo": "/images/partners/exocad.png"
+      },
+      {
+        "name": "Medit",
+        "logo": "/images/partners/medit.png"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": [
+      {
+        "question": "What is the learning curve for implementing CAD/CAM in our practice?",
+        "answer": "Most dental teams become comfortable with the basic workflow within 2-3 weeks. Our implementation includes comprehensive hands-on training for your entire team. The scanning process typically has the shortest learning curve (1-2 days), while design skills develop over a few weeks of regular use. We provide ongoing support with virtual check-ins during your first month, and our clinical education team is available for advanced training as your skills progress."
+      },
+      {
+        "question": "What types of materials can be used with the system?",
+        "answer": "Our milling units are compatible with a wide range of materials including lithium disilicate (e.max), zirconia, hybrid ceramics (Enamic), composites, PMMA, and wax. The Professional and Enterprise systems can also mill titanium pre-milled abutments. All materials come in various shades and translucencies to match any clinical situation, and multi-layered blocks are available for enhanced esthetics in the anterior region."
+      },
+      {
+        "question": "What is the return on investment timeline?",
+        "answer": "Most practices achieve ROI within 18-24 months. With an average lab bill reduction of 60% and the ability to complete restorations in a single visit, practices typically see a positive cash flow impact immediately. Practices completing just 15-20 restorations per month will fully cover their monthly equipment cost, with additional units representing pure profit compared to traditional lab-based workflows."
+      },
+      {
+        "question": "Can we still work with our lab for complex cases?",
+        "answer": "Absolutely. Our open architecture system allows you to easily export scan files in standard STL format, which can be sent to any dental lab. This creates a hybrid workflow where routine cases are handled in-house while complex cases are sent to your lab. Many practices handle 80-90% of their restorative cases in-house, maintaining lab relationships for complex full-arch cases, removable prosthetics, or esthetically demanding anterior cases."
+      },
+      {
+        "question": "How accurate are the digital impressions compared to traditional methods?",
+        "answer": "Multiple independent studies have shown that digital impressions are equal or superior to traditional impressions in accuracy. Our scanner achieves a precision of under 10 microns, which exceeds the capabilities of physical impression materials. Additionally, digital impressions eliminate many sources of error in traditional methods, including impression material distortion, disinfection issues, and model pouring inaccuracies. The digital process also allows immediate verification and selective rescanning if needed."
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Customer Success Stories",
+    "reviews": [
+      {
+        "name": "Dr. Michael Anderson",
+        "practice": "Anderson Restorative Dentistry",
+        "rating": 5,
+        "comment": "Implementing CAD/CAM technology has been transformative for my practice. We've reduced lab costs by over 70% while delivering higher quality restorations. Patients love the single-visit convenience, and my team enjoys the predictable digital workflow. The system paid for itself in just 14 months, and we're now seeing significantly higher profit margins on all restorative procedures.",
+        "date": "2 months ago"
+      },
+      {
+        "name": "Dr. Jennifer Patel",
+        "practice": "Patel Dental Associates",
+        "rating": 5,
+        "comment": "The precision of the restorations has exceeded my expectations. Our marginal fit is consistently excellent, and the esthetic outcomes rival what we previously achieved with our high-end lab. The digital workflow has eliminated remakes almost entirely, and our patients are amazed by the technology. We're attracting new patients specifically because we offer same-day restorations.",
+        "date": "3 months ago"
+      },
+      {
+        "name": "Dr. Robert Thompson",
+        "practice": "Advanced Cosmetic Dentistry",
+        "rating": 5,
+        "comment": "As someone who was initially skeptical about in-office milling, I've been completely won over by the quality and efficiency. The learning curve was much easier than I anticipated, and the support team helped us integrate the technology smoothly. We're now completing 40-50 restorations monthly in-house, and our production has increased by nearly 30% with the same staff hours.",
+        "date": "1 month ago"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Transform Your Restorative Workflow?",
+    "description": "Join thousands of dental practices delivering same-day, high-quality restorations with our integrated CAD/CAM solution.",
+    "primaryButton": {
+      "text": "Request Demo",
+      "href": "/request-demo"
+    },
+    "secondaryButton": {
+      "text": "View Pricing",
+      "href": "/pricing"
+    }
+  }
+} 

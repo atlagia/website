@@ -1,0 +1,336 @@
+{
+  "hero": {
+    "subtitle": "KI-gestützte Einzelhandelsverwaltung",
+    "title": "Transformieren Sie Ihr Einzelhandelsgeschäft mit intelligenten Abläufen",
+    "description": "Erleben Sie die Zukunft des Einzelhandels mit unserer umfassenden, KI-gestützten Plattform, die Geschäftsabläufe optimiert, die Kundenerfahrung verbessert und Wachstum über alle Kanäle hinweg fördert.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "thumbnail": "/images/retail-hero.webp",
+      "alt": "Einzelhandels-Management-Plattform Demo"
+    },
+    "stats": [
+      {
+        "value": "35%",
+        "label": "Umsatzsteigerung"
+      },
+      {
+        "value": "50%",
+        "label": "Bestandsoptimierung"
+      },
+      {
+        "value": "45%",
+        "label": "Kundenzufriedenheit"
+      }
+    ]
+  },
+  "features": {
+    "title": "Enterprise-Grade Funktionen",
+    "subtitle": "Einzelhandels-Management der nächsten Generation",
+    "description": "Entdecken Sie unsere umfassende Suite fortschrittlicher Tools, die entwickelt wurde, um Ihre Einzelhandelsabläufe zu revolutionieren. Jede Funktion ist darauf ausgerichtet, maximale Effizienz und überlegene Kundenerfahrung zu bieten.",
+    "categories": [
+      {
+        "name": "Geschäftsabläufe",
+        "description": "Kernfunktionen, die Ihre täglichen Abläufe optimieren"
+      },
+      {
+        "name": "Kundenerfahrung",
+        "description": "Tools, die Kundenengagement und Zufriedenheit verbessern"
+      }
+    ],
+    "items": [
+      {
+        "icon": "store",
+        "title": "Intelligente Geschäftsverwaltung",
+        "description": "KI-gestützte Geschäftsabläufe und Mitarbeiterverwaltung",
+        "category": "Geschäftsabläufe",
+        "image": "/images/features/store-management.webp",
+        "highlights": [
+          "Mitarbeiterplanungsoptimierung",
+          "Aufgabenverwaltung",
+          "Leistungsverfolgung",
+          "Geschäftsanalytik"
+        ],
+        "stats": {
+          "value": "30%",
+          "label": "Operative Effizienz"
+        }
+      },
+      {
+        "icon": "shopping-bag",
+        "title": "Omnichannel-Handel",
+        "description": "Nahtlose Integration über alle Verkaufskanäle",
+        "category": "Kundenerfahrung",
+        "image": "/images/features/omnichannel.webp",
+        "highlights": [
+          "Einheitliche Bestandsverwaltung",
+          "Kanalübergreifende Auftragsabwicklung",
+          "Kundendatensynchronisation",
+          "Konsistente Preisgestaltung"
+        ],
+        "stats": {
+          "value": "40%",
+          "label": "Kanalintegration"
+        }
+      },
+      {
+        "icon": "bar-chart",
+        "title": "Fortschrittliche Analytik",
+        "description": "Datenbasierte Einblicke für bessere Entscheidungen",
+        "category": "Geschäftsabläufe",
+        "image": "/images/features/analytics.webp",
+        "highlights": [
+          "Umsatzprognosen",
+          "Kundenverhaltensanalyse",
+          "Leistungsmetriken",
+          "Trendidentifikation"
+        ],
+        "stats": {
+          "value": "85%",
+          "label": "Bessere Entscheidungen"
+        }
+      },
+      {
+        "icon": "users",
+        "title": "Kundenengagement",
+        "description": "Verbesserte Kundenbindung und -rückgewinnung",
+        "category": "Kundenerfahrung",
+        "image": "/images/features/customer-engagement.webp",
+        "highlights": [
+          "Treueprogrammverwaltung",
+          "Personalisierte Marketing",
+          "Kundenfeedback",
+          "Engagement-Tracking"
+        ],
+        "stats": {
+          "value": "45%",
+          "label": "Kundenbindung"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Sehen Sie es in Aktion",
+    "description": "Beobachten Sie, wie führende Einzelhandelsunternehmen ihre Abläufe transformieren",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "thumbnail": "/images/showcase-thumb.webp"
+    },
+    "testimonials": [
+      {
+        "author": "Emma Thompson",
+        "role": "Geschäftsführerin, Fashion Forward",
+        "image": "/images/testimonials/emma.webp",
+        "quote": "Diese Plattform hat unsere Geschäftsabläufe revolutioniert. Wir haben eine 35%ige Umsatzsteigerung und verbesserte Kundenzufriedenheit verzeichnet."
+      },
+      {
+        "author": "David Chen",
+        "role": "Operationsdirektor, TechRetail",
+        "image": "/images/testimonials/david.webp",
+        "quote": "Die KI-Funktionen haben unsere Bestandsverwaltung und Mitarbeitereffizienz dramatisch verbessert."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Transformative Vorteile",
+    "subtitle": "Bewährte Ergebnisse & Wirkung",
+    "description": "Erleben Sie messbare Verbesserungen in allen Aspekten Ihres Einzelhandelsgeschäfts mit unserer umfassenden Lösung. Unsere Plattform liefert konkrete Ergebnisse, die sich direkt auf Ihre Gewinnmarge auswirken.",
+    "items": [
+      {
+        "title": "Umsatzwachstum",
+        "description": "Maximieren Sie Ihren Einzelhandelsumsatz mit KI-gestützter Optimierung.",
+        "icon": "trending-up",
+        "color": "green",
+        "stats": {
+          "value": "35%",
+          "label": "Umsatzsteigerung"
+        },
+        "highlights": [
+          "Intelligente Preisoptimierung",
+          "Cross-Selling-Möglichkeiten",
+          "Bestandsoptimierung",
+          "Mitarbeiterleistung"
+        ]
+      },
+      {
+        "title": "Operative Exzellenz",
+        "description": "Optimieren Sie Ihre Einzelhandelsabläufe mit intelligenter Automatisierung.",
+        "icon": "zap",
+        "color": "blue",
+        "stats": {
+          "value": "50%",
+          "label": "Effizienzsteigerung"
+        },
+        "highlights": [
+          "Automatisierte Planung",
+          "Aufgabenverwaltung",
+          "Bestandskontrolle",
+          "Prozessoptimierung"
+        ]
+      },
+      {
+        "title": "Kundenerfahrung",
+        "description": "Bieten Sie außergewöhnliche Einkaufserlebnisse, die Loyalität fördern.",
+        "icon": "heart",
+        "color": "purple",
+        "stats": {
+          "value": "45%",
+          "label": "Kundenzufriedenheit"
+        },
+        "highlights": [
+          "Personalisierter Service",
+          "Nahtloser Checkout",
+          "Treueprogramme",
+          "Kundenfeedback"
+        ]
+      },
+      {
+        "title": "Datenintelligenz",
+        "description": "Treffen Sie datenbasierte Entscheidungen mit fortschrittlicher Analytik.",
+        "icon": "chart-bar",
+        "color": "yellow",
+        "stats": {
+          "value": "85%",
+          "label": "Bessere Einblicke"
+        },
+        "highlights": [
+          "Umsatzanalytik",
+          "Kundenverhalten",
+          "Bestandstrends",
+          "Leistungsmetriken"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Flexible Preispläne",
+    "subtitle": "Transparente Preise",
+    "description": "Wählen Sie den perfekten Plan für Ihr Geschäft. Sparen Sie bis zu 20% bei jährlicher Abrechnung.",
+    "billingPeriods": ["Monatlich", "Jährlich"],
+    "plans": [
+      {
+        "name": "Starter",
+        "highlight": "Perfekt für kleine Geschäfte",
+        "monthlyPrice": "$199",
+        "yearlyPrice": "$1,990",
+        "yearlyDiscount": "Sparen Sie $398/Jahr",
+        "description": "Grundlegende Funktionen für Ihren digitalen Wandel",
+        "features": [
+          {
+            "text": "Grundlegende Geschäftsverwaltung",
+            "included": true
+          },
+          {
+            "text": "Bestandsverfolgung",
+            "included": true
+          },
+          {
+            "text": "Umsatzberichterstattung",
+            "included": true
+          },
+          {
+            "text": "Grundlegende Analytik",
+            "included": true
+          },
+          {
+            "text": "E-Mail-Support",
+            "included": true
+          },
+          {
+            "text": "Mobile App-Zugriff",
+            "included": true
+          }
+        ],
+        "cta": "Jetzt Starten",
+        "popular": false
+      },
+      {
+        "name": "Professional",
+        "highlight": "Beliebt bei wachsenden Geschäften",
+        "monthlyPrice": "$399",
+        "yearlyPrice": "$3,990",
+        "yearlyDiscount": "Sparen Sie $798/Jahr",
+        "description": "Fortschrittliche Funktionen für etablierte Geschäfte",
+        "features": [
+          {
+            "text": "Alles aus Starter, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "KI-gestützte Funktionen",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "Fortschrittliche Analytik",
+            "included": true
+          },
+          {
+            "text": "Multi-Geschäfts-Support",
+            "included": true
+          },
+          {
+            "text": "Prioritäts-Support",
+            "included": true
+          },
+          {
+            "text": "API-Zugriff",
+            "included": true
+          }
+        ],
+        "cta": "Jetzt Starten",
+        "popular": true
+      },
+      {
+        "name": "Enterprise",
+        "highlight": "Für große Einzelhandelsketten",
+        "monthlyPrice": "Individuell",
+        "yearlyPrice": "Individuell",
+        "yearlyDiscount": "Kontaktieren Sie uns für Sonderpreise",
+        "description": "Maßgeschneiderte Lösungen für Enterprise-Bedürfnisse",
+        "features": [
+          {
+            "text": "Alles aus Professional, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Individuelle Integrationsunterstützung",
+            "included": true
+          },
+          {
+            "text": "Dedizierter Account Manager",
+            "included": true
+          },
+          {
+            "text": "Fortschrittliche Sicherheitsfunktionen",
+            "included": true
+          },
+          {
+            "text": "Individuelle Entwicklungsoptionen",
+            "included": true
+          },
+          {
+            "text": "SLA-Garantien",
+            "included": true
+          }
+        ],
+        "cta": "Vertrieb Kontaktieren",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "Bereit, Ihr Einzelhandelsgeschäft zu transformieren?",
+    "description": "Schließen Sie sich Tausenden erfolgreicher Geschäfte an, die unsere Plattform nutzen",
+    "primaryButton": {
+      "text": "Demo Planen",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Demo-Video Ansehen",
+      "link": "/demo-video"
+    },
+    "background": "/images/cta-background.webp"
+  }
+} 

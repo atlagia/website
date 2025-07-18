@@ -1,0 +1,325 @@
+{
+  "pageTitle": "Industry Solutions",
+  "pageDescription": "Discover our comprehensive suite of industry-specific solutions powered by artificial intelligence.",
+  "hero": {
+    "badge": "Industry Solutions",
+    "title": "Transform Your Industry with AI-Powered Solutions",
+    "description": "Discover our comprehensive suite of industry-specific solutions designed to revolutionize your operations with cutting-edge artificial intelligence.",
+    "cta": {
+      "primary": {
+        "text": "Explore Solutions",
+        "href": "#solutions"
+      },
+      "secondary": {
+        "text": "Contact Sales",
+        "href": "/contact"
+      }
+    }
+  },
+  "stats": [
+    {
+      "value": "10K+",
+      "label": "Active Users"
+    },
+    {
+      "value": "99.9%",
+      "label": "Uptime"
+    },
+    {
+      "value": "45%",
+      "label": "Efficiency Increase"
+    },
+    {
+      "value": "24/7",
+      "label": "Support"
+    }
+  ],
+  "solutions": [
+    {
+      "category": "Healthcare",
+      "description": "Comprehensive solutions for healthcare providers",
+      "items": [
+        {
+          "icon": "stethoscope",
+          "name": "Medical Practices",
+          "description": "Streamline your medical practice with AI-powered management",
+          "href": "/solutions/medical-solution",
+          "color": "blue"
+        },
+        {
+          "icon": "hospital",
+          "name": "Hospitals",
+          "description": "Complete hospital management and patient care system",
+          "href": "/solutions/hospital-solution",
+          "color": "indigo"
+        },
+        {
+          "icon": "building2",
+          "name": "Clinics",
+          "description": "Efficient clinic operations and patient management",
+          "href": "/solutions/clinic-solution",
+          "color": "purple"
+        },
+        {
+          "icon": "pill",
+          "name": "Pharmacies",
+          "description": "Modern pharmacy management and inventory control",
+          "href": "/solutions/pharmacy-solution",
+          "color": "pink"
+        }
+      ]
+    },
+    {
+      "category": "Specialized Care",
+      "description": "Tailored solutions for specialized medical facilities",
+      "items": [
+        {
+          "icon": "tooth",
+          "name": "Dental Practices",
+          "description": "Complete dental practice management solution",
+          "href": "/solutions/dental-solution",
+          "color": "cyan"
+        },
+        {
+          "icon": "radio-tower",
+          "name": "Radiology Centers",
+          "description": "Advanced radiology information system",
+          "href": "/solutions/radiology-solution",
+          "color": "emerald"
+        },
+        {
+          "icon": "flask",
+          "name": "Laboratories",
+          "description": "Comprehensive laboratory management system",
+          "href": "/solutions/laboratory-solution",
+          "color": "teal"
+        },
+        {
+          "icon": "dog",
+          "name": "Veterinary Practices",
+          "description": "Complete veterinary practice management",
+          "href": "/solutions/veterinary-solution",
+          "color": "orange"
+        }
+      ]
+    },
+    {
+      "category": "Retail & Commerce",
+      "description": "Digital solutions for modern retail and e-commerce businesses",
+      "items": [
+        {
+          "icon": "shopping-bag",
+          "name": "E-commerce",
+          "description": "Complete e-commerce platform with AI-driven insights",
+          "href": "/solutions/ecommerce-solution",
+          "color": "rose"
+        },
+        {
+          "icon": "store",
+          "name": "Retail Stores",
+          "description": "Smart retail management and point of sale system",
+          "href": "/solutions/retail-solution",
+          "color": "amber"
+        },
+        {
+          "icon": "warehouse",
+          "name": "Wholesale",
+          "description": "Efficient wholesale and distribution management",
+          "href": "/solutions/wholesale-solution",
+          "color": "lime"
+        },
+        {
+          "icon": "truck",
+          "name": "Logistics",
+          "description": "Intelligent logistics and supply chain management",
+          "href": "/solutions/logistics-solution",
+          "color": "green"
+        }
+      ]
+    },
+    {
+      "category": "Manufacturing & Industry",
+      "description": "Smart solutions for modern manufacturing and industrial operations",
+      "items": [
+        {
+          "icon": "factory",
+          "name": "Manufacturing",
+          "description": "Smart manufacturing and production management",
+          "href": "/solutions/manufacturing-solution",
+          "color": "sky"
+        },
+        {
+          "icon": "warehouse",
+          "name": "Inventory",
+          "description": "Advanced inventory and warehouse management",
+          "href": "/solutions/inventory-solution",
+          "color": "cyan"
+        },
+        {
+          "icon": "truck",
+          "name": "Supply Chain",
+          "description": "End-to-end supply chain optimization",
+          "href": "/solutions/supply-chain-solution",
+          "color": "blue"
+        },
+        {
+          "icon": "trending-up",
+          "name": "Quality Control",
+          "description": "AI-powered quality assurance and control",
+          "href": "/solutions/quality-solution",
+          "color": "indigo"
+        }
+      ]
+    },
+    {
+      "category": "Professional Services",
+      "description": "Specialized solutions for service-based businesses",
+      "items": [
+        {
+          "icon": "building",
+          "name": "Real Estate",
+          "description": "Complete real estate management platform",
+          "href": "/solutions/real-estate-solution",
+          "color": "violet"
+        },
+        {
+          "icon": "graduation-cap",
+          "name": "Education",
+          "description": "Smart education and learning management",
+          "href": "/solutions/education-solution",
+          "color": "purple"
+        },
+        {
+          "icon": "hotel",
+          "name": "Hospitality",
+          "description": "Comprehensive hospitality management system",
+          "href": "/solutions/hospitality-solution",
+          "color": "fuchsia"
+        },
+        {
+          "icon": "users",
+          "name": "Professional Services",
+          "description": "Business services and consulting management",
+          "href": "/solutions/professional-solution",
+          "color": "pink"
+        }
+      ]
+    }
+  ],
+  "features": {
+    "title": "Powerful Features for Every Solution",
+    "description": "Our platform comes packed with features that enhance your operations",
+    "items": [
+      {
+        "icon": "globe",
+        "title": "Global Accessibility",
+        "description": "Access your solution from anywhere, anytime with our cloud-based platform"
+      },
+      {
+        "icon": "clock",
+        "title": "24/7 Support",
+        "description": "Round-the-clock technical support and system monitoring"
+      },
+      {
+        "icon": "shield",
+        "title": "Data Security",
+        "description": "Enterprise-grade security with end-to-end encryption"
+      },
+      {
+        "icon": "zap",
+        "title": "Real-time Updates",
+        "description": "Instant updates and synchronization across all devices"
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Benefits Across All Solutions",
+    "description": "Experience the advantages of our AI-powered platform across all industry solutions.",
+    "items": [
+      {
+        "icon": "brain",
+        "title": "AI-Powered Intelligence",
+        "description": "Advanced artificial intelligence and machine learning capabilities that adapt to your specific needs",
+        "stats": "45%",
+        "label": "Efficiency Increase"
+      },
+      {
+        "icon": "shield",
+        "title": "Enterprise Security",
+        "description": "Bank-grade security with end-to-end encryption and compliance with industry standards",
+        "stats": "99.9%",
+        "label": "System Uptime"
+      },
+      {
+        "icon": "trending-up",
+        "title": "Scalable Growth",
+        "description": "Solutions that grow with your business, from small practices to large enterprises",
+        "stats": "3x",
+        "label": "Average Growth"
+      },
+      {
+        "icon": "users",
+        "title": "Enhanced Experience",
+        "description": "Improved experience for both staff and customers with intuitive interfaces",
+        "stats": "96%",
+        "label": "Satisfaction Rate"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "description": "Hear from healthcare professionals who have transformed their practice with our solutions",
+    "items": [
+      {
+        "quote": "GiaConnect has transformed how we operate. The AI capabilities are truly revolutionary.",
+        "author": "Dr. Sarah Chen",
+        "role": "Medical Director",
+        "image": "/images/testimonials/sarah.jpg"
+      },
+      {
+        "quote": "The platform's efficiency and ease of use have greatly improved our patient care.",
+        "author": "Dr. James Wilson",
+        "role": "Hospital Administrator",
+        "image": "/images/testimonials/james.jpg"
+      }
+    ]
+  },
+  "integrations": {
+    "title": "Works With Your Favorite Tools",
+    "description": "Seamlessly integrate with popular healthcare and business applications"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "description": "Find answers to common questions about our solutions",
+    "items": [
+      {
+        "question": "How does the AI integration work?",
+        "answer": "Our AI system seamlessly integrates with your existing workflows, learning and adapting to your specific needs over time."
+      },
+      {
+        "question": "What kind of support do you offer?",
+        "answer": "We provide 24/7 technical support, regular training sessions, and dedicated account managers for enterprise clients."
+      },
+      {
+        "question": "Is my data secure?",
+        "answer": "Yes, we implement bank-grade security measures and are fully compliant with HIPAA and other healthcare regulations."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Transform Your Business?",
+    "description": "Join thousands of businesses that have already modernized their operations with our AI-powered solutions.",
+    "buttons": [
+      {
+        "text": "Schedule a Demo",
+        "href": "/demo",
+        "variant": "primary"
+      },
+      {
+        "text": "Contact Sales",
+        "href": "/contact",
+        "variant": "secondary"
+      }
+    ]
+  }
+} 

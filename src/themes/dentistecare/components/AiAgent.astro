@@ -1,0 +1,237 @@
+---
+interface Feature {
+  title: string;
+  description: string;
+  icon: string; // "whatsapp", "calendar", "analytics", "multimedia"
+}
+
+interface CtaButton {
+  text: string;
+  link: string;
+}
+
+export interface Props {
+  subtitle?: string;
+  title: string;
+  description: string;
+  features: Feature[];
+  ctaButton?: CtaButton;
+}
+
+const { subtitle, title, description, features, ctaButton } = Astro.props;
+
+const icons = {
+  whatsapp: `
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.487 5.235 3.487 8.413 0 6.557-5.338 11.892-11.894 11.892-1.99 0-3.875-.527-5.547-1.478l-6.313 1.701zm5.626-4.825l.32.185c1.479.851 3.162 1.302 4.891 1.302 5.449 0 9.888-4.434 9.889-9.888.001-5.454-4.434-9.889-9.889-9.889-5.452 0-9.887 4.434-9.887 9.888 0 1.791.48 3.515 1.348 5.021l.204.354-1.016 3.71z"/>
+    </svg>
+  `,
+  calendar: `
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+      <line x1="16" y1="2" x2="16" y2="6"></line>
+      <line x1="8" y1="2" x2="8" y2="6"></line>
+      <line x1="3" y1="10" x2="21" y2="10"></line>
+    </svg>
+  `,
+  analytics: `
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path d="M21 21H3V3"></path>
+      <path d="M21 9L15 15L9 9L3 15"></path>
+    </svg>
+  `,
+  multimedia: `
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+      <circle cx="9" cy="9" r="2"></circle>
+      <path d="M21 15l-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path>
+      <path d="M14 10l-2-2"></path>
+    </svg>
+  `
+};
+---
+
+<section class="relative py-24 px-4 overflow-hidden bg-gradient-to-b from-gray-900 to-gray-800" id="ai-agent-section">
+  <!-- Animated Background Elements -->
+  <div class="absolute inset-0 z-0">
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-bl from-[#0a91b1]/10 to-blue-500/10 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-tr from-blue-500/10 to-[#0a91b1]/10 rounded-full blur-3xl animate-blob"></div>
+    <div class="absolute inset-0 bg-grid-pattern opacity-[0.03]"></div>
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto">
+    <div class="text-center">
+      {subtitle && (
+        <span class="inline-block px-4 py-1.5 mb-4 text-sm font-medium rounded-full bg-[#0a91b1]/20 text-[#0a91b1] backdrop-blur-sm border border-[#0a91b1]/30" id="ai-agent-subtitle">
+          {subtitle}
+        </span>
+      )}
+      <h2 class="mt-4 text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl" set:html={title}></h2>
+      <p class="max-w-3xl mx-auto mt-6 text-lg text-gray-300">{description}</p>
+    </div>
+
+    <div class="relative mt-16 sm:mt-24 lg:mt-32">
+      <!-- Animated Connection Lines (Desktop only) -->
+      <svg class="hidden lg:block absolute top-1/2 left-1/2 z-0 pointer-events-none" width="600" height="600" style="transform:translate(-50%,-50%);" viewBox="0 0 600 600" fill="none">
+        <!-- Top (extend upward) -->
+        <line x1="300" y1="220" x2="300" y2="40" stroke="#14b8a6" stroke-width="4" class="ai-connection-line" />
+        <!-- Right (extend right) -->
+        <line x1="380" y1="300" x2="570" y2="300" stroke="#14b8a6" stroke-width="4" class="ai-connection-line" />
+        <!-- Bottom (unchanged) -->
+        <line x1="300" y1="380" x2="300" y2="560" stroke="#14b8a6" stroke-width="4" class="ai-connection-line" />
+        <!-- Left (extend left) -->
+        <line x1="220" y1="300" x2="30" y2="300" stroke="#14b8a6" stroke-width="4" class="ai-connection-line" />
+        <circle cx="300" cy="300" r="80" fill="none" stroke="#14b8a6" stroke-width="2" class="ai-connection-glow" />
+      </svg>
+
+      <div class="absolute hidden lg:block top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+        <div class="relative w-64 h-64 sm:w-80 sm:h-80">
+          <div class="absolute inset-0 rounded-full bg-teal-500/30 animate-pulse"></div>
+          <div class="absolute inset-4 rounded-full bg-teal-500/50 animate-pulse-delay"></div>
+          <div class="absolute flex items-center justify-center inset-10 rounded-full bg-teal-500">
+            <i class="fa-solid fa-brain text-white text-6xl sm:text-7xl"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-0">
+        {features.map((feature, index) => (
+          <div class:list={[`feature-card feature-card-${index + 1}`]}>
+            <div class="flex items-center justify-center w-16 h-16 mx-auto rounded-full bg-teal-500">
+              <Fragment set:html={icons[feature.icon]} />
+            </div>
+            <h3 class="mt-6 text-xl font-bold text-white">{feature.title}</h3>
+            <p class="mt-2 text-base text-gray-400">{feature.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+    
+    {ctaButton && (
+      <div class="mt-20 text-center lg:mt-32">
+        <a href={ctaButton.link} class="inline-block px-10 py-4 font-semibold text-white transition bg-teal-500 rounded-lg hover:bg-teal-600">{ctaButton.text}</a>
+      </div>
+    )}
+  </div>
+</section>
+
+<style>
+  @keyframes pulse-delay {
+    0%, 100% { transform: scale(0.9); opacity: 0.5; }
+    50% { transform: scale(1.1); opacity: 1; }
+  }
+  .animate-pulse-delay {
+    animation: pulse-delay 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    animation-delay: 1.5s;
+  }
+
+  .feature-card {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s forwards;
+    position: relative;
+    z-index: 10;
+  }
+
+  .feature-card-1 { animation-delay: 0.2s; }
+  .feature-card-2 { animation-delay: 0.4s; }
+  .feature-card-3 { animation-delay: 0.6s; }
+  .feature-card-4 { animation-delay: 0.8s; }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .feature-card {
+        background: transparent;
+        border: none;
+        backdrop-filter: none;
+        width: 250px;
+        animation: none; /* remove fade in on desktop */
+        opacity: 1;
+        transform: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -125px; /* half of width */
+        margin-top: -80px;  /* roughly half of expected height */
+    }
+    /* Position cards around the center in a cross layout */
+    .feature-card-1 { top: -30px; left: 50%; margin-left: -125px; animation: float 4s ease-in-out infinite; animation-delay: 0s; } /* Move top card higher */
+    .feature-card-2 { top: 50%; left: 92%; margin-top: -80px; animation: float 4s ease-in-out infinite; animation-delay: 1s; }
+    .feature-card-3 { top: 90%; left: 50%; margin-left: -125px; animation: float 4s ease-in-out infinite; animation-delay: 2s; }
+    .feature-card-4 { top: 50%; left: 8%; margin-top: -80px; animation: float 4s ease-in-out infinite; animation-delay: 3s; }
+
+    .lg\:grid-cols-4 {
+        grid-template-columns: none;
+        justify-items: center;
+        align-items: center;
+        height: 600px; /* Increased height for float */
+    }
+
+    .relative.grid {
+      height: 600px;
+    }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+
+  @keyframes blob {
+    0% {
+      transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    }
+    33% {
+      transform: translate(-50%, -50%) scale(1.1) rotate(120deg);
+    }
+    66% {
+      transform: translate(-50%, -50%) scale(0.9) rotate(240deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1) rotate(360deg);
+    }
+  }
+  .animate-blob {
+    animation: blob 20s infinite linear;
+  }
+  .bg-grid-pattern {
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  /* Animated connection lines */
+  .ai-connection-line {
+    stroke-dasharray: 20 10;
+    stroke-dashoffset: 0;
+    filter: drop-shadow(0 0 8px #14b8a6);
+    animation: ai-line-pulse 2s infinite linear;
+  }
+  .ai-connection-glow {
+    opacity: 0.2;
+    filter: blur(4px) drop-shadow(0 0 12px #14b8a6);
+    animation: ai-glow-pulse 2s infinite alternate;
+  }
+  @keyframes ai-line-pulse {
+    0% { stroke-dashoffset: 0; opacity: 0.7; }
+    50% { stroke-dashoffset: 30; opacity: 1; }
+    100% { stroke-dashoffset: 0; opacity: 0.7; }
+  }
+  @keyframes ai-glow-pulse {
+    0% { opacity: 0.2; }
+    100% { opacity: 0.5; }
+  }
+</style> 

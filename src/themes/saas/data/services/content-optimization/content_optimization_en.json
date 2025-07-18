@@ -1,0 +1,192 @@
+{
+  "hero": {
+    "subtitle": "CONTENT OPTIMIZATION",
+    "title": "Optimize Your Content with AI",
+    "description": "Leverage AI-powered content optimization to improve readability, engagement, and SEO performance while maintaining your unique voice.",
+    "image": "https://cdn.atlagia.com/kepart_vector_laptop_Ai_Platform_e-commerce_Revolution_light_ba_59ef1169-e3f4-4348-b833-718c6666b861.png"
+  },
+  "benefits": {
+    "title": "Why Choose Our Content Optimization",
+    "items": [
+      {
+        "icon": "Brain",
+        "title": "AI Analysis",
+        "description": "Smart content analysis and improvement suggestions.",
+        "color": "purple"
+      },
+      {
+        "icon": "Target",
+        "title": "SEO Focus",
+        "description": "Optimize for search engines while keeping readers engaged.",
+        "color": "blue"
+      },
+      {
+        "icon": "Sparkles",
+        "title": "Style Enhancement",
+        "description": "Improve clarity and impact while maintaining voice.",
+        "color": "green"
+      },
+      {
+        "icon": "BarChart",
+        "title": "Performance Tracking",
+        "description": "Monitor and improve content effectiveness.",
+        "color": "pink"
+      }
+    ]
+  },
+  "features": {
+    "title": "Powerful Optimization Features",
+    "description": "Everything you need to create high-performing content.",
+    "items": [
+      {
+        "title": "Smart Content Analysis",
+        "description": "Get instant feedback on your content quality",
+        "image": "https://cdn.atlagia.com/kepart_VECTOR_54f8b550-4811-4131-9b38-eb71bcd38a49.png",
+        "features": [
+          "Readability scoring",
+          "Tone analysis",
+          "Grammar checking",
+          "Style suggestions"
+        ]
+      },
+      {
+        "title": "SEO Optimization",
+        "description": "Optimize your content for search engines",
+        "image": "https://cdn.atlagia.com/kepart_VECTOR_b5733d26-d34e-4193-b7af-74ee5ff80f6c.png",
+        "features": [
+          "Keyword optimization",
+          "Meta tag suggestions",
+          "Structure analysis",
+          "Internal linking"
+        ]
+      },
+      {
+        "title": "Performance Analytics",
+        "description": "Track and improve content performance",
+        "image": "https://cdn.atlagia.com/kepart_VECTOR_37ed9a40-a493-4db4-a687-b7f71312e43b.png",
+        "features": [
+          "Engagement metrics",
+          "Conversion tracking",
+          "A/B testing",
+          "ROI analysis"
+        ]
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "description": "Optimize your content in four simple steps",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Input Content",
+        "description": "Paste or import your content"
+      },
+      {
+        "number": "02",
+        "title": "AI Analysis",
+        "description": "Get comprehensive analysis"
+      },
+      {
+        "number": "03",
+        "title": "Optimize",
+        "description": "Apply suggested improvements"
+      },
+      {
+        "number": "04",
+        "title": "Track Results",
+        "description": "Monitor performance gains"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Simple, Transparent Pricing",
+    "description": "Choose the plan that best fits your content needs",
+    "plans": [
+      {
+        "name": "Starter",
+        "price": "39",
+        "period": "/month",
+        "description": "For individual creators",
+        "features": [
+          "10,000 words/month",
+          "Basic optimization",
+          "Daily updates",
+          "Email support"
+        ],
+        "cta": {
+          "text": "Start Free Trial",
+          "link": "/trial"
+        }
+      },
+      {
+        "name": "Professional",
+        "price": "99",
+        "period": "/month",
+        "description": "For content teams",
+        "features": [
+          "100,000 words/month",
+          "Advanced optimization",
+          "Real-time updates",
+          "Priority support"
+        ],
+        "cta": {
+          "text": "Start Free Trial",
+          "link": "/trial"
+        },
+        "popular": true
+      },
+      {
+        "name": "Enterprise",
+        "price": "299",
+        "period": "/month",
+        "description": "For large operations",
+        "features": [
+          "Unlimited words",
+          "Custom solutions",
+          "API access",
+          "24/7 support"
+        ],
+        "cta": {
+          "text": "Contact Sales",
+          "link": "/contact"
+        }
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "What Our Customers Say",
+    "items": [
+      {
+        "content": "The content optimization tool has helped us increase our organic traffic by 150% and improve our conversion rates significantly.",
+        "author": "Emily Roberts",
+        "position": "Content Director",
+        "company": "ContentFirst",
+        "image": "/images/testimonials/emily.jpg"
+      },
+      {
+        "content": "We've seen a dramatic improvement in our content engagement since using the AI optimization tools. Our bounce rates have decreased by 40%.",
+        "author": "David Kim",
+        "position": "Marketing Manager",
+        "company": "GrowthLabs",
+        "image": "/images/testimonials/david.jpg"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Optimize Your Content?",
+    "description": "Join thousands of businesses using our platform to create better content.",
+    "buttons": [
+      {
+        "text": "Start Free Trial",
+        "link": "/trial",
+        "primary": true
+      },
+      {
+        "text": "Watch Demo",
+        "link": "/demo",
+        "primary": false
+      }
+    ]
+  }
+} 

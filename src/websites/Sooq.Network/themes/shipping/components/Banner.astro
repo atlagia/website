@@ -1,0 +1,153 @@
+---
+import { Button } from './ui/Button';
+import styles from '../style/component/bannerSection.json';
+
+interface Props {
+  headline: string;
+  description: string;
+  backgroundImage: string;
+  button1Text: string;
+  button1Link: string;
+  button2Text: string;
+  button2Link: string;
+  subtitle?: string;
+  cards?: Array<{
+    title: string;
+    description: string;
+  }>;
+  trustBadges?: string[];
+}
+
+const { 
+  headline, 
+  description, 
+  backgroundImage,
+  button1Text,
+  button1Link,
+  button2Text,
+  button2Link,
+  subtitle,
+  cards,
+  trustBadges
+} = Astro.props;
+---
+
+<section class={styles.section.container}>
+  <!-- Animated Background Elements -->
+  <div class={styles.backgroundElements.container}>
+    <div class={styles.backgroundElements.blob1}></div>
+    <div class={styles.backgroundElements.blob2}></div>
+  </div>
+
+  <!-- Content -->
+  <div class={styles.content.container}>
+    <!-- Header Content -->
+    <div class={styles.content.header.container}>
+      {subtitle && (
+        <span class={styles.content.header.subtitle}>
+          {subtitle}
+        </span>
+      )}
+      <h2 class={styles.content.header.headline}>
+        {headline}
+      </h2>
+      <p class={styles.content.header.description}>
+        {description}
+      </p>
+      
+      <!-- Action Buttons -->
+      <div class={styles.content.header.buttonsContainer}>
+        <a
+          href={button1Link}
+          class={styles.content.header.primaryButton}
+        >
+          {button1Text}
+        </a>
+        <a
+          href={button2Link}
+          class={styles.content.header.secondaryButton}
+        >
+          {button2Text}
+        </a>
+      </div>
+    </div>
+
+    <!-- Feature Cards -->
+    {cards && cards.length > 0 && (
+      <div class={styles.content.featureCards.container}>
+        {cards.map((card) => (
+          <div class={styles.content.featureCards.card.container}>
+            <div class={styles.content.featureCards.card.header.container}>
+              <div class={styles.content.featureCards.card.header.iconContainer}>
+                <svg xmlns="http://www.w3.org/2000/svg" class={styles.content.featureCards.card.header.icon} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                </svg>
+              </div>
+              <h3 class={styles.content.featureCards.card.header.title}>
+                {card.title}
+              </h3>
+            </div>
+            <p class={styles.content.featureCards.card.description}>
+              {card.description}
+            </p>
+          </div>
+        ))}
+      </div>
+    )}
+
+    <!-- Trust Badges -->
+    {trustBadges && trustBadges.length > 0 && (
+      <div class={styles.content.trustBadges.container}>
+        {trustBadges.map((badge) => (
+          <div class={styles.content.trustBadges.badge.container}>
+            <svg class={styles.content.trustBadges.badge.icon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span>{badge}</span>
+          </div>
+        ))}
+      </div>
+    )}
+  </div>
+</section>
+
+<style define:vars={{ 
+  blobDuration: styles.animations.blob.duration,
+  backdropBlur: styles.effects.backdropBlur,
+  hoverTranslate: styles.effects.hoverTranslate
+}}>
+  @keyframes blob {
+    0% {
+      transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    }
+    33% {
+      transform: translate(-50%, -50%) scale(1.1) rotate(120deg);
+    }
+    66% {
+      transform: translate(-50%, -50%) scale(0.9) rotate(240deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1) rotate(360deg);
+    }
+  }
+
+  .animate-blob {
+    animation: blob var(--blobDuration, 20s) infinite linear;
+  }
+
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+
+  .backdrop-blur-sm {
+    backdrop-filter: blur(8px);
+  }
+
+  .hover\:-translate-y-0.5:hover {
+    transform: translateY(-2px);
+  }
+</style>

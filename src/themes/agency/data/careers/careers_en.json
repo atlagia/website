@@ -1,0 +1,230 @@
+{
+  "pageTitle": "Careers",
+  "pageDescription": "Join our team of innovators and shape the future of AI technology",
+  "hero": {
+    "badge": "We're Hiring",
+    "title": "Join Our Team of Innovators",
+    "description": "Help us shape the future of AI technology and transform industries around the world. We're looking for passionate individuals who thrive on challenges and innovation.",
+    "cta": {
+      "primary": {
+        "text": "View Open Positions",
+        "href": "#open-positions"
+      },
+      "secondary": {
+        "text": "Learn About Our Process",
+        "href": "#application-process"
+      }
+    }
+  },
+  "values": {
+    "title": "Our Values",
+    "description": "These principles guide everything we do and define our company culture.",
+    "items": [
+      {
+        "title": "Innovation",
+        "description": "We push boundaries and embrace cutting-edge technologies to solve complex problems.",
+        "icon": "lightbulb"
+      },
+      {
+        "title": "Collaboration",
+        "description": "We believe in the power of diverse teams working together toward common goals.",
+        "icon": "users"
+      },
+      {
+        "title": "Excellence",
+        "description": "We strive for the highest quality in everything we do, from code to customer service.",
+        "icon": "award"
+      },
+      {
+        "title": "Integrity",
+        "description": "We act with honesty, transparency, and ethical responsibility in all our decisions.",
+        "icon": "shield"
+      }
+    ]
+  },
+  "openPositions": {
+    "title": "Open Positions",
+    "description": "Explore our current job openings and find opportunities that match your skills and career goals.",
+    "positions": [
+      {
+        "id": "ai-engineer",
+        "title": "AI Engineer",
+        "department": "Engineering",
+        "type": "Full-time",
+        "location": "San Francisco / Remote",
+        "description": "Design and implement cutting-edge AI solutions for our enterprise clients.",
+        "requirements": [
+          "5+ years of experience in AI/ML development",
+          "Strong knowledge of TensorFlow, PyTorch, or similar frameworks",
+          "Experience with natural language processing or computer vision",
+          "Strong programming skills in Python",
+          "Excellent communication skills"
+        ],
+        "posted": "2 weeks ago"
+      },
+      {
+        "id": "frontend-developer",
+        "title": "Frontend Developer",
+        "department": "Engineering",
+        "type": "Full-time",
+        "location": "New York / Remote",
+        "description": "Build intuitive and responsive user interfaces for our AI-powered platforms.",
+        "requirements": [
+          "3+ years of experience with React and modern JavaScript",
+          "Proficiency in TypeScript and state management libraries",
+          "Experience with responsive design and CSS frameworks",
+          "Understanding of web accessibility standards",
+          "Knowledge of testing frameworks"
+        ],
+        "posted": "1 week ago"
+      },
+      {
+        "id": "product-manager",
+        "title": "Product Manager",
+        "department": "Product",
+        "type": "Full-time",
+        "location": "Remote",
+        "description": "Lead the development of our AI products from conception to launch.",
+        "requirements": [
+          "4+ years of product management experience",
+          "Background in AI, SaaS, or enterprise software",
+          "Strong analytical and problem-solving abilities",
+          "Excellent stakeholder management skills",
+          "Technical background is a plus"
+        ],
+        "posted": "3 days ago"
+      },
+      {
+        "id": "ux-designer",
+        "title": "UX Designer",
+        "department": "Design",
+        "type": "Full-time",
+        "location": "London / Remote",
+        "description": "Create user-centered designs for complex AI applications.",
+        "requirements": [
+          "3+ years of UX design experience",
+          "Strong portfolio showcasing user-centered design process",
+          "Experience with design systems and tools (Figma, Adobe XD)",
+          "Understanding of accessibility standards",
+          "Ability to conduct user research and testing"
+        ],
+        "posted": "1 month ago"
+      },
+      {
+        "id": "data-scientist",
+        "title": "Data Scientist",
+        "department": "Data",
+        "type": "Full-time",
+        "location": "Remote",
+        "description": "Analyze complex datasets and build predictive models to power our AI solutions.",
+        "requirements": [
+          "MS or PhD in Computer Science, Statistics, or related field",
+          "Strong experience with machine learning algorithms",
+          "Proficiency in Python, R, or similar languages",
+          "Experience with big data technologies",
+          "Strong analytical and problem-solving skills"
+        ],
+        "posted": "2 weeks ago"
+      },
+      {
+        "id": "devops-engineer",
+        "title": "DevOps Engineer",
+        "department": "Operations",
+        "type": "Full-time",
+        "location": "Berlin / Remote",
+        "description": "Build and maintain our cloud infrastructure and deployment pipelines.",
+        "requirements": [
+          "3+ years of experience in DevOps or Site Reliability Engineering",
+          "Experience with AWS, Azure, or GCP",
+          "Knowledge of containerization and orchestration (Docker, Kubernetes)",
+          "Experience with CI/CD tools",
+          "Scripting and automation skills"
+        ],
+        "posted": "3 weeks ago"
+      }
+    ]
+  },
+  "perks": {
+    "title": "Perks & Benefits",
+    "description": "We believe in taking care of our team with competitive benefits and a supportive work environment.",
+    "items": [
+      {
+        "title": "Flexible Work",
+        "description": "Work from anywhere with flexible hours to achieve your best work-life balance.",
+        "icon": "globe"
+      },
+      {
+        "title": "Competitive Compensation",
+        "description": "We offer industry-leading salaries, equity options, and performance bonuses.",
+        "icon": "dollar-sign"
+      },
+      {
+        "title": "Health Benefits",
+        "description": "Comprehensive health, dental, and vision insurance for you and your dependents.",
+        "icon": "heart"
+      },
+      {
+        "title": "Professional Development",
+        "description": "Continuous learning with education stipends, conferences, and training programs.",
+        "icon": "graduation-cap"
+      },
+      {
+        "title": "Team Events",
+        "description": "Regular team retreats, social events, and collaborative activities.",
+        "icon": "users"
+      },
+      {
+        "title": "Tech Equipment",
+        "description": "Latest hardware and software to ensure you have the tools you need to succeed.",
+        "icon": "laptop"
+      }
+    ]
+  },
+  "process": {
+    "title": "Our Application Process",
+    "description": "We've designed a straightforward process to help us find the best talent while respecting your time.",
+    "steps": [
+      {
+        "step": "1",
+        "title": "Application Review",
+        "description": "Our team reviews your application to assess your qualifications and experience."
+      },
+      {
+        "step": "2",
+        "title": "Initial Interview",
+        "description": "A conversation with our recruiting team to learn more about your background and aspirations."
+      },
+      {
+        "step": "3",
+        "title": "Technical Assessment",
+        "description": "Depending on the role, you'll complete a technical assessment or case study."
+      },
+      {
+        "step": "4",
+        "title": "Team Interviews",
+        "description": "Meet with potential team members and leaders to explore team fit and collaboration."
+      },
+      {
+        "step": "5",
+        "title": "Final Decision",
+        "description": "We'll provide feedback and potentially extend an offer to join our team."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Make an Impact?",
+    "description": "Join our team and help shape the future of AI technology. We're looking for passionate people who want to make a difference.",
+    "buttons": [
+      {
+        "text": "Browse Open Positions",
+        "href": "#open-positions",
+        "variant": "primary"
+      },
+      {
+        "text": "Contact Recruiting",
+        "href": "/contact",
+        "variant": "secondary"
+      }
+    ]
+  }
+} 

@@ -1,0 +1,209 @@
+{
+  "hero": {
+    "title": "Centre de Ressources et d'Apprentissage",
+    "description": "Explorez notre collection complète de guides, tutoriels et outils pour maîtriser le marketing digital et développer votre entreprise."
+  },
+  "featuredSection": {
+    "title": "Ressources Vedettes"
+  },
+  "featuredResources": [
+    {
+      "title": "Guide du Marketing Digital",
+      "description": "Un guide complet pour construire et exécuter des stratégies de marketing digital réussies.",
+      "icon": "BookOpen",
+      "link": "/resources/digital-marketing-playbook"
+    },
+    {
+      "title": "Meilleures Pratiques SEO 2024",
+      "description": "Découvrez les dernières techniques et stratégies SEO pour améliorer la visibilité de votre site web.",
+      "icon": "Target",
+      "link": "/resources/seo-best-practices"
+    },
+    {
+      "title": "Kit de Stratégie Réseaux Sociaux",
+      "description": "Modèles et outils pour créer du contenu engageant sur les réseaux sociaux et développer votre audience.",
+      "icon": "Users",
+      "link": "/resources/social-media-kit"
+    }
+  ],
+  "categoriesSection": {
+    "title": "Parcourir par Catégorie"
+  },
+  "categories": [
+    {
+      "title": "Pour Commencer",
+      "icon": "Rocket",
+      "resources": [
+        {
+          "title": "Fondamentaux du Marketing Digital",
+          "link": "/resources/digital-marketing-fundamentals"
+        },
+        {
+          "title": "Guide d'Optimisation de Site Web",
+          "link": "/resources/website-optimization"
+        },
+        {
+          "title": "Bases de la Stratégie de Contenu",
+          "link": "/resources/content-strategy"
+        }
+      ]
+    },
+    {
+      "title": "Analytique & Données",
+      "icon": "BarChart",
+      "resources": [
+        {
+          "title": "Configuration Google Analytics",
+          "link": "/resources/google-analytics"
+        },
+        {
+          "title": "Prise de Décision Basée sur les Données",
+          "link": "/resources/data-driven-decisions"
+        },
+        {
+          "title": "Guide de Suivi des Conversions",
+          "link": "/resources/conversion-tracking"
+        }
+      ]
+    },
+    {
+      "title": "Création de Contenu",
+      "icon": "FileText",
+      "resources": [
+        {
+          "title": "Conseils de Rédaction",
+          "link": "/resources/content-writing"
+        },
+        {
+          "title": "Guide du Contenu Visuel",
+          "link": "/resources/visual-content"
+        },
+        {
+          "title": "Bases du Marketing Vidéo",
+          "link": "/resources/video-marketing"
+        }
+      ]
+    },
+    {
+      "title": "Réseaux Sociaux",
+      "icon": "MessageSquare",
+      "resources": [
+        {
+          "title": "Stratégies par Plateforme",
+          "link": "/resources/social-platforms"
+        },
+        {
+          "title": "Gestion de Communauté",
+          "link": "/resources/community-management"
+        },
+        {
+          "title": "Calendrier Réseaux Sociaux",
+          "link": "/resources/social-calendar"
+        }
+      ]
+    },
+    {
+      "title": "SEO Technique",
+      "icon": "FileCode",
+      "resources": [
+        {
+          "title": "Checklist d'Audit Technique",
+          "link": "/resources/technical-audit"
+        },
+        {
+          "title": "Guide du Balisage Schema",
+          "link": "/resources/schema-markup"
+        },
+        {
+          "title": "Optimisation Mobile",
+          "link": "/resources/mobile-optimization"
+        }
+      ]
+    },
+    {
+      "title": "Stratégies de Croissance",
+      "icon": "Lightbulb",
+      "resources": [
+        {
+          "title": "Guide de Génération de Leads",
+          "link": "/resources/lead-generation"
+        },
+        {
+          "title": "Stratégie d'Email Marketing",
+          "link": "/resources/email-marketing"
+        },
+        {
+          "title": "Automatisation Marketing",
+          "link": "/resources/marketing-automation"
+        }
+      ]
+    }
+  ],
+  "articlesSection": {
+    "title": "Derniers Articles"
+  },
+  "latestArticles": [
+    {
+      "title": "10 Tendances SEO à Surveiller en 2024",
+      "excerpt": "Restez en avance avec ces tendances SEO émergentes qui façonneront le paysage digital en 2024.",
+      "category": "SEO",
+      "readTime": 8,
+      "image": "/images/blog/seo-trends.jpg",
+      "link": "/blog/seo-trends-2024"
+    },
+    {
+      "title": "Le Guide Ultime du Marketing de Contenu",
+      "excerpt": "Apprenez à créer et distribuer du contenu de valeur qui attire et fidélise votre audience cible.",
+      "category": "Contenu",
+      "readTime": 12,
+      "image": "/images/blog/content-marketing.jpg",
+      "link": "/blog/content-marketing-guide"
+    },
+    {
+      "title": "Analytique des Réseaux Sociaux : Mesurer le Succès",
+      "excerpt": "Découvrez les métriques clés et les outils pour mesurer et améliorer votre performance sur les réseaux sociaux.",
+      "category": "Réseaux Sociaux",
+      "readTime": 10,
+      "image": "/images/blog/social-analytics.jpg",
+      "link": "/blog/social-media-analytics"
+    }
+  ],
+  "downloadablesSection": {
+    "title": "Ressources Gratuites"
+  },
+  "downloadables": [
+    {
+      "title": "Modèle de Calendrier Réseaux Sociaux",
+      "description": "Planifiez et organisez votre contenu sur les réseaux sociaux avec notre modèle facile à utiliser.",
+      "icon": "Calendar",
+      "fileType": "Modèle Excel",
+      "link": "/downloads/social-media-calendar.xlsx"
+    },
+    {
+      "title": "Checklist d'Audit SEO",
+      "description": "Checklist complète pour évaluer et améliorer la performance SEO de votre site web.",
+      "icon": "CheckCircle",
+      "fileType": "Guide PDF",
+      "link": "/downloads/seo-audit-checklist.pdf"
+    },
+    {
+      "title": "Modèle de Plan Marketing",
+      "description": "Modèle stratégique pour planifier et exécuter vos campagnes de marketing digital.",
+      "icon": "Target",
+      "fileType": "Modèle PowerPoint",
+      "link": "/downloads/marketing-plan-template.pptx"
+    }
+  ],
+  "cta": {
+    "title": "Prêt à Améliorer Votre Marketing Digital ?",
+    "description": "Commencez avec nos ressources complètes et nos conseils d'experts",
+    "primaryButton": {
+      "text": "Parcourir les Ressources",
+      "link": "/resources"
+    },
+    "secondaryButton": {
+      "text": "Nous Contacter",
+      "link": "/contact"
+    }
+  }
+} 

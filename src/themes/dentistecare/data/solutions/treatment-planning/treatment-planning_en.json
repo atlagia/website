@@ -1,0 +1,317 @@
+{
+  "hero": {
+    "subtitle": "CLINICAL TOOLS",
+    "title": "Comprehensive Treatment Planning System",
+    "description": "Streamline case presentation and improve treatment acceptance with our intuitive, visual treatment planning solution designed specifically for dental practices."
+  },
+  "overview": {
+    "title": "Visualize, Present, and Execute Treatment",
+    "description": "Our treatment planning platform provides dentists with powerful tools to develop comprehensive care plans, communicate options clearly to patients, and manage case execution efficiently.",
+    "features": [
+      {
+        "icon": "edit-3",
+        "title": "Visual Plan Builder",
+        "description": "Create detailed plans with intuitive interface"
+      },
+      {
+        "icon": "users",
+        "title": "Patient-Friendly Presentation",
+        "description": "Clear visuals that patients understand"
+      },
+      {
+        "icon": "dollar-sign",
+        "title": "Financial Integration",
+        "description": "Seamless cost estimation and insurance calculation"
+      },
+      {
+        "icon": "check-square",
+        "title": "Case Tracking",
+        "description": "Monitor treatment progress across appointments"
+      }
+    ]
+  },
+  "applications": {
+    "title": "Comprehensive Planning Tools",
+    "description": "Solutions for all aspects of treatment planning and case presentation",
+    "problems": [
+      {
+        "title": "Restorative Planning",
+        "description": "Map out comprehensive restoration sequences",
+        "icon": "tool"
+      },
+      {
+        "title": "Implant Treatment",
+        "description": "Plan placement and prosthetics with precision",
+        "icon": "crosshair"
+      },
+      {
+        "title": "Periodontal Therapy",
+        "description": "Track and present perio treatment plans",
+        "icon": "activity"
+      },
+      {
+        "title": "Orthodontic Cases",
+        "description": "Visualize movement and treatment stages",
+        "icon": "sliders"
+      },
+      {
+        "title": "Cosmetic Dentistry",
+        "description": "Create smile designs with before/after simulations",
+        "icon": "image"
+      },
+      {
+        "title": "Phased Treatment",
+        "description": "Organize complex care into manageable stages",
+        "icon": "layers"
+      }
+    ]
+  },
+  "process": {
+    "title": "Implementation Process",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Software Integration",
+        "description": "Connect with your practice management system"
+      },
+      {
+        "number": "02",
+        "title": "Customization",
+        "description": "Configure templates for your specific practice"
+      },
+      {
+        "number": "03",
+        "title": "Team Training",
+        "description": "Comprehensive training for clinical and admin staff"
+      },
+      {
+        "number": "04",
+        "title": "Template Creation",
+        "description": "Develop procedure templates for common treatments"
+      },
+      {
+        "number": "05",
+        "title": "Presentation Setup",
+        "description": "Configure patient presentation views and materials"
+      },
+      {
+        "number": "06",
+        "title": "Ongoing Optimization",
+        "description": "Regular refinement based on practice feedback"
+      }
+    ]
+  },
+  "advantages": {
+    "title": "Practice Benefits",
+    "description": "How treatment planning software transforms your clinical workflow and patient experience",
+    "benefits": [
+      {
+        "title": "38% Higher Case Acceptance",
+        "description": "Improved patient understanding drives acceptance",
+        "icon": "thumbs-up"
+      },
+      {
+        "title": "45% Faster Treatment Planning",
+        "description": "Streamlined process with templates and automation",
+        "icon": "clock"
+      },
+      {
+        "title": "25% More Production",
+        "description": "Increase in completed treatment plans",
+        "icon": "trending-up"
+      },
+      {
+        "title": "Enhanced Clinical Coordination",
+        "description": "Better communication across the dental team",
+        "icon": "users"
+      }
+    ]
+  },
+  "features": {
+    "title": "Key Features",
+    "description": "Comprehensive tools for effective treatment planning and presentation",
+    "featureList": [
+      {
+        "title": "Interactive Odontogram",
+        "description": "Visual tooth charting with treatment mapping",
+        "icon": "grid"
+      },
+      {
+        "title": "Imaging Integration",
+        "description": "Connect x-rays and photos to treatment plans",
+        "icon": "camera"
+      },
+      {
+        "title": "Treatment Alternatives",
+        "description": "Present multiple options with pros and cons",
+        "icon": "git-branch"
+      },
+      {
+        "title": "Phased Planning",
+        "description": "Organize treatment by priority and timeline",
+        "icon": "layers"
+      },
+      {
+        "title": "Cost Estimation",
+        "description": "Calculate fees, insurance, and patient portion",
+        "icon": "dollar-sign"
+      },
+      {
+        "title": "Digital Consent",
+        "description": "Capture signatures for treatment acceptance",
+        "icon": "edit"
+      },
+      {
+        "title": "Progress Tracking",
+        "description": "Monitor completion of treatment plans",
+        "icon": "check-circle"
+      },
+      {
+        "title": "Visual Simulations",
+        "description": "Show patients before/after possibilities",
+        "icon": "image"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Pricing Options",
+    "description": "Select the plan that fits your practice needs",
+    "options": [
+      {
+        "name": "Essentials",
+        "price": "$149",
+        "duration": "per month",
+        "includes": [
+          "Basic treatment planning tools",
+          "Standard odontogram",
+          "Single provider license",
+          "Patient presentation view",
+          "Digital signature capture",
+          "Email support"
+        ]
+      },
+      {
+        "name": "Professional",
+        "price": "$249",
+        "duration": "per month",
+        "includes": [
+          "All Essentials features",
+          "Advanced treatment planning",
+          "Up to 5 provider licenses",
+          "Treatment alternatives comparison",
+          "Financial estimator",
+          "Priority support",
+          "Video tutorials"
+        ]
+      },
+      {
+        "name": "Enterprise",
+        "price": "$399",
+        "duration": "per month",
+        "includes": [
+          "All Professional features",
+          "Unlimited provider licenses",
+          "Visual treatment simulations",
+          "Advanced case presentation tools",
+          "Custom procedure templates",
+          "Multi-location support",
+          "Dedicated account manager",
+          "On-site training"
+        ]
+      }
+    ]
+  },
+  "integration": {
+    "title": "Seamless Integration",
+    "description": "Works with your existing practice management systems",
+    "partners": [
+      {
+        "name": "Dentrix",
+        "logo": "/images/partners/dentrix.png"
+      },
+      {
+        "name": "Eaglesoft",
+        "logo": "/images/partners/eaglesoft.png"
+      },
+      {
+        "name": "Open Dental",
+        "logo": "/images/partners/opendental.png"
+      },
+      {
+        "name": "Curve Dental",
+        "logo": "/images/partners/curve.png"
+      },
+      {
+        "name": "Denticon",
+        "logo": "/images/partners/denticon.png"
+      },
+      {
+        "name": "Dentimax",
+        "logo": "/images/partners/dentimax.png"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": [
+      {
+        "question": "How does the system handle complex, multi-phase treatment plans?",
+        "answer": "Our system allows you to organize complex treatment into logical phases based on clinical priority, healing times, or financial considerations. Each phase can be presented, accepted, and scheduled independently, while maintaining the comprehensive view of the entire treatment plan. You can easily adjust phasing as treatment progresses, and the system automatically updates the sequencing and dependencies between procedures."
+      },
+      {
+        "question": "Can we customize the treatment presentation for different types of patients?",
+        "answer": "Absolutely. The presentation interface can be configured with different detail levels and terminology based on patient preferences. For visually-oriented patients, you can emphasize images and simulations; for detail-oriented patients, you can provide more comprehensive clinical explanations. The system also allows you to save these preferences for future appointments with the same patient."
+      },
+      {
+        "question": "How accurate is the financial estimation feature?",
+        "answer": "The financial estimator pulls real-time fee data from your practice management system and can connect with insurance providers to verify benefits and calculate patient portions. For PPO plans, it references your contracted fee schedules. The system accounts for annual maximums, remaining benefits, frequencies, downgrades, and exclusions to provide highly accurate estimates. Most practices report 95%+ accuracy in their treatment plan estimates."
+      },
+      {
+        "question": "Is the treatment planning software difficult to learn?",
+        "answer": "Our software is designed with intuitive interfaces that mimic how dentists naturally think about treatment planning. Most users become proficient after just 1-2 hours of training. The system includes interactive tutorials, and our implementation includes hands-on training sessions. Many features use templates and automation to simplify the process, reducing the learning curve significantly."
+      },
+      {
+        "question": "How does the visual simulation work for cosmetic cases?",
+        "answer": "The visual simulation tool allows you to show realistic before/after views for cosmetic procedures. For smile design, you can adjust tooth shape, position, color, and gingival contours using simple controls. The system can also simulate the results of whitening, veneers, crowns, and orthodontic movement. These simulations can be created in minutes during the patient consultation, providing immediate visual feedback for treatment discussions."
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Customer Success Stories",
+    "reviews": [
+      {
+        "name": "Dr. Elizabeth Warren",
+        "practice": "Warren Dental Excellence",
+        "rating": 5,
+        "comment": "The visual treatment planning system has transformed our case presentation process. Our case acceptance for comprehensive treatment has increased from around 60% to over 90%. Patients truly understand what we're recommending and why. The phased planning approach has also made larger treatment plans more accessible by breaking them into manageable segments.",
+        "date": "2 months ago"
+      },
+      {
+        "name": "Dr. Marcus Johnson",
+        "practice": "Premier Dental Solutions",
+        "rating": 5,
+        "comment": "As a prosthodontist, I handle complex restorative cases daily. This software has streamlined my planning process and dramatically improved interdisciplinary communication. I can create detailed plans with precise sequencing and share them with referring doctors. The integration with our imaging system allows me to incorporate CBCT and intraoral scans directly into treatment plans.",
+        "date": "3 months ago"
+      },
+      {
+        "name": "Susan Garcia",
+        "practice": "Treatment Coordinator, Bright Smile Dental",
+        "rating": 5,
+        "comment": "From a treatment coordinator perspective, this software is invaluable. The financial integration gives me instant accurate estimates, including insurance coverage. Patients appreciate the transparency, and I can easily create payment plans for phased treatment. The digital signature feature has eliminated our paper consent forms and streamlined our workflow tremendously.",
+        "date": "1 month ago"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Transform Your Treatment Planning Process?",
+    "description": "Join thousands of dental practices using our platform to improve case acceptance and streamline clinical workflows.",
+    "primaryButton": {
+      "text": "Request Demo",
+      "href": "/request-demo"
+    },
+    "secondaryButton": {
+      "text": "View Pricing",
+      "href": "/pricing"
+    }
+  }
+} 

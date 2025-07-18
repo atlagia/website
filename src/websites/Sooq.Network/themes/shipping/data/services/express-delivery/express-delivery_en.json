@@ -1,0 +1,42 @@
+{
+  "hero": {
+    "title": "Express Delivery",
+    "subtitle": "Fast, Reliable, and On-Time Shipping",
+    "description": "Get your packages delivered quickly with our next-day and two-day express shipping options. Perfect for urgent deliveries, both domestic and international.",
+    "heroIcon": "Clock",
+    "heroAnimation": "spin",
+    "image": "https://source.unsplash.com/800x400/?express,delivery,shipping"
+  },
+  "overview": {
+    "title": "Why Choose Express Delivery?",
+    "description": "Our Express Delivery service ensures your shipments arrive on time, every time. With priority handling, real-time tracking, and dedicated support, you can trust us for your most urgent deliveries.",
+    "features": [
+      {
+        "icon": "clock",
+        "title": "Next-Day & Two-Day Delivery",
+        "description": "Choose from flexible express options for both domestic and international shipments."
+      },
+      {
+        "icon": "search",
+        "title": "Real-Time Tracking",
+        "description": "Track your package at every step with instant notifications and live updates."
+      },
+      {
+        "icon": "shield",
+        "title": "Priority Handling",
+        "description": "Your express shipments receive top priority and secure handling throughout the journey."
+      },
+      {
+        "icon": "activity",
+        "title": "Door-to-Door Service",
+        "description": "We pick up and deliver directly to your door for maximum convenience."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Ship Express?",
+    "description": "Get a quote now and experience the speed and reliability of our Express Delivery service.",
+    "buttonText": "Get a Quote",
+    "buttonLink": "/quote"
+  }
+} 

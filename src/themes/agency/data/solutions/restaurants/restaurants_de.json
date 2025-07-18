@@ -1,0 +1,332 @@
+{
+  "hero": {
+    "subtitle": "KI-gestützte Restaurantverwaltung",
+    "title": "Transformieren Sie Ihr Restaurant mit intelligenten Abläufen",
+    "description": "Erleben Sie die Zukunft der Restaurantverwaltung mit unserer umfassenden, KI-gestützten Plattform, die Abläufe optimiert, die Kundenerfahrung verbessert und Wachstum in allen Aspekten Ihres Geschäfts fördert.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "thumbnail": "/images/restaurant-hero.webp",
+      "alt": "Restaurant-Management-Plattform Demo"
+    },
+    "stats": [
+      {
+        "value": "40%",
+        "label": "Bestellabwicklung"
+      },
+      {
+        "value": "55%",
+        "label": "Kundenzufriedenheit"
+      },
+      {
+        "value": "30%",
+        "label": "Kostenreduktion"
+      }
+    ]
+  },
+  "features": {
+    "title": "Enterprise-Grade Funktionen",
+    "subtitle": "Restaurant-Management der nächsten Generation",
+    "description": "Entdecken Sie unsere umfassende Suite fortschrittlicher Tools, die entwickelt wurde, um Ihre Restaurantabläufe zu revolutionieren. Jede Funktion ist darauf ausgerichtet, maximale Effizienz und überlegene Kundenerfahrung zu bieten.",
+    "categories": [
+      {
+        "name": "Restaurantabläufe",
+        "description": "Kernfunktionen, die Ihre täglichen Abläufe optimieren"
+      },
+      {
+        "name": "Kundenerfahrung",
+        "description": "Tools, die Kundenengagement und Zufriedenheit verbessern"
+      }
+    ],
+    "items": [
+      {
+        "icon": "utensils",
+        "title": "Intelligente Bestellverwaltung",
+        "description": "KI-gestützte Bestellabwicklung und Küchenmanagement",
+        "category": "Restaurantabläufe",
+        "image": "/images/features/order-management.webp",
+        "highlights": [
+          "Echtzeit-Bestellverfolgung",
+          "Küchen-Displaysystem",
+          "Bestellpriorisierung",
+          "Bestandsalarme"
+        ],
+        "stats": {
+          "value": "40%",
+          "label": "Schnellere Abwicklung"
+        }
+      },
+      {
+        "icon": "users",
+        "title": "Tischverwaltung",
+        "description": "Intelligentes Sitzplatz- und Reservierungssystem",
+        "category": "Kundenerfahrung",
+        "image": "/images/features/table-management.webp",
+        "highlights": [
+          "Intelligente Sitzplatzzuweisung",
+          "Reservierungsverwaltung",
+          "Wartelistenoptimierung",
+          "Tischumsatzverfolgung"
+        ],
+        "stats": {
+          "value": "35%",
+          "label": "Bessere Auslastung"
+        }
+      },
+      {
+        "icon": "bar-chart",
+        "title": "Menüanalytik",
+        "description": "Datenbasierte Menüoptimierung und Preisgestaltung",
+        "category": "Restaurantabläufe",
+        "image": "/images/features/menu-analytics.webp",
+        "highlights": [
+          "Gerichtleistungsanalyse",
+          "Preisoptimierung",
+          "Zutatenkostenverfolgung",
+          "Menüentwicklung"
+        ],
+        "stats": {
+          "value": "25%",
+          "label": "Gewinnsteigerung"
+        }
+      },
+      {
+        "icon": "shopping-cart",
+        "title": "Lieferintegration",
+        "description": "Nahtlose Integration von Lieferplattformen",
+        "category": "Kundenerfahrung",
+        "image": "/images/features/delivery-integration.webp",
+        "highlights": [
+          "Multi-Plattform-Integration",
+          "Lieferverfolgung",
+          "Fahrerverwaltung",
+          "Bestellsynchronisation"
+        ],
+        "stats": {
+          "value": "45%",
+          "label": "Liefereffizienz"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Sehen Sie es in Aktion",
+    "description": "Beobachten Sie, wie führende Restaurants ihre Abläufe transformieren",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "thumbnail": "/images/showcase-thumb.webp"
+    },
+    "testimonials": [
+      {
+        "author": "Chef Michael Chen",
+        "role": "Besitzer, Fusion Kitchen",
+        "image": "/images/testimonials/michael.webp",
+        "quote": "Diese Plattform hat unsere Restaurantabläufe revolutioniert. Wir haben eine 40%ige Steigerung der Bestellabwicklungsgeschwindigkeit und verbesserte Kundenzufriedenheit verzeichnet."
+      },
+      {
+        "author": "Sarah Rodriguez",
+        "role": "Managerin, Taste of Italy",
+        "image": "/images/testimonials/sarah.webp",
+        "quote": "Die KI-Funktionen haben unsere Tischverwaltung und Kücheneffizienz dramatisch verbessert."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Transformative Vorteile",
+    "subtitle": "Bewährte Ergebnisse & Wirkung",
+    "description": "Erleben Sie messbare Verbesserungen in allen Aspekten Ihres Restaurantgeschäfts mit unserer umfassenden Lösung. Unsere Plattform liefert konkrete Ergebnisse, die sich direkt auf Ihre Gewinnmarge auswirken.",
+    "items": [
+      {
+        "title": "Operative Effizienz",
+        "description": "Optimieren Sie Ihre Restaurantabläufe mit intelligenter Automatisierung.",
+        "icon": "zap",
+        "color": "blue",
+        "stats": {
+          "value": "40%",
+          "label": "Schnellere Abläufe"
+        },
+        "highlights": [
+          "Bestellabwicklung",
+          "Küchenmanagement",
+          "Bestandskontrolle",
+          "Mitarbeiterplanung"
+        ]
+      },
+      {
+        "title": "Kundenerfahrung",
+        "description": "Bieten Sie außergewöhnliche Dinerlebnisse, die Loyalität fördern.",
+        "icon": "heart",
+        "color": "purple",
+        "stats": {
+          "value": "55%",
+          "label": "Kundenzufriedenheit"
+        },
+        "highlights": [
+          "Nahtlose Bestellung",
+          "Tischverwaltung",
+          "Loyalitätsprogramme",
+          "Kundenfeedback"
+        ]
+      },
+      {
+        "title": "Kostenmanagement",
+        "description": "Optimieren Sie Kosten und maximieren Sie die Rentabilität.",
+        "icon": "trending-up",
+        "color": "green",
+        "stats": {
+          "value": "30%",
+          "label": "Kostenreduktion"
+        },
+        "highlights": [
+          "Bestandsoptimierung",
+          "Abfallreduktion",
+          "Mitarbeitereffizienz",
+          "Energiemanagement"
+        ]
+      },
+      {
+        "title": "Business Intelligence",
+        "description": "Treffen Sie datenbasierte Entscheidungen mit fortschrittlicher Analytik.",
+        "icon": "chart-bar",
+        "color": "yellow",
+        "stats": {
+          "value": "85%",
+          "label": "Bessere Einblicke"
+        },
+        "highlights": [
+          "Verkaufsanalytik",
+          "Kundenverhalten",
+          "Menüleistung",
+          "Operative Metriken"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Flexible Preispläne",
+    "subtitle": "Transparente Preise",
+    "description": "Wählen Sie den perfekten Plan für Ihr Restaurant. Sparen Sie bis zu 20% bei jährlicher Abrechnung.",
+    "billingPeriods": ["Monatlich", "Jährlich"],
+    "plans": [
+      {
+        "name": "Starter",
+        "highlight": "Perfekt für kleine Restaurants",
+        "monthlyPrice": "$149",
+        "yearlyPrice": "$1,490",
+        "yearlyDiscount": "Sparen Sie $298/Jahr",
+        "description": "Grundlegende Funktionen für Ihren digitalen Wandel",
+        "features": [
+          {
+            "text": "Grundlegende Bestellverwaltung",
+            "included": true
+          },
+          {
+            "text": "Tischverwaltung",
+            "included": true
+          },
+          {
+            "text": "Grundlegende Berichterstattung",
+            "included": true
+          },
+          {
+            "text": "E-Mail-Support",
+            "included": true
+          },
+          {
+            "text": "Mobile App-Zugriff",
+            "included": true
+          }
+        ],
+        "cta": "Jetzt Starten",
+        "popular": false
+      },
+      {
+        "name": "Professional",
+        "highlight": "Beliebt bei wachsenden Restaurants",
+        "monthlyPrice": "$299",
+        "yearlyPrice": "$2,990",
+        "yearlyDiscount": "Sparen Sie $598/Jahr",
+        "description": "Fortschrittliche Funktionen für etablierte Restaurants",
+        "features": [
+          {
+            "text": "Alles aus Starter, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "KI-gestützte Funktionen",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "Fortschrittliche Analytik",
+            "included": true
+          },
+          {
+            "text": "Lieferintegration",
+            "included": true
+          },
+          {
+            "text": "Prioritäts-Support",
+            "included": true
+          },
+          {
+            "text": "API-Zugriff",
+            "included": true
+          }
+        ],
+        "cta": "Jetzt Starten",
+        "popular": true
+      },
+      {
+        "name": "Enterprise",
+        "highlight": "Für Restaurantketten",
+        "monthlyPrice": "Individuell",
+        "yearlyPrice": "Individuell",
+        "yearlyDiscount": "Kontaktieren Sie uns für Sonderpreise",
+        "description": "Maßgeschneiderte Lösungen für Enterprise-Bedürfnisse",
+        "features": [
+          {
+            "text": "Alles aus Professional, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Multi-Standort-Support",
+            "included": true
+          },
+          {
+            "text": "Dedizierter Account Manager",
+            "included": true
+          },
+          {
+            "text": "Fortschrittliche Sicherheitsfunktionen",
+            "included": true
+          },
+          {
+            "text": "Individuelle Entwicklungsoptionen",
+            "included": true
+          },
+          {
+            "text": "SLA-Garantien",
+            "included": true
+          }
+        ],
+        "cta": "Vertrieb Kontaktieren",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "Bereit, Ihr Restaurant zu transformieren?",
+    "description": "Schließen Sie sich Tausenden erfolgreicher Restaurants an, die unsere Plattform nutzen",
+    "primaryButton": {
+      "text": "Demo Planen",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Demo-Video Ansehen",
+      "link": "/demo-video"
+    },
+    "background": "/images/cta-background.webp"
+  }
+} 

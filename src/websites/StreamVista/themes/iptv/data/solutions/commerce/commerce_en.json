@@ -1,0 +1,164 @@
+{
+  "hero": {
+    "subtitle": "E-Commerce Solutions",
+    "title": "Build and Scale Your Online Business",
+    "description": "Powerful e-commerce tools to help you sell more and grow your business online",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=example",
+      "alt": "E-Commerce Platform Demo"
+    },
+    "stats": [
+      {
+        "value": "$1B+",
+        "label": "Transactions Processed"
+      },
+      {
+        "value": "50M+",
+        "label": "Products Sold"
+      },
+      {
+        "value": "99.9%",
+        "label": "Platform Uptime"
+      }
+    ]
+  },
+  "features": {
+    "subtitle": "Platform Features",
+    "title": "Everything You Need to Sell Online",
+    "description": "A complete suite of tools to manage your online store and boost sales",
+    "items": [
+      {
+        "icon": "cart",
+        "category": "Store Management",
+        "title": "Store Builder",
+        "description": "Create and manage your online store with powerful tools",
+        "image": "/images/solutions/commerce/store-builder.jpg",
+        "highlights": [
+          "Drag-and-drop builder",
+          "Mobile optimization",
+          "Custom domains",
+          "Theme customization"
+        ]
+      },
+      {
+        "icon": "trending-up",
+        "category": "Sales",
+        "title": "Sales Management",
+        "description": "Comprehensive tools to manage and boost your sales",
+        "image": "/images/solutions/commerce/sales-management.jpg",
+        "highlights": [
+          "Order processing",
+          "Inventory tracking",
+          "Payment processing",
+          "Shipping integration"
+        ]
+      },
+      {
+        "icon": "users",
+        "category": "Customers",
+        "title": "Customer Management",
+        "description": "Build and maintain strong customer relationships",
+        "image": "/images/solutions/commerce/customer-management.jpg",
+        "highlights": [
+          "Customer profiles",
+          "Purchase history",
+          "Support integration",
+          "Loyalty programs"
+        ]
+      },
+      {
+        "icon": "brain",
+        "category": "Marketing",
+        "title": "Marketing Tools",
+        "description": "Powerful marketing tools to grow your business",
+        "image": "/images/solutions/commerce/marketing-tools.jpg",
+        "highlights": [
+          "Email marketing",
+          "Social media integration",
+          "SEO optimization",
+          "Promotional tools"
+        ]
+      }
+    ]
+  },
+  "benefits": {
+    "subtitle": "Platform Benefits",
+    "title": "Why Choose Our E-Commerce Platform",
+    "description": "Experience the benefits of a modern, scalable e-commerce solution",
+    "items": [
+      {
+        "icon": "chart",
+        "color": "blue",
+        "title": "Easy to Use",
+        "description": "Get started quickly with intuitive tools",
+        "stats": {
+          "value": "1hr",
+          "label": "Setup Time"
+        },
+        "highlights": [
+          "User-friendly interface",
+          "Quick setup",
+          "Guided onboarding"
+        ]
+      },
+      {
+        "icon": "trending-up",
+        "color": "purple",
+        "title": "Scalable Growth",
+        "description": "Scale your business without limitations",
+        "stats": {
+          "value": "∞",
+          "label": "Growth Potential"
+        },
+        "highlights": [
+          "Unlimited products",
+          "High performance",
+          "Global reach"
+        ]
+      },
+      {
+        "icon": "cart",
+        "color": "green",
+        "title": "Increased Sales",
+        "description": "Tools to help you sell more effectively",
+        "stats": {
+          "value": "45%",
+          "label": "Avg. Sales Increase"
+        },
+        "highlights": [
+          "Conversion optimization",
+          "Upsell features",
+          "Abandoned cart recovery"
+        ]
+      },
+      {
+        "icon": "users",
+        "color": "yellow",
+        "title": "Customer Success",
+        "description": "Build lasting customer relationships",
+        "stats": {
+          "value": "92%",
+          "label": "Customer Satisfaction"
+        },
+        "highlights": [
+          "Customer support",
+          "Feedback tools",
+          "Community building"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Start Selling Online?",
+    "description": "Join thousands of successful businesses on our e-commerce platform",
+    "background": "/images/solutions/commerce/cta-background.jpg",
+    "primaryButton": {
+      "text": "Start Free Trial",
+      "link": "/signup"
+    },
+    "secondaryButton": {
+      "text": "View Pricing",
+      "link": "/pricing"
+    }
+  }
+} 

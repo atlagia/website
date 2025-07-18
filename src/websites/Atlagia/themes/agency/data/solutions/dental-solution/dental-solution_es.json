@@ -1,0 +1,336 @@
+{
+  "hero": {
+    "subtitle": "Gestión Dental de Próxima Generación",
+    "title": "Transforma tu Clínica Dental con Soluciones Impulsadas por IA",
+    "description": "Experimenta el futuro de la gestión de clínica dental con nuestra plataforma integral impulsada por IA que optimiza las operaciones y mejora la atención al paciente.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "thumbnail": "/images/dental-hero.webp",
+      "alt": "Demo de Gestión de Clínica Dental"
+    },
+    "stats": [
+      {
+        "value": "98%",
+        "label": "Satisfacción del Paciente"
+      },
+      {
+        "value": "75%",
+        "label": "Tiempo Ahorrado"
+      },
+      {
+        "value": "50%",
+        "label": "Reducción de Costos"
+      }
+    ]
+  },
+  "features": {
+    "title": "Características de Nivel Empresarial",
+    "subtitle": "Gestión de Clínica de Próxima Generación",
+    "description": "Descubre nuestra suite completa de herramientas avanzadas diseñadas para revolucionar la gestión de tu clínica dental. Cada característica está diseñada para ofrecer máxima eficiencia y atención superior al paciente.",
+    "categories": [
+      {
+        "name": "Gestión de Clínica",
+        "description": "Características principales que optimizan tus operaciones diarias"
+      },
+      {
+        "name": "Experiencia del Paciente",
+        "description": "Herramientas que mejoran el compromiso y la satisfacción del paciente"
+      }
+    ],
+    "items": [
+      {
+        "icon": "globe",
+        "title": "Constructor de Sitios Web Profesional",
+        "description": "Crea sitios web impresionantes optimizados para conversión con capacidades SEO y reservas integradas.",
+        "category": "Gestión de Clínica",
+        "image": "/images/features/website-builder.webp",
+        "highlights": [
+          "Constructor arrastrar y soltar con plantillas premium",
+          "Sistema de diseño responsive mobile-first",
+          "Reservas y pagos en línea integrados",
+          "Kit de herramientas de optimización SEO avanzado"
+        ],
+        "stats": {
+          "value": "250%",
+          "label": "Aumento en Reservas"
+        }
+      },
+      {
+        "icon": "calendar",
+        "title": "Programación Inteligente",
+        "description": "Gestión de citas impulsada por IA que maximiza la eficiencia de tu clínica.",
+        "category": "Gestión de Clínica",
+        "image": "/images/features/scheduling.webp",
+        "highlights": [
+          "Resolución inteligente de conflictos con optimización IA",
+          "Sincronización de calendario multi-proveedor",
+          "Recordatorios y confirmaciones automáticas a pacientes",
+          "Gestión de asignación de recursos y salas"
+        ],
+        "stats": {
+          "value": "89%",
+          "label": "Menos Ausencias"
+        }
+      },
+      {
+        "icon": "users",
+        "title": "Suite de Gestión de Pacientes",
+        "description": "Gestión integral de relaciones con pacientes con análisis avanzados.",
+        "category": "Experiencia del Paciente",
+        "image": "/images/features/patient-management.webp",
+        "highlights": [
+          "Registros digitales de pacientes con búsqueda inteligente",
+          "Planificación y seguimiento de tratamientos",
+          "Gestión integrada de facturación y seguros",
+          "Portal de comunicación con pacientes"
+        ],
+        "stats": {
+          "value": "95%",
+          "label": "Retención de Pacientes"
+        }
+      },
+      {
+        "icon": "brain",
+        "title": "Asistente Clínico IA",
+        "description": "Herramientas IA avanzadas para soporte de diagnóstico y planificación de tratamientos.",
+        "category": "Experiencia del Paciente",
+        "image": "/images/features/ai-assistant.webp",
+        "highlights": [
+          "Análisis de imágenes y diagnóstico impulsado por IA",
+          "Recomendaciones de tratamiento personalizadas",
+          "Herramientas de evaluación de riesgos en tiempo real",
+          "Documentación clínica automatizada"
+        ],
+        "stats": {
+          "value": "45%",
+          "label": "Diagnóstico Más Rápido"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Véalo en Acción",
+    "description": "Mira cómo las clínicas dentales líderes transforman sus operaciones",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "thumbnail": "/images/showcase-thumb.webp"
+    },
+    "testimonials": [
+      {
+        "author": "Dra. Sarah Chen",
+        "role": "Dentista Principal, Clínica Bright Smile",
+        "image": "/images/testimonials/sarah.webp",
+        "quote": "Esta plataforma ha revolucionado la forma en que operamos. Hemos visto un aumento del 40% en eficiencia."
+      },
+      {
+        "author": "Dr. Michael Rodriguez",
+        "role": "Propietario, Clínica Advanced Dental Care",
+        "image": "/images/testimonials/michael.webp",
+        "quote": "Las características de IA han mejorado drásticamente la precisión de nuestros diagnósticos y la satisfacción de nuestros pacientes."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Beneficios Transformadores",
+    "subtitle": "Resultados e Impacto Comprobados",
+    "description": "Experimenta mejoras medibles en todos los aspectos de tu clínica con nuestra solución integral. Nuestra plataforma proporciona resultados concretos que impactan directamente en tu rentabilidad.",
+    "items": [
+      {
+        "title": "Excelencia Operativa",
+        "description": "Optimiza las operaciones de tu clínica con automatización impulsada por IA, reduciendo costos administrativos y mejorando la eficiencia del personal.",
+        "icon": "chart-up",
+        "color": "blue",
+        "stats": {
+          "value": "75%",
+          "label": "Reducción en Trabajo Administrativo"
+        },
+        "highlights": [
+          "Gestión de flujos de trabajo automatizada",
+          "Asignación inteligente de recursos",
+          "Reducción de papeleo",
+          "Procesos optimizados"
+        ]
+      },
+      {
+        "title": "Experiencia del Paciente Mejorada",
+        "description": "Ofrece atención excepcional a los pacientes a través de la innovación digital y las interacciones personalizadas que superan las expectativas.",
+        "icon": "heart",
+        "color": "purple",
+        "stats": {
+          "value": "98%",
+          "label": "Satisfacción del Paciente"
+        },
+        "highlights": [
+          "Reserva de citas digital",
+          "Recordatorios automatizados",
+          "Portal del paciente en línea",
+          "Comunicación fluida"
+        ]
+      },
+      {
+        "title": "Crecimiento de Ingresos",
+        "description": "Maximiza el rendimiento financiero de tu clínica con programación inteligente y utilización optimizada de recursos.",
+        "icon": "trending-up",
+        "color": "green",
+        "stats": {
+          "value": "35%",
+          "label": "Aumento de Ingresos"
+        },
+        "highlights": [
+          "Programación optimizada",
+          "Reducción de ausencias",
+          "Aumento de reservas",
+          "Mejor utilización de recursos"
+        ]
+      },
+      {
+        "title": "Excelencia Clínica",
+        "description": "Mejora tus capacidades clínicas con herramientas de diagnóstico y planificación de tratamientos impulsadas por IA.",
+        "icon": "star",
+        "color": "yellow",
+        "stats": {
+          "value": "50%",
+          "label": "Ganancia en Eficiencia"
+        },
+        "highlights": [
+          "Diagnóstico impulsado por IA",
+          "Planificación de tratamientos",
+          "Documentación clínica",
+          "Aseguramiento de calidad"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Planes de Precios Flexibles",
+    "subtitle": "Precios Transparentes",
+    "description": "Elige el plan perfecto para tu clínica. Ahorra hasta un 20% con facturación anual.",
+    "billingPeriods": ["Mensual", "Anual"],
+    "plans": [
+      {
+        "name": "Inicial",
+        "highlight": "Perfecto para nuevas clínicas",
+        "monthlyPrice": "$199",
+        "yearlyPrice": "$1,990",
+        "yearlyDiscount": "Ahorra $398/año",
+        "description": "Características esenciales para comenzar tu viaje de transformación digital",
+        "features": [
+          {
+            "text": "Programación básica de citas",
+            "included": true
+          },
+          {
+            "text": "Acceso al portal del paciente",
+            "included": true
+          },
+          {
+            "text": "Gestión de registros digitales",
+            "included": true
+          },
+          {
+            "text": "Soporte por email (24/7)",
+            "included": true
+          },
+          {
+            "text": "Análisis básico",
+            "included": true
+          },
+          {
+            "text": "Acceso a la aplicación móvil",
+            "included": true
+          }
+        ],
+        "cta": "Comenzar Ahora",
+        "popular": false
+      },
+      {
+        "name": "Profesional",
+        "highlight": "Más popular para clínicas establecidas",
+        "monthlyPrice": "$399",
+        "yearlyPrice": "$3,990",
+        "yearlyDiscount": "Ahorra $798/año",
+        "description": "Características avanzadas para clínicas en crecimiento",
+        "features": [
+          {
+            "text": "Todo lo incluido en Inicial, más:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Características IA avanzadas",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "Soporte multi-proveedor",
+            "included": true
+          },
+          {
+            "text": "Panel de análisis personalizado",
+            "included": true
+          },
+          {
+            "text": "Soporte prioritario",
+            "included": true
+          },
+          {
+            "text": "Acceso API",
+            "included": true
+          }
+        ],
+        "cta": "Comenzar Ahora",
+        "popular": true
+      },
+      {
+        "name": "Empresarial",
+        "highlight": "Para grandes clínicas y DSOs",
+        "monthlyPrice": "Personalizado",
+        "yearlyPrice": "Personalizado",
+        "yearlyDiscount": "Contáctanos para precios especiales",
+        "description": "Soluciones adaptadas a las necesidades empresariales",
+        "features": [
+          {
+            "text": "Todo lo incluido en Profesional, más:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Soporte de integración personalizado",
+            "included": true
+          },
+          {
+            "text": "Gerente de cuenta dedicado",
+            "included": true
+          },
+          {
+            "text": "Características de seguridad avanzadas",
+            "included": true
+          },
+          {
+            "text": "Opciones de desarrollo personalizadas",
+            "included": true
+          },
+          {
+            "text": "Garantías SLA",
+            "included": true
+          }
+        ],
+        "cta": "Contactar Ventas",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "¿Listo para Transformar tu Clínica?",
+    "description": "Únete a miles de clínicas dentales exitosas que utilizan nuestra plataforma",
+    "primaryButton": {
+      "text": "Programar una Demo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Ver Video Demo",
+      "link": "/demo-video"
+    },
+    "background": "/images/cta-background.webp"
+  }
+} 

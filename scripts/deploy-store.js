@@ -1,4 +1,4 @@
-import { exec } from 'child_process';
+import { spawn } from 'child_process';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -34,17 +34,25 @@ async function deployStore(storeName) {
 
   console.log(`📁 Using env file: ${envFile}`);
 
-  return new Promise((resolve, reject) => {
-    // Build with store's env
-    exec(`ENV_FILE=${envFile} npm run build`, { cwd: PROJECT_ROOT }, (error, stdout, stderr) => {
-      if (error) {
-        console.error('❌ Build failed:', error);
-        console.error(stderr);
+  return new Promise((resolve) => {
+    // Build with store's env using spawn instead of exec to avoid memory issues
+    const buildProcess = spawn('npm', ['run', 'build'], {
+      cwd: PROJECT_ROOT,
+      env: { ...process.env, ENV_FILE: envFile },
+      stdio: 'inherit' // Stream output directly to console instead of buffering
+    });
+    
+    buildProcess.on('error', (error) => {
+      console.error('❌ Build failed:', error);
+      resolve(false);
+    });
+    
+    buildProcess.on('exit', (code) => {
+      if (code !== 0) {
+        console.error(`❌ Build process exited with code ${code}`);
         resolve(false);
         return;
       }
-      
-      console.log(stdout);
       
       try {
         // Copy dist to store directory

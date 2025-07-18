@@ -1,0 +1,278 @@
+---
+import { Button } from './ui/Button';
+import { Mail, Download, Calendar, Bell } from 'lucide-react';
+
+// Import form configuration
+const { config, form } = await import('../forms/emailsignup/config.json');
+
+interface Props {
+  subtitle?: string;
+  title?: string;
+  description?: string;
+  buttonText?: string;
+  placeholder?: string;
+  features?: string[];
+  trustBadge?: {
+    icon: string;
+    text: string;
+  };
+  formType?: string;
+}
+
+const {
+  subtitle = form.subtitle,
+  title = form.title,
+  description = form.description,
+  buttonText = form.buttonText,
+  placeholder = form.placeholder,
+  features = form.features,
+  trustBadge,
+  formType = "newsletter"
+} = Astro.props;
+
+// Resource options
+const resources = [
+  { value: "guide", label: "Practice Efficiency Guide" },
+  { value: "webinar", label: "AI in Dentistry Webinar" },
+  { value: "checklist", label: "Software Implementation Checklist" },
+  { value: "case-study", label: "ROI Case Study" }
+];
+---
+
+<section class="relative py-24 px-4 overflow-hidden bg-gradient-to-b from-white to-gray-50">
+  <div class="absolute inset-0 z-0">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-bl from-[#0a91b1]/10 to-blue-500/10 rounded-full blur-3xl animate-blob"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-tr from-blue-500/10 to-[#0a91b1]/10 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
+    
+    <!-- Software Grid Pattern -->
+    <div class="absolute inset-0 bg-grid-pattern opacity-[0.03]"></div>
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto">
+    <!-- Two-column layout -->
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <!-- Content Column -->
+      <div>
+        {subtitle && (
+          <span class="inline-block px-4 py-1.5 mb-4 text-sm font-medium rounded-full bg-[#0a91b1]/20 text-[#0a91b1] backdrop-blur-sm border border-[#0a91b1]/30">
+            {subtitle}
+          </span>
+        )}
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">
+          {title}
+        </h2>
+        <p class="text-xl text-gray-600 leading-relaxed mb-8">
+          {description}
+        </p>
+        
+        {features.length > 0 && (
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+            {features.map((feature) => (
+              <div class="flex items-center text-gray-700 group">
+                <div class="flex-shrink-0 w-6 h-6 rounded-full bg-[#0a91b1]/20 flex items-center justify-center group-hover:bg-[#0a91b1]/30 transition-colors duration-300 mr-3">
+                  <svg class="w-4 h-4 text-[#0a91b1]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                  </svg>
+                </div>
+                <span>{feature}</span>
+              </div>
+            ))}
+          </div>
+        )}
+        
+        <!-- Trust Badge -->
+        {trustBadge && (
+          <div class="flex items-center mt-8 text-gray-500">
+            <svg class="w-5 h-5 mr-2 text-[#0a91b1]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={trustBadge.icon}/>
+            </svg>
+            <span class="text-sm">{trustBadge.text}</span>
+          </div>
+        )}
+      </div>
+      
+      <!-- Form Column -->
+      <div class="bg-white backdrop-blur-md p-8 rounded-2xl border border-gray-200 shadow-xl">
+        <div class="mb-6">
+          <h3 class="text-xl font-bold text-gray-900 mb-2">
+            {formType === "newsletter" 
+              ? "Subscribe to our newsletter" 
+              : "Get your free resource"}
+          </h3>
+          <p class="text-gray-600">
+            {formType === "newsletter" 
+              ? "Stay updated with the latest features and dental management tips" 
+              : "Fill out the form to receive your selected resource instantly"}
+          </p>
+        </div>
+        
+        <form 
+          id="newsletter-form" 
+          class="space-y-5"
+        >
+          {formType === "resource" && (
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1.5">Choose your resource</label>
+              <select 
+                name="resource" 
+                class="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#0a91b1]/50 focus:border-[#0a91b1]"
+                required
+              >
+                <option value="" disabled selected>Select a resource</option>
+                {resources.map(resource => (
+                  <option value={resource.value}>{resource.label}</option>
+                ))}
+              </select>
+            </div>
+          )}
+          
+          {form.fields.map(field => (
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1.5">{field.label || field.placeholder}</label>
+              <input 
+                type={field.type}
+                name={field.id}
+                placeholder={field.placeholder}
+                class="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#0a91b1]/50 focus:border-[#0a91b1]"
+                required={field.required}
+              />
+            </div>
+          ))}
+          
+          <div class="flex items-center space-x-2 text-sm text-gray-600">
+            <input type="checkbox" id="privacy-policy" name="privacy-policy" class="rounded text-[#0a91b1] focus:ring-[#0a91b1]" required />
+            <label for="privacy-policy">I agree to the privacy policy and terms of service</label>
+          </div>
+
+          <div>
+            <button
+              type="submit"
+              class="w-full py-3.5 text-base font-medium text-white bg-[#0a91b1] hover:bg-[#097d99] rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-[#0a91b1]/25 focus:outline-none focus:ring-2 focus:ring-[#0a91b1]/50"
+            >
+              {buttonText}
+            </button>
+          </div>
+        </form>
+        
+        <!-- Form Icons -->
+        <div class="flex justify-between mt-8 border-t border-gray-200 pt-6">
+          <div class="flex flex-col items-center">
+            <div class="w-10 h-10 rounded-full bg-[#0a91b1]/20 flex items-center justify-center mb-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#0a91b1]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+              </svg>
+            </div>
+            <span class="text-xs text-gray-500">Instant Access</span>
+          </div>
+          
+          <div class="flex flex-col items-center">
+            <div class="w-10 h-10 rounded-full bg-[#0a91b1]/20 flex items-center justify-center mb-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#0a91b1]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+              </svg>
+            </div>
+            <span class="text-xs text-gray-500">Secure</span>
+          </div>
+          
+          <div class="flex flex-col items-center">
+            <div class="w-10 h-10 rounded-full bg-[#0a91b1]/20 flex items-center justify-center mb-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#0a91b1]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+              </svg>
+            </div>
+            <span class="text-xs text-gray-500">Unsubscribe Anytime</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script define:vars={{ config }}>
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('newsletter-form');
+  
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const formData = new FormData(form);
+    const today = new Date().toISOString().split('T')[0];
+    
+    // Prepare the data according to the schema
+    const subscriberData = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      resource: formData.get('resource') || 'newsletter',
+      subscriptionDate: today,
+      subscriptionStatus: 'Subscribed'
+    };
+
+    try {
+      const response = await fetch(
+        `${config.apiBaseUrl}/builder/entities/${config.schemaId}/entries/create/`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-Schema-Key-Token': config.keyToken
+          },
+          body: JSON.stringify({
+            data: subscriberData,
+            key_token: config.keyToken
+          })
+        }
+      );
+
+      const result = await response.json();
+      
+      if (result.id) {
+        // Success
+        form.reset();
+        alert('Thank you! Your submission has been received.');
+      } else {
+        throw new Error(result.error || 'Failed to process your request');
+      }
+    } catch (error) {
+      console.error('Submission error:', error);
+      alert('Sorry, there was an error processing your request. Please try again.');
+    }
+  });
+});
+</script>
+
+<style>
+  @keyframes blob {
+    0% {
+      transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    }
+    33% {
+      transform: translate(-50%, -50%) scale(1.1) rotate(120deg);
+    }
+    66% {
+      transform: translate(-50%, -50%) scale(0.9) rotate(240deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1) rotate(360deg);
+    }
+  }
+
+  .animate-blob {
+    animation: blob 20s infinite linear;
+  }
+
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+  
+  /* Grid Pattern Background */
+  .bg-grid-pattern {
+    background-image: 
+      linear-gradient(to right, rgba(10, 145, 177, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(10, 145, 177, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+  
+  .backdrop-blur-md {
+    backdrop-filter: blur(12px);
+  }
+</style>

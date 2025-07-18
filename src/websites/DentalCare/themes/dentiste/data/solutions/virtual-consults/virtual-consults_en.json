@@ -1,0 +1,317 @@
+{
+  "hero": {
+    "subtitle": "PATIENT EXPERIENCE",
+    "title": "Virtual Dental Consultations",
+    "description": "Expand your practice reach and enhance patient convenience with secure, HIPAA-compliant virtual consultations that streamline care and improve case acceptance."
+  },
+  "overview": {
+    "title": "Modern Teledentistry Platform",
+    "description": "Our virtual consultation solution enables dentists to provide initial assessments, follow-up care, and emergency triage through secure video conferencing, expanding access to care while saving chair time.",
+    "features": [
+      {
+        "icon": "video",
+        "title": "HD Video Consultations",
+        "description": "Crystal-clear video for accurate assessment"
+      },
+      {
+        "icon": "shield",
+        "title": "HIPAA Compliant",
+        "description": "Enterprise-grade security for patient privacy"
+      },
+      {
+        "icon": "smartphone",
+        "title": "Multi-Device Access",
+        "description": "Works on computers, tablets, and smartphones"
+      },
+      {
+        "icon": "edit-3",
+        "title": "Digital Documentation",
+        "description": "Seamless integration with patient records"
+      }
+    ]
+  },
+  "applications": {
+    "title": "Virtual Care Applications",
+    "description": "Versatile teledentistry tools for multiple clinical scenarios",
+    "problems": [
+      {
+        "title": "New Patient Screening",
+        "description": "Pre-qualify patients before in-office visits",
+        "icon": "user-plus"
+      },
+      {
+        "title": "Treatment Planning",
+        "description": "Present options and address questions remotely",
+        "icon": "layout"
+      },
+      {
+        "title": "Post-Op Follow-ups",
+        "description": "Check healing without additional appointments",
+        "icon": "check-circle"
+      },
+      {
+        "title": "Emergency Triage",
+        "description": "Assess urgency and provide initial guidance",
+        "icon": "alert-triangle"
+      },
+      {
+        "title": "Specialist Collaboration",
+        "description": "Connect with specialists for joint consultations",
+        "icon": "users"
+      },
+      {
+        "title": "Orthodontic Monitoring",
+        "description": "Track progress without monthly in-person checks",
+        "icon": "trending-up"
+      }
+    ]
+  },
+  "process": {
+    "title": "Implementation Process",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Platform Setup",
+        "description": "Configure virtual care tools for your practice"
+      },
+      {
+        "number": "02",
+        "title": "Integration",
+        "description": "Connect with your practice management system"
+      },
+      {
+        "number": "03",
+        "title": "Team Training",
+        "description": "Prepare staff for virtual appointment workflows"
+      },
+      {
+        "number": "04",
+        "title": "Patient Education",
+        "description": "Create resources to introduce virtual visits"
+      },
+      {
+        "number": "05",
+        "title": "Service Promotion",
+        "description": "Market virtual options to your patient base"
+      },
+      {
+        "number": "06",
+        "title": "Ongoing Optimization",
+        "description": "Refine processes based on data and feedback"
+      }
+    ]
+  },
+  "advantages": {
+    "title": "Practice Benefits",
+    "description": "How virtual consultations enhance your practice operations and patient care",
+    "benefits": [
+      {
+        "title": "20% More New Patients",
+        "description": "Attract tech-savvy patients seeking convenience",
+        "icon": "user-plus"
+      },
+      {
+        "title": "40% Higher Case Acceptance",
+        "description": "More time to explain treatment options",
+        "icon": "thumbs-up"
+      },
+      {
+        "title": "15% Reduced Chair Time",
+        "description": "Optimize operatory usage for production",
+        "icon": "clock"
+      },
+      {
+        "title": "Expanded Service Area",
+        "description": "Reach patients beyond traditional boundaries",
+        "icon": "map"
+      }
+    ]
+  },
+  "features": {
+    "title": "Key Features",
+    "description": "Comprehensive tools for effective virtual dental care",
+    "featureList": [
+      {
+        "title": "Integrated Scheduling",
+        "description": "Book virtual visits in your existing system",
+        "icon": "calendar"
+      },
+      {
+        "title": "Patient Self-Booking",
+        "description": "Allow patients to schedule virtual consultations",
+        "icon": "user"
+      },
+      {
+        "title": "Screen Sharing",
+        "description": "Review images and treatment plans together",
+        "icon": "monitor"
+      },
+      {
+        "title": "Intraoral Camera Support",
+        "description": "Connect diagnostic cameras for detailed views",
+        "icon": "camera"
+      },
+      {
+        "title": "Digital Forms",
+        "description": "Send and receive completed forms online",
+        "icon": "file-text"
+      },
+      {
+        "title": "Secure Messaging",
+        "description": "HIPAA-compliant text communication",
+        "icon": "message-square"
+      },
+      {
+        "title": "Session Recording",
+        "description": "Document consultations with patient consent",
+        "icon": "film"
+      },
+      {
+        "title": "Treatment Visualization",
+        "description": "Share before/after simulations remotely",
+        "icon": "image"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Pricing Options",
+    "description": "Select the plan that fits your practice needs",
+    "options": [
+      {
+        "name": "Essentials",
+        "price": "$129",
+        "duration": "per month",
+        "includes": [
+          "Basic virtual consultation platform",
+          "Up to 50 virtual visits monthly",
+          "Single provider license",
+          "Email support",
+          "Patient waiting room",
+          "Basic screen sharing"
+        ]
+      },
+      {
+        "name": "Professional",
+        "price": "$249",
+        "duration": "per month",
+        "includes": [
+          "All Essentials features",
+          "Up to 150 virtual visits monthly",
+          "Up to 5 provider licenses",
+          "Digital forms integration",
+          "Session recording",
+          "Treatment visualization tools",
+          "Priority support"
+        ]
+      },
+      {
+        "name": "Enterprise",
+        "price": "$399",
+        "duration": "per month",
+        "includes": [
+          "All Professional features",
+          "Unlimited virtual visits",
+          "Unlimited provider licenses",
+          "Advanced analytics dashboard",
+          "Multi-location support",
+          "Custom branding options",
+          "Specialist network access",
+          "Dedicated account manager"
+        ]
+      }
+    ]
+  },
+  "integration": {
+    "title": "Seamless Integration",
+    "description": "Works with your existing practice management systems",
+    "partners": [
+      {
+        "name": "Dentrix",
+        "logo": "/images/partners/dentrix.png"
+      },
+      {
+        "name": "Eaglesoft",
+        "logo": "/images/partners/eaglesoft.png"
+      },
+      {
+        "name": "Open Dental",
+        "logo": "/images/partners/opendental.png"
+      },
+      {
+        "name": "Curve Dental",
+        "logo": "/images/partners/curve.png"
+      },
+      {
+        "name": "Denticon",
+        "logo": "/images/partners/denticon.png"
+      },
+      {
+        "name": "Dentimax",
+        "logo": "/images/partners/dentimax.png"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": [
+      {
+        "question": "Are virtual consultations legal for dentistry?",
+        "answer": "Yes, teledentistry is legal in all 50 states, although specific regulations vary by state. Our platform is designed to comply with all current regulations, and we provide state-specific guidance during implementation. Many states have expanded teledentistry allowances since 2020, making it easier than ever to incorporate virtual care into your practice."
+      },
+      {
+        "question": "Can I bill insurance for virtual consultations?",
+        "answer": "Yes, most dental and medical insurers now provide reimbursement for teledentistry services. Our platform includes current CDT codes for virtual consultations (D9995 and D9996) and documentation templates to support insurance claims. Many practices also offer virtual consultations as a fee-for-service option or as a complimentary service to attract new patients."
+      },
+      {
+        "question": "What equipment do patients need?",
+        "answer": "Patients only need a device with internet access and a camera—a smartphone, tablet, or computer works perfectly. Our platform works through a web browser with no downloads required, though we also offer mobile apps for enhanced functionality. Patients receive a simple link via email or text message to join their consultation with a single tap."
+      },
+      {
+        "question": "How does intraoral camera support work?",
+        "answer": "For practices using intraoral cameras, our platform can integrate with most USB-connected devices. For patients, we've developed a guided photo capture system that helps them take clinically useful photos with their smartphone camera. The Professional and Enterprise plans also include AI-assisted image enhancement tools to improve diagnostic quality."
+      },
+      {
+        "question": "What types of consultations work best virtually?",
+        "answer": "Virtual consultations are ideal for initial screenings, treatment plan presentations, post-operative checks, and orthodontic monitoring. Many practices use them for emergency triage to assess urgency and provide immediate guidance. While they can't replace all in-person care, they're excellent for determining which patients need immediate attention and which concerns can be addressed remotely."
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Customer Success Stories",
+    "reviews": [
+      {
+        "name": "Dr. Rebecca Johnson",
+        "practice": "Smile Design Studio",
+        "rating": 5,
+        "comment": "Implementing virtual consultations has transformed our new patient experience. We're converting over 85% of virtual consults into in-office visits, and patients arrive already educated about their treatment options. It's saved us chair time and improved our case acceptance dramatically.",
+        "date": "2 months ago"
+      },
+      {
+        "name": "Dr. Michael Chen",
+        "practice": "Parkside Dental",
+        "rating": 5,
+        "comment": "The emergency triage feature has been a game-changer for our practice. We can quickly assess patients with urgent concerns, provide immediate guidance, and properly prepare for their visit if needed. It's reduced stress for both patients and our team while opening up our schedule for truly urgent cases.",
+        "date": "1 month ago"
+      },
+      {
+        "name": "Dr. Sophia Rodriguez",
+        "practice": "Clear Orthodontics",
+        "rating": 5,
+        "comment": "For our orthodontic practice, virtual check-ins have allowed us to extend intervals between in-office visits without compromising care quality. Patients love the convenience, and we're able to see more new starts while maintaining excellent oversight of active cases. The ROI has been substantial.",
+        "date": "3 months ago"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Add Virtual Consultations to Your Practice?",
+    "description": "Join thousands of forward-thinking dental practices offering the convenience of virtual care to their patients.",
+    "primaryButton": {
+      "text": "Request Demo",
+      "href": "/request-demo"
+    },
+    "secondaryButton": {
+      "text": "View Pricing",
+      "href": "/pricing"
+    }
+  }
+} 

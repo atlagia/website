@@ -1,0 +1,192 @@
+{
+  "hero": {
+    "subtitle": "EMAIL MARKETING AI",
+    "title": "Supercharge Your Email Marketing with AI",
+    "description": "Transform your email campaigns with AI-powered personalization, automation, and analytics designed to boost engagement and conversions.",
+    "image": "https://cdn.atlagia.com/kepart_vector_laptop_Ai_Platform_e-commerce_AI_Revolution_light_327b0a78-42f4-4a2a-be26-de56509232a3.png"
+  },
+  "benefits": {
+    "title": "Why Choose Our Email Marketing AI",
+    "items": [
+      {
+        "icon": "Brain",
+        "title": "Smart Personalization",
+        "description": "AI-driven content personalization that speaks directly to each subscriber's interests and behaviors.",
+        "color": "purple"
+      },
+      {
+        "icon": "Target",
+        "title": "Predictive Analytics",
+        "description": "Forecast campaign performance and optimize send times for maximum engagement.",
+        "color": "blue"
+      },
+      {
+        "icon": "Wand",
+        "title": "Auto-Generation",
+        "description": "Generate compelling email content and subject lines that drive opens and clicks.",
+        "color": "pink"
+      },
+      {
+        "icon": "ChartLine",
+        "title": "Smart Optimization",
+        "description": "Continuous A/B testing and optimization for improving campaign performance.",
+        "color": "green"
+      }
+    ]
+  },
+  "features": {
+    "title": "Powerful Email Marketing Features",
+    "description": "Everything you need to create, automate, and optimize your email marketing campaigns.",
+    "items": [
+      {
+        "title": "AI Content Creation",
+        "description": "Create engaging email content with our advanced AI writing assistant",
+        "image": "https://cdn.atlagia.com/kepart_Futuristic_abstract_infographic_representing_strategic_p_26c25dbc-196b-4150-af72-c5e7854980f6.png",
+        "features": [
+          "Subject line optimization",
+          "Body content generation",
+          "Smart templates",
+          "Tone and style customization"
+        ]
+      },
+      {
+        "title": "Smart Automation",
+        "description": "Set up intelligent automated email sequences that adapt to subscriber behavior",
+        "image": "https://cdn.atlagia.com/kepart_Futuristic_abstract_infographic_representing_strategic_p_a60e9e93-c021-457e-a4c5-5de535526530.png",
+        "features": [
+          "Behavioral triggers",
+          "Dynamic content",
+          "Journey mapping",
+          "Automated A/B testing"
+        ]
+      },
+      {
+        "title": "Advanced Analytics",
+        "description": "Get deep insights into your email performance with AI-powered analytics",
+        "image": "https://cdn.atlagia.com/kepart_Futuristic_abstract_infographic_representing_strategic_p_f2ef9310-0d62-446f-987f-e3062c93561e.png",
+        "features": [
+          "Performance prediction",
+          "Engagement scoring",
+          "Revenue attribution",
+          "Subscriber insights"
+        ]
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "description": "Get started with AI-powered email marketing in four simple steps",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Connect Your Data",
+        "description": "Import your subscriber list and past campaign data"
+      },
+      {
+        "number": "02",
+        "title": "Set Your Goals",
+        "description": "Define your campaign objectives and preferences"
+      },
+      {
+        "number": "03",
+        "title": "Create Content",
+        "description": "Generate and customize AI-powered email content"
+      },
+      {
+        "number": "04",
+        "title": "Optimize & Scale",
+        "description": "Let AI optimize and scale your campaigns"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Simple, Transparent Pricing",
+    "description": "Choose the plan that best fits your email marketing needs",
+    "plans": [
+      {
+        "name": "Starter",
+        "price": "49",
+        "period": "/month",
+        "description": "Perfect for small businesses",
+        "features": [
+          "Up to 10,000 subscribers",
+          "Basic AI features",
+          "Standard templates",
+          "Email support"
+        ],
+        "cta": {
+          "text": "Start Free Trial",
+          "link": "/trial"
+        }
+      },
+      {
+        "name": "Professional",
+        "price": "99",
+        "period": "/month",
+        "description": "For growing businesses",
+        "features": [
+          "Up to 50,000 subscribers",
+          "Advanced AI features",
+          "Custom templates",
+          "Priority support"
+        ],
+        "cta": {
+          "text": "Start Free Trial",
+          "link": "/trial"
+        },
+        "popular": true
+      },
+      {
+        "name": "Enterprise",
+        "price": "249",
+        "period": "/month",
+        "description": "For large organizations",
+        "features": [
+          "Unlimited subscribers",
+          "Premium AI features",
+          "Custom integration",
+          "24/7 support"
+        ],
+        "cta": {
+          "text": "Contact Sales",
+          "link": "/contact"
+        }
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "What Our Customers Say",
+    "items": [
+      {
+        "content": "The AI-powered content generation and optimization have increased our email open rates by 45% and click-through rates by 60%. It's been a game-changer for our email marketing.",
+        "author": "Jessica Chen",
+        "position": "Email Marketing Manager",
+        "company": "GrowthMax",
+        "image": "/images/testimonials/jessica.jpg"
+      },
+      {
+        "content": "The predictive analytics and automated optimization have saved us countless hours while delivering better results than our manual campaigns ever did.",
+        "author": "Marcus Thompson",
+        "position": "Digital Marketing Director",
+        "company": "EcomPro",
+        "image": "/images/testimonials/marcus.jpg"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Transform Your Email Marketing?",
+    "description": "Join thousands of businesses using our AI to create better email campaigns.",
+    "buttons": [
+      {
+        "text": "Start Free Trial",
+        "link": "/trial",
+        "primary": true
+      },
+      {
+        "text": "Watch Demo",
+        "link": "/demo",
+        "primary": false
+      }
+    ]
+  }
+} 

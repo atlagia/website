@@ -1,0 +1,182 @@
+{
+  "hero": {
+    "subtitle": "توثيق واجهة برمجة التطبيقات",
+    "title": "دمج منصتنا",
+    "description": "توثيق شامل لواجهة برمجة التطبيقات يساعدك على دمج حلول التجارة الإلكترونية في تطبيقاتك.",
+    "searchPlaceholder": "البحث في توثيق واجهة برمجة التطبيقات..."
+  },
+  "sidebar": {
+    "categories": [
+      {
+        "title": "البدء",
+        "icon": "Code",
+        "items": [
+          {
+            "title": "المصادقة",
+            "link": "/api/auth"
+          },
+          {
+            "title": "نظرة عامة على واجهة برمجة التطبيقات",
+            "link": "/api/overview"
+          },
+          {
+            "title": "حدود الاستخدام",
+            "link": "/api/rate-limits"
+          }
+        ]
+      },
+      {
+        "title": "النقاط النهائية الأساسية",
+        "icon": "Terminal",
+        "items": [
+          {
+            "title": "واجهة برمجة التطبيقات للمنتجات",
+            "link": "/api/products"
+          },
+          {
+            "title": "واجهة برمجة التطبيقات للطلبات",
+            "link": "/api/orders"
+          },
+          {
+            "title": "واجهة برمجة التطبيقات للعملاء",
+            "link": "/api/customers"
+          }
+        ]
+      },
+      {
+        "title": "الميزات المتقدمة",
+        "icon": "Box",
+        "items": [
+          {
+            "title": "Webhooks",
+            "link": "/api/webhooks"
+          },
+          {
+            "title": "واجهة برمجة التطبيقات للتحليلات",
+            "link": "/api/analytics"
+          },
+          {
+            "title": "دمج الذكاء الاصطناعي",
+            "link": "/api/ai"
+          }
+        ]
+      },
+      {
+        "title": "الأمان",
+        "icon": "Shield",
+        "items": [
+          {
+            "title": "مفاتيح واجهة برمجة التطبيقات",
+            "link": "/api/keys"
+          },
+          {
+            "title": "OAuth 2.0",
+            "link": "/api/oauth"
+          },
+          {
+            "title": "تشفير البيانات",
+            "link": "/api/encryption"
+          }
+        ]
+      }
+    ]
+  },
+  "featured": {
+    "title": "الأدلة المميزة",
+    "guides": [
+      {
+        "icon": "Zap",
+        "title": "دليل البدء السريع",
+        "description": "ابدأ باستخدام واجهة برمجة التطبيقات في دقائق",
+        "link": "/api/quick-start",
+        "color": "pink"
+      },
+      {
+        "icon": "Database",
+        "title": "نماذج البيانات",
+        "description": "فهم هياكل البيانات والعلاقات",
+        "link": "/api/data-models",
+        "color": "blue"
+      },
+      {
+        "icon": "Settings",
+        "title": "أنماط التكامل",
+        "description": "أنماط شائعة للتكامل مع منصتنا",
+        "link": "/api/integration-patterns",
+        "color": "purple"
+      }
+    ]
+  },
+  "endpoints": {
+    "title": "النقاط النهائية الشائعة",
+    "description": "اكتشف نقاط النهاية الأكثر استخدامًا في واجهة برمجة التطبيقات",
+    "items": [
+      {
+        "method": "GET",
+        "path": "/api/v1/products",
+        "title": "قائمة المنتجات",
+        "description": "استرجاع قائمة المنتجات مع خيارات التصفية والترقيم"
+      },
+      {
+        "method": "POST",
+        "path": "/api/v1/orders",
+        "title": "إنشاء طلب",
+        "description": "إنشاء طلب جديد مع العناصر ومعلومات العميل"
+      },
+      {
+        "method": "GET",
+        "path": "/api/v1/customers/{id}",
+        "title": "استرجاع العميل",
+        "description": "استرجاع معلومات مفصلة عن عميل محدد"
+      },
+      {
+        "method": "PUT",
+        "path": "/api/v1/products/{id}",
+        "title": "تحديث المنتج",
+        "description": "تحديث معلومات وخصائص منتج موجود"
+      }
+    ]
+  },
+  "updates": {
+    "title": "أحدث التحديثات",
+    "description": "ابق على اطلاع بأحدث ميزات واجهة برمجة التطبيقات والتحسينات",
+    "items": [
+      {
+        "date": "2024-03-15",
+        "title": "أحداث Webhook جديدة",
+        "description": "إضافة دعم لتغييرات حالة الطلب وتحديثات المخزون",
+        "tag": "ميزة"
+      },
+      {
+        "date": "2024-03-10",
+        "title": "واجهة برمجة التطبيقات الإصدار 2.0 بيتا",
+        "description": "تقديم الجيل التالي من واجهة برمجة التطبيقات مع أداء محسن ونقاط نهاية جديدة",
+        "tag": "تحديث"
+      },
+      {
+        "date": "2024-03-05",
+        "title": "تحسينات المصادقة",
+        "description": "إضافة دعم OAuth 2.0 مع رموز التحديث وأمان محسن",
+        "tag": "أمان"
+      }
+    ]
+  },
+  "help": {
+    "title": "هل تحتاج إلى مزيد من المساعدة؟",
+    "description": "لا يمكنك العثور على ما تبحث عنه؟ فريق دعم المطورين لدينا هنا للمساعدة.",
+    "options": [
+      {
+        "icon": "MessageCircle",
+        "title": "منتدى المطورين",
+        "description": "انضم إلى مجتمع المطورين للحصول على المساعدة من المطورين الآخرين",
+        "link": "/api/community"
+      },
+      {
+        "icon": "Mail",
+        "title": "اتصل بدعم واجهة برمجة التطبيقات",
+        "description": "تواصل مع فريق دعم واجهة برمجة التطبيقات المخصص لدينا",
+        "link": "/api/support"
+      }
+    ]
+  }
+} 

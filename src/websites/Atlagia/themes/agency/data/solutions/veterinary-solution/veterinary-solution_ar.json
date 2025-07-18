@@ -1,0 +1,335 @@
+{
+  "hero": {
+    "subtitle": "إدارة العيادات البيطرية",
+    "title": "حل إدارة العيادات البيطرية المتكامل",
+    "description": "نظام شامل لإدارة العيادات البيطرية يعمل على تبسيط العمليات وتحسين رعاية المرضى وتنمية ممارستك.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "عرض حل إدارة العيادات البيطرية"
+    },
+    "stats": [
+      {
+        "value": "40%",
+        "label": "توفير الوقت"
+      },
+      {
+        "value": "95%",
+        "label": "رضا العملاء"
+      },
+      {
+        "value": "35%",
+        "label": "نمو الإيرادات"
+      }
+    ]
+  },
+  "features": {
+    "subtitle": "ميزات متقدمة",
+    "title": "إدارة بيطرية متكاملة",
+    "description": "أدوات شاملة مصممة للعيادات البيطرية الحديثة",
+    "categories": [
+      {
+        "name": "عمليات العيادة",
+        "description": "تبسيط العمليات اليومية وإدارة المرضى"
+      },
+      {
+        "name": "رعاية المرضى",
+        "description": "تحسين رعاية الحيوانات والتواصل مع العملاء"
+      }
+    ],
+    "items": [
+      {
+        "icon": "calendar",
+        "category": "العمليات",
+        "title": "جدولة ذكية",
+        "description": "إدارة فعالة للمواعيد والموارد",
+        "image": "/images/solutions/veterinary/scheduling.jpg",
+        "highlights": [
+          "حجز عبر الإنترنت",
+          "تذكيرات تلقائية",
+          "تخصيص الموارد",
+          "دعم المواقع المتعددة"
+        ],
+        "stats": {
+          "value": "40%",
+          "label": "توفير الوقت"
+        }
+      },
+      {
+        "icon": "file-text",
+        "category": "الإكلينيكي",
+        "title": "سجلات طبية إلكترونية",
+        "description": "سجلات مرضى شاملة وتوثيق إكلينيكي",
+        "image": "/images/solutions/veterinary/emr.jpg",
+        "highlights": [
+          "سجلات رقمية",
+          "خطط العلاج",
+          "تكامل المختبر",
+          "إدارة الوصفات الطبية"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "امتثال رقمي"
+        }
+      },
+      {
+        "icon": "message-circle",
+        "category": "التواصل",
+        "title": "تفاعل العملاء",
+        "description": "أدوات محسنة للتواصل والتفاعل مع العملاء",
+        "image": "/images/solutions/veterinary/communication.jpg",
+        "highlights": [
+          "بوابة العملاء",
+          "تحديثات عبر الرسائل القصيرة والبريد الإلكتروني",
+          "تذكيرات المواعيد",
+          "موارد تعليمية"
+        ],
+        "stats": {
+          "value": "95%",
+          "label": "رضا العملاء"
+        }
+      },
+      {
+        "icon": "trending-up",
+        "category": "الأعمال",
+        "title": "تحليلات العيادة",
+        "description": "ذكاء أعمال شامل وإعداد التقارير",
+        "image": "/images/solutions/veterinary/analytics.jpg",
+        "highlights": [
+          "تقارير مالية",
+          "مقاييس الأداء",
+          "تحليلات المخزون",
+          "رؤى النمو"
+        ],
+        "stats": {
+          "value": "35%",
+          "label": "نمو الإيرادات"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "التميز البيطري",
+    "description": "شاهد كيف تقوم العيادات البيطرية الرائدة بتحويل عملياتها",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "قصة نجاح بيطرية"
+    },
+    "testimonials": [
+      {
+        "author": "د. إيميلي روبرتس",
+        "role": "مالكة العيادة",
+        "image": "/images/testimonials/vet1.jpg",
+        "quote": "قام هذا النظام بتحويل عيادتنا. حسنت ميزات الجدولة والتواصل مع العملاء المتكاملة كفاءتنا بشكل كبير."
+      },
+      {
+        "author": "د. مارك طومسون",
+        "role": "رئيس الأطباء البيطريين",
+        "image": "/images/testimonials/vet2.jpg",
+        "quote": "ساعدت أدوات السجلات الطبية الإلكترونية وتخطيط العلاج في تقديم رعاية أفضل لمرضانا."
+      }
+    ]
+  },
+  "benefits": {
+    "subtitle": "المزايا الرئيسية",
+    "title": "حول عيادتك البيطرية",
+    "description": "اختبر مزايا نظام إدارة العيادات البيطرية المتكامل بالكامل",
+    "items": [
+      {
+        "icon": "zap",
+        "title": "التميز التشغيلي",
+        "description": "تبسيط عمليات العيادة وسير العمل",
+        "color": "blue",
+        "stats": {
+          "value": "40%",
+          "label": "توفير الوقت"
+        },
+        "highlights": [
+          "جدولة آلية",
+          "إدارة المخزون",
+          "تحسين الموارد",
+          "أتمتة المهام"
+        ]
+      },
+      {
+        "icon": "heart",
+        "title": "رعاية محسنة للمرضى",
+        "description": "تحسين رعاية الحيوانات ونتائج العلاج",
+        "color": "green",
+        "stats": {
+          "value": "98%",
+          "label": "نجاح العلاج"
+        },
+        "highlights": [
+          "سجلات رقمية",
+          "تتبع العلاج",
+          "تكامل المختبر",
+          "بروتوكولات الرعاية"
+        ]
+      },
+      {
+        "icon": "users",
+        "title": "رضا العملاء",
+        "description": "تحسين تجربة العملاء والتفاعل",
+        "color": "purple",
+        "stats": {
+          "value": "95%",
+          "label": "رضا العملاء"
+        },
+        "highlights": [
+          "حجز عبر الإنترنت",
+          "بوابة العملاء",
+          "أدوات التواصل",
+          "موارد تعليمية"
+        ]
+      },
+      {
+        "icon": "trending-up",
+        "title": "نمو العيادة",
+        "description": "دفع نمو العيادة وربحيتها",
+        "color": "red",
+        "stats": {
+          "value": "35%",
+          "label": "نمو الإيرادات"
+        },
+        "highlights": [
+          "تحليلات مالية",
+          "رؤى النمو",
+          "أدوات التسويق",
+          "الاحتفاظ بالعملاء"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "subtitle": "أسعار شفافة",
+    "title": "خطط أسعار مرنة",
+    "description": "اختر الخطة المثالية لعيادتك البيطرية. وفر حتى 20% مع الفواتير السنوية.",
+    "billingPeriods": ["شهري", "سنوي"],
+    "plans": [
+      {
+        "name": "أساسي",
+        "highlight": "للعيادات الصغيرة",
+        "monthlyPrice": "$199",
+        "yearlyPrice": "$1,990",
+        "yearlyDiscount": "وفر $398/سنة",
+        "description": "ميزات أساسية للعيادات الصغيرة",
+        "features": [
+          {
+            "text": "جدولة المواعيد",
+            "included": true
+          },
+          {
+            "text": "سجلات طبية إلكترونية أساسية",
+            "included": true
+          },
+          {
+            "text": "تواصل مع العملاء",
+            "included": true
+          },
+          {
+            "text": "دعم عبر البريد الإلكتروني",
+            "included": true
+          },
+          {
+            "text": "تقارير أساسية",
+            "included": true
+          },
+          {
+            "text": "وصول عبر الجوال",
+            "included": true
+          }
+        ],
+        "cta": "ابدأ الآن",
+        "popular": false
+      },
+      {
+        "name": "احترافي",
+        "highlight": "الأكثر شعبية للعيادات النامية",
+        "monthlyPrice": "$399",
+        "yearlyPrice": "$3,990",
+        "yearlyDiscount": "وفر $798/سنة",
+        "description": "ميزات متقدمة للعيادات النامية",
+        "features": [
+          {
+            "text": "كل ما هو متضمن في الأساسي، بالإضافة إلى:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "سجلات طبية إلكترونية متقدمة",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "تكامل المختبر",
+            "included": true
+          },
+          {
+            "text": "تحليلات متقدمة",
+            "included": true
+          },
+          {
+            "text": "دعم ذو أولوية",
+            "included": true
+          },
+          {
+            "text": "دعم المواقع المتعددة",
+            "included": true
+          }
+        ],
+        "cta": "ابدأ الآن",
+        "popular": true
+      },
+      {
+        "name": "مؤسسة",
+        "highlight": "للعيادات الكبيرة",
+        "monthlyPrice": "مخصص",
+        "yearlyPrice": "مخصص",
+        "yearlyDiscount": "اتصل بنا للأسعار الخاصة",
+        "description": "حلول مخصصة للعيادات الكبيرة",
+        "features": [
+          {
+            "text": "كل ما هو متضمن في الاحترافي، بالإضافة إلى:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "دعم تكامل مخصص",
+            "included": true
+          },
+          {
+            "text": "مدير حساب مخصص",
+            "included": true
+          },
+          {
+            "text": "ميزات أمان متقدمة",
+            "included": true
+          },
+          {
+            "text": "تطوير مخصص",
+            "included": true
+          },
+          {
+            "text": "ضمانات مستوى الخدمة",
+            "included": true
+          }
+        ],
+        "cta": "اتصل بالمبيعات",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "جاهز لتحويل عيادتك البيطرية؟",
+    "description": "انضم إلى العيادات البيطرية الرائدة التي حدّثت عملياتها باستخدام حلنا.",
+    "background": "/images/solutions/veterinary/cta-background.jpg",
+    "primaryButton": {
+      "text": "جدولة عرض توضيحي",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "شاهد العرض التوضيحي",
+      "link": "#showcase"
+    }
+  }
+} 

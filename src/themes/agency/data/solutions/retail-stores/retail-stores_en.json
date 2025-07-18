@@ -1,0 +1,336 @@
+{
+  "hero": {
+    "subtitle": "AI-Powered Retail Management",
+    "title": "Transform Your Retail Business with Intelligent Operations",
+    "description": "Experience the future of retail with our comprehensive, AI-driven platform that optimizes store operations, enhances customer experience, and drives growth across all channels.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "thumbnail": "/images/retail-hero.webp",
+      "alt": "Retail Management Platform Demo"
+    },
+    "stats": [
+      {
+        "value": "35%",
+        "label": "Sales Increase"
+      },
+      {
+        "value": "50%",
+        "label": "Inventory Optimization"
+      },
+      {
+        "value": "45%",
+        "label": "Customer Satisfaction"
+      }
+    ]
+  },
+  "features": {
+    "title": "Enterprise-Grade Features",
+    "subtitle": "Next-Generation Retail Management",
+    "description": "Discover our comprehensive suite of advanced tools designed to revolutionize your retail operations. Each feature is crafted to deliver maximum efficiency and superior customer experience.",
+    "categories": [
+      {
+        "name": "Store Operations",
+        "description": "Core features that streamline your daily operations"
+      },
+      {
+        "name": "Customer Experience",
+        "description": "Tools that enhance customer engagement and satisfaction"
+      }
+    ],
+    "items": [
+      {
+        "icon": "store",
+        "title": "Smart Store Management",
+        "description": "AI-powered store operations and staff management",
+        "category": "Store Operations",
+        "image": "/images/features/store-management.webp",
+        "highlights": [
+          "Staff scheduling optimization",
+          "Task management",
+          "Performance tracking",
+          "Store analytics"
+        ],
+        "stats": {
+          "value": "30%",
+          "label": "Operational Efficiency"
+        }
+      },
+      {
+        "icon": "shopping-bag",
+        "title": "Omnichannel Commerce",
+        "description": "Seamless integration across all sales channels",
+        "category": "Customer Experience",
+        "image": "/images/features/omnichannel.webp",
+        "highlights": [
+          "Unified inventory management",
+          "Cross-channel order fulfillment",
+          "Customer data synchronization",
+          "Consistent pricing"
+        ],
+        "stats": {
+          "value": "40%",
+          "label": "Channel Integration"
+        }
+      },
+      {
+        "icon": "bar-chart",
+        "title": "Advanced Analytics",
+        "description": "Data-driven insights for better decision making",
+        "category": "Store Operations",
+        "image": "/images/features/analytics.webp",
+        "highlights": [
+          "Sales forecasting",
+          "Customer behavior analysis",
+          "Performance metrics",
+          "Trend identification"
+        ],
+        "stats": {
+          "value": "85%",
+          "label": "Better Decision Making"
+        }
+      },
+      {
+        "icon": "users",
+        "title": "Customer Engagement",
+        "description": "Enhanced customer loyalty and retention",
+        "category": "Customer Experience",
+        "image": "/images/features/customer-engagement.webp",
+        "highlights": [
+          "Loyalty program management",
+          "Personalized marketing",
+          "Customer feedback",
+          "Engagement tracking"
+        ],
+        "stats": {
+          "value": "45%",
+          "label": "Customer Retention"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "See It In Action",
+    "description": "Watch how leading retail businesses transform their operations",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "thumbnail": "/images/showcase-thumb.webp"
+    },
+    "testimonials": [
+      {
+        "author": "Emma Thompson",
+        "role": "Store Manager, Fashion Forward",
+        "image": "/images/testimonials/emma.webp",
+        "quote": "This platform has revolutionized our store operations. We've seen a 35% increase in sales and improved customer satisfaction."
+      },
+      {
+        "author": "David Chen",
+        "role": "Operations Director, TechRetail",
+        "image": "/images/testimonials/david.webp",
+        "quote": "The AI features have dramatically improved our inventory management and staff efficiency."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Transformative Benefits",
+    "subtitle": "Proven Results & Impact",
+    "description": "Experience measurable improvements across all aspects of your retail business with our comprehensive solution. Our platform delivers concrete results that directly impact your bottom line.",
+    "items": [
+      {
+        "title": "Sales Growth",
+        "description": "Maximize your retail sales with AI-powered optimization.",
+        "icon": "trending-up",
+        "color": "green",
+        "stats": {
+          "value": "35%",
+          "label": "Sales Increase"
+        },
+        "highlights": [
+          "Smart pricing optimization",
+          "Cross-selling opportunities",
+          "Inventory optimization",
+          "Staff performance"
+        ]
+      },
+      {
+        "title": "Operational Excellence",
+        "description": "Streamline your retail operations with intelligent automation.",
+        "icon": "zap",
+        "color": "blue",
+        "stats": {
+          "value": "50%",
+          "label": "Efficiency Gain"
+        },
+        "highlights": [
+          "Automated scheduling",
+          "Task management",
+          "Inventory control",
+          "Process optimization"
+        ]
+      },
+      {
+        "title": "Customer Experience",
+        "description": "Deliver exceptional shopping experiences that drive loyalty.",
+        "icon": "heart",
+        "color": "purple",
+        "stats": {
+          "value": "45%",
+          "label": "Customer Satisfaction"
+        },
+        "highlights": [
+          "Personalized service",
+          "Seamless checkout",
+          "Loyalty programs",
+          "Customer feedback"
+        ]
+      },
+      {
+        "title": "Data Intelligence",
+        "description": "Make data-driven decisions with advanced analytics.",
+        "icon": "chart-bar",
+        "color": "yellow",
+        "stats": {
+          "value": "85%",
+          "label": "Better Insights"
+        },
+        "highlights": [
+          "Sales analytics",
+          "Customer behavior",
+          "Inventory trends",
+          "Performance metrics"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Flexible Pricing Plans",
+    "subtitle": "Transparent Pricing",
+    "description": "Choose the perfect plan for your business. Save up to 20% with annual billing.",
+    "billingPeriods": ["Monthly", "Yearly"],
+    "plans": [
+      {
+        "name": "Starter",
+        "highlight": "Perfect for small stores",
+        "monthlyPrice": "$199",
+        "yearlyPrice": "$1,990",
+        "yearlyDiscount": "Save $398/year",
+        "description": "Essential features to start your digital transformation",
+        "features": [
+          {
+            "text": "Basic store management",
+            "included": true
+          },
+          {
+            "text": "Inventory tracking",
+            "included": true
+          },
+          {
+            "text": "Sales reporting",
+            "included": true
+          },
+          {
+            "text": "Basic analytics",
+            "included": true
+          },
+          {
+            "text": "Email support",
+            "included": true
+          },
+          {
+            "text": "Mobile app access",
+            "included": true
+          }
+        ],
+        "cta": "Get Started",
+        "popular": false
+      },
+      {
+        "name": "Professional",
+        "highlight": "Most popular for growing stores",
+        "monthlyPrice": "$399",
+        "yearlyPrice": "$3,990",
+        "yearlyDiscount": "Save $798/year",
+        "description": "Advanced features for established stores",
+        "features": [
+          {
+            "text": "Everything in Starter, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "AI-powered features",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "Advanced analytics",
+            "included": true
+          },
+          {
+            "text": "Multi-store support",
+            "included": true
+          },
+          {
+            "text": "Priority support",
+            "included": true
+          },
+          {
+            "text": "API access",
+            "included": true
+          }
+        ],
+        "cta": "Get Started",
+        "popular": true
+      },
+      {
+        "name": "Enterprise",
+        "highlight": "For large retail chains",
+        "monthlyPrice": "Custom",
+        "yearlyPrice": "Custom",
+        "yearlyDiscount": "Contact us for special pricing",
+        "description": "Tailored solutions for enterprise needs",
+        "features": [
+          {
+            "text": "Everything in Professional, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Custom integration support",
+            "included": true
+          },
+          {
+            "text": "Dedicated account manager",
+            "included": true
+          },
+          {
+            "text": "Advanced security features",
+            "included": true
+          },
+          {
+            "text": "Custom development options",
+            "included": true
+          },
+          {
+            "text": "SLA guarantees",
+            "included": true
+          }
+        ],
+        "cta": "Contact Sales",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Transform Your Retail Business?",
+    "description": "Join thousands of successful retail stores using our platform",
+    "primaryButton": {
+      "text": "Schedule a Demo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Watch Demo Video",
+      "link": "/demo-video"
+    },
+    "background": "/images/cta-background.webp"
+  }
+} 

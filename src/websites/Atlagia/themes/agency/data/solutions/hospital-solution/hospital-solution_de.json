@@ -1,0 +1,335 @@
+{
+  "hero": {
+    "subtitle": "Krankenhausmanagementsystem",
+    "title": "Umfassende Krankenhausmanagement-Lösung",
+    "description": "Ein Enterprise-Grade-Krankenhausmanagementsystem, das alle Abteilungen integriert, die Patientenversorgung optimiert und den Betrieb in Ihrer gesamten Einrichtung verbessert.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Krankenhausmanagement-Lösung Demo"
+    },
+    "stats": [
+      {
+        "value": "97%",
+        "label": "Patientenzufriedenheit"
+      },
+      {
+        "value": "45%",
+        "label": "Operative Effizienz"
+      },
+      {
+        "value": "3.2x",
+        "label": "ROI"
+      }
+    ]
+  },
+  "features": {
+    "subtitle": "Enterprise-Funktionen",
+    "title": "Vollständiges Krankenhausmanagement",
+    "description": "Eine umfassende Suite von Tools für moderne Krankenhäuser und Gesundheitseinrichtungen",
+    "categories": [
+      {
+        "name": "Klinisches Management",
+        "description": "Optimieren Sie die Patientenversorgung in allen Abteilungen"
+      },
+      {
+        "name": "Administrative Operationen",
+        "description": "Optimieren Sie den Krankenhausbetrieb und das Ressourcenmanagement"
+      }
+    ],
+    "items": [
+      {
+        "icon": "building",
+        "category": "Einrichtungsmanagement",
+        "title": "Multi-Abteilungs-Integration",
+        "description": "Nahtlose Koordination zwischen Abteilungen und Einrichtungen",
+        "image": "/images/solutions/hospital/departments.jpg",
+        "highlights": [
+          "Abteilungskoordination",
+          "Ressourcenallokation",
+          "Personalplanung",
+          "Bettenmanagement"
+        ],
+        "stats": {
+          "value": "40%",
+          "label": "Bessere Ressourcennutzung"
+        }
+      },
+      {
+        "icon": "activity",
+        "category": "Patientenversorgung",
+        "title": "Klinische Exzellenz",
+        "description": "Umfassendes Patientenversorgungs- und Überwachungssystem",
+        "image": "/images/solutions/hospital/clinical.jpg",
+        "highlights": [
+          "EMR/EHR-System",
+          "Klinische Pfade",
+          "Bestellmanagement",
+          "Versorgungsprotokolle"
+        ],
+        "stats": {
+          "value": "55%",
+          "label": "Schnellere Patientenversorgung"
+        }
+      },
+      {
+        "icon": "microscope",
+        "category": "Diagnostik",
+        "title": "Integrierte Diagnostik",
+        "description": "Vernetzte Labor- und Bildgebungssysteme",
+        "image": "/images/solutions/hospital/diagnostics.jpg",
+        "highlights": [
+          "Laborintegration",
+          "PACS-System",
+          "Ergebnisverwaltung",
+          "Digitale Bildgebung"
+        ],
+        "stats": {
+          "value": "65%",
+          "label": "Schnellere Diagnostik"
+        }
+      },
+      {
+        "icon": "chart-bar",
+        "category": "Analytik",
+        "title": "Krankenhaus-Intelligenz",
+        "description": "Fortgeschrittenes Analyse- und Berichtssystem",
+        "image": "/images/solutions/hospital/analytics.jpg",
+        "highlights": [
+          "Leistungsmetriken",
+          "Ressourcenanalytik",
+          "Finanzielle Einblicke",
+          "Qualitätsmaße"
+        ],
+        "stats": {
+          "value": "45%",
+          "label": "Bessere Entscheidungsfindung"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Exzellenz in der Gesundheitsversorgung",
+    "description": "Sehen Sie, wie führende Krankenhäuser die Gesundheitsversorgung transformieren",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Krankenhaus-Erfolgsgeschichte"
+    },
+    "testimonials": [
+      {
+        "author": "Dr. Robert Chen",
+        "role": "Krankenhaus-CEO",
+        "image": "/images/testimonials/ceo1.jpg",
+        "quote": "Dieses System hat die Art und Weise revolutioniert, wie wir unser Krankenhaus verwalten. Die Integration über Abteilungen hinweg hat sowohl die Effizienz als auch die Patientenversorgung verbessert."
+      },
+      {
+        "author": "Dr. Sarah Thompson",
+        "role": "Chefärztin",
+        "image": "/images/testimonials/doctor2.jpg",
+        "quote": "Die klinische Entscheidungsunterstützung und die integrierte Diagnostik haben unsere Fähigkeit zur Bereitstellung qualitativ hochwertiger Versorgung erheblich verbessert."
+      }
+    ]
+  },
+  "benefits": {
+    "subtitle": "Hauptvorteile",
+    "title": "Transformieren Sie Ihr Krankenhaus",
+    "description": "Erleben Sie die Vorteile eines vollständig integrierten Krankenhausmanagementsystems",
+    "items": [
+      {
+        "icon": "trending-up",
+        "title": "Operative Exzellenz",
+        "description": "Optimieren Sie den Krankenhausbetrieb und das Ressourcenmanagement",
+        "color": "blue",
+        "stats": {
+          "value": "45%",
+          "label": "Operative Effizienz"
+        },
+        "highlights": [
+          "Ressourcenoptimierung",
+          "Workflow-Automatisierung",
+          "Kostensenkung",
+          "Bessere Koordination"
+        ]
+      },
+      {
+        "icon": "heart",
+        "title": "Verbesserte Patientenversorgung",
+        "description": "Verbessern Sie die Patientenversorgung und -erfahrung",
+        "color": "red",
+        "stats": {
+          "value": "97%",
+          "label": "Patientenzufriedenheit"
+        },
+        "highlights": [
+          "Bessere Versorgungskoordination",
+          "Reduzierte Wartezeiten",
+          "Verbesserte Ergebnisse",
+          "Patientenengagement"
+        ]
+      },
+      {
+        "icon": "users",
+        "title": "Mitarbeiterbefähigung",
+        "description": "Ermöglichen Sie Gesundheitsdienstleistern bessere Tools",
+        "color": "green",
+        "stats": {
+          "value": "50%",
+          "label": "Mitarbeiterproduktivität"
+        },
+        "highlights": [
+          "Klinische Entscheidungsunterstützung",
+          "Einfache Dokumentation",
+          "Bessere Kommunikation",
+          "Mobiler Zugang"
+        ]
+      },
+      {
+        "icon": "shield",
+        "title": "Qualität & Compliance",
+        "description": "Behalten Sie die höchsten Standards der Versorgung und Compliance bei",
+        "color": "purple",
+        "stats": {
+          "value": "100%",
+          "label": "Regulatorische Compliance"
+        },
+        "highlights": [
+          "Qualitätsmetriken",
+          "Regulatorische Compliance",
+          "Risikomanagement",
+          "Audit-Unterstützung"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "subtitle": "Enterprise-Preisgestaltung",
+    "title": "Flexible Enterprise-Lösungen",
+    "description": "Maßgeschneiderte Preisgestaltung basierend auf der Größe und den Bedürfnissen Ihres Krankenhauses. Sparen Sie mit unseren Enterprise-Paketen.",
+    "billingPeriods": ["Monatlich", "Jährlich"],
+    "plans": [
+      {
+        "name": "Standard",
+        "highlight": "Für kleine Krankenhäuser",
+        "monthlyPrice": "$2,999",
+        "yearlyPrice": "$29,990",
+        "yearlyDiscount": "Sparen Sie $5,998/Jahr",
+        "description": "Wesentliche Funktionen für kleine Krankenhäuser",
+        "features": [
+          {
+            "text": "Grundlegendes Krankenhausmanagement",
+            "included": true
+          },
+          {
+            "text": "EMR/EHR-System",
+            "included": true
+          },
+          {
+            "text": "Abteilungskoordination",
+            "included": true
+          },
+          {
+            "text": "Standard-Support",
+            "included": true
+          },
+          {
+            "text": "Grundlegende Analytik",
+            "included": true
+          },
+          {
+            "text": "Mobiler Zugang",
+            "included": true
+          }
+        ],
+        "cta": "Jetzt Starten",
+        "popular": false
+      },
+      {
+        "name": "Professional",
+        "highlight": "Beliebt für mittelgroße Krankenhäuser",
+        "monthlyPrice": "$4,999",
+        "yearlyPrice": "$49,990",
+        "yearlyDiscount": "Sparen Sie $9,998/Jahr",
+        "description": "Fortgeschrittene Funktionen für wachsende Krankenhäuser",
+        "features": [
+          {
+            "text": "Alles in Standard, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Fortgeschrittene klinische Pfade",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "Labor- & PACS-Integration",
+            "included": true
+          },
+          {
+            "text": "Fortgeschrittene Analytik",
+            "included": true
+          },
+          {
+            "text": "Prioritäts-Support",
+            "included": true
+          },
+          {
+            "text": "Multi-Einrichtungs-Support",
+            "included": true
+          }
+        ],
+        "cta": "Jetzt Starten",
+        "popular": true
+      },
+      {
+        "name": "Enterprise",
+        "highlight": "Für große Krankenhausnetzwerke",
+        "monthlyPrice": "Individuell",
+        "yearlyPrice": "Individuell",
+        "yearlyDiscount": "Kontaktieren Sie uns für Sonderpreise",
+        "description": "Maßgeschneiderte Lösungen für Krankenhausnetzwerke",
+        "features": [
+          {
+            "text": "Alles in Professional, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Individuelle Integrationsunterstützung",
+            "included": true
+          },
+          {
+            "text": "Dediziertes Erfolgsteam",
+            "included": true
+          },
+          {
+            "text": "Fortgeschrittene Sicherheitsfunktionen",
+            "included": true
+          },
+          {
+            "text": "Individuelle Entwicklung",
+            "included": true
+          },
+          {
+            "text": "Enterprise SLA",
+            "included": true
+          }
+        ],
+        "cta": "Vertrieb kontaktieren",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "Bereit, Ihr Krankenhaus zu transformieren?",
+    "description": "Schließen Sie sich führenden Gesundheitseinrichtungen an, die ihre Operationen mit unserer Lösung modernisiert haben.",
+    "background": "/images/solutions/hospital/cta-background.jpg",
+    "primaryButton": {
+      "text": "Demo planen",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Demo ansehen",
+      "link": "#showcase"
+    }
+  }
+} 

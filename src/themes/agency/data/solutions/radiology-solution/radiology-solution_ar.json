@@ -1,0 +1,335 @@
+{
+  "hero": {
+    "subtitle": "نظام معلومات الأشعة",
+    "title": "حل إدارة الأشعة المتقدم",
+    "description": "نظام شامل لمعلومات الأشعة يعمل على تبسيط عمليات التصوير وتحسين التقارير وتحسين رعاية المرضى.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "عرض حل إدارة الأشعة"
+    },
+    "stats": [
+      {
+        "value": "45%",
+        "label": "تقارير أسرع"
+      },
+      {
+        "value": "99.9%",
+        "label": "جودة الصور"
+      },
+      {
+        "value": "30%",
+        "label": "خفض التكاليف"
+      }
+    ]
+  },
+  "features": {
+    "subtitle": "ميزات متقدمة",
+    "title": "إدارة الأشعة الشاملة",
+    "description": "أدوات شاملة مصممة لممارسات الأشعة الحديثة",
+    "categories": [
+      {
+        "name": "سير عمل التصوير",
+        "description": "تبسيط عمليات التصوير والتقارير"
+      },
+      {
+        "name": "رعاية المرضى",
+        "description": "تحسين تجربة المريض وتقديم الرعاية"
+      }
+    ],
+    "items": [
+      {
+        "icon": "image",
+        "category": "التصوير",
+        "title": "تكامل نظام PACS",
+        "description": "تكامل سلس مع أنظمة PACS",
+        "image": "/images/solutions/radiology/pacs.jpg",
+        "highlights": [
+          "توافق DICOM",
+          "دعم متعدد الوسائط",
+          "أرشفة الصور",
+          "وصول عن بعد"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "توافق DICOM"
+        }
+      },
+      {
+        "icon": "file-text",
+        "category": "التقارير",
+        "title": "تقارير ذكية",
+        "description": "تقارير بمساعدة الذكاء الاصطناعي وقوالب منظمة",
+        "image": "/images/solutions/radiology/reporting.jpg",
+        "highlights": [
+          "التعرف على الصوت",
+          "مكتبة القوالب",
+          "النتائج الحرجة",
+          "قياسات تلقائية"
+        ],
+        "stats": {
+          "value": "45%",
+          "label": "تقارير أسرع"
+        }
+      },
+      {
+        "icon": "users",
+        "category": "سير العمل",
+        "title": "تحسين سير العمل",
+        "description": "إدارة وجدولة فعالة لسير العمل",
+        "image": "/images/solutions/radiology/workflow.jpg",
+        "highlights": [
+          "جدولة ذكية",
+          "إدارة قائمة العمل",
+          "أتمتة البروتوكولات",
+          "تخصيص الموارد"
+        ],
+        "stats": {
+          "value": "35%",
+          "label": "تحسين الكفاءة"
+        }
+      },
+      {
+        "icon": "activity",
+        "category": "التحليلات",
+        "title": "تحليلات متقدمة",
+        "description": "تحليلات شاملة وذكاء الأعمال",
+        "image": "/images/solutions/radiology/analytics.jpg",
+        "highlights": [
+          "مقاييس الأداء",
+          "مؤشرات الجودة",
+          "استخدام الموارد",
+          "تحليلات مالية"
+        ],
+        "stats": {
+          "value": "30%",
+          "label": "خفض التكاليف"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "تميز الأشعة في العمل",
+    "description": "شاهد كيف تقوم ممارسات الأشعة الرائدة بتحويل عملياتها",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "قصة نجاح الأشعة"
+    },
+    "testimonials": [
+      {
+        "author": "د. جيمس أندرسون",
+        "role": "رئيس قسم الأشعة",
+        "image": "/images/testimonials/rad1.jpg",
+        "quote": "أحدث هذا النظام ثورة في ممارستنا. حسنت قدرات تكامل PACS والتقارير كفاءتنا بشكل كبير."
+      },
+      {
+        "author": "د. سارة مارتينيز",
+        "role": "مديرة التصوير",
+        "image": "/images/testimonials/rad2.jpg",
+        "quote": "ساعدت التقارير بمساعدة الذكاء الاصطناعي وتحسين سير العمل في تقديم تشخيصات أسرع وأكثر دقة."
+      }
+    ]
+  },
+  "benefits": {
+    "subtitle": "المزايا الرئيسية",
+    "title": "حول ممارسة الأشعة الخاصة بك",
+    "description": "اختبر مزايا نظام إدارة الأشعة المتكامل بالكامل",
+    "items": [
+      {
+        "icon": "zap",
+        "title": "كفاءة محسنة",
+        "description": "تبسيط سير عمل الأشعة والتقارير",
+        "color": "blue",
+        "stats": {
+          "value": "45%",
+          "label": "وقت معالجة أسرع"
+        },
+        "highlights": [
+          "سير عمل آلي",
+          "جدولة ذكية",
+          "تحسين الموارد",
+          "تقارير سريعة"
+        ]
+      },
+      {
+        "icon": "check-circle",
+        "title": "ضمان الجودة",
+        "description": "الحفاظ على أعلى معايير جودة التصوير",
+        "color": "green",
+        "stats": {
+          "value": "99.9%",
+          "label": "جودة الصور"
+        },
+        "highlights": [
+          "ضوابط الجودة",
+          "إدارة البروتوكولات",
+          "منع الأخطاء",
+          "تتبع الامتثال"
+        ]
+      },
+      {
+        "icon": "users",
+        "title": "رعاية المرضى",
+        "description": "تحسين تجربة المريض والنتائج",
+        "color": "purple",
+        "stats": {
+          "value": "95%",
+          "label": "رضا المرضى"
+        },
+        "highlights": [
+          "وصول سريع",
+          "مشاركة النتائج",
+          "بوابة المريض",
+          "تنسيق الرعاية"
+        ]
+      },
+      {
+        "icon": "shield",
+        "title": "الأمان والامتثال",
+        "description": "ضمان أمان البيانات والامتثال التنظيمي",
+        "color": "red",
+        "stats": {
+          "value": "100%",
+          "label": "امتثال HIPAA"
+        },
+        "highlights": [
+          "تشفير البيانات",
+          "التحكم في الوصول",
+          "تتبع التدقيق",
+          "الامتثال التنظيمي"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "subtitle": "تسعير شفاف",
+    "title": "خطط تسعير مرنة",
+    "description": "اختر الخطة المثالية لممارسة الأشعة الخاصة بك. وفر حتى 20% مع الفواتير السنوية.",
+    "billingPeriods": ["شهري", "سنوي"],
+    "plans": [
+      {
+        "name": "أساسي",
+        "highlight": "للممارسات الصغيرة",
+        "monthlyPrice": "$999",
+        "yearlyPrice": "$9,990",
+        "yearlyDiscount": "وفر $1,998/سنة",
+        "description": "ميزات أساسية للممارسات الصغيرة",
+        "features": [
+          {
+            "text": "تكامل PACS الأساسي",
+            "included": true
+          },
+          {
+            "text": "قوالب التقارير",
+            "included": true
+          },
+          {
+            "text": "نظام الجدولة",
+            "included": true
+          },
+          {
+            "text": "دعم البريد الإلكتروني",
+            "included": true
+          },
+          {
+            "text": "تحليلات أساسية",
+            "included": true
+          },
+          {
+            "text": "وصول عبر الجوال",
+            "included": true
+          }
+        ],
+        "cta": "ابدأ الآن",
+        "popular": false
+      },
+      {
+        "name": "احترافي",
+        "highlight": "الأكثر شعبية للممارسات النامية",
+        "monthlyPrice": "$1,999",
+        "yearlyPrice": "$19,990",
+        "yearlyDiscount": "وفر $3,998/سنة",
+        "description": "ميزات متقدمة للممارسات النامية",
+        "features": [
+          {
+            "text": "كل ما هو متضمن في الأساسي، بالإضافة إلى:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "تكامل PACS المتقدم",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "تقارير بمساعدة الذكاء الاصطناعي",
+            "included": true
+          },
+          {
+            "text": "تحليلات متقدمة",
+            "included": true
+          },
+          {
+            "text": "دعم ذو أولوية",
+            "included": true
+          },
+          {
+            "text": "دعم المواقع المتعددة",
+            "included": true
+          }
+        ],
+        "cta": "ابدأ الآن",
+        "popular": true
+      },
+      {
+        "name": "مؤسسة",
+        "highlight": "للممارسات والمستشفيات الكبيرة",
+        "monthlyPrice": "مخصص",
+        "yearlyPrice": "مخصص",
+        "yearlyDiscount": "اتصل بنا للأسعار الخاصة",
+        "description": "حلول مخصصة للممارسات الكبيرة",
+        "features": [
+          {
+            "text": "كل ما هو متضمن في الاحترافي، بالإضافة إلى:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "دعم تكامل مخصص",
+            "included": true
+          },
+          {
+            "text": "مدير حساب مخصص",
+            "included": true
+          },
+          {
+            "text": "ميزات أمان متقدمة",
+            "included": true
+          },
+          {
+            "text": "تطوير مخصص",
+            "included": true
+          },
+          {
+            "text": "ضمانات SLA",
+            "included": true
+          }
+        ],
+        "cta": "اتصل بالمبيعات",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "هل أنت جاهز لتحويل ممارسة الأشعة الخاصة بك؟",
+    "description": "انضم إلى ممارسات الأشعة الرائدة التي حدّثت عملياتها باستخدام حلنا.",
+    "background": "/images/solutions/radiology/cta-background.jpg",
+    "primaryButton": {
+      "text": "جدولة عرض توضيحي",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "شاهد العرض التوضيحي",
+      "link": "#showcase"
+    }
+  }
+} 

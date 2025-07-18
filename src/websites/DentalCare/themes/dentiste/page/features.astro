@@ -1,0 +1,906 @@
+---
+import { SITE_TITLE } from '../consts';
+import { Calendar, UserCog, LineChart, Brain, Database, Shield, CheckCircle, Layers, Users, MessageCircle, FileText, Clock, ArrowRight, LayoutGrid, Sparkles, Bell, Globe, History, Edit, ScanLine, ClipboardList, Mic, DollarSign, Activity, PieChart, Lock, UserCheck, DatabaseBackup, ShieldAlert, UserPlus, TrendingUp } from 'lucide-react';
+
+const theme = import.meta.env.THEME || 'default';
+const lang = Astro.params.lang || 'en';
+
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+
+// Import language-specific data
+const indexData = await import(`../data/index_${lang}.json`);
+const featuresData = {
+  title: "All Platform Features",
+  description: "Explore all the powerful features and modules of the Atlagia DentalCare platform.",
+  hero: {
+    title: "Complete Dental Practice Management Tools",
+    subtitle: "PLATFORM FEATURES",
+    description: "Discover how our comprehensive suite of tools can transform your dental practice workflow, increase efficiency, and enhance patient care."
+  },
+  dashboardTabs: [
+    {
+      id: "dashboard",
+      title: "Dashboard",
+      icon: "LayoutGrid",
+    },
+    {
+      id: "appointments",
+      title: "Appointments",
+      icon: "Calendar",
+    },
+    {
+      id: "patients",
+      title: "Patients",
+      icon: "Users",
+    },
+    {
+      id: "ai-assistant",
+      title: "AI Assistant",
+      icon: "Brain",
+    },
+    {
+      id: "analytics",
+      title: "Analytics",
+      icon: "LineChart",
+    },
+    {
+      id: "security",
+      title: "Security",
+      icon: "Shield",
+    }
+  ],
+  sections: [
+    {
+      title: "Practice Management",
+      features: [
+        {
+          icon: "Calendar",
+          title: "Smart Appointment System",
+          description: "AI-optimized scheduling with conflict prevention and automated reminders."
+        },
+        {
+          icon: "Users",
+          title: "Patient Management",
+          description: "Complete patient profiles with medical history and treatment tracking."
+        },
+        {
+          icon: "FileText",
+          title: "Digital Documentation",
+          description: "Paperless forms, treatment plans, and clinical notes."
+        },
+        {
+          icon: "MessageCircle",
+          title: "Communication Hub",
+          description: "Patient messaging, staff chat, and automated notifications."
+        }
+      ]
+    },
+    {
+      title: "Clinical Tools",
+      features: [
+        {
+          icon: "Brain",
+          title: "AI Diagnostics Assistant",
+          description: "Algorithm-based analysis of radiographs and clinical images."
+        },
+        {
+          icon: "Layers",
+          title: "Treatment Planning",
+          description: "Visual treatment sequencing and priority management."
+        },
+        {
+          icon: "CheckCircle",
+          title: "Clinical Checklists",
+          description: "Procedure protocols and safety verification systems."
+        },
+        {
+          icon: "Database",
+          title: "Imaging Integration",
+          description: "Seamless connection with all major imaging systems."
+        }
+      ]
+    },
+    {
+      title: "Business Operations",
+      features: [
+        {
+          icon: "LineChart",
+          title: "Financial Analytics",
+          description: "Real-time practice metrics, revenue tracking, and forecasting."
+        },
+        {
+          icon: "UserCog",
+          title: "Staff Management",
+          description: "Scheduling, performance tracking, and task management."
+        },
+        {
+          icon: "Shield",
+          title: "Compliance Tools",
+          description: "HIPAA-compliant systems and automated record-keeping."
+        },
+        {
+          icon: "Clock",
+          title: "Operational Efficiency",
+          description: "Workflow optimization and bottleneck identification."
+        }
+      ]
+    }
+  ]
+};
+
+// Map icon strings to components
+const iconMap = {
+  Calendar,
+  UserCog, 
+  LineChart, 
+  Brain, 
+  Database, 
+  Shield,
+  CheckCircle,
+  Layers,
+  Users,
+  MessageCircle,
+  FileText,
+  Clock,
+  LayoutGrid,
+  Sparkles,
+  Bell,
+  Globe,
+  History,
+  Edit,
+  ScanLine,
+  ClipboardList,
+  Mic,
+  DollarSign,
+  Activity,
+  PieChart,
+  Lock,
+  UserCheck,
+  DatabaseBackup,
+  ShieldAlert,
+  UserPlus,
+  TrendingUp
+};
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <BaseHead 
+      title={`${featuresData.title} | ${SITE_TITLE}`}
+      description={featuresData.description}
+    />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <!-- Hero Section -->
+      <section class="relative py-24 px-4 overflow-hidden bg-gradient-to-b from-white to-gray-50">
+        <div class="absolute inset-0 z-0">
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-bl from-[#0a91b1]/10 to-blue-500/10 rounded-full blur-3xl animate-blob"></div>
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-tr from-pink-500/10 to-[#0a91b1]/10 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
+          
+          <!-- Software Grid Pattern -->
+          <div class="absolute inset-0 bg-grid-pattern opacity-[0.03]"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto text-center">
+          <span class="inline-block px-4 py-1.5 mb-6 text-sm font-semibold bg-[#0a91b1]/20 text-[#0a91b1] rounded-full border border-[#0a91b1]/30">{featuresData.hero.subtitle}</span>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">{featuresData.hero.title}</h1>
+          <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-12">{featuresData.hero.description}</p>
+          
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="#features" class="px-8 py-3 bg-[#0a91b1] hover:bg-[#097d99] text-white font-medium rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-[#0a91b1]/25">
+              Explore Features
+            </a>
+            <a href="/demo" class="px-8 py-3 bg-white hover:bg-gray-100 text-[#0a91b1] font-medium rounded-lg border border-gray-200 transition-all duration-300 shadow-sm hover:shadow-md">
+              Request Demo
+            </a>
+          </div>
+        </div>
+        
+        <!-- Floating UI Elements -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 w-full max-w-5xl mx-auto">
+          <div class="relative grid grid-cols-3 gap-4 opacity-90">
+            <div class="animate-float-subtle bg-white p-4 rounded-xl shadow-lg border border-gray-100">
+              <div class="flex items-center">
+                <div class="w-8 h-8 rounded-lg bg-blue-100 flex items-center justify-center mr-3">
+                  <Calendar className="w-4 h-4 text-blue-600" />
+                </div>
+                <span class="text-sm font-medium">Appointment Module</span>
+              </div>
+            </div>
+            <div class="animate-float-subtle animation-delay-1000 bg-white p-4 rounded-xl shadow-lg border border-gray-100">
+              <div class="flex items-center">
+                <div class="w-8 h-8 rounded-lg bg-green-100 flex items-center justify-center mr-3">
+                  <UserCog className="w-4 h-4 text-green-600" />
+                </div>
+                <span class="text-sm font-medium">Patient Portal</span>
+              </div>
+            </div>
+            <div class="animate-float-subtle animation-delay-2000 bg-white p-4 rounded-xl shadow-lg border border-gray-100">
+              <div class="flex items-center">
+                <div class="w-8 h-8 rounded-lg bg-purple-100 flex items-center justify-center mr-3">
+                  <Brain className="w-4 h-4 text-purple-600" />
+                </div>
+                <span class="text-sm font-medium">AI Assistant</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Interactive Features Section -->
+      <section id="features" class="py-20 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+          <!-- Interactive Dashboard Preview -->
+          <div class="mb-24 relative">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-6">Explore Our Platform</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Click through the modules in our interactive dashboard to discover how Atlagia DentalCare can streamline your practice.
+                </p>
+            </div>
+            <div class="overflow-hidden rounded-2xl shadow-2xl border border-gray-200 relative">
+              <!-- Dashboard Header -->
+              <div class="bg-gradient-to-r from-[#0a91b1] to-[#0c7d97] p-4">
+                <div class="flex justify-between items-center">
+                  <div class="flex items-center">
+                    <div class="flex space-x-1 mr-4">
+                      <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                      <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                      <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                    </div>
+                    <h3 class="text-white font-medium">Atlagia DentalCare Pro Dashboard</h3>
+                  </div>
+                  <div class="flex items-center space-x-3">
+                    <div class="flex items-center bg-white/20 rounded-full px-2 py-1">
+                      <div class="w-2 h-2 bg-green-400 rounded-full mr-1 pulse-dot"></div>
+                      <span class="text-xs text-white">Live</span>
+                    </div>
+                    <div class="flex items-center bg-white/20 rounded-full px-2 py-1">
+                      <span class="text-xs text-white">Dr. Emma Wilson</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Dashboard Content -->
+              <div class="bg-gray-50 p-6">
+                <div class="grid grid-cols-12 gap-6">
+                  <!-- Sidebar -->
+                  <div class="col-span-3 bg-white rounded-xl shadow-sm p-4 border border-gray-100">
+                    <div class="flex flex-col space-y-1" id="dashboard-tabs">
+                      {featuresData.dashboardTabs.map((tab, index) => {
+                        const IconComponent = iconMap[tab.icon];
+                        return (
+                          <button class={`flex items-center p-2 rounded-lg dashboard-tab-button w-full text-left ${index === 0 ? 'bg-[#0a91b1]/10 text-[#0a91b1] font-medium' : 'hover:bg-gray-50 text-gray-700'}`} data-tab={tab.id}>
+                            <IconComponent className={`h-5 w-5 mr-2 flex-shrink-0 ${index === 0 ? 'text-[#0a91b1]' : 'text-gray-500'}`} />
+                            {tab.title}
+                          </button>
+                        )
+                      })}
+                    </div>
+                  </div>
+                  
+                  <!-- Main Content -->
+                  <div class="col-span-9">
+                    <!-- Dashboard Tab Pane -->
+                    <div id="tab-dashboard" class="dashboard-tab-pane active space-y-6">
+                      <!-- Stats Row -->
+                      <div class="grid grid-cols-4 gap-4">
+                        <div class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
+                          <div class="flex items-center justify-between">
+                            <div>
+                              <p class="text-sm text-gray-500">Appointments</p>
+                              <h4 class="text-2xl font-bold count-up" data-target="23">0</h4>
+                            </div>
+                            <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center">
+                              <Calendar className="w-6 h-6 text-blue-600" />
+                            </div>
+                          </div>
+                          <div class="mt-2 flex items-center text-xs">
+                            <span class="text-green-500 font-medium flex items-center">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+                              </svg>
+                              +12%
+                            </span>
+                            <span class="ml-2 text-gray-500">vs last week</span>
+                          </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
+                          <div class="flex items-center justify-between">
+                            <div>
+                              <p class="text-sm text-gray-500">Patients</p>
+                              <h4 class="text-2xl font-bold count-up" data-target="1254">0</h4>
+                            </div>
+                            <div class="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center">
+                              <Users className="w-6 h-6 text-green-600" />
+                            </div>
+                          </div>
+                          <div class="mt-2 flex items-center text-xs">
+                            <span class="text-green-500 font-medium flex items-center">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+                              </svg>
+                              +5%
+                            </span>
+                            <span class="ml-2 text-gray-500">vs last month</span>
+                          </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
+                          <div class="flex items-center justify-between">
+                            <div>
+                              <p class="text-sm text-gray-500">Revenue</p>
+                              <h4 class="text-2xl font-bold count-up-prefix" data-prefix="$" data-target="12850">$0</h4>
+                            </div>
+                            <div class="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center">
+                              <LineChart className="w-6 h-6 text-purple-600" />
+                            </div>
+                          </div>
+                          <div class="mt-2 flex items-center text-xs">
+                            <span class="text-green-500 font-medium flex items-center">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+                              </svg>
+                              +8%
+                            </span>
+                            <span class="ml-2 text-gray-500">vs last month</span>
+                          </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
+                          <div class="flex items-center justify-between">
+                            <div>
+                              <p class="text-sm text-gray-500">AI Analysis</p>
+                              <h4 class="text-2xl font-bold count-up" data-target="87">0<span class="text-lg">%</span></h4>
+                            </div>
+                            <div class="w-10 h-10 rounded-lg bg-amber-100 flex items-center justify-center">
+                              <Brain className="w-6 h-6 text-amber-600" />
+                            </div>
+                          </div>
+                          <div class="mt-2 flex items-center text-xs">
+                            <span class="text-amber-500 font-medium">87% accuracy</span>
+                            <span class="ml-2 text-gray-500">this week</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Calendar Section -->
+                      <div class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
+                        <div class="flex justify-between items-center mb-4">
+                          <h3 class="font-medium">Today's Appointments</h3>
+                          <div class="flex items-center text-sm">
+                            <span class="text-gray-500 mr-3">March 14, 2024</span>
+                            <button class="p-1 rounded hover:bg-gray-100">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                              </svg>
+                            </button>
+                            <button class="p-1 rounded hover:bg-gray-100">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                        
+                        <div class="space-y-2 appointment-list">
+                          <div class="flex items-center bg-blue-50 p-3 rounded-md transform translate-x-full opacity-0 appointment-item">
+                            <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                            <span class="text-sm text-gray-600 w-16">09:30 AM</span>
+                            <span class="text-sm font-medium text-gray-800 flex-1">Sarah Johnson</span>
+                            <span class="text-xs bg-blue-100 text-blue-800 px-2 py-0.5 rounded">Cleaning</span>
+                          </div>
+                          <div class="flex items-center bg-green-50 p-3 rounded-md transform translate-x-full opacity-0 appointment-item">
+                            <div class="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
+                            <span class="text-sm text-gray-600 w-16">11:00 AM</span>
+                            <span class="text-sm font-medium text-gray-800 flex-1">Michael Chen</span>
+                            <span class="text-xs bg-green-100 text-green-800 px-2 py-0.5 rounded">Check-up</span>
+                          </div>
+                          <div class="flex items-center bg-purple-50 p-3 rounded-md transform translate-x-full opacity-0 appointment-item">
+                            <div class="w-2 h-2 bg-purple-500 rounded-full mr-3"></div>
+                            <span class="text-sm text-gray-600 w-16">02:15 PM</span>
+                            <span class="text-sm font-medium text-gray-800 flex-1">Emma Wilson</span>
+                            <span class="text-xs bg-purple-100 text-purple-800 px-2 py-0.5 rounded">Consultation</span>
+                          </div>
+                          <div class="flex items-center bg-amber-50 p-3 rounded-md transform translate-x-full opacity-0 appointment-item">
+                            <div class="w-2 h-2 bg-amber-500 rounded-full mr-3"></div>
+                            <span class="text-sm text-gray-600 w-16">04:30 PM</span>
+                            <span class="text-sm font-medium text-gray-800 flex-1">John Smith</span>
+                            <span class="text-xs bg-amber-100 text-amber-800 px-2 py-0.5 rounded">Treatment</span>
+                          </div>
+                        </div>
+                        
+                        <!-- AI Activity -->
+                        <div class="mt-5 pt-3 border-t border-gray-200 flex items-center">
+                          <div class="typing-indicator"><span></span><span></span><span></span></div>
+                          <span class="text-xs text-gray-500 ml-2">AI analyzing patient data and optimizing schedule...</span>
+                          <div class="ml-auto text-xs bg-blue-100 text-blue-800 px-2 py-0.5 rounded">Active</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Appointments Tab -->
+                    <div id="tab-appointments" class="dashboard-tab-pane hidden bg-white rounded-xl p-6 border border-gray-100 shadow-sm h-full">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold">Appointment Schedule</h3>
+                            <div class="flex items-center space-x-2">
+                                <button class="px-3 py-1 text-sm bg-gray-100 rounded-md hover:bg-gray-200 transition-colors">Day</button>
+                                <button class="px-3 py-1 text-sm bg-[#0a91b1]/10 text-[#0a91b1] font-medium rounded-md">Week</button>
+                                <button class="px-3 py-1 text-sm bg-gray-100 rounded-md hover:bg-gray-200 transition-colors">Month</button>
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="p-1 text-sm font-semibold text-gray-500">Wednesday, March 15</div>
+                            <div class="flex items-center bg-blue-50 p-3 rounded-md">
+                                <span class="text-sm text-gray-600 w-20">09:00 AM</span>
+                                <span class="text-sm font-medium text-gray-800 flex-1">David Cohen</span>
+                                <span class="text-xs bg-blue-100 text-blue-800 px-2 py-0.5 rounded">Follow-up</span>
+                            </div>
+                            <div class="flex items-center bg-green-50 p-3 rounded-md">
+                                <span class="text-sm text-gray-600 w-20">10:30 AM</span>
+                                <span class="text-sm font-medium text-gray-800 flex-1">Jessica Miller</span>
+                                <span class="text-xs bg-green-100 text-green-800 px-2 py-0.5 rounded">New Patient</span>
+                            </div>
+                            <div class="p-1 text-sm font-semibold text-gray-500">Thursday, March 16</div>
+                            <div class="flex items-center bg-purple-50 p-3 rounded-md">
+                                <span class="text-sm text-gray-600 w-20">02:00 PM</span>
+                                <span class="text-sm font-medium text-gray-800 flex-1">Daniel Lewis</span>
+                                <span class="text-xs bg-purple-100 text-purple-800 px-2 py-0.5 rounded">Implant</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Patients Tab -->
+                    <div id="tab-patients" class="dashboard-tab-pane hidden bg-white rounded-xl p-6 border border-gray-100 shadow-sm h-full">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold">Patient Records</h3>
+                            <div class="flex items-center space-x-2">
+                                <div class="relative">
+                                    <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                                    <input type="text" placeholder="Search patients..." class="pl-10 pr-4 py-2 border rounded-lg w-64 focus:ring-[#0a91b1] focus:border-[#0a91b1] transition">
+                                </div>
+                                <button class="flex items-center px-4 py-2 bg-[#0a91b1] text-white rounded-lg hover:bg-[#097d99] transition-colors">
+                                    <UserPlus className="w-4 h-4 mr-2" />
+                                    New Patient
+                                </button>
+                            </div>
+                        </div>
+                        <table class="w-full text-left">
+                            <thead>
+                                <tr class="text-sm text-gray-500 border-b">
+                                    <th class="py-2 font-normal">Name</th>
+                                    <th class="py-2 font-normal">Last Visit</th>
+                                    <th class="py-2 font-normal">Next Appointment</th>
+                                    <th class="py-2 font-normal text-right">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b hover:bg-gray-50">
+                                    <td class="py-3 font-medium">Sarah Johnson</td>
+                                    <td>2024-03-14</td>
+                                    <td>2024-09-14</td>
+                                    <td class="text-right"><a href="#" class="text-[#0a91b1] hover:underline">View</a></td>
+                                </tr>
+                                <tr class="border-b hover:bg-gray-50">
+                                    <td class="py-3 font-medium">Michael Chen</td>
+                                    <td>2024-03-14</td>
+                                    <td>-</td>
+                                    <td class="text-right"><a href="#" class="text-[#0a91b1] hover:underline">View</a></td>
+                                </tr>
+                                 <tr class="border-b hover:bg-gray-50">
+                                    <td class="py-3 font-medium">Emma Wilson</td>
+                                    <td>2024-03-12</td>
+                                    <td>2024-04-05</td>
+                                    <td class="text-right"><a href="#" class="text-[#0a91b1] hover:underline">View</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- AI Assistant Tab -->
+                     <div id="tab-ai-assistant" class="dashboard-tab-pane hidden bg-white rounded-xl p-6 border border-gray-100 shadow-sm h-full">
+                        <h3 class="text-xl font-bold mb-4">AI Diagnostic Assistant</h3>
+                        <div class="grid grid-cols-2 gap-6">
+                            <div>
+                                <p class="text-sm font-medium text-gray-600 mb-2">Patient: Robert Downey - Panorex 2024-03-15</p>
+                                <img src="https://cdn.atlagia.com/dental-xray-example.jpg" alt="Dental X-ray" class="rounded-lg shadow-md border">
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-3 text-gray-800">AI Analysis Report</h4>
+                                <div class="space-y-3">
+                                    <div class="flex items-start"><CheckCircle class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" /><div><span class="font-semibold">Finding 1:</span> Possible caries on tooth #14 (upper left first molar).</div></div>
+                                    <div class="flex items-start"><CheckCircle class="w-5 h-5 text-yellow-500 mr-2 mt-0.5 flex-shrink-0" /><div><span class="font-semibold">Finding 2:</span> Minor bone loss around tooth #24 (lower left first premolar). Recommend periodontal probing.</div></div>
+                                    <div class="flex items-start"><CheckCircle class="w-5 h-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" /><div><span class="font-semibold">Observation:</span> Wisdom tooth #17 is impacted. Monitor for changes.</div></div>
+                                </div>
+                                <button class="mt-4 w-full py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200">Confirm & Add to Notes</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Analytics Tab -->
+                    <div id="tab-analytics" class="dashboard-tab-pane hidden bg-white rounded-xl p-6 border border-gray-100 shadow-sm h-full">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold">Practice Performance</h3>
+                             <div class="text-sm border rounded-md">
+                                <button class="px-3 py-1 rounded-l-md bg-gray-100 hover:bg-gray-200">Last 30 days</button>
+                                <button class="px-3 py-1 bg-gray-100 hover:bg-gray-200 border-l border-r">Last 90 days</button>
+                                <button class="px-3 py-1 rounded-r-md bg-[#0a91b1]/10 text-[#0a91b1] font-medium">This Year</button>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                            <div>
+                                <h4 class="font-semibold mb-2 text-gray-800">Monthly Revenue</h4>
+                                <div class="bg-gray-50 p-4 rounded-lg h-56 flex items-end space-x-2 border">
+                                    <div class="flex-1 h-[60%] bg-blue-300 rounded-t-md" title="$12k"></div>
+                                    <div class="flex-1 h-[75%] bg-blue-400 rounded-t-md" title="$15k"></div>
+                                    <div class="flex-1 h-[85%] bg-[#0a91b1] rounded-t-md" title="$17k"></div>
+                                </div>
+                            </div>
+                             <div>
+                                <h4 class="font-semibold mb-2 text-gray-800">New Patients</h4>
+                                <div class="bg-gray-50 p-4 rounded-lg h-56 flex items-end space-x-2 border">
+                                    <div class="flex-1 h-[50%] bg-green-300 rounded-t-md" title="35"></div>
+                                    <div class="flex-1 h-[60%] bg-green-400 rounded-t-md" title="42"></div>
+                                    <div class="flex-1 h-[55%] bg-green-500 rounded-t-md" title="38"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Security Tab -->
+                    <div id="tab-security" class="dashboard-tab-pane hidden bg-white rounded-xl p-6 border border-gray-100 shadow-sm h-full">
+                        <h3 class="text-xl font-bold mb-4">Security & Compliance</h3>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center p-4 border rounded-lg">
+                                <div>
+                                    <h4 class="font-semibold">Two-Factor Authentication (2FA)</h4>
+                                    <p class="text-sm text-gray-600">Add an extra layer of security to your account.</p>
+                                </div>
+                                <div class="w-12 h-6 flex items-center bg-gray-300 rounded-full p-1 cursor-pointer"><div class="w-4 h-4 bg-white rounded-full shadow-md transform"></div></div>
+                            </div>
+                             <div class="flex justify-between items-center p-4 border rounded-lg">
+                                <div>
+                                    <h4 class="font-semibold">Data Encryption at Rest</h4>
+                                    <p class="text-sm text-gray-600">All patient data is encrypted on our servers.</p>
+                                </div>
+                                <div class="w-12 h-6 flex items-center bg-green-500 rounded-full p-1 cursor-pointer"><div class="w-4 h-4 bg-white rounded-full shadow-md transform translate-x-6"></div></div>
+                            </div>
+                             <div class="flex justify-between items-center p-4 border rounded-lg">
+                                <div>
+                                    <h4 class="font-semibold">HIPAA-compliant Audit Logs</h4>
+                                    <p class="text-sm text-gray-600">Track all access and changes to patient data.</p>
+                                </div>
+                                 <button class="px-3 py-1 text-sm bg-gray-100 rounded-md hover:bg-gray-200">View Logs</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Feature Groups -->
+          {featuresData.sections.map((section, sectionIndex) => (
+            <div class="py-12 sm:py-16" id={section.title.toLowerCase().replace(/\s+/g, '-')}>
+              <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-6">{section.title}</h2>
+                <div class="w-20 h-1 bg-[#0a91b1] mx-auto"></div>
+              </div>
+              
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {section.features.map((feature, featureIndex) => {
+                  const IconComponent = iconMap[feature.icon];
+                  return (
+                    <div class="feature-card bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300" data-aos="fade-up" data-aos-delay={featureIndex * 100}>
+                      <div class="w-12 h-12 bg-[#0a91b1]/10 rounded-lg flex items-center justify-center mb-4">
+                        <IconComponent className="w-6 h-6 text-[#0a91b1]" />
+                      </div>
+                      <h3 class="text-xl font-bold mb-3">{feature.title}</h3>
+                      <p class="text-gray-600 mb-4">{feature.description}</p>
+                      
+                      <a href="#" class="inline-flex items-center text-[#0a91b1] font-medium hover:text-[#097d99]">
+                        Learn more <ArrowRight className="w-4 h-4 ml-1" />
+                      </a>
+                    </div>
+                  )
+                })}
+              </div>
+            </div>
+          ))}
+          
+          <!-- Integration Partners -->
+          <div class="mt-24">
+            <div class="text-center mb-12">
+              <h2 class="text-3xl font-bold mb-6">Integration Partners</h2>
+              <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                Atlagia DentalCare seamlessly integrates with your favorite dental tools and services.
+              </p>
+            </div>
+            
+            <div class="bg-gray-50 rounded-2xl py-10 px-6 border border-gray-200">
+              <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+                {Array(6).fill(0).map((_, i) => (
+                  <div class="flex items-center justify-center">
+                    <div class="h-12 w-full bg-gray-200 rounded-lg animate-pulse"></div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- CTA Section -->
+      <section class="py-16 px-4 bg-gradient-to-b from-white to-gray-50">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl font-bold mb-6">Ready to Transform Your Dental Practice?</h2>
+          <p class="text-lg text-gray-600 mb-8">
+            Experience the full power of Atlagia DentalCare with a personalized demo.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="/demo" class="px-8 py-3.5 bg-[#0a91b1] hover:bg-[#097d99] text-white font-medium rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-[#0a91b1]/25">
+              Schedule a Demo
+            </a>
+            <a href="/pricing" class="px-8 py-3.5 bg-white hover:bg-gray-100 text-[#0a91b1] font-medium rounded-lg border border-gray-200 transition-all duration-300 shadow-sm hover:shadow-md">
+              View Pricing
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style>
+  @keyframes blob {
+    0% {
+      transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    }
+    33% {
+      transform: translate(-50%, -50%) scale(1.1) rotate(120deg);
+    }
+    66% {
+      transform: translate(-50%, -50%) scale(0.9) rotate(240deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1) rotate(360deg);
+    }
+  }
+
+  .animate-blob {
+    animation: blob 20s infinite linear;
+  }
+  
+  .animation-delay-1000 {
+    animation-delay: 1s;
+  }
+
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+  
+  @keyframes float-subtle {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  .animate-float-subtle {
+    animation: float-subtle 6s ease-in-out infinite;
+  }
+  
+  /* Grid Pattern Background */
+  .bg-grid-pattern {
+    background-image: 
+      linear-gradient(to right, rgba(10, 145, 177, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(10, 145, 177, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+  
+  /* Dashboard Animation Styles */
+  .pulse-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    animation: pulse-animation 2s infinite;
+  }
+  
+  @keyframes pulse-animation {
+    0% { transform: scale(0.8); opacity: 0.5; }
+    50% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(0.8); opacity: 0.5; }
+  }
+  
+  .appointment-item {
+    transition: all 0.6s ease-out;
+  }
+  
+  .typing-indicator {
+    display: inline-flex;
+    align-items: center;
+    height: 10px;
+  }
+  
+  .typing-indicator span {
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    margin: 0 1px;
+    background: #0a91b1;
+    border-radius: 50%;
+    animation: typing 1s infinite ease-in-out;
+  }
+  
+  .typing-indicator span:nth-child(1) { animation-delay: 0s; }
+  .typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
+  .typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
+  
+  @keyframes typing {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+  }
+
+  .dashboard-tab-pane {
+      animation: fadeIn 0.5s;
+  }
+
+  @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Dashboard Tab functionality
+  const tabContainer = document.getElementById('dashboard-tabs');
+  if (tabContainer) {
+    const tabButtons = tabContainer.querySelectorAll('.dashboard-tab-button');
+    const mainContentContainer = tabContainer.closest('.grid').querySelector('.col-span-9');
+    const tabPanes = mainContentContainer.querySelectorAll('.dashboard-tab-pane');
+
+    tabButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const tabId = button.dataset.tab;
+        
+        // Update buttons state
+        tabButtons.forEach(btn => {
+          const icon = btn.querySelector('svg');
+          btn.classList.remove('bg-[#0a91b1]/10', 'text-[#0a91b1]', 'font-medium');
+          btn.classList.add('hover:bg-gray-50', 'text-gray-700');
+          icon.classList.add('text-gray-500');
+          icon.classList.remove('text-[#0a91b1]');
+        });
+        
+        const clickedIcon = button.querySelector('svg');
+        button.classList.add('bg-[#0a91b1]/10', 'text-[#0a91b1]', 'font-medium');
+        button.classList.remove('hover:bg-gray-50', 'text-gray-700');
+        clickedIcon.classList.remove('text-gray-500');
+        clickedIcon.classList.add('text-[#0a91b1]');
+
+        // Update panes visibility
+        tabPanes.forEach(pane => {
+          if (pane.id === `tab-${tabId}`) {
+            pane.classList.remove('hidden');
+            pane.classList.add('active');
+          } else {
+            pane.classList.add('hidden');
+            pane.classList.remove('active');
+          }
+        });
+      });
+    });
+  }
+
+  // Set up intersection observer to trigger animations when dashboard is visible
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Animate progress bar
+        const progressBars = entry.target.querySelectorAll('.progress-bar');
+        progressBars.forEach(bar => {
+          const targetWidth = bar.getAttribute('data-width');
+          setTimeout(() => {
+            bar.style.width = `${targetWidth}%`;
+          }, 300);
+        });
+        
+        // Animate count-up numbers
+        const countElements = entry.target.querySelectorAll('.count-up');
+        countElements.forEach(el => {
+          const target = parseInt(el.getAttribute('data-target'));
+          animateCount(el, target);
+        });
+        
+        // Animate count-up numbers with prefix
+        const countPrefixElements = entry.target.querySelectorAll('.count-up-prefix');
+        countPrefixElements.forEach(el => {
+          const target = parseInt(el.getAttribute('data-target'));
+          const prefix = el.getAttribute('data-prefix') || '';
+          animateCountPrefix(el, target, prefix);
+        });
+        
+        // Animate appointments sliding in
+        const appointments = entry.target.querySelectorAll('.appointment-item');
+        appointments.forEach((app, index) => {
+          setTimeout(() => {
+            app.style.transform = 'translateX(0)';
+            app.style.opacity = '1';
+          }, 300 + (index * 200));
+        });
+        
+        // Unobserve after triggering animations
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  
+  // Observe all interactive elements
+  document.querySelectorAll('.appointment-list').forEach(el => {
+    observer.observe(el.closest('.bg-white'));
+  });
+  
+  document.querySelectorAll('.count-up, .count-up-prefix').forEach(el => {
+    observer.observe(el.closest('.bg-white'));
+  });
+  
+  // Function to animate count-up
+  function animateCount(element, target) {
+    let current = 0;
+    const increment = Math.ceil(target / 30); // Divide animation into 30 steps
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= target) {
+        current = target;
+        clearInterval(timer);
+      }
+      element.textContent = current;
+    }, 50);
+  }
+  
+  // Function to animate count-up with prefix
+  function animateCountPrefix(element, target, prefix) {
+    let current = 0;
+    const increment = Math.ceil(target / 30); // Divide animation into 30 steps
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= target) {
+        current = target;
+        clearInterval(timer);
+      }
+      element.textContent = `${prefix}${current}`;
+    }, 50);
+  }
+  
+  // Feature card animation on scroll
+  const featureCards = document.querySelectorAll('.feature-card');
+  const featureObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('opacity-100');
+          entry.target.classList.remove('opacity-0', 'translate-y-10');
+        }, index * 100);
+        featureObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  
+  featureCards.forEach(card => {
+    card.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-500');
+    featureObserver.observe(card);
+  });
+});
+</script> 

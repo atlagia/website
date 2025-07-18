@@ -1,0 +1,186 @@
+{
+  "hero": {
+    "subtitle": "ENDODONTIC TREATMENT",
+    "title": "Root Canal Therapy",
+    "description": "Advanced, pain-free root canal treatment to save your natural teeth and restore your oral health."
+  },
+  "overview": {
+    "title": "Modern Root Canal Treatment",
+    "description": "Using state-of-the-art technology and techniques, we provide comfortable and effective root canal therapy to treat infected or damaged teeth.",
+    "features": [
+      {
+        "icon": "stethoscope",
+        "title": "Advanced Diagnostics",
+        "description": "Precise digital imaging for accurate treatment"
+      },
+      {
+        "icon": "heart-pulse",
+        "title": "Painless Procedure",
+        "description": "Modern techniques for maximum comfort"
+      },
+      {
+        "icon": "timer",
+        "title": "Efficient Treatment",
+        "description": "Most treatments completed in 1-2 visits"
+      },
+      {
+        "icon": "shield-check",
+        "title": "High Success Rate",
+        "description": "95% success rate in saving natural teeth"
+      }
+    ]
+  },
+  "process": {
+    "title": "Root Canal Treatment Process",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Diagnosis",
+        "description": "Comprehensive examination and X-rays to assess the infection"
+      },
+      {
+        "number": "02",
+        "title": "Preparation",
+        "description": "Local anesthesia and isolation of the affected tooth"
+      },
+      {
+        "number": "03",
+        "title": "Cleaning",
+        "description": "Removal of infected pulp and thorough canal cleaning"
+      },
+      {
+        "number": "04",
+        "title": "Filling",
+        "description": "Sealing the canals with biocompatible material"
+      },
+      {
+        "number": "05",
+        "title": "Restoration",
+        "description": "Placement of permanent crown for protection"
+      }
+    ]
+  },
+  "symptoms": {
+    "title": "When You May Need a Root Canal",
+    "description": "Common signs that indicate the need for root canal treatment",
+    "signs": [
+      {
+        "icon": "zap",
+        "title": "Severe Tooth Pain",
+        "description": "Persistent pain when chewing or applying pressure"
+      },
+      {
+        "icon": "thermometer",
+        "title": "Temperature Sensitivity",
+        "description": "Prolonged sensitivity to hot or cold"
+      },
+      {
+        "icon": "alert-circle",
+        "title": "Tooth Discoloration",
+        "description": "Darkening or graying of the affected tooth"
+      },
+      {
+        "icon": "activity",
+        "title": "Gum Swelling",
+        "description": "Swollen or tender gums around the affected tooth"
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Benefits of Root Canal Treatment",
+    "description": "Why choosing root canal therapy is beneficial for your oral health",
+    "items": [
+      {
+        "title": "Save Natural Teeth",
+        "description": "Preserve your original tooth structure",
+        "icon": "tooth"
+      },
+      {
+        "title": "Pain Relief",
+        "description": "Eliminate tooth pain and discomfort",
+        "icon": "shield"
+      },
+      {
+        "title": "Prevent Spread",
+        "description": "Stop infection from spreading to other teeth",
+        "icon": "shield-alert"
+      },
+      {
+        "title": "Long-lasting Results",
+        "description": "Treated teeth can last a lifetime",
+        "icon": "clock"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Common Questions About Root Canals",
+    "questions": [
+      {
+        "question": "Is a root canal painful?",
+        "answer": "Modern root canal procedures are virtually painless thanks to advanced techniques and effective local anesthesia. Most patients report that it's no more uncomfortable than getting a filling."
+      },
+      {
+        "question": "How long does the procedure take?",
+        "answer": "Most root canals can be completed in 1-2 appointments, with each session lasting 60-90 minutes depending on the complexity of the case."
+      },
+      {
+        "question": "How long is the recovery period?",
+        "answer": "Most patients return to normal activities the next day. Mild discomfort may persist for a few days and can be managed with over-the-counter pain medication."
+      },
+      {
+        "question": "How long will the treated tooth last?",
+        "answer": "With proper care and maintenance, a tooth treated with root canal therapy can last a lifetime. Regular dental check-ups are essential for long-term success."
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Root Canal Treatment Costs",
+    "description": "Investment in your oral health with transparent pricing",
+    "options": [
+      {
+        "name": "Front Tooth Root Canal",
+        "price": "$800",
+        "duration": "60-90 min",
+        "includes": [
+          "Digital X-rays",
+          "Local anesthesia",
+          "Canal treatment",
+          "Temporary filling"
+        ]
+      },
+      {
+        "name": "Molar Root Canal",
+        "price": "$1,200",
+        "duration": "90-120 min",
+        "includes": [
+          "Complex canal treatment",
+          "Advanced imaging",
+          "Premium materials",
+          "Extended warranty"
+        ]
+      }
+    ]
+  },
+  "aftercare": {
+    "title": "Post-Treatment Care",
+    "steps": [
+      "Avoid chewing on the treated tooth until fully restored",
+      "Take prescribed medications as directed",
+      "Maintain good oral hygiene",
+      "Return for permanent crown placement",
+      "Schedule regular follow-up appointments"
+    ]
+  },
+  "cta": {
+    "title": "Experiencing Tooth Pain?",
+    "description": "Don't wait until the pain becomes severe. Schedule your consultation today for expert evaluation.",
+    "primaryButton": {
+      "text": "Book Appointment",
+      "href": "/booking"
+    },
+    "secondaryButton": {
+      "text": "Contact Us",
+      "href": "/contact"
+    }
+  }
+} 

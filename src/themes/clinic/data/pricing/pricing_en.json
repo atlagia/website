@@ -1,0 +1,121 @@
+{
+  "hero": {
+    "subtitle": "PRICING PLANS",
+    "title": "Choose the Right Plan for Your Business",
+    "description": "Transparent pricing with no hidden fees. All plans include our core AI-powered features to help you grow."
+  },
+  "billing": {
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "discount": "Save 20%"
+  },
+  "plans": [
+    {
+      "name": "Starter",
+      "description": "Perfect for small e-commerce businesses",
+      "price": {
+        "monthly": 29,
+        "yearly": 290
+      },
+      "featured": false,
+      "features": [
+        "AI Content Generation (5k words/mo)",
+        "Basic SEO Tools",
+        "Product Optimization",
+        "Email Support",
+        "2 Team Members",
+        "Analytics Dashboard",
+        "API Access"
+      ],
+      "cta": {
+        "text": "Get Started",
+        "link": "/get-started"
+      }
+    },
+    {
+      "name": "Professional",
+      "description": "Ideal for growing businesses",
+      "price": {
+        "monthly": 79,
+        "yearly": 790
+      },
+      "featured": true,
+      "badge": "Popular",
+      "features": [
+        "AI Content Generation (20k words/mo)",
+        "Advanced SEO Suite",
+        "Product & Inventory Optimization",
+        "Priority Support",
+        "5 Team Members",
+        "Advanced Analytics",
+        "API Access",
+        "Custom Integrations",
+        "Bulk Editor",
+        "A/B Testing"
+      ],
+      "cta": {
+        "text": "Get Started",
+        "link": "/get-started"
+      }
+    },
+    {
+      "name": "Enterprise",
+      "description": "For large-scale operations",
+      "price": {
+        "monthly": 199,
+        "yearly": 1990
+      },
+      "featured": false,
+      "features": [
+        "Unlimited AI Content Generation",
+        "Enterprise SEO Tools",
+        "Full Suite Optimization",
+        "24/7 Priority Support",
+        "Unlimited Team Members",
+        "Custom Analytics",
+        "Premium API Access",
+        "Custom Development",
+        "Advanced Bulk Operations",
+        "Multi-store Management"
+      ],
+      "cta": {
+        "text": "Get Started",
+        "link": "/get-started"
+      }
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Can I change my plan later?",
+      "answer": "Yes, you can upgrade or downgrade your plan at any time. Changes will be reflected in your next billing cycle."
+    },
+    {
+      "question": "What payment methods do you accept?",
+      "answer": "We accept all major credit cards, PayPal, and bank transfers for enterprise customers."
+    },
+    {
+      "question": "Is there a free trial available?",
+      "answer": "Yes, we offer a 14-day free trial on all plans. No credit card required."
+    },
+    {
+      "question": "What happens after my trial ends?",
+      "answer": "After your trial ends, you can choose to subscribe to any of our plans or your account will be automatically downgraded to our limited free tier."
+    }
+  ],
+  "cta": {
+    "title": "Still Have Questions?",
+    "description": "Our team is here to help you find the perfect plan for your business needs.",
+    "buttons": [
+      {
+        "text": "Contact Sales",
+        "link": "/contact",
+        "primary": true
+      },
+      {
+        "text": "Request Demo",
+        "link": "/demo",
+        "primary": false
+      }
+    ]
+  }
+} 

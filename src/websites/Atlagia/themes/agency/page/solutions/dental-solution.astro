@@ -1,0 +1,276 @@
+---
+import { Calendar, Users, Globe, MessageSquare, Brain, Clock, Shield, ChartBar } from 'lucide-react';
+
+interface Feature {
+  icon: any;
+  title: string;
+  description: string;
+}
+
+const features: Feature[] = [
+  {
+    icon: Globe,
+    title: "Professional Website",
+    description: "Modern, responsive dental practice website with appointment booking, service showcase, and patient portal integration."
+  },
+  {
+    icon: Calendar,
+    title: "Smart Appointment System",
+    description: "Automated scheduling with real-time availability, reminders, and multi-provider support."
+  },
+  {
+    icon: Users,
+    title: "Patient Management",
+    description: "Comprehensive patient records, medical history tracking, and secure document management."
+  },
+  {
+    icon: Brain,
+    title: "AI Assistant Support",
+    description: "24/7 intelligent virtual secretary for appointments, inquiries, and patient support."
+  },
+  {
+    icon: MessageSquare,
+    title: "Patient Communication",
+    description: "Automated reminders, follow-ups, and secure messaging system for better patient engagement."
+  },
+  {
+    icon: ChartBar,
+    title: "Analytics & Reports",
+    description: "Detailed insights into practice performance, patient trends, and financial analytics."
+  },
+  {
+    icon: Clock,
+    title: "Time Management",
+    description: "Efficient scheduling, resource allocation, and staff management tools."
+  },
+  {
+    icon: Shield,
+    title: "Security & Compliance",
+    description: "HIPAA-compliant data protection and secure patient information handling."
+  }
+];
+
+const benefits = [
+  "Reduce administrative workload by 75%",
+  "Increase patient satisfaction by 90%",
+  "24/7 AI-powered patient support",
+  "Streamline appointment management",
+  "Enhance patient communication",
+  "Improve practice efficiency",
+  "Secure data management",
+  "Comprehensive analytics"
+];
+---
+
+<section class="relative py-20 overflow-hidden bg-gradient-to-b from-gray-50 via-white to-gray-50">
+  <!-- Background Effects -->
+  <div class="absolute inset-0 z-0">
+    <!-- Animated Gradient Orbs -->
+    <div class="absolute top-1/4 left-1/4 w-[800px] h-[800px] bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 rounded-full blur-3xl animate-float-slow"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-gradient-to-tr from-purple-500/10 via-pink-500/10 to-blue-500/10 rounded-full blur-3xl animate-float-delayed-slow"></div>
+    
+    <!-- Grid Pattern -->
+    <div class="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(to_bottom,transparent,black,transparent)] opacity-20"></div>
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-4">
+    <!-- Header Section -->
+    <div class="text-center mb-16">
+      <!-- Badge -->
+      <div class="animate-slide-down">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/50 border border-purple-100/20 backdrop-blur-sm shadow-lg shadow-purple-500/5 hover:shadow-purple-500/10 transition-all duration-300 mb-8">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-600 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-gradient-to-r from-blue-600 to-purple-600"></span>
+          </span>
+          <span class="text-sm font-medium bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            Dental Practice Solution
+          </span>
+        </div>
+      </div>
+
+      <!-- Title -->
+      <div class="relative mb-8 animate-slide-up">
+        <div class="relative inline-block">
+          <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 pb-4">
+            All-in-One Dental Practice Management Solution
+            <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent opacity-0 animate-shine"></div>
+          </h1>
+          <!-- Animated Border -->
+          <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-1/3 h-1">
+            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500 to-transparent animate-border-slide"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-purple-500 to-transparent animate-border-slide-delayed"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Description -->
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-12 animate-fade-in">
+        Transform your dental practice with our comprehensive digital solution. Streamline operations, enhance patient care, and grow your practice with AI-powered assistance.
+      </p>
+    </div>
+
+    <!-- Features Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+      {features.map((feature, index) => (
+        <div 
+          class="group p-6 rounded-2xl bg-white/70 backdrop-blur-sm border border-purple-100/20 hover:bg-white/90 transition-all duration-500 hover:shadow-xl hover:shadow-purple-500/10 animate-fade-in hover:-translate-y-1 hover:scale-[1.02] relative overflow-hidden"
+          style={`animation-delay: ${index * 150}ms`}
+        >
+          <!-- Animated Background -->
+          <div class="absolute inset-0 bg-gradient-to-r from-purple-500/0 via-pink-500/5 to-blue-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-gradient-slow"></div>
+          
+          <!-- Icon -->
+          <div class="relative z-10 mb-4">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/10 to-purple-500/10 p-2.5 group-hover:from-blue-500/20 group-hover:to-purple-500/20 transition-all duration-500 animate-pulse-slow">
+              <feature.icon class="w-full h-full text-blue-600 group-hover:scale-110 transition-transform duration-300 animate-bounce-subtle" />
+            </div>
+          </div>
+          
+          <!-- Content -->
+          <h3 class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">
+            {feature.title}
+          </h3>
+          <p class="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
+            {feature.description}
+          </p>
+        </div>
+      ))}
+    </div>
+
+    <!-- Benefits Section -->
+    <div class="bg-white/80 backdrop-blur-sm rounded-3xl p-12 border border-purple-100/20 shadow-xl animate-slide-up" style="animation-delay: 600ms">
+      <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Key Benefits</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {benefits.map((benefit, index) => (
+          <div 
+            class="flex items-center gap-3 p-4 rounded-xl bg-white/50 border border-purple-100/10 animate-fade-in"
+            style={`animation-delay: ${800 + index * 100}ms`}
+          >
+            <div class="flex-shrink-0 w-2 h-2 rounded-full bg-blue-500"></div>
+            <span class="text-gray-700">{benefit}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="text-center mt-20 animate-slide-up" style="animation-delay: 1000ms">
+      <a 
+        href="/contact" 
+        class="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium hover:opacity-90 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25 hover:-translate-y-0.5 group"
+      >
+        <span>Schedule a Demo</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes float-slow {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(10px, -10px) rotate(1deg); }
+    50% { transform: translate(0, -15px) rotate(-1deg); }
+    75% { transform: translate(-10px, -5px) rotate(1deg); }
+  }
+
+  @keyframes float-delayed-slow {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(-10px, 10px) rotate(-1deg); }
+    50% { transform: translate(0, 15px) rotate(1deg); }
+    75% { transform: translate(10px, 5px) rotate(-1deg); }
+  }
+
+  @keyframes shine {
+    0% { opacity: 0; transform: translateX(-100%); }
+    50% { opacity: 1; }
+    100% { opacity: 0; transform: translateX(100%); }
+  }
+
+  @keyframes border-slide {
+    0%, 100% { transform: translateX(-100%); opacity: 0; }
+    25%, 75% { opacity: 1; }
+    50% { transform: translateX(100%); opacity: 0; }
+  }
+
+  @keyframes slide-up {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+  @keyframes slide-down {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes pulse-slow {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.9; transform: scale(0.98); }
+  }
+
+  @keyframes bounce-subtle {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-2px); }
+  }
+
+  @keyframes gradient-slow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .animate-float-slow {
+    animation: float-slow 30s ease-in-out infinite;
+  }
+
+  .animate-float-delayed-slow {
+    animation: float-delayed-slow 30s ease-in-out infinite;
+    animation-delay: -15s;
+  }
+
+  .animate-shine {
+    animation: shine 3s ease-in-out infinite;
+  }
+
+  .animate-border-slide {
+    animation: border-slide 3s ease-in-out infinite;
+  }
+
+  .animate-border-slide-delayed {
+    animation: border-slide 3s ease-in-out infinite;
+    animation-delay: 1.5s;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 1s ease-out forwards;
+  }
+
+  .animate-slide-down {
+    animation: slide-down 1s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fade-in 1s ease-out forwards;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse-slow 6s ease-in-out infinite;
+  }
+
+  .animate-bounce-subtle {
+    animation: bounce-subtle 3s ease-in-out infinite;
+  }
+
+  .animate-gradient-slow {
+    background-size: 200% 200%;
+    animation: gradient-slow 8s linear infinite;
+  }
+</style> 

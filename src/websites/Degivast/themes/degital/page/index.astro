@@ -1,0 +1,233 @@
+---
+import { getLangFromUrl, useTranslations } from '@utils/i18n';
+
+const theme = import.meta.env.THEME || 'default';
+const { lang } = Astro.params;
+
+// Import components
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+const { default: Hero } = await import(`../components/Hero.astro`);
+const { default: Features } = await import(`../components/Features.astro`);
+const { default: Pricing } = await import(`../components/Pricing.astro`);
+const { default: CTA } = await import(`../components/CTA.astro`);
+const { default: Integrations } = await import(`../components/Integrations.astro`);
+const { default: Testimonials } = await import(`../components/Testimonials.astro`);
+const { default: HowItWorks } = await import(`../components/HowItWorks.astro`);
+const { default: Newsletter } = await import(`../components/Newsletter.astro`);
+const { default: TrustSignals } = await import(`../components/TrustSignals.astro`);
+const { default: SuccessStories } = await import(`../components/SuccessStories.astro`);
+const { default: FeatureGrid } = await import(`../components/FeatureGrid.astro`);
+const { default: IntegrationShowcase } = await import(`../components/IntegrationShowcase.astro`);
+
+// Get translations
+const translations = await useTranslations(lang);
+const jsonData = translations.default;
+
+// Get site title and description from language-specific data
+const SITE_TITLE = jsonData.siteTitle || 'AutomatePro';
+const SITE_DESCRIPTION = jsonData.siteDescription || 'Intelligent Business Automation Platform';
+
+// Generate static paths for all supported languages
+export async function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'fr' } },
+    { params: { lang: 'es' } },
+    { params: { lang: 'it' } },
+    { params: { lang: 'de' } },
+    { params: { lang: 'nl' } },
+    { params: { lang: 'pt' } },
+  ];
+}
+---
+
+<!doctype html>
+<html lang={lang} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
+  <head>
+    <BaseHead 
+      title={SITE_TITLE} 
+      description={SITE_DESCRIPTION} 
+      isHomePage={true}
+    />
+    <style>
+      .gradient-bg {
+        background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #d946ef 100%);
+      }
+      .blur-overlay {
+        backdrop-filter: blur(8px);
+      }
+      .section-spacing {
+        padding: 6rem 0;
+      }
+      .section-spacing-sm {
+        padding: 4rem 0;
+      }
+    </style>
+  </head>
+  <body class={lang === 'ar' ? 'rtl' : 'ltr'}>
+    <Header />
+    <main>
+      {/* Dynamic Sections from JSON */}
+      {jsonData.sections?.map((section) => {
+        switch (section.type) {
+          case 'hero':
+            return (
+              <Hero
+                title={section.title}
+                description={section.description}
+                primaryCTA={section.primaryCTA}
+                secondaryCTA={section.secondaryCTA}
+                stats={section.stats}
+              />
+            );
+          
+          case 'features':
+            return (
+              <Features
+                title={section.title}
+                description={section.description}
+                features={section.features}
+              />
+            );
+
+          case 'howItWorks':
+            return (
+              <HowItWorks
+                title={section.title}
+                description={section.description}
+                steps={section.steps}
+              />
+            );
+
+          case 'integrations':
+            return (
+              <Integrations
+                title={section.title}
+                description={section.description}
+                integrations={section.integrations}
+              />
+            );
+
+          case 'testimonials':
+            return (
+              <Testimonials
+                title={section.title}
+                description={section.description}
+                testimonials={section.testimonials}
+              />
+            );
+            
+          case 'pricing':
+            return (
+              <Pricing
+                title={section.title}
+                description={section.description}
+                plans={section.plans}
+              />
+            );
+
+          case 'trustSignals':
+            return (
+              <TrustSignals
+                title={section.title}
+                description={section.description}
+                logos={section.logos}
+                certifications={section.certifications}
+              />
+            );
+
+          case 'featureGrid':
+            return (
+              <section class="section-spacing bg-gray-50">
+                <div class="container mx-auto px-4">
+                  <FeatureGrid
+                    title={section.title}
+                    description={section.description}
+                    features={section.features}
+                  />
+                </div>
+              </section>
+            );
+
+          case 'integrationShowcase':
+            return (
+              <section class="section-spacing gradient-bg text-white">
+                <div class="container mx-auto px-4">
+                  <IntegrationShowcase
+                    title={section.title}
+                    description={section.description}
+                    categories={section.categories}
+                  />
+                </div>
+              </section>
+            );
+
+          case 'successStories':
+            return (
+              <section class="section-spacing-sm bg-white">
+                <div class="container mx-auto px-4">
+                  <SuccessStories
+                    title={section.title}
+                    description={section.description}
+                    stories={section.stories}
+                  />
+                </div>
+              </section>
+            );
+
+          case 'newsletter':
+            return (
+              <section class="section-spacing gradient-bg text-white">
+                <div class="container mx-auto px-4">
+                  <Newsletter 
+                    title={section.title}
+                    description={section.description}
+                    buttonText={section.buttonText}
+                  />
+                </div>
+              </section>
+            );
+
+          case 'cta':
+            return (
+              <CTA
+                title={section.title}
+                description={section.description}
+                primaryCTA={section.primaryCTA}
+                secondaryCTA={section.secondaryCTA}
+              />
+            );
+
+          default:
+            return null;
+        }
+      })}
+    </main>
+    <Footer />
+
+    <script>
+      // Intersection Observer for animations
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-in');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      // Observe all sections
+      document.querySelectorAll('section').forEach(section => {
+        observer.observe(section);
+      });
+    </script>
+  </body>
+</html>

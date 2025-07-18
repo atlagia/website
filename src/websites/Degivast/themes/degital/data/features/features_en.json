@@ -1,0 +1,126 @@
+{
+  "title": "Powerful Features for Modern Business",
+  "description": "Discover how our intelligent automation platform can transform your business operations",
+  "features": [
+    {
+      "icon": "Workflow",
+      "title": "Visual Workflow Builder",
+      "description": "Create complex automation workflows with our intuitive drag-and-drop interface. No coding required."
+    },
+    {
+      "icon": "Bot",
+      "title": "AI Process Mining",
+      "description": "Our AI analyzes your business processes and suggests automation opportunities automatically."
+    },
+    {
+      "icon": "Globe",
+      "title": "Multi-platform Integration",
+      "description": "Connect with 500+ platforms and apps to create seamless automated workflows across your tech stack."
+    },
+    {
+      "icon": "Shield",
+      "title": "Enterprise Security",
+      "description": "SOC 2 compliant with end-to-end encryption, role-based access control, and audit logging."
+    },
+    {
+      "icon": "Cpu",
+      "title": "Smart Templates",
+      "description": "Start quickly with pre-built automation templates for common business processes."
+    },
+    {
+      "icon": "Users",
+      "title": "Team Collaboration",
+      "description": "Built-in tools for team workflow management, version control, and process documentation."
+    }
+  ],
+  "sections": [
+    {
+      "title": "AI-Powered Automation",
+      "description": "Let artificial intelligence handle your repetitive tasks",
+      "features": [
+        {
+          "title": "Process Mining",
+          "description": "AI analyzes your workflows to identify automation opportunities"
+        },
+        {
+          "title": "Smart Routing",
+          "description": "Intelligent task distribution based on team capacity and expertise"
+        },
+        {
+          "title": "Anomaly Detection",
+          "description": "Automatically detect and flag process anomalies"
+        }
+      ]
+    },
+    {
+      "title": "Enterprise Integration",
+      "description": "Connect with your existing tools and systems",
+      "features": [
+        {
+          "title": "API Integration",
+          "description": "RESTful API for seamless integration with your systems"
+        },
+        {
+          "title": "Custom Connectors",
+          "description": "Build custom connectors for proprietary systems"
+        },
+        {
+          "title": "Data Mapping",
+          "description": "Visual data mapping between different systems"
+        }
+      ]
+    },
+    {
+      "title": "Advanced Analytics",
+      "description": "Gain insights into your automation performance",
+      "features": [
+        {
+          "title": "Process Analytics",
+          "description": "Track and analyze automation performance metrics"
+        },
+        {
+          "title": "ROI Calculator",
+          "description": "Measure the impact of automation on your business"
+        },
+        {
+          "title": "Custom Reports",
+          "description": "Create custom reports for different stakeholders"
+        }
+      ]
+    }
+  ],
+  "integrations": {
+    "title": "Connect Your Tools",
+    "description": "Integrate with your favorite business tools and platforms",
+    "categories": [
+      {
+        "name": "Communication",
+        "tools": ["Slack", "Microsoft Teams", "Gmail", "Outlook"]
+      },
+      {
+        "name": "CRM",
+        "tools": ["Salesforce", "HubSpot", "Zoho", "Pipedrive"]
+      },
+      {
+        "name": "Project Management",
+        "tools": ["Jira", "Asana", "Trello", "Monday.com"]
+      },
+      {
+        "name": "Documentation",
+        "tools": ["Notion", "Confluence", "Google Docs", "SharePoint"]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Automate Your Business?",
+    "description": "Start your free trial today and see how AutomatePro can transform your operations.",
+    "primaryButton": {
+      "text": "Start Free Trial",
+      "link": "/signup"
+    },
+    "secondaryButton": {
+      "text": "Schedule Demo",
+      "link": "/demo"
+    }
+  }
+} 

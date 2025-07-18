@@ -1,0 +1,335 @@
+{
+  "hero": {
+    "subtitle": "Gestion de Cabinet Vétérinaire",
+    "title": "Solution Complète de Gestion Vétérinaire",
+    "description": "Un système complet de gestion de cabinet vétérinaire qui optimise les opérations, améliore les soins aux patients et développe votre pratique.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Démo de la Solution de Gestion Vétérinaire"
+    },
+    "stats": [
+      {
+        "value": "40%",
+        "label": "Temps Économisé"
+      },
+      {
+        "value": "95%",
+        "label": "Satisfaction Client"
+      },
+      {
+        "value": "35%",
+        "label": "Croissance des Revenus"
+      }
+    ]
+  },
+  "features": {
+    "subtitle": "Fonctionnalités Avancées",
+    "title": "Gestion Vétérinaire Complète",
+    "description": "Outils complets conçus pour les cabinets vétérinaires modernes",
+    "categories": [
+      {
+        "name": "Opérations de Cabinet",
+        "description": "Optimisation des opérations quotidiennes et de la gestion des patients"
+      },
+      {
+        "name": "Soins aux Patients",
+        "description": "Amélioration des soins aux animaux et de la communication client"
+      }
+    ],
+    "items": [
+      {
+        "icon": "calendar",
+        "category": "Opérations",
+        "title": "Planification Intelligente",
+        "description": "Gestion efficace des rendez-vous et des ressources",
+        "image": "/images/solutions/veterinary/scheduling.jpg",
+        "highlights": [
+          "Réservation en ligne",
+          "Rappels automatiques",
+          "Allocation des ressources",
+          "Support multi-sites"
+        ],
+        "stats": {
+          "value": "40%",
+          "label": "Temps économisé"
+        }
+      },
+      {
+        "icon": "file-text",
+        "category": "Clinique",
+        "title": "Dossiers Médicaux Électroniques",
+        "description": "Dossiers patients complets et documentation clinique",
+        "image": "/images/solutions/veterinary/emr.jpg",
+        "highlights": [
+          "Dossiers numériques",
+          "Plans de traitement",
+          "Intégration laboratoire",
+          "Gestion des ordonnances"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "Conformité numérique"
+        }
+      },
+      {
+        "icon": "message-circle",
+        "category": "Communication",
+        "title": "Engagement Client",
+        "description": "Outils améliorés de communication et d'engagement client",
+        "image": "/images/solutions/veterinary/communication.jpg",
+        "highlights": [
+          "Portail client",
+          "Mises à jour SMS/Email",
+          "Rappels de rendez-vous",
+          "Ressources éducatives"
+        ],
+        "stats": {
+          "value": "95%",
+          "label": "Satisfaction client"
+        }
+      },
+      {
+        "icon": "trending-up",
+        "category": "Business",
+        "title": "Analyses de Cabinet",
+        "description": "Intelligence d'affaires complète et rapports",
+        "image": "/images/solutions/veterinary/analytics.jpg",
+        "highlights": [
+          "Rapports financiers",
+          "Métriques de performance",
+          "Analyses d'inventaire",
+          "Perspectives de croissance"
+        ],
+        "stats": {
+          "value": "35%",
+          "label": "Croissance des revenus"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Excellence Vétérinaire",
+    "description": "Découvrez comment les cabinets vétérinaires leaders transforment leurs opérations",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Histoire de Réussite Vétérinaire"
+    },
+    "testimonials": [
+      {
+        "author": "Dr. Emily Roberts",
+        "role": "Propriétaire de Cabinet",
+        "image": "/images/testimonials/vet1.jpg",
+        "quote": "Ce système a transformé notre cabinet. Les fonctionnalités intégrées de planification et de communication client ont considérablement amélioré notre efficacité."
+      },
+      {
+        "author": "Dr. Mark Thompson",
+        "role": "Vétérinaire en Chef",
+        "image": "/images/testimonials/vet2.jpg",
+        "quote": "Les dossiers médicaux électroniques et les outils de planification de traitement nous ont aidés à fournir de meilleurs soins à nos patients."
+      }
+    ]
+  },
+  "benefits": {
+    "subtitle": "Avantages Clés",
+    "title": "Transformez Votre Cabinet Vétérinaire",
+    "description": "Découvrez les avantages d'un système de gestion vétérinaire entièrement intégré",
+    "items": [
+      {
+        "icon": "zap",
+        "title": "Excellence Opérationnelle",
+        "description": "Optimisation des opérations de cabinet et du flux de travail",
+        "color": "blue",
+        "stats": {
+          "value": "40%",
+          "label": "Temps Économisé"
+        },
+        "highlights": [
+          "Planification automatisée",
+          "Gestion des stocks",
+          "Optimisation des ressources",
+          "Automatisation des tâches"
+        ]
+      },
+      {
+        "icon": "heart",
+        "title": "Soins aux Patients Améliorés",
+        "description": "Amélioration des soins aux animaux et des résultats de traitement",
+        "color": "green",
+        "stats": {
+          "value": "98%",
+          "label": "Succès du Traitement"
+        },
+        "highlights": [
+          "Dossiers numériques",
+          "Suivi des traitements",
+          "Intégration laboratoire",
+          "Protocoles de soins"
+        ]
+      },
+      {
+        "icon": "users",
+        "title": "Satisfaction Client",
+        "description": "Amélioration de l'expérience client et de l'engagement",
+        "color": "purple",
+        "stats": {
+          "value": "95%",
+          "label": "Satisfaction Client"
+        },
+        "highlights": [
+          "Réservation en ligne",
+          "Portail client",
+          "Outils de communication",
+          "Ressources éducatives"
+        ]
+      },
+      {
+        "icon": "trending-up",
+        "title": "Croissance du Cabinet",
+        "description": "Stimulation de la croissance et de la rentabilité du cabinet",
+        "color": "red",
+        "stats": {
+          "value": "35%",
+          "label": "Croissance des Revenus"
+        },
+        "highlights": [
+          "Analyses financières",
+          "Perspectives de croissance",
+          "Outils marketing",
+          "Fidélisation client"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "subtitle": "Tarification Transparente",
+    "title": "Plans de Prix Flexibles",
+    "description": "Choisissez le plan parfait pour votre cabinet vétérinaire. Économisez jusqu'à 20% avec la facturation annuelle.",
+    "billingPeriods": ["Mensuel", "Annuel"],
+    "plans": [
+      {
+        "name": "Essentiel",
+        "highlight": "Pour les petits cabinets",
+        "monthlyPrice": "$199",
+        "yearlyPrice": "$1,990",
+        "yearlyDiscount": "Économisez $398/an",
+        "description": "Fonctionnalités essentielles pour les petits cabinets",
+        "features": [
+          {
+            "text": "Planification des rendez-vous",
+            "included": true
+          },
+          {
+            "text": "DME de base",
+            "included": true
+          },
+          {
+            "text": "Communication client",
+            "included": true
+          },
+          {
+            "text": "Support par email",
+            "included": true
+          },
+          {
+            "text": "Rapports de base",
+            "included": true
+          },
+          {
+            "text": "Accès mobile",
+            "included": true
+          }
+        ],
+        "cta": "Commencer",
+        "popular": false
+      },
+      {
+        "name": "Professionnel",
+        "highlight": "Plus populaire pour les cabinets en croissance",
+        "monthlyPrice": "$399",
+        "yearlyPrice": "$3,990",
+        "yearlyDiscount": "Économisez $798/an",
+        "description": "Fonctionnalités avancées pour les cabinets en croissance",
+        "features": [
+          {
+            "text": "Tout ce qui est inclus dans Essentiel, plus :",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "DME avancé",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "Intégration laboratoire",
+            "included": true
+          },
+          {
+            "text": "Analyses avancées",
+            "included": true
+          },
+          {
+            "text": "Support prioritaire",
+            "included": true
+          },
+          {
+            "text": "Support multi-sites",
+            "included": true
+          }
+        ],
+        "cta": "Commencer",
+        "popular": true
+      },
+      {
+        "name": "Enterprise",
+        "highlight": "Pour les grands cabinets",
+        "monthlyPrice": "Sur mesure",
+        "yearlyPrice": "Sur mesure",
+        "yearlyDiscount": "Contactez-nous pour des tarifs spéciaux",
+        "description": "Solutions personnalisées pour les grands cabinets",
+        "features": [
+          {
+            "text": "Tout ce qui est inclus dans Professionnel, plus :",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Support d'intégration personnalisé",
+            "included": true
+          },
+          {
+            "text": "Gestionnaire de compte dédié",
+            "included": true
+          },
+          {
+            "text": "Fonctionnalités de sécurité avancées",
+            "included": true
+          },
+          {
+            "text": "Développement personnalisé",
+            "included": true
+          },
+          {
+            "text": "Garanties SLA",
+            "included": true
+          }
+        ],
+        "cta": "Contacter les Ventes",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prêt à Transformer Votre Cabinet Vétérinaire ?",
+    "description": "Rejoignez les cabinets vétérinaires leaders qui ont modernisé leurs opérations avec notre solution.",
+    "background": "/images/solutions/veterinary/cta-background.jpg",
+    "primaryButton": {
+      "text": "Planifier une Démo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Voir la Démo",
+      "link": "#showcase"
+    }
+  }
+} 

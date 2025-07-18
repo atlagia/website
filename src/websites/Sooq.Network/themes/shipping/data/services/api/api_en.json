@@ -1,0 +1,42 @@
+{
+  "hero": {
+    "title": "API Integration",
+    "subtitle": "Seamless Shipping Automation",
+    "description": "Connect your systems directly to our shipping infrastructure with our powerful API. Automate shipping processes, track packages in real-time, and scale your operations effortlessly.",
+    "heroIcon": "Code",
+    "heroAnimation": "animate-float",
+    "image": ""
+  },
+  "overview": {
+    "title": "Why Choose Our API Integration?",
+    "description": "Our developer-friendly API enables you to embed shipping functionality directly into your applications. With comprehensive documentation, robust security, and dedicated support, integration is quick and reliable.",
+    "features": [
+      {
+        "icon": "code",
+        "title": "RESTful Architecture",
+        "description": "Modern, well-documented API with predictable resource-oriented URLs and standard HTTP responses."
+      },
+      {
+        "icon": "key",
+        "title": "Secure Authentication",
+        "description": "OAuth 2.0 authentication and HTTPS encryption to keep your data secure at all times."
+      },
+      {
+        "icon": "zap",
+        "title": "Real-Time Capabilities",
+        "description": "Live tracking, instant rate calculations, and immediate shipping label generation."
+      },
+      {
+        "icon": "book-open",
+        "title": "Comprehensive Documentation",
+        "description": "Detailed guides, code samples, and SDKs for all major programming languages."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Integrate?",
+    "description": "Get API credentials and start building powerful shipping solutions into your applications.",
+    "buttonText": "Get API Access",
+    "buttonLink": "/developers"
+  }
+} 

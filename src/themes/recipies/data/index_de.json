@@ -1,0 +1,156 @@
+{
+  "siteTitle": "Recipia - Ihre Rezeptsammlung",
+  "siteDescription": "Entdecken Sie köstliche Rezepte aus aller Welt. Von schnellen Gerichten bis hin zu Gourmetgerichten - finden Sie das perfekte Rezept für jeden Anlass.",
+  "sections": [
+    {
+      "type": "welcomeSection",
+      "title": "Willkommen bei Recipia: Ihr Kochparadies",
+      "description": "Entdecken Sie unsere sorgfältig ausgewählte Sammlung von Rezepten leidenschaftlicher Hobbyköche und professioneller Küchenchefs. Von schnellen Alltagsgerichten bis hin zu festlichen Menüs - finden Sie das perfekte Gericht für jeden Moment.",
+      "blogLinkText": "Neueste Rezepte entdecken",
+      "blogLink": "/blog"
+    },
+    {
+      "type": "bannerSection",
+      "headline": "Entdecken Sie die Freude am Kochen",
+      "description": "Durchstöbern Sie unsere Sammlung getesteter und beliebter Rezepte. Schritt-für-Schritt-Anleitungen, Kochtipps und wunderschöne Foodfotografie.",
+      "backgroundImage": "/images/cooking-banner.jpg",
+      "button1Text": "Rezepte durchstöbern",
+      "button1Link": "/recipes",
+      "button2Text": "Rezept teilen",
+      "button2Link": "/submit-recipe"
+    },
+    {
+      "type": "categoryGrid",
+      "title": "Nach Kategorien durchsuchen",
+      "description": "Finden Sie das perfekte Rezept für jede Mahlzeit oder jeden Anlass",
+      "categories": [
+        {
+          "id": "quick-meals",
+          "name": "Schnell & Einfach",
+          "description": "Köstliche Gerichte in 30 Minuten oder weniger",
+          "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=2670&auto=format&fit=crop",
+          "link": "/collections/quick-meals"
+        },
+        {
+          "id": "healthy",
+          "name": "Gesunde Ernährung",
+          "description": "Nahrhafte und ausgewogene Rezepte",
+          "image": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=2653&auto=format&fit=crop",
+          "link": "/collections/healthy"
+        },
+        {
+          "id": "desserts",
+          "name": "Desserts",
+          "description": "Süße Leckereien und Backideen",
+          "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?q=80&w=2670&auto=format&fit=crop",
+          "link": "/collections/desserts"
+        }
+      ]
+    },
+    {
+      "type": "productShowcase",
+      "title": "Beliebte Rezepte",
+      "description": "Die beliebtesten Gerichte unserer Community diese Woche",
+      "viewAllLink": "/recipes",
+      "products": [
+        {
+          "id": "recipe-1",
+          "name": "Klassische Spaghetti Carbonara",
+          "description": "Authentisches italienisches Nudelgericht",
+          "cookTime": "30 Min",
+          "image": "/images/recipes/carbonara.jpg",
+          "category": "Hauptgerichte"
+        },
+        {
+          "id": "recipe-2",
+          "name": "Quinoa Buddha Bowl",
+          "description": "Gesunde und bunte Bowl",
+          "cookTime": "25 Min",
+          "image": "/images/recipes/buddha-bowl.jpg",
+          "category": "Gesund"
+        },
+        {
+          "id": "recipe-3",
+          "name": "Schokoladen-Lavakuchen",
+          "description": "Klassischer Dessertgenuss",
+          "cookTime": "20 Min",
+          "image": "/images/recipes/lava-cake.jpg",
+          "category": "Desserts"
+        },
+        {
+          "id": "recipe-4",
+          "name": "Mediterraner Salat",
+          "description": "Frischer und leichter Salat",
+          "cookTime": "15 Min",
+          "image": "/images/recipes/med-salad.jpg",
+          "category": "Salate"
+        }
+      ]
+    },
+    {
+      "type": "testimonialSection",
+      "title": "Bewertungen der Köche",
+      "testimonials": [
+        {
+          "id": "1",
+          "author": "Sandra M.",
+          "role": "Hobbykoch",
+          "content": "Die detaillierten Anleitungen und Tipps machen es so einfach, diese köstlichen Rezepte nachzukochen. Meine Familie liebt alles, was ich zubereite!",
+          "avatar": ""
+        },
+        {
+          "id": "2",
+          "author": "Michael P.",
+          "role": "Foodie",
+          "content": "Eine tolle Rezeptsammlung! Besonders die Rubrik für schnelle Gerichte ist perfekt für geschäftige Abende.",
+          "avatar": ""
+        },
+        {
+          "id": "3",
+          "author": "Lisa K.",
+          "role": "Anfängerin",
+          "content": "Als Anfängerin in der Küche sind diese Rezepte perfekt. Klare Anleitungen und immer leckere Ergebnisse!",
+          "avatar": ""
+        }
+      ]
+    },
+    {
+      "type": "faqSection",
+      "title": "Häufige Fragen",
+      "description": "Häufig gestellte Fragen zu unseren Rezepten und Kochtechniken",
+      "faqs": [
+        {
+          "question": "Wie werden die Rezepte getestet?",
+          "answer": "Jedes Rezept wird in unserer Küche und von unserer Community sorgfältig getestet, um konstant köstliche Ergebnisse zu gewährleisten."
+        },
+        {
+          "question": "Kann ich die Portionsgrößen anpassen?",
+          "answer": "Ja! Die meisten Rezepte enthalten einen Portionsrechner, der die Zutatenmengen automatisch anpasst."
+        },
+        {
+          "question": "Gibt es Nährwertangaben?",
+          "answer": "Wir stellen für jedes Rezept detaillierte Nährwertinformationen bereit, einschließlich Kalorien, Makronährstoffe und Ernährungshinweise."
+        },
+        {
+          "question": "Kann ich eigene Rezepte teilen?",
+          "answer": "Auf jeden Fall! Unsere Community liebt es, neue Rezepte auszuprobieren. Nutzen Sie den 'Rezept teilen' Button, um Ihre Lieblingsgerichte einzureichen."
+        }
+      ]
+    },
+    {
+      "type": "featuredPostsSection",
+      "title": "Kochtipps & Geschichten",
+      "description": "Neueste Rezepte, Kochtechniken und Food-Stories aus unserer Community",
+      "exploreMoreText": "Alle Beiträge ansehen",
+      "exploreMoreLink": "/blog"
+    },
+    {
+      "type": "emailSignupSection",
+      "title": "Werden Sie Teil unserer Kochgemeinschaft",
+      "description": "Erhalten Sie wöchentlich Rezeptinspirationen, Kochtipps und saisonale Lieblingsrezepte direkt in Ihr Postfach",
+      "backgroundImage": "/images/newsletter-cooking-bg.jpg",
+      "formAction": "/api/subscribe",
+      "submitText": "Kostenlose Rezepte erhalten"
+    }
+  ]
+}

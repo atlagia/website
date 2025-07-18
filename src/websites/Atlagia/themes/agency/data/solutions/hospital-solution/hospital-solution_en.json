@@ -1,0 +1,335 @@
+{
+  "hero": {
+    "subtitle": "Hospital Management System",
+    "title": "Comprehensive Hospital Management Solution",
+    "description": "An enterprise-grade hospital management system that integrates all departments, streamlines patient care, and optimizes operations across your entire facility.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Hospital Management Solution Demo"
+    },
+    "stats": [
+      {
+        "value": "97%",
+        "label": "Patient Satisfaction"
+      },
+      {
+        "value": "45%",
+        "label": "Operational Efficiency"
+      },
+      {
+        "value": "3.2x",
+        "label": "ROI"
+      }
+    ]
+  },
+  "features": {
+    "subtitle": "Enterprise Features",
+    "title": "Complete Hospital Management",
+    "description": "A comprehensive suite of tools designed for modern hospitals and healthcare facilities",
+    "categories": [
+      {
+        "name": "Clinical Management",
+        "description": "Streamline patient care across all departments"
+      },
+      {
+        "name": "Administrative Operations",
+        "description": "Optimize hospital operations and resource management"
+      }
+    ],
+    "items": [
+      {
+        "icon": "building",
+        "category": "Facility Management",
+        "title": "Multi-Department Integration",
+        "description": "Seamlessly coordinate between departments and facilities",
+        "image": "/images/solutions/hospital/departments.jpg",
+        "highlights": [
+          "Department coordination",
+          "Resource allocation",
+          "Staff scheduling",
+          "Bed management"
+        ],
+        "stats": {
+          "value": "40%",
+          "label": "Better resource utilization"
+        }
+      },
+      {
+        "icon": "activity",
+        "category": "Patient Care",
+        "title": "Clinical Excellence",
+        "description": "Comprehensive patient care and monitoring system",
+        "image": "/images/solutions/hospital/clinical.jpg",
+        "highlights": [
+          "EMR/EHR system",
+          "Clinical pathways",
+          "Order management",
+          "Care protocols"
+        ],
+        "stats": {
+          "value": "55%",
+          "label": "Faster patient care"
+        }
+      },
+      {
+        "icon": "microscope",
+        "category": "Diagnostics",
+        "title": "Integrated Diagnostics",
+        "description": "Connected laboratory and imaging systems",
+        "image": "/images/solutions/hospital/diagnostics.jpg",
+        "highlights": [
+          "Lab integration",
+          "PACS system",
+          "Result management",
+          "Digital imaging"
+        ],
+        "stats": {
+          "value": "65%",
+          "label": "Faster diagnostics"
+        }
+      },
+      {
+        "icon": "chart-bar",
+        "category": "Analytics",
+        "title": "Hospital Intelligence",
+        "description": "Advanced analytics and reporting system",
+        "image": "/images/solutions/hospital/analytics.jpg",
+        "highlights": [
+          "Performance metrics",
+          "Resource analytics",
+          "Financial insights",
+          "Quality measures"
+        ],
+        "stats": {
+          "value": "45%",
+          "label": "Better decision making"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Excellence in Healthcare",
+    "description": "See how leading hospitals are transforming healthcare delivery",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Hospital Success Story"
+    },
+    "testimonials": [
+      {
+        "author": "Dr. Robert Chen",
+        "role": "Hospital CEO",
+        "image": "/images/testimonials/ceo1.jpg",
+        "quote": "This system has revolutionized how we manage our hospital. The integration across departments has improved both efficiency and patient care."
+      },
+      {
+        "author": "Dr. Sarah Thompson",
+        "role": "Chief of Medicine",
+        "image": "/images/testimonials/doctor2.jpg",
+        "quote": "The clinical decision support and integrated diagnostics have significantly improved our ability to provide quality care."
+      }
+    ]
+  },
+  "benefits": {
+    "subtitle": "Key Benefits",
+    "title": "Transform Your Hospital",
+    "description": "Experience the advantages of a fully integrated hospital management system",
+    "items": [
+      {
+        "icon": "trending-up",
+        "title": "Operational Excellence",
+        "description": "Streamline hospital operations and resource management",
+        "color": "blue",
+        "stats": {
+          "value": "45%",
+          "label": "Operational Efficiency"
+        },
+        "highlights": [
+          "Resource optimization",
+          "Workflow automation",
+          "Cost reduction",
+          "Better coordination"
+        ]
+      },
+      {
+        "icon": "heart",
+        "title": "Enhanced Patient Care",
+        "description": "Improve patient outcomes and experience",
+        "color": "red",
+        "stats": {
+          "value": "97%",
+          "label": "Patient Satisfaction"
+        },
+        "highlights": [
+          "Better care coordination",
+          "Reduced wait times",
+          "Improved outcomes",
+          "Patient engagement"
+        ]
+      },
+      {
+        "icon": "users",
+        "title": "Staff Empowerment",
+        "description": "Enable healthcare providers with better tools",
+        "color": "green",
+        "stats": {
+          "value": "50%",
+          "label": "Staff Productivity"
+        },
+        "highlights": [
+          "Clinical decision support",
+          "Easy documentation",
+          "Better communication",
+          "Mobile access"
+        ]
+      },
+      {
+        "icon": "shield",
+        "title": "Quality & Compliance",
+        "description": "Maintain highest standards of care and compliance",
+        "color": "purple",
+        "stats": {
+          "value": "100%",
+          "label": "Regulatory Compliance"
+        },
+        "highlights": [
+          "Quality metrics",
+          "Regulatory compliance",
+          "Risk management",
+          "Audit support"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "subtitle": "Enterprise Pricing",
+    "title": "Flexible Enterprise Solutions",
+    "description": "Customized pricing based on your hospital's size and needs. Save with our enterprise packages.",
+    "billingPeriods": ["Monthly", "Yearly"],
+    "plans": [
+      {
+        "name": "Standard",
+        "highlight": "For small hospitals",
+        "monthlyPrice": "$2,999",
+        "yearlyPrice": "$29,990",
+        "yearlyDiscount": "Save $5,998/year",
+        "description": "Essential features for small hospitals",
+        "features": [
+          {
+            "text": "Basic hospital management",
+            "included": true
+          },
+          {
+            "text": "EMR/EHR system",
+            "included": true
+          },
+          {
+            "text": "Department coordination",
+            "included": true
+          },
+          {
+            "text": "Standard support",
+            "included": true
+          },
+          {
+            "text": "Basic analytics",
+            "included": true
+          },
+          {
+            "text": "Mobile access",
+            "included": true
+          }
+        ],
+        "cta": "Get Started",
+        "popular": false
+      },
+      {
+        "name": "Professional",
+        "highlight": "Most popular for mid-size hospitals",
+        "monthlyPrice": "$4,999",
+        "yearlyPrice": "$49,990",
+        "yearlyDiscount": "Save $9,998/year",
+        "description": "Advanced features for growing hospitals",
+        "features": [
+          {
+            "text": "Everything in Standard, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Advanced clinical pathways",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "Lab & PACS integration",
+            "included": true
+          },
+          {
+            "text": "Advanced analytics",
+            "included": true
+          },
+          {
+            "text": "Priority support",
+            "included": true
+          },
+          {
+            "text": "Multi-facility support",
+            "included": true
+          }
+        ],
+        "cta": "Get Started",
+        "popular": true
+      },
+      {
+        "name": "Enterprise",
+        "highlight": "For large hospital networks",
+        "monthlyPrice": "Custom",
+        "yearlyPrice": "Custom",
+        "yearlyDiscount": "Contact us for special pricing",
+        "description": "Tailored solutions for hospital networks",
+        "features": [
+          {
+            "text": "Everything in Professional, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Custom integration support",
+            "included": true
+          },
+          {
+            "text": "Dedicated success team",
+            "included": true
+          },
+          {
+            "text": "Advanced security features",
+            "included": true
+          },
+          {
+            "text": "Custom development",
+            "included": true
+          },
+          {
+            "text": "Enterprise SLA",
+            "included": true
+          }
+        ],
+        "cta": "Contact Sales",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Transform Your Hospital?",
+    "description": "Join leading healthcare institutions that have modernized their operations with our solution.",
+    "background": "/images/solutions/hospital/cta-background.jpg",
+    "primaryButton": {
+      "text": "Schedule a Demo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Watch Demo",
+      "link": "#showcase"
+    }
+  }
+} 

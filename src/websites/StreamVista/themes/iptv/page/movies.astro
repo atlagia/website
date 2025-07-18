@@ -1,0 +1,260 @@
+---
+import { getLangFromUrl, useTranslations } from '@utils/i18n';
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+
+const lang = getLangFromUrl(Astro.url);
+const translations = await useTranslations(lang);
+const jsonData = translations.default;
+
+const SITE_TITLE = jsonData.siteTitle || 'StreamVista';
+const PAGE_TITLE = 'Movies | ' + SITE_TITLE;
+const PAGE_DESCRIPTION = 'Watch the latest movies in HD and 4K quality';
+
+// Sample movie data
+const movies = {
+  featured: [
+    {
+      title: "The Last Adventure",
+      genre: "Action",
+      rating: "4.8",
+      year: "2024",
+      quality: "4K",
+      duration: "2h 15m",
+      image: "/movies/last-adventure.jpg"
+    },
+    {
+      title: "Midnight Mystery",
+      genre: "Thriller",
+      rating: "4.6",
+      year: "2024",
+      quality: "4K",
+      duration: "1h 55m",
+      image: "/movies/midnight-mystery.jpg"
+    },
+    {
+      title: "Love in Paris",
+      genre: "Romance",
+      rating: "4.7",
+      year: "2024",
+      quality: "4K",
+      duration: "2h 5m",
+      image: "/movies/love-paris.jpg"
+    }
+  ],
+  categories: [
+    {
+      name: "Action & Adventure",
+      movies: [
+        {
+          title: "Speed Force",
+          rating: "4.5",
+          year: "2023",
+          quality: "4K",
+          image: "/movies/speed-force.jpg"
+        },
+        {
+          title: "Sky Warriors",
+          rating: "4.3",
+          year: "2023",
+          quality: "HD",
+          image: "/movies/sky-warriors.jpg"
+        }
+      ]
+    },
+    {
+      name: "Drama",
+      movies: [
+        {
+          title: "The Last Letter",
+          rating: "4.7",
+          year: "2023",
+          quality: "4K",
+          image: "/movies/last-letter.jpg"
+        },
+        {
+          title: "City Dreams",
+          rating: "4.4",
+          year: "2023",
+          quality: "HD",
+          image: "/movies/city-dreams.jpg"
+        }
+      ]
+    },
+    {
+      name: "Comedy",
+      movies: [
+        {
+          title: "Laugh Out Loud",
+          rating: "4.6",
+          year: "2023",
+          quality: "4K",
+          image: "/movies/laugh-out-loud.jpg"
+        },
+        {
+          title: "Family Fun",
+          rating: "4.2",
+          year: "2023",
+          quality: "HD",
+          image: "/movies/family-fun.jpg"
+        }
+      ]
+    }
+  ]
+};
+
+const genres = [
+  "Action", "Adventure", "Animation", "Comedy", "Crime", "Documentary",
+  "Drama", "Family", "Fantasy", "Horror", "Mystery", "Romance",
+  "Sci-Fi", "Thriller", "War", "Western"
+];
+---
+
+<!doctype html>
+<html lang={lang} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
+  <head>
+    <BaseHead title={PAGE_TITLE} description={PAGE_DESCRIPTION} />
+  </head>
+  <body class="bg-black text-white">
+    <Header />
+    <main class="pt-24"> <!-- Add 96px (24 * 4px) padding to account for header height + extra space -->
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section class="space-y-12">
+          {/* Hero Section */}
+          <div class="text-center space-y-4">
+            <h1 class="text-4xl md:text-6xl font-bold gradient-text">
+              Movies
+            </h1>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+              Stream thousands of movies in HD and 4K quality.
+            </p>
+          </div>
+
+          {/* Search and Filters */}
+          <div class="glass rounded-xl p-6 space-y-6">
+            <div class="flex flex-col md:flex-row gap-4">
+              <div class="flex-1">
+                <input
+                  type="search"
+                  placeholder="Search movies..."
+                  class="w-full px-4 py-2 rounded-lg bg-white/10 border border-white/20 focus:border-purple-500 focus:ring-2 focus:ring-purple-500"
+                />
+              </div>
+              <div class="flex gap-4">
+                <select class="px-4 py-2 rounded-lg bg-white/10 border border-white/20 focus:border-purple-500 focus:ring-2 focus:ring-purple-500">
+                  <option value="">All Genres</option>
+                  {genres.map(genre => (
+                    <option value={genre.toLowerCase()}>{genre}</option>
+                  ))}
+                </select>
+                <select class="px-4 py-2 rounded-lg bg-white/10 border border-white/20 focus:border-purple-500 focus:ring-2 focus:ring-purple-500">
+                  <option value="">Release Year</option>
+                  <option value="2024">2024</option>
+                  <option value="2023">2023</option>
+                  <option value="2022">2022</option>
+                  <option value="2021">2021</option>
+                </select>
+                <select class="px-4 py-2 rounded-lg bg-white/10 border border-white/20 focus:border-purple-500 focus:ring-2 focus:ring-purple-500">
+                  <option value="">Quality</option>
+                  <option value="4k">4K</option>
+                  <option value="hd">HD</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          {/* Featured Movies */}
+          <div class="space-y-6">
+            <h2 class="text-2xl font-bold text-purple-400">Featured Movies</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+              {movies.featured.map(movie => (
+                <div class="glass rounded-xl overflow-hidden hover-scale hover-glow">
+                  <div class="aspect-video bg-white/5 relative">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                      <span class="text-2xl font-bold">{movie.title}</span>
+                    </div>
+                    <div class="absolute top-2 right-2 bg-purple-600 text-white px-2 py-1 rounded-lg text-sm">
+                      {movie.quality}
+                    </div>
+                  </div>
+                  <div class="p-4 space-y-2">
+                    <div class="flex items-center justify-between">
+                      <span class="text-sm text-gray-400">{movie.genre}</span>
+                      <div class="flex items-center gap-1">
+                        <span class="text-yellow-400">★</span>
+                        <span>{movie.rating}</span>
+                      </div>
+                    </div>
+                    <div class="flex items-center justify-between text-sm text-gray-400">
+                      <span>{movie.year}</span>
+                      <span>{movie.duration}</span>
+                    </div>
+                    <button class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 rounded-lg transition duration-200">
+                      Watch Now
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Movie Categories */}
+          <div class="space-y-12">
+            {movies.categories.map(category => (
+              <div class="space-y-6">
+                <h2 class="text-2xl font-bold text-purple-400">{category.name}</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                  {category.movies.map(movie => (
+                    <div class="glass rounded-xl overflow-hidden hover-scale hover-glow">
+                      <div class="aspect-[2/3] bg-white/5 relative">
+                        <div class="absolute inset-0 flex items-center justify-center text-center p-2">
+                          <span class="font-bold">{movie.title}</span>
+                        </div>
+                        <div class="absolute top-2 right-2 bg-purple-600 text-white px-2 py-1 rounded-lg text-sm">
+                          {movie.quality}
+                        </div>
+                      </div>
+                      <div class="p-3 space-y-2">
+                        <div class="flex items-center justify-between text-sm">
+                          <span>{movie.year}</span>
+                          <div class="flex items-center gap-1">
+                            <span class="text-yellow-400">★</span>
+                            <span>{movie.rating}</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* CTA Section */}
+          <div class="glass rounded-2xl p-8 text-center space-y-6">
+            <h2 class="text-3xl font-bold gradient-text">Unlimited Movies</h2>
+            <p class="text-xl text-gray-300">
+              Get access to our entire movie collection with a StreamVista subscription.
+            </p>
+            <div class="flex justify-center gap-4">
+              <a
+                href="/pricing"
+                class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg transition duration-200"
+              >
+                View Plans
+              </a>
+              <a
+                href="/signup"
+                class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-8 rounded-lg transition duration-200"
+              >
+                Start Free Trial
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html> 

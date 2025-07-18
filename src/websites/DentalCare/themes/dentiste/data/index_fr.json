@@ -1,0 +1,357 @@
+{
+  "siteTitle": "DentCare - Clinique Dentaire Moderne",
+  "siteDescription": "Découvrez des soins dentaires exceptionnels avec nos installations à la pointe de la technologie et notre équipe d'experts. Nous offrons des services dentaires complets, des examens de routine aux procédures avancées.",
+  "sections": [
+    {
+      "type": "welcomeSection",
+      "badge": "Soins Dentaires Experts",
+      "title": "Votre Sourire, Notre <span class=\"dental-highlight\">Priorité</span>",
+      "description": "Découvrez des soins dentaires de classe mondiale avec notre équipe de professionnels expérimentés. Nous combinons technologie de pointe et soins attentionnés pour vous offrir le sourire sain et beau que vous méritez.",
+      "blogLinkText": "Nos Services",
+      "getStartedText": "Prendre Rendez-vous",
+      "blogLink": "/services",
+      "heroImage": "https://cdn.atlagia.com/dentise-doctore.png",
+      "partnerLogos": [
+        {
+          "src": "https://cdn.atlagia.com/trustpilot-logo.png",
+          "alt": "Association Dentaire"
+        },
+        {
+          "src": "https://cdn.atlagia.com/Google-Review-Logo.png",
+          "alt": "Avis Google"
+        }
+      ]
+    },
+    {
+      "type": "aboutSection",
+      "subtitle": "À PROPOS DE NOUS",
+      "title": "Soins Dentaires Modernes avec une Touche Personnelle",
+      "description": "Chez DentCare, nous combinons technologie avancée et soins attentionnés pour offrir des services dentaires exceptionnels. Notre engagement envers l'excellence garantit que chaque patient reçoit une attention personnalisée et un traitement de la plus haute qualité.",
+      "image": "https://cdn.atlagia.com/kepart_A_professional_and_inviting_dental_clinic_banner_featuri_ff02d49f-09d7-4eec-80dd-7dfc5f60a122.png",
+      "features": [
+        {
+          "title": "Soins Préventifs",
+          "description": "Examens réguliers et nettoyages pour maintenir votre santé bucco-dentaire"
+        },
+        {
+          "title": "Dentisterie Esthétique",
+          "description": "Transformez votre sourire avec nos traitements esthétiques avancés"
+        },
+        {
+          "title": "Soins d'Urgence",
+          "description": "Services dentaires d'urgence 24/7 lorsque vous en avez le plus besoin"
+        }
+      ],
+      "stats": [
+        {
+          "value": "17+",
+          "label": "Années d'Expérience"
+        },
+        {
+          "value": "10k+",
+          "label": "Patients Satisfaits"
+        }
+      ],
+      "experienceBadge": {
+        "value": "15+",
+        "label": "Années d'Expérience"
+      },
+      "ctaButton": {
+        "text": "Planifier une Consultation",
+        "link": "/contact"
+      }
+    },
+    {
+      "type": "whoWeAreSection",
+      "subtitle": "QUI NOUS SOMMES",
+      "title": "Votre Partenaire de Confiance en Santé Dentaire",
+      "description": "Chez DentCare, nous nous engageons à fournir des soins dentaires exceptionnels dans un environnement confortable et accueillant. Notre équipe de professionnels expérimentés utilise les dernières technologies et techniques pour garantir les meilleurs résultats possibles pour nos patients.",
+      "image": "https://cdn.atlagia.com/kepart_A_professional_and_inviting_dental_clinic_banner_featuri_907c15b6-9c8d-4170-b8e0-1855b2ad6506.png",
+      "stats": [
+        {
+          "value": "17K+",
+          "label": "Patients Satisfaits"
+        },
+        {
+          "value": "98%",
+          "label": "Satisfaction des Patients"
+        }
+      ],
+      "trustIndicators": [
+        {
+          "icon": "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z",
+          "text": "Professionnels Agréés"
+        },
+        {
+          "icon": "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z",
+          "text": "Équipement Moderne"
+        }
+      ],
+      "ctaButton": {
+        "text": "En Savoir Plus sur Nous",
+        "link": "/about"
+      }
+    },
+    {
+      "type": "bannerSection",
+      "subtitle": "NOTRE EXPERTISE",
+      "headline": "Soins Dentaires Avancés",
+      "description": "La technologie de pointe rencontre les soins attentionnés",
+      "backgroundImage": "/images/banner-bg.jpg",
+      "button1Text": "Nos Services",
+      "button1Link": "/services",
+      "button2Text": "Réserver une Consultation",
+      "button2Link": "/consultation",
+      "trustBadges": [
+        "Soins Professionnels",
+        "Équipement Moderne",
+        "Environnement Confortable",
+        "Dentistes Experts"
+      ],
+      "cards": [
+        {
+          "title": "Dentisterie Numérique",
+          "description": "Imagerie numérique avancée et technologie CAD/CAM pour des traitements dentaires précis et efficaces."
+        },
+        {
+          "title": "Soins Doux",
+          "description": "Le confort du patient est notre priorité, avec des options de sédation disponibles pour des visites dentaires sans anxiété."
+        },
+        {
+          "title": "Soins Préventifs",
+          "description": "Services préventifs complets pour maintenir votre santé bucco-dentaire et votre beau sourire."
+        },
+        {
+          "title": "Dentisterie Familiale",
+          "description": "Soins dentaires complets pour toute la famille, des enfants aux seniors."
+        },
+        {
+          "title": "Excellence Esthétique",
+          "description": "Transformez votre sourire avec nos procédures esthétiques avancées, y compris les facettes, le blanchiment et les relookings de sourire."
+        },
+        {
+          "title": "Services d'Urgence",
+          "description": "Soins dentaires d'urgence 24/7 disponibles lorsque vous en avez le plus besoin, avec une réponse rapide et un traitement efficace."
+        }
+      ]
+    },
+    {
+      "type": "benefitsSection",
+      "subtitle": "AVANTAGES",
+      "title": "Pourquoi Choisir DentCare ?",
+      "description": "Découvrez la Différence des Soins Dentaires Modernes",
+      "benefits": [
+        {
+          "title": "Technologie Avancée",
+          "description": "Notre clinique est équipée des dernières technologies dentaires, garantissant des diagnostics précis et des traitements confortables pour des résultats optimaux."
+        },
+        {
+          "title": "Équipe d'Experts",
+          "description": "Nos professionnels dentaires expérimentés s'engagent à fournir des soins de la plus haute qualité avec une touche douce et une attention personnalisée."
+        },
+        {
+          "title": "Soins Complets",
+          "description": "Des examens de routine aux procédures avancées, nous offrons une gamme complète de services dentaires pour répondre à tous vos besoins en santé bucco-dentaire sous un même toit."
+        }
+      ],
+      "stats": [
+        {
+          "value": "15+",
+          "label": "Années d'Expérience"
+        },
+        {
+          "value": "10k+",
+          "label": "Patients Satisfaits"
+        },
+        {
+          "value": "25k+",
+          "label": "Procédures Dentaires"
+        },
+        {
+          "value": "12+",
+          "label": "Dentistes Experts"
+        }
+      ]
+    },
+    {
+      "type": "reviewsSection",
+      "reviews": [
+        {
+          "rating": 5,
+          "content": "L'équipe de DentCare est exceptionnelle. Ils ont rendu mon expérience dentaire confortable et sans stress. Les résultats de mon traitement ont dépassé mes attentes !",
+          "author": "Sarah Johnson",
+          "position": "Patient"
+        },
+        {
+          "rating": 5,
+          "content": "Je ne me suis jamais senti aussi à l'aise dans un cabinet dentaire. Le personnel est amical, professionnel et se soucie vraiment du confort des patients. Je recommande vivement !",
+          "author": "Michael Brown",
+          "position": "Patient"
+        },
+        {
+          "rating": 5,
+          "content": "Soins dentaires exceptionnels ! La technologie moderne et l'équipe qualifiée ont rendu mon traitement rapide et indolore. Mon sourire n'a jamais été aussi beau !",
+          "author": "Emily Davis",
+          "position": "Patient"
+        }
+      ]
+    },
+    {
+      "type": "pricingSection",
+      "subtitle": "NOS PLANS",
+      "title": "Plans de Soins Dentaires Abordables",
+      "description": "Choisissez le plan dentaire parfait pour vous et votre famille. Tous les plans incluent des examens réguliers et des nettoyages. Options de paiement flexibles disponibles.",
+      "insuranceInfo": {
+        "text": "Nous acceptons la plupart des plans d'assurance dentaire",
+        "providers": ["Delta Dental", "Cigna", "Aetna", "MetLife"]
+      },
+      "plans": [
+        {
+          "name": "Soins de Base",
+          "price": "29 $",
+          "period": "Par Mois",
+          "buttonText": "Choisir le Plan",
+          "buttonLink": "/plans",
+          "features": [
+            {
+              "text": "Examens Réguliers",
+              "included": true
+            },
+            {
+              "text": "Nettoyage de Base",
+              "included": true
+            },
+            {
+              "text": "Radiographies",
+              "included": true
+            },
+            {
+              "text": "Soins d'Urgence",
+              "included": true
+            }
+          ]
+        },
+        {
+          "name": "Soins Familiaux",
+          "price": "79 $",
+          "period": "Par Mois",
+          "buttonText": "Choisir le Plan",
+          "buttonLink": "/plans",
+          "features": [
+            {
+              "text": "Toutes les Caractéristiques des Soins de Base",
+              "included": true
+            },
+            {
+              "text": "Couverture Familiale",
+              "included": true
+            },
+            {
+              "text": "Services Préventifs",
+              "included": true
+            },
+            {
+              "text": "Traitements au Fluor",
+              "included": true
+            },
+            {
+              "text": "Planification Prioritaire",
+              "included": true
+            }
+          ]
+        },
+        {
+          "name": "Soins Premium",
+          "price": "149 $",
+          "period": "Par Mois",
+          "isPopular": true,
+          "buttonText": "Choisir le Plan",
+          "buttonLink": "/plans",
+          "features": [
+            {
+              "text": "Toutes les Caractéristiques des Soins Familiaux",
+              "included": true
+            },
+            {
+              "text": "Services Cosmétiques",
+              "included": true
+            },
+            {
+              "text": "Soins Orthodontiques",
+              "included": true
+            },
+            {
+              "text": "Implants Dentaires",
+              "included": true
+            },
+            {
+              "text": "Rendez-vous VIP",
+              "included": true
+            },
+            {
+              "text": "Soins d'Urgence 24/7",
+              "included": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ctaSection",
+      "subtitle": "PLANIFIEZ AUJOURD'HUI",
+      "title": "Commencez Votre Voyage vers un Sourire Plus Sain",
+      "description": "Prenez rendez-vous aujourd'hui et découvrez la différence des soins dentaires modernes et attentionnés. Offres spéciales pour les nouveaux patients disponibles !",
+      "primaryButtonText": "Prendre Rendez-vous",
+      "primaryButtonLink": "/appointment",
+      "secondaryButtonText": "Contactez-nous",
+      "secondaryButtonLink": "/contact",
+      "stats": [
+        {
+          "value": "15K+",
+          "label": "Patients Satisfaits"
+        },
+        {
+          "value": "20+",
+          "label": "Années d'Expérience"
+        },
+        {
+          "value": "98%",
+          "label": "Taux de Satisfaction"
+        },
+        {
+          "value": "24/7",
+          "label": "Soins d'Urgence"
+        }
+      ],
+      "emergencyContact": {
+        "phone": "(555) 123-4567",
+        "hours": "Disponible 24/7 pour les urgences dentaires"
+      },
+      "trustIndicators": [
+        "Rendez-vous le Jour Même",
+        "Dentistes Expérimentés",
+        "Installations Modernes",
+        "Assurance Acceptée"
+      ]
+    },
+    {
+      "type": "emailSignupSection",
+      "subtitle": "RESTEZ CONNECTÉ",
+      "title": "Rejoignez Notre Newsletter de Santé Dentaire",
+      "description": "Abonnez-vous pour recevoir des conseils de santé bucco-dentaire, des offres spéciales et des mises à jour de notre cabinet dentaire.",
+      "buttonText": "S'abonner",
+      "placeholder": "Entrez votre email",
+      "formType": "newsletter",
+      "trustBadge": {
+        "icon": "M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z",
+        "text": "Vos informations sont sécurisées et cryptées"
+      },
+      "features": [
+        "Conseils de Santé Dentaire",
+        "Offres Spéciales",
+        "Rappels de Rendez-vous",
+        "Derniers Traitements"
+      ]
+    }
+  ]
+}

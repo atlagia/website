@@ -1,0 +1,336 @@
+{
+  "hero": {
+    "subtitle": "Gestion Dentaire de Nouvelle Génération",
+    "title": "Transformez Votre Cabinet Dentaire avec des Solutions IA",
+    "description": "Découvrez l'avenir de la gestion de cabinet dentaire avec notre plateforme complète propulsée par l'IA qui simplifie les opérations et améliore les soins aux patients.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "thumbnail": "/images/dental-hero.webp",
+      "alt": "Démo de Gestion de Cabinet Dentaire"
+    },
+    "stats": [
+      {
+        "value": "98%",
+        "label": "Satisfaction des Patients"
+      },
+      {
+        "value": "75%",
+        "label": "Temps Économisé"
+      },
+      {
+        "value": "50%",
+        "label": "Réduction des Coûts"
+      }
+    ]
+  },
+  "features": {
+    "title": "Fonctionnalités de Niveau Entreprise",
+    "subtitle": "Gestion de Cabinet de Nouvelle Génération",
+    "description": "Découvrez notre suite complète d'outils avancés conçus pour révolutionner la gestion de votre cabinet dentaire. Chaque fonctionnalité est conçue pour offrir une efficacité maximale et des soins aux patients supérieurs.",
+    "categories": [
+      {
+        "name": "Gestion de Cabinet",
+        "description": "Fonctionnalités principales qui simplifient vos opérations quotidiennes"
+      },
+      {
+        "name": "Expérience Patient",
+        "description": "Outils qui améliorent l'engagement et la satisfaction des patients"
+      }
+    ],
+    "items": [
+      {
+        "icon": "globe",
+        "title": "Créateur de Site Web Professionnel",
+        "description": "Créez des sites web impressionnants optimisés pour la conversion avec des capacités SEO et de réservation intégrées.",
+        "category": "Gestion de Cabinet",
+        "image": "/images/features/website-builder.webp",
+        "highlights": [
+          "Créateur glisser-déposer avec modèles premium",
+          "Système de design responsive mobile-first",
+          "Réservation et paiement en ligne intégrés",
+          "Kit d'outils d'optimisation SEO avancé"
+        ],
+        "stats": {
+          "value": "250%",
+          "label": "Augmentation des Réservations"
+        }
+      },
+      {
+        "icon": "calendar",
+        "title": "Planification Intelligente",
+        "description": "Gestion des rendez-vous propulsée par l'IA qui maximise l'efficacité de votre cabinet.",
+        "category": "Gestion de Cabinet",
+        "image": "/images/features/scheduling.webp",
+        "highlights": [
+          "Résolution intelligente des conflits avec optimisation IA",
+          "Synchronisation du calendrier multi-praticiens",
+          "Rappels et confirmations automatiques aux patients",
+          "Gestion de l'allocation des ressources et des salles"
+        ],
+        "stats": {
+          "value": "89%",
+          "label": "Moins d'Absences"
+        }
+      },
+      {
+        "icon": "users",
+        "title": "Suite de Gestion des Patients",
+        "description": "Gestion complète des relations avec les patients avec analyses avancées.",
+        "category": "Expérience Patient",
+        "image": "/images/features/patient-management.webp",
+        "highlights": [
+          "Dossiers patients numériques avec recherche intelligente",
+          "Planification et suivi des traitements",
+          "Gestion intégrée de la facturation et des assurances",
+          "Portail de communication patient"
+        ],
+        "stats": {
+          "value": "95%",
+          "label": "Rétention des Patients"
+        }
+      },
+      {
+        "icon": "brain",
+        "title": "Assistant Clinique IA",
+        "description": "Outils IA avancés pour le support au diagnostic et la planification des traitements.",
+        "category": "Expérience Patient",
+        "image": "/images/features/ai-assistant.webp",
+        "highlights": [
+          "Analyse d'images et diagnostic propulsé par l'IA",
+          "Recommandations de traitement personnalisées",
+          "Outils d'évaluation des risques en temps réel",
+          "Documentation clinique automatisée"
+        ],
+        "stats": {
+          "value": "45%",
+          "label": "Diagnostic Plus Rapide"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Voir en Action",
+    "description": "Regardez comment les cabinets dentaires leaders transforment leurs opérations",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "thumbnail": "/images/showcase-thumb.webp"
+    },
+    "testimonials": [
+      {
+        "author": "Dr. Sarah Chen",
+        "role": "Dentiste Principale, Cabinet Bright Smile",
+        "image": "/images/testimonials/sarah.webp",
+        "quote": "Cette plateforme a révolutionné notre façon de travailler. Nous avons constaté une augmentation de 40% de l'efficacité."
+      },
+      {
+        "author": "Dr. Michael Rodriguez",
+        "role": "Propriétaire, Cabinet Advanced Dental Care",
+        "image": "/images/testimonials/michael.webp",
+        "quote": "Les fonctionnalités IA ont considérablement amélioré la précision de nos diagnostics et la satisfaction de nos patients."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Bénéfices Transformateurs",
+    "subtitle": "Résultats et Impact Prouvés",
+    "description": "Expérimentez des améliorations mesurables dans tous les aspects de votre cabinet avec notre solution complète. Notre plateforme fournit des résultats concrets qui impactent directement votre rentabilité.",
+    "items": [
+      {
+        "title": "Excellence Opérationnelle",
+        "description": "Simplifiez les opérations de votre cabinet avec l'automatisation propulsée par l'IA, réduisant les frais administratifs et améliorant l'efficacité du personnel.",
+        "icon": "chart-up",
+        "color": "blue",
+        "stats": {
+          "value": "75%",
+          "label": "Réduction du Travail Administratif"
+        },
+        "highlights": [
+          "Gestion des flux de travail automatisée",
+          "Allocation intelligente des ressources",
+          "Réduction de la paperasse",
+          "Processus simplifiés"
+        ]
+      },
+      {
+        "title": "Expérience Patient Améliorée",
+        "description": "Offrez des soins exceptionnels aux patients grâce à l'innovation numérique et aux interactions personnalisées qui dépassent les attentes.",
+        "icon": "heart",
+        "color": "purple",
+        "stats": {
+          "value": "98%",
+          "label": "Satisfaction des Patients"
+        },
+        "highlights": [
+          "Réservation de rendez-vous numérique",
+          "Rappels automatisés",
+          "Portail patient en ligne",
+          "Communication fluide"
+        ]
+      },
+      {
+        "title": "Croissance des Revenus",
+        "description": "Maximisez la performance financière de votre cabinet avec une planification intelligente et une utilisation optimisée des ressources.",
+        "icon": "trending-up",
+        "color": "green",
+        "stats": {
+          "value": "35%",
+          "label": "Augmentation des Revenus"
+        },
+        "highlights": [
+          "Planification optimisée",
+          "Réduction des absences",
+          "Augmentation des réservations",
+          "Meilleure utilisation des ressources"
+        ]
+      },
+      {
+        "title": "Excellence Clinique",
+        "description": "Améliorez vos capacités cliniques avec des outils de diagnostic et de planification des traitements propulsés par l'IA.",
+        "icon": "star",
+        "color": "yellow",
+        "stats": {
+          "value": "50%",
+          "label": "Gain d'Efficacité"
+        },
+        "highlights": [
+          "Diagnostic propulsé par l'IA",
+          "Planification des traitements",
+          "Documentation clinique",
+          "Assurance qualité"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Plans de Prix Flexibles",
+    "subtitle": "Tarification Transparente",
+    "description": "Choisissez le plan parfait pour votre cabinet. Économisez jusqu'à 20% avec la facturation annuelle.",
+    "billingPeriods": ["Mensuel", "Annuel"],
+    "plans": [
+      {
+        "name": "Débutant",
+        "highlight": "Parfait pour les nouveaux cabinets",
+        "monthlyPrice": "$199",
+        "yearlyPrice": "$1,990",
+        "yearlyDiscount": "Économisez $398/an",
+        "description": "Fonctionnalités essentielles pour commencer votre transformation numérique",
+        "features": [
+          {
+            "text": "Planification de rendez-vous basique",
+            "included": true
+          },
+          {
+            "text": "Accès au portail patient",
+            "included": true
+          },
+          {
+            "text": "Gestion des dossiers numériques",
+            "included": true
+          },
+          {
+            "text": "Support par email (24/7)",
+            "included": true
+          },
+          {
+            "text": "Analyses basiques",
+            "included": true
+          },
+          {
+            "text": "Accès à l'application mobile",
+            "included": true
+          }
+        ],
+        "cta": "Commencer",
+        "popular": false
+      },
+      {
+        "name": "Professionnel",
+        "highlight": "Plus populaire pour les cabinets établis",
+        "monthlyPrice": "$399",
+        "yearlyPrice": "$3,990",
+        "yearlyDiscount": "Économisez $798/an",
+        "description": "Fonctionnalités avancées pour les cabinets en croissance",
+        "features": [
+          {
+            "text": "Tout ce qui est inclus dans Débutant, plus :",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Fonctionnalités IA avancées",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "Support multi-praticiens",
+            "included": true
+          },
+          {
+            "text": "Tableau de bord d'analyses personnalisé",
+            "included": true
+          },
+          {
+            "text": "Support prioritaire",
+            "included": true
+          },
+          {
+            "text": "Accès API",
+            "included": true
+          }
+        ],
+        "cta": "Commencer",
+        "popular": true
+      },
+      {
+        "name": "Entreprise",
+        "highlight": "Pour les grands cabinets et DSOs",
+        "monthlyPrice": "Personnalisé",
+        "yearlyPrice": "Personnalisé",
+        "yearlyDiscount": "Contactez-nous pour des tarifs spéciaux",
+        "description": "Solutions adaptées aux besoins des entreprises",
+        "features": [
+          {
+            "text": "Tout ce qui est inclus dans Professionnel, plus :",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Support d'intégration personnalisé",
+            "included": true
+          },
+          {
+            "text": "Gestionnaire de compte dédié",
+            "included": true
+          },
+          {
+            "text": "Fonctionnalités de sécurité avancées",
+            "included": true
+          },
+          {
+            "text": "Options de développement personnalisées",
+            "included": true
+          },
+          {
+            "text": "Garanties SLA",
+            "included": true
+          }
+        ],
+        "cta": "Contacter les Ventes",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prêt à Transformer Votre Cabinet ?",
+    "description": "Rejoignez des milliers de cabinets dentaires prospères utilisant notre plateforme",
+    "primaryButton": {
+      "text": "Planifier une Démo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Regarder la Vidéo de Démo",
+      "link": "/demo-video"
+    },
+    "background": "/images/cta-background.webp"
+  }
+} 

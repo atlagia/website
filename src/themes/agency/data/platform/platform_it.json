@@ -1,0 +1,283 @@
+{
+  "pageTitle": "Piattaforma",
+  "pageDescription": "Esplora le capacità avanzate della nostra piattaforma IA e le specifiche tecniche.",
+  "hero": {
+    "badge": "Panoramica della Piattaforma",
+    "title": "Piattaforma IA Avanzata per l'Innovazione Aziendale",
+    "description": "Scopri la nostra piattaforma IA di livello enterprise che combina tecnologia all'avanguardia con scalabilità e sicurezza senza pari.",
+    "cta": {
+      "primary": {
+        "text": "Esplora le Funzionalità",
+        "href": "#features"
+      },
+      "secondary": {
+        "text": "Visualizza la Documentazione",
+        "href": "/docs"
+      }
+    }
+  },
+  "techSpecs": [
+    {
+      "title": "Potenza di Elaborazione",
+      "value": "100K+",
+      "unit": "richieste/secondo"
+    },
+    {
+      "title": "Tempo di Risposta",
+      "value": "<50",
+      "unit": "millisecondi"
+    },
+    {
+      "title": "Centri Dati",
+      "value": "25+",
+      "unit": "località globali"
+    },
+    {
+      "title": "Parametri del Modello",
+      "value": "175B+",
+      "unit": "parametri"
+    }
+  ],
+  "features": [
+    {
+      "category": "Motore IA Core",
+      "description": "Capacità avanzate di intelligenza artificiale",
+      "items": [
+        {
+          "icon": "Brain",
+          "name": "Machine Learning",
+          "description": "Algoritmi ML avanzati che si adattano e imparano dai tuoi dati",
+          "highlights": [
+            "Modelli di Deep Learning",
+            "Reti Neurali",
+            "Riconoscimento Pattern",
+            "Analisi Predittiva"
+          ],
+          "stats": {
+            "value": "99.9%",
+            "label": "Tasso di Accuratezza"
+          }
+        },
+        {
+          "icon": "Bot",
+          "name": "Linguaggio Naturale",
+          "description": "Elaborazione e comprensione sofisticata del linguaggio naturale",
+          "highlights": [
+            "Analisi del Testo",
+            "Analisi del Sentiment",
+            "Traduzione Linguistica",
+            "Riconoscimento Intenti"
+          ],
+          "stats": {
+            "value": "45+",
+            "label": "Lingue Supportate"
+          }
+        },
+        {
+          "icon": "Cpu",
+          "name": "Computer Vision",
+          "description": "Capacità avanzate di elaborazione di immagini e video",
+          "highlights": [
+            "Rilevamento Oggetti",
+            "Riconoscimento Immagini",
+            "Analisi Video",
+            "Elaborazione OCR"
+          ],
+          "stats": {
+            "value": "95%",
+            "label": "Tasso di Rilevamento"
+          }
+        },
+        {
+          "icon": "Network",
+          "name": "Reti Neurali",
+          "description": "Architetture di reti neurali all'avanguardia",
+          "highlights": [
+            "Deep Learning",
+            "Transfer Learning",
+            "Reinforcement Learning",
+            "AutoML"
+          ],
+          "stats": {
+            "value": "2x",
+            "label": "Aumento Prestazioni"
+          }
+        }
+      ]
+    },
+    {
+      "category": "Infrastruttura della Piattaforma",
+      "description": "Base tecnica robusta e scalabile",
+      "items": [
+        {
+          "icon": "Cloud",
+          "name": "Cloud Native",
+          "description": "Costruita su infrastruttura cloud moderna per massima scalabilità",
+          "highlights": [
+            "Auto-scaling",
+            "Bilanciamento del Carico",
+            "CDN Globale",
+            "Edge Computing"
+          ],
+          "stats": {
+            "value": "99.99%",
+            "label": "Disponibilità"
+          }
+        },
+        {
+          "icon": "Lock",
+          "name": "Sicurezza",
+          "description": "Misure di sicurezza e conformità di livello enterprise",
+          "highlights": [
+            "Crittografia End-to-end",
+            "Conformità SOC 2",
+            "Conformità GDPR",
+            "Controllo Accessi"
+          ],
+          "stats": {
+            "value": "256-bit",
+            "label": "Crittografia"
+          }
+        },
+        {
+          "icon": "Database",
+          "name": "Gestione Dati",
+          "description": "Capacità avanzate di elaborazione e archiviazione dati",
+          "highlights": [
+            "Elaborazione in Tempo Reale",
+            "Data Warehousing",
+            "Pipeline ETL",
+            "Data Lakes"
+          ],
+          "stats": {
+            "value": "PB",
+            "label": "Scala"
+          }
+        },
+        {
+          "icon": "Code",
+          "name": "API & Integrazione",
+          "description": "Capacità complete di API e integrazione",
+          "highlights": [
+            "API RESTful",
+            "Supporto GraphQL",
+            "Webhooks",
+            "Librerie SDK"
+          ],
+          "stats": {
+            "value": "1000+",
+            "label": "Endpoint API"
+          }
+        }
+      ]
+    },
+    {
+      "category": "Strumenti di Sviluppo",
+      "description": "Strumenti completi per sviluppatori e aziende",
+      "items": [
+        {
+          "icon": "Settings",
+          "name": "Strumenti Sviluppatore",
+          "description": "Toolkit completo per sviluppatori e team tecnici",
+          "highlights": [
+            "Documentazione API",
+            "Strumenti di Test",
+            "Console di Debug",
+            "Esempi di Codice"
+          ],
+          "stats": {
+            "value": "100+",
+            "label": "Strumenti Dev"
+          }
+        },
+        {
+          "icon": "Layers",
+          "name": "Builder Low-Code",
+          "description": "Strumenti di sviluppo visuale per deployment rapido",
+          "highlights": [
+            "Drag-and-Drop",
+            "Workflow Visuali",
+            "Template",
+            "Componenti Personalizzati"
+          ],
+          "stats": {
+            "value": "80%",
+            "label": "Tempo Risparmiato"
+          }
+        },
+        {
+          "icon": "Workflow",
+          "name": "Motore di Workflow",
+          "description": "Potenti capacità di automazione del workflow",
+          "highlights": [
+            "Designer Visuale",
+            "Logica Personalizzata",
+            "Trigger Eventi",
+            "Gestione Errori"
+          ],
+          "stats": {
+            "value": "500+",
+            "label": "Template"
+          }
+        },
+        {
+          "icon": "LineChart",
+          "name": "Analytics & Insights",
+          "description": "Strumenti completi di analisi e reporting",
+          "highlights": [
+            "Metriche in Tempo Reale",
+            "Report Personalizzati",
+            "Visualizzazione Dati",
+            "Opzioni di Export"
+          ],
+          "stats": {
+            "value": "360°",
+            "label": "Vista Dati"
+          }
+        }
+      ]
+    }
+  ],
+  "integrations": [
+    {
+      "name": "AWS",
+      "logo": "/images/integrations/aws.svg"
+    },
+    {
+      "name": "Google Cloud",
+      "logo": "/images/integrations/gcp.svg"
+    },
+    {
+      "name": "Azure",
+      "logo": "/images/integrations/azure.svg"
+    },
+    {
+      "name": "Salesforce",
+      "logo": "/images/integrations/salesforce.svg"
+    },
+    {
+      "name": "SAP",
+      "logo": "/images/integrations/sap.svg"
+    },
+    {
+      "name": "Oracle",
+      "logo": "/images/integrations/oracle.svg"
+    }
+  ],
+  "cta": {
+    "title": "Pronto per Iniziare?",
+    "description": "Scopri la potenza della nostra piattaforma IA con una demo personalizzata.",
+    "buttons": [
+      {
+        "text": "Pianifica una Demo",
+        "href": "/demo",
+        "variant": "primary"
+      },
+      {
+        "text": "Visualizza la Documentazione",
+        "href": "/docs",
+        "variant": "secondary"
+      }
+    ]
+  }
+} 

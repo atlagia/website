@@ -1,0 +1,235 @@
+{
+  "pageTitle": "Unsere Dienstleistungen",
+  "pageDescription": "Entdecken Sie unsere umfassende Palette an professionellen Dienstleistungen, die Ihr Unternehmen im digitalen Zeitalter unterstützen.",
+  "hero": {
+    "badge": "Unsere Dienstleistungen",
+    "title": "Professionelle Dienstleistungen für Ihren Erfolg",
+    "description": "Entdecken Sie unsere umfassende Palette an Dienstleistungen, die Ihr Unternehmen im digitalen Zeitalter unterstützen.",
+    "cta": {
+      "primary": {
+        "text": "Dienstleistungen Erkunden",
+        "href": "#services"
+      },
+      "secondary": {
+        "text": "Jetzt Starten",
+        "href": "/contact"
+      }
+    }
+  },
+  "stats": [
+    {
+      "value": "500+",
+      "label": "Abgeschlossene Projekte"
+    },
+    {
+      "value": "99.9%",
+      "label": "Erfolgsrate"
+    },
+    {
+      "value": "45%",
+      "label": "Innovationsrate"
+    },
+    {
+      "value": "24/7",
+      "label": "Support"
+    }
+  ],
+  "services": [
+    {
+      "category": "Entwicklungsdienstleistungen",
+      "description": "Maßgeschneiderte Softwareentwicklungslösungen für Ihre Geschäftsanforderungen",
+      "items": [
+        {
+          "icon": "code",
+          "name": "Individuelle Softwareentwicklung",
+          "description": "Maßgeschneiderte Softwarelösungen mit modernster Technologie",
+          "features": ["Webanwendungen", "Mobile Apps", "Desktop-Software", "API-Entwicklung"],
+          "color": "blue"
+        },
+        {
+          "icon": "brain",
+          "name": "KI & Maschinelles Lernen",
+          "description": "Intelligente Lösungen mit fortschrittlicher KI und ML",
+          "features": ["Prädiktive Analysen", "Verarbeitung natürlicher Sprache", "Computer Vision", "Deep Learning"],
+          "color": "purple"
+        },
+        {
+          "icon": "database",
+          "name": "Datenengineering",
+          "description": "Umfassende Datenmanagement- und Analyselösungen",
+          "features": ["Data Warehousing", "ETL-Pipelines", "Big Data Verarbeitung", "Datenvisualisierung"],
+          "color": "indigo"
+        },
+        {
+          "icon": "network",
+          "name": "Cloud-Lösungen",
+          "description": "Skalierbare Cloud-Infrastruktur und -Dienste",
+          "features": ["Cloud-Migration", "DevOps", "Containerisierung", "Serverless-Architektur"],
+          "color": "cyan"
+        }
+      ]
+    },
+    {
+      "category": "Beratungsdienstleistungen",
+      "description": "Expertenführung für Ihre digitale Transformation",
+      "items": [
+        {
+          "icon": "settings",
+          "name": "Digitale Transformation",
+          "description": "Strategische Planung und Umsetzung digitaler Initiativen",
+          "features": ["Prozessautomatisierung", "Digitale Strategie", "Change Management", "Technologie-Roadmap"],
+          "color": "rose"
+        },
+        {
+          "icon": "cpu",
+          "name": "Technologieberatung",
+          "description": "Expertenberatung bei Technologieauswahl und -implementierung",
+          "features": ["Architekturgestaltung", "Sicherheitsbewertung", "Leistungsoptimierung", "Skalierbarkeitsplanung"],
+          "color": "amber"
+        },
+        {
+          "icon": "file-text",
+          "name": "Projektmanagement",
+          "description": "Professionelles Projektmanagement und -durchführung",
+          "features": ["Agile Entwicklung", "Risikomanagement", "Ressourcenplanung", "Qualitätssicherung"],
+          "color": "lime"
+        },
+        {
+          "icon": "bar-chart",
+          "name": "Business Analytics",
+          "description": "Datenbasierte Erkenntnisse für Geschäftswachstum",
+          "features": ["Business Intelligence", "Leistungskennzahlen", "Marktanalyse", "Wettbewerbsanalyse"],
+          "color": "green"
+        }
+      ]
+    },
+    {
+      "category": "Support-Dienstleistungen",
+      "description": "Umfassende Support- und Wartungslösungen",
+      "items": [
+        {
+          "icon": "shield",
+          "name": "Sicherheitsdienstleistungen",
+          "description": "Enterprise-Grade Sicherheitslösungen",
+          "features": ["Sicherheitsaudits", "Penetrationstests", "Compliance-Management", "Sicherheitsschulungen"],
+          "color": "sky"
+        },
+        {
+          "icon": "clock",
+          "name": "24/7 Support",
+          "description": "Rund-um-die-Uhr technischer Support und Wartung",
+          "features": ["Help Desk", "Systemüberwachung", "Incident Response", "Leistungsoptimierung"],
+          "color": "cyan"
+        },
+        {
+          "icon": "globe",
+          "name": "Globale Dienstleistungen",
+          "description": "Internationaler Support und Beratung",
+          "features": ["Mehrsprachiger Support", "Globale Bereitstellung", "Compliance-Management", "Lokale Expertise"],
+          "color": "blue"
+        },
+        {
+          "icon": "zap",
+          "name": "Schulungen & Workshops",
+          "description": "Umfassende Schulungen und Kompetenzentwicklung",
+          "features": ["Technische Schulungen", "Workshops", "Zertifizierungsprogramme", "Wissensvermittlung"],
+          "color": "indigo"
+        }
+      ]
+    }
+  ],
+  "features": {
+    "title": "Was Wir Bieten",
+    "description": "Unsere Dienstleistungen kommen mit umfassenden Funktionen und Support",
+    "items": [
+      {
+        "icon": "code",
+        "title": "Individuelle Entwicklung",
+        "description": "Maßgeschneiderte Lösungen mit modernster Technologie"
+      },
+      {
+        "icon": "database",
+        "title": "Datenmanagement",
+        "description": "Sichere und effiziente Datenverarbeitungssysteme"
+      },
+      {
+        "icon": "network",
+        "title": "Integration",
+        "description": "Nahtlose Integration mit bestehenden Systemen"
+      },
+      {
+        "icon": "monitor",
+        "title": "Benutzeroberfläche",
+        "description": "Intuitive und responsive Gestaltung"
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Dienstleistungsvorteile",
+    "description": "Erleben Sie die Vorteile der Zusammenarbeit mit unserem Team.",
+    "items": [
+      {
+        "icon": "rocket",
+        "title": "Innovation",
+        "description": "Zukunftsweisende Lösungen für Ihre Geschäftstransformation",
+        "stats": "45%",
+        "label": "Innovationsrate"
+      },
+      {
+        "icon": "target",
+        "title": "Präzision",
+        "description": "Präzise und zuverlässige Dienstleistungserbringung",
+        "stats": "99.9%",
+        "label": "Erfolgsrate"
+      },
+      {
+        "icon": "lightbulb",
+        "title": "Expertise",
+        "description": "Tiefgehende Branchenkenntnis und technische Expertise",
+        "stats": "3x",
+        "label": "Erfahrungsniveau"
+      },
+      {
+        "icon": "users",
+        "title": "Zusammenarbeit",
+        "description": "Starke Partnerschaften mit Kunden und Teams",
+        "stats": "96%",
+        "label": "Kundenzufriedenheit"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Was Unsere Kunden Sagen",
+    "description": "Hören Sie von Unternehmen, die von unseren Dienstleistungen profitiert haben",
+    "items": [
+      {
+        "quote": "Die Expertise und das Engagement des Teams waren während unseres gesamten Projekts spürbar. Ihre innovativen Lösungen haben unsere Abläufe transformiert.",
+        "author": "Sarah Chen",
+        "role": "CTO, Tech Solutions",
+        "image": "/images/testimonials/sarah.jpg"
+      },
+      {
+        "quote": "Ihr umfassender Ansatz zur Dienstleistungserbringung und ihre Liebe zum Detail haben den Unterschied für den Erfolg unseres Projekts ausgemacht.",
+        "author": "John Smith",
+        "role": "CEO, Digital Innovations",
+        "image": "/images/testimonials/john.jpg"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Bereit zum Start?",
+    "description": "Schließen Sie sich Hunderten von Unternehmen an, die ihre Abläufe mit unseren Dienstleistungen transformiert haben.",
+    "buttons": [
+      {
+        "text": "Kontaktieren Sie Uns",
+        "href": "/contact",
+        "variant": "primary"
+      },
+      {
+        "text": "Demo Planen",
+        "href": "/demo",
+        "variant": "secondary"
+      }
+    ]
+  }
+} 

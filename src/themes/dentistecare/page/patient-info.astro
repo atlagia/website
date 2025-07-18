@@ -1,0 +1,166 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const lang = Astro.params.lang || 'en';
+
+// Import the JSON data
+const patientInfo = await import(`../data/patient-info/patient-info_${lang}.json`);
+
+// Import styles
+const styles = await import(`../style/page/patientinfopage.json`);
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <BaseHead title="Patient Information" description="Important information for new and existing patients" />
+  </head>
+  <body>
+    <Header />
+    <main class="pt-20">
+      <!-- Hero Section -->
+      <section class={styles.hero.section}>
+        <div class={styles.hero.container}>
+          <span class={styles.hero.subtitle}>
+            {patientInfo.hero.subtitle}
+          </span>
+          <h1 class={styles.hero.title}>
+            {patientInfo.hero.title}
+          </h1>
+          <p class={styles.hero.description}>
+            {patientInfo.hero.description}
+          </p>
+        </div>
+      </section>
+
+      <!-- Forms Section -->
+      <section class={styles.forms.section}>
+        <div class={styles.forms.container}>
+          <h2 class={styles.forms.title}>
+            {patientInfo.newPatients.title}
+          </h2>
+          <div class={styles.forms.grid}>
+            {patientInfo.newPatients.items.map(form => (
+              <div class={styles.forms.card}>
+                <div class={styles.forms.cardHeader}>
+                  <h3 class={styles.forms.cardTitle}>{form.title}</h3>
+                  <span class={styles.forms.cardFormat}>{form.format}</span>
+                </div>
+                <div class={styles.forms.cardFooter}>
+                  <span class={styles.forms.cardSize}>{form.size}</span>
+                  <a
+                    href={form.link}
+                    class={styles.forms.downloadLink}
+                  >
+                    Download
+                    <svg class={styles.forms.downloadIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                      <polyline points="7 10 12 15 17 10"/>
+                      <line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- What to Expect -->
+      <section class={styles.firstVisit.section}>
+        <div class={styles.firstVisit.container}>
+          <h2 class={styles.firstVisit.title}>
+            {patientInfo.firstVisit.title}
+          </h2>
+          <div class={styles.firstVisit.grid}>
+            {patientInfo.firstVisit.steps.map(step => (
+              <div class={styles.firstVisit.stepContainer}>
+                <div class={styles.firstVisit.stepNumber}>
+                  {step.number}
+                </div>
+                <div class={styles.firstVisit.stepContent}>
+                  <h3 class={styles.firstVisit.stepTitle}>{step.title}</h3>
+                  <p class={styles.firstVisit.stepDescription}>{step.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- Insurance & Payment -->
+      <section class={styles.insurance.section}>
+        <div class={styles.insurance.container}>
+          <h2 class={styles.insurance.title}>
+            {patientInfo.insurance.title}
+          </h2>
+          <p class={styles.insurance.description}>
+            {patientInfo.insurance.description}
+          </p>
+          <div class={styles.insurance.grid}>
+            {patientInfo.insurance.details.map(detail => (
+              <div class={styles.insurance.detailCard}>
+                <div class={styles.insurance.detailContent}>
+                  <svg class={styles.insurance.detailIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  <span class={styles.insurance.detailText}>{detail}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- Office Policies -->
+      <section class={styles.policies.section}>
+        <div class={styles.policies.container}>
+          <h2 class={styles.policies.title}>
+            {patientInfo.policies.title}
+          </h2>
+          <div class={styles.policies.grid}>
+            {patientInfo.policies.items.map(policy => (
+              <div class={styles.policies.policyCard}>
+                <h3 class={styles.policies.policyTitle}>{policy.title}</h3>
+                <p class={styles.policies.policyContent}>{policy.content}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class={styles.cta.section}>
+        <div class={styles.cta.container}>
+          <h2 class={styles.cta.title}>{patientInfo.cta.title}</h2>
+          <p class={styles.cta.description}>
+            {patientInfo.cta.description}
+          </p>
+          <div class={styles.cta.buttonsContainer}>
+            <a
+              href={patientInfo.cta.primaryButton.href}
+              class={styles.cta.primaryButton}
+            >
+              {patientInfo.cta.primaryButton.text}
+            </a>
+            <a
+              href={patientInfo.cta.secondaryButton.href}
+              class={styles.cta.secondaryButton}
+            >
+              {patientInfo.cta.secondaryButton.text}
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style>
+  section {
+    scroll-margin-top: 100px;
+  }
+</style> 

@@ -1,0 +1,171 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  categories: {
+    name: string;
+    channels: string[];
+  }[];
+}
+
+const { title, description, categories } = Astro.props;
+
+// Category icons
+const categoryIcons = {
+  Sports: `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
+  </svg>`,
+  Entertainment: `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" />
+  </svg>`,
+  News: `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9.5a2.5 2.5 0 00-2.5-2.5H14" />
+  </svg>`,
+  Kids: `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+  </svg>`
+};
+---
+
+<section class="relative py-20 overflow-hidden bg-black">
+  <!-- Background Elements -->
+  <div class="absolute inset-0">
+    <div class="absolute inset-0 bg-gradient-to-b from-purple-900/20 via-black to-black"></div>
+    <div class="absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-purple-500/10 to-transparent"></div>
+    <div class="absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-emerald-500/10 to-transparent"></div>
+  </div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 animate-fade-in">
+        {title}
+      </h2>
+      <p class="text-gray-400 text-lg animate-fade-in-delay">
+        {description}
+      </p>
+    </div>
+
+    <!-- Categories Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+      {categories.map((category, index) => (
+        <div 
+          class="category-card group relative overflow-hidden"
+          style={`animation-delay: ${index * 0.1}s`}
+        >
+          <!-- Card Background -->
+          <div class="absolute inset-0 bg-gradient-to-br from-purple-900/30 to-emerald-900/30 group-hover:from-purple-900/40 group-hover:to-emerald-900/40 transition-all duration-300"></div>
+          
+          <!-- Card Content -->
+          <div class="relative bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 group-hover:border-white/20 transition-all duration-300">
+            <!-- Category Icon -->
+            <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-r from-purple-500/10 to-emerald-500/10 text-purple-400 group-hover:text-purple-300 transition-colors duration-300 mb-4">
+              <Fragment set:html={categoryIcons[category.name]} />
+            </div>
+
+            <!-- Category Name -->
+            <h3 class="text-xl font-semibold text-white mb-4 group-hover:text-purple-300 transition-colors duration-300">
+              {category.name}
+            </h3>
+
+            <!-- Channels List -->
+            <ul class="space-y-2">
+              {category.channels.map((channel) => (
+                <li class="channel-item flex items-center space-x-2 text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                  <span class="w-2 h-2 rounded-full bg-purple-500/50"></span>
+                  <span>{channel}</span>
+                </li>
+              ))}
+            </ul>
+
+            <!-- Hover Effects -->
+            <div class="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div class="absolute top-0 left-0 w-24 h-24">
+                <div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-purple-500/50 to-transparent transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                <div class="absolute top-0 left-0 w-[1px] h-full bg-gradient-to-b from-purple-500/50 to-transparent transform origin-top scale-y-0 group-hover:scale-y-100 transition-transform duration-500"></div>
+              </div>
+              <div class="absolute bottom-0 right-0 w-24 h-24">
+                <div class="absolute bottom-0 right-0 w-full h-[1px] bg-gradient-to-l from-emerald-500/50 to-transparent transform origin-right scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                <div class="absolute bottom-0 right-0 w-[1px] h-full bg-gradient-to-t from-emerald-500/50 to-transparent transform origin-bottom scale-y-0 group-hover:scale-y-100 transition-transform duration-500"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Live TV Indicator -->
+    <div class="flex justify-center">
+      <div class="inline-flex items-center px-4 py-2 rounded-full bg-white/5 backdrop-blur-sm border border-white/10">
+        <span class="flex h-2 w-2 mr-2">
+          <span class="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-red-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+        </span>
+        <span class="text-white/90 text-sm font-medium">Live TV Streaming</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .category-card {
+    animation: fadeInUp 0.5s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .channel-item {
+    animation: fadeInRight 0.5s ease-out forwards;
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInRight {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  .animate-fade-in-delay {
+    animation: fadeIn 0.5s ease-out 0.2s forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+</style>
+
+<script>
+  // Add intersection observer for animation triggers
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.1,
+    }
+  );
+
+  document.querySelectorAll('.category-card').forEach((card) => {
+    observer.observe(card);
+  });
+</script> 

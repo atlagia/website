@@ -1,0 +1,317 @@
+{
+  "hero": {
+    "subtitle": "CLINICAL TOOLS",
+    "title": "Advanced Dental Imaging Solution",
+    "description": "Transform your diagnostic capabilities with our integrated dental imaging platform that combines state-of-the-art hardware compatibility with intelligent software for enhanced patient care."
+  },
+  "overview": {
+    "title": "Comprehensive Imaging Management",
+    "description": "Our dental imaging solution seamlessly connects your imaging devices with intuitive software to capture, store, enhance, and share diagnostic images across your practice.",
+    "features": [
+      {
+        "icon": "camera",
+        "title": "Universal Compatibility",
+        "description": "Works with virtually all imaging devices"
+      },
+      {
+        "icon": "edit-3",
+        "title": "Image Enhancement",
+        "description": "Advanced tools for optimal diagnostics"
+      },
+      {
+        "icon": "share-2",
+        "title": "Seamless Sharing",
+        "description": "Securely share with patients and colleagues"
+      },
+      {
+        "icon": "hard-drive",
+        "title": "Intelligent Storage",
+        "description": "HIPAA-compliant cloud and local options"
+      }
+    ]
+  },
+  "applications": {
+    "title": "Complete Imaging Workflow",
+    "description": "Comprehensive tools for every aspect of dental imaging",
+    "problems": [
+      {
+        "title": "Intraoral Radiography",
+        "description": "Manage periapical, bitewing and occlusal images",
+        "icon": "zap"
+      },
+      {
+        "title": "Panoramic Imaging",
+        "description": "Full-mouth and TMJ visualization",
+        "icon": "sidebar"
+      },
+      {
+        "title": "CBCT Management",
+        "description": "3D imaging for implants and complex cases",
+        "icon": "box"
+      },
+      {
+        "title": "Intraoral Photography",
+        "description": "High-resolution clinical documentation",
+        "icon": "camera"
+      },
+      {
+        "title": "CAD/CAM Integration",
+        "description": "Connect with your digital impression system",
+        "icon": "cpu"
+      },
+      {
+        "title": "Patient Education",
+        "description": "Visual tools for treatment acceptance",
+        "icon": "book-open"
+      }
+    ]
+  },
+  "process": {
+    "title": "Implementation Process",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Equipment Assessment",
+        "description": "Evaluate your current imaging devices and needs"
+      },
+      {
+        "number": "02",
+        "title": "Software Installation",
+        "description": "Set up imaging platform across your practice"
+      },
+      {
+        "number": "03",
+        "title": "Device Integration",
+        "description": "Connect and configure all imaging hardware"
+      },
+      {
+        "number": "04",
+        "title": "Data Migration",
+        "description": "Transfer existing images to the new system"
+      },
+      {
+        "number": "05",
+        "title": "Team Training",
+        "description": "Comprehensive training for clinical team"
+      },
+      {
+        "number": "06",
+        "title": "Ongoing Support",
+        "description": "Regular updates and technical assistance"
+      }
+    ]
+  },
+  "advantages": {
+    "title": "Clinical Benefits",
+    "description": "How our imaging solution enhances diagnostic capabilities and treatment outcomes",
+    "benefits": [
+      {
+        "title": "30% Better Diagnostics",
+        "description": "Enhanced image quality for accurate assessment",
+        "icon": "search"
+      },
+      {
+        "title": "50% Faster Workflow",
+        "description": "Streamlined imaging process saves chair time",
+        "icon": "clock"
+      },
+      {
+        "title": "25% Higher Case Acceptance",
+        "description": "Visual patient education improves understanding",
+        "icon": "thumbs-up"
+      },
+      {
+        "title": "Radiation Reduction",
+        "description": "Advanced sensors reduce patient exposure",
+        "icon": "shield"
+      }
+    ]
+  },
+  "features": {
+    "title": "Key Features",
+    "description": "Powerful tools for comprehensive dental imaging management",
+    "featureList": [
+      {
+        "title": "Multi-Device Integration",
+        "description": "Connect sensors, cameras, and 3D devices",
+        "icon": "link"
+      },
+      {
+        "title": "AI-Enhanced Processing",
+        "description": "Automatic exposure correction and enhancement",
+        "icon": "cpu"
+      },
+      {
+        "title": "Annotation Tools",
+        "description": "Mark findings and communicate with patients",
+        "icon": "edit"
+      },
+      {
+        "title": "Side-by-Side Comparison",
+        "description": "Track changes over time with visual comparison",
+        "icon": "columns"
+      },
+      {
+        "title": "Measurement Tools",
+        "description": "Precise measurement for implants and treatment",
+        "icon": "ruler"
+      },
+      {
+        "title": "3D Reconstruction",
+        "description": "Convert CBCT data into detailed 3D models",
+        "icon": "cube"
+      },
+      {
+        "title": "Patient Portal Integration",
+        "description": "Share images securely with patients",
+        "icon": "users"
+      },
+      {
+        "title": "DICOM Compatibility",
+        "description": "Standard format for specialist collaboration",
+        "icon": "file"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Pricing Options",
+    "description": "Select the plan that fits your practice needs",
+    "options": [
+      {
+        "name": "Essentials",
+        "price": "$199",
+        "duration": "per month",
+        "includes": [
+          "2D imaging management",
+          "Basic image enhancement",
+          "Single location license",
+          "Up to 3 imaging devices",
+          "5TB secure cloud storage",
+          "Email support"
+        ]
+      },
+      {
+        "name": "Professional",
+        "price": "$349",
+        "duration": "per month",
+        "includes": [
+          "All Essentials features",
+          "3D imaging capability",
+          "Advanced enhancement tools",
+          "Up to 10 imaging devices",
+          "10TB secure cloud storage",
+          "Patient sharing portal",
+          "Priority support"
+        ]
+      },
+      {
+        "name": "Enterprise",
+        "price": "$599",
+        "duration": "per month",
+        "includes": [
+          "All Professional features",
+          "Unlimited imaging devices",
+          "AI diagnostic assistance",
+          "Advanced 3D tools",
+          "Multi-location support",
+          "Unlimited secure storage",
+          "Custom integrations",
+          "Dedicated account manager"
+        ]
+      }
+    ]
+  },
+  "integration": {
+    "title": "Universal Compatibility",
+    "description": "Works with your existing imaging devices and practice management systems",
+    "partners": [
+      {
+        "name": "Dexis",
+        "logo": "/images/partners/dexis.png"
+      },
+      {
+        "name": "Carestream",
+        "logo": "/images/partners/carestream.png"
+      },
+      {
+        "name": "Planmeca",
+        "logo": "/images/partners/planmeca.png"
+      },
+      {
+        "name": "Vatech",
+        "logo": "/images/partners/vatech.png"
+      },
+      {
+        "name": "Sirona",
+        "logo": "/images/partners/sirona.png"
+      },
+      {
+        "name": "Instrumentarium",
+        "logo": "/images/partners/instrumentarium.png"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": [
+      {
+        "question": "Will this work with our existing imaging equipment?",
+        "answer": "Yes, our solution is designed to be universally compatible with virtually all dental imaging devices on the market. We support sensors and cameras from major manufacturers including Dexis, Carestream, Planmeca, Vatech, Sirona, and many others. During implementation, we'll provide specific drivers and integration tools for your exact hardware configuration."
+      },
+      {
+        "question": "How secure is the cloud storage for patient images?",
+        "answer": "Our cloud storage solution exceeds all HIPAA requirements with enterprise-grade encryption both in transit and at rest. We utilize multiple redundant data centers with 99.99% uptime, automatic backups, and comprehensive disaster recovery protocols. All data access is logged and auditable, and we provide a signed Business Associate Agreement (BAA)."
+      },
+      {
+        "question": "Can we integrate this with our practice management software?",
+        "answer": "Yes, our imaging solution integrates with all major dental practice management systems including Dentrix, Eaglesoft, Open Dental, and others. Images are automatically linked to patient records, and can be accessed directly from your patient management interface. We use industry-standard HL7 and DICOM protocols to ensure seamless communication between systems."
+      },
+      {
+        "question": "What kind of training is provided for our team?",
+        "answer": "We provide comprehensive training for your entire team as part of the implementation process. This includes live online sessions, on-site training if needed, and a complete library of video tutorials and documentation. We tailor the training to your specific hardware configuration and clinical needs, ensuring everyone is confident using the system."
+      },
+      {
+        "question": "How does the AI enhancement improve our diagnostics?",
+        "answer": "Our AI-powered image enhancement automatically optimizes contrast, brightness, and sharpness to highlight clinically relevant details. For radiographs, it can enhance enamel-dentin boundaries, highlight potential caries, and improve visualization of canal structures. The system also includes AI-assisted detection tools that can flag potential areas of concern for your review, serving as a valuable second opinion."
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Customer Success Stories",
+    "reviews": [
+      {
+        "name": "Dr. James Wilson",
+        "practice": "Advanced Dental Care",
+        "rating": 5,
+        "comment": "The image quality improvement alone was worth the investment. We've been able to detect early caries and canal structures that were nearly invisible in our old system. The 3D reconstruction tools have completely transformed our implant planning process, and patients are amazed when they can see their treatment visualized.",
+        "date": "2 months ago"
+      },
+      {
+        "name": "Dr. Amelia Patel",
+        "practice": "Smile Design Dentistry",
+        "rating": 5,
+        "comment": "We were hesitant about switching imaging systems after 15 years with our previous provider, but the transition was surprisingly smooth. All our historical images transferred perfectly, and the team adapted to the new interface within days. The ability to annotate images and share them directly with patients has significantly improved our case acceptance.",
+        "date": "3 months ago"
+      },
+      {
+        "name": "Dr. Robert Chen",
+        "practice": "Parkside Dental Group",
+        "rating": 5,
+        "comment": "As a multi-location practice, the enterprise solution has been a game-changer for us. Specialists can now instantly access imaging from any of our locations, and the cloud storage means we never worry about server issues or backups. The integration with our practice management software is seamless—everything just works.",
+        "date": "1 month ago"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Transform Your Dental Imaging?",
+    "description": "Join thousands of practices using our platform to enhance diagnostic capabilities and improve patient care.",
+    "primaryButton": {
+      "text": "Request Demo",
+      "href": "/request-demo"
+    },
+    "secondaryButton": {
+      "text": "View Pricing",
+      "href": "/pricing"
+    }
+  }
+} 

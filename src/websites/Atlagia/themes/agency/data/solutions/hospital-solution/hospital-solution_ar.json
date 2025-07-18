@@ -1,0 +1,335 @@
+{
+  "hero": {
+    "subtitle": "نظام إدارة المستشفى",
+    "title": "حل شامل لإدارة المستشفى",
+    "description": "نظام إدارة مستشفى على مستوى المؤسسات يتكامل مع جميع الأقسام، ويبسط رعاية المرضى، ويحسن العمليات في منشأتك بالكامل.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "عرض توضيحي لحل إدارة المستشفى"
+    },
+    "stats": [
+      {
+        "value": "97%",
+        "label": "رضا المرضى"
+      },
+      {
+        "value": "45%",
+        "label": "الكفاءة التشغيلية"
+      },
+      {
+        "value": "3.2x",
+        "label": "العائد على الاستثمار"
+      }
+    ]
+  },
+  "features": {
+    "subtitle": "ميزات المؤسسات",
+    "title": "إدارة مستشفى متكاملة",
+    "description": "مجموعة شاملة من الأدوات المصممة للمستشفيات والمرافق الصحية الحديثة",
+    "categories": [
+      {
+        "name": "الإدارة السريرية",
+        "description": "تبسيط رعاية المرضى في جميع الأقسام"
+      },
+      {
+        "name": "العمليات الإدارية",
+        "description": "تحسين عمليات المستشفى وإدارة الموارد"
+      }
+    ],
+    "items": [
+      {
+        "icon": "building",
+        "category": "إدارة المرافق",
+        "title": "تكامل متعدد الأقسام",
+        "description": "تنسيق سلس بين الأقسام والمرافق",
+        "image": "/images/solutions/hospital/departments.jpg",
+        "highlights": [
+          "تنسيق الأقسام",
+          "تخصيص الموارد",
+          "جدولة الموظفين",
+          "إدارة الأسرة"
+        ],
+        "stats": {
+          "value": "40%",
+          "label": "استخدام أفضل للموارد"
+        }
+      },
+      {
+        "icon": "activity",
+        "category": "رعاية المرضى",
+        "title": "التميز السريري",
+        "description": "نظام شامل لرعاية ومراقبة المرضى",
+        "image": "/images/solutions/hospital/clinical.jpg",
+        "highlights": [
+          "نظام السجل الطبي الإلكتروني",
+          "المسارات السريرية",
+          "إدارة الطلبات",
+          "بروتوكولات الرعاية"
+        ],
+        "stats": {
+          "value": "55%",
+          "label": "رعاية أسرع للمرضى"
+        }
+      },
+      {
+        "icon": "microscope",
+        "category": "التشخيص",
+        "title": "تشخيص متكامل",
+        "description": "أنظمة مختبر وتصوير متصلة",
+        "image": "/images/solutions/hospital/diagnostics.jpg",
+        "highlights": [
+          "تكامل المختبر",
+          "نظام PACS",
+          "إدارة النتائج",
+          "التصوير الرقمي"
+        ],
+        "stats": {
+          "value": "65%",
+          "label": "تشخيص أسرع"
+        }
+      },
+      {
+        "icon": "chart-bar",
+        "category": "التحليلات",
+        "title": "ذكاء المستشفى",
+        "description": "نظام تحليلات وإعداد تقارير متقدم",
+        "image": "/images/solutions/hospital/analytics.jpg",
+        "highlights": [
+          "مقاييس الأداء",
+          "تحليلات الموارد",
+          "رؤى مالية",
+          "مقاييس الجودة"
+        ],
+        "stats": {
+          "value": "45%",
+          "label": "قرارات أفضل"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "التميز في الرعاية الصحية",
+    "description": "شاهد كيف تقوم المستشفيات الرائدة بتحويل تقديم الرعاية الصحية",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "قصة نجاح المستشفى"
+    },
+    "testimonials": [
+      {
+        "author": "د. روبرت تشن",
+        "role": "الرئيس التنفيذي للمستشفى",
+        "image": "/images/testimonials/ceo1.jpg",
+        "quote": "أحدث هذا النظام ثورة في طريقة إدارة مستشفانا. أدى التكامل بين الأقسام إلى تحسين كل من الكفاءة ورعاية المرضى."
+      },
+      {
+        "author": "د. سارة طومسون",
+        "role": "رئيسة قسم الطب",
+        "image": "/images/testimonials/doctor2.jpg",
+        "quote": "حسّن دعم القرارات السريرية والتشخيص المتكامل بشكل كبير قدرتنا على تقديم رعاية عالية الجودة."
+      }
+    ]
+  },
+  "benefits": {
+    "subtitle": "المزايا الرئيسية",
+    "title": "حول مستشفاك",
+    "description": "اختبر مزايا نظام إدارة مستشفى متكامل بالكامل",
+    "items": [
+      {
+        "icon": "trending-up",
+        "title": "التميز التشغيلي",
+        "description": "تبسيط عمليات المستشفى وإدارة الموارد",
+        "color": "blue",
+        "stats": {
+          "value": "45%",
+          "label": "الكفاءة التشغيلية"
+        },
+        "highlights": [
+          "تحسين الموارد",
+          "أتمتة سير العمل",
+          "تقليل التكاليف",
+          "تنسيق أفضل"
+        ]
+      },
+      {
+        "icon": "heart",
+        "title": "تحسين رعاية المرضى",
+        "description": "تحسين نتائج وتجربة المرضى",
+        "color": "red",
+        "stats": {
+          "value": "97%",
+          "label": "رضا المرضى"
+        },
+        "highlights": [
+          "تنسيق أفضل للرعاية",
+          "تقليل أوقات الانتظار",
+          "تحسين النتائج",
+          "مشاركة المرضى"
+        ]
+      },
+      {
+        "icon": "users",
+        "title": "تمكين الموظفين",
+        "description": "تمكين مقدمي الرعاية الصحية بأدوات أفضل",
+        "color": "green",
+        "stats": {
+          "value": "50%",
+          "label": "إنتاجية الموظفين"
+        },
+        "highlights": [
+          "دعم القرارات السريرية",
+          "توثيق سهل",
+          "تواصل أفضل",
+          "وصول متنقل"
+        ]
+      },
+      {
+        "icon": "shield",
+        "title": "الجودة والامتثال",
+        "description": "الحفاظ على أعلى معايير الرعاية والامتثال",
+        "color": "purple",
+        "stats": {
+          "value": "100%",
+          "label": "الامتثال التنظيمي"
+        },
+        "highlights": [
+          "مقاييس الجودة",
+          "الامتثال التنظيمي",
+          "إدارة المخاطر",
+          "دعم التدقيق"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "subtitle": "تسعير المؤسسات",
+    "title": "حلول مؤسسية مرنة",
+    "description": "تسعير مخصص بناءً على حجم واحتياجات مستشفاك. وفر مع حزمنا المؤسسية.",
+    "billingPeriods": ["شهري", "سنوي"],
+    "plans": [
+      {
+        "name": "قياسي",
+        "highlight": "للمستشفيات الصغيرة",
+        "monthlyPrice": "$2,999",
+        "yearlyPrice": "$29,990",
+        "yearlyDiscount": "وفر $5,998/سنة",
+        "description": "ميزات أساسية للمستشفيات الصغيرة",
+        "features": [
+          {
+            "text": "إدارة مستشفى أساسية",
+            "included": true
+          },
+          {
+            "text": "نظام السجل الطبي الإلكتروني",
+            "included": true
+          },
+          {
+            "text": "تنسيق الأقسام",
+            "included": true
+          },
+          {
+            "text": "دعم قياسي",
+            "included": true
+          },
+          {
+            "text": "تحليلات أساسية",
+            "included": true
+          },
+          {
+            "text": "وصول متنقل",
+            "included": true
+          }
+        ],
+        "cta": "ابدأ",
+        "popular": false
+      },
+      {
+        "name": "احترافي",
+        "highlight": "الأكثر شعبية للمستشفيات متوسطة الحجم",
+        "monthlyPrice": "$4,999",
+        "yearlyPrice": "$49,990",
+        "yearlyDiscount": "وفر $9,998/سنة",
+        "description": "ميزات متقدمة للمستشفيات النامية",
+        "features": [
+          {
+            "text": "كل ما هو مدرج في القياسي، بالإضافة إلى:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "مسارات سريرية متقدمة",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "تكامل المختبر وPACS",
+            "included": true
+          },
+          {
+            "text": "تحليلات متقدمة",
+            "included": true
+          },
+          {
+            "text": "دعم ذو أولوية",
+            "included": true
+          },
+          {
+            "text": "دعم المرافق المتعددة",
+            "included": true
+          }
+        ],
+        "cta": "ابدأ",
+        "popular": true
+      },
+      {
+        "name": "مؤسسة",
+        "highlight": "لشبكات المستشفيات الكبيرة",
+        "monthlyPrice": "مخصص",
+        "yearlyPrice": "مخصص",
+        "yearlyDiscount": "اتصل بنا للأسعار الخاصة",
+        "description": "حلول مخصصة لشبكات المستشفيات",
+        "features": [
+          {
+            "text": "كل ما هو مدرج في الاحترافي، بالإضافة إلى:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "دعم تكامل مخصص",
+            "included": true
+          },
+          {
+            "text": "فريق نجاح مخصص",
+            "included": true
+          },
+          {
+            "text": "ميزات أمان متقدمة",
+            "included": true
+          },
+          {
+            "text": "تطوير مخصص",
+            "included": true
+          },
+          {
+            "text": "اتفاقية مستوى الخدمة المؤسسية",
+            "included": true
+          }
+        ],
+        "cta": "اتصل بالمبيعات",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "جاهز لتحويل مستشفاك؟",
+    "description": "انضم إلى المؤسسات الصحية الرائدة التي حدّثت عملياتها بحلنا.",
+    "background": "/images/solutions/hospital/cta-background.jpg",
+    "primaryButton": {
+      "text": "جدولة عرض توضيحي",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "شاهد العرض التوضيحي",
+      "link": "#showcase"
+    }
+  }
+} 

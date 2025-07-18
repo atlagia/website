@@ -1,0 +1,317 @@
+{
+  "hero": {
+    "subtitle": "PRACTICE MANAGEMENT",
+    "title": "Smart Dental Inventory Management",
+    "description": "Streamline your dental supply management with our intelligent inventory system that reduces waste, prevents stockouts, and optimizes your purchasing process."
+  },
+  "overview": {
+    "title": "Simplified Supply Management",
+    "description": "Our inventory solution provides real-time tracking of all dental supplies, automated reordering, and comprehensive analytics to reduce costs and improve efficiency.",
+    "features": [
+      {
+        "icon": "box",
+        "title": "Real-Time Tracking",
+        "description": "Monitor inventory levels with precision in real-time"
+      },
+      {
+        "icon": "rotate-cw",
+        "title": "Auto-Reordering",
+        "description": "Automated purchase orders based on custom thresholds"
+      },
+      {
+        "icon": "alert-triangle",
+        "title": "Low Stock Alerts",
+        "description": "Proactive notifications before supplies run out"
+      },
+      {
+        "icon": "bar-chart-2",
+        "title": "Usage Analytics",
+        "description": "Track consumption patterns to optimize ordering"
+      }
+    ]
+  },
+  "applications": {
+    "title": "Complete Supply Chain Solution",
+    "description": "Comprehensive tools for managing your entire dental supply inventory lifecycle",
+    "problems": [
+      {
+        "title": "Consumables Management",
+        "description": "Track high-volume items like gloves, masks, and composites",
+        "icon": "package"
+      },
+      {
+        "title": "Equipment Maintenance",
+        "description": "Schedule maintenance and track service history",
+        "icon": "tool"
+      },
+      {
+        "title": "Vendor Management",
+        "description": "Centralize supplier information and ordering",
+        "icon": "users"
+      },
+      {
+        "title": "Expiration Tracking",
+        "description": "Prevent waste with expiry date monitoring",
+        "icon": "calendar"
+      },
+      {
+        "title": "Sterilization Management",
+        "description": "Track instrument packages and sterilization cycles",
+        "icon": "thermometer"
+      },
+      {
+        "title": "Multi-Location Sync",
+        "description": "Coordinate inventory across multiple practices",
+        "icon": "globe"
+      }
+    ]
+  },
+  "process": {
+    "title": "How It Works",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Initial Setup",
+        "description": "We help you catalog all existing inventory and set min/max levels"
+      },
+      {
+        "number": "02",
+        "title": "Barcode Integration",
+        "description": "Set up scanning system for easy item tracking and updates"
+      },
+      {
+        "number": "03",
+        "title": "Vendor Connections",
+        "description": "Link directly to your suppliers for streamlined ordering"
+      },
+      {
+        "number": "04",
+        "title": "Staff Training",
+        "description": "Comprehensive training on inventory workflows"
+      },
+      {
+        "number": "05",
+        "title": "Automation Setup",
+        "description": "Configure automatic reordering rules and notifications"
+      },
+      {
+        "number": "06",
+        "title": "Optimization",
+        "description": "Regular reviews to refine thresholds and improve efficiency"
+      }
+    ]
+  },
+  "advantages": {
+    "title": "Business Benefits",
+    "description": "How our inventory solution impacts your practice operations and profitability",
+    "benefits": [
+      {
+        "title": "25% Reduction in Waste",
+        "description": "Prevent expired products and unnecessary purchases",
+        "icon": "trash-2"
+      },
+      {
+        "title": "15% Cost Savings",
+        "description": "Optimize ordering quantities and negotiate better pricing",
+        "icon": "dollar-sign"
+      },
+      {
+        "title": "Zero Stockouts",
+        "description": "Eliminate procedure delays due to missing supplies",
+        "icon": "check-circle"
+      },
+      {
+        "title": "5+ Hours Saved Weekly",
+        "description": "Reduce time spent on manual inventory management",
+        "icon": "clock"
+      }
+    ]
+  },
+  "features": {
+    "title": "Key Features",
+    "description": "Powerful tools designed specifically for dental practice inventory management",
+    "featureList": [
+      {
+        "title": "Barcode Scanning",
+        "description": "Quick updates using mobile device scanning",
+        "icon": "smartphone"
+      },
+      {
+        "title": "Par Level Management",
+        "description": "Set minimum and maximum quantities for all items",
+        "icon": "sliders"
+      },
+      {
+        "title": "Purchase Order Generator",
+        "description": "Create and send POs directly to vendors",
+        "icon": "file-text"
+      },
+      {
+        "title": "Usage Tracking",
+        "description": "Track consumption by procedure or provider",
+        "icon": "trending-up"
+      },
+      {
+        "title": "Lot Number Tracking",
+        "description": "Important for implants and other trackable items",
+        "icon": "hash"
+      },
+      {
+        "title": "Cost Analytics",
+        "description": "Monitor spending patterns and identify savings",
+        "icon": "pie-chart"
+      },
+      {
+        "title": "Mobile Access",
+        "description": "Check and update inventory from anywhere",
+        "icon": "tablet"
+      },
+      {
+        "title": "Automated Reporting",
+        "description": "Scheduled inventory reports for management",
+        "icon": "file"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Pricing Options",
+    "description": "Select the plan that fits your practice needs",
+    "options": [
+      {
+        "name": "Essentials",
+        "price": "$99",
+        "duration": "per month",
+        "includes": [
+          "Up to 500 inventory items",
+          "Basic barcode scanning",
+          "Manual reordering",
+          "Low-stock alerts",
+          "Email support",
+          "Single location"
+        ]
+      },
+      {
+        "name": "Professional",
+        "price": "$199",
+        "duration": "per month",
+        "includes": [
+          "Up to 2,000 inventory items",
+          "All Essentials features",
+          "Automated purchase orders",
+          "Vendor management",
+          "Usage analytics",
+          "Priority support",
+          "Up to 2 locations"
+        ]
+      },
+      {
+        "name": "Enterprise",
+        "price": "$349",
+        "duration": "per month",
+        "includes": [
+          "Unlimited inventory items",
+          "All Professional features",
+          "Multiple location support",
+          "Advanced analytics",
+          "Custom reporting",
+          "API access for integrations",
+          "Dedicated account manager",
+          "Equipment maintenance tracking"
+        ]
+      }
+    ]
+  },
+  "integration": {
+    "title": "Seamless Integration",
+    "description": "Works with your existing practice management systems",
+    "partners": [
+      {
+        "name": "Dentrix",
+        "logo": "/images/partners/dentrix.png"
+      },
+      {
+        "name": "Eaglesoft",
+        "logo": "/images/partners/eaglesoft.png"
+      },
+      {
+        "name": "Open Dental",
+        "logo": "/images/partners/opendental.png"
+      },
+      {
+        "name": "Curve Dental",
+        "logo": "/images/partners/curve.png"
+      },
+      {
+        "name": "Denticon",
+        "logo": "/images/partners/denticon.png"
+      },
+      {
+        "name": "Dentimax",
+        "logo": "/images/partners/dentimax.png"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": [
+      {
+        "question": "How does the barcode scanning work?",
+        "answer": "Our system supports multiple barcode formats and can be used with your existing product barcodes. Staff can scan items using a dedicated scanner or our mobile app on any smartphone. Scanning updates inventory counts in real-time and can be used for both receiving and dispensing items."
+      },
+      {
+        "question": "Can we track sterilization of instruments?",
+        "answer": "Yes, our system includes specialized features for tracking sterilization cycles. You can create instrument packages, assign unique IDs, and track their sterilization history, ensuring proper infection control and regulatory compliance."
+      },
+      {
+        "question": "How does automatic reordering work?",
+        "answer": "You set minimum threshold levels for each product. When inventory falls below that level, the system automatically generates a purchase order that can be reviewed before sending. Orders can be automatically sent to vendors via email, EDI, or their online ordering portal."
+      },
+      {
+        "question": "Can we track usage by procedure?",
+        "answer": "Yes, our system allows you to create procedure templates that list all required items. When procedures are performed, inventory is automatically deducted, giving you precise usage data and cost analysis by procedure type."
+      },
+      {
+        "question": "Is there a limit to how many items we can track?",
+        "answer": "Our Essentials plan supports up to 500 items, Professional up to 2,000, and Enterprise has unlimited items. Most dental practices have between 300-1,500 inventory items depending on specialties and services offered."
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Customer Success Stories",
+    "reviews": [
+      {
+        "name": "Dr. Richard Miller",
+        "practice": "Miller Dental Group",
+        "rating": 5,
+        "comment": "Since implementing this inventory system, we've reduced our monthly supply costs by 22%. The automatic reordering alone has saved us countless hours of staff time and prevented those panic moments when we discover we're out of something essential.",
+        "date": "2 months ago"
+      },
+      {
+        "name": "Jessica Torres",
+        "practice": "Office Manager, Bright Smile Dentistry",
+        "rating": 5,
+        "comment": "Managing supplies for our multi-location practice used to be a nightmare. Now we have complete visibility across all locations and can even transfer items between offices when needed. The time savings has been remarkable.",
+        "date": "3 months ago"
+      },
+      {
+        "name": "Dr. Emily Chang",
+        "practice": "Chang Pediatric Dentistry",
+        "rating": 5,
+        "comment": "The cost analytics feature helped us identify several areas where we were overspending. We've optimized our ordering and negotiated better rates with vendors based on the data. The system paid for itself within the first three months.",
+        "date": "1 month ago"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Optimize Your Dental Inventory?",
+    "description": "Join thousands of dental practices using our platform to reduce costs, save time, and eliminate supply management headaches.",
+    "primaryButton": {
+      "text": "Request Demo",
+      "href": "/request-demo"
+    },
+    "secondaryButton": {
+      "text": "View Pricing",
+      "href": "/pricing"
+    }
+  }
+} 

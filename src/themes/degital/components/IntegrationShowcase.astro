@@ -1,0 +1,111 @@
+---
+import { Icon } from '@iconify/astro';
+import { cn } from '../../../utils/cn';
+
+interface Integration {
+  name: string;
+  integrations: string[];
+  icon: string;
+}
+
+interface Benefit {
+  title: string;
+  description: string;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  categories: Integration[];
+  benefits: Benefit[];
+}
+
+const { title, description, categories, benefits } = Astro.props;
+
+// Map category names to icons and colors
+const categoryConfig = {
+  crm: {
+    icon: 'lucide:users',
+    color: 'blue'
+  },
+  marketing: {
+    icon: 'lucide:megaphone',
+    color: 'green'
+  },
+  productivity: {
+    icon: 'lucide:zap',
+    color: 'orange'
+  },
+  finance: {
+    icon: 'lucide:wallet',
+    color: 'purple'
+  }
+};
+
+// Map integration names to icons
+const integrationIcons = {
+  Salesforce: 'simple-icons:salesforce',
+  HubSpot: 'simple-icons:hubspot',
+  Zoho: 'simple-icons:zoho',
+  Mailchimp: 'simple-icons:mailchimp',
+  Klaviyo: 'simple-icons:klaviyo',
+  SendGrid: 'simple-icons:sendgrid',
+  Slack: 'simple-icons:slack',
+  Asana: 'simple-icons:asana',
+  Trello: 'simple-icons:trello',
+  Stripe: 'simple-icons:stripe',
+  PayPal: 'simple-icons:paypal',
+  QuickBooks: 'simple-icons:quickbooks'
+};
+---
+
+<section class="py-20 px-4 bg-gradient-to-b from-gray-50 to-white">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">{title}</h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">{description}</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+      {categories.map((category) => {
+        const config = categoryConfig[category.icon.toLowerCase()] || categoryConfig.productivity;
+        return (
+          <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100">
+            <div class={cn(
+              "w-12 h-12 rounded-lg flex items-center justify-center mb-6",
+              `bg-${config.color}-100 text-${config.color}-600`
+            )}>
+              <Icon name={config.icon} class="w-6 h-6" />
+            </div>
+            <h3 class="text-xl font-semibold mb-4">{category.name}</h3>
+            <ul class="space-y-3">
+              {category.integrations.map((integration) => (
+                <li class="flex items-center text-gray-600 group">
+                  <Icon 
+                    name={integrationIcons[integration] || 'lucide:check-circle'} 
+                    class="w-5 h-5 mr-2 text-gray-400 group-hover:text-gray-600 transition-colors" 
+                  />
+                  <span class="group-hover:text-gray-900 transition-colors">
+                    {integration}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        );
+      })}
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {benefits.map((benefit) => (
+        <div class="text-center p-6 rounded-xl bg-white border border-gray-100 hover:shadow-lg transition-all duration-300">
+          <div class="inline-flex p-3 rounded-lg bg-blue-50 text-blue-600 mb-4">
+            <Icon name="lucide:check-circle" class="w-6 h-6" />
+          </div>
+          <h3 class="text-xl font-semibold mb-2">{benefit.title}</h3>
+          <p class="text-gray-600">{benefit.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section> 

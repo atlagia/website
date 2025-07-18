@@ -1,0 +1,283 @@
+{
+  "pageTitle": "Plattform",
+  "pageDescription": "Entdecken Sie die fortschrittlichen KI-Plattformfunktionen und technischen Spezifikationen.",
+  "hero": {
+    "badge": "Plattform-Überblick",
+    "title": "Fortschrittliche KI-Plattform für Unternehmensinnovation",
+    "description": "Entdecken Sie unsere Enterprise-KI-Plattform, die modernste Technologie mit unübertroffener Skalierbarkeit und Sicherheit verbindet.",
+    "cta": {
+      "primary": {
+        "text": "Funktionen erkunden",
+        "href": "#features"
+      },
+      "secondary": {
+        "text": "Dokumentation ansehen",
+        "href": "/docs"
+      }
+    }
+  },
+  "techSpecs": [
+    {
+      "title": "Verarbeitungsleistung",
+      "value": "100K+",
+      "unit": "Anfragen/Sekunde"
+    },
+    {
+      "title": "Antwortzeit",
+      "value": "<50",
+      "unit": "Millisekunden"
+    },
+    {
+      "title": "Rechenzentren",
+      "value": "25+",
+      "unit": "globale Standorte"
+    },
+    {
+      "title": "Modellparameter",
+      "value": "175B+",
+      "unit": "Parameter"
+    }
+  ],
+  "features": [
+    {
+      "category": "KI-Kernmodul",
+      "description": "Fortschrittliche künstliche Intelligenz-Fähigkeiten",
+      "items": [
+        {
+          "icon": "Brain",
+          "name": "Machine Learning",
+          "description": "Fortschrittliche ML-Algorithmen, die sich anpassen und aus Ihren Daten lernen",
+          "highlights": [
+            "Deep Learning Modelle",
+            "Neuronale Netze",
+            "Mustererkennung",
+            "Prädiktive Analytik"
+          ],
+          "stats": {
+            "value": "99.9%",
+            "label": "Genauigkeitsrate"
+          }
+        },
+        {
+          "icon": "Bot",
+          "name": "Natürliche Sprache",
+          "description": "Fortschrittliche Verarbeitung und Verständnis natürlicher Sprache",
+          "highlights": [
+            "Textanalyse",
+            "Stimmungsanalyse",
+            "Sprachübersetzung",
+            "Intentionserkennung"
+          ],
+          "stats": {
+            "value": "45+",
+            "label": "Unterstützte Sprachen"
+          }
+        },
+        {
+          "icon": "Cpu",
+          "name": "Computer Vision",
+          "description": "Fortschrittliche Bild- und Videoverarbeitungsfähigkeiten",
+          "highlights": [
+            "Objekterkennung",
+            "Bilderkennung",
+            "Videoanalyse",
+            "OCR-Verarbeitung"
+          ],
+          "stats": {
+            "value": "95%",
+            "label": "Erkennungsrate"
+          }
+        },
+        {
+          "icon": "Network",
+          "name": "Neuronale Netze",
+          "description": "Modernste neuronale Netzwerkarchitekturen",
+          "highlights": [
+            "Deep Learning",
+            "Transfer Learning",
+            "Reinforcement Learning",
+            "AutoML"
+          ],
+          "stats": {
+            "value": "2x",
+            "label": "Leistungssteigerung"
+          }
+        }
+      ]
+    },
+    {
+      "category": "Plattform-Infrastruktur",
+      "description": "Robuste und skalierbare technische Grundlage",
+      "items": [
+        {
+          "icon": "Cloud",
+          "name": "Cloud Native",
+          "description": "Aufgebaut auf moderner Cloud-Infrastruktur für maximale Skalierbarkeit",
+          "highlights": [
+            "Auto-Skalierung",
+            "Lastausgleich",
+            "Globales CDN",
+            "Edge Computing"
+          ],
+          "stats": {
+            "value": "99.99%",
+            "label": "Verfügbarkeit"
+          }
+        },
+        {
+          "icon": "Lock",
+          "name": "Sicherheit",
+          "description": "Enterprise-Grade Sicherheits- und Compliance-Maßnahmen",
+          "highlights": [
+            "Ende-zu-Ende-Verschlüsselung",
+            "SOC 2 Compliance",
+            "DSGVO-Konformität",
+            "Zugriffssteuerung"
+          ],
+          "stats": {
+            "value": "256-bit",
+            "label": "Verschlüsselung"
+          }
+        },
+        {
+          "icon": "Database",
+          "name": "Datenverwaltung",
+          "description": "Fortschrittliche Datenverarbeitungs- und Speicherfähigkeiten",
+          "highlights": [
+            "Echtzeit-Verarbeitung",
+            "Data Warehousing",
+            "ETL-Pipeline",
+            "Data Lakes"
+          ],
+          "stats": {
+            "value": "PB",
+            "label": "Skalierung"
+          }
+        },
+        {
+          "icon": "Code",
+          "name": "API & Integration",
+          "description": "Umfassende API- und Integrationsfähigkeiten",
+          "highlights": [
+            "RESTful APIs",
+            "GraphQL-Unterstützung",
+            "Webhooks",
+            "SDK-Bibliotheken"
+          ],
+          "stats": {
+            "value": "1000+",
+            "label": "API-Endpunkte"
+          }
+        }
+      ]
+    },
+    {
+      "category": "Entwicklungswerkzeuge",
+      "description": "Umfassende Tools für Entwickler und Unternehmen",
+      "items": [
+        {
+          "icon": "Settings",
+          "name": "Entwickler-Tools",
+          "description": "Komplettes Toolkit für Entwickler und technische Teams",
+          "highlights": [
+            "API-Dokumentation",
+            "Test-Tools",
+            "Debug-Konsole",
+            "Code-Beispiele"
+          ],
+          "stats": {
+            "value": "100+",
+            "label": "Dev-Tools"
+          }
+        },
+        {
+          "icon": "Layers",
+          "name": "Low-Code Builder",
+          "description": "Visuelle Entwicklungstools für schnelle Bereitstellung",
+          "highlights": [
+            "Drag-and-Drop",
+            "Visuelle Workflows",
+            "Vorlagen",
+            "Benutzerdefinierte Komponenten"
+          ],
+          "stats": {
+            "value": "80%",
+            "label": "Zeitersparnis"
+          }
+        },
+        {
+          "icon": "Workflow",
+          "name": "Workflow-Engine",
+          "description": "Leistungsstarke Workflow-Automatisierungsfähigkeiten",
+          "highlights": [
+            "Visueller Designer",
+            "Benutzerdefinierte Logik",
+            "Event-Trigger",
+            "Fehlerbehandlung"
+          ],
+          "stats": {
+            "value": "500+",
+            "label": "Vorlagen"
+          }
+        },
+        {
+          "icon": "LineChart",
+          "name": "Analytics & Insights",
+          "description": "Umfassende Analyse- und Berichtswerkzeuge",
+          "highlights": [
+            "Echtzeit-Metriken",
+            "Benutzerdefinierte Berichte",
+            "Datenvisualisierung",
+            "Export-Optionen"
+          ],
+          "stats": {
+            "value": "360°",
+            "label": "Datenansicht"
+          }
+        }
+      ]
+    }
+  ],
+  "integrations": [
+    {
+      "name": "AWS",
+      "logo": "/images/integrations/aws.svg"
+    },
+    {
+      "name": "Google Cloud",
+      "logo": "/images/integrations/gcp.svg"
+    },
+    {
+      "name": "Azure",
+      "logo": "/images/integrations/azure.svg"
+    },
+    {
+      "name": "Salesforce",
+      "logo": "/images/integrations/salesforce.svg"
+    },
+    {
+      "name": "SAP",
+      "logo": "/images/integrations/sap.svg"
+    },
+    {
+      "name": "Oracle",
+      "logo": "/images/integrations/oracle.svg"
+    }
+  ],
+  "cta": {
+    "title": "Bereit loszulegen?",
+    "description": "Erleben Sie die Leistungsfähigkeit unserer KI-Plattform mit einer personalisierten Demo.",
+    "buttons": [
+      {
+        "text": "Demo planen",
+        "href": "/demo",
+        "variant": "primary"
+      },
+      {
+        "text": "Dokumentation ansehen",
+        "href": "/docs",
+        "variant": "secondary"
+      }
+    ]
+  }
+} 

@@ -1,0 +1,141 @@
+---
+import styles from '../style/component/pricingSection.json';
+
+interface PricingFeature {
+  text: string;
+  included: boolean;
+}
+
+interface PricingPlan {
+  name: string;
+  price: string;
+  period: string;
+  features: PricingFeature[];
+  buttonText: string;
+  buttonLink: string;
+  isPopular?: boolean;
+}
+
+interface Props {
+  subtitle: string;
+  title: string;
+  description: string;
+  plans: PricingPlan[];
+  insuranceInfo?: {
+    text: string;
+    providers: string[];
+  };
+}
+
+const { subtitle, title, description, plans, insuranceInfo } = Astro.props;
+---
+
+<section class={styles.section.container} id="content-pricingSection">
+  <div class={styles.content.container}>
+    <!-- Header -->
+    <div class={styles.header.container}>
+      <span class={styles.header.subtitle} id="content-subtitle">
+        {subtitle}
+      </span>
+      <h2 class={styles.header.title} id="content-title">
+        {title}
+      </h2>
+      <p class={styles.header.description} id="content-description">
+        {description}
+      </p>
+    </div>
+
+    <!-- Pricing Grid -->
+    <div class={styles.pricingGrid.container}>
+      {plans.map((plan, planIndex) => (
+        <div class={plan.isPopular ? styles.pricingCard.container.popular : styles.pricingCard.container.base}>
+          {plan.isPopular && (
+            <div class={styles.pricingCard.popularBadge} id={`content-popularBadge-${planIndex}`}>
+              Most Popular
+            </div>
+          )}
+          
+          <div class={styles.pricingCard.content}>
+            <!-- Plan Header -->
+            <div class={styles.pricingCard.header.container}>
+              <h3 class={styles.pricingCard.header.title} id={`content-planName-${planIndex}`}>{plan.name}</h3>
+              <div class={styles.pricingCard.header.priceContainer}>
+                <span class={styles.pricingCard.header.price} id={`content-planPrice-${planIndex}`}>{plan.price}</span>
+                <span class={styles.pricingCard.header.period} id={`content-planPeriod-${planIndex}`}>{plan.period}</span>
+              </div>
+            </div>
+
+            <!-- Features List -->
+            <ul class={styles.pricingCard.featuresList.container}>
+              {plan.features.map((feature, featureIndex) => (
+                <li class={styles.pricingCard.featuresList.item}>
+                  <svg 
+                    class={feature.included ? styles.pricingCard.featuresList.icon.included : styles.pricingCard.featuresList.icon.excluded}
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path 
+                      stroke-linecap="round" 
+                      stroke-linejoin="round" 
+                      stroke-width="2" 
+                      d={feature.included ? "M5 13l4 4L19 7" : "M6 18L18 6M6 6l12 12"}
+                    />
+                  </svg>
+                  <span class={feature.included ? styles.pricingCard.featuresList.text.included : styles.pricingCard.featuresList.text.excluded} id={`content-planFeature-${planIndex}-${featureIndex}`}>
+                    {feature.text}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            <!-- Action Button -->
+            <a
+              href={plan.buttonLink}
+              class={plan.isPopular ? styles.pricingCard.button.primary : styles.pricingCard.button.secondary}
+              id={`content-planButton-${planIndex}`}
+            >
+              {plan.buttonText}
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Insurance Info -->
+    {insuranceInfo && (
+      <div class={styles.insuranceInfo.container}>
+        <p class={styles.insuranceInfo.text} id="content-insuranceText">{insuranceInfo.text}</p>
+        <div class={styles.insuranceInfo.providersContainer}>
+          {insuranceInfo.providers.map((provider, index) => (
+            <span class={styles.insuranceInfo.provider} id={`content-insuranceProvider-${index}`}>
+              {provider}
+            </span>
+          ))}
+        </div>
+      </div>
+    )}
+  </div>
+</section>
+
+<style define:vars={{ 
+  primaryColor: styles.colors.primary,
+  primaryHover: styles.colors.primaryHover,
+  primaryLight: styles.colors.primaryLight,
+  primaryLighter: styles.colors.primaryLighter,
+  primaryBorder: styles.colors.primaryBorder,
+  transitionDuration: styles.transitions.duration,
+  transitionProperties: styles.transitions.properties,
+  transitionTiming: styles.transitions.timing,
+  hoverTranslateY: styles.transitions.hover.translateY
+}}>
+  .transition-all {
+    transition-property: var(--transitionProperties);
+    transition-duration: var(--transitionDuration);
+    transition-timing-function: var(--transitionTiming);
+  }
+
+  .hover\:-translate-y-1:hover {
+    transform: translateY(var(--hoverTranslateY));
+  }
+</style> 

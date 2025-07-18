@@ -1,0 +1,264 @@
+---
+import { SITE_TITLE } from '../../consts';
+import pkg from 'lucide-react';
+const { Shield, Sparkles, Wind, Heart, Star, CheckCircle, Clock, Check } = pkg;
+
+const theme = import.meta.env.THEME || 'default';
+const lang = Astro.params.lang || 'en';
+
+const { default: BaseHead } = await import(`../../components/BaseHead.astro`);
+const { default: Header } = await import(`../../components/Header.astro`);
+const { default: Footer } = await import(`../../components/Footer.astro`);
+
+// Import language-specific service data
+const serviceData = await import(`../../data/services/cleaning/cleaning_${lang}.json`);
+
+const businessInfo = {
+  name: import.meta.env.PUBLIC_BUSINESS_NAME || 'DentCare'
+};
+
+// Define icon paths
+const iconPaths = {
+  brush: `<path d="M9.06 11.9l8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.07"/><path d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z"/>`,
+  sparkles: `<path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>`,
+  shield: `<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>`,
+  wind: `<path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/>`,
+  heart: `<path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>`,
+  'check-circle': `<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>`
+};
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <BaseHead 
+      title={`Professional Teeth Cleaning | ${businessInfo.name}`}
+      description={serviceData.hero.description}
+    />
+  </head>
+  <body>
+    <Header />
+    <main class="pt-10">
+      <!-- Hero Section -->
+      <section class="relative py-20 px-4 bg-gradient-to-b from-[#f0f9ff] via-white to-transparent overflow-hidden">
+        <div class="absolute inset-0 z-0">
+          <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-bl from-[#0a91b1]/10 to-blue-500/10 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
+          <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-tr from-sky-500/10 to-[#0a91b1]/10 rounded-full blur-3xl animate-blob"></div>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto text-center">
+          <span class="inline-block px-4 py-1.5 mb-4 text-sm font-medium rounded-full bg-[#0a91b1]/10 text-[#0a91b1] border border-[#0a91b1]/20">
+            {serviceData.hero.subtitle}
+          </span>
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">{serviceData.hero.title}</h1>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            {serviceData.hero.description}
+          </p>
+        </div>
+      </section>
+
+      <!-- Overview Section -->
+      <section class="relative py-16 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">{serviceData.overview.title}</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">{serviceData.overview.description}</p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {serviceData.overview.features.map(feature => (
+              <div class="p-6 bg-white rounded-2xl border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div class="w-12 h-12 rounded-xl bg-[#0a91b1]/10 flex items-center justify-center mb-4">
+                  <svg 
+                    class="w-6 h-6 text-[#0a91b1]"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    set:html={iconPaths[feature.icon]}
+                  />
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
+                <p class="text-gray-600">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- Process Section -->
+      <section class="relative py-16 px-4 bg-gradient-to-b from-white via-[#0a91b1]/5 to-white">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">{serviceData.process.title}</h2>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {serviceData.process.steps.map((step, index) => (
+              <div class="relative">
+                {index < serviceData.process.steps.length - 1 && (
+                  <div class="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2">
+                    <svg class="w-6 h-6 text-gray-300" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                      <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                  </div>
+                )}
+                <div class="p-6 bg-white rounded-2xl border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300">
+                  <span class="inline-block text-3xl font-bold text-[#0a91b1] mb-4">{step.number}</span>
+                  <h3 class="text-xl font-semibold text-gray-900 mb-2">{step.title}</h3>
+                  <p class="text-gray-600">{step.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- Benefits Section -->
+      <section class="relative py-16 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">{serviceData.benefits.title}</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">{serviceData.benefits.description}</p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {serviceData.benefits.items.map(benefit => (
+              <div class="p-6 bg-white rounded-2xl border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div class="w-12 h-12 rounded-xl bg-[#0a91b1]/10 flex items-center justify-center mb-4">
+                  <svg 
+                    class="w-6 h-6 text-[#0a91b1]"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    set:html={iconPaths[benefit.icon]}
+                  />
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">{benefit.title}</h3>
+                <p class="text-gray-600">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing Section -->
+      <section class="relative py-16 px-4 bg-gradient-to-b from-white via-[#0a91b1]/5 to-white">
+        <div class="max-w-5xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">{serviceData.pricing.title}</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">{serviceData.pricing.description}</p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {serviceData.pricing.options.map(option => (
+              <div class="p-8 bg-white rounded-2xl border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300">
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">{option.name}</h3>
+                <div class="flex items-baseline mb-4">
+                  <span class="text-4xl font-bold text-[#0a91b1]">{option.price}</span>
+                  <span class="ml-2 text-gray-500">/ session</span>
+                </div>
+                <div class="flex items-center text-sm text-gray-500 mb-6">
+                  <svg class="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                  <span>{option.duration}</span>
+                </div>
+                <ul class="space-y-3 mb-8">
+                  {option.includes.map(item => (
+                    <li class="flex items-center">
+                      <svg class="w-5 h-5 text-[#0a91b1] mr-3" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <polyline points="20 6 9 17 4 12"/>
+                      </svg>
+                      <span class="text-gray-600">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href="/booking"
+                  class="block w-full py-3 px-6 text-center font-semibold rounded-lg bg-[#0a91b1] text-white hover:bg-[#097d99] transition-colors"
+                >
+                  Book Now
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="relative py-16 px-4 bg-white">
+        <div class="max-w-3xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">{serviceData.faq.title}</h2>
+          </div>
+          <div class="space-y-6">
+            {serviceData.faq.questions.map(faq => (
+              <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">{faq.question}</h3>
+                <p class="text-gray-600">{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="relative py-24 px-4 bg-gray-900">
+        <div class="absolute inset-0 z-0">
+          <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-bl from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
+          <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-tr from-sky-500/10 to-cyan-500/10 rounded-full blur-3xl animate-blob"></div>
+        </div>
+        <div class="relative z-10 max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">{serviceData.cta.title}</h2>
+          <p class="text-xl text-gray-300 mb-8">{serviceData.cta.description}</p>
+          <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a
+              href={serviceData.cta.primaryButton.href}
+              class="inline-flex items-center justify-center px-8 py-4 rounded-lg font-medium bg-[#0a91b1] text-white hover:bg-[#097d99] transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
+            >
+              {serviceData.cta.primaryButton.text}
+            </a>
+            <a
+              href={serviceData.cta.secondaryButton.href}
+              class="inline-flex items-center justify-center px-8 py-4 rounded-lg font-medium bg-gray-800 text-white hover:bg-gray-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
+            >
+              {serviceData.cta.secondaryButton.text}
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style>
+  @keyframes blob {
+    0% {
+      transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    }
+    33% {
+      transform: translate(-50%, -50%) scale(1.1) rotate(120deg);
+    }
+    66% {
+      transform: translate(-50%, -50%) scale(0.9) rotate(240deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1) rotate(360deg);
+    }
+  }
+
+  .animate-blob {
+    animation: blob 20s infinite linear;
+  }
+
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+
+  .hover\:-translate-y-0.5:hover {
+    transform: translateY(-2px);
+  }
+</style> 

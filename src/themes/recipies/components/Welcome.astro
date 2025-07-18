@@ -1,0 +1,54 @@
+---
+import { Button } from './ui/Button';
+import { ArrowRight } from 'lucide-react';
+
+interface Props {
+  title: string;
+  description: string;
+  blogLink: string;
+  blogLinkText: string;
+}
+
+const { title, description, blogLink, blogLinkText } = Astro.props;
+---
+
+<section class="relative min-h-[80vh] flex items-center justify-center px-4 py-20">
+  <!-- Background with food-themed pattern -->
+  <div class="absolute inset-0 bg-gradient-to-b from-orange-50 to-white">
+    <div class="absolute inset-0 bg-[url('/pattern.svg')] opacity-5"></div>
+  </div>
+  
+  <div class="relative max-w-4xl mx-auto text-center">
+    <div class="mb-6">
+      <span class="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-orange-100 text-orange-600">
+        Discover Delicious Recipes
+      </span>
+    </div>
+    
+    <h1 class="text-4xl md:text-6xl font-display font-bold mb-6 leading-tight text-gray-900">
+      {title}
+    </h1>
+    
+    <p class="text-xl md:text-2xl mb-10 text-gray-600 max-w-2xl mx-auto font-light">
+      {description}
+    </p>
+    
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a 
+        href={blogLink}
+        class="inline-flex items-center justify-center gap-2 bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-orange-200"
+      >
+        {blogLinkText}
+        <ArrowRight className="w-5 h-5" />
+      </a>
+      
+      <a 
+        href="#featured-products"
+        class="inline-flex items-center justify-center gap-2 bg-white hover:bg-orange-50 text-orange-600 border-2 border-orange-200 px-8 py-4 rounded-lg font-medium transition-all duration-300"
+      >
+        Browse Popular Recipes
+        <ArrowRight className="w-5 h-5" />
+      </a>
+    </div>
+  </div>
+</section>

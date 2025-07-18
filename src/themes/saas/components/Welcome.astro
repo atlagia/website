@@ -1,0 +1,142 @@
+---
+import { Button } from './ui/Button';
+import { ArrowRight } from 'lucide-react';
+
+interface Logo {
+  src: string;
+  alt: string;
+}
+
+interface Props {
+  badge: string;
+  title: string;
+  description: string;
+  blogLink: string;
+  blogLinkText: string;
+  heroImage: string;
+  partnerLogos: Logo[];
+  getStartedText?: string;
+}
+
+const { 
+  badge, 
+  title, 
+  description, 
+  blogLink, 
+  blogLinkText, 
+  heroImage, 
+  partnerLogos,
+  getStartedText = 'Get Started Free'
+} = Astro.props;
+const isRTL = Astro.url.pathname.includes('/ar/');
+---
+
+<section class="relative min-h-[90vh] flex items-center justify-center px-4 py-20 overflow-hidden bg-[#f9faff]">
+  <!-- Animated Background Elements -->
+  <div class="absolute inset-0 z-0">
+    <!-- Animated Gradient Blobs -->
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-bl from-purple-500/10 to-blue-500/10 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-tr from-pink-500/10 to-cyan-500/10 rounded-full blur-3xl animate-blob"></div>
+  </div>
+
+  <div class={`relative z-10 max-w-7xl mx-auto flex flex-col ${isRTL ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-12`}>
+    <div class="flex-1 flex flex-col">
+      <div class={`mb-6 flex ${isRTL ? 'justify-end' : 'justify-start'}`}>
+        <span class="px-4 py-1.5 rounded-full text-sm font-medium bg-pink-50 text-pink-600 border border-pink-100" id="content-badge">
+          {badge}
+        </span>
+      </div>
+      <h1 
+        class="text-4xl lg:text-6xl font-bold mb-6 leading-tight text-gray-900"
+        set:html={title}
+        id="content-title"
+      />
+      <!-- Mobile Image (shown between title and description) -->
+      <div class="block lg:hidden relative mb-8">
+        <div class="absolute inset-0 bg-gradient-to-r from-pink-500/10 to-purple-500/10 rounded-3xl blur-2xl transform rotate-6 scale-110"></div>
+        <img 
+          src={heroImage}
+          alt="AI Automation Illustration"
+          class="relative w-full max-w-[600px] mx-auto drop-shadow-xl transform hover:scale-105 transition-transform duration-300"
+          id="content-heroImage-mobile"
+        />
+      </div>
+      <p class="text-xl text-gray-600 mb-8" id="content-description">
+        {description}
+      </p>
+      <div class={`flex flex-col sm:flex-row gap-4 ${isRTL ? 'justify-end' : 'justify-start'}`}>
+        <a 
+          href="https://app.atlagia.com"
+          class="inline-flex items-center justify-center gap-2 bg-pink-600 hover:bg-pink-700 text-white px-8 py-4 rounded-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
+          id="content-getStartedLink"
+        >
+          <span id="content-getStartedText">{getStartedText}</span>
+          <ArrowRight className={`w-5 h-5 ${isRTL ? 'rtl-rotate-180' : ''}`} />
+        </a>
+        <a 
+          href={blogLink}
+          class="inline-flex items-center justify-center gap-2 bg-gray-100 hover:bg-gray-200 text-gray-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
+          id="content-blogLink"
+        >
+          <span id="content-blogLinkText">{blogLinkText}</span>
+          <ArrowRight className={`w-5 h-5 ${isRTL ? 'rtl-rotate-180' : ''}`} />
+        </a>
+      </div>
+      <div class={`mt-12 flex items-center ${isRTL ? 'justify-end' : 'justify-start'} gap-8`}>
+        {partnerLogos.map((logo, index) => (
+          <img 
+            src={logo.src} 
+            alt={logo.alt} 
+            class="h-8 opacity-60 hover:opacity-100 transition-opacity duration-300"
+            id={`content-partnerLogo-${index}`}
+            data-content-key={`partnerLogos.${index}.src`}
+            data-alt-key={`partnerLogos.${index}.alt`}
+          />
+        ))}
+      </div>
+    </div>
+    <!-- Desktop Image (hidden on mobile) -->
+    <div class="flex-1 relative hidden lg:block">
+      <div class="absolute inset-0 bg-gradient-to-r from-pink-500/10 to-purple-500/10 rounded-3xl blur-2xl transform rotate-6 scale-110"></div>
+      <img 
+        src={heroImage}
+        alt="AI Automation Illustration"
+        class="relative w-full max-w-[800px] mx-auto drop-shadow-xl transform hover:scale-105 transition-transform duration-300"
+        id="content-heroImage-desktop"
+      />
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes blob {
+    0% {
+      transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    }
+    33% {
+      transform: translate(-50%, -50%) scale(1.1) rotate(120deg);
+    }
+    66% {
+      transform: translate(-50%, -50%) scale(0.9) rotate(240deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1) rotate(360deg);
+    }
+  }
+
+  .animate-blob {
+    animation: blob 20s infinite linear;
+  }
+
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+
+  .font-arabic {
+    font-family: 'Cairo', sans-serif;
+  }
+</style>

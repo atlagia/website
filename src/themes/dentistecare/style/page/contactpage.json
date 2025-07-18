@@ -1,0 +1,63 @@
+{
+  "hero": {
+    "section": "relative py-20 px-4 bg-gradient-to-b from-[#f0f9ff] via-white to-transparent overflow-hidden",
+    "blob1": "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-bl from-[#0a91b1]/10 to-blue-500/10 rounded-full blur-3xl animate-blob animation-delay-4000",
+    "blob2": "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-tr from-sky-500/10 to-[#0a91b1]/10 rounded-full blur-3xl animate-blob",
+    "container": "relative z-10 max-w-7xl mx-auto text-center",
+    "subtitle": "inline-block px-4 py-1.5 mb-4 text-sm font-medium rounded-full bg-[#0a91b1]/10 text-[#0a91b1] border border-[#0a91b1]/20",
+    "title": "text-4xl md:text-5xl font-bold text-gray-900 mb-6",
+    "description": "text-xl text-gray-600 max-w-3xl mx-auto"
+  },
+  "contactOptions": {
+    "section": "relative py-16 px-4 bg-white",
+    "container": "max-w-7xl mx-auto",
+    "grid": "grid grid-cols-1 md:grid-cols-3 gap-8",
+    "card": "group p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl border border-gray-100 hover:border-[#0a91b1]/20 transition-all duration-300",
+    "cardContent": "flex flex-col items-center text-center",
+    "iconContainer": "w-14 h-14 mb-6 rounded-xl bg-[#0a91b1]/10 group-hover:bg-[#0a91b1]/20 flex items-center justify-center transition-colors",
+    "icon": "w-7 h-7 text-[#0a91b1]",
+    "title": "text-xl font-semibold mb-2 text-gray-900 group-hover:text-[#0a91b1]",
+    "description": "text-gray-600 mb-2",
+    "content": "font-medium text-[#0a91b1]"
+  },
+  "contactForm": {
+    "section": "relative py-16 px-4 bg-gradient-to-b from-white via-[#0a91b1]/5 to-white",
+    "container": "max-w-7xl mx-auto",
+    "grid": "grid grid-cols-1 lg:grid-cols-2 gap-16",
+    "formContainer": "bg-white p-8 rounded-2xl shadow-lg border border-gray-100",
+    "formTitle": "text-2xl font-bold text-gray-900 mb-6",
+    "form": "space-y-6",
+    "formRow": "grid grid-cols-1 md:grid-cols-2 gap-6",
+    "formGroup": {
+      "label": "block text-sm font-medium text-gray-700 mb-1",
+      "input": "w-full px-4 py-2.5 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0a91b1]/20 focus:border-[#0a91b1] transition-colors",
+      "textarea": "w-full px-4 py-2.5 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0a91b1]/20 focus:border-[#0a91b1] transition-colors"
+    },
+    "submitButton": "w-full bg-[#0a91b1] text-white py-3 px-6 rounded-lg font-semibold hover:bg-[#097d99] transition-colors hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
+  },
+  "mapInfo": {
+    "container": "space-y-8",
+    "map": "aspect-video w-full rounded-2xl overflow-hidden shadow-lg",
+    "hoursCard": "bg-white p-8 rounded-2xl shadow-lg border border-gray-100",
+    "hoursHeader": "flex items-center gap-3 mb-4",
+    "hoursIconContainer": "w-10 h-10 rounded-lg bg-[#0a91b1]/10 flex items-center justify-center",
+    "hoursIcon": "w-5 h-5 text-[#0a91b1]",
+    "hoursTitle": "text-xl font-semibold text-gray-900",
+    "hoursContent": "pl-13 text-gray-600 whitespace-pre-line",
+    "emergencyCard": "bg-gray-900 p-8 rounded-2xl shadow-lg",
+    "emergencyHeader": "flex items-center gap-3 mb-4",
+    "emergencyIconContainer": "w-10 h-10 rounded-lg bg-cyan-600/20 flex items-center justify-center",
+    "emergencyIcon": "w-5 h-5 text-cyan-400",
+    "emergencyTitle": "text-xl font-semibold text-white",
+    "emergencyContent": "pl-13",
+    "emergencyDescription": "text-gray-300 mb-2",
+    "emergencyContact": "text-xl font-bold text-cyan-400 hover:text-cyan-300 transition-colors"
+  },
+  "animations": {
+    "blob": "keyframes { 0% { transform: translate(-50%, -50%) scale(1) rotate(0deg); } 33% { transform: translate(-50%, -50%) scale(1.1) rotate(120deg); } 66% { transform: translate(-50%, -50%) scale(0.9) rotate(240deg); } 100% { transform: translate(-50%, -50%) scale(1) rotate(360deg); } }",
+    "animateBlob": "animation: blob 20s infinite linear",
+    "animationDelay4000": "animation-delay: 4s",
+    "backdropBlurSm": "backdrop-filter: blur(8px)",
+    "hoverTranslateY": "transform: translateY(-2px)"
+  }
+} 

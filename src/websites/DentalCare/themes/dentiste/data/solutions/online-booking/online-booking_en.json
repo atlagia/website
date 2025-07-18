@@ -1,0 +1,317 @@
+{
+  "hero": {
+    "subtitle": "PATIENT EXPERIENCE",
+    "title": "24/7 Online Appointment Booking",
+    "description": "Empower patients to book appointments on their schedule with our intuitive online booking platform, reducing administrative workload and improving patient satisfaction."
+  },
+  "overview": {
+    "title": "Modernize Your Appointment Scheduling",
+    "description": "Our online booking solution integrates seamlessly with your practice management system, allowing patients to book, reschedule, or cancel appointments anytime, anywhere.",
+    "features": [
+      {
+        "icon": "calendar",
+        "title": "Real-Time Availability",
+        "description": "Show patients your actual available appointment slots"
+      },
+      {
+        "icon": "smartphone",
+        "title": "Mobile-Friendly",
+        "description": "Optimized experience on all devices"
+      },
+      {
+        "icon": "refresh",
+        "title": "Instant Confirmation",
+        "description": "Automated emails and text confirmations"
+      },
+      {
+        "icon": "shield",
+        "title": "Secure & HIPAA Compliant",
+        "description": "Enterprise-grade security for patient data"
+      }
+    ]
+  },
+  "applications": {
+    "title": "Comprehensive Booking Capabilities",
+    "description": "Everything you need for a seamless patient scheduling experience",
+    "problems": [
+      {
+        "title": "New Patient Intake",
+        "description": "Digital forms with booking to save time",
+        "icon": "user-plus"
+      },
+      {
+        "title": "Returning Patients",
+        "description": "Quick booking with saved information",
+        "icon": "repeat"
+      },
+      {
+        "title": "Family Appointments",
+        "description": "Book multiple family members together",
+        "icon": "users"
+      },
+      {
+        "title": "Emergency Scheduling",
+        "description": "Priority booking for urgent care needs",
+        "icon": "alert-circle"
+      },
+      {
+        "title": "Specialty Consultations",
+        "description": "Route patients to the right provider",
+        "icon": "activity"
+      },
+      {
+        "title": "Insurance Verification",
+        "description": "Collect and verify insurance during booking",
+        "icon": "check-square"
+      }
+    ]
+  },
+  "process": {
+    "title": "How It Works",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Integration Setup",
+        "description": "We connect to your practice management system"
+      },
+      {
+        "number": "02",
+        "title": "Provider Configuration",
+        "description": "Set up provider schedules and appointment types"
+      },
+      {
+        "number": "03",
+        "title": "Website Integration",
+        "description": "Add booking widget to your website and social media"
+      },
+      {
+        "number": "04",
+        "title": "Rules Configuration",
+        "description": "Define your scheduling rules and preferences"
+      },
+      {
+        "number": "05",
+        "title": "Staff Training",
+        "description": "Training for managing online appointments"
+      },
+      {
+        "number": "06",
+        "title": "Patient Communication",
+        "description": "Announce the new booking option to patients"
+      }
+    ]
+  },
+  "advantages": {
+    "title": "Business Benefits",
+    "description": "How online booking transforms your practice operations",
+    "benefits": [
+      {
+        "title": "30% Reduced No-Shows",
+        "description": "Automated reminders and easier rescheduling",
+        "icon": "check-circle"
+      },
+      {
+        "title": "24/7 Booking Capability",
+        "description": "Capture appointments even when office is closed",
+        "icon": "clock"
+      },
+      {
+        "title": "80% Less Phone Traffic",
+        "description": "Reduce administrative burden on front desk",
+        "icon": "phone-off"
+      },
+      {
+        "title": "15% More New Patients",
+        "description": "Convenient booking drives practice growth",
+        "icon": "trending-up"
+      }
+    ]
+  },
+  "features": {
+    "title": "Key Features",
+    "description": "Powerful tools designed for modern dental practices",
+    "featureList": [
+      {
+        "title": "Customizable Rules",
+        "description": "Set booking windows, buffer times, and more",
+        "icon": "settings"
+      },
+      {
+        "title": "Provider Preferences",
+        "description": "Each provider controls their availability",
+        "icon": "user"
+      },
+      {
+        "title": "Insurance Verification",
+        "description": "Capture insurance details during booking",
+        "icon": "clipboard"
+      },
+      {
+        "title": "Automated Reminders",
+        "description": "Email and SMS appointment confirmations",
+        "icon": "bell"
+      },
+      {
+        "title": "Waitlist Management",
+        "description": "Fill cancelled slots automatically",
+        "icon": "list"
+      },
+      {
+        "title": "Custom Forms",
+        "description": "Intake and medical history integration",
+        "icon": "file-text"
+      },
+      {
+        "title": "Appointment Types",
+        "description": "Different durations for different procedures",
+        "icon": "layers"
+      },
+      {
+        "title": "Analytics Dashboard",
+        "description": "Track booking patterns and trends",
+        "icon": "bar-chart"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Pricing Options",
+    "description": "Select the plan that fits your practice needs",
+    "options": [
+      {
+        "name": "Essentials",
+        "price": "$79",
+        "duration": "per month",
+        "includes": [
+          "Basic online booking widget",
+          "Email confirmations",
+          "5 appointment types",
+          "Single provider",
+          "Website integration",
+          "Email support"
+        ]
+      },
+      {
+        "name": "Professional",
+        "price": "$149",
+        "duration": "per month",
+        "includes": [
+          "All Essentials features",
+          "Up to 5 providers",
+          "SMS reminders",
+          "Custom intake forms",
+          "Unlimited appointment types",
+          "Insurance verification",
+          "Priority support"
+        ]
+      },
+      {
+        "name": "Enterprise",
+        "price": "$279",
+        "duration": "per month",
+        "includes": [
+          "All Professional features",
+          "Unlimited providers",
+          "Waitlist management",
+          "Advanced analytics",
+          "Custom API integrations",
+          "Multi-location support",
+          "Dedicated account manager",
+          "HIPAA BAA included"
+        ]
+      }
+    ]
+  },
+  "integration": {
+    "title": "Seamless Integration",
+    "description": "Works with your existing practice management systems",
+    "partners": [
+      {
+        "name": "Dentrix",
+        "logo": "/images/partners/dentrix.png"
+      },
+      {
+        "name": "Eaglesoft",
+        "logo": "/images/partners/eaglesoft.png"
+      },
+      {
+        "name": "Open Dental",
+        "logo": "/images/partners/opendental.png"
+      },
+      {
+        "name": "Curve Dental",
+        "logo": "/images/partners/curve.png"
+      },
+      {
+        "name": "Denticon",
+        "logo": "/images/partners/denticon.png"
+      },
+      {
+        "name": "Dentimax",
+        "logo": "/images/partners/dentimax.png"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": [
+      {
+        "question": "How quickly can we get online booking set up?",
+        "answer": "Most practices are fully set up within 1-2 weeks. The process includes connecting to your practice management system, configuring your scheduling rules, setting up provider calendars, and integrating the booking widget on your website. Our implementation team handles most of the work, requiring only a few hours of your time."
+      },
+      {
+        "question": "Can patients book for specific procedures?",
+        "answer": "Yes, you can set up different appointment types with specific durations for different procedures. You control which procedures are available for online booking. For complex treatments requiring consultation first, you can set up specific 'consultation' appointment types that book the right amount of time."
+      },
+      {
+        "question": "How does it prevent double-booking?",
+        "answer": "Our system syncs in real-time with your practice management software. When a patient books online, that time slot is immediately blocked in your schedule. Similarly, when your staff books appointments, those slots are instantly removed from online availability."
+      },
+      {
+        "question": "Can we set specific hours for online booking?",
+        "answer": "Absolutely. You have full control over which days and times are available for online booking. You can set different hours for different providers, block out lunch breaks, reserve certain times for specific procedures, or keep some slots available only for staff to book directly."
+      },
+      {
+        "question": "What happens if a patient needs to reschedule?",
+        "answer": "Patients can easily reschedule or cancel their appointments through our platform. When they receive confirmation or reminder emails/texts, they include links to modify their appointment. The system enforces your rules about cancellation windows and can automatically add cancellation fees if configured."
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Customer Success Stories",
+    "reviews": [
+      {
+        "name": "Dr. Sarah Johnson",
+        "practice": "Smile Design Dentistry",
+        "rating": 5,
+        "comment": "Adding online booking has transformed our front desk operations. Our staff now spends less time on the phone and more time providing personalized attention to patients in the office. Plus, we're seeing a significant increase in new patient appointments that come in overnight!",
+        "date": "1 month ago"
+      },
+      {
+        "name": "Dr. Michael Rodriguez",
+        "practice": "Family Dental Care",
+        "rating": 5,
+        "comment": "The integration with our existing management system was seamless. Patients love the convenience, and our no-show rate has dropped by almost 40% with the automated reminders. I only wish we had implemented this years ago.",
+        "date": "2 months ago"
+      },
+      {
+        "name": "Lisa Patel",
+        "practice": "Office Manager, Orthodontic Specialists",
+        "rating": 5,
+        "comment": "Managing appointments for multiple orthodontists used to be incredibly complicated. The online booking system has simplified everything with its rules engine that ensures the right appointments go to the right providers. Our patients particularly appreciate the family booking feature for multiple children.",
+        "date": "3 months ago"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Modernize Your Appointment Booking?",
+    "description": "Join thousands of dental practices offering convenient online scheduling to their patients.",
+    "primaryButton": {
+      "text": "Request Demo",
+      "href": "/request-demo"
+    },
+    "secondaryButton": {
+      "text": "View Pricing",
+      "href": "/pricing"
+    }
+  }
+} 

@@ -1,0 +1,65 @@
+---
+interface Metric {
+  value: string;
+  label: string;
+}
+
+interface Story {
+  company: string;
+  logo: string;
+  quote: string;
+  author: string;
+  role: string;
+  metrics: Metric;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  stories: Story[];
+  platformMetrics: Metric[];
+}
+
+const { title, description, stories, platformMetrics } = Astro.props;
+---
+
+<section class="py-20 px-4 bg-white">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">{title}</h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">{description}</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+      {stories.map((story) => (
+        <div class="bg-gray-50 rounded-xl p-8">
+          <img
+            src={story.logo}
+            alt={story.company}
+            class="h-8 mb-6"
+          />
+          <div class="mb-6">
+            <div class="text-4xl font-bold text-blue-600 mb-2">{story.metrics.value}</div>
+            <div class="text-gray-600">{story.metrics.label}</div>
+          </div>
+          <blockquote class="text-gray-700 mb-6">"{story.quote}"</blockquote>
+          <div class="flex items-center">
+            <div>
+              <div class="font-semibold">{story.author}</div>
+              <div class="text-sm text-gray-600">{story.role}</div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {platformMetrics.map((metric) => (
+        <div class="text-center">
+          <div class="text-4xl font-bold text-blue-600 mb-2">{metric.value}</div>
+          <div class="text-gray-600">{metric.label}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section> 

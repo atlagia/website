@@ -50,6 +50,8 @@ export default defineConfig({
         '@components': path.resolve(__dirname, './src/components'),
         '@libs': path.resolve(__dirname, './src/lib'),
         '@themes': path.resolve(__dirname, './src/themes'),
+        '@utils': path.resolve(__dirname, './src/utils'),  // Add this line
+        '@websites': path.resolve(__dirname, './src/websites'),  // Add this line
       },
     },
     build: {

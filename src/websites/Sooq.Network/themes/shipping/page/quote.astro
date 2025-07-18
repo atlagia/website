@@ -1,0 +1,446 @@
+---
+import { SITE_TITLE } from '../consts';
+import pkg from 'lucide-react';
+const { Mail, Phone, MapPin, Truck, Package, BarChart, Calculator, Clock, Calendar } = pkg;
+
+const theme = import.meta.env.THEME || 'default';
+const lang = Astro.params.lang || 'en';
+
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+
+// Import language-specific contact data
+const contactData = await import(`../data/contact/contact_${lang}.json`);
+
+// Import styles
+const styles = await import(`../style/page/contactpage.json`);
+
+// Get business information from environment variables
+const businessInfo = {
+  name: import.meta.env.PUBLIC_BUSINESS_NAME || 'Global Shipping Solutions',
+  email: import.meta.env.PUBLIC_BUSINESS_EMAIL || 'support@sooq.network',
+  phone: import.meta.env.PUBLIC_BUSINESS_PHONE || '+1 (855) 256-4478',
+  address: {
+    street: import.meta.env.PUBLIC_BUSINESS_ADDRESS || '5301A Rivergrade Rd.',
+    city: import.meta.env.PUBLIC_BUSINESS_CITY || 'Irwindale',
+    country: import.meta.env.PUBLIC_BUSINESS_COUNTRY || 'CA 91706'
+  }
+};
+
+// Define locations
+const locations = [
+  {
+    title: "California Headquarters",
+    address: "5301A Rivergrade Rd., Irwindale, CA 91706"
+  },
+  {
+    title: "Southern California Branch",
+    address: "1235 Quarry St., Corona, CA 92879"
+  },
+  {
+    title: "Nevada Branch",
+    address: "2880 N Lamb Blvd., Las Vegas, NV 89115"
+  }
+];
+
+// Define shipping options
+const shippingOptions = [
+  { id: "standard", name: "Standard Shipping", description: "5-7 business days" },
+  { id: "express", name: "Express Shipping", description: "2-3 business days" },
+  { id: "overnight", name: "Overnight Shipping", description: "Next business day" },
+  { id: "international", name: "International Shipping", description: "7-14 business days" },
+  { id: "bulk", name: "Bulk Freight", description: "Custom scheduling" },
+  { id: "ecommerce", name: "eCommerce Fulfillment", description: "Integrated solutions" }
+];
+
+// Define icon paths for each icon type
+const iconPaths = {
+  Mail: `<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline>`,
+  Phone: `<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>`,
+  MapPin: `<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle>`,
+  Truck: `<rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle>`
+};
+
+// Map contact info with icon paths
+const quoteContactInfo = [
+  {
+    icon: "Truck",
+    iconPath: iconPaths.Truck,
+    title: "Fast Shipping Quotes",
+    description: "Get quick estimates for your shipping needs",
+    content: "24/7 Online Quote System",
+    link: "#quote-form"
+  },
+  {
+    icon: "Phone",
+    iconPath: iconPaths.Phone,
+    title: "Call for a Quote",
+    description: "Speak directly with our shipping experts",
+    content: businessInfo.phone,
+    link: `tel:${businessInfo.phone}`
+  },
+  {
+    icon: "Mail",
+    iconPath: iconPaths.Mail,
+    title: "Email Us",
+    description: "Send us your shipping requirements",
+    content: businessInfo.email,
+    link: `mailto:${businessInfo.email}`
+  }
+];
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <BaseHead 
+      title={`Request a Shipping Quote | ${businessInfo.name}`}
+      description="Get a customized shipping quote for your logistics and eCommerce shipping needs. Fast, reliable, and competitive pricing."
+    />
+  </head>
+  <body>
+    <Header />
+    <main class="pt-10">
+      <!-- Hero Section -->
+      <section class={styles.hero.section}>
+        <div class="absolute inset-0 z-0">
+          <div class={styles.hero.blob1}></div>
+          <div class={styles.hero.blob2}></div>
+        </div>
+        <div class={styles.hero.container}>
+          <span class={styles.hero.subtitle}>
+            REQUEST A QUOTE
+          </span>
+          <h1 class={styles.hero.title}>Get Your Shipping Quote Today</h1>
+          <p class={styles.hero.description}>
+            Need pricing for your shipping needs? Our fast and easy quote system provides competitive rates for all your domestic and international shipping requirements.
+          </p>
+        </div>
+      </section>
+
+      <!-- Quote Options -->
+      <section class={styles.contactOptions.section}>
+        <div class={styles.contactOptions.container}>
+          <div class={styles.contactOptions.grid}>
+            {quoteContactInfo.map(item => (
+              <a
+                href={item.link}
+                class={styles.contactOptions.card}
+              >
+                <div class={styles.contactOptions.cardContent}>
+                  <div class={styles.contactOptions.iconContainer}>
+                    <svg 
+                      class={styles.contactOptions.icon} 
+                      fill="none" 
+                      viewBox="0 0 24 24" 
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      set:html={item.iconPath}
+                    />
+                  </div>
+                  <h3 class={styles.contactOptions.title}>{item.title}</h3>
+                  <p class={styles.contactOptions.description}>{item.description}</p>
+                  <p class={styles.contactOptions.content}>{item.content}</p>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- Quote Form Section -->
+      <section class={styles.contactForm.section} id="quote-form">
+        <div class={styles.contactForm.container}>
+          <div class={styles.contactForm.grid}>
+            <!-- Left: Form -->
+            <div class={styles.contactForm.formContainer}>
+              <h2 class={styles.contactForm.formTitle}>Request a Shipping Quote</h2>
+              <form class={styles.contactForm.form}>
+                <div class={styles.contactForm.formRow}>
+                  <div>
+                    <label for="first-name" class={styles.contactForm.formGroup.label}>
+                      First Name
+                    </label>
+                    <input
+                      type="text"
+                      id="first-name"
+                      name="first-name"
+                      placeholder="Enter your first name"
+                      required
+                      class={styles.contactForm.formGroup.input}
+                    />
+                  </div>
+                  <div>
+                    <label for="last-name" class={styles.contactForm.formGroup.label}>
+                      Last Name
+                    </label>
+                    <input
+                      type="text"
+                      id="last-name"
+                      name="last-name"
+                      placeholder="Enter your last name"
+                      required
+                      class={styles.contactForm.formGroup.input}
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label for="email" class={styles.contactForm.formGroup.label}>
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                    class={styles.contactForm.formGroup.input}
+                  />
+                </div>
+                <div>
+                  <label for="company" class={styles.contactForm.formGroup.label}>
+                    Company Name
+                  </label>
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    placeholder="Enter your company name (optional)"
+                    class={styles.contactForm.formGroup.input}
+                  />
+                </div>
+                <div>
+                  <label class={styles.contactForm.formGroup.label}>
+                    Shipping Services Needed
+                  </label>
+                  <div class="grid grid-cols-2 gap-3 mt-1">
+                    {shippingOptions.map(option => (
+                      <div class="flex items-start">
+                        <input 
+                          type="checkbox" 
+                          id={option.id} 
+                          name="shippingType" 
+                          value={option.id} 
+                          class="mt-1 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded" 
+                        />
+                        <label for={option.id} class="ml-2 block text-sm">
+                          <span class="font-medium">{option.name}</span>
+                          <span class="text-gray-500 block text-xs">{option.description}</span>
+                        </label>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <label for="packageDetails" class={styles.contactForm.formGroup.label}>
+                    Package Details
+                  </label>
+                  <textarea
+                    id="packageDetails"
+                    name="packageDetails"
+                    rows="4"
+                    placeholder="Dimensions, weight, type of items, special handling requirements, etc."
+                    class={styles.contactForm.formGroup.textarea}
+                  ></textarea>
+                </div>
+                <div class={styles.contactForm.formRow}>
+                  <div>
+                    <label for="origin" class={styles.contactForm.formGroup.label}>
+                      Origin Location
+                    </label>
+                    <input
+                      type="text"
+                      id="origin"
+                      name="origin"
+                      placeholder="City, State, Country"
+                      class={styles.contactForm.formGroup.input}
+                    />
+                  </div>
+                  <div>
+                    <label for="destination" class={styles.contactForm.formGroup.label}>
+                      Destination
+                    </label>
+                    <input
+                      type="text"
+                      id="destination"
+                      name="destination"
+                      placeholder="City, State, Country"
+                      class={styles.contactForm.formGroup.input}
+                    />
+                  </div>
+                </div>
+                <button
+                  type="submit"
+                  class={styles.contactForm.submitButton}
+                >
+                  Request Quote
+                </button>
+                <p class="text-xs text-gray-500 mt-4">
+                  By submitting this form, you agree to our <a href="/privacy" class="text-blue-600 hover:underline">Privacy Policy</a> and consent to being contacted regarding your shipping needs.
+                </p>
+              </form>
+            </div>
+
+            <!-- Right: Info -->
+            <div class={styles.mapInfo.container}>
+              <div class={styles.mapInfo.map}>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3304.4557921177266!2d-118.0524077!3d34.0849046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2d5f2e6212c39%3A0x9f5e9cbfd6d69e74!2s5301%20Rivergrade%20Rd%2C%20Irwindale%2C%20CA%2091706!5e0!3m2!1sen!2sus!4v1720394879372!5m2!1sen!2sus"
+                  width="100%"
+                  height="100%"
+                  style="border:0;"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+              
+              <!-- Shipping Hours -->
+              <div class={styles.mapInfo.hoursCard}>
+                <div class={styles.mapInfo.hoursHeader}>
+                  <div class={styles.mapInfo.hoursIconContainer}>
+                    <svg class={styles.mapInfo.hoursIcon} fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                  </div>
+                  <h3 class={styles.mapInfo.hoursTitle}>Operating Hours</h3>
+                </div>
+                <div class={styles.mapInfo.hoursContent}>
+                  <p>Monday - Friday: 8:00 AM - 8:00 PM<br>
+                  Saturday: 9:00 AM - 4:00 PM<br>
+                  Sunday: Closed (Emergency Support Available)</p>
+                </div>
+              </div>
+              
+              <!-- Our Locations -->
+              <div class={styles.mapInfo.emergencyCard}>
+                <div class={styles.mapInfo.emergencyHeader}>
+                  <div class={styles.mapInfo.emergencyIconContainer}>
+                    <svg class={styles.mapInfo.emergencyIcon} fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                  </div>
+                  <h3 class={styles.mapInfo.emergencyTitle}>Our Locations</h3>
+                </div>
+                <div class={styles.mapInfo.emergencyContent}>
+                  {locations.map(location => (
+                    <div class="mb-3 last:mb-0">
+                      <p class="font-medium text-sm">{location.title}</p>
+                      <p class="text-sm text-gray-600">{location.address}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              
+              <!-- Call for Immediate Quote -->
+              <div class={styles.mapInfo.emergencyCard}>
+                <div class={styles.mapInfo.emergencyHeader}>
+                  <div class={styles.mapInfo.emergencyIconContainer}>
+                    <svg class={styles.mapInfo.emergencyIcon} fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                  </div>
+                  <h3 class={styles.mapInfo.emergencyTitle}>Need a Fast Quote?</h3>
+                </div>
+                <div class={styles.mapInfo.emergencyContent}>
+                  <p class={styles.mapInfo.emergencyDescription}>For immediate shipping quotes, call our dedicated quote line:</p>
+                  <a href={`tel:${businessInfo.phone}`} class={styles.mapInfo.emergencyContact}>
+                    {businessInfo.phone}
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Testimonials Section -->
+      <section class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-2xl font-bold text-center mb-8">What Our Customers Say</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <div class="flex items-center mb-4">
+                <div class="text-yellow-400 flex">
+                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+              </div>
+              <p class="text-gray-600 italic mb-4">"Their shipping quotes were significantly lower than competitors, and they still delivered ahead of schedule. Truly impressed with their service."</p>
+              <p class="font-semibold">- Sarah Johnson, eCommerce Business Owner</p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <div class="flex items-center mb-4">
+                <div class="text-yellow-400 flex">
+                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+              </div>
+              <p class="text-gray-600 italic mb-4">"We had complex international shipping requirements, and they provided a custom solution that saved us both time and money. Excellent service."</p>
+              <p class="font-semibold">- Michael Chen, Import/Export Manager</p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <div class="flex items-center mb-4">
+                <div class="text-yellow-400 flex">
+                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+              </div>
+              <p class="text-gray-600 italic mb-4">"Their quote process was quick and straightforward. The shipping rates were competitive, and our packages arrived in perfect condition."</p>
+              <p class="font-semibold">- Rebecca Martinez, Retail Operations Director</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <Footer />
+    
+    <script>
+      // Simple form submission handling
+      document.querySelector('form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Thank you for your quote request. Our team will contact you within 24 hours with a detailed shipping quote.');
+        this.reset();
+      });
+    </script>
+  </body>
+</html>
+
+<style define:vars={{ 
+  blobAnimation: styles.animations.blob 
+}}>
+  @keyframes blob {
+    0% {
+      transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    }
+    33% {
+      transform: translate(-50%, -50%) scale(1.1) rotate(120deg);
+    }
+    66% {
+      transform: translate(-50%, -50%) scale(0.9) rotate(240deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1) rotate(360deg);
+    }
+  }
+
+  .animate-blob {
+    animation: blob 20s infinite linear;
+  }
+
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+  
+  .backdrop-blur-sm {
+    backdrop-filter: blur(8px);
+  }
+
+  .hover\:-translate-y-0.5:hover {
+    transform: translateY(-2px);
+  }
+</style>

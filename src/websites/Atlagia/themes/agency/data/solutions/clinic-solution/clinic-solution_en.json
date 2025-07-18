@@ -1,0 +1,335 @@
+{
+  "hero": {
+    "subtitle": "Clinic Management System",
+    "title": "Streamline Your Clinic Operations",
+    "description": "An integrated clinic management solution that combines patient care, administrative tasks, and business operations to enhance your practice efficiency.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Clinic Management Solution Demo"
+    },
+    "stats": [
+      {
+        "value": "96%",
+        "label": "Patient Satisfaction"
+      },
+      {
+        "value": "50%",
+        "label": "Administrative Time Saved"
+      },
+      {
+        "value": "35%",
+        "label": "Revenue Increase"
+      }
+    ]
+  },
+  "features": {
+    "subtitle": "Comprehensive Features",
+    "title": "Everything Your Clinic Needs",
+    "description": "A complete suite of tools designed for modern clinics",
+    "categories": [
+      {
+        "name": "Clinical Operations",
+        "description": "Streamline patient care and clinical workflows"
+      },
+      {
+        "name": "Practice Management",
+        "description": "Optimize administrative and business operations"
+      }
+    ],
+    "items": [
+      {
+        "icon": "calendar",
+        "category": "Appointments",
+        "title": "Smart Scheduling",
+        "description": "AI-powered scheduling system with automated reminders",
+        "image": "/images/solutions/clinic/scheduling.jpg",
+        "highlights": [
+          "Online booking",
+          "Automated reminders",
+          "Waitlist management",
+          "Resource allocation"
+        ],
+        "stats": {
+          "value": "60%",
+          "label": "Reduced no-shows"
+        }
+      },
+      {
+        "icon": "file-text",
+        "category": "Clinical Records",
+        "title": "Electronic Health Records",
+        "description": "Comprehensive EHR system with easy documentation",
+        "image": "/images/solutions/clinic/ehr.jpg",
+        "highlights": [
+          "Digital charting",
+          "Treatment plans",
+          "Lab integration",
+          "E-prescriptions"
+        ],
+        "stats": {
+          "value": "45%",
+          "label": "Time saved on documentation"
+        }
+      },
+      {
+        "icon": "credit-card",
+        "category": "Billing",
+        "title": "Smart Billing",
+        "description": "Automated billing and insurance processing",
+        "image": "/images/solutions/clinic/billing.jpg",
+        "highlights": [
+          "Insurance verification",
+          "Payment processing",
+          "Claims management",
+          "Financial reporting"
+        ],
+        "stats": {
+          "value": "30%",
+          "label": "Faster reimbursements"
+        }
+      },
+      {
+        "icon": "activity",
+        "category": "Analytics",
+        "title": "Practice Intelligence",
+        "description": "Data-driven insights for better decision making",
+        "image": "/images/solutions/clinic/analytics.jpg",
+        "highlights": [
+          "Performance metrics",
+          "Patient analytics",
+          "Financial insights",
+          "Operational reports"
+        ],
+        "stats": {
+          "value": "35%",
+          "label": "Revenue growth"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "See It In Action",
+    "description": "Watch how leading clinics are transforming their practice",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Clinic Success Story"
+    },
+    "testimonials": [
+      {
+        "author": "Dr. Emily Rodriguez",
+        "role": "Clinic Director",
+        "image": "/images/testimonials/doctor1.jpg",
+        "quote": "This system has transformed how we operate. Our staff is more efficient and our patients are happier."
+      },
+      {
+        "author": "Dr. James Wilson",
+        "role": "Family Physician",
+        "image": "/images/testimonials/doctor2.jpg",
+        "quote": "The EHR system is intuitive and the billing integration has significantly improved our revenue cycle."
+      }
+    ]
+  },
+  "benefits": {
+    "subtitle": "Key Benefits",
+    "title": "Transform Your Practice",
+    "description": "Experience the advantages of a fully integrated clinic management system",
+    "items": [
+      {
+        "icon": "clock",
+        "title": "Time Efficiency",
+        "description": "Reduce administrative burden and focus on patient care",
+        "color": "blue",
+        "stats": {
+          "value": "50%",
+          "label": "Time Saved"
+        },
+        "highlights": [
+          "Automated workflows",
+          "Quick documentation",
+          "Efficient scheduling",
+          "Reduced paperwork"
+        ]
+      },
+      {
+        "icon": "heart",
+        "title": "Better Patient Care",
+        "description": "Enhance patient experience and outcomes",
+        "color": "red",
+        "stats": {
+          "value": "96%",
+          "label": "Patient Satisfaction"
+        },
+        "highlights": [
+          "Comprehensive records",
+          "Better follow-up",
+          "Improved communication",
+          "Care coordination"
+        ]
+      },
+      {
+        "icon": "trending-up",
+        "title": "Practice Growth",
+        "description": "Increase revenue and optimize operations",
+        "color": "green",
+        "stats": {
+          "value": "35%",
+          "label": "Revenue Growth"
+        },
+        "highlights": [
+          "Optimized billing",
+          "Reduced costs",
+          "Better utilization",
+          "Increased efficiency"
+        ]
+      },
+      {
+        "icon": "shield",
+        "title": "Compliance & Security",
+        "description": "Maintain regulatory compliance and data security",
+        "color": "purple",
+        "stats": {
+          "value": "100%",
+          "label": "HIPAA Compliant"
+        },
+        "highlights": [
+          "HIPAA compliance",
+          "Data encryption",
+          "Audit trails",
+          "Secure access"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "subtitle": "Transparent Pricing",
+    "title": "Flexible Pricing Plans",
+    "description": "Choose the perfect plan for your clinic. Save up to 20% with annual billing.",
+    "billingPeriods": ["Monthly", "Yearly"],
+    "plans": [
+      {
+        "name": "Basic",
+        "highlight": "Perfect for small clinics",
+        "monthlyPrice": "$299",
+        "yearlyPrice": "$2,990",
+        "yearlyDiscount": "Save $598/year",
+        "description": "Essential features for small practices",
+        "features": [
+          {
+            "text": "Appointment scheduling",
+            "included": true
+          },
+          {
+            "text": "Basic EHR",
+            "included": true
+          },
+          {
+            "text": "Patient portal",
+            "included": true
+          },
+          {
+            "text": "Email support",
+            "included": true
+          },
+          {
+            "text": "Basic reporting",
+            "included": true
+          },
+          {
+            "text": "Mobile access",
+            "included": true
+          }
+        ],
+        "cta": "Get Started",
+        "popular": false
+      },
+      {
+        "name": "Professional",
+        "highlight": "Most popular for growing clinics",
+        "monthlyPrice": "$599",
+        "yearlyPrice": "$5,990",
+        "yearlyDiscount": "Save $1,198/year",
+        "description": "Advanced features for established clinics",
+        "features": [
+          {
+            "text": "Everything in Basic, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Advanced EHR features",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "Telehealth platform",
+            "included": true
+          },
+          {
+            "text": "Advanced analytics",
+            "included": true
+          },
+          {
+            "text": "Priority support",
+            "included": true
+          },
+          {
+            "text": "Multi-provider support",
+            "included": true
+          }
+        ],
+        "cta": "Get Started",
+        "popular": true
+      },
+      {
+        "name": "Enterprise",
+        "highlight": "For large clinics",
+        "monthlyPrice": "Custom",
+        "yearlyPrice": "Custom",
+        "yearlyDiscount": "Contact us for special pricing",
+        "description": "Tailored solutions for large practices",
+        "features": [
+          {
+            "text": "Everything in Professional, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Custom integration support",
+            "included": true
+          },
+          {
+            "text": "Dedicated account manager",
+            "included": true
+          },
+          {
+            "text": "Advanced security features",
+            "included": true
+          },
+          {
+            "text": "Custom development options",
+            "included": true
+          },
+          {
+            "text": "SLA guarantees",
+            "included": true
+          }
+        ],
+        "cta": "Contact Sales",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Transform Your Clinic?",
+    "description": "Join thousands of healthcare providers who have modernized their practice with our solution.",
+    "background": "/images/solutions/clinic/cta-background.jpg",
+    "primaryButton": {
+      "text": "Schedule a Demo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Watch Demo",
+      "link": "#showcase"
+    }
+  }
+} 

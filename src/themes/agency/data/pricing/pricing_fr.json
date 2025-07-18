@@ -1,0 +1,348 @@
+{
+  "pageTitle": "Solutions",
+  "pageDescription": "Solutions et fonctionnalités spécifiques à l'industrie. Trouvez les solutions parfaites pour vos besoins professionnels.",
+  "hero": {
+    "badge": "Solutions Spécifiques à l'Industrie",
+    "title": "Solutions Adaptées à Chaque Industrie",
+    "description": "Découvrez des solutions spécifiques à l'industrie avec des fonctionnalités puissantes. Commencez par notre plateforme mondiale et ajoutez des solutions spécialisées selon vos besoins.",
+    "cta": {
+      "text": "Contacter les Ventes",
+      "href": "/contact/sales"
+    }
+  },
+  "benefits": {
+    "title": "Avantages Clés",
+    "description": "Transformez votre entreprise avec nos solutions complètes",
+    "items": [
+      {
+        "title": "Excellence Opérationnelle",
+        "icon": "Zap",
+        "description": "Optimisez les opérations et améliorez l'efficacité",
+        "items": [
+          "Flux de Travail Automatisés",
+          "Surveillance en Temps Réel",
+          "Optimisation des Ressources",
+          "Automatisation des Processus"
+        ]
+      },
+      {
+        "title": "Sécurité Renforcée",
+        "icon": "Shield",
+        "description": "Sécurité et conformité de niveau entreprise",
+        "items": [
+          "Chiffrement des Données",
+          "Contrôle d'Accès",
+          "Gestion de la Conformité",
+          "Journalisation des Audits"
+        ]
+      },
+      {
+        "title": "Évolutivité",
+        "icon": "Globe",
+        "description": "Évoluez sans limitations",
+        "items": [
+          "Infrastructure Cloud",
+          "Équilibrage de Charge",
+          "Mise à l'Échelle Automatique",
+          "Déploiement Mondial"
+        ]
+      },
+      {
+        "title": "Capacités d'Intégration",
+        "icon": "Database",
+        "description": "Connectez-vous à vos systèmes existants",
+        "items": [
+          "Accès API",
+          "Intégrations Personnalisées",
+          "Support Webhook",
+          "Synchronisation des Données"
+        ]
+      }
+    ]
+  },
+  "industries": {
+    "title": "Industries Disponibles",
+    "description": "Sélectionnez votre industrie pour voir les solutions spécialisées",
+    "items": [
+      {
+        "name": "Santé",
+        "icon": "Stethoscope",
+        "description": "Solutions pour hôpitaux, cliniques et cabinets médicaux",
+        "solutions": [
+          { "name": "Cabinet Médical", "link": "/solutions/medical-practice" },
+          { "name": "Hôpital", "link": "/solutions/hospital" },
+          { "name": "Clinique", "link": "/solutions/clinic" },
+          { "name": "Pharmacie", "link": "/solutions/pharmacy" }
+        ]
+      },
+      {
+        "name": "Fabrication",
+        "icon": "Factory",
+        "description": "Solutions industrielles et manufacturières",
+        "solutions": [
+          { "name": "Production", "link": "/solutions/production" },
+          { "name": "Contrôle Qualité", "link": "/solutions/quality-control" },
+          { "name": "Chaîne d'Approvisionnement", "link": "/solutions/supply-chain" },
+          { "name": "Maintenance", "link": "/solutions/maintenance" }
+        ]
+      },
+      {
+        "name": "Commerce de Détail",
+        "icon": "ShoppingBag",
+        "description": "Solutions de commerce de détail et e-commerce",
+        "solutions": [
+          { "name": "Gestion de Magasin", "link": "/solutions/store-management" },
+          { "name": "E-commerce", "link": "/solutions/ecommerce" },
+          { "name": "Inventaire", "link": "/solutions/inventory" },
+          { "name": "Service Client", "link": "/solutions/customer-service" }
+        ]
+      },
+      {
+        "name": "Services Professionnels",
+        "icon": "Briefcase",
+        "description": "Solutions pour les prestataires de services professionnels",
+        "solutions": [
+          { "name": "Conseil", "link": "/solutions/consulting" },
+          { "name": "Juridique", "link": "/solutions/legal" },
+          { "name": "Comptabilité", "link": "/solutions/accounting" },
+          { "name": "Immobilier", "link": "/solutions/real-estate" }
+        ]
+      },
+      {
+        "name": "Éducation",
+        "icon": "GraduationCap",
+        "description": "Solutions pour les établissements d'enseignement",
+        "solutions": [
+          { "name": "Gestion Scolaire", "link": "/solutions/school-management" },
+          { "name": "Services aux Étudiants", "link": "/solutions/student-services" },
+          { "name": "Administration", "link": "/solutions/administration" },
+          { "name": "Apprentissage", "link": "/solutions/learning" }
+        ]
+      },
+      {
+        "name": "Immobilier",
+        "icon": "Home",
+        "description": "Solutions immobilières",
+        "solutions": [
+          { "name": "Gestion de Patrimoine", "link": "/solutions/property-management" },
+          { "name": "Ventes", "link": "/solutions/sales" },
+          { "name": "Location", "link": "/solutions/leasing" },
+          { "name": "Maintenance", "link": "/solutions/maintenance" }
+        ]
+      },
+      {
+        "name": "Logistique",
+        "icon": "Truck",
+        "description": "Solutions de transport et logistique",
+        "solutions": [
+          { "name": "Gestion de Flotte", "link": "/solutions/fleet-management" },
+          { "name": "Livraison", "link": "/solutions/delivery" },
+          { "name": "Entrepôt", "link": "/solutions/warehouse" },
+          { "name": "Suivi", "link": "/solutions/tracking" }
+        ]
+      },
+      {
+        "name": "Hôtellerie",
+        "icon": "Hotel",
+        "description": "Solutions hôtelières et d'hébergement",
+        "solutions": [
+          { "name": "Gestion Hôtelière", "link": "/solutions/hotel-management" },
+          { "name": "Réservation", "link": "/solutions/booking" },
+          { "name": "Services aux Clients", "link": "/solutions/guest-services" },
+          { "name": "Opérations", "link": "/solutions/operations" }
+        ]
+      }
+    ]
+  },
+  "successMetrics": {
+    "title": "Résultats Prouvés",
+    "description": "Découvrez l'impact de nos solutions sur les entreprises",
+    "items": [
+      {
+        "title": "Gains d'Efficacité",
+        "value": "40%",
+        "description": "Amélioration moyenne de l'efficacité opérationnelle",
+        "icon": "Zap"
+      },
+      {
+        "title": "Réduction des Coûts",
+        "value": "30%",
+        "description": "Réduction typique des coûts opérationnels",
+        "icon": "Star"
+      },
+      {
+        "title": "Gain de Temps",
+        "value": "50%",
+        "description": "Temps moyen gagné sur les tâches routinières",
+        "icon": "Clock"
+      },
+      {
+        "title": "Satisfaction Client",
+        "value": "95%",
+        "description": "Taux moyen de satisfaction client",
+        "icon": "Users"
+      }
+    ]
+  },
+  "globalFeatures": {
+    "title": "Fonctionnalités de la Plateforme Mondiale",
+    "description": "Fonctionnalités principales disponibles dans toutes les industries",
+    "name": "Plateforme Mondiale",
+    "features": [
+      {
+        "category": "Capacités IA",
+        "items": [
+          "Opérations IA de Base",
+          "Modèles IA Avancés",
+          "Formation IA Personnalisée",
+          "Traitement en Temps Réel"
+        ]
+      },
+      {
+        "category": "Sécurité et Conformité",
+        "items": [
+          "Sécurité de Niveau Entreprise",
+          "Chiffrement des Données",
+          "Contrôle d'Accès",
+          "Gestion de la Conformité"
+        ]
+      },
+      {
+        "category": "Intégration et API",
+        "items": [
+          "Accès API RESTful",
+          "Intégrations Personnalisées",
+          "Support Webhook",
+          "Export/Import de Données"
+        ]
+      },
+      {
+        "category": "Analytique et Rapports",
+        "items": [
+          "Analytique en Temps Réel",
+          "Rapports Personnalisés",
+          "Visualisation des Données",
+          "Métriques de Performance"
+        ]
+      }
+    ]
+  },
+  "integrations": {
+    "title": "Intégrations Transparentes",
+    "description": "Connectez-vous à vos outils et services préférés",
+    "categories": [
+      {
+        "category": "Services Cloud",
+        "items": [
+          { "name": "AWS", "icon": "CloudAws" },
+          { "name": "Azure", "icon": "CloudMicrosoft" },
+          { "name": "Google Cloud", "icon": "CloudGoogle" }
+        ]
+      },
+      {
+        "category": "Logiciels d'Entreprise",
+        "items": [
+          { "name": "Salesforce", "icon": "Database2" },
+          { "name": "SAP", "icon": "Building2" },
+          { "name": "Oracle", "icon": "Database" }
+        ]
+      },
+      {
+        "category": "Outils de Développement",
+        "items": [
+          { "name": "GitHub", "icon": "Code" },
+          { "name": "Jira", "icon": "Cpu" },
+          { "name": "Slack", "icon": "MessageSquare" }
+        ]
+      }
+    ]
+  },
+  "faqs": {
+    "title": "Questions Fréquentes",
+    "description": "Trouvez des réponses aux questions courantes sur nos solutions",
+    "items": [
+      {
+        "question": "Comment choisir les bonnes solutions ?",
+        "answer": "Notre équipe peut vous aider à identifier les bonnes solutions en fonction de vos besoins professionnels. Nous proposons des consultations gratuites pour vous garantir le meilleur rapport qualité-prix."
+      },
+      {
+        "question": "Puis-je combiner des solutions de différentes industries ?",
+        "answer": "Oui, vous pouvez combiner des solutions de différentes industries pour créer un package personnalisé qui répond à vos besoins spécifiques. Contactez notre équipe commerciale pour une solution sur mesure."
+      },
+      {
+        "question": "Que comprend la plateforme mondiale ?",
+        "answer": "La plateforme mondiale comprend les capacités IA de base, l'analytique de base, l'accès API et les fonctionnalités communautaires. Les solutions spécifiques à l'industrie s'appuient sur cette base."
+      },
+      {
+        "question": "Comment commencer ?",
+        "answer": "Commencez par planifier une consultation avec notre équipe. Nous vous aiderons à identifier les bonnes solutions et à créer un plan d'implémentation personnalisé."
+      }
+    ]
+  },
+  "implementation": {
+    "title": "Processus d'Implémentation",
+    "description": "Démarrez rapidement avec notre processus d'implémentation éprouvé",
+    "steps": [
+      {
+        "number": "1",
+        "title": "Découverte",
+        "description": "Nous analysons vos besoins et créons un plan d'implémentation personnalisé"
+      },
+      {
+        "number": "2",
+        "title": "Configuration",
+        "description": "Configuration rapide de vos solutions"
+      },
+      {
+        "number": "3",
+        "title": "Intégration",
+        "description": "Intégration transparente avec vos systèmes existants"
+      },
+      {
+        "number": "4",
+        "title": "Lancement",
+        "description": "Mise en service avec support et formation complets"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Besoin d'Aide pour Choisir ?",
+    "description": "Notre équipe est là pour vous aider à trouver les solutions parfaites pour vos besoins",
+    "options": [
+      {
+        "title": "Consultation par Industrie",
+        "description": "Obtenez des conseils d'experts pour choisir les bonnes solutions",
+        "icon": "Building2",
+        "link": "/contact/consultation"
+      },
+      {
+        "title": "Équipe Commerciale",
+        "description": "Discutez des solutions personnalisées et de l'implémentation",
+        "icon": "Users",
+        "link": "/contact/sales"
+      },
+      {
+        "title": "Support Technique",
+        "description": "Obtenez de l'aide pour l'implémentation et les questions techniques",
+        "icon": "HelpCircle",
+        "link": "/contact/support"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prêt à Transformer Votre Industrie ?",
+    "description": "Commencez avec nos solutions spécifiques à l'industrie dès aujourd'hui.",
+    "buttons": [
+      {
+        "text": "Planifier une Consultation",
+        "href": "/contact/consultation",
+        "variant": "primary"
+      },
+      {
+        "text": "Contacter les Ventes",
+        "href": "/contact/sales",
+        "variant": "secondary"
+      }
+    ]
+  }
+} 

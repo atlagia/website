@@ -1,0 +1,66 @@
+{
+  "hero": {
+    "title": "Transformez Votre Entreprise avec l'Intelligence Artificielle",
+    "description": "Découvrez l'automatisation transparente et les insights intelligents avec notre plateforme complète"
+  },
+  "workflowSteps": [
+    {
+      "title": "Création de Projet",
+      "description": "Commencez par créer un nouvel espace de travail pour votre projet. Notre interface intuitive vous guide dans la configuration des paramètres et des objectifs.",
+      "icon": "Rocket",
+      "image": "/images/platform/project-creation.webp",
+      "features": [
+        "Configuration personnalisée",
+        "Définition des objectifs",
+        "Paramètres de collaboration"
+      ]
+    },
+    {
+      "title": "Analyse par IA",
+      "description": "Notre IA avancée analyse vos besoins et fournit des recommandations intelligentes pour tous les services.",
+      "icon": "Brain",
+      "image": "/images/platform/ai-analysis.webp",
+      "features": [
+        "Analyse en temps réel",
+        "Recommandations intelligentes",
+        "Suivi des performances"
+      ]
+    },
+    {
+      "title": "Intégration des Services",
+      "description": "Intégrez facilement différents services comme le SEO, la génération de contenu et la gestion e-commerce.",
+      "icon": "Settings",
+      "image": "/images/platform/service-integration.webp",
+      "features": [
+        "Intégration en un clic",
+        "Synchronisation inter-services",
+        "Flux de travail automatisés"
+      ]
+    },
+    {
+      "title": "Résultats et Optimisation",
+      "description": "Surveillez vos progrès et optimisez vos stratégies avec des analyses et des insights détaillés.",
+      "icon": "Target",
+      "image": "/images/platform/results-dashboard.webp",
+      "features": [
+        "Analytiques en temps réel",
+        "Métriques de performance",
+        "Suggestions d'optimisation"
+      ]
+    }
+  ],
+  "cta": {
+    "title": "Prêt à Commencer ?",
+    "description": "Rejoignez des milliers d'entreprises qui transforment déjà leurs opérations avec notre plateforme IA",
+    "buttons": {
+      "primary": {
+        "text": "Commencer Gratuitement",
+        "url": "/signup"
+      },
+      "secondary": {
+        "text": "Demander une Démo",
+        "url": "/demo"
+      }
+    }
+  }
+} 

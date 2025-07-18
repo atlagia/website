@@ -1,0 +1,84 @@
+---
+import { getLangFromUrl, useTranslations } from '@utils/i18n';
+
+const { lang } = Astro.params;
+const translations = await useTranslations(lang);
+const jsonData = translations.default;
+
+// Import components
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+
+const SITE_TITLE = `${jsonData.siteTitle} - AI Content Generator`;
+const SITE_DESCRIPTION = jsonData.aiContentDescription || 'Generate high-quality content with our AI-powered tools';
+
+// Generate static paths for all supported languages
+export async function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'fr' } },
+    { params: { lang: 'es' } },
+    { params: { lang: 'it' } },
+    { params: { lang: 'de' } },
+    { params: { lang: 'nl' } },
+    { params: { lang: 'pt' } },
+  ];
+}
+---
+
+<!doctype html>
+<html lang={lang} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body class={lang === 'ar' ? 'rtl' : 'ltr'}>
+    <Header />
+    <main class="container mx-auto px-4 py-16">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-16">
+          <h1 class="text-4xl font-bold mb-4">{jsonData.aiContent?.title}</h1>
+          <p class="text-xl text-gray-600">{jsonData.aiContent?.subtitle}</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+          {jsonData.aiContent?.features?.map((feature) => (
+            <div class="bg-white rounded-lg shadow-lg p-8">
+              <div class="text-primary mb-4">
+                <span class="text-3xl">{feature.icon}</span>
+              </div>
+              <h3 class="text-xl font-semibold mb-3">{feature.title}</h3>
+              <p class="text-gray-600">{feature.description}</p>
+            </div>
+          ))}
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-8 mb-16">
+          <h2 class="text-2xl font-semibold mb-6">{jsonData.aiContent?.howItWorks?.title}</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {jsonData.aiContent?.howItWorks?.steps?.map((step, index) => (
+              <div class="flex flex-col items-center text-center">
+                <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-semibold mb-4">
+                  {index + 1}
+                </div>
+                <h3 class="font-semibold mb-2">{step.title}</h3>
+                <p class="text-gray-600">{step.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div class="text-center">
+          <h2 class="text-2xl font-semibold mb-8">{jsonData.aiContent?.cta?.title}</h2>
+          <a 
+            href={jsonData.aiContent?.cta?.buttonLink} 
+            class="inline-block bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-dark transition-colors"
+          >
+            {jsonData.aiContent?.cta?.buttonText}
+          </a>
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html> 

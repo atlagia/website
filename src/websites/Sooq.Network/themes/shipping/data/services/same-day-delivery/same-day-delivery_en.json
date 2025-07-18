@@ -1,0 +1,42 @@
+{
+  "hero": {
+    "title": "Same-Day Delivery",
+    "subtitle": "Speed When It Matters Most",
+    "description": "Get your packages delivered within hours. Our same-day delivery service is perfect for urgent shipments that can't wait until tomorrow.",
+    "heroIcon": "Zap",
+    "heroAnimation": "spin",
+    "image": ""
+  },
+  "overview": {
+    "title": "Why Choose Same-Day Delivery?",
+    "description": "When time is critical, our same-day delivery ensures your shipments arrive fast and reliably. Benefit from real-time tracking, dedicated support, and priority handling.",
+    "features": [
+      {
+        "icon": "zap",
+        "title": "Ultra-Fast Shipping",
+        "description": "Packages picked up and delivered within hours, not days."
+      },
+      {
+        "icon": "clock",
+        "title": "Guaranteed Deadlines",
+        "description": "We meet your tightest delivery windows, every time."
+      },
+      {
+        "icon": "map-pin",
+        "title": "Local Expertise",
+        "description": "Our local couriers know the fastest routes in your city."
+      },
+      {
+        "icon": "phone",
+        "title": "Live Support",
+        "description": "Get real-time updates and support from our team."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Need It Delivered Today?",
+    "description": "Book your same-day delivery now and experience unmatched speed and reliability.",
+    "buttonText": "Book Now",
+    "buttonLink": "/quote"
+  }
+} 

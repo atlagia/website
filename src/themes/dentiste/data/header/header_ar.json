@@ -1,0 +1,131 @@
+{
+  "navigation": [
+    {
+      "name": "منتجاتنا الذكية",
+      "href": "/products",
+      "megaMenu": {
+        "categories": [
+          {
+            "title": "التسويق",
+            "icon": "marketing",
+            "items": [
+              {
+                "name": "منشئ المحتوى الذكي",
+                "href": "/ai-content-generator"
+              },
+              {
+                "name": "أتمتة وسائل التواصل",
+                "href": "/social-media-automation"
+              },
+              {
+                "name": "التسويق عبر البريد الإلكتروني",
+                "href": "/email-marketing-ai"
+              },
+              {
+                "name": "لوحة التحليلات",
+                "href": "/analytics-dashboard"
+              }
+            ]
+          },
+          {
+            "title": "التجارة الإلكترونية",
+            "icon": "ecommerce",
+            "items": [
+              {
+                "name": "محسن المنتجات",
+                "href": "/product-optimization"
+              },
+              {
+                "name": "إدارة المخزون",
+                "href": "/inventory-management"
+              },
+              {
+                "name": "ذكاء التسعير",
+                "href": "/pricing-intelligence"
+              },
+              {
+                "name": "تحليل العملاء",
+                "href": "/customer-insights"
+              }
+            ]
+          },
+          {
+            "title": "تحسين محركات البحث",
+            "icon": "seo",
+            "items": [
+              {
+                "name": "بحث الكلمات المفتاحية",
+                "href": "/keyword-research"
+              },
+              {
+                "name": "تحسين المحتوى",
+                "href": "/content-optimization"
+              },
+              {
+                "name": "محلل الروابط",
+                "href": "/backlink-analyzer"
+              },
+              {
+                "name": "تحليل المنافسين",
+                "href": "/competitor-analysis"
+              }
+            ]
+          }
+        ],
+        "featured": {
+          "badge": "جديد",
+          "title": "محرر المنتجات الشامل",
+          "description": "حسّن كامل منتجاتك في دقائق",
+          "link": {
+            "text": "اكتشف المزيد",
+            "href": "/bulk-editor"
+          }
+        }
+      }
+    },
+    {
+      "name": "الفئات",
+      "href": "/categories"
+    },
+    {
+      "name": "التوثيق",
+      "href": "/documentation"
+    },
+    {
+      "name": "الدعم",
+      "href": "/support"
+    }
+  ],
+  "auth": {
+    "signIn": {
+      "text": "تسجيل الدخول",
+      "href": "https://app.atlagia.com/login"
+    },
+    "getStarted": {
+      "text": "ابدأ الآن",
+      "href": "https://app.atlagia.com/signup"
+    }
+  },
+  "languages": [
+    {
+      "code": "en",
+      "name": "English"
+    },
+    {
+      "code": "fr",
+      "name": "Français"
+    },
+    {
+      "code": "de",
+      "name": "Deutsch"
+    },
+    {
+      "code": "it",
+      "name": "Italiano"
+    },
+    {
+      "code": "ar",
+      "name": "العربية"
+    }
+  ]
+} 

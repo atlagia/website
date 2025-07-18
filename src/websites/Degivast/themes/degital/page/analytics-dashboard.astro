@@ -1,0 +1,106 @@
+---
+import { getLangFromUrl, useTranslations } from '@utils/i18n';
+
+const { lang } = Astro.params;
+const translations = await useTranslations(lang);
+const jsonData = translations.default;
+
+// Import components
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+
+const SITE_TITLE = `${jsonData.siteTitle} - Analytics Dashboard`;
+const SITE_DESCRIPTION = jsonData.analyticsDescription || 'Comprehensive analytics and reporting tools for your business';
+
+// Generate static paths for all supported languages
+export async function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'fr' } },
+    { params: { lang: 'es' } },
+    { params: { lang: 'it' } },
+    { params: { lang: 'de' } },
+    { params: { lang: 'nl' } },
+    { params: { lang: 'pt' } },
+  ];
+}
+---
+
+<!doctype html>
+<html lang={lang} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body class={lang === 'ar' ? 'rtl' : 'ltr'}>
+    <Header />
+    <main class="container mx-auto px-4 py-16">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <h1 class="text-4xl font-bold mb-4">{jsonData.analytics?.title}</h1>
+          <p class="text-xl text-gray-600">{jsonData.analytics?.subtitle}</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+          <div>
+            <h2 class="text-2xl font-semibold mb-6">{jsonData.analytics?.overview?.title}</h2>
+            <div class="bg-white rounded-lg shadow-lg p-8">
+              <div class="grid grid-cols-2 gap-8">
+                {jsonData.analytics?.overview?.metrics?.map((metric) => (
+                  <div>
+                    <div class="text-3xl font-bold text-primary mb-2">{metric.value}</div>
+                    <div class="text-gray-600">{metric.label}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h2 class="text-2xl font-semibold mb-6">{jsonData.analytics?.features?.title}</h2>
+            <div class="space-y-6">
+              {jsonData.analytics?.features?.list?.map((feature) => (
+                <div class="flex items-start">
+                  <div class="text-primary mr-4">
+                    <span class="text-2xl">{feature.icon}</span>
+                  </div>
+                  <div>
+                    <h3 class="font-semibold mb-1">{feature.title}</h3>
+                    <p class="text-gray-600">{feature.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-8 mb-16">
+          <h2 class="text-2xl font-semibold text-center mb-8">{jsonData.analytics?.reports?.title}</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {jsonData.analytics?.reports?.types?.map((report) => (
+              <div class="bg-white rounded-lg p-6 text-center">
+                <div class="text-primary mb-4">
+                  <span class="text-3xl">{report.icon}</span>
+                </div>
+                <h3 class="font-semibold mb-2">{report.title}</h3>
+                <p class="text-gray-600 text-sm">{report.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div class="text-center">
+          <h2 class="text-2xl font-semibold mb-4">{jsonData.analytics?.cta?.title}</h2>
+          <p class="text-gray-600 mb-8">{jsonData.analytics?.cta?.description}</p>
+          <a 
+            href={jsonData.analytics?.cta?.buttonLink} 
+            class="inline-block bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-dark transition-colors"
+          >
+            {jsonData.analytics?.cta?.buttonText}
+          </a>
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html> 

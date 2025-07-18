@@ -1,0 +1,335 @@
+{
+  "hero": {
+    "subtitle": "Sistema de Gestão de Clínica",
+    "title": "Otimize as Operações da Sua Clínica",
+    "description": "Uma solução integrada de gestão de clínica que combina atendimento ao paciente, tarefas administrativas e operações comerciais para melhorar a eficiência da sua prática.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Demo da Solução de Gestão de Clínica"
+    },
+    "stats": [
+      {
+        "value": "96%",
+        "label": "Satisfação dos Pacientes"
+      },
+      {
+        "value": "50%",
+        "label": "Tempo Administrativo Economizado"
+      },
+      {
+        "value": "35%",
+        "label": "Aumento de Receita"
+      }
+    ]
+  },
+  "features": {
+    "subtitle": "Funcionalidades Abrangentes",
+    "title": "Tudo que Sua Clínica Precisa",
+    "description": "Um conjunto completo de ferramentas projetado para clínicas modernas",
+    "categories": [
+      {
+        "name": "Operações Clínicas",
+        "description": "Otimize o atendimento ao paciente e os fluxos de trabalho clínicos"
+      },
+      {
+        "name": "Gestão da Prática",
+        "description": "Otimize as operações administrativas e comerciais"
+      }
+    ],
+    "items": [
+      {
+        "icon": "calendar",
+        "category": "Agendamentos",
+        "title": "Agendamento Inteligente",
+        "description": "Sistema de agendamento com IA e lembretes automatizados",
+        "image": "/images/solutions/clinic/scheduling.jpg",
+        "highlights": [
+          "Agendamento online",
+          "Lembretes automatizados",
+          "Gestão de lista de espera",
+          "Alocação de recursos"
+        ],
+        "stats": {
+          "value": "60%",
+          "label": "Redução de no-shows"
+        }
+      },
+      {
+        "icon": "file-text",
+        "category": "Prontuários",
+        "title": "Prontuário Eletrônico",
+        "description": "Sistema PE completo com documentação simplificada",
+        "image": "/images/solutions/clinic/ehr.jpg",
+        "highlights": [
+          "Documentação digital",
+          "Planos de tratamento",
+          "Integração com laboratório",
+          "Prescrições eletrônicas"
+        ],
+        "stats": {
+          "value": "45%",
+          "label": "Tempo economizado na documentação"
+        }
+      },
+      {
+        "icon": "credit-card",
+        "category": "Faturamento",
+        "title": "Faturamento Inteligente",
+        "description": "Processamento automatizado de faturamento e seguros",
+        "image": "/images/solutions/clinic/billing.jpg",
+        "highlights": [
+          "Verificação de seguros",
+          "Processamento de pagamentos",
+          "Gestão de reembolsos",
+          "Relatórios financeiros"
+        ],
+        "stats": {
+          "value": "30%",
+          "label": "Reembolsos mais rápidos"
+        }
+      },
+      {
+        "icon": "activity",
+        "category": "Análise",
+        "title": "Inteligência de Prática",
+        "description": "Informações baseadas em dados para melhores decisões",
+        "image": "/images/solutions/clinic/analytics.jpg",
+        "highlights": [
+          "Métricas de desempenho",
+          "Análise de pacientes",
+          "Insights financeiros",
+          "Relatórios operacionais"
+        ],
+        "stats": {
+          "value": "35%",
+          "label": "Crescimento de receita"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Veja em Ação",
+    "description": "Descubra como as principais clínicas estão transformando suas práticas",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "História de Sucesso da Clínica"
+    },
+    "testimonials": [
+      {
+        "author": "Dra. Ana Silva",
+        "role": "Diretora da Clínica",
+        "image": "/images/testimonials/doctor1.jpg",
+        "quote": "Este sistema transformou a forma como operamos. Nossa equipe está mais eficiente e nossos pacientes estão mais satisfeitos."
+      },
+      {
+        "author": "Dr. Pedro Santos",
+        "role": "Médico de Família",
+        "image": "/images/testimonials/doctor2.jpg",
+        "quote": "O sistema PE é intuitivo e a integração com faturamento melhorou significativamente nosso ciclo de receita."
+      }
+    ]
+  },
+  "benefits": {
+    "subtitle": "Benefícios Principais",
+    "title": "Transforme Sua Prática",
+    "description": "Experimente as vantagens de um sistema de gestão de clínica totalmente integrado",
+    "items": [
+      {
+        "icon": "clock",
+        "title": "Eficiência de Tempo",
+        "description": "Reduza a carga administrativa e foque no atendimento ao paciente",
+        "color": "blue",
+        "stats": {
+          "value": "50%",
+          "label": "Tempo Economizado"
+        },
+        "highlights": [
+          "Fluxos de trabalho automatizados",
+          "Documentação rápida",
+          "Agendamento eficiente",
+          "Redução de papelada"
+        ]
+      },
+      {
+        "icon": "heart",
+        "title": "Melhor Atendimento ao Paciente",
+        "description": "Melhore a experiência e os resultados dos pacientes",
+        "color": "red",
+        "stats": {
+          "value": "96%",
+          "label": "Satisfação dos Pacientes"
+        },
+        "highlights": [
+          "Prontuários completos",
+          "Melhor acompanhamento",
+          "Comunicação melhorada",
+          "Coordenação de cuidados"
+        ]
+      },
+      {
+        "icon": "trending-up",
+        "title": "Crescimento da Prática",
+        "description": "Aumente a receita e otimize as operações",
+        "color": "green",
+        "stats": {
+          "value": "35%",
+          "label": "Crescimento de Receita"
+        },
+        "highlights": [
+          "Faturamento otimizado",
+          "Custos reduzidos",
+          "Melhor utilização",
+          "Maior eficiência"
+        ]
+      },
+      {
+        "icon": "shield",
+        "title": "Conformidade e Segurança",
+        "description": "Mantenha a conformidade regulatória e a segurança dos dados",
+        "color": "purple",
+        "stats": {
+          "value": "100%",
+          "label": "Conformidade HIPAA"
+        },
+        "highlights": [
+          "Conformidade HIPAA",
+          "Criptografia de dados",
+          "Rastreamento de auditoria",
+          "Acesso seguro"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "subtitle": "Preços Transparentes",
+    "title": "Planos de Preço Flexíveis",
+    "description": "Escolha o plano perfeito para sua clínica. Economize até 20% com faturamento anual.",
+    "billingPeriods": ["Mensal", "Anual"],
+    "plans": [
+      {
+        "name": "Básico",
+        "highlight": "Perfeito para pequenas clínicas",
+        "monthlyPrice": "$299",
+        "yearlyPrice": "$2,990",
+        "yearlyDiscount": "Economize $598/ano",
+        "description": "Funcionalidades essenciais para pequenas práticas",
+        "features": [
+          {
+            "text": "Agendamento de consultas",
+            "included": true
+          },
+          {
+            "text": "PE básico",
+            "included": true
+          },
+          {
+            "text": "Portal do paciente",
+            "included": true
+          },
+          {
+            "text": "Suporte por email",
+            "included": true
+          },
+          {
+            "text": "Relatórios básicos",
+            "included": true
+          },
+          {
+            "text": "Acesso mobile",
+            "included": true
+          }
+        ],
+        "cta": "Começar Agora",
+        "popular": false
+      },
+      {
+        "name": "Profissional",
+        "highlight": "Mais popular para clínicas em crescimento",
+        "monthlyPrice": "$599",
+        "yearlyPrice": "$5,990",
+        "yearlyDiscount": "Economize $1,198/ano",
+        "description": "Funcionalidades avançadas para clínicas estabelecidas",
+        "features": [
+          {
+            "text": "Tudo do Básico, mais:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Funcionalidades avançadas do PE",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "Plataforma de telemedicina",
+            "included": true
+          },
+          {
+            "text": "Análises avançadas",
+            "included": true
+          },
+          {
+            "text": "Suporte prioritário",
+            "included": true
+          },
+          {
+            "text": "Suporte multi-provedor",
+            "included": true
+          }
+        ],
+        "cta": "Começar Agora",
+        "popular": true
+      },
+      {
+        "name": "Enterprise",
+        "highlight": "Para grandes clínicas",
+        "monthlyPrice": "Personalizado",
+        "yearlyPrice": "Personalizado",
+        "yearlyDiscount": "Entre em contato para preços especiais",
+        "description": "Soluções personalizadas para grandes práticas",
+        "features": [
+          {
+            "text": "Tudo do Profissional, mais:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Suporte de integração personalizada",
+            "included": true
+          },
+          {
+            "text": "Gerente de conta dedicado",
+            "included": true
+          },
+          {
+            "text": "Funcionalidades avançadas de segurança",
+            "included": true
+          },
+          {
+            "text": "Opções de desenvolvimento personalizadas",
+            "included": true
+          },
+          {
+            "text": "Garantias SLA",
+            "included": true
+          }
+        ],
+        "cta": "Fale com Vendas",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "Pronto para Transformar Sua Clínica?",
+    "description": "Junte-se a milhares de profissionais de saúde que modernizaram suas práticas com nossa solução.",
+    "background": "/images/solutions/clinic/cta-background.jpg",
+    "primaryButton": {
+      "text": "Agende uma Demo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Ver Demo",
+      "link": "#showcase"
+    }
+  }
+} 

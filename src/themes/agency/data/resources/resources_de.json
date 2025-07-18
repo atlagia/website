@@ -1,0 +1,223 @@
+{
+  "pageTitle": "Ressourcen",
+  "pageDescription": "Greifen Sie auf umfassende Dokumentation, Leitfäden, Fallstudien und weitere Ressourcen zu, die Ihnen helfen, mit unserer Plattform erfolgreich zu sein.",
+  "hero": {
+    "badge": "Ressourcen & Dokumentation",
+    "title": "Ressourcen für Ihren Erfolg",
+    "description": "Greifen Sie auf umfassende Dokumentation, Leitfäden, Tutorials und Fallstudien zu, um das Beste aus unserer Plattform herauszuholen.",
+    "cta": {
+      "primary": {
+        "text": "Dokumentation durchsuchen",
+        "href": "/docs"
+      },
+      "secondary": {
+        "text": "Leitfäden ansehen",
+        "href": "#guides"
+      }
+    }
+  },
+  "resourceCategories": [
+    {
+      "title": "Dokumentation",
+      "icon": "Book",
+      "description": "Umfassende Leitfäden und API-Dokumentation",
+      "items": [
+        {
+          "title": "Erste Schritte",
+          "description": "Schnellstartanleitung für neue Benutzer",
+          "icon": "BookOpen",
+          "link": "/docs/getting-started",
+          "tag": "Essentiell"
+        },
+        {
+          "title": "API-Referenz",
+          "description": "Vollständige API-Dokumentation",
+          "icon": "FileCode",
+          "link": "/docs/api",
+          "tag": "Technisch"
+        },
+        {
+          "title": "SDK-Dokumentation",
+          "description": "Sprachspezifische SDK-Leitfäden",
+          "icon": "FileText",
+          "link": "/docs/sdk",
+          "tag": "Entwicklung"
+        },
+        {
+          "title": "Integrationsleitfäden",
+          "description": "Schritt-für-Schritt Integrationsanleitungen",
+          "icon": "ChevronRight",
+          "link": "/docs/integration",
+          "tag": "Technisch"
+        }
+      ]
+    },
+    {
+      "title": "Lernzentrum",
+      "icon": "GraduationCap",
+      "description": "Bildungsressourcen und Tutorials",
+      "items": [
+        {
+          "title": "Video-Tutorials",
+          "description": "Schritt-für-Schritt Videoanleitungen",
+          "icon": "Video",
+          "link": "/learn/tutorials",
+          "tag": "Video"
+        },
+        {
+          "title": "Best Practices",
+          "description": "Implementierungsrichtlinien",
+          "icon": "Star",
+          "link": "/learn/best-practices",
+          "tag": "Leitfaden"
+        },
+        {
+          "title": "Code-Beispiele",
+          "description": "Beispielcode und Snippets",
+          "icon": "FileCode",
+          "link": "/learn/examples",
+          "tag": "Code"
+        },
+        {
+          "title": "Community-Foren",
+          "description": "Diskussion und Support",
+          "icon": "MessageSquare",
+          "link": "/community",
+          "tag": "Support"
+        }
+      ]
+    },
+    {
+      "title": "Fallstudien",
+      "icon": "BarChart",
+      "description": "Erfolgsgeschichten und Implementierungsbeispiele",
+      "items": [
+        {
+          "title": "Gesundheitswesen Erfolg",
+          "description": "Transformation medizinischer Praxis",
+          "icon": "Users",
+          "link": "/case-studies/healthcare",
+          "tag": "Gesundheit"
+        },
+        {
+          "title": "Einzelhandel Innovation",
+          "description": "E-Commerce-Optimierung",
+          "icon": "BarChart",
+          "link": "/case-studies/retail",
+          "tag": "Einzelhandel"
+        },
+        {
+          "title": "Fertigungsexzellenz",
+          "description": "Produktionsoptimierung",
+          "icon": "Award",
+          "link": "/case-studies/manufacturing",
+          "tag": "Industrie"
+        },
+        {
+          "title": "Service-Verbesserung",
+          "description": "Kundenservice-Optimierung",
+          "icon": "Star",
+          "link": "/case-studies/service",
+          "tag": "Service"
+        }
+      ]
+    }
+  ],
+  "featuredGuides": [
+    {
+      "title": "Plattform-Implementierungsleitfaden",
+      "description": "Vollständiger Leitfaden zur Implementierung unserer KI-Plattform",
+      "image": "/images/resources/implementation.jpg",
+      "category": "Technischer Leitfaden",
+      "readTime": "15 Min. Lesezeit",
+      "link": "/guides/implementation"
+    },
+    {
+      "title": "KI-Integration Best Practices",
+      "description": "Lernen Sie, wie Sie KI effektiv in Ihren Workflow integrieren",
+      "image": "/images/resources/ai-integration.jpg",
+      "category": "Best Practices",
+      "readTime": "10 Min. Lesezeit",
+      "link": "/guides/ai-integration"
+    },
+    {
+      "title": "Sicherheit & Compliance Leitfaden",
+      "description": "Verstehen Sie Sicherheitsfunktionen und Compliance",
+      "image": "/images/resources/security.jpg",
+      "category": "Sicherheit",
+      "readTime": "12 Min. Lesezeit",
+      "link": "/guides/security"
+    }
+  ],
+  "latestArticles": [
+    {
+      "title": "Die Zukunft der KI im Gesundheitswesen",
+      "description": "Erkundung kommender Trends und Innovationen",
+      "image": "/images/blog/ai-healthcare.jpg",
+      "date": "15. März 2024",
+      "readTime": "8 Min. Lesezeit",
+      "category": "Brancheneinblicke",
+      "link": "/blog/ai-healthcare-future"
+    },
+    {
+      "title": "KI-Leistung optimieren",
+      "description": "Tipps zur Maximierung der KI-Effizienz",
+      "image": "/images/blog/ai-performance.jpg",
+      "date": "10. März 2024",
+      "readTime": "6 Min. Lesezeit",
+      "category": "Technisch",
+      "link": "/blog/ai-performance"
+    },
+    {
+      "title": "KI-Sicherheit Best Practices",
+      "description": "Ihre KI-Implementierung sicher halten",
+      "image": "/images/blog/ai-security.jpg",
+      "date": "5. März 2024",
+      "readTime": "7 Min. Lesezeit",
+      "category": "Sicherheit",
+      "link": "/blog/ai-security"
+    }
+  ],
+  "downloads": [
+    {
+      "title": "Plattform-Überblick",
+      "description": "Umfassender PDF-Leitfaden",
+      "icon": "Download",
+      "format": "PDF",
+      "size": "2.5 MB",
+      "link": "/downloads/platform-overview.pdf"
+    },
+    {
+      "title": "Technisches Whitepaper",
+      "description": "Detaillierte technische Spezifikationen",
+      "icon": "FileText",
+      "format": "PDF",
+      "size": "3.8 MB",
+      "link": "/downloads/technical-whitepaper.pdf"
+    },
+    {
+      "title": "Implementierungsleitfaden",
+      "description": "Schritt-für-Schritt Einrichtungsanleitung",
+      "icon": "Book",
+      "format": "PDF",
+      "size": "1.8 MB",
+      "link": "/downloads/implementation-guide.pdf"
+    }
+  ],
+  "cta": {
+    "title": "Hilfe benötigt?",
+    "description": "Unser Support-Team ist hier, um Ihnen zum Erfolg mit unserer Plattform zu verhelfen.",
+    "buttons": [
+      {
+        "text": "Support kontaktieren",
+        "href": "/contact",
+        "variant": "primary"
+      },
+      {
+        "text": "Community beitreten",
+        "href": "/community",
+        "variant": "secondary"
+      }
+    ]
+  }
+} 

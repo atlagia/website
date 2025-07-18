@@ -1,0 +1,425 @@
+---
+import { SITE_TITLE } from '../consts';
+import { 
+  Rocket, 
+  Zap, 
+  Target, 
+  Sparkles, 
+  ArrowRight, 
+  Brain, 
+  Settings, 
+  Users, 
+  Check,
+  Shield, 
+  Gauge, 
+  Globe, 
+  Award, 
+  BarChart3, 
+  PieChart,
+  Clock,
+  DollarSign,
+  Lightbulb,
+  Heart,
+  Star
+} from 'lucide-react';
+
+const theme = import.meta.env.THEME || 'default';
+const lang = Astro.params.lang || 'en';
+
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+
+// Import language-specific data
+const pageData = await import(`../data/how-it-works/how_it_works_${lang}.json`);
+
+const businessInfo = {
+  name: import.meta.env.PUBLIC_BUSINESS_NAME || 'Atalsia'
+};
+
+// Map icon strings to actual components
+const iconMap = {
+  Rocket,
+  Brain,
+  Settings,
+  Target,
+  Sparkles,
+  Zap,
+  Users
+};
+
+// Schema markup for the How It Works page
+const schemaMarkup = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name: `How ${businessInfo.name} Works`,
+  description: pageData.hero.description,
+  step: pageData.workflowSteps.map((step, index) => ({
+    "@type": "HowToStep",
+    position: index + 1,
+    name: step.title,
+    text: step.description,
+    image: {
+      "@type": "ImageObject",
+      url: step.image
+    }
+  }))
+};
+
+// Add new data for statistics
+const statistics = [
+  { value: "98%", label: "Customer Satisfaction", icon: Heart },
+  { value: "2x", label: "Faster Implementation", icon: Clock },
+  { value: "45%", label: "Cost Reduction", icon: DollarSign },
+  { value: "24/7", label: "AI-Powered Support", icon: Shield }
+];
+
+// Add integration logos (replace with your actual integration partners)
+const integrations = [
+  { name: "Shopify", logo: "/images/integrations/shopify.svg" },
+  { name: "WooCommerce", logo: "/images/integrations/woocommerce.svg" },
+  { name: "Google Analytics", logo: "/images/integrations/google-analytics.svg" },
+  { name: "Stripe", logo: "/images/integrations/stripe.svg" },
+  { name: "HubSpot", logo: "/images/integrations/hubspot.svg" },
+  { name: "Salesforce", logo: "/images/integrations/salesforce.svg" }
+];
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <BaseHead 
+      title={`How It Works | ${businessInfo.name}`}
+      description={pageData.hero.description}
+      type="website"
+      schemaMarkup={schemaMarkup}
+    />
+  </head>
+  <body>
+    <Header />
+    
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-b from-purple-50 to-white dark:from-gray-900 dark:to-gray-800 pt-20 pb-12 lg:pt-24">
+      <div class="container mx-auto px-4">
+        <div class="text-center max-w-4xl mx-auto">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            {pageData.hero.title}
+          </h1>
+          <p class="text-xl text-gray-600 dark:text-gray-300 mb-8">
+            {pageData.hero.description}
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Statistics Section -->
+    <section class="py-16 bg-white dark:bg-gray-800">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          {statistics.map(stat => (
+            <div class="text-center">
+              <div class="inline-flex items-center justify-center w-12 h-12 mb-4 bg-purple-100 dark:bg-purple-900 rounded-full">
+                <stat.icon className="w-6 h-6 text-purple-600 dark:text-purple-400" />
+              </div>
+              <div class="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+                {stat.value}
+              </div>
+              <div class="text-gray-600 dark:text-gray-300">
+                {stat.label}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Workflow Steps -->
+    <section class="py-16 bg-white dark:bg-gray-800">
+      <div class="container mx-auto px-4">
+        {pageData.workflowSteps.map((step, index) => {
+          const StepIcon = iconMap[step.icon];
+          return (
+            <div class={`flex flex-col lg:flex-row items-center gap-12 mb-20 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
+              <!-- Image Section -->
+              <div class="w-full lg:w-1/2">
+                <div class="relative rounded-xl overflow-hidden shadow-2xl">
+                  <img 
+                    src={step.image} 
+                    alt={step.title}
+                    class="w-full h-auto"
+                    loading="lazy"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-blue-500/10"></div>
+                </div>
+              </div>
+
+              <!-- Content Section -->
+              <div class="w-full lg:w-1/2">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="p-2 bg-purple-100 dark:bg-purple-900 rounded-lg">
+                    <StepIcon className="w-6 h-6 text-purple-600 dark:text-purple-400" />
+                  </div>
+                  <span class="text-sm font-semibold text-purple-600 dark:text-purple-400">
+                    Step {index + 1}
+                  </span>
+                </div>
+
+                <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                  {step.title}
+                </h2>
+                
+                <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">
+                  {step.description}
+                </p>
+
+                <ul class="space-y-3">
+                  {step.features.map(feature => (
+                    <li class="flex items-center gap-3">
+                      <Check className="w-5 h-5 text-green-500" />
+                      <span class="text-gray-700 dark:text-gray-200">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </section>
+
+        <!-- Key Benefits Section -->
+    <section class="py-20 bg-gray-50 dark:bg-gray-900">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            Why Choose Our Platform?
+          </h2>
+          <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            Discover how our AI-powered platform can transform your business operations and drive growth
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {pageData.benefits.map(benefit => (
+            <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+              <div class="flex items-center gap-4 mb-4">
+                <div class="p-3 bg-purple-100 dark:bg-purple-900 rounded-lg">
+                  <div class="w-6 h-6 text-purple-600 dark:text-purple-400">
+                    {/* Add icon based on benefit type */}
+                  </div>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                  {benefit.title}
+                </h3>
+              </div>
+              <p class="text-gray-600 dark:text-gray-300">
+                {benefit.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Integrations Section -->
+    <section class="py-20 bg-gray-50 dark:bg-gray-900">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            Seamless Integrations
+          </h2>
+          <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            Connect with your favorite tools and platforms for a unified workflow
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+          {integrations.map(integration => (
+            <div class="flex items-center justify-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+              <img 
+                src={integration.logo} 
+                alt={`${integration.name} integration`}
+                class="h-12 w-auto filter dark:invert"
+                loading="lazy"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Success Stories Preview -->
+    <section class="py-20 bg-white dark:bg-gray-800">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            Success Stories
+          </h2>
+          <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            See how businesses like yours achieve remarkable results with our platform
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {pageData.successStories.map(story => (
+            <div class="bg-gray-50 dark:bg-gray-900 rounded-xl p-6 shadow-lg">
+              <div class="flex items-center gap-4 mb-6">
+                <img 
+                  src={story.logo} 
+                  alt={story.company}
+                  class="w-12 h-12 rounded-full"
+                  loading="lazy"
+                />
+                <div>
+                  <h3 class="font-semibold text-gray-900 dark:text-white">
+                    {story.company}
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-300">
+                    {story.industry}
+                  </p>
+                </div>
+              </div>
+              <blockquote class="text-gray-600 dark:text-gray-300 mb-4">
+                "{story.quote}"
+              </blockquote>
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <img 
+                    src={story.authorImage} 
+                    alt={story.author}
+                    class="w-8 h-8 rounded-full"
+                    loading="lazy"
+                  />
+                  <span class="text-sm font-medium text-gray-900 dark:text-white">
+                    {story.author}
+                  </span>
+                </div>
+                <div class="flex items-center gap-1">
+                  {[...Array(5)].map((_, i) => (
+                    <Star className={`w-4 h-4 ${i < story.rating ? 'text-yellow-400' : 'text-gray-300'}`} />
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-50 dark:bg-gray-900">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            Frequently Asked Questions
+          </h2>
+          <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            Find answers to common questions about our platform
+          </p>
+        </div>
+
+        <div class="max-w-3xl mx-auto space-y-6">
+          {pageData.faq.map(item => (
+            <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md">
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+                {item.question}
+              </h3>
+              <p class="text-gray-600 dark:text-gray-300">
+                {item.answer}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-b from-purple-50 to-white dark:from-gray-900 dark:to-gray-800">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+          {pageData.cta.title}
+        </h2>
+        <p class="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
+          {pageData.cta.description}
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a 
+            href={pageData.cta.buttons.primary.url} 
+            class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-purple-600 hover:bg-purple-700 text-white font-semibold transition-colors"
+          >
+            {pageData.cta.buttons.primary.text}
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </a>
+          <a 
+            href={pageData.cta.buttons.secondary.url} 
+            class="inline-flex items-center justify-center px-6 py-3 rounded-lg border-2 border-purple-600 text-purple-600 hover:bg-purple-50 dark:hover:bg-purple-900/20 font-semibold transition-colors"
+          >
+            {pageData.cta.buttons.secondary.text}
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <Footer />
+  </body>
+</html>
+
+<style>
+  /* Add smooth scroll behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Add hover effects for images */
+  .rounded-xl {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .rounded-xl:hover {
+    transform: scale(1.02);
+  }
+
+  /* Add animation for feature lists */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  li {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  li:nth-child(1) { animation-delay: 0.1s; }
+  li:nth-child(2) { animation-delay: 0.2s; }
+  li:nth-child(3) { animation-delay: 0.3s; }
+
+  /* Add new animations for statistics */
+  @keyframes countUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .statistics-item {
+    animation: countUp 0.8s ease-out forwards;
+  }
+
+  /* Add hover effect for integration logos */
+  .integration-logo {
+    transition: transform 0.3s ease;
+  }
+
+  .integration-logo:hover {
+    transform: scale(1.1);
+  }
+
+  /* Add smooth transition for FAQ items */
+  .faq-item {
+    transition: all 0.3s ease;
+  }
+
+  .faq-item:hover {
+    transform: translateX(10px);
+  }
+</style> 

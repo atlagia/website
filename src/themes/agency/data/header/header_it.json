@@ -1,0 +1,249 @@
+{
+  "navigation": [
+    {
+      "name": "Settori",
+      "href": "/industries",
+      "megaMenu": {
+        "categories": [
+          {
+            "title": "Sanità",
+            "icon": "stethoscope",
+            "items": [
+              {
+                "name": "Studi Medici",
+                "href": "/solutions/medical-solution"
+              },
+              {
+                "name": "Ospedali",
+                "href": "/solutions/hospital-solution"
+              },
+              {
+                "name": "Cliniche",
+                "href": "/solutions/clinic-solution"
+              },
+              {
+                "name": "Farmacie",
+                "href": "/solutions/pharmacy-solution"
+              }
+            ]
+          },
+          {
+            "title": "Servizi Professionali",
+            "icon": "briefcase",
+            "items": [
+              {
+                "name": "Studi Odontoiatrici",
+                "href": "/solutions/dental-solution"
+              },
+              {
+                "name": "Cliniche Veterinarie",
+                "href": "/solutions/veterinary-solution"
+              },
+              {
+                "name": "Centri Radiologici",
+                "href": "/solutions/radiology-solution"
+              },
+              {
+                "name": "Laboratori",
+                "href": "/solutions/laboratory-solution"
+              }
+            ]
+          },
+          {
+            "title": "Commercio & Distribuzione",
+            "icon": "shopping-bag",
+            "items": [
+              {
+                "name": "E-commerce",
+                "href": "/solutions/ecommerce-solution"
+              },
+              {
+                "name": "Negozi",
+                "href": "/solutions/retail-stores"
+              },
+              {
+                "name": "Ristoranti",
+                "href": "/solutions/restaurants"
+              },
+              {
+                "name": "Grossisti",
+                "href": "/solutions/wholesale"
+              }
+            ]
+          }
+        ],
+        "featured": {
+          "badge": "Nuovo",
+          "title": "Soluzioni IA per Settore",
+          "description": "Automatizzazione IA personalizzata per il tuo settore",
+          "link": {
+            "text": "Esplora le Soluzioni",
+            "href": "/solutions"
+          }
+        }
+      }
+    },
+    {
+      "name": "Soluzioni",
+      "href": "/solutions",
+      "megaMenu": {
+        "categories": [
+          {
+            "title": "Operazioni",
+            "icon": "settings",
+            "items": [
+              {
+                "name": "Automatizzazione dei Processi",
+                "href": "/solutions/workflow"
+              },
+              {
+                "name": "Gestione Documenti",
+                "href": "/solutions/documents"
+              },
+              {
+                "name": "Pianificazione Risorse",
+                "href": "/solutions/planning"
+              },
+              {
+                "name": "Analisi & Report",
+                "href": "/solutions/analytics"
+              }
+            ]
+          },
+          {
+            "title": "Esperienza Cliente",
+            "icon": "users",
+            "items": [
+              {
+                "name": "Supporto IA",
+                "href": "/solutions/chat-support"
+              },
+              {
+                "name": "Analisi Cliente",
+                "href": "/solutions/customer-analytics"
+              },
+              {
+                "name": "Personalizzazione",
+                "href": "/solutions/personalization"
+              },
+              {
+                "name": "Strumenti di Engagement",
+                "href": "/solutions/engagement"
+              }
+            ]
+          },
+          {
+            "title": "Crescita",
+            "icon": "trending-up",
+            "items": [
+              {
+                "name": "Marketing IA",
+                "href": "/solutions/marketing"
+              },
+              {
+                "name": "Intelligenza Commerciale",
+                "href": "/solutions/sales"
+              },
+              {
+                "name": "Ricerca di Mercato",
+                "href": "/solutions/research"
+              },
+              {
+                "name": "Business Intelligence",
+                "href": "/solutions/intelligence"
+              }
+            ]
+          }
+        ],
+        "featured": {
+          "badge": "In Evidenza",
+          "title": "Suite IA Enterprise",
+          "description": "Piattaforma completa di trasformazione IA",
+          "link": {
+            "text": "Scopri di Più",
+            "href": "/enterprise"
+          }
+        }
+      }
+    },
+    {
+      "name": "Piattaforma",
+      "href": "/platform",
+      "megaMenu": {
+        "categories": [
+          {
+            "title": "Funzionalità Principali",
+            "icon": "cpu",
+            "items": [
+              {
+                "name": "Motore IA",
+                "href": "/platform/ai-engine"
+              },
+              {
+                "name": "Hub Integrazione",
+                "href": "/platform/integrations"
+              },
+              {
+                "name": "Sicurezza",
+                "href": "/platform/security"
+              },
+              {
+                "name": "Accesso API",
+                "href": "/platform/api"
+              }
+            ]
+          }
+        ],
+        "featured": {
+          "badge": "Nuovo",
+          "title": "Portale Sviluppatori",
+          "description": "Sviluppa con la nostra piattaforma IA",
+          "link": {
+            "text": "Inizia Ora",
+            "href": "/developers"
+          }
+        }
+      }
+    },
+    {
+      "name": "Risorse",
+      "href": "/resources"
+    },
+    {
+      "name": "Prezzi",
+      "href": "/pricing"
+    }
+  ],
+  "auth": {
+    "signIn": {
+      "text": "Contattaci",
+      "href": "/contact"
+    },
+    "getStarted": {
+      "text": "Inizia Ora",
+      "href": "/it/discuss-project"
+    }
+  },
+  "languages": [
+    {
+      "code": "en",
+      "name": "English"
+    },
+    {
+      "code": "fr",
+      "name": "Français"
+    },
+    {
+      "code": "de",
+      "name": "Deutsch"
+    },
+    {
+      "code": "es",
+      "name": "Español"
+    },
+    {
+      "code": "ar",
+      "name": "العربية"
+    }
+  ]
+} 

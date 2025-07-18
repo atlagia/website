@@ -1,0 +1,153 @@
+{
+  "navigation": [
+    {
+      "name": "Solutions",
+      "href": "/solutions",
+      "megaMenu": {
+        "categories": [
+          {
+            "title": "Practice Management",
+            "icon": "laptop",
+            "items": [
+              {
+                "name": "Appointment Scheduling",
+                "href": "/solutions/scheduling"
+              },
+              {
+                "name": "Patient Records",
+                "href": "/solutions/patient-records"
+              },
+              {
+                "name": "Billing & Insurance",
+                "href": "/solutions/billing"
+              },
+              {
+                "name": "Inventory Management",
+                "href": "/solutions/inventory"
+              }
+            ]
+          },
+          {
+            "title": "Patient Experience",
+            "icon": "users",
+            "items": [
+              {
+                "name": "Online Booking",
+                "href": "/solutions/online-booking"
+              },
+              {
+                "name": "Patient Portal",
+                "href": "/solutions/patient-portal"
+              },
+              {
+                "name": "Automated Reminders",
+                "href": "/solutions/reminders"
+              },
+              {
+                "name": "Virtual Consultations",
+                "href": "/solutions/virtual-consults"
+              }
+            ]
+          },
+          {
+            "title": "Clinical Tools",
+            "icon": "stethoscope",
+            "items": [
+              {
+                "name": "Digital Imaging",
+                "href": "/solutions/imaging"
+              },
+              {
+                "name": "Treatment Planning",
+                "href": "/solutions/treatment-planning"
+              },
+              {
+                "name": "CAD/CAM Integration",
+                "href": "/solutions/cad-cam"
+              },
+              {
+                "name": "AI Diagnostics",
+                "href": "/solutions/ai-diagnostics"
+              }
+            ]
+          },
+          {
+            "title": "Business Growth",
+            "icon": "trending-up",
+            "items": [
+              {
+                "name": "Marketing Automation",
+                "href": "/solutions/marketing"
+              },
+              {
+                "name": "Analytics Dashboard",
+                "href": "/solutions/analytics"
+              },
+              {
+                "name": "Reputation Management",
+                "href": "/solutions/reputation"
+              },
+              {
+                "name": "Multi-location Support",
+                "href": "/solutions/multi-location"
+              }
+            ]
+          }
+        ],
+        "featured": {
+          "badge": "New",
+          "title": "AI-Powered Sleep Dentistry Module",
+          "description": "Our new software module streamlines sedation workflow and monitoring",
+          "link": {
+            "text": "Learn more",
+            "href": "/solutions/sleep-dentistry-module"
+          }
+        }
+      }
+    },
+    {
+      "name": "Pricing",
+      "href": "/pricing"
+    },
+    {
+      "name": "Resources",
+      "href": "/resources"
+    },
+    {
+      "name": "Contact",
+      "href": "/contact"
+    }
+  ],
+  "auth": {
+    "signIn": {
+      "text": "Client Login",
+      "href": "/client-portal/login"
+    },
+    "getStarted": {
+      "text": "Request Demo",
+      "href": "/request-demo"
+    }
+  },
+  "languages": [
+    {
+      "code": "en",
+      "name": "English"
+    },
+    {
+      "code": "fr",
+      "name": "Français"
+    },
+    {
+      "code": "de",
+      "name": "Deutsch"
+    },
+    {
+      "code": "it",
+      "name": "Italiano"
+    },
+    {
+      "code": "ar",
+      "name": "العربية"
+    }
+  ]
+} 

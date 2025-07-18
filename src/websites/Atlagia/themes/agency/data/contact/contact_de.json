@@ -1,0 +1,67 @@
+{
+  "hero": {
+    "subtitle": "KONTAKT",
+    "title": "Lassen Sie uns über Ihr Geschäft sprechen",
+    "description": "Haben Sie Fragen zu unseren KI-gestützten Lösungen? Wir sind hier, um Ihnen zu helfen, Ihr E-Commerce-Geschäft zu optimieren und zu wachsen."
+  },
+  "contactInfo": [
+    {
+      "icon": "Mail",
+      "title": "E-Mail",
+      "content": "support@atalsia.com",
+      "description": "Unser freundliches Team ist für Sie da.",
+      "link": "mailto:support@atalsia.com"
+    },
+    {
+      "icon": "Phone",
+      "title": "Rufen Sie uns an",
+      "content": "+1 2035 472 248",
+      "description": "Mo-Fr von 9:00 bis 18:00 Uhr.",
+      "link": "tel:+12035472248"
+    },
+    {
+      "icon": "MapPin",
+      "title": "Büro",
+      "content": "London, Großbritannien",
+      "description": "124 City Road",
+      "link": "https://maps.google.com/maps?q=124 City Road, London, United Kingdom"
+    }
+  ],
+  "form": {
+    "title": "Senden Sie uns eine Nachricht",
+    "fields": {
+      "firstName": {
+        "label": "Vorname",
+        "placeholder": "Geben Sie Ihren Vornamen ein"
+      },
+      "lastName": {
+        "label": "Nachname",
+        "placeholder": "Geben Sie Ihren Nachnamen ein"
+      },
+      "email": {
+        "label": "E-Mail",
+        "placeholder": "Geben Sie Ihre E-Mail-Adresse ein"
+      },
+      "subject": {
+        "label": "Betreff",
+        "placeholder": "Geben Sie den Betreff ein"
+      },
+      "message": {
+        "label": "Nachricht",
+        "placeholder": "Geben Sie Ihre Nachricht ein"
+      }
+    },
+    "submitButton": "Nachricht senden"
+  },
+  "support": {
+    "hours": {
+      "title": "Supportzeiten",
+      "content": "Montag - Freitag, 9:00 - 18:00 Uhr (GMT)"
+    },
+    "additional": {
+      "title": "Weitere Kontaktmöglichkeiten",
+      "description": "Für allgemeine Anfragen:",
+      "email": "contact@atalsia.com"
+    }
+  }
+} 

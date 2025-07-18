@@ -1,0 +1,192 @@
+{
+  "hero": {
+    "subtitle": "AI COMPETITOR ANALYSIS",
+    "title": "Gain Strategic Insights with AI",
+    "description": "Leverage artificial intelligence to analyze competitors, uncover opportunities, and make data-driven decisions to outperform your competition.",
+    "image": "https://cdn.atlagia.com/kepart_vector_laptop_Ai_Platform_e-commerce_Revolution_light_ba_3916f84e-6b71-47ac-adb5-4ca73e16d0ca.png"
+  },
+  "benefits": {
+    "title": "Why Choose Our AI Competitor Analysis",
+    "items": [
+      {
+        "icon": "Brain",
+        "title": "Smart Insights",
+        "description": "AI-powered competitive intelligence.",
+        "color": "indigo"
+      },
+      {
+        "icon": "Eye",
+        "title": "Market Vision",
+        "description": "Comprehensive market monitoring.",
+        "color": "blue"
+      },
+      {
+        "icon": "TrendingUp",
+        "title": "Growth Opportunities",
+        "description": "Identify untapped market potential.",
+        "color": "green"
+      },
+      {
+        "icon": "Target",
+        "title": "Strategic Planning",
+        "description": "Data-driven strategy development.",
+        "color": "purple"
+      }
+    ]
+  },
+  "features": {
+    "title": "Powerful Analysis Features",
+    "description": "Everything you need to understand and outperform your competition.",
+    "items": [
+      {
+        "title": "Comprehensive Analysis",
+        "description": "Deep insights into competitor strategies",
+        "image": "https://cdn.atlagia.com/kepart__f812dcbd-b9b8-45b6-b20d-d5165c76a2d1.png",
+        "features": [
+          "Content strategy analysis",
+          "SEO performance tracking",
+          "Social media monitoring",
+          "Market positioning insights"
+        ]
+      },
+      {
+        "title": "Performance Tracking",
+        "description": "Monitor and benchmark competitive metrics",
+        "image": "https://cdn.atlagia.com/kepart__76bd25ee-d1f2-456a-92a7-f69aba49b53b.png",
+        "features": [
+          "Traffic analysis",
+          "Keyword rankings",
+          "Market share tracking",
+          "Growth metrics"
+        ]
+      },
+      {
+        "title": "Strategic Planning",
+        "description": "Turn insights into actionable strategies",
+        "image": "https://cdn.atlagia.com/kepart_Futuristic_abstract_infographic_representing_strategic_p_15b5e2a7-d66a-4773-afe8-3461e11fd840.png",
+        "features": [
+          "Gap analysis",
+          "Opportunity identification",
+          "Strategy recommendations",
+          "Action plan generation"
+        ]
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "description": "Get started with AI competitor analysis in four simple steps",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Add Competitors",
+        "description": "Input your competitors for analysis"
+      },
+      {
+        "number": "02",
+        "title": "AI Analysis",
+        "description": "Let AI analyze competitive data"
+      },
+      {
+        "number": "03",
+        "title": "Get Insights",
+        "description": "Review detailed analysis reports"
+      },
+      {
+        "number": "04",
+        "title": "Take Action",
+        "description": "Implement strategic recommendations"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Simple, Transparent Pricing",
+    "description": "Choose the plan that best fits your analysis needs",
+    "plans": [
+      {
+        "name": "Starter",
+        "price": "59",
+        "period": "/month",
+        "description": "For small businesses",
+        "features": [
+          "3 competitors",
+          "Basic analysis",
+          "Weekly updates",
+          "Email support"
+        ],
+        "cta": {
+          "text": "Start Free Trial",
+          "link": "/trial"
+        }
+      },
+      {
+        "name": "Professional",
+        "price": "149",
+        "period": "/month",
+        "description": "For growing businesses",
+        "features": [
+          "10 competitors",
+          "Advanced analysis",
+          "Daily updates",
+          "Priority support"
+        ],
+        "cta": {
+          "text": "Start Free Trial",
+          "link": "/trial"
+        },
+        "popular": true
+      },
+      {
+        "name": "Enterprise",
+        "price": "349",
+        "period": "/month",
+        "description": "For large operations",
+        "features": [
+          "Unlimited competitors",
+          "Custom solutions",
+          "API access",
+          "24/7 support"
+        ],
+        "cta": {
+          "text": "Contact Sales",
+          "link": "/contact"
+        }
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "What Our Customers Say",
+    "items": [
+      {
+        "content": "The AI competitor analysis tool has transformed how we approach our market strategy. We've identified numerous opportunities we would have missed otherwise.",
+        "author": "Sarah Johnson",
+        "position": "Marketing Director",
+        "company": "StrategyPro",
+        "image": "/images/testimonials/sarah.jpg"
+      },
+      {
+        "content": "The insights we've gained have been invaluable. We've increased our market share by 15% since implementing the strategic recommendations.",
+        "author": "Mark Thompson",
+        "position": "CEO",
+        "company": "GrowthTech",
+        "image": "/images/testimonials/mark.jpg"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Outperform Your Competition?",
+    "description": "Join thousands of businesses using our platform to gain competitive advantage.",
+    "buttons": [
+      {
+        "text": "Start Free Trial",
+        "link": "/trial",
+        "primary": true
+      },
+      {
+        "text": "Watch Demo",
+        "link": "/demo",
+        "primary": false
+      }
+    ]
+  }
+} 

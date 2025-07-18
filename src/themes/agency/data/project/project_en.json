@@ -1,0 +1,105 @@
+{
+  "hero": {
+    "subtitle": "DISCUSS YOUR PROJECT",
+    "title": "Let's Build Something Amazing Together",
+    "description": "Share your project ideas with our team of experts. We'll help you transform your vision into reality with cutting-edge technology and innovative solutions."
+  },
+  "features": {
+    "title": "Why Choose Us for Your Project",
+    "description": "Our team combines technical expertise with creative problem-solving to deliver exceptional results for every project.",
+    "items": [
+      {
+        "icon": "Code",
+        "title": "Technical Excellence",
+        "description": "Our developers are experts in the latest technologies and best practices, ensuring your project is built to the highest standards."
+      },
+      {
+        "icon": "Lightbulb",
+        "title": "Innovative Solutions",
+        "description": "We don't just build what you ask for—we suggest creative solutions that might not have occurred to you, adding extra value to your project."
+      },
+      {
+        "icon": "Clock",
+        "title": "On-Time Delivery",
+        "description": "We understand the importance of deadlines and work diligently to ensure your project is completed on schedule."
+      },
+      {
+        "icon": "Users",
+        "title": "Collaborative Approach",
+        "description": "We work closely with you throughout the development process, keeping you informed and involved at every stage."
+      },
+      {
+        "icon": "Shield",
+        "title": "Quality Assurance",
+        "description": "Our rigorous testing processes ensure your project is bug-free and performs flawlessly across all platforms."
+      },
+      {
+        "icon": "TrendingUp",
+        "title": "Scalable Solutions",
+        "description": "We build with the future in mind, creating solutions that can grow and evolve with your business needs."
+      }
+    ]
+  },
+  "process": {
+    "title": "Our Development Process",
+    "description": "We follow a proven methodology to ensure your project is delivered efficiently and meets all your requirements.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Discovery & Planning",
+        "description": "We start by understanding your business, goals, and requirements to create a detailed project plan."
+      },
+      {
+        "number": "02",
+        "title": "Design & Prototyping",
+        "description": "Our designers create wireframes and prototypes to visualize the user experience before development begins."
+      },
+      {
+        "number": "03",
+        "title": "Development",
+        "description": "Our developers build your project using the latest technologies and best practices, with regular updates and feedback."
+      },
+      {
+        "number": "04",
+        "title": "Testing & Quality Assurance",
+        "description": "We thoroughly test your project to ensure it's bug-free and performs flawlessly across all platforms."
+      },
+      {
+        "number": "05",
+        "title": "Launch & Support",
+        "description": "We help you launch your project and provide ongoing support to ensure its continued success."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "description": "Find answers to common questions about our project development process.",
+    "items": [
+      {
+        "question": "How long does it take to complete a project?",
+        "answer": "Project timelines vary depending on complexity, scope, and requirements. Simple projects might take 4-8 weeks, while more complex applications could take 3-6 months or more. We'll provide a detailed timeline estimate after our initial consultation."
+      },
+      {
+        "question": "What is your pricing model?",
+        "answer": "We offer flexible pricing models including fixed-price, time and materials, and dedicated team arrangements. The best approach depends on your project's scope, timeline, and requirements. We'll recommend the most suitable option during our consultation."
+      },
+      {
+        "question": "Do you offer maintenance and support after project completion?",
+        "answer": "Yes, we offer various maintenance and support packages to ensure your project continues to perform optimally after launch. These can include bug fixes, updates, feature enhancements, and technical support."
+      },
+      {
+        "question": "How do you handle project changes and scope adjustments?",
+        "answer": "We understand that requirements can evolve during development. We have a structured change management process to evaluate, implement, and communicate changes while minimizing impact on timeline and budget."
+      },
+      {
+        "question": "What technologies do you specialize in?",
+        "answer": "Our team is proficient in a wide range of technologies including React, Angular, Vue.js, Node.js, Python, Java, .NET, and more. We also have expertise in AI/ML, cloud solutions, and mobile development for iOS and Android."
+      }
+    ]
+  },
+  "readyToStart": {
+    "title": "Ready to Get Started?",
+    "description": "Fill out the form to discuss your project with our team. We'll get back to you within 24 hours to schedule a consultation.",
+    "buttonText": "Go to Form"
+  }
+} 

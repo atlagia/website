@@ -1,0 +1,270 @@
+---
+import { SITE_TITLE } from '../consts';
+import pkg from 'lucide-react';
+const { Tooth, Clock, Shield, Users, HeartPulse, Stethoscope } = pkg;
+
+const theme = import.meta.env.THEME || 'default';
+const lang = Astro.params.lang || 'en';
+
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+
+// Import language-specific about data
+const aboutData = await import(`../data/about/about_${lang}.json`);
+
+// Import styles
+const styles = await import(`../style/page/aboutpage.json`);
+
+const businessInfo = {
+  name: import.meta.env.PUBLIC_BUSINESS_NAME || 'DentCare'
+};
+
+// Define icon paths for each icon type
+const iconPaths = {
+  Tooth: `<path d="M12 22c2.23 0 4.1-2.29 4.5-5.34C16.83 13.4 18 9.61 18 8c0-2.21-1.79-4-4-4s-4 1.79-4 4c0 1.61 1.17 5.4 1.5 8.66C11.9 19.71 13.77 22 16 22z"></path>`,
+  HeartPulse: `<path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path><path d="M3.22 12H9.5l.5-1 2 4 .5-2 2 2h5.27"></path>`,
+  Clock: `<circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>`,
+  Shield: `<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>`,
+  Users: `<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path>`,
+  Stethoscope: `<path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"></path><path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"></path><circle cx="20" cy="10" r="2"></circle>`
+};
+
+// Default icon path
+const defaultIconPath = iconPaths.Tooth;
+
+// Map features with icon paths
+const features = aboutData.welcome.features.map(feature => {
+  const iconPath = iconPaths[feature.icon] || defaultIconPath;
+  return {
+    ...feature,
+    iconPath
+  };
+});
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <BaseHead 
+      title={`About Us | ${businessInfo.name}`}
+      description={aboutData.hero.description}
+    />
+  </head>
+  <body>
+    <Header />
+    <main class="pt-10">
+      <!-- Hero Section -->
+      <section class={styles.hero.section}>
+        <div class="absolute inset-0 z-0">
+          <div class={styles.hero.blob1}></div>
+          <div class={styles.hero.blob2}></div>
+        </div>
+        <div class={styles.hero.container}>
+          <span class={styles.hero.subtitle}>
+            {aboutData.hero.subtitle}
+          </span>
+          <h1 class={styles.hero.title}>
+            {aboutData.hero.title}
+          </h1>
+          <p class={styles.hero.description}>
+            {aboutData.hero.description}
+          </p>
+        </div>
+      </section>
+
+      <!-- Welcome Section -->
+      <section class={styles.welcome.section}>
+        <div class={styles.welcome.container}>
+          <div class={styles.welcome.grid}>
+            <div>
+              <span class={styles.welcome.subtitle}>
+                {aboutData.welcome.subtitle}
+              </span>
+              <h2 class={styles.welcome.title}>
+                {aboutData.welcome.title}
+              </h2>
+              <p class={styles.welcome.description}>
+                {aboutData.welcome.description}
+              </p>
+              <div class={styles.welcome.featuresContainer}>
+                {features.map(feature => (
+                  <div class={styles.welcome.feature.container}>
+                    <div class={styles.welcome.feature.iconContainer}>
+                      <svg 
+                        class={styles.welcome.feature.icon} 
+                        fill="none" 
+                        viewBox="0 0 24 24" 
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        set:html={feature.iconPath}
+                      />
+                    </div>
+                    <div>
+                      <h3 class={styles.welcome.feature.content.title}>{feature.title}</h3>
+                      <p class={styles.welcome.feature.content.description}>{feature.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div class={styles.welcome.imageContainer}>
+              <div class={styles.welcome.imageBlob1}></div>
+              <div class={styles.welcome.imageBlob2}></div>
+              <img 
+                src={aboutData.welcome.image}
+                alt="Dental Care"
+                class={styles.welcome.image}
+              />
+              <div class={styles.welcome.experienceBadge}>
+                <div class={styles.welcome.experienceNumber}>15+</div>
+                <div class={styles.welcome.experienceText}>Years Experience</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Certifications Section -->
+      <section class={styles.certifications.section}>
+        <div class={styles.certifications.container}>
+          <div class={styles.certifications.logoContainer}>
+            {aboutData.certifications.map(cert => (
+              <img 
+                src={cert.logo}
+                alt={cert.name}
+                class={styles.certifications.logo}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Team Section -->
+      <section class={styles.team.section}>
+        <div class={styles.team.container}>
+          <div class={styles.team.grid}>
+            <div class={styles.team.imageContainer}>
+              <div class={styles.team.imageBlob}></div>
+              <img 
+                src={aboutData.team.image}
+                alt="Our Dental Team"
+                class={styles.team.image}
+              />
+            </div>
+            <div class={styles.team.contentContainer}>
+              <span class={styles.team.subtitle}>
+                {aboutData.team.subtitle}
+              </span>
+              <h2 class={styles.team.title}>
+                {aboutData.team.title}
+              </h2>
+              <p class={styles.team.description}>
+                {aboutData.team.description}
+              </p>
+              <div class={styles.team.statsGrid}>
+                {aboutData.team.stats.map(stat => (
+                  <div>
+                    <div class={styles.team.statNumber}>{stat.number}</div>
+                    <div class={styles.team.statTitle}>{stat.title}</div>
+                  </div>
+                ))}
+              </div>
+              <a 
+                href={aboutData.team.cta.link}
+                class={styles.team.cta}
+              >
+                {aboutData.team.cta.text}
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section class={styles.testimonials.section}>
+        <div class="absolute inset-0 z-0">
+          <div class={styles.testimonials.blob1}></div>
+          <div class={styles.testimonials.blob2}></div>
+        </div>
+        <div class={styles.testimonials.container}>
+          <div class={styles.testimonials.header}>
+            <span class={styles.testimonials.subtitle}>
+              PATIENT TESTIMONIALS
+            </span>
+            <h2 class={styles.testimonials.title}>
+              {aboutData.testimonials.title}
+            </h2>
+            <p class={styles.testimonials.description}>
+              {aboutData.testimonials.description}
+            </p>
+          </div>
+          <div class={styles.testimonials.grid}>
+            {aboutData.testimonials.items.map(testimonial => (
+              <div class={styles.testimonials.testimonialCard}>
+                <p class={styles.testimonials.testimonialContent}>"{testimonial.content}"</p>
+                <div class={styles.testimonials.testimonialAuthor}>
+                  <img 
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    class={styles.testimonials.authorImage}
+                  />
+                  <div>
+                    <div class={styles.testimonials.authorName}>{testimonial.name}</div>
+                    <div class={styles.testimonials.authorPosition}>{testimonial.position}</div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div class={styles.testimonials.ctaContainer}>
+            <a
+              href={aboutData.testimonials.cta.link}
+              class={styles.testimonials.cta}
+            >
+              {aboutData.testimonials.cta.text}
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style define:vars={{ 
+  blobAnimation: styles.animations.blob 
+}}>
+  @keyframes blob {
+    0% {
+      transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    }
+    33% {
+      transform: translate(-50%, -50%) scale(1.1) rotate(120deg);
+    }
+    66% {
+      transform: translate(-50%, -50%) scale(0.9) rotate(240deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1) rotate(360deg);
+    }
+  }
+
+  .animate-blob {
+    animation: blob 20s infinite linear;
+  }
+
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+
+  .backdrop-blur-sm {
+    backdrop-filter: blur(8px);
+  }
+
+  .hover\:-translate-y-0.5:hover {
+    transform: translateY(-2px);
+  }
+</style>

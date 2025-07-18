@@ -1,0 +1,54 @@
+---
+import { SITE_TITLE } from '../../consts';
+import { Zap, Brain, Target, Languages, Check, ArrowRight, Star } from 'lucide-react';
+
+const theme = import.meta.env.THEME || 'default';
+const lang = Astro.params.lang || 'en';
+const serviceName = Astro.params.service;
+
+const { default: BaseHead } = await import(`../../components/BaseHead.astro`);
+const { default: Header } = await import(`../../components/Header.astro`);
+const { default: Footer } = await import(`../../components/Footer.astro`);
+
+// Import language-specific service data
+const serviceData = await import(`../../data/services/${serviceName}/ai_content_${lang}.json`);
+
+// Generate static paths for all services
+export async function getStaticPaths() {
+  const languages = ['en', 'fr', 'es', 'it', 'de', 'nl', 'pt'];
+  const services = ['ai-content-generator'];
+  
+  return languages.flatMap(lang => 
+    services.map(service => ({
+      params: { 
+        lang,
+        service 
+      }
+    }))
+  );
+}
+
+const businessInfo = {
+  name: import.meta.env.PUBLIC_BUSINESS_NAME || 'Atalsia'
+};
+
+// Map icon strings to actual components
+const iconMap = {
+  Zap,
+  Brain,
+  Target,
+  Languages
+};
+
+// Map benefits with actual icon components
+const benefits = serviceData.benefits.items.map(benefit => ({
+  ...benefit,
+  icon: iconMap[benefit.icon]
+}));
+---
+
+<!-- Rest of the template remains the same as before -->
+<!doctype html>
+<html lang={lang}>
+  <!-- ... previous template code ... -->
+</html> 

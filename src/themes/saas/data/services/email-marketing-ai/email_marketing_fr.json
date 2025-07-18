@@ -1,0 +1,192 @@
+{
+  "hero": {
+    "subtitle": "EMAIL MARKETING IA",
+    "title": "Boostez Votre Email Marketing avec l'IA",
+    "description": "Transformez vos campagnes email avec la personnalisation, l'automatisation et l'analyse alimentées par l'IA, conçues pour augmenter l'engagement et les conversions.",
+    "image": "/images/services/email-marketing-ai.svg"
+  },
+  "benefits": {
+    "title": "Pourquoi Choisir Notre Email Marketing IA",
+    "items": [
+      {
+        "icon": "Brain",
+        "title": "Personnalisation Intelligente",
+        "description": "Personnalisation du contenu par IA qui s'adresse directement aux intérêts et comportements de chaque abonné.",
+        "color": "purple"
+      },
+      {
+        "icon": "Target",
+        "title": "Analyses Prédictives",
+        "description": "Prévoyez la performance des campagnes et optimisez les heures d'envoi pour un engagement maximal.",
+        "color": "blue"
+      },
+      {
+        "icon": "Wand",
+        "title": "Génération Automatique",
+        "description": "Générez des contenus d'emails et des objets accrocheurs qui stimulent les ouvertures et les clics.",
+        "color": "pink"
+      },
+      {
+        "icon": "ChartLine",
+        "title": "Optimisation Intelligente",
+        "description": "Tests A/B continus et optimisation pour améliorer la performance des campagnes.",
+        "color": "green"
+      }
+    ]
+  },
+  "features": {
+    "title": "Fonctionnalités Puissantes d'Email Marketing",
+    "description": "Tout ce dont vous avez besoin pour créer, automatiser et optimiser vos campagnes d'email marketing.",
+    "items": [
+      {
+        "title": "Création de Contenu IA",
+        "description": "Créez du contenu email engageant avec notre assistant d'écriture IA avancé",
+        "image": "/images/services/ai-email-content.svg",
+        "features": [
+          "Optimisation des objets",
+          "Génération de contenu",
+          "Templates intelligents",
+          "Personnalisation du ton et du style"
+        ]
+      },
+      {
+        "title": "Automatisation Intelligente",
+        "description": "Configurez des séquences email automatisées intelligentes qui s'adaptent au comportement des abonnés",
+        "image": "/images/services/email-automation.svg",
+        "features": [
+          "Déclencheurs comportementaux",
+          "Contenu dynamique",
+          "Cartographie du parcours",
+          "Tests A/B automatisés"
+        ]
+      },
+      {
+        "title": "Analyses Avancées",
+        "description": "Obtenez des insights approfondis sur la performance de vos emails avec l'analyse alimentée par l'IA",
+        "image": "/images/services/email-analytics.svg",
+        "features": [
+          "Prédiction de performance",
+          "Score d'engagement",
+          "Attribution des revenus",
+          "Insights sur les abonnés"
+        ]
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "Comment Ça Marche",
+    "description": "Commencez avec l'email marketing alimenté par l'IA en quatre étapes simples",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Connectez Vos Données",
+        "description": "Importez votre liste d'abonnés et les données des campagnes passées"
+      },
+      {
+        "number": "02",
+        "title": "Définissez Vos Objectifs",
+        "description": "Définissez vos objectifs de campagne et vos préférences"
+      },
+      {
+        "number": "03",
+        "title": "Créez du Contenu",
+        "description": "Générez et personnalisez du contenu email alimenté par l'IA"
+      },
+      {
+        "number": "04",
+        "title": "Optimisez & Développez",
+        "description": "Laissez l'IA optimiser et développer vos campagnes"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Tarification Simple et Transparente",
+    "description": "Choisissez le forfait qui correspond le mieux à vos besoins en email marketing",
+    "plans": [
+      {
+        "name": "Débutant",
+        "price": "49",
+        "period": "/mois",
+        "description": "Parfait pour les petites entreprises",
+        "features": [
+          "Jusqu'à 10 000 abonnés",
+          "Fonctionnalités IA de base",
+          "Templates standard",
+          "Support par email"
+        ],
+        "cta": {
+          "text": "Essai Gratuit",
+          "link": "/trial"
+        }
+      },
+      {
+        "name": "Professionnel",
+        "price": "99",
+        "period": "/mois",
+        "description": "Pour les entreprises en croissance",
+        "features": [
+          "Jusqu'à 50 000 abonnés",
+          "Fonctionnalités IA avancées",
+          "Templates personnalisés",
+          "Support prioritaire"
+        ],
+        "cta": {
+          "text": "Essai Gratuit",
+          "link": "/trial"
+        },
+        "popular": true
+      },
+      {
+        "name": "Entreprise",
+        "price": "249",
+        "period": "/mois",
+        "description": "Pour les grandes organisations",
+        "features": [
+          "Abonnés illimités",
+          "Fonctionnalités IA premium",
+          "Intégration personnalisée",
+          "Support 24/7"
+        ],
+        "cta": {
+          "text": "Contacter les Ventes",
+          "link": "/contact"
+        }
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Ce Que Disent Nos Clients",
+    "items": [
+      {
+        "content": "La génération de contenu et l'optimisation alimentées par l'IA ont augmenté nos taux d'ouverture de 45% et nos taux de clic de 60%. Ça a révolutionné notre email marketing.",
+        "author": "Jessica Chen",
+        "position": "Responsable Email Marketing",
+        "company": "GrowthMax",
+        "image": "/images/testimonials/jessica.jpg"
+      },
+      {
+        "content": "Les analyses prédictives et l'optimisation automatisée nous ont fait gagner d'innombrables heures tout en offrant de meilleurs résultats que nos campagnes manuelles.",
+        "author": "Marcus Thompson",
+        "position": "Directeur Marketing Digital",
+        "company": "EcomPro",
+        "image": "/images/testimonials/marcus.jpg"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prêt à Transformer Votre Email Marketing ?",
+    "description": "Rejoignez des milliers d'entreprises qui utilisent notre IA pour créer de meilleures campagnes email.",
+    "buttons": [
+      {
+        "text": "Essai Gratuit",
+        "link": "/trial",
+        "primary": true
+      },
+      {
+        "text": "Voir la Démo",
+        "link": "/demo",
+        "primary": false
+      }
+    ]
+  }
+} 

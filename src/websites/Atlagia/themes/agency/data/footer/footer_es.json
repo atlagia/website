@@ -1,0 +1,184 @@
+{
+  "company": {
+    "title": "Empresa",
+    "links": [
+      {
+        "name": "Sobre nosotros",
+        "href": "/about"
+      },
+      {
+        "name": "Carreras",
+        "href": "/careers"
+      },
+      {
+        "name": "Prensa",
+        "href": "/press"
+      },
+      {
+        "name": "Blog",
+        "href": "/blog"
+      }
+    ]
+  },
+  "product": {
+    "title": "Soluciones",
+    "links": [
+      {
+        "name": "Prácticas médicas",
+        "href": "/solutions/medical-solution"
+      },
+      {
+        "name": "Hospitales",
+        "href": "/solutions/hospital-solution"
+      },
+      {
+        "name": "Clínicas",
+        "href": "/solutions/clinic-solution"
+      },
+      {
+        "name": "Farmacias",
+        "href": "/solutions/pharmacy-solution"
+      },
+      {
+        "name": "Prácticas dentales",
+        "href": "/solutions/dental-solution"
+      },
+      {
+        "name": "Prácticas veterinarias",
+        "href": "/solutions/veterinary-solution"
+      },
+      {
+        "name": "Centros de radiología",
+        "href": "/solutions/radiology-solution"
+      },
+      {
+        "name": "Laboratorios",
+        "href": "/solutions/laboratory-solution"
+      },
+      {
+        "name": "Comercio electrónico",
+        "href": "/solutions/ecommerce-solution"
+      },
+      {
+        "name": "Tiendas minoristas",
+        "href": "/solutions/retail-stores"
+      },
+      {
+        "name": "Restaurantes",
+        "href": "/solutions/restaurants"
+      },
+      {
+        "name": "Venta al por mayor",
+        "href": "/solutions/wholesale"
+      }
+    ]
+  },
+  "services": {
+    "title": "Servicios",
+    "links": [
+      {
+        "name": "Desarrollo",
+        "href": "/services/development"
+      },
+      {
+        "name": "Consultoría",
+        "href": "/services/consulting"
+      },
+      {
+        "name": "Soporte",
+        "href": "/services/support"
+      },
+      {
+        "name": "Formación",
+        "href": "/services/training"
+      }
+    ]
+  },
+  "resources": {
+    "title": "Recursos",
+    "links": [
+      {
+        "name": "Documentación",
+        "href": "/documentation"
+      },
+      {
+        "name": "Referencia de API",
+        "href": "/api"
+      },
+      {
+        "name": "Soporte",
+        "href": "/support"
+      },
+      {
+        "name": "Estado",
+        "href": "/status"
+      }
+    ]
+  },
+  "legal": {
+    "title": "Legal",
+    "links": [
+      {
+        "name": "Privacidad",
+        "href": "/privacy"
+      },
+      {
+        "name": "Términos",
+        "href": "/terms"
+      },
+      {
+        "name": "Política de cookies",
+        "href": "/cookie-policy"
+      }
+    ]
+  },
+  "social": {
+    "title": "Redes sociales",
+    "links": [
+      {
+        "name": "YouTube",
+        "href": "https://www.youtube.com/@Atlagia",
+        "icon": "youtube"
+      },
+      {
+        "name": "Instagram",
+        "href": "https://www.instagram.com/atlagia/",
+        "icon": "instagram"
+      },
+      {
+        "name": "Twitter",
+        "href": "https://twitter.com/atlagia",
+        "icon": "twitter"
+      },
+      {
+        "name": "LinkedIn",
+        "href": "https://linkedin.com/company/atlagia",
+        "icon": "linkedin"
+      },
+      {
+        "name": "GitHub",
+        "href": "https://github.com/atlagia",
+        "icon": "github"
+      }
+    ]
+  },
+  "newsletter": {
+    "title": "Suscríbete a nuestro boletín",
+    "description": "Mantente al día con las últimas tendencias de la industria, actualizaciones de productos y noticias de la empresa.",
+    "buttonText": "Suscribirse",
+    "placeholderText": "Introduce tu correo electrónico"
+  },
+  "copyright": {
+    "text": "© 2025 GiaConnect. Todos los derechos reservados.",
+    "links": [
+      {
+        "name": "Política de privacidad",
+        "href": "/privacy"
+      },
+      {
+        "name": "Términos de servicio",
+        "href": "/terms"
+      }
+    ]
+  }
+} 

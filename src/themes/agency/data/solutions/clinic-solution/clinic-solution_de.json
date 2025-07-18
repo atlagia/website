@@ -1,0 +1,335 @@
+{
+  "hero": {
+    "subtitle": "Klinik-Managementsystem",
+    "title": "Optimieren Sie Ihre Klinikabläufe",
+    "description": "Eine integrierte Klinikmanagement-Lösung, die Patientenversorgung, administrative Aufgaben und Geschäftsabläufe kombiniert, um die Effizienz Ihrer Praxis zu steigern.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Demo der Klinikmanagement-Lösung"
+    },
+    "stats": [
+      {
+        "value": "96%",
+        "label": "Patientenzufriedenheit"
+      },
+      {
+        "value": "50%",
+        "label": "Eingesparter Verwaltungsaufwand"
+      },
+      {
+        "value": "35%",
+        "label": "Umsatzsteigerung"
+      }
+    ]
+  },
+  "features": {
+    "subtitle": "Umfassende Funktionen",
+    "title": "Alles, was Ihre Klinik Braucht",
+    "description": "Ein vollständiger Werkzeugsatz für moderne Kliniken",
+    "categories": [
+      {
+        "name": "Klinische Abläufe",
+        "description": "Optimieren Sie die Patientenversorgung und klinischen Arbeitsabläufe"
+      },
+      {
+        "name": "Praxis-Management",
+        "description": "Optimieren Sie administrative und geschäftliche Abläufe"
+      }
+    ],
+    "items": [
+      {
+        "icon": "calendar",
+        "category": "Termine",
+        "title": "Intelligente Terminplanung",
+        "description": "KI-gestütztes Terminplanungssystem mit automatischen Erinnerungen",
+        "image": "/images/solutions/clinic/scheduling.jpg",
+        "highlights": [
+          "Online-Buchung",
+          "Automatische Erinnerungen",
+          "Wartelistenverwaltung",
+          "Ressourcenallokation"
+        ],
+        "stats": {
+          "value": "60%",
+          "label": "Reduzierte No-Shows"
+        }
+      },
+      {
+        "icon": "file-text",
+        "category": "Klinische Aufzeichnungen",
+        "title": "Elektronische Patientenakte",
+        "description": "Umfassendes EPA-System mit einfacher Dokumentation",
+        "image": "/images/solutions/clinic/ehr.jpg",
+        "highlights": [
+          "Digitale Dokumentation",
+          "Behandlungspläne",
+          "Laborintegration",
+          "E-Rezepte"
+        ],
+        "stats": {
+          "value": "45%",
+          "label": "Eingesparter Dokumentationsaufwand"
+        }
+      },
+      {
+        "icon": "credit-card",
+        "category": "Abrechnung",
+        "title": "Intelligente Abrechnung",
+        "description": "Automatisierte Abrechnung und Versicherungsabwicklung",
+        "image": "/images/solutions/clinic/billing.jpg",
+        "highlights": [
+          "Versicherungsprüfung",
+          "Zahlungsabwicklung",
+          "Abrechnungsverwaltung",
+          "Finanzberichte"
+        ],
+        "stats": {
+          "value": "30%",
+          "label": "Schnellere Erstattungen"
+        }
+      },
+      {
+        "icon": "activity",
+        "category": "Analyse",
+        "title": "Praxis-Intelligenz",
+        "description": "Datenbasierte Erkenntnisse für bessere Entscheidungen",
+        "image": "/images/solutions/clinic/analytics.jpg",
+        "highlights": [
+          "Leistungskennzahlen",
+          "Patientenanalysen",
+          "Finanzielle Einblicke",
+          "Operative Berichte"
+        ],
+        "stats": {
+          "value": "35%",
+          "label": "Umsatzwachstum"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Sehen Sie es in Aktion",
+    "description": "Erleben Sie, wie führende Kliniken ihre Praxis transformieren",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Klinik-Erfolgsgeschichte"
+    },
+    "testimonials": [
+      {
+        "author": "Dr. Anna Schmidt",
+        "role": "Klinikleiterin",
+        "image": "/images/testimonials/doctor1.jpg",
+        "quote": "Dieses System hat unsere Arbeitsweise transformiert. Unser Personal ist effizienter und unsere Patienten sind zufriedener."
+      },
+      {
+        "author": "Dr. Michael Weber",
+        "role": "Hausarzt",
+        "image": "/images/testimonials/doctor2.jpg",
+        "quote": "Das EPA-System ist intuitiv und die Abrechnungsintegration hat unseren Umsatzzyklus deutlich verbessert."
+      }
+    ]
+  },
+  "benefits": {
+    "subtitle": "Wichtige Vorteile",
+    "title": "Transformieren Sie Ihre Praxis",
+    "description": "Erleben Sie die Vorteile eines vollständig integrierten Klinikmanagementsystems",
+    "items": [
+      {
+        "icon": "clock",
+        "title": "Zeiteffizienz",
+        "description": "Reduzieren Sie den Verwaltungsaufwand und konzentrieren Sie sich auf die Patientenversorgung",
+        "color": "blue",
+        "stats": {
+          "value": "50%",
+          "label": "Eingesparte Zeit"
+        },
+        "highlights": [
+          "Automatisierte Arbeitsabläufe",
+          "Schnelle Dokumentation",
+          "Effiziente Terminplanung",
+          "Reduzierter Papierkram"
+        ]
+      },
+      {
+        "icon": "heart",
+        "title": "Bessere Patientenversorgung",
+        "description": "Verbessern Sie die Patientenversorgung und Ergebnisse",
+        "color": "red",
+        "stats": {
+          "value": "96%",
+          "label": "Patientenzufriedenheit"
+        },
+        "highlights": [
+          "Umfassende Aufzeichnungen",
+          "Besseres Follow-up",
+          "Verbesserte Kommunikation",
+          "Versorgungskoordination"
+        ]
+      },
+      {
+        "icon": "trending-up",
+        "title": "Praxiswachstum",
+        "description": "Steigern Sie den Umsatz und optimieren Sie die Abläufe",
+        "color": "green",
+        "stats": {
+          "value": "35%",
+          "label": "Umsatzwachstum"
+        },
+        "highlights": [
+          "Optimierte Abrechnung",
+          "Reduzierte Kosten",
+          "Bessere Ressourcennutzung",
+          "Erhöhte Effizienz"
+        ]
+      },
+      {
+        "icon": "shield",
+        "title": "Compliance & Sicherheit",
+        "description": "Gewährleisten Sie regulatorische Compliance und Datensicherheit",
+        "color": "purple",
+        "stats": {
+          "value": "100%",
+          "label": "HIPAA-Konformität"
+        },
+        "highlights": [
+          "HIPAA-Konformität",
+          "Datenverschlüsselung",
+          "Audit-Tracking",
+          "Sicherer Zugang"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "subtitle": "Transparente Preise",
+    "title": "Flexible Preispläne",
+    "description": "Wählen Sie den perfekten Plan für Ihre Klinik. Sparen Sie bis zu 20% bei jährlicher Abrechnung.",
+    "billingPeriods": ["Monatlich", "Jährlich"],
+    "plans": [
+      {
+        "name": "Basis",
+        "highlight": "Perfekt für kleine Kliniken",
+        "monthlyPrice": "$299",
+        "yearlyPrice": "$2,990",
+        "yearlyDiscount": "Sparen Sie $598/Jahr",
+        "description": "Grundlegende Funktionen für kleine Praxen",
+        "features": [
+          {
+            "text": "Terminplanung",
+            "included": true
+          },
+          {
+            "text": "Basis-EPA",
+            "included": true
+          },
+          {
+            "text": "Patientenportal",
+            "included": true
+          },
+          {
+            "text": "E-Mail-Support",
+            "included": true
+          },
+          {
+            "text": "Basis-Berichte",
+            "included": true
+          },
+          {
+            "text": "Mobiler Zugang",
+            "included": true
+          }
+        ],
+        "cta": "Jetzt Starten",
+        "popular": false
+      },
+      {
+        "name": "Professional",
+        "highlight": "Beliebt bei wachsenden Kliniken",
+        "monthlyPrice": "$599",
+        "yearlyPrice": "$5,990",
+        "yearlyDiscount": "Sparen Sie $1,198/Jahr",
+        "description": "Erweiterte Funktionen für etablierte Kliniken",
+        "features": [
+          {
+            "text": "Alles aus Basis, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Erweiterte EPA-Funktionen",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "Telemedizin-Plattform",
+            "included": true
+          },
+          {
+            "text": "Erweiterte Analysen",
+            "included": true
+          },
+          {
+            "text": "Prioritäts-Support",
+            "included": true
+          },
+          {
+            "text": "Multi-Provider-Support",
+            "included": true
+          }
+        ],
+        "cta": "Jetzt Starten",
+        "popular": true
+      },
+      {
+        "name": "Enterprise",
+        "highlight": "Für große Kliniken",
+        "monthlyPrice": "Individuell",
+        "yearlyPrice": "Individuell",
+        "yearlyDiscount": "Kontaktieren Sie uns für Sonderpreise",
+        "description": "Maßgeschneiderte Lösungen für große Praxen",
+        "features": [
+          {
+            "text": "Alles aus Professional, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Individuelle Integrationsunterstützung",
+            "included": true
+          },
+          {
+            "text": "Dedizierter Account Manager",
+            "included": true
+          },
+          {
+            "text": "Erweiterte Sicherheitsfunktionen",
+            "included": true
+          },
+          {
+            "text": "Individuelle Entwicklungsoptionen",
+            "included": true
+          },
+          {
+            "text": "SLA-Garantien",
+            "included": true
+          }
+        ],
+        "cta": "Vertrieb Kontaktieren",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "Bereit, Ihre Klinik zu Transformieren?",
+    "description": "Schließen Sie sich Tausenden von Gesundheitsdienstleistern an, die ihre Praxis mit unserer Lösung modernisiert haben.",
+    "background": "/images/solutions/clinic/cta-background.jpg",
+    "primaryButton": {
+      "text": "Demo Planen",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Demo Ansehen",
+      "link": "#showcase"
+    }
+  }
+} 

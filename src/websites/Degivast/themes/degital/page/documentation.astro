@@ -1,0 +1,144 @@
+---
+import { getLangFromUrl, useTranslations } from '@utils/i18n';
+
+const { lang } = Astro.params;
+const translations = await useTranslations(lang);
+const jsonData = translations.default;
+
+// Import components
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+
+const SITE_TITLE = `${jsonData.siteTitle} - Documentation`;
+const SITE_DESCRIPTION = jsonData.docsDescription || 'Technical documentation and guides for our platform';
+
+// Generate static paths for all supported languages
+export async function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'fr' } },
+    { params: { lang: 'es' } },
+    { params: { lang: 'it' } },
+    { params: { lang: 'de' } },
+    { params: { lang: 'nl' } },
+    { params: { lang: 'pt' } },
+  ];
+}
+---
+
+<!doctype html>
+<html lang={lang} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body class={lang === 'ar' ? 'rtl' : 'ltr'}>
+    <Header />
+    <main class="container mx-auto px-4 py-16">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h1 class="text-4xl font-bold mb-4">{jsonData.docs?.title}</h1>
+          <p class="text-xl text-gray-600">{jsonData.docs?.subtitle}</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+          {/* Sidebar Navigation */}
+          <div class="lg:col-span-1">
+            <div class="sticky top-8">
+              <h2 class="text-lg font-semibold mb-4">{jsonData.docs?.navigation?.title}</h2>
+              <nav class="space-y-2">
+                {jsonData.docs?.navigation?.sections?.map((section) => (
+                  <div>
+                    <h3 class="font-medium text-gray-900 mb-2">{section.title}</h3>
+                    <ul class="space-y-2 pl-4">
+                      {section.items?.map((item) => (
+                        <li>
+                          <a 
+                            href={item.link}
+                            class="text-gray-600 hover:text-primary transition-colors"
+                          >
+                            {item.title}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </nav>
+            </div>
+          </div>
+
+          {/* Main Content */}
+          <div class="lg:col-span-3">
+            <div class="bg-white rounded-lg shadow-lg p-8">
+              {/* Quick Start */}
+              <section class="mb-12">
+                <h2 class="text-2xl font-semibold mb-6">{jsonData.docs?.quickStart?.title}</h2>
+                <div class="prose prose-lg">
+                  {jsonData.docs?.quickStart?.steps?.map((step, index) => (
+                    <div class="mb-8">
+                      <h3 class="text-xl font-semibold mb-3">
+                        {index + 1}. {step.title}
+                      </h3>
+                      <p class="text-gray-600 mb-4">{step.description}</p>
+                      {step.code && (
+                        <pre class="bg-gray-900 text-white p-4 rounded-lg overflow-x-auto">
+                          <code>{step.code}</code>
+                        </pre>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </section>
+
+              {/* API Reference */}
+              <section class="mb-12">
+                <h2 class="text-2xl font-semibold mb-6">{jsonData.docs?.api?.title}</h2>
+                <div class="space-y-8">
+                  {jsonData.docs?.api?.endpoints?.map((endpoint) => (
+                    <div class="border-b border-gray-200 pb-8">
+                      <div class="flex items-center mb-4">
+                        <span class={`px-3 py-1 rounded-full text-sm font-medium mr-3 ${
+                          endpoint.method === 'GET' ? 'bg-green-100 text-green-800' :
+                          endpoint.method === 'POST' ? 'bg-blue-100 text-blue-800' :
+                          endpoint.method === 'PUT' ? 'bg-yellow-100 text-yellow-800' :
+                          'bg-red-100 text-red-800'
+                        }`}>
+                          {endpoint.method}
+                        </span>
+                        <code class="text-gray-800">{endpoint.path}</code>
+                      </div>
+                      <p class="text-gray-600 mb-4">{endpoint.description}</p>
+                      {endpoint.example && (
+                        <pre class="bg-gray-900 text-white p-4 rounded-lg overflow-x-auto">
+                          <code>{endpoint.example}</code>
+                        </pre>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </section>
+
+              {/* SDK Examples */}
+              <section>
+                <h2 class="text-2xl font-semibold mb-6">{jsonData.docs?.sdk?.title}</h2>
+                <div class="space-y-8">
+                  {jsonData.docs?.sdk?.examples?.map((example) => (
+                    <div class="mb-8">
+                      <h3 class="text-xl font-semibold mb-3">{example.title}</h3>
+                      <p class="text-gray-600 mb-4">{example.description}</p>
+                      <pre class="bg-gray-900 text-white p-4 rounded-lg overflow-x-auto">
+                        <code>{example.code}</code>
+                      </pre>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html> 

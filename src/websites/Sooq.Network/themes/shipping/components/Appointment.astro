@@ -1,0 +1,138 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  formTitle: string;
+  formDescription: string;
+  services: string[];
+}
+
+const { title, description, formTitle, formDescription, services } = Astro.props;
+---
+
+<section class="py-20 bg-gray-50" id="content-appointmentSection">
+  <div class="container mx-auto px-4">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4" id="content-title">{title}</h2>
+      <p class="text-gray-600" id="content-description">{description}</p>
+    </div>
+
+    <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-md overflow-hidden">
+      <div class="md:flex">
+        <!-- Image Section -->
+        <div class="md:w-2/5 bg-blue-600 text-white p-8 flex flex-col justify-center">
+          <h3 class="text-2xl font-semibold mb-4" id="content-formTitle">{formTitle}</h3>
+          <p class="mb-6" id="content-formDescription">{formDescription}</p>
+          <ul class="space-y-3">
+            {services.map((service, index) => (
+              <li class="flex items-center" id={`content-service-${index}`}>
+                <i class="fas fa-check-circle mr-2"></i>
+                <span>{service}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        
+        <!-- Form Section -->
+        <div class="md:w-3/5 p-8">
+          <form class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="name" class="block text-sm font-medium text-gray-700 mb-1" id="content-nameLabel">Full Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+                  placeholder="John Doe"
+                />
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium text-gray-700 mb-1" id="content-emailLabel">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+                  placeholder="john@example.com"
+                />
+              </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1" id="content-phoneLabel">Phone Number</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+                  placeholder="(123) 456-7890"
+                />
+              </div>
+              <div>
+                <label for="service" class="block text-sm font-medium text-gray-700 mb-1" id="content-serviceLabel">Service</label>
+                <select
+                  id="service"
+                  name="service"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+                >
+                  <option value="" disabled selected>Select a service</option>
+                  {services.map((service) => (
+                    <option value={service}>{service}</option>
+                  ))}
+                </select>
+              </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="date" class="block text-sm font-medium text-gray-700 mb-1" id="content-dateLabel">Preferred Date</label>
+                <input
+                  type="date"
+                  id="date"
+                  name="date"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+                />
+              </div>
+              <div>
+                <label for="time" class="block text-sm font-medium text-gray-700 mb-1" id="content-timeLabel">Preferred Time</label>
+                <select
+                  id="time"
+                  name="time"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+                >
+                  <option value="" disabled selected>Select a time</option>
+                  <option value="morning">Morning (9AM - 12PM)</option>
+                  <option value="afternoon">Afternoon (12PM - 4PM)</option>
+                  <option value="evening">Evening (4PM - 7PM)</option>
+                </select>
+              </div>
+            </div>
+            
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-700 mb-1" id="content-messageLabel">Additional Information</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="3"
+                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+                placeholder="Tell us about your concerns or any specific requirements..."
+              ></textarea>
+            </div>
+            
+            <div>
+              <button
+                type="submit"
+                class="w-full bg-blue-600 text-white py-3 px-4 rounded-md hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                id="content-submitButton"
+              >
+                Book Appointment
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 

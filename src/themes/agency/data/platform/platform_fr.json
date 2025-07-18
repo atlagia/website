@@ -1,0 +1,283 @@
+{
+  "pageTitle": "Plateforme",
+  "pageDescription": "Explorez les capacités avancées de notre plateforme IA et ses spécifications techniques.",
+  "hero": {
+    "badge": "Aperçu de la Plateforme",
+    "title": "Plateforme IA Avancée pour l'Innovation Entreprise",
+    "description": "Découvrez notre plateforme IA de niveau entreprise qui combine technologie de pointe, évolutivité inégalée et sécurité maximale.",
+    "cta": {
+      "primary": {
+        "text": "Explorer les Fonctionnalités",
+        "href": "#features"
+      },
+      "secondary": {
+        "text": "Voir la Documentation",
+        "href": "/docs"
+      }
+    }
+  },
+  "techSpecs": [
+    {
+      "title": "Puissance de Traitement",
+      "value": "100K+",
+      "unit": "requêtes/seconde"
+    },
+    {
+      "title": "Temps de Réponse",
+      "value": "<50",
+      "unit": "millisecondes"
+    },
+    {
+      "title": "Centres de Données",
+      "value": "25+",
+      "unit": "emplacements mondiaux"
+    },
+    {
+      "title": "Paramètres du Modèle",
+      "value": "175B+",
+      "unit": "paramètres"
+    }
+  ],
+  "features": [
+    {
+      "category": "Moteur IA Principal",
+      "description": "Capacités avancées d'intelligence artificielle",
+      "items": [
+        {
+          "icon": "Brain",
+          "name": "Machine Learning",
+          "description": "Algorithmes ML avancés qui s'adaptent et apprennent de vos données",
+          "highlights": [
+            "Modèles d'Apprentissage Profond",
+            "Réseaux Neuronaux",
+            "Reconnaissance de Motifs",
+            "Analytique Prédictive"
+          ],
+          "stats": {
+            "value": "99.9%",
+            "label": "Taux de Précision"
+          }
+        },
+        {
+          "icon": "Bot",
+          "name": "Langage Naturel",
+          "description": "Traitement et compréhension sophistiqués du langage naturel",
+          "highlights": [
+            "Analyse de Texte",
+            "Analyse de Sentiment",
+            "Traduction Linguistique",
+            "Reconnaissance d'Intention"
+          ],
+          "stats": {
+            "value": "45+",
+            "label": "Langues Supportées"
+          }
+        },
+        {
+          "icon": "Cpu",
+          "name": "Vision par Ordinateur",
+          "description": "Capacités avancées de traitement d'images et de vidéos",
+          "highlights": [
+            "Détection d'Objets",
+            "Reconnaissance d'Images",
+            "Analyse Vidéo",
+            "Traitement OCR"
+          ],
+          "stats": {
+            "value": "95%",
+            "label": "Taux de Détection"
+          }
+        },
+        {
+          "icon": "Network",
+          "name": "Réseaux Neuronaux",
+          "description": "Architectures de réseaux neuronaux à la pointe",
+          "highlights": [
+            "Apprentissage Profond",
+            "Apprentissage par Transfert",
+            "Apprentissage par Renforcement",
+            "AutoML"
+          ],
+          "stats": {
+            "value": "2x",
+            "label": "Gain de Performance"
+          }
+        }
+      ]
+    },
+    {
+      "category": "Infrastructure de la Plateforme",
+      "description": "Base technique robuste et évolutive",
+      "items": [
+        {
+          "icon": "Cloud",
+          "name": "Cloud Native",
+          "description": "Construit sur une infrastructure cloud moderne pour une évolutivité maximale",
+          "highlights": [
+            "Auto-scaling",
+            "Équilibrage de Charge",
+            "CDN Global",
+            "Edge Computing"
+          ],
+          "stats": {
+            "value": "99.99%",
+            "label": "Disponibilité"
+          }
+        },
+        {
+          "icon": "Lock",
+          "name": "Sécurité",
+          "description": "Mesures de sécurité et de conformité de niveau entreprise",
+          "highlights": [
+            "Chiffrement de Bout en Bout",
+            "Conformité SOC 2",
+            "Conformité RGPD",
+            "Contrôle d'Accès"
+          ],
+          "stats": {
+            "value": "256-bit",
+            "label": "Chiffrement"
+          }
+        },
+        {
+          "icon": "Database",
+          "name": "Gestion des Données",
+          "description": "Capacités avancées de traitement et de stockage des données",
+          "highlights": [
+            "Traitement en Temps Réel",
+            "Entrepôt de Données",
+            "Pipeline ETL",
+            "Lacs de Données"
+          ],
+          "stats": {
+            "value": "PB",
+            "label": "Échelle"
+          }
+        },
+        {
+          "icon": "Code",
+          "name": "API & Intégration",
+          "description": "Capacités complètes d'API et d'intégration",
+          "highlights": [
+            "APIs RESTful",
+            "Support GraphQL",
+            "Webhooks",
+            "Bibliothèques SDK"
+          ],
+          "stats": {
+            "value": "1000+",
+            "label": "Points d'API"
+          }
+        }
+      ]
+    },
+    {
+      "category": "Outils de Développement",
+      "description": "Outils complets pour développeurs et entreprises",
+      "items": [
+        {
+          "icon": "Settings",
+          "name": "Outils Développeur",
+          "description": "Boîte à outils complète pour les équipes techniques",
+          "highlights": [
+            "Documentation API",
+            "Outils de Test",
+            "Console de Débogage",
+            "Exemples de Code"
+          ],
+          "stats": {
+            "value": "100+",
+            "label": "Outils Dev"
+          }
+        },
+        {
+          "icon": "Layers",
+          "name": "Constructeur Low-Code",
+          "description": "Outils de développement visuel pour un déploiement rapide",
+          "highlights": [
+            "Glisser-Déposer",
+            "Flux de Travail Visuels",
+            "Modèles",
+            "Composants Personnalisés"
+          ],
+          "stats": {
+            "value": "80%",
+            "label": "Temps Économisé"
+          }
+        },
+        {
+          "icon": "Workflow",
+          "name": "Moteur de Workflow",
+          "description": "Puissantes capacités d'automatisation des flux de travail",
+          "highlights": [
+            "Concepteur Visuel",
+            "Logique Personnalisée",
+            "Déclencheurs d'Événements",
+            "Gestion des Erreurs"
+          ],
+          "stats": {
+            "value": "500+",
+            "label": "Modèles"
+          }
+        },
+        {
+          "icon": "LineChart",
+          "name": "Analytique & Insights",
+          "description": "Outils complets d'analyse et de reporting",
+          "highlights": [
+            "Métriques en Temps Réel",
+            "Rapports Personnalisés",
+            "Visualisation de Données",
+            "Options d'Export"
+          ],
+          "stats": {
+            "value": "360°",
+            "label": "Vue des Données"
+          }
+        }
+      ]
+    }
+  ],
+  "integrations": [
+    {
+      "name": "AWS",
+      "logo": "/images/integrations/aws.svg"
+    },
+    {
+      "name": "Google Cloud",
+      "logo": "/images/integrations/gcp.svg"
+    },
+    {
+      "name": "Azure",
+      "logo": "/images/integrations/azure.svg"
+    },
+    {
+      "name": "Salesforce",
+      "logo": "/images/integrations/salesforce.svg"
+    },
+    {
+      "name": "SAP",
+      "logo": "/images/integrations/sap.svg"
+    },
+    {
+      "name": "Oracle",
+      "logo": "/images/integrations/oracle.svg"
+    }
+  ],
+  "cta": {
+    "title": "Prêt à Commencer ?",
+    "description": "Découvrez la puissance de notre plateforme IA avec une démo personnalisée.",
+    "buttons": [
+      {
+        "text": "Planifier une Démo",
+        "href": "/demo",
+        "variant": "primary"
+      },
+      {
+        "text": "Voir la Documentation",
+        "href": "/docs",
+        "variant": "secondary"
+      }
+    ]
+  }
+} 

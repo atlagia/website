@@ -1,0 +1,257 @@
+---
+import { getLangFromUrl, useTranslations } from '@utils/i18n';
+import { Check } from 'lucide-react';
+
+const { lang } = Astro.params;
+const translations = await useTranslations(lang);
+const jsonData = translations.default;
+
+// Import components
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+
+const SITE_TITLE = `${jsonData.siteTitle} - Pricing`;
+const SITE_DESCRIPTION = jsonData.pricingDescription || 'Choose the perfect plan for your business needs';
+
+// Generate static paths for all supported languages
+export async function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'fr' } },
+  ];
+}
+
+// Client-side script for pricing toggle
+const script = `
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.getElementById('billing-toggle');
+    const monthlyPrices = document.querySelectorAll('[data-price-monthly]');
+    const yearlyPrices = document.querySelectorAll('[data-price-yearly]');
+    const monthlyText = document.getElementById('monthly-text');
+    const yearlyText = document.getElementById('yearly-text');
+
+    toggle.addEventListener('change', () => {
+      monthlyPrices.forEach(el => el.classList.toggle('hidden'));
+      yearlyPrices.forEach(el => el.classList.toggle('hidden'));
+      monthlyText.classList.toggle('text-gray-900');
+      monthlyText.classList.toggle('text-gray-500');
+      yearlyText.classList.toggle('text-gray-500');
+      yearlyText.classList.toggle('text-gray-900');
+    });
+  });
+`;
+
+const plans = [
+  {
+    name: 'Starter',
+    description: 'Perfect for small businesses getting started with digital marketing',
+    monthlyPrice: '$49',
+    yearlyPrice: '$39',
+    features: [
+      'Basic SEO optimization',
+      'Social media integration',
+      'Up to 5 pages',
+      'Basic analytics',
+      'Email support',
+    ],
+    cta: 'Get Started',
+    popular: false
+  },
+  {
+    name: 'Professional',
+    description: 'Ideal for growing businesses needing advanced features',
+    monthlyPrice: '$99',
+    yearlyPrice: '$79',
+    features: [
+      'Advanced SEO tools',
+      'Content management system',
+      'Up to 20 pages',
+      'Advanced analytics',
+      'Priority support',
+      'Custom integrations',
+      'A/B testing',
+    ],
+    cta: 'Get Started',
+    popular: true
+  },
+  {
+    name: 'Enterprise',
+    description: 'For large organizations requiring full-scale solutions',
+    monthlyPrice: '$199',
+    yearlyPrice: '$159',
+    features: [
+      'Enterprise SEO suite',
+      'Unlimited pages',
+      'Custom development',
+      'Dedicated support',
+      'API access',
+      'Advanced security',
+      'Custom reporting',
+      'SLA guarantee',
+    ],
+    cta: 'Contact Sales',
+    popular: false
+  }
+];
+
+const faqs = [
+  {
+    question: 'What payment methods do you accept?',
+    answer: 'We accept all major credit cards, PayPal, and bank transfers for annual plans.'
+  },
+  {
+    question: 'Can I change plans later?',
+    answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes will be reflected in your next billing cycle.'
+  },
+  {
+    question: 'Is there a free trial?',
+    answer: 'Yes, we offer a 14-day free trial on all plans. No credit card required.'
+  },
+  {
+    question: 'What happens after my trial ends?',
+    answer: 'After your trial ends, you can choose to subscribe to any of our plans or your account will be automatically downgraded to a limited free version.'
+  }
+];
+---
+
+<!doctype html>
+<html lang={lang} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <script set:html={script} />
+  </head>
+  <body class={lang === 'ar' ? 'rtl' : 'ltr'}>
+    <Header />
+    
+    <main>
+      <!-- Hero Section -->
+      <section class="relative py-24 overflow-hidden">
+        <!-- Background gradient -->
+        <div class="absolute inset-0 bg-gradient-to-b from-blue-50 to-white"></div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center">
+            <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
+              Simple, transparent pricing
+            </h1>
+            <p class="mt-6 max-w-2xl mx-auto text-xl text-gray-500">
+              Choose the perfect plan for your business. All plans include a 14-day free trial.
+            </p>
+          </div>
+
+          <!-- Billing Toggle -->
+          <div class="mt-12 flex justify-center items-center gap-x-4">
+            <span id="monthly-text" class="text-sm font-medium text-gray-900">Monthly billing</span>
+            <button
+              type="button"
+              class="bg-gray-200 relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+              role="switch"
+              aria-checked="false"
+              id="billing-toggle"
+            >
+              <span class="translate-x-0 pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"></span>
+            </button>
+            <span id="yearly-text" class="text-sm font-medium text-gray-500">
+              Annual billing
+              <span class="inline-flex items-center rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800">
+                Save 20%
+              </span>
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing Section -->
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
+        <div class="grid md:grid-cols-3 gap-8">
+          {plans.map(plan => (
+            <div class={`relative p-8 bg-white rounded-2xl ${plan.popular ? 'ring-2 ring-blue-600 scale-105' : 'border border-gray-200'}`}>
+              {plan.popular && (
+                <span class="absolute -top-5 left-1/2 -translate-x-1/2 inline-flex px-4 py-1 rounded-full text-sm font-semibold bg-blue-600 text-white">
+                  Most Popular
+                </span>
+              )}
+
+              <div class="text-center">
+                <h3 class="text-2xl font-bold mb-2">{plan.name}</h3>
+                <p class="text-gray-600 mb-6">{plan.description}</p>
+                <div class="mb-6">
+                  <div data-price-monthly class="flex items-baseline justify-center">
+                    <span class="text-5xl font-bold">{plan.monthlyPrice}</span>
+                    <span class="text-gray-600 ml-2">/month</span>
+                  </div>
+                  <div data-price-yearly class="flex items-baseline justify-center hidden">
+                    <span class="text-5xl font-bold">{plan.yearlyPrice}</span>
+                    <span class="text-gray-600 ml-2">/month</span>
+                  </div>
+                </div>
+              </div>
+
+              <ul class="space-y-4 mb-8">
+                {plan.features.map(feature => (
+                  <li class="flex items-start gap-3">
+                    <Check class="w-5 h-5 text-blue-600 flex-shrink-0" />
+                    <span class="text-gray-600">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <a
+                href={plan.popular ? '/contact?plan=professional' : `/contact?plan=${plan.name.toLowerCase()}`}
+                class={`block w-full py-3 px-6 rounded-lg text-center font-semibold transition-colors ${
+                  plan.popular
+                    ? 'bg-blue-600 text-white hover:bg-blue-700'
+                    : 'bg-gray-50 text-gray-900 hover:bg-gray-100'
+                }`}
+              >
+                {plan.cta}
+              </a>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
+        <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+        <div class="space-y-8">
+          {faqs.map(faq => (
+            <div class="bg-white rounded-lg p-6 shadow-sm">
+              <h3 class="text-lg font-semibold mb-2">{faq.question}</h3>
+              <p class="text-gray-600">{faq.answer}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="relative py-24 bg-blue-600">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 class="text-3xl font-bold text-white mb-4">
+            Ready to get started?
+          </h2>
+          <p class="text-xl text-blue-100 mb-8">
+            Join thousands of businesses that trust our platform
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-blue-50"
+            >
+              Contact Sales
+            </a>
+            <a
+              href="/signup"
+              class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-700 hover:bg-blue-800"
+            >
+              Start Free Trial
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <Footer />
+  </body>
+</html> 

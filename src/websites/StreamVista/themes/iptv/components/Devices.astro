@@ -1,0 +1,198 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  devices: {
+    name: string;
+    icon: string;
+    platforms: string[];
+  }[];
+}
+
+const { title, description, devices } = Astro.props;
+
+// Device icons mapping
+const deviceIcons = {
+  tv: `<svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+  </svg>`,
+  mobile: `<svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+  </svg>`,
+  computer: `<svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+  </svg>`,
+  gaming: `<svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z M15 10l-3 3m0 0l-3-3m3 3V7" />
+  </svg>`
+};
+---
+
+<section class="relative py-20 overflow-hidden bg-black">
+  <!-- Background Elements -->
+  <div class="absolute inset-0">
+    <div class="absolute inset-0 bg-gradient-to-b from-purple-900/20 via-black to-black"></div>
+    <!-- Device Connection Lines -->
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-purple-500/20 to-transparent animate-[device-line_8s_infinite]"></div>
+      <div class="absolute top-0 left-1/2 w-[1px] h-full bg-gradient-to-b from-transparent via-emerald-500/20 to-transparent animate-[device-line-vertical_12s_infinite]"></div>
+    </div>
+  </div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 animate-fade-in">
+        {title}
+      </h2>
+      <p class="text-gray-400 text-lg animate-fade-in-delay">
+        {description}
+      </p>
+    </div>
+
+    <!-- Devices Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {devices.map((device, index) => (
+        <div 
+          class="device-card group relative"
+          style={`animation-delay: ${index * 0.2}s`}
+        >
+          <!-- Card Background -->
+          <div class="absolute inset-0 bg-gradient-to-br from-purple-900/30 to-emerald-900/30 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          
+          <!-- Card Content -->
+          <div class="relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 group-hover:border-white/20 transition-all duration-300">
+            <!-- Device Icon -->
+            <div class="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-r from-purple-500/10 to-emerald-500/10 text-purple-400 group-hover:text-purple-300 transition-colors duration-300 mb-6">
+              <Fragment set:html={deviceIcons[device.icon]} />
+            </div>
+
+            <!-- Device Name -->
+            <h3 class="text-xl font-semibold text-white mb-4 group-hover:text-purple-300 transition-colors duration-300">
+              {device.name}
+            </h3>
+
+            <!-- Platforms -->
+            <div class="space-y-2">
+              {device.platforms.map((platform) => (
+                <div class="platform-item flex items-center space-x-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                  <span class="text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                    {platform}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            <!-- Connection Lines -->
+            <div class="absolute inset-0 rounded-2xl overflow-hidden opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-purple-500/30 via-transparent to-emerald-500/30"></div>
+              <div class="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-emerald-500/30 via-transparent to-purple-500/30"></div>
+              <div class="absolute top-0 left-0 w-[1px] h-full bg-gradient-to-b from-purple-500/30 via-transparent to-emerald-500/30"></div>
+              <div class="absolute top-0 right-0 w-[1px] h-full bg-gradient-to-b from-emerald-500/30 via-transparent to-purple-500/30"></div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Multi-Device Support Badge -->
+    <div class="mt-12 text-center">
+      <div class="inline-flex items-center px-6 py-3 rounded-full bg-white/5 backdrop-blur-sm border border-white/10">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-emerald-500 mr-2" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.804A1 1 0 0113 18H7a1 1 0 01-.707-1.707l.804-.804L7.22 15H5a2 2 0 01-2-2V5zm5.771 7H5V5h10v7H8.771z" clip-rule="evenodd" />
+        </svg>
+        <span class="text-white/90 text-sm font-medium">Stream Simultaneously on Multiple Devices</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .device-card {
+    animation: fadeInUp 0.5s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .platform-item {
+    animation: fadeInRight 0.5s ease-out forwards;
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInRight {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes device-line {
+    0%, 100% { transform: translateX(-100%); }
+    50% { transform: translateX(100%); }
+  }
+
+  @keyframes device-line-vertical {
+    0%, 100% { transform: translateY(-100%); }
+    50% { transform: translateY(100%); }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  .animate-fade-in-delay {
+    animation: fadeIn 0.5s ease-out 0.2s forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  /* Hover Animation for Icons */
+  .device-card:hover svg {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: .8;
+      transform: scale(1.1);
+    }
+  }
+</style>
+
+<script>
+  // Add intersection observer for animation triggers
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.1,
+    }
+  );
+
+  document.querySelectorAll('.device-card').forEach((card) => {
+    observer.observe(card);
+  });
+</script> 

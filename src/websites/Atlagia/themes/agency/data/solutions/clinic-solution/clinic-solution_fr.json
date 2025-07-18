@@ -1,0 +1,335 @@
+{
+  "hero": {
+    "subtitle": "Système de Gestion de Clinique",
+    "title": "Optimisez les Opérations de Votre Clinique",
+    "description": "Une solution intégrée de gestion de clinique qui combine les soins aux patients, les tâches administratives et les opérations commerciales pour améliorer l'efficacité de votre pratique.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Démo de la Solution de Gestion de Clinique"
+    },
+    "stats": [
+      {
+        "value": "96%",
+        "label": "Satisfaction des Patients"
+      },
+      {
+        "value": "50%",
+        "label": "Temps Administratif Économisé"
+      },
+      {
+        "value": "35%",
+        "label": "Augmentation des Revenus"
+      }
+    ]
+  },
+  "features": {
+    "subtitle": "Fonctionnalités Complètes",
+    "title": "Tout ce dont Votre Clinique a Besoin",
+    "description": "Une suite complète d'outils conçue pour les cliniques modernes",
+    "categories": [
+      {
+        "name": "Opérations Cliniques",
+        "description": "Optimisez les soins aux patients et les flux de travail cliniques"
+      },
+      {
+        "name": "Gestion de la Pratique",
+        "description": "Optimisez les opérations administratives et commerciales"
+      }
+    ],
+    "items": [
+      {
+        "icon": "calendar",
+        "category": "Rendez-vous",
+        "title": "Planification Intelligente",
+        "description": "Système de planification assisté par IA avec rappels automatisés",
+        "image": "/images/solutions/clinic/scheduling.jpg",
+        "highlights": [
+          "Réservation en ligne",
+          "Rappels automatisés",
+          "Gestion des listes d'attente",
+          "Allocation des ressources"
+        ],
+        "stats": {
+          "value": "60%",
+          "label": "Réduction des absences"
+        }
+      },
+      {
+        "icon": "file-text",
+        "category": "Dossiers Cliniques",
+        "title": "Dossiers Médicaux Électroniques",
+        "description": "Système DME complet avec documentation facile",
+        "image": "/images/solutions/clinic/ehr.jpg",
+        "highlights": [
+          "Documentation numérique",
+          "Plans de traitement",
+          "Intégration laboratoire",
+          "Ordonnances électroniques"
+        ],
+        "stats": {
+          "value": "45%",
+          "label": "Temps gagné sur la documentation"
+        }
+      },
+      {
+        "icon": "credit-card",
+        "category": "Facturation",
+        "title": "Facturation Intelligente",
+        "description": "Traitement automatisé de la facturation et des assurances",
+        "image": "/images/solutions/clinic/billing.jpg",
+        "highlights": [
+          "Vérification des assurances",
+          "Traitement des paiements",
+          "Gestion des réclamations",
+          "Rapports financiers"
+        ],
+        "stats": {
+          "value": "30%",
+          "label": "Remboursements plus rapides"
+        }
+      },
+      {
+        "icon": "activity",
+        "category": "Analytique",
+        "title": "Intelligence de Pratique",
+        "description": "Informations basées sur les données pour une meilleure prise de décision",
+        "image": "/images/solutions/clinic/analytics.jpg",
+        "highlights": [
+          "Métriques de performance",
+          "Analytique des patients",
+          "Perspectives financières",
+          "Rapports opérationnels"
+        ],
+        "stats": {
+          "value": "35%",
+          "label": "Croissance des revenus"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Voyez-le en Action",
+    "description": "Découvrez comment les principales cliniques transforment leur pratique",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "Histoire de Réussite de Clinique"
+    },
+    "testimonials": [
+      {
+        "author": "Dr. Sophie Laurent",
+        "role": "Directrice de Clinique",
+        "image": "/images/testimonials/doctor1.jpg",
+        "quote": "Ce système a transformé notre façon d'opérer. Notre personnel est plus efficace et nos patients sont plus satisfaits."
+      },
+      {
+        "author": "Dr. Pierre Dubois",
+        "role": "Médecin de Famille",
+        "image": "/images/testimonials/doctor2.jpg",
+        "quote": "Le système DME est intuitif et l'intégration de la facturation a considérablement amélioré notre cycle de revenus."
+      }
+    ]
+  },
+  "benefits": {
+    "subtitle": "Avantages Clés",
+    "title": "Transformez Votre Pratique",
+    "description": "Découvrez les avantages d'un système de gestion de clinique entièrement intégré",
+    "items": [
+      {
+        "icon": "clock",
+        "title": "Efficacité Temporelle",
+        "description": "Réduisez la charge administrative et concentrez-vous sur les soins aux patients",
+        "color": "blue",
+        "stats": {
+          "value": "50%",
+          "label": "Temps Économisé"
+        },
+        "highlights": [
+          "Flux de travail automatisés",
+          "Documentation rapide",
+          "Planification efficace",
+          "Réduction du papier"
+        ]
+      },
+      {
+        "icon": "heart",
+        "title": "Meilleurs Soins aux Patients",
+        "description": "Améliorez l'expérience et les résultats des patients",
+        "color": "red",
+        "stats": {
+          "value": "96%",
+          "label": "Satisfaction des Patients"
+        },
+        "highlights": [
+          "Dossiers complets",
+          "Meilleur suivi",
+          "Communication améliorée",
+          "Coordination des soins"
+        ]
+      },
+      {
+        "icon": "trending-up",
+        "title": "Croissance de la Pratique",
+        "description": "Augmentez les revenus et optimisez les opérations",
+        "color": "green",
+        "stats": {
+          "value": "35%",
+          "label": "Croissance des Revenus"
+        },
+        "highlights": [
+          "Facturation optimisée",
+          "Coûts réduits",
+          "Meilleure utilisation",
+          "Efficacité accrue"
+        ]
+      },
+      {
+        "icon": "shield",
+        "title": "Conformité et Sécurité",
+        "description": "Maintenez la conformité réglementaire et la sécurité des données",
+        "color": "purple",
+        "stats": {
+          "value": "100%",
+          "label": "Conformité HIPAA"
+        },
+        "highlights": [
+          "Conformité HIPAA",
+          "Chiffrement des données",
+          "Traçabilité des audits",
+          "Accès sécurisé"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "subtitle": "Tarification Transparente",
+    "title": "Plans de Prix Flexibles",
+    "description": "Choisissez le plan parfait pour votre clinique. Économisez jusqu'à 20% avec la facturation annuelle.",
+    "billingPeriods": ["Mensuel", "Annuel"],
+    "plans": [
+      {
+        "name": "Basique",
+        "highlight": "Parfait pour les petites cliniques",
+        "monthlyPrice": "$299",
+        "yearlyPrice": "$2,990",
+        "yearlyDiscount": "Économisez $598/an",
+        "description": "Fonctionnalités essentielles pour les petites pratiques",
+        "features": [
+          {
+            "text": "Planification des rendez-vous",
+            "included": true
+          },
+          {
+            "text": "DME basique",
+            "included": true
+          },
+          {
+            "text": "Portail patient",
+            "included": true
+          },
+          {
+            "text": "Support par email",
+            "included": true
+          },
+          {
+            "text": "Rapports basiques",
+            "included": true
+          },
+          {
+            "text": "Accès mobile",
+            "included": true
+          }
+        ],
+        "cta": "Commencer",
+        "popular": false
+      },
+      {
+        "name": "Professionnel",
+        "highlight": "Plus populaire pour les cliniques en croissance",
+        "monthlyPrice": "$599",
+        "yearlyPrice": "$5,990",
+        "yearlyDiscount": "Économisez $1,198/an",
+        "description": "Fonctionnalités avancées pour les cliniques établies",
+        "features": [
+          {
+            "text": "Tout du Basique, plus :",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Fonctionnalités DME avancées",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "Plateforme de télésanté",
+            "included": true
+          },
+          {
+            "text": "Analytique avancée",
+            "included": true
+          },
+          {
+            "text": "Support prioritaire",
+            "included": true
+          },
+          {
+            "text": "Support multi-prestataires",
+            "included": true
+          }
+        ],
+        "cta": "Commencer",
+        "popular": true
+      },
+      {
+        "name": "Entreprise",
+        "highlight": "Pour les grandes cliniques",
+        "monthlyPrice": "Personnalisé",
+        "yearlyPrice": "Personnalisé",
+        "yearlyDiscount": "Contactez-nous pour des tarifs spéciaux",
+        "description": "Solutions adaptées pour les grandes pratiques",
+        "features": [
+          {
+            "text": "Tout du Professionnel, plus :",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Support d'intégration personnalisée",
+            "included": true
+          },
+          {
+            "text": "Gestionnaire de compte dédié",
+            "included": true
+          },
+          {
+            "text": "Fonctionnalités de sécurité avancées",
+            "included": true
+          },
+          {
+            "text": "Options de développement personnalisées",
+            "included": true
+          },
+          {
+            "text": "Garanties SLA",
+            "included": true
+          }
+        ],
+        "cta": "Contacter les Ventes",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prêt à Transformer Votre Clinique ?",
+    "description": "Rejoignez des milliers de prestataires de soins qui ont modernisé leur pratique avec notre solution.",
+    "background": "/images/solutions/clinic/cta-background.jpg",
+    "primaryButton": {
+      "text": "Planifier une Démo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Voir la Démo",
+      "link": "#showcase"
+    }
+  }
+} 

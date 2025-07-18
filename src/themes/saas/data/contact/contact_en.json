@@ -1,0 +1,67 @@
+{
+  "hero": {
+    "subtitle": "GET IN TOUCH",
+    "title": "Let's Talk About Your Business",
+    "description": "Have questions about our AI-powered solutions? We're here to help you optimize and grow your e-commerce business."
+  },
+  "contactInfo": [
+    {
+      "icon": "Mail",
+      "title": "Email Us",
+      "content": "support@atalsia.com",
+      "description": "Our friendly team is here to help.",
+      "link": "mailto:support@atalsia.com"
+    },
+    {
+      "icon": "Phone",
+      "title": "Call Us",
+      "content": "+1 2035 472 248",
+      "description": "Mon-Fri from 9am to 6pm.",
+      "link": "tel:+12035472248"
+    },
+    {
+      "icon": "MapPin",
+      "title": "Office",
+      "content": "London, United Kingdom",
+      "description": "124 City Road",
+      "link": "https://maps.google.com/maps?q=124 City Road, London, United Kingdom"
+    }
+  ],
+  "form": {
+    "title": "Send us a Message",
+    "fields": {
+      "firstName": {
+        "label": "First Name",
+        "placeholder": "Enter your first name"
+      },
+      "lastName": {
+        "label": "Last Name",
+        "placeholder": "Enter your last name"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Enter your email"
+      },
+      "subject": {
+        "label": "Subject",
+        "placeholder": "Enter subject"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Enter your message"
+      }
+    },
+    "submitButton": "Send Message"
+  },
+  "support": {
+    "hours": {
+      "title": "Support Hours",
+      "content": "Monday - Friday, 9 AM - 6 PM (GMT)"
+    },
+    "additional": {
+      "title": "Additional Contact",
+      "description": "For general inquiries:",
+      "email": "contact@atalsia.com"
+    }
+  }
+} 

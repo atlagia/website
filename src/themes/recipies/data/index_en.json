@@ -1,0 +1,156 @@
+{
+  "siteTitle": "Recipia - Your Recipe Collection",
+  "siteDescription": "Discover delicious recipes from around the world. From quick meals to gourmet dishes, find the perfect recipe for any occasion.",
+  "sections": [
+    {
+      "type": "welcomeSection",
+      "title": "Welcome to Recipia: Your Recipe Paradise",
+      "description": "Explore our collection of carefully curated recipes from passionate home cooks and professional chefs. From quick weekday dinners to special occasion feasts - find the perfect dish for every moment.",
+      "blogLinkText": "Read Our Latest Recipes",
+      "blogLink": "/blog"
+    },
+    {
+      "type": "bannerSection",
+      "headline": "Discover the Joy of Cooking",
+      "description": "Browse our collection of tested and loved recipes. Step-by-step instructions, cooking tips, and beautiful food photography.",
+      "backgroundImage": "/images/cooking-banner.jpg",
+      "button1Text": "Browse Recipes",
+      "button1Link": "/recipes",
+      "button2Text": "Share Your Recipe",
+      "button2Link": "/submit-recipe"
+    },
+    {
+      "type": "categoryGrid",
+      "title": "Browse by Category",
+      "description": "Find the perfect recipe for any meal or occasion",
+      "categories": [
+        {
+          "id": "quick-meals",
+          "name": "Quick & Easy",
+          "description": "Delicious meals ready in 30 minutes or less",
+          "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=2670&auto=format&fit=crop",
+          "link": "/collections/quick-meals"
+        },
+        {
+          "id": "healthy",
+          "name": "Healthy Eating",
+          "description": "Nutritious and wholesome recipes",
+          "image": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=2653&auto=format&fit=crop",
+          "link": "/collections/healthy"
+        },
+        {
+          "id": "desserts",
+          "name": "Desserts",
+          "description": "Sweet treats and baking inspiration",
+          "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?q=80&w=2670&auto=format&fit=crop",
+          "link": "/collections/desserts"
+        }
+      ]
+    },
+    {
+      "type": "productShowcase",
+      "title": "Popular Recipes",
+      "description": "Our community's most loved dishes this week",
+      "viewAllLink": "/recipes",
+      "products": [
+        {
+          "id": "recipe-1",
+          "name": "Classic Spaghetti Carbonara",
+          "description": "Authentic Italian pasta dish",
+          "cookTime": "30 mins",
+          "image": "/images/recipes/carbonara.jpg",
+          "category": "Main Course"
+        },
+        {
+          "id": "recipe-2",
+          "name": "Quinoa Buddha Bowl",
+          "description": "Healthy and colorful bowl",
+          "cookTime": "25 mins",
+          "image": "/images/recipes/buddha-bowl.jpg",
+          "category": "Healthy"
+        },
+        {
+          "id": "recipe-3",
+          "name": "Chocolate Lava Cake",
+          "description": "Decadent dessert classic",
+          "cookTime": "20 mins",
+          "image": "/images/recipes/lava-cake.jpg",
+          "category": "Desserts"
+        },
+        {
+          "id": "recipe-4",
+          "name": "Mediterranean Salad",
+          "description": "Fresh and light salad",
+          "cookTime": "15 mins",
+          "image": "/images/recipes/med-salad.jpg",
+          "category": "Salads"
+        }
+      ]
+    },
+    {
+      "type": "testimonialSection",
+      "title": "Cook's Reviews",
+      "testimonials": [
+        {
+          "id": "1",
+          "author": "Sarah M.",
+          "role": "Home Cook",
+          "content": "The detailed instructions and tips made it so easy to recreate these delicious recipes. My family loves everything I've made!",
+          "avatar": ""
+        },
+        {
+          "id": "2",
+          "author": "Michael P.",
+          "role": "Food Enthusiast",
+          "content": "Such a great collection of recipes! I especially love the quick meal section for busy weeknights.",
+          "avatar": ""
+        },
+        {
+          "id": "3",
+          "author": "Lisa K.",
+          "role": "Beginner Cook",
+          "content": "As a beginner in the kitchen, these recipes are perfect. Clear instructions and always delicious results!",
+          "avatar": ""
+        }
+      ]
+    },
+    {
+      "type": "faqSection",
+      "title": "Cooking Questions",
+      "description": "Common questions about our recipes and cooking techniques",
+      "faqs": [
+        {
+          "question": "How are the recipes tested?",
+          "answer": "Each recipe is thoroughly tested in our kitchen and by our community of home cooks to ensure consistent, delicious results."
+        },
+        {
+          "question": "Can I adjust the serving sizes?",
+          "answer": "Yes! Most recipes include a serving size calculator that automatically adjusts ingredient quantities."
+        },
+        {
+          "question": "Are nutritional facts available?",
+          "answer": "We provide detailed nutritional information for each recipe, including calories, macronutrients, and dietary considerations."
+        },
+        {
+          "question": "Can I share my own recipes?",
+          "answer": "Absolutely! Our community loves trying new recipes. Use the 'Share Your Recipe' button to submit your favorite dishes."
+        }
+      ]
+    },
+    {
+      "type": "featuredPostsSection",
+      "title": "Cooking Tips & Stories",
+      "description": "Latest recipes, cooking techniques, and food stories from our community",
+      "exploreMoreText": "View All Posts",
+      "exploreMoreLink": "/blog"
+    },
+    {
+      "type": "emailSignupSection",
+      "title": "Join Our Kitchen Community",
+      "description": "Get weekly recipe inspiration, cooking tips, and seasonal favorites delivered to your inbox",
+      "backgroundImage": "/images/newsletter-cooking-bg.jpg",
+      "formAction": "/api/subscribe",
+      "submitText": "Get Free Recipes"
+    }
+  ]
+}

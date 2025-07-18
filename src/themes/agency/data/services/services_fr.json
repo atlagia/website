@@ -1,0 +1,235 @@
+{
+  "pageTitle": "Nos Services",
+  "pageDescription": "Découvrez notre gamme complète de services professionnels conçus pour aider votre entreprise à prospérer à l'ère numérique.",
+  "hero": {
+    "badge": "Nos Services",
+    "title": "Services Professionnels pour Votre Succès",
+    "description": "Découvrez notre gamme complète de services conçus pour aider votre entreprise à prospérer à l'ère numérique.",
+    "cta": {
+      "primary": {
+        "text": "Explorer les Services",
+        "href": "#services"
+      },
+      "secondary": {
+        "text": "Commencer",
+        "href": "/contact"
+      }
+    }
+  },
+  "stats": [
+    {
+      "value": "500+",
+      "label": "Projets Réalisés"
+    },
+    {
+      "value": "99.9%",
+      "label": "Taux de Réussite"
+    },
+    {
+      "value": "45%",
+      "label": "Taux d'Innovation"
+    },
+    {
+      "value": "24/7",
+      "label": "Support"
+    }
+  ],
+  "services": [
+    {
+      "category": "Services de Développement",
+      "description": "Solutions de développement logiciel personnalisées pour vos besoins business",
+      "items": [
+        {
+          "icon": "code",
+          "name": "Développement Logiciel Sur Mesure",
+          "description": "Solutions logicielles adaptées construites avec des technologies de pointe",
+          "features": ["Applications Web", "Applications Mobiles", "Logiciels Desktop", "Développement API"],
+          "color": "blue"
+        },
+        {
+          "icon": "brain",
+          "name": "IA & Machine Learning",
+          "description": "Solutions intelligentes propulsées par l'IA et le ML avancés",
+          "features": ["Analyses Prédictives", "Traitement du Langage Naturel", "Vision par Ordinateur", "Apprentissage Profond"],
+          "color": "purple"
+        },
+        {
+          "icon": "database",
+          "name": "Ingénierie des Données",
+          "description": "Solutions complètes de gestion et d'analyse des données",
+          "features": ["Entrepôt de Données", "Pipelines ETL", "Traitement Big Data", "Visualisation des Données"],
+          "color": "indigo"
+        },
+        {
+          "icon": "network",
+          "name": "Solutions Cloud",
+          "description": "Infrastructure et services cloud évolutifs",
+          "features": ["Migration Cloud", "DevOps", "Conteneurisation", "Architecture Serverless"],
+          "color": "cyan"
+        }
+      ]
+    },
+    {
+      "category": "Services de Conseil",
+      "description": "Guidance experte pour votre transformation numérique",
+      "items": [
+        {
+          "icon": "settings",
+          "name": "Transformation Numérique",
+          "description": "Planification stratégique et mise en œuvre des initiatives numériques",
+          "features": ["Automatisation des Processus", "Stratégie Numérique", "Gestion du Changement", "Feuille de Route Technologique"],
+          "color": "rose"
+        },
+        {
+          "icon": "cpu",
+          "name": "Conseil Technologique",
+          "description": "Conseils d'experts sur la sélection et la mise en œuvre des technologies",
+          "features": ["Conception d'Architecture", "Évaluation de la Sécurité", "Optimisation des Performances", "Planification de l'Évolutivité"],
+          "color": "amber"
+        },
+        {
+          "icon": "file-text",
+          "name": "Gestion de Projet",
+          "description": "Gestion et livraison professionnelle de projets",
+          "features": ["Développement Agile", "Gestion des Risques", "Planification des Ressources", "Assurance Qualité"],
+          "color": "lime"
+        },
+        {
+          "icon": "bar-chart",
+          "name": "Analyse Business",
+          "description": "Insights basés sur les données pour la croissance business",
+          "features": ["Business Intelligence", "Métriques de Performance", "Analyse de Marché", "Intelligence Concurrentielle"],
+          "color": "green"
+        }
+      ]
+    },
+    {
+      "category": "Services de Support",
+      "description": "Solutions complètes de support et de maintenance",
+      "items": [
+        {
+          "icon": "shield",
+          "name": "Services de Sécurité",
+          "description": "Solutions de sécurité de niveau entreprise",
+          "features": ["Audits de Sécurité", "Tests de Pénétration", "Gestion de la Conformité", "Formation à la Sécurité"],
+          "color": "sky"
+        },
+        {
+          "icon": "clock",
+          "name": "Support 24/7",
+          "description": "Support technique et maintenance en continu",
+          "features": ["Help Desk", "Surveillance Système", "Gestion des Incidents", "Optimisation des Performances"],
+          "color": "cyan"
+        },
+        {
+          "icon": "globe",
+          "name": "Services Mondiaux",
+          "description": "Support et conseil internationaux",
+          "features": ["Support Multilingue", "Déploiement Mondial", "Gestion de la Conformité", "Expertise Locale"],
+          "color": "blue"
+        },
+        {
+          "icon": "zap",
+          "name": "Formation & Ateliers",
+          "description": "Formation complète et développement des compétences",
+          "features": ["Formation Technique", "Ateliers", "Programmes de Certification", "Transfert de Connaissances"],
+          "color": "indigo"
+        }
+      ]
+    }
+  ],
+  "features": {
+    "title": "Ce que Nous Offrons",
+    "description": "Nos services sont accompagnés de fonctionnalités et d'un support complets",
+    "items": [
+      {
+        "icon": "code",
+        "title": "Développement Sur Mesure",
+        "description": "Solutions adaptées construites avec des technologies de pointe"
+      },
+      {
+        "icon": "database",
+        "title": "Gestion des Données",
+        "description": "Systèmes sécurisés et efficaces de gestion des données"
+      },
+      {
+        "icon": "network",
+        "title": "Intégration",
+        "description": "Intégration transparente avec les systèmes existants"
+      },
+      {
+        "icon": "monitor",
+        "title": "Interface Utilisateur",
+        "description": "Design intuitif et responsive"
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Avantages de Nos Services",
+    "description": "Découvrez les avantages de travailler avec notre équipe.",
+    "items": [
+      {
+        "icon": "rocket",
+        "title": "Innovation",
+        "description": "Solutions de pointe qui transforment votre entreprise",
+        "stats": "45%",
+        "label": "Taux d'Innovation"
+      },
+      {
+        "icon": "target",
+        "title": "Précision",
+        "description": "Livraison de services précise et fiable",
+        "stats": "99.9%",
+        "label": "Taux de Réussite"
+      },
+      {
+        "icon": "lightbulb",
+        "title": "Expertise",
+        "description": "Connaissance approfondie du secteur et expertise technique",
+        "stats": "3x",
+        "label": "Niveau d'Expérience"
+      },
+      {
+        "icon": "users",
+        "title": "Collaboration",
+        "description": "Partenariats solides avec les clients et les équipes",
+        "stats": "96%",
+        "label": "Satisfaction Client"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Ce que Disent Nos Clients",
+    "description": "Découvrez les témoignages d'entreprises qui ont bénéficié de nos services",
+    "items": [
+      {
+        "quote": "L'expertise et le dévouement de l'équipe ont été évidents tout au long de notre projet. Leurs solutions innovantes ont transformé nos opérations.",
+        "author": "Sarah Chen",
+        "role": "CTO, Tech Solutions",
+        "image": "/images/testimonials/sarah.jpg"
+      },
+      {
+        "quote": "Leur approche globale de la livraison de services et leur attention aux détails ont fait toute la différence dans le succès de notre projet.",
+        "author": "John Smith",
+        "role": "CEO, Digital Innovations",
+        "image": "/images/testimonials/john.jpg"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prêt à Commencer ?",
+    "description": "Rejoignez des centaines d'entreprises qui ont transformé leurs opérations avec nos services.",
+    "buttons": [
+      {
+        "text": "Nous Contacter",
+        "href": "/contact",
+        "variant": "primary"
+      },
+      {
+        "text": "Planifier une Démo",
+        "href": "/demo",
+        "variant": "secondary"
+      }
+    ]
+  }
+} 

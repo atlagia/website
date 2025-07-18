@@ -1,0 +1,52 @@
+{
+  "section": {
+    "container": "relative py-24 px-4 overflow-hidden bg-gradient-to-b from-white via-[#0a91b1]/5 to-white"
+  },
+  "content": {
+    "container": "relative z-10 max-w-7xl mx-auto"
+  },
+  "header": {
+    "container": "text-center mb-16",
+    "subtitle": "inline-block px-4 py-1.5 mb-4 text-sm font-medium rounded-full bg-[#0a91b1]/10 text-[#0a91b1] border border-[#0a91b1]/20",
+    "title": "text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6",
+    "description": "text-xl text-gray-600 max-w-3xl mx-auto"
+  },
+  "benefitsGrid": {
+    "container": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+  },
+  "benefitCard": {
+    "container": "group relative",
+    "gradientBackground": "absolute inset-0 bg-gradient-to-r from-[#0a91b1]/5 to-[#0a91b1]/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-500",
+    "content": {
+      "container": "relative p-8 bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 h-full border border-gray-100",
+      "iconContainer": "w-14 h-14 mb-6 rounded-xl bg-[#0a91b1]/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300",
+      "icon": "w-7 h-7 text-[#0a91b1]",
+      "title": "text-2xl font-bold text-gray-900 mb-4 group-hover:text-[#0a91b1] transition-colors duration-300",
+      "description": "text-gray-600 leading-relaxed"
+    }
+  },
+  "trustIndicators": {
+    "container": "mt-16 flex flex-wrap justify-center gap-8 md:gap-16",
+    "stat": {
+      "container": "text-center group",
+      "value": "text-3xl font-bold text-[#0a91b1] mb-1 group-hover:scale-110 transition-transform duration-300",
+      "label": "text-gray-600"
+    }
+  },
+  "transitions": {
+    "all": {
+      "property": "all",
+      "timing": "cubic-bezier(0.4, 0, 0.2, 1)",
+      "duration": "300ms"
+    },
+    "hover": {
+      "shadow": "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+      "scale": "scale(1.1)"
+    }
+  },
+  "colors": {
+    "primary": "#0a91b1",
+    "primaryLight": "#0a91b1/10",
+    "primaryLighter": "#0a91b1/5"
+  }
+}

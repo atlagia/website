@@ -96,10 +96,17 @@ export async function getTranslatedProductByHandle(handle: string, lang: string 
       };
     }
     
-    throw new Error(`Unsupported data type: ${dataType}`);
+    console.error(`Unsupported data type: ${dataType}`);
+    return {
+      product: null,
+      relatedProducts: []
+    };
   } catch (error) {
     console.error('Error in getTranslatedProductByHandle:', error);
-    throw error;
+    return {
+      product: null,
+      relatedProducts: []
+    };
   }
 } 
 
@@ -109,12 +116,15 @@ export async function getAllCollections(lang: string = 'EN') {
   
     try {
       if (dataType === 'shopify') {
-        return await getShopifyCollections(lang);
+        const collections = await getShopifyCollections(lang);
+        return collections || [];
       } else if (dataType === 'woocommerce') {
-        return await getWooCollections();
+        const collections = await getWooCollections();
+        return collections || [];
       }
       
-      throw new Error(`Unsupported data type: ${dataType}`);
+      console.error(`Unsupported data type: ${dataType}`);
+      return [];
     } catch (error) {
       console.error('Error in getAllCollections:', error);
       return [];
@@ -129,14 +139,41 @@ export async function getCollectionByHandle(handle: string, lang: string = 'EN')
 
   try {
     if (dataType === 'shopify') {
-      return await getShopifyCollection(handle, lang);
+      const collection = await getShopifyCollection(handle, lang);
+      return collection || {
+        id: '',
+        title: '',
+        handle: handle,
+        description: '',
+        products: { edges: [] }
+      };
     } else if (dataType === 'woocommerce') {
-      return await getWooCollection(handle);
+      const collection = await getWooCollection(handle);
+      return collection || {
+        id: '',
+        title: '',
+        handle: handle,
+        description: '',
+        products: { edges: [] }
+      };
     }
     
-    throw new Error(`Unsupported data type: ${dataType}`);
+    console.error(`Unsupported data type: ${dataType}`);
+    return {
+      id: '',
+      title: '',
+      handle: handle,
+      description: '',
+      products: { edges: [] }
+    };
   } catch (error) {
     console.error('Error in getCollectionByHandle:', error);
-    throw error;
+    return {
+      id: '',
+      title: '',
+      handle: handle,
+      description: '',
+      products: { edges: [] }
+    };
   }
 }

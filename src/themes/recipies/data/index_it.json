@@ -1,0 +1,156 @@
+{
+  "siteTitle": "Recipia - La Tua Collezione di Ricette",
+  "siteDescription": "Scopri deliziose ricette da tutto il mondo. Dai pasti veloci ai piatti gourmet, trova la ricetta perfetta per ogni occasione.",
+  "sections": [
+    {
+      "type": "welcomeSection",
+      "title": "Benvenuti su Recipia: Il Tuo Paradiso Culinario",
+      "description": "Esplora la nostra collezione di ricette accuratamente selezionate da appassionati cuochi casalinghi e chef professionisti. Dalle cene infrasettimanali veloci ai banchetti per le occasioni speciali - trova il piatto perfetto per ogni momento.",
+      "blogLinkText": "Scopri le Ultime Ricette",
+      "blogLink": "/blog"
+    },
+    {
+      "type": "bannerSection",
+      "headline": "Scopri la Gioia della Cucina",
+      "description": "Sfoglia la nostra collezione di ricette testate e amate. Istruzioni passo dopo passo, consigli di cucina e splendide fotografie gastronomiche.",
+      "backgroundImage": "/images/cooking-banner.jpg",
+      "button1Text": "Sfoglia le Ricette",
+      "button1Link": "/recipes",
+      "button2Text": "Condividi la Tua Ricetta",
+      "button2Link": "/submit-recipe"
+    },
+    {
+      "type": "categoryGrid",
+      "title": "Sfoglia per Categoria",
+      "description": "Trova la ricetta perfetta per ogni pasto o occasione",
+      "categories": [
+        {
+          "id": "quick-meals",
+          "name": "Veloce & Facile",
+          "description": "Piatti deliziosi pronti in 30 minuti o meno",
+          "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=2670&auto=format&fit=crop",
+          "link": "/collections/quick-meals"
+        },
+        {
+          "id": "healthy",
+          "name": "Cucina Sana",
+          "description": "Ricette nutrienti e salutari",
+          "image": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=2653&auto=format&fit=crop",
+          "link": "/collections/healthy"
+        },
+        {
+          "id": "desserts",
+          "name": "Dolci",
+          "description": "Delizie dolci e ispirazioni per la pasticceria",
+          "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?q=80&w=2670&auto=format&fit=crop",
+          "link": "/collections/desserts"
+        }
+      ]
+    },
+    {
+      "type": "productShowcase",
+      "title": "Ricette Popolari",
+      "description": "I piatti più amati dalla nostra community questa settimana",
+      "viewAllLink": "/recipes",
+      "products": [
+        {
+          "id": "recipe-1",
+          "name": "Spaghetti alla Carbonara Classica",
+          "description": "Autentico piatto di pasta italiana",
+          "cookTime": "30 min",
+          "image": "/images/recipes/carbonara.jpg",
+          "category": "Primi Piatti"
+        },
+        {
+          "id": "recipe-2",
+          "name": "Buddha Bowl al Quinoa",
+          "description": "Bowl sana e colorata",
+          "cookTime": "25 min",
+          "image": "/images/recipes/buddha-bowl.jpg",
+          "category": "Cucina Sana"
+        },
+        {
+          "id": "recipe-3",
+          "name": "Tortino al Cioccolato dal Cuore Morbido",
+          "description": "Classico dessert goloso",
+          "cookTime": "20 min",
+          "image": "/images/recipes/lava-cake.jpg",
+          "category": "Dolci"
+        },
+        {
+          "id": "recipe-4",
+          "name": "Insalata Mediterranea",
+          "description": "Insalata fresca e leggera",
+          "cookTime": "15 min",
+          "image": "/images/recipes/med-salad.jpg",
+          "category": "Insalate"
+        }
+      ]
+    },
+    {
+      "type": "testimonialSection",
+      "title": "Recensioni dei Cuochi",
+      "testimonials": [
+        {
+          "id": "1",
+          "author": "Sara M.",
+          "role": "Cuoca Casalinga",
+          "content": "Le istruzioni dettagliate e i consigli rendono facilissimo ricreare queste deliziose ricette. La mia famiglia adora tutto ciò che preparo!",
+          "avatar": ""
+        },
+        {
+          "id": "2",
+          "author": "Michele P.",
+          "role": "Appassionato di Cucina",
+          "content": "Una collezione di ricette davvero fantastica! Adoro particolarmente la sezione dei pasti veloci per le serate impegnate.",
+          "avatar": ""
+        },
+        {
+          "id": "3",
+          "author": "Lisa K.",
+          "role": "Principiante in Cucina",
+          "content": "Come principiante in cucina, queste ricette sono perfette. Istruzioni chiare e risultati sempre deliziosi!",
+          "avatar": ""
+        }
+      ]
+    },
+    {
+      "type": "faqSection",
+      "title": "Domande sulla Cucina",
+      "description": "Domande frequenti sulle nostre ricette e tecniche di cucina",
+      "faqs": [
+        {
+          "question": "Come vengono testate le ricette?",
+          "answer": "Ogni ricetta viene accuratamente testata nella nostra cucina e dalla nostra community di cuochi casalinghi per garantire risultati costanti e deliziosi."
+        },
+        {
+          "question": "Posso modificare le porzioni?",
+          "answer": "Sì! La maggior parte delle ricette include un calcolatore delle porzioni che regola automaticamente le quantità degli ingredienti."
+        },
+        {
+          "question": "Sono disponibili le informazioni nutrizionali?",
+          "answer": "Forniamo informazioni nutrizionali dettagliate per ogni ricetta, incluse calorie, macronutrienti e considerazioni dietetiche."
+        },
+        {
+          "question": "Posso condividere le mie ricette?",
+          "answer": "Assolutamente! La nostra community adora provare nuove ricette. Usa il pulsante 'Condividi la Tua Ricetta' per inviare i tuoi piatti preferiti."
+        }
+      ]
+    },
+    {
+      "type": "featuredPostsSection",
+      "title": "Consigli & Storie di Cucina",
+      "description": "Ultime ricette, tecniche di cucina e storie gastronomiche dalla nostra community",
+      "exploreMoreText": "Vedi Tutti i Post",
+      "exploreMoreLink": "/blog"
+    },
+    {
+      "type": "emailSignupSection",
+      "title": "Unisciti alla Nostra Community Culinaria",
+      "description": "Ricevi settimanalmente ispirazione per le ricette, consigli di cucina e i piatti stagionali preferiti direttamente nella tua casella di posta",
+      "backgroundImage": "/images/newsletter-cooking-bg.jpg",
+      "formAction": "/api/subscribe",
+      "submitText": "Ricevi Ricette Gratuite"
+    }
+  ]
+}

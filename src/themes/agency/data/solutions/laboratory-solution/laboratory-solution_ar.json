@@ -1,0 +1,335 @@
+{
+  "hero": {
+    "subtitle": "نظام معلومات المختبر",
+    "title": "حل إدارة المختبر الحديث",
+    "description": "نظام معلومات مختبر شامل يبسط معالجة العينات، ويضمن الدقة، ويعجل بتقديم النتائج.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "عرض توضيحي لحل إدارة المختبر"
+    },
+    "stats": [
+      {
+        "value": "99.9%",
+        "label": "دقة الاختبارات"
+      },
+      {
+        "value": "60%",
+        "label": "معالجة أسرع"
+      },
+      {
+        "value": "40%",
+        "label": "تقليل التكاليف"
+      }
+    ]
+  },
+  "features": {
+    "subtitle": "ميزات متقدمة",
+    "title": "إدارة مختبر متكاملة",
+    "description": "أدوات شاملة مصممة للمختبرات السريرية والبحثية الحديثة",
+    "categories": [
+      {
+        "name": "إدارة العينات",
+        "description": "تتبع وإدارة العينات طوال دورة حياتها"
+      },
+      {
+        "name": "سير عمل الاختبارات",
+        "description": "تبسيط عمليات الاختبار وضبط الجودة"
+      }
+    ],
+    "items": [
+      {
+        "icon": "test-tube",
+        "category": "معالجة العينات",
+        "title": "نظام تتبع العينات",
+        "description": "إدارة وتتبع كاملة لدورة حياة العينة",
+        "image": "/images/solutions/laboratory/samples.jpg",
+        "highlights": [
+          "تكامل الباركود",
+          "سلسلة الحفظ",
+          "إدارة التخزين",
+          "سجل العينات"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "تتبع العينات"
+        }
+      },
+      {
+        "icon": "clipboard-check",
+        "category": "ضبط الجودة",
+        "title": "ضمان الجودة",
+        "description": "نظام شامل لضبط الجودة والتحقق",
+        "image": "/images/solutions/laboratory/quality.jpg",
+        "highlights": [
+          "بروتوكولات ضبط الجودة",
+          "قواعد التحقق",
+          "تتبع الامتثال",
+          "مسارات التدقيق"
+        ],
+        "stats": {
+          "value": "99.9%",
+          "label": "دقة الاختبارات"
+        }
+      },
+      {
+        "icon": "microscope",
+        "category": "الاختبارات",
+        "title": "إدارة الاختبارات",
+        "description": "معالجة فعالة للاختبارات وإدارة النتائج",
+        "image": "/images/solutions/laboratory/testing.jpg",
+        "highlights": [
+          "سير عمل الاختبارات",
+          "التحقق من النتائج",
+          "النطاقات المرجعية",
+          "المعالجة المجمعة"
+        ],
+        "stats": {
+          "value": "60%",
+          "label": "معالجة أسرع"
+        }
+      },
+      {
+        "icon": "chart-bar",
+        "category": "التحليلات",
+        "title": "تحليلات المختبر",
+        "description": "نظام تحليلات وإعداد تقارير شامل",
+        "image": "/images/solutions/laboratory/analytics.jpg",
+        "highlights": [
+          "مقاييس الأداء",
+          "تحليل عبء العمل",
+          "مؤشرات الجودة",
+          "تحليل التكاليف"
+        ],
+        "stats": {
+          "value": "40%",
+          "label": "تقليل التكاليف"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "التميز في المختبر",
+    "description": "شاهد كيف تقوم المختبرات الرائدة بتحويل عملياتها",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "alt": "قصة نجاح المختبر"
+    },
+    "testimonials": [
+      {
+        "author": "د. مايكل لي",
+        "role": "مدير المختبر",
+        "image": "/images/testimonials/lab1.jpg",
+        "quote": "أحدث هذا النظام ثورة في عمليات مختبرنا. حسّنت قدرات الأتمتة والتتبع كفاءتنا بشكل كبير."
+      },
+      {
+        "author": "د. إيما ويلسون",
+        "role": "مديرة الجودة",
+        "image": "/images/testimonials/lab2.jpg",
+        "quote": "ساعدت ميزات ضبط الجودة في الحفاظ على أعلى معايير الدقة والامتثال."
+      }
+    ]
+  },
+  "benefits": {
+    "subtitle": "المزايا الرئيسية",
+    "title": "حول مختبرك",
+    "description": "اختبر مزايا نظام إدارة مختبر متكامل بالكامل",
+    "items": [
+      {
+        "icon": "trending-up",
+        "title": "التميز التشغيلي",
+        "description": "تبسيط عمليات المختبر وسير العمل",
+        "color": "blue",
+        "stats": {
+          "value": "60%",
+          "label": "زيادة الكفاءة"
+        },
+        "highlights": [
+          "سير عمل آلي",
+          "معالجة أسرع",
+          "تحسين الموارد",
+          "تقليل التكاليف"
+        ]
+      },
+      {
+        "icon": "check-circle",
+        "title": "ضمان الجودة",
+        "description": "الحفاظ على أعلى معايير الدقة",
+        "color": "green",
+        "stats": {
+          "value": "99.9%",
+          "label": "دقة الاختبارات"
+        },
+        "highlights": [
+          "ضوابط الجودة",
+          "قواعد التحقق",
+          "منع الأخطاء",
+          "تتبع الامتثال"
+        ]
+      },
+      {
+        "icon": "clock",
+        "title": "كفاءة الوقت",
+        "description": "تقليل وقت الاستجابة وتحسين الإنتاجية",
+        "color": "purple",
+        "stats": {
+          "value": "50%",
+          "label": "وقت استجابة أسرع"
+        },
+        "highlights": [
+          "معالجة سريعة",
+          "تقارير آلية",
+          "معالجة مجمعة",
+          "إدارة الأولويات"
+        ]
+      },
+      {
+        "icon": "shield",
+        "title": "الامتثال والأمان",
+        "description": "ضمان الامتثال التنظيمي وأمن البيانات",
+        "color": "red",
+        "stats": {
+          "value": "100%",
+          "label": "معدل الامتثال"
+        },
+        "highlights": [
+          "الامتثال التنظيمي",
+          "أمن البيانات",
+          "مسارات التدقيق",
+          "التحكم في الوصول"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "subtitle": "تسعير شفاف",
+    "title": "خطط تسعير مرنة",
+    "description": "اختر الخطة المثالية لمختبرك. وفر حتى 20% مع الفواتير السنوية.",
+    "billingPeriods": ["شهري", "سنوي"],
+    "plans": [
+      {
+        "name": "أساسي",
+        "highlight": "للمختبرات الصغيرة",
+        "monthlyPrice": "$499",
+        "yearlyPrice": "$4,990",
+        "yearlyDiscount": "وفر $998/سنة",
+        "description": "ميزات أساسية للمختبرات الصغيرة",
+        "features": [
+          {
+            "text": "تتبع العينات الأساسي",
+            "included": true
+          },
+          {
+            "text": "إدارة الاختبارات",
+            "included": true
+          },
+          {
+            "text": "ضبط الجودة",
+            "included": true
+          },
+          {
+            "text": "دعم البريد الإلكتروني",
+            "included": true
+          },
+          {
+            "text": "تقارير أساسية",
+            "included": true
+          },
+          {
+            "text": "وصول متنقل",
+            "included": true
+          }
+        ],
+        "cta": "ابدأ",
+        "popular": false
+      },
+      {
+        "name": "احترافي",
+        "highlight": "الأكثر شعبية للمختبرات متوسطة الحجم",
+        "monthlyPrice": "$999",
+        "yearlyPrice": "$9,990",
+        "yearlyDiscount": "وفر $1,998/سنة",
+        "description": "ميزات متقدمة للمختبرات النامية",
+        "features": [
+          {
+            "text": "كل ما هو مدرج في الأساسي، بالإضافة إلى:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "أتمتة متقدمة",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "تكامل الأجهزة",
+            "included": true
+          },
+          {
+            "text": "تحليلات متقدمة",
+            "included": true
+          },
+          {
+            "text": "دعم ذو أولوية",
+            "included": true
+          },
+          {
+            "text": "دعم المواقع المتعددة",
+            "included": true
+          }
+        ],
+        "cta": "ابدأ",
+        "popular": true
+      },
+      {
+        "name": "مؤسسة",
+        "highlight": "للمختبرات الكبيرة",
+        "monthlyPrice": "مخصص",
+        "yearlyPrice": "مخصص",
+        "yearlyDiscount": "اتصل بنا للأسعار الخاصة",
+        "description": "حلول مخصصة للمختبرات الكبيرة",
+        "features": [
+          {
+            "text": "كل ما هو مدرج في الاحترافي، بالإضافة إلى:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "دعم تكامل مخصص",
+            "included": true
+          },
+          {
+            "text": "مدير حساب مخصص",
+            "included": true
+          },
+          {
+            "text": "ميزات أمان متقدمة",
+            "included": true
+          },
+          {
+            "text": "تطوير مخصص",
+            "included": true
+          },
+          {
+            "text": "ضمانات اتفاقية مستوى الخدمة",
+            "included": true
+          }
+        ],
+        "cta": "اتصل بالمبيعات",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "جاهز لتحويل مختبرك؟",
+    "description": "انضم إلى المختبرات الرائدة التي حدّثت عملياتها بحلنا.",
+    "background": "/images/solutions/laboratory/cta-background.jpg",
+    "primaryButton": {
+      "text": "جدولة عرض توضيحي",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "شاهد العرض التوضيحي",
+      "link": "#showcase"
+    }
+  }
+} 

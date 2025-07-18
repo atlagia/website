@@ -1,0 +1,357 @@
+---
+// Header.astro
+import { Menu, Globe } from 'lucide-react';
+import { getLangFromUrl, getLocalizedPath } from '../../../utils/i18n';
+
+const currentPath = Astro.url.pathname;
+const currentLang = getLangFromUrl(Astro.url);
+const siteName = currentLang === 'ar' ? 'أَتلاَّسيَا' : (import.meta.env.PUBLIC_SITE_NAME || 'Atlagia');
+const isRTL = currentLang === 'ar';
+
+// Import the language-specific header content
+const headerData = await import(`../data/header/header_${currentLang}.json`).catch(() => {
+  return import('../data/header/header_en.json');
+});
+
+const { navigation, auth, languages } = headerData;
+---
+
+<header class="fixed w-full top-0 z-50 bg-[rgb(249,250,255)]/60 backdrop-blur-lg">
+  <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Top">
+    <div class="flex h-16 items-center justify-between">
+      <!-- Logo -->
+      <div class="flex items-center">
+        <a href={`/${currentLang}`} class="flex items-center">
+          <span class:list={[
+            "text-xl font-bold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent",
+            isRTL && "font-arabic-primary"
+          ]}>
+            {siteName}
+          </span>
+        </a>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <div class:list={["hidden md:flex items-center space-x-8", isRTL && "space-x-reverse"]}>
+        <!-- Products Mega Menu -->
+        <div class="relative group">
+          <button class="flex items-center text-sm font-medium text-gray-600 hover:text-cyan-600 transition-colors">
+            {navigation[0].name}
+            <svg class:list={["w-4 h-4", isRTL ? "mr-1" : "ml-1"]} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          <!-- Mega Menu Dropdown -->
+          <div class:list={[
+            "absolute mt-2 w-[800px] p-8 rounded-2xl shadow-xl bg-white border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200",
+            isRTL ? "right-0 translate-x-1/4" : "left-0 -translate-x-1/4"
+          ]}>
+            <!-- Categories Grid -->
+            <div class="grid grid-cols-3 gap-x-12 gap-y-8">
+              {navigation[0].megaMenu.categories.map((category) => (
+                <div class="space-y-4">
+                  <div class="flex items-center gap-2">
+                    <span class:list={[
+                      "p-1.5 rounded-lg",
+                      {
+                        'bg-cyan-50': category.title === 'General Dentistry',
+                        'bg-blue-50': category.title === 'Cosmetic Dentistry',
+                        'bg-sky-50': category.title === 'Specialized Care'
+                      }
+                    ]}>
+                      {/* Icons based on category */}
+                      {category.icon === 'stethoscope' && (
+                        <svg class="w-5 h-5 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
+                        </svg>
+                      )}
+                      {category.icon === 'sparkles' && (
+                        <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                        </svg>
+                      )}
+                      {category.icon === 'heart-pulse' && (
+                        <svg class="w-5 h-5 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                      )}
+                    </span>
+                    <h3 class="font-semibold text-gray-900">{category.title}</h3>
+                  </div>
+                  <ul class:list={["space-y-3 border-gray-100", isRTL ? "border-r pr-4" : "border-l pl-4"]}>
+                    {category.items.map((item) => (
+                      <li>
+                        <a href={`/${currentLang}${item.href}`} class="flex items-center text-sm text-gray-600 hover:text-cyan-600">
+                          <span class:list={["w-1.5 h-1.5 rounded-full bg-gray-300", isRTL ? "ml-2" : "mr-2"]}></span>
+                          {item.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+
+            <!-- Featured Section -->
+            <div class="mt-8 pt-6 border-t border-gray-100">
+              <div class="flex items-center justify-between bg-gradient-to-r from-cyan-50 to-blue-50 p-4 rounded-xl">
+                <div>
+                  <span class="inline-block px-2 py-1 text-xs font-semibold bg-cyan-100 text-cyan-600 rounded-full">
+                    {navigation[0].megaMenu.featured.badge}
+                  </span>
+                  <h4 class="text-sm font-medium text-gray-900 mt-1">{navigation[0].megaMenu.featured.title}</h4>
+                  <p class="text-sm text-gray-600">{navigation[0].megaMenu.featured.description}</p>
+                </div>
+                <a href={`/${currentLang}${navigation[0].megaMenu.featured.link.href}`} 
+                   class="flex items-center text-sm font-medium text-cyan-600 hover:text-cyan-700">
+                  {navigation[0].megaMenu.featured.link.text}
+                  <svg class={`w-4 h-4 ${isRTL ? 'mr-1 rotate-180' : 'ml-1'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rest of navigation items -->
+        {navigation.slice(1).map((item) => (
+          <a
+            href={`/${currentLang}${item.href}`}
+            class="text-sm font-medium text-gray-600 hover:text-cyan-600 transition-colors"
+          >
+            {item.name}
+          </a>
+        ))}
+      </div>
+
+      <!-- Right Section -->
+      <div class={`flex items-center gap-4 ${isRTL ? 'mr-4' : 'ml-4'}`}>
+        <!-- Language Selector -->
+        <div class="hidden md:flex items-center">
+          <div class="relative group">
+            <button class="flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-cyan-600">
+              <Globe className="h-4 w-4" />
+              <span>{languages.find(lang => lang.code === currentLang)?.name}</span>
+            </button>
+            <div class={`absolute ${isRTL ? 'left-0' : 'right-0'} mt-2 w-48 rounded-xl shadow-lg bg-white/80 backdrop-blur-lg ring-1 ring-black/5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200`}>
+              <div class="py-1" role="menu">
+                {languages.map((lang) => (
+                  <a
+                    href={getLocalizedPath(currentPath, lang.code)}
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-cyan-50 hover:text-cyan-600"
+                    role="menuitem"
+                  >
+                    {lang.name}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sign In Button -->
+        <a
+          href={auth.signIn.href}
+          class="hidden md:inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-gray-700 hover:text-cyan-600 transition-colors"
+        >
+          {auth.signIn.text}
+        </a>
+
+        <!-- Get Started Button -->
+        <a
+          href={auth.getStarted.href}
+          class="hidden md:inline-flex items-center justify-center px-6 py-2.5 text-sm font-medium text-white bg-cyan-600 hover:bg-cyan-700 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25 hover:-translate-y-0.5"
+        >
+          {auth.getStarted.text}
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <div class="relative md:hidden">
+          <button
+            type="button"
+            id="mobile-menu-button"
+            class="inline-flex items-center justify-center p-2 rounded-lg text-gray-600 hover:text-cyan-600 hover:bg-cyan-50"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open menu</span>
+            <Menu className="h-6 w-6" aria-hidden="true" />
+          </button>
+
+          <!-- Mobile Menu Dropdown -->
+          <div 
+            id="mobile-menu-dropdown"
+            class={`absolute ${isRTL ? 'left-0' : 'right-0'} mt-2 w-56 rounded-xl shadow-lg bg-white/80 backdrop-blur-lg ring-1 ring-black/5 opacity-0 invisible transition-all duration-200 ease-in-out transform scale-95`}
+          >
+            <div class="py-2" role="menu">
+              <!-- Products Dropdown -->
+              <div class="relative">
+                <button
+                  type="button"
+                  class="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-cyan-50 hover:text-cyan-600 flex items-center justify-between"
+                  id="mobile-products-button"
+                  aria-expanded="false"
+                >
+                  {navigation[0].name}
+                  <svg class={`w-4 h-4 ${isRTL ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
+                <div
+                  id="mobile-products-dropdown"
+                  class="hidden py-2 bg-gray-50"
+                >
+                  {navigation[0].megaMenu.categories.map((category) => (
+                    <div class="px-4 py-2">
+                      <div class="font-medium text-gray-900 mb-2">{category.title}</div>
+                      {category.items.map((item) => (
+                        <a
+                          href={`/${currentLang}${item.href}`}
+                          class="block px-4 py-1.5 text-sm text-gray-700 hover:text-cyan-600"
+                        >
+                          {item.name}
+                        </a>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <!-- Rest of navigation items -->
+              {navigation.slice(1).map((item) => (
+                <a
+                  href={`/${currentLang}${item.href}`}
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-cyan-50 hover:text-cyan-600"
+                  role="menuitem"
+                >
+                  {item.name}
+                </a>
+              ))}
+
+              <div class="border-t border-gray-100 my-2"></div>
+
+              <!-- Language Selector -->
+              <div class="relative px-4 py-2">
+                <button
+                  type="button"
+                  class="flex items-center gap-2 text-sm text-gray-700 hover:text-cyan-600"
+                  id="mobile-language-button"
+                  aria-expanded="false"
+                >
+                  <Globe className="h-4 w-4" />
+                  <span>{languages.find(lang => lang.code === currentLang)?.name}</span>
+                </button>
+                <div
+                  id="mobile-language-dropdown"
+                  class="hidden py-2"
+                >
+                  {languages.map((lang) => (
+                    <a
+                      href={getLocalizedPath(currentPath, lang.code)}
+                      class="block px-4 py-1.5 text-sm text-gray-700 hover:text-cyan-600"
+                    >
+                      {lang.name}
+                    </a>
+                  ))}
+                </div>
+              </div>
+
+              <!-- Auth Buttons -->
+              <div class="border-t border-gray-100 my-2"></div>
+              <a
+                href={auth.signIn.href}
+                class="block px-4 py-2 text-sm text-gray-700 hover:bg-cyan-50 hover:text-cyan-600"
+                role="menuitem"
+              >
+                {auth.signIn.text}
+              </a>
+              <a
+                href={auth.getStarted.href}
+                class="block px-4 py-2 text-sm text-cyan-600 hover:bg-cyan-50"
+                role="menuitem"
+              >
+                {auth.getStarted.text}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<script>
+  // Mobile menu functionality
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenuDropdown = document.getElementById('mobile-menu-dropdown');
+  const mobileProductsButton = document.getElementById('mobile-products-button');
+  const mobileProductsDropdown = document.getElementById('mobile-products-dropdown');
+  const mobileLanguageButton = document.getElementById('mobile-language-button');
+  const mobileLanguageDropdown = document.getElementById('mobile-language-dropdown');
+
+  // Main mobile menu toggle
+  mobileMenuButton?.addEventListener('click', () => {
+    const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+    mobileMenuButton.setAttribute('aria-expanded', (!isExpanded).toString());
+    
+    if (!isExpanded) {
+      mobileMenuDropdown?.classList.remove('opacity-0', 'invisible', 'scale-95');
+      mobileMenuDropdown?.classList.add('opacity-100', 'visible', 'scale-100');
+    } else {
+      mobileMenuDropdown?.classList.add('opacity-0', 'invisible', 'scale-95');
+      mobileMenuDropdown?.classList.remove('opacity-100', 'visible', 'scale-100');
+    }
+  });
+
+  // Products submenu toggle
+  mobileProductsButton?.addEventListener('click', () => {
+    const isExpanded = mobileProductsButton.getAttribute('aria-expanded') === 'true';
+    mobileProductsButton.setAttribute('aria-expanded', (!isExpanded).toString());
+    mobileProductsDropdown?.classList.toggle('hidden');
+  });
+
+  // Language submenu toggle
+  mobileLanguageButton?.addEventListener('click', () => {
+    const isExpanded = mobileLanguageButton.getAttribute('aria-expanded') === 'true';
+    mobileLanguageButton.setAttribute('aria-expanded', (!isExpanded).toString());
+    mobileLanguageDropdown?.classList.toggle('hidden');
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (event) => {
+    if (!mobileMenuButton?.contains(event.target as Node) && 
+        !mobileMenuDropdown?.contains(event.target as Node)) {
+      mobileMenuButton?.setAttribute('aria-expanded', 'false');
+      mobileMenuDropdown?.classList.add('opacity-0', 'invisible', 'scale-95');
+      mobileMenuDropdown?.classList.remove('opacity-100', 'visible', 'scale-100');
+    }
+  });
+</script>
+<style>
+  /* Add RTL support */
+  :global([dir="rtl"]) .space-x-8 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 1;
+  }
+
+  :global([dir="rtl"]) .translate-x-1\/4 {
+    --tw-translate-x: 25%;
+  }
+
+  :global([dir="rtl"]) .border-l {
+    border-left: none;
+    border-right: 1px solid;
+  }
+
+  :global([dir="rtl"]) .pl-4 {
+    padding-left: 0;
+    padding-right: 1rem;
+  }
+
+  /* Add smooth transitions */
+  .transition-all {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+</style>

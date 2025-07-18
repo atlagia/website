@@ -1,0 +1,336 @@
+{
+  "hero": {
+    "subtitle": "Next-Generation Dental Management",
+    "title": "Transform Your Dental Practice with AI-Powered Solutions",
+    "description": "Experience the future of dental practice management with our comprehensive, AI-driven platform that streamlines operations and enhances patient care.",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "thumbnail": "/images/dental-hero.webp",
+      "alt": "Dental Practice Management Demo"
+    },
+    "stats": [
+      {
+        "value": "98%",
+        "label": "Patient Satisfaction"
+      },
+      {
+        "value": "75%",
+        "label": "Time Saved"
+      },
+      {
+        "value": "50%",
+        "label": "Cost Reduction"
+      }
+    ]
+  },
+  "features": {
+    "title": "Enterprise-Grade Features",
+    "subtitle": "Next-Generation Practice Management",
+    "description": "Discover our comprehensive suite of advanced tools designed to revolutionize your dental practice management. Each feature is crafted to deliver maximum efficiency and superior patient care.",
+    "categories": [
+      {
+        "name": "Practice Management",
+        "description": "Core features that streamline your daily operations"
+      },
+      {
+        "name": "Patient Experience",
+        "description": "Tools that enhance patient engagement and satisfaction"
+      }
+    ],
+    "items": [
+      {
+        "icon": "globe",
+        "title": "Professional Website Builder",
+        "description": "Create stunning, conversion-optimized websites with built-in SEO and booking capabilities.",
+        "category": "Practice Management",
+        "image": "/images/features/website-builder.webp",
+        "highlights": [
+          "Drag-and-drop builder with premium templates",
+          "Mobile-first responsive design system",
+          "Integrated online booking & payments",
+          "Advanced SEO optimization toolkit"
+        ],
+        "stats": {
+          "value": "250%",
+          "label": "Booking Increase"
+        }
+      },
+      {
+        "icon": "calendar",
+        "title": "Intelligent Scheduling",
+        "description": "AI-powered appointment management that maximizes your practice efficiency.",
+        "category": "Practice Management",
+        "image": "/images/features/scheduling.webp",
+        "highlights": [
+          "Smart conflict resolution with AI optimization",
+          "Multi-provider calendar synchronization",
+          "Automated patient reminders & confirmations",
+          "Resource & room allocation management"
+        ],
+        "stats": {
+          "value": "89%",
+          "label": "Less No-Shows"
+        }
+      },
+      {
+        "icon": "users",
+        "title": "Patient Management Suite",
+        "description": "Comprehensive patient relationship management with advanced analytics.",
+        "category": "Patient Experience",
+        "image": "/images/features/patient-management.webp",
+        "highlights": [
+          "Digital patient records with smart search",
+          "Treatment planning & progress tracking",
+          "Integrated billing & insurance management",
+          "Patient communication portal"
+        ],
+        "stats": {
+          "value": "95%",
+          "label": "Patient Retention"
+        }
+      },
+      {
+        "icon": "brain",
+        "title": "AI Clinical Assistant",
+        "description": "Advanced AI tools for diagnosis support and treatment planning.",
+        "category": "Patient Experience",
+        "image": "/images/features/ai-assistant.webp",
+        "highlights": [
+          "AI-powered image analysis & diagnostics",
+          "Personalized treatment recommendations",
+          "Real-time risk assessment tools",
+          "Automated clinical documentation"
+        ],
+        "stats": {
+          "value": "45%",
+          "label": "Faster Diagnosis"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "See It In Action",
+    "description": "Watch how leading dental practices transform their operations",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SL3CQa0qO6k",
+      "thumbnail": "/images/showcase-thumb.webp"
+    },
+    "testimonials": [
+      {
+        "author": "Dr. Sarah Chen",
+        "role": "Lead Dentist, Bright Smile Dental",
+        "image": "/images/testimonials/sarah.webp",
+        "quote": "This platform has revolutionized how we operate. We've seen a 40% increase in efficiency."
+      },
+      {
+        "author": "Dr. Michael Rodriguez",
+        "role": "Owner, Advanced Dental Care",
+        "image": "/images/testimonials/michael.webp",
+        "quote": "The AI features have dramatically improved our diagnosis accuracy and patient satisfaction."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Transformative Benefits",
+    "subtitle": "Proven Results & Impact",
+    "description": "Experience measurable improvements across all aspects of your practice with our comprehensive solution. Our platform delivers concrete results that directly impact your bottom line.",
+    "items": [
+      {
+        "title": "Operational Excellence",
+        "description": "Streamline your practice operations with AI-powered automation, reducing administrative overhead and improving staff efficiency.",
+        "icon": "chart-up",
+        "color": "blue",
+        "stats": {
+          "value": "75%",
+          "label": "Reduction in Admin Work"
+        },
+        "highlights": [
+          "Automated workflow management",
+          "Smart resource allocation",
+          "Reduced paperwork",
+          "Streamlined processes"
+        ]
+      },
+      {
+        "title": "Enhanced Patient Experience",
+        "description": "Deliver exceptional patient care through digital innovation and personalized interactions that exceed expectations.",
+        "icon": "heart",
+        "color": "purple",
+        "stats": {
+          "value": "98%",
+          "label": "Patient Satisfaction"
+        },
+        "highlights": [
+          "Digital appointment booking",
+          "Automated reminders",
+          "Online patient portal",
+          "Seamless communication"
+        ]
+      },
+      {
+        "title": "Revenue Growth",
+        "description": "Maximize your practice's financial performance with intelligent scheduling and optimized resource utilization.",
+        "icon": "trending-up",
+        "color": "green",
+        "stats": {
+          "value": "35%",
+          "label": "Revenue Increase"
+        },
+        "highlights": [
+          "Optimized scheduling",
+          "Reduced no-shows",
+          "Increased bookings",
+          "Better resource utilization"
+        ]
+      },
+      {
+        "title": "Clinical Excellence",
+        "description": "Enhance your clinical capabilities with AI-assisted diagnostics and treatment planning tools.",
+        "icon": "star",
+        "color": "yellow",
+        "stats": {
+          "value": "50%",
+          "label": "Efficiency Gain"
+        },
+        "highlights": [
+          "AI-powered diagnostics",
+          "Treatment planning",
+          "Clinical documentation",
+          "Quality assurance"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Flexible Pricing Plans",
+    "subtitle": "Transparent Pricing",
+    "description": "Choose the perfect plan for your practice. Save up to 20% with annual billing.",
+    "billingPeriods": ["Monthly", "Yearly"],
+    "plans": [
+      {
+        "name": "Starter",
+        "highlight": "Perfect for new practices",
+        "monthlyPrice": "$199",
+        "yearlyPrice": "$1,990",
+        "yearlyDiscount": "Save $398/year",
+        "description": "Essential features to start your digital transformation journey",
+        "features": [
+          {
+            "text": "Basic appointment scheduling",
+            "included": true
+          },
+          {
+            "text": "Patient portal access",
+            "included": true
+          },
+          {
+            "text": "Digital records management",
+            "included": true
+          },
+          {
+            "text": "Email support (24/7)",
+            "included": true
+          },
+          {
+            "text": "Basic analytics",
+            "included": true
+          },
+          {
+            "text": "Mobile app access",
+            "included": true
+          }
+        ],
+        "cta": "Get Started",
+        "popular": false
+      },
+      {
+        "name": "Professional",
+        "highlight": "Most popular for established practices",
+        "monthlyPrice": "$399",
+        "yearlyPrice": "$3,990",
+        "yearlyDiscount": "Save $798/year",
+        "description": "Advanced features for growing practices",
+        "features": [
+          {
+            "text": "Everything in Starter, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Advanced AI features",
+            "included": true,
+            "isNew": true
+          },
+          {
+            "text": "Multi-provider support",
+            "included": true
+          },
+          {
+            "text": "Custom analytics dashboard",
+            "included": true
+          },
+          {
+            "text": "Priority support",
+            "included": true
+          },
+          {
+            "text": "API access",
+            "included": true
+          }
+        ],
+        "cta": "Get Started",
+        "popular": true
+      },
+      {
+        "name": "Enterprise",
+        "highlight": "For large practices and DSOs",
+        "monthlyPrice": "Custom",
+        "yearlyPrice": "Custom",
+        "yearlyDiscount": "Contact us for special pricing",
+        "description": "Tailored solutions for enterprise needs",
+        "features": [
+          {
+            "text": "Everything in Professional, plus:",
+            "included": true,
+            "isHeader": true
+          },
+          {
+            "text": "Custom integration support",
+            "included": true
+          },
+          {
+            "text": "Dedicated account manager",
+            "included": true
+          },
+          {
+            "text": "Advanced security features",
+            "included": true
+          },
+          {
+            "text": "Custom development options",
+            "included": true
+          },
+          {
+            "text": "SLA guarantees",
+            "included": true
+          }
+        ],
+        "cta": "Contact Sales",
+        "popular": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Transform Your Practice?",
+    "description": "Join thousands of successful dental practices using our platform",
+    "primaryButton": {
+      "text": "Schedule a Demo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Watch Demo Video",
+      "link": "/demo-video"
+    },
+    "background": "/images/cta-background.webp"
+  }
+} 
