@@ -1,4 +1,6 @@
 ---
+import { FaUser } from 'react-icons/fa';
+
 interface Testimonial {
   id: string;
   author: string;
@@ -13,6 +15,11 @@ interface Props {
 }
 
 const { title, testimonials } = Astro.props;
+
+// Function to get initials from name
+const getInitials = (name: string) => {
+  return name.charAt(0).toUpperCase();
+};
 ---
 
 <section class="py-20 px-4 bg-white">
@@ -23,12 +30,14 @@ const { title, testimonials } = Astro.props;
       {testimonials.map((testimonial, index) => (
         <div class="bg-gray-50 p-6 rounded-xl">
           <div class="flex items-center gap-4 mb-4">
-            <img
-              src={testimonial.avatar}
-              alt={testimonial.author}
-              class="w-12 h-12 rounded-full object-cover"
-              id={`content-testimonial-${index}-avatar`}
-            />
+            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500/10 to-pink-500/10 flex items-center justify-center">
+              <div class="relative">
+                <FaUser class="w-6 h-6 text-gray-400" />
+                <span class="absolute inset-0 flex items-center justify-center text-sm font-semibold text-gray-700">
+                  {getInitials(testimonial.author)}
+                </span>
+              </div>
+            </div>
             <div>
               <h3 class="font-semibold" id={`content-testimonial-${index}-author`}>{testimonial.author}</h3>
               <p class="text-sm text-gray-600" id={`content-testimonial-${index}-role`}>{testimonial.role}</p>

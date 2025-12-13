@@ -1,0 +1,768 @@
+{
+  "siteTitle": "Dentagia - برنامج طب الأسنان الحديث والآمن القائم على السحابة مدعوم بالذكاء الاصطناعي",
+  "siteDescription": "حول عيادتك السنية باستخدام برنامج إدارة الممارسة المدعوم بالذكاء الاصطناعي من Dentagia. تبسيط رعاية المرضى، وأتمتة سير العمل، وتنمية ممارستك مع حلول آمنة قائمة على السحابة مصممة لطب الأسنان الحديث.",
+  "sections": [
+    {
+      "type": "welcomeSection",
+      "badge": "برنامج طب الأسنان المدعوم بالذكاء الاصطناعي",
+      "title": "نمو عيادتك مع إدارة طب الأسنان <span class='text-gradient'>المدعومة بالذكاء الاصطناعي</span>",
+      "description": "تبسيط عملياتك، وزيادة الكفاءة، وتقديم رعاية استثنائية للمرضى مع منصة إدارة العيادة الذكية من Dentagia.",
+      "blogLinkText": "استكشف الميزات",
+      "getStartedText": "جدولة عرض توضيحي",
+      "getStartedLink": "/demo",
+      "blogLink": "/features",
+      "heroImage": "https://cdn.atlagia.com/GiaConnect/images/670e6478-6043-4aec-a731-a0d4468e6d4e.png",
+      "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+      "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+      "features": [
+        {
+          "icon": "Cloud",
+          "title": "قائم على السحابة",
+          "description": "الوصول بأمان إلى بيانات عيادتك من أي مكان وفي أي وقت مع بنيتنا التحتية السحابية"
+        },
+        {
+          "icon": "Shield",
+          "title": "آمن ومتوافق",
+          "description": "أمان متوافق مع HIPAA مع تخزين مشفر ونسخ احتياطية منتظمة"
+        },
+        {
+          "icon": "Zap",
+          "title": "مدعوم بالذكاء الاصطناعي",
+          "description": "أتمتة ذكية للجدولة، ورؤى المرضى، وتحليلات العيادة"
+        },
+        {
+          "icon": "TrendingUp",
+          "title": "نمو العيادة",
+          "description": "أدوات مصممة لتنمية عيادتك وتحسين رضا المرضى"
+        }
+      ],
+      "partnerLogos": [
+        {
+          "src": "https://cdn.atlagia.com/GiaConnect/images/processed-3bb4b721-db62-4347-82ed-b11735f18565.png",
+          "alt": "Conformité HIPAA"
+        },
+        {
+          "src": "https://cdn.atlagia.com/GiaConnect/images/processed-d4ae1096-ccab-49e9-91f5-1d6504936092.png",
+          "alt": "Certification Cloud"
+        },
+        {
+          "src": "https://cdn.atlagia.com/GiaConnect/images/a3550c4a-95d2-4341-9ed7-2a5de91b0b66.png",
+          "alt": "Propulsé par l'IA"
+        }
+      ],
+      "trustedBy": "موثوق به من قبل عيادات الأسنان"
+    },
+    {
+      "type": "aboutSection",
+      "subtitle": "لماذا Dentagia",
+      "title": "كل ما تحتاجه لإدارة عيادة أسنان حديثة",
+      "features": [
+        {
+          "icon": "ai-development",
+          "title": "إدارة المرضى المدعومة بالذكاء الاصطناعي",
+          "keywords": [
+            "ذكاء اصطناعي",
+            "مريض",
+            "إدارة"
+          ],
+          "description": "نظام ذكي لإدارة المرضى يتعلم من عادات عيادتك ويساعد في تحسين سير العمل.",
+          "bullets": [
+            "جدولة مواعيد ذكية",
+            "رؤى المرضى المدعومة بالذكاء الاصطناعي",
+            "تذكيرات ومتابعات تلقائية",
+            "تحليلات تنبؤية لنمو العيادة"
+          ],
+          "backgroundSvg": "<svg width='100%' height='100%' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='grid1' width='20' height='20' patternUnits='userSpaceOnUse'><path d='M 20 0 L 0 0 0 20' fill='none' stroke='currentColor' stroke-width='0.5' opacity='0.1'/></pattern></defs><rect width='100%' height='100%' fill='url(#grid1)'/></svg>"
+        },
+        {
+          "icon": "software-solutions",
+          "title": "إدارة شاملة للعيادة",
+          "keywords": [
+            "عيادة",
+            "إدارة",
+            "برنامج"
+          ],
+          "description": "حل متكامل لإدارة عيادتك السنية بشكل فعال ومؤثر.",
+          "bullets": [
+            "سجلات المرضى والتاريخ الطبي",
+            "جدولة المواعيد والتقويم",
+            "الفوترة والمدفوعات",
+            "تخطيط العلاج والتوثيق"
+          ],
+          "backgroundSvg": "<svg width='100%' height='100%' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='code' width='20' height='20' patternUnits='userSpaceOnUse'><path d='M 0 10 L 10 0 M 20 10 L 10 20' stroke='currentColor' stroke-width='0.5' opacity='0.1'/></pattern></defs><rect width='100%' height='100%' fill='url(#code)'/></svg>"
+        },
+        {
+          "icon": "digital-transformation",
+          "title": "بنية تحتية سحابية آمنة",
+          "keywords": [
+            "آمن",
+            "سحابة",
+            "بنية تحتية"
+          ],
+          "description": "أمان على مستوى المؤسسات مع إمكانية الوصول السحابي للعيادات السنية الحديثة.",
+          "bullets": [
+            "تخزين متوافق مع HIPAA",
+            "نسخ احتياطية واستعادة تلقائية",
+            "وصول متعدد الأجهزة",
+            "مزامنة في الوقت الفعلي"
+          ],
+          "backgroundSvg": "<svg width='100%' height='100%' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='circuit' width='40' height='40' patternUnits='userSpaceOnUse'><circle cx='20' cy='20' r='1' fill='currentColor' opacity='0.1'/><path d='M 40 20 H 30 M 20 0 V 10' stroke='currentColor' stroke-width='0.5' opacity='0.1'/></pattern></defs><rect width='100%' height='100%' fill='url(#circuit)'/></svg>"
+        },
+        {
+          "icon": "industry-solutions",
+          "title": "أدوات نمو العيادة",
+          "keywords": [
+            "نمو",
+            "تحليلات",
+            "رؤى"
+          ],
+          "description": "رؤى قائمة على البيانات وأدوات لمساعدة عيادتك على النمو والازدهار.",
+          "bullets": [
+            "تحليلات أداء العيادة",
+            "رؤى حول الاحتفاظ بالمرضى",
+            "تتبع وإعداد تقارير الإيرادات",
+            "أدوات أتمتة التسويق"
+          ],
+          "backgroundSvg": "<svg width='100%' height='100%' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='dots' width='20' height='20' patternUnits='userSpaceOnUse'><circle cx='10' cy='10' r='1' fill='currentColor' opacity='0.1'/></pattern></defs><rect width='100%' height='100%' fill='url(#dots)'/></svg>"
+        }
+      ],
+      "ctaText": "استكشف الميزات",
+      "ctaLink": "/features"
+    },
+    {
+      "type": "whatsappConversationSection",
+      "title": "التواصل مع المرضى المدعوم بالذكاء الاصطناعي",
+      "subtitle": "شاهد كيف يتعامل مساعدنا بالذكاء الاصطناعي مع جدولة المواعيد تلقائيًا",
+      "description": "استمتع بجدولة مواعيد سلسة مع مساعدنا الذكي بالذكاء الاصطناعي الذي يفهم اللغة الطبيعية ويحجز تلقائيًا الأوقات المفضلة لديك.",
+      "phoneNumber": "+1 (555) 123-4567",
+      "aiName": "مساعد Dentagia بالذكاء الاصطناعي",
+      "messages": [
+        {
+          "text": "مرحبًا، أحتاج إلى جدولة موعد لتنظيف الأسنان",
+          "sender": "user",
+          "timestamp": "10:30"
+        },
+        {
+          "text": "مرحبًا! سأكون سعيدًا لمساعدتك في جدولة تنظيف الأسنان. دعني أتحقق من الأوقات المتاحة لدينا لك.",
+          "sender": "ai",
+          "timestamp": "10:31"
+        },
+        {
+          "text": "لدي توفر هذا الأسبوع. هل تفضل:\n\n📅 الثلاثاء 15 مارس الساعة 2:00 مساءً\n📅 الخميس 17 مارس الساعة 10:00 صباحًا\n📅 الجمعة 18 مارس الساعة 3:30 مساءً",
+          "sender": "ai",
+          "timestamp": "10:31"
+        },
+        {
+          "text": "الخميس الساعة 10 صباحًا يناسبني",
+          "sender": "user",
+          "timestamp": "10:32"
+        },
+        {
+          "text": "ممتاز! لقد قمت بجدولة موعد تنظيف الأسنان الخاص بك ليوم الخميس 17 مارس الساعة 10:00 صباحًا. سيستغرق الموعد حوالي 45 دقيقة.",
+          "sender": "ai",
+          "timestamp": "10:32",
+          "type": "appointment",
+          "appointmentData": {
+            "date": "الخميس 17 مارس",
+            "time": "10:00 صباحًا",
+            "service": "تنظيف الأسنان",
+            "duration": "45 دقيقة"
+          }
+        },
+        {
+          "text": "رائع! سأرسل لك رسالة تأكيد وتذكير قبل 24 ساعة من موعدك. هل هناك أي شيء آخر يمكنني مساعدتك فيه؟",
+          "sender": "ai",
+          "timestamp": "10:33"
+        },
+        {
+          "text": "لا، هذا كل شيء. شكرًا لك!",
+          "sender": "user",
+          "timestamp": "10:33"
+        },
+        {
+          "text": "عفوًا! نتطلع لرؤيتك في 17 مارس. أتمنى لك يومًا رائعًا! 😊",
+          "sender": "ai",
+          "timestamp": "10:33"
+        }
+      ]
+    },
+    {
+      "type": "aiAgentSection",
+      "subtitle": "لماذا تختار Dentagia",
+      "title": "مساعدك الذكي <span class='text-gradient'>لعيادة الأسنان</span>",
+      "description": "انضم إلى مئات عيادات الأسنان التي تثق في Dentagia. اكتشف قوة الأتمتة المدعومة بالذكاء الاصطناعي التي تتعلم من أنماط عيادتك وتحسن كل جانب من جوانب عملياتك السنية.",
+      "features": [
+        {
+          "icon": "scheduling",
+          "title": "الجدولة الذكية",
+          "description": "تحسين المواعيد المدعوم بالذكاء الاصطناعي الذي يقلل من الغياب ويعظم كفاءة العيادة.",
+          "metric": {
+            "value": "70%",
+            "label": "تقليل الغياب"
+          }
+        },
+        {
+          "icon": "analytics",
+          "title": "تحليلات العيادة",
+          "description": "رؤى في الوقت الفعلي وتحليلات تنبؤية لمساعدتك على فهم عيادتك وتنميتها.",
+          "metric": {
+            "value": "35%",
+            "label": "نمو الإيرادات"
+          }
+        },
+        {
+          "icon": "communication",
+          "title": "التواصل مع المرضى",
+          "description": "تذكيرات تلقائية، ومتابعات، وتواصل مخصص مع المرضى عبر الرسائل النصية والبريد الإلكتروني.",
+          "metric": {
+            "value": "95%",
+            "label": "معدل التسليم"
+          }
+        },
+        {
+          "icon": "automation",
+          "title": "أتمتة سير العمل",
+          "description": "تدير الأتمتة الذكية المهام الروتينية، مما يحررك للتركيز على رعاية المرضى.",
+          "metric": {
+            "value": "10ساعات",
+            "label": "الوقت الموفر/الأسبوع"
+          }
+        },
+        {
+          "icon": "patient",
+          "title": "رؤى المرضى",
+          "description": "تحليل سلوك المرضى المدعوم بالذكاء الاصطناعي ورؤى تنبؤية لنتائج رعاية أفضل.",
+          "metric": {
+            "value": "60%",
+            "label": "معدل الاستجابة"
+          }
+        },
+        {
+          "icon": "security",
+          "title": "الامتثال لـ HIPAA",
+          "description": "أمان على مستوى المؤسسات مع مراقبة الامتثال التلقائية وسجلات التدقيق.",
+          "metric": {
+            "value": "100%",
+            "label": "الامتثال"
+          }
+        }
+      ],
+      "ctaButton": {
+        "text": "استكشف ميزات الذكاء الاصطناعي",
+        "link": "/features/ai-scheduling"
+      },
+      "benefits": [
+        {
+          "title": "إمكانية الوصول السحابية",
+          "description": "الوصول إلى بيانات عيادتك من أي مكان، على أي جهاز. لم تعد مقيدًا بجهاز كمبيوتر واحد أو موقع واحد."
+        },
+        {
+          "title": "أمان متوافق مع HIPAA",
+          "description": "أمان على مستوى المؤسسات مع تخزين بيانات مشفر، ونسخ احتياطية منتظمة، والامتثال للوائح الصحة."
+        },
+        {
+          "title": "أتمتة مدعومة بالذكاء الاصطناعي",
+          "description": "تدير الأتمتة الذكية المهام الروتينية، مما يحررك للتركيز على رعاية المرضى ونمو العيادة."
+        },
+        {
+          "title": "سهولة الاستخدام",
+          "description": "واجهة بديهية مصممة لمحترفي طب الأسنان. ابدأ بسرعة مع الحد الأدنى من التدريب المطلوب."
+        },
+        {
+          "title": "دعم شامل",
+          "description": "دعم على مدار الساعة طوال أيام الأسبوع من فريقنا من خبراء إدارة عيادات الأسنان. نحن هنا عندما تحتاجنا."
+        },
+        {
+          "title": "حل قابل للتوسع",
+          "description": "ينمو مع عيادتك. سواء كنت ممارسًا منفردًا أو عيادة متعددة المواقع، يتكيف Dentagia مع احتياجاتك."
+        }
+      ]
+    },
+    {
+      "type": "achievementsSection",
+      "subtitle": "تأثيرنا",
+      "title": "مساعدة عيادات الأسنان على الازدهار",
+      "description": "سجلنا الحافل يتحدث عن نفسه. إليك كيف تساعد Dentagia عيادات الأسنان على النمو والنجاح.",
+      "achievements": [
+        {
+          "value": "500+",
+          "label": "عيادات الأسنان",
+          "description": "تثق في Dentagia لإدارة عملياتها ورعاية المرضى",
+          "icon": "building"
+        },
+        {
+          "value": "50%",
+          "label": "الوقت الموفر",
+          "description": "متوسط تقليل الوقت الإداري للعيادات التي تستخدم Dentagia",
+          "icon": "clock"
+        },
+        {
+          "value": "35%",
+          "label": "نمو الإيرادات",
+          "description": "متوسط زيادة الإيرادات للعيادات بعد تنفيذ Dentagia",
+          "icon": "trending-up"
+        },
+        {
+          "value": "99.9%",
+          "label": "التوفر",
+          "description": "بنية تحتية سحابية موثوقة لضمان عدم فقدان عيادتك أي نبضة",
+          "icon": "server"
+        }
+      ]
+    },
+    {
+      "type": "projectsSection",
+      "subtitle": "قصص النجاح",
+      "title": "كيف تنمو عيادات الأسنان مع Dentagia",
+      "description": "شاهد كيف تقوم العيادات في جميع أنحاء البلاد بتحويل عملياتها والنمو مع Dentagia.",
+      "projects": [
+        {
+          "title": "عيادة الأسنان المركزية",
+          "category": "عيادة متعددة الممارسين",
+          "description": "عمليات مبسطة لعيادة تضم 5 أطباء أسنان مع جدولة مدعومة بالذكاء الاصطناعي وتواصل تلقائي مع المرضى.",
+          "image": "https://cdn.atlagia.com/projects/ecommerce-platform.webp",
+          "stats": {
+            "efficiency": "+60%",
+            "satisfaction": "98%",
+            "growth": "+40%"
+          },
+          "technologies": [
+            "الجدولة بالذكاء الاصطناعي",
+            "منصة السحابة",
+            "التحليلات",
+            "الأتمتة"
+          ]
+        },
+        {
+          "title": "Family Dental Care",
+          "category": "عيادة فردية",
+          "description": "تحول كامل للعيادة مع إدارة المرضى، والفوترة التلقائية، وتحليلات النمو.",
+          "image": "https://cdn.atlagia.com/projects/healthcare-system.webp",
+          "stats": {
+            "time_saved": "15hrs/week",
+            "revenue": "+35%",
+            "patients": "+50%"
+          },
+          "technologies": [
+            "إدارة المرضى",
+            "الفوترة التلقائية",
+            "التخزين السحابي",
+            "رؤى الذكاء الاصطناعي"
+          ]
+        },
+        {
+          "title": "مركز طب الأسنان التجميلي",
+          "category": "عيادة متخصصة",
+          "description": "أدوات متقدمة لتخطيط العلاج والتواصل مع المرضى لعيادة تجميلية عالية الجودة.",
+          "image": "https://cdn.atlagia.com/projects/fintech-dashboard.webp",
+          "stats": {
+            "conversion": "+45%",
+            "retention": "95%",
+            "satisfaction": "99%"
+          },
+          "technologies": [
+            "تخطيط العلاج",
+            "بوابة المريض",
+            "التحليلات",
+            "التواصل بالذكاء الاصطناعي"
+          ]
+        },
+        {
+          "title": "مجموعة طب أسنان الأطفال",
+          "category": "متعددة المواقع",
+          "description": "نظام إدارة مركزي يربط ثلاثة مواقع مع سجلات المرضى والجدولة الموحدة.",
+          "image": "https://cdn.atlagia.com/projects/manufacturing-system.webp",
+          "stats": {
+            "coordination": "100%",
+            "efficiency": "+70%",
+            "growth": "+55%"
+          },
+          "technologies": [
+            "متعددة المواقع",
+            "مزامنة السحابة",
+            "السجلات الموحدة",
+            "الفوترة المركزية"
+          ]
+        }
+      ],
+      "buttonText": "عرض جميع القصص",
+      "buttonLink": "/stories"
+    },
+    {
+      "type": "industryFeaturesSection",
+      "subtitle": "ميزات العيادة",
+      "title": "كل ما تحتاجه لإدارة عيادتك",
+      "description": "توفر Dentagia أدوات شاملة مصممة خصيصًا لعيادات الأسنان من جميع الأحجام.",
+      "industries": [
+        {
+          "icon": "Users",
+          "title": "إدارة المرضى",
+          "description": "سجلات المرضى الكاملة، والتاريخ الطبي، وخطط العلاج على منصة آمنة.",
+          "features": [
+            "سجلات المرضى الرقمية",
+            "تتبع التاريخ الطبي",
+            "أدوات تخطيط العلاج",
+            "بوابة التواصل مع المرضى"
+          ],
+          "processIcons": [
+            "FileText",
+            "Calendar",
+            "Clipboard",
+            "MessageSquare"
+          ]
+        },
+        {
+          "icon": "Calendar",
+          "title": "جدولة المواعيد",
+          "description": "جدولة مدعومة بالذكاء الاصطناعي تحسن جدولك وتقلل من الغياب.",
+          "features": [
+            "حجز مواعيد ذكي",
+            "تذكيرات تلقائية",
+            "إدارة قوائم الانتظار",
+            "تحسين التقويم"
+          ],
+          "processIcons": [
+            "Clock",
+            "Bell",
+            "List",
+            "TrendingUp"
+          ]
+        },
+        {
+          "icon": "CreditCard",
+          "title": "الفوترة والمدفوعات",
+          "description": "فوترة، ومعالجة المدفوعات، وتكامل التأمين مبسطة.",
+          "features": [
+            "الفوترة التلقائية",
+            "معالجة المدفوعات",
+            "مطالبات التأمين",
+            "التقارير المالية"
+          ],
+          "processIcons": [
+            "FileText",
+            "CreditCard",
+            "FileCheck",
+            "BarChart"
+          ]
+        },
+        {
+          "icon": "BarChart",
+          "title": "تحليلات العيادة",
+          "description": "رؤى قائمة على البيانات لفهم عيادتك وتنميتها.",
+          "features": [
+            "مؤشرات الأداء",
+            "تحليلات المرضى",
+            "تتبع الإيرادات",
+            "رؤى النمو"
+          ],
+          "processIcons": [
+            "TrendingUp",
+            "Users",
+            "DollarSign",
+            "Target"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "automationFeaturesSection",
+      "subtitle": "أتمتة الذكاء الاصطناعي",
+      "title": "أتمتة ذكية لعيادتك",
+      "description": "دع الذكاء الاصطناعي يتولى المهام الروتينية حتى تتمكن من التركيز على الأساسيات: تقديم رعاية استثنائية للمرضى.",
+      "features": [
+        {
+          "icon": "Workflow",
+          "title": "الجدولة التلقائية",
+          "description": "جدولة مدعومة بالذكاء الاصطناعي تحسن جدولك، وتملأ الإلغاءات تلقائيًا، وتقلل من الغياب.",
+          "metrics": [
+            {
+              "value": "70%",
+              "label": "تقليل الغياب"
+            },
+            {
+              "value": "10ساعات",
+              "label": "الوقت الموفر/الأسبوع"
+            }
+          ]
+        },
+        {
+          "icon": "MessageSquare",
+          "title": "التواصل مع المرضى",
+          "description": "تذكيرات، ومتابعات، وتواصل مع المرضى تلقائي عبر الرسائل النصية والبريد الإلكتروني.",
+          "metrics": [
+            {
+              "value": "95%",
+              "label": "تسليم التذكيرات"
+            },
+            {
+              "value": "60%",
+              "label": "معدل الاستجابة"
+            }
+          ]
+        },
+        {
+          "icon": "FileText",
+          "title": "أتمتة الفوترة",
+          "description": "فوترة، ومدفوعات، وإرسال مطالبات التأمين تلقائيًا لتبسيط عملياتك المالية.",
+          "metrics": [
+            {
+              "value": "80%",
+              "label": "معالجة أسرع"
+            },
+            {
+              "value": "50%",
+              "label": "الوقت الموفر"
+            }
+          ]
+        },
+        {
+          "icon": "BarChart",
+          "title": "رؤى العيادة",
+          "description": "تحليلات مدعومة بالذكاء الاصطناعي توفر رؤى قابلة للتنفيذ حول الأداء وفرص النمو.",
+          "metrics": [
+            {
+              "value": "في الوقت الفعلي",
+              "label": "التحليلات"
+            },
+            {
+              "value": "35%",
+              "label": "نمو الإيرادات"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "technologiesSection",
+      "subtitle": "التكنولوجيا",
+      "title": "مبني على تقنية حديثة وآمنة",
+      "description": "تعتمد Dentagia على تقنية متطورة لتقديم منصة إدارة عيادة آمنة وموثوقة وقوية.",
+      "categories": [
+        {
+          "name": "البنية التحتية السحابية",
+          "description": "بنية تحتية سحابية آمنة وقابلة للتوسع تضمن الموثوقية وإمكانية الوصول.",
+          "technologies": [
+            {
+              "name": "AWS Cloud",
+              "icon": "aws",
+              "level": "مؤسساتي",
+              "description": "بنية تحتية سحابية آمنة مع توفر 99.9%"
+            },
+            {
+              "name": "تشفير البيانات",
+              "icon": "shield",
+              "level": "متوافق مع HIPAA",
+              "description": "تشفير من طرف إلى طرف لتأمين بيانات المرضى"
+            },
+            {
+              "name": "النسخ الاحتياطي التلقائي",
+              "icon": "cloud",
+              "level": "تلقائي",
+              "description": "نسخ احتياطية يومية تلقائية مع استعادة بعد الكوارث"
+            },
+            {
+              "name": "متعدد الأجهزة",
+              "icon": "devices",
+              "level": "متعدد المنصات",
+              "description": "الوصول من سطح المكتب أو الجهاز اللوحي أو الأجهزة المحمولة"
+            }
+          ]
+        },
+        {
+          "name": "الذكاء الاصطناعي والأتمتة",
+          "description": "أتمتة ذكية مدعومة بتقنية الذكاء الاصطناعي المتقدمة.",
+          "technologies": [
+            {
+              "name": "الجدولة الذكية",
+              "icon": "calendar",
+              "level": "مدعوم بالذكاء الاصطناعي",
+              "description": "تحسين ذكي للمواعيد"
+            },
+            {
+              "name": "رؤى المرضى",
+              "icon": "brain",
+              "level": "تنبؤي",
+              "description": "تحليل تنبؤي لسلوك المرضى"
+            },
+            {
+              "name": "التذكيرات التلقائية",
+              "icon": "bell",
+              "level": "ذكي",
+              "description": "أتمتة ذكية للتواصل مع المرضى"
+            },
+            {
+              "name": "تحليلات العيادة",
+              "icon": "chart",
+              "level": "قائم على البيانات",
+              "description": "رؤى أداء العيادة المدعومة بالذكاء الاصطناعي"
+            }
+          ]
+        },
+        {
+          "name": "إدارة العيادة",
+          "description": "أدوات شاملة لإدارة كل جانب من جوانب عيادتك.",
+          "technologies": [
+            {
+              "name": "سجلات المرضى",
+              "icon": "file",
+              "level": "شامل",
+              "description": "سجلات المرضى الرقمية الكاملة والتاريخ"
+            },
+            {
+              "name": "نظام الفوترة",
+              "icon": "credit-card",
+              "level": "تلقائي",
+              "description": "فوترة مبسطة ومعالجة المدفوعات"
+            },
+            {
+              "name": "تخطيط العلاج",
+              "icon": "clipboard",
+              "level": "متقدم",
+              "description": "خطط العلاج الرقمية والتوثيق"
+            },
+            {
+              "name": "التقارير",
+              "icon": "bar-chart",
+              "level": "في الوقت الفعلي",
+              "description": "تحليلات وتقارير شاملة للعيادة في الوقت الفعلي"
+            }
+          ]
+        },
+        {
+          "name": "الأمان والامتثال",
+          "description": "أمان على مستوى المؤسسات متوافق مع معايير قطاع الصحة.",
+          "technologies": [
+            {
+              "name": "الامتثال لـ HIPAA",
+              "icon": "shield-check",
+              "level": "معتمد",
+              "description": "امتثال وتصديق HIPAA كامل"
+            },
+            {
+              "name": "تشفير البيانات",
+              "icon": "lock",
+              "level": "256-bit",
+              "description": "تشفير بيانات على المستوى العسكري"
+            },
+            {
+              "name": "التحكم في الوصول",
+              "icon": "user-check",
+              "level": "قائم على الأدوار",
+              "description": "التحكم في الوصول والأذونات التفصيلية"
+            },
+            {
+              "name": "سجلات التدقيق",
+              "icon": "file-text",
+              "level": "شامل",
+              "description": "تتبع كامل للامتثال"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "reviewsSection",
+      "reviews": [
+        {
+          "name": "Dr. Sarah Martinez",
+          "role": "Practice Owner",
+          "company": "Downtown Dental Clinic",
+          "image": "/images/testimonials/sarah.jpg",
+          "content": "Dentagia has transformed how we run our practice. The AI-powered scheduling alone saves us 10 hours per week, and our patient satisfaction scores have never been higher. The cloud-based system means we can access everything from anywhere.",
+          "rating": 5
+        },
+        {
+          "name": "Dr. Michael Chen",
+          "role": "Lead Dentist",
+          "company": "Family Dental Care",
+          "image": "/images/testimonials/michael.jpg",
+          "content": "Switching to Dentagia was the best decision we made. The patient management system is intuitive, billing is automated, and the analytics help us understand our practice better. Our revenue has increased by 35% since implementation.",
+          "rating": 5
+        },
+        {
+          "name": "Emily Rodriguez",
+          "role": "Practice Manager",
+          "company": "Cosmetic Dentistry Center",
+          "image": "/images/testimonials/emily.jpg",
+          "content": "The support team is incredible, and the platform is so easy to use. We've reduced administrative time by 50% and our team loves how streamlined everything is. Dentagia truly understands what dental practices need.",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "type": "bannerSection",
+      "subtitle": "نمو عيادتك",
+      "headline": "حول عيادتك السنية مع حلول مدعومة بالذكاء الاصطناعي",
+      "description": "اكتشف كيف يمكن لمنصة Dentagia الحديثة والآمنة والقائمة على السحابة تبسيط عملياتك، وتحسين رضا المرضى، وتحفيز نمو العيادة.",
+      "backgroundImage": "/images/banner-bg.jpg",
+      "button1Text": "عرض الميزات",
+      "button1Link": "/features",
+      "button2Text": "جدولة عرض توضيحي",
+      "button2Link": "/demo",
+      "cards": [
+        {
+          "title": "الجدولة المدعومة بالذكاء الاصطناعي",
+          "description": "جدولة ذكية تحسن جدولك، وتقلل من الغياب، وتعظم كفاءة العيادة."
+        },
+        {
+          "title": "إدارة المرضى",
+          "description": "سجلات المرضى الكاملة، والتاريخ الطبي، وخطط العلاج على منصة آمنة ويمكن الوصول إليها."
+        },
+        {
+          "title": "الفوترة التلقائية",
+          "description": "تبسيط الفوترة مع معالجة المدفوعات التلقائية، ومطالبات التأمين، والتقارير المالية."
+        },
+        {
+          "title": "تحليلات العيادة",
+          "description": "رؤى قائمة على البيانات حول أداء العيادة، واتجاهات المرضى، وفرص النمو."
+        }
+      ]
+    },
+    {
+      "type": "processSection",
+      "subtitle": "ابدأ",
+      "title": "إعداد بسيط، نتائج فورية",
+      "description": "البدء مع Dentagia سريع وسهل. يرشدك فريقنا في كل خطوة لضمان انتقال سلس.",
+      "steps": [
+        {
+          "number": "01",
+          "title": "جدولة عرض توضيحي",
+          "description": "اكتشف Dentagia في العمل مع عرض توضيحي مخصص يتناسب مع احتياجات عيادتك.",
+          "icon": "calendar"
+        },
+        {
+          "number": "02",
+          "title": "إعداد سريع",
+          "description": "يساعدك فريقنا على نقل بياناتك وتكوين Dentagia لعيادتك في أيام، وليس أسابيع.",
+          "icon": "settings"
+        },
+        {
+          "number": "03",
+          "title": "التدريب والاندماج",
+          "description": "تدريب شامل لفريقك لضمان أن الجميع يشعر بالراحة مع المنصة.",
+          "icon": "users"
+        },
+        {
+          "number": "04",
+          "title": "الإطلاق والدعم",
+          "description": "أطلق بثقة مع العلم أن فريق الدعم لدينا متاح على مدار الساعة طوال أيام الأسبوع كلما احتجت إلينا.",
+          "icon": "rocket"
+        }
+      ]
+    },
+    {
+      "type": "emailSignupSection",
+      "subtitle": "النشرة الإخبارية",
+      "title": "ابق على اطلاع برؤى عيادات الأسنان",
+      "description": "انضم إلى نشرتنا الإخبارية للحصول على أحدث النصائح حول إدارة العيادة، ورعاية المرضى، وتنمية ممارستك.",
+      "buttonText": "اشترك الآن",
+      "placeholder": "أدخل بريدك الإلكتروني",
+      "features": [
+        "نصائح إدارة العيادة",
+        "تحديثات المنتج",
+        "قصص النجاح",
+        "لا بريد مزعج أبدًا"
+      ]
+    }
+  ]
+}

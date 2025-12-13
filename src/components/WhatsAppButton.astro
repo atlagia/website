@@ -8,7 +8,9 @@ const message = productTitle
   ? `Hello! I'm interested in ${productTitle}`
   : "Hello! I'm interested in your products.";
 
-const whatsappUrl = `https://wa.me/+1234567890?text=${encodeURIComponent(message)}`;
+// Get phone number from environment variable
+const businessPhone = import.meta.env.PUBLIC_BUSINESS_PHONE || '+212697173388';
+const whatsappUrl = `https://wa.me/${businessPhone}?text=${encodeURIComponent(message)}`;
 
 // Check if WhatsApp is enabled via environment variable
 const isWhatsAppEnabled = import.meta.env.PUBLIC_ENABLE_WHATSAPP === true;

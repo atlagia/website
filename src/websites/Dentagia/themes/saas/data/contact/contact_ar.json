@@ -1,0 +1,67 @@
+{
+  "hero": {
+    "subtitle": "اتصل بنا",
+    "title": "دعنا نتحدث عن عيادتك السنية",
+    "description": "هل لديك أسئلة حول برنامج إدارة الممارسة المدعوم بالذكاء الاصطناعي من Dentagia؟ نحن هنا لمساعدتك في تحسين عمليات عيادتك وتنمية عيادتك السنية."
+  },
+  "contactInfo": [
+    {
+      "icon": "Mail",
+      "title": "أرسل لنا بريدًا إلكترونيًا",
+      "content": "contact@dentagia.com",
+      "description": "فريقنا الودود هنا لمساعدتك في احتياجات إدارة عيادتك.",
+      "link": "mailto:contact@dentagia.com"
+    },
+    {
+      "icon": "Phone",
+      "title": "اتصل بنا",
+      "content": "+33756756240",
+      "description": "الاثنين - الجمعة من 9 صباحًا إلى 6 مساءً (CET).",
+      "link": "tel:+33756756240"
+    },
+    {
+      "icon": "MapPin",
+      "title": "المكتب",
+      "content": "فيزيل، فرنسا",
+      "description": "98 AV ARISTIDE BRIAND, 38220",
+      "link": "https://maps.google.com/maps?q=98 AV ARISTIDE BRIAND, VIZILLE, 38220, FRANCE"
+    }
+  ],
+  "form": {
+    "title": "أرسل لنا رسالة",
+    "fields": {
+      "firstName": {
+        "label": "الاسم الأول",
+        "placeholder": "أدخل اسمك الأول"
+      },
+      "lastName": {
+        "label": "اسم العائلة",
+        "placeholder": "أدخل اسم عائلتك"
+      },
+      "email": {
+        "label": "البريد الإلكتروني",
+        "placeholder": "أدخل بريدك الإلكتروني"
+      },
+      "subject": {
+        "label": "الموضوع",
+        "placeholder": "أدخل الموضوع"
+      },
+      "message": {
+        "label": "الرسالة",
+        "placeholder": "أخبرنا عن احتياجات أو أسئلة عيادتك"
+      }
+    },
+    "submitButton": "إرسال الرسالة"
+  },
+  "support": {
+    "hours": {
+      "title": "ساعات الدعم",
+      "content": "الاثنين - الجمعة، 9 صباحًا - 6 مساءً (CET)"
+    },
+    "additional": {
+      "title": "معلومات الشركة",
+      "description": "EASY-WAY INFORMATICIENS A TEMPS PARTAG SARL",
+      "email": "support@dentagia.com"
+    }
+  }
+}

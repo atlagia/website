@@ -1,0 +1,223 @@
+{
+  "pageTitle": "Risorse - Dentagia",
+  "pageDescription": "Accedi a documentazione completa, guide, case study e altre risorse per aiutare il tuo studio dentistico a avere successo con Dentagia.",
+  "hero": {
+    "badge": "Risorse e Documentazione",
+    "title": "Risorse per Aiutare il Tuo Studio ad Avere Successo",
+    "description": "Accedi a documentazione completa, guide, tutorial e case study per sfruttare al meglio la piattaforma di gestione dello studio di Dentagia.",
+    "cta": {
+      "primary": {
+        "text": "Sfoglia Documentazione",
+        "href": "/documentation"
+      },
+      "secondary": {
+        "text": "Vedi Guide",
+        "href": "#guides"
+      }
+    }
+  },
+  "resourceCategories": [
+    {
+      "title": "Documentazione",
+      "icon": "Book",
+      "description": "Guide complete e documentazione della piattaforma",
+      "items": [
+        {
+          "title": "Guida Introduttiva",
+          "description": "Guida rapida per i nuovi utenti di Dentagia",
+          "icon": "BookOpen",
+          "link": "/documentation/getting-started",
+          "tag": "Essenziale"
+        },
+        {
+          "title": "Guida Gestione Pazienti",
+          "description": "Guida completa per gestire le cartelle pazienti",
+          "icon": "FileCode",
+          "link": "/documentation/patient-management",
+          "tag": "Studio"
+        },
+        {
+          "title": "Guida Pianificazione",
+          "description": "Come usare le funzionalità di pianificazione alimentate da IA",
+          "icon": "FileText",
+          "link": "/documentation/scheduling",
+          "tag": "Studio"
+        },
+        {
+          "title": "Guida Fatturazione e Pagamenti",
+          "description": "Tutorial passo-passo su fatturazione e pagamenti",
+          "icon": "ChevronRight",
+          "link": "/documentation/billing",
+          "tag": "Finanziario"
+        }
+      ]
+    },
+    {
+      "title": "Centro di Apprendimento",
+      "icon": "GraduationCap",
+      "description": "Risorse educative e tutorial per studi dentistici",
+      "items": [
+        {
+          "title": "Tutorial Video",
+          "description": "Guide video passo-passo per la gestione dello studio",
+          "icon": "Video",
+          "link": "/learn/tutorials",
+          "tag": "Video"
+        },
+        {
+          "title": "Migliori Pratiche",
+          "description": "Migliori pratiche e consigli per la gestione dello studio",
+          "icon": "Star",
+          "link": "/learn/best-practices",
+          "tag": "Guida"
+        },
+        {
+          "title": "Materiali di Formazione",
+          "description": "Risorse di formazione per il tuo team dello studio",
+          "icon": "FileCode",
+          "link": "/learn/training",
+          "tag": "Formazione"
+        },
+        {
+          "title": "Forum della Comunità",
+          "description": "Discussione e supporto da altri studi",
+          "icon": "MessageSquare",
+          "link": "/community",
+          "tag": "Supporto"
+        }
+      ]
+    },
+    {
+      "title": "Case Study",
+      "icon": "BarChart",
+      "description": "Storie di successo di studi dentistici che usano Dentagia",
+      "items": [
+        {
+          "title": "Studio Dentistico del Centro",
+          "description": "Trasformazione di uno studio multi-professionale",
+          "icon": "Users",
+          "link": "/case-studies/downtown-dental",
+          "tag": "Studio Dentistico"
+        },
+        {
+          "title": "Family Dental Care",
+          "description": "Crescita ed efficienza di uno studio individuale",
+          "icon": "BarChart",
+          "link": "/case-studies/family-dental",
+          "tag": "Studio Dentistico"
+        },
+        {
+          "title": "Centro di Odontoiatria Estetica",
+          "description": "Ottimizzazione di uno studio specializzato",
+          "icon": "Award",
+          "link": "/case-studies/cosmetic-dental",
+          "tag": "Studio Dentistico"
+        },
+        {
+          "title": "Gruppo Dentistico Pediatrico",
+          "description": "Gestione di uno studio multi-sede",
+          "icon": "Star",
+          "link": "/case-studies/pediatric-dental",
+          "tag": "Studio Dentistico"
+        }
+      ]
+    }
+  ],
+  "featuredGuides": [
+    {
+      "title": "Guida Configurazione Studio",
+      "description": "Guida completa per configurare il tuo studio con Dentagia",
+      "image": "/images/resources/practice-setup.jpg",
+      "category": "Guida Configurazione",
+      "readTime": "15 min di lettura",
+      "link": "/guides/practice-setup"
+    },
+    {
+      "title": "Migliori Pratiche Pianificazione IA",
+      "description": "Impara come usare efficacemente la pianificazione alimentata da IA nel tuo studio",
+      "image": "/images/resources/ai-scheduling.jpg",
+      "category": "Migliori Pratiche",
+      "readTime": "10 min di lettura",
+      "link": "/guides/ai-scheduling"
+    },
+    {
+      "title": "Guida Conformità HIPAA",
+      "description": "Comprensione della conformità HIPAA e funzionalità di sicurezza",
+      "image": "/images/resources/hipaa-compliance.jpg",
+      "category": "Sicurezza",
+      "readTime": "12 min di lettura",
+      "link": "/guides/hipaa-compliance"
+    }
+  ],
+  "latestArticles": [
+    {
+      "title": "Il Futuro della Gestione di Studi Dentistici",
+      "description": "Esplorando tendenze e innovazioni future nella gestione di studi dentistici",
+      "image": "/images/blog/dental-future.jpg",
+      "date": "15 mar 2024",
+      "readTime": "8 min di lettura",
+      "category": "Insights del Settore",
+      "link": "/blog/dental-future"
+    },
+    {
+      "title": "Ottimizzare l'Efficienza dello Studio con IA",
+      "description": "Consigli per massimizzare l'efficienza dello studio con strumenti alimentati da IA",
+      "image": "/images/blog/ai-efficiency.jpg",
+      "date": "10 mar 2024",
+      "readTime": "6 min di lettura",
+      "category": "Gestione Studio",
+      "link": "/blog/ai-efficiency"
+    },
+    {
+      "title": "Migliori Pratiche Sicurezza HIPAA",
+      "description": "Mantenere i dati del tuo studio sicuri e conformi",
+      "image": "/images/blog/hipaa-security.jpg",
+      "date": "5 mar 2024",
+      "readTime": "7 min di lettura",
+      "category": "Sicurezza",
+      "link": "/blog/hipaa-security"
+    }
+  ],
+  "downloads": [
+    {
+      "title": "Panoramica Gestione Studio",
+      "description": "Guida PDF completa alle funzionalità di Dentagia",
+      "icon": "Download",
+      "format": "PDF",
+      "size": "2.5 MB",
+      "link": "/downloads/practice-overview.pdf"
+    },
+    {
+      "title": "Guida Conformità HIPAA",
+      "description": "Guida dettagliata alla conformità HIPAA e sicurezza",
+      "icon": "FileText",
+      "format": "PDF",
+      "size": "3.8 MB",
+      "link": "/downloads/hipaa-guide.pdf"
+    },
+    {
+      "title": "Guida Implementazione",
+      "description": "Guida passo-passo alla configurazione dello studio",
+      "icon": "Book",
+      "format": "PDF",
+      "size": "1.8 MB",
+      "link": "/downloads/implementation-guide.pdf"
+    }
+  ],
+  "cta": {
+    "title": "Hai Bisogno di Aiuto?",
+    "description": "Il nostro team di supporto è qui per aiutare il tuo studio ad avere successo con Dentagia.",
+    "buttons": [
+      {
+        "text": "Contatta Supporto",
+        "href": "/contact",
+        "variant": "primary"
+      },
+      {
+        "text": "Unisciti alla Comunità",
+        "href": "/community",
+        "variant": "secondary"
+      }
+    ]
+  }
+}

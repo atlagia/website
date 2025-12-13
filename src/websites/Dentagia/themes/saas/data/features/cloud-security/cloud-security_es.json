@@ -1,0 +1,182 @@
+{
+  "hero": {
+    "subtitle": "Seguridad en la nube",
+    "title": "Infraestructura segura en la nube",
+    "description": "Seguridad en la nube de nivel empresarial con copias de seguridad automáticas, recuperación ante desastres y garantía de disponibilidad del 99.9% para los datos de su consultorio dental.",
+    "icon": "cloud",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "99.9%",
+        "label": "Disponibilidad"
+      },
+      {
+        "value": "256-bit",
+        "label": "Cifrado"
+      },
+      {
+        "value": "24/7",
+        "label": "Monitoreo"
+      }
+    ]
+  },
+  "features": {
+    "title": "Características de seguridad en la nube",
+    "subtitle": "Infraestructura empresarial",
+    "description": "Infraestructura segura y escalable en la nube diseñada para la protección de datos de consultorios dentales.",
+    "items": [
+      {
+        "icon": "cloud",
+        "title": "Almacenamiento seguro en la nube",
+        "description": "Almacenamiento en la nube de nivel empresarial con copias de seguridad redundantes y capacidades de recuperación ante desastres.",
+        "highlights": [
+          "Almacenamiento redundante",
+          "Copias de seguridad automáticas",
+          "Recuperación ante desastres",
+          "Redundancia de datos",
+          "Distribución geográfica"
+        ],
+        "stats": {
+          "value": "99.9%",
+          "label": "Disponibilidad"
+        }
+      },
+      {
+        "icon": "shield",
+        "title": "Monitoreo de seguridad",
+        "description": "Monitoreo de seguridad 24/7 y detección de amenazas para proteger los datos de su consultorio.",
+        "highlights": [
+          "Monitoreo 24/7",
+          "Detección de amenazas",
+          "Prevención de intrusiones",
+          "Alertas de seguridad",
+          "Respuesta a incidentes"
+        ],
+        "stats": {
+          "value": "24/7",
+          "label": "Monitoreo"
+        }
+      },
+      {
+        "icon": "database",
+        "title": "Copias de seguridad automáticas",
+        "description": "Copias de seguridad diarias automáticas con recuperación a un punto en el tiempo y políticas de retención de datos.",
+        "highlights": [
+          "Copias de seguridad diarias",
+          "Recuperación a un punto en el tiempo",
+          "Retención de datos",
+          "Verificación de copias de seguridad",
+          "Pruebas de recuperación"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "Protegido"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Garantía de seguridad en la nube",
+    "description": "Seguridad de nivel empresarial para su consultorio",
+    "stats": [
+      {
+        "icon": "cloud",
+        "value": "99.9%",
+        "label": "Disponibilidad"
+      },
+      {
+        "icon": "shield",
+        "value": "24/7",
+        "label": "Monitoreo"
+      },
+      {
+        "icon": "database",
+        "value": "100%",
+        "label": "Protegido"
+      },
+      {
+        "icon": "award",
+        "value": "256-bit",
+        "label": "Cifrado"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Dr. Michael Chen",
+        "role": "Dentista principal",
+        "quote": "La seguridad en la nube nos da total confianza. Nuestros datos están siempre protegidos y accesibles, con 99.9% de disponibilidad."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Beneficios de seguridad en la nube",
+    "subtitle": "Protección confiable",
+    "description": "Experimente la tranquilidad que viene con la seguridad empresarial en la nube.",
+    "items": [
+      {
+        "title": "Alta disponibilidad",
+        "description": "Garantía de disponibilidad del 99.9% garantiza que los datos de su consultorio estén siempre accesibles.",
+        "icon": "cloud",
+        "color": "teal",
+        "stats": {
+          "value": "99.9%",
+          "label": "Disponibilidad"
+        },
+        "highlights": [
+          "Infraestructura confiable",
+          "Sistemas redundantes",
+          "Recuperación ante desastres",
+          "Alta disponibilidad"
+        ]
+      },
+      {
+        "title": "Monitoreo 24/7",
+        "description": "Monitoreo continuo de seguridad protege sus datos las 24 horas del día, los 7 días de la semana.",
+        "icon": "shield",
+        "color": "cyan",
+        "stats": {
+          "value": "24/7",
+          "label": "Monitoreo"
+        },
+        "highlights": [
+          "Monitoreo continuo",
+          "Detección de amenazas",
+          "Alertas de seguridad",
+          "Respuesta a incidentes"
+        ]
+      },
+      {
+        "title": "Protección de datos",
+        "description": "Copia de seguridad y recuperación completas garantizan que sus datos estén siempre protegidos.",
+        "icon": "database",
+        "color": "blue",
+        "stats": {
+          "value": "100%",
+          "label": "Protegido"
+        },
+        "highlights": [
+          "Copias de seguridad automáticas",
+          "Recuperación a un punto en el tiempo",
+          "Redundancia de datos",
+          "Pruebas de recuperación"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "¿Listo para infraestructura segura en la nube?",
+    "description": "Vea cómo la seguridad en la nube de Dentagia protege los datos de su consultorio.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Programar una demostración",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Aprender más",
+      "link": "/features"
+    }
+  }
+}
+

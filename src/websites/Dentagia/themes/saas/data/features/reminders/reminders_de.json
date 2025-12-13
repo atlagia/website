@@ -1,0 +1,182 @@
+{
+  "hero": {
+    "subtitle": "Automatisierte Kommunikation",
+    "title": "Automatisierte Terminerinnerungen",
+    "description": "Reduzieren Sie Absagen und verbessern Sie die Patientenkommunikation mit intelligenten automatisierten Erinnerungen per SMS und E-Mail, die sich an Patientenpräferenzen anpassen.",
+    "icon": "bell",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "70%",
+        "label": "Reduzierung von Absagen"
+      },
+      {
+        "value": "95%",
+        "label": "Zustellungsrate"
+      },
+      {
+        "value": "60%",
+        "label": "Antwortrate"
+      }
+    ]
+  },
+  "features": {
+    "title": "Erinnerungs-Funktionen",
+    "subtitle": "Intelligente Kommunikation",
+    "description": "Intelligente automatisierte Erinnerungen, die Patienten informiert halten und verpasste Termine reduzieren.",
+    "items": [
+      {
+        "icon": "bell",
+        "title": "Multi-Kanal-Erinnerungen",
+        "description": "Senden Sie Erinnerungen per SMS, E-Mail und Telefonanrufen basierend auf Patientenpräferenzen und Termintyp.",
+        "highlights": [
+          "SMS-Erinnerungen",
+          "E-Mail-Benachrichtigungen",
+          "Telefonanruf-Optionen",
+          "Präferenzbasierte Zustellung",
+          "Mehrsprachiger Support"
+        ],
+        "stats": {
+          "value": "95%",
+          "label": "Zustellungsrate"
+        }
+      },
+      {
+        "icon": "clock",
+        "title": "Intelligentes Timing",
+        "description": "KI bestimmt optimale Erinnerungszeiten basierend auf Patientenverlauf und Termintyp.",
+        "highlights": [
+          "Optimales Timing",
+          "Patientenverlaufsanalyse",
+          "Terminbasierte Planung",
+          "Zeitzonenverwaltung",
+          "Anpassbare Intervalle"
+        ],
+        "stats": {
+          "value": "70%",
+          "label": "Reduzierung von Absagen"
+        }
+      },
+      {
+        "icon": "users",
+        "title": "Bestätigungsanfragen",
+        "description": "Fordern Sie automatisch Bestätigungen an und verwalten Sie Antworten, um die Terminplanung zu optimieren.",
+        "highlights": [
+          "Bestätigungsanfragen",
+          "Antwortverwaltung",
+          "Automatische Aktualisierungen",
+          "Wartelistenverwaltung",
+          "Stornierungsverwaltung"
+        ],
+        "stats": {
+          "value": "60%",
+          "label": "Antwortrate"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Erinnerungs-Erfolgsgeschichten",
+    "description": "Sehen Sie, wie automatisierte Erinnerungen Praxen transformieren",
+    "stats": [
+      {
+        "icon": "bell",
+        "value": "95%",
+        "label": "Zustellungsrate"
+      },
+      {
+        "icon": "trending-up",
+        "value": "70%",
+        "label": "Reduzierung von Absagen"
+      },
+      {
+        "icon": "users",
+        "value": "60%",
+        "label": "Antwortrate"
+      },
+      {
+        "icon": "award",
+        "value": "100%",
+        "label": "Automatisiert"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Emily Rodriguez",
+        "role": "Praxisleiterin",
+        "quote": "Automatisierte Erinnerungen haben unsere Absagen um 70% reduziert. Patienten schätzen die zeitnahen Erinnerungen und wir sparen Stunden an Telefonanrufen."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Vorteile der Erinnerungen",
+    "subtitle": "Verbesserte Kommunikation",
+    "description": "Erleben Sie die Vorteile automatisierter Patientenkommunikation.",
+    "items": [
+      {
+        "title": "Absagen reduzieren",
+        "description": "Zeitnahe Erinnerungen reduzieren erheblich verpasste Termine.",
+        "icon": "bell",
+        "color": "teal",
+        "stats": {
+          "value": "70%",
+          "label": "Reduzierung"
+        },
+        "highlights": [
+          "Zeitnahe Erinnerungen",
+          "Mehrere Kanäle",
+          "Bestätigungsanfragen",
+          "Antwortverwaltung"
+        ]
+      },
+      {
+        "title": "Hohe Zustellung",
+        "description": "Multi-Kanal-Zustellung stellt sicher, dass Erinnerungen Patienten zuverlässig erreichen.",
+        "icon": "check-circle",
+        "color": "cyan",
+        "stats": {
+          "value": "95%",
+          "label": "Zustellungsrate"
+        },
+        "highlights": [
+          "SMS-Zustellung",
+          "E-Mail-Zustellung",
+          "Telefon-Optionen",
+          "Zuverlässige Zustellung"
+        ]
+      },
+      {
+        "title": "Besseres Engagement",
+        "description": "Automatisierte Erinnerungen verbessern Patientenengagement und Kommunikation.",
+        "icon": "users",
+        "color": "blue",
+        "stats": {
+          "value": "60%",
+          "label": "Antwortrate"
+        },
+        "highlights": [
+          "Patientenengagement",
+          "Antwortverfolgung",
+          "Kommunikationsverlauf",
+          "Präferenzverwaltung"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Bereit für automatisierte Erinnerungen?",
+    "description": "Sehen Sie, wie das Erinnerungssystem von Dentagia Absagen reduzieren und Kommunikation verbessern kann.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Demo vereinbaren",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Mehr erfahren",
+      "link": "/features"
+    }
+  }
+}
+

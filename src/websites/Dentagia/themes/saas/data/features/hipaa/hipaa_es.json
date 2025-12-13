@@ -1,0 +1,198 @@
+{
+  "hero": {
+    "subtitle": "Cumplimiento HIPAA",
+    "title": "Seguridad y cumplimiento conforme a HIPAA",
+    "description": "Seguridad de nivel empresarial con cumplimiento completo de HIPAA, garantizando que sus datos de pacientes estén protegidos con los más altos estándares de seguridad y privacidad.",
+    "icon": "shield",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "100%",
+        "label": "Conforme a HIPAA"
+      },
+      {
+        "value": "256-bit",
+        "label": "Cifrado"
+      },
+      {
+        "value": "99.9%",
+        "label": "Disponibilidad"
+      }
+    ]
+  },
+  "features": {
+    "title": "Características de cumplimiento HIPAA",
+    "subtitle": "Seguridad empresarial",
+    "description": "Características completas de cumplimiento y seguridad HIPAA diseñadas para proteger todos los datos de pacientes.",
+    "items": [
+      {
+        "icon": "shield",
+        "title": "Cumplimiento completo de HIPAA",
+        "description": "Cumplimiento completo de HIPAA con todas las salvaguardas, políticas y procedimientos requeridos implementados.",
+        "highlights": [
+          "Infraestructura conforme a HIPAA",
+          "Salvaguardas requeridas implementadas",
+          "Documentación de cumplimiento",
+          "Auditorías y evaluaciones regulares",
+          "Certificación y validación"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "Conforme"
+        }
+      },
+      {
+        "icon": "lock",
+        "title": "Cifrado de datos",
+        "description": "Cifrado de extremo a extremo para todos los datos de pacientes en tránsito y en reposo con seguridad de nivel militar.",
+        "highlights": [
+          "Cifrado de 256 bits",
+          "Protección de datos en reposo",
+          "Seguridad de datos en tránsito",
+          "Gestión de claves",
+          "Estándares de cifrado"
+        ],
+        "stats": {
+          "value": "256-bit",
+          "label": "Cifrado"
+        }
+      },
+      {
+        "icon": "users",
+        "title": "Controles de acceso",
+        "description": "Controles de acceso basados en roles con permisos granulares y pistas de auditoría completas.",
+        "highlights": [
+          "Acceso basado en roles",
+          "Permisos granulares",
+          "Autenticación multifactor",
+          "Registro de acceso",
+          "Pistas de auditoría"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "Controlado"
+        }
+      },
+      {
+        "icon": "database",
+        "title": "Pistas de auditoría",
+        "description": "Pistas de auditoría completas para todos los accesos, modificaciones y actividades del sistema de datos de pacientes.",
+        "highlights": [
+          "Registro completo",
+          "Seguimiento de acceso",
+          "Historial de modificaciones",
+          "Reportes de cumplimiento",
+          "Análisis forense"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "Rastreado"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Garantía de cumplimiento HIPAA",
+    "description": "Seguridad de nivel empresarial para su consultorio",
+    "stats": [
+      {
+        "icon": "shield",
+        "value": "100%",
+        "label": "Conforme a HIPAA"
+      },
+      {
+        "icon": "lock",
+        "value": "256-bit",
+        "label": "Cifrado"
+      },
+      {
+        "icon": "database",
+        "value": "100%",
+        "label": "Pistas de auditoría"
+      },
+      {
+        "icon": "award",
+        "value": "99.9%",
+        "label": "Disponibilidad"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Dr. Michael Chen",
+        "role": "Dentista principal, Family Dental Care",
+        "quote": "El cumplimiento HIPAA era una preocupación importante para nosotros. Las características de seguridad de Dentagia nos dan total confianza de que nuestros datos de pacientes están protegidos."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Beneficios del cumplimiento HIPAA",
+    "subtitle": "Seguridad y confianza",
+    "description": "Experimente la tranquilidad que viene con el cumplimiento completo de HIPAA.",
+    "items": [
+      {
+        "title": "Cumplimiento completo",
+        "description": "Cumplimiento completo de HIPAA con todas las salvaguardas y documentación requeridas.",
+        "icon": "shield",
+        "color": "teal",
+        "stats": {
+          "value": "100%",
+          "label": "Conforme"
+        },
+        "highlights": [
+          "Infraestructura conforme a HIPAA",
+          "Salvaguardas requeridas",
+          "Documentación de cumplimiento",
+          "Auditorías regulares"
+        ]
+      },
+      {
+        "title": "Protección de datos",
+        "description": "Cifrado y seguridad de nivel militar protegen todos los datos de pacientes.",
+        "icon": "lock",
+        "color": "cyan",
+        "stats": {
+          "value": "256-bit",
+          "label": "Cifrado"
+        },
+        "highlights": [
+          "Cifrado de extremo a extremo",
+          "Almacenamiento seguro",
+          "Copias de seguridad cifradas",
+          "Gestión de claves"
+        ]
+      },
+      {
+        "title": "Control de acceso",
+        "description": "Controles de acceso granulares garantizan que solo el personal autorizado pueda acceder a los datos de pacientes.",
+        "icon": "users",
+        "color": "blue",
+        "stats": {
+          "value": "100%",
+          "label": "Controlado"
+        },
+        "highlights": [
+          "Acceso basado en roles",
+          "Permisos granulares",
+          "Autenticación multifactor",
+          "Registro de acceso"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "¿Listo para la seguridad conforme a HIPAA?",
+    "description": "Vea cómo las características de seguridad de Dentagia protegen su consultorio y sus datos de pacientes.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Programar una demostración",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Aprender más",
+      "link": "/features"
+    }
+  }
+}
+

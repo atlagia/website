@@ -1,0 +1,182 @@
+{
+  "hero": {
+    "subtitle": "Protezione dati",
+    "title": "Backup automatico e ripristino di emergenza",
+    "description": "Proteggi i dati del tuo studio con backup giornalieri automatici, ripristino a un punto nel tempo e piani completi di ripristino di emergenza.",
+    "icon": "database",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "Giornaliero",
+        "label": "Backup"
+      },
+      {
+        "value": "100%",
+        "label": "Ripristino"
+      },
+      {
+        "value": "24/7",
+        "label": "Protezione"
+      }
+    ]
+  },
+  "features": {
+    "title": "Funzionalità backup e ripristino",
+    "subtitle": "Protezione completa dati",
+    "description": "Soluzioni complete di backup e ripristino per proteggere i dati del tuo studio.",
+    "items": [
+      {
+        "icon": "database",
+        "title": "Backup giornalieri automatici",
+        "description": "Backup giornalieri automatici con archiviazione crittografata e politiche conservazione multiple.",
+        "highlights": [
+          "Backup automatici giornalieri",
+          "Archiviazione crittografata",
+          "Politiche conservazione multiple",
+          "Verifica backup",
+          "Backup incrementali"
+        ],
+        "stats": {
+          "value": "Giornaliero",
+          "label": "Backup"
+        }
+      },
+      {
+        "icon": "clock",
+        "title": "Ripristino a un punto nel tempo",
+        "description": "Ripristina dati a qualsiasi punto nel tempo con opzioni ripristino granulari e perdita dati minima.",
+        "highlights": [
+          "Ripristino a un punto nel tempo",
+          "Ripristino granulare",
+          "Perdita dati minima",
+          "Tempi ripristino rapidi",
+          "Test ripristino"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "Ripristino"
+        }
+      },
+      {
+        "icon": "shield",
+        "title": "Ripristino di emergenza",
+        "description": "Piani completi di ripristino di emergenza con failover automatico e continuità operativa.",
+        "highlights": [
+          "Piani ripristino di emergenza",
+          "Failover automatico",
+          "Continuità operativa",
+          "Ridondanza geografica",
+          "Procedure ripristino"
+        ],
+        "stats": {
+          "value": "24/7",
+          "label": "Protezione"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Garanzia backup e ripristino",
+    "description": "Protezione completa dati per il tuo studio",
+    "stats": [
+      {
+        "icon": "database",
+        "value": "Giornaliero",
+        "label": "Backup"
+      },
+      {
+        "icon": "clock",
+        "value": "100%",
+        "label": "Ripristino"
+      },
+      {
+        "icon": "shield",
+        "value": "24/7",
+        "label": "Protezione"
+      },
+      {
+        "icon": "award",
+        "value": "100%",
+        "label": "Affidabile"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Dr. Michael Chen",
+        "role": "Dentista principale",
+        "quote": "Il sistema di backup automatico ci dà totale tranquillità. Sappiamo che i nostri dati sono sempre protetti e recuperabili."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Vantaggi backup e ripristino",
+    "subtitle": "Protezione completa",
+    "description": "Sperimenta la sicurezza di backup e ripristino completi.",
+    "items": [
+      {
+        "title": "Backup giornalieri",
+        "description": "I backup giornalieri automatici garantiscono che i tuoi dati siano sempre protetti.",
+        "icon": "database",
+        "color": "teal",
+        "stats": {
+          "value": "Giornaliero",
+          "label": "Backup"
+        },
+        "highlights": [
+          "Backup automatici",
+          "Programmi giornalieri",
+          "Archiviazione crittografata",
+          "Copie multiple"
+        ]
+      },
+      {
+        "title": "Ripristino completo",
+        "description": "Il ripristino a un punto nel tempo garantisce che puoi ripristinare dati a qualsiasi momento.",
+        "icon": "clock",
+        "color": "cyan",
+        "stats": {
+          "value": "100%",
+          "label": "Ripristino"
+        },
+        "highlights": [
+          "Ripristino a un punto nel tempo",
+          "Ripristino granulare",
+          "Ripristino rapido",
+          "Tempo di inattività minimo"
+        ]
+      },
+      {
+        "title": "Protezione 24/7",
+        "description": "La protezione continua garantisce che i tuoi dati siano sempre al sicuro.",
+        "icon": "shield",
+        "color": "blue",
+        "stats": {
+          "value": "24/7",
+          "label": "Protezione"
+        },
+        "highlights": [
+          "Monitoraggio continuo",
+          "Backup automatizzati",
+          "Ripristino di emergenza",
+          "Continuità operativa"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Pronto per protezione completa dati?",
+    "description": "Vedi come il backup e ripristino di Dentagia proteggono i dati del tuo studio.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Prenota una demo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Scopri di più",
+      "link": "/features"
+    }
+  }
+}
+

@@ -1,0 +1,182 @@
+{
+  "hero": {
+    "subtitle": "Planification de traitement numérique",
+    "title": "Planification de traitement avancée et gestion de cas",
+    "description": "Créez des plans de traitement numériques complets, suivez la progression des patients et gérez des cas complexes avec des outils avancés conçus pour les cabinets dentaires modernes.",
+    "icon": "clipboard",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "80%",
+        "label": "Planification plus rapide"
+      },
+      {
+        "value": "95%",
+        "label": "Précision"
+      },
+      {
+        "value": "90%",
+        "label": "Taux d'acceptation"
+      }
+    ]
+  },
+  "features": {
+    "title": "Fonctionnalités de planification de traitement",
+    "subtitle": "Gestion de cas complète",
+    "description": "Outils avancés pour créer, gérer et suivre les plans de traitement et les cas patients.",
+    "items": [
+      {
+        "icon": "clipboard",
+        "title": "Plans de traitement numériques",
+        "description": "Créez des plans de traitement complets avec procédures, calendriers et estimations de coûts dans un format numérique.",
+        "highlights": [
+          "Planification de traitement multi-phases",
+          "Planification des procédures",
+          "Estimation des coûts",
+          "Gestion des calendriers",
+          "Outils de présentation de cas"
+        ],
+        "stats": {
+          "value": "80%",
+          "label": "Planification plus rapide"
+        }
+      },
+      {
+        "icon": "trending-up",
+        "title": "Gestion de cas",
+        "description": "Suivez les cas patients de la consultation initiale jusqu'à l'achèvement du traitement avec des outils de gestion de cas complets.",
+        "highlights": [
+          "Suivi de cas",
+          "Surveillance de la progression",
+          "Historique des traitements",
+          "Suivi des résultats",
+          "Analytique de cas"
+        ],
+        "stats": {
+          "value": "95%",
+          "label": "Précision"
+        }
+      },
+      {
+        "icon": "users",
+        "title": "Communication patient",
+        "description": "Partagez les plans de traitement avec les patients, obtenez des approbations et communiquez sur la progression du traitement.",
+        "highlights": [
+          "Partage de plans",
+          "Approbation patient",
+          "Mises à jour de progression",
+          "Messagerie sécurisée",
+          "Partage de documents"
+        ],
+        "stats": {
+          "value": "90%",
+          "label": "Taux d'acceptation"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Succès de la planification de traitement",
+    "description": "Découvrez comment les cabinets rationalisent la planification de traitement",
+    "stats": [
+      {
+        "icon": "clipboard",
+        "value": "80%",
+        "label": "Planification plus rapide"
+      },
+      {
+        "icon": "trending-up",
+        "value": "95%",
+        "label": "Précision"
+      },
+      {
+        "icon": "users",
+        "value": "90%",
+        "label": "Acceptation"
+      },
+      {
+        "icon": "award",
+        "value": "100%",
+        "label": "Numérique"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Dr. Sarah Martinez",
+        "role": "Propriétaire du cabinet",
+        "quote": "La planification de traitement est devenue tellement plus facile. Nous pouvons créer des plans complets en quelques minutes et les partager avec les patients instantanément."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Avantages de la planification de traitement",
+    "subtitle": "Gestion de cas rationalisée",
+    "description": "Découvrez les avantages de la planification de traitement numérique.",
+    "items": [
+      {
+        "title": "Planification plus rapide",
+        "description": "Créez des plans de traitement beaucoup plus rapidement avec des outils numériques et des modèles.",
+        "icon": "zap",
+        "color": "teal",
+        "stats": {
+          "value": "80%",
+          "label": "Plus rapide"
+        },
+        "highlights": [
+          "Modèles numériques",
+          "Création rapide de plans",
+          "Calculs automatisés",
+          "Flux de travail rationalisés"
+        ]
+      },
+      {
+        "title": "Meilleure précision",
+        "description": "Les plans numériques réduisent les erreurs et améliorent la précision du traitement.",
+        "icon": "check-circle",
+        "color": "cyan",
+        "stats": {
+          "value": "95%",
+          "label": "Précision"
+        },
+        "highlights": [
+          "Réduction des erreurs",
+          "Formatage cohérent",
+          "Calculs précis",
+          "Meilleure documentation"
+        ]
+      },
+      {
+        "title": "Acceptation plus élevée",
+        "description": "Une meilleure présentation et communication améliorent les taux d'acceptation des traitements.",
+        "icon": "trending-up",
+        "color": "blue",
+        "stats": {
+          "value": "90%",
+          "label": "Acceptation"
+        },
+        "highlights": [
+          "Meilleure présentation",
+          "Communication claire",
+          "Aides visuelles",
+          "Engagement patient"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prêt à rationaliser la planification de traitement ?",
+    "description": "Découvrez comment les fonctionnalités de planification de traitement de Dentagia peuvent transformer votre gestion de cas.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Planifier une démo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "En savoir plus",
+      "link": "/features"
+    }
+  }
+}
+

@@ -73,6 +73,14 @@
           { "label": "Water Resistance", "value": "100m/330ft" },
           { "label": "Crystal", "value": "Sapphire with AR coating" }
         ]
+      },
+      "iptv": {
+        "specs": [
+          { "label": "Channels", "value": "12,000+ Live TV Channels" },
+          { "label": "Video on Demand", "value": "+3,000 Movies & Series" },
+          { "label": "Compatible Devices", "value": "Smart TVs, Android, MAG, iOS, PC" },
+          { "label": "Streaming Quality", "value": "High-Quality Streaming" }
+        ]
       }
     }
   },
@@ -142,6 +150,14 @@
           { "label": "Résistance à l'eau", "value": "100m/330ft" },
           { "label": "Verre", "value": "Saphir avec traitement AR" }
         ]
+      },
+      "iptv": {
+        "specs": [
+          { "label": "Canaux", "value": "12,000+ Chaînes TV en direct" },
+          { "label": "Vidéo à la demande", "value": "+3,000 Films & Séries" },
+          { "label": "Appareils compatibles", "value": "Télévisions intelligentes, Android, MAG, iOS, PC" },
+          { "label": "Qualité de streaming", "value": "Streaming haute qualité" }
+        ]
       }
     }
   },
@@ -202,6 +218,62 @@
           { "label": "Uhrwerk", "value": "Schweizer Automatik" },
           { "label": "Wasserdichtigkeit", "value": "100m/330ft" },
           { "label": "Glas", "value": "Saphirglas mit AR-Beschichtung" }
+        ]
+      },
+      "iptv": {
+        "specs": [
+          { "label": "Kanäle", "value": "12,000+ Live TV-Kanäle" },
+          { "label": "Video auf Anfrage", "value": "+3,000 Filme & Serien" },
+          { "label": "Kompatible Geräte", "value": "Intelligente Fernseher, Android, MAG, iOS, PC" },
+          { "label": "Streaming-Qualität", "value": "Hochwertiger Streaming" }
+        ]
+      }
+    }
+  },
+  "es": {
+    "categories": {
+      "iptv": {
+        "specs": [
+          { "label": "Canales", "value": "12,000+ Canales de TV en Vivo" },
+          { "label": "Video bajo Demanda", "value": "+3,000 Películas y Series" },
+          { "label": "Dispositivos Compatibles", "value": "Smart TVs, Android, MAG, iOS, PC" },
+          { "label": "Calidad de Streaming", "value": "Streaming de Alta Calidad" }
+        ]
+      }
+    }
+  },
+  "it": {
+    "categories": {
+      "iptv": {
+        "specs": [
+          { "label": "Canali", "value": "12,000+ Canali TV in Diretta" },
+          { "label": "Video on Demand", "value": "+3,000 Film e Serie" },
+          { "label": "Dispositivi Compatibili", "value": "Smart TV, Android, MAG, iOS, PC" },
+          { "label": "Qualità di Streaming", "value": "Streaming di Alta Qualità" }
+        ]
+      }
+    }
+  },
+  "pt": {
+    "categories": {
+      "iptv": {
+        "specs": [
+          { "label": "Canais", "value": "12,000+ Canais de TV ao Vivo" },
+          { "label": "Vídeo sob Demanda", "value": "+3,000 Filmes e Séries" },
+          { "label": "Dispositivos Compatíveis", "value": "Smart TVs, Android, MAG, iOS, PC" },
+          { "label": "Qualidade de Streaming", "value": "Streaming de Alta Qualidade" }
+        ]
+      }
+    }
+  },
+  "nl": {
+    "categories": {
+      "iptv": {
+        "specs": [
+          { "label": "Kanalen", "value": "12,000+ Live TV-kanalen" },
+          { "label": "Video op Aanvraag", "value": "+3,000 Films & Series" },
+          { "label": "Compatibele Apparaten", "value": "Smart TV's, Android, MAG, iOS, PC" },
+          { "label": "Streaming Kwaliteit", "value": "Hoogwaardige Streaming" }
         ]
       }
     }

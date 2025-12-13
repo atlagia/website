@@ -1,0 +1,182 @@
+{
+  "hero": {
+    "subtitle": "Datenverschlüsselung",
+    "title": "End-to-End-Datenverschlüsselung",
+    "description": "Militärische 256-Bit-Verschlüsselung schützt alle Patientendaten in Transit und im Ruhezustand und garantiert das höchste Sicherheitsniveau für Ihre Zahnarztpraxis.",
+    "icon": "lock",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "256-bit",
+        "label": "Verschlüsselung"
+      },
+      {
+        "value": "100%",
+        "label": "Geschützt"
+      },
+      {
+        "value": "End-to-End",
+        "label": "Sicherheit"
+      }
+    ]
+  },
+  "features": {
+    "title": "Verschlüsselungs-Funktionen",
+    "subtitle": "Militärische Sicherheit",
+    "description": "Umfassende Verschlüsselungs- und Sicherheitsfunktionen zum Schutz aller Patientendaten.",
+    "items": [
+      {
+        "icon": "lock",
+        "title": "256-Bit-Verschlüsselung",
+        "description": "Militärische AES-256-Bit-Verschlüsselung für alle Daten im Ruhezustand und in Transit.",
+        "highlights": [
+          "AES-256-Bit-Verschlüsselung",
+          "Schutz von Daten im Ruhezustand",
+          "Sicherheit von Daten in Transit",
+          "Schlüsselverwaltung",
+          "Verschlüsselungsstandards"
+        ],
+        "stats": {
+          "value": "256-bit",
+          "label": "Verschlüsselung"
+        }
+      },
+      {
+        "icon": "shield",
+        "title": "End-to-End-Schutz",
+        "description": "Vollständiger Datenschutz vom Eingang bis zur Speicherung mit End-to-End-Verschlüsselung.",
+        "highlights": [
+          "End-to-End-Verschlüsselung",
+          "Vollständiger Datenfluss-Schutz",
+          "Sichere Übertragung",
+          "Verschlüsselte Speicherung",
+          "Zero-Knowledge-Architektur"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "Geschützt"
+        }
+      },
+      {
+        "icon": "database",
+        "title": "Schlüsselverwaltung",
+        "description": "Sichere Schlüsselverwaltung und Rotationsrichtlinien stellen sicher, dass Verschlüsselungsschlüssel immer geschützt sind.",
+        "highlights": [
+          "Sichere Schlüsselspeicherung",
+          "Schlüsselrotation",
+          "Zugriffskontrollen",
+          "Schlüsselverwaltungsrichtlinien",
+          "Compliance-Standards"
+        ],
+        "stats": {
+          "value": "End-to-End",
+          "label": "Sicherheit"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Verschlüsselungs-Sicherheit",
+    "description": "Militärischer Schutz für Ihre Daten",
+    "stats": [
+      {
+        "icon": "lock",
+        "value": "256-bit",
+        "label": "Verschlüsselung"
+      },
+      {
+        "icon": "shield",
+        "value": "100%",
+        "label": "Geschützt"
+      },
+      {
+        "icon": "database",
+        "value": "End-to-End",
+        "label": "Sicherheit"
+      },
+      {
+        "icon": "award",
+        "value": "Militärisch",
+        "label": "Niveau"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Dr. Sarah Martinez",
+        "role": "Praxisinhaber",
+        "quote": "Die Verschlüsselung gibt uns volles Vertrauen, dass unsere Patientendaten mit den höchsten Sicherheitsstandards geschützt sind."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Vorteile der Verschlüsselung",
+    "subtitle": "Maximale Sicherheit",
+    "description": "Erleben Sie die Ruhe, die mit militärischer Verschlüsselung einhergeht.",
+    "items": [
+      {
+        "title": "Militärischer Schutz",
+        "description": "256-Bit-Verschlüsselung bietet das höchste verfügbare Datenschutzniveau.",
+        "icon": "lock",
+        "color": "teal",
+        "stats": {
+          "value": "256-bit",
+          "label": "Verschlüsselung"
+        },
+        "highlights": [
+          "Militärische Verschlüsselung",
+          "AES-256-Standard",
+          "Branchenführende Sicherheit",
+          "Compliance-bereit"
+        ]
+      },
+      {
+        "title": "Vollständiger Schutz",
+        "description": "End-to-End-Verschlüsselung schützt Daten während ihres gesamten Lebenszyklus.",
+        "icon": "shield",
+        "color": "cyan",
+        "stats": {
+          "value": "100%",
+          "label": "Geschützt"
+        },
+        "highlights": [
+          "End-to-End-Verschlüsselung",
+          "Vollständiger Datenfluss",
+          "Sichere Übertragung",
+          "Verschlüsselte Speicherung"
+        ]
+      },
+      {
+        "title": "Sichere Schlüsselverwaltung",
+        "description": "Professionelle Schlüsselverwaltung stellt sicher, dass Verschlüsselungsschlüssel immer sicher sind.",
+        "icon": "database",
+        "color": "blue",
+        "stats": {
+          "value": "End-to-End",
+          "label": "Sicherheit"
+        },
+        "highlights": [
+          "Sichere Schlüsselspeicherung",
+          "Schlüsselrotation",
+          "Zugriffskontrollen",
+          "Verwaltungsrichtlinien"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Bereit für militärische Verschlüsselung?",
+    "description": "Sehen Sie, wie die Verschlüsselung von Dentagia Ihre Patientendaten schützt.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Demo vereinbaren",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Mehr erfahren",
+      "link": "/features"
+    }
+  }
+}
+

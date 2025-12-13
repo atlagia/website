@@ -1,0 +1,298 @@
+{
+  "pageTitle": "Historias de Éxito de Consultorios Dentales",
+  "pageDescription": "Explore historias de éxito y estudios de casos de consultorios dentales que usan la plataforma de gestión de consultorios Dentagia.",
+  "hero": {
+    "badge": "Historias de Éxito",
+    "title": "Cómo Crecen los Consultorios Dentales con Dentagia",
+    "description": "Descubra cómo los consultorios dentales en todo el país están transformando sus operaciones y creciendo con la plataforma de gestión de consultorios impulsada por IA de Dentagia.",
+    "cta": {
+      "primary": {
+        "text": "Ver Historias",
+        "href": "#projects"
+      },
+      "secondary": {
+        "text": "Iniciar Su Viaje",
+        "href": "/contact"
+      }
+    }
+  },
+  "stats": [
+    {
+      "value": "500+",
+      "label": "Consultorios Dentales"
+    },
+    {
+      "value": "99.9%",
+      "label": "Disponibilidad"
+    },
+    {
+      "value": "50%",
+      "label": "Tiempo Ahorrado"
+    },
+    {
+      "value": "24/7",
+      "label": "Soporte"
+    }
+  ],
+  "projects": [
+    {
+      "category": "Odontología General",
+      "description": "Transformando consultorios de odontología general con soluciones impulsadas por IA",
+      "items": [
+        {
+          "icon": "building",
+          "name": "Clínica Dental del Centro",
+          "description": "Consultorio multi-profesional con programación impulsada por IA y comunicación automatizada con pacientes",
+          "image": "/images/projects/downtown-dental.webp",
+          "stats": {
+            "value": "+60%",
+            "label": "Aumento de Eficiencia"
+          },
+          "tags": ["Programación IA", "Multi-Profesional", "Gestión del Consultorio"],
+          "color": "blue"
+        },
+        {
+          "icon": "home",
+          "name": "Family Dental Care",
+          "description": "Transformación de consultorio individual con gestión de pacientes y automatización de facturación",
+          "image": "/images/projects/family-dental.webp",
+          "stats": {
+            "value": "+35%",
+            "label": "Crecimiento de Ingresos"
+          },
+          "tags": ["Consultorio Individual", "Automatización Facturación", "Gestión de Pacientes"],
+          "color": "indigo"
+        },
+        {
+          "icon": "users",
+          "name": "Centro Dental Comunitario",
+          "description": "Consultorio comunitario con gestión integral de pacientes y análisis",
+          "image": "/images/projects/community-dental.webp",
+          "stats": {
+            "value": "+50%",
+            "label": "Satisfacción del Paciente"
+          },
+          "tags": ["Consultorio Comunitario", "Análisis", "Gestión"],
+          "color": "purple"
+        },
+        {
+          "icon": "calendar",
+          "name": "Odontología del Vecindario",
+          "description": "Optimización del consultorio con programación IA y automatización de flujos de trabajo",
+          "image": "/images/projects/neighborhood-dental.webp",
+          "stats": {
+            "value": "15hrs/semana",
+            "label": "Tiempo Ahorrado"
+          },
+          "tags": ["Programación IA", "Automatización", "Eficiencia"],
+          "color": "pink"
+        }
+      ]
+    },
+    {
+      "category": "Consultorios Especializados",
+      "description": "Consultorios dentales especializados alcanzando la excelencia",
+      "items": [
+        {
+          "icon": "sparkles",
+          "name": "Centro de Odontología Estética",
+          "description": "Consultorio estético de alta gama con planificación de tratamiento avanzada y comunicación con pacientes",
+          "image": "/images/projects/cosmetic-dental.webp",
+          "stats": {
+            "value": "+45%",
+            "label": "Tasa de Conversión"
+          },
+          "tags": ["Estética", "Planificación de Tratamiento", "Portal del Paciente"],
+          "color": "rose"
+        },
+        {
+          "icon": "heart",
+          "name": "Grupo Dental Pediátrico",
+          "description": "Consultorio pediátrico multi-ubicación con gestión centralizada",
+          "image": "/images/projects/pediatric-dental.webp",
+          "stats": {
+            "value": "100%",
+            "label": "Coordinación"
+          },
+          "tags": ["Multi-Ubicación", "Pediátrico", "Centralizado"],
+          "color": "amber"
+        },
+        {
+          "icon": "smile",
+          "name": "Consultorio de Ortodoncia",
+          "description": "Consultorio de ortodoncia con seguimiento de tratamiento y compromiso del paciente",
+          "image": "/images/projects/orthodontic-dental.webp",
+          "stats": {
+            "value": "+55%",
+            "label": "Retención de Pacientes"
+          },
+          "tags": ["Ortodoncia", "Seguimiento de Tratamiento", "Compromiso"],
+          "color": "lime"
+        },
+        {
+          "icon": "tooth",
+          "name": "Centro de Cirugía Oral",
+          "description": "Consultorio quirúrgico con programación avanzada y gestión de casos",
+          "image": "/images/projects/oral-surgery.webp",
+          "stats": {
+            "value": "+40%",
+            "label": "Eficiencia de Casos"
+          },
+          "tags": ["Cirugía Oral", "Gestión de Casos", "Programación"],
+          "color": "green"
+        }
+      ]
+    },
+    {
+      "category": "Consultorios Multi-Ubicación",
+      "description": "Grandes consultorios gestionando múltiples ubicaciones",
+      "items": [
+        {
+          "icon": "map-pin",
+          "name": "Grupo Dental Regional",
+          "description": "Consultorio multi-ubicación con registros de pacientes unificados y programación",
+          "image": "/images/projects/regional-dental.webp",
+          "stats": {
+            "value": "+70%",
+            "label": "Eficiencia Operativa"
+          },
+          "tags": ["Multi-Ubicación", "Registros Unificados", "Sincronización Cloud"],
+          "color": "sky"
+        },
+        {
+          "icon": "building-2",
+          "name": "Red de Atención Dental",
+          "description": "Red de consultorios con facturación centralizada e informes",
+          "image": "/images/projects/dental-network.webp",
+          "stats": {
+            "value": "+55%",
+            "label": "Crecimiento de Ingresos"
+          },
+          "tags": ["Red", "Facturación Centralizada", "Informes"],
+          "color": "cyan"
+        },
+        {
+          "icon": "globe",
+          "name": "Odontología Estatal",
+          "description": "Grupo de consultorios a nivel estatal con gestión integral",
+          "image": "/images/projects/statewide-dental.webp",
+          "stats": {
+            "value": "100%",
+            "label": "Sincronización de Datos"
+          },
+          "tags": ["Estatal", "Gestión", "Cloud"],
+          "color": "blue"
+        },
+        {
+          "icon": "trending-up",
+          "name": "Cadena Dental en Crecimiento",
+          "description": "Cadena de consultorios en rápida expansión con soluciones escalables",
+          "image": "/images/projects/dental-chain.webp",
+          "stats": {
+            "value": "+80%",
+            "label": "Escalabilidad"
+          },
+          "tags": ["Cadena", "Escalable", "Crecimiento"],
+          "color": "indigo"
+        }
+      ]
+    }
+  ],
+  "features": {
+    "title": "Funciones del Consultorio",
+    "description": "Nuestra plataforma viene con funciones integrales para consultorios dentales",
+    "items": [
+      {
+        "icon": "users",
+        "title": "Gestión de Pacientes",
+        "description": "Registros digitales completos de pacientes e historial"
+      },
+      {
+        "icon": "calendar",
+        "title": "Programación IA",
+        "description": "Programación inteligente de citas y optimización"
+      },
+      {
+        "icon": "credit-card",
+        "title": "Facturación y Pagos",
+        "description": "Facturación optimizada y procesamiento de pagos"
+      },
+      {
+        "icon": "bar-chart",
+        "title": "Análisis del Consultorio",
+        "description": "Insights basados en datos para el crecimiento del consultorio"
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Beneficios del Consultorio",
+    "description": "Experimente las ventajas de usar Dentagia para su consultorio.",
+    "items": [
+      {
+        "icon": "rocket",
+        "title": "Eficiencia",
+        "description": "Operaciones optimizadas que ahorran tiempo y reducen la carga administrativa",
+        "stats": "50%",
+        "label": "Tiempo Ahorrado"
+      },
+      {
+        "icon": "target",
+        "title": "Crecimiento",
+        "description": "Herramientas e insights para ayudar a su consultorio a crecer",
+        "stats": "35%",
+        "label": "Crecimiento de Ingresos"
+      },
+      {
+        "icon": "lightbulb",
+        "title": "Innovación",
+        "description": "Tecnología IA de vanguardia diseñada para consultorios dentales modernos",
+        "stats": "500+",
+        "label": "Consultorios"
+      },
+      {
+        "icon": "users",
+        "title": "Soporte",
+        "description": "Equipo de soporte dedicado disponible 24/7 para su consultorio",
+        "stats": "24/7",
+        "label": "Soporte"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Testimonios de Consultorios",
+    "description": "Escuche a consultorios dentales que han transformado sus operaciones con Dentagia",
+    "items": [
+      {
+        "quote": "Dentagia ha transformado cómo gestionamos nuestro consultorio. La programación impulsada por IA sola nos ahorra 10 horas por semana, y nuestros puntajes de satisfacción del paciente nunca han sido más altos.",
+        "author": "Dr. Sarah Martinez",
+        "role": "Propietario del Consultorio",
+        "company": "Clínica Dental del Centro",
+        "image": "/images/testimonials/sarah.jpg"
+      },
+      {
+        "quote": "Cambiar a Dentagia fue la mejor decisión que tomamos. El sistema de gestión de pacientes es intuitivo, la facturación está automatizada y los análisis nos ayudan a entender mejor nuestro consultorio.",
+        "author": "Dr. Michael Chen",
+        "role": "Dentista Principal",
+        "company": "Family Dental Care",
+        "image": "/images/testimonials/michael.jpg"
+      }
+    ]
+  },
+  "cta": {
+    "title": "¿Listo para Transformar Su Consultorio?",
+    "description": "Únase a cientos de consultorios dentales que han transformado sus operaciones con Dentagia.",
+    "buttons": [
+      {
+        "text": "Programar una Demostración",
+        "href": "/demo",
+        "variant": "primary"
+      },
+      {
+        "text": "Contáctenos",
+        "href": "/contact",
+        "variant": "secondary"
+      }
+    ]
+  }
+}
+

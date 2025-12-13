@@ -1,5 +1,12 @@
 import type { APIRoute } from 'astro';
 import { getAllTranslatedProducts } from '../lib/shopify';
+import { getEnvVar } from '../lib/env';
+
+// Get allowed languages from environment variable
+const getAllowedLanguages = (): string[] => {
+  const allowedLanguages = getEnvVar('ALLOWED_LANGUAGES') || 'en';
+  return allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+};
 
 // Helper function to escape XML special characters
 function escapeXml(unsafe: string): string {
@@ -18,7 +25,8 @@ function escapeXml(unsafe: string): string {
 export const prerender = true;
 
 export const getStaticPaths = () => {
-  return ['', 'en', 'fr', 'de', 'es', 'it'].map(lang => ({ params: { lang: lang || 'default' } }));
+  const allowedLanguages = getAllowedLanguages();
+  return ['', ...allowedLanguages].map(lang => ({ params: { lang: lang || 'default' } }));
 };
 
 export const GET: APIRoute = async ({ params, site }) => {

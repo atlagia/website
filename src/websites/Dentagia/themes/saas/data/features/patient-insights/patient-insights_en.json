@@ -1,0 +1,182 @@
+{
+  "hero": {
+    "subtitle": "AI-Powered Analytics",
+    "title": "Patient Insights & Predictive Analytics",
+    "description": "Leverage AI-powered analytics to gain deep insights into patient behavior, predict treatment needs, and optimize practice growth strategies.",
+    "icon": "trending-up",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "35%",
+        "label": "Revenue Growth"
+      },
+      {
+        "value": "95%",
+        "label": "Prediction Accuracy"
+      },
+      {
+        "value": "60%",
+        "label": "Better Decisions"
+      }
+    ]
+  },
+  "features": {
+    "title": "Patient Insights Features",
+    "subtitle": "Data-Driven Intelligence",
+    "description": "Advanced analytics and AI-powered insights to help you understand and grow your practice.",
+    "items": [
+      {
+        "icon": "brain",
+        "title": "Predictive Analytics",
+        "description": "AI analyzes patient data to predict treatment needs, appointment patterns, and patient behavior.",
+        "highlights": [
+          "Treatment predictions",
+          "Appointment forecasting",
+          "Patient behavior analysis",
+          "Risk assessment",
+          "Trend identification"
+        ],
+        "stats": {
+          "value": "95%",
+          "label": "Accuracy"
+        }
+      },
+      {
+        "icon": "trending-up",
+        "title": "Practice Growth Insights",
+        "description": "Data-driven insights into practice performance, revenue opportunities, and growth strategies.",
+        "highlights": [
+          "Revenue analytics",
+          "Performance metrics",
+          "Growth opportunities",
+          "Market insights",
+          "Strategic recommendations"
+        ],
+        "stats": {
+          "value": "35%",
+          "label": "Revenue Growth"
+        }
+      },
+      {
+        "icon": "users",
+        "title": "Patient Segmentation",
+        "description": "Segment patients by behavior, treatment needs, and value to optimize marketing and care strategies.",
+        "highlights": [
+          "Behavioral segmentation",
+          "Treatment-based groups",
+          "Value analysis",
+          "Targeted marketing",
+          "Personalized care"
+        ],
+        "stats": {
+          "value": "60%",
+          "label": "Better Decisions"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Patient Insights Success",
+    "description": "See how AI analytics transform practices",
+    "stats": [
+      {
+        "icon": "brain",
+        "value": "95%",
+        "label": "Accuracy"
+      },
+      {
+        "icon": "trending-up",
+        "value": "35%",
+        "label": "Revenue Growth"
+      },
+      {
+        "icon": "users",
+        "value": "60%",
+        "label": "Better Decisions"
+      },
+      {
+        "icon": "award",
+        "value": "100%",
+        "label": "AI-Powered"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Dr. Michael Chen",
+        "role": "Lead Dentist",
+        "quote": "The patient insights feature has helped us understand our practice better and grow revenue by 35%. The AI predictions are incredibly accurate."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Patient Insights Benefits",
+    "subtitle": "Data-Driven Growth",
+    "description": "Experience the power of AI-powered analytics.",
+    "items": [
+      {
+        "title": "Predictive Accuracy",
+        "description": "AI predictions help you anticipate patient needs and optimize scheduling.",
+        "icon": "brain",
+        "color": "teal",
+        "stats": {
+          "value": "95%",
+          "label": "Accuracy"
+        },
+        "highlights": [
+          "Treatment predictions",
+          "Appointment forecasting",
+          "Behavior analysis",
+          "Risk assessment"
+        ]
+      },
+      {
+        "title": "Revenue Growth",
+        "description": "Data-driven insights identify opportunities to grow practice revenue.",
+        "icon": "trending-up",
+        "color": "cyan",
+        "stats": {
+          "value": "35%",
+          "label": "Growth"
+        },
+        "highlights": [
+          "Revenue analytics",
+          "Opportunity identification",
+          "Strategic recommendations",
+          "Performance tracking"
+        ]
+      },
+      {
+        "title": "Better Decisions",
+        "description": "Comprehensive insights enable better strategic and operational decisions.",
+        "icon": "users",
+        "color": "blue",
+        "stats": {
+          "value": "60%",
+          "label": "Improvement"
+        },
+        "highlights": [
+          "Data-driven decisions",
+          "Strategic planning",
+          "Performance optimization",
+          "Market insights"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready for AI-Powered Insights?",
+    "description": "See how Dentagia's patient insights can transform your practice growth.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Schedule a Demo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Learn More",
+      "link": "/features"
+    }
+  }
+}
+

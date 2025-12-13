@@ -7,9 +7,15 @@ interface SearchProps {
   placeholder: {
     [key: string]: string;
   };
+  searchStyles?: {
+    icon?: string;
+    button?: string;
+    form?: string;
+    input?: string;
+  };
 }
 
-export default function Search({ apiEndpoint, lang, placeholder }: SearchProps) {
+export default function Search({ apiEndpoint, lang, placeholder, searchStyles }: SearchProps) {
   const [query, setQuery] = useState('');
   const [isOpen, setIsOpen] = useState(false);
   const searchRef = useRef<HTMLDivElement>(null);
@@ -40,16 +46,16 @@ export default function Search({ apiEndpoint, lang, placeholder }: SearchProps) 
           setIsOpen(!isOpen);
           setTimeout(() => inputRef.current?.focus(), 100);
         }}
-        className="p-2 hover:bg-gray-100 rounded-full"
+        className={searchStyles?.button || "p-2 hover:bg-gray-100 rounded-full"}
         aria-label="Search"
       >
-        <SearchIcon size={20} />
+        <SearchIcon size={20} className={searchStyles?.icon || "text-gray-700"} />
       </button>
 
       {isOpen && (
         <form
           onSubmit={handleSearch}
-          className="absolute top-full right-0 mt-2 w-72 bg-white rounded-lg shadow-lg p-4 z-50"
+          className={searchStyles?.form || "absolute top-full right-0 mt-2 w-72 bg-white rounded-lg shadow-lg p-4 z-50"}
         >
           <input
             ref={inputRef}
@@ -57,7 +63,7 @@ export default function Search({ apiEndpoint, lang, placeholder }: SearchProps) 
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder={placeholder[lang] || placeholder['en']}
-            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className={searchStyles?.input || "w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"}
           />
         </form>
       )}

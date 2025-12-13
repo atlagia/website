@@ -1,0 +1,163 @@
+---
+import { Button } from './ui/Button';
+
+interface Props {
+  headline: string;
+  description: string;
+  backgroundImage: string;
+  button1Text: string;
+  button1Link: string;
+  button2Text: string;
+  button2Link: string;
+  subtitle?: string;
+  cards?: Array<{
+    title: string;
+    description: string;
+  }>;
+}
+
+const { 
+  headline, 
+  description, 
+  backgroundImage,
+  button1Text,
+  button1Link,
+  button2Text,
+  button2Link,
+  subtitle,
+  cards
+} = Astro.props;
+---
+
+<section class="relative py-32 overflow-hidden bg-gradient-to-br from-white via-emerald-50/30 to-gray-50">
+  <!-- Background Effects -->
+  <div class="absolute inset-0">
+    <div class="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-[0.05] [mask-image:linear-gradient(to_bottom,transparent,black,transparent)]"></div>
+    <!-- Soft gradient orbs in dental palette -->
+    <div class="absolute top-1/3 right-1/4 w-[520px] h-[520px] bg-gradient-to-br from-emerald-200/40 via-cyan-200/40 to-blue-200/40 rounded-full blur-3xl animate-float"></div>
+    <div class="absolute bottom-1/3 left-1/4 w-[420px] h-[420px] bg-gradient-to-tr from-cyan-200/40 via-emerald-200/40 to-blue-200/40 rounded-full blur-3xl animate-float-delayed"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="relative z-10 max-w-7xl mx-auto px-4">
+    <!-- Subtitle -->
+    <div class="text-center mb-6">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 shadow-sm border border-emerald-200 backdrop-blur-sm transition-all duration-300 hover:border-emerald-300">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-60"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-gradient-to-r from-emerald-500 to-cyan-500"></span>
+        </span>
+        <span class="text-sm font-medium text-emerald-700">
+          {subtitle || "INDUSTRY SOLUTIONS"}
+        </span>
+      </div>
+    </div>
+
+    <!-- Main Title -->
+    <div class="text-center mb-8">
+      <div class="relative inline-block">
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-emerald-600 via-gray-900 to-cyan-600 bg-clip-text text-transparent pb-4 relative">
+          {headline}
+          <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent opacity-0 animate-shine"></div>
+        </h2>
+        <!-- Animated Border -->
+        <div class="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-1/4 h-1">
+          <div class="absolute inset-0 bg-gradient-to-r from-transparent via-emerald-500 to-transparent animate-border-slide"></div>
+          <div class="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500 to-transparent animate-border-slide-delayed"></div>
+        </div>
+      </div>
+      <p class="mt-6 text-lg text-gray-600 max-w-3xl mx-auto">
+        {description}
+      </p>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+      {cards?.map((card, index) => (
+        <div class="group relative">
+          <!-- Card Background -->
+          <div class="absolute inset-0 bg-white rounded-2xl transform transition-transform group-hover:scale-[1.02] duration-300 shadow-sm"></div>
+          <!-- Glow Effect -->
+          <div class="absolute -inset-0.5 bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-2xl opacity-0 group-hover:opacity-20 blur transition duration-300"></div>
+          
+          <!-- Content -->
+          <div class="relative p-8 rounded-2xl border border-gray-200 bg-white group-hover:border-emerald-300 transition-all duration-300">
+            <div class="flex items-start gap-4">
+              <div class="p-3 rounded-xl bg-emerald-100 group-hover:bg-emerald-200 transition-colors duration-300">
+                <div class="w-6 h-6 text-emerald-600">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-emerald-600 transition-colors duration-300">
+                  {card.title}
+                </h3>
+                <p class="text-gray-600 leading-relaxed">
+                  {card.description}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href={button1Link} class="inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-emerald-500 to-cyan-500 text-white font-medium hover:shadow-lg hover:shadow-emerald-500/30 hover:-translate-y-0.5 transition-all duration-300">
+        {button1Text}
+        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </a>
+      <a href={button2Link} class="inline-flex items-center px-8 py-4 rounded-full bg-white border border-emerald-200 text-emerald-700 font-medium hover:bg-emerald-50 hover:border-emerald-300 transition-all duration-300">
+        {button2Text}
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes float {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(10px, -10px) rotate(1deg); }
+    50% { transform: translate(0, -15px) rotate(-1deg); }
+    75% { transform: translate(-10px, -5px) rotate(1deg); }
+  }
+
+  .animate-float {
+    animation: float 20s ease-in-out infinite;
+  }
+
+  .animate-float-delayed {
+    animation: float 20s ease-in-out infinite;
+    animation-delay: -10s;
+  }
+
+  @keyframes border-slide {
+    0%, 100% { transform: translateX(-100%); opacity: 0; }
+    25%, 75% { opacity: 1; }
+    50% { transform: translateX(100%); opacity: 0; }
+  }
+
+  .animate-border-slide {
+    animation: border-slide 3s ease-in-out infinite;
+  }
+
+  .animate-border-slide-delayed {
+    animation: border-slide 3s ease-in-out infinite;
+    animation-delay: 1.5s;
+  }
+
+  @keyframes shine {
+    0% { opacity: 0; transform: translateX(-100%); }
+    50% { opacity: 1; }
+    100% { opacity: 0; transform: translateX(100%); }
+  }
+
+  .animate-shine {
+    animation: shine 3s ease-in-out infinite;
+  }
+</style>

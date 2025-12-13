@@ -1,0 +1,472 @@
+{
+  "pageTitle": "Movies",
+  "pageDescription": "Stream thousands of movies in HD and 4K quality",
+  "heroTitle": "Movies",
+  "heroDescription": "Stream thousands of movies in HD and 4K quality",
+  "movies": {
+    "featured": [
+      {
+        "title": "SuperMan",
+        "genre": "Superhero",
+        "rating": "4.8",
+        "year": "2025",
+        "quality": "4K",
+        "duration": "2h 15m",
+        "image": "https://cdn.atlagia.com/fastiptv/Superman_(2025_film)_poster.jpg"
+      },
+      {
+        "title": "Sinners",
+        "genre": "Drama",
+        "rating": "4.6",
+        "year": "2025",
+        "quality": "4K",
+        "duration": "1h 55m",
+        "image": "https://cdn.atlagia.com/fastiptv/images.jpeg"
+      },
+      {
+        "title": "Mickey 17",
+        "genre": "Science Fiction",
+        "rating": "4.7",
+        "year": "2025",
+        "quality": "4K",
+        "duration": "2h 5m",
+        "image": "https://cdn.atlagia.com/fastiptv/images%20(1).jpeg"
+      }
+    ],
+    "categories": [
+      {
+        "name": "Superhero",
+        "movies": [
+          {
+            "title": "SuperMan",
+            "rating": "4.8",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/Superman_(2025_film)_poster.jpg"
+          },
+          {
+            "title": "Batman: The Brave and the Bold",
+            "rating": "4.7",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://via.placeholder.com/300x450/1f2937/ffffff?text=Batman+Brave+Bold"
+          },
+          {
+            "title": "Spider-Man: Beyond the Spider-Verse",
+            "rating": "4.9",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://via.placeholder.com/300x450/1f2937/ffffff?text=Spider-Man+Beyond"
+          },
+          {
+            "title": "Wonder Woman: New World",
+            "rating": "4.6",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://via.placeholder.com/300x450/1f2937/ffffff?text=Wonder+Woman+New+World"
+          },
+          {
+            "title": "Black Panther: Wakanda Forever Part 2",
+            "rating": "4.8",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://via.placeholder.com/300x450/1f2937/ffffff?text=Black+Panther+Wakanda+Forever"
+          },
+          {
+            "title": "The Flash: Speed Force",
+            "rating": "4.5",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://via.placeholder.com/300x450/1f2937/ffffff?text=Flash+Speed+Force"
+          }
+        ]
+      },
+      {
+        "name": "Drama",
+        "movies": [
+          {
+            "title": "Sinners",
+            "rating": "4.6",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/images.jpeg"
+          },
+          {
+            "title": "La jeune Femme à l'aiguille 2025",
+            "rating": "4.7",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/7b0554c79b550c0863bfc8922e27d49a.webp"
+          },
+          {
+            "title": "The Last Letter",
+            "rating": "4.8",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://via.placeholder.com/300x450/1f2937/ffffff?text=Last+Letter"
+          },
+          {
+            "title": "City Dreams",
+            "rating": "4.5",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://via.placeholder.com/300x450/1f2937/ffffff?text=City+Dreams"
+          },
+          {
+            "title": "Broken Promises",
+            "rating": "4.7",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://via.placeholder.com/300x450/1f2937/ffffff?text=Broken+Promises"
+          },
+          {
+            "title": "The Silent Echo",
+            "rating": "4.6",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://via.placeholder.com/300x450/1f2937/ffffff?text=Silent+Echo"
+          }
+        ]
+      },
+      {
+        "name": "Science Fiction",
+        "movies": [
+          {
+            "title": "Mickey 17",
+            "rating": "4.7",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/images%20(1).jpeg"
+          },
+          {
+            "title": "Companion",
+            "rating": "4.8",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/MV5BYmUxZDI2ZjMtNDI5Mi00NTY4LWFhNGMtZGI5YzljZTg4NGI1XkEyXkFqcGc%40._V1_FMjpg_UX1000_.jpg"
+          },
+          {
+            "title": "Interstellar 2: Beyond Time",
+            "rating": "4.9",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://via.placeholder.com/300x450/1f2937/ffffff?text=Interstellar+2+Beyond+Time"
+          },
+          {
+            "title": "The Martian Chronicles",
+            "rating": "4.7",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://via.placeholder.com/300x450/1f2937/ffffff?text=Martian+Chronicles"
+          },
+          {
+            "title": "Quantum Leap: The Movie",
+            "rating": "4.6",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://via.placeholder.com/300x450/1f2937/ffffff?text=Quantum+Leap+Movie"
+          },
+          {
+            "title": "AI: The Awakening",
+            "rating": "4.8",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://via.placeholder.com/300x450/1f2937/ffffff?text=AI+Awakening"
+          }
+        ]
+      },
+      {
+        "name": "Action",
+        "movies": [
+          {
+            "title": "Mission Impossible: Dead Reckoning Part 3",
+            "rating": "4.8",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://via.placeholder.com/300x450/1f2937/ffffff?text=Mission+Impossible+3"
+          },
+          {
+            "title": "Fast & Furious 12: Final Ride",
+            "rating": "4.6",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://via.placeholder.com/300x450/1f2937/ffffff?text=Fast+Furious+12"
+          },
+          {
+            "title": "John Wick: Chapter 6",
+            "rating": "4.9",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://via.placeholder.com/300x450/1f2937/ffffff?text=John+Wick+Chapter+6"
+          },
+          {
+            "title": "The Equalizer 4",
+            "rating": "4.7",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://via.placeholder.com/300x450/1f2937/ffffff?text=Equalizer+4"
+          },
+          {
+            "title": "Mad Max: Fury Road 2",
+            "rating": "4.8",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://via.placeholder.com/300x450/1f2937/ffffff?text=Mad+Max+Fury+Road+2"
+          },
+          {
+            "title": "The Expendables 5",
+            "rating": "4.5",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://via.placeholder.com/300x450/1f2937/ffffff?text=Expendables+5"
+          }
+        ]
+      },
+      {
+        "name": "Comedy",
+        "movies": [
+          {
+            "title": "The Hangover 4: Last Call",
+            "rating": "4.4",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://via.placeholder.com/300x450/1f2937/ffffff?text=Hangover+4+Last+Call"
+          },
+          {
+            "title": "Superbad 2: College Years",
+            "rating": "4.6",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://via.placeholder.com/300x450/1f2937/ffffff?text=Superbad+2+College+Years"
+          },
+          {
+            "title": "Bridesmaids 2: The Wedding Crashers",
+            "rating": "4.5",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://via.placeholder.com/300x450/1f2937/ffffff?text=Bridesmaids+2+Wedding+Crashers"
+          },
+          {
+            "title": "The 40-Year-Old Virgin 2",
+            "rating": "4.3",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://via.placeholder.com/300x450/1f2937/ffffff?text=40+Year+Old+Virgin+2"
+          },
+          {
+            "title": "Step Brothers 2: The Reunion",
+            "rating": "4.7",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://via.placeholder.com/300x450/1f2937/ffffff?text=Step+Brothers+2+Reunion"
+          },
+          {
+            "title": "Anchorman 3: The Legend Continues",
+            "rating": "4.5",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://via.placeholder.com/300x450/1f2937/ffffff?text=Anchorman+3+Legend+Continues"
+          }
+        ]
+      },
+      {
+        "name": "Horror",
+        "movies": [
+          {
+            "title": "The Conjuring: The Last Rites",
+            "rating": "4.7",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://via.placeholder.com/300x450/1f2937/ffffff?text=Conjuring+Last+Rites"
+          },
+          {
+            "title": "Insidious: The Final Chapter",
+            "rating": "4.6",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://via.placeholder.com/300x450/1f2937/ffffff?text=Insidious+Final+Chapter"
+          },
+          {
+            "title": "A Quiet Place: Day One",
+            "rating": "4.8",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://via.placeholder.com/300x450/1f2937/ffffff?text=Quiet+Place+Day+One"
+          },
+          {
+            "title": "The Nun 3: The Final Exorcism",
+            "rating": "4.5",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://via.placeholder.com/300x450/1f2937/ffffff?text=Nun+3+Final+Exorcism"
+          },
+          {
+            "title": "Halloween Ends: The Beginning",
+            "rating": "4.7",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://via.placeholder.com/300x450/1f2937/ffffff?text=Halloween+Ends+Beginning"
+          },
+          {
+            "title": "It: Chapter Three",
+            "rating": "4.6",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://via.placeholder.com/300x450/1f2937/ffffff?text=IT+Chapter+Three"
+          }
+        ]
+      },
+      {
+        "name": "Romance",
+        "movies": [
+          {
+            "title": "The Notebook 2: A New Chapter",
+            "rating": "4.8",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://via.placeholder.com/300x450/1f2937/ffffff?text=Notebook+2+New+Chapter"
+          },
+          {
+            "title": "Titanic: The Return",
+            "rating": "4.9",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://via.placeholder.com/300x450/1f2937/ffffff?text=Titanic+Return"
+          },
+          {
+            "title": "La La Land 2: Another Day of Sun",
+            "rating": "4.7",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://via.placeholder.com/300x450/1f2937/ffffff?text=La+La+Land+2+Another+Day"
+          },
+          {
+            "title": "The Fault in Our Stars 2",
+            "rating": "4.6",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://via.placeholder.com/300x450/1f2937/ffffff?text=Fault+in+Our+Stars+2"
+          },
+          {
+            "title": "500 Days of Summer 2",
+            "rating": "4.5",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://via.placeholder.com/300x450/1f2937/ffffff?text=500+Days+Summer+2"
+          },
+          {
+            "title": "Eternal Sunshine 2",
+            "rating": "4.8",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://via.placeholder.com/300x450/1f2937/ffffff?text=Eternal+Sunshine+2"
+          }
+        ]
+      },
+      {
+        "name": "Sports Documentary",
+        "movies": [
+          {
+            "title": "F1 2025",
+            "rating": "4.5",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/MV5BZTYwYjJhNzYtY2ZiZS00ZmYxLWJkZjctYjRlNGIxYjI3ZTU0XkEyXkFqcGc%40._V1_.jpg"
+          },
+          {
+            "title": "The Last Dance 2: The Return",
+            "rating": "4.8",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://via.placeholder.com/300x450/1f2937/ffffff?text=Last+Dance+2+Return"
+          },
+          {
+            "title": "Beckham: The Legacy",
+            "rating": "4.7",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://via.placeholder.com/300x450/1f2937/ffffff?text=Beckham+Legacy"
+          },
+          {
+            "title": "Messi: The GOAT",
+            "rating": "4.9",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://via.placeholder.com/300x450/1f2937/ffffff?text=Messi+GOAT"
+          },
+          {
+            "title": "Ronaldo: The Phenomenon",
+            "rating": "4.8",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://via.placeholder.com/300x450/1f2937/ffffff?text=Ronaldo+Phenomenon"
+          },
+          {
+            "title": "Tiger Woods: The Comeback",
+            "rating": "4.6",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://via.placeholder.com/300x450/1f2937/ffffff?text=Tiger+Woods+Comeback"
+          }
+        ]
+      },
+      {
+        "name": "Thriller",
+        "movies": [
+          {
+            "title": "The Insider 2025",
+            "rating": "4.7",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/901424b912ee290f826dba3af9b7ce70.jpg"
+          },
+          {
+            "title": "Gone Girl 2: The Return",
+            "rating": "4.8",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://via.placeholder.com/300x450/1f2937/ffffff?text=Gone+Girl+2+Return"
+          },
+          {
+            "title": "The Silence of the Lambs 2",
+            "rating": "4.9",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://via.placeholder.com/300x450/1f2937/ffffff?text=Silence+Lambs+2"
+          },
+          {
+            "title": "Se7en 2: The Eighth Sin",
+            "rating": "4.7",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://via.placeholder.com/300x450/1f2937/ffffff?text=Se7en+2+Eighth+Sin"
+          },
+          {
+            "title": "Fight Club 2: The Rules",
+            "rating": "4.8",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://via.placeholder.com/300x450/1f2937/ffffff?text=Fight+Club+2+Rules"
+          },
+          {
+            "title": "The Usual Suspects 2",
+            "rating": "4.6",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://via.placeholder.com/300x450/1f2937/ffffff?text=Usual+Suspects+2"
+          }
+        ]
+      }
+    ]
+  },
+  "genres": [
+    "Superhero", "Drama", "Science Fiction", "Action", "Comedy", "Horror", "Romance", "Sports Documentary", "Thriller", "Adventure", "Animation", "Crime", "Documentary",
+    "Family", "Fantasy", "Mystery", "War", "Western"
+  ],
+  "years": ["2025", "2024", "2023", "2022", "2021"],
+  "qualities": ["4K", "HD"]
+}
+
+
+
+

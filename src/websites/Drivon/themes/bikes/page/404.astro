@@ -1,0 +1,91 @@
+---
+import { getLangFromUrl, useTranslations, isValidLanguage } from '@utils/i18n';
+
+// Get the language parameter from the URL
+const { lang = 'en' } = Astro.params;
+
+// Validate language and redirect to /en if invalid
+if (!isValidLanguage(lang)) {
+  return Astro.redirect('/en');
+}
+
+const translations = await useTranslations(lang);
+const jsonData = translations.default;
+
+// Properly handle dynamic imports with default exports
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+
+// Generate static paths for allowed languages from environment
+export async function getStaticPaths() {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  const languages = allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+  
+  return languages.map(lang => ({ params: { lang } }));
+}
+
+const SITE_TITLE = jsonData.siteTitle || 'DriverApparel';
+const SITE_DESCRIPTION = '404 - Page Not Found';
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <BaseHead 
+      title={`404 - ${SITE_TITLE}`} 
+      description={SITE_DESCRIPTION} 
+      isHomePage={false}
+    />
+    <style>
+      .error-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        text-align: center;
+        padding: 2rem;
+        background-color: #f4f4f4;
+      }
+      .error-code {
+        font-size: 6rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 1rem;
+      }
+      .error-message {
+        font-size: 1.5rem;
+        color: #666;
+        margin-bottom: 2rem;
+      }
+      .back-home {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+      .back-home:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <div class="error-container">
+        <div class="error-code">404</div>
+        <div class="error-message">
+          {jsonData.notFoundMessage || 'Oops! The page you are looking for does not exist.'}
+        </div>
+        <a href={`/${lang}`} class="back-home">
+          {jsonData.backToHomeText || 'Back to Home'}
+        </a>
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>

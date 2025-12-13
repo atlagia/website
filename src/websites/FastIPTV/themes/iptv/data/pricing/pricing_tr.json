@@ -1,0 +1,97 @@
+{
+  "hero": {
+    "title": "Fast Stronger IPTV Planınızı Seçin",
+    "description": "Premium yayın ihtiyaçlarınız için mükemmel Fast IPTV üyeliğini bulun"
+  },
+  "billing": {
+    "monthly": "Aylık faturalandırma",
+    "yearly": "Yıllık faturalandırma",
+    "saveText": "%20 Tasarruf Edin"
+  },
+  "plans": [
+    {
+      "name": "1 Aylık Fast IPTV",
+      "price": "16.99",
+      "duration": "ay",
+      "checkoutUrl": "https://pays.myatlagia.store/checkout?cart=%7B%22items%22%3A%5B%7B%22title%22%3A%221%20Month%20Fast%20IPTV%22%2C%22price%22%3A1699%2C%22currency%22%3A%22USD%22%2C%22quantity%22%3A1%2C%22image%22%3A%22https%3A%2F%2Fvia.placeholder.com%2F100%22%7D%5D%2C%22total%22%3A1699%7D&store=FastTV&shop_domain=pays.myatlagia.store",
+      "features": [
+        "+32.000 Fast IPTV Kanalı",
+        "+140.000 Premium IPTV Film ve Dizi",
+        "8K/ 4K / Ultra HD Stronger IPTV Kalitesi",
+        "Tüm Fast IPTV Kanalları için Catch Up /EPG",
+        "ÜCRETSİZ Premium IPTV Kanalları ve VOD Güncellemeleri",
+        "%99.9 Fast IPTV Sunucu Çalışma Süresi",
+        "Stronger IPTV için Tüm Cihazlar Desteklenir",
+        "Fast IPTV için AntiFreeze Teknolojisi",
+        "7/24 Premium IPTV Teknik Desteği"
+      ],
+      "isPopular": false
+    },
+    {
+      "name": "12 Aylık Stronger IPTV",
+      "price": "59.99",
+      "duration": "yıl",
+      "checkoutUrl": "https://pays.myatlagia.store/checkout?cart=%7B%22items%22%3A%5B%7B%22title%22%3A%2212%20Month%20Stronger%20IPTV%22%2C%22price%22%3A5999%2C%22currency%22%3A%22USD%22%2C%22quantity%22%3A1%2C%22image%22%3A%22https%3A%2F%2Fvia.placeholder.com%2F100%22%7D%5D%2C%22total%22%3A5999%7D&store=FastTV&shop_domain=pays.myatlagia.store",
+      "features": [
+        "+32.000 Premium IPTV Kanalı",
+        "+140.000 Fast IPTV Film ve Dizi",
+        "8K/ 4K / Ultra HD Stronger IPTV Kalitesi",
+        "Tüm Fast IPTV Kanalları için Catch Up /EPG",
+        "ÜCRETSİZ Premium IPTV Kanalları ve VOD Güncellemeleri",
+        "%99.9 Fast IPTV Sunucu Çalışma Süresi",
+        "Stronger IPTV için Tüm Cihazlar Desteklenir",
+        "Fast IPTV için AntiFreeze Teknolojisi",
+        "7/24 Premium IPTV Teknik Desteği"
+      ],
+      "isPopular": true
+    },
+    {
+      "name": "3 Aylık Fast IPTV",
+      "price": "29.99",
+      "duration": "çeyrek",
+      "checkoutUrl": "https://pays.myatlagia.store/checkout?cart=%7B%22items%22%3A%5B%7B%22title%22%3A%223%20Month%20Fast%20IPTV%22%2C%22price%22%3A2999%2C%22currency%22%3A%22USD%22%2C%22quantity%22%3A1%2C%22image%22%3A%22https%3A%2F%2Fvia.placeholder.com%2F100%22%7D%5D%2C%22total%22%3A2999%7D&store=FastTV&shop_domain=pays.myatlagia.store",
+      "features": [
+        "+32.000 Stronger IPTV Kanalı",
+        "+140.000 Premium IPTV Film ve Dizi",
+        "8K/ 4K / Ultra HD Fast IPTV Kalitesi",
+        "Tüm Premium IPTV Kanalları için Catch Up /EPG",
+        "ÜCRETSİZ Fast IPTV Kanalları ve VOD Güncellemeleri",
+        "%99.9 Stronger IPTV Sunucu Çalışma Süresi",
+        "Fast IPTV için Tüm Cihazlar Desteklenir",
+        "Premium IPTV için AntiFreeze Teknolojisi",
+        "7/24 Stronger IPTV Teknik Desteği"
+      ],
+      "isPopular": false
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Hangi ödeme yöntemlerini kabul ediyorsunuz?",
+      "answer": "Tüm büyük kredi kartları, PayPal ve yıllık planlar için banka havalelerini kabul ediyoruz."
+    },
+    {
+      "question": "Planımı daha sonra değiştirebilir miyim?",
+      "answer": "Evet, planınızı istediğiniz zaman yükseltebilir veya düşürebilirsiniz. Değişiklikler bir sonraki faturalandırma döngünüzde yansıtılacaktır."
+    },
+    {
+      "question": "Ücretsiz deneme var mı?",
+      "answer": "Evet, tüm planlarda 14 günlük ücretsiz deneme sunuyoruz. Kredi kartı gerekmez."
+    },
+    {
+      "question": "Deneme sürem bittikten sonra ne olur?",
+      "answer": "Deneme süreniz bittikten sonra, planlarımızdan herhangi birine abone olmayı seçebilir veya hesabınız otomatik olarak sınırlı ücretsiz sürüme düşürülür."
+    }
+  ],
+  "cta": {
+    "title": "Başlamaya hazır mısınız?",
+    "description": "Platformumuza güvenen binlerce işletmeye katılın",
+    "primaryButton": {
+      "text": "Ücretsiz Denemeyi Başlat",
+      "link": "/signup"
+    },
+    "secondaryButton": {
+      "text": "Satış Ekibiyle İletişim",
+      "link": "/contact"
+    }
+  }
+}

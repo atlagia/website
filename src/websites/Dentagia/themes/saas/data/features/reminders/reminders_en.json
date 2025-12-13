@@ -1,0 +1,182 @@
+{
+  "hero": {
+    "subtitle": "Automated Communication",
+    "title": "Automated Appointment Reminders",
+    "description": "Reduce no-shows and improve patient communication with intelligent automated reminders via SMS and email that adapt to patient preferences.",
+    "icon": "bell",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "70%",
+        "label": "No-Show Reduction"
+      },
+      {
+        "value": "95%",
+        "label": "Delivery Rate"
+      },
+      {
+        "value": "60%",
+        "label": "Response Rate"
+      }
+    ]
+  },
+  "features": {
+    "title": "Reminder Features",
+    "subtitle": "Smart Communication",
+    "description": "Intelligent automated reminders that keep patients informed and reduce missed appointments.",
+    "items": [
+      {
+        "icon": "bell",
+        "title": "Multi-Channel Reminders",
+        "description": "Send reminders via SMS, email, and phone calls based on patient preferences and appointment type.",
+        "highlights": [
+          "SMS reminders",
+          "Email notifications",
+          "Phone call options",
+          "Preference-based delivery",
+          "Multi-language support"
+        ],
+        "stats": {
+          "value": "95%",
+          "label": "Delivery Rate"
+        }
+      },
+      {
+        "icon": "clock",
+        "title": "Smart Timing",
+        "description": "AI determines optimal reminder timing based on patient history and appointment type.",
+        "highlights": [
+          "Optimal timing",
+          "Patient history analysis",
+          "Appointment-based scheduling",
+          "Time zone handling",
+          "Customizable intervals"
+        ],
+        "stats": {
+          "value": "70%",
+          "label": "No-Show Reduction"
+        }
+      },
+      {
+        "icon": "users",
+        "title": "Confirmation Requests",
+        "description": "Automatically request confirmations and handle responses to optimize scheduling.",
+        "highlights": [
+          "Confirmation requests",
+          "Response handling",
+          "Automatic updates",
+          "Waitlist management",
+          "Cancellation handling"
+        ],
+        "stats": {
+          "value": "60%",
+          "label": "Response Rate"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Reminder Success Stories",
+    "description": "See how automated reminders transform practices",
+    "stats": [
+      {
+        "icon": "bell",
+        "value": "95%",
+        "label": "Delivery Rate"
+      },
+      {
+        "icon": "trending-up",
+        "value": "70%",
+        "label": "No-Show Reduction"
+      },
+      {
+        "icon": "users",
+        "value": "60%",
+        "label": "Response Rate"
+      },
+      {
+        "icon": "award",
+        "value": "100%",
+        "label": "Automated"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Emily Rodriguez",
+        "role": "Practice Manager",
+        "quote": "Automated reminders have reduced our no-shows by 70%. Patients appreciate the timely reminders and we save hours of phone calls."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Reminder Benefits",
+    "subtitle": "Improved Communication",
+    "description": "Experience the advantages of automated patient communication.",
+    "items": [
+      {
+        "title": "Reduce No-Shows",
+        "description": "Timely reminders significantly reduce missed appointments.",
+        "icon": "bell",
+        "color": "teal",
+        "stats": {
+          "value": "70%",
+          "label": "Reduction"
+        },
+        "highlights": [
+          "Timely reminders",
+          "Multiple channels",
+          "Confirmation requests",
+          "Response handling"
+        ]
+      },
+      {
+        "title": "High Delivery",
+        "description": "Multi-channel delivery ensures reminders reach patients reliably.",
+        "icon": "check-circle",
+        "color": "cyan",
+        "stats": {
+          "value": "95%",
+          "label": "Delivery Rate"
+        },
+        "highlights": [
+          "SMS delivery",
+          "Email delivery",
+          "Phone options",
+          "Reliable delivery"
+        ]
+      },
+      {
+        "title": "Better Engagement",
+        "description": "Automated reminders improve patient engagement and communication.",
+        "icon": "users",
+        "color": "blue",
+        "stats": {
+          "value": "60%",
+          "label": "Response Rate"
+        },
+        "highlights": [
+          "Patient engagement",
+          "Response tracking",
+          "Communication history",
+          "Preference management"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready for Automated Reminders?",
+    "description": "See how Dentagia's reminder system can reduce no-shows and improve communication.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Schedule a Demo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Learn More",
+      "link": "/features"
+    }
+  }
+}
+

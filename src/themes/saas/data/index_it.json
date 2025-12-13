@@ -1,383 +1,674 @@
 {
-  "siteTitle": "Atasia - Piattaforma di Crescita Alimentata dall'IA",
-  "siteDescription": "Che tu gestisca un negozio online, una piattaforma SaaS, un'agenzia digitale o un sito di contenuti - le nostre soluzioni IA ti aiutano a ottimizzare e far crescere la tua presenza online.",
+  "siteTitle": "Atlagia - Soluzioni Digitali Potenziate dall'AI & Agenzia di Sviluppo",
+  "siteDescription": "Creiamo soluzioni digitali intelligenti e sviluppiamo applicazioni AI all'avanguardia che trasformano le aziende in vari settori. Il tuo partner per l'innovazione e l'eccellenza digitale.",
   "sections": [
     {
       "type": "welcomeSection",
-      "badge": "Automazione Alimentata dall'IA",
-      "title": "Cresci più velocemente con l'<span class=\"text-pink-600\">Automazione</span> Alimentata dall'IA",
-      "description": "Sblocca il potenziale della tua azienda con l'automazione IA — aumenta la visibilità, semplifica le operazioni e scala senza sforzo, che tu gestisca un negozio online, una piattaforma SaaS, un'agenzia digitale o un sito di contenuti!",
-      "blogLinkText": "Scopri Come Funziona",
-      "getStartedText": "Inizia Gratis",
-      "blogLink": "/how-it-works",
-      "heroImage": "https://cdn.atlagia.com/ATLAS-1.webp",
-      "partnerLogos": [
-        {
-          "src": "https://cdn.atlagia.com/1655873659shopify-black-logo.webp",
-          "alt": "Shopify"
-        },
-        {
-          "src": "https://cdn.atlagia.com/wix-com-website-logo-1.webp",
-          "alt": "Wix"
-        },
-        {
-          "src": "https://cdn.atlagia.com/woocommerce-03.webp",
-          "alt": "WordPress"
-        }
-      ]
-    },{
-      "type": "aboutSection",
-      "subtitle": "CHI SIAMO",
-      "title": "Il Vantaggio di cui la Tua Azienda Digitale ha Bisogno",
+      "badge": "Agenzia di Innovazione Digitale",
+      "title": "Progettiamo e Sviluppiamo Soluzioni Potenziate dall'AI per il Futuro Digitale",
+      "description": "Trasforma la tua azienda con la nostra esperienza nello sviluppo di AI, soluzioni software personalizzate e innovazione digitale. Siamo specializzati nella creazione di sistemi intelligenti che guidano l'efficienza, l'automazione e la crescita in ogni settore.",
+      "blogLinkText": "Esplora le Soluzioni",
+      "getStartedText": "Discuti il Tuo Progetto",
+      "getStartedLink": "/discuss-project",
+      "blogLink": "/solutions",
+      "heroImage": "https://cdn.atlagia.com/GiaConnect/images/670e6478-6043-4aec-a731-a0d4468e6d4e.png",
       "features": [
         {
-          "icon": "https://cdn.atlagia.com/kepart_global_seo_enhancer_vector_f1860727-592d-44ee-8095-d293f95a7f14.webp",
-          "title": "Ottimizzazione SEO Alimentata dall'IA",
-          "keywords": ["SEO", "Classifica", "Analitica"],
-          "description": "Migliora le tue classifiche di ricerca e genera traffico organico con algoritmi IA avanzati.",
-          "bullets": [
-            "Ricerca e ottimizzazione intelligente delle parole chiave",
-            "Suggerimenti per l'ottimizzazione dei contenuti",
-            "Analisi della concorrenza",
-            "Monitoraggio delle classifiche di ricerca"
-          ],
-          "backgroundSvg": "<svg width='100%' height='100%' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='grid1' width='10' height='10' patternUnits='userSpaceOnUse'><path d='M 10 0 L 0 0 0 10' fill='none' stroke='currentColor' stroke-width='0.5' opacity='0.1'/></pattern><pattern id='circuit1' width='30' height='30' patternUnits='userSpaceOnUse'><circle cx='15' cy='15' r='1' fill='currentColor' opacity='0.1'/><path d='M30 15 H20 M15 0 V10' stroke='currentColor' stroke-width='0.5' opacity='0.1'/></pattern><linearGradient id='headGrad1' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:#00a99d;stop-opacity:0.15'/><stop offset='100%' style='stop-color:#FF6B6B;stop-opacity:0.15'/></linearGradient></defs><g transform='translate(100, 50)'><path d='M100,0 h100 a50,50 0 0 1 50,50 v150 a50,50 0 0 1 -50,50 h-100 a50,50 0 0 1 -50,-50 v-150 a50,50 0 0 1 50,-50' fill='url(#headGrad1)' stroke='currentColor' stroke-width='3'/><rect width='300' height='250' fill='url(#grid1)'/><rect width='300' height='250' fill='url(#circuit1)'/><circle cx='80' cy='100' r='30' fill='#00a99d' fill-opacity='0.2' stroke='currentColor' stroke-width='3'/><circle cx='220' cy='100' r='30' fill='#00a99d' fill-opacity='0.2' stroke='currentColor' stroke-width='3'/><path d='M80,100 v-20 h140 v20' stroke='currentColor' stroke-width='3' fill='none'/><path d='M120,180 q40,40 80,0' stroke='currentColor' stroke-width='3' fill='none'/><g stroke='currentColor' stroke-width='2'><line x1='0' y1='40' x2='300' y2='40'/><line x1='20' y1='60' x2='280' y2='60'/></g><text x='20' y='20' font-size='12' fill='currentColor' opacity='0.6'>SEO</text><text x='250' y='20' font-size='12' fill='currentColor' opacity='0.6'>RANK</text></g></svg>"
+          "icon": "Globe",
+          "title": "Soluzioni Digitali",
+          "description": "Sviluppo software personalizzato e soluzioni di trasformazione digitale"
         },
         {
-          "icon": "https://cdn.atlagia.com/kepart_AI-Powered_Keyword_Suggestions_vector_364432f3-f7a7-44a8-bf02-ed377f95bbbc-1.webp",
-          "title": "Ottimizzazione del Marketing Alimentata dall'IA",
-          "keywords": ["Crescita", "ROI", "Portata"],
-          "description": "Massimizza il tuo ROI di marketing con approfondimenti basati sui dati e campagne automatizzate.",
-          "bullets": [
-            "Contenuti di marketing generati dall'IA",
-            "Analisi delle prestazioni delle campagne",
-            "Ottimizzazione del targeting del pubblico",
-            "Automazione del marketing multi-canale"
-          ],
-          "backgroundSvg": "<svg width='100%' height='100%' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='dots1' width='10' height='10' patternUnits='userSpaceOnUse'><circle cx='5' cy='5' r='1' fill='currentColor' opacity='0.1'/></pattern><pattern id='waves1' width='20' height='10' patternUnits='userSpaceOnUse'><path d='M 0 5 C 5 0, 10 10, 20 5' stroke='currentColor' stroke-width='0.5' opacity='0.1' fill='none'/></pattern><linearGradient id='headGrad2' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:#FF6B6B;stop-opacity=0.15'/><stop offset='100%' style='stop-color:#00a99d;stop-opacity=0.15'/></linearGradient></defs><g transform='translate(100, 50)'><path d='M100,20 l100,-20 l50,50 v150 l-50,50 l-100,-20 l-50,-50 v-110 z' fill='url(#headGrad2)' stroke='currentColor' stroke-width='3'/><rect width='300' height='250' fill='url(#dots1)'/><rect width='300' height='250' fill='url(#waves1)'/><circle cx='80' cy='100' r='25' fill='#FF6B6B' fill-opacity='0.2' stroke='currentColor' stroke-width='3'/><circle cx='220' cy='100' r='25' fill='#FF6B6B' fill-opacity='0.2' stroke='currentColor' stroke-width='3'/><path d='M120,160 q30,30 60,0' stroke='currentColor' stroke-width='3' fill='none'/><g stroke='currentColor' stroke-width='3'><path d='M20,80 q-20,-20 -20,-40'/><path d='M280,80 q20,-20 20,-40'/></g><text x='30' y='30' font-size='12' fill='currentColor' opacity='0.6'>CRESCITA</text><text x='220' y='30' font-size='12' fill='currentColor' opacity='0.6'>ROI</text></g></svg>"
+          "icon": "Zap",
+          "title": "Sviluppo AI",
+          "description": "Sviluppo di sistemi AI avanzati e soluzioni di machine learning"
         },
         {
-          "icon": "https://cdn.atlagia.com/kepart_ecomerce_products_edit_vector_d99c2857-4476-4cce-b562-dfb299182da8.webp",
-          "title": "Gestione Aziendale Alimentata dall'IA",
-          "keywords": ["Sistema", "Flusso", "Dati"],
-          "description": "Ottimizza le operazioni e automatizza i flussi di lavoro con strumenti intelligenti alimentati dall'IA.",
-          "bullets": [
-            "Ottimizzazione automatizzata dei flussi di lavoro",
-            "Gestione dell'inventario",
-            "Previsioni di vendita",
-            "Analisi delle prestazioni"
-          ],
-          "backgroundSvg": "<svg width='100%' height='100%' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='circuit2' width='20' height='20' patternUnits='userSpaceOnUse'><path d='M 0 10 L 10 10 M 10 0 L 10 20' fill='none' stroke='currentColor' stroke-width='0.5' opacity='0.1'/></pattern><pattern id='grid2' width='40' height='40' patternUnits='userSpaceOnUse'><path d='M 40 0 L 0 0 0 40' fill='none' stroke='currentColor' stroke-width='1' opacity='0.05'/><circle cx='0' cy='0' r='2' fill='currentColor' opacity='0.1'/></pattern><linearGradient id='headGrad3' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:#00a99d;stop-opacity=0.15'/><stop offset='100%' style='stop-color:#4B0082;stop-opacity=0.15'/></linearGradient></defs><g transform='translate(100, 50)'><path d='M50,50 h200 v200 h-200 z' fill='url(#headGrad3)' stroke='currentColor' stroke-width='3'/><rect width='300' height='250' fill='url(#circuit2)'/><rect width='300' height='250' fill='url(#grid2)'/><rect x='70' y='80' width='40' height='40' fill='#00a99d' fill-opacity='0.2' stroke='currentColor' stroke-width='3'/><rect x='190' y='80' width='40' height='40' fill='#00a99d' fill-opacity='0.2' stroke='currentColor' stroke-width='3'/><path d='M100,180 h100' stroke='currentColor' stroke-width='3' fill='none'/><text x='40' y='40' font-size='12' fill='currentColor' opacity='0.6'>SISTEMA</text><text x='200' y='40' font-size='12' fill='currentColor' opacity='0.6'>FLUSSO</text></g></svg>"
+          "icon": "Users",
+          "title": "Soluzioni per l'Industria",
+          "description": "Soluzioni specializzate per e-commerce, sanità, finanza e altro"
         },
         {
-          "icon": "https://cdn.atlagia.com/kepart__91c4c28d-f806-4ef4-86a5-00ed63c2c7d4-1.webp",
-          "title": "Agente di Supporto Clienti Alimentato dall'IA",
-          "keywords": ["24/7", "Aiuto", "Chat"],
-          "description": "Offri supporto clienti 24/7 alimentato dall'IA su tutte le piattaforme.",
-          "bullets": [
-            "Risposte automatizzate 24/7",
-            "Supporto multilingue",
-            "Smistamento intelligente dei ticket",
-            "Analisi del sentiment dei clienti"
-          ],
-          "backgroundSvg": "<svg width='100%' height='100%' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='waves2' width='20' height='20' patternUnits='userSpaceOnUse'><path d='M 0 10 C 5 5, 15 15, 20 10' fill='none' stroke='currentColor' stroke-width='0.5' opacity='0.1'/></pattern><pattern id='dots2' width='20' height='20' patternUnits='userSpaceOnUse'><circle cx='10' cy='10' r='1' fill='currentColor' opacity='0.1'/><circle cx='0' cy='0' r='1' fill='currentColor' opacity='0.1'/></pattern><linearGradient id='headGrad4' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:#4B0082;stop-opacity=0.15'/><stop offset='100%' style='stop-color:#FF6B6B;stop-opacity=0.15'/></linearGradient></defs><g transform='translate(100, 50)'><path d='M150,0 C230,0 280,50 280,130 C280,210 230,260 150,260 C70,260 20,210 20,130 C20,50 70,0 150,0' fill='url(#headGrad4)' stroke='currentColor' stroke-width='3'/><rect width='300' height='250' fill='url(#waves2)'/><rect width='300' height='250' fill='url(#dots2)'/><circle cx='90' cy='100' r='30' fill='#FF6B6B' fill-opacity='0.2' stroke='currentColor' stroke-width='3'/><circle cx='210' cy='100' r='30' fill='#FF6B6B' fill-opacity='0.2' stroke='currentColor' stroke-width='3'/><path d='M90,170 q60,40 120,0' stroke='currentColor' stroke-width='3' fill='none'/><text x='50' y='30' font-size='12' fill='currentColor' opacity='0.6'>24/7</text><text x='200' y='30' font-size='12' fill='currentColor' opacity='0.6'>AIUTO</text></g></svg>"
+          "icon": "Brain",
+          "title": "Innovazione Tecnologica",
+          "description": "Integrazione di tecnologie all'avanguardia e sviluppo innovativo"
         }
       ],
-      "ctaText": "Scopri Come Funziona",
-      "ctaLink": "/how-it-works"
+      "partnerLogos": [
+        {
+          "src": "https://cdn.atlagia.com/GiaConnect/images/processed-3bb4b721-db62-4347-82ed-b11735f18565.png",
+          "alt": "Partner Shopify"
+        },
+        {
+          "src": "https://cdn.atlagia.com/GiaConnect/images/processed-d4ae1096-ccab-49e9-91f5-1d6504936092.png",
+          "alt": "Partner Wix"
+        },
+        {
+          "src": "https://cdn.atlagia.com/GiaConnect/images/a3550c4a-95d2-4341-9ed7-2a5de91b0b66.png",
+          "alt": "Partner WooCommerce"
+        }
+      ]
+    },
+    {
+      "type": "aboutSection",
+      "subtitle": "CHI SIAMO",
+      "title": "Creare il Paesaggio Digitale di Domani con l'Innovazione AI",
+      "features": [
+        {
+          "icon": "ai-development",
+          "title": "Sviluppo e Integrazione AI",
+          "keywords": [
+            "Sviluppo",
+            "Innovazione",
+            "AI"
+          ],
+          "description": "Siamo specializzati nello sviluppo e nell'integrazione di soluzioni AI all'avanguardia che trasformano le operazioni aziendali.",
+          "bullets": [
+            "Sviluppo di modelli AI personalizzati",
+            "Integrazione di machine learning",
+            "Elaborazione del linguaggio naturale",
+            "Soluzioni di visione artificiale"
+          ],
+          "backgroundSvg": "<svg width='100%' height='100%' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='grid1' width='20' height='20' patternUnits='userSpaceOnUse'><path d='M 20 0 L 0 0 0 20' fill='none' stroke='currentColor' stroke-width='0.5' opacity='0.1'/></pattern></defs><rect width='100%' height='100%' fill='url(#grid1)'/></svg>"
+        },
+        {
+          "icon": "software-solutions",
+          "title": "Soluzioni Software",
+          "keywords": [
+            "Software",
+            "Sviluppo",
+            "Soluzioni"
+          ],
+          "description": "Servizi di sviluppo software end-to-end su misura per le esigenze del tuo settore.",
+          "bullets": [
+            "Sviluppo software personalizzato",
+            "Applicazioni web e mobile",
+            "Soluzioni cloud-native",
+            "Sviluppo e integrazione API"
+          ],
+          "backgroundSvg": "<svg width='100%' height='100%' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='code' width='20' height='20' patternUnits='userSpaceOnUse'><path d='M 0 10 L 10 0 M 20 10 L 10 20' stroke='currentColor' stroke-width='0.5' opacity='0.1'/></pattern></defs><rect width='100%' height='100%' fill='url(#code)'/></svg>"
+        },
+        {
+          "icon": "digital-transformation",
+          "title": "Trasformazione Digitale",
+          "keywords": [
+            "Trasformare",
+            "Innovare",
+            "Crescere"
+          ],
+          "description": "Guida la tua azienda attraverso una trasformazione digitale completa.",
+          "bullets": [
+            "Automazione dei processi",
+            "Consulenza strategica digitale",
+            "Modernizzazione tecnologica",
+            "Soluzioni basate sui dati"
+          ],
+          "backgroundSvg": "<svg width='100%' height='100%' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='circuit' width='40' height='40' patternUnits='userSpaceOnUse'><circle cx='20' cy='20' r='1' fill='currentColor' opacity='0.1'/><path d='M 40 20 H 30 M 20 0 V 10' stroke='currentColor' stroke-width='0.5' opacity='0.1'/></pattern></defs><rect width='100%' height='100%' fill='url(#circuit)'/></svg>"
+        },
+        {
+          "icon": "industry-solutions",
+          "title": "Soluzioni per l'Industria",
+          "keywords": [
+            "Specializzato",
+            "Industria",
+            "Esperto"
+          ],
+          "description": "Soluzioni specifiche per l'industria potenziate dalla tecnologia avanzata.",
+          "bullets": [
+            "Piattaforme e-commerce",
+            "Sistemi sanitari",
+            "Soluzioni FinTech",
+            "Applicazioni aziendali"
+          ],
+          "backgroundSvg": "<svg width='100%' height='100%' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='dots' width='20' height='20' patternUnits='userSpaceOnUse'><circle cx='10' cy='10' r='1' fill='currentColor' opacity='0.1'/></pattern></defs><rect width='100%' height='100%' fill='url(#dots)'/></svg>"
+        }
+      ],
+      "ctaText": "Esplora i Nostri Servizi",
+      "ctaLink": "/services"
     },
     {
       "type": "whoWeAreSection",
-      "subtitle": "CHI SIAMO",
-      "title": "Atlasia: Il Tuo Partner IA per il Successo Digitale",
-      "description": "In Atlasia, siamo più di un semplice fornitore di tecnologia — siamo il tuo partner IA dedicato ad aiutare le aziende online a prosperare. La nostra missione è fornire alle aziende di tutti i tipi soluzioni IA avanzate che stimolano la crescita, migliorano l'efficienza e ottimizzano le prestazioni nel panorama digitale.",
-      "image": "https://cdn.atlagia.com/kepart_vector_laptop_Ai_Platform_e-commerce_Revolution_light_ba_06524236-8880-4362-9e92-06f3aad37244.webp",
+      "subtitle": "LEADER DELL'INNOVAZIONE",
+      "title": "Pionieri delle Soluzioni AI per l'Eccellenza Digitale",
+      "description": "Come leader del settore nello sviluppo di AI e trasformazione digitale, stiamo rivoluzionando il modo in cui le aziende operano nell'era digitale. Il nostro team di sviluppatori esperti e specialisti AI crea soluzioni all'avanguardia che guidano l'innovazione, l'efficienza e la crescita. Dallo sviluppo AI personalizzato alla trasformazione digitale su scala aziendale, forniamo risultati che superano le aspettative.",
+      "image": "https://cdn.atlagia.com/GiaConnect/images/9304b8fc-6ad2-4ee5-944d-5b6472cf005b.png",
       "stats": [
-        {
-          "value": "1000+",
-          "label": "Clienti Soddisfatti"
-        },
-        {
-          "value": "20%",
-          "label": "Tasso di Crescita Medio"
-        }
-      ]
-    },
-    {
-      "type": "bannerSection",
-      "subtitle": "GRANDE ONORE",
-      "headline": "I Nostri Premi",
-      "description": "Riconosciuti per l'eccellenza nelle soluzioni alimentate dall'IA",
-      "backgroundImage": "/images/banner-bg.jpg",
-      "button1Text": "Sfoglia i Prodotti",
-      "button1Link": "/products",
-      "button2Text": "Vendi su Digivast",
-      "button2Link": "/become-seller",
-      "cards": [
-        {
-          "title": "Editor Universale in Massa",
-          "description": "Semplifica il processo di modifica per vasti inventari, consentendo aggiornamenti e modifiche senza soluzione di continuità su più mercati e piattaforme da un'unica dashboard."
-        },
-        {
-          "title": "Ottimizzatore SEO Globale",
-          "description": "Sfrutta l'IA per ottimizzare i tuoi contenuti per diversi mercati e lingue, garantendo che i tuoi prodotti si classifichino in alto ovunque i tuoi clienti stiano cercando."
-        },
-        {
-          "title": "Generazione di Contenuti Alimentata dall'IA",
-          "description": "Genera automaticamente contenuti coinvolgenti e ottimizzati per il SEO per i tuoi prodotti e materiali di marketing."
-        },
-        {
-          "title": "Ottimizzazione in Massa dei Meta Tag",
-          "description": "Consente l'ottimizzazione in massa dei meta tag su tutto il tuo catalogo prodotti per una visibilità massima nelle ricerche."
-        }
-      ]
-    },{
-      "type": "benefitsSection",
-      "subtitle": "VANTAGGI",
-      "title": "Perché Scegliere Atalsia?",
-      "description": "Scopri i Vantaggi della Gestione E-Commerce Alimentata dall'IA",
-      "benefits": [
-        {
-          "title": "Ottimizzazione delle Vendite Alimentata dall'IA",
-          "description": "Gli algoritmi IA avanzati di Atalsia analizzano il comportamento dei clienti, le tendenze del mercato e i dati dei prodotti per suggerire raccomandazioni e strategie personalizzate che aumentano le vendite e i ricavi."
-        },
-        {
-          "title": "Gestione del Tempo Efficiente",
-          "description": "Con i flussi di lavoro ottimizzati e le funzionalità di automazione di Atalsia, le attività che normalmente richiederebbero ore possono ora essere completate in pochi minuti, consentendo ai professionisti dell'e-commerce di concentrare il loro tempo ed energia sulle decisioni strategiche e sulla crescita aziendale."
-        },
-        {
-          "title": "Strumenti di Miglioramento SEO",
-          "description": "Gli strumenti SEO alimentati dall'IA di Atalsia ottimizzano le parole chiave e i meta tag, migliorando le classifiche di ricerca senza sforzo. Aumenta la visibilità del tuo negozio online e attira più traffico organico con una gestione SEO semplificata. Distinguiti nei risultati di ricerca per una maggiore esposizione del marchio e crescita."
-        }
-      ]
-    },{
-      "type": "bloggerSection",
-      "subtitle": "ATLASIA BLOGGER",
-      "title": "Automatizza il Contenuto con l'IA di Atalsia",
-      "description": "Genera senza sforzo post di blog coinvolgenti e ottimizzati per il SEO con lo strumento alimentato dall'IA di Atalsia, semplificando il tuo processo di creazione di contenuti.",
-      "buttonText": "Scopri Ora",
-      "buttonLink": "/blogger",
-      "image": "https://cdn.atlagia.com/kepart_vector_laptop_Ai_Platform_e-commerce_Auto_Blogger_Revolu_d6ffb19e-1f2b-47a0-a7ff-6465f0a24e95.webp"
-    },{
-      "type": "reviewsSection",
-      "reviews": [
-        {
-          "rating": 5,
-          "content": "Il livello di supporto e personalizzazione disponibile con il Piano Enterprise è eccezionale. Il nostro account manager dedicato ci ha aiutato a ottimizzare le prestazioni del nostro negozio e a raggiungere una crescita notevole.",
-          "author": "David Lee",
-          "position": "Imprenditore E-commerce"
-        },
-        {
-          "rating": 5,
-          "content": "Come proprietario di un negozio online, gli strumenti IA di Atalsia hanno rivoluzionato il nostro approccio alla SEO e alla gestione dei prodotti. L'Editor Universale in Massa ci ha risparmiato innumerevoli ore e il nostro traffico organico è aumentato del 50% in soli tre mesi!",
-          "author": "Michael Chen",
-          "position": "Responsabile Marketing Digitale"
-        },
-        {
-          "rating": 5,
-          "content": "Le suggerimenti di parole chiave alimentate dall'IA di Atalsia e gli strumenti di personalizzazione sono stati un punto di svolta per la nostra attività. I nostri tassi di conversione sono migliorati significativamente e non potremmo essere più soddisfatti dei risultati.",
-          "author": "Sarah Thompson",
-          "position": "Imprenditore E-commerce"
-        }
-      ]
-    },{
-      "type": "pricingSection",
-      "subtitle": "SCEGLI IL TUO PIANO",
-      "title": "Piani di Prezzo Flessibili per Soddisfare le Tue Esigenze",
-      "description": "Seleziona il piano perfetto per la tua attività. Inizia con una demo gratuita e aggiorna man mano che cresci. Tutti i piani includono una garanzia di rimborso di 14 giorni",
-      "plans": [
-        {
-          "name": "Piano Starter",
-          "price": "9 €",
-          "period": "Al Mese",
-          "buttonText": "Inizia Ora",
-          "buttonLink": "/signup",
-          "features": [
-            {
-              "text": "Accesso all'Ottimizzatore SEO Alimentato dall'IA",
-              "included": true
-            },
-            {
-              "text": "Uso dell'Editor Universale in Massa (fino a 300 prodotti)",
-              "included": true
-            },
-            {
-              "text": "Personalizzazione Base Alimentata dall'IA",
-              "included": true
-            },
-            {
-              "text": "Supporto Email",
-              "included": true
-            }
-          ]
-        },
-        {
-          "name": "Piano Base",
-          "price": "19 €",
-          "period": "Al Mese",
-          "buttonText": "Inizia Ora",
-          "buttonLink": "/signup",
-          "features": [
-            {
-              "text": "Ottimizzatore SEO Alimentato dall'IA",
-              "included": true
-            },
-            {
-              "text": "Editor Universale in Massa (fino a 1000 prodotti)",
-              "included": true
-            },
-            {
-              "text": "Personalizzazione Base Alimentata dall'IA",
-              "included": true
-            },
-            {
-              "text": "Suggerimenti di Parole Chiave Alimentati dall'IA",
-              "included": true
-            },
-            {
-              "text": "Supporto Email",
-              "included": true
-            }
-          ]
-        },
-        {
-          "name": "Piano Pro",
-          "price": "79 €",
-          "period": "Al Mese",
-          "isPopular": true,
-          "buttonText": "Inizia Ora",
-          "buttonLink": "/signup",
-          "features": [
-            {
-              "text": "Tutte le funzionalità del Piano Base",
-              "included": true
-            },
-            {
-              "text": "Accesso illimitato all'Editor Universale in Massa",
-              "included": true
-            },
-            {
-              "text": "Personalizzazione Avanzata Alimentata dall'IA",
-              "included": true
-            },
-            {
-              "text": "Suggerimenti di Parole Chiave Prioritari",
-              "included": true
-            },
-            {
-              "text": "Strumenti SEO Avanzati",
-              "included": true
-            },
-            {
-              "text": "Dashboard di Analisi e Reportistica",
-              "included": true
-            },
-            {
-              "text": "Supporto Email Prioritario",
-              "included": true
-            },
-            {
-              "text": "Nuove Funzionalità e Aggiornamenti",
-              "included": true
-            }
-          ]
-        },
-        {
-          "name": "Piano Enterprise",
-          "price": "199 €",
-          "period": "Al Mese",
-          "buttonText": "Contatta Vendite",
-          "buttonLink": "/contact",
-          "features": [
-            {
-              "text": "Tutte le funzionalità del Piano Pro",
-              "included": true
-            },
-            {
-              "text": "Account Manager Dedicato",
-              "included": true
-            },
-            {
-              "text": "Soluzioni IA Personalizzate",
-              "included": true
-            },
-            {
-              "text": "Integrazione Multi-CMS",
-              "included": true
-            },
-            {
-              "text": "Analisi e Insights Avanzati",
-              "included": true
-            },
-            {
-              "text": "Supporto Prioritario 24/7",
-              "included": true
-            },
-            {
-              "text": "Onboarding e Formazione Personalizzati",
-              "included": true
-            },
-            {
-              "text": "Revisione Mensile dell'Ottimizzazione",
-              "included": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "ctaSection",
-      "subtitle": "INIZIA OGGI",
-      "title": "Trasforma la Tua Attività E-commerce con Soluzioni Alimentate dall'IA",
-      "description": "Unisciti a migliaia di aziende di successo che già utilizzano Atalsia. Inizia oggi la tua prova gratuita di 14 giorni e scopri la potenza dell'ottimizzazione e-commerce alimentata dall'IA.",
-      "primaryButtonText": "Inizia la Prova Gratuita",
-      "primaryButtonLink": "/signup",
-      "secondaryButtonText": "Pianifica una Demo",
-      "secondaryButtonLink": "/demo",
-      "stats": [
-        {
-          "value": "14K+",
-          "label": "Utenti Attivi"
-        },
-        {
-          "value": "50M+",
-          "label": "Prodotti Ottimizzati"
-        },
         {
           "value": "98%",
           "label": "Soddisfazione del Cliente"
         },
         {
+          "value": "500+",
+          "label": "Progetti Consegnati"
+        },
+        {
+          "value": "85%",
+          "label": "Sviluppo Più Veloce"
+        },
+        {
           "value": "24/7",
-          "label": "Supporto Esperto"
+          "label": "Supporto AI"
+        }
+      ]
+    },
+    {
+      "type": "bannerSection",
+      "subtitle": "SOLUZIONI TRASFORMATIVE",
+      "headline": "Potenziare la Crescita Aziendale Attraverso l'Innovazione AI",
+      "description": "Scopri come le nostre soluzioni AI all'avanguardia e i servizi di sviluppo esperti possono trasformare le operazioni della tua azienda e guidare una crescita senza precedenti nell'era digitale.",
+      "backgroundImage": "/images/banner-bg.jpg",
+      "button1Text": "Esplora le Soluzioni",
+      "button1Link": "/solutions",
+      "button2Text": "Pianifica una Demo",
+      "button2Link": "/demo",
+      "cards": [
+        {
+          "title": "Sviluppo Potenziato dall'AI",
+          "description": "Sfrutta la potenza dell'intelligenza artificiale per costruire applicazioni più intelligenti ed efficienti che si adattano e si espandono con le esigenze della tua azienda."
+        },
+        {
+          "title": "Trasformazione Digitale",
+          "description": "Trasforma la tua azienda con soluzioni digitali complete che semplificano le operazioni e migliorano le esperienze dei clienti."
+        },
+        {
+          "title": "Soluzioni Software Personalizzate",
+          "description": "Ottieni soluzioni software su misura che si allineano perfettamente con i tuoi obiettivi aziendali e forniscono vantaggi competitivi."
+        },
+        {
+          "title": "Cloud & DevOps",
+          "description": "Ottimizza la tua infrastruttura con soluzioni cloud-native e pratiche DevOps automatizzate per la massima efficienza e affidabilità."
+        }
+      ]
+    },
+    {
+      "type": "benefitsSection",
+      "subtitle": "PERCHÉ SCEGLIERE NOI",
+      "title": "Guidare l'Eccellenza Digitale Attraverso l'Innovazione",
+      "description": "Collabora con noi per trasformare la tua presenza digitale con tecnologia all'avanguardia e soluzioni esperte",
+      "benefits": [
+        {
+          "title": "Team di Sviluppo Esperto",
+          "description": "I nostri sviluppatori esperti e specialisti AI portano anni di esperienza nella creazione di soluzioni digitali sofisticate in vari settori."
+        },
+        {
+          "title": "Soluzioni Personalizzate",
+          "description": "Creiamo soluzioni su misura che si allineano perfettamente con i tuoi obiettivi aziendali, garantendo il massimo impatto e ROI."
+        },
+        {
+          "title": "Tecnologia Innovativa",
+          "description": "Rimani all'avanguardia con il nostro stack tecnologico all'avanguardia, che include le ultime novità in AI, cloud computing e framework di sviluppo."
+        },
+        {
+          "title": "Metodologia Agile",
+          "description": "Il nostro approccio agile garantisce uno sviluppo rapido, un miglioramento continuo e flessibilità per adattarsi alle esigenze in evoluzione."
+        },
+        {
+          "title": "Supporto Completo",
+          "description": "Dal concetto iniziale alla manutenzione post-lancio, forniamo supporto completo per il tuo viaggio digitale."
+        },
+        {
+          "title": "Esperienza Settoriale",
+          "description": "Una profonda comprensione di vari settori ci consente di fornire soluzioni che affrontano le sfide specifiche del settore."
+        }
+      ]
+    },
+    {
+      "type": "projectsSection",
+      "subtitle": "I NOSTRI PROGETTI",
+      "title": "Trasformare le Industrie Attraverso l'Innovazione",
+      "description": "Esplora il nostro portfolio di trasformazioni digitali di successo in vari settori.",
+      "projects": [
+        {
+          "title": "Piattaforma E-commerce",
+          "category": "Retail & E-commerce",
+          "description": "Piattaforma e-commerce potenziata dall'AI con sistema di raccomandazione avanzato e gestione automatizzata dell'inventario.",
+          "image": "https://cdn.atlagia.com/projects/ecommerce-platform.webp",
+          "stats": {
+            "conversion": "+150%",
+            "automation": "85%",
+            "efficiency": "3x"
+          },
+          "technologies": [
+            "AI/ML",
+            "React",
+            "Node.js",
+            "AWS"
+          ]
+        },
+        {
+          "title": "Sistema di Gestione Sanitaria",
+          "category": "Sanità",
+          "description": "Piattaforma sanitaria integrata con gestione dei pazienti, telemedicina e supporto diagnostico AI.",
+          "image": "https://cdn.atlagia.com/projects/healthcare-system.webp",
+          "stats": {
+            "efficiency": "+200%",
+            "accuracy": "99.9%",
+            "satisfaction": "98%"
+          },
+          "technologies": [
+            "Python",
+            "TensorFlow",
+            "React",
+            "Cloud"
+          ]
+        },
+        {
+          "title": "Dashboard di Analisi FinTech",
+          "category": "Finanza",
+          "description": "Piattaforma di analisi finanziaria in tempo reale con approfondimenti guidati dall'AI e reportistica automatizzata.",
+          "image": "https://cdn.atlagia.com/projects/fintech-dashboard.webp",
+          "stats": {
+            "processing": "In tempo reale",
+            "accuracy": "99.99%",
+            "automation": "90%"
+          },
+          "technologies": [
+            "Vue.js",
+            "Python",
+            "AI/ML",
+            "AWS"
+          ]
+        },
+        {
+          "title": "Sistema di Produzione Intelligente",
+          "category": "Produzione",
+          "description": "Sistema di produzione abilitato all'IoT con manutenzione predittiva e controllo qualità automatizzato.",
+          "image": "https://cdn.atlagia.com/projects/manufacturing-system.webp",
+          "stats": {
+            "downtime": "-75%",
+            "quality": "+95%",
+            "efficiency": "4x"
+          },
+          "technologies": [
+            "IoT",
+            "AI/ML",
+            "Cloud",
+            "React"
+          ]
         }
       ],
-      "partnerLogos": [
+      "buttonText": "Visualizza Tutti i Progetti",
+      "buttonLink": "/projects"
+    },
+    {
+      "type": "technologiesSection",
+      "subtitle": "STACK TECNOLOGICO",
+      "title": "La Nostra Competenza Tecnologica",
+      "description": "Sfruttiamo tecnologie all'avanguardia per fornire soluzioni eccezionali che guidano la crescita aziendale e l'innovazione.",
+      "categories": [
         {
-          "src": "https://cdn.atlagia.com/1655873659shopify-black-logo.png",
-          "alt": "Shopify"
+          "name": "Sviluppo Frontend",
+          "description": "Tecnologie web moderne per creare interfacce utente reattive e interattive.",
+          "technologies": [
+            {
+              "name": "React",
+              "icon": "react",
+              "level": "Esperto",
+              "description": "Costruire applicazioni web dinamiche e scalabili"
+            },
+            {
+              "name": "Vue.js",
+              "icon": "vue",
+              "level": "Avanzato",
+              "description": "Creare interfacce utente reattive e performanti"
+            },
+            {
+              "name": "Next.js",
+              "icon": "nextjs",
+              "level": "Esperto",
+              "description": "Rendering lato server e generazione di siti statici"
+            },
+            {
+              "name": "TypeScript",
+              "icon": "typescript",
+              "level": "Avanzato",
+              "description": "Sviluppo JavaScript sicuro per i tipi"
+            }
+          ]
         },
         {
-          "src": "https://cdn.atlagia.com/wix-com-website-logo-1.png",
-          "alt": "Wix"
+          "name": "Sviluppo Backend",
+          "description": "Tecnologie server robuste per costruire applicazioni scalabili.",
+          "technologies": [
+            {
+              "name": "Node.js",
+              "icon": "nodejs",
+              "level": "Esperto",
+              "description": "Applicazioni server ad alte prestazioni"
+            },
+            {
+              "name": "Python",
+              "icon": "python",
+              "level": "Avanzato",
+              "description": "Elaborazione dati e machine learning"
+            },
+            {
+              "name": "Go",
+              "icon": "golang",
+              "level": "Intermedio",
+              "description": "Servizi backend veloci ed efficienti"
+            },
+            {
+              "name": "Java",
+              "icon": "java",
+              "level": "Avanzato",
+              "description": "Applicazioni di livello enterprise"
+            }
+          ]
         },
         {
-          "src": "https://cdn.atlagia.com/woocommerce-03.png",
-          "alt": "WordPress"
+          "name": "AI & Machine Learning",
+          "description": "Tecnologie AI avanzate per soluzioni intelligenti.",
+          "technologies": [
+            {
+              "name": "TensorFlow",
+              "icon": "tensorflow",
+              "level": "Avanzato",
+              "description": "Deep learning e reti neurali"
+            },
+            {
+              "name": "PyTorch",
+              "icon": "pytorch",
+              "level": "Avanzato",
+              "description": "Reti neurali dinamiche"
+            },
+            {
+              "name": "OpenAI",
+              "icon": "openai",
+              "level": "Esperto",
+              "description": "Elaborazione del linguaggio naturale"
+            },
+            {
+              "name": "Scikit-learn",
+              "icon": "scikit",
+              "level": "Avanzato",
+              "description": "Algoritmi di machine learning"
+            }
+          ]
+        },
+        {
+          "name": "Cloud & DevOps",
+          "description": "Infrastruttura cloud e strumenti di operazioni di sviluppo.",
+          "technologies": [
+            {
+              "name": "AWS",
+              "icon": "aws",
+              "level": "Esperto",
+              "description": "Infrastruttura e servizi cloud"
+            },
+            {
+              "name": "Docker",
+              "icon": "docker",
+              "level": "Avanzato",
+              "description": "Containerizzazione e distribuzione"
+            },
+            {
+              "name": "Kubernetes",
+              "icon": "kubernetes",
+              "level": "Avanzato",
+              "description": "Orchestrazione dei container"
+            },
+            {
+              "name": "CI/CD",
+              "icon": "cicd",
+              "level": "Esperto",
+              "description": "Integrazione e distribuzione continua"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "processSection",
+      "subtitle": "IL NOSTRO PROCESSO",
+      "title": "Come Forniamo Eccellenza",
+      "description": "Il nostro processo collaudato garantisce qualità costante e consegna di progetti di successo in ogni fase dello sviluppo.",
+      "steps": [
+        {
+          "number": "01",
+          "title": "Scoperta e Pianificazione",
+          "description": "Analizziamo le tue esigenze, definiamo l'ambito del progetto e creiamo una roadmap dettagliata per il successo.",
+          "icon": "search"
+        },
+        {
+          "number": "02",
+          "title": "Design e Architettura",
+          "description": "Il nostro team crea architetture scalabili e design intuitivi che si allineano con i tuoi obiettivi aziendali.",
+          "icon": "layout"
+        },
+        {
+          "number": "03",
+          "title": "Sviluppo",
+          "description": "Costruiamo soluzioni robuste utilizzando tecnologie all'avanguardia e best practice.",
+          "icon": "code"
+        },
+        {
+          "number": "04",
+          "title": "Test e Lancio",
+          "description": "Test approfonditi garantiscono qualità, seguiti da un lancio fluido e supporto continuo.",
+          "icon": "check-circle"
+        }
+      ]
+    },
+    {
+      "type": "reviewsSection",
+      "subtitle": "TESTIMONIANZE DEI CLIENTI",
+      "title": "Cosa Dicono i Nostri Clienti",
+      "description": "Scoprite perché le aziende leader si fidano di noi per fornire soluzioni eccezionali basate sull'IA che guidano il loro successo.",
+      "reviews": [
+        {
+          "name": "Sarah Johnson",
+          "role": "CTO",
+          "company": "TechVision Inc",
+          "image": "/images/testimonials/sarah.jpg",
+          "content": "Lavorare con questo team è stato trasformativo per la nostra azienda. Le loro soluzioni di IA hanno automatizzato i nostri processi principali, riducendo i costi operativi del 60% migliorando al contempo la precisione.",
+          "rating": 5
+        },
+        {
+          "name": "Michael Chen",
+          "role": "CEO",
+          "company": "InnovatePro",
+          "image": "/images/testimonials/michael.jpg",
+          "content": "Il livello di competenza e professionalità è eccezionale. Non hanno solo fornito una soluzione; sono diventati partner strategici nel nostro percorso di trasformazione digitale.",
+          "rating": 5
+        },
+        {
+          "name": "Emily Rodriguez",
+          "role": "Direttore Operativo",
+          "company": "GlobalTech",
+          "image": "/images/testimonials/emily.jpg",
+          "content": "Le loro soluzioni di automazione basate sull'IA hanno rivoluzionato il nostro servizio clienti. Ora possiamo fornire supporto 24/7 con un tasso di soddisfazione del cliente del 98%.",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "type": "achievementsSection",
+      "subtitle": "IL NOSTRO IMPATTO",
+      "title": "Guidare l'Eccellenza Digitale",
+      "description": "Il nostro track record di successo parla attraverso i numeri. Ecco come abbiamo aiutato le aziende a trasformarsi e crescere con soluzioni potenziate dall'AI.",
+      "achievements": [
+        {
+          "value": "500+",
+          "label": "Progetti",
+          "description": "Soluzioni AI e automazione consegnate con successo in vari settori",
+          "icon": "rocket"
+        },
+        {
+          "value": "95%",
+          "label": "Tasso di Successo",
+          "description": "Soddisfazione del cliente e tasso di completamento dei progetti sopra gli standard del settore",
+          "icon": "chart"
+        },
+        {
+          "value": "60%",
+          "label": "Riduzione dei Costi",
+          "description": "Risparmio medio sui costi operativi ottenuto per i nostri clienti",
+          "icon": "trending-up"
+        },
+        {
+          "value": "24/7",
+          "label": "Supporto",
+          "description": "Assistenza e supporto tecnico potenziati dall'AI 24 ore su 24, 7 giorni su 7",
+          "icon": "headphones"
+        }
+      ]
+    },
+    {
+      "type": "industryFeaturesSection",
+      "subtitle": "SOLUZIONI PER L'INDUSTRIA",
+      "title": "Soluzioni AI per Ogni Settore",
+      "description": "Scopri come la piattaforma AI di Atlaga può trasformare il tuo settore specifico con soluzioni su misura e strumenti di automazione.",
+      "industries": [
+        {
+          "icon": "ShoppingCart",
+          "title": "E-commerce",
+          "description": "Ottimizza le operazioni del tuo negozio online con automazione potenziata dall'AI e strumenti di coinvolgimento dei clienti.",
+          "features": [
+            "Gestione automatizzata dell'inventario",
+            "Supporto clienti AI",
+            "Raccomandazioni di prodotti intelligenti",
+            "Campagne di marketing automatizzate"
+          ],
+          "processIcons": [
+            "Package",
+            "Bot",
+            "Users",
+            "CreditCard"
+          ]
+        },
+        {
+          "icon": "Stethoscope",
+          "title": "Sanità",
+          "description": "Trasforma l'assistenza ai pazienti e la gestione delle pratiche con soluzioni di automazione intelligenti.",
+          "features": [
+            "Pianificazione automatizzata degli appuntamenti",
+            "Gestione dei record dei pazienti",
+            "Assistenza diagnostica potenziata dall'AI",
+            "Automazione del flusso di lavoro delle pratiche"
+          ],
+          "processIcons": [
+            "Calendar",
+            "FileText",
+            "Brain",
+            "StethoscopeAlt"
+          ]
+        },
+        {
+          "icon": "Briefcase",
+          "title": "Agenzie Digitali",
+          "description": "Scala le operazioni della tua agenzia e fornisci risultati migliori con strumenti potenziati dall'AI.",
+          "features": [
+            "Gestione progetti automatizzata",
+            "Automazione della creazione di contenuti",
+            "Automazione dei report per i clienti",
+            "Ottimizzazione delle risorse"
+          ],
+          "processIcons": [
+            "PenTool",
+            "Bot",
+            "BarChart",
+            "Target"
+          ]
+        },
+        {
+          "icon": "Rocket",
+          "title": "Startup",
+          "description": "Lancia e scala la tua startup più velocemente con strumenti di automazione AI completi.",
+          "features": [
+            "Sviluppo rapido di MVP",
+            "Operazioni automatizzate",
+            "Automazione della crescita",
+            "Scalabilità conveniente"
+          ],
+          "processIcons": [
+            "Code",
+            "Zap",
+            "Brain",
+            "Rocket"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "automationFeaturesSection",
+      "subtitle": "AUTOMAZIONE AI",
+      "title": "Trasforma la Tua Azienda con l'Automazione AI",
+      "description": "Scopri come i nostri strumenti di automazione AI possono rivoluzionare le tue operazioni e guidare la crescita in ogni aspetto della tua azienda.",
+      "features": [
+        {
+          "icon": "Workflow",
+          "title": "Automazione del Flusso di Lavoro",
+          "description": "Ottimizza i processi aziendali con automazione del flusso di lavoro intelligente che apprende e si adatta alle tue esigenze.",
+          "metrics": [
+            {
+              "value": "70%",
+              "label": "Tempo Risparmiato"
+            },
+            {
+              "value": "90%",
+              "label": "Riduzione degli Errori"
+            }
+          ]
+        },
+        {
+          "icon": "Headphones",
+          "title": "Servizio Clienti AI",
+          "description": "Fornisci supporto clienti 24/7 con agenti AI che gestiscono le richieste, risolvono i problemi e migliorano la soddisfazione.",
+          "metrics": [
+            {
+              "value": "24/7",
+              "label": "Copertura del Supporto"
+            },
+            {
+              "value": "85%",
+              "label": "Tasso di Risoluzione"
+            }
+          ]
+        },
+        {
+          "icon": "Megaphone",
+          "title": "Automazione del Marketing",
+          "description": "Automatizza le tue campagne di marketing con targeting potenziato dall'AI, creazione di contenuti e ottimizzazione.",
+          "metrics": [
+            {
+              "value": "3x",
+              "label": "Aumento del ROI"
+            },
+            {
+              "value": "60%",
+              "label": "Riduzione dei Costi"
+            }
+          ]
+        },
+        {
+          "icon": "BarChart",
+          "title": "Analisi Intelligente",
+          "description": "Ottieni approfondimenti azionabili con analisi potenziate dall'AI che ti aiutano a prendere decisioni basate sui dati.",
+          "metrics": [
+            {
+              "value": "95%",
+              "label": "Precisione"
+            },
+            {
+              "value": "50%",
+              "label": "Approfondimenti Più Veloci"
+            }
+          ]
         }
       ]
     },
     {
       "type": "emailSignupSection",
       "subtitle": "NEWSLETTER",
-      "title": "Rimani Aggiornato con le Innovazioni IA",
-      "description": "Iscriviti alla nostra newsletter e ricevi gli ultimi aggiornamenti sulle soluzioni e-commerce alimentate dall'IA, approfondimenti del settore e offerte esclusive.",
+      "title": "Rimani Aggiornato con le Innovazioni AI",
+      "description": "Unisciti alla nostra newsletter e ricevi gli ultimi aggiornamenti su soluzioni aziendali potenziate dall'AI, approfondimenti del settore e offerte esclusive.",
       "buttonText": "Iscriviti Ora",
       "placeholder": "Inserisci la tua email di lavoro",
       "features": [
-        "Approfondimenti IA Settimanali",
-        "Aggiornamenti sui Prodotti",
-        "Storie di Successo",
+        "Approfondimenti AI settimanali",
+        "Aggiornamenti sui prodotti",
+        "Storie di successo",
         "Nessun spam, mai"
       ]
     }

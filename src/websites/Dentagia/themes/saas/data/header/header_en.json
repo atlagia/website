@@ -1,0 +1,249 @@
+{
+  "navigation": [
+    {
+      "name": "Features",
+      "href": "/features",
+      "megaMenu": {
+        "categories": [
+          {
+            "title": "Practice Management",
+            "icon": "briefcase",
+            "items": [
+              {
+                "name": "Patient Management",
+                "href": "/features/patient-management"
+              },
+              {
+                "name": "Appointment Scheduling",
+                "href": "/features/scheduling"
+              },
+              {
+                "name": "Billing & Payments",
+                "href": "/features/billing"
+              },
+              {
+                "name": "Treatment Planning",
+                "href": "/features/treatment-planning"
+              }
+            ]
+          },
+          {
+            "title": "AI & Automation",
+            "icon": "zap",
+            "items": [
+              {
+                "name": "AI-Powered Scheduling",
+                "href": "/features/ai-scheduling"
+              },
+              {
+                "name": "Patient Insights",
+                "href": "/features/patient-insights"
+              },
+              {
+                "name": "Automated Reminders",
+                "href": "/features/reminders"
+              },
+              {
+                "name": "Practice Analytics",
+                "href": "/features/analytics"
+              }
+            ]
+          },
+          {
+            "title": "Security & Compliance",
+            "icon": "shield",
+            "items": [
+              {
+                "name": "HIPAA Compliance",
+                "href": "/features/hipaa"
+              },
+              {
+                "name": "Cloud Security",
+                "href": "/features/security"
+              },
+              {
+                "name": "Data Encryption",
+                "href": "/features/encryption"
+              },
+              {
+                "name": "Backup & Recovery",
+                "href": "/features/backup"
+              }
+            ]
+          }
+        ],
+        "featured": {
+          "badge": "New",
+          "title": "AI-Powered Dental Management",
+          "description": "Modern, secure, cloud-based software for dental practices",
+          "link": {
+            "text": "Explore Features",
+            "href": "/features"
+          }
+        }
+      }
+    },
+    {
+      "name": "Solutions",
+      "href": "/solutions",
+      "megaMenu": {
+        "categories": [
+          {
+            "title": "Practice Types",
+            "icon": "building",
+            "items": [
+              {
+                "name": "Solo Practices",
+                "href": "/solutions/solo-practice"
+              },
+              {
+                "name": "Multi-Practitioner",
+                "href": "/solutions/multi-practitioner"
+              },
+              {
+                "name": "Multi-Location",
+                "href": "/solutions/multi-location"
+              },
+              {
+                "name": "Specialty Practices",
+                "href": "/solutions/specialty"
+              }
+            ]
+          },
+          {
+            "title": "Practice Growth",
+            "icon": "trending-up",
+            "items": [
+              {
+                "name": "Patient Retention",
+                "href": "/solutions/patient-retention"
+              },
+              {
+                "name": "Revenue Optimization",
+                "href": "/solutions/revenue"
+              },
+              {
+                "name": "Marketing Automation",
+                "href": "/solutions/marketing"
+              },
+              {
+                "name": "Practice Analytics",
+                "href": "/solutions/analytics"
+              }
+            ]
+          },
+          {
+            "title": "Integration",
+            "icon": "link",
+            "items": [
+              {
+                "name": "Insurance Integration",
+                "href": "/solutions/insurance"
+              },
+              {
+                "name": "Payment Processing",
+                "href": "/solutions/payments"
+              },
+              {
+                "name": "Lab Integration",
+                "href": "/solutions/lab"
+              },
+              {
+                "name": "Imaging Systems",
+                "href": "/solutions/imaging"
+              }
+            ]
+          }
+        ],
+        "featured": {
+          "badge": "Featured",
+          "title": "Cloud-Based Platform",
+          "description": "Secure, scalable solution for dental practices",
+          "link": {
+            "text": "Learn More",
+            "href": "/platform"
+          }
+        }
+      }
+    },
+    {
+      "name": "Platform",
+      "href": "/platform",
+      "megaMenu": {
+        "categories": [
+          {
+            "title": "Technology",
+            "icon": "cpu",
+            "items": [
+              {
+                "name": "Cloud Infrastructure",
+                "href": "/platform/cloud"
+              },
+              {
+                "name": "AI Technology",
+                "href": "/platform/ai"
+              },
+              {
+                "name": "Security & Compliance",
+                "href": "/platform/security"
+              },
+              {
+                "name": "Mobile Access",
+                "href": "/platform/mobile"
+              }
+            ]
+          }
+        ],
+        "featured": {
+          "badge": "New",
+          "title": "Modern Cloud Platform",
+          "description": "Secure, scalable infrastructure for dental practices",
+          "link": {
+            "text": "Learn More",
+            "href": "/platform"
+          }
+        }
+      }
+    },
+    {
+      "name": "Resources",
+      "href": "/resources"
+    },
+    {
+      "name": "Pricing",
+      "href": "/pricing"
+    }
+  ],
+  "auth": {
+    "signIn": {
+      "text": "Contact Us",
+      "href": "/contact"
+    },
+    "getStarted": {
+      "text": "Schedule Demo",
+      "href": "/demo"
+    }
+  },
+  "languages": [
+    {
+      "code": "en",
+      "name": "English"
+    },
+    {
+      "code": "fr",
+      "name": "Français"
+    },
+    {
+      "code": "de",
+      "name": "Deutsch"
+    },
+    {
+      "code": "es",
+      "name": "Español"
+    },
+    {
+      "code": "ar",
+      "name": "العربية"
+    }
+  ]
+} 

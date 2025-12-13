@@ -1,0 +1,297 @@
+{
+  "pageTitle": "Storie di Successo di Studi Dentistici",
+  "pageDescription": "Esplora storie di successo e case study di studi dentistici che utilizzano la piattaforma di gestione dello studio Dentagia.",
+  "hero": {
+    "badge": "Storie di Successo",
+    "title": "Come gli Studi Dentistici Crescono con Dentagia",
+    "description": "Scopri come gli studi dentistici in tutto il paese stanno trasformando le loro operazioni e crescendo con la piattaforma di gestione dello studio alimentata da IA di Dentagia.",
+    "cta": {
+      "primary": {
+        "text": "Vedi le Storie",
+        "href": "#projects"
+      },
+      "secondary": {
+        "text": "Inizia il Tuo Viaggio",
+        "href": "/contact"
+      }
+    }
+  },
+  "stats": [
+    {
+      "value": "500+",
+      "label": "Studi Dentistici"
+    },
+    {
+      "value": "99.9%",
+      "label": "Disponibilità"
+    },
+    {
+      "value": "50%",
+      "label": "Tempo Risparmiato"
+    },
+    {
+      "value": "24/7",
+      "label": "Supporto"
+    }
+  ],
+  "projects": [
+    {
+      "category": "Odontoiatria Generale",
+      "description": "Trasformare studi di odontoiatria generale con soluzioni alimentate da IA",
+      "items": [
+        {
+          "icon": "building",
+          "name": "Studio Dentistico del Centro",
+          "description": "Studio multi-professionale con pianificazione alimentata da IA e comunicazione automatizzata con i pazienti",
+          "image": "/images/projects/downtown-dental.webp",
+          "stats": {
+            "value": "+60%",
+            "label": "Aumento Efficienza"
+          },
+          "tags": ["Pianificazione IA", "Multi-Professionale", "Gestione Studio"],
+          "color": "blue"
+        },
+        {
+          "icon": "home",
+          "name": "Family Dental Care",
+          "description": "Trasformazione studio individuale con gestione pazienti e automazione fatturazione",
+          "image": "/images/projects/family-dental.webp",
+          "stats": {
+            "value": "+35%",
+            "label": "Crescita Ricavi"
+          },
+          "tags": ["Studio Individuale", "Automazione Fatturazione", "Gestione Pazienti"],
+          "color": "indigo"
+        },
+        {
+          "icon": "users",
+          "name": "Centro Dentistico della Comunità",
+          "description": "Studio comunitario con gestione pazienti completa e analisi",
+          "image": "/images/projects/community-dental.webp",
+          "stats": {
+            "value": "+50%",
+            "label": "Soddisfazione Pazienti"
+          },
+          "tags": ["Studio Comunitario", "Analisi", "Gestione"],
+          "color": "purple"
+        },
+        {
+          "icon": "calendar",
+          "name": "Odontoiatria del Quartiere",
+          "description": "Ottimizzazione studio con pianificazione IA e automazione flussi di lavoro",
+          "image": "/images/projects/neighborhood-dental.webp",
+          "stats": {
+            "value": "15ore/settimana",
+            "label": "Tempo Risparmiato"
+          },
+          "tags": ["Pianificazione IA", "Automazione", "Efficienza"],
+          "color": "pink"
+        }
+      ]
+    },
+    {
+      "category": "Studi Specializzati",
+      "description": "Studi dentistici specializzati che raggiungono l'eccellenza",
+      "items": [
+        {
+          "icon": "sparkles",
+          "name": "Centro di Odontoiatria Estetica",
+          "description": "Studio estetico di alta gamma con pianificazione trattamento avanzata e comunicazione pazienti",
+          "image": "/images/projects/cosmetic-dental.webp",
+          "stats": {
+            "value": "+45%",
+            "label": "Tasso di Conversione"
+          },
+          "tags": ["Estetica", "Pianificazione Trattamento", "Portale Paziente"],
+          "color": "rose"
+        },
+        {
+          "icon": "heart",
+          "name": "Gruppo Dentistico Pediatrico",
+          "description": "Studio pediatrico multi-sede con gestione centralizzata",
+          "image": "/images/projects/pediatric-dental.webp",
+          "stats": {
+            "value": "100%",
+            "label": "Coordinamento"
+          },
+          "tags": ["Multi-Sede", "Pediatrico", "Centralizzato"],
+          "color": "amber"
+        },
+        {
+          "icon": "smile",
+          "name": "Studio di Ortodonzia",
+          "description": "Studio ortodontico con monitoraggio trattamento e coinvolgimento pazienti",
+          "image": "/images/projects/orthodontic-dental.webp",
+          "stats": {
+            "value": "+55%",
+            "label": "Ritenzione Pazienti"
+          },
+          "tags": ["Ortodonzia", "Monitoraggio Trattamento", "Coinvolgimento"],
+          "color": "lime"
+        },
+        {
+          "icon": "tooth",
+          "name": "Centro di Chirurgia Orale",
+          "description": "Studio chirurgico con pianificazione avanzata e gestione casi",
+          "image": "/images/projects/oral-surgery.webp",
+          "stats": {
+            "value": "+40%",
+            "label": "Efficienza Casi"
+          },
+          "tags": ["Chirurgia Orale", "Gestione Casi", "Pianificazione"],
+          "color": "green"
+        }
+      ]
+    },
+    {
+      "category": "Studi Multi-Sede",
+      "description": "Grandi studi che gestiscono più sedi",
+      "items": [
+        {
+          "icon": "map-pin",
+          "name": "Gruppo Dentistico Regionale",
+          "description": "Studio multi-sede con cartelle pazienti unificate e pianificazione",
+          "image": "/images/projects/regional-dental.webp",
+          "stats": {
+            "value": "+70%",
+            "label": "Efficienza Operativa"
+          },
+          "tags": ["Multi-Sede", "Cartelle Unificate", "Sincronizzazione Cloud"],
+          "color": "sky"
+        },
+        {
+          "icon": "building-2",
+          "name": "Rete di Cure Dentistiche",
+          "description": "Rete di studi con fatturazione centralizzata e reporting",
+          "image": "/images/projects/dental-network.webp",
+          "stats": {
+            "value": "+55%",
+            "label": "Crescita Ricavi"
+          },
+          "tags": ["Rete", "Fatturazione Centralizzata", "Reporting"],
+          "color": "cyan"
+        },
+        {
+          "icon": "globe",
+          "name": "Odontoiatria Statale",
+          "description": "Gruppo di studi a livello statale con gestione completa",
+          "image": "/images/projects/statewide-dental.webp",
+          "stats": {
+            "value": "100%",
+            "label": "Sincronizzazione Dati"
+          },
+          "tags": ["Statale", "Gestione", "Cloud"],
+          "color": "blue"
+        },
+        {
+          "icon": "trending-up",
+          "name": "Catena Dentistica in Crescita",
+          "description": "Catena di studi in rapida espansione con soluzioni scalabili",
+          "image": "/images/projects/dental-chain.webp",
+          "stats": {
+            "value": "+80%",
+            "label": "Scalabilità"
+          },
+          "tags": ["Catena", "Scalabile", "Crescita"],
+          "color": "indigo"
+        }
+      ]
+    }
+  ],
+  "features": {
+    "title": "Funzionalità dello Studio",
+    "description": "La nostra piattaforma viene fornita con funzionalità complete per studi dentistici",
+    "items": [
+      {
+        "icon": "users",
+        "title": "Gestione Pazienti",
+        "description": "Cartelle pazienti digitali complete e anamnesi"
+      },
+      {
+        "icon": "calendar",
+        "title": "Pianificazione IA",
+        "description": "Pianificazione appuntamenti intelligente e ottimizzazione"
+      },
+      {
+        "icon": "credit-card",
+        "title": "Fatturazione e Pagamenti",
+        "description": "Fatturazione semplificata ed elaborazione pagamenti"
+      },
+      {
+        "icon": "bar-chart",
+        "title": "Analisi dello Studio",
+        "description": "Insights basati sui dati per la crescita dello studio"
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Vantaggi dello Studio",
+    "description": "Sperimenta i vantaggi dell'uso di Dentagia per il tuo studio.",
+    "items": [
+      {
+        "icon": "rocket",
+        "title": "Efficienza",
+        "description": "Operazioni semplificate che risparmiano tempo e riducono il carico amministrativo",
+        "stats": "50%",
+        "label": "Tempo Risparmiato"
+      },
+      {
+        "icon": "target",
+        "title": "Crescita",
+        "description": "Strumenti e insights per aiutare il tuo studio a crescere",
+        "stats": "35%",
+        "label": "Crescita Ricavi"
+      },
+      {
+        "icon": "lightbulb",
+        "title": "Innovazione",
+        "description": "Tecnologia IA all'avanguardia progettata per studi dentistici moderni",
+        "stats": "500+",
+        "label": "Studi"
+      },
+      {
+        "icon": "users",
+        "title": "Supporto",
+        "description": "Team di supporto dedicato disponibile 24/7 per il tuo studio",
+        "stats": "24/7",
+        "label": "Supporto"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Testimonianze di Studi",
+    "description": "Ascolta gli studi dentistici che hanno trasformato le loro operazioni con Dentagia",
+    "items": [
+      {
+        "quote": "Dentagia ha trasformato come gestiamo il nostro studio. La pianificazione alimentata da IA da sola ci fa risparmiare 10 ore a settimana, e i nostri punteggi di soddisfazione dei pazienti non sono mai stati così alti.",
+        "author": "Dr. Sarah Martinez",
+        "role": "Proprietario dello Studio",
+        "company": "Studio Dentistico del Centro",
+        "image": "/images/testimonials/sarah.jpg"
+      },
+      {
+        "quote": "Passare a Dentagia è stata la migliore decisione che abbiamo preso. Il sistema di gestione pazienti è intuitivo, la fatturazione è automatizzata e le analisi ci aiutano a capire meglio il nostro studio.",
+        "author": "Dr. Michael Chen",
+        "role": "Dentista Principale",
+        "company": "Family Dental Care",
+        "image": "/images/testimonials/michael.jpg"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Pronto a Trasformare il Tuo Studio?",
+    "description": "Unisciti a centinaia di studi dentistici che hanno trasformato le loro operazioni con Dentagia.",
+    "buttons": [
+      {
+        "text": "Prenota una Demo",
+        "href": "/demo",
+        "variant": "primary"
+      },
+      {
+        "text": "Contattaci",
+        "href": "/contact",
+        "variant": "secondary"
+      }
+    ]
+  }
+}

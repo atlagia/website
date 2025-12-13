@@ -1,0 +1,180 @@
+{
+  "company": {
+    "title": "الشركة",
+    "links": [
+      {
+        "name": "نبذة عنا",
+        "href": "/about"
+      },
+      {
+        "name": "الوظائف",
+        "href": "/careers"
+      },
+      {
+        "name": "الصحافة",
+        "href": "/press"
+      },
+      {
+        "name": "المدونة",
+        "href": "/blog"
+      }
+    ]
+  },
+  "product": {
+    "title": "الميزات",
+    "links": [
+      {
+        "name": "إدارة المرضى",
+        "href": "/features/patient-management"
+      },
+      {
+        "name": "الجدولة بالذكاء الاصطناعي",
+        "href": "/features/ai-scheduling"
+      },
+      {
+        "name": "الفوترة والمدفوعات",
+        "href": "/features/billing"
+      },
+      {
+        "name": "تحليلات العيادة",
+        "href": "/features/analytics"
+      },
+      {
+        "name": "منصة السحابة",
+        "href": "/platform/cloud"
+      },
+      {
+        "name": "الأمان و HIPAA",
+        "href": "/features/hipaa"
+      },
+      {
+        "name": "الوصول المحمول",
+        "href": "/platform/mobile"
+      },
+      {
+        "name": "التكاملات",
+        "href": "/platform/integrations"
+      }
+    ]
+  },
+  "services": {
+    "title": "حلول العيادات",
+    "links": [
+      {
+        "name": "العيادات الفردية",
+        "href": "/solutions/solo-practice"
+      },
+      {
+        "name": "متعددة الممارسين",
+        "href": "/solutions/multi-practitioner"
+      },
+      {
+        "name": "متعددة المواقع",
+        "href": "/solutions/multi-location"
+      },
+      {
+        "name": "إعداد العيادة",
+        "href": "/services/setup"
+      }
+    ]
+  },
+  "resources": {
+    "title": "الموارد",
+    "links": [
+      {
+        "name": "التوثيق",
+        "href": "/documentation"
+      },
+      {
+        "name": "مرجع API",
+        "href": "/api"
+      },
+      {
+        "name": "الدعم",
+        "href": "/support"
+      },
+      {
+        "name": "الحالة",
+        "href": "/status"
+      }
+    ]
+  },
+  "legal": {
+    "title": "قانوني",
+    "links": [
+      {
+        "name": "الخصوصية",
+        "href": "/privacy"
+      },
+      {
+        "name": "الشروط",
+        "href": "/terms"
+      },
+      {
+        "name": "سياسة ملفات تعريف الارتباط",
+        "href": "/cookie-policy"
+      }
+    ]
+  },
+  "social": {
+    "title": "اجتماعي",
+    "links": [
+      {
+        "name": "YouTube",
+        "href": "https://www.youtube.com/@Atlagia",
+        "icon": "youtube"
+      },
+      {
+        "name": "Instagram",
+        "href": "https://www.instagram.com/atlagia/",
+        "icon": "instagram"
+      },
+      {
+        "name": "Twitter",
+        "href": "https://twitter.com/atlagia",
+        "icon": "twitter"
+      },
+      {
+        "name": "LinkedIn",
+        "href": "https://linkedin.com/company/atlagia",
+        "icon": "linkedin"
+      },
+      {
+        "name": "GitHub",
+        "href": "https://github.com/atlagia",
+        "icon": "github"
+      }
+    ]
+  },
+  "newsletter": {
+    "title": "اشترك في نشرتنا الإخبارية",
+    "description": "ابق على اطلاع بنصائح إدارة عيادات الأسنان، وتحديثات المنتج، ورؤى الصناعة.",
+    "buttonText": "اشترك",
+    "placeholderText": "أدخل بريدك الإلكتروني"
+  },
+  "copyright": {
+    "text": "© 2025 Atlagia. جميع الحقوق محفوظة.",
+    "links": [
+      {
+        "name": "سياسة الخصوصية",
+        "href": "/privacy"
+      },
+      {
+        "name": "شروط الخدمة",
+        "href": "/terms"
+      }
+    ]
+  },
+  "contact": {
+    "title": "معلومات الاتصال",
+    "addressTitle": "العنوان",
+    "contactTitle": "اتصل بنا",
+    "company": "ATLAGIA INC.",
+    "address": "1940 COMMERCE STREET SUITE 308",
+    "city": "YORKTOWN HEIGHTS",
+    "postalCode": "NY 10598",
+    "country": "الولايات المتحدة",
+    "email": "contact@dentagia.com",
+    "phone": "+1 2035 472 248"
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "pageTitle": "Prenota una Demo",
+  "pageDescription": "Sperimenta la potenza del software di gestione dello studio dentistico alimentato da IA di Dentagia con la nostra demo interattiva",
+  "hero": {
+    "badge": "Demo Interattiva",
+    "title": "Vedi Dentagia in Azione",
+    "description": "Prova la nostra piattaforma di gestione dello studio dentistico alimentata da IA in prima persona. Nessuna carta di credito richiesta, nessuna installazione necessaria. Inizia in pochi secondi e vedi come Dentagia può trasformare il tuo studio.",
+    "cta": {
+      "primary": {
+        "text": "Prenota Demo",
+        "href": "#demo-form"
+      },
+      "secondary": {
+        "text": "Guarda il Video",
+        "href": "#video"
+      }
+    }
+  },
+  "features": [
+    {
+      "icon": "zap",
+      "title": "Accesso Istantaneo",
+      "description": "Inizia a esplorare immediatamente con dati di esempio dello studio dentistico precaricati"
+    },
+    {
+      "icon": "shield",
+      "title": "Sicuro e Privato",
+      "description": "I tuoi dati demo sono isolati e vengono eliminati automaticamente dopo 24 ore. Sicurezza conforme HIPAA."
+    },
+    {
+      "icon": "users",
+      "title": "Tour Guidato",
+      "description": "Percorso passo-passo delle funzionalità chiave inclusa gestione pazienti, pianificazione e fatturazione"
+    },
+    {
+      "icon": "rocket",
+      "title": "Tutte le Funzionalità",
+      "description": "Sperimenta tutte le funzionalità premium inclusa pianificazione alimentata da IA e analisi dello studio"
+    }
+  ],
+  "demoForm": {
+    "title": "Richiedi la Tua Demo Personalizzata",
+    "subtitle": "Compila il modulo qui sotto e configureremo un ambiente demo personalizzato per il tuo studio",
+    "fields": {
+      "fullName": {
+        "label": "Nome Completo",
+        "placeholder": "Dr. Mario Rossi",
+        "required": true
+      },
+      "email": {
+        "label": "Email Lavorativa",
+        "placeholder": "mario@studi odentistico.it",
+        "required": true
+      },
+      "company": {
+        "label": "Nome dello Studio",
+        "placeholder": "Il Tuo Studio Dentistico",
+        "required": true
+      },
+      "industry": {
+        "label": "Tipo di Studio",
+        "placeholder": "Seleziona il tipo del tuo studio",
+        "options": [
+          "Odontoiatria Generale",
+          "Odontoiatria Estetica",
+          "Odontoiatria Pediatrica",
+          "Ortodonzia",
+          "Chirurgia Orale",
+          "Parodontologia",
+          "Endodonzia",
+          "Multi-Specialità",
+          "Altro"
+        ],
+        "required": true
+      },
+      "useCase": {
+        "label": "Cosa vorresti esplorare?",
+        "placeholder": "Raccontaci delle tue esigenze di gestione dello studio...",
+        "required": false
+      }
+    },
+    "submitButton": "Prenota la Mia Demo",
+    "consent": "Inviando questo modulo, accetti la nostra Informativa sulla Privacy e i Termini di Servizio"
+  },
+  "benefits": {
+    "title": "Perché Provare la Nostra Demo?",
+    "items": [
+      {
+        "icon": "check-circle",
+        "title": "Scenari di Studio Reali",
+        "description": "Esplora casi d'uso specifici per studi dentistici con dati pazienti e scenari di appuntamenti realistici"
+      },
+      {
+        "icon": "trending-up",
+        "title": "Vedi il Potenziale ROI",
+        "description": "Comprendi come Dentagia può migliorare l'efficienza del tuo studio, ridurre le assenze e aumentare i ricavi"
+      },
+      {
+        "icon": "settings",
+        "title": "Opzioni di Personalizzazione",
+        "description": "Scopri come adattare la piattaforma alle tue esigenze e flussi di lavoro specifici dello studio"
+      },
+      {
+        "icon": "award",
+        "title": "Supporto di Esperti",
+        "description": "Ottieni risposte dai nostri specialisti in gestione di studi dentistici durante la tua demo"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Cosa Dicono i Nostri Utenti Demo",
+    "items": [
+      {
+        "quote": "La demo era incredibilmente intuitiva. In 10 minuti, potevo vedere esattamente come Dentagia avrebbe trasformato le operazioni del nostro studio e ci avrebbe fatto risparmiare ore ogni settimana.",
+        "author": "Dr. Sarah Martinez",
+        "role": "Proprietario dello Studio",
+        "company": "Studio Dentistico del Centro",
+        "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah"
+      },
+      {
+        "quote": "Ho provato molte demo di gestione di studi, ma Dentagia si è distinto. Le funzionalità di pianificazione alimentata da IA e gestione pazienti sono esattamente ciò di cui avevamo bisogno.",
+        "author": "Dr. Michael Chen",
+        "role": "Dentista Principale",
+        "company": "Family Dental Care",
+        "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Michael"
+      }
+    ]
+  },
+  "video": {
+    "title": "Guarda una Panoramica Rapida",
+    "description": "Vedi come funziona Dentagia in soli 2 minuti",
+    "thumbnail": "https://via.placeholder.com/800x450/6366f1/ffffff?text=Dentagia+Demo+Video",
+    "duration": "2:30",
+    "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+  },
+  "faq": {
+    "title": "Domande Frequenti",
+    "items": [
+      {
+        "question": "Quanto dura la demo?",
+        "answer": "Il tuo ambiente demo personalizzato rimane attivo per 24 ore, dandoti molto tempo per esplorare al tuo ritmo e vedere come Dentagia si adatta al tuo studio."
+      },
+      {
+        "question": "È richiesta qualche installazione?",
+        "answer": "Nessuna installazione necessaria! La nostra demo funziona interamente nel tuo browser web. Basta cliccare sul link che ti inviamo e iniziare a esplorare."
+      },
+      {
+        "question": "Avrò accesso a tutte le funzionalità?",
+        "answer": "Sì, avrai accesso a tutte le funzionalità premium durante il periodo della demo, inclusa pianificazione alimentata da IA, gestione pazienti, fatturazione e analisi dello studio."
+      },
+      {
+        "question": "Posso importare i miei dati dello studio?",
+        "answer": "La demo viene fornita con dati di esempio dello studio dentistico, ma puoi anche caricare i tuoi dati per vedere come funziona la piattaforma con le tue informazioni reali dello studio."
+      },
+      {
+        "question": "Cosa succede dopo la scadenza della demo?",
+        "answer": "Tutti i dati demo vengono eliminati automaticamente dopo 24 ore. Se desideri continuare, possiamo aiutarti a configurare un account di prova o programmare una consultazione personalizzata."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Pronto a Trasformare il Tuo Studio?",
+    "description": "Unisciti a centinaia di studi dentistici che già usano Dentagia per semplificare le loro operazioni e far crescere il loro studio.",
+    "button": {
+      "text": "Prenota la Tua Demo Ora",
+      "href": "#demo-form"
+    }
+  }
+}
+

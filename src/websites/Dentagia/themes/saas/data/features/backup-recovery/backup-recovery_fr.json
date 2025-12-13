@@ -1,0 +1,182 @@
+{
+  "hero": {
+    "subtitle": "Protection des données",
+    "title": "Sauvegarde automatique et reprise après sinistre",
+    "description": "Protégez les données de votre cabinet avec des sauvegardes quotidiennes automatiques, récupération à un point dans le temps et plans de reprise après sinistre complets.",
+    "icon": "database",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "Quotidien",
+        "label": "Sauvegardes"
+      },
+      {
+        "value": "100%",
+        "label": "Récupération"
+      },
+      {
+        "value": "24/7",
+        "label": "Protection"
+      }
+    ]
+  },
+  "features": {
+    "title": "Fonctionnalités de sauvegarde et récupération",
+    "subtitle": "Protection complète des données",
+    "description": "Solutions de sauvegarde et récupération complètes pour protéger les données de votre cabinet.",
+    "items": [
+      {
+        "icon": "database",
+        "title": "Sauvegardes quotidiennes automatiques",
+        "description": "Sauvegardes quotidiennes automatiques avec stockage chiffré et politiques de rétention multiples.",
+        "highlights": [
+          "Sauvegardes automatiques quotidiennes",
+          "Stockage chiffré",
+          "Politiques de rétention multiples",
+          "Vérification des sauvegardes",
+          "Sauvegardes incrémentielles"
+        ],
+        "stats": {
+          "value": "Quotidien",
+          "label": "Sauvegardes"
+        }
+      },
+      {
+        "icon": "clock",
+        "title": "Récupération à un point dans le temps",
+        "description": "Récupérez les données à n'importe quel point dans le temps avec options de récupération granulaires et perte de données minimale.",
+        "highlights": [
+          "Récupération à un point dans le temps",
+          "Récupération granulaire",
+          "Perte de données minimale",
+          "Temps de récupération rapides",
+          "Tests de récupération"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "Récupération"
+        }
+      },
+      {
+        "icon": "shield",
+        "title": "Reprise après sinistre",
+        "description": "Plans de reprise après sinistre complets avec basculement automatique et continuité des activités.",
+        "highlights": [
+          "Plans de reprise après sinistre",
+          "Basculement automatique",
+          "Continuité des activités",
+          "Redondance géographique",
+          "Procédures de récupération"
+        ],
+        "stats": {
+          "value": "24/7",
+          "label": "Protection"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Assurance de sauvegarde et récupération",
+    "description": "Protection complète des données pour votre cabinet",
+    "stats": [
+      {
+        "icon": "database",
+        "value": "Quotidien",
+        "label": "Sauvegardes"
+      },
+      {
+        "icon": "clock",
+        "value": "100%",
+        "label": "Récupération"
+      },
+      {
+        "icon": "shield",
+        "value": "24/7",
+        "label": "Protection"
+      },
+      {
+        "icon": "award",
+        "value": "100%",
+        "label": "Fiable"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Dr. Michael Chen",
+        "role": "Dentiste principal",
+        "quote": "Le système de sauvegarde automatique nous donne une tranquillité d'esprit totale. Nous savons que nos données sont toujours protégées et récupérables."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Avantages de la sauvegarde et récupération",
+    "subtitle": "Protection complète",
+    "description": "Découvrez la sécurité d'une sauvegarde et récupération complètes.",
+    "items": [
+      {
+        "title": "Sauvegardes quotidiennes",
+        "description": "Les sauvegardes quotidiennes automatiques garantissent que vos données sont toujours protégées.",
+        "icon": "database",
+        "color": "teal",
+        "stats": {
+          "value": "Quotidien",
+          "label": "Sauvegardes"
+        },
+        "highlights": [
+          "Sauvegardes automatiques",
+          "Calendriers quotidiens",
+          "Stockage chiffré",
+          "Copies multiples"
+        ]
+      },
+      {
+        "title": "Récupération complète",
+        "description": "La récupération à un point dans le temps garantit que vous pouvez restaurer les données à n'importe quel moment.",
+        "icon": "clock",
+        "color": "cyan",
+        "stats": {
+          "value": "100%",
+          "label": "Récupération"
+        },
+        "highlights": [
+          "Récupération à un point dans le temps",
+          "Récupération granulaire",
+          "Restauration rapide",
+          "Temps d'arrêt minimal"
+        ]
+      },
+      {
+        "title": "Protection 24/7",
+        "description": "La protection continue garantit que vos données sont toujours en sécurité.",
+        "icon": "shield",
+        "color": "blue",
+        "stats": {
+          "value": "24/7",
+          "label": "Protection"
+        },
+        "highlights": [
+          "Surveillance continue",
+          "Sauvegardes automatisées",
+          "Reprise après sinistre",
+          "Continuité des activités"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prêt pour une protection complète des données ?",
+    "description": "Découvrez comment la sauvegarde et récupération de Dentagia protègent les données de votre cabinet.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Planifier une démo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "En savoir plus",
+      "link": "/features"
+    }
+  }
+}
+

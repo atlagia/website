@@ -1,0 +1,67 @@
+{
+  "hero": {
+    "subtitle": "CONTACTEZ-NOUS",
+    "title": "Parlons de Votre Cabinet Dentaire",
+    "description": "Des questions sur le logiciel de gestion de cabinet propulsé par l'IA de Dentagia ? Nous sommes là pour vous aider à optimiser les opérations de votre cabinet et à développer votre cabinet dentaire."
+  },
+  "contactInfo": [
+    {
+      "icon": "Mail",
+      "title": "Envoyez-nous un Email",
+      "content": "contact@dentagia.com",
+      "description": "Notre équipe amicale est là pour vous aider avec vos besoins de gestion de cabinet.",
+      "link": "mailto:contact@dentagia.com"
+    },
+    {
+      "icon": "Phone",
+      "title": "Appelez-nous",
+      "content": "+33756756240",
+      "description": "Lun-Ven de 9h à 18h (CET).",
+      "link": "tel:+33756756240"
+    },
+    {
+      "icon": "MapPin",
+      "title": "Bureau",
+      "content": "VIZILLE, FRANCE",
+      "description": "98 AV ARISTIDE BRIAND, 38220",
+      "link": "https://maps.google.com/maps?q=98 AV ARISTIDE BRIAND, VIZILLE, 38220, FRANCE"
+    }
+  ],
+  "form": {
+    "title": "Envoyez-nous un Message",
+    "fields": {
+      "firstName": {
+        "label": "Prénom",
+        "placeholder": "Entrez votre prénom"
+      },
+      "lastName": {
+        "label": "Nom",
+        "placeholder": "Entrez votre nom"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Entrez votre email"
+      },
+      "subject": {
+        "label": "Sujet",
+        "placeholder": "Entrez le sujet"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Parlez-nous des besoins ou questions de votre cabinet"
+      }
+    },
+    "submitButton": "Envoyer le Message"
+  },
+  "support": {
+    "hours": {
+      "title": "Heures de Support",
+      "content": "Lundi - Vendredi, 9h - 18h (CET)"
+    },
+    "additional": {
+      "title": "Informations sur l'Entreprise",
+      "description": "EASY-WAY INFORMATICIENS A TEMPS PARTAG SARL",
+      "email": "support@dentagia.com"
+    }
+  }
+}

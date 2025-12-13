@@ -1,0 +1,180 @@
+{
+  "company": {
+    "title": "Azienda",
+    "links": [
+      {
+        "name": "Chi siamo",
+        "href": "/about"
+      },
+      {
+        "name": "Carriere",
+        "href": "/careers"
+      },
+      {
+        "name": "Stampa",
+        "href": "/press"
+      },
+      {
+        "name": "Blog",
+        "href": "/blog"
+      }
+    ]
+  },
+  "product": {
+    "title": "Funzionalità",
+    "links": [
+      {
+        "name": "Gestione pazienti",
+        "href": "/features/patient-management"
+      },
+      {
+        "name": "Pianificazione IA",
+        "href": "/features/ai-scheduling"
+      },
+      {
+        "name": "Fatturazione e pagamenti",
+        "href": "/features/billing"
+      },
+      {
+        "name": "Analisi dello studio",
+        "href": "/features/analytics"
+      },
+      {
+        "name": "Piattaforma cloud",
+        "href": "/platform/cloud"
+      },
+      {
+        "name": "Sicurezza e HIPAA",
+        "href": "/features/hipaa"
+      },
+      {
+        "name": "Accesso mobile",
+        "href": "/platform/mobile"
+      },
+      {
+        "name": "Integrazioni",
+        "href": "/platform/integrations"
+      }
+    ]
+  },
+  "services": {
+    "title": "Soluzioni per studi",
+    "links": [
+      {
+        "name": "Studi individuali",
+        "href": "/solutions/solo-practice"
+      },
+      {
+        "name": "Multi-professionale",
+        "href": "/solutions/multi-practitioner"
+      },
+      {
+        "name": "Multi-sede",
+        "href": "/solutions/multi-location"
+      },
+      {
+        "name": "Configurazione studio",
+        "href": "/services/setup"
+      }
+    ]
+  },
+  "resources": {
+    "title": "Risorse",
+    "links": [
+      {
+        "name": "Documentazione",
+        "href": "/documentation"
+      },
+      {
+        "name": "Riferimento API",
+        "href": "/api"
+      },
+      {
+        "name": "Supporto",
+        "href": "/support"
+      },
+      {
+        "name": "Stato",
+        "href": "/status"
+      }
+    ]
+  },
+  "legal": {
+    "title": "Legale",
+    "links": [
+      {
+        "name": "Privacy",
+        "href": "/privacy"
+      },
+      {
+        "name": "Termini",
+        "href": "/terms"
+      },
+      {
+        "name": "Politica dei cookie",
+        "href": "/cookie-policy"
+      }
+    ]
+  },
+  "social": {
+    "title": "Social",
+    "links": [
+      {
+        "name": "YouTube",
+        "href": "https://www.youtube.com/@Atlagia",
+        "icon": "youtube"
+      },
+      {
+        "name": "Instagram",
+        "href": "https://www.instagram.com/atlagia/",
+        "icon": "instagram"
+      },
+      {
+        "name": "Twitter",
+        "href": "https://twitter.com/atlagia",
+        "icon": "twitter"
+      },
+      {
+        "name": "LinkedIn",
+        "href": "https://linkedin.com/company/atlagia",
+        "icon": "linkedin"
+      },
+      {
+        "name": "GitHub",
+        "href": "https://github.com/atlagia",
+        "icon": "github"
+      }
+    ]
+  },
+  "newsletter": {
+    "title": "Iscriviti alla nostra newsletter",
+    "description": "Resta aggiornato con consigli sulla gestione dello studio dentistico, aggiornamenti prodotti e insights del settore.",
+    "buttonText": "Iscriviti",
+    "placeholderText": "Inserisci la tua email"
+  },
+  "copyright": {
+    "text": "© 2025 Atlagia. Tutti i diritti riservati.",
+    "links": [
+      {
+        "name": "Politica sulla privacy",
+        "href": "/privacy"
+      },
+      {
+        "name": "Termini di servizio",
+        "href": "/terms"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Informazioni di contatto",
+    "addressTitle": "Indirizzo",
+    "contactTitle": "Contatto",
+    "company": "ATLAGIA INC.",
+    "address": "1940 COMMERCE STREET SUITE 308",
+    "city": "YORKTOWN HEIGHTS",
+    "postalCode": "NY 10598",
+    "country": "Stati Uniti",
+    "email": "contact@dentagia.com",
+    "phone": "+1 2035 472 248"
+  }
+}

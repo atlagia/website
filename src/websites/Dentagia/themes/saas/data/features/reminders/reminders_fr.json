@@ -1,0 +1,182 @@
+{
+  "hero": {
+    "subtitle": "Communication automatisée",
+    "title": "Rappels de rendez-vous automatisés",
+    "description": "Réduisez les absences et améliorez la communication patient avec des rappels automatisés intelligents par SMS et email qui s'adaptent aux préférences patients.",
+    "icon": "bell",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "70%",
+        "label": "Réduction des absences"
+      },
+      {
+        "value": "95%",
+        "label": "Taux de livraison"
+      },
+      {
+        "value": "60%",
+        "label": "Taux de réponse"
+      }
+    ]
+  },
+  "features": {
+    "title": "Fonctionnalités de rappels",
+    "subtitle": "Communication intelligente",
+    "description": "Rappels automatisés intelligents qui informent les patients et réduisent les rendez-vous manqués.",
+    "items": [
+      {
+        "icon": "bell",
+        "title": "Rappels multi-canaux",
+        "description": "Envoyez des rappels par SMS, email et appels téléphoniques selon les préférences patients et le type de rendez-vous.",
+        "highlights": [
+          "Rappels SMS",
+          "Notifications email",
+          "Options d'appel téléphonique",
+          "Livraison basée sur les préférences",
+          "Support multi-langues"
+        ],
+        "stats": {
+          "value": "95%",
+          "label": "Taux de livraison"
+        }
+      },
+      {
+        "icon": "clock",
+        "title": "Timing intelligent",
+        "description": "L'IA détermine le timing optimal des rappels basé sur l'historique patient et le type de rendez-vous.",
+        "highlights": [
+          "Timing optimal",
+          "Analyse de l'historique patient",
+          "Planification basée sur les rendez-vous",
+          "Gestion des fuseaux horaires",
+          "Intervalles personnalisables"
+        ],
+        "stats": {
+          "value": "70%",
+          "label": "Réduction des absences"
+        }
+      },
+      {
+        "icon": "users",
+        "title": "Demandes de confirmation",
+        "description": "Demandez automatiquement des confirmations et gérez les réponses pour optimiser la planification.",
+        "highlights": [
+          "Demandes de confirmation",
+          "Gestion des réponses",
+          "Mises à jour automatiques",
+          "Gestion des listes d'attente",
+          "Gestion des annulations"
+        ],
+        "stats": {
+          "value": "60%",
+          "label": "Taux de réponse"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Histoires de succès des rappels",
+    "description": "Découvrez comment les rappels automatisés transforment les cabinets",
+    "stats": [
+      {
+        "icon": "bell",
+        "value": "95%",
+        "label": "Taux de livraison"
+      },
+      {
+        "icon": "trending-up",
+        "value": "70%",
+        "label": "Réduction des absences"
+      },
+      {
+        "icon": "users",
+        "value": "60%",
+        "label": "Taux de réponse"
+      },
+      {
+        "icon": "award",
+        "value": "100%",
+        "label": "Automatisé"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Emily Rodriguez",
+        "role": "Gestionnaire de cabinet",
+        "quote": "Les rappels automatisés ont réduit nos absences de 70%. Les patients apprécient les rappels en temps opportun et nous économisons des heures d'appels téléphoniques."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Avantages des rappels",
+    "subtitle": "Communication améliorée",
+    "description": "Découvrez les avantages de la communication patient automatisée.",
+    "items": [
+      {
+        "title": "Réduire les absences",
+        "description": "Les rappels en temps opportun réduisent considérablement les rendez-vous manqués.",
+        "icon": "bell",
+        "color": "teal",
+        "stats": {
+          "value": "70%",
+          "label": "Réduction"
+        },
+        "highlights": [
+          "Rappels en temps opportun",
+          "Canaux multiples",
+          "Demandes de confirmation",
+          "Gestion des réponses"
+        ]
+      },
+      {
+        "title": "Livraison élevée",
+        "description": "La livraison multi-canaux garantit que les rappels atteignent les patients de manière fiable.",
+        "icon": "check-circle",
+        "color": "cyan",
+        "stats": {
+          "value": "95%",
+          "label": "Taux de livraison"
+        },
+        "highlights": [
+          "Livraison SMS",
+          "Livraison email",
+          "Options téléphoniques",
+          "Livraison fiable"
+        ]
+      },
+      {
+        "title": "Meilleur engagement",
+        "description": "Les rappels automatisés améliorent l'engagement et la communication patient.",
+        "icon": "users",
+        "color": "blue",
+        "stats": {
+          "value": "60%",
+          "label": "Taux de réponse"
+        },
+        "highlights": [
+          "Engagement patient",
+          "Suivi des réponses",
+          "Historique de communication",
+          "Gestion des préférences"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prêt pour les rappels automatisés ?",
+    "description": "Découvrez comment le système de rappels de Dentagia peut réduire les absences et améliorer la communication.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Planifier une démo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "En savoir plus",
+      "link": "/features"
+    }
+  }
+}
+

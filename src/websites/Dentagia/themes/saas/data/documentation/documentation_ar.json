@@ -1,0 +1,298 @@
+{
+  "pageTitle": "التوثيق - Dentagia",
+  "pageDescription": "أدلة شاملة ومراجع واجهة برمجة التطبيقات ودروس تعليمية لمساعدتك في الاستفادة القصوى من منصة إدارة عيادات الأسنان Dentagia",
+  "hero": {
+    "badge": "موارد المطور",
+    "title": "التوثيق والأدلة",
+    "description": "كل ما تحتاجه للبناء والتكامل والتوسع مع منصة إدارة عيادات الأسنان Dentagia",
+    "searchPlaceholder": "البحث في التوثيق...",
+    "quickLinks": [
+      {
+        "text": "البدء",
+        "href": "#getting-started"
+      },
+      {
+        "text": "مرجع واجهة برمجة التطبيقات",
+        "href": "#api-reference"
+      },
+      {
+        "text": "الدروس التعليمية",
+        "href": "#tutorials"
+      }
+    ]
+  },
+    "categories": [
+      {
+      "id": "getting-started",
+        "title": "البدء",
+      "description": "أدلة البدء السريع لمساعدتك في بدء رحلتك مع Dentagia",
+        "icon": "Rocket",
+        "items": [
+          {
+            "title": "دليل البدء السريع",
+          "description": "احصل على عيادتك السنية في العمل في 5 دقائق",
+          "icon": "Zap",
+          "link": "/ar/docs/quick-start"
+        },
+        {
+          "title": "إعداد العيادة",
+          "description": "تعليمات خطوة بخطوة لإعداد عيادتك",
+          "icon": "Download",
+          "link": "/ar/docs/practice-setup"
+        },
+        {
+          "title": "التكوين",
+          "description": "قم بتكوين إعدادات إدارة عيادتك",
+          "icon": "Settings",
+          "link": "/ar/docs/configuration"
+        },
+        {
+          "title": "أول سجل مريض",
+          "description": "أنشئ أول سجل مريض وموعد",
+          "icon": "FileText",
+          "link": "/ar/docs/first-patient"
+        }
+      ]
+    },
+    {
+      "id": "api-reference",
+      "title": "مرجع واجهة برمجة التطبيقات",
+      "description": "توثيق واجهة برمجة التطبيقات الكامل ونقاط النهاية لإدارة عيادات الأسنان",
+      "icon": "Code",
+      "items": [
+        {
+          "title": "المصادقة",
+          "description": "مصادقة واجهة برمجة التطبيقات والأمان للامتثال لـ HIPAA",
+          "icon": "Lock",
+          "link": "/ar/docs/api/authentication"
+        },
+        {
+          "title": "واجهة برمجة التطبيقات REST",
+          "description": "نقاط نهاية واجهة برمجة التطبيقات RESTful لإدارة المرضى والجدولة والفوترة",
+          "icon": "Server",
+          "link": "/ar/docs/api/rest"
+        },
+        {
+          "title": "واجهة برمجة التطبيقات للمرضى",
+          "description": "إدارة سجلات المرضى والتاريخ الطبي وخطط العلاج",
+          "icon": "Users",
+          "link": "/ar/docs/api/patients"
+        },
+        {
+          "title": "واجهة برمجة التطبيقات للجدولة",
+          "description": "جدولة المواعيد المدعومة بالذكاء الاصطناعي وإدارة التقويم",
+          "icon": "Calendar",
+          "link": "/ar/docs/api/scheduling"
+        },
+        {
+          "title": "واجهة برمجة التطبيقات للفوترة",
+          "description": "نقاط نهاية الفوترة والفوترة ومعالجة المدفوعات",
+          "icon": "CreditCard",
+          "link": "/ar/docs/api/billing"
+        },
+        {
+          "title": "Webhooks",
+          "description": "إشعارات الأحداث في الوقت الفعلي لأحداث العيادة",
+          "icon": "Webhook",
+          "link": "/ar/docs/api/webhooks"
+          }
+        ]
+      },
+      {
+      "id": "tutorials",
+      "title": "الدروس التعليمية",
+      "description": "أدلة خطوة بخطوة وأمثلة لإدارة عيادات الأسنان",
+      "icon": "BookOpen",
+        "items": [
+          {
+          "title": "إدارة المرضى",
+          "description": "دليل شامل لإدارة سجلات المرضى والتاريخ الطبي",
+          "icon": "Users",
+          "link": "/ar/docs/tutorials/patient-management"
+        },
+        {
+          "title": "إعداد الجدولة بالذكاء الاصطناعي",
+          "description": "إعداد وتحسين جدولة المواعيد المدعومة بالذكاء الاصطناعي",
+          "icon": "Calendar",
+          "link": "/ar/docs/tutorials/ai-scheduling"
+        },
+        {
+          "title": "أتمتة الفوترة",
+          "description": "أتمتة الفوترة والفوترة ومعالجة المدفوعات",
+          "icon": "CreditCard",
+          "link": "/ar/docs/tutorials/billing-automation"
+        },
+        {
+          "title": "تحليلات العيادة",
+          "description": "إعداد واستخدام تحليلات العيادة والتقارير",
+          "icon": "BarChart",
+          "link": "/ar/docs/tutorials/analytics"
+        },
+        {
+          "title": "الامتثال لـ HIPAA",
+          "description": "تأكد من أن عيادتك تلبي متطلبات الامتثال لـ HIPAA",
+          "icon": "Shield",
+          "link": "/ar/docs/tutorials/hipaa-compliance"
+        },
+        {
+          "title": "التكاملات المخصصة",
+          "description": "التكامل مع أنظمة التصوير السني والأدوات الأخرى",
+          "icon": "Puzzle",
+          "link": "/ar/docs/tutorials/integrations"
+          }
+        ]
+      },
+      {
+      "id": "guides",
+      "title": "الأدلة",
+      "description": "أدلة متعمقة للميزات المتقدمة وأفضل الممارسات",
+      "icon": "Map",
+        "items": [
+          {
+          "title": "أفضل ممارسات أمان HIPAA",
+          "description": "أمن بيانات عيادتك وضمان الامتثال لـ HIPAA",
+          "icon": "Shield",
+          "link": "/ar/docs/guides/security"
+        },
+        {
+          "title": "تحسين أداء العيادة",
+          "description": "تحسين عمليات عيادتك للكفاءة والنمو",
+          "icon": "Gauge",
+          "link": "/ar/docs/guides/performance"
+        },
+        {
+          "title": "هجرة البيانات",
+          "description": "الانتقال من نظام إدارة العيادة الحالي",
+          "icon": "Upload",
+          "link": "/ar/docs/guides/migration"
+        },
+        {
+          "title": "تحليلات العيادة والتقارير",
+          "description": "تتبع وتحليل أداء عيادتك",
+          "icon": "BarChart",
+          "link": "/ar/docs/guides/analytics"
+        }
+      ]
+    }
+  ],
+  "sdks": {
+    "title": "SDKs والمكتبات",
+    "description": "SDKs ومكتبات رسمية للغات الشائعة",
+    "items": [
+      {
+        "name": "Python",
+        "icon": "Code",
+        "description": "SDK Python الرسمي لواجهة برمجة التطبيقات Dentagia",
+        "version": "v2.1.0",
+        "link": "https://github.com/dentagia/python-sdk",
+        "installCommand": "pip install dentagia"
+      },
+      {
+        "name": "JavaScript",
+        "icon": "Code",
+        "description": "SDK JavaScript الرسمي لواجهة برمجة التطبيقات Dentagia",
+        "version": "v3.0.2",
+        "link": "https://github.com/dentagia/js-sdk",
+        "installCommand": "npm install @dentagia/sdk"
+      },
+      {
+        "name": "TypeScript",
+        "icon": "Code",
+        "description": "SDK TypeScript الرسمي لواجهة برمجة التطبيقات Dentagia",
+        "version": "v3.0.2",
+        "link": "https://github.com/dentagia/ts-sdk",
+        "installCommand": "npm install @dentagia/sdk-ts"
+      },
+      {
+        "name": "Java",
+        "icon": "Code",
+        "description": "SDK Java الرسمي لواجهة برمجة التطبيقات Dentagia",
+        "version": "v1.5.0",
+        "link": "https://github.com/dentagia/java-sdk",
+        "installCommand": "maven: com.dentagia:sdk:1.5.0"
+      },
+      {
+        "name": "Go",
+        "icon": "Code",
+        "description": "SDK Go الرسمي لواجهة برمجة التطبيقات Dentagia",
+        "version": "v1.3.0",
+        "link": "https://github.com/dentagia/go-sdk",
+        "installCommand": "go get github.com/dentagia/sdk"
+      },
+      {
+        "name": "Ruby",
+        "icon": "Code",
+        "description": "SDK Ruby الرسمي لواجهة برمجة التطبيقات Dentagia",
+        "version": "v2.0.1",
+        "link": "https://github.com/dentagia/ruby-sdk",
+        "installCommand": "gem install dentagia"
+      }
+    ]
+  },
+  "resources": {
+    "title": "موارد إضافية",
+    "description": "المزيد من الأدوات والموارد لمساعدتك على النجاح مع Dentagia",
+    "items": [
+      {
+        "title": "حالة واجهة برمجة التطبيقات",
+        "description": "حالة واجهة برمجة التطبيقات في الوقت الفعلي والتوفر",
+        "icon": "Activity",
+        "link": "https://status.dentagia.com",
+        "external": true
+      },
+      {
+        "title": "منتدى المطورين",
+        "description": "تواصل مع المطورين الآخرين ومديري عيادات الأسنان",
+        "icon": "Users",
+        "link": "https://community.dentagia.com",
+        "external": true
+      },
+      {
+        "title": "مستودع GitHub",
+        "description": "عرض الكود المصدري والأمثلة",
+        "icon": "Github",
+        "link": "https://github.com/dentagia",
+        "external": true
+      },
+      {
+        "title": "سجل التغييرات",
+        "description": "أحدث التحديثات والإصدارات",
+        "icon": "FileText",
+        "link": "/ar/changelog",
+        "external": false
+      },
+      {
+        "title": "الدروس التعليمية بالفيديو",
+        "description": "تعلم من خلال أدلة الفيديو لإدارة العيادة",
+        "icon": "Video",
+        "link": "/ar/tutorials",
+        "external": false
+      },
+      {
+        "title": "مركز الدعم",
+        "description": "احصل على المساعدة من فريقنا",
+        "icon": "HelpCircle",
+        "link": "/ar/contact",
+        "external": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "تحتاج إلى مساعدة؟",
+    "description": "فريق الدعم لدينا هنا لمساعدتك على النجاح مع Dentagia",
+    "buttons": [
+      {
+        "text": "اتصل بالدعم",
+        "href": "/ar/contact",
+        "variant": "primary",
+        "icon": "MessageSquare"
+      },
+      {
+        "text": "جدولة عرض توضيحي",
+        "href": "/ar/demo",
+        "variant": "secondary",
+        "icon": "Calendar"
+      }
+    ]
+  }
+}

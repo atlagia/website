@@ -1,0 +1,182 @@
+{
+  "hero": {
+    "subtitle": "Chiffrement des données",
+    "title": "Chiffrement de bout en bout des données",
+    "description": "Chiffrement de niveau militaire 256-bit protège toutes les données patients en transit et au repos, garantissant le plus haut niveau de sécurité pour votre cabinet dentaire.",
+    "icon": "lock",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "256-bit",
+        "label": "Chiffrement"
+      },
+      {
+        "value": "100%",
+        "label": "Protégé"
+      },
+      {
+        "value": "Bout en bout",
+        "label": "Sécurité"
+      }
+    ]
+  },
+  "features": {
+    "title": "Fonctionnalités de chiffrement",
+    "subtitle": "Sécurité de niveau militaire",
+    "description": "Fonctionnalités de chiffrement et sécurité complètes pour protéger toutes les données patients.",
+    "items": [
+      {
+        "icon": "lock",
+        "title": "Chiffrement 256-bit",
+        "description": "Chiffrement AES 256-bit de niveau militaire pour toutes les données au repos et en transit.",
+        "highlights": [
+          "Chiffrement AES 256-bit",
+          "Protection des données au repos",
+          "Sécurité des données en transit",
+          "Gestion des clés",
+          "Normes de chiffrement"
+        ],
+        "stats": {
+          "value": "256-bit",
+          "label": "Chiffrement"
+        }
+      },
+      {
+        "icon": "shield",
+        "title": "Protection de bout en bout",
+        "description": "Protection complète des données de l'entrée au stockage avec chiffrement de bout en bout.",
+        "highlights": [
+          "Chiffrement de bout en bout",
+          "Protection complète du flux de données",
+          "Transmission sécurisée",
+          "Stockage chiffré",
+          "Architecture zero-knowledge"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "Protégé"
+        }
+      },
+      {
+        "icon": "database",
+        "title": "Gestion des clés",
+        "description": "Gestion sécurisée des clés et politiques de rotation garantissent que les clés de chiffrement sont toujours protégées.",
+        "highlights": [
+          "Stockage sécurisé des clés",
+          "Rotation des clés",
+          "Contrôles d'accès",
+          "Politiques de gestion des clés",
+          "Normes de conformité"
+        ],
+        "stats": {
+          "value": "Bout en bout",
+          "label": "Sécurité"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Sécurité de chiffrement",
+    "description": "Protection de niveau militaire pour vos données",
+    "stats": [
+      {
+        "icon": "lock",
+        "value": "256-bit",
+        "label": "Chiffrement"
+      },
+      {
+        "icon": "shield",
+        "value": "100%",
+        "label": "Protégé"
+      },
+      {
+        "icon": "database",
+        "value": "Bout en bout",
+        "label": "Sécurité"
+      },
+      {
+        "icon": "award",
+        "value": "Militaire",
+        "label": "Niveau"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Dr. Sarah Martinez",
+        "role": "Propriétaire du cabinet",
+        "quote": "Le chiffrement nous donne une confiance totale que nos données patients sont protégées avec les normes de sécurité les plus élevées."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Avantages du chiffrement",
+    "subtitle": "Sécurité maximale",
+    "description": "Découvrez la tranquillité d'esprit qui vient avec le chiffrement de niveau militaire.",
+    "items": [
+      {
+        "title": "Protection de niveau militaire",
+        "description": "Le chiffrement 256-bit fournit le plus haut niveau de protection des données disponible.",
+        "icon": "lock",
+        "color": "teal",
+        "stats": {
+          "value": "256-bit",
+          "label": "Chiffrement"
+        },
+        "highlights": [
+          "Chiffrement de niveau militaire",
+          "Norme AES-256",
+          "Sécurité de pointe",
+          "Prêt pour la conformité"
+        ]
+      },
+      {
+        "title": "Protection complète",
+        "description": "Le chiffrement de bout en bout protège les données tout au long de leur cycle de vie complet.",
+        "icon": "shield",
+        "color": "cyan",
+        "stats": {
+          "value": "100%",
+          "label": "Protégé"
+        },
+        "highlights": [
+          "Chiffrement de bout en bout",
+          "Flux de données complet",
+          "Transmission sécurisée",
+          "Stockage chiffré"
+        ]
+      },
+      {
+        "title": "Gestion sécurisée des clés",
+        "description": "La gestion professionnelle des clés garantit que les clés de chiffrement sont toujours sécurisées.",
+        "icon": "database",
+        "color": "blue",
+        "stats": {
+          "value": "Bout en bout",
+          "label": "Sécurité"
+        },
+        "highlights": [
+          "Stockage sécurisé des clés",
+          "Rotation des clés",
+          "Contrôles d'accès",
+          "Politiques de gestion"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prêt pour le chiffrement de niveau militaire ?",
+    "description": "Découvrez comment le chiffrement de Dentagia protège vos données patients.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Planifier une démo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "En savoir plus",
+      "link": "/features"
+    }
+  }
+}
+

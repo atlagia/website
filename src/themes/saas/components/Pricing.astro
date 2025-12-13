@@ -7,11 +7,14 @@ interface PricingFeature {
 interface PricingPlan {
   name: string;
   price: string;
+  yearlyPrice?: string;
   period: string;
+  yearlyPeriod?: string;
   features: PricingFeature[];
   buttonText: string;
   buttonLink: string;
   isPopular?: boolean;
+  discount?: string;
 }
 
 interface Props {
@@ -45,6 +48,16 @@ const { subtitle, title, description, plans } = Astro.props;
       </p>
     </div>
 
+    <!-- Pricing Toggle -->
+    <div class="flex justify-center items-center gap-4 mb-12">
+      <span class="text-gray-600 font-medium">Monthly</span>
+      <label class="relative inline-flex items-center cursor-pointer">
+        <input type="checkbox" value="" class="sr-only peer" id="pricing-toggle">
+        <div class="w-14 h-7 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-pink-300 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[4px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-pink-600"></div>
+      </label>
+      <span class="text-gray-600 font-medium">Yearly <span class="text-pink-600 text-sm">(Save 20%)</span></span>
+    </div>
+
     <!-- Pricing Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       {plans.map((plan, index) => (
@@ -58,10 +71,15 @@ const { subtitle, title, description, plans } = Astro.props;
           <div class="p-8">
             <!-- Plan Header -->
             <h3 class="text-xl font-bold text-gray-900 mb-4" id={`content-plan-${index}-name`}>{plan.name}</h3>
-            <div class="flex items-baseline mb-8">
-              <span class="text-4xl font-bold text-gray-900" id={`content-plan-${index}-price`}>{plan.price}</span>
-              <span class="text-gray-500 ml-2" id={`content-plan-${index}-period`}>{plan.period}</span>
+            <div class="flex items-baseline mb-1">
+              <span class="text-4xl font-bold text-gray-900 monthly-price" id={`content-plan-${index}-price`}>${plan.price}</span>
+              <span class="text-4xl font-bold text-gray-900 yearly-price hidden" id={`content-plan-${index}-yearly-price`}>${plan.yearlyPrice}</span>
+              <span class="text-gray-500 ml-2 monthly-period" id={`content-plan-${index}-period`}>{plan.period}</span>
+              <span class="text-gray-500 ml-2 yearly-period hidden" id={`content-plan-${index}-yearly-period`}>{plan.yearlyPeriod}</span>
             </div>
+            {plan.discount && (
+              <p class="text-pink-600 text-sm mb-8" id={`content-plan-${index}-discount`}>{plan.discount}</p>
+            )}
 
             <!-- Features List -->
             <ul class="space-y-4 mb-8">
@@ -105,6 +123,21 @@ const { subtitle, title, description, plans } = Astro.props;
     </div>
   </div>
 </section>
+
+<script>
+  const toggle = document.getElementById('pricing-toggle');
+  const monthlyPrices = document.querySelectorAll('.monthly-price');
+  const yearlyPrices = document.querySelectorAll('.yearly-price');
+  const monthlyPeriods = document.querySelectorAll('.monthly-period');
+  const yearlyPeriods = document.querySelectorAll('.yearly-period');
+
+  toggle?.addEventListener('change', function() {
+    monthlyPrices.forEach(price => price.classList.toggle('hidden'));
+    yearlyPrices.forEach(price => price.classList.toggle('hidden'));
+    monthlyPeriods.forEach(period => period.classList.toggle('hidden'));
+    yearlyPeriods.forEach(period => period.classList.toggle('hidden'));
+  });
+</script>
 
 <style>
   @keyframes blob {

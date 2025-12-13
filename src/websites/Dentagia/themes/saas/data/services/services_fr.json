@@ -1,0 +1,237 @@
+{
+  "pageTitle": "Services de Gestion de Cabinet Dentaire",
+  "pageDescription": "Explorez notre gamme complète de services conçus pour aider votre cabinet dentaire à prospérer avec des solutions propulsées par l'IA.",
+  "hero": {
+    "badge": "Nos Services",
+    "title": "Services Complets de Gestion de Cabinet",
+    "description": "Découvrez notre gamme complète de services conçus pour aider votre cabinet dentaire à prospérer avec des solutions modernes de gestion de cabinet propulsées par l'IA.",
+    "cta": {
+      "primary": {
+        "text": "Explorer les Services",
+        "href": "#services"
+      },
+      "secondary": {
+        "text": "Commencer",
+        "href": "/contact"
+      }
+    }
+  },
+  "stats": [
+    {
+      "value": "500+",
+      "label": "Cabinets Dentaires"
+    },
+    {
+      "value": "99.9%",
+      "label": "Disponibilité"
+    },
+    {
+      "value": "50%",
+      "label": "Temps Économisé"
+    },
+    {
+      "value": "24/7",
+      "label": "Support"
+    }
+  ],
+  "services": [
+    {
+      "category": "Gestion du Cabinet",
+      "description": "Solutions complètes de gestion de cabinet pour votre cabinet dentaire",
+      "items": [
+        {
+          "icon": "users",
+          "name": "Gestion des Patients",
+          "description": "Dossiers patients complets, historique médical et planification des traitements",
+          "features": ["Dossiers Patients Numériques", "Suivi de l'Historique Médical", "Planification des Traitements", "Portail Patient"],
+          "color": "blue"
+        },
+        {
+          "icon": "calendar",
+          "name": "Planification Propulsée par l'IA",
+          "description": "Planification intelligente des rendez-vous qui optimise votre calendrier",
+          "features": ["Planification Intelligente", "Rappels Automatisés", "Gestion des Listes d'Attente", "Réduction des Absences"],
+          "color": "purple"
+        },
+        {
+          "icon": "credit-card",
+          "name": "Facturation et Paiements",
+          "description": "Facturation, facturation et traitement des paiements rationalisés",
+          "features": ["Facturation Automatisée", "Traitement des Paiements", "Demandes d'Assurance", "Rapports Financiers"],
+          "color": "indigo"
+        },
+        {
+          "icon": "bar-chart",
+          "name": "Analytique du Cabinet",
+          "description": "Insights basés sur les données pour comprendre et développer votre cabinet",
+          "features": ["Métriques de Performance", "Analytique Patient", "Suivi des Revenus", "Insights de Croissance"],
+          "color": "cyan"
+        }
+      ]
+    },
+    {
+      "category": "Outils Cliniques",
+      "description": "Outils cliniques avancés pour les cabinets dentaires modernes",
+      "items": [
+        {
+          "icon": "file-text",
+          "name": "Dossiers Numériques",
+          "description": "Dossiers patients numériques complets et documentation",
+          "features": ["Dossiers Médicaux", "Plans de Traitement", "Gestion des Radiographies", "Notes Cliniques"],
+          "color": "rose"
+        },
+        {
+          "icon": "clipboard",
+          "name": "Planification des Traitements",
+          "description": "Outils avancés de planification et documentation des traitements",
+          "features": ["Plans de Traitement", "Présentation de Cas", "Suivi des Progrès", "Analyse des Résultats"],
+          "color": "amber"
+        },
+        {
+          "icon": "shield",
+          "name": "Conformité HIPAA",
+          "description": "Sécurité de niveau entreprise et conformité HIPAA",
+          "features": ["Chiffrement des Données", "Contrôle d'Accès", "Journaux d'Audit", "Gestion de la Conformité"],
+          "color": "lime"
+        },
+        {
+          "icon": "cloud",
+          "name": "Stockage Cloud",
+          "description": "Stockage et sauvegarde de données sécurisés basés sur le cloud",
+          "features": ["Sauvegardes Automatiques", "Récupération de Données", "Accès Multi-Appareils", "Synchronisation en Temps Réel"],
+          "color": "green"
+        }
+      ]
+    },
+    {
+      "category": "Services de Support",
+      "description": "Support et formation complets pour votre cabinet",
+      "items": [
+        {
+          "icon": "headphones",
+          "name": "Support 24/7",
+          "description": "Support technique et assistance disponibles 24h/24 et 7j/7",
+          "features": ["Service d'Assistance", "Surveillance du Système", "Résolution des Problèmes", "Optimisation des Performances"],
+          "color": "sky"
+        },
+        {
+          "icon": "graduation-cap",
+          "name": "Formation et Onboarding",
+          "description": "Formation complète pour votre équipe",
+          "features": ["Formation d'Équipe", "Tutoriels Vidéo", "Documentation", "Meilleures Pratiques"],
+          "color": "cyan"
+        },
+        {
+          "icon": "settings",
+          "name": "Personnalisation",
+          "description": "Solutions sur mesure pour les besoins spécifiques de votre cabinet",
+          "features": ["Personnalisation des Flux de Travail", "Personnalisation des Rapports", "Configuration d'Intégration", "Configuration du Cabinet"],
+          "color": "blue"
+        },
+        {
+          "icon": "zap",
+          "name": "Mises à Jour Système",
+          "description": "Mises à jour régulières et nouvelles versions de fonctionnalités",
+          "features": ["Mises à Jour Automatiques", "Nouvelles Fonctionnalités", "Correctifs de Sécurité", "Améliorations des Performances"],
+          "color": "indigo"
+        }
+      ]
+    }
+  ],
+  "features": {
+    "title": "Ce Que Nous Offrons",
+    "description": "Nos services sont accompagnés de fonctionnalités et d'un support complets",
+    "items": [
+      {
+        "icon": "cloud",
+        "title": "Plateforme Basée sur le Cloud",
+        "description": "Accédez aux données de votre cabinet en toute sécurité depuis n'importe où, à tout moment"
+      },
+      {
+        "icon": "shield",
+        "title": "Conforme HIPAA",
+        "description": "Sécurité de niveau entreprise avec stockage de données chiffré"
+      },
+      {
+        "icon": "zap",
+        "title": "Propulsé par l'IA",
+        "description": "Automatisation intelligente pour la planification et les insights du cabinet"
+      },
+      {
+        "icon": "trending-up",
+        "title": "Croissance du Cabinet",
+        "description": "Outils conçus pour vous aider à développer votre cabinet"
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Avantages des Services",
+    "description": "Découvrez les avantages d'utiliser Dentagia pour votre cabinet.",
+    "items": [
+      {
+        "icon": "rocket",
+        "title": "Efficacité",
+        "description": "Opérations rationalisées qui font gagner du temps et réduisent la charge administrative",
+        "stats": "50%",
+        "label": "Temps Économisé"
+      },
+      {
+        "icon": "target",
+        "title": "Fiabilité",
+        "description": "Plateforme sécurisée et fiable avec garantie de disponibilité de 99,9%",
+        "stats": "99.9%",
+        "label": "Disponibilité"
+      },
+      {
+        "icon": "lightbulb",
+        "title": "Innovation",
+        "description": "Technologie IA de pointe conçue pour les cabinets dentaires modernes",
+        "stats": "500+",
+        "label": "Cabinets"
+      },
+      {
+        "icon": "users",
+        "title": "Support",
+        "description": "Équipe de support dédiée disponible 24/7 pour votre cabinet",
+        "stats": "24/7",
+        "label": "Support"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Ce Que Disent Nos Clients",
+    "description": "Écoutez les cabinets dentaires qui ont bénéficié de Dentagia",
+    "items": [
+      {
+        "quote": "Dentagia a transformé la façon dont nous gérons notre cabinet. La planification propulsée par l'IA seule nous fait économiser 10 heures par semaine, et nos scores de satisfaction patient n'ont jamais été aussi élevés.",
+        "author": "Dr. Sarah Martinez",
+        "role": "Propriétaire du Cabinet",
+        "company": "Clinique Dentaire du Centre",
+        "image": "/images/testimonials/sarah.jpg"
+      },
+      {
+        "quote": "Passer à Dentagia a été la meilleure décision que nous ayons prise. Le système de gestion des patients est intuitif, la facturation est automatisée, et l'analytique nous aide à mieux comprendre notre cabinet.",
+        "author": "Dr. Michael Chen",
+        "role": "Dentiste Principal",
+        "company": "Family Dental Care",
+        "image": "/images/testimonials/michael.jpg"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prêt à Commencer ?",
+    "description": "Rejoignez des centaines de cabinets dentaires qui ont transformé leurs opérations avec Dentagia.",
+    "buttons": [
+      {
+        "text": "Contactez-nous",
+        "href": "/contact",
+        "variant": "primary"
+      },
+      {
+        "text": "Planifier une Démo",
+        "href": "/demo",
+        "variant": "secondary"
+      }
+    ]
+  }
+}

@@ -1,0 +1,365 @@
+---
+import { SITE_TITLE } from '../consts';
+import * as LucideIcons from 'lucide-react';
+import { getLangFromUrl } from '@utils/i18n';
+
+const {
+  Brain,
+  Cpu,
+  Network,
+  Lock,
+  Zap,
+  Code,
+  Cloud,
+  Database,
+  LineChart,
+  Settings,
+  Layers,
+  Workflow,
+  Bot,
+  ChevronRight,
+  ArrowRight,
+  Shield,
+  Globe,
+  Clock,
+  Users,
+  Star,
+  CloudAws,
+  CloudGoogle,
+  CloudMicrosoft,
+  Building2,
+  Factory,
+  Database2
+} = LucideIcons;
+
+const theme = import.meta.env.THEME || 'default';
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'GiaConnect';
+
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+
+// Get current language from URL
+const currentLang = getLangFromUrl(Astro.url);
+
+// Import language-specific data
+const platformData = await import(`../data/platform/platform_${currentLang}.json`).catch(() => {
+  // Fallback to English if language file doesn't exist
+  return import(`../data/platform/platform_en.json`);
+});
+
+const {
+  pageTitle,
+  pageDescription,
+  hero,
+  techSpecs,
+  features,
+  integrations,
+  cta
+} = platformData;
+
+// Map icon strings to actual icon components
+const getIcon = (iconName) => LucideIcons[iconName];
+
+const iconMap = {
+  Brain,
+  Cpu,
+  Network,
+  Lock,
+  Zap,
+  Code,
+  Cloud,
+  Database,
+  LineChart,
+  Settings,
+  Layers,
+  Workflow,
+  Bot,
+  ChevronRight,
+  ArrowRight,
+  Shield,
+  Globe,
+  Clock,
+  Users,
+  Star,
+  CloudAws,
+  CloudGoogle,
+  CloudMicrosoft,
+  Building2,
+  Factory,
+  Database2
+};
+
+---
+
+<!doctype html>
+<html lang={currentLang} class="scroll-smooth" dir={currentLang === 'ar' ? 'rtl' : 'ltr'}>
+  <head>
+    <BaseHead 
+      title={`${pageTitle} | ${siteName}`}
+      description={pageDescription}
+    />
+  </head>
+  <body class="bg-gray-50">
+    <Header />
+    
+    <!-- Hero Section -->
+    <section class="relative min-h-[80vh] flex items-center py-20 overflow-hidden">
+      <!-- Background Effects -->
+      <div class="absolute inset-0 bg-gradient-to-br from-emerald-50 via-cyan-50 to-teal-50">
+        <div class="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(to_bottom,transparent,black,transparent)] opacity-20"></div>
+      </div>
+
+      <div class="relative container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 border border-emerald-100 shadow-lg mb-8">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span class="rounded-full h-2 w-2 bg-emerald-500"></span>
+            </span>
+            <span class="text-sm font-medium text-emerald-700">{hero.badge}</span>
+          </div>
+
+          <h1 class="text-5xl lg:text-6xl font-bold leading-tight mb-8">
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 to-teal-600">
+              {hero.title}
+            </span>
+          </h1>
+
+          <p class="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
+            {hero.description}
+          </p>
+
+          <div class="flex items-center justify-center gap-4">
+            <a 
+              href={hero.cta.primary.href}
+              class="px-8 py-4 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-medium hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 hover:shadow-lg hover:shadow-emerald-500/25 hover:-translate-y-0.5"
+            >
+              {hero.cta.primary.text}
+            </a>
+            <a 
+              href={hero.cta.secondary.href}
+              class="px-8 py-4 rounded-xl bg-white text-gray-700 font-medium hover:bg-gray-50 transition-all duration-300 hover:shadow-lg hover:shadow-gray-200/50 hover:-translate-y-0.5"
+            >
+              {hero.cta.secondary.text}
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Specs Banner -->
+    <section class="relative py-12 bg-white border-y border-gray-100">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-4 gap-8">
+          {techSpecs.map((spec) => (
+            <div class="text-center">
+              <div class="text-4xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
+                {spec.value}
+              </div>
+              <div class="text-sm text-gray-500 mt-1">{spec.unit}</div>
+              <div class="text-gray-600 mt-2 font-medium">{spec.title}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section id="features" class="py-32 relative">
+      <!-- Background Effects -->
+      <div class="absolute inset-0">
+        <div class="absolute inset-0 bg-gradient-to-br from-emerald-50 via-white to-teal-50 opacity-90"></div>
+        <div class="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(to_bottom,transparent,black,transparent)] opacity-10"></div>
+      </div>
+
+      <div class="container mx-auto px-4 relative">
+        {features.map((category, index) => (
+          <div class={`mb-20 ${index !== 0 ? 'mt-32' : ''}`}>
+            <div class="text-center max-w-3xl mx-auto mb-16">
+              <h2 class="text-4xl font-bold mb-6">{category.category}</h2>
+              <p class="text-xl text-gray-600">{category.description}</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {category.items.map((feature) => {
+                const FeatureIcon = getIcon(feature.icon);
+                return (
+                  <div class="group relative transform hover:-translate-y-2 transition-all duration-500">
+                    <!-- Card Glow Effect -->
+                    <div class="absolute -inset-0.5 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-3xl blur opacity-25 group-hover:opacity-100 transition duration-500"></div>
+                    
+                    <!-- Card Content -->
+                    <div class="relative h-full bg-white backdrop-blur-sm rounded-3xl p-8 border border-gray-200">
+                      <div class="relative w-16 h-16 mb-6">
+                        <div class="absolute inset-0 bg-emerald-100 rounded-2xl transform group-hover:scale-110 transition-transform duration-500"></div>
+                        <div class="relative h-full flex items-center justify-center">
+                          <FeatureIcon class="w-8 h-8 text-emerald-600" />
+                        </div>
+                      </div>
+
+                      <h3 class="text-xl font-semibold mb-4">{feature.name}</h3>
+                      <p class="text-gray-600 mb-6">{feature.description}</p>
+
+                      <!-- Highlights -->
+                      <div class="space-y-3 mb-6">
+                        {feature.highlights.map((highlight) => (
+                          <div class="flex items-center gap-2 text-sm text-gray-600">
+                            <ChevronRight class="w-4 h-4 text-emerald-500 flex-shrink-0" />
+                            <span>{highlight}</span>
+                          </div>
+                        ))}
+                      </div>
+
+                      <!-- Stats -->
+                      <div class="flex items-center justify-end">
+                        <div class="text-right">
+                          <div class="text-2xl font-bold text-emerald-600">{feature.stats.value}</div>
+                          <div class="text-sm text-gray-600">{feature.stats.label}</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Integration Partners -->
+    <section class="py-24 bg-white border-t border-gray-100">
+      <div class="container mx-auto px-4">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-emerald-50 border border-emerald-100 mb-4">
+            <Globe class="w-5 h-5 text-emerald-600" />
+            <span class="text-base font-medium text-emerald-700">Integrations</span>
+          </div>
+          <h2 class="text-4xl font-bold mb-6">Enterprise Integration Partners</h2>
+          <p class="text-xl text-gray-600">Seamlessly integrate with leading enterprise platforms and services</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+          {integrations.map((partner) => {
+            const PartnerIcon = iconMap[partner.icon] || iconMap['Cloud'];
+            return (
+              <div class="group relative transform hover:-translate-y-2 transition-all duration-500">
+                <!-- Card Glow Effect -->
+                <div class="absolute -inset-0.5 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-xl blur opacity-0 group-hover:opacity-25 transition duration-500"></div>
+                
+                <!-- Card Content -->
+                <div class="relative bg-white rounded-xl p-6 flex flex-col items-center justify-center gap-3 border border-gray-100 group-hover:border-transparent transition-colors duration-500">
+                  <div class="w-16 h-16 flex items-center justify-center bg-emerald-50 rounded-lg group-hover:bg-emerald-100 transition-colors duration-500">
+                    <PartnerIcon class="w-8 h-8 text-emerald-600" />
+                  </div>
+                  <span class="text-sm font-medium text-gray-600 group-hover:text-emerald-600 transition-colors duration-500">{partner.name}</span>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="relative py-20 overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-r from-emerald-600 to-teal-600">
+        <div class="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(to_bottom,transparent,black,transparent)] opacity-10"></div>
+      </div>
+      
+      <div class="relative container mx-auto px-4 text-center">
+        <div class="max-w-3xl mx-auto">
+          <h2 class="text-4xl font-bold text-white mb-6">{cta.title}</h2>
+          <p class="text-xl text-white/90 mb-8">
+            {cta.description}
+          </p>
+          <div class="flex items-center justify-center gap-4">
+            {cta.buttons.map((button) => (
+              <a 
+                href={button.href}
+                class={`px-8 py-4 rounded-xl ${
+                  button.variant === 'primary'
+                    ? 'bg-white text-emerald-600 hover:bg-gray-100'
+                    : 'bg-white/10 text-white hover:bg-white/20'
+                } font-medium transition-all duration-300 hover:shadow-lg hover:shadow-emerald-500/25 hover:-translate-y-0.5`}
+              >
+                {button.text}
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Footer />
+
+    <script>
+      // Add smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
+
+<style>
+  /* Animations */
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 0.4; }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 4s ease-in-out infinite;
+  }
+
+  /* Smooth transitions */
+  .transition-all {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+
+  /* Hover effects */
+  .hover\:scale-105:hover {
+    transform: scale(1.05);
+  }
+
+  .hover\:-translate-y-1:hover {
+    transform: translateY(-0.25rem);
+  }
+
+  /* RTL Support */
+  [dir="rtl"] .from-emerald-600 {
+    --tw-gradient-from: theme('colors.teal.600');
+    --tw-gradient-to: theme('colors.emerald.600');
+  }
+
+  [dir="rtl"] .to-teal-600 {
+    --tw-gradient-to: theme('colors.emerald.600');
+  }
+
+  [dir="rtl"] .from-emerald-500 {
+    --tw-gradient-from: theme('colors.teal.500');
+    --tw-gradient-to: theme('colors.emerald.500');
+  }
+
+  [dir="rtl"] .to-teal-500 {
+    --tw-gradient-to: theme('colors.emerald.500');
+  }
+</style> 

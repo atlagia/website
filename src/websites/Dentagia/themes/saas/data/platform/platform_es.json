@@ -1,0 +1,284 @@
+{
+  "pageTitle": "Plataforma Dentagia",
+  "pageDescription": "Explore las capacidades y funciones avanzadas de la plataforma de gestión de consultorios dentales impulsada por IA de Dentagia.",
+  "hero": {
+    "badge": "Resumen de la Plataforma",
+    "title": "Plataforma Avanzada de Gestión de Consultorios para Consultorios Dentales",
+    "description": "Descubra nuestra plataforma de gestión de consultorios dentales de nivel empresarial que combina tecnología IA de vanguardia con infraestructura basada en la nube, seguridad inigualable y escalabilidad.",
+    "cta": {
+      "primary": {
+        "text": "Explorar Funciones",
+        "href": "#features"
+      },
+      "secondary": {
+        "text": "Ver Documentación",
+        "href": "/documentation"
+      }
+    }
+  },
+  "techSpecs": [
+    {
+      "title": "Disponibilidad",
+      "value": "99.9%",
+      "unit": "garantizada"
+    },
+    {
+      "title": "Tiempo de Respuesta",
+      "value": "<100",
+      "unit": "milisegundos"
+    },
+    {
+      "title": "Centros de Datos",
+      "value": "Global",
+      "unit": "infraestructura cloud"
+    },
+    {
+      "title": "Consultorios",
+      "value": "500+",
+      "unit": "consultorios dentales"
+    }
+  ],
+  "features": [
+    {
+      "category": "Núcleo de Gestión del Consultorio",
+      "description": "Capacidades esenciales de gestión de consultorios",
+      "items": [
+        {
+          "icon": "Users",
+          "name": "Gestión de Pacientes",
+          "description": "Gestión integral de registros de pacientes e historiales médicos",
+          "highlights": [
+            "Registros Digitales de Pacientes",
+            "Seguimiento del Historial Médico",
+            "Planificación de Tratamientos",
+            "Acceso al Portal del Paciente"
+          ],
+          "stats": {
+            "value": "100%",
+            "label": "Registros Digitales"
+          }
+        },
+        {
+          "icon": "Calendar",
+          "name": "Programación Impulsada por IA",
+          "description": "Programación inteligente de citas y optimización del calendario",
+          "highlights": [
+            "Programación Inteligente",
+            "Recordatorios Automatizados",
+            "Gestión de Listas de Espera",
+            "Reducción de Ausencias"
+          ],
+          "stats": {
+            "value": "70%",
+            "label": "Reducción de Ausencias"
+          }
+        },
+        {
+          "icon": "CreditCard",
+          "name": "Facturación y Pagos",
+          "description": "Facturación, facturación y procesamiento de pagos optimizados",
+          "highlights": [
+            "Facturación Automatizada",
+            "Procesamiento de Pagos",
+            "Reclamaciones de Seguros",
+            "Informes Financieros"
+          ],
+          "stats": {
+            "value": "80%",
+            "label": "Procesamiento Más Rápido"
+          }
+        },
+        {
+          "icon": "BarChart",
+          "name": "Análisis del Consultorio",
+          "description": "Insights basados en datos para el crecimiento y optimización del consultorio",
+          "highlights": [
+            "Métricas de Rendimiento",
+            "Análisis de Pacientes",
+            "Seguimiento de Ingresos",
+            "Insights de Crecimiento"
+          ],
+          "stats": {
+            "value": "35%",
+            "label": "Crecimiento de Ingresos"
+          }
+        }
+      ]
+    },
+    {
+      "category": "Infraestructura Cloud",
+      "description": "Plataforma segura y escalable basada en la nube",
+      "items": [
+        {
+          "icon": "Cloud",
+          "name": "Acceso Basado en la Nube",
+          "description": "Acceda a los datos de su consultorio desde cualquier lugar, en cualquier momento",
+          "highlights": [
+            "Acceso Multi-Dispositivo",
+            "Sincronización en Tiempo Real",
+            "Copias de Seguridad Automáticas",
+            "Disponibilidad Global"
+          ],
+          "stats": {
+            "value": "99.9%",
+            "label": "Disponibilidad"
+          }
+        },
+        {
+          "icon": "Shield",
+          "name": "Cumplimiento HIPAA",
+          "description": "Seguridad de nivel empresarial y cumplimiento HIPAA",
+          "highlights": [
+            "Cifrado de Extremo a Extremo",
+            "Cumplimiento HIPAA",
+            "Control de Acceso",
+            "Registros de Auditoría"
+          ],
+          "stats": {
+            "value": "256-bit",
+            "label": "Cifrado"
+          }
+        },
+        {
+          "icon": "Database",
+          "name": "Gestión de Datos",
+          "description": "Almacenamiento y gestión seguros de datos de pacientes",
+          "highlights": [
+            "Almacenamiento Seguro",
+            "Copia de Seguridad de Datos",
+            "Recuperación ante Desastres",
+            "Retención de Datos"
+          ],
+          "stats": {
+            "value": "100%",
+            "label": "Seguridad de Datos"
+          }
+        },
+        {
+          "icon": "Zap",
+          "name": "Integración IA",
+          "description": "Capacidades IA avanzadas para la optimización del consultorio",
+          "highlights": [
+            "Programación Inteligente",
+            "Análisis Predictivo",
+            "Recordatorios Automatizados",
+            "Insights del Consultorio"
+          ],
+          "stats": {
+            "value": "50%",
+            "label": "Tiempo Ahorrado"
+          }
+        }
+      ]
+    },
+    {
+      "category": "Herramientas del Consultorio",
+      "description": "Herramientas integrales para operaciones de consultorios dentales",
+      "items": [
+        {
+          "icon": "FileText",
+          "name": "Documentación Clínica",
+          "description": "Registros clínicos digitales completos y documentación",
+          "highlights": [
+            "Planes de Tratamiento",
+            "Notas Clínicas",
+            "Gestión de Radiografías",
+            "Seguimiento del Progreso"
+          ],
+          "stats": {
+            "value": "100%",
+            "label": "Registros Digitales"
+          }
+        },
+        {
+          "icon": "MessageSquare",
+          "name": "Comunicación con Pacientes",
+          "description": "Comunicación y participación automatizadas con pacientes",
+          "highlights": [
+            "Recordatorios de Citas",
+            "Mensajes de Seguimiento",
+            "SMS y Correo Electrónico",
+            "Portal del Paciente"
+          ],
+          "stats": {
+            "value": "95%",
+            "label": "Entrega de Recordatorios"
+          }
+        },
+        {
+          "icon": "Workflow",
+          "name": "Automatización de Flujos de Trabajo",
+          "description": "Flujos de trabajo automatizados para la eficiencia del consultorio",
+          "highlights": [
+            "Automatización de Citas",
+            "Automatización de Facturación",
+            "Generación de Informes",
+            "Gestión de Tareas"
+          ],
+          "stats": {
+            "value": "50%",
+            "label": "Tiempo Ahorrado"
+          }
+        },
+        {
+          "icon": "LineChart",
+          "name": "Informes y Análisis",
+          "description": "Informes integrales y análisis del consultorio",
+          "highlights": [
+            "Informes Financieros",
+            "Métricas del Consultorio",
+            "Informes de Pacientes",
+            "Informes Personalizados"
+          ],
+          "stats": {
+            "value": "Tiempo Real",
+            "label": "Análisis"
+          }
+        }
+      ]
+    }
+  ],
+  "integrations": [
+    {
+      "name": "AWS Cloud",
+      "icon": "CloudAws"
+    },
+    {
+      "name": "Google Cloud",
+      "icon": "CloudGoogle"
+    },
+    {
+      "name": "Microsoft Azure",
+      "icon": "CloudMicrosoft"
+    },
+    {
+      "name": "Imagen Dental",
+      "icon": "Image"
+    },
+    {
+      "name": "Proveedores de Seguros",
+      "icon": "Shield"
+    },
+    {
+      "name": "Pasarelas de Pago",
+      "icon": "CreditCard"
+    }
+  ],
+  "cta": {
+    "title": "¿Listo para Comenzar?",
+    "description": "Experimente el poder de la plataforma de gestión de consultorios de Dentagia con una demostración personalizada.",
+    "buttons": [
+      {
+        "text": "Programar una Demostración",
+        "href": "/demo",
+        "variant": "primary"
+      },
+      {
+        "text": "Ver Documentación",
+        "href": "/documentation",
+        "variant": "secondary"
+      }
+    ]
+  }
+}
+

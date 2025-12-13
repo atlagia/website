@@ -1,0 +1,198 @@
+{
+  "hero": {
+    "subtitle": "Intelligente Terminplanung",
+    "title": "KI-gestützte Terminplanung",
+    "description": "Optimieren Sie den Kalender Ihrer Praxis mit intelligenter Terminplanung, die Absagen reduziert, Stornierungen automatisch füllt und die Praxiseffizienz maximiert.",
+    "icon": "calendar",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "70%",
+        "label": "Reduzierung von Absagen"
+      },
+      {
+        "value": "10hrs",
+        "label": "Zeit gespart/Woche"
+      },
+      {
+        "value": "95%",
+        "label": "Efficienz"
+      }
+    ]
+  },
+  "features": {
+    "title": "Terminplanungs-Funktionen",
+    "subtitle": "Intelligente Kalenderverwaltung",
+    "description": "Fortgeschrittene Terminplanungs-Tools zur Maximierung der Praxiseffizienz und Reduzierung der Verwaltungskosten.",
+    "items": [
+      {
+        "icon": "calendar",
+        "title": "Multi-Provider-Terminplanung",
+        "description": "Verwalten Sie Zeitpläne für mehrere Zahnärzte, Hygieniker und Spezialisten in einem einheitlichen Kalendersystem.",
+        "highlights": [
+          "Einheitlicher Kalender für alle Anbieter",
+          "Ressourcen- und Raumzuweisung",
+          "Konflikterkennung und -lösung",
+          "Multi-Standort-Support",
+          "Wiederkehrende Terminvorlagen"
+        ],
+        "stats": {
+          "value": "95%",
+          "label": "Efficienz"
+        }
+      },
+      {
+        "icon": "bell",
+        "title": "Automatisierte Erinnerungen",
+        "description": "Reduzieren Sie Absagen mit automatisierten Erinnerungen per SMS und E-Mail, die zu optimalen Zeiten vor Terminen gesendet werden.",
+        "highlights": [
+          "SMS- und E-Mail-Erinnerungen",
+          "Anpassbare Erinnerungszeiten",
+          "Bestätigungsanfragen",
+          "Wartelistenverwaltung",
+          "Stornierungsbenachrichtigungen"
+        ],
+        "stats": {
+          "value": "70%",
+          "label": "Reduzierung von Absagen"
+        }
+      },
+      {
+        "icon": "users",
+        "title": "Online-Buchung",
+        "description": "Ermöglichen Sie Patienten, Termine online 24/7 mit Echtzeit-Verfügbarkeit und automatischen Bestätigungen zu buchen.",
+        "highlights": [
+          "Online-Buchung 24/7",
+          "Echtzeit-Verfügbarkeit",
+          "Automatische Bestätigungen",
+          "Patientenselbstbedienung",
+          "Mobile-freundliche Oberfläche"
+        ],
+        "stats": {
+          "value": "40%",
+          "label": "Erhöhung der Buchungen"
+        }
+      },
+      {
+        "icon": "trending-up",
+        "title": "Kalenderoptimierung",
+        "description": "KI-gestützte Kalenderoptimierung, die aus den Mustern Ihrer Praxis lernt, um die Effizienz zu maximieren.",
+        "highlights": [
+          "KI-gestützte Optimierung",
+          "Mustererkennung",
+          "Automatisches Auffüllen von Slots",
+          "Effizienzanalyse",
+          "Umsatzoptimierung"
+        ],
+        "stats": {
+          "value": "10hrs",
+          "label": "Zeit gespart/Woche"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Terminplanungs-Erfolgsgeschichten",
+    "description": "Sehen Sie, wie Praxen ihre Terminplanungsabläufe transformieren",
+    "stats": [
+      {
+        "icon": "calendar",
+        "value": "70%",
+        "label": "Reduzierung von Absagen"
+      },
+      {
+        "icon": "clock",
+        "value": "10hrs",
+        "label": "Zeit gespart"
+      },
+      {
+        "icon": "trending-up",
+        "value": "40%",
+        "label": "Erhöhung der Buchungen"
+      },
+      {
+        "icon": "users",
+        "value": "95%",
+        "label": "Efficienz"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Dr. Michael Chen",
+        "role": "Leitender Zahnarzt, Family Dental Care",
+        "quote": "Die KI-gestützte Terminplanung hat unser Absagenproblem vollständig beseitigt. Wir sparen allein bei der Terminplanung 10 Stunden pro Woche."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Vorteile der Terminplanung",
+    "subtitle": "Transformieren Sie Ihren Kalender",
+    "description": "Erleben Sie die Vorteile intelligenter Terminplanung.",
+    "items": [
+      {
+        "title": "Absagen reduzieren",
+        "description": "Automatisierte Erinnerungen und Bestätigungen reduzieren erheblich verpasste Termine.",
+        "icon": "bell",
+        "color": "teal",
+        "stats": {
+          "value": "70%",
+          "label": "Reduzierung"
+        },
+        "highlights": [
+          "Zeitnahe Erinnerungen",
+          "Mehrere Kanäle",
+          "Bestätigungsanfragen",
+          "Antwortverwaltung"
+        ]
+      },
+      {
+        "title": "Zeit sparen",
+        "description": "Automatisierte Terminplanung und Optimierung sparen wöchentlich Stunden an Verwaltungsarbeit.",
+        "icon": "clock",
+        "color": "cyan",
+        "stats": {
+          "value": "10hrs",
+          "label": "Pro Woche"
+        },
+        "highlights": [
+          "Automatisierte Terminplanung",
+          "Kalenderoptimierung",
+          "Reduzierte Telefonanrufe",
+          "Optimierte Workflows"
+        ]
+      },
+      {
+        "title": "Buchungen erhöhen",
+        "description": "Online-Buchung 24/7 und optimierte Terminplanung erhöhen das Terminvolumen.",
+        "icon": "trending-up",
+        "color": "blue",
+        "stats": {
+          "value": "40%",
+          "label": "Erhöhung"
+        },
+        "highlights": [
+          "Online-Buchung",
+          "Optimierte Terminplanung",
+          "Slot-Auffüllung",
+          "Umsatzwachstum"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Bereit, Ihre Terminplanung zu optimieren?",
+    "description": "Sehen Sie, wie die intelligente Terminplanung von Dentagia Ihre Praxisabläufe transformieren kann.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Demo vereinbaren",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Mehr erfahren",
+      "link": "/features"
+    }
+  }
+}
+

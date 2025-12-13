@@ -3,7 +3,7 @@
     "title": "الشركة",
     "links": [
       {
-        "name": "عن الشركة",
+        "name": "من نحن",
         "href": "/about"
       },
       {
@@ -11,7 +11,7 @@
         "href": "/careers"
       },
       {
-        "name": "الأخبار الصحفية",
+        "name": "المركز الإعلامي",
         "href": "/press"
       },
       {
@@ -21,35 +21,88 @@
     ]
   },
   "product": {
-    "title": "المنتج",
+    "title": "الحلول",
     "links": [
       {
-        "name": "المميزات",
-        "href": "/features"
+        "name": "الممارسات الطبية",
+        "href": "/solutions/medical-solution"
       },
       {
-        "name": "الأسعار",
-        "href": "/pricing"
+        "name": "المستشفيات",
+        "href": "/solutions/hospital-solution"
       },
       {
-        "name": "الأمان",
-        "href": "/security"
+        "name": "العيادات",
+        "href": "/solutions/clinic-solution"
       },
       {
-        "name": "سجل التحديثات",
-        "href": "/changelog"
+        "name": "الصيدليات",
+        "href": "/solutions/pharmacy-solution"
+      },
+      {
+        "name": "عيادات الأسنان",
+        "href": "/solutions/dental-solution"
+      },
+      {
+        "name": "العيادات البيطرية",
+        "href": "/solutions/veterinary-solution"
+      },
+      {
+        "name": "مراكز الأشعة",
+        "href": "/solutions/radiology-solution"
+      },
+      {
+        "name": "المختبرات",
+        "href": "/solutions/laboratory-solution"
+      },
+      {
+        "name": "التجارة الإلكترونية",
+        "href": "/solutions/ecommerce-solution"
+      },
+      {
+        "name": "متاجر التجزئة",
+        "href": "/solutions/retail-stores"
+      },
+      {
+        "name": "المطاعم",
+        "href": "/solutions/restaurants"
+      },
+      {
+        "name": "البيع بالجملة",
+        "href": "/solutions/wholesale"
+      }
+    ]
+  },
+  "services": {
+    "title": "الخدمات",
+    "links": [
+      {
+        "name": "التطوير",
+        "href": "/services/development"
+      },
+      {
+        "name": "الاستشارات",
+        "href": "/services/consulting"
+      },
+      {
+        "name": "الدعم",
+        "href": "/services/support"
+      },
+      {
+        "name": "التدريب",
+        "href": "/services/training"
       }
     ]
   },
   "resources": {
-    "title": "المصادر",
+    "title": "الموارد",
     "links": [
       {
         "name": "التوثيق",
         "href": "/documentation"
       },
       {
-        "name": "واجهة برمجة التطبيقات",
+        "name": "مرجع واجهة برمجة التطبيقات",
         "href": "/api"
       },
       {
@@ -57,13 +110,13 @@
         "href": "/support"
       },
       {
-        "name": "حالة النظام",
+        "name": "الحالة",
         "href": "/status"
       }
     ]
   },
   "legal": {
-    "title": "قانوني",
+    "title": "القانونية",
     "links": [
       {
         "name": "الخصوصية",
@@ -74,7 +127,7 @@
         "href": "/terms"
       },
       {
-        "name": "سياسة ملفات الارتباط",
+        "name": "سياسة ملفات تعريف الارتباط",
         "href": "/cookie-policy"
       }
     ]
@@ -83,30 +136,40 @@
     "title": "التواصل الاجتماعي",
     "links": [
       {
+        "name": "يوتيوب",
+        "href": "https://www.youtube.com/@Atlagia",
+        "icon": "youtube"
+      },
+      {
+        "name": "انستغرام",
+        "href": "https://www.instagram.com/giaconnect/",
+        "icon": "instagram"
+      },
+      {
         "name": "تويتر",
-        "href": "https://twitter.com/atlagia",
+        "href": "https://twitter.com/giaconnect",
         "icon": "twitter"
       },
       {
         "name": "لينكد إن",
-        "href": "https://linkedin.com/company/atlagia",
+        "href": "https://linkedin.com/company/giaconnect",
         "icon": "linkedin"
       },
       {
-        "name": "جيت هب",
-        "href": "https://github.com/atlagia",
+        "name": "جيثب",
+        "href": "https://github.com/giaconnect",
         "icon": "github"
       }
     ]
   },
   "newsletter": {
     "title": "اشترك في نشرتنا الإخبارية",
-    "description": "آخر الأخبار والمقالات والموارد، تصل إلى بريدك الإلكتروني أسبوعياً.",
+    "description": "ابق على اطلاع بآخر رؤى الصناعة وتحديثات المنتجات وأخبار الشركة.",
     "buttonText": "اشتراك",
     "placeholderText": "أدخل بريدك الإلكتروني"
   },
   "copyright": {
-    "text": "© 2024 أَطلجيا. جميع الحقوق محفوظة.",
+    "text": "© 2025 أَتلاَّسيَا. جميع الحقوق محفوظة.",
     "links": [
       {
         "name": "سياسة الخصوصية",

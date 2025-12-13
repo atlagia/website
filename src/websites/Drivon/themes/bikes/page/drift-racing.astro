@@ -1,0 +1,221 @@
+---
+import Layoutc from '@layouts/Layoutc.astro';
+import { ArrowRight, Zap, Car, Trophy, Star, Flag } from 'lucide-react';
+
+// Generate static paths for allowed languages from environment
+export async function getStaticPaths() {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  const languages = allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+  
+  return languages.map(lang => ({ params: { lang } }));
+}
+
+const { lang = 'en' } = Astro.params;
+const baseUrl = import.meta.env.DOMAINE || 'https://drivon.store';
+const storeName = import.meta.env.PUBLIC_SITE_NAME || 'Drivon';
+
+// Load multilingual data
+let data;
+try {
+  data = await import(`../data/drift-racing/drift-racing_${lang}.json`);
+} catch (error) {
+  data = await import(`../data/drift-racing/drift-racing_en.json`);
+}
+
+const pageData = data.default;
+
+// SEO
+const seoTitle = `${pageData.title} | ${storeName}`;
+const seoDescription = pageData.description;
+---
+
+<Layoutc title={seoTitle} description={seoDescription} lang={lang}>
+  <div class="min-h-screen bg-gray-50">
+    <!-- Hero Section -->
+    <section class="relative h-[60vh] bg-gradient-to-br from-orange-900 via-red-800 to-pink-900">
+      <div class="absolute inset-0 bg-black/50"></div>
+      <div class="relative z-10 h-full flex items-center justify-center text-center px-4">
+        <div class="max-w-4xl mx-auto">
+          <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">
+            {pageData.hero.title}
+          </h1>
+          <p class="text-xl md:text-2xl text-gray-200 mb-8">
+            {pageData.hero.subtitle}
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href={`/${lang}/collections`} class="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+              Drift Collection
+            </a>
+            <a href={`/${lang}/street-culture`} class="bg-white/20 hover:bg-white/30 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+              Street Culture
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Drift Racing Features -->
+    <section class="py-20 px-4">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">The Art of Drifting</h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Drift racing is the ultimate expression of skill, style, and control. From JDM legends to drift champions, celebrate the art of controlled chaos.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6">
+              <Zap class="w-8 h-8 text-orange-600" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Drift Champions</h3>
+            <p class="text-gray-600">
+              Celebrate the legendary drift drivers who have mastered the art of controlled chaos and earned their place in drift racing history.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
+              <Car class="w-8 h-8 text-red-600" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">JDM Legends</h3>
+            <p class="text-gray-600">
+              Honor the legendary JDM cars and drivers who have shaped the drift scene and continue to inspire generations of drift enthusiasts.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mb-6">
+              <Trophy class="w-8 h-8 text-pink-600" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Drift Style</h3>
+            <p class="text-gray-600">
+              Experience the rich culture of drift racing through authentic designs that capture the style and skill of the sport.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Drift Racing Categories -->
+    <section class="py-20 bg-gray-100">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">Drift Racing Collection</h2>
+          <p class="text-xl text-gray-600">Celebrate the art of drifting</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <a href={`/${lang}/collections`} class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+            <div class="h-48 bg-gradient-to-br from-orange-500 to-orange-700 flex items-center justify-center">
+              <Zap class="w-16 h-16 text-white" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Drift Hoodies</h3>
+              <p class="text-gray-600 mb-4">Premium hoodies celebrating drift culture</p>
+              <div class="flex items-center text-orange-600 font-semibold group-hover:text-orange-700">
+                Shop Drift Hoodies <ArrowRight class="w-4 h-4 ml-2" />
+              </div>
+            </div>
+          </a>
+
+          <a href={`/${lang}/collections`} class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+            <div class="h-48 bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center">
+              <Car class="w-16 h-16 text-white" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">JDM Tees</h3>
+              <p class="text-gray-600 mb-4">Classic tees celebrating JDM culture</p>
+              <div class="flex items-center text-red-600 font-semibold group-hover:text-red-700">
+                Shop JDM Tees <ArrowRight class="w-4 h-4 ml-2" />
+              </div>
+            </div>
+          </a>
+
+          <a href={`/${lang}/racing-accessories`} class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+            <div class="h-48 bg-gradient-to-br from-pink-500 to-pink-700 flex items-center justify-center">
+              <Trophy class="w-16 h-16 text-white" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Drift Accessories</h3>
+              <p class="text-gray-600 mb-4">Essential accessories for drift fans</p>
+              <div class="flex items-center text-pink-600 font-semibold group-hover:text-pink-700">
+                Shop Drift Accessories <ArrowRight class="w-4 h-4 ml-2" />
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Drift Racing Culture -->
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">Drift Racing Culture</h2>
+          <p class="text-xl text-gray-600">Experience the authentic drift lifestyle</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <div class="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+              <Zap class="w-10 h-10 text-orange-600" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">Drift Scene</h3>
+            <p class="text-gray-600 text-center mb-6">
+              Experience the raw energy of drift racing with authentic designs that capture the skill and style of the sport.
+            </p>
+            <a href={`/${lang}/street-culture`} class="flex items-center justify-center text-orange-600 font-semibold hover:text-orange-700">
+              Explore Drift Scene <ArrowRight class="w-4 h-4 ml-2" />
+            </a>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <div class="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+              <Car class="w-10 h-10 text-red-600" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">JDM Culture</h3>
+            <p class="text-gray-600 text-center mb-6">
+              Celebrate the legendary JDM cars and culture that have shaped the drift scene and inspired generations.
+            </p>
+            <a href={`/${lang}/street-culture`} class="flex items-center justify-center text-red-600 font-semibold hover:text-red-700">
+              Explore JDM Culture <ArrowRight class="w-4 h-4 ml-2" />
+            </a>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <div class="w-20 h-20 bg-pink-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+              <Star class="w-10 h-10 text-pink-600" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">Drift Community</h3>
+            <p class="text-gray-600 text-center mb-6">
+              Connect with like-minded drift enthusiasts who share your passion for the art of controlled chaos.
+            </p>
+            <a href={`/${lang}/car-communities`} class="flex items-center justify-center text-pink-600 font-semibold hover:text-pink-700">
+              Join Drift Community <ArrowRight class="w-4 h-4 ml-2" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-gray-900 text-white">
+      <div class="max-w-4xl mx-auto text-center px-4">
+        <h2 class="text-4xl font-bold mb-6">Experience Drift Racing Culture</h2>
+        <p class="text-xl text-gray-300 mb-8">
+          Join the global drift racing community and celebrate the art of controlled chaos with our authentic drift racing collection.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href={`/${lang}/collections`} class="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+            Shop Drift Racing Collection
+          </a>
+          <a href={`/${lang}/street-culture`} class="bg-white/20 hover:bg-white/30 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+            Explore Street Culture
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layoutc>

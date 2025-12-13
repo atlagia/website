@@ -1,0 +1,211 @@
+---
+import Layoutc from '@layouts/Layoutc.astro';
+import { ArrowRight, Clock, Trophy, Star, Crown, Award } from 'lucide-react';
+
+// Generate static paths for allowed languages from environment
+export async function getStaticPaths() {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  const languages = allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+  
+  return languages.map(lang => ({ params: { lang } }));
+}
+
+const { lang = 'en' } = Astro.params;
+const baseUrl = import.meta.env.DOMAINE || 'https://drivon.store';
+const storeName = import.meta.env.PUBLIC_SITE_NAME || 'Drivon';
+
+// SEO
+const seoTitle = `Le Mans Hoodies | ${storeName}`;
+const seoDescription = "Premium Le Mans hoodies celebrating endurance racing heroes. From 24-hour champions to endurance legends, wear the heritage of Le Mans.";
+---
+
+<Layoutc title={seoTitle} description={seoDescription} lang={lang}>
+  <div class="min-h-screen bg-gray-50">
+    <!-- Hero Section -->
+    <section class="relative h-[60vh] bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900">
+      <div class="absolute inset-0 bg-black/50"></div>
+      <div class="relative z-10 h-full flex items-center justify-center text-center px-4">
+        <div class="max-w-4xl mx-auto">
+          <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">
+            Le Mans Hoodies
+          </h1>
+          <p class="text-xl md:text-2xl text-gray-200 mb-8">
+            Premium hoodies celebrating endurance racing heroes
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href={`/${lang}/collections`} class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+              Shop Le Mans Hoodies
+            </a>
+            <a href={`/${lang}/le-mans-heroes`} class="bg-white/20 hover:bg-white/30 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+              Le Mans Heroes
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Le Mans Hoodies Features -->
+    <section class="py-20 px-4">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">Premium Le Mans Hoodies</h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            From 24-hour champions to endurance legends, our Le Mans hoodies celebrate the greatest drivers in endurance racing history with authentic designs and premium quality.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+              <Clock class="w-8 h-8 text-blue-600" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">24-Hour Champions</h3>
+            <p class="text-gray-600">
+              Celebrate the legendary drivers who have conquered the grueling 24 Hours of Le Mans and earned their place in endurance racing history.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+              <Trophy class="w-8 h-8 text-green-600" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Endurance Legends</h3>
+            <p class="text-gray-600">
+              Honor the legendary drivers who have shaped endurance racing and inspired generations of racing fans worldwide.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+              <Star class="w-8 h-8 text-purple-600" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Premium Quality</h3>
+            <p class="text-gray-600">
+              Every hoodie is crafted with premium materials and attention to detail, ensuring comfort and durability for the endurance racing enthusiast.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Le Mans Hoodies Categories -->
+    <section class="py-20 bg-gray-100">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">Le Mans Hoodies Collection</h2>
+          <p class="text-xl text-gray-600">Celebrate endurance racing heroes</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <a href={`/${lang}/collections`} class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+            <div class="h-48 bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center">
+              <Clock class="w-16 h-16 text-white" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Le Mans Champions Hoodies</h3>
+              <p class="text-gray-600 mb-4">Premium hoodies celebrating Le Mans champions</p>
+              <div class="flex items-center text-blue-600 font-semibold group-hover:text-blue-700">
+                Shop Champions Hoodies <ArrowRight class="w-4 h-4 ml-2" />
+              </div>
+            </div>
+          </a>
+
+          <a href={`/${lang}/collections`} class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+            <div class="h-48 bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center">
+              <Trophy class="w-16 h-16 text-white" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Le Mans Heroes Hoodies</h3>
+              <p class="text-gray-600 mb-4">Classic hoodies honoring endurance racing legends</p>
+              <div class="flex items-center text-green-600 font-semibold group-hover:text-green-700">
+                Shop Heroes Hoodies <ArrowRight class="w-4 h-4 ml-2" />
+              </div>
+            </div>
+          </a>
+
+          <a href={`/${lang}/collections`} class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+            <div class="h-48 bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center">
+              <Star class="w-16 h-16 text-white" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Le Mans Heritage Hoodies</h3>
+              <p class="text-gray-600 mb-4">Hoodies celebrating Le Mans racing heritage</p>
+              <div class="flex items-center text-purple-600 font-semibold group-hover:text-purple-700">
+                Shop Heritage Hoodies <ArrowRight class="w-4 h-4 ml-2" />
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Le Mans Hoodies Spotlight -->
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">Le Mans Hoodies Features</h2>
+          <p class="text-xl text-gray-600">Premium quality and authentic designs</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+              <Crown class="w-10 h-10 text-blue-600" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">Premium Materials</h3>
+            <p class="text-gray-600 text-center mb-6">
+              Crafted with premium cotton and attention to detail, ensuring comfort and durability for the endurance racing enthusiast.
+            </p>
+            <a href={`/${lang}/collections`} class="flex items-center justify-center text-blue-600 font-semibold hover:text-blue-700">
+              Shop Premium Hoodies <ArrowRight class="w-4 h-4 ml-2" />
+            </a>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+              <Award class="w-10 h-10 text-green-600" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">Authentic Designs</h3>
+            <p class="text-gray-600 text-center mb-6">
+              Featuring authentic Le Mans designs that celebrate the heritage and culture of endurance racing.
+            </p>
+            <a href={`/${lang}/collections`} class="flex items-center justify-center text-green-600 font-semibold hover:text-green-700">
+              Shop Authentic Designs <ArrowRight class="w-4 h-4 ml-2" />
+            </a>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <div class="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+              <Star class="w-10 h-10 text-purple-600" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">Le Mans Heritage</h3>
+            <p class="text-gray-600 text-center mb-6">
+              Each hoodie tells a story of Le Mans heritage, from 24-hour champions to endurance legends and iconic moments.
+            </p>
+            <a href={`/${lang}/le-mans-heroes`} class="flex items-center justify-center text-purple-600 font-semibold hover:text-purple-700">
+              Explore Le Mans Heritage <ArrowRight class="w-4 h-4 ml-2" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-gray-900 text-white">
+      <div class="max-w-4xl mx-auto text-center px-4">
+        <h2 class="text-4xl font-bold mb-6">Wear Le Mans Heritage</h2>
+        <p class="text-xl text-gray-300 mb-8">
+          Join the global endurance racing community and celebrate the greatest drivers in Le Mans history with our premium Le Mans hoodies collection.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href={`/${lang}/collections`} class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+            Shop Le Mans Hoodies Collection
+          </a>
+          <a href={`/${lang}/le-mans-heroes`} class="bg-white/20 hover:bg-white/30 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+            Explore Le Mans Heroes
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layoutc>

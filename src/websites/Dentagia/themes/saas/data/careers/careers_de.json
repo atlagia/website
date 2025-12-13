@@ -1,0 +1,236 @@
+{
+  "pageTitle": "Karriere bei Dentagia",
+  "pageDescription": "Werden Sie Teil unseres Teams von Innovatoren und gestalten Sie die Zukunft des Praxismanagements mit KI-gestützten Lösungen",
+  "hero": {
+    "badge": "Wir Stellen Ein",
+    "title": "Werden Sie Teil Unseres Teams von Innovatoren",
+    "description": "Helfen Sie uns, die Zukunft des Praxismanagements zu gestalten und zu transformieren, wie Zahnarztpraxen arbeiten. Wir suchen leidenschaftliche Menschen, die bei Herausforderungen und Innovationen in der Gesundheitstechnologie aufblühen.",
+    "cta": {
+      "primary": {
+        "text": "Offene Stellen Ansehen",
+        "href": "#open-positions"
+      },
+      "secondary": {
+        "text": "Unseren Prozess Erfahren",
+        "href": "#application-process"
+      }
+    }
+  },
+  "values": {
+    "title": "Unsere Werte",
+    "description": "Diese Prinzipien leiten alles, was wir tun, und definieren unsere Unternehmenskultur.",
+    "items": [
+      {
+        "title": "Innovation",
+        "description": "Wir stoßen Grenzen vor und nutzen modernste KI-Technologien, um komplexe Praxismanagement-Herausforderungen zu lösen.",
+        "icon": "lightbulb"
+      },
+      {
+        "title": "Zusammenarbeit",
+        "description": "Wir glauben an die Kraft vielfältiger Teams, die gemeinsam an gemeinsamen Zielen in der Gesundheitstechnologie arbeiten.",
+        "icon": "users"
+      },
+      {
+        "title": "Exzellenz",
+        "description": "Wir streben nach höchster Qualität in allem, was wir tun, vom Code bis zum Kundenservice für Zahnarztpraxen.",
+        "icon": "award"
+      },
+      {
+        "title": "Integrität",
+        "description": "Wir handeln mit Ehrlichkeit, Transparenz und ethischer Verantwortung, besonders beim Umgang mit sensiblen Patientendaten.",
+        "icon": "shield"
+      }
+    ]
+  },
+  "openPositions": {
+    "title": "Offene Stellen",
+    "description": "Erkunden Sie unsere aktuellen Stellenangebote und finden Sie Möglichkeiten, die zu Ihren Fähigkeiten und Karrierezielen passen.",
+    "positions": [
+      {
+        "id": "ai-engineer",
+        "title": "KI-Ingenieur - Gesundheit",
+        "department": "Ingenieurwesen",
+        "type": "Vollzeit",
+        "location": "San Francisco / Remote",
+        "description": "Entwerfen und implementieren Sie modernste KI-Lösungen für das Praxismanagement, einschließlich Terminoptimierung und Patienten-Insights.",
+        "requirements": [
+          "5+ Jahre Erfahrung in der KI/ML-Entwicklung",
+          "Erfahrung mit Gesundheits- oder Praxismanagement-Systemen",
+          "Starke Kenntnisse von TensorFlow, PyTorch oder ähnlichen Frameworks",
+          "Erfahrung mit natürlicher Sprachverarbeitung oder prädiktiver Analytik",
+          "Starke Programmierkenntnisse in Python",
+          "Verständnis der HIPAA-Compliance-Anforderungen"
+        ],
+        "posted": "vor 2 Wochen"
+      },
+      {
+        "id": "frontend-developer",
+        "title": "Frontend-Entwickler",
+        "department": "Ingenieurwesen",
+        "type": "Vollzeit",
+        "location": "New York / Remote",
+        "description": "Erstellen Sie intuitive und reaktionsschnelle Benutzeroberflächen für unsere KI-gestützte Praxismanagement-Plattform.",
+        "requirements": [
+          "3+ Jahre Erfahrung mit React und modernem JavaScript",
+          "Beherrschung von TypeScript und State-Management-Bibliotheken",
+          "Erfahrung mit responsivem Design und CSS-Frameworks",
+          "Verständnis von Web-Zugänglichkeitsstandards",
+          "Erfahrung mit Gesundheits- oder Zahnarztsoftware ist ein Plus",
+          "Kenntnisse von Test-Frameworks"
+        ],
+        "posted": "vor 1 Woche"
+      },
+      {
+        "id": "product-manager",
+        "title": "Produktmanager - Gesundheit",
+        "department": "Produkt",
+        "type": "Vollzeit",
+        "location": "Remote",
+        "description": "Führen Sie die Entwicklung unserer Praxismanagement-Produkte von der Konzeption bis zum Launch.",
+        "requirements": [
+          "4+ Jahre Produktmanagement-Erfahrung",
+          "Hintergrund in Gesundheit, SaaS oder Praxismanagement-Software",
+          "Starke analytische und Problemlösungsfähigkeiten",
+          "Ausgezeichnete Stakeholder-Management-Fähigkeiten",
+          "Verständnis von Praxismanagement-Workflows ist ein Plus",
+          "Technischer Hintergrund ist ein Plus"
+        ],
+        "posted": "vor 3 Tagen"
+      },
+      {
+        "id": "ux-designer",
+        "title": "UX-Designer - Gesundheit",
+        "department": "Design",
+        "type": "Vollzeit",
+        "location": "London / Remote",
+        "description": "Erstellen Sie benutzerzentrierte Designs für komplexe Praxismanagement-Anwendungen.",
+        "requirements": [
+          "3+ Jahre UX-Design-Erfahrung",
+          "Starkes Portfolio, das benutzerzentrierten Designprozess zeigt",
+          "Erfahrung mit Design-Systemen und Tools (Figma, Adobe XD)",
+          "Verständnis von Zugänglichkeitsstandards",
+          "Erfahrung mit Gesundheits- oder Zahnarztsoftware-Design ist ein Plus",
+          "Fähigkeit zur Durchführung von Benutzerforschung und Tests"
+        ],
+        "posted": "vor 1 Monat"
+      },
+      {
+        "id": "data-scientist",
+        "title": "Data Scientist - Gesundheitsanalytik",
+        "department": "Daten",
+        "type": "Vollzeit",
+        "location": "Remote",
+        "description": "Analysieren Sie komplexe Datensätze und erstellen Sie prädiktive Modelle, um unsere KI-Lösungen für das Praxismanagement zu unterstützen.",
+        "requirements": [
+          "Master oder Promotion in Informatik, Statistik oder verwandtem Bereich",
+          "Starke Erfahrung mit Machine-Learning-Algorithmen",
+          "Erfahrung mit Gesundheitsdaten und HIPAA-Compliance",
+          "Beherrschung von Python, R oder ähnlichen Sprachen",
+          "Erfahrung mit Big-Data-Technologien",
+          "Starke analytische und Problemlösungsfähigkeiten"
+        ],
+        "posted": "vor 2 Wochen"
+      },
+      {
+        "id": "devops-engineer",
+        "title": "DevOps-Ingenieur - Gesundheit",
+        "department": "Betrieb",
+        "type": "Vollzeit",
+        "location": "Berlin / Remote",
+        "description": "Erstellen und warten Sie unsere Cloud-Infrastruktur und Deployment-Pipelines für HIPAA-konforme Praxismanagement-Systeme.",
+        "requirements": [
+          "3+ Jahre Erfahrung in DevOps oder Site Reliability Engineering",
+          "Erfahrung mit AWS, Azure oder GCP",
+          "Kenntnisse von Containerisierung und Orchestrierung (Docker, Kubernetes)",
+          "Erfahrung mit CI/CD-Tools",
+          "Verständnis von Gesundheitsdatensicherheit und HIPAA-Compliance",
+          "Scripting- und Automatisierungsfähigkeiten"
+        ],
+        "posted": "vor 3 Wochen"
+      }
+    ]
+  },
+  "perks": {
+    "title": "Vorteile & Leistungen",
+    "description": "Wir glauben daran, unser Team mit wettbewerbsfähigen Leistungen und einer unterstützenden Arbeitsumgebung zu betreuen.",
+    "items": [
+      {
+        "title": "Flexibles Arbeiten",
+        "description": "Arbeiten Sie von überall mit flexiblen Stunden, um Ihre beste Work-Life-Balance zu erreichen.",
+        "icon": "globe"
+      },
+      {
+        "title": "Wettbewerbsfähige Vergütung",
+        "description": "Wir bieten branchenführende Gehälter, Aktienoptionen und Leistungsboni.",
+        "icon": "dollar-sign"
+      },
+      {
+        "title": "Gesundheitsleistungen",
+        "description": "Umfassende Kranken-, Zahn- und Augenversicherung für Sie und Ihre Angehörigen.",
+        "icon": "heart"
+      },
+      {
+        "title": "Berufliche Entwicklung",
+        "description": "Kontinuierliches Lernen mit Bildungsstipendien, Konferenzen und Schulungsprogrammen.",
+        "icon": "graduation-cap"
+      },
+      {
+        "title": "Team-Events",
+        "description": "Regelmäßige Team-Retreats, soziale Veranstaltungen und kollaborative Aktivitäten.",
+        "icon": "users"
+      },
+      {
+        "title": "Tech-Ausrüstung",
+        "description": "Neueste Hardware und Software, um sicherzustellen, dass Sie die Tools haben, die Sie zum Erfolg benötigen.",
+        "icon": "laptop"
+      }
+    ]
+  },
+  "process": {
+    "title": "Unser Bewerbungsprozess",
+    "description": "Wir haben einen unkomplizierten Prozess entwickelt, um uns zu helfen, die besten Talente zu finden und gleichzeitig Ihre Zeit zu respektieren.",
+    "steps": [
+      {
+        "step": "1",
+        "title": "Bewerbungsprüfung",
+        "description": "Unser Team prüft Ihre Bewerbung, um Ihre Qualifikationen und Erfahrung zu bewerten."
+      },
+      {
+        "step": "2",
+        "title": "Erstes Interview",
+        "description": "Ein Gespräch mit unserem Recruiting-Team, um mehr über Ihren Hintergrund und Ihre Bestrebungen zu erfahren."
+      },
+      {
+        "step": "3",
+        "title": "Technische Bewertung",
+        "description": "Je nach Rolle absolvieren Sie eine technische Bewertung oder eine Fallstudie."
+      },
+      {
+        "step": "4",
+        "title": "Team-Interviews",
+        "description": "Treffen Sie sich mit potenziellen Teammitgliedern und Führungskräften, um Team-Fit und Zusammenarbeit zu erkunden."
+      },
+      {
+        "step": "5",
+        "title": "Endgültige Entscheidung",
+        "description": "Wir geben Feedback und erweitern möglicherweise ein Angebot, unserem Team beizutreten."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Bereit, Einfluss zu Nehmen?",
+    "description": "Werden Sie Teil unseres Teams und helfen Sie, die Zukunft des Praxismanagements zu gestalten. Wir suchen leidenschaftliche Menschen, die einen Unterschied in der Gesundheitstechnologie machen wollen.",
+    "buttons": [
+      {
+        "text": "Offene Stellen Durchsuchen",
+        "href": "#open-positions",
+        "variant": "primary"
+      },
+      {
+        "text": "Recruiting Kontaktieren",
+        "href": "/contact",
+        "variant": "secondary"
+      }
+    ]
+  }
+}

@@ -1,0 +1,198 @@
+{
+  "hero": {
+    "subtitle": "Analisi studio",
+    "title": "Analisi e report completi studio",
+    "description": "Ottieni insights approfonditi sulla performance del tuo studio con analisi completa, dashboard in tempo reale e report azionabili che guidano la crescita.",
+    "icon": "trending-up",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "Tempo reale",
+        "label": "Analisi"
+      },
+      {
+        "value": "35%",
+        "label": "Crescita entrate"
+      },
+      {
+        "value": "100%",
+        "label": "Visibilità"
+      }
+    ]
+  },
+  "features": {
+    "title": "Funzionalità analisi",
+    "subtitle": "Insights basati su dati",
+    "description": "Strumenti completi di analisi e report per capire e ottimizzare la performance del tuo studio.",
+    "items": [
+      {
+        "icon": "trending-up",
+        "title": "Dashboard tempo reale",
+        "description": "Monitora la performance dello studio in tempo reale con dashboard personalizzabili e metriche chiave.",
+        "highlights": [
+          "Metriche tempo reale",
+          "Dashboard personalizzabili",
+          "Indicatori chiave performance",
+          "Analisi visiva",
+          "Monitoraggio performance"
+        ],
+        "stats": {
+          "value": "Tempo reale",
+          "label": "Analisi"
+        }
+      },
+      {
+        "icon": "users",
+        "title": "Analisi entrate",
+        "description": "Monitora entrate, incassi e performance finanziaria con analisi e report dettagliati.",
+        "highlights": [
+          "Monitoraggio entrate",
+          "Analisi incassi",
+          "Report finanziari",
+          "Analisi tendenze",
+          "Previsioni"
+        ],
+        "stats": {
+          "value": "35%",
+          "label": "Crescita entrate"
+        }
+      },
+      {
+        "icon": "calendar",
+        "title": "Analisi appuntamenti",
+        "description": "Analizza pattern appuntamenti, assenze ed efficienza pianificazione per ottimizzare operazioni.",
+        "highlights": [
+          "Pattern appuntamenti",
+          "Analisi assenze",
+          "Efficienza pianificazione",
+          "Monitoraggio utilizzo",
+          "Insights ottimizzazione"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "Visibilità"
+        }
+      },
+      {
+        "icon": "brain",
+        "title": "Analisi pazienti",
+        "description": "Comprendi comportamento paziente, fidelizzazione e valore con analisi completa pazienti.",
+        "highlights": [
+          "Comportamento paziente",
+          "Analisi fidelizzazione",
+          "Segmentazione valore",
+          "Pattern trattamento",
+          "Metriche coinvolgimento"
+        ],
+        "stats": {
+          "value": "95%",
+          "label": "Insights"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Storie di successo analisi",
+    "description": "Vedi come l'analisi trasforma la gestione studi",
+    "stats": [
+      {
+        "icon": "trending-up",
+        "value": "35%",
+        "label": "Crescita entrate"
+      },
+      {
+        "icon": "clock",
+        "value": "Tempo reale",
+        "label": "Analisi"
+      },
+      {
+        "icon": "users",
+        "value": "100%",
+        "label": "Visibilità"
+      },
+      {
+        "icon": "award",
+        "value": "95%",
+        "label": "Insights"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Dr. Sarah Martinez",
+        "role": "Proprietario studio",
+        "quote": "La dashboard analisi ci dà visibilità completa sul nostro studio. Abbiamo aumentato le entrate del 35% usando insights basati su dati."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Vantaggi analisi",
+    "subtitle": "Eccellenza basata su dati",
+    "description": "Sperimenta il potere dell'analisi completa dello studio.",
+    "items": [
+      {
+        "title": "Insights tempo reale",
+        "description": "Monitora la performance dello studio in tempo reale con analisi e dashboard istantanei.",
+        "icon": "zap",
+        "color": "teal",
+        "stats": {
+          "value": "Tempo reale",
+          "label": "Analisi"
+        },
+        "highlights": [
+          "Dashboard tempo reale",
+          "Metriche istantanee",
+          "Aggiornamenti live",
+          "Monitoraggio performance"
+        ]
+      },
+      {
+        "title": "Crescita entrate",
+        "description": "Gli insights basati su dati identificano opportunità per far crescere le entrate dello studio.",
+        "icon": "trending-up",
+        "color": "cyan",
+        "stats": {
+          "value": "35%",
+          "label": "Crescita"
+        },
+        "highlights": [
+          "Analisi entrate",
+          "Identificazione opportunità",
+          "Monitoraggio performance",
+          "Strategie crescita"
+        ]
+      },
+      {
+        "title": "Visibilità completa",
+        "description": "L'analisi completa fornisce visibilità completa su tutti gli aspetti del tuo studio.",
+        "icon": "users",
+        "color": "blue",
+        "stats": {
+          "value": "100%",
+          "label": "Visibilità"
+        },
+        "highlights": [
+          "Metriche complete",
+          "Analisi multi-dimensionale",
+          "Report completi",
+          "Insights strategici"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Pronto per l'analisi studio?",
+    "description": "Vedi come l'analisi di Dentagia può trasformare la performance del tuo studio.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Prenota una demo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Scopri di più",
+      "link": "/features"
+    }
+  }
+}
+

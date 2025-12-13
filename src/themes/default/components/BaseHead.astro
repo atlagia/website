@@ -13,6 +13,9 @@ interface Props extends SEOProps {
     currency: string;
   };
   availability?: boolean;
+  alternateUrls?: Array<{lang: string, url: string}>;
+  productSchema?: any;
+  breadcrumbSchema?: any;
 }
 
 const { 
@@ -24,10 +27,85 @@ const {
   modifiedTime,
   isProduct = false,
   price,
-  availability
+  availability,
+  alternateUrls = [],
+  productSchema,
+  breadcrumbSchema
 } = Astro.props;
 
-const canonicalURL = generateCanonicalURL(Astro.url.pathname);
+// Get current language from URL
+const currentPath = Astro.url.pathname;
+const currentLang = currentPath.split('/')[1];
+
+// Get allowed languages from environment
+const getAllowedLanguages = () => {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  return allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+};
+
+const supportedLanguages = getAllowedLanguages();
+
+// Generate hreflang URLs - Use provided alternateUrls or generate them
+const hrefLangURLs = alternateUrls.length > 0 ? [...alternateUrls] : [];
+
+// If no alternateUrls provided, generate them
+if (alternateUrls.length === 0) {
+  // Determine the base path (without language prefix)
+  let basePath = currentPath;
+  if (currentLang && supportedLanguages.includes(currentLang)) {
+    // Remove language prefix from path
+    basePath = currentPath.substring(currentLang.length + 1) || '/';
+  }
+
+  // Generate hreflang URLs for each supported language
+  const uniqueLangs = new Set();
+  supportedLanguages.forEach(lang => {
+    let url;
+    
+    if (basePath === '/') {
+      // For home pages, each language gets its own home page
+      url = `${Astro.url.origin}/${lang}`;
+    } else {
+      // For other pages, add language prefix to the base path
+      url = `${Astro.url.origin}/${lang}${basePath}`;
+    }
+    
+    // Add all language variants
+    if (!uniqueLangs.has(lang)) {
+      uniqueLangs.add(lang);
+      hrefLangURLs.push({ lang, url });
+    }
+  });
+
+  // Add x-default pointing to English version (always)
+  const xDefaultUrl = basePath === '/' 
+    ? `${Astro.url.origin}/en` 
+    : `${Astro.url.origin}/en${basePath}`;
+  hrefLangURLs.push({ lang: 'x-default', url: xDefaultUrl });
+}
+
+// Always add self-referential hreflang tag (required by Google) - ensure it's not duplicated
+if (currentLang && supportedLanguages.includes(currentLang)) {
+  const selfUrl = Astro.url.href;
+  const existingSelf = hrefLangURLs.find(h => h.lang === currentLang && h.url === selfUrl);
+  if (!existingSelf) {
+    hrefLangURLs.push({ lang: currentLang, url: selfUrl });
+  }
+}
+
+// Set canonical URL - each language should have its own canonical URL
+let canonicalURL;
+if (currentPath === '/') {
+  // Root path should redirect to English version
+  canonicalURL = `${Astro.url.origin}/en`;
+} else if (currentLang && supportedLanguages.includes(currentLang)) {
+  // Language-specific pages have their own canonical URL
+  canonicalURL = Astro.url.href;
+} else {
+  // Non-language pages should point to English version
+  canonicalURL = `${Astro.url.origin}/en${currentPath}`;
+}
+
 const schema = generateSchema(Astro.props, Astro.url.pathname);
 ---
 
@@ -39,6 +117,14 @@ const schema = generateSchema(Astro.props, Astro.url.pathname);
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
+
+<!-- Language Alternates (hreflang) -->
+{hrefLangURLs.map(({ lang, url }) => (
+  <link rel="alternate" hreflang={lang} href={url} />
+))}
+
+<!-- Robots Meta Tag - Allow indexing of all language versions -->
+<meta name="robots" content="index, follow" />
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
@@ -76,6 +162,10 @@ const schema = generateSchema(Astro.props, Astro.url.pathname);
 
 <!-- Schema.org -->
 <script type="application/ld+json" set:html={schema} />
+
+<!-- Additional Schema Markup -->
+{productSchema && <script type="application/ld+json" set:html={JSON.stringify(productSchema)} />}
+{breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}
 
 
 <!-- Fonts -->

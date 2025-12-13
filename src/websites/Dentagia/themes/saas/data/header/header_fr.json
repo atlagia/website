@@ -1,0 +1,249 @@
+{
+  "navigation": [
+    {
+      "name": "Fonctionnalités",
+      "href": "/features",
+      "megaMenu": {
+        "categories": [
+          {
+            "title": "Gestion du cabinet",
+            "icon": "briefcase",
+            "items": [
+              {
+                "name": "Gestion des patients",
+                "href": "/features/patient-management"
+              },
+              {
+                "name": "Planification des rendez-vous",
+                "href": "/features/scheduling"
+              },
+              {
+                "name": "Facturation et paiements",
+                "href": "/features/billing"
+              },
+              {
+                "name": "Planification des traitements",
+                "href": "/features/treatment-planning"
+              }
+            ]
+          },
+          {
+            "title": "IA et automatisation",
+            "icon": "zap",
+            "items": [
+              {
+                "name": "Planification propulsée par l'IA",
+                "href": "/features/ai-scheduling"
+              },
+              {
+                "name": "Insights patients",
+                "href": "/features/patient-insights"
+              },
+              {
+                "name": "Rappels automatisés",
+                "href": "/features/reminders"
+              },
+              {
+                "name": "Analytique du cabinet",
+                "href": "/features/analytics"
+              }
+            ]
+          },
+          {
+            "title": "Sécurité et conformité",
+            "icon": "shield",
+            "items": [
+              {
+                "name": "Conformité HIPAA",
+                "href": "/features/hipaa"
+              },
+              {
+                "name": "Sécurité cloud",
+                "href": "/features/security"
+              },
+              {
+                "name": "Chiffrement des données",
+                "href": "/features/encryption"
+              },
+              {
+                "name": "Sauvegarde et récupération",
+                "href": "/features/backup"
+              }
+            ]
+          }
+        ],
+        "featured": {
+          "badge": "Nouveau",
+          "title": "Gestion dentaire propulsée par l'IA",
+          "description": "Logiciel moderne, sécurisé et basé sur le cloud pour les cabinets dentaires",
+          "link": {
+            "text": "Explorer les fonctionnalités",
+            "href": "/features"
+          }
+        }
+      }
+    },
+    {
+      "name": "Solutions",
+      "href": "/solutions",
+      "megaMenu": {
+        "categories": [
+          {
+            "title": "Types de cabinets",
+            "icon": "building",
+            "items": [
+              {
+                "name": "Cabinets individuels",
+                "href": "/solutions/solo-practice"
+              },
+              {
+                "name": "Multi-praticiens",
+                "href": "/solutions/multi-practitioner"
+              },
+              {
+                "name": "Multi-sites",
+                "href": "/solutions/multi-location"
+              },
+              {
+                "name": "Cabinets spécialisés",
+                "href": "/solutions/specialty"
+              }
+            ]
+          },
+          {
+            "title": "Croissance du cabinet",
+            "icon": "trending-up",
+            "items": [
+              {
+                "name": "Rétention des patients",
+                "href": "/solutions/patient-retention"
+              },
+              {
+                "name": "Optimisation des revenus",
+                "href": "/solutions/revenue"
+              },
+              {
+                "name": "Automatisation marketing",
+                "href": "/solutions/marketing"
+              },
+              {
+                "name": "Analytique du cabinet",
+                "href": "/solutions/analytics"
+              }
+            ]
+          },
+          {
+            "title": "Intégration",
+            "icon": "link",
+            "items": [
+              {
+                "name": "Intégration assurance",
+                "href": "/solutions/insurance"
+              },
+              {
+                "name": "Traitement des paiements",
+                "href": "/solutions/payments"
+              },
+              {
+                "name": "Intégration laboratoire",
+                "href": "/solutions/lab"
+              },
+              {
+                "name": "Systèmes d'imagerie",
+                "href": "/solutions/imaging"
+              }
+            ]
+          }
+        ],
+        "featured": {
+          "badge": "En vedette",
+          "title": "Plateforme cloud",
+          "description": "Solution sécurisée et évolutive pour les cabinets dentaires",
+          "link": {
+            "text": "En savoir plus",
+            "href": "/platform"
+          }
+        }
+      }
+    },
+    {
+      "name": "Plateforme",
+      "href": "/platform",
+      "megaMenu": {
+        "categories": [
+          {
+            "title": "Technologie",
+            "icon": "cpu",
+            "items": [
+              {
+                "name": "Infrastructure cloud",
+                "href": "/platform/cloud"
+              },
+              {
+                "name": "Technologie IA",
+                "href": "/platform/ai"
+              },
+              {
+                "name": "Sécurité et conformité",
+                "href": "/platform/security"
+              },
+              {
+                "name": "Accès mobile",
+                "href": "/platform/mobile"
+              }
+            ]
+          }
+        ],
+        "featured": {
+          "badge": "Nouveau",
+          "title": "Plateforme cloud moderne",
+          "description": "Infrastructure sécurisée et évolutive pour les cabinets dentaires",
+          "link": {
+            "text": "En savoir plus",
+            "href": "/platform"
+          }
+        }
+      }
+    },
+    {
+      "name": "Ressources",
+      "href": "/resources"
+    },
+    {
+      "name": "Tarifs",
+      "href": "/pricing"
+    }
+  ],
+  "auth": {
+    "signIn": {
+      "text": "Contactez-nous",
+      "href": "/contact"
+    },
+    "getStarted": {
+      "text": "Planifier une démo",
+      "href": "/demo"
+    }
+  },
+  "languages": [
+    {
+      "code": "en",
+      "name": "English"
+    },
+    {
+      "code": "fr",
+      "name": "Français"
+    },
+    {
+      "code": "de",
+      "name": "Deutsch"
+    },
+    {
+      "code": "es",
+      "name": "Español"
+    },
+    {
+      "code": "ar",
+      "name": "العربية"
+    }
+  ]
+}

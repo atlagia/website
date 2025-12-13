@@ -197,3 +197,43 @@ export async function getRecentReviews(limit: number = 10) {
     return { reviews: null, error: err };
   }
 } 
+
+// Function to fetch blog posts
+export async function fetchBlogPosts(language?: string, limit: number = 10) {
+  const cacheKey = `blog-posts:${language || 'all'}:${limit}`;
+  
+  try {
+    // Try to get cached blog posts
+    const cachedPosts = await getCachedData(cacheKey);
+    if (cachedPosts) {
+      return cachedPosts;
+    }
+
+    // Fetch blog posts from Supabase
+    const query = supabase
+      .from('blog_posts')
+      .select('*')
+      .order('created_at', { ascending: false })
+      .limit(limit);
+
+    // Add language filter if provided
+    if (language) {
+      query.eq('language', language);
+    }
+
+    const { data: posts, error } = await query;
+
+    if (error) {
+      console.error('❌ Error fetching blog posts:', error);
+      return [];
+    }
+
+    // Cache blog posts for 24 hours
+    await setCachedData(cacheKey, posts, 86400);
+
+    return posts;
+  } catch (err) {
+    console.error('❌ Unexpected error fetching blog posts:', err);
+    return [];
+  }
+} 

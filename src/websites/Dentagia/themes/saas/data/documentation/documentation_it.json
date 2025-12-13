@@ -1,0 +1,298 @@
+{
+  "pageTitle": "Documentazione - Dentagia",
+  "pageDescription": "Guide complete, riferimenti API e tutorial per ottenere il massimo dalla piattaforma di gestione di studi dentistici Dentagia",
+  "hero": {
+    "badge": "Risorse per Sviluppatori",
+    "title": "Documentazione e Guide",
+    "description": "Tutto ciò di cui hai bisogno per costruire, integrare e scalare con la piattaforma di gestione di studi dentistici Dentagia",
+    "searchPlaceholder": "Cerca documentazione...",
+    "quickLinks": [
+      {
+        "text": "Primi Passi",
+        "href": "#getting-started"
+      },
+      {
+        "text": "Riferimento API",
+        "href": "#api-reference"
+      },
+      {
+        "text": "Tutorial",
+        "href": "#tutorials"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "getting-started",
+      "title": "Primi Passi",
+      "description": "Guide di avvio rapido per iniziare il tuo viaggio con Dentagia",
+      "icon": "Rocket",
+      "items": [
+        {
+          "title": "Guida di Avvio Rapido",
+          "description": "Metti in funzione il tuo studio dentistico in 5 minuti",
+          "icon": "Zap",
+          "link": "/it/docs/quick-start"
+        },
+        {
+          "title": "Configurazione dello Studio",
+          "description": "Istruzioni passo-passo per configurare il tuo studio",
+          "icon": "Download",
+          "link": "/it/docs/practice-setup"
+        },
+        {
+          "title": "Configurazione",
+          "description": "Configura le impostazioni di gestione del tuo studio",
+          "icon": "Settings",
+          "link": "/it/docs/configuration"
+        },
+        {
+          "title": "Prima Cartella Paziente",
+          "description": "Crea la tua prima cartella paziente e appuntamento",
+          "icon": "FileText",
+          "link": "/it/docs/first-patient"
+        }
+      ]
+    },
+    {
+      "id": "api-reference",
+      "title": "Riferimento API",
+      "description": "Documentazione API completa ed endpoint per gestione di studi dentistici",
+      "icon": "Code",
+      "items": [
+        {
+          "title": "Autenticazione",
+          "description": "Autenticazione API e sicurezza per conformità HIPAA",
+          "icon": "Lock",
+          "link": "/it/docs/api/authentication"
+        },
+        {
+          "title": "API REST",
+          "description": "Endpoint API RESTful per gestione pazienti, pianificazione e fatturazione",
+          "icon": "Server",
+          "link": "/it/docs/api/rest"
+        },
+        {
+          "title": "API Pazienti",
+          "description": "Gestisci cartelle pazienti, anamnesi mediche e piani di trattamento",
+          "icon": "Users",
+          "link": "/it/docs/api/patients"
+        },
+        {
+          "title": "API Pianificazione",
+          "description": "Pianificazione appuntamenti alimentata da IA e gestione calendario",
+          "icon": "Calendar",
+          "link": "/it/docs/api/scheduling"
+        },
+        {
+          "title": "API Fatturazione",
+          "description": "Endpoint di fatturazione, fatturazione ed elaborazione pagamenti",
+          "icon": "CreditCard",
+          "link": "/it/docs/api/billing"
+        },
+        {
+          "title": "Webhooks",
+          "description": "Notifiche eventi in tempo reale per eventi dello studio",
+          "icon": "Webhook",
+          "link": "/it/docs/api/webhooks"
+        }
+      ]
+    },
+    {
+      "id": "tutorials",
+      "title": "Tutorial",
+      "description": "Guide passo-passo ed esempi per gestione di studi dentistici",
+      "icon": "BookOpen",
+      "items": [
+        {
+          "title": "Gestione Pazienti",
+          "description": "Guida completa per gestire cartelle pazienti e anamnesi mediche",
+          "icon": "Users",
+          "link": "/it/docs/tutorials/patient-management"
+        },
+        {
+          "title": "Configurazione Pianificazione IA",
+          "description": "Configura e ottimizza la pianificazione appuntamenti alimentata da IA",
+          "icon": "Calendar",
+          "link": "/it/docs/tutorials/ai-scheduling"
+        },
+        {
+          "title": "Automatizzazione Fatturazione",
+          "description": "Automatizza fatturazione, fatturazione ed elaborazione pagamenti",
+          "icon": "CreditCard",
+          "link": "/it/docs/tutorials/billing-automation"
+        },
+        {
+          "title": "Analisi dello Studio",
+          "description": "Configura e usa analisi e rapporti dello studio",
+          "icon": "BarChart",
+          "link": "/it/docs/tutorials/analytics"
+        },
+        {
+          "title": "Conformità HIPAA",
+          "description": "Assicurati che il tuo studio soddisfi i requisiti di conformità HIPAA",
+          "icon": "Shield",
+          "link": "/it/docs/tutorials/hipaa-compliance"
+        },
+        {
+          "title": "Integrazioni Personalizzate",
+          "description": "Integra con sistemi di imaging dentale e altri strumenti",
+          "icon": "Puzzle",
+          "link": "/it/docs/tutorials/integrations"
+        }
+      ]
+    },
+    {
+      "id": "guides",
+      "title": "Guide",
+      "description": "Guide approfondite per funzionalità avanzate e migliori pratiche",
+      "icon": "Map",
+      "items": [
+        {
+          "title": "Migliori Pratiche di Sicurezza HIPAA",
+          "description": "Proteggi i dati del tuo studio e assicura conformità HIPAA",
+          "icon": "Shield",
+          "link": "/it/docs/guides/security"
+        },
+        {
+          "title": "Ottimizzazione Prestazioni dello Studio",
+          "description": "Ottimizza le operazioni del tuo studio per efficienza e crescita",
+          "icon": "Gauge",
+          "link": "/it/docs/guides/performance"
+        },
+        {
+          "title": "Migrazione Dati",
+          "description": "Migra dal tuo sistema di gestione di studi esistente",
+          "icon": "Upload",
+          "link": "/it/docs/guides/migration"
+        },
+        {
+          "title": "Analisi e Rapporti dello Studio",
+          "description": "Traccia e analizza le prestazioni del tuo studio",
+          "icon": "BarChart",
+          "link": "/it/docs/guides/analytics"
+        }
+      ]
+    }
+  ],
+  "sdks": {
+    "title": "SDK e Librerie",
+    "description": "SDK e librerie ufficiali per linguaggi popolari",
+    "items": [
+      {
+        "name": "Python",
+        "icon": "Code",
+        "description": "SDK Python ufficiale per API Dentagia",
+        "version": "v2.1.0",
+        "link": "https://github.com/dentagia/python-sdk",
+        "installCommand": "pip install dentagia"
+      },
+      {
+        "name": "JavaScript",
+        "icon": "Code",
+        "description": "SDK JavaScript ufficiale per API Dentagia",
+        "version": "v3.0.2",
+        "link": "https://github.com/dentagia/js-sdk",
+        "installCommand": "npm install @dentagia/sdk"
+      },
+      {
+        "name": "TypeScript",
+        "icon": "Code",
+        "description": "SDK TypeScript ufficiale per API Dentagia",
+        "version": "v3.0.2",
+        "link": "https://github.com/dentagia/ts-sdk",
+        "installCommand": "npm install @dentagia/sdk-ts"
+      },
+      {
+        "name": "Java",
+        "icon": "Code",
+        "description": "SDK Java ufficiale per API Dentagia",
+        "version": "v1.5.0",
+        "link": "https://github.com/dentagia/java-sdk",
+        "installCommand": "maven: com.dentagia:sdk:1.5.0"
+      },
+      {
+        "name": "Go",
+        "icon": "Code",
+        "description": "SDK Go ufficiale per API Dentagia",
+        "version": "v1.3.0",
+        "link": "https://github.com/dentagia/go-sdk",
+        "installCommand": "go get github.com/dentagia/sdk"
+      },
+      {
+        "name": "Ruby",
+        "icon": "Code",
+        "description": "SDK Ruby ufficiale per API Dentagia",
+        "version": "v2.0.1",
+        "link": "https://github.com/dentagia/ruby-sdk",
+        "installCommand": "gem install dentagia"
+      }
+    ]
+  },
+  "resources": {
+    "title": "Risorse Aggiuntive",
+    "description": "Altri strumenti e risorse per aiutarti ad avere successo con Dentagia",
+    "items": [
+      {
+        "title": "Stato API",
+        "description": "Stato API in tempo reale e disponibilità",
+        "icon": "Activity",
+        "link": "https://status.dentagia.com",
+        "external": true
+      },
+      {
+        "title": "Forum Sviluppatori",
+        "description": "Connettiti con altri sviluppatori e gestori di studi",
+        "icon": "Users",
+        "link": "https://community.dentagia.com",
+        "external": true
+      },
+      {
+        "title": "Repository GitHub",
+        "description": "Visualizza codice sorgente ed esempi",
+        "icon": "Github",
+        "link": "https://github.com/dentagia",
+        "external": true
+      },
+      {
+        "title": "Registro delle Modifiche",
+        "description": "Ultimi aggiornamenti e release",
+        "icon": "FileText",
+        "link": "/it/changelog",
+        "external": false
+      },
+      {
+        "title": "Tutorial Video",
+        "description": "Impara attraverso guide video per gestione di studi",
+        "icon": "Video",
+        "link": "/it/tutorials",
+        "external": false
+      },
+      {
+        "title": "Centro Supporto",
+        "description": "Ottieni aiuto dal nostro team",
+        "icon": "HelpCircle",
+        "link": "/it/contact",
+        "external": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "Hai Bisogno di Aiuto?",
+    "description": "Il nostro team di supporto è qui per aiutarti ad avere successo con Dentagia",
+    "buttons": [
+      {
+        "text": "Contatta Supporto",
+        "href": "/it/contact",
+        "variant": "primary",
+        "icon": "MessageSquare"
+      },
+      {
+        "text": "Prenota una Demo",
+        "href": "/it/demo",
+        "variant": "secondary",
+        "icon": "Calendar"
+      }
+    ]
+  }
+}

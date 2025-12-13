@@ -1,0 +1,78 @@
+{
+  "title": "Endurance Professional Series",
+  "description": "Professional endurance racing gear for Le Mans, WEC, and long-distance racing. Premium quality endurance racing equipment.",
+  "hero": {
+    "title": "Endurance Professional Series",
+    "subtitle": "Professional endurance racing gear designed for Le Mans, WEC, and long-distance racing challenges"
+  },
+  "sections": {
+    "collection": {
+      "title": "Professional Endurance Collection",
+      "subtitle": "Premium racing gear for endurance professionals"
+    },
+    "features": {
+      "title": "Built for Endurance",
+      "subtitle": "Designed for the longest races"
+    },
+    "series": {
+      "title": "Supported Racing Series",
+      "subtitle": "Professional endurance racing championships"
+    }
+  },
+  "collections": [
+    {
+      "title": "Endurance Suits",
+      "description": "Designed for comfort during long racing sessions",
+      "link": "/collections/endurance-suits",
+      "linkText": "Shop Endurance Professional"
+    },
+    {
+      "title": "Cooling Systems",
+      "description": "Advanced cooling technology for endurance racing",
+      "link": "/collections/cooling-systems",
+      "linkText": "Shop Endurance Professional"
+    },
+    {
+      "title": "Hydration Gear",
+      "description": "Professional hydration systems for long races",
+      "link": "/collections/hydration-gear",
+      "linkText": "Shop Endurance Professional"
+    }
+  ],
+  "features": [
+    {
+      "icon": "24",
+      "title": "24-Hour Ready",
+      "description": "Designed to perform through the longest endurance races"
+    },
+    {
+      "icon": "🌡️",
+      "title": "Temperature Control",
+      "description": "Advanced cooling systems for optimal performance"
+    },
+    {
+      "icon": "💧",
+      "title": "Hydration Focus",
+      "description": "Built-in hydration systems for sustained performance"
+    }
+  ],
+  "series": [
+    {
+      "name": "Le Mans 24h",
+      "description": "World's most famous endurance race"
+    },
+    {
+      "name": "WEC",
+      "description": "World Endurance Championship"
+    },
+    {
+      "name": "IMSA",
+      "description": "International Motor Sports Association"
+    },
+    {
+      "name": "ELMS",
+      "description": "European Le Mans Series"
+    }
+  ]
+}
+

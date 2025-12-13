@@ -1,0 +1,223 @@
+{
+  "pageTitle": "Ressources - Dentagia",
+  "pageDescription": "Accédez à une documentation complète, des guides, des études de cas et plus de ressources pour aider votre cabinet dentaire à réussir avec Dentagia.",
+  "hero": {
+    "badge": "Ressources et Documentation",
+    "title": "Ressources pour Aider Votre Cabinet à Réussir",
+    "description": "Accédez à une documentation complète, des guides, des tutoriels et des études de cas pour tirer le meilleur parti de la plateforme de gestion de cabinet de Dentagia.",
+    "cta": {
+      "primary": {
+        "text": "Parcourir la Documentation",
+        "href": "/documentation"
+      },
+      "secondary": {
+        "text": "Voir les Guides",
+        "href": "#guides"
+      }
+    }
+  },
+  "resourceCategories": [
+    {
+      "title": "Documentation",
+      "icon": "Book",
+      "description": "Guides complets et documentation de la plateforme",
+      "items": [
+        {
+          "title": "Guide de Démarrage",
+          "description": "Guide de démarrage rapide pour les nouveaux utilisateurs de Dentagia",
+          "icon": "BookOpen",
+          "link": "/documentation/getting-started",
+          "tag": "Essentiel"
+        },
+        {
+          "title": "Guide de Gestion des Patients",
+          "description": "Guide complet pour gérer les dossiers patients",
+          "icon": "FileCode",
+          "link": "/documentation/patient-management",
+          "tag": "Cabinet"
+        },
+        {
+          "title": "Guide de Planification",
+          "description": "Comment utiliser les fonctionnalités de planification propulsées par l'IA",
+          "icon": "FileText",
+          "link": "/documentation/scheduling",
+          "tag": "Cabinet"
+        },
+        {
+          "title": "Guide Facturation et Paiements",
+          "description": "Tutoriels étape par étape sur la facturation et les paiements",
+          "icon": "ChevronRight",
+          "link": "/documentation/billing",
+          "tag": "Financier"
+        }
+      ]
+    },
+    {
+      "title": "Centre d'Apprentissage",
+      "icon": "GraduationCap",
+      "description": "Ressources éducatives et tutoriels pour les cabinets dentaires",
+      "items": [
+        {
+          "title": "Tutoriels Vidéo",
+          "description": "Guides vidéo étape par étape pour la gestion de cabinet",
+          "icon": "Video",
+          "link": "/learn/tutorials",
+          "tag": "Vidéo"
+        },
+        {
+          "title": "Meilleures Pratiques",
+          "description": "Meilleures pratiques et conseils de gestion de cabinet",
+          "icon": "Star",
+          "link": "/learn/best-practices",
+          "tag": "Guide"
+        },
+        {
+          "title": "Matériel de Formation",
+          "description": "Ressources de formation pour votre équipe de cabinet",
+          "icon": "FileCode",
+          "link": "/learn/training",
+          "tag": "Formation"
+        },
+        {
+          "title": "Forums Communautaires",
+          "description": "Discussion et support d'autres cabinets",
+          "icon": "MessageSquare",
+          "link": "/community",
+          "tag": "Support"
+        }
+      ]
+    },
+    {
+      "title": "Études de Cas",
+      "icon": "BarChart",
+      "description": "Histoires de réussite de cabinets dentaires utilisant Dentagia",
+      "items": [
+        {
+          "title": "Clinique Dentaire du Centre",
+          "description": "Transformation d'un cabinet multi-praticiens",
+          "icon": "Users",
+          "link": "/case-studies/downtown-dental",
+          "tag": "Cabinet Dentaire"
+        },
+        {
+          "title": "Family Dental Care",
+          "description": "Croissance et efficacité d'un cabinet solo",
+          "icon": "BarChart",
+          "link": "/case-studies/family-dental",
+          "tag": "Cabinet Dentaire"
+        },
+        {
+          "title": "Centre de Dentisterie Esthétique",
+          "description": "Optimisation d'un cabinet spécialisé",
+          "icon": "Award",
+          "link": "/case-studies/cosmetic-dental",
+          "tag": "Cabinet Dentaire"
+        },
+        {
+          "title": "Groupe Dentaire Pédiatrique",
+          "description": "Gestion d'un cabinet multi-sites",
+          "icon": "Star",
+          "link": "/case-studies/pediatric-dental",
+          "tag": "Cabinet Dentaire"
+        }
+      ]
+    }
+  ],
+  "featuredGuides": [
+    {
+      "title": "Guide de Configuration du Cabinet",
+      "description": "Guide complet pour configurer votre cabinet avec Dentagia",
+      "image": "/images/resources/practice-setup.jpg",
+      "category": "Guide de Configuration",
+      "readTime": "15 min de lecture",
+      "link": "/guides/practice-setup"
+    },
+    {
+      "title": "Meilleures Pratiques de Planification IA",
+      "description": "Apprenez à utiliser efficacement la planification propulsée par l'IA dans votre cabinet",
+      "image": "/images/resources/ai-scheduling.jpg",
+      "category": "Meilleures Pratiques",
+      "readTime": "10 min de lecture",
+      "link": "/guides/ai-scheduling"
+    },
+    {
+      "title": "Guide de Conformité HIPAA",
+      "description": "Comprendre la conformité HIPAA et les fonctionnalités de sécurité",
+      "image": "/images/resources/hipaa-compliance.jpg",
+      "category": "Sécurité",
+      "readTime": "12 min de lecture",
+      "link": "/guides/hipaa-compliance"
+    }
+  ],
+  "latestArticles": [
+    {
+      "title": "L'Avenir de la Gestion de Cabinet Dentaire",
+      "description": "Explorer les tendances et innovations à venir dans la gestion de cabinet dentaire",
+      "image": "/images/blog/dental-future.jpg",
+      "date": "15 mars 2024",
+      "readTime": "8 min de lecture",
+      "category": "Insights du Secteur",
+      "link": "/blog/dental-future"
+    },
+    {
+      "title": "Optimiser l'Efficacité du Cabinet avec l'IA",
+      "description": "Conseils pour maximiser l'efficacité du cabinet avec des outils propulsés par l'IA",
+      "image": "/images/blog/ai-efficiency.jpg",
+      "date": "10 mars 2024",
+      "readTime": "6 min de lecture",
+      "category": "Gestion de Cabinet",
+      "link": "/blog/ai-efficiency"
+    },
+    {
+      "title": "Meilleures Pratiques de Sécurité HIPAA",
+      "description": "Garder les données de votre cabinet sécurisées et conformes",
+      "image": "/images/blog/hipaa-security.jpg",
+      "date": "5 mars 2024",
+      "readTime": "7 min de lecture",
+      "category": "Sécurité",
+      "link": "/blog/hipaa-security"
+    }
+  ],
+  "downloads": [
+    {
+      "title": "Aperçu de la Gestion de Cabinet",
+      "description": "Guide PDF complet sur les fonctionnalités de Dentagia",
+      "icon": "Download",
+      "format": "PDF",
+      "size": "2.5 Mo",
+      "link": "/downloads/practice-overview.pdf"
+    },
+    {
+      "title": "Guide de Conformité HIPAA",
+      "description": "Guide détaillé sur la conformité HIPAA et la sécurité",
+      "icon": "FileText",
+      "format": "PDF",
+      "size": "3.8 Mo",
+      "link": "/downloads/hipaa-guide.pdf"
+    },
+    {
+      "title": "Guide d'Implémentation",
+      "description": "Guide de configuration du cabinet étape par étape",
+      "icon": "Book",
+      "format": "PDF",
+      "size": "1.8 Mo",
+      "link": "/downloads/implementation-guide.pdf"
+    }
+  ],
+  "cta": {
+    "title": "Besoin d'Aide ?",
+    "description": "Notre équipe de support est là pour aider votre cabinet à réussir avec Dentagia.",
+    "buttons": [
+      {
+        "text": "Contacter le Support",
+        "href": "/contact",
+        "variant": "primary"
+      },
+      {
+        "text": "Rejoindre la Communauté",
+        "href": "/community",
+        "variant": "secondary"
+      }
+    ]
+  }
+}

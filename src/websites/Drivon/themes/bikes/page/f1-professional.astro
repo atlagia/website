@@ -1,0 +1,73 @@
+---
+import Layoutc from '@layouts/Layoutc.astro';
+import { ArrowRight, Zap, Car, Trophy, Star, Flag } from 'lucide-react';
+
+const { lang = 'en' } = Astro.params;
+const baseUrl = import.meta.env.DOMAINE || 'https://drivon.store';
+const storeName = import.meta.env.PUBLIC_SITE_NAME || 'Drivon';
+
+// Load language-specific data
+let pageData;
+try {
+  pageData = await import(`../data/f1-professional/f1-professional_${lang}.json`);
+} catch (error) {
+  // Fallback to English if language file doesn't exist
+  pageData = await import(`../data/f1-professional/f1-professional_en.json`);
+}
+
+const data = pageData.default;
+
+// SEO
+const seoTitle = `${data.title} | ${storeName}`;
+const seoDescription = data.description;
+---
+
+<Layoutc title={seoTitle} description={seoDescription} lang={lang}>
+    <main class="pt-20">
+      <!-- Hero Section -->
+      <section class="relative py-20 px-4 bg-gradient-to-r from-red-600 to-red-800 text-white">
+        <div class="max-w-7xl mx-auto text-center">
+          <h1 class="text-4xl md:text-6xl font-bold mb-6">{data.hero.title}</h1>
+          <p class="text-xl md:text-2xl text-red-100 max-w-3xl mx-auto">
+            {data.hero.subtitle}
+          </p>
+        </div>
+      </section>
+
+      <!-- Product Categories -->
+      <section class="py-16 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+          <h2 class="text-3xl font-bold text-center mb-12">{data.sections.collection.title}</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {data.collections.map(product => (
+              <div class="bg-gray-50 rounded-lg p-6 text-center">
+                <h3 class="text-xl font-semibold mb-4">{product.title}</h3>
+                <p class="text-gray-600 mb-4">{product.description}</p>
+                <a href={`/${lang}${product.link}`} class="inline-block bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700 transition-colors">
+                  {product.linkText}
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section class="py-16 px-4 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+          <h2 class="text-3xl font-bold text-center mb-12">{data.sections.features.title}</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {data.features.map(feature => (
+              <div class="text-center">
+                <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span class="text-white text-2xl font-bold">{feature.icon}</span>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">{feature.title}</h3>
+                <p class="text-gray-600">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </main>
+</Layoutc>

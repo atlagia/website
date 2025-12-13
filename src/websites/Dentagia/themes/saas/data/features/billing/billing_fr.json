@@ -1,0 +1,198 @@
+{
+  "hero": {
+    "subtitle": "Facturation rationalisée",
+    "title": "Facturation automatisée et traitement des paiements",
+    "description": "Simplifiez la facturation, l'invoicing et le traitement des paiements avec des flux de travail automatisés, l'intégration d'assurance et des rapports financiers complets.",
+    "icon": "credit-card",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "80%",
+        "label": "Traitement plus rapide"
+      },
+      {
+        "value": "50%",
+        "label": "Temps économisé"
+      },
+      {
+        "value": "95%",
+        "label": "Précision"
+      }
+    ]
+  },
+  "features": {
+    "title": "Fonctionnalités de facturation",
+    "subtitle": "Gestion financière",
+    "description": "Outils complets de facturation et de traitement des paiements conçus pour rationaliser les opérations financières de votre cabinet.",
+    "items": [
+      {
+        "icon": "credit-card",
+        "title": "Facturation automatisée",
+        "description": "Générez des factures automatiquement basées sur les traitements, avec modèles personnalisables et rappels de paiement automatiques.",
+        "highlights": [
+          "Génération automatique de factures",
+          "Modèles de facture personnalisables",
+          "Rappels de paiement",
+          "Plans de paiement multiples",
+          "Facturation récurrente"
+        ],
+        "stats": {
+          "value": "80%",
+          "label": "Traitement plus rapide"
+        }
+      },
+      {
+        "icon": "trending-up",
+        "title": "Demandes d'assurance",
+        "description": "Soumission rationalisée de demandes d'assurance avec vérification d'éligibilité en temps réel et suivis automatisés.",
+        "highlights": [
+          "Soumission électronique de demandes",
+          "Vérifications d'éligibilité en temps réel",
+          "Suivis automatisés",
+          "Suivi du statut des demandes",
+          "Gestion des refus"
+        ],
+        "stats": {
+          "value": "95%",
+          "label": "Taux d'approbation"
+        }
+      },
+      {
+        "icon": "users",
+        "title": "Traitement des paiements",
+        "description": "Acceptez les paiements en ligne et en personne avec plusieurs méthodes de paiement et traitement sécurisé.",
+        "highlights": [
+          "Traitement par carte de crédit",
+          "Virements ACH et bancaires",
+          "Plans de paiement",
+          "Portail de paiement en ligne",
+          "Traitement sécurisé"
+        ],
+        "stats": {
+          "value": "50%",
+          "label": "Temps économisé"
+        }
+      },
+      {
+        "icon": "trending-up",
+        "title": "Rapports financiers",
+        "description": "Rapports financiers et analytique complets pour suivre les revenus, les encaissements et la performance du cabinet.",
+        "highlights": [
+          "Rapports de revenus",
+          "Analytique des encaissements",
+          "Suivi d'assurance",
+          "Tendances de paiement",
+          "Performance du cabinet"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "Visibilité"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Histoires de succès de facturation",
+    "description": "Découvrez comment les cabinets rationalisent leurs opérations de facturation",
+    "stats": [
+      {
+        "icon": "credit-card",
+        "value": "80%",
+        "label": "Traitement plus rapide"
+      },
+      {
+        "icon": "clock",
+        "value": "50%",
+        "label": "Temps économisé"
+      },
+      {
+        "icon": "trending-up",
+        "value": "95%",
+        "label": "Précision"
+      },
+      {
+        "icon": "users",
+        "value": "100%",
+        "label": "Automatisation"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Emily Rodriguez",
+        "role": "Gestionnaire de cabinet, Centre de Dentisterie Esthétique",
+        "quote": "L'automatisation de la facturation a réduit notre temps administratif de 50%. Nous traitons les demandes plus rapidement et collectons les paiements plus efficacement."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Avantages de la facturation",
+    "subtitle": "Excellence financière",
+    "description": "Découvrez les avantages de la facturation automatisée et du traitement des paiements.",
+    "items": [
+      {
+        "title": "Traitement plus rapide",
+        "description": "Les flux de travail automatisés traitent les factures et demandes beaucoup plus rapidement que les méthodes manuelles.",
+        "icon": "zap",
+        "color": "teal",
+        "stats": {
+          "value": "80%",
+          "label": "Plus rapide"
+        },
+        "highlights": [
+          "Facturation automatisée",
+          "Demandes électroniques",
+          "Traitement instantané",
+          "Délais réduits"
+        ]
+      },
+      {
+        "title": "Gagner du temps",
+        "description": "L'automatisation élimine la saisie manuelle de données et réduit les frais généraux administratifs.",
+        "icon": "clock",
+        "color": "cyan",
+        "stats": {
+          "value": "50%",
+          "label": "Temps économisé"
+        },
+        "highlights": [
+          "Flux de travail automatisés",
+          "Documents papier réduits",
+          "Processus rationalisés",
+          "Moins de saisie manuelle"
+        ]
+      },
+      {
+        "title": "Améliorer les encaissements",
+        "description": "Un meilleur suivi et des rappels automatisés améliorent les taux de collecte des paiements.",
+        "icon": "trending-up",
+        "color": "blue",
+        "stats": {
+          "value": "95%",
+          "label": "Taux de collecte"
+        },
+        "highlights": [
+          "Rappels de paiement",
+          "Suivi des encaissements",
+          "Plans de paiement",
+          "Meilleure visibilité"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prêt à rationaliser votre facturation ?",
+    "description": "Découvrez comment les fonctionnalités de facturation de Dentagia peuvent transformer vos opérations financières.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Planifier une démo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "En savoir plus",
+      "link": "/features"
+    }
+  }
+}
+

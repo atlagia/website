@@ -1,0 +1,72 @@
+{
+  "navigation": [
+    {
+      "text": "Canali",
+      "href": "/channels"
+    },
+    {
+      "text": "Film", 
+      "href": "/movies"
+    },
+    {
+      "text": "Serie TV",
+      "href": "/shows"
+    },
+    {
+      "text": "Pacchetti",
+      "href": "/packages"
+    }
+  ],
+  "auth": {
+    "login": {
+      "text": "Accedi",
+      "href": "/packages"
+    },
+    "signup": {
+      "text": "Inizia",
+      "href": "/packages"
+    }
+  },
+  "languages": [
+    {
+      "code": "en",
+      "name": "English"
+    },
+    {
+      "code": "fr",
+      "name": "Français"
+    },
+    {
+      "code": "de",
+      "name": "Deutsch"
+    },
+    {
+      "code": "it",
+      "name": "Italiano"
+    },
+    {
+      "code": "nl",
+      "name": "Nederlands"
+    },
+    {
+      "code": "pt",
+      "name": "Português"
+    },
+    {
+      "code": "ar",
+      "name": "العربية"
+    },
+    {
+      "code": "es",
+      "name": "Español"
+    },
+    {
+      "code": "ru",
+      "name": "Русский"
+    },
+    {
+      "code": "zh",
+      "name": "中文"
+    }
+  ]
+} 

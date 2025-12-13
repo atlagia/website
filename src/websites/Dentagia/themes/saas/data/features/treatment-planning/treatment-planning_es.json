@@ -1,0 +1,182 @@
+{
+  "hero": {
+    "subtitle": "Planificación de tratamiento digital",
+    "title": "Planificación avanzada de tratamientos y gestión de casos",
+    "description": "Cree planes de tratamiento digitales completos, rastree el progreso del paciente y gestione casos complejos con herramientas avanzadas diseñadas para consultorios dentales modernos.",
+    "icon": "clipboard",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "80%",
+        "label": "Planificación más rápida"
+      },
+      {
+        "value": "95%",
+        "label": "Precisión"
+      },
+      {
+        "value": "90%",
+        "label": "Tasa de aceptación"
+      }
+    ]
+  },
+  "features": {
+    "title": "Características de planificación de tratamientos",
+    "subtitle": "Gestión integral de casos",
+    "description": "Herramientas avanzadas para crear, gestionar y rastrear planes de tratamiento y casos de pacientes.",
+    "items": [
+      {
+        "icon": "clipboard",
+        "title": "Planes de tratamiento digitales",
+        "description": "Cree planes de tratamiento completos con procedimientos, cronogramas y estimaciones de costos en formato digital.",
+        "highlights": [
+          "Planificación de tratamientos multifase",
+          "Programación de procedimientos",
+          "Estimación de costos",
+          "Gestión de cronogramas",
+          "Herramientas de presentación de casos"
+        ],
+        "stats": {
+          "value": "80%",
+          "label": "Planificación más rápida"
+        }
+      },
+      {
+        "icon": "trending-up",
+        "title": "Gestión de casos",
+        "description": "Rastree casos de pacientes desde la consulta inicial hasta la finalización del tratamiento con herramientas integrales de gestión de casos.",
+        "highlights": [
+          "Seguimiento de casos",
+          "Monitoreo del progreso",
+          "Historial de tratamientos",
+          "Seguimiento de resultados",
+          "Análisis de casos"
+        ],
+        "stats": {
+          "value": "95%",
+          "label": "Precisión"
+        }
+      },
+      {
+        "icon": "users",
+        "title": "Comunicación con pacientes",
+        "description": "Comparta planes de tratamiento con pacientes, obtenga aprobaciones y comuníquese sobre el progreso del tratamiento.",
+        "highlights": [
+          "Compartir planes",
+          "Aprobación del paciente",
+          "Actualizaciones de progreso",
+          "Mensajería segura",
+          "Compartir documentos"
+        ],
+        "stats": {
+          "value": "90%",
+          "label": "Tasa de aceptación"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Éxito en planificación de tratamientos",
+    "description": "Vea cómo los consultorios optimizan la planificación de tratamientos",
+    "stats": [
+      {
+        "icon": "clipboard",
+        "value": "80%",
+        "label": "Planificación más rápida"
+      },
+      {
+        "icon": "trending-up",
+        "value": "95%",
+        "label": "Precisión"
+      },
+      {
+        "icon": "users",
+        "value": "90%",
+        "label": "Aceptación"
+      },
+      {
+        "icon": "award",
+        "value": "100%",
+        "label": "Digital"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Dr. Sarah Martinez",
+        "role": "Propietario del consultorio",
+        "quote": "La planificación de tratamientos se ha vuelto mucho más fácil. Podemos crear planes completos en minutos y compartirlos con los pacientes al instante."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Beneficios de la planificación de tratamientos",
+    "subtitle": "Gestión de casos optimizada",
+    "description": "Experimente las ventajas de la planificación digital de tratamientos.",
+    "items": [
+      {
+        "title": "Planificación más rápida",
+        "description": "Cree planes de tratamiento mucho más rápido con herramientas digitales y plantillas.",
+        "icon": "zap",
+        "color": "teal",
+        "stats": {
+          "value": "80%",
+          "label": "Más rápido"
+        },
+        "highlights": [
+          "Plantillas digitales",
+          "Creación rápida de planes",
+          "Cálculos automatizados",
+          "Flujos de trabajo optimizados"
+        ]
+      },
+      {
+        "title": "Mejor precisión",
+        "description": "Los planes digitales reducen errores y mejoran la precisión del tratamiento.",
+        "icon": "check-circle",
+        "color": "cyan",
+        "stats": {
+          "value": "95%",
+          "label": "Precisión"
+        },
+        "highlights": [
+          "Reducción de errores",
+          "Formato consistente",
+          "Cálculos precisos",
+          "Mejor documentación"
+        ]
+      },
+      {
+        "title": "Mayor aceptación",
+        "description": "Mejor presentación y comunicación mejoran las tasas de aceptación de tratamientos.",
+        "icon": "trending-up",
+        "color": "blue",
+        "stats": {
+          "value": "90%",
+          "label": "Aceptación"
+        },
+        "highlights": [
+          "Mejor presentación",
+          "Comunicación clara",
+          "Ayudas visuales",
+          "Compromiso del paciente"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "¿Listo para optimizar la planificación de tratamientos?",
+    "description": "Vea cómo las características de planificación de tratamientos de Dentagia pueden transformar su gestión de casos.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Programar una demostración",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Aprender más",
+      "link": "/features"
+    }
+  }
+}
+

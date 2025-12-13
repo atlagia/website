@@ -1,0 +1,223 @@
+{
+  "pageTitle": "الموارد - Dentagia",
+  "pageDescription": "الوصول إلى توثيق شامل، وأدلة، ودراسات حالة، والمزيد من الموارد لمساعدة عيادتك السنية على النجاح مع Dentagia.",
+  "hero": {
+    "badge": "الموارد والتوثيق",
+    "title": "الموارد لمساعدة عيادتك على النجاح",
+    "description": "الوصول إلى توثيق شامل، وأدلة، ودروس تعليمية، ودراسات حالة للاستفادة القصوى من منصة إدارة الممارسة من Dentagia.",
+    "cta": {
+      "primary": {
+        "text": "تصفح التوثيق",
+        "href": "/documentation"
+      },
+      "secondary": {
+        "text": "عرض الأدلة",
+        "href": "#guides"
+      }
+    }
+  },
+  "resourceCategories": [
+    {
+      "title": "التوثيق",
+      "icon": "Book",
+      "description": "أدلة شاملة وتوثيق المنصة",
+      "items": [
+        {
+          "title": "دليل البدء",
+          "description": "دليل البدء السريع لمستخدمي Dentagia الجدد",
+          "icon": "BookOpen",
+          "link": "/documentation/getting-started",
+          "tag": "أساسي"
+        },
+        {
+          "title": "دليل إدارة المرضى",
+          "description": "دليل شامل لإدارة سجلات المرضى",
+          "icon": "FileCode",
+          "link": "/documentation/patient-management",
+          "tag": "العيادة"
+        },
+        {
+          "title": "دليل الجدولة",
+          "description": "كيفية استخدام ميزات الجدولة المدعومة بالذكاء الاصطناعي",
+          "icon": "FileText",
+          "link": "/documentation/scheduling",
+          "tag": "العيادة"
+        },
+        {
+          "title": "دليل الفوترة والمدفوعات",
+          "description": "دروس تعليمية خطوة بخطوة حول الفوترة والمدفوعات",
+          "icon": "ChevronRight",
+          "link": "/documentation/billing",
+          "tag": "مالي"
+        }
+      ]
+    },
+    {
+      "title": "مركز التعلم",
+      "icon": "GraduationCap",
+      "description": "موارد تعليمية ودروس تعليمية لعيادات الأسنان",
+      "items": [
+        {
+          "title": "دروس فيديو",
+          "description": "أدلة فيديو خطوة بخطوة لإدارة العيادة",
+          "icon": "Video",
+          "link": "/learn/tutorials",
+          "tag": "فيديو"
+        },
+        {
+          "title": "أفضل الممارسات",
+          "description": "أفضل ممارسات ونصائح إدارة العيادة",
+          "icon": "Star",
+          "link": "/learn/best-practices",
+          "tag": "دليل"
+        },
+        {
+          "title": "مواد التدريب",
+          "description": "موارد التدريب لفريق عيادتك",
+          "icon": "FileCode",
+          "link": "/learn/training",
+          "tag": "تدريب"
+        },
+        {
+          "title": "منتديات المجتمع",
+          "description": "مناقشة ودعم من عيادات أخرى",
+          "icon": "MessageSquare",
+          "link": "/community",
+          "tag": "الدعم"
+        }
+      ]
+    },
+    {
+      "title": "دراسات الحالة",
+      "icon": "BarChart",
+      "description": "قصص نجاح من عيادات الأسنان التي تستخدم Dentagia",
+      "items": [
+        {
+          "title": "عيادة الأسنان المركزية",
+          "description": "تحول عيادة متعددة الممارسين",
+          "icon": "Users",
+          "link": "/case-studies/downtown-dental",
+          "tag": "عيادة الأسنان"
+        },
+        {
+          "title": "Family Dental Care",
+          "description": "نمو وكفاءة عيادة فردية",
+          "icon": "BarChart",
+          "link": "/case-studies/family-dental",
+          "tag": "عيادة الأسنان"
+        },
+        {
+          "title": "مركز طب الأسنان التجميلي",
+          "description": "تحسين عيادة متخصصة",
+          "icon": "Award",
+          "link": "/case-studies/cosmetic-dental",
+          "tag": "عيادة الأسنان"
+        },
+        {
+          "title": "مجموعة طب أسنان الأطفال",
+          "description": "إدارة عيادة متعددة المواقع",
+          "icon": "Star",
+          "link": "/case-studies/pediatric-dental",
+          "tag": "عيادة الأسنان"
+        }
+      ]
+    }
+  ],
+  "featuredGuides": [
+    {
+      "title": "دليل إعداد العيادة",
+      "description": "دليل شامل لإعداد عيادتك مع Dentagia",
+      "image": "/images/resources/practice-setup.jpg",
+      "category": "دليل الإعداد",
+      "readTime": "15 دقيقة قراءة",
+      "link": "/guides/practice-setup"
+    },
+    {
+      "title": "أفضل ممارسات الجدولة بالذكاء الاصطناعي",
+      "description": "تعلم كيفية استخدام الجدولة المدعومة بالذكاء الاصطناعي بفعالية في عيادتك",
+      "image": "/images/resources/ai-scheduling.jpg",
+      "category": "أفضل الممارسات",
+      "readTime": "10 دقائق قراءة",
+      "link": "/guides/ai-scheduling"
+    },
+    {
+      "title": "دليل الامتثال لـ HIPAA",
+      "description": "فهم امتثال HIPAA وميزات الأمان",
+      "image": "/images/resources/hipaa-compliance.jpg",
+      "category": "الأمان",
+      "readTime": "12 دقيقة قراءة",
+      "link": "/guides/hipaa-compliance"
+    }
+  ],
+  "latestArticles": [
+    {
+      "title": "مستقبل إدارة عيادات الأسنان",
+      "description": "استكشاف الاتجاهات والابتكارات القادمة في إدارة عيادات الأسنان",
+      "image": "/images/blog/dental-future.jpg",
+      "date": "15 مارس 2024",
+      "readTime": "8 دقائق قراءة",
+      "category": "رؤى الصناعة",
+      "link": "/blog/dental-future"
+    },
+    {
+      "title": "تحسين كفاءة العيادة بالذكاء الاصطناعي",
+      "description": "نصائح لتعظيم كفاءة العيادة باستخدام أدوات مدعومة بالذكاء الاصطناعي",
+      "image": "/images/blog/ai-efficiency.jpg",
+      "date": "10 مارس 2024",
+      "readTime": "6 دقائق قراءة",
+      "category": "إدارة العيادة",
+      "link": "/blog/ai-efficiency"
+    },
+    {
+      "title": "أفضل ممارسات أمان HIPAA",
+      "description": "الحفاظ على بيانات عيادتك آمنة ومتوافقة",
+      "image": "/images/blog/hipaa-security.jpg",
+      "date": "5 مارس 2024",
+      "readTime": "7 دقائق قراءة",
+      "category": "الأمان",
+      "link": "/blog/hipaa-security"
+    }
+  ],
+  "downloads": [
+    {
+      "title": "نظرة عامة على إدارة العيادة",
+      "description": "دليل PDF شامل لميزات Dentagia",
+      "icon": "Download",
+      "format": "PDF",
+      "size": "2.5 ميجابايت",
+      "link": "/downloads/practice-overview.pdf"
+    },
+    {
+      "title": "دليل الامتثال لـ HIPAA",
+      "description": "دليل تفصيلي حول امتثال HIPAA والأمان",
+      "icon": "FileText",
+      "format": "PDF",
+      "size": "3.8 ميجابايت",
+      "link": "/downloads/hipaa-guide.pdf"
+    },
+    {
+      "title": "دليل التنفيذ",
+      "description": "دليل إعداد العيادة خطوة بخطوة",
+      "icon": "Book",
+      "format": "PDF",
+      "size": "1.8 ميجابايت",
+      "link": "/downloads/implementation-guide.pdf"
+    }
+  ],
+  "cta": {
+    "title": "هل تحتاج إلى مساعدة؟",
+    "description": "فريق الدعم لدينا هنا لمساعدة عيادتك على النجاح مع Dentagia.",
+    "buttons": [
+      {
+        "text": "اتصل بالدعم",
+        "href": "/contact",
+        "variant": "primary"
+      },
+      {
+        "text": "انضم إلى المجتمع",
+        "href": "/community",
+        "variant": "secondary"
+      }
+    ]
+  }
+}

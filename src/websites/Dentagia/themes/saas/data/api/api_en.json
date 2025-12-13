@@ -1,0 +1,210 @@
+{
+  "hero": {
+    "subtitle": "API DOCUMENTATION",
+    "title": "Integrate with Dentagia Platform",
+    "description": "Comprehensive API documentation to help you integrate Dentagia's dental practice management solutions into your applications.",
+    "searchPlaceholder": "Search API documentation..."
+  },
+  "sidebar": {
+    "categories": [
+      {
+        "title": "Getting Started",
+        "icon": "Code",
+        "items": [
+          {
+            "title": "Authentication",
+            "link": "/api/auth"
+          },
+          {
+            "title": "API Overview",
+            "link": "/api/overview"
+          },
+          {
+            "title": "Rate Limits",
+            "link": "/api/rate-limits"
+          },
+          {
+            "title": "HIPAA Compliance",
+            "link": "/api/hipaa"
+          }
+        ]
+      },
+      {
+        "title": "Core Endpoints",
+        "icon": "Terminal",
+        "items": [
+          {
+            "title": "Patients API",
+            "link": "/api/patients"
+          },
+          {
+            "title": "Appointments API",
+            "link": "/api/appointments"
+          },
+          {
+            "title": "Billing API",
+            "link": "/api/billing"
+          },
+          {
+            "title": "Treatment Plans API",
+            "link": "/api/treatment-plans"
+          }
+        ]
+      },
+      {
+        "title": "Advanced Features",
+        "icon": "Box",
+        "items": [
+          {
+            "title": "Webhooks",
+            "link": "/api/webhooks"
+          },
+          {
+            "title": "Practice Analytics API",
+            "link": "/api/analytics"
+          },
+          {
+            "title": "AI Scheduling API",
+            "link": "/api/ai-scheduling"
+          },
+          {
+            "title": "Patient Communication API",
+            "link": "/api/communication"
+          }
+        ]
+      },
+      {
+        "title": "Security",
+        "icon": "Shield",
+        "items": [
+          {
+            "title": "API Keys",
+            "link": "/api/keys"
+          },
+          {
+            "title": "OAuth 2.0",
+            "link": "/api/oauth"
+          },
+          {
+            "title": "Data Encryption",
+            "link": "/api/encryption"
+          },
+          {
+            "title": "HIPAA Compliance",
+            "link": "/api/hipaa-compliance"
+          }
+        ]
+      }
+    ]
+  },
+  "featured": {
+    "title": "Featured Guides",
+    "guides": [
+      {
+        "icon": "Zap",
+        "title": "Quick Start Guide",
+        "description": "Get up and running with Dentagia API in minutes",
+        "link": "/api/quick-start",
+        "color": "pink"
+      },
+      {
+        "icon": "Database",
+        "title": "Patient Data Models",
+        "description": "Understanding patient data structures and relationships",
+        "link": "/api/data-models",
+        "color": "blue"
+      },
+      {
+        "icon": "Settings",
+        "title": "Integration Patterns",
+        "description": "Common patterns for integrating with dental practice management",
+        "link": "/api/integration-patterns",
+        "color": "purple"
+      }
+    ]
+  },
+  "endpoints": {
+    "title": "Popular Endpoints",
+    "description": "Explore our most commonly used API endpoints for dental practice management",
+    "items": [
+      {
+        "method": "GET",
+        "path": "/api/v1/patients",
+        "title": "List Patients",
+        "description": "Retrieve a list of patients with optional filtering and pagination"
+      },
+      {
+        "method": "POST",
+        "path": "/api/v1/appointments",
+        "title": "Create Appointment",
+        "description": "Create a new appointment with patient information and scheduling details"
+      },
+      {
+        "method": "GET",
+        "path": "/api/v1/patients/{id}",
+        "title": "Get Patient",
+        "description": "Retrieve detailed information about a specific patient including medical history"
+      },
+      {
+        "method": "PUT",
+        "path": "/api/v1/appointments/{id}",
+        "title": "Update Appointment",
+        "description": "Update an existing appointment's information and status"
+      },
+      {
+        "method": "POST",
+        "path": "/api/v1/billing/invoices",
+        "title": "Create Invoice",
+        "description": "Create a new invoice for patient treatment or services"
+      },
+      {
+        "method": "GET",
+        "path": "/api/v1/analytics/practice",
+        "title": "Get Practice Analytics",
+        "description": "Retrieve practice performance metrics and insights"
+      }
+    ]
+  },
+  "updates": {
+    "title": "Latest Updates",
+    "description": "Stay up to date with our latest API features and improvements",
+    "items": [
+      {
+        "date": "2024-03-15",
+        "title": "AI Scheduling API",
+        "description": "Added support for AI-powered appointment scheduling and optimization",
+        "tag": "Feature"
+      },
+      {
+        "date": "2024-03-10",
+        "title": "API Version 2.0 Beta",
+        "description": "Introducing our next-generation API with improved performance and new dental practice endpoints",
+        "tag": "Update"
+      },
+      {
+        "date": "2024-03-05",
+        "title": "Enhanced HIPAA Security",
+        "description": "Added support for enhanced encryption and improved HIPAA compliance features",
+        "tag": "Security"
+      }
+    ]
+  },
+  "help": {
+    "title": "Need More Help?",
+    "description": "Can't find what you're looking for? Our developer support team is here to help.",
+    "options": [
+      {
+        "icon": "MessageCircle",
+        "title": "Developer Forum",
+        "description": "Join our developer community to get help from other developers and practice managers",
+        "link": "/api/community"
+      },
+      {
+        "icon": "Mail",
+        "title": "Contact API Support",
+        "description": "Get in touch with our dedicated API support team",
+        "link": "/api/support"
+      }
+    ]
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "hero": {
+    "subtitle": "AI-Powered Intelligence",
+    "title": "AI-Powered Appointment Scheduling",
+    "description": "Revolutionary AI scheduling that learns from your practice patterns, optimizes your calendar automatically, and maximizes practice efficiency.",
+    "icon": "brain",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "70%",
+        "label": "No-Show Reduction"
+      },
+      {
+        "value": "10hrs",
+        "label": "Time Saved/Week"
+      },
+      {
+        "value": "95%",
+        "label": "Optimization"
+      }
+    ]
+  },
+  "features": {
+    "title": "AI Scheduling Features",
+    "subtitle": "Intelligent Automation",
+    "description": "Advanced AI-powered scheduling that learns and adapts to your practice needs.",
+    "items": [
+      {
+        "icon": "brain",
+        "title": "Predictive Scheduling",
+        "description": "AI analyzes historical data to predict optimal appointment times and reduce no-shows.",
+        "highlights": [
+          "Pattern recognition",
+          "No-show prediction",
+          "Optimal time suggestions",
+          "Patient behavior analysis",
+          "Calendar optimization"
+        ],
+        "stats": {
+          "value": "70%",
+          "label": "No-Show Reduction"
+        }
+      },
+      {
+        "icon": "zap",
+        "title": "Automatic Gap Filling",
+        "description": "AI automatically fills cancellations and gaps in your schedule with waitlist patients or optimized rescheduling.",
+        "highlights": [
+          "Automatic gap detection",
+          "Waitlist management",
+          "Smart rescheduling",
+          "Revenue optimization",
+          "Efficiency maximization"
+        ],
+        "stats": {
+          "value": "95%",
+          "label": "Efficiency"
+        }
+      },
+      {
+        "icon": "trending-up",
+        "title": "Revenue Optimization",
+        "description": "AI optimizes your schedule to maximize revenue by suggesting high-value appointment slots.",
+        "highlights": [
+          "Revenue maximization",
+          "Appointment value analysis",
+          "Optimal slot suggestions",
+          "Practice growth insights",
+          "Performance tracking"
+        ],
+        "stats": {
+          "value": "35%",
+          "label": "Revenue Growth"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "AI Scheduling Success",
+    "description": "See how AI is transforming practice scheduling",
+    "stats": [
+      {
+        "icon": "brain",
+        "value": "70%",
+        "label": "No-Show Reduction"
+      },
+      {
+        "icon": "clock",
+        "value": "10hrs",
+        "label": "Time Saved"
+      },
+      {
+        "icon": "trending-up",
+        "value": "35%",
+        "label": "Revenue Growth"
+      },
+      {
+        "icon": "award",
+        "value": "95%",
+        "label": "Efficiency"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Dr. Sarah Martinez",
+        "role": "Practice Owner, Downtown Dental Clinic",
+        "quote": "The AI-powered scheduling alone saves us 10 hours per week. It's like having an intelligent assistant that never sleeps."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "AI Scheduling Benefits",
+    "subtitle": "Intelligent Automation",
+    "description": "Experience the power of AI-driven scheduling optimization.",
+    "items": [
+      {
+        "title": "Reduce No-Shows",
+        "description": "AI predicts and prevents no-shows with intelligent scheduling and reminders.",
+        "icon": "bell",
+        "color": "teal",
+        "stats": {
+          "value": "70%",
+          "label": "Reduction"
+        },
+        "highlights": [
+          "No-show prediction",
+          "Optimal scheduling",
+          "Automated reminders",
+          "Patient behavior analysis"
+        ]
+      },
+      {
+        "title": "Maximize Efficiency",
+        "description": "AI optimizes your calendar to maximize practice efficiency and revenue.",
+        "icon": "trending-up",
+        "color": "cyan",
+        "stats": {
+          "value": "95%",
+          "label": "Efficiency"
+        },
+        "highlights": [
+          "Calendar optimization",
+          "Gap filling",
+          "Revenue maximization",
+          "Resource allocation"
+        ]
+      },
+      {
+        "title": "Save Time",
+        "description": "Automated scheduling and optimization save hours of administrative work.",
+        "icon": "clock",
+        "color": "blue",
+        "stats": {
+          "value": "10hrs",
+          "label": "Per Week"
+        },
+        "highlights": [
+          "Automated scheduling",
+          "Reduced manual work",
+          "Streamlined workflows",
+          "Time optimization"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready for AI-Powered Scheduling?",
+    "description": "See how Dentagia's AI scheduling can transform your practice operations.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Schedule a Demo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Learn More",
+      "link": "/features"
+    }
+  }
+}
+

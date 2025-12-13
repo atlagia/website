@@ -1,0 +1,348 @@
+---
+import { getLangFromUrl, useTranslations } from '@utils/i18n';
+
+const { lang } = Astro.params;
+
+// Import components
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+
+// Get translations
+const translations = await useTranslations(lang);
+const jsonData = translations.default;
+
+// Get site title and description from language-specific data
+const SITE_TITLE = jsonData.siteTitle || 'FastIPTV';
+const SITE_DESCRIPTION = jsonData.siteDescription || 'Premium IPTV Streaming Service';
+
+// Generate static paths for all supported languages
+export async function getStaticPaths() {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  const languages = allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+  
+  return languages.map(lang => ({
+    params: { lang }
+  }));
+}
+---
+
+<!doctype html>
+<html lang={lang} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
+  <BaseHead 
+    title={`Our Story | ${SITE_TITLE}`}
+    description="Learn about FastIPTV's journey to becoming the leading IPTV streaming service provider."
+    lang={lang}
+  />
+  <body class="bg-gray-50">
+    <Header lang={lang} />
+    
+    <main class="pt-20">
+      <!-- Hero Section -->
+      <section class="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4">
+          <div class="text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">
+              {lang === 'en' && 'Our Story'}
+              {lang === 'fr' && 'Notre Histoire'}
+              {lang === 'de' && 'Unsere Geschichte'}
+              {lang === 'es' && 'Nuestra Historia'}
+              {lang === 'it' && 'La Nostra Storia'}
+              {lang === 'pt' && 'Nossa História'}
+              {lang === 'nl' && 'Ons Verhaal'}
+              {lang === 'zh' && '我们的故事'}
+              {lang === 'ar' && 'قصتنا'}
+              {lang === 'tr' && 'Hikayemiz'}
+            </h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto opacity-90">
+              {lang === 'en' && 'From humble beginnings to the world\'s most trusted IPTV streaming platform'}
+              {lang === 'fr' && 'Des débuts modestes à la plateforme de streaming IPTV la plus fiable au monde'}
+              {lang === 'de' && 'Von bescheidenen Anfängen zur vertrauenswürdigsten IPTV-Streaming-Plattform der Welt'}
+              {lang === 'es' && 'Desde humildes comienzos hasta la plataforma de streaming IPTV más confiable del mundo'}
+              {lang === 'it' && 'Dai modesti inizi alla piattaforma di streaming IPTV più affidabile al mondo'}
+              {lang === 'pt' && 'De humildes começos à plataforma de streaming IPTV mais confiável do mundo'}
+              {lang === 'nl' && 'Van bescheiden begin tot \'s werelds meest vertrouwde IPTV streaming platform'}
+              {lang === 'zh' && '从卑微的开始到世界上最值得信赖的IPTV流媒体平台'}
+              {lang === 'ar' && 'من البدايات المتواضعة إلى منصة البث التلفزيوني الأكثر موثوقية في العالم'}
+              {lang === 'tr' && 'Mütevazı başlangıçlardan dünyanın en güvenilir IPTV yayın platformuna'}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Timeline Section -->
+      <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+                {lang === 'en' && 'The Journey Begins'}
+                {lang === 'fr' && 'Le Voyage Commence'}
+                {lang === 'de' && 'Die Reise Beginnt'}
+                {lang === 'es' && 'El Viaje Comienza'}
+                {lang === 'it' && 'Il Viaggio Inizia'}
+                {lang === 'pt' && 'A Jornada Começa'}
+                {lang === 'nl' && 'De Reis Begint'}
+                {lang === 'zh' && '旅程开始'}
+                {lang === 'ar' && 'تبدأ الرحلة'}
+                {lang === 'tr' && 'Yolculuk Başlıyor'}
+              </h2>
+              <p class="text-lg text-gray-600 mb-6">
+                {lang === 'en' && 'Founded in 2018, FastIPTV started as a small team of streaming enthusiasts who believed in making premium entertainment accessible to everyone. Our mission was simple: deliver the fastest, most reliable IPTV service with the best content library.'}
+                {lang === 'fr' && 'Fondée en 2018, FastIPTV a commencé comme une petite équipe d\'enthousiastes du streaming qui croyaient en rendre le divertissement premium accessible à tous. Notre mission était simple : fournir le service IPTV le plus rapide et le plus fiable avec la meilleure bibliothèque de contenu.'}
+                {lang === 'de' && 'Gegründet im Jahr 2018, begann FastIPTV als kleines Team von Streaming-Enthusiasten, die daran glaubten, Premium-Unterhaltung für alle zugänglich zu machen. Unsere Mission war einfach: den schnellsten, zuverlässigsten IPTV-Service mit der besten Content-Bibliothek liefern.'}
+                {lang === 'es' && 'Fundada en 2018, FastIPTV comenzó como un pequeño equipo de entusiastas del streaming que creían en hacer el entretenimiento premium accesible para todos. Nuestra misión era simple: entregar el servicio IPTV más rápido y confiable con la mejor biblioteca de contenido.'}
+                {lang === 'it' && 'Fondata nel 2018, FastIPTV è iniziata come un piccolo team di appassionati di streaming che credevano nel rendere l\'intrattenimento premium accessibile a tutti. La nostra missione era semplice: fornire il servizio IPTV più veloce e affidabile con la migliore libreria di contenuti.'}
+                {lang === 'pt' && 'Fundada em 2018, a FastIPTV começou como uma pequena equipe de entusiastas de streaming que acreditavam em tornar o entretenimento premium acessível a todos. Nossa missão era simples: entregar o serviço IPTV mais rápido e confiável com a melhor biblioteca de conteúdo.'}
+                {lang === 'nl' && 'Opgericht in 2018, begon FastIPTV als een klein team van streaming-enthousiastelingen die geloofden in het toegankelijk maken van premium entertainment voor iedereen. Onze missie was eenvoudig: de snelste, meest betrouwbare IPTV-service leveren met de beste contentbibliotheek.'}
+                {lang === 'zh' && '成立于2018年，FastIPTV最初是一个小型流媒体爱好者团队，他们相信让每个人都能享受优质娱乐。我们的使命很简单：提供最快、最可靠的IPTV服务，拥有最好的内容库。'}
+                {lang === 'ar' && 'تأسست في عام 2018، بدأت FastIPTV كفريق صغير من عشاق البث الذين آمنوا بجعل الترفيه المتميز في متناول الجميع. كانت مهمتنا بسيطة: تقديم أسرع وأكثر خدمات IPTV موثوقية مع أفضل مكتبة محتوى.'}
+                {lang === 'tr' && '2018 yılında kurulan FastIPTV, premium eğlenceyi herkese erişilebilir kılma konusunda inanan küçük bir streaming tutkunu ekibi olarak başladı. Misyonumuz basitti: en hızlı, en güvenilir IPTV hizmetini en iyi içerik kütüphanesiyle sunmak.'}
+              </p>
+            </div>
+            <div class="bg-gradient-to-br from-blue-100 to-purple-100 p-8 rounded-2xl">
+              <div class="grid grid-cols-2 gap-6">
+                <div class="text-center">
+                  <div class="text-3xl font-bold text-blue-600 mb-2">32,000+</div>
+                  <div class="text-sm text-gray-600">
+                    {lang === 'en' && 'Channels'}
+                    {lang === 'fr' && 'Chaînes'}
+                    {lang === 'de' && 'Kanäle'}
+                    {lang === 'es' && 'Canales'}
+                    {lang === 'it' && 'Canali'}
+                    {lang === 'pt' && 'Canais'}
+                    {lang === 'nl' && 'Kanalen'}
+                    {lang === 'zh' && '频道'}
+                    {lang === 'ar' && 'قنوات'}
+                    {lang === 'tr' && 'Kanal'}
+                  </div>
+                </div>
+                <div class="text-center">
+                  <div class="text-3xl font-bold text-purple-600 mb-2">140,000+</div>
+                  <div class="text-sm text-gray-600">
+                    {lang === 'en' && 'Movies'}
+                    {lang === 'fr' && 'Films'}
+                    {lang === 'de' && 'Filme'}
+                    {lang === 'es' && 'Películas'}
+                    {lang === 'it' && 'Film'}
+                    {lang === 'pt' && 'Filmes'}
+                    {lang === 'nl' && 'Films'}
+                    {lang === 'zh' && '电影'}
+                    {lang === 'ar' && 'أفلام'}
+                    {lang === 'tr' && 'Film'}
+                  </div>
+                </div>
+                <div class="text-center">
+                  <div class="text-3xl font-bold text-green-600 mb-2">99.9%</div>
+                  <div class="text-sm text-gray-600">
+                    {lang === 'en' && 'Uptime'}
+                    {lang === 'fr' && 'Disponibilité'}
+                    {lang === 'de' && 'Verfügbarkeit'}
+                    {lang === 'es' && 'Tiempo de Actividad'}
+                    {lang === 'it' && 'Tempo di Attività'}
+                    {lang === 'pt' && 'Tempo de Atividade'}
+                    {lang === 'nl' && 'Uptime'}
+                    {lang === 'zh' && '正常运行时间'}
+                    {lang === 'ar' && 'وقت التشغيل'}
+                    {lang === 'tr' && 'Çalışma Süresi'}
+                  </div>
+                </div>
+                <div class="text-center">
+                  <div class="text-3xl font-bold text-orange-600 mb-2">2M+</div>
+                  <div class="text-sm text-gray-600">
+                    {lang === 'en' && 'Users'}
+                    {lang === 'fr' && 'Utilisateurs'}
+                    {lang === 'de' && 'Benutzer'}
+                    {lang === 'es' && 'Usuarios'}
+                    {lang === 'it' && 'Utenti'}
+                    {lang === 'pt' && 'Usuários'}
+                    {lang === 'nl' && 'Gebruikers'}
+                    {lang === 'zh' && '用户'}
+                    {lang === 'ar' && 'مستخدمين'}
+                    {lang === 'tr' && 'Kullanıcı'}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Values Section -->
+      <section class="bg-white py-20">
+        <div class="max-w-7xl mx-auto px-4">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              {lang === 'en' && 'Our Values'}
+              {lang === 'fr' && 'Nos Valeurs'}
+              {lang === 'de' && 'Unsere Werte'}
+              {lang === 'es' && 'Nuestros Valores'}
+              {lang === 'it' && 'I Nostri Valori'}
+              {lang === 'pt' && 'Nossos Valores'}
+              {lang === 'nl' && 'Onze Waarden'}
+              {lang === 'zh' && '我们的价值观'}
+              {lang === 'ar' && 'قيمنا'}
+              {lang === 'tr' && 'Değerlerimiz'}
+            </h2>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="text-center p-6">
+              <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold mb-4">
+                {lang === 'en' && 'Speed & Performance'}
+                {lang === 'fr' && 'Vitesse et Performance'}
+                {lang === 'de' && 'Geschwindigkeit & Leistung'}
+                {lang === 'es' && 'Velocidad y Rendimiento'}
+                {lang === 'it' && 'Velocità e Prestazioni'}
+                {lang === 'pt' && 'Velocidade e Performance'}
+                {lang === 'nl' && 'Snelheid & Prestaties'}
+                {lang === 'zh' && '速度和性能'}
+                {lang === 'ar' && 'السرعة والأداء'}
+                {lang === 'tr' && 'Hız ve Performans'}
+              </h3>
+              <p class="text-gray-600">
+                {lang === 'en' && 'We prioritize lightning-fast streaming with minimal buffering and maximum quality.'}
+                {lang === 'fr' && 'Nous privilégions un streaming ultra-rapide avec un minimum de mise en mémoire tampon et une qualité maximale.'}
+                {lang === 'de' && 'Wir priorisieren blitzschnelles Streaming mit minimaler Pufferung und maximaler Qualität.'}
+                {lang === 'es' && 'Priorizamos el streaming ultrarrápido con mínima carga y máxima calidad.'}
+                {lang === 'it' && 'Priorizziamo lo streaming velocissimo con buffering minimo e qualità massima.'}
+                {lang === 'pt' && 'Priorizamos streaming ultrarrápido com buffer mínimo e qualidade máxima.'}
+                {lang === 'nl' && 'We prioriteren bliksemsnel streaming met minimale buffering en maximale kwaliteit.'}
+                {lang === 'zh' && '我们优先考虑闪电般快速的流媒体，缓冲最少，质量最高。'}
+                {lang === 'ar' && 'نحن نعطي الأولوية للبث السريع جداً مع الحد الأدنى من التحميل والجودة القصوى.'}
+                {lang === 'tr' && 'Minimum yükleme ve maksimum kalite ile şimşek hızında yayını önceliklendiriyoruz.'}
+              </p>
+            </div>
+            
+            <div class="text-center p-6">
+              <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold mb-4">
+                {lang === 'en' && 'Reliability'}
+                {lang === 'fr' && 'Fiabilité'}
+                {lang === 'de' && 'Zuverlässigkeit'}
+                {lang === 'es' && 'Confiabilidad'}
+                {lang === 'it' && 'Affidabilità'}
+                {lang === 'pt' && 'Confiabilidade'}
+                {lang === 'nl' && 'Betrouwbaarheid'}
+                {lang === 'zh' && '可靠性'}
+                {lang === 'ar' && 'الموثوقية'}
+                {lang === 'tr' && 'Güvenilirlik'}
+              </h3>
+              <p class="text-gray-600">
+                {lang === 'en' && 'Our infrastructure ensures 99.9% uptime with redundant servers and failover systems.'}
+                {lang === 'fr' && 'Notre infrastructure garantit 99,9% de disponibilité avec des serveurs redondants et des systèmes de basculement.'}
+                {lang === 'de' && 'Unsere Infrastruktur gewährleistet 99,9% Verfügbarkeit mit redundanten Servern und Failover-Systemen.'}
+                {lang === 'es' && 'Nuestra infraestructura garantiza 99.9% de tiempo de actividad con servidores redundantes y sistemas de respaldo.'}
+                {lang === 'it' && 'La nostra infrastruttura garantisce il 99,9% di uptime con server ridondanti e sistemi di failover.'}
+                {lang === 'pt' && 'Nossa infraestrutura garante 99,9% de tempo de atividade com servidores redundantes e sistemas de failover.'}
+                {lang === 'nl' && 'Onze infrastructuur zorgt voor 99,9% uptime met redundante servers en failover-systemen.'}
+                {lang === 'zh' && '我们的基础设施通过冗余服务器和故障转移系统确保99.9%的正常运行时间。'}
+                {lang === 'ar' && 'بنيتنا التحتية تضمن 99.9% من وقت التشغيل مع خوادم احتياطية وأنظمة تبديل.'}
+                {lang === 'tr' && 'Altyapımız yedekli sunucular ve yedekleme sistemleri ile %99.9 çalışma süresi sağlar.'}
+              </p>
+            </div>
+            
+            <div class="text-center p-6">
+              <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold mb-4">
+                {lang === 'en' && 'Customer First'}
+                {lang === 'fr' && 'Client d\'Abord'}
+                {lang === 'de' && 'Kunde zuerst'}
+                {lang === 'es' && 'Cliente Primero'}
+                {lang === 'it' && 'Cliente Prima'}
+                {lang === 'pt' && 'Cliente em Primeiro'}
+                {lang === 'nl' && 'Klant Eerst'}
+                {lang === 'zh' && '客户至上'}
+                {lang === 'ar' && 'العميل أولاً'}
+                {lang === 'tr' && 'Müşteri Önce'}
+              </h3>
+              <p class="text-gray-600">
+                {lang === 'en' && 'Every decision we make is guided by what\'s best for our customers and their viewing experience.'}
+                {lang === 'fr' && 'Chaque décision que nous prenons est guidée par ce qui est le mieux pour nos clients et leur expérience de visionnement.'}
+                {lang === 'de' && 'Jede Entscheidung, die wir treffen, wird von dem geleitet, was für unsere Kunden und ihr Seherlebnis am besten ist.'}
+                {lang === 'es' && 'Cada decisión que tomamos está guiada por lo que es mejor para nuestros clientes y su experiencia de visualización.'}
+                {lang === 'it' && 'Ogni decisione che prendiamo è guidata da ciò che è meglio per i nostri clienti e la loro esperienza di visione.'}
+                {lang === 'pt' && 'Cada decisão que tomamos é guiada pelo que é melhor para nossos clientes e sua experiência de visualização.'}
+                {lang === 'nl' && 'Elke beslissing die we nemen wordt geleid door wat het beste is voor onze klanten en hun kijkervaring.'}
+                {lang === 'zh' && '我们做出的每一个决定都以什么对我们的客户和他们的观看体验最好为指导。'}
+                {lang === 'ar' && 'كل قرار نتخذه يوجهه ما هو الأفضل لعملائنا وتجربة المشاهدة الخاصة بهم.'}
+                {lang === 'tr' && 'Verdiğimiz her karar, müşterilerimiz ve onların izleme deneyimi için en iyi olan şey tarafından yönlendirilir.'}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            {lang === 'en' && 'Join Our Story'}
+            {lang === 'fr' && 'Rejoignez Notre Histoire'}
+            {lang === 'de' && 'Werden Sie Teil Unserer Geschichte'}
+            {lang === 'es' && 'Únete a Nuestra Historia'}
+            {lang === 'it' && 'Unisciti alla Nostra Storia'}
+            {lang === 'pt' && 'Junte-se à Nossa História'}
+            {lang === 'nl' && 'Word Onderdeel van Ons Verhaal'}
+            {lang === 'zh' && '加入我们的故事'}
+            {lang === 'ar' && 'انضم إلى قصتنا'}
+            {lang === 'tr' && 'Hikayemize Katıl'}
+          </h2>
+          <p class="text-xl mb-8 max-w-2xl mx-auto opacity-90">
+            {lang === 'en' && 'Be part of the future of streaming entertainment with FastIPTV'}
+            {lang === 'fr' && 'Faites partie de l\'avenir du divertissement en streaming avec FastIPTV'}
+            {lang === 'de' && 'Seien Sie Teil der Zukunft des Streaming-Unterhaltungs mit FastIPTV'}
+            {lang === 'es' && 'Sé parte del futuro del entretenimiento en streaming con FastIPTV'}
+            {lang === 'it' && 'Fai parte del futuro dell\'intrattenimento in streaming con FastIPTV'}
+            {lang === 'pt' && 'Faça parte do futuro do entretenimento em streaming com FastIPTV'}
+            {lang === 'nl' && 'Word onderdeel van de toekomst van streaming entertainment met FastIPTV'}
+            {lang === 'zh' && '与FastIPTV一起成为流媒体娱乐未来的一部分'}
+            {lang === 'ar' && 'كن جزءاً من مستقبل الترفيه البث مع FastIPTV'}
+            {lang === 'tr' && 'FastIPTV ile yayın eğlencesinin geleceğinin bir parçası olun'}
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href={`/${lang}/packages`} class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+              {lang === 'en' && 'Get Started'}
+              {lang === 'fr' && 'Commencer'}
+              {lang === 'de' && 'Loslegen'}
+              {lang === 'es' && 'Comenzar'}
+              {lang === 'it' && 'Inizia'}
+              {lang === 'pt' && 'Começar'}
+              {lang === 'nl' && 'Aan de Slag'}
+              {lang === 'zh' && '开始使用'}
+              {lang === 'ar' && 'ابدأ'}
+              {lang === 'tr' && 'Başla'}
+            </a>
+            <a href={`/${lang}/contact`} class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+              {lang === 'en' && 'Contact Us'}
+              {lang === 'fr' && 'Nous Contacter'}
+              {lang === 'de' && 'Kontaktieren Sie Uns'}
+              {lang === 'es' && 'Contáctanos'}
+              {lang === 'it' && 'Contattaci'}
+              {lang === 'pt' && 'Entre em Contato'}
+              {lang === 'nl' && 'Neem Contact Op'}
+              {lang === 'zh' && '联系我们'}
+              {lang === 'ar' && 'اتصل بنا'}
+              {lang === 'tr' && 'İletişime Geç'}
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <Footer lang={lang} />
+  </body>
+</html>

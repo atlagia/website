@@ -1,0 +1,627 @@
+---
+import { SITE_TITLE } from '../../consts';
+import pkg from 'lucide-react';
+const { 
+  Users,
+  Calendar,
+  CreditCard,
+  Clipboard,
+  Brain,
+  Zap,
+  TrendingUp,
+  Bell,
+  Shield,
+  Lock,
+  Cloud,
+  Database,
+  ChevronRight,
+  Play,
+  Award,
+  CheckCircle
+} = pkg;
+
+const theme = import.meta.env.THEME || 'default';
+const lang = Astro.params.lang || 'en';
+const featurePath = Astro.url.pathname.split('/').pop() || 'patient-management';
+
+const validFeatures = [
+  'patient-management',
+  'scheduling',
+  'billing',
+  'treatment-planning',
+  'ai-scheduling',
+  'patient-insights',
+  'reminders',
+  'analytics',
+  'hipaa',
+  'cloud-security',
+  'encryption',
+  'backup-recovery'
+];
+
+if (!validFeatures.includes(featurePath)) {
+  return Astro.redirect('/404');
+}
+
+const { default: BaseHead } = await import(`../../components/BaseHead.astro`);
+const { default: Header } = await import(`../../components/Header.astro`);
+const { default: Footer } = await import(`../../components/Footer.astro`);
+
+const featureData = await import(`../../data/features/${featurePath}/${featurePath}_${lang}.json`).catch(() => 
+  import(`../../data/features/${featurePath}/${featurePath}_en.json`)
+);
+
+// Helper function to get YouTube video ID
+function getYouTubeVideoId(url: string) {
+  if (!url) return null;
+  // Handle youtu.be format
+  if (url.includes('youtu.be/')) {
+    const match = url.match(/youtu\.be\/([^#&?]*)/);
+    return match && match[1] ? match[1] : null;
+  }
+  // Handle youtube.com/watch?v= format
+  const regExp = /^.*(?:youtube\.com\/watch\?v=|youtube\.com\/embed\/|youtube\.com\/v\/)([^#&?]*).*/;
+  const match = url.match(regExp);
+  return (match && match[1] && match[1].length === 11) ? match[1] : null;
+}
+
+export async function getStaticPaths() {
+  const languages = ['en', 'fr', 'es', 'it', 'de', 'ar'];
+  const features = validFeatures;
+  return languages.flatMap(lang => 
+    features.map(feature => ({
+      params: { lang, features: feature }
+    }))
+  );
+}
+
+const businessInfo = {
+  name: import.meta.env.PUBLIC_SITE_NAME || 'Dentagia'
+};
+
+const iconMap = {
+  users: Users,
+  calendar: Calendar,
+  'credit-card': CreditCard,
+  clipboard: Clipboard,
+  brain: Brain,
+  zap: Zap,
+  'trending-up': TrendingUp,
+  bell: Bell,
+  shield: Shield,
+  lock: Lock,
+  cloud: Cloud,
+  database: Database
+};
+
+const getIcon = (iconName: string) => {
+  return iconMap[iconName.toLowerCase()] || Users;
+};
+
+---
+
+<!doctype html>
+<html lang={lang} class="scroll-smooth">
+  <head>
+    <BaseHead 
+      title={`${featureData.hero.title} | ${businessInfo.name}`}
+      description={featureData.hero.description}
+    />
+    <style>
+      .youtube-container {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+        height: 0;
+        overflow: hidden;
+        border-radius: 1rem;
+      }
+      .youtube-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+      
+      /* Custom Icon Styles */
+      .icon-white {
+        color: white !important;
+      }
+      .icon-white svg {
+        stroke: white !important;
+        fill: none !important;
+      }
+      
+      /* Benefits section icons */
+      .benefits-section svg {
+        stroke: white !important;
+        color: white !important;
+        fill: none !important;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <Header />
+    
+    <!-- Hero Section -->
+    <section class="relative min-h-[90vh] flex items-center py-20 overflow-hidden">
+      <!-- Background Effects -->
+      <div class="absolute inset-0 bg-gradient-to-br from-teal-50 via-cyan-50 to-blue-50">
+        <div class="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(to_bottom,transparent,black,transparent)] opacity-20"></div>
+      </div>
+
+      <div class="relative container mx-auto px-4">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <!-- Content -->
+          <div class="space-y-8">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 border border-teal-100 shadow-lg">
+              <span class="relative flex h-2 w-2">
+                <span class="animate-ping absolute h-full w-full rounded-full bg-teal-400 opacity-75"></span>
+                <span class="rounded-full h-2 w-2 bg-teal-500"></span>
+              </span>
+              <span class="text-sm font-medium text-teal-700">{featureData.hero.subtitle}</span>
+            </div>
+
+            <h1 class="text-5xl lg:text-6xl font-bold leading-tight">
+              <span class="bg-clip-text text-transparent bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600">
+                {featureData.hero.title}
+              </span>
+            </h1>
+
+            <p class="text-xl text-gray-600 max-w-xl">
+              {featureData.hero.description}
+            </p>
+
+            <!-- Stats -->
+            <div class="grid grid-cols-3 gap-8">
+              {featureData.hero.stats.map(stat => (
+                <div class="text-center">
+                  <div class="text-3xl font-bold text-teal-600">{stat.value}</div>
+                  <div class="text-sm text-gray-600">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- Hero Visual -->
+          <div class="relative group">
+            <div class="absolute inset-0 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-3xl blur-2xl opacity-25 group-hover:opacity-40 transition-opacity duration-500"></div>
+            {(() => {
+              const videoUrl = featureData.hero.video?.url || featureData.hero.heroVideo;
+              const videoThumbnail = featureData.hero.video?.thumbnail || featureData.hero.heroVideoThumbnail || featureData.hero.heroImage;
+              const videoId = videoUrl ? getYouTubeVideoId(videoUrl) : null;
+              
+              if (videoId) {
+                return (
+                  <div 
+                    id="video-container" 
+                    class="relative w-full rounded-3xl shadow-2xl border border-white/50 overflow-hidden animate-float-subtle cursor-pointer" 
+                    style="filter: drop-shadow(0 25px 25px rgba(20, 184, 166, 0.15)); aspect-ratio: 16/10; position: relative;"
+                  >
+                    <!-- Video Thumbnail (shown initially) -->
+                    <div id="video-thumbnail" class="relative w-full h-full">
+                      <img 
+                        src={videoThumbnail || `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
+                        alt={featureData.hero.video?.alt || featureData.hero.title}
+                        class="w-full h-full object-cover"
+                      />
+                      <!-- Play Button Overlay -->
+                      <div class="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/30 transition-all duration-300">
+                        <div class="relative">
+                          <div class="absolute inset-0 bg-white/20 rounded-full blur-xl"></div>
+                          <div class="relative w-20 h-20 md:w-24 md:h-24 bg-red-600 rounded-full flex items-center justify-center shadow-2xl hover:bg-red-700 transition-all duration-300 hover:scale-110">
+                            <svg class="w-8 h-8 md:w-10 md:h-10 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M8 5v14l11-7z"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- Video Iframe (hidden initially) -->
+                    <iframe
+                      id="video-iframe"
+                      src=""
+                      data-src={`https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1&autoplay=1&enablejsapi=1`}
+                      title={featureData.hero.video?.alt || featureData.hero.title}
+                      class="absolute inset-0 w-full h-full z-30"
+                      style="display: none; width: 100%; height: 100%; border: none; position: absolute; top: 0; left: 0;"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                );
+              } else if (featureData.hero.heroImage || videoThumbnail) {
+                return (
+                  <img 
+                    src={featureData.hero.heroImage || videoThumbnail}
+                    alt={featureData.hero.title}
+                    class="relative w-full rounded-3xl shadow-2xl border border-white/50 animate-float-subtle"
+                    style="filter: drop-shadow(0 25px 25px rgba(20, 184, 166, 0.15)); aspect-ratio: 16/10;"
+                  />
+                );
+              } else {
+                return (
+                  <div class="relative rounded-3xl overflow-hidden bg-gradient-to-br from-teal-600 via-cyan-600 to-blue-600 shadow-2xl aspect-video flex items-center justify-center">
+                    <!-- Grid Pattern -->
+                    <div class="absolute inset-0 opacity-10">
+                      <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <defs>
+                          <pattern id="grid-hero" width="10" height="10" patternUnits="userSpaceOnUse">
+                            <path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" stroke-width="0.5"/>
+                          </pattern>
+                        </defs>
+                        <rect width="100" height="100" fill="url(#grid-hero)" />
+                      </svg>
+                    </div>
+                    
+                    <!-- Decorative Blobs -->
+                    <div class="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2 group-hover:scale-110 transition-transform duration-700"></div>
+                    <div class="absolute bottom-0 left-0 w-64 h-64 bg-black/10 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2 group-hover:scale-110 transition-transform duration-700"></div>
+                    
+                    <!-- Central Icon -->
+                    <div class="relative z-10">
+                      <div class="absolute inset-0 bg-white/20 rounded-full blur-3xl scale-150 animate-pulse-slow"></div>
+                      {(() => {
+                        const Icon = getIcon(featureData.hero.icon || 'users');
+                        return <Icon class="relative w-32 h-32 text-white drop-shadow-2xl transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500" strokeWidth={2} />;
+                      })()}
+                    </div>
+                  </div>
+                );
+              }
+            })()}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-32 relative overflow-hidden">
+      <!-- Background Effects -->
+      <div class="absolute inset-0">
+        <div class="absolute inset-0 bg-gradient-to-br from-teal-50 via-white to-cyan-50 opacity-90"></div>
+        <div class="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(to_bottom,transparent,black,transparent)] opacity-10"></div>
+      </div>
+
+      <div class="container mx-auto px-4 relative">
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto mb-20">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-50 border border-teal-100 mb-4">
+            <span class="text-sm font-medium bg-gradient-to-r from-teal-600 to-cyan-600 text-transparent bg-clip-text">
+              {featureData.features.subtitle}
+            </span>
+          </div>
+          <h2 class="text-4xl lg:text-5xl font-bold mb-6 text-gray-900">{featureData.features.title}</h2>
+          <p class="text-xl text-gray-600">{featureData.features.description}</p>
+        </div>
+
+        <!-- Categories -->
+        {featureData.features.categories && featureData.features.categories.length > 0 && (
+          <div class="grid md:grid-cols-2 gap-8 mb-16">
+            {featureData.features.categories.map((category, index) => (
+              <div class="text-center p-8 rounded-2xl bg-white/50 backdrop-blur-sm border border-gray-100">
+                <h3 class="text-2xl font-semibold mb-3 text-gray-900">{category.name}</h3>
+                <p class="text-gray-600">{category.description}</p>
+              </div>
+            ))}
+          </div>
+        )}
+
+        <!-- Features Grid -->
+        <div class="grid lg:grid-cols-2 gap-8">
+          {featureData.features.items.map((feature, index) => {
+            const Icon = getIcon(feature.icon);
+            return (
+              <div class="group relative">
+                <!-- Card Background Effects -->
+                <div class="absolute inset-0 bg-gradient-to-r from-teal-500/5 to-cyan-500/5 rounded-3xl transform group-hover:scale-[1.02] transition-transform duration-500"></div>
+                <div class="relative p-8 bg-white/80 backdrop-blur-sm rounded-3xl border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-500">
+                  <div class="flex items-start gap-6">
+                    <!-- Icon Column -->
+                    <div class="flex-shrink-0">
+                      <div class="relative w-16 h-16 flex items-center justify-center">
+                        <div class="absolute inset-0 bg-gradient-to-br from-teal-500/10 to-cyan-500/10 rounded-2xl transform group-hover:scale-110 transition-transform duration-500"></div>
+                        <Icon class="w-8 h-8 text-teal-600 relative z-10" />
+                      </div>
+                    </div>
+
+                    <!-- Content Column -->
+                    <div class="flex-grow">
+                      <!-- Category Badge -->
+                      {feature.category && (
+                        <div class="inline-block px-3 py-1 rounded-full bg-teal-50 text-teal-700 text-sm font-medium mb-4">
+                          {feature.category}
+                        </div>
+                      )}
+
+                      <h3 class="text-2xl font-semibold mb-4 text-gray-900">{feature.title}</h3>
+                      <p class="text-gray-600 mb-6">{feature.description}</p>
+
+                      <!-- Highlights Grid -->
+                      {feature.highlights && feature.highlights.length > 0 && (
+                        <div class="grid sm:grid-cols-2 gap-4 mb-6">
+                          {feature.highlights.map(highlight => (
+                            <div class="flex items-center gap-2 text-sm text-gray-600">
+                              <ChevronRight class="w-4 h-4 text-teal-500 flex-shrink-0" />
+                              <span>{highlight}</span>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+
+                      <!-- Stats -->
+                      {feature.stats && (
+                        <div class="flex items-center justify-end">
+                          <div class="text-right">
+                            <div class="text-2xl font-bold text-teal-600">{feature.stats.value}</div>
+                            <div class="text-sm text-gray-600">{feature.stats.label}</div>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    <!-- Showcase Section -->
+    {featureData.showcase && (
+      <section class="py-20 bg-gradient-to-br from-gray-900 to-teal-900 text-white">
+        <div class="container mx-auto px-4">
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl font-bold mb-4">{featureData.showcase.title}</h2>
+            <p class="text-xl opacity-80">{featureData.showcase.description}</p>
+          </div>
+
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <!-- Showcase Visual -->
+            <div class="relative group">
+              <div class="absolute inset-0 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-3xl blur-2xl opacity-20 group-hover:opacity-30 transition-opacity"></div>
+              <div class="relative rounded-3xl overflow-hidden bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 shadow-2xl p-8">
+                <!-- Stats Grid -->
+                <div class="grid grid-cols-2 gap-6">
+                  {featureData.showcase.stats && featureData.showcase.stats.map((stat, index) => {
+                    const StatIcon = getIcon(stat.icon || 'trending-up');
+                    const colors = [
+                      'from-teal-500 to-cyan-500',
+                      'from-blue-500 to-cyan-500',
+                      'from-cyan-500 to-teal-500',
+                      'from-teal-500 to-blue-500'
+                    ];
+                    const bgColor = colors[index % colors.length];
+                    return (
+                      <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10 transform hover:scale-105 transition-all duration-300">
+                        <div class={`w-12 h-12 bg-gradient-to-br ${bgColor} rounded-xl flex items-center justify-center mb-4 shadow-lg`}>
+                          <StatIcon class="w-6 h-6 text-white" strokeWidth={2} />
+                        </div>
+                        <div class="text-3xl font-bold text-white mb-1">{stat.value}</div>
+                        <div class="text-sm text-white/70">{stat.label}</div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonials -->
+            {featureData.showcase.testimonials && (
+              <div class="space-y-8">
+                {featureData.showcase.testimonials.map((testimonial, index) => {
+                  const initial = testimonial.author.charAt(0).toUpperCase();
+                  const colors = [
+                    'from-teal-500 to-cyan-500',
+                    'from-blue-500 to-cyan-500',
+                    'from-cyan-500 to-teal-500',
+                    'from-teal-500 to-blue-500'
+                  ];
+                  const bgColor = colors[index % colors.length];
+                  
+                  return (
+                    <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300">
+                      <div class="flex items-center gap-4 mb-4">
+                        <div class={`relative w-14 h-14 rounded-xl bg-gradient-to-br ${bgColor} flex items-center justify-center shadow-lg transform hover:scale-110 transition-all duration-300`}>
+                          <div class="absolute inset-0 bg-white/10 rounded-xl backdrop-blur-sm"></div>
+                          <span class="relative text-white text-2xl font-bold">{initial}</span>
+                        </div>
+                        <div>
+                          <div class="font-semibold text-white">{testimonial.author}</div>
+                          <div class="text-sm text-white/70">{testimonial.role}</div>
+                        </div>
+                      </div>
+                      <p class="text-lg text-white/90 italic leading-relaxed">"{testimonial.quote}"</p>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- Benefits Section -->
+    {featureData.benefits && (
+      <section class="py-32 relative overflow-hidden benefits-section">
+        <!-- Background Effects -->
+        <div class="absolute inset-0">
+          <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-teal-900 to-cyan-900"></div>
+          <div class="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(to_bottom,transparent,black,transparent)] opacity-10"></div>
+        </div>
+
+        <div class="container mx-auto px-4 relative">
+          <!-- Header -->
+          <div class="text-center max-w-3xl mx-auto mb-20">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-4">
+              <span class="text-sm font-medium text-white">{featureData.benefits.subtitle}</span>
+            </div>
+            <h2 class="text-4xl lg:text-5xl font-bold mb-6 text-white">{featureData.benefits.title}</h2>
+            <p class="text-xl text-gray-300">{featureData.benefits.description}</p>
+          </div>
+
+          <!-- Benefits Grid -->
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {featureData.benefits.items.map((benefit, index) => {
+              const Icon = getIcon(benefit.icon);
+              const colors = {
+                blue: 'from-blue-400 to-blue-500',
+                teal: 'from-teal-400 to-teal-500',
+                cyan: 'from-cyan-400 to-cyan-500',
+                green: 'from-emerald-400 to-emerald-500'
+              };
+              const gradientColor = colors[benefit.color] || colors.teal;
+              
+              return (
+                <div class="group relative transform hover:-translate-y-2 transition-all duration-500">
+                  <!-- Card Glow Effect -->
+                  <div class={`absolute -inset-0.5 bg-gradient-to-r ${gradientColor} rounded-3xl blur opacity-30 group-hover:opacity-60 transition duration-500`}></div>
+                  
+                  <!-- Card Content -->
+                  <div class="relative h-full bg-white/10 backdrop-blur-sm border border-white/20 rounded-3xl p-8">
+                    <!-- Icon Container with Glow -->
+                    <div class="relative w-16 h-16 mb-6 mx-auto">
+                      <div class={`absolute inset-0 bg-gradient-to-br ${gradientColor} rounded-2xl blur-sm opacity-40 group-hover:opacity-60 transition-opacity duration-500`}></div>
+                      <div class="relative h-full flex items-center justify-center">
+                        <Icon class="w-8 h-8" />
+                      </div>
+                    </div>
+
+                    <!-- Content -->
+                    <h3 class="text-2xl font-semibold text-white text-center mb-4">{benefit.title}</h3>
+                    <p class="text-gray-300 text-center mb-6 leading-relaxed">{benefit.description}</p>
+
+                    <!-- Stats with Enhanced Gradient -->
+                    {benefit.stats && (
+                      <div class="flex items-center justify-center mb-8">
+                        <div class="text-center">
+                          <div class={`text-5xl font-bold bg-gradient-to-r ${gradientColor} text-transparent bg-clip-text group-hover:scale-110 transition-transform duration-500`}>
+                            {benefit.stats.value}
+                          </div>
+                          <div class="text-sm text-gray-300 mt-2">{benefit.stats.label}</div>
+                        </div>
+                      </div>
+                    )}
+
+                    <!-- Highlights with Enhanced Dots -->
+                    {benefit.highlights && (
+                      <div class="space-y-3">
+                        {benefit.highlights.map(highlight => (
+                          <div class="flex items-center gap-3 text-sm text-gray-300">
+                            <div class={`w-2 h-2 rounded-full bg-gradient-to-r ${gradientColor} group-hover:scale-125 transition-transform duration-500`}></div>
+                            <span class="group-hover:text-white transition-colors duration-500">{highlight}</span>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- CTA Section -->
+    {featureData.cta && (
+      <section 
+        class="relative py-20 bg-cover bg-center"
+        style={`background-image: url(${featureData.cta.background || '/images/cta-bg.jpg'})`}
+      >
+        <div class="absolute inset-0 bg-gradient-to-r from-teal-900/90 to-cyan-900/90"></div>
+        <div class="relative container mx-auto px-4 text-center text-white">
+          <h2 class="text-4xl font-bold mb-6">{featureData.cta.title}</h2>
+          <p class="text-xl opacity-90 max-w-2xl mx-auto mb-8">{featureData.cta.description}</p>
+          <div class="flex items-center justify-center gap-4">
+            <a 
+              href={featureData.cta.primaryButton.link}
+              class="px-8 py-4 rounded-xl bg-white text-teal-600 font-medium hover:bg-gray-100 transition-colors"
+            >
+              {featureData.cta.primaryButton.text}
+            </a>
+            <a 
+              href={featureData.cta.secondaryButton.link}
+              class="px-8 py-4 rounded-xl bg-white/10 text-white font-medium hover:bg-white/20 transition-colors"
+            >
+              {featureData.cta.secondaryButton.text}
+            </a>
+          </div>
+        </div>
+      </section>
+    )}
+
+    <Footer />
+
+    <script>
+      // Video player logic
+      function initVideoPlayer() {
+        const videoContainer = document.getElementById('video-container');
+        const videoThumbnail = document.getElementById('video-thumbnail');
+        const videoIframe = document.getElementById('video-iframe');
+
+        if (videoContainer && videoThumbnail && videoIframe) {
+          // Check if event listener is already attached to prevent duplicates on astro:page-load
+          if (!videoContainer.dataset.listenerAttached) {
+            videoContainer.addEventListener('click', () => {
+              if (videoThumbnail && videoIframe) {
+                videoThumbnail.style.display = 'none'; // Hide thumbnail
+                videoIframe.style.display = 'block'; // Show iframe
+                const dataSrc = videoIframe.getAttribute('data-src');
+                if (dataSrc && !videoIframe.src) {
+                  videoIframe.src = dataSrc; // Load video
+                }
+              }
+            });
+            videoContainer.dataset.listenerAttached = 'true'; // Mark listener as attached
+          }
+        }
+      }
+
+      // Initialize video player on load
+      document.addEventListener('DOMContentLoaded', initVideoPlayer);
+      
+      // Also run on Astro page load
+      document.addEventListener('astro:page-load', initVideoPlayer);
+      
+      // Run immediately if DOM is ready
+      if (document.readyState !== 'loading') {
+        initVideoPlayer();
+      }
+    </script>
+  </body>
+</html>
+
+<style>
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes float-subtle {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(0, -10px); }
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 0.4; }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-float-subtle {
+    animation: float-subtle 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 4s ease-in-out infinite;
+  }
+</style>
+

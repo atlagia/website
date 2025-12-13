@@ -1,0 +1,198 @@
+{
+  "hero": {
+    "subtitle": "HIPAA Compliance",
+    "title": "HIPAA-Compliant Security & Compliance",
+    "description": "Enterprise-grade security with full HIPAA compliance, ensuring your patient data is protected with the highest standards of security and privacy.",
+    "icon": "shield",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "100%",
+        "label": "HIPAA Compliant"
+      },
+      {
+        "value": "256-bit",
+        "label": "Encryption"
+      },
+      {
+        "value": "99.9%",
+        "label": "Uptime"
+      }
+    ]
+  },
+  "features": {
+    "title": "HIPAA Compliance Features",
+    "subtitle": "Enterprise Security",
+    "description": "Comprehensive HIPAA compliance and security features designed to protect patient data.",
+    "items": [
+      {
+        "icon": "shield",
+        "title": "Full HIPAA Compliance",
+        "description": "Complete HIPAA compliance with all required safeguards, policies, and procedures in place.",
+        "highlights": [
+          "HIPAA-compliant infrastructure",
+          "Required safeguards implemented",
+          "Compliance documentation",
+          "Regular audits and assessments",
+          "Certification and validation"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "Compliant"
+        }
+      },
+      {
+        "icon": "lock",
+        "title": "Data Encryption",
+        "description": "End-to-end encryption for all patient data in transit and at rest with military-grade security.",
+        "highlights": [
+          "256-bit encryption",
+          "End-to-end protection",
+          "Encrypted backups",
+          "Secure data transmission",
+          "Key management"
+        ],
+        "stats": {
+          "value": "256-bit",
+          "label": "Encryption"
+        }
+      },
+      {
+        "icon": "users",
+        "title": "Access Controls",
+        "description": "Role-based access controls with granular permissions and complete audit trails.",
+        "highlights": [
+          "Role-based access",
+          "Granular permissions",
+          "Multi-factor authentication",
+          "Access logging",
+          "Audit trails"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "Controlled"
+        }
+      },
+      {
+        "icon": "database",
+        "title": "Audit Trails",
+        "description": "Complete audit trails for all patient data access, modifications, and system activities.",
+        "highlights": [
+          "Complete logging",
+          "Access tracking",
+          "Modification history",
+          "Compliance reporting",
+          "Forensic analysis"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "Tracked"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "HIPAA Compliance Assurance",
+    "description": "Enterprise-grade security for your practice",
+    "stats": [
+      {
+        "icon": "shield",
+        "value": "100%",
+        "label": "HIPAA Compliant"
+      },
+      {
+        "icon": "lock",
+        "value": "256-bit",
+        "label": "Encryption"
+      },
+      {
+        "icon": "database",
+        "value": "100%",
+        "label": "Audit Trails"
+      },
+      {
+        "icon": "award",
+        "value": "99.9%",
+        "label": "Uptime"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Dr. Michael Chen",
+        "role": "Lead Dentist, Family Dental Care",
+        "quote": "HIPAA compliance was a major concern for us. Dentagia's security features give us complete confidence that our patient data is protected."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "HIPAA Compliance Benefits",
+    "subtitle": "Security & Trust",
+    "description": "Experience the peace of mind that comes with full HIPAA compliance.",
+    "items": [
+      {
+        "title": "Full Compliance",
+        "description": "Complete HIPAA compliance with all required safeguards and documentation.",
+        "icon": "shield",
+        "color": "teal",
+        "stats": {
+          "value": "100%",
+          "label": "Compliant"
+        },
+        "highlights": [
+          "HIPAA-compliant infrastructure",
+          "Required safeguards",
+          "Compliance documentation",
+          "Regular audits"
+        ]
+      },
+      {
+        "title": "Data Protection",
+        "description": "Military-grade encryption and security protect all patient data.",
+        "icon": "lock",
+        "color": "cyan",
+        "stats": {
+          "value": "256-bit",
+          "label": "Encryption"
+        },
+        "highlights": [
+          "End-to-end encryption",
+          "Secure storage",
+          "Encrypted backups",
+          "Key management"
+        ]
+      },
+      {
+        "title": "Access Control",
+        "description": "Granular access controls ensure only authorized personnel can access patient data.",
+        "icon": "users",
+        "color": "blue",
+        "stats": {
+          "value": "100%",
+          "label": "Controlled"
+        },
+        "highlights": [
+          "Role-based access",
+          "Granular permissions",
+          "Multi-factor auth",
+          "Access logging"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready for HIPAA-Compliant Security?",
+    "description": "See how Dentagia's security features protect your practice and patient data.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Schedule a Demo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Learn More",
+      "link": "/features"
+    }
+  }
+}
+

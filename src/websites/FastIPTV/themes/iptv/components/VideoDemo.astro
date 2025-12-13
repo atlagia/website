@@ -1,0 +1,180 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  videoUrl: string;
+  features?: string[];
+  sectionTitle?: string;
+  sectionDescription?: string;
+  ctaButtons?: {
+    primary: {
+      text: string;
+      link: string;
+    };
+    secondary: {
+      text: string;
+      link: string;
+    };
+  };
+}
+
+const { 
+  title, 
+  description, 
+  videoUrl, 
+  features = [],
+  sectionTitle = "Why Choose FastIPTV?",
+  sectionDescription = "Experience the future of streaming with our cutting-edge IPTV service designed for performance and reliability.",
+  ctaButtons = {
+    primary: {
+      text: "Start Free Trial",
+      link: "/packages"
+    },
+    secondary: {
+      text: "View Channels",
+      link: "/channels"
+    }
+  }
+} = Astro.props;
+
+// Extract video ID from YouTube URL with error handling
+const getVideoId = (url: string) => {
+  if (!url || typeof url !== 'string') {
+    return '';
+  }
+  const regex = /(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/;
+  const match = url.match(regex);
+  return match ? match[1] : '';
+};
+
+const videoId = getVideoId(videoUrl || '');
+const embedUrl = videoId ? `https://www.youtube.com/embed/${videoId}` : '';
+
+// Default features if none provided
+const defaultFeatures = [
+  {
+    title: "32,000+ Premium Channels",
+    description: "Access to the world's largest channel library"
+  },
+  {
+    title: "4K Ultra HD Quality",
+    description: "Crystal clear streaming with minimal buffering"
+  },
+  {
+    title: "24/7 Customer Support",
+    description: "Expert help whenever you need it"
+  },
+  {
+    title: "Multi-Device Compatibility",
+    description: "Watch on any device, anywhere, anytime"
+  }
+];
+---
+
+<section class="py-16 bg-gradient-to-br from-gray-900 via-black to-gray-900">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+        {title || 'Why Choose Our Fast Stronger IPTV'}
+      </h2>
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+        {description || 'Experience the power of premium streaming with our cutting-edge IPTV service.'}
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <!-- Video Section -->
+      <div class="relative">
+        {embedUrl ? (
+          <div class="aspect-video rounded-2xl overflow-hidden shadow-2xl">
+            <iframe
+              src={embedUrl}
+              title="FastIPTV Demo Video"
+              class="w-full h-full"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        ) : (
+          <div class="aspect-video rounded-2xl overflow-hidden shadow-2xl bg-gray-800 flex items-center justify-center">
+            <div class="text-center">
+              <svg class="w-16 h-16 text-gray-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <p class="text-gray-400">Video not available</p>
+            </div>
+          </div>
+        )}
+        
+        <!-- Video overlay decoration -->
+        <div class="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full opacity-20 animate-pulse"></div>
+        <div class="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full opacity-20 animate-pulse delay-1000"></div>
+      </div>
+
+      <!-- Features Section -->
+      <div class="space-y-8">
+        <div class="text-center lg:text-left">
+          <h3 class="text-3xl font-bold text-white mb-6">
+            {sectionTitle}
+          </h3>
+          <p class="text-gray-300 text-lg mb-8">
+            {sectionDescription}
+          </p>
+        </div>
+
+        {features && features.length > 0 && (
+          <div class="space-y-6">
+            {features.map((feature, index) => (
+              <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
+                  <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-white font-medium">{feature}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+
+        <!-- Default features if none provided -->
+        {(!features || features.length === 0) && (
+          <div class="space-y-6">
+            {defaultFeatures.map((feature, index) => (
+              <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
+                  <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-white font-medium">{feature.title}</p>
+                  <p class="text-gray-400 text-sm">{feature.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 pt-6">
+          <a
+            href={ctaButtons.primary.link}
+            class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
+          >
+            {ctaButtons.primary.text}
+          </a>
+          <a
+            href={ctaButtons.secondary.link}
+            class="inline-flex items-center justify-center px-8 py-3 border border-gray-600 text-base font-medium rounded-lg text-gray-300 hover:text-white hover:border-gray-500 transition-all duration-200"
+          >
+            {ctaButtons.secondary.text}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

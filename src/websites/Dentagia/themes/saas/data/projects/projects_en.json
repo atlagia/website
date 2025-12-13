@@ -1,0 +1,297 @@
+{
+  "pageTitle": "Dental Practice Success Stories",
+  "pageDescription": "Explore success stories and case studies from dental practices using Dentagia's practice management platform.",
+  "hero": {
+    "badge": "Success Stories",
+    "title": "How Dental Practices Grow with Dentagia",
+    "description": "Discover how dental practices across the country are transforming their operations and growing with Dentagia's AI-powered practice management platform.",
+    "cta": {
+      "primary": {
+        "text": "View Stories",
+        "href": "#projects"
+      },
+      "secondary": {
+        "text": "Start Your Journey",
+        "href": "/contact"
+      }
+    }
+  },
+  "stats": [
+    {
+      "value": "500+",
+      "label": "Dental Practices"
+    },
+    {
+      "value": "99.9%",
+      "label": "Uptime"
+    },
+    {
+      "value": "50%",
+      "label": "Time Saved"
+    },
+    {
+      "value": "24/7",
+      "label": "Support"
+    }
+  ],
+  "projects": [
+    {
+      "category": "General Dentistry",
+      "description": "Transforming general dental practices with AI-powered solutions",
+      "items": [
+        {
+          "icon": "building",
+          "name": "Downtown Dental Clinic",
+          "description": "Multi-practitioner practice with AI-powered scheduling and automated patient communication",
+          "image": "/images/projects/downtown-dental.webp",
+          "stats": {
+            "value": "+60%",
+            "label": "Efficiency Increase"
+          },
+          "tags": ["AI Scheduling", "Multi-Practitioner", "Practice Management"],
+          "color": "blue"
+        },
+        {
+          "icon": "home",
+          "name": "Family Dental Care",
+          "description": "Solo practice transformation with patient management and billing automation",
+          "image": "/images/projects/family-dental.webp",
+          "stats": {
+            "value": "+35%",
+            "label": "Revenue Growth"
+          },
+          "tags": ["Solo Practice", "Billing Automation", "Patient Management"],
+          "color": "indigo"
+        },
+        {
+          "icon": "users",
+          "name": "Community Dental Center",
+          "description": "Community practice with comprehensive patient management and analytics",
+          "image": "/images/projects/community-dental.webp",
+          "stats": {
+            "value": "+50%",
+            "label": "Patient Satisfaction"
+          },
+          "tags": ["Community Practice", "Analytics", "Management"],
+          "color": "purple"
+        },
+        {
+          "icon": "calendar",
+          "name": "Neighborhood Dental",
+          "description": "Practice optimization with AI scheduling and workflow automation",
+          "image": "/images/projects/neighborhood-dental.webp",
+          "stats": {
+            "value": "15hrs/week",
+            "label": "Time Saved"
+          },
+          "tags": ["AI Scheduling", "Automation", "Efficiency"],
+          "color": "pink"
+        }
+      ]
+    },
+    {
+      "category": "Specialty Practices",
+      "description": "Specialized dental practices achieving excellence",
+      "items": [
+        {
+          "icon": "sparkles",
+          "name": "Cosmetic Dentistry Center",
+          "description": "High-end cosmetic practice with advanced treatment planning and patient communication",
+          "image": "/images/projects/cosmetic-dental.webp",
+          "stats": {
+            "value": "+45%",
+            "label": "Conversion Rate"
+          },
+          "tags": ["Cosmetic", "Treatment Planning", "Patient Portal"],
+          "color": "rose"
+        },
+        {
+          "icon": "heart",
+          "name": "Pediatric Dental Group",
+          "description": "Multi-location pediatric practice with centralized management",
+          "image": "/images/projects/pediatric-dental.webp",
+          "stats": {
+            "value": "100%",
+            "label": "Coordination"
+          },
+          "tags": ["Multi-Location", "Pediatric", "Centralized"],
+          "color": "amber"
+        },
+        {
+          "icon": "smile",
+          "name": "Orthodontic Practice",
+          "description": "Orthodontic practice with treatment tracking and patient engagement",
+          "image": "/images/projects/orthodontic-dental.webp",
+          "stats": {
+            "value": "+55%",
+            "label": "Patient Retention"
+          },
+          "tags": ["Orthodontics", "Treatment Tracking", "Engagement"],
+          "color": "lime"
+        },
+        {
+          "icon": "tooth",
+          "name": "Oral Surgery Center",
+          "description": "Surgical practice with advanced scheduling and case management",
+          "image": "/images/projects/oral-surgery.webp",
+          "stats": {
+            "value": "+40%",
+            "label": "Case Efficiency"
+          },
+          "tags": ["Oral Surgery", "Case Management", "Scheduling"],
+          "color": "green"
+        }
+      ]
+    },
+    {
+      "category": "Multi-Location Practices",
+      "description": "Large practices managing multiple locations",
+      "items": [
+        {
+          "icon": "map-pin",
+          "name": "Regional Dental Group",
+          "description": "Multi-location practice with unified patient records and scheduling",
+          "image": "/images/projects/regional-dental.webp",
+          "stats": {
+            "value": "+70%",
+            "label": "Operational Efficiency"
+          },
+          "tags": ["Multi-Location", "Unified Records", "Cloud Sync"],
+          "color": "sky"
+        },
+        {
+          "icon": "building-2",
+          "name": "Dental Care Network",
+          "description": "Network of practices with centralized billing and reporting",
+          "image": "/images/projects/dental-network.webp",
+          "stats": {
+            "value": "+55%",
+            "label": "Revenue Growth"
+          },
+          "tags": ["Network", "Centralized Billing", "Reporting"],
+          "color": "cyan"
+        },
+        {
+          "icon": "globe",
+          "name": "Statewide Dental",
+          "description": "Statewide practice group with comprehensive management",
+          "image": "/images/projects/statewide-dental.webp",
+          "stats": {
+            "value": "100%",
+            "label": "Data Sync"
+          },
+          "tags": ["Statewide", "Management", "Cloud"],
+          "color": "blue"
+        },
+        {
+          "icon": "trending-up",
+          "name": "Growing Dental Chain",
+          "description": "Rapidly expanding practice chain with scalable solutions",
+          "image": "/images/projects/dental-chain.webp",
+          "stats": {
+            "value": "+80%",
+            "label": "Scalability"
+          },
+          "tags": ["Chain", "Scalable", "Growth"],
+          "color": "indigo"
+        }
+      ]
+    }
+  ],
+  "features": {
+    "title": "Practice Features",
+    "description": "Our platform comes with comprehensive features for dental practices",
+    "items": [
+      {
+        "icon": "users",
+        "title": "Patient Management",
+        "description": "Complete digital patient records and history"
+      },
+      {
+        "icon": "calendar",
+        "title": "AI Scheduling",
+        "description": "Intelligent appointment scheduling and optimization"
+      },
+      {
+        "icon": "credit-card",
+        "title": "Billing & Payments",
+        "description": "Streamlined billing and payment processing"
+      },
+      {
+        "icon": "bar-chart",
+        "title": "Practice Analytics",
+        "description": "Data-driven insights for practice growth"
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Practice Benefits",
+    "description": "Experience the advantages of using Dentagia for your practice.",
+    "items": [
+      {
+        "icon": "rocket",
+        "title": "Efficiency",
+        "description": "Streamlined operations that save time and reduce administrative burden",
+        "stats": "50%",
+        "label": "Time Saved"
+      },
+      {
+        "icon": "target",
+        "title": "Growth",
+        "description": "Tools and insights to help your practice grow",
+        "stats": "35%",
+        "label": "Revenue Growth"
+      },
+      {
+        "icon": "lightbulb",
+        "title": "Innovation",
+        "description": "Cutting-edge AI technology designed for modern dental practices",
+        "stats": "500+",
+        "label": "Practices"
+      },
+      {
+        "icon": "users",
+        "title": "Support",
+        "description": "Dedicated support team available 24/7 for your practice",
+        "stats": "24/7",
+        "label": "Support"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Practice Testimonials",
+    "description": "Hear from dental practices that have transformed their operations with Dentagia",
+    "items": [
+      {
+        "quote": "Dentagia has transformed how we run our practice. The AI-powered scheduling alone saves us 10 hours per week, and our patient satisfaction scores have never been higher.",
+        "author": "Dr. Sarah Martinez",
+        "role": "Practice Owner",
+        "company": "Downtown Dental Clinic",
+        "image": "/images/testimonials/sarah.jpg"
+      },
+      {
+        "quote": "Switching to Dentagia was the best decision we made. The patient management system is intuitive, billing is automated, and the analytics help us understand our practice better.",
+        "author": "Dr. Michael Chen",
+        "role": "Lead Dentist",
+        "company": "Family Dental Care",
+        "image": "/images/testimonials/michael.jpg"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Transform Your Practice?",
+    "description": "Join hundreds of dental practices that have transformed their operations with Dentagia.",
+    "buttons": [
+      {
+        "text": "Schedule a Demo",
+        "href": "/demo",
+        "variant": "primary"
+      },
+      {
+        "text": "Contact Us",
+        "href": "/contact",
+        "variant": "secondary"
+      }
+    ]
+  }
+}

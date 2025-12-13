@@ -1,0 +1,97 @@
+{
+  "hero": {
+    "title": "Escolha Seu Plano Fast Stronger IPTV",
+    "description": "Encontre a associação Fast IPTV perfeita para suas necessidades de streaming premium"
+  },
+  "billing": {
+    "monthly": "Cobrança mensal",
+    "yearly": "Cobrança anual",
+    "saveText": "Economize 20%"
+  },
+  "plans": [
+    {
+      "name": "1 Mês Fast IPTV",
+      "price": "16.99",
+      "duration": "mês",
+      "checkoutUrl": "https://pays.myatlagia.store/checkout?cart=%7B%22items%22%3A%5B%7B%22title%22%3A%221%20Month%20Fast%20IPTV%22%2C%22price%22%3A1699%2C%22currency%22%3A%22USD%22%2C%22quantity%22%3A1%2C%22image%22%3A%22https%3A%2F%2Fvia.placeholder.com%2F100%22%7D%5D%2C%22total%22%3A1699%7D&store=FastTV&shop_domain=pays.myatlagia.store",
+      "features": [
+        "+32,000 Canais Fast IPTV",
+        "+140,000 Filmes e Séries IPTV Premium",
+        "Qualidade Stronger IPTV 8K/4K/Ultra HD",
+        "Catch Up/EPG Para Todos os Canais Fast IPTV",
+        "ATUALIZAÇÕES GRATUITAS de Canais IPTV Premium e VOD",
+        "99.9% Tempo de Atividade do Servidor Fast IPTV",
+        "Todos os Dispositivos Suportados para Stronger IPTV",
+        "Tecnologia AntiFreeze para Fast IPTV",
+        "Assistência Técnica IPTV Premium 24/7"
+      ],
+      "isPopular": false
+    },
+    {
+      "name": "12 Meses Stronger IPTV",
+      "price": "59.99",
+      "duration": "ano",
+      "checkoutUrl": "https://pays.myatlagia.store/checkout?cart=%7B%22items%22%3A%5B%7B%22title%22%3A%2212%20Month%20Stronger%20IPTV%22%2C%22price%22%3A5999%2C%22currency%22%3A%22USD%22%2C%22quantity%22%3A1%2C%22image%22%3A%22https%3A%2F%2Fvia.placeholder.com%2F100%22%7D%5D%2C%22total%22%3A5999%7D&store=FastTV&shop_domain=pays.myatlagia.store",
+      "features": [
+        "+32,000 Canais IPTV Premium",
+        "+140,000 Filmes e Séries Fast IPTV",
+        "Qualidade Stronger IPTV 8K/4K/Ultra HD",
+        "Catch Up/EPG Para Todos os Canais Fast IPTV",
+        "ATUALIZAÇÕES GRATUITAS de Canais IPTV Premium e VOD",
+        "99.9% Tempo de Atividade do Servidor Fast IPTV",
+        "Todos os Dispositivos Suportados para Stronger IPTV",
+        "Tecnologia AntiFreeze para Fast IPTV",
+        "Assistência Técnica IPTV Premium 24/7"
+      ],
+      "isPopular": true
+    },
+    {
+      "name": "3 Meses Fast IPTV",
+      "price": "29.99",
+      "duration": "trimestre",
+      "checkoutUrl": "https://pays.myatlagia.store/checkout?cart=%7B%22items%22%3A%5B%7B%22title%22%3A%223%20Month%20Fast%20IPTV%22%2C%22price%22%3A2999%2C%22currency%22%3A%22USD%22%2C%22quantity%22%3A1%2C%22image%22%3A%22https%3A%2F%2Fvia.placeholder.com%2F100%22%7D%5D%2C%22total%22%3A2999%7D&store=FastTV&shop_domain=pays.myatlagia.store",
+      "features": [
+        "+32,000 Canais Stronger IPTV",
+        "+140,000 Filmes e Séries IPTV Premium",
+        "Qualidade Fast IPTV 8K/4K/Ultra HD",
+        "Catch Up/EPG Para Todos os Canais IPTV Premium",
+        "ATUALIZAÇÕES GRATUITAS de Canais Fast IPTV e VOD",
+        "99.9% Tempo de Atividade do Servidor Stronger IPTV",
+        "Todos os Dispositivos Suportados para Fast IPTV",
+        "Tecnologia AntiFreeze para IPTV Premium",
+        "Assistência Técnica Stronger IPTV 24/7"
+      ],
+      "isPopular": false
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Quais métodos de pagamento vocês aceitam?",
+      "answer": "Aceitamos todos os principais cartões de crédito, PayPal e transferências bancárias para planos anuais."
+    },
+    {
+      "question": "Posso alterar planos depois?",
+      "answer": "Sim, você pode fazer upgrade ou downgrade do seu plano a qualquer momento. As alterações serão refletidas no seu próximo ciclo de cobrança."
+    },
+    {
+      "question": "Há um teste gratuito?",
+      "answer": "Sim, oferecemos um teste gratuito de 14 dias em todos os planos. Nenhum cartão de crédito necessário."
+    },
+    {
+      "question": "O que acontece após o fim do meu teste?",
+      "answer": "Após o fim do seu teste, você pode escolher se inscrever em um de nossos planos ou sua conta será automaticamente rebaixada para uma versão gratuita limitada."
+    }
+  ],
+  "cta": {
+    "title": "Pronto para começar?",
+    "description": "Junte-se a milhares de empresas que confiam em nossa plataforma",
+    "primaryButton": {
+      "text": "Iniciar Teste Gratuito",
+      "link": "/signup"
+    },
+    "secondaryButton": {
+      "text": "Contatar Vendas",
+      "link": "/contact"
+    }
+  }
+}

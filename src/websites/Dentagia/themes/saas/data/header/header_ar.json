@@ -1,0 +1,249 @@
+{
+  "navigation": [
+    {
+      "name": "الميزات",
+      "href": "/features",
+      "megaMenu": {
+        "categories": [
+          {
+            "title": "إدارة العيادة",
+            "icon": "briefcase",
+            "items": [
+              {
+                "name": "إدارة المرضى",
+                "href": "/features/patient-management"
+              },
+              {
+                "name": "جدولة المواعيد",
+                "href": "/features/scheduling"
+              },
+              {
+                "name": "الفوترة والمدفوعات",
+                "href": "/features/billing"
+              },
+              {
+                "name": "تخطيط العلاج",
+                "href": "/features/treatment-planning"
+              }
+            ]
+          },
+          {
+            "title": "الذكاء الاصطناعي والأتمتة",
+            "icon": "zap",
+            "items": [
+              {
+                "name": "الجدولة المدعومة بالذكاء الاصطناعي",
+                "href": "/features/ai-scheduling"
+              },
+              {
+                "name": "رؤى المرضى",
+                "href": "/features/patient-insights"
+              },
+              {
+                "name": "التذكيرات التلقائية",
+                "href": "/features/reminders"
+              },
+              {
+                "name": "تحليلات العيادة",
+                "href": "/features/analytics"
+              }
+            ]
+          },
+          {
+            "title": "الأمان والامتثال",
+            "icon": "shield",
+            "items": [
+              {
+                "name": "الامتثال لـ HIPAA",
+                "href": "/features/hipaa"
+              },
+              {
+                "name": "أمان السحابة",
+                "href": "/features/security"
+              },
+              {
+                "name": "تشفير البيانات",
+                "href": "/features/encryption"
+              },
+              {
+                "name": "النسخ الاحتياطي والاستعادة",
+                "href": "/features/backup"
+              }
+            ]
+          }
+        ],
+        "featured": {
+          "badge": "جديد",
+          "title": "إدارة طب الأسنان المدعومة بالذكاء الاصطناعي",
+          "description": "برنامج حديث وآمن قائم على السحابة لعيادات الأسنان",
+          "link": {
+            "text": "استكشف الميزات",
+            "href": "/features"
+          }
+        }
+      }
+    },
+    {
+      "name": "الحلول",
+      "href": "/solutions",
+      "megaMenu": {
+        "categories": [
+          {
+            "title": "أنواع العيادات",
+            "icon": "building",
+            "items": [
+              {
+                "name": "العيادات الفردية",
+                "href": "/solutions/solo-practice"
+              },
+              {
+                "name": "متعددة الممارسين",
+                "href": "/solutions/multi-practitioner"
+              },
+              {
+                "name": "متعددة المواقع",
+                "href": "/solutions/multi-location"
+              },
+              {
+                "name": "العيادات المتخصصة",
+                "href": "/solutions/specialty"
+              }
+            ]
+          },
+          {
+            "title": "نمو العيادة",
+            "icon": "trending-up",
+            "items": [
+              {
+                "name": "الاحتفاظ بالمرضى",
+                "href": "/solutions/patient-retention"
+              },
+              {
+                "name": "تحسين الإيرادات",
+                "href": "/solutions/revenue"
+              },
+              {
+                "name": "أتمتة التسويق",
+                "href": "/solutions/marketing"
+              },
+              {
+                "name": "تحليلات العيادة",
+                "href": "/solutions/analytics"
+              }
+            ]
+          },
+          {
+            "title": "التكامل",
+            "icon": "link",
+            "items": [
+              {
+                "name": "تكامل التأمين",
+                "href": "/solutions/insurance"
+              },
+              {
+                "name": "معالجة المدفوعات",
+                "href": "/solutions/payments"
+              },
+              {
+                "name": "تكامل المختبر",
+                "href": "/solutions/lab"
+              },
+              {
+                "name": "أنظمة التصوير",
+                "href": "/solutions/imaging"
+              }
+            ]
+          }
+        ],
+        "featured": {
+          "badge": "مميز",
+          "title": "منصة قائمة على السحابة",
+          "description": "حل آمن وقابل للتوسع لعيادات الأسنان",
+          "link": {
+            "text": "اعرف المزيد",
+            "href": "/platform"
+          }
+        }
+      }
+    },
+    {
+      "name": "المنصة",
+      "href": "/platform",
+      "megaMenu": {
+        "categories": [
+          {
+            "title": "التكنولوجيا",
+            "icon": "cpu",
+            "items": [
+              {
+                "name": "البنية التحتية السحابية",
+                "href": "/platform/cloud"
+              },
+              {
+                "name": "تقنية الذكاء الاصطناعي",
+                "href": "/platform/ai"
+              },
+              {
+                "name": "الأمان والامتثال",
+                "href": "/platform/security"
+              },
+              {
+                "name": "الوصول المحمول",
+                "href": "/platform/mobile"
+              }
+            ]
+          }
+        ],
+        "featured": {
+          "badge": "جديد",
+          "title": "منصة سحابية حديثة",
+          "description": "بنية تحتية آمنة وقابلة للتوسع لعيادات الأسنان",
+          "link": {
+            "text": "اعرف المزيد",
+            "href": "/platform"
+          }
+        }
+      }
+    },
+    {
+      "name": "الموارد",
+      "href": "/resources"
+    },
+    {
+      "name": "الأسعار",
+      "href": "/pricing"
+    }
+  ],
+  "auth": {
+    "signIn": {
+      "text": "اتصل بنا",
+      "href": "/contact"
+    },
+    "getStarted": {
+      "text": "جدولة عرض توضيحي",
+      "href": "/demo"
+    }
+  },
+  "languages": [
+    {
+      "code": "en",
+      "name": "English"
+    },
+    {
+      "code": "fr",
+      "name": "Français"
+    },
+    {
+      "code": "de",
+      "name": "Deutsch"
+    },
+    {
+      "code": "es",
+      "name": "Español"
+    },
+    {
+      "code": "ar",
+      "name": "العربية"
+    }
+  ]
+}

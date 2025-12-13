@@ -1,7 +1,13 @@
 import type { APIRoute } from 'astro';
 import { getAllProducts } from '../lib/shopify';
 
-const languages = ['en', 'fr', 'de', 'es', 'it'];
+// Get allowed languages from environment variable
+const getAllowedLanguages = (): string[] => {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  return allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+};
+
+const languages = getAllowedLanguages();
 
 // Helper function to escape XML special characters
 function escapeXml(unsafe: string): string {

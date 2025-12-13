@@ -163,6 +163,31 @@
             "a": "All our watches come with a 2-year international warranty covering manufacturing defects."
           }
         ]
+      },
+      "iptv": {
+        "title": "IPTV Subscription FAQs",
+        "questions": [
+          {
+            "q": "How many channels are included in this subscription?",
+            "a": "This IPTV subscription provides access to over 11,000 international TV channels across various categories."
+          },
+          {
+            "q": "What devices are compatible with this IPTV subscription?",
+            "a": "Works with Smart TVs from LG, Samsung, Sony, and Android devices. No additional decoder is needed."
+          },
+          {
+            "q": "How long is the subscription valid?",
+            "a": "This is a 12-month subscription that provides uninterrupted access to live TV channels and premium video-on-demand content."
+          },
+          {
+            "q": "Can I watch on multiple devices?",
+            "a": "The subscription allows streaming on multiple compatible devices simultaneously, perfect for households with different viewing preferences."
+          },
+          {
+            "q": "What type of content is available?",
+            "a": "Includes live TV channels, sports, movies, series, documentaries, and international programming across multiple languages."
+          }
+        ]
       }
     }
   },
@@ -186,37 +211,173 @@
           }
         ]
       },
-      "bag": {
-        "title": "FAQ Sacs",
+      "template": {
+        "title": "Template FAQs",
         "questions": [
           {
-            "q": "Quelle est la capacité du sac ?",
-            "a": "Le sac a une capacité de 25L avec plusieurs compartiments pour un rangement organisé."
+            "q": "What's included in the template package?",
+            "a": "You'll receive all source files, documentation, and demo content. Plus free updates and 6 months support."
           },
           {
-            "q": "Ce sac est-il résistant à l'eau ?",
-            "a": "Oui, le sac est fabriqué avec des matériaux résistants à l'eau pour protéger vos affaires sous une pluie légère."
+            "q": "Do I need coding knowledge?",
+            "a": "Basic HTML/CSS knowledge is helpful but not required. We provide detailed documentation for setup."
           },
           {
-            "q": "Comment nettoyer ce sac ?",
-            "a": "Nettoyez localement avec du savon doux et de l'eau tiède. Laissez sécher complètement avant utilisation."
+            "q": "Can I use this for client projects?",
+            "a": "Yes, our standard license allows usage in both personal and client projects."
+          }
+        ]
+      },
+      "plugin": {
+        "title": "Plugin FAQs",
+        "questions": [
+          {
+            "q": "Is this compatible with the latest version?",
+            "a": "Yes, we maintain regular updates to ensure compatibility with the latest platform versions."
+          },
+          {
+            "q": "How do I install the plugin?",
+            "a": "Installation is simple - just upload through your admin panel or follow our step-by-step guide."
+          },
+          {
+            "q": "Can I use this on multiple sites?",
+            "a": "This depends on your license type. Single-site licenses are for one installation, while developer licenses allow multiple sites."
+          }
+        ]
+      },
+      "script": {
+        "title": "Script FAQs",
+        "questions": [
+          {
+            "q": "What are the system requirements?",
+            "a": "Requirements vary by script. Check the technical specifications tab for detailed requirements."
+          },
+          {
+            "q": "Do you offer customization?",
+            "a": "Yes, we can provide customization services. Contact our support team for a quote."
+          },
+          {
+            "q": "Is documentation included?",
+            "a": "Yes, comprehensive documentation is included with installation and usage instructions."
+          }
+        ]
+      },
+      "jacket": {
+        "title": "Jacket FAQs",
+        "questions": [
+          {
+            "q": "How does this jacket fit?",
+            "a": "The jacket follows a regular fit design that's true to size. We recommend selecting your usual size for a comfortable fit."
+          },
+          {
+            "q": "Is this jacket machine washable?",
+            "a": "Yes, this jacket is machine washable. Use cold water and tumble dry on low for best results."
+          },
+          {
+            "q": "What's the best way to care for this jacket?",
+            "a": "For optimal longevity, wash in cold water, avoid bleach, and tumble dry on low heat. Remove promptly and hang to prevent wrinkles."
+          }
+        ]
+      },
+      "shoes": {
+        "title": "Footwear FAQs",
+        "questions": [
+          {
+            "q": "How do these shoes fit?",
+            "a": "Our shoes typically run true to size. For the best fit, we recommend measuring your feet and checking our size chart."
+          },
+          {
+            "q": "Are these shoes waterproof?",
+            "a": "While these shoes are water-resistant, they are not fully waterproof. They will protect against light rain and splashes."
+          },
+          {
+            "q": "How do I clean these shoes?",
+            "a": "Clean with a damp cloth and mild soap. Air dry at room temperature, away from direct heat or sunlight."
+          }
+        ]
+      },
+      "helmet": {
+        "title": "Helmet FAQs",
+        "questions": [
+          {
+            "q": "How do I measure for the right helmet size?",
+            "a": "Measure the circumference of your head about one inch above your eyebrows. Use our size chart to find your perfect fit."
+          },
+          {
+            "q": "How often should I replace my helmet?",
+            "a": "Replace your helmet every 3-5 years, or immediately after any impact, even if no damage is visible."
+          }
+        ]
+      },
+      "gloves": {
+        "title": "Gloves FAQs",
+        "questions": [
+          {
+            "q": "Are these gloves touchscreen compatible?",
+            "a": "Yes, these gloves feature touchscreen-compatible fingertips for use with smartphones and other devices."
+          },
+          {
+            "q": "How should I care for these gloves?",
+            "a": "Hand wash in cold water with mild detergent. Air dry naturally away from direct heat."
+          }
+        ]
+      },
+      "bag": {
+        "title": "Bag FAQs",
+        "questions": [
+          {
+            "q": "What is the bag's capacity?",
+            "a": "The bag has a 25L capacity with multiple compartments for organized storage."
+          },
+          {
+            "q": "Is this bag water-resistant?",
+            "a": "Yes, the bag is made with water-resistant materials to protect your belongings in light rain."
+          },
+          {
+            "q": "How do I clean this bag?",
+            "a": "Spot clean with mild soap and warm water. Air dry completely before use."
           }
         ]
       },
       "watch": {
-        "title": "FAQ Montres",
+        "title": "Watch FAQs",
         "questions": [
           {
-            "q": "Cette montre est-elle étanche ?",
-            "a": "Oui, cette montre est étanche jusqu'à 100m/330ft. Adaptée à la natation mais pas à la plongée."
+            "q": "Is this watch water resistant?",
+            "a": "Yes, this watch is water resistant to 100m/330ft. Suitable for swimming but not for diving."
           },
           {
-            "q": "Quelle est la précision du mouvement ?",
-            "a": "Le mouvement automatique suisse est réglé pour maintenir une précision de -5/+15 secondes par jour."
+            "q": "How accurate is the movement?",
+            "a": "The Swiss automatic movement is regulated to maintain accuracy within -5/+15 seconds per day."
           },
           {
-            "q": "Quelle est la période de garantie ?",
-            "a": "Toutes nos montres sont livrées avec une garantie internationale de 2 ans couvrant les défauts de fabrication."
+            "q": "What is the warranty period?",
+            "a": "All our watches come with a 2-year international warranty covering manufacturing defects."
+          }
+        ]
+      },
+      "iptv": {
+        "title": "FAQ Abonnement IPTV",
+        "questions": [
+          {
+            "q": "Combien de chaînes sont incluses dans cet abonnement ?",
+            "a": "Cet abonnement IPTV donne accès à plus de 11 000 chaînes de télévision internationales dans diverses catégories."
+          },
+          {
+            "q": "Quels appareils sont compatibles avec cet abonnement IPTV ?",
+            "a": "Fonctionne avec les Smart TVs de LG, Samsung, Sony et les appareils Android. Aucun décodeur supplémentaire n'est nécessaire."
+          },
+          {
+            "q": "Quelle est la durée de validité de l'abonnement ?",
+            "a": "Il s'agit d'un abonnement de 12 mois qui offre un accès ininterrompu aux chaînes de télévision en direct et au contenu vidéo à la demande."
+          },
+          {
+            "q": "Puis-je regarder sur plusieurs appareils ?",
+            "a": "L'abonnement permet de diffuser simultanément sur plusieurs appareils compatibles, parfait pour les foyers ayant des préférences de visionnage différentes."
+          },
+          {
+            "q": "Quel type de contenu est disponible ?",
+            "a": "Comprend des chaînes de télévision en direct, des sports, des films, des séries, des documentaires et des programmes internationaux dans plusieurs langues."
           }
         ]
       }
@@ -269,6 +430,31 @@
           {
             "q": "Wie lange ist die Garantiezeit?",
             "a": "Alle unsere Uhren kommen mit einer 2-jährigen internationalen Garantie für Herstellungsfehler."
+          }
+        ]
+      },
+      "iptv": {
+        "title": "IPTV-Abonnement FAQ",
+        "questions": [
+          {
+            "q": "Wie viele Kanäle sind in diesem Abonnement enthalten?",
+            "a": "Dieses IPTV-Abonnement bietet Zugang zu über 11.000 internationalen TV-Kanälen in verschiedenen Kategorien."
+          },
+          {
+            "q": "Mit welchen Geräten ist dieses IPTV-Abonnement kompatibel?",
+            "a": "Funktioniert mit Smart-TVs von LG, Samsung, Sony und Android-Geräten. Kein zusätzlicher Decoder erforderlich."
+          },
+          {
+            "q": "Wie lange ist das Abonnement gültig?",
+            "a": "Dies ist ein 12-Monats-Abonnement, das uneingeschränkten Zugang zu Live-TV-Kanälen und Premium-Video-on-Demand-Inhalten bietet."
+          },
+          {
+            "q": "Kann ich auf mehreren Geräten schauen?",
+            "a": "Das Abonnement ermöglicht die gleichzeitige Übertragung auf mehreren kompatiblen Geräten, perfekt für Haushalte mit unterschiedlichen Sehgewohnheiten."
+          },
+          {
+            "q": "Welche Arten von Inhalten sind verfügbar?",
+            "a": "Umfasst Live-TV-Kanäle, Sport, Filme, Serien, Dokumentationen und internationale Programme in mehreren Sprachen."
           }
         ]
       }

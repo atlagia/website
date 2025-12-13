@@ -1,0 +1,224 @@
+{
+  "pageTitle": "Recursos - Dentagia",
+  "pageDescription": "Acceda a documentación completa, guías, estudios de casos y más recursos para ayudar a su consultorio dental a tener éxito con Dentagia.",
+  "hero": {
+    "badge": "Recursos y Documentación",
+    "title": "Recursos para Ayudar a Su Consultorio a Tener Éxito",
+    "description": "Acceda a documentación completa, guías, tutoriales y estudios de casos para aprovechar al máximo la plataforma de gestión de consultorios de Dentagia.",
+    "cta": {
+      "primary": {
+        "text": "Explorar Documentación",
+        "href": "/documentation"
+      },
+      "secondary": {
+        "text": "Ver Guías",
+        "href": "#guides"
+      }
+    }
+  },
+  "resourceCategories": [
+    {
+      "title": "Documentación",
+      "icon": "Book",
+      "description": "Guías completas y documentación de la plataforma",
+      "items": [
+        {
+          "title": "Guía de Inicio",
+          "description": "Guía de inicio rápido para nuevos usuarios de Dentagia",
+          "icon": "BookOpen",
+          "link": "/documentation/getting-started",
+          "tag": "Esencial"
+        },
+        {
+          "title": "Guía de Gestión de Pacientes",
+          "description": "Guía completa para gestionar registros de pacientes",
+          "icon": "FileCode",
+          "link": "/documentation/patient-management",
+          "tag": "Consultorio"
+        },
+        {
+          "title": "Guía de Programación",
+          "description": "Cómo usar las funciones de programación impulsadas por IA",
+          "icon": "FileText",
+          "link": "/documentation/scheduling",
+          "tag": "Consultorio"
+        },
+        {
+          "title": "Guía de Facturación y Pagos",
+          "description": "Tutoriales paso a paso sobre facturación y pagos",
+          "icon": "ChevronRight",
+          "link": "/documentation/billing",
+          "tag": "Financiero"
+        }
+      ]
+    },
+    {
+      "title": "Centro de Aprendizaje",
+      "icon": "GraduationCap",
+      "description": "Recursos educativos y tutoriales para consultorios dentales",
+      "items": [
+        {
+          "title": "Tutoriales en Video",
+          "description": "Guías en video paso a paso para gestión de consultorios",
+          "icon": "Video",
+          "link": "/learn/tutorials",
+          "tag": "Video"
+        },
+        {
+          "title": "Mejores Prácticas",
+          "description": "Mejores prácticas y consejos de gestión de consultorios",
+          "icon": "Star",
+          "link": "/learn/best-practices",
+          "tag": "Guía"
+        },
+        {
+          "title": "Materiales de Capacitación",
+          "description": "Recursos de capacitación para su equipo del consultorio",
+          "icon": "FileCode",
+          "link": "/learn/training",
+          "tag": "Capacitación"
+        },
+        {
+          "title": "Foros de la Comunidad",
+          "description": "Discusión y soporte de otros consultorios",
+          "icon": "MessageSquare",
+          "link": "/community",
+          "tag": "Soporte"
+        }
+      ]
+    },
+    {
+      "title": "Estudios de Casos",
+      "icon": "BarChart",
+      "description": "Historias de éxito de consultorios dentales que usan Dentagia",
+      "items": [
+        {
+          "title": "Clínica Dental del Centro",
+          "description": "Transformación de un consultorio multi-profesional",
+          "icon": "Users",
+          "link": "/case-studies/downtown-dental",
+          "tag": "Consultorio Dental"
+        },
+        {
+          "title": "Family Dental Care",
+          "description": "Crecimiento y eficiencia de un consultorio individual",
+          "icon": "BarChart",
+          "link": "/case-studies/family-dental",
+          "tag": "Consultorio Dental"
+        },
+        {
+          "title": "Centro de Odontología Estética",
+          "description": "Optimización de un consultorio especializado",
+          "icon": "Award",
+          "link": "/case-studies/cosmetic-dental",
+          "tag": "Consultorio Dental"
+        },
+        {
+          "title": "Grupo Dental Pediátrico",
+          "description": "Gestión de un consultorio multi-ubicación",
+          "icon": "Star",
+          "link": "/case-studies/pediatric-dental",
+          "tag": "Consultorio Dental"
+        }
+      ]
+    }
+  ],
+  "featuredGuides": [
+    {
+      "title": "Guía de Configuración del Consultorio",
+      "description": "Guía completa para configurar su consultorio con Dentagia",
+      "image": "/images/resources/practice-setup.jpg",
+      "category": "Guía de Configuración",
+      "readTime": "15 min de lectura",
+      "link": "/guides/practice-setup"
+    },
+    {
+      "title": "Mejores Prácticas de Programación IA",
+      "description": "Aprenda a usar efectivamente la programación impulsada por IA en su consultorio",
+      "image": "/images/resources/ai-scheduling.jpg",
+      "category": "Mejores Prácticas",
+      "readTime": "10 min de lectura",
+      "link": "/guides/ai-scheduling"
+    },
+    {
+      "title": "Guía de Cumplimiento HIPAA",
+      "description": "Comprensión del cumplimiento HIPAA y funciones de seguridad",
+      "image": "/images/resources/hipaa-compliance.jpg",
+      "category": "Seguridad",
+      "readTime": "12 min de lectura",
+      "link": "/guides/hipaa-compliance"
+    }
+  ],
+  "latestArticles": [
+    {
+      "title": "El Futuro de la Gestión de Consultorios Dentales",
+      "description": "Explorando tendencias e innovaciones venideras en la gestión de consultorios dentales",
+      "image": "/images/blog/dental-future.jpg",
+      "date": "15 mar 2024",
+      "readTime": "8 min de lectura",
+      "category": "Insights de la Industria",
+      "link": "/blog/dental-future"
+    },
+    {
+      "title": "Optimizar la Eficiencia del Consultorio con IA",
+      "description": "Consejos para maximizar la eficiencia del consultorio con herramientas impulsadas por IA",
+      "image": "/images/blog/ai-efficiency.jpg",
+      "date": "10 mar 2024",
+      "readTime": "6 min de lectura",
+      "category": "Gestión de Consultorios",
+      "link": "/blog/ai-efficiency"
+    },
+    {
+      "title": "Mejores Prácticas de Seguridad HIPAA",
+      "description": "Mantener los datos de su consultorio seguros y conformes",
+      "image": "/images/blog/hipaa-security.jpg",
+      "date": "5 mar 2024",
+      "readTime": "7 min de lectura",
+      "category": "Seguridad",
+      "link": "/blog/hipaa-security"
+    }
+  ],
+  "downloads": [
+    {
+      "title": "Resumen de Gestión de Consultorios",
+      "description": "Guía PDF completa sobre las funciones de Dentagia",
+      "icon": "Download",
+      "format": "PDF",
+      "size": "2.5 MB",
+      "link": "/downloads/practice-overview.pdf"
+    },
+    {
+      "title": "Guía de Cumplimiento HIPAA",
+      "description": "Guía detallada sobre cumplimiento HIPAA y seguridad",
+      "icon": "FileText",
+      "format": "PDF",
+      "size": "3.8 MB",
+      "link": "/downloads/hipaa-guide.pdf"
+    },
+    {
+      "title": "Guía de Implementación",
+      "description": "Guía paso a paso de configuración del consultorio",
+      "icon": "Book",
+      "format": "PDF",
+      "size": "1.8 MB",
+      "link": "/downloads/implementation-guide.pdf"
+    }
+  ],
+  "cta": {
+    "title": "¿Necesita Ayuda?",
+    "description": "Nuestro equipo de soporte está aquí para ayudar a su consultorio a tener éxito con Dentagia.",
+    "buttons": [
+      {
+        "text": "Contactar Soporte",
+        "href": "/contact",
+        "variant": "primary"
+      },
+      {
+        "text": "Unirse a la Comunidad",
+        "href": "/community",
+        "variant": "secondary"
+      }
+    ]
+  }
+}
+

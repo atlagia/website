@@ -1,0 +1,297 @@
+{
+  "pageTitle": "قصص نجاح عيادات الأسنان",
+  "pageDescription": "استكشف قصص النجاح ودراسات الحالة من عيادات الأسنان التي تستخدم منصة إدارة العيادة Dentagia.",
+  "hero": {
+    "badge": "قصص النجاح",
+    "title": "كيف تنمو عيادات الأسنان مع Dentagia",
+    "description": "اكتشف كيف تقوم عيادات الأسنان في جميع أنحاء البلاد بتحويل عملياتها والنمو مع منصة إدارة العيادة المدعومة بالذكاء الاصطناعي من Dentagia.",
+    "cta": {
+      "primary": {
+        "text": "عرض القصص",
+        "href": "#projects"
+      },
+      "secondary": {
+        "text": "ابدأ رحلتك",
+        "href": "/contact"
+      }
+    }
+  },
+  "stats": [
+    {
+      "value": "500+",
+      "label": "عيادات الأسنان"
+    },
+    {
+      "value": "99.9%",
+      "label": "التوفر"
+    },
+    {
+      "value": "50%",
+      "label": "الوقت الموفر"
+    },
+    {
+      "value": "24/7",
+      "label": "الدعم"
+    }
+  ],
+  "projects": [
+    {
+      "category": "طب الأسنان العام",
+      "description": "تحويل عيادات طب الأسنان العام مع حلول مدعومة بالذكاء الاصطناعي",
+      "items": [
+        {
+          "icon": "building",
+          "name": "عيادة الأسنان المركزية",
+          "description": "عيادة متعددة الممارسين مع جدولة مدعومة بالذكاء الاصطناعي وتواصل تلقائي مع المرضى",
+          "image": "/images/projects/downtown-dental.webp",
+          "stats": {
+            "value": "+60%",
+            "label": "زيادة الكفاءة"
+          },
+          "tags": ["الجدولة بالذكاء الاصطناعي", "متعدد الممارسين", "إدارة العيادة"],
+          "color": "blue"
+        },
+        {
+          "icon": "home",
+          "name": "Family Dental Care",
+          "description": "تحول عيادة فردية مع إدارة المرضى وأتمتة الفوترة",
+          "image": "/images/projects/family-dental.webp",
+          "stats": {
+            "value": "+35%",
+            "label": "نمو الإيرادات"
+          },
+          "tags": ["عيادة فردية", "أتمتة الفوترة", "إدارة المرضى"],
+          "color": "indigo"
+        },
+        {
+          "icon": "users",
+          "name": "مركز طب الأسنان المجتمعي",
+          "description": "عيادة مجتمعية مع إدارة شاملة للمرضى والتحليلات",
+          "image": "/images/projects/community-dental.webp",
+          "stats": {
+            "value": "+50%",
+            "label": "رضا المرضى"
+          },
+          "tags": ["عيادة مجتمعية", "التحليلات", "الإدارة"],
+          "color": "purple"
+        },
+        {
+          "icon": "calendar",
+          "name": "طب أسنان الحي",
+          "description": "تحسين العيادة مع الجدولة بالذكاء الاصطناعي وأتمتة سير العمل",
+          "image": "/images/projects/neighborhood-dental.webp",
+          "stats": {
+            "value": "15ساعة/أسبوع",
+            "label": "الوقت الموفر"
+          },
+          "tags": ["الجدولة بالذكاء الاصطناعي", "الأتمتة", "الكفاءة"],
+          "color": "pink"
+        }
+      ]
+    },
+    {
+      "category": "عيادات متخصصة",
+      "description": "عيادات أسنان متخصصة تحقق التميز",
+      "items": [
+        {
+          "icon": "sparkles",
+          "name": "مركز طب الأسنان التجميلي",
+          "description": "عيادة تجميلية عالية الجودة مع تخطيط علاج متقدم وتواصل مع المرضى",
+          "image": "/images/projects/cosmetic-dental.webp",
+          "stats": {
+            "value": "+45%",
+            "label": "معدل التحويل"
+          },
+          "tags": ["تجميلي", "تخطيط العلاج", "بوابة المريض"],
+          "color": "rose"
+        },
+        {
+          "icon": "heart",
+          "name": "مجموعة طب أسنان الأطفال",
+          "description": "عيادة أطفال متعددة المواقع مع إدارة مركزية",
+          "image": "/images/projects/pediatric-dental.webp",
+          "stats": {
+            "value": "100%",
+            "label": "التنسيق"
+          },
+          "tags": ["متعدد المواقع", "أطفال", "مركزي"],
+          "color": "amber"
+        },
+        {
+          "icon": "smile",
+          "name": "عيادة تقويم الأسنان",
+          "description": "عيادة تقويم أسنان مع تتبع العلاج ومشاركة المرضى",
+          "image": "/images/projects/orthodontic-dental.webp",
+          "stats": {
+            "value": "+55%",
+            "label": "الاحتفاظ بالمرضى"
+          },
+          "tags": ["تقويم الأسنان", "تتبع العلاج", "المشاركة"],
+          "color": "lime"
+        },
+        {
+          "icon": "tooth",
+          "name": "مركز جراحة الفم",
+          "description": "عيادة جراحية مع جدولة متقدمة وإدارة الحالات",
+          "image": "/images/projects/oral-surgery.webp",
+          "stats": {
+            "value": "+40%",
+            "label": "كفاءة الحالات"
+          },
+          "tags": ["جراحة الفم", "إدارة الحالات", "الجدولة"],
+          "color": "green"
+        }
+      ]
+    },
+    {
+      "category": "عيادات متعددة المواقع",
+      "description": "عيادات كبيرة تدير مواقع متعددة",
+      "items": [
+        {
+          "icon": "map-pin",
+          "name": "مجموعة طب الأسنان الإقليمية",
+          "description": "عيادة متعددة المواقع مع سجلات مرضى موحدة والجدولة",
+          "image": "/images/projects/regional-dental.webp",
+          "stats": {
+            "value": "+70%",
+            "label": "الكفاءة التشغيلية"
+          },
+          "tags": ["متعدد المواقع", "سجلات موحدة", "مزامنة السحابة"],
+          "color": "sky"
+        },
+        {
+          "icon": "building-2",
+          "name": "شبكة رعاية الأسنان",
+          "description": "شبكة من العيادات مع فوترة مركزية وإعداد التقارير",
+          "image": "/images/projects/dental-network.webp",
+          "stats": {
+            "value": "+55%",
+            "label": "نمو الإيرادات"
+          },
+          "tags": ["شبكة", "الفوترة المركزية", "التقارير"],
+          "color": "cyan"
+        },
+        {
+          "icon": "globe",
+          "name": "طب الأسنان على مستوى الولاية",
+          "description": "مجموعة عيادات على مستوى الولاية مع إدارة شاملة",
+          "image": "/images/projects/statewide-dental.webp",
+          "stats": {
+            "value": "100%",
+            "label": "مزامنة البيانات"
+          },
+          "tags": ["على مستوى الولاية", "الإدارة", "السحابة"],
+          "color": "blue"
+        },
+        {
+          "icon": "trending-up",
+          "name": "سلسلة طب الأسنان المتنامية",
+          "description": "سلسلة عيادات تتوسع بسرعة مع حلول قابلة للتوسع",
+          "image": "/images/projects/dental-chain.webp",
+          "stats": {
+            "value": "+80%",
+            "label": "القابلية للتوسع"
+          },
+          "tags": ["سلسلة", "قابل للتوسع", "النمو"],
+          "color": "indigo"
+        }
+      ]
+    }
+  ],
+  "features": {
+    "title": "ميزات العيادة",
+    "description": "تأتي منصتنا مع ميزات شاملة لعيادات الأسنان",
+    "items": [
+      {
+        "icon": "users",
+        "title": "إدارة المرضى",
+        "description": "سجلات المرضى الرقمية الكاملة والتاريخ"
+      },
+      {
+        "icon": "calendar",
+        "title": "الجدولة بالذكاء الاصطناعي",
+        "description": "جدولة مواعيد ذكية وتحسين"
+      },
+      {
+        "icon": "credit-card",
+        "title": "الفوترة والمدفوعات",
+        "description": "فوترة مبسطة ومعالجة المدفوعات"
+      },
+      {
+        "icon": "bar-chart",
+        "title": "تحليلات العيادة",
+        "description": "رؤى قائمة على البيانات لنمو العيادة"
+      }
+    ]
+  },
+  "benefits": {
+    "title": "فوائد العيادة",
+    "description": "اختبر مزايا استخدام Dentagia لعيادتك.",
+    "items": [
+      {
+        "icon": "rocket",
+        "title": "الكفاءة",
+        "description": "عمليات مبسطة توفر الوقت وتقلل العبء الإداري",
+        "stats": "50%",
+        "label": "الوقت الموفر"
+      },
+      {
+        "icon": "target",
+        "title": "النمو",
+        "description": "أدوات ورؤى لمساعدة عيادتك على النمو",
+        "stats": "35%",
+        "label": "نمو الإيرادات"
+      },
+      {
+        "icon": "lightbulb",
+        "title": "الابتكار",
+        "description": "تقنية ذكاء اصطناعي متطورة مصممة لعيادات الأسنان الحديثة",
+        "stats": "500+",
+        "label": "العيادات"
+      },
+      {
+        "icon": "users",
+        "title": "الدعم",
+        "description": "فريق دعم مخصص متاح على مدار الساعة طوال أيام الأسبوع لعيادتك",
+        "stats": "24/7",
+        "label": "الدعم"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "شهادات العيادات",
+    "description": "استمع إلى عيادات الأسنان التي حولت عملياتها مع Dentagia",
+    "items": [
+      {
+        "quote": "لقد حولت Dentagia طريقة إدارة عيادتنا. الجدولة المدعومة بالذكاء الاصطناعي وحدها توفر لنا 10 ساعات في الأسبوع، ولم تكن درجات رضا المرضى لدينا أعلى من قبل.",
+        "author": "د. سارة مارتينيز",
+        "role": "مالك العيادة",
+        "company": "عيادة الأسنان المركزية",
+        "image": "/images/testimonials/sarah.jpg"
+      },
+      {
+        "quote": "كان التحول إلى Dentagia أفضل قرار اتخذناه. نظام إدارة المرضى بديهي، والفوترة تلقائية، والتحليلات تساعدنا على فهم عيادتنا بشكل أفضل.",
+        "author": "د. مايكل تشين",
+        "role": "طبيب أسنان رئيسي",
+        "company": "Family Dental Care",
+        "image": "/images/testimonials/michael.jpg"
+      }
+    ]
+  },
+  "cta": {
+    "title": "هل أنت مستعد لتحويل عيادتك؟",
+    "description": "انضم إلى مئات عيادات الأسنان التي حولت عملياتها مع Dentagia.",
+    "buttons": [
+      {
+        "text": "جدولة عرض توضيحي",
+        "href": "/demo",
+        "variant": "primary"
+      },
+      {
+        "text": "اتصل بنا",
+        "href": "/contact",
+        "variant": "secondary"
+      }
+    ]
+  }
+}

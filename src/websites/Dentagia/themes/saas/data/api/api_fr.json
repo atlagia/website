@@ -1,0 +1,210 @@
+{
+  "hero": {
+    "subtitle": "DOCUMENTATION API",
+    "title": "Intégrez la Plateforme Dentagia",
+    "description": "Documentation API complète pour vous aider à intégrer les solutions de gestion de cabinet dentaire de Dentagia dans vos applications.",
+    "searchPlaceholder": "Rechercher dans la documentation API..."
+  },
+  "sidebar": {
+    "categories": [
+      {
+        "title": "Premiers Pas",
+        "icon": "Code",
+        "items": [
+          {
+            "title": "Authentification",
+            "link": "/api/auth"
+          },
+          {
+            "title": "Aperçu de l'API",
+            "link": "/api/overview"
+          },
+          {
+            "title": "Limites de Taux",
+            "link": "/api/rate-limits"
+          },
+          {
+            "title": "Conformité HIPAA",
+            "link": "/api/hipaa"
+          }
+        ]
+      },
+      {
+        "title": "Points de Terminaison Principaux",
+        "icon": "Terminal",
+        "items": [
+          {
+            "title": "API Patients",
+            "link": "/api/patients"
+          },
+          {
+            "title": "API Rendez-vous",
+            "link": "/api/appointments"
+          },
+          {
+            "title": "API Facturation",
+            "link": "/api/billing"
+          },
+          {
+            "title": "API Plans de Traitement",
+            "link": "/api/treatment-plans"
+          }
+        ]
+      },
+      {
+        "title": "Fonctionnalités Avancées",
+        "icon": "Box",
+        "items": [
+          {
+            "title": "Webhooks",
+            "link": "/api/webhooks"
+          },
+          {
+            "title": "API Analytique du Cabinet",
+            "link": "/api/analytics"
+          },
+          {
+            "title": "API Planification IA",
+            "link": "/api/ai-scheduling"
+          },
+          {
+            "title": "API Communication Patient",
+            "link": "/api/communication"
+          }
+        ]
+      },
+      {
+        "title": "Sécurité",
+        "icon": "Shield",
+        "items": [
+          {
+            "title": "Clés API",
+            "link": "/api/keys"
+          },
+          {
+            "title": "OAuth 2.0",
+            "link": "/api/oauth"
+          },
+          {
+            "title": "Chiffrement des Données",
+            "link": "/api/encryption"
+          },
+          {
+            "title": "Conformité HIPAA",
+            "link": "/api/hipaa-compliance"
+          }
+        ]
+      }
+    ]
+  },
+  "featured": {
+    "title": "Guides en Vedette",
+    "guides": [
+      {
+        "icon": "Zap",
+        "title": "Guide de Démarrage Rapide",
+        "description": "Démarrez avec l'API Dentagia en quelques minutes",
+        "link": "/api/quick-start",
+        "color": "pink"
+      },
+      {
+        "icon": "Database",
+        "title": "Modèles de Données Patients",
+        "description": "Comprendre les structures de données patients et relations",
+        "link": "/api/data-models",
+        "color": "blue"
+      },
+      {
+        "icon": "Settings",
+        "title": "Modèles d'Intégration",
+        "description": "Modèles courants pour intégrer avec la gestion de cabinet dentaire",
+        "link": "/api/integration-patterns",
+        "color": "purple"
+      }
+    ]
+  },
+  "endpoints": {
+    "title": "Points de Terminaison Populaires",
+    "description": "Explorez nos points de terminaison API les plus couramment utilisés pour la gestion de cabinet dentaire",
+    "items": [
+      {
+        "method": "GET",
+        "path": "/api/v1/patients",
+        "title": "Lister les Patients",
+        "description": "Récupérer une liste de patients avec filtrage optionnel et pagination"
+      },
+      {
+        "method": "POST",
+        "path": "/api/v1/appointments",
+        "title": "Créer un Rendez-vous",
+        "description": "Créer un nouveau rendez-vous avec informations patient et détails de planification"
+      },
+      {
+        "method": "GET",
+        "path": "/api/v1/patients/{id}",
+        "title": "Obtenir un Patient",
+        "description": "Récupérer des informations détaillées sur un patient spécifique incluant l'historique médical"
+      },
+      {
+        "method": "PUT",
+        "path": "/api/v1/appointments/{id}",
+        "title": "Mettre à Jour un Rendez-vous",
+        "description": "Mettre à jour les informations et statut d'un rendez-vous existant"
+      },
+      {
+        "method": "POST",
+        "path": "/api/v1/billing/invoices",
+        "title": "Créer une Facture",
+        "description": "Créer une nouvelle facture pour traitement ou services patient"
+      },
+      {
+        "method": "GET",
+        "path": "/api/v1/analytics/practice",
+        "title": "Obtenir l'Analytique du Cabinet",
+        "description": "Récupérer les métriques de performance et insights du cabinet"
+      }
+    ]
+  },
+  "updates": {
+    "title": "Dernières Mises à Jour",
+    "description": "Restez à jour avec nos dernières fonctionnalités API et améliorations",
+    "items": [
+      {
+        "date": "2024-03-15",
+        "title": "API Planification IA",
+        "description": "Ajout du support pour planification de rendez-vous propulsée par l'IA et optimisation",
+        "tag": "Fonctionnalité"
+      },
+      {
+        "date": "2024-03-10",
+        "title": "API Version 2.0 Beta",
+        "description": "Introduction de notre API de nouvelle génération avec performances améliorées et nouveaux points de terminaison pour cabinet dentaire",
+        "tag": "Mise à Jour"
+      },
+      {
+        "date": "2024-03-05",
+        "title": "Sécurité HIPAA Améliorée",
+        "description": "Ajout du support pour chiffrement amélioré et fonctionnalités de conformité HIPAA améliorées",
+        "tag": "Sécurité"
+      }
+    ]
+  },
+  "help": {
+    "title": "Besoin de Plus d'Aide ?",
+    "description": "Vous ne trouvez pas ce que vous cherchez ? Notre équipe de support développeur est là pour vous aider.",
+    "options": [
+      {
+        "icon": "MessageCircle",
+        "title": "Forum Développeur",
+        "description": "Rejoignez notre communauté de développeurs pour obtenir de l'aide d'autres développeurs et gestionnaires de cabinet",
+        "link": "/api/community"
+      },
+      {
+        "icon": "Mail",
+        "title": "Contacter le Support API",
+        "description": "Entrez en contact avec notre équipe de support API dédiée",
+        "link": "/api/support"
+      }
+    ]
+  }
+}

@@ -1,0 +1,198 @@
+{
+  "hero": {
+    "subtitle": "HIPAA-Compliance",
+    "title": "HIPAA-konforme Sicherheit und Compliance",
+    "description": "Unternehmenstaugliche Sicherheit mit vollständiger HIPAA-Compliance, die garantiert, dass Ihre Patientendaten mit den höchsten Sicherheits- und Datenschutzstandards geschützt sind.",
+    "icon": "shield",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "100%",
+        "label": "HIPAA-konform"
+      },
+      {
+        "value": "256-bit",
+        "label": "Verschlüsselung"
+      },
+      {
+        "value": "99.9%",
+        "label": "Verfügbarkeit"
+      }
+    ]
+  },
+  "features": {
+    "title": "HIPAA-Compliance-Funktionen",
+    "subtitle": "Unternehmenstaugliche Sicherheit",
+    "description": "Umfassende HIPAA-Compliance- und Sicherheitsfunktionen zum Schutz aller Patientendaten.",
+    "items": [
+      {
+        "icon": "shield",
+        "title": "Vollständige HIPAA-Compliance",
+        "description": "Vollständige HIPAA-Compliance mit allen erforderlichen Sicherheitsvorkehrungen, Richtlinien und Verfahren implementiert.",
+        "highlights": [
+          "HIPAA-konforme Infrastruktur",
+          "Erforderliche Sicherheitsvorkehrungen implementiert",
+          "Compliance-Dokumentation",
+          "Regelmäßige Audits und Bewertungen",
+          "Zertifizierung und Validierung"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "Konform"
+        }
+      },
+      {
+        "icon": "lock",
+        "title": "Datenverschlüsselung",
+        "description": "End-to-End-Verschlüsselung für alle Patientendaten in Transit und im Ruhezustand mit militärischer Sicherheit.",
+        "highlights": [
+          "256-Bit-Verschlüsselung",
+          "Schutz von Daten im Ruhezustand",
+          "Sicherheit von Daten in Transit",
+          "Schlüsselverwaltung",
+          "Verschlüsselungsstandards"
+        ],
+        "stats": {
+          "value": "256-bit",
+          "label": "Verschlüsselung"
+        }
+      },
+      {
+        "icon": "users",
+        "title": "Zugriffskontrollen",
+        "description": "Rollenbasierte Zugriffskontrollen mit granularen Berechtigungen und vollständigen Audit-Trails.",
+        "highlights": [
+          "Rollenbasierter Zugriff",
+          "Granulare Berechtigungen",
+          "Multi-Faktor-Authentifizierung",
+          "Zugriffsprotokollierung",
+          "Audit-Trails"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "Kontrolliert"
+        }
+      },
+      {
+        "icon": "database",
+        "title": "Audit-Trails",
+        "description": "Vollständige Audit-Trails für alle Zugriffe, Änderungen und Systemaktivitäten von Patientendaten.",
+        "highlights": [
+          "Vollständige Protokollierung",
+          "Zugriffsverfolgung",
+          "Änderungsverlauf",
+          "Compliance-Berichte",
+          "Forensische Analyse"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "Verfolgt"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "HIPAA-Compliance-Garantie",
+    "description": "Unternehmenstaugliche Sicherheit für Ihre Praxis",
+    "stats": [
+      {
+        "icon": "shield",
+        "value": "100%",
+        "label": "HIPAA-konform"
+      },
+      {
+        "icon": "lock",
+        "value": "256-bit",
+        "label": "Verschlüsselung"
+      },
+      {
+        "icon": "database",
+        "value": "100%",
+        "label": "Audit-Trails"
+      },
+      {
+        "icon": "award",
+        "value": "99.9%",
+        "label": "Verfügbarkeit"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Dr. Michael Chen",
+        "role": "Leitender Zahnarzt, Family Dental Care",
+        "quote": "HIPAA-Compliance war eine wichtige Sorge für uns. Die Sicherheitsfunktionen von Dentagia geben uns volles Vertrauen, dass unsere Patientendaten geschützt sind."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Vorteile der HIPAA-Compliance",
+    "subtitle": "Sicherheit und Vertrauen",
+    "description": "Erleben Sie die Ruhe, die mit vollständiger HIPAA-Compliance einhergeht.",
+    "items": [
+      {
+        "title": "Vollständige Compliance",
+        "description": "Vollständige HIPAA-Compliance mit allen erforderlichen Sicherheitsvorkehrungen und Dokumentation.",
+        "icon": "shield",
+        "color": "teal",
+        "stats": {
+          "value": "100%",
+          "label": "Konform"
+        },
+        "highlights": [
+          "HIPAA-konforme Infrastruktur",
+          "Erforderliche Sicherheitsvorkehrungen",
+          "Compliance-Dokumentation",
+          "Regelmäßige Audits"
+        ]
+      },
+      {
+        "title": "Datenschutz",
+        "description": "Militärische Verschlüsselung und Sicherheit schützen alle Patientendaten.",
+        "icon": "lock",
+        "color": "cyan",
+        "stats": {
+          "value": "256-bit",
+          "label": "Verschlüsselung"
+        },
+        "highlights": [
+          "End-to-End-Verschlüsselung",
+          "Sichere Speicherung",
+          "Verschlüsselte Backups",
+          "Schlüsselverwaltung"
+        ]
+      },
+      {
+        "title": "Zugriffskontrolle",
+        "description": "Granulare Zugriffskontrollen stellen sicher, dass nur autorisiertes Personal auf Patientendaten zugreifen kann.",
+        "icon": "users",
+        "color": "blue",
+        "stats": {
+          "value": "100%",
+          "label": "Kontrolliert"
+        },
+        "highlights": [
+          "Rollenbasierter Zugriff",
+          "Granulare Berechtigungen",
+          "Multi-Faktor-Authentifizierung",
+          "Zugriffsprotokollierung"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Bereit für HIPAA-konforme Sicherheit?",
+    "description": "Sehen Sie, wie die Sicherheitsfunktionen von Dentagia Ihre Praxis und Ihre Patientendaten schützen.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Demo vereinbaren",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Mehr erfahren",
+      "link": "/features"
+    }
+  }
+}
+

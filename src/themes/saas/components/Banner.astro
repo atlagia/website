@@ -29,84 +29,136 @@ const {
 } = Astro.props;
 ---
 
-<section class="relative py-32 overflow-hidden bg-navy-900">
-  <!-- Curved top shape -->
-  <div class="absolute top-0 left-0 w-full overflow-hidden">
-    <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="relative block w-full h-[100px] text-white">
-      <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="currentColor"></path>
-    </svg>
+<section class="relative py-32 overflow-hidden bg-[#0A0A1F]">
+  <!-- Background Effects -->
+  <div class="absolute inset-0">
+    <div class="absolute inset-0 bg-gradient-to-br from-[#0A0A1F] via-[#1A1A3F] to-[#0A0A1F] opacity-80"></div>
+    <div class="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-[0.2]"></div>
+    <!-- Animated Gradient Orbs -->
+    <div class="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-gradient-to-br from-purple-500/10 via-pink-500/10 to-blue-500/10 rounded-full blur-3xl animate-float"></div>
+    <div class="absolute bottom-1/3 left-1/4 w-[400px] h-[400px] bg-gradient-to-tr from-blue-500/10 via-purple-500/10 to-pink-500/10 rounded-full blur-3xl animate-float-delayed"></div>
   </div>
 
   <!-- Content -->
   <div class="relative z-10 max-w-7xl mx-auto px-4">
     <!-- Subtitle -->
-    <div class="text-center mb-4">
-      <span class="text-sm font-semibold tracking-wider text-pink-500 uppercase" id="content-subtitle">
-        {subtitle || "HUGE HONOR"}
-      </span>
+    <div class="text-center mb-6">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm transition-all duration-300 hover:bg-white/10">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-pink-600 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-gradient-to-r from-pink-600 to-purple-600"></span>
+        </span>
+        <span class="text-sm font-medium bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
+          {subtitle || "INDUSTRY SOLUTIONS"}
+        </span>
+      </div>
     </div>
 
     <!-- Main Title -->
-    <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center mb-16" id="content-headline">
-      {headline}
-    </h2>
-
-    <!-- Timeline with cards -->
-    <div class="relative mb-20">
-      <!-- Timeline line -->
-      <div class="absolute left-1/2 transform -translate-x-1/2 w-px h-full bg-gray-700">
-        {[0, 1, 2, 3].map((_, index) => (
-          <div class={`absolute ${index === 2 ? 'bg-pink-500' : 'bg-white'} w-4 h-4 rounded-full -left-[7px] transform -translate-x-1/2`} style={`top: ${index * 33}%`}></div>
-        ))}
+    <div class="text-center mb-8">
+      <div class="relative inline-block">
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-white bg-clip-text text-transparent pb-4 relative">
+          {headline}
+          <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent opacity-0 animate-shine"></div>
+        </h2>
+        <!-- Animated Border -->
+        <div class="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-1/4 h-1">
+          <div class="absolute inset-0 bg-gradient-to-r from-transparent via-pink-500 to-transparent animate-border-slide"></div>
+          <div class="absolute inset-0 bg-gradient-to-r from-transparent via-purple-500 to-transparent animate-border-slide-delayed"></div>
+        </div>
       </div>
+      <p class="mt-6 text-lg text-gray-400 max-w-3xl mx-auto">
+        {description}
+      </p>
+    </div>
 
-      <!-- Cards -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 relative">
-        {cards?.map((card, index) => (
-          <div class={`p-8 rounded-2xl bg-navy-800 backdrop-blur-lg ${index % 2 === 0 ? 'md:mr-8' : 'md:ml-8'} hover:bg-navy-700 transition-colors duration-300`}>
-            <h3 class="text-2xl font-bold text-white mb-4" id={`content-card-${index}-title`}>{card.title}</h3>
-            <p class="text-gray-300 leading-relaxed" id={`content-card-${index}-description`}>{card.description}</p>
+    <!-- Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+      {cards?.map((card, index) => (
+        <div class="group relative">
+          <!-- Card Background -->
+          <div class="absolute inset-0 bg-gradient-to-br from-white/[0.08] to-white/[0.02] rounded-2xl transform transition-transform group-hover:scale-[1.02] duration-300"></div>
+          <!-- Glow Effect -->
+          <div class="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl opacity-0 group-hover:opacity-20 blur transition duration-300"></div>
+          
+          <!-- Content -->
+          <div class="relative p-8 rounded-2xl backdrop-blur-sm border border-white/10">
+            <div class="flex items-start gap-4">
+              <div class="p-3 rounded-xl bg-white/5 group-hover:bg-white/10 transition-colors duration-300">
+                <div class="w-6 h-6 text-pink-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-3 group-hover:text-pink-500 transition-colors duration-300">
+                  {card.title}
+                </h3>
+                <p class="text-gray-400 leading-relaxed">
+                  {card.description}
+                </p>
+              </div>
+            </div>
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </div>
 
-    <!-- Video Presentation Button -->
-    <div class="text-center">
-      <button class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-navy-800 text-white hover:bg-navy-700 transition-colors duration-300">
-        <span class="w-8 h-8 flex items-center justify-center rounded-full bg-pink-500">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
-          </svg>
-        </span>
-        Video Presentation
-      </button>
+    <!-- Action Buttons -->
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href={button1Link} class="inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium hover:shadow-lg hover:shadow-purple-500/25 hover:-translate-y-0.5 transition-all duration-300">
+        {button1Text}
+        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </a>
+      <a href={button2Link} class="inline-flex items-center px-8 py-4 rounded-full bg-white/5 border border-white/10 text-white font-medium hover:bg-white/10 transition-all duration-300">
+        {button2Text}
+      </a>
     </div>
-  </div>
-
-  <!-- Curved bottom shape -->
-  <div class="absolute bottom-0 left-0 w-full overflow-hidden">
-    <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="relative block w-full h-[100px] text-white rotate-180">
-      <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="currentColor"></path>
-    </svg>
   </div>
 </section>
 
 <style>
-  .bg-navy-900 {
-    background-color: #0a0b1e;
-  }
-  .bg-navy-800 {
-    background-color: #12132d;
-  }
-  .bg-navy-700 {
-    background-color: #1a1b3f;
+  @keyframes float {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(10px, -10px) rotate(1deg); }
+    50% { transform: translate(0, -15px) rotate(-1deg); }
+    75% { transform: translate(-10px, -5px) rotate(1deg); }
   }
 
-  /* Smooth transition for hover effects */
-  .transition-colors {
-    transition-property: background-color, border-color, color, fill, stroke;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 300ms;
+  .animate-float {
+    animation: float 20s ease-in-out infinite;
+  }
+
+  .animate-float-delayed {
+    animation: float 20s ease-in-out infinite;
+    animation-delay: -10s;
+  }
+
+  @keyframes border-slide {
+    0%, 100% { transform: translateX(-100%); opacity: 0; }
+    25%, 75% { opacity: 1; }
+    50% { transform: translateX(100%); opacity: 0; }
+  }
+
+  .animate-border-slide {
+    animation: border-slide 3s ease-in-out infinite;
+  }
+
+  .animate-border-slide-delayed {
+    animation: border-slide 3s ease-in-out infinite;
+    animation-delay: 1.5s;
+  }
+
+  @keyframes shine {
+    0% { opacity: 0; transform: translateX(-100%); }
+    50% { opacity: 1; }
+    100% { opacity: 0; transform: translateX(100%); }
+  }
+
+  .animate-shine {
+    animation: shine 3s ease-in-out infinite;
   }
 </style>

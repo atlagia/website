@@ -1,0 +1,170 @@
+{
+  "pageTitle": "Demo Vereinbaren",
+  "pageDescription": "Erleben Sie die Leistungsfähigkeit von Dentagias KI-gestützter Zahnarztpraxis-Management-Software mit unserer interaktiven Demo",
+  "hero": {
+    "badge": "Interaktive Demo",
+    "title": "Erleben Sie Dentagia in Aktion",
+    "description": "Testen Sie unsere KI-gestützte Zahnarztpraxis-Management-Plattform direkt. Keine Kreditkarte erforderlich, keine Installation nötig. Starten Sie in Sekunden und sehen Sie, wie Dentagia Ihre Praxis transformieren kann.",
+    "cta": {
+      "primary": {
+        "text": "Demo Vereinbaren",
+        "href": "#demo-form"
+      },
+      "secondary": {
+        "text": "Video Ansehen",
+        "href": "#video"
+      }
+    }
+  },
+  "features": [
+    {
+      "icon": "zap",
+      "title": "Sofortiger Zugriff",
+      "description": "Beginnen Sie sofort mit vorgefertigten Beispieldaten für Zahnarztpraxen zu erkunden"
+    },
+    {
+      "icon": "shield",
+      "title": "Sicher & Privat",
+      "description": "Ihre Demo-Daten sind isoliert und werden nach 24 Stunden automatisch gelöscht. HIPAA-konforme Sicherheit."
+    },
+    {
+      "icon": "users",
+      "title": "Geführte Tour",
+      "description": "Schritt-für-Schritt-Anleitung zu wichtigen Funktionen einschließlich Patientenmanagement, Terminplanung und Abrechnung"
+    },
+    {
+      "icon": "rocket",
+      "title": "Alle Funktionen",
+      "description": "Erleben Sie alle Premium-Funktionen einschließlich KI-gestützter Terminplanung und Praxisanalysen"
+    }
+  ],
+  "demoForm": {
+    "title": "Fordern Sie Ihre Persönliche Demo An",
+    "subtitle": "Füllen Sie das untenstehende Formular aus und wir richten eine angepasste Demo-Umgebung für Ihre Praxis ein",
+    "fields": {
+      "fullName": {
+        "label": "Vollständiger Name",
+        "placeholder": "Dr. Max Mustermann",
+        "required": true
+      },
+      "email": {
+        "label": "Geschäfts-E-Mail",
+        "placeholder": "max@zahnarztpraxis.de",
+        "required": true
+      },
+      "company": {
+        "label": "Praxisname",
+        "placeholder": "Ihre Zahnarztpraxis",
+        "required": true
+      },
+      "industry": {
+        "label": "Praxistyp",
+        "placeholder": "Wählen Sie Ihren Praxistyp",
+        "options": [
+          "Allgemeine Zahnmedizin",
+          "Ästhetische Zahnmedizin",
+          "Kinderzahnmedizin",
+          "Orthodontie",
+          "Oralchirurgie",
+          "Parodontologie",
+          "Endodontie",
+          "Multi-Spezialität",
+          "Andere"
+        ],
+        "required": true
+      },
+      "useCase": {
+        "label": "Was möchten Sie erkunden?",
+        "placeholder": "Erzählen Sie uns von Ihren Praxismanagement-Bedürfnissen...",
+        "required": false
+      }
+    },
+    "submitButton": "Meine Demo Vereinbaren",
+    "consent": "Durch das Absenden dieses Formulars stimmen Sie unserer Datenschutzrichtlinie und unseren Nutzungsbedingungen zu"
+  },
+  "benefits": {
+    "title": "Warum Unsere Demo Ausprobieren?",
+    "items": [
+      {
+        "icon": "check-circle",
+        "title": "Echte Praxisszenarien",
+        "description": "Erkunden Sie Anwendungsfälle speziell für Zahnarztpraxen mit realistischen Patientendaten und Terminszenarien"
+      },
+      {
+        "icon": "trending-up",
+        "title": "ROI-Potenzial Sehen",
+        "description": "Verstehen Sie, wie Dentagia Ihre Praxiseffizienz verbessern, Absagen reduzieren und den Umsatz steigern kann"
+      },
+      {
+        "icon": "settings",
+        "title": "Anpassungsoptionen",
+        "description": "Entdecken Sie, wie Sie die Plattform an Ihre spezifischen Praxisbedürfnisse und Arbeitsabläufe anpassen können"
+      },
+      {
+        "icon": "award",
+        "title": "Experten-Support",
+        "description": "Erhalten Sie Antworten von unseren Zahnarztpraxis-Management-Spezialisten während Ihrer Demo"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Was Unsere Demo-Nutzer Sagen",
+    "items": [
+      {
+        "quote": "Die Demo war unglaublich intuitiv. Innerhalb von 10 Minuten konnte ich genau sehen, wie Dentagia unsere Praxisabläufe transformieren und uns jede Woche Stunden sparen würde.",
+        "author": "Dr. Sarah Martinez",
+        "role": "Praxisinhaberin",
+        "company": "Zahnarztpraxis Zentrum",
+        "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah"
+      },
+      {
+        "quote": "Ich habe viele Praxismanagement-Demos ausprobiert, aber Dentagia stach hervor. Die KI-gestützten Terminplanungs- und Patientenmanagement-Funktionen sind genau das, was wir brauchten.",
+        "author": "Dr. Michael Chen",
+        "role": "Leitender Zahnarzt",
+        "company": "Family Dental Care",
+        "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Michael"
+      }
+    ]
+  },
+  "video": {
+    "title": "Sehen Sie Einen Schnellen Überblick",
+    "description": "Sehen Sie, wie Dentagia in nur 2 Minuten funktioniert",
+    "thumbnail": "https://via.placeholder.com/800x450/6366f1/ffffff?text=Dentagia+Demo+Video",
+    "duration": "2:30",
+    "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+  },
+  "faq": {
+    "title": "Häufig Gestellte Fragen",
+    "items": [
+      {
+        "question": "Wie lange dauert die Demo?",
+        "answer": "Ihre persönliche Demo-Umgebung bleibt 24 Stunden aktiv und gibt Ihnen viel Zeit, in Ihrem eigenen Tempo zu erkunden und zu sehen, wie Dentagia zu Ihrer Praxis passt."
+      },
+      {
+        "question": "Ist eine Installation erforderlich?",
+        "answer": "Keine Installation erforderlich! Unsere Demo läuft vollständig in Ihrem Webbrowser. Klicken Sie einfach auf den Link, den wir Ihnen senden, und beginnen Sie zu erkunden."
+      },
+      {
+        "question": "Habe ich Zugriff auf alle Funktionen?",
+        "answer": "Ja, Sie haben während Ihrer Demo-Zeit Zugriff auf alle Premium-Funktionen, einschließlich KI-gestützter Terminplanung, Patientenmanagement, Abrechnung und Praxisanalysen."
+      },
+      {
+        "question": "Kann ich meine eigenen Praxisdaten importieren?",
+        "answer": "Die Demo kommt mit Beispieldaten für Zahnarztpraxen, aber Sie können auch Ihre eigenen Daten hochladen, um zu sehen, wie die Plattform mit Ihren echten Praxisinformationen funktioniert."
+      },
+      {
+        "question": "Was passiert nach Ablauf der Demo?",
+        "answer": "Alle Demo-Daten werden nach 24 Stunden automatisch gelöscht. Wenn Sie fortfahren möchten, können wir Ihnen bei der Einrichtung eines Testkontos oder der Vereinbarung einer personalisierten Beratung helfen."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Bereit, Ihre Praxis zu Transformieren?",
+    "description": "Schließen Sie sich Hunderten von Zahnarztpraxen an, die Dentagia bereits verwenden, um ihre Abläufe zu optimieren und ihre Praxis zu entwickeln.",
+    "button": {
+      "text": "Vereinbaren Sie Jetzt Ihre Demo",
+      "href": "#demo-form"
+    }
+  }
+}
+

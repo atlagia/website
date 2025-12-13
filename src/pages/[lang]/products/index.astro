@@ -1,0 +1,391 @@
+---
+import Layout from '@layouts/Layoutc.astro';
+import ProductCard from '@themes/default/components/ProductCard';
+import { getPaginatedTranslatedProducts } from '@libs/shopify';
+import { getPaginatedProducts } from '@libs/woocommerce';
+import { generateCacheKey, getCachedPage, cachePageContent } from '@libs/cache';
+import { Grid, List } from 'lucide-react';
+import FilterSidebar from '@components/FilterSidebar.astro';
+import SortDropdown from '@components/SortDropdown.astro';
+import ReactiveProductCard from '@components/ReactiveProductCard.tsx';
+
+// Generate static paths for allowed languages from environment
+export async function getStaticPaths() {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  const languages = allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+  
+  return languages.map(lang => ({ params: { lang } }));
+}
+
+// Dynamic imports based on environment
+const SITE_NAME = import.meta.env.PUBLIC_SITE_NAME || 'RidWear';
+const THEME = import.meta.env.THEME || 'default';
+
+// Get page and locale
+const page = Number(Astro.url.searchParams.get('page')) || 1;
+const PRODUCTS_PER_PAGE = 20;
+const { lang = 'en' } = Astro.params;
+
+let contentData;
+let filterData;
+
+try {
+  // Try to load from current website theme path
+  contentData = await import(`@websites/Drivon/themes/bikes/data/products/products_${lang}.json`);
+  filterData = await import(`@websites/Drivon/themes/bikes/data/collection-filters.json`);
+} catch (error) {
+  try {
+    // Fallback to English
+    contentData = await import(`@websites/Drivon/themes/bikes/data/products/products_en.json`);
+    filterData = await import(`@websites/Drivon/themes/bikes/data/collection-filters.json`);
+  } catch (fallbackError) {
+    // Final fallback to default data
+    contentData = await import('@data/collection-content.json');
+    filterData = await import('@data/collection-filters.json');
+  }
+}
+
+const theme = import.meta.env.THEME || 'default';
+const siteName = import.meta.env.PUBLIC_SITE_NAME;
+const dataType = import.meta.env.DATA_TYPE?.toLowerCase() || 'shopify';
+
+// Get content for current language
+const content = contentData.default || contentData;
+
+// Parse current filters from URL
+const url = new URL(Astro.request.url);
+const currentFilters: Record<string, string[]> = {};
+url.searchParams.forEach((value, key) => {
+  if (key === 'color' || key === 'size' || key === 'availability') {
+    if (!currentFilters[key]) currentFilters[key] = [];
+    currentFilters[key].push(value);
+  }
+});
+
+// Get current sort parameter
+const currentSort = url.searchParams.get('sort') || '';
+
+// Add this helper function that doesn't use document
+function stripHtml(html: string) {
+  if (!html) return '';
+  
+  // First, remove script and style tags and their contents
+  let text = html.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
+  text = text.replace(/<style\b[^<]*(?:(?!<\/style>)<[^<]*)*<\/style>/gi, '');
+  
+  // Then remove all remaining HTML tags
+  text = text.replace(/<[^>]+>/g, ' ');
+  
+  // Replace multiple spaces, newlines, and tabs with a single space
+  text = text.replace(/\s+/g, ' ');
+  
+  // Decode HTML entities
+  text = text.replace(/&nbsp;/g, ' ')
+             .replace(/&amp;/g, '&')
+             .replace(/&lt;/g, '<')
+             .replace(/&gt;/g, '>')
+             .replace(/&quot;/g, '"')
+             .replace(/&#039;/g, "'");
+  
+  // Trim whitespace
+  return text.trim();
+}
+
+// Generate cache key for this page
+const cacheKey = generateCacheKey(`/collections?page=${page}`, lang);
+const cachedContent = await getCachedPage(cacheKey);
+
+if (cachedContent) {
+  console.log('✅ Serving cached collections page:', cacheKey);
+  return new Response(cachedContent, {
+    headers: {
+      'Content-Type': 'text/html;charset=UTF-8',
+      'X-Cache': 'HIT',
+    },
+  });
+}
+
+// Fetch products based on data source
+let products = [];
+let pagination = {
+  currentPage: page,
+  totalPages: 0,
+  totalProducts: 0,
+  hasNextPage: false,
+  hasPreviousPage: false
+};
+
+try {
+  if (dataType === 'shopify') {
+    console.log('🛍️ Fetching from Shopify');
+    const shopifyData = await getPaginatedTranslatedProducts(page, PRODUCTS_PER_PAGE, lang);
+    products = shopifyData.products;
+    pagination = shopifyData.pagination;
+  } else if (dataType === 'woocommerce') {
+    console.log('🛍️ Fetching from WooCommerce');
+    const wooData = await getPaginatedProducts(page, PRODUCTS_PER_PAGE);
+    
+    // Transform WooCommerce data to match Shopify structure
+    products = wooData.products.map(product => ({
+      node: {
+        id: product.id.toString(),
+        title: product.name,
+        handle: product.slug,
+        description: stripHtml(product.description || ''),
+        variants: {
+          edges: [{
+            node: {
+              price: {
+                amount: product.price,
+                currencyCode: 'USD'
+              },
+              compareAtPrice: product.regular_price ? {
+                amount: product.regular_price,
+                currencyCode: 'USD'
+              } : null
+            }
+          }]
+        },
+        images: {
+          edges: product.images.map(image => ({
+            node: {
+              url: image.src,
+              altText: image.alt || product.name
+            }
+          }))
+        }
+      }
+    }));
+    
+    pagination = wooData.pagination;
+  } else {
+    throw new Error(`Unsupported data type: ${dataType}`);
+  }
+} catch (error) {
+  console.error(`❌ Error fetching products:`, error);
+  return new Response('Error fetching products', { status: 500 });
+}
+---
+
+<Layout title={`Products | ${siteName}`} lang={lang}>
+  <main class="max-w-7xl mx-auto px-4 pb-8 pt-[100px]">
+    {/* Breadcrumbs */}
+    <nav class="mb-8">
+      <ol class="flex items-center space-x-2 text-sm">
+        <li>
+          <a href={`/${lang}`} class="text-gray-500 hover:text-gray-700">{content.breadcrumbs.home}</a>
+        </li>
+        <li class="text-gray-400">/</li>
+        <li class="text-gray-900 font-medium">{content.breadcrumbs?.products || 'Products'}</li>
+      </ol>
+    </nav>
+
+    {/* Page Header */}
+    <header class="text-center mb-16">
+      <h1 class="text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">{content.pageTitle || 'Products'}</h1>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        {content.pageDescription || 'Explore our premium selection of products with advanced filtering'}
+      </p>
+    </header>
+
+    {/* Mobile Filter Toggle */}
+    <div class="lg:hidden mb-6">
+      <button 
+        id="mobile-filter-toggle"
+        class="w-full flex items-center justify-center gap-2 px-4 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+      >
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+        </svg>
+{content.filters?.title || 'Filters'} & Sort
+      </button>
+    </div>
+
+    {/* Main Content with Sidebar */}
+    <div class="flex flex-col lg:flex-row gap-8">
+      {/* Mobile Filter Overlay */}
+      <div 
+        id="mobile-filter-overlay"
+        class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden lg:hidden"
+      ></div>
+
+      {/* Sidebar Filters */}
+      <aside 
+        id="filter-sidebar"
+        class="w-full lg:w-80 flex-shrink-0 fixed lg:relative top-0 left-0 h-full lg:h-auto bg-white z-40 lg:z-auto transform -translate-x-full lg:translate-x-0 lg:top-auto lg:left-auto lg:transform-none transition-transform duration-300 ease-in-out lg:block"
+      >
+        <div class="p-4 lg:p-0">
+          <div class="flex items-center justify-between mb-4 lg:hidden">
+            <h3 class="text-lg font-semibold">{content.filters?.title || 'Filters'}</h3>
+            <button 
+              id="close-mobile-filters"
+              class="p-2 hover:bg-gray-100 rounded-full"
+            >
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <FilterSidebar language={lang} currentFilters={currentFilters} filterData={filterData.default} />
+        </div>
+      </aside>
+
+      {/* Main Content Area */}
+      <div class="flex-1 w-full">
+        {/* Top Controls */}
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 gap-4">
+          <!-- View Toggle -->
+          <div class="flex items-center space-x-2">
+            <button class="p-2 rounded-md bg-white border border-gray-300 hover:bg-gray-50 transition-colors">
+              <Grid className="w-5 h-5 text-gray-600" />
+            </button>
+            <button class="p-2 rounded-md bg-gray-50 border border-gray-300 hover:bg-gray-100 transition-colors">
+              <List className="w-5 h-5 text-gray-600" />
+            </button>
+          </div>
+
+          <!-- Sort Dropdown and Product Count -->
+          <div class="flex items-center gap-4">
+            <SortDropdown language={lang} currentSort={currentSort} />
+            <div class="text-sm text-gray-600 hidden sm:block">
+              {pagination.totalProducts} {content.collections.count}
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile Product Count */}
+        <div class="text-sm text-gray-600 mb-4 sm:hidden">
+          {pagination.totalProducts} {content.collections.count}
+        </div>
+
+        {/* Products Grid */}
+        <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6 lg:gap-8">
+          {products.map((product) => {
+            // Handle both Shopify and WooCommerce data structures
+            const node = product.node;
+            const price = dataType === 'shopify' 
+              ? (node.variants?.edges?.[0]?.node?.price?.amount || 
+                 node.priceRange?.minVariantPrice?.amount || 
+                 '0')
+              : node.variants.edges[0].node.price.amount;
+              
+            const compareAtPrice = dataType === 'shopify'
+              ? node.variants?.edges?.[0]?.node?.compareAtPrice?.amount
+              : node.variants.edges[0].node.compareAtPrice?.amount;
+              
+            const imageUrl = dataType === 'shopify'
+              ? node.images?.edges?.[0]?.node?.url
+              : node.images.edges[0].node.url;
+
+            const currencyCode = dataType === 'shopify'
+              ? (node.variants?.edges?.[0]?.node?.price?.currencyCode || 'USD')
+              : 'USD';
+            
+            return (
+              <ReactiveProductCard 
+                client:load
+                product={{
+                  id: node.id,
+                  title: node.title,
+                  handle: node.handle,
+                  price: { amount: price, currencyCode: currencyCode },
+                  compareAtPrice: compareAtPrice ? { amount: compareAtPrice, currencyCode: currencyCode } : undefined,
+                  image: imageUrl ? { url: imageUrl, altText: node.title } : undefined
+                }}
+                lang={lang}
+                content={content}
+              />
+            );
+          })}
+        </div>
+
+        <!-- Pagination -->
+        <div class="flex justify-center items-center gap-4 mt-12">
+          {pagination.hasPreviousPage && (
+            <a
+              href={`/${lang}/collections?page=${page - 1}`}
+              class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
+            >
+{content.pagination?.previous || 'Previous'}
+            </a>
+          )}
+          
+          <span class="text-gray-600">
+            Page {pagination.currentPage} of {pagination.totalPages}
+          </span>
+          
+          {pagination.hasNextPage && (
+            <a
+              href={`/${lang}/collections?page=${page + 1}`}
+              class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
+            >
+{content.pagination?.next || 'Next'}
+            </a>
+          )}
+        </div>
+
+        <div class="text-center text-sm text-gray-500 mt-4">
+          Showing {(page - 1) * PRODUCTS_PER_PAGE + 1} - {Math.min(page * PRODUCTS_PER_PAGE, pagination.totalProducts)} 
+          of {pagination.totalProducts} products
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<script>
+  // Handle dynamic loading states
+  document.addEventListener('astro:page-load', () => {
+    const grid = document.querySelector('.grid');
+    if (grid) {
+      grid.classList.add('fade-in');
+    }
+    
+    // Initialize mobile filter functionality
+    initializeMobileFilters();
+  });
+
+  function initializeMobileFilters() {
+    const mobileFilterToggle = document.getElementById('mobile-filter-toggle');
+    const mobileFilterOverlay = document.getElementById('mobile-filter-overlay');
+    const filterSidebar = document.getElementById('filter-sidebar');
+    const closeMobileFilters = document.getElementById('close-mobile-filters');
+
+    if (!mobileFilterToggle || !filterSidebar) return;
+
+    // Open mobile filters
+    mobileFilterToggle.addEventListener('click', () => {
+      filterSidebar.classList.remove('-translate-x-full');
+      mobileFilterOverlay.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    });
+
+    // Close mobile filters
+    const closeFilters = () => {
+      filterSidebar.classList.add('-translate-x-full');
+      mobileFilterOverlay.classList.add('hidden');
+      document.body.style.overflow = '';
+    };
+
+    closeMobileFilters?.addEventListener('click', closeFilters);
+    mobileFilterOverlay?.addEventListener('click', closeFilters);
+
+    // Close on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeFilters();
+      }
+    });
+  }
+</script>
+
+<style>
+  .fade-in {
+    animation: fadeIn 0.5s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+</style>

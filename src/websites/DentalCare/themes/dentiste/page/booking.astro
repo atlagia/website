@@ -32,12 +32,12 @@ const iconPaths = {
   ChevronRight: `<polyline points="9 18 15 12 9 6"/>`
 };
 
-// DataVault configuration
+// DataVault configuration - use values from config.json
 const DATAVAULT_CONFIG = {
-  apiBaseUrl: import.meta.env.PUBLIC_API_URL || 'http://localhost:8000/api/datavault',
-  schemaId: 11, // Your dental booking schema ID
+  apiBaseUrl: dataVaultForm.config.apiBaseUrl,
+  schemaId: dataVaultForm.config.schemaId,
   entityName: 'Booking',
-  keyToken: '7ec76314-49d0-40b6-b296-082076e8899n'
+  keyToken: dataVaultForm.config.keyToken
 };
 ---
 
@@ -400,9 +400,9 @@ const DATAVAULT_CONFIG = {
             };
 
             try {
-              // Submit to DataVault using the config from Astro
+              // Submit to DataVault using the form submission endpoint
               const response = await fetch(
-                `${DATAVAULT_CONFIG.apiBaseUrl}/builder/entities/${DATAVAULT_CONFIG.schemaId}/entries/create/`,
+                `${DATAVAULT_CONFIG.apiBaseUrl}/forms/${DATAVAULT_CONFIG.schemaId}/submit/`,
                 {
                   method: 'POST',
                   headers: {
@@ -410,15 +410,15 @@ const DATAVAULT_CONFIG = {
                     'X-Schema-Key-Token': DATAVAULT_CONFIG.keyToken
                   },
                   body: JSON.stringify({
-                    data: bookingData,
-                    key_token: DATAVAULT_CONFIG.keyToken
+                    form_data: bookingData,
+                    entity_name: DATAVAULT_CONFIG.entityName || 'Booking'
                   })
                 }
               );
 
               const result = await response.json();
               
-              if (result.id) {
+              if (result.success && result.entry_id) {
                 // Show success message
                 alert('Your appointment has been booked successfully! You will receive a confirmation email shortly.');
                 
@@ -575,7 +575,7 @@ const DATAVAULT_CONFIG = {
       }
     </script>
 
-    <script is:inline src="http://localhost:8000/api/datavault/embed/datavault-form.js"></script>
+    <script is:inline src={`${dataVaultForm.config.apiBaseUrl}/embed/datavault-form.js`}></script>
     
     <div id="datavault-booking-form"></div>
   </body>

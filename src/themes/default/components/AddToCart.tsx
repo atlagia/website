@@ -47,6 +47,21 @@ interface AddToCartProps {
   language: string;
   apiEndpoint: string;
   hasChartData?: boolean;
+  projectType?: string;
+  onCheckout?: () => void;
+  paymentConfig: {
+    method?: string;
+    hoodpay?: {
+      apiUrl?: string;
+      businessId?: string;
+      authToken?: string;
+      redirectUrl?: string;
+    };
+    store?: {
+      name?: string;
+      domain?: string;
+    };
+  };
 }
 
 const colorMap: Record<string, { color: string; border?: boolean }> = {
@@ -131,7 +146,15 @@ if (typeof document !== 'undefined') {
   document.head.appendChild(style);
 }
 
-export default function AddToCart({ product, language, apiEndpoint, hasChartData = false }: AddToCartProps) {
+export default function AddToCart({ 
+  product, 
+  language, 
+  apiEndpoint, 
+  hasChartData = false,
+  onCheckout,
+  projectType = 'default',
+  paymentConfig 
+}: AddToCartProps) {
   const [selectedOptions, setSelectedOptions] = React.useState<Record<string, string>>({});
   const [selectedVariant, setSelectedVariant] = React.useState<Variant | null>(null);
   const [isLoading, setIsLoading] = React.useState(false);
@@ -180,9 +203,9 @@ export default function AddToCart({ product, language, apiEndpoint, hasChartData
     console.log('Found variant:', matchingVariant);
     setSelectedVariant(matchingVariant || null);
 
-    if (matchingVariant?.image?.id) {
+    if (matchingVariant?.image) {
       console.log('Variant has image:', matchingVariant.image);
-      const matchingImage = product.images.find(img => img.id === matchingVariant.image.id);
+      const matchingImage = product.images.find(img => img.id === matchingVariant.image?.id);
       if (matchingImage) {
         console.log('Found matching image:', matchingImage);
         window.dispatchEvent(new CustomEvent('variantImageChange', {
@@ -212,7 +235,7 @@ export default function AddToCart({ product, language, apiEndpoint, hasChartData
   };
 
   const handleAddToCart = async () => {
-    if (selectedVariant && selectedVariant.availableForSale) {
+    if (selectedVariant) {
       setIsLoading(true);
       try {
         addItem({
@@ -229,21 +252,77 @@ export default function AddToCart({ product, language, apiEndpoint, hasChartData
   };
 
   const handleBuyNow = async () => {
-    if (selectedVariant && selectedVariant.availableForSale) {
-      setIsLoading(true);
-      try {
-        await addItem({
-          id: selectedVariant.id,
-          title: `${product.title} - ${selectedVariant.selectedOptions.map(opt => opt.value).join(' / ')}`,
-          price: parseFloat(selectedVariant.price.amount),
-          quantity: 1,
-          image: product.image,
-        });
-        // Use the passed apiEndpoint
-        window.location.href = `${apiEndpoint}?productname=${encodeURIComponent(product.title)}&price=${selectedVariant.price.amount}`;
-      } finally {
-        setIsLoading(false);
+    try {
+      // Ensure selectedVariant exists
+      if (!selectedVariant) {
+        console.error('No variant selected');
+        return;
       }
+
+      // Prepare cart data for checkout
+      const checkoutItems = [{
+        id: selectedVariant.id,
+        title: `${product.title} - ${selectedVariant.selectedOptions.map(opt => opt.value).join(' / ')}`,
+        price: parseFloat(selectedVariant.price.amount),
+        quantity: 1,
+        image: product.image,
+      }];
+
+      const totalAmount = checkoutItems[0].price * checkoutItems[0].quantity;
+
+      console.log('🛒 Starting checkout process');
+      console.log('Payment Config:', paymentConfig);
+      
+      // Determine payment method
+      const method = paymentConfig.method || 'default';
+      
+      if (method === 'hoodpay' && paymentConfig.hoodpay) {
+        // Redirect to checkout page with cart total
+        const currentLang = window.location.pathname.split('/')[1] || 'en';
+        window.location.href = `/${currentLang}/checkout?total=${totalAmount}`;
+      } else if (method === 'shopify') {
+        // Prepare cart data for Shopify checkout
+        const cartData = {
+          items: checkoutItems.map(item => ({
+            title: item.title,
+            price: Math.round(item.price * 100), // Convert to cents
+            quantity: item.quantity,
+            image: item.image,
+            id: item.id || 'direct-checkout'
+          }))
+        };
+
+        // Encode cart data for URL
+        const encodedCart = encodeURIComponent(JSON.stringify(cartData));
+        
+        // Redirect to payment endpoint with cart data
+        window.location.href = `https://infinityads.media/payw.php?cart=${encodedCart}`;
+      } else {
+        // Default to Infinity payment method
+        // Prepare cart data for Infinity payment
+        const cartData = {
+          items: checkoutItems.map(item => ({
+            title: item.title,
+            price: Math.round(item.price * 100), // Convert to cents
+            currency: 'USD',
+            quantity: item.quantity,
+            image: item.image
+          })),
+          total: Math.round(totalAmount * 100)
+        };
+
+        // Get current store name and domain from configuration or defaults
+        const storeName = paymentConfig.store?.name || 'Checkout';
+        const storeDomain = paymentConfig.store?.domain || 'localhost';
+
+        // Encode cart data for URL
+        const encodedCart = encodeURIComponent(JSON.stringify(cartData));
+        
+        // Redirect to Infinity payment checkout
+        window.location.href = `https://pays.myatlagia.store/checkout?cart=${encodedCart}&store=${storeName}&shop_domain=${storeDomain}`;
+      }
+    } catch (error) {
+      console.error('❌ Checkout error:', error);
     }
   };
 
@@ -344,11 +423,7 @@ export default function AddToCart({ product, language, apiEndpoint, hasChartData
                 </div>
               )}
             </div>
-            {selectedVariant.availableForSale ? (
-              <span className="text-sm font-medium text-green-600">In Stock</span>
-            ) : (
-              <span className="text-sm font-medium text-red-600">Out of Stock</span>
-            )}
+            <span className="text-sm font-medium text-green-600">In Stock</span>
           </div>
         )}
 
@@ -379,31 +454,33 @@ export default function AddToCart({ product, language, apiEndpoint, hasChartData
 
         {/* Main Add to Cart Buttons */}
         <div className="space-y-3">
-          <button
-            onClick={handleAddToCart}
-            disabled={!selectedVariant?.availableForSale || isLoading}
-            className="w-full bg-gray-900 text-white px-5 py-3 rounded-full text-base font-semibold 
-                     hover:bg-gray-800 transition-all duration-200 
-                     disabled:bg-gray-300 disabled:cursor-not-allowed 
-                     flex items-center justify-center gap-2 
-                     transform hover:scale-[1.02] active:scale-[0.98]"
-          >
-            {isLoading ? (
-              <>
-                <Loader2 className="animate-spin" size={20} />
-                <span>{translations.processing}</span>
-              </>
-            ) : (
-              <>
-                <ShoppingCart size={18} />
-                <span>{translations.addToCart}</span>
-              </>
-            )}
-          </button>
+          {projectType !== 'iptv' && (
+            <button
+              onClick={handleAddToCart}
+              disabled={isLoading}
+              className="w-full bg-gray-900 text-white px-5 py-3 rounded-full text-base font-semibold 
+                       hover:bg-gray-800 transition-all duration-200 
+                       disabled:bg-gray-300 disabled:cursor-not-allowed 
+                       flex items-center justify-center gap-2 
+                       transform hover:scale-[1.02] active:scale-[0.98]"
+            >
+              {isLoading ? (
+                <>
+                  <Loader2 className="animate-spin" size={20} />
+                  <span>{translations.processing}</span>
+                </>
+              ) : (
+                <>
+                  <ShoppingCart size={18} />
+                  <span>{translations.addToCart}</span>
+                </>
+              )}
+            </button>
+          )}
 
           <button
             onClick={handleBuyNow}
-            disabled={!selectedVariant?.availableForSale || isLoading}
+            disabled={isLoading}
             className="w-full bg-blue-600 text-white px-5 py-3 rounded-full text-base font-semibold 
                      hover:bg-blue-700 transition-all duration-200 
                      disabled:bg-gray-300 disabled:cursor-not-allowed 
@@ -417,7 +494,7 @@ export default function AddToCart({ product, language, apiEndpoint, hasChartData
                 <span>{translations.processing}</span>
               </>
             ) : (
-              <span>{translations.buyNow}</span>
+              <span>{projectType === 'iptv' ? 'Subscribe Now' : translations.buyNow}</span>
             )}
           </button>
         </div>
@@ -430,12 +507,12 @@ export default function AddToCart({ product, language, apiEndpoint, hasChartData
         }`}
       >
         <div className="max-w-7xl mx-auto space-y-3">
-          {/* Sticky Add to Cart Button */}
+          {/* Sticky Subscribe/Buy Now Button */}
           <button
-            onClick={handleAddToCart}
-            disabled={!selectedVariant?.availableForSale || isLoading}
-            className="w-full bg-gray-900 text-white px-5 py-3 rounded-full text-base font-semibold 
-                     hover:bg-gray-800 transition-all duration-200 
+            onClick={handleBuyNow}
+            disabled={isLoading}
+            className="w-full bg-blue-600 text-white px-5 py-3 rounded-full text-base font-semibold 
+                     hover:bg-blue-700 transition-all duration-200 
                      disabled:bg-gray-300 disabled:cursor-not-allowed 
                      flex items-center justify-center gap-2"
           >
@@ -445,10 +522,7 @@ export default function AddToCart({ product, language, apiEndpoint, hasChartData
                 <span>{translations.processing}</span>
               </>
             ) : (
-              <>
-                <ShoppingCart size={18} />
-                <span>{translations.addToCart}</span>
-              </>
+              <span>{projectType === 'iptv' ? 'Subscribe Now' : translations.buyNow}</span>
             )}
           </button>
 

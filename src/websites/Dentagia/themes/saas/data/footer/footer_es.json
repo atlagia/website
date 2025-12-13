@@ -1,0 +1,180 @@
+{
+  "company": {
+    "title": "Empresa",
+    "links": [
+      {
+        "name": "Acerca de",
+        "href": "/about"
+      },
+      {
+        "name": "Carreras",
+        "href": "/careers"
+      },
+      {
+        "name": "Prensa",
+        "href": "/press"
+      },
+      {
+        "name": "Blog",
+        "href": "/blog"
+      }
+    ]
+  },
+  "product": {
+    "title": "Funciones",
+    "links": [
+      {
+        "name": "Gestión de pacientes",
+        "href": "/features/patient-management"
+      },
+      {
+        "name": "Programación IA",
+        "href": "/features/ai-scheduling"
+      },
+      {
+        "name": "Facturación y pagos",
+        "href": "/features/billing"
+      },
+      {
+        "name": "Análisis del consultorio",
+        "href": "/features/analytics"
+      },
+      {
+        "name": "Plataforma cloud",
+        "href": "/platform/cloud"
+      },
+      {
+        "name": "Seguridad y HIPAA",
+        "href": "/features/hipaa"
+      },
+      {
+        "name": "Acceso móvil",
+        "href": "/platform/mobile"
+      },
+      {
+        "name": "Integraciones",
+        "href": "/platform/integrations"
+      }
+    ]
+  },
+  "services": {
+    "title": "Soluciones para consultorios",
+    "links": [
+      {
+        "name": "Consultorios individuales",
+        "href": "/solutions/solo-practice"
+      },
+      {
+        "name": "Multi-profesional",
+        "href": "/solutions/multi-practitioner"
+      },
+      {
+        "name": "Multi-ubicación",
+        "href": "/solutions/multi-location"
+      },
+      {
+        "name": "Configuración del consultorio",
+        "href": "/services/setup"
+      }
+    ]
+  },
+  "resources": {
+    "title": "Recursos",
+    "links": [
+      {
+        "name": "Documentación",
+        "href": "/documentation"
+      },
+      {
+        "name": "Referencia API",
+        "href": "/api"
+      },
+      {
+        "name": "Soporte",
+        "href": "/support"
+      },
+      {
+        "name": "Estado",
+        "href": "/status"
+      }
+    ]
+  },
+  "legal": {
+    "title": "Legal",
+    "links": [
+      {
+        "name": "Privacidad",
+        "href": "/privacy"
+      },
+      {
+        "name": "Términos",
+        "href": "/terms"
+      },
+      {
+        "name": "Política de cookies",
+        "href": "/cookie-policy"
+      }
+    ]
+  },
+  "social": {
+    "title": "Social",
+    "links": [
+      {
+        "name": "YouTube",
+        "href": "https://www.youtube.com/@Atlagia",
+        "icon": "youtube"
+      },
+      {
+        "name": "Instagram",
+        "href": "https://www.instagram.com/atlagia/",
+        "icon": "instagram"
+      },
+      {
+        "name": "Twitter",
+        "href": "https://twitter.com/atlagia",
+        "icon": "twitter"
+      },
+      {
+        "name": "LinkedIn",
+        "href": "https://linkedin.com/company/atlagia",
+        "icon": "linkedin"
+      },
+      {
+        "name": "GitHub",
+        "href": "https://github.com/atlagia",
+        "icon": "github"
+      }
+    ]
+  },
+  "newsletter": {
+    "title": "Suscríbase a nuestro newsletter",
+    "description": "Manténgase actualizado con consejos de gestión de consultorios dentales, actualizaciones de productos e insights de la industria.",
+    "buttonText": "Suscribirse",
+    "placeholderText": "Ingrese su correo electrónico"
+  },
+  "copyright": {
+    "text": "© 2025 Atlagia. Todos los derechos reservados.",
+    "links": [
+      {
+        "name": "Política de privacidad",
+        "href": "/privacy"
+      },
+      {
+        "name": "Términos de servicio",
+        "href": "/terms"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Información de contacto",
+    "addressTitle": "Dirección",
+    "contactTitle": "Contacto",
+    "company": "ATLAGIA INC.",
+    "address": "1940 COMMERCE STREET SUITE 308",
+    "city": "YORKTOWN HEIGHTS",
+    "postalCode": "NY 10598",
+    "country": "Estados Unidos",
+    "email": "contact@dentagia.com",
+    "phone": "+1 2035 472 248"
+  }
+}

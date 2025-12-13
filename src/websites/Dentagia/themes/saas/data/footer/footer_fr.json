@@ -1,0 +1,180 @@
+{
+  "company": {
+    "title": "Entreprise",
+    "links": [
+      {
+        "name": "À propos",
+        "href": "/about"
+      },
+      {
+        "name": "Carrières",
+        "href": "/careers"
+      },
+      {
+        "name": "Presse",
+        "href": "/press"
+      },
+      {
+        "name": "Blog",
+        "href": "/blog"
+      }
+    ]
+  },
+  "product": {
+    "title": "Fonctionnalités",
+    "links": [
+      {
+        "name": "Gestion des patients",
+        "href": "/features/patient-management"
+      },
+      {
+        "name": "Planification IA",
+        "href": "/features/ai-scheduling"
+      },
+      {
+        "name": "Facturation et paiements",
+        "href": "/features/billing"
+      },
+      {
+        "name": "Analytique du cabinet",
+        "href": "/features/analytics"
+      },
+      {
+        "name": "Plateforme cloud",
+        "href": "/platform/cloud"
+      },
+      {
+        "name": "Sécurité et HIPAA",
+        "href": "/features/hipaa"
+      },
+      {
+        "name": "Accès mobile",
+        "href": "/platform/mobile"
+      },
+      {
+        "name": "Intégrations",
+        "href": "/platform/integrations"
+      }
+    ]
+  },
+  "services": {
+    "title": "Solutions pour cabinets",
+    "links": [
+      {
+        "name": "Cabinets individuels",
+        "href": "/solutions/solo-practice"
+      },
+      {
+        "name": "Multi-praticiens",
+        "href": "/solutions/multi-practitioner"
+      },
+      {
+        "name": "Multi-sites",
+        "href": "/solutions/multi-location"
+      },
+      {
+        "name": "Configuration du cabinet",
+        "href": "/services/setup"
+      }
+    ]
+  },
+  "resources": {
+    "title": "Ressources",
+    "links": [
+      {
+        "name": "Documentation",
+        "href": "/documentation"
+      },
+      {
+        "name": "Référence API",
+        "href": "/api"
+      },
+      {
+        "name": "Support",
+        "href": "/support"
+      },
+      {
+        "name": "Statut",
+        "href": "/status"
+      }
+    ]
+  },
+  "legal": {
+    "title": "Légal",
+    "links": [
+      {
+        "name": "Confidentialité",
+        "href": "/privacy"
+      },
+      {
+        "name": "Conditions",
+        "href": "/terms"
+      },
+      {
+        "name": "Politique des cookies",
+        "href": "/cookie-policy"
+      }
+    ]
+  },
+  "social": {
+    "title": "Social",
+    "links": [
+      {
+        "name": "YouTube",
+        "href": "https://www.youtube.com/@Atlagia",
+        "icon": "youtube"
+      },
+      {
+        "name": "Instagram",
+        "href": "https://www.instagram.com/atlagia/",
+        "icon": "instagram"
+      },
+      {
+        "name": "Twitter",
+        "href": "https://twitter.com/atlagia",
+        "icon": "twitter"
+      },
+      {
+        "name": "LinkedIn",
+        "href": "https://linkedin.com/company/atlagia",
+        "icon": "linkedin"
+      },
+      {
+        "name": "GitHub",
+        "href": "https://github.com/atlagia",
+        "icon": "github"
+      }
+    ]
+  },
+  "newsletter": {
+    "title": "Abonnez-vous à notre newsletter",
+    "description": "Restez informé des conseils de gestion de cabinet dentaire, des mises à jour produit et des insights du secteur.",
+    "buttonText": "S'abonner",
+    "placeholderText": "Entrez votre email"
+  },
+  "copyright": {
+    "text": "© 2025 Atlagia. Tous droits réservés.",
+    "links": [
+      {
+        "name": "Politique de confidentialité",
+        "href": "/privacy"
+      },
+      {
+        "name": "Conditions d'utilisation",
+        "href": "/terms"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Informations de contact",
+    "addressTitle": "Adresse",
+    "contactTitle": "Contact",
+    "company": "ATLAGIA INC.",
+    "address": "1940 COMMERCE STREET SUITE 308",
+    "city": "YORKTOWN HEIGHTS",
+    "postalCode": "NY 10598",
+    "country": "États-Unis",
+    "email": "contact@dentagia.com",
+    "phone": "+1 2035 472 248"
+  }
+}

@@ -1,0 +1,205 @@
+{
+  "pageTitle": "À propos de Dentagia",
+  "pageDescription": "Découvrez la mission, les valeurs et l'engagement de Dentagia dans la transformation des cabinets dentaires grâce à un logiciel de gestion de cabinet innovant propulsé par l'IA.",
+  "hero": {
+    "badge": "Notre Histoire",
+    "title": "Renforcer les cabinets dentaires grâce à l'innovation IA",
+    "description": "Dentagia est à l'avant-garde de la transformation de la gestion de cabinet dentaire, aidant les cabinets dentaires de toutes tailles à tirer parti de la technologie IA de pointe et des solutions basées sur le cloud pour atteindre l'excellence opérationnelle et des soins patients exceptionnels.",
+    "image": "/images/about/hero.jpg"
+  },
+  "mission": {
+    "title": "Notre Mission",
+    "description": "Révolutionner la gestion de cabinet dentaire en rendant les solutions propulsées par l'IA et basées sur le cloud accessibles, pratiques et impactantes pour les cabinets dentaires de toutes tailles.",
+    "items": [
+      {
+        "title": "Accessibilité",
+        "description": "Rendre les solutions de gestion de cabinet avancées accessibles aux cabinets dentaires de toutes tailles, des praticiens individuels aux groupes multi-sites",
+        "icon": "Globe"
+      },
+      {
+        "title": "Innovation",
+        "description": "Repousser continuellement les limites du possible avec la technologie IA dans la gestion de cabinet dentaire",
+        "icon": "Lightbulb"
+      },
+      {
+        "title": "Impact",
+        "description": "Délivrer des résultats mesurables et des transformations qui aident les cabinets à croître et à améliorer les soins aux patients",
+        "icon": "Target"
+      }
+    ]
+  },
+  "values": {
+    "title": "Nos Valeurs",
+    "description": "Les principes qui guident tout ce que nous faisons chez Dentagia",
+    "items": [
+      {
+        "title": "Excellence",
+        "description": "Nous visons l'excellence dans tous les aspects de notre travail, du développement produit au service client et au support de cabinet",
+        "icon": "Award"
+      },
+      {
+        "title": "Intégrité",
+        "description": "Nous maintenons les plus hauts standards d'intégrité, de sécurité et de conformité HIPAA dans toutes nos opérations",
+        "icon": "Shield"
+      },
+      {
+        "title": "Innovation",
+        "description": "Nous innovons constamment pour rester en avance sur les tendances du secteur et répondre aux besoins évolutifs des cabinets dentaires modernes",
+        "icon": "Zap"
+      },
+      {
+        "title": "Partenariat",
+        "description": "Nous croyons en la construction de partenariats solides avec les cabinets dentaires, en comprenant leurs défis et objectifs uniques",
+        "icon": "Handshake"
+      }
+    ]
+  },
+  "team": {
+    "title": "Notre Équipe",
+    "description": "Rencontrez les personnes passionnées derrière le succès de Dentagia",
+    "leadership": {
+      "title": "Équipe de Direction",
+      "members": [
+        {
+          "name": "Dr. Sarah Martinez",
+          "role": "PDG & Fondatrice",
+          "bio": "Plus de 20 ans d'expérience dans la gestion de cabinet dentaire et l'innovation technologique en santé",
+          "image": "/images/team/sarah.jpg"
+        },
+        {
+          "name": "Michael Chen",
+          "role": "Directeur Technique",
+          "bio": "Expert en technologie IA, infrastructure cloud et architecture logicielle de santé",
+          "image": "/images/team/michael.jpg"
+        },
+        {
+          "name": "Emily Rodriguez",
+          "role": "Responsable Produit",
+          "bio": "Spécialiste en gestion de cabinet dentaire avec une compréhension approfondie des opérations de cabinet et des soins aux patients",
+          "image": "/images/team/emily.jpg"
+        }
+      ]
+    }
+  },
+  "history": {
+    "title": "Notre Parcours",
+    "description": "De la startup au partenaire de confiance pour les cabinets dentaires",
+    "timeline": [
+      {
+        "year": "2020",
+        "title": "Fondation",
+        "description": "Dentagia a été fondée avec une vision de révolutionner la gestion de cabinet dentaire avec des solutions propulsées par l'IA"
+      },
+      {
+        "year": "2021",
+        "title": "Premier Jalon",
+        "description": "Lancement de notre première solution de gestion de cabinet dentaire propulsée par l'IA avec planification patient et automatisation de la facturation"
+      },
+      {
+        "year": "2022",
+        "title": "Expansion",
+        "description": "Expansion pour servir les cabinets dentaires à l'échelle nationale et atteint plus de 100 implémentations de cabinets"
+      },
+      {
+        "year": "2023",
+        "title": "Innovation",
+        "description": "Introduction de fonctionnalités IA avancées incluant analytique prédictive, rappels automatisés et insights de croissance du cabinet"
+      },
+      {
+        "year": "2024",
+        "title": "Leadership",
+        "description": "Reconnu comme une plateforme de gestion de cabinet dentaire de premier plan, de confiance pour plus de 500 cabinets dentaires"
+      }
+    ]
+  },
+  "achievements": {
+    "title": "Nos Réalisations",
+    "description": "Reconnaissance et jalons qui démontrent notre impact sur les cabinets dentaires",
+    "items": [
+      {
+        "title": "Reconnaissance du Secteur",
+        "description": "Plusieurs prix pour l'innovation et l'excellence dans les logiciels de gestion de cabinet dentaire",
+        "icon": "Trophy"
+      },
+      {
+        "title": "Succès des Cabinets",
+        "description": "Plus de 500 implémentations réussies dans les cabinets dentaires de toutes tailles",
+        "icon": "Users"
+      },
+      {
+        "title": "Portée Nationale",
+        "description": "Servir les cabinets dentaires à travers le pays avec accessibilité basée sur le cloud",
+        "icon": "Globe"
+      },
+      {
+        "title": "Conformité HIPAA",
+        "description": "Certification de conformité HIPAA complète et normes de sécurité pour la protection des données patients",
+        "icon": "Shield"
+      }
+    ]
+  },
+  "partners": {
+    "title": "Nos Partenaires",
+    "description": "Travailler avec les leaders du secteur pour fournir des solutions exceptionnelles aux cabinets dentaires",
+    "categories": [
+      {
+        "category": "Partenaires Technologiques",
+        "items": [
+          { "name": "AWS Cloud", "logo": "/images/partners/aws.svg" },
+          { "name": "Microsoft Azure", "logo": "/images/partners/microsoft.svg" },
+          { "name": "Google Cloud", "logo": "/images/partners/gcp.svg" }
+        ]
+      },
+      {
+        "category": "Partenaires du Secteur",
+        "items": [
+          { "name": "Associations Dentaires", "logo": "/images/partners/dental-association.svg" },
+          { "name": "Technologie de Santé", "logo": "/images/partners/healthcare.svg" },
+          { "name": "Gestion de Cabinet", "logo": "/images/partners/practice-management.svg" }
+        ]
+      }
+    ]
+  },
+  "culture": {
+    "title": "Notre Culture",
+    "description": "Un lieu de travail qui favorise l'innovation et la croissance dans la gestion de cabinet dentaire",
+    "items": [
+      {
+        "title": "Innovation en Premier",
+        "description": "Nous encourageons la pensée créative et les approches novatrices pour résoudre les défis de gestion de cabinet dentaire",
+        "icon": "Lightbulb"
+      },
+      {
+        "title": "Apprentissage Continu",
+        "description": "Nous investissons dans la croissance et le développement de notre équipe pour rester en avance sur les tendances du secteur dentaire",
+        "icon": "GraduationCap"
+      },
+      {
+        "title": "Équilibre Travail-Vie",
+        "description": "Nous promouvons un équilibre sain entre le travail et la vie personnelle, comprenant les exigences des professionnels de santé",
+        "icon": "Heart"
+      },
+      {
+        "title": "Diversité & Inclusion",
+        "description": "Nous célébrons la diversité et favorisons un environnement inclusif qui reflète la communauté dentaire que nous servons",
+        "icon": "Users"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Rejoignez Notre Parcours",
+    "description": "Soyez partie prenante de l'avenir de la gestion de cabinet dentaire",
+    "buttons": [
+      {
+        "text": "Voir les Carrières",
+        "href": "/careers",
+        "variant": "primary"
+      },
+      {
+        "text": "Contactez-nous",
+        "href": "/contact",
+        "variant": "secondary"
+      }
+    ]
+  }
+}

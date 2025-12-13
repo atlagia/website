@@ -1,0 +1,170 @@
+{
+  "pageTitle": "Programar una Demostración",
+  "pageDescription": "Experimente el poder del software de gestión de consultorios dentales impulsado por IA de Dentagia con nuestra demostración interactiva",
+  "hero": {
+    "badge": "Demostración Interactiva",
+    "title": "Vea Dentagia en Acción",
+    "description": "Pruebe nuestra plataforma de gestión de consultorios dentales impulsada por IA de primera mano. No se requiere tarjeta de crédito, no se necesita instalación. Comience en segundos y vea cómo Dentagia puede transformar su consultorio.",
+    "cta": {
+      "primary": {
+        "text": "Programar Demostración",
+        "href": "#demo-form"
+      },
+      "secondary": {
+        "text": "Ver Video",
+        "href": "#video"
+      }
+    }
+  },
+  "features": [
+    {
+      "icon": "zap",
+      "title": "Acceso Instantáneo",
+      "description": "Comience a explorar inmediatamente con datos de ejemplo de consultorio dental precargados"
+    },
+    {
+      "icon": "shield",
+      "title": "Seguro y Privado",
+      "description": "Sus datos de demostración están aislados y se eliminan automáticamente después de 24 horas. Seguridad conforme a HIPAA."
+    },
+    {
+      "icon": "users",
+      "title": "Tour Guiado",
+      "description": "Recorrido paso a paso de las funciones clave que incluyen gestión de pacientes, programación y facturación"
+    },
+    {
+      "icon": "rocket",
+      "title": "Todas las Funciones",
+      "description": "Experimente todas las funciones premium que incluyen programación impulsada por IA y análisis del consultorio"
+    }
+  ],
+  "demoForm": {
+    "title": "Solicite Su Demostración Personalizada",
+    "subtitle": "Complete el formulario a continuación y configuraremos un entorno de demostración personalizado para su consultorio",
+    "fields": {
+      "fullName": {
+        "label": "Nombre Completo",
+        "placeholder": "Dr. Juan Pérez",
+        "required": true
+      },
+      "email": {
+        "label": "Correo Electrónico Laboral",
+        "placeholder": "juan@consultoriodental.com",
+        "required": true
+      },
+      "company": {
+        "label": "Nombre del Consultorio",
+        "placeholder": "Su Consultorio Dental",
+        "required": true
+      },
+      "industry": {
+        "label": "Tipo de Consultorio",
+        "placeholder": "Seleccione el tipo de su consultorio",
+        "options": [
+          "Odontología General",
+          "Odontología Estética",
+          "Odontología Pediátrica",
+          "Ortodoncia",
+          "Cirugía Oral",
+          "Periodoncia",
+          "Endodoncia",
+          "Multi-Especialidad",
+          "Otro"
+        ],
+        "required": true
+      },
+      "useCase": {
+        "label": "¿Qué le gustaría explorar?",
+        "placeholder": "Cuéntenos sobre sus necesidades de gestión del consultorio...",
+        "required": false
+      }
+    },
+    "submitButton": "Programar Mi Demostración",
+    "consent": "Al enviar este formulario, acepta nuestra Política de Privacidad y Términos de Servicio"
+  },
+  "benefits": {
+    "title": "¿Por Qué Probar Nuestra Demostración?",
+    "items": [
+      {
+        "icon": "check-circle",
+        "title": "Escenarios de Consultorio Reales",
+        "description": "Explore casos de uso específicos para consultorios dentales con datos de pacientes y escenarios de citas realistas"
+      },
+      {
+        "icon": "trending-up",
+        "title": "Ver el Potencial de ROI",
+        "description": "Comprenda cómo Dentagia puede mejorar la eficiencia de su consultorio, reducir las ausencias y aumentar los ingresos"
+      },
+      {
+        "icon": "settings",
+        "title": "Opciones de Personalización",
+        "description": "Descubra cómo adaptar la plataforma a sus necesidades y flujos de trabajo específicos del consultorio"
+      },
+      {
+        "icon": "award",
+        "title": "Soporte de Expertos",
+        "description": "Obtenga respuestas de nuestros especialistas en gestión de consultorios dentales durante su demostración"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Lo Que Dicen Nuestros Usuarios de Demostración",
+    "items": [
+      {
+        "quote": "La demostración fue increíblemente intuitiva. En 10 minutos, pude ver exactamente cómo Dentagia transformaría las operaciones de nuestro consultorio y nos ahorraría horas cada semana.",
+        "author": "Dr. Sarah Martinez",
+        "role": "Propietario del Consultorio",
+        "company": "Clínica Dental del Centro",
+        "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah"
+      },
+      {
+        "quote": "He probado muchas demostraciones de gestión de consultorios, pero Dentagia se destacó. Las funciones de programación impulsada por IA y gestión de pacientes son exactamente lo que necesitábamos.",
+        "author": "Dr. Michael Chen",
+        "role": "Dentista Principal",
+        "company": "Family Dental Care",
+        "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Michael"
+      }
+    ]
+  },
+  "video": {
+    "title": "Vea una Descripción General Rápida",
+    "description": "Vea cómo funciona Dentagia en solo 2 minutos",
+    "thumbnail": "https://via.placeholder.com/800x450/6366f1/ffffff?text=Dentagia+Demo+Video",
+    "duration": "2:30",
+    "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "items": [
+      {
+        "question": "¿Cuánto dura la demostración?",
+        "answer": "Su entorno de demostración personalizado permanece activo durante 24 horas, dándole mucho tiempo para explorar a su propio ritmo y ver cómo Dentagia se adapta a su consultorio."
+      },
+      {
+        "question": "¿Se requiere alguna instalación?",
+        "answer": "¡No se requiere instalación! Nuestra demostración se ejecuta completamente en su navegador web. Simplemente haga clic en el enlace que le enviamos y comience a explorar."
+      },
+      {
+        "question": "¿Tendré acceso a todas las funciones?",
+        "answer": "Sí, tendrá acceso a todas las funciones premium durante su período de demostración, incluyendo programación impulsada por IA, gestión de pacientes, facturación y análisis del consultorio."
+      },
+      {
+        "question": "¿Puedo importar mis propios datos del consultorio?",
+        "answer": "La demostración viene con datos de ejemplo de consultorio dental, pero también puede cargar sus propios datos para ver cómo funciona la plataforma con su información real del consultorio."
+      },
+      {
+        "question": "¿Qué sucede después de que expire la demostración?",
+        "answer": "Todos los datos de demostración se eliminan automáticamente después de 24 horas. Si desea continuar, podemos ayudarlo a configurar una cuenta de prueba o programar una consulta personalizada."
+      }
+    ]
+  },
+  "cta": {
+    "title": "¿Listo para Transformar Su Consultorio?",
+    "description": "Únase a cientos de consultorios dentales que ya usan Dentagia para optimizar sus operaciones y hacer crecer su consultorio.",
+    "button": {
+      "text": "Programe Su Demostración Ahora",
+      "href": "#demo-form"
+    }
+  }
+}
+

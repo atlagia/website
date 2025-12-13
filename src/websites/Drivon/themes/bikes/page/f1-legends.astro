@@ -1,0 +1,263 @@
+---
+import Layoutc from '@layouts/Layoutc.astro';
+import { ArrowRight, Trophy, Star, Award, Crown, Medal } from 'lucide-react';
+
+// Generate static paths for allowed languages from environment
+export async function getStaticPaths() {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  const languages = allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+  
+  return languages.map(lang => ({ params: { lang } }));
+}
+
+const { lang = 'en' } = Astro.params;
+const baseUrl = import.meta.env.DOMAINE || 'https://drivon.store';
+const storeName = import.meta.env.PUBLIC_SITE_NAME || 'Drivon';
+
+// SEO
+const seoTitle = `F1 Legends | ${storeName}`;
+const seoDescription = "Celebrate the greatest Formula 1 drivers in history. From world champions to racing icons, honor the legends who shaped F1.";
+---
+
+<Layoutc title={seoTitle} description={seoDescription} lang={lang}>
+  <div class="min-h-screen bg-gray-50">
+    <!-- Hero Section -->
+    <section class="relative h-[60vh] bg-gradient-to-br from-red-900 via-red-800 to-black">
+      <div class="absolute inset-0 bg-black/50"></div>
+      <div class="relative z-10 h-full flex items-center justify-center text-center px-4">
+        <div class="max-w-4xl mx-auto">
+          <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">
+            F1 Legends
+          </h1>
+          <p class="text-xl md:text-2xl text-gray-200 mb-8">
+            The greatest drivers in Formula 1 history
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href={`/${lang}/f1-hoodies`} class="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+              F1 Legends Collection
+            </a>
+            <a href={`/${lang}/formula1-collection`} class="bg-white/20 hover:bg-white/30 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+              F1 Collection
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- F1 Legends Features -->
+    <section class="py-20 px-4">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">Champions of Formula 1</h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            From the golden age of Formula 1 to modern champions, celebrate the legendary drivers who have shaped the world's most prestigious racing series.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
+              <Crown class="w-8 h-8 text-red-600" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">World Champions</h3>
+            <p class="text-gray-600">
+              Celebrate the legendary F1 drivers who have conquered the world championship and earned their place in racing history.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+              <Star class="w-8 h-8 text-blue-600" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Racing Icons</h3>
+            <p class="text-gray-600">
+              Honor the legendary drivers who have shaped Formula 1 and inspired generations of racing fans worldwide.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-6">
+              <Medal class="w-8 h-8 text-yellow-600" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Modern Heroes</h3>
+            <p class="text-gray-600">
+              Celebrate today's F1 heroes who continue to push the boundaries of speed and engineering excellence.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- F1 Legends Categories -->
+    <section class="py-20 bg-gray-100">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">F1 Legends Collection</h2>
+          <p class="text-xl text-gray-600">Celebrate the greatest F1 drivers</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <a href={`/${lang}/f1-hoodies`} class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+            <div class="h-48 bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center">
+              <Crown class="w-16 h-16 text-white" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">F1 Legends Hoodies</h3>
+              <p class="text-gray-600 mb-4">Premium hoodies celebrating F1 champions</p>
+              <div class="flex items-center text-red-600 font-semibold group-hover:text-red-700">
+                Shop F1 Legends Hoodies <ArrowRight class="w-4 h-4 ml-2" />
+              </div>
+            </div>
+          </a>
+
+          <a href={`/${lang}/collections`} class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+            <div class="h-48 bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center">
+              <Star class="w-16 h-16 text-white" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">F1 Legends Tees</h3>
+              <p class="text-gray-600 mb-4">Classic tees honoring F1 racing icons</p>
+              <div class="flex items-center text-blue-600 font-semibold group-hover:text-blue-700">
+                Shop F1 Legends Tees <ArrowRight class="w-4 h-4 ml-2" />
+              </div>
+            </div>
+          </a>
+
+          <a href={`/${lang}/racing-accessories`} class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+            <div class="h-48 bg-gradient-to-br from-yellow-500 to-yellow-700 flex items-center justify-center">
+              <Award class="w-16 h-16 text-white" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">F1 Legends Accessories</h3>
+              <p class="text-gray-600 mb-4">Essential accessories for F1 legends fans</p>
+              <div class="flex items-center text-yellow-600 font-semibold group-hover:text-yellow-700">
+                Shop F1 Legends Accessories <ArrowRight class="w-4 h-4 ml-2" />
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- F1 Legends Spotlight -->
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">Legendary F1 Drivers</h2>
+          <p class="text-xl text-gray-600">Honor the greatest drivers in Formula 1 history</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <div class="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+              <Crown class="w-10 h-10 text-red-600" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">World Champions</h3>
+            <p class="text-gray-600 text-center mb-6">
+              Celebrate the drivers who have conquered the F1 world championship and earned their place in racing history.
+            </p>
+            <a href={`/${lang}/f1-hoodies`} class="flex items-center justify-center text-red-600 font-semibold hover:text-red-700">
+              Shop Champions Collection <ArrowRight class="w-4 h-4 ml-2" />
+            </a>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+              <Star class="w-10 h-10 text-blue-600" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">Racing Icons</h3>
+            <p class="text-gray-600 text-center mb-6">
+              Honor the legendary drivers who have shaped Formula 1 and inspired generations of racing fans.
+            </p>
+            <a href={`/${lang}/collections`} class="flex items-center justify-center text-blue-600 font-semibold hover:text-blue-700">
+              Shop Icons Collection <ArrowRight class="w-4 h-4 ml-2" />
+            </a>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <div class="w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+              <Medal class="w-10 h-10 text-yellow-600" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">Modern Heroes</h3>
+            <p class="text-gray-600 text-center mb-6">
+              Celebrate today's F1 heroes who continue to push the boundaries of speed and engineering excellence.
+            </p>
+            <a href={`/${lang}/collections`} class="flex items-center justify-center text-yellow-600 font-semibold hover:text-yellow-700">
+              Shop Modern Heroes <ArrowRight class="w-4 h-4 ml-2" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- F1 Heritage -->
+    <section class="py-20 bg-gray-100">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">F1 Heritage & Legacy</h2>
+          <p class="text-xl text-gray-600">Experience the rich history of Formula 1</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="text-center">
+            <div class="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+              <Trophy class="w-10 h-10 text-red-600" />
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Championships</h3>
+            <p class="text-gray-600">
+              Celebrate the drivers who have won multiple world championships and earned their place in F1 history.
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+              <Star class="w-10 h-10 text-blue-600" />
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Racing Records</h3>
+            <p class="text-gray-600">
+              Honor the drivers who have set incredible racing records and achieved legendary status in Formula 1.
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+              <Award class="w-10 h-10 text-yellow-600" />
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Iconic Moments</h3>
+            <p class="text-gray-600">
+              Remember the legendary moments and achievements that have defined Formula 1 racing history.
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+              <Crown class="w-10 h-10 text-green-600" />
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Racing Legacy</h3>
+            <p class="text-gray-600">
+              Experience the lasting impact and legacy of the greatest Formula 1 drivers in racing history.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-gray-900 text-white">
+      <div class="max-w-4xl mx-auto text-center px-4">
+        <h2 class="text-4xl font-bold mb-6">Honor F1 Legends</h2>
+        <p class="text-xl text-gray-300 mb-8">
+          Join the global F1 community and celebrate the greatest drivers in Formula 1 history with our authentic legends collection.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href={`/${lang}/f1-hoodies`} class="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+            Shop F1 Legends Collection
+          </a>
+          <a href={`/${lang}/formula1-collection`} class="bg-white/20 hover:bg-white/30 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+            Explore F1 Collection
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layoutc>

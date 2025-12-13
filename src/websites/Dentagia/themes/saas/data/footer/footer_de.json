@@ -1,0 +1,180 @@
+{
+  "company": {
+    "title": "Unternehmen",
+    "links": [
+      {
+        "name": "Über uns",
+        "href": "/about"
+      },
+      {
+        "name": "Karriere",
+        "href": "/careers"
+      },
+      {
+        "name": "Presse",
+        "href": "/press"
+      },
+      {
+        "name": "Blog",
+        "href": "/blog"
+      }
+    ]
+  },
+  "product": {
+    "title": "Funktionen",
+    "links": [
+      {
+        "name": "Patientenmanagement",
+        "href": "/features/patient-management"
+      },
+      {
+        "name": "KI-Terminplanung",
+        "href": "/features/ai-scheduling"
+      },
+      {
+        "name": "Abrechnung und Zahlungen",
+        "href": "/features/billing"
+      },
+      {
+        "name": "Praxisanalysen",
+        "href": "/features/analytics"
+      },
+      {
+        "name": "Cloud-Plattform",
+        "href": "/platform/cloud"
+      },
+      {
+        "name": "Sicherheit und HIPAA",
+        "href": "/features/hipaa"
+      },
+      {
+        "name": "Mobiler Zugriff",
+        "href": "/platform/mobile"
+      },
+      {
+        "name": "Integrationen",
+        "href": "/platform/integrations"
+      }
+    ]
+  },
+  "services": {
+    "title": "Praxislösungen",
+    "links": [
+      {
+        "name": "Einzelpraxen",
+        "href": "/solutions/solo-practice"
+      },
+      {
+        "name": "Mehrzahnarztpraxen",
+        "href": "/solutions/multi-practitioner"
+      },
+      {
+        "name": "Multi-Standort",
+        "href": "/solutions/multi-location"
+      },
+      {
+        "name": "Praxis-Einrichtung",
+        "href": "/services/setup"
+      }
+    ]
+  },
+  "resources": {
+    "title": "Ressourcen",
+    "links": [
+      {
+        "name": "Dokumentation",
+        "href": "/documentation"
+      },
+      {
+        "name": "API-Referenz",
+        "href": "/api"
+      },
+      {
+        "name": "Support",
+        "href": "/support"
+      },
+      {
+        "name": "Status",
+        "href": "/status"
+      }
+    ]
+  },
+  "legal": {
+    "title": "Rechtliches",
+    "links": [
+      {
+        "name": "Datenschutz",
+        "href": "/privacy"
+      },
+      {
+        "name": "Nutzungsbedingungen",
+        "href": "/terms"
+      },
+      {
+        "name": "Cookie-Richtlinie",
+        "href": "/cookie-policy"
+      }
+    ]
+  },
+  "social": {
+    "title": "Social",
+    "links": [
+      {
+        "name": "YouTube",
+        "href": "https://www.youtube.com/@Atlagia",
+        "icon": "youtube"
+      },
+      {
+        "name": "Instagram",
+        "href": "https://www.instagram.com/atlagia/",
+        "icon": "instagram"
+      },
+      {
+        "name": "Twitter",
+        "href": "https://twitter.com/atlagia",
+        "icon": "twitter"
+      },
+      {
+        "name": "LinkedIn",
+        "href": "https://linkedin.com/company/atlagia",
+        "icon": "linkedin"
+      },
+      {
+        "name": "GitHub",
+        "href": "https://github.com/atlagia",
+        "icon": "github"
+      }
+    ]
+  },
+  "newsletter": {
+    "title": "Abonnieren Sie unseren Newsletter",
+    "description": "Bleiben Sie auf dem Laufenden mit Tipps zur Praxisführung, Produkt-Updates und Brancheneinblicken.",
+    "buttonText": "Abonnieren",
+    "placeholderText": "Geben Sie Ihre E-Mail ein"
+  },
+  "copyright": {
+    "text": "© 2025 Atlagia. Alle Rechte vorbehalten.",
+    "links": [
+      {
+        "name": "Datenschutzrichtlinie",
+        "href": "/privacy"
+      },
+      {
+        "name": "Nutzungsbedingungen",
+        "href": "/terms"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Kontaktinformationen",
+    "addressTitle": "Adresse",
+    "contactTitle": "Kontakt",
+    "company": "ATLAGIA INC.",
+    "address": "1940 COMMERCE STREET SUITE 308",
+    "city": "YORKTOWN HEIGHTS",
+    "postalCode": "NY 10598",
+    "country": "Vereinigte Staaten",
+    "email": "contact@dentagia.com",
+    "phone": "+1 2035 472 248"
+  }
+}

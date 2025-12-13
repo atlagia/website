@@ -1,189 +1,351 @@
 ---
 import Layout from '@layouts/Layoutp.astro';
-import { useCartStore } from '../../store/cart';
+import BaseHead from '@themes/default/components/BaseHead.astro';
+import { getLangFromUrl, useTranslations } from '@utils/i18n';
+import StripeConnectPayment from '../../components/StripeConnectPayment';
+import { useCartStore } from '@store/cart';
 
 const { lang } = Astro.params;
-const searchParams = Astro.url.searchParams;
-const total = searchParams.get('total');
+const t = useTranslations(lang);
 
-// Get payment config from layout
-const paymentConfig = {
-  method: import.meta.env.PUBLIC_PAYMENT_METHOD,
-  hoodpay: {
-    apiUrl: import.meta.env.HOODPAY_API_URL,
-    businessId: import.meta.env.HOODPAY_BUSINESS_ID,
-    authToken: import.meta.env.HOODPAY_AUTH_TOKEN,
-    redirectUrl: `${import.meta.env.DOMAINE}${import.meta.env.HOODPAY_REDIRECT_URL}`
+// Retrieve cart data from URL or session
+const urlParams = Astro.url.searchParams;
+const total = urlParams.get('total') || '0';
+let cartItems: any[] = [];
+
+try {
+  const cartParam = urlParams.get('cart');
+  if (cartParam) {
+    const parsedCart = JSON.parse(decodeURIComponent(cartParam));
+    cartItems = parsedCart.items || [];
   }
-};
+} catch (error) {
+  console.error('Error parsing cart:', error);
+}
 
-// Translations
-const translations = {
-  en: {
-    title: 'Checkout',
-    shipping: 'Shipping Information',
-    firstName: 'First Name',
-    lastName: 'Last Name',
-    email: 'Email',
-    phone: 'Phone',
-    address: 'Address',
-    city: 'City',
-    country: 'Country',
-    postalCode: 'Postal Code',
-    payButton: 'Pay Now',
-    total: 'Total',
-  },
-  // Add other languages as needed
-};
+// Prepare countries list
+const countries = [
+  { code: 'FR', name: 'France' },
+  { code: 'US', name: 'United States' },
+  { code: 'CA', name: 'Canada' },
+  { code: 'GB', name: 'United Kingdom' },
+];
 
-const t = translations[lang] || translations.en;
+// Determine seller account ID and Stripe publishable key
+const sellerAccountId = import.meta.env.STRIPE_CONNECT_SELLER_ACCOUNT_ID || 'acct_default_seller';
+const stripePublishableKey = import.meta.env.STRIPE_PLATFORM_PUBLISHABLE_KEY || '';
 ---
 
-<Layout title={t.title}>
-  <div class="max-w-2xl mx-auto px-4 py-8">
-    <h1 class="text-3xl font-bold mb-8">{t.title}</h1>
-    
-    <div class="bg-white rounded-lg shadow p-6 mb-6">
-      <h2 class="text-xl font-semibold mb-4">{t.shipping}</h2>
+<!DOCTYPE html>
+<html lang={lang}>
+<head>
+  <BaseHead 
+    title="Checkout | ProDriver Gear"
+    description="Complete your purchase securely"
+    isCheckoutPage={true}
+  />
+  <script is:inline>
+    // Remove cart and total from URL after page load
+    window.addEventListener('load', () => {
+      if (window.history.replaceState) {
+        const url = new URL(window.location.href);
+        url.searchParams.delete('cart');
+        url.searchParams.delete('total');
+        window.history.replaceState({}, document.title, url.toString());
+      }
+    });
+
+    // Close cart when checkout page loads
+    if (window.localStorage) {
+      const cartStore = JSON.parse(localStorage.getItem('cart-storage') || '{}');
+      if (cartStore) {
+        cartStore.state = { ...cartStore.state, isOpen: false };
+        localStorage.setItem('cart-storage', JSON.stringify(cartStore));
+      }
+    }
       
-      <form id="checkoutForm" class="space-y-4">
-        <div class="grid grid-cols-2 gap-4">
+    // If using Zustand store directly
+    if (window.useCartStore) {
+      window.useCartStore.getState().setIsOpen(false);
+    }
+  </script>
+</head>
+<body>
+  <Layout title="Checkout" lang={lang}>
+    <div class="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Checkout Form -->
+        <div class="bg-white p-8 rounded-lg shadow-sm">
+          <h2 class="text-2xl font-bold mb-6 text-gray-900">Contact</h2>
+          <form id="checkout-form" class="space-y-6">
+            <input type="hidden" name="total" value={total} />
+            <input type="hidden" name="cart" value={JSON.stringify(cartItems)} />
+            
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Adresse e-mail</label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                required 
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+              <div class="flex items-center mt-2">
+                <input 
+                  type="checkbox" 
+                  id="newsletter" 
+                  name="newsletter" 
+                  class="mr-2 text-blue-600 focus:ring-blue-500"
+                />
+                <label for="newsletter" class="text-sm text-gray-700">
+                  Envoyez-moi des nouvelles et des offres par e-mail
+                </label>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold mb-4 text-gray-900">Livraison</h3>
+              <div>
+                <label for="country" class="block text-sm font-medium text-gray-700 mb-2">Pays/région</label>
+                <select 
+                  id="country" 
+                  name="country" 
+                  required 
+                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                  {countries.map((country) => (
+                    <option value={country.code} selected={country.code === 'FR'}>{country.name}</option>
+                  ))}
+                </select>
+              </div>
+
+              <div class="grid grid-cols-2 gap-4 mt-4">
           <div>
-            <label class="block text-sm font-medium text-gray-700">{t.firstName}</label>
-            <input type="text" name="firstName" required
-              class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                  <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">Prénom</label>
+                  <input 
+                    type="text" 
+                    id="firstName" 
+                    name="firstName" 
+                    required 
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
           <div>
-            <label class="block text-sm font-medium text-gray-700">{t.lastName}</label>
-            <input type="text" name="lastName" required
-              class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                  <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">Nom</label>
+                  <input 
+                    type="text" 
+                    id="lastName" 
+                    name="lastName" 
+                    required 
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
         </div>
 
-        <div>
-          <label class="block text-sm font-medium text-gray-700">{t.email}</label>
-          <input type="email" name="email" required
-            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              <div class="mt-4">
+                <label for="company" class="block text-sm font-medium text-gray-700 mb-2">Entreprise (optionnel)</label>
+                <input 
+                  type="text" 
+                  id="company" 
+                  name="company" 
+                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+
+              <div class="mt-4">
+                <label for="address" class="block text-sm font-medium text-gray-700 mb-2">Adresse</label>
+                <input 
+                  type="text" 
+                  id="address" 
+                  name="address" 
+                  required 
+                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="Saisissez votre adresse"
           />
         </div>
 
-        <div>
-          <label class="block text-sm font-medium text-gray-700">{t.phone}</label>
-          <input type="tel" name="phone" required
-            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              <div class="mt-4">
+                <label for="apartment" class="block text-sm font-medium text-gray-700 mb-2">Appartement, suite, etc. (optionnel)</label>
+                <input 
+                  type="text" 
+                  id="apartment" 
+                  name="apartment" 
+                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
 
+              <div class="grid grid-cols-2 gap-4 mt-4">
+                <div>
+                  <label for="zipCode" class="block text-sm font-medium text-gray-700 mb-2">Code postal</label>
+                  <input 
+                    type="text" 
+                    id="zipCode" 
+                    name="zipCode" 
+                    required 
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700">{t.address}</label>
-          <input type="text" name="address" required
-            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                  <label for="city" class="block text-sm font-medium text-gray-700 mb-2">Ville</label>
+                  <input 
+                    type="text" 
+                    id="city" 
+                    name="city" 
+                    required 
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+              </div>
+
+              <div class="mt-4">
+                <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Téléphone</label>
+                <input 
+                  type="tel" 
+                  id="phone" 
+                  name="phone" 
+                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
 
-        <div class="grid grid-cols-2 gap-4">
-          <div>
-            <label class="block text-sm font-medium text-gray-700">{t.city}</label>
-            <input type="text" name="city" required
-              class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-            />
+              <div class="flex items-center mt-4">
+                <input 
+                  type="checkbox" 
+                  id="saveInfo" 
+                  name="saveInfo" 
+                  class="mr-2 text-blue-600 focus:ring-blue-500"
+                />
+                <label for="saveInfo" class="text-sm text-gray-700">
+                  Sauvegarder mes coordonnées pour la prochaine fois
+                </label>
+              </div>
           </div>
+
           <div>
-            <label class="block text-sm font-medium text-gray-700">{t.postalCode}</label>
-            <input type="text" name="postalCode" required
-              class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-            />
+              <h3 class="text-xl font-bold mb-4 text-gray-900">Mode d'expédition</h3>
+              <div class="bg-gray-100 p-4 rounded-md text-sm text-gray-700">
+                Saisissez votre adresse d'expédition pour voir les modes d'expédition disponibles.
           </div>
         </div>
 
         <div>
-          <label class="block text-sm font-medium text-gray-700">{t.country}</label>
-          <select name="country" required
-            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-          >
-            <option value="US">United States</option>
-            <option value="CA">Canada</option>
-            <option value="GB">United Kingdom</option>
-            <!-- Add more countries as needed -->
-          </select>
+              <h3 class="text-xl font-bold mb-4 text-gray-900">Paiement</h3>
+              <p class="text-sm text-gray-700 mb-4">Toutes les transactions sont sécurisées et chiffrées.</p>
+
+              <div class="border border-gray-300 rounded-md p-4">
+                <!-- Stripe Connect Payment Component Integration -->
+                <div class="mt-4">
+                  <StripeConnectPayment 
+                    client:load
+                    amount={parseFloat(total)}
+                    sellerAccountId={sellerAccountId}
+                    stripePublishableKey={stripePublishableKey}
+                    onPaymentSuccess={(paymentDetails) => {
+                      console.log('Payment successful:', paymentDetails);
+                      // You can add additional logic here, like form submission
+                      document.getElementById('checkout-form')?.submit();
+                    }}
+                    onPaymentError={(error) => {
+                      console.error('Payment error:', error);
+                      alert('Payment failed: ' + error);
+                    }}
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Removed the extra submit button -->
+          </form>
         </div>
 
-        <div class="border-t pt-4 mt-6">
-          <div class="flex justify-between items-center text-xl font-semibold">
-            <span>{t.total}:</span>
-            <span>${total}</span>
+        <!-- Order Summary -->
+        <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
+          <div class="space-y-6">
+            {cartItems.map((item) => (
+              <div class="flex justify-between items-center border-b pb-4">
+                <div class="flex items-center space-x-4">
+                  <img 
+                    src={item.image} 
+                    alt={item.title} 
+                    class="w-20 h-20 object-cover rounded-md border border-gray-200"
+                  />
+                  <div>
+                    <h3 class="font-bold text-gray-900 text-base">{item.title}</h3>
+                    <p class="text-gray-600 text-sm">Quantité: {item.quantity}</p>
+                  </div>
+                </div>
+                <p class="font-bold text-gray-900 text-base">
+                  {item.price.toFixed(2)} €
+                </p>
+              </div>
+            ))}
+            
+            <div class="space-y-2">
+              <div class="flex justify-between text-sm text-gray-700">
+                <span>Sous-total</span>
+                <span>{parseFloat(total).toFixed(2)} €</span>
+              </div>
+              <div class="flex justify-between text-sm text-gray-700">
+                <span>Expédition</span>
+                <span>Saisir une adresse d'expédition</span>
+              </div>
+              <div class="flex justify-between text-sm text-gray-700">
+                <label for="discount" class="text-gray-700">Code de réduction ou carte-cadeau</label>
+                <div class="flex">
+                  <input 
+                    type="text" 
+                    id="discount" 
+                    name="discount" 
+                    placeholder="Code de réduction"
+                    class="px-2 py-1 border border-gray-300 rounded-l-md text-sm w-40"
+                  />
+                  <button 
+                    type="button" 
+                    class="px-3 py-1 bg-black text-white text-sm rounded-r-md hover:bg-gray-800"
+                  >
+                    Valider
+                  </button>
+                </div>
+              </div>
+              <div class="flex justify-between text-lg font-bold border-t pt-2 text-gray-900">
+                <span>Total</span>
+                <span>{(parseFloat(total) * 1.1).toFixed(2)} €</span>
+              </div>
+              <p class="text-sm text-gray-600 text-center">Taxes de 7,50 € incluses</p>
+            </div>
           </div>
         </div>
-
-        <button
-          type="submit"
-          class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center gap-2"
-        >
-          <span>{t.payButton}</span>
-          <span id="processingIndicator" class="hidden">
-            <svg class="animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-            </svg>
-          </span>
-        </button>
-      </form>
-    </div>
+      </div>
   </div>
 </Layout>
 
-<script define:vars={{ paymentConfig, total }}>
-  document.getElementById('checkoutForm').addEventListener('submit', async (e) => {
+  <script>
+    document.getElementById('checkout-form')?.addEventListener('submit', async (e) => {
     e.preventDefault();
     
-    const form = e.target;
-    const button = form.querySelector('button[type="submit"]');
-    const processingIndicator = document.getElementById('processingIndicator');
-    
-    try {
-      button.disabled = true;
-      processingIndicator.classList.remove('hidden');
+      const formData = new FormData(e.target as HTMLFormElement);
+      const formValues = Object.fromEntries(formData.entries());
 
-      const formData = new FormData(form);
-      const shippingInfo = Object.fromEntries(formData.entries());
-
-      const paymentData = {
-        currency: 'USD',
-        amount: Math.round(parseFloat(total)),
-        customerEmail: shippingInfo.email,
-        metadata: {
-          shipping: JSON.stringify(shippingInfo)
-        }
-      };
-
-      const response = await fetch(`${paymentConfig.hoodpay.apiUrl}/businesses/${paymentConfig.hoodpay.businessId}/payments`, {
+      try {
+        const response = await fetch('/api/checkout', {
         method: 'POST',
         headers: {
-          'Authorization': `Bearer ${paymentConfig.hoodpay.authToken}`,
           'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify({
-          ...paymentData,
-          redirectUrl: paymentConfig.hoodpay.redirectUrl
-        })
-      });
+          },
+          body: JSON.stringify(formValues)
+        });
 
-      if (!response.ok) {
-        throw new Error(`Payment creation failed: ${response.statusText}`);
-      }
+        const result = await response.json();
 
-      const data = await response.json();
-      window.location.href = data.data.url;
-      
+        if (result.success) {
+          window.location.href = '/checkout/success';
+        } else {
+          alert(result.message || 'Payment processing failed');
+        }
     } catch (error) {
       console.error('Checkout error:', error);
-      alert('An error occurred during checkout. Please try again.');
-      
-      button.disabled = false;
-      processingIndicator.classList.add('hidden');
+        alert('An error occurred during checkout');
     }
   });
 </script> 
+</body>
+</html> 

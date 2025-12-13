@@ -1,0 +1,459 @@
+{
+  "pageTitle": "Prezzi - Gestione Studi Dentistici Dentagia",
+  "pageDescription": "Piani di prezzo flessibili per studi dentistici di tutte le dimensioni. Scegli il piano che si adatta alle esigenze del tuo studio.",
+  "hero": {
+    "badge": "Prezzi Semplici e Trasparenti",
+    "title": "Scegli il Piano Giusto per il Tuo Studio",
+    "description": "Piani di prezzo flessibili progettati per studi dentistici di tutte le dimensioni. Inizia con il nostro piano essenziale e scala man mano che il tuo studio cresce.",
+    "cta": {
+      "text": "Contatta Vendite",
+      "href": "/contact"
+    }
+  },
+  "plans": [
+    {
+      "name": "Essenziale",
+      "description": "Perfetto per professionisti individuali e studi piccoli",
+      "price": "199€",
+      "period": "al mese",
+      "features": [
+        "Fino a 2 professionisti",
+        "Gestione pazienti",
+        "Pianificazione base",
+        "Fatturazione e fatturazione",
+        "Archiviazione cloud (50GB)",
+        "Supporto email",
+        "Accesso app mobile"
+      ],
+      "cta": {
+        "text": "Inizia",
+        "href": "/contact",
+        "variant": "outline"
+      },
+      "popular": false
+    },
+    {
+      "name": "Professionale",
+      "description": "Ideale per studi in crescita con più professionisti",
+      "price": "399€",
+      "period": "al mese",
+      "features": [
+        "Fino a 5 professionisti",
+        "Pianificazione alimentata da IA",
+        "Gestione pazienti avanzata",
+        "Fatturazione e pagamenti automatizzati",
+        "Analisi dello studio",
+        "Archiviazione cloud (200GB)",
+        "Supporto prioritario",
+        "Accesso app mobile",
+        "Rapporti personalizzati"
+      ],
+      "cta": {
+        "text": "Inizia",
+        "href": "/contact",
+        "variant": "primary"
+      },
+      "popular": true
+    },
+    {
+      "name": "Enterprise",
+      "description": "Per studi grandi e gruppi multi-sede",
+      "price": "Personalizzato",
+      "period": "al mese",
+      "features": [
+        "Professionisti illimitati",
+        "Gestione multi-sede",
+        "Funzionalità IA avanzate",
+        "Analisi completa dello studio",
+        "Archiviazione cloud illimitata",
+        "Supporto dedicato 24/7",
+        "Integrazioni personalizzate",
+        "Opzioni white-label",
+        "Funzionalità di sicurezza avanzate",
+        "Account manager dedicato"
+      ],
+      "cta": {
+        "text": "Contatta Vendite",
+        "href": "/contact",
+        "variant": "outline"
+      },
+      "popular": false
+    }
+  ],
+  "benefits": {
+    "title": "Vantaggi dello Studio",
+    "description": "Tutto ciò di cui hai bisogno per gestire uno studio dentistico di successo",
+    "items": [
+      {
+        "icon": "Shield",
+        "title": "Sicurezza Conforme HIPAA",
+        "description": "Sicurezza di livello aziendale e conformità HIPAA",
+        "items": [
+          "Crittografia end-to-end",
+          "Audit di sicurezza regolari",
+          "Certificazione di conformità HIPAA",
+          "Backup dati sicuri"
+        ]
+      },
+      {
+        "icon": "Cloud",
+        "title": "Accesso Basato su Cloud",
+        "description": "Accedi ai dati del tuo studio da qualsiasi luogo, in qualsiasi momento",
+        "items": [
+          "Accesso multi-dispositivo",
+          "Sincronizzazione in tempo reale",
+          "Backup automatici",
+          "Garanzia di disponibilità 99,9%"
+        ]
+      },
+      {
+        "icon": "Zap",
+        "title": "Automatizzazione Alimentata da IA",
+        "description": "Automatizzazione intelligente e insights",
+        "items": [
+          "Ottimizzazione pianificazione IA",
+          "Analisi predittiva",
+          "Promemoria pazienti automatizzati",
+          "Insights di crescita dello studio"
+        ]
+      },
+      {
+        "icon": "Users",
+        "title": "Gestione Completa dello Studio",
+        "description": "Soluzione tutto-in-uno per il tuo studio",
+        "items": [
+          "Gestione pazienti",
+          "Pianificazione appuntamenti",
+          "Fatturazione e fatturazione",
+          "Pianificazione trattamenti"
+        ]
+      }
+    ]
+  },
+  "industries": {
+    "title": "Perfetto per Ogni Tipo di Studio",
+    "description": "Dentagia funziona per studi dentistici di tutte le dimensioni e specialità",
+    "items": [
+      {
+        "icon": "Home",
+        "name": "Studi Individuali",
+        "description": "Perfetto per professionisti indipendenti",
+        "solutions": [
+          {
+            "name": "Piano Essenziale",
+            "link": "/pricing"
+          },
+          {
+            "name": "Gestione Pazienti",
+            "link": "/features"
+          }
+        ]
+      },
+      {
+        "icon": "Users",
+        "name": "Cliniche Multi-Professionale",
+        "description": "Ideale per cliniche con più dentisti",
+        "solutions": [
+          {
+            "name": "Piano Professionale",
+            "link": "/pricing"
+          },
+          {
+            "name": "Collaborazione di Squadra",
+            "link": "/features"
+          }
+        ]
+      },
+      {
+        "icon": "Building",
+        "name": "Gruppi Multi-Sede",
+        "description": "Gestione centralizzata per gruppi dentali",
+        "solutions": [
+          {
+            "name": "Piano Enterprise",
+            "link": "/pricing"
+          },
+          {
+            "name": "Multi-Sede",
+            "link": "/features"
+          }
+        ]
+      },
+      {
+        "icon": "Stethoscope",
+        "name": "Studi Specializzati",
+        "description": "Personalizzato per ortodonzia, parodontologia e altro",
+        "solutions": [
+          {
+            "name": "Funzionalità Specializzate",
+            "link": "/features"
+          },
+          {
+            "name": "Soluzioni Personalizzate",
+            "link": "/contact"
+          }
+        ]
+      }
+    ]
+  },
+  "successMetrics": {
+    "title": "Risultati Comprovati",
+    "description": "Vedi come Dentagia aiuta gli studi ad avere successo",
+    "items": [
+      {
+        "icon": "TrendingUp",
+        "value": "35%",
+        "title": "Crescita dei Ricavi",
+        "description": "Aumento medio dei ricavi dopo l'implementazione"
+      },
+      {
+        "icon": "Clock",
+        "value": "50%",
+        "title": "Tempo Risparmiato",
+        "description": "Riduzione del tempo amministrativo"
+      },
+      {
+        "icon": "Building",
+        "value": "500+",
+        "title": "Studi Dentistici",
+        "description": "Si fidano di Dentagia per la gestione del loro studio"
+      },
+      {
+        "icon": "Star",
+        "value": "98%",
+        "title": "Soddisfazione",
+        "description": "Valutazione della soddisfazione del cliente"
+      }
+    ]
+  },
+  "globalFeatures": {
+    "title": "Funzionalità Complete",
+    "description": "Tutto ciò di cui hai bisogno in una piattaforma",
+    "features": [
+      {
+        "category": "Gestione dello Studio",
+        "items": [
+          "Cartelle pazienti e anamnesi mediche",
+          "Pianificazione appuntamenti",
+          "Pianificazione trattamenti",
+          "Documentazione clinica"
+        ]
+      },
+      {
+        "category": "Fatturazione e Pagamenti",
+        "items": [
+          "Fatturazione automatizzata",
+          "Elaborazione pagamenti",
+          "Richieste assicurative",
+          "Reporting finanziario"
+        ]
+      }
+    ]
+  },
+  "integrations": {
+    "title": "Integrazioni Senza Soluzione di Continuità",
+    "description": "Connettiti con gli strumenti che usi già",
+    "categories": [
+      {
+        "category": "Imaging Dentale",
+        "items": [
+          {
+            "name": "Sistemi di Radiografia",
+            "icon": "Database"
+          },
+          {
+            "name": "Imaging 3D",
+            "icon": "Database2"
+          },
+          {
+            "name": "Telecamere Intraorali",
+            "icon": "Database"
+          }
+        ]
+      },
+      {
+        "category": "Elaborazione Pagamenti",
+        "items": [
+          {
+            "name": "Stripe",
+            "icon": "Code"
+          },
+          {
+            "name": "Square",
+            "icon": "Code"
+          },
+          {
+            "name": "PayPal",
+            "icon": "Code"
+          }
+        ]
+      },
+      {
+        "category": "Servizi Cloud",
+        "items": [
+          {
+            "name": "AWS",
+            "icon": "CloudAws"
+          },
+          {
+            "name": "Google Cloud",
+            "icon": "CloudGoogle"
+          },
+          {
+            "name": "Microsoft Azure",
+            "icon": "CloudMicrosoft"
+          }
+        ]
+      }
+    ]
+  },
+  "features": {
+    "title": "Tutti i Piani Includono",
+    "description": "Funzionalità essenziali disponibili in ogni piano",
+    "items": [
+      {
+        "icon": "shield",
+        "title": "Conforme HIPAA",
+        "description": "Sicurezza di livello aziendale e conformità HIPAA"
+      },
+      {
+        "icon": "cloud",
+        "title": "Basato su cloud",
+        "description": "Accedi ai dati del tuo studio da qualsiasi luogo, in qualsiasi momento"
+      },
+      {
+        "icon": "zap",
+        "title": "Alimentato da IA",
+        "description": "Automatizzazione intelligente e insights"
+      },
+      {
+        "icon": "smartphone",
+        "title": "Accesso mobile",
+        "description": "App mobile completa per iOS e Android"
+      },
+      {
+        "icon": "refresh-cw",
+        "title": "Aggiornamenti automatici",
+        "description": "Aggiornamenti regolari e nuove funzionalità senza costi aggiuntivi"
+      },
+      {
+        "icon": "headphones",
+        "title": "Supporto",
+        "description": "Team di supporto dedicato per aiutare il tuo studio a avere successo"
+      }
+    ]
+  },
+  "faqs": {
+    "title": "Domande Frequenti",
+    "description": "Domande comuni sui prezzi di Dentagia",
+    "items": [
+      {
+        "question": "Posso cambiare piano in seguito?",
+        "answer": "Sì, puoi aggiornare o ridurre il tuo piano in qualsiasi momento. Le modifiche hanno effetto immediato e addebiteremo eventuali costi in modo proporzionale."
+      },
+      {
+        "question": "C'è una tariffa di configurazione?",
+        "answer": "Nessuna tariffa di configurazione per i piani Essenziale e Professionale. I piani Enterprise possono includere servizi di configurazione e migrazione."
+      },
+      {
+        "question": "Quali metodi di pagamento accettate?",
+        "answer": "Accettiamo tutte le principali carte di credito, bonifici ACH e possiamo organizzare la fatturazione annuale per i clienti Enterprise."
+      },
+      {
+        "question": "Offrite sconti per la fatturazione annuale?",
+        "answer": "Sì, offriamo uno sconto del 15% quando paghi annualmente. Contatta il nostro team di vendita per maggiori informazioni."
+      },
+      {
+        "question": "Cosa succede se supero i limiti del mio piano?",
+        "answer": "Ti avviseremo prima di raggiungere i tuoi limiti. Puoi aggiornare il tuo piano o acquistare capacità aggiuntiva secondo necessità."
+      },
+      {
+        "question": "C'è una prova gratuita?",
+        "answer": "Sì, offriamo una prova gratuita di 14 giorni con accesso completo a tutte le funzionalità. Nessuna carta di credito richiesta per iniziare."
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Cosa Dicono i Nostri Clienti",
+    "items": [
+      {
+        "quote": "Il piano Professionale era perfetto per il nostro studio. La pianificazione alimentata da IA da sola si ripaga riducendo le assenze.",
+        "author": "Dr. Sarah Martinez",
+        "role": "Proprietario dello Studio",
+        "company": "Studio Dentistico del Centro"
+      },
+      {
+        "quote": "Siamo passati a Enterprise quando ci siamo espansi a più sedi. Le funzionalità di gestione multi-sede sono inestimabili.",
+        "author": "Dr. Michael Chen",
+        "role": "Direttore dello Studio",
+        "company": "Gruppo Dentistico Familiare"
+      }
+    ]
+  },
+  "implementation": {
+    "title": "Processo di Implementazione Semplice",
+    "description": "Mettiti in funzione rapidamente con la nostra configurazione ottimizzata",
+    "steps": [
+      {
+        "number": "1",
+        "title": "Prenota Demo",
+        "description": "Vedi Dentagia in azione con una demo personalizzata"
+      },
+      {
+        "number": "2",
+        "title": "Configurazione Rapida",
+        "description": "Il nostro team ti aiuta a migrare i dati e configurare il tuo studio"
+      },
+      {
+        "number": "3",
+        "title": "Formazione",
+        "description": "Formazione completa per il tuo team"
+      },
+      {
+        "number": "4",
+        "title": "Go-Live",
+        "description": "Lancia con supporto 24/7 disponibile"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contattaci",
+    "description": "Il nostro team è qui per aiutarti a scegliere il piano giusto",
+    "options": [
+      {
+        "icon": "Phone",
+        "title": "Chiamaci",
+        "description": "Parla con il nostro team di vendita",
+        "link": "tel:+33756756240"
+      },
+      {
+        "icon": "MessageSquare",
+        "title": "Inviaci un'Email",
+        "description": "Inviaci le tue domande",
+        "link": "mailto:contact@dentagia.com"
+      },
+      {
+        "icon": "Calendar",
+        "title": "Prenota Demo",
+        "description": "Prenota una demo personalizzata",
+        "link": "/demo"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Pronto per Iniziare?",
+    "description": "Inizia la tua prova gratuita di 14 giorni oggi. Nessuna carta di credito richiesta.",
+    "buttons": [
+      {
+        "text": "Inizia Prova Gratuita",
+        "href": "/demo",
+        "variant": "primary"
+      },
+      {
+        "text": "Contatta Vendite",
+        "href": "/contact",
+        "variant": "secondary"
+      }
+    ]
+  }
+} 

@@ -1,6 +1,17 @@
 import type { APIRoute } from 'astro';
+import { getEnvVar } from '../lib/env';
 
-const languages = ['en', 'fr', 'de', 'es', 'it'];
+// Get allowed languages from environment variable
+const getAllowedLanguages = (): string[] => {
+  const allowedLanguages = getEnvVar('ALLOWED_LANGUAGES') || 'en';
+  console.log('🔍 ALLOWED_LANGUAGES from env:', getEnvVar('ALLOWED_LANGUAGES'));
+  console.log('🔍 Raw allowedLanguages:', allowedLanguages);
+  const languages = allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+  console.log('🔍 Final languages array:', languages);
+  return languages;
+};
+
+const languages = getAllowedLanguages();
 
 export const GET: APIRoute = async ({ site }) => {
   if (!site) {

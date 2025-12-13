@@ -1,0 +1,459 @@
+{
+  "pageTitle": "Precios - Gestión de Consultorios Dentales Dentagia",
+  "pageDescription": "Planes de precios flexibles para consultorios dentales de todos los tamaños. Elija el plan que se adapte a las necesidades de su consultorio.",
+  "hero": {
+    "badge": "Precios Simples y Transparentes",
+    "title": "Elija el Plan Correcto para Su Consultorio",
+    "description": "Planes de precios flexibles diseñados para consultorios dentales de todos los tamaños. Comience con nuestro plan esencial y escale a medida que su consultorio crece.",
+    "cta": {
+      "text": "Contactar Ventas",
+      "href": "/contact"
+    }
+  },
+  "plans": [
+    {
+      "name": "Esencial",
+      "description": "Perfecto para profesionales individuales y consultorios pequeños",
+      "price": "$199",
+      "period": "por mes",
+      "features": [
+        "Hasta 2 profesionales",
+        "Gestión de pacientes",
+        "Programación básica",
+        "Facturación y facturación",
+        "Almacenamiento cloud (50GB)",
+        "Soporte por email",
+        "Acceso a aplicación móvil"
+      ],
+      "cta": {
+        "text": "Comenzar",
+        "href": "/contact",
+        "variant": "outline"
+      },
+      "popular": false
+    },
+    {
+      "name": "Profesional",
+      "description": "Ideal para consultorios en crecimiento con múltiples profesionales",
+      "price": "$399",
+      "period": "por mes",
+      "features": [
+        "Hasta 5 profesionales",
+        "Programación impulsada por IA",
+        "Gestión avanzada de pacientes",
+        "Facturación y pagos automatizados",
+        "Análisis del consultorio",
+        "Almacenamiento cloud (200GB)",
+        "Soporte prioritario",
+        "Acceso a aplicación móvil",
+        "Informes personalizados"
+      ],
+      "cta": {
+        "text": "Comenzar",
+        "href": "/contact",
+        "variant": "primary"
+      },
+      "popular": true
+    },
+    {
+      "name": "Empresarial",
+      "description": "Para consultorios grandes y grupos multi-ubicación",
+      "price": "Personalizado",
+      "period": "por mes",
+      "features": [
+        "Profesionales ilimitados",
+        "Gestión multi-ubicación",
+        "Funciones IA avanzadas",
+        "Análisis completo del consultorio",
+        "Almacenamiento cloud ilimitado",
+        "Soporte dedicado 24/7",
+        "Integraciones personalizadas",
+        "Opciones white-label",
+        "Funciones de seguridad avanzadas",
+        "Gerente de cuenta dedicado"
+      ],
+      "cta": {
+        "text": "Contactar Ventas",
+        "href": "/contact",
+        "variant": "outline"
+      },
+      "popular": false
+    }
+  ],
+  "benefits": {
+    "title": "Beneficios del Consultorio",
+    "description": "Todo lo que necesita para gestionar un consultorio dental exitoso",
+    "items": [
+      {
+        "icon": "Shield",
+        "title": "Seguridad Conforme a HIPAA",
+        "description": "Seguridad de nivel empresarial y cumplimiento HIPAA",
+        "items": [
+          "Cifrado de extremo a extremo",
+          "Auditorías de seguridad regulares",
+          "Certificación de cumplimiento HIPAA",
+          "Copias de seguridad de datos seguras"
+        ]
+      },
+      {
+        "icon": "Cloud",
+        "title": "Acceso Basado en la Nube",
+        "description": "Acceda a los datos de su consultorio desde cualquier lugar, en cualquier momento",
+        "items": [
+          "Acceso multi-dispositivo",
+          "Sincronización en tiempo real",
+          "Copias de seguridad automáticas",
+          "Garantía de disponibilidad 99.9%"
+        ]
+      },
+      {
+        "icon": "Zap",
+        "title": "Automatización Impulsada por IA",
+        "description": "Automatización inteligente e insights",
+        "items": [
+          "Optimización de programación IA",
+          "Análisis predictivo",
+          "Recordatorios automatizados a pacientes",
+          "Insights de crecimiento del consultorio"
+        ]
+      },
+      {
+        "icon": "Users",
+        "title": "Gestión Completa del Consultorio",
+        "description": "Solución todo-en-uno para su consultorio",
+        "items": [
+          "Gestión de pacientes",
+          "Programación de citas",
+          "Facturación y facturación",
+          "Planificación de tratamientos"
+        ]
+      }
+    ]
+  },
+  "industries": {
+    "title": "Perfecto para Cada Tipo de Consultorio",
+    "description": "Dentagia funciona para consultorios dentales de todos los tamaños y especialidades",
+    "items": [
+      {
+        "icon": "Home",
+        "name": "Consultorios Individuales",
+        "description": "Perfecto para profesionales independientes",
+        "solutions": [
+          {
+            "name": "Plan Esencial",
+            "link": "/pricing"
+          },
+          {
+            "name": "Gestión de Pacientes",
+            "link": "/features"
+          }
+        ]
+      },
+      {
+        "icon": "Users",
+        "name": "Clínicas Multi-Profesionales",
+        "description": "Ideal para clínicas con múltiples dentistas",
+        "solutions": [
+          {
+            "name": "Plan Profesional",
+            "link": "/pricing"
+          },
+          {
+            "name": "Colaboración en Equipo",
+            "link": "/features"
+          }
+        ]
+      },
+      {
+        "icon": "Building",
+        "name": "Grupos Multi-Ubicación",
+        "description": "Gestión centralizada para grupos dentales",
+        "solutions": [
+          {
+            "name": "Plan Empresarial",
+            "link": "/pricing"
+          },
+          {
+            "name": "Multi-Ubicación",
+            "link": "/features"
+          }
+        ]
+      },
+      {
+        "icon": "Stethoscope",
+        "name": "Consultorios Especializados",
+        "description": "Personalizado para ortodoncia, periodoncia y más",
+        "solutions": [
+          {
+            "name": "Funciones Especializadas",
+            "link": "/features"
+          },
+          {
+            "name": "Soluciones Personalizadas",
+            "link": "/contact"
+          }
+        ]
+      }
+    ]
+  },
+  "successMetrics": {
+    "title": "Resultados Comprobados",
+    "description": "Vea cómo Dentagia ayuda a los consultorios a tener éxito",
+    "items": [
+      {
+        "icon": "TrendingUp",
+        "value": "35%",
+        "title": "Crecimiento de Ingresos",
+        "description": "Aumento promedio de ingresos después de la implementación"
+      },
+      {
+        "icon": "Clock",
+        "value": "50%",
+        "title": "Tiempo Ahorrado",
+        "description": "Reducción del tiempo administrativo"
+      },
+      {
+        "icon": "Building",
+        "value": "500+",
+        "title": "Consultorios Dentales",
+        "description": "Confían en Dentagia para su gestión de consultorios"
+      },
+      {
+        "icon": "Star",
+        "value": "98%",
+        "title": "Satisfacción",
+        "description": "Calificación de satisfacción del cliente"
+      }
+    ]
+  },
+  "globalFeatures": {
+    "title": "Funciones Integrales",
+    "description": "Todo lo que necesita en una plataforma",
+    "features": [
+      {
+        "category": "Gestión del Consultorio",
+        "items": [
+          "Registros de pacientes e historiales médicos",
+          "Programación de citas",
+          "Planificación de tratamientos",
+          "Documentación clínica"
+        ]
+      },
+      {
+        "category": "Facturación y Pagos",
+        "items": [
+          "Facturación automatizada",
+          "Procesamiento de pagos",
+          "Reclamaciones de seguros",
+          "Informes financieros"
+        ]
+      }
+    ]
+  },
+  "integrations": {
+    "title": "Integraciones Transparentes",
+    "description": "Conéctese con las herramientas que ya usa",
+    "categories": [
+      {
+        "category": "Imagen Dental",
+        "items": [
+          {
+            "name": "Sistemas de Rayos X",
+            "icon": "Database"
+          },
+          {
+            "name": "Imagen 3D",
+            "icon": "Database2"
+          },
+          {
+            "name": "Cámaras Intraorales",
+            "icon": "Database"
+          }
+        ]
+      },
+      {
+        "category": "Procesamiento de Pagos",
+        "items": [
+          {
+            "name": "Stripe",
+            "icon": "Code"
+          },
+          {
+            "name": "Square",
+            "icon": "Code"
+          },
+          {
+            "name": "PayPal",
+            "icon": "Code"
+          }
+        ]
+      },
+      {
+        "category": "Servicios en la Nube",
+        "items": [
+          {
+            "name": "AWS",
+            "icon": "CloudAws"
+          },
+          {
+            "name": "Google Cloud",
+            "icon": "CloudGoogle"
+          },
+          {
+            "name": "Microsoft Azure",
+            "icon": "CloudMicrosoft"
+          }
+        ]
+      }
+    ]
+  },
+  "features": {
+    "title": "Todos los Planes Incluyen",
+    "description": "Funciones esenciales disponibles en cada plan",
+    "items": [
+      {
+        "icon": "shield",
+        "title": "Conforme a HIPAA",
+        "description": "Seguridad de nivel empresarial y cumplimiento HIPAA"
+      },
+      {
+        "icon": "cloud",
+        "title": "Basado en la nube",
+        "description": "Acceda a los datos de su consultorio desde cualquier lugar, en cualquier momento"
+      },
+      {
+        "icon": "zap",
+        "title": "Impulsado por IA",
+        "description": "Automatización inteligente e insights"
+      },
+      {
+        "icon": "smartphone",
+        "title": "Acceso móvil",
+        "description": "Aplicación móvil completa para iOS y Android"
+      },
+      {
+        "icon": "refresh-cw",
+        "title": "Actualizaciones automáticas",
+        "description": "Actualizaciones regulares y nuevas funciones sin costo adicional"
+      },
+      {
+        "icon": "headphones",
+        "title": "Soporte",
+        "description": "Equipo de soporte dedicado para ayudar a su consultorio a tener éxito"
+      }
+    ]
+  },
+  "faqs": {
+    "title": "Preguntas Frecuentes",
+    "description": "Preguntas comunes sobre precios de Dentagia",
+    "items": [
+      {
+        "question": "¿Puedo cambiar de plan más tarde?",
+        "answer": "Sí, puede actualizar o reducir su plan en cualquier momento. Los cambios surten efecto inmediatamente, y prorratearemos cualquier cargo."
+      },
+      {
+        "question": "¿Hay una tarifa de configuración?",
+        "answer": "No hay tarifas de configuración para los planes Esencial y Profesional. Los planes Empresariales pueden incluir servicios de configuración y migración."
+      },
+      {
+        "question": "¿Qué métodos de pago aceptan?",
+        "answer": "Aceptamos todas las principales tarjetas de crédito, transferencias ACH y podemos organizar facturación anual para clientes Empresariales."
+      },
+      {
+        "question": "¿Ofrecen descuentos por facturación anual?",
+        "answer": "Sí, ofrecemos un descuento del 15% cuando paga anualmente. Contacte a nuestro equipo de ventas para más información."
+      },
+      {
+        "question": "¿Qué sucede si excedo los límites de mi plan?",
+        "answer": "Le notificaremos antes de que alcance sus límites. Puede actualizar su plan o comprar capacidad adicional según sea necesario."
+      },
+      {
+        "question": "¿Hay una prueba gratuita?",
+        "answer": "Sí, ofrecemos una prueba gratuita de 14 días con acceso completo a todas las funciones. No se requiere tarjeta de crédito para comenzar."
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Lo Que Dicen Nuestros Clientes",
+    "items": [
+      {
+        "quote": "El plan Profesional fue perfecto para nuestro consultorio. La programación impulsada por IA sola se paga reduciendo las ausencias.",
+        "author": "Dr. Sarah Martinez",
+        "role": "Propietario del Consultorio",
+        "company": "Clínica Dental del Centro"
+      },
+      {
+        "quote": "Actualizamos a Empresarial cuando nos expandimos a múltiples ubicaciones. Las funciones de gestión multi-ubicación son invaluables.",
+        "author": "Dr. Michael Chen",
+        "role": "Director del Consultorio",
+        "company": "Grupo Dental Familiar"
+      }
+    ]
+  },
+  "implementation": {
+    "title": "Proceso de Implementación Simple",
+    "description": "Póngase en marcha rápidamente con nuestra configuración optimizada",
+    "steps": [
+      {
+        "number": "1",
+        "title": "Programar Demostración",
+        "description": "Vea Dentagia en acción con una demostración personalizada"
+      },
+      {
+        "number": "2",
+        "title": "Configuración Rápida",
+        "description": "Nuestro equipo lo ayuda a migrar datos y configurar su consultorio"
+      },
+      {
+        "number": "3",
+        "title": "Capacitación",
+        "description": "Capacitación completa para su equipo"
+      },
+      {
+        "number": "4",
+        "title": "Puesta en Marcha",
+        "description": "Lance con soporte 24/7 disponible"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Póngase en Contacto",
+    "description": "Nuestro equipo está aquí para ayudarlo a elegir el plan correcto",
+    "options": [
+      {
+        "icon": "Phone",
+        "title": "Llámenos",
+        "description": "Hable con nuestro equipo de ventas",
+        "link": "tel:+33756756240"
+      },
+      {
+        "icon": "MessageSquare",
+        "title": "Envíenos un Correo",
+        "description": "Envíenos sus preguntas",
+        "link": "mailto:contact@dentagia.com"
+      },
+      {
+        "icon": "Calendar",
+        "title": "Programar Demostración",
+        "description": "Reserve una demostración personalizada",
+        "link": "/demo"
+      }
+    ]
+  },
+  "cta": {
+    "title": "¿Listo para Comenzar?",
+    "description": "Comience su prueba gratuita de 14 días hoy. No se requiere tarjeta de crédito.",
+    "buttons": [
+      {
+        "text": "Iniciar Prueba Gratuita",
+        "href": "/demo",
+        "variant": "primary"
+      },
+      {
+        "text": "Contactar Ventas",
+        "href": "/contact",
+        "variant": "secondary"
+      }
+    ]
+  }
+} 

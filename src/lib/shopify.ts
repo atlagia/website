@@ -1829,6 +1829,82 @@ export async function searchProducts(query: string, language: string = 'EN') {
   }
 }
 
+// Simple filter function for URL parameters
+export async function filterProducts(filters: any, language: string = 'EN', page: number = 1, limit: number = 20) {
+  try {
+    console.log('🔍 [FILTER] Applying filters:', filters);
+    
+    // Get all products first
+    const allProducts = await getAllTranslatedProducts(language);
+    
+    if (!allProducts || allProducts.length === 0) {
+      return await getPaginatedTranslatedProducts(page, limit, language);
+    }
+
+    let filteredProducts = allProducts;
+
+    // Apply color filter
+    if (filters.color && filters.color.length > 0) {
+      filteredProducts = filteredProducts.filter(product => {
+        const productColors = product.node.options?.find(opt => 
+          opt.name?.toLowerCase() === 'color'
+        )?.values || [];
+        
+        return filters.color.some(filterColor => 
+          productColors.some(productColor => 
+            productColor.toLowerCase().includes(filterColor.toLowerCase())
+          )
+        );
+      });
+    }
+
+    // Apply size filter
+    if (filters.size && filters.size.length > 0) {
+      filteredProducts = filteredProducts.filter(product => {
+        const productSizes = product.node.options?.find(opt => 
+          opt.name?.toLowerCase() === 'size'
+        )?.values || [];
+        
+        return filters.size.some(filterSize => 
+          productSizes.some(productSize => 
+            productSize.toLowerCase() === filterSize.toLowerCase()
+          )
+        );
+      });
+    }
+
+    // Apply price filter
+    if (filters.price) {
+      const [minPrice, maxPrice] = filters.price.split('-').map(p => parseFloat(p));
+      filteredProducts = filteredProducts.filter(product => {
+        const price = parseFloat(product.node.priceRange?.minVariantPrice?.amount || '0');
+        return price >= minPrice && (isNaN(maxPrice) || price <= maxPrice);
+      });
+    }
+
+    // Apply pagination
+    const start = (page - 1) * limit;
+    const paginatedProducts = filteredProducts.slice(start, start + limit);
+    const totalProducts = filteredProducts.length;
+    const totalPages = Math.ceil(totalProducts / limit);
+
+    return {
+      products: paginatedProducts,
+      pagination: {
+        currentPage: page,
+        totalPages,
+        totalProducts,
+        hasNextPage: page < totalPages,
+        hasPreviousPage: page > 1
+      }
+    };
+
+  } catch (error) {
+    console.error('❌ [FILTER ERROR]', error);
+    return await getPaginatedTranslatedProducts(page, limit, language);
+  }
+}
+
 
 
 

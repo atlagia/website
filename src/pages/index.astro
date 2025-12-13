@@ -1,3 +1,4 @@
+export const prerender = true;
 ---
 import { fetchBlogPosts } from '../utils/shopifyAPI';
 import { getLangFromUrl, useTranslations, isValidLanguage } from '../utils/i18n';
@@ -45,7 +46,6 @@ export async function getStaticPaths() {
   ];
 }
 ---
-
 <!doctype html>
 <html lang={validLang} dir={validLang === 'ar' ? 'rtl' : 'ltr'}>
   <head>
@@ -91,18 +91,73 @@ export async function getStaticPaths() {
           
           const html = await response.text();
           
-          // Create a temporary element to parse the HTML
-          const tempEl = document.createElement('div');
-          tempEl.innerHTML = html;
+          // Parse the full HTML document
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(html, 'text/html');
+          
+          // Copy ALL style tags from head (including Astro scoped styles)
+          const styles = doc.querySelectorAll('style');
+          styles.forEach(style => {
+            if (!document.querySelector(`style[data-astro-cid="${style.getAttribute('data-astro-cid')}"]`)) {
+              const newStyle = document.createElement('style');
+              Array.from(style.attributes).forEach(attr => {
+                newStyle.setAttribute(attr.name, attr.value);
+              });
+              newStyle.textContent = style.textContent;
+              document.head.appendChild(newStyle);
+            }
+          });
           
           // Extract main content
-          const mainContent = tempEl.querySelector('main');
+          const mainContent = doc.querySelector('main');
           
           if (mainContent) {
+            const targetMain = document.getElementById('main-content');
+            
+            // Copy all attributes from source main (including classes and data attributes)
+            Array.from(mainContent.attributes).forEach(attr => {
+              if (attr.name !== 'id') {
+                targetMain.setAttribute(attr.name, attr.value);
+              }
+            });
+            
             // Replace placeholder with actual content
-            document.getElementById('main-content').innerHTML = mainContent.innerHTML;
-            document.getElementById('main-content').style.display = 'block';
+            targetMain.innerHTML = mainContent.innerHTML;
+            targetMain.style.display = 'block';
             document.getElementById('main-content-placeholder').style.display = 'none';
+            
+            // Execute any scripts that were in the loaded content
+            const scripts = document.getElementById('main-content').querySelectorAll('script');
+            scripts.forEach(script => {
+              const newScript = document.createElement('script');
+              if (script.src) {
+                newScript.src = script.src;
+              } else {
+                newScript.textContent = script.textContent;
+              }
+              document.head.appendChild(newScript);
+            });
+            
+            // Initialize any components that need client-side hydration
+            if (window.htmx) {
+              window.htmx.process(document.getElementById('main-content'));
+            }
+            
+            // Trigger custom events for component initialization
+            window.dispatchEvent(new Event('contentLoaded'));
+            
+            // Initialize any Astro components that have client:load
+            const clientComponents = document.querySelectorAll('[data-astro-cid]');
+            clientComponents.forEach(component => {
+              // Re-trigger component initialization if needed
+              if (component.hasAttribute('data-hydrate')) {
+                const event = new CustomEvent('astro:hydrate', { 
+                  detail: { component } 
+                });
+                component.dispatchEvent(event);
+              }
+            });
+            
           } else {
             throw new Error('Could not find main content in the response');
           }
@@ -124,3 +179,4 @@ export async function getStaticPaths() {
     </script>
   </body>
 </html>
+

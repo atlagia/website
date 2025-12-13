@@ -1,0 +1,210 @@
+{
+  "hero": {
+    "subtitle": "API-DOKUMENTATION",
+    "title": "Integrieren Sie sich mit Dentagia-Plattform",
+    "description": "Umfassende API-Dokumentation, um Ihnen zu helfen, Dentagias Praxismanagement-Lösungen in Ihre Anwendungen zu integrieren.",
+    "searchPlaceholder": "API-Dokumentation durchsuchen..."
+  },
+  "sidebar": {
+    "categories": [
+      {
+        "title": "Erste Schritte",
+        "icon": "Code",
+        "items": [
+          {
+            "title": "Authentifizierung",
+            "link": "/api/auth"
+          },
+          {
+            "title": "API-Übersicht",
+            "link": "/api/overview"
+          },
+          {
+            "title": "Rate Limits",
+            "link": "/api/rate-limits"
+          },
+          {
+            "title": "HIPAA-Compliance",
+            "link": "/api/hipaa"
+          }
+        ]
+      },
+      {
+        "title": "Kern-Endpunkte",
+        "icon": "Terminal",
+        "items": [
+          {
+            "title": "Patienten-API",
+            "link": "/api/patients"
+          },
+          {
+            "title": "Terminplanungs-API",
+            "link": "/api/appointments"
+          },
+          {
+            "title": "Abrechnungs-API",
+            "link": "/api/billing"
+          },
+          {
+            "title": "Behandlungsplanungs-API",
+            "link": "/api/treatment-plans"
+          }
+        ]
+      },
+      {
+        "title": "Erweiterte Funktionen",
+        "icon": "Box",
+        "items": [
+          {
+            "title": "Webhooks",
+            "link": "/api/webhooks"
+          },
+          {
+            "title": "Praxisanalysen-API",
+            "link": "/api/analytics"
+          },
+          {
+            "title": "KI-Terminplanungs-API",
+            "link": "/api/ai-scheduling"
+          },
+          {
+            "title": "Patientenkommunikations-API",
+            "link": "/api/communication"
+          }
+        ]
+      },
+      {
+        "title": "Sicherheit",
+        "icon": "Shield",
+        "items": [
+          {
+            "title": "API-Schlüssel",
+            "link": "/api/keys"
+          },
+          {
+            "title": "OAuth 2.0",
+            "link": "/api/oauth"
+          },
+          {
+            "title": "Datenverschlüsselung",
+            "link": "/api/encryption"
+          },
+          {
+            "title": "HIPAA-Compliance",
+            "link": "/api/hipaa-compliance"
+          }
+        ]
+      }
+    ]
+  },
+  "featured": {
+    "title": "Ausgewählte Anleitungen",
+    "guides": [
+      {
+        "icon": "Zap",
+        "title": "Schnellstart-Anleitung",
+        "description": "Starten Sie in Minuten mit der Dentagia API",
+        "link": "/api/quick-start",
+        "color": "pink"
+      },
+      {
+        "icon": "Database",
+        "title": "Patientendatenmodelle",
+        "description": "Verständnis von Patientendatenstrukturen und -beziehungen",
+        "link": "/api/data-models",
+        "color": "blue"
+      },
+      {
+        "icon": "Settings",
+        "title": "Integrationsmuster",
+        "description": "Häufige Muster für die Integration mit Praxismanagement",
+        "link": "/api/integration-patterns",
+        "color": "purple"
+      }
+    ]
+  },
+  "endpoints": {
+    "title": "Beliebte Endpunkte",
+    "description": "Erkunden Sie unsere am häufigsten verwendeten API-Endpunkte für Praxismanagement",
+    "items": [
+      {
+        "method": "GET",
+        "path": "/api/v1/patients",
+        "title": "Patienten Auflisten",
+        "description": "Abrufen einer Liste von Patienten mit optionaler Filterung und Paginierung"
+      },
+      {
+        "method": "POST",
+        "path": "/api/v1/appointments",
+        "title": "Termin Erstellen",
+        "description": "Erstellen Sie einen neuen Termin mit Patienteninformationen und Terminplanungsdetails"
+      },
+      {
+        "method": "GET",
+        "path": "/api/v1/patients/{id}",
+        "title": "Patient Abrufen",
+        "description": "Abrufen detaillierter Informationen über einen bestimmten Patienten einschließlich Krankengeschichte"
+      },
+      {
+        "method": "PUT",
+        "path": "/api/v1/appointments/{id}",
+        "title": "Termin Aktualisieren",
+        "description": "Aktualisieren Sie die Informationen und den Status eines bestehenden Termins"
+      },
+      {
+        "method": "POST",
+        "path": "/api/v1/billing/invoices",
+        "title": "Rechnung Erstellen",
+        "description": "Erstellen Sie eine neue Rechnung für Patientenbehandlung oder -dienstleistungen"
+      },
+      {
+        "method": "GET",
+        "path": "/api/v1/analytics/practice",
+        "title": "Praxisanalysen Abrufen",
+        "description": "Abrufen von Praxisleistungskennzahlen und Insights"
+      }
+    ]
+  },
+  "updates": {
+    "title": "Neueste Updates",
+    "description": "Bleiben Sie auf dem Laufenden mit unseren neuesten API-Funktionen und Verbesserungen",
+    "items": [
+      {
+        "date": "2024-03-15",
+        "title": "KI-Terminplanungs-API",
+        "description": "Hinzufügung der Unterstützung für KI-gestützte Terminplanung und Optimierung",
+        "tag": "Funktion"
+      },
+      {
+        "date": "2024-03-10",
+        "title": "API Version 2.0 Beta",
+        "description": "Einführung unserer API der nächsten Generation mit verbesserter Leistung und neuen Praxismanagement-Endpunkten",
+        "tag": "Update"
+      },
+      {
+        "date": "2024-03-05",
+        "title": "Erweiterte HIPAA-Sicherheit",
+        "description": "Hinzufügung der Unterstützung für erweiterte Verschlüsselung und verbesserte HIPAA-Compliance-Funktionen",
+        "tag": "Sicherheit"
+      }
+    ]
+  },
+  "help": {
+    "title": "Brauchen Sie Mehr Hilfe?",
+    "description": "Können Sie nicht finden, wonach Sie suchen? Unser Entwickler-Support-Team ist hier, um zu helfen.",
+    "options": [
+      {
+        "icon": "MessageCircle",
+        "title": "Entwickler-Forum",
+        "description": "Treten Sie unserer Entwicklergemeinschaft bei, um Hilfe von anderen Entwicklern und Praxismanagern zu erhalten",
+        "link": "/api/community"
+      },
+      {
+        "icon": "Mail",
+        "title": "API-Support Kontaktieren",
+        "description": "Kontaktieren Sie unser dediziertes API-Support-Team",
+        "link": "/api/support"
+      }
+    ]
+  }
+}

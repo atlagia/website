@@ -1,0 +1,218 @@
+---
+import { getProductFilters } from '@libs/controller';
+
+interface Props {
+  lang?: string;
+  currentFilters?: Record<string, string[]>;
+}
+
+// Color name to hex code mapping
+const COLOR_MAP = {
+  'red': '#FF0000',
+  'blue': '#0000FF', 
+  'green': '#00FF00',
+  'black': '#000000',
+  'white': '#FFFFFF',
+  'gray': '#808080',
+  'yellow': '#FFFF00',
+  'orange': '#FFA500',
+  'purple': '#800080',
+  'pink': '#FFC0CB',
+  'brown': '#A52A2A',
+  'teal': '#008080',
+  'navy': '#000080',
+  'maroon': '#800000',
+  'olive': '#808000'
+};
+
+const { 
+  lang = 'en', 
+  currentFilters = {} 
+} = Astro.props;
+
+// Fetch available filters
+const availableFilters = await getProductFilters(lang);
+
+// Transform color filters to use names and hex codes
+if (availableFilters.color) {
+  availableFilters.color = availableFilters.color.map(color => {
+    // Find the color name for the hex code
+    const colorName = Object.keys(COLOR_MAP).find(
+      name => COLOR_MAP[name].toLowerCase() === color.value.toLowerCase()
+    ) || color.value;
+
+    return {
+      ...color,
+      value: colorName,
+      hexValue: COLOR_MAP[colorName.toLowerCase()] || color.value
+    };
+  });
+}
+
+// Prepare filter groups
+const filterGroups = [
+  { 
+    name: 'color', 
+    label: 'COLOR'
+  },
+  { 
+    name: 'size', 
+    label: 'SIZE'
+  }
+];
+---
+
+<div 
+  id="product-filter-container" 
+  class="
+    bg-white 
+    border 
+    border-gray-200 
+    rounded-lg 
+    p-4 
+    w-full 
+    max-w-[250px]
+    shadow-sm
+  "
+>
+  <form 
+    id="product-filter-form" 
+    method="get" 
+    class="space-y-4"
+  >
+    {filterGroups.map(group => (
+      <div>
+        <h3 class="
+          text-sm 
+          font-bold 
+          uppercase 
+          text-gray-800 
+          mb-2 
+          tracking-wider
+        ">
+          {group.label}
+        </h3>
+        <div class="grid grid-cols-2 gap-2">
+          {availableFilters[group.name]?.map(option => (
+            <label 
+              class="
+                flex 
+                items-center 
+                space-x-2 
+                cursor-pointer
+                text-sm
+                text-gray-700
+              "
+            >
+              <input 
+                type="checkbox" 
+                name={`filter-${group.name}`} 
+                value={option.value}
+                checked={currentFilters[group.name]?.includes(option.value)}
+                class="
+                  form-checkbox 
+                  h-4 
+                  w-4 
+                  text-blue-600 
+                  border-gray-300 
+                  rounded 
+                  focus:ring-blue-500
+                "
+                {...(group.name === 'color' ? { style: `background-color: ${option.hexValue}` } : {})}
+              />
+              {group.name === 'color' ? (
+                <div 
+                  class="
+                    w-5 
+                    h-5 
+                    rounded-full 
+                    border 
+                    border-gray-300
+                  "
+                  style={`background-color: ${option.hexValue}`}
+                />
+              ) : null}
+              <span>{option.label}</span>
+            </label>
+          ))}
+        </div>
+      </div>
+    ))}
+
+    <div class="flex space-x-2 mt-4">
+      <button 
+        type="submit" 
+        class="
+          w-full 
+          bg-blue-600 
+          text-white 
+          py-2 
+          rounded 
+          text-sm 
+          font-semibold 
+          uppercase 
+          tracking-wider 
+          hover:bg-blue-700 
+          transition
+        "
+      >
+        Apply Filters
+      </button>
+      <button 
+        type="reset" 
+        class="
+          w-full 
+          bg-gray-200 
+          text-gray-800 
+          py-2 
+          rounded 
+          text-sm 
+          font-semibold 
+          uppercase 
+          tracking-wider 
+          hover:bg-gray-300 
+          transition
+        "
+      >
+        Reset
+      </button>
+    </div>
+  </form>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('product-filter-form');
+    
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      // Collect selected filters
+      const filters = new URLSearchParams();
+      
+      form.querySelectorAll('input[type="checkbox"]:checked').forEach(checkbox => {
+        filters.append(`filter-${checkbox.name.replace('filter-', '')}`, checkbox.value);
+      });
+      
+      // Update URL with filters
+      const baseUrl = window.location.pathname;
+      const newUrl = `${baseUrl}?${filters.toString()}`;
+      
+      // Navigate to filtered URL
+      window.location.href = newUrl;
+    });
+
+    form.addEventListener('reset', () => {
+      // Remove all filter parameters from URL
+      const baseUrl = window.location.pathname;
+      window.location.href = baseUrl;
+    });
+  });
+</script>
+
+<style>
+  .form-checkbox:checked {
+    background-color: theme('colors.blue.600');
+    border-color: theme('colors.blue.600');
+  }
+</style>

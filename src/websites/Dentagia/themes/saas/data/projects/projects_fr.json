@@ -1,0 +1,297 @@
+{
+  "pageTitle": "Histoires de Succès de Cabinets Dentaires",
+  "pageDescription": "Explorez les histoires de succès et études de cas de cabinets dentaires utilisant la plateforme de gestion de cabinet Dentagia.",
+  "hero": {
+    "badge": "Histoires de Succès",
+    "title": "Comment les Cabinets Dentaires Grandissent avec Dentagia",
+    "description": "Découvrez comment les cabinets dentaires à travers le pays transforment leurs opérations et grandissent avec la plateforme de gestion de cabinet propulsée par l'IA de Dentagia.",
+    "cta": {
+      "primary": {
+        "text": "Voir les Histoires",
+        "href": "#projects"
+      },
+      "secondary": {
+        "text": "Commencer Votre Parcours",
+        "href": "/contact"
+      }
+    }
+  },
+  "stats": [
+    {
+      "value": "500+",
+      "label": "Cabinets Dentaires"
+    },
+    {
+      "value": "99.9%",
+      "label": "Disponibilité"
+    },
+    {
+      "value": "50%",
+      "label": "Temps Économisé"
+    },
+    {
+      "value": "24/7",
+      "label": "Support"
+    }
+  ],
+  "projects": [
+    {
+      "category": "Dentisterie Générale",
+      "description": "Transformer les cabinets de dentisterie générale avec des solutions propulsées par l'IA",
+      "items": [
+        {
+          "icon": "building",
+          "name": "Clinique Dentaire du Centre",
+          "description": "Cabinet multi-praticiens avec planification propulsée par l'IA et communication patient automatisée",
+          "image": "/images/projects/downtown-dental.webp",
+          "stats": {
+            "value": "+60%",
+            "label": "Augmentation de l'Efficacité"
+          },
+          "tags": ["Planification IA", "Multi-Praticiens", "Gestion de Cabinet"],
+          "color": "blue"
+        },
+        {
+          "icon": "home",
+          "name": "Family Dental Care",
+          "description": "Transformation de cabinet solo avec gestion patient et automatisation de la facturation",
+          "image": "/images/projects/family-dental.webp",
+          "stats": {
+            "value": "+35%",
+            "label": "Croissance du Revenu"
+          },
+          "tags": ["Cabinet Solo", "Automatisation Facturation", "Gestion Patient"],
+          "color": "indigo"
+        },
+        {
+          "icon": "users",
+          "name": "Centre Dentaire Communautaire",
+          "description": "Cabinet communautaire avec gestion patient complète et analytique",
+          "image": "/images/projects/community-dental.webp",
+          "stats": {
+            "value": "+50%",
+            "label": "Satisfaction Patient"
+          },
+          "tags": ["Cabinet Communautaire", "Analytique", "Gestion"],
+          "color": "purple"
+        },
+        {
+          "icon": "calendar",
+          "name": "Dentisterie du Quartier",
+          "description": "Optimisation du cabinet avec planification IA et automatisation des flux de travail",
+          "image": "/images/projects/neighborhood-dental.webp",
+          "stats": {
+            "value": "15hrs/semaine",
+            "label": "Temps Économisé"
+          },
+          "tags": ["Planification IA", "Automatisation", "Efficacité"],
+          "color": "pink"
+        }
+      ]
+    },
+    {
+      "category": "Cabinets Spécialisés",
+      "description": "Cabinets dentaires spécialisés atteignant l'excellence",
+      "items": [
+        {
+          "icon": "sparkles",
+          "name": "Centre de Dentisterie Esthétique",
+          "description": "Cabinet esthétique haut de gamme avec planification de traitement avancée et communication patient",
+          "image": "/images/projects/cosmetic-dental.webp",
+          "stats": {
+            "value": "+45%",
+            "label": "Taux de Conversion"
+          },
+          "tags": ["Esthétique", "Planification Traitement", "Portail Patient"],
+          "color": "rose"
+        },
+        {
+          "icon": "heart",
+          "name": "Groupe Dentaire Pédiatrique",
+          "description": "Cabinet pédiatrique multi-sites avec gestion centralisée",
+          "image": "/images/projects/pediatric-dental.webp",
+          "stats": {
+            "value": "100%",
+            "label": "Coordination"
+          },
+          "tags": ["Multi-Sites", "Pédiatrique", "Centralisé"],
+          "color": "amber"
+        },
+        {
+          "icon": "smile",
+          "name": "Cabinet d'Orthodontie",
+          "description": "Cabinet d'orthodontie avec suivi de traitement et engagement patient",
+          "image": "/images/projects/orthodontic-dental.webp",
+          "stats": {
+            "value": "+55%",
+            "label": "Rétention Patient"
+          },
+          "tags": ["Orthodontie", "Suivi Traitement", "Engagement"],
+          "color": "lime"
+        },
+        {
+          "icon": "tooth",
+          "name": "Centre de Chirurgie Orale",
+          "description": "Cabinet chirurgical avec planification avancée et gestion de cas",
+          "image": "/images/projects/oral-surgery.webp",
+          "stats": {
+            "value": "+40%",
+            "label": "Efficacité des Cas"
+          },
+          "tags": ["Chirurgie Orale", "Gestion de Cas", "Planification"],
+          "color": "green"
+        }
+      ]
+    },
+    {
+      "category": "Cabinets Multi-Sites",
+      "description": "Grands cabinets gérant plusieurs sites",
+      "items": [
+        {
+          "icon": "map-pin",
+          "name": "Groupe Dentaire Régional",
+          "description": "Cabinet multi-sites avec dossiers patients unifiés et planification",
+          "image": "/images/projects/regional-dental.webp",
+          "stats": {
+            "value": "+70%",
+            "label": "Efficacité Opérationnelle"
+          },
+          "tags": ["Multi-Sites", "Dossiers Unifiés", "Sync Cloud"],
+          "color": "sky"
+        },
+        {
+          "icon": "building-2",
+          "name": "Réseau de Soins Dentaires",
+          "description": "Réseau de cabinets avec facturation centralisée et reporting",
+          "image": "/images/projects/dental-network.webp",
+          "stats": {
+            "value": "+55%",
+            "label": "Croissance du Revenu"
+          },
+          "tags": ["Réseau", "Facturation Centralisée", "Reporting"],
+          "color": "cyan"
+        },
+        {
+          "icon": "globe",
+          "name": "Dentisterie État",
+          "description": "Groupe de cabinets à l'échelle de l'État avec gestion complète",
+          "image": "/images/projects/statewide-dental.webp",
+          "stats": {
+            "value": "100%",
+            "label": "Sync Données"
+          },
+          "tags": ["État", "Gestion", "Cloud"],
+          "color": "blue"
+        },
+        {
+          "icon": "trending-up",
+          "name": "Chaîne Dentaire en Croissance",
+          "description": "Chaîne de cabinets en expansion rapide avec solutions évolutives",
+          "image": "/images/projects/dental-chain.webp",
+          "stats": {
+            "value": "+80%",
+            "label": "Évolutivité"
+          },
+          "tags": ["Chaîne", "Évolutif", "Croissance"],
+          "color": "indigo"
+        }
+      ]
+    }
+  ],
+  "features": {
+    "title": "Fonctionnalités du Cabinet",
+    "description": "Notre plateforme est livrée avec des fonctionnalités complètes pour les cabinets dentaires",
+    "items": [
+      {
+        "icon": "users",
+        "title": "Gestion des Patients",
+        "description": "Dossiers patients numériques complets et historique"
+      },
+      {
+        "icon": "calendar",
+        "title": "Planification IA",
+        "description": "Planification de rendez-vous intelligente et optimisation"
+      },
+      {
+        "icon": "credit-card",
+        "title": "Facturation & Paiements",
+        "description": "Facturation rationalisée et traitement des paiements"
+      },
+      {
+        "icon": "bar-chart",
+        "title": "Analytique du Cabinet",
+        "description": "Insights basés sur les données pour la croissance du cabinet"
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Avantages du Cabinet",
+    "description": "Découvrez les avantages d'utiliser Dentagia pour votre cabinet.",
+    "items": [
+      {
+        "icon": "rocket",
+        "title": "Efficacité",
+        "description": "Opérations rationalisées qui économisent du temps et réduisent la charge administrative",
+        "stats": "50%",
+        "label": "Temps Économisé"
+      },
+      {
+        "icon": "target",
+        "title": "Croissance",
+        "description": "Outils et insights pour aider votre cabinet à grandir",
+        "stats": "35%",
+        "label": "Croissance du Revenu"
+      },
+      {
+        "icon": "lightbulb",
+        "title": "Innovation",
+        "description": "Technologie IA de pointe conçue pour les cabinets dentaires modernes",
+        "stats": "500+",
+        "label": "Cabinets"
+      },
+      {
+        "icon": "users",
+        "title": "Support",
+        "description": "Équipe de support dédiée disponible 24/7 pour votre cabinet",
+        "stats": "24/7",
+        "label": "Support"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Témoignages de Cabinets",
+    "description": "Écoutez les cabinets dentaires qui ont transformé leurs opérations avec Dentagia",
+    "items": [
+      {
+        "quote": "Dentagia a transformé la façon dont nous gérons notre cabinet. La planification propulsée par l'IA seule nous fait économiser 10 heures par semaine, et nos scores de satisfaction patient n'ont jamais été aussi élevés.",
+        "author": "Dr. Sarah Martinez",
+        "role": "Propriétaire du Cabinet",
+        "company": "Clinique Dentaire du Centre",
+        "image": "/images/testimonials/sarah.jpg"
+      },
+      {
+        "quote": "Passer à Dentagia a été la meilleure décision que nous ayons prise. Le système de gestion des patients est intuitif, la facturation est automatisée, et l'analytique nous aide à mieux comprendre notre cabinet.",
+        "author": "Dr. Michael Chen",
+        "role": "Dentiste Principal",
+        "company": "Family Dental Care",
+        "image": "/images/testimonials/michael.jpg"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prêt à Transformer Votre Cabinet ?",
+    "description": "Rejoignez des centaines de cabinets dentaires qui ont transformé leurs opérations avec Dentagia.",
+    "buttons": [
+      {
+        "text": "Planifier une Démo",
+        "href": "/demo",
+        "variant": "primary"
+      },
+      {
+        "text": "Nous Contacter",
+        "href": "/contact",
+        "variant": "secondary"
+      }
+    ]
+  }
+}

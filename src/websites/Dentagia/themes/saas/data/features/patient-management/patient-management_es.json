@@ -1,0 +1,233 @@
+{
+  "hero": {
+    "subtitle": "Gestión completa de pacientes",
+    "title": "Registros y gestión integral de pacientes",
+    "description": "Gestione toda la información del paciente, historial médico, planes de tratamiento y comunicaciones en una plataforma segura basada en la nube diseñada para consultorios dentales modernos.",
+    "icon": "users",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "100%",
+        "label": "Registros digitales"
+      },
+      {
+        "value": "95%",
+        "label": "Retención de pacientes"
+      },
+      {
+        "value": "50%",
+        "label": "Tiempo ahorrado"
+      }
+    ]
+  },
+  "features": {
+    "title": "Características de gestión de pacientes",
+    "subtitle": "Atención integral al paciente",
+    "description": "Todo lo que necesita para gestionar registros de pacientes, historial médico, planes de tratamiento y comunicaciones en una plataforma integrada.",
+    "categories": [
+      {
+        "name": "Registros de pacientes",
+        "description": "Registros digitales completos de pacientes con historial médico detallado"
+      },
+      {
+        "name": "Gestión de tratamientos",
+        "description": "Herramientas avanzadas de planificación de tratamientos y gestión de casos"
+      }
+    ],
+    "items": [
+      {
+        "icon": "users",
+        "title": "Registros digitales de pacientes",
+        "description": "Perfiles completos de pacientes con datos demográficos, información de contacto, detalles de seguro e historial médico en un lugar seguro.",
+        "category": "Registros de pacientes",
+        "highlights": [
+          "Perfiles completos de pacientes con todos los datos demográficos",
+          "Seguimiento de historial médico y dental",
+          "Información de seguro y elegibilidad",
+          "Contacto de emergencia e información familiar",
+          "Adjuntos de fotos y documentos"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "Registros digitales"
+        }
+      },
+      {
+        "icon": "clipboard",
+        "title": "Seguimiento del historial médico",
+        "description": "Rastree el historial médico y dental completo incluyendo alergias, medicamentos, tratamientos previos y condiciones en curso.",
+        "category": "Registros de pacientes",
+        "highlights": [
+          "Documentación completa del historial médico",
+          "Seguimiento de alergias y medicamentos",
+          "Registros de tratamientos previos",
+          "Monitoreo de condiciones en curso",
+          "Historial médico familiar"
+        ],
+        "stats": {
+          "value": "95%",
+          "label": "Precisión"
+        }
+      },
+      {
+        "icon": "calendar",
+        "title": "Planificación de tratamientos",
+        "description": "Cree, gestione y rastree planes de tratamiento con procedimientos detallados, cronogramas y estimaciones de costos.",
+        "category": "Gestión de tratamientos",
+        "highlights": [
+          "Planificación de tratamientos multifase",
+          "Programación y seguimiento de procedimientos",
+          "Estimación de costos y planificación financiera",
+          "Monitoreo del progreso del tratamiento",
+          "Herramientas de presentación de casos"
+        ],
+        "stats": {
+          "value": "80%",
+          "label": "Planificación más rápida"
+        }
+      },
+      {
+        "icon": "trending-up",
+        "title": "Portal de comunicación del paciente",
+        "description": "Portal seguro del paciente para programación de citas, visualización de planes de tratamiento, procesamiento de pagos y mensajería segura.",
+        "category": "Gestión de tratamientos",
+        "highlights": [
+          "Solicitudes de citas en línea",
+          "Acceso y aprobación de planes de tratamiento",
+          "Mensajería segura con el consultorio",
+          "Procesamiento de pagos y estados de cuenta",
+          "Compartir y descargar documentos"
+        ],
+        "stats": {
+          "value": "90%",
+          "label": "Compromiso"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Ver la gestión de pacientes en acción",
+    "description": "Descubra cómo los consultorios dentales optimizan la atención al paciente con nuestro sistema de gestión integral",
+    "stats": [
+      {
+        "icon": "users",
+        "value": "10,000+",
+        "label": "Registros de pacientes"
+      },
+      {
+        "icon": "trending-up",
+        "value": "95%",
+        "label": "Tasa de retención"
+      },
+      {
+        "icon": "clock",
+        "value": "50%",
+        "label": "Tiempo ahorrado"
+      },
+      {
+        "icon": "award",
+        "value": "98%",
+        "label": "Satisfacción"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Dr. Sarah Martinez",
+        "role": "Propietario del consultorio, Downtown Dental",
+        "quote": "El sistema de gestión de pacientes ha transformado completamente cómo manejamos los registros de pacientes. Todo está organizado, seguro y fácilmente accesible desde cualquier lugar."
+      },
+      {
+        "author": "Emily Rodriguez",
+        "role": "Gerente del consultorio, Family Dental Care",
+        "quote": "Hemos reducido el tiempo administrativo en un 50% y nuestros pacientes adoran el portal en línea. Ha hecho nuestro consultorio mucho más eficiente."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Beneficios de la gestión de pacientes",
+    "subtitle": "Transforme su consultorio",
+    "description": "Experimente las ventajas de la gestión integral de pacientes diseñada para consultorios dentales modernos.",
+    "items": [
+      {
+        "title": "Eficiencia mejorada",
+        "description": "Optimice la gestión de registros de pacientes y reduzca los gastos administrativos con flujos de trabajo automatizados.",
+        "icon": "zap",
+        "color": "teal",
+        "stats": {
+          "value": "50%",
+          "label": "Tiempo ahorrado"
+        },
+        "highlights": [
+          "Búsqueda y consulta rápida de pacientes",
+          "Entrada y actualización automatizada de datos",
+          "Programación de citas optimizada",
+          "Reducción de papeleo y archivo"
+        ]
+      },
+      {
+        "title": "Mejor atención al paciente",
+        "description": "Acceda instantáneamente a información completa del paciente para tomar mejores decisiones de atención informadas.",
+        "icon": "users",
+        "color": "cyan",
+        "stats": {
+          "value": "95%",
+          "label": "Retención de pacientes"
+        },
+        "highlights": [
+          "Acceso completo al historial médico",
+          "Seguimiento de planes de tratamiento",
+          "Herramientas de comunicación con pacientes",
+          "Coordinación de atención"
+        ]
+      },
+      {
+        "title": "Seguridad mejorada",
+        "description": "Almacenamiento de datos de pacientes conforme a HIPAA con cifrado, controles de acceso y pistas de auditoría.",
+        "icon": "shield",
+        "color": "blue",
+        "stats": {
+          "value": "100%",
+          "label": "Conforme a HIPAA"
+        },
+        "highlights": [
+          "Cifrado de extremo a extremo",
+          "Controles de acceso basados en roles",
+          "Pistas de auditoría completas",
+          "Almacenamiento seguro en la nube"
+        ]
+      },
+      {
+        "title": "Ingresos aumentados",
+        "description": "Una mejor gestión de pacientes conduce a una mayor aceptación de tratamientos y crecimiento del consultorio.",
+        "icon": "trending-up",
+        "color": "indigo",
+        "stats": {
+          "value": "35%",
+          "label": "Crecimiento de ingresos"
+        },
+        "highlights": [
+          "Mayor aceptación de tratamientos",
+          "Mejor retención de pacientes",
+          "Procesos de facturación optimizados",
+          "Experiencia mejorada del paciente"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "¿Listo para transformar la gestión de pacientes?",
+    "description": "Vea cómo las características de gestión de pacientes de Dentagia pueden optimizar las operaciones de su consultorio y mejorar la atención al paciente.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Programar una demostración",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Aprender más",
+      "link": "/features"
+    }
+  }
+}
+

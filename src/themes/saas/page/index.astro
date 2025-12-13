@@ -22,8 +22,13 @@ const { default: WhoWeAre } = await import(`../components/WhoWeAre.astro`);
 const { default: Benefits } = await import(`../components/Benefits.astro`);
 const { default: Reviews } = await import(`../components/Reviews.astro`);
 const { default: CtaSection } = await import(`../components/CtaSection.astro`);
+const { default: Projects } = await import(`../components/Projects.astro`);
 const { default: Blogger } = await import(`../components/Blogger.astro`);
-const { default: Pricing } = await import(`../components/Pricing.astro`);
+const { default: Technologies } = await import(`../components/Technologies.astro`);
+const { default: Process } = await import(`../components/Process.astro`);
+const { default: IndustryFeatures } = await import(`../components/IndustryFeatures.astro`);
+const { default: AutomationFeatures } = await import(`../components/AutomationFeatures.astro`);
+const { default: Achievements } = await import(`../components/Achievements.astro`);
 
 // Get the language parameter from the URL
 const { lang } = Astro.params;
@@ -37,7 +42,7 @@ const translations = await useTranslations(lang);
 const jsonData = translations.default;
 
 // Get site title and description from language-specific data
-const SITE_TITLE = jsonData.siteTitle || 'DigiVast';
+const SITE_TITLE = jsonData.siteTitle || 'Atlagia';
 const SITE_DESCRIPTION = jsonData.siteDescription || 'Your ultimate cosplay destination';
 
 const blogId = '82152357935';
@@ -86,8 +91,10 @@ export async function getStaticPaths() {
                 blogLink={`/${lang}${section.blogLink}`}
                 blogLinkText={section.blogLinkText}
                 getStartedText={section.getStartedText}
-                heroImage = {section.heroImage}
-                partnerLogos = {section.partnerLogos}
+                getStartedLink={`/${lang}${section.getStartedLink}`}
+                heroImage={section.heroImage}
+                partnerLogos={section.partnerLogos}
+                features={section.features}
               />
             )}
             
@@ -200,6 +207,17 @@ export async function getStaticPaths() {
               />
             )}
 
+            {section.type === 'projectsSection' && (
+              <Projects
+                subtitle={section.subtitle}
+                title={section.title}
+                description={section.description}
+                projects={section.projects}
+                buttonText={section.buttonText}
+                buttonLink={`/${lang}${section.buttonLink}`}
+              />
+            )}
+
             {section.type === 'bloggerSection' && (
               <Blogger
                 subtitle={section.subtitle}
@@ -214,15 +232,36 @@ export async function getStaticPaths() {
             {section.type === 'reviewsSection' && (
               <Reviews
                 reviews={section.reviews}
-              />
-            )}
-
-            {section.type === 'pricingSection' && (
-              <Pricing
                 subtitle={section.subtitle}
                 title={section.title}
                 description={section.description}
-                plans={section.plans}
+              />
+            )}
+
+            {section.type === 'achievementsSection' && (
+              <Achievements
+                subtitle={section.subtitle}
+                title={section.title}
+                description={section.description}
+                achievements={section.achievements}
+              />
+            )}
+
+            {section.type === 'technologiesSection' && (
+              <Technologies
+                subtitle={section.subtitle}
+                title={section.title}
+                description={section.description}
+                categories={section.categories}
+              />
+            )}
+
+            {section.type === 'processSection' && (
+              <Process
+                subtitle={section.subtitle}
+                title={section.title}
+                description={section.description}
+                steps={section.steps}
               />
             )}
 
@@ -237,6 +276,24 @@ export async function getStaticPaths() {
                 secondaryButtonLink={`/${lang}${section.secondaryButtonLink}`}
                 stats={section.stats}
                 partnerLogos={jsonData.sections.find(s => s.type === 'welcomeSection')?.partnerLogos}
+              />
+            )}
+
+            {section.type === 'industryFeaturesSection' && (
+              <IndustryFeatures
+                subtitle={section.subtitle}
+                title={section.title}
+                description={section.description}
+                industries={section.industries}
+              />
+            )}
+
+            {section.type === 'automationFeaturesSection' && (
+              <AutomationFeatures
+                subtitle={section.subtitle}
+                title={section.title}
+                description={section.description}
+                features={section.features}
               />
             )}
           </>

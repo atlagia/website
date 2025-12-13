@@ -1,0 +1,210 @@
+{
+  "hero": {
+    "subtitle": "توثيق واجهة برمجة التطبيقات",
+    "title": "التكامل مع منصة Dentagia",
+    "description": "توثيق شامل لواجهة برمجة التطبيقات لمساعدتك على دمج حلول إدارة عيادات الأسنان من Dentagia في تطبيقاتك.",
+    "searchPlaceholder": "البحث في توثيق واجهة برمجة التطبيقات..."
+  },
+  "sidebar": {
+    "categories": [
+      {
+        "title": "البدء",
+        "icon": "Code",
+        "items": [
+          {
+            "title": "المصادقة",
+            "link": "/api/auth"
+          },
+          {
+            "title": "نظرة عامة على واجهة برمجة التطبيقات",
+            "link": "/api/overview"
+          },
+          {
+            "title": "حدود الاستخدام",
+            "link": "/api/rate-limits"
+          },
+          {
+            "title": "الامتثال لـ HIPAA",
+            "link": "/api/hipaa"
+          }
+        ]
+      },
+      {
+        "title": "النقاط النهائية الأساسية",
+        "icon": "Terminal",
+        "items": [
+          {
+            "title": "واجهة برمجة التطبيقات للمرضى",
+            "link": "/api/patients"
+          },
+          {
+            "title": "واجهة برمجة التطبيقات للمواعيد",
+            "link": "/api/appointments"
+          },
+          {
+            "title": "واجهة برمجة التطبيقات للفوترة",
+            "link": "/api/billing"
+          },
+          {
+            "title": "واجهة برمجة التطبيقات لخطط العلاج",
+            "link": "/api/treatment-plans"
+          }
+        ]
+      },
+      {
+        "title": "الميزات المتقدمة",
+        "icon": "Box",
+        "items": [
+          {
+            "title": "Webhooks",
+            "link": "/api/webhooks"
+          },
+          {
+            "title": "واجهة برمجة التطبيقات لتحليلات العيادة",
+            "link": "/api/analytics"
+          },
+          {
+            "title": "واجهة برمجة التطبيقات للجدولة بالذكاء الاصطناعي",
+            "link": "/api/ai-scheduling"
+          },
+          {
+            "title": "واجهة برمجة التطبيقات للتواصل مع المرضى",
+            "link": "/api/communication"
+          }
+        ]
+      },
+      {
+        "title": "الأمان",
+        "icon": "Shield",
+        "items": [
+          {
+            "title": "مفاتيح واجهة برمجة التطبيقات",
+            "link": "/api/keys"
+          },
+          {
+            "title": "OAuth 2.0",
+            "link": "/api/oauth"
+          },
+          {
+            "title": "تشفير البيانات",
+            "link": "/api/encryption"
+          },
+          {
+            "title": "الامتثال لـ HIPAA",
+            "link": "/api/hipaa-compliance"
+          }
+        ]
+      }
+    ]
+  },
+  "featured": {
+    "title": "الأدلة المميزة",
+    "guides": [
+      {
+        "icon": "Zap",
+        "title": "دليل البدء السريع",
+        "description": "ابدأ مع واجهة برمجة التطبيقات Dentagia في دقائق",
+        "link": "/api/quick-start",
+        "color": "pink"
+      },
+      {
+        "icon": "Database",
+        "title": "نماذج بيانات المرضى",
+        "description": "فهم هياكل بيانات المرضى والعلاقات",
+        "link": "/api/data-models",
+        "color": "blue"
+      },
+      {
+        "icon": "Settings",
+        "title": "أنماط التكامل",
+        "description": "أنماط شائعة للتكامل مع إدارة عيادات الأسنان",
+        "link": "/api/integration-patterns",
+        "color": "purple"
+      }
+    ]
+  },
+  "endpoints": {
+    "title": "النقاط النهائية الشائعة",
+    "description": "اكتشف نقاط النهاية الأكثر استخدامًا في واجهة برمجة التطبيقات لإدارة عيادات الأسنان",
+    "items": [
+      {
+        "method": "GET",
+        "path": "/api/v1/patients",
+        "title": "قائمة المرضى",
+        "description": "استرجاع قائمة المرضى مع خيارات التصفية والترقيم"
+      },
+      {
+        "method": "POST",
+        "path": "/api/v1/appointments",
+        "title": "إنشاء موعد",
+        "description": "إنشاء موعد جديد مع معلومات المريض وتفاصيل الجدولة"
+      },
+      {
+        "method": "GET",
+        "path": "/api/v1/patients/{id}",
+        "title": "الحصول على مريض",
+        "description": "استرجاع معلومات مفصلة عن مريض محدد بما في ذلك التاريخ الطبي"
+      },
+      {
+        "method": "PUT",
+        "path": "/api/v1/appointments/{id}",
+        "title": "تحديث موعد",
+        "description": "تحديث معلومات وحالة موعد موجود"
+      },
+      {
+        "method": "POST",
+        "path": "/api/v1/billing/invoices",
+        "title": "إنشاء فاتورة",
+        "description": "إنشاء فاتورة جديدة لعلاج أو خدمات المريض"
+      },
+      {
+        "method": "GET",
+        "path": "/api/v1/analytics/practice",
+        "title": "الحصول على تحليلات العيادة",
+        "description": "استرجاع مقاييس الأداء ورؤى العيادة"
+      }
+    ]
+  },
+  "updates": {
+    "title": "أحدث التحديثات",
+    "description": "ابق على اطلاع بأحدث ميزات واجهة برمجة التطبيقات والتحسينات",
+    "items": [
+      {
+        "date": "2024-03-15",
+        "title": "واجهة برمجة التطبيقات للجدولة بالذكاء الاصطناعي",
+        "description": "إضافة دعم للجدولة المدعومة بالذكاء الاصطناعي وتحسين المواعيد",
+        "tag": "ميزة"
+      },
+      {
+        "date": "2024-03-10",
+        "title": "واجهة برمجة التطبيقات الإصدار 2.0 بيتا",
+        "description": "تقديم الجيل التالي من واجهة برمجة التطبيقات مع أداء محسن ونقاط نهاية جديدة لعيادات الأسنان",
+        "tag": "تحديث"
+      },
+      {
+        "date": "2024-03-05",
+        "title": "أمان HIPAA محسن",
+        "description": "إضافة دعم للتشفير المحسن وميزات الامتثال لـ HIPAA المحسنة",
+        "tag": "أمان"
+      }
+    ]
+  },
+  "help": {
+    "title": "هل تحتاج إلى مزيد من المساعدة؟",
+    "description": "لا يمكنك العثور على ما تبحث عنه؟ فريق دعم المطورين لدينا هنا للمساعدة.",
+    "options": [
+      {
+        "icon": "MessageCircle",
+        "title": "منتدى المطورين",
+        "description": "انضم إلى مجتمع المطورين للحصول على المساعدة من المطورين الآخرين ومديري العيادات",
+        "link": "/api/community"
+      },
+      {
+        "icon": "Mail",
+        "title": "اتصل بدعم واجهة برمجة التطبيقات",
+        "description": "تواصل مع فريق دعم واجهة برمجة التطبيقات المخصص لدينا",
+        "link": "/api/support"
+      }
+    ]
+  }
+}

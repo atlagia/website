@@ -1,0 +1,198 @@
+{
+  "hero": {
+    "subtitle": "Optimierte Abrechnung",
+    "title": "Automatisierte Abrechnung und Zahlungsabwicklung",
+    "description": "Vereinfachen Sie Abrechnung, Rechnungsstellung und Zahlungsabwicklung mit automatisierten Workflows, Versicherungsintegration und umfassenden Finanzberichten.",
+    "icon": "credit-card",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "80%",
+        "label": "Schnellere Bearbeitung"
+      },
+      {
+        "value": "50%",
+        "label": "Zeit gespart"
+      },
+      {
+        "value": "95%",
+        "label": "Genauigkeit"
+      }
+    ]
+  },
+  "features": {
+    "title": "Abrechnungs-Funktionen",
+    "subtitle": "Finanzverwaltung",
+    "description": "Umfassende Tools für Abrechnung und Zahlungsabwicklung zur Optimierung der Finanzabläufe Ihrer Praxis.",
+    "items": [
+      {
+        "icon": "credit-card",
+        "title": "Automatisierte Abrechnung",
+        "description": "Generieren Sie Rechnungen automatisch basierend auf Behandlungen mit anpassbaren Vorlagen und automatischen Zahlungserinnerungen.",
+        "highlights": [
+          "Automatische Rechnungsgenerierung",
+          "Anpassbare Rechnungsvorlagen",
+          "Zahlungserinnerungen",
+          "Mehrere Zahlungspläne",
+          "Wiederkehrende Abrechnung"
+        ],
+        "stats": {
+          "value": "80%",
+          "label": "Schnellere Bearbeitung"
+        }
+      },
+      {
+        "icon": "trending-up",
+        "title": "Versicherungsanträge",
+        "description": "Optimierte Einreichung von Versicherungsanträgen mit Echtzeit-Berechtigungsprüfung und automatisierten Nachfassaktionen.",
+        "highlights": [
+          "Elektronische Antragseinreichung",
+          "Echtzeit-Berechtigungsprüfungen",
+          "Automatisierte Nachfassaktionen",
+          "Antragsstatusverfolgung",
+          "Ablehnungsverwaltung"
+        ],
+        "stats": {
+          "value": "95%",
+          "label": "Genehmigungsrate"
+        }
+      },
+      {
+        "icon": "users",
+        "title": "Zahlungsabwicklung",
+        "description": "Akzeptieren Sie Zahlungen online und persönlich mit mehreren Zahlungsmethoden und sicherer Abwicklung.",
+        "highlights": [
+          "Kreditkartenabwicklung",
+          "ACH- und Banküberweisungen",
+          "Zahlungspläne",
+          "Online-Zahlungsportal",
+          "Sichere Abwicklung"
+        ],
+        "stats": {
+          "value": "50%",
+          "label": "Zeit gespart"
+        }
+      },
+      {
+        "icon": "trending-up",
+        "title": "Finanzberichte",
+        "description": "Umfassende Finanzberichte und Analysen zur Verfolgung von Einnahmen, Einzahlungen und Praxisleistung.",
+        "highlights": [
+          "Umsatzverfolgung",
+          "Einzahlungsanalyse",
+          "Finanzberichte",
+          "Trendanalyse",
+          "Praxisleistung"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "Sichtbarkeit"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Abrechnungs-Erfolgsgeschichten",
+    "description": "Sehen Sie, wie Praxen ihre Abrechnungsabläufe optimieren",
+    "stats": [
+      {
+        "icon": "credit-card",
+        "value": "80%",
+        "label": "Schnellere Bearbeitung"
+      },
+      {
+        "icon": "clock",
+        "value": "50%",
+        "label": "Zeit gespart"
+      },
+      {
+        "icon": "trending-up",
+        "value": "95%",
+        "label": "Genauigkeit"
+      },
+      {
+        "icon": "users",
+        "value": "100%",
+        "label": "Automatisierung"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Emily Rodriguez",
+        "role": "Praxisleiterin, Zentrum für Ästhetische Zahnmedizin",
+        "quote": "Die Abrechnungsautomatisierung hat unsere Verwaltungszeit um 50% reduziert. Wir bearbeiten Anträge schneller und erheben Zahlungen effizienter."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Vorteile der Abrechnung",
+    "subtitle": "Finanzielle Exzellenz",
+    "description": "Erleben Sie die Vorteile automatisierter Abrechnung und Zahlungsabwicklung.",
+    "items": [
+      {
+        "title": "Schnellere Bearbeitung",
+        "description": "Automatisierte Workflows bearbeiten Rechnungen und Anträge viel schneller als manuelle Methoden.",
+        "icon": "zap",
+        "color": "teal",
+        "stats": {
+          "value": "80%",
+          "label": "Schneller"
+        },
+        "highlights": [
+          "Automatisierte Abrechnung",
+          "Elektronische Anträge",
+          "Sofortige Bearbeitung",
+          "Reduzierte Verzögerungen"
+        ]
+      },
+      {
+        "title": "Zeit sparen",
+        "description": "Automatisierung eliminiert manuelle Dateneingabe und reduziert Verwaltungskosten.",
+        "icon": "clock",
+        "color": "cyan",
+        "stats": {
+          "value": "50%",
+          "label": "Zeit gespart"
+        },
+        "highlights": [
+          "Automatisierte Workflows",
+          "Reduzierte Papierarbeit",
+          "Optimierte Prozesse",
+          "Weniger manuelle Eingabe"
+        ]
+      },
+      {
+        "title": "Einzahlungen verbessern",
+        "description": "Bessere Verfolgung und automatisierte Erinnerungen verbessern die Zahlungserhebungsraten.",
+        "icon": "trending-up",
+        "color": "blue",
+        "stats": {
+          "value": "95%",
+          "label": "Erhebungsrate"
+        },
+        "highlights": [
+          "Zahlungserinnerungen",
+          "Einzahlungsverfolgung",
+          "Zahlungspläne",
+          "Bessere Sichtbarkeit"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Bereit, Ihre Abrechnung zu optimieren?",
+    "description": "Sehen Sie, wie die Abrechnungs-Funktionen von Dentagia Ihre Finanzabläufe transformieren können.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Demo vereinbaren",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Mehr erfahren",
+      "link": "/features"
+    }
+  }
+}
+

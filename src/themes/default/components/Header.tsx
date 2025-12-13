@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { ShoppingCart, Globe } from 'lucide-react';
 import Cart from './Cart';
-import { useCartStore } from '../../../store/cart';
-import { useCurrencyStore } from '../../../store/currency';
+import { useCartStore } from '@store/cart';
+import { useCurrencyStore } from '@store/currency';
 import Search from './Search';
+
 
 interface HeaderProps {
   siteName: string;
@@ -20,12 +21,14 @@ interface HeaderProps {
   languages: {
     [key: string]: string;
   };
+  allowedLanguages: string[];
   projectType: string;
   currentPath: string;
   currencies: {
     [key: string]: string;
   };
   styles: any;
+  headerStyles: any;
   apiEndpoint: string;
   searchConfig: {
     apiEndpoint: string;
@@ -42,6 +45,10 @@ interface HeaderProps {
       authToken: string;
       redirectUrl: string;
     };
+    store?: {
+      name: string;
+      domain: string;
+    };
   };
 }
 
@@ -49,22 +56,29 @@ export default function Header({
   siteName, 
   menuConfig, 
   languages, 
+  allowedLanguages,
   projectType, 
   currentPath,
   currencies,
   styles,
+  headerStyles,
   apiEndpoint,
   searchConfig,
   paymentConfig
 }: HeaderProps) {
+  // Filter the languages object based on allowed languages passed from server
+  const filteredLanguages = Object.fromEntries(
+    Object.entries(languages).filter(([code]) => allowedLanguages.includes(code))
+  );
+
   // Extract initial language and handle path parsing
   const getInitialLanguage = () => {
     const pathParts = currentPath.split('/');
     // Check if path starts with a language code
     const pathLang = pathParts[1];
     
-    // If path doesn't start with language code (e.g., /products/...)
-    if (!languages[pathLang]) {
+    // If path doesn't start with language code (e.g., /products/...) or language is not allowed
+    if (!filteredLanguages[pathLang]) {
       return 'en'; // Default to English
     }
     
@@ -86,15 +100,14 @@ export default function Header({
     const pathParts = currentPath.split('/');
     const pathLang = pathParts[1];
     
-    if (languages[pathLang] && pathLang !== language) {
+    if (filteredLanguages[pathLang] && pathLang !== language) {
       setLanguage(pathLang);
     }
   }, [currentPath]);
 
-  // Get current menu items based on language and project type
+  // Get current menu items based on language (simplified structure)
   const getCurrentMenuItems = () => {
-    const langContent = menuConfig[language] || menuConfig.en;
-    return langContent[projectType] || langContent.default;
+    return menuConfig[language] || menuConfig.en;
   };
 
   const currentMenuItems = getCurrentMenuItems();
@@ -133,13 +146,13 @@ export default function Header({
 
   return (
     <>
-      <header className={styles.wrapper}>
-        <div className={styles.container}>
-          <div className={styles.nav.wrapper}>
-            {/* Mobile Menu Button - Now first item */}
+      <header className={headerStyles.wrapper}>
+        <div className={headerStyles.container}>
+          <div className={headerStyles.nav.wrapper}>
+            {/* Mobile Menu Button - Only visible on mobile */}
             <div className="flex lg:hidden">
-              <button
-                className="p-2"
+              <button 
+                className="p-2 text-gray-300 hover:text-white"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 aria-label="Toggle menu"
               >
@@ -154,17 +167,17 @@ export default function Header({
             </div>
 
             {/* Logo/Brand - Centered on mobile */}
-            <div className="flex-1 lg:flex-none text-center lg:text-left">
-              <a href={getHomeUrl()} className={styles.nav.brand}>{siteName}</a>
+            <div className={headerStyles.logo.wrapper}>
+              <a href={getHomeUrl()} className={headerStyles.nav.brand}>{siteName}</a>
             </div>
 
-            {/* Desktop Navigation */}
+            {/* Desktop Navigation - Hidden on mobile, visible on desktop */}
             <nav className="hidden lg:flex lg:items-center lg:space-x-4">
               {currentMenuItems.items.map((item, index) => (
                 <a 
                   key={index}
                   href={item.href}
-                  className={styles.nav.menu.item}
+                  className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
                 >
                   {item.label}
                 </a>
@@ -172,24 +185,30 @@ export default function Header({
             </nav>
 
             {/* Right-side actions */}
-            <div className={styles.actions.wrapper}>
+            <div className={headerStyles.actions.wrapper}>
               <Search 
                 apiEndpoint={searchConfig.apiEndpoint}
                 lang={language}
                 placeholder={searchConfig.placeholder}
+                searchStyles={{
+                  icon: headerStyles.actions.search?.icon,
+                  button: "p-2 hover:bg-gray-100 rounded-full",
+                  form: "absolute top-full right-0 mt-2 w-72 bg-white rounded-lg shadow-lg p-4 z-50",
+                  input: "w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                }}
               />
 
               {/* Currency Selector */}
-              <div className="relative">
+              <div className={headerStyles.actions.currency.wrapper}>
                 <button
                   onClick={() => setShowCurrencyMenu(!showCurrencyMenu)}
-                  className={styles.actions.currency.button}
+                  className={headerStyles.actions.currency.button}
                 >
-                  <span className={styles.actions.currency.text}>{currencies[currency]}</span>
+                  <span className={headerStyles.actions.currency.text}>{currencies[currency]}</span>
                 </button>
 
                 {showCurrencyMenu && (
-                  <div className={styles.actions.currency.dropdown}>
+                  <div className={headerStyles.actions.currency.dropdown}>
                     {Object.entries(currencies).map(([code, symbol]) => (
                       <button
                         key={code}
@@ -197,8 +216,8 @@ export default function Header({
                           setCurrency(code);
                           setShowCurrencyMenu(false);
                         }}
-                        className={`${styles.actions.currency.option} ${
-                          currency === code ? 'bg-gray-100' : 'hover:bg-gray-50'
+                        className={`${headerStyles.actions.currency.option} ${
+                          currency === code ? headerStyles.actions.currency.optionActive : headerStyles.actions.currency.optionHover
                         }`}
                       >
                         {`${code} (${symbol})`}
@@ -213,15 +232,15 @@ export default function Header({
                 <button
                   onClick={() => setShowLanguageMenu(!showLanguageMenu)}
                   className={styles.actions.language.button}
-                  aria-label={`Select language (current: ${languages[language]})`}
+                  aria-label={`Select language (current: ${filteredLanguages[language]})`}
                 >
                   <Globe size={20} />
-                  <span className={styles.actions.language.text}>{languages[language]}</span>
+                  <span className={styles.actions.language.text}>{filteredLanguages[language]}</span>
                 </button>
 
                 {showLanguageMenu && (
                   <div className={styles.actions.language.dropdown}>
-                    {Object.entries(languages).map(([code, name]) => (
+                    {Object.entries(filteredLanguages).map(([code, name]) => (
                       <button
                         key={code}
                         onClick={() => changeLanguage(code)}
@@ -289,29 +308,52 @@ export default function Header({
         />
       )}
 
-      {/* Cart Sidebar (unchanged) */}
+      {/* Cart Sidebar - Enhanced */}
       <div 
-        className={`fixed inset-y-0 right-0 w-full max-w-md bg-white shadow-xl z-[100] transform transition-transform duration-300 ease-in-out ${
+        className={`fixed inset-y-0 right-0 w-full max-w-md bg-gradient-to-b from-white to-gray-50 shadow-2xl z-[100] transform transition-all duration-300 ease-in-out backdrop-blur-sm ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
         <div className="h-full flex flex-col">
-          <div className="p-4 border-b">
+          {/* Enhanced Header */}
+          <div className="p-6 border-b border-gray-200 bg-gradient-to-r from-gray-50 to-white">
             <div className="flex justify-between items-center">
-              <h2 className="text-lg font-medium">Shopping Cart</h2>
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6m8 0V9a2 2 0 00-2-2H9a2 2 0 00-2 2v4.01" />
+                  </svg>
+                </div>
+                <h2 className="text-xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">Shopping Cart</h2>
+              </div>
               <button 
                 onClick={() => setIsOpen(false)}
-                className="p-2 hover:bg-gray-100 rounded-full"
+                className="p-2.5 hover:bg-gray-100 rounded-full transition-all duration-200 hover:scale-110 group"
                 aria-label="Close shopping cart"
               >
-                ✕
+                <svg className="w-5 h-5 text-gray-500 group-hover:text-gray-700 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
               </button>
             </div>
           </div>
           <Cart 
-            onCheckout={() => setIsOpen(false)} 
+            onCheckout={() => {
+              // Explicitly close the cart
+              setIsOpen(false);
+              // Persist the closed state in localStorage
+              if (window.localStorage) {
+                const cartStore = JSON.parse(localStorage.getItem('cart-storage') || '{}');
+                if (cartStore) {
+                  cartStore.state = { ...cartStore.state, isOpen: false };
+                  localStorage.setItem('cart-storage', JSON.stringify(cartStore));
+                }
+              }
+            }} 
             apiEndpoint={apiEndpoint}
             paymentConfig={paymentConfig}
+            storeName={paymentConfig.store?.name || 'DefaultStore'}
+            storeDomain={paymentConfig.store?.domain || 'localhost'}
           />
         </div>
       </div>

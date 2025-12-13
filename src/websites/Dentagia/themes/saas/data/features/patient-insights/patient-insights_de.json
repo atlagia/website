@@ -1,0 +1,182 @@
+{
+  "hero": {
+    "subtitle": "KI-gestützte Analyse",
+    "title": "Patienten-Insights und prädiktive Analyse",
+    "description": "Nutzen Sie KI-gestützte Analyse, um tiefe Einblicke in das Patientenverhalten zu gewinnen, Behandlungsbedarf vorherzusagen und Praxswachstumsstrategien zu optimieren.",
+    "icon": "trending-up",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "35%",
+        "label": "Umsatzwachstum"
+      },
+      {
+        "value": "95%",
+        "label": "Vorhersagegenauigkeit"
+      },
+      {
+        "value": "60%",
+        "label": "Bessere Entscheidungen"
+      }
+    ]
+  },
+  "features": {
+    "title": "Patienten-Insights-Funktionen",
+    "subtitle": "Datengetriebene Intelligenz",
+    "description": "Fortgeschrittene Analyse und KI-gestützte Insights zur Unterstützung beim Verstehen und Wachstum Ihrer Praxis.",
+    "items": [
+      {
+        "icon": "brain",
+        "title": "Prädiktive Analyse",
+        "description": "KI analysiert Patientendaten, um Behandlungsbedarf, Terminmuster und Patientenverhalten vorherzusagen.",
+        "highlights": [
+          "Behandlungsvorhersagen",
+          "Terminprognose",
+          "Patientenverhaltensanalyse",
+          "Risikobewertung",
+          "Trendidentifikation"
+        ],
+        "stats": {
+          "value": "95%",
+          "label": "Genauigkeit"
+        }
+      },
+      {
+        "icon": "trending-up",
+        "title": "Praxiswachstums-Insights",
+        "description": "Datengetriebene Insights zu Praxisleistung, Umsatzmöglichkeiten und Wachstumsstrategien.",
+        "highlights": [
+          "Umsatzanalyse",
+          "Leistungsmetriken",
+          "Wachstumsmöglichkeiten",
+          "Markt-Insights",
+          "Strategische Empfehlungen"
+        ],
+        "stats": {
+          "value": "35%",
+          "label": "Umsatzwachstum"
+        }
+      },
+      {
+        "icon": "users",
+        "title": "Patientensegmentierung",
+        "description": "Segmentieren Sie Patienten nach Verhalten, Behandlungsbedarf und Wert, um Marketing- und Versorgungsstrategien zu optimieren.",
+        "highlights": [
+          "Verhaltenssegmentierung",
+          "Behandlungsbasierte Gruppen",
+          "Wertanalyse",
+          "Zielgerichtetes Marketing",
+          "Personalisierte Versorgung"
+        ],
+        "stats": {
+          "value": "60%",
+          "label": "Bessere Entscheidungen"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Patienten-Insights-Erfolg",
+    "description": "Sehen Sie, wie KI-Analyse Praxen transformiert",
+    "stats": [
+      {
+        "icon": "brain",
+        "value": "95%",
+        "label": "Genauigkeit"
+      },
+      {
+        "icon": "trending-up",
+        "value": "35%",
+        "label": "Umsatzwachstum"
+      },
+      {
+        "icon": "users",
+        "value": "60%",
+        "label": "Bessere Entscheidungen"
+      },
+      {
+        "icon": "award",
+        "value": "100%",
+        "label": "KI-gestützt"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Dr. Michael Chen",
+        "role": "Leitender Zahnarzt",
+        "quote": "Die Patienten-Insights-Funktion hat uns geholfen, unsere Praxis besser zu verstehen und den Umsatz um 35% zu steigern. Die KI-Vorhersagen sind unglaublich genau."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Vorteile der Patienten-Insights",
+    "subtitle": "Datengetriebenes Wachstum",
+    "description": "Erleben Sie die Kraft der KI-gestützten Analyse.",
+    "items": [
+      {
+        "title": "Prädiktive Genauigkeit",
+        "description": "KI-Vorhersagen helfen Ihnen, Patientenbedarf vorherzusehen und die Terminplanung zu optimieren.",
+        "icon": "brain",
+        "color": "teal",
+        "stats": {
+          "value": "95%",
+          "label": "Genauigkeit"
+        },
+        "highlights": [
+          "Behandlungsvorhersagen",
+          "Terminprognose",
+          "Verhaltensanalyse",
+          "Risikobewertung"
+        ]
+      },
+      {
+        "title": "Umsatzwachstum",
+        "description": "Datengetriebene Insights identifizieren Möglichkeiten, den Praxisumsatz zu steigern.",
+        "icon": "trending-up",
+        "color": "cyan",
+        "stats": {
+          "value": "35%",
+          "label": "Wachstum"
+        },
+        "highlights": [
+          "Umsatzanalyse",
+          "Möglichkeitsidentifikation",
+          "Strategische Empfehlungen",
+          "Leistungsverfolgung"
+        ]
+      },
+      {
+        "title": "Bessere Entscheidungen",
+        "description": "Umfassende Insights ermöglichen bessere strategische und operative Entscheidungen.",
+        "icon": "users",
+        "color": "blue",
+        "stats": {
+          "value": "60%",
+          "label": "Verbesserung"
+        },
+        "highlights": [
+          "Datengetriebene Entscheidungen",
+          "Strategische Planung",
+          "Leistungsoptimierung",
+          "Markt-Insights"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Bereit für KI-gestützte Insights?",
+    "description": "Sehen Sie, wie die Patienten-Insights von Dentagia Ihr Praxiswachstum transformieren können.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Demo vereinbaren",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Mehr erfahren",
+      "link": "/features"
+    }
+  }
+}
+

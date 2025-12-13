@@ -1,0 +1,296 @@
+{
+  "pageTitle": "Soluciones para consultorios dentales - Dentagia",
+  "pageDescription": "Soluciones integrales para consultorios dentales de todos los tamaños. Software de gestión de consultorios impulsado por IA y basado en la nube.",
+  "hero": {
+    "badge": "Soluciones para consultorios",
+    "title": "Soluciones para cada consultorio dental",
+    "description": "Descubra cómo la plataforma moderna, segura y basada en la nube de Dentagia puede transformar las operaciones de su consultorio dental con soluciones impulsadas por IA diseñadas para consultorios de todos los tamaños.",
+    "cta": {
+      "primary": {
+        "text": "Explorar funciones",
+        "href": "#solutions"
+      },
+      "secondary": {
+        "text": "Programar demostración",
+        "href": "/demo"
+      }
+    }
+  },
+  "stats": [
+    {
+      "value": "500+",
+      "label": "Consultorios dentales"
+    },
+    {
+      "value": "99.9%",
+      "label": "Disponibilidad"
+    },
+    {
+      "value": "50%",
+      "label": "Tiempo ahorrado"
+    },
+    {
+      "value": "24/7",
+      "label": "Soporte"
+    }
+  ],
+  "solutions": [
+    {
+      "category": "Tipos de consultorio",
+      "description": "Soluciones adaptadas al tamaño y estructura de su consultorio",
+      "items": [
+        {
+          "icon": "user",
+          "name": "Consultorios individuales",
+          "description": "Gestión completa del consultorio para profesionales individuales con programación impulsada por IA y gestión de pacientes",
+          "href": "/solutions/solo-practice",
+          "color": "cyan"
+        },
+        {
+          "icon": "users",
+          "name": "Multi-profesional",
+          "description": "Operaciones optimizadas para consultorios con múltiples dentistas y miembros del personal",
+          "href": "/solutions/multi-practitioner",
+          "color": "teal"
+        },
+        {
+          "icon": "building",
+          "name": "Multi-ubicación",
+          "description": "Sistema de gestión centralizado para consultorios dentales con múltiples ubicaciones",
+          "href": "/solutions/multi-location",
+          "color": "blue"
+        },
+        {
+          "icon": "star",
+          "name": "Consultorios especializados",
+          "description": "Herramientas avanzadas para consultorios cosméticos, ortodóncicos, pediátricos y otros consultorios especializados",
+          "href": "/solutions/specialty",
+          "color": "purple"
+        }
+      ]
+    },
+    {
+      "category": "Gestión del consultorio",
+      "description": "Funciones principales para gestionar eficientemente su consultorio dental",
+      "items": [
+        {
+          "icon": "users",
+          "name": "Gestión de pacientes",
+          "description": "Registros completos de pacientes, historiales médicos y planes de tratamiento en una plataforma segura",
+          "href": "/features/patient-management",
+          "color": "indigo"
+        },
+        {
+          "icon": "calendar",
+          "name": "Programación IA",
+          "description": "Programación inteligente de citas que optimiza su calendario y reduce las ausencias",
+          "href": "/features/ai-scheduling",
+          "color": "pink"
+        },
+        {
+          "icon": "credit-card",
+          "name": "Facturación y pagos",
+          "description": "Facturación, facturación y procesamiento de pagos optimizados con integración de seguros",
+          "href": "/features/billing",
+          "color": "rose"
+        },
+        {
+          "icon": "clipboard",
+          "name": "Planificación de tratamientos",
+          "description": "Planes de tratamiento digitales, documentación y herramientas de gestión de casos",
+          "href": "/features/treatment-planning",
+          "color": "amber"
+        }
+      ]
+    },
+    {
+      "category": "IA y automatización",
+      "description": "Automatización inteligente impulsada por tecnología IA avanzada",
+      "items": [
+        {
+          "icon": "brain",
+          "name": "Insights impulsados por IA",
+          "description": "Análisis predictivo e insights sobre el comportamiento de los pacientes para ayudar a hacer crecer su consultorio",
+          "href": "/features/patient-insights",
+          "color": "violet"
+        },
+        {
+          "icon": "bell",
+          "name": "Recordatorios automatizados",
+          "description": "Recordatorios de citas inteligentes y seguimientos por SMS y correo electrónico",
+          "href": "/features/reminders",
+          "color": "emerald"
+        },
+        {
+          "icon": "trending-up",
+          "name": "Análisis del consultorio",
+          "description": "Insights basados en datos sobre el rendimiento del consultorio, ingresos y oportunidades de crecimiento",
+          "href": "/features/analytics",
+          "color": "lime"
+        },
+        {
+          "icon": "zap",
+          "name": "Automatización de flujos de trabajo",
+          "description": "Automatice tareas rutinarias y optimice las operaciones del consultorio",
+          "href": "/features/automation",
+          "color": "orange"
+        }
+      ]
+    },
+    {
+      "category": "Seguridad y cumplimiento",
+      "description": "Seguridad de nivel empresarial y cumplimiento HIPAA para su consultorio",
+      "items": [
+        {
+          "icon": "shield",
+          "name": "Cumplimiento HIPAA",
+          "description": "Certificación completa de cumplimiento HIPAA y estándares de seguridad para la protección de datos de pacientes",
+          "href": "/features/hipaa",
+          "color": "green"
+        },
+        {
+          "icon": "lock",
+          "name": "Cifrado de datos",
+          "description": "Cifrado de extremo a extremo y almacenamiento en la nube seguro para todos los datos de pacientes",
+          "href": "/features/encryption",
+          "color": "sky"
+        },
+        {
+          "icon": "cloud",
+          "name": "Infraestructura cloud",
+          "description": "Plataforma cloud segura y escalable con copias de seguridad automáticas y recuperación ante desastres",
+          "href": "/platform/cloud",
+          "color": "cyan"
+        },
+        {
+          "icon": "smartphone",
+          "name": "Acceso móvil",
+          "description": "Acceda a los datos de su consultorio de forma segura desde cualquier dispositivo, en cualquier lugar",
+          "href": "/platform/mobile",
+          "color": "blue"
+        }
+      ]
+    }
+  ],
+  "features": {
+    "title": "Funciones poderosas para consultorios dentales",
+    "description": "Nuestra plataforma viene repleta de funciones diseñadas específicamente para la gestión de consultorios dentales",
+    "items": [
+      {
+        "icon": "cloud",
+        "title": "Plataforma basada en la nube",
+        "description": "Acceda a los datos de su consultorio de forma segura desde cualquier lugar, en cualquier momento con nuestra infraestructura en la nube"
+      },
+      {
+        "icon": "shield",
+        "title": "Conforme a HIPAA",
+        "description": "Seguridad de nivel empresarial con cumplimiento completo de HIPAA y almacenamiento de datos cifrado"
+      },
+      {
+        "icon": "zap",
+        "title": "Impulsado por IA",
+        "description": "Automatización inteligente e insights impulsados por IA para optimizar las operaciones de su consultorio"
+      },
+      {
+        "icon": "smartphone",
+        "title": "Acceso móvil",
+        "description": "Acceso completo a la aplicación móvil para gestionar su consultorio sobre la marcha"
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Beneficios para su consultorio dental",
+    "description": "Experimente las ventajas de la gestión moderna, segura y basada en la nube de consultorios dentales.",
+    "items": [
+      {
+        "icon": "trending-up",
+        "title": "Crecimiento del consultorio",
+        "description": "Los insights y análisis impulsados por IA le ayudan a hacer crecer su consultorio y aumentar los ingresos",
+        "stats": "35%",
+        "label": "Crecimiento de ingresos"
+      },
+      {
+        "icon": "clock",
+        "title": "Ahorro de tiempo",
+        "description": "Automatice tareas rutinarias y optimice las operaciones para ahorrar tiempo en la atención al paciente",
+        "stats": "50%",
+        "label": "Tiempo ahorrado"
+      },
+      {
+        "icon": "shield",
+        "title": "Seguridad y cumplimiento",
+        "description": "Plataforma conforme a HIPAA con seguridad de nivel empresarial y protección de datos",
+        "stats": "99.9%",
+        "label": "Disponibilidad"
+      },
+      {
+        "icon": "users",
+        "title": "Satisfacción del paciente",
+        "description": "Mejore la experiencia del paciente con programación optimizada, comunicación y atención",
+        "stats": "98%",
+        "label": "Tasa de satisfacción"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Lo que dicen los consultorios dentales",
+    "description": "Escuche a profesionales dentales que han transformado su consultorio con Dentagia",
+    "items": [
+      {
+        "quote": "Dentagia ha transformado cómo gestionamos nuestro consultorio. La programación impulsada por IA sola nos ahorra 10 horas por semana, y nuestros puntajes de satisfacción del paciente nunca han sido más altos.",
+        "author": "Dr. Sarah Martinez",
+        "role": "Propietario del consultorio",
+        "image": "/images/testimonials/sarah.jpg"
+      },
+      {
+        "quote": "Cambiar a Dentagia fue la mejor decisión que tomamos. El sistema de gestión de pacientes es intuitivo, la facturación está automatizada y nuestros ingresos han aumentado un 35%.",
+        "author": "Dr. Michael Chen",
+        "role": "Dentista principal",
+        "image": "/images/testimonials/michael.jpg"
+      }
+    ]
+  },
+  "integrations": {
+    "title": "Funciona con sus herramientas de consultorio",
+    "description": "Integre perfectamente con proveedores de seguros, procesadores de pagos, sistemas de laboratorio y software de imagen"
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "description": "Encuentre respuestas a preguntas comunes sobre las soluciones de gestión de consultorios dentales de Dentagia",
+    "items": [
+      {
+        "question": "¿Cómo funciona la programación impulsada por IA?",
+        "answer": "Nuestro sistema de IA aprende de sus patrones de consultorio y optimiza automáticamente la programación de citas, llena cancelaciones y reduce las ausencias hasta en un 70%."
+      },
+      {
+        "question": "¿Es Dentagia conforme a HIPAA?",
+        "answer": "Sí, Dentagia es totalmente conforme a HIPAA con seguridad de nivel empresarial, cifrado de extremo a extremo y pistas de auditoría completas para todos los accesos a datos de pacientes."
+      },
+      {
+        "question": "¿Puedo acceder a los datos de mi consultorio desde dispositivos móviles?",
+        "answer": "Sí, Dentagia es totalmente accesible desde escritorio, tableta y dispositivos móviles con nuestra plataforma segura basada en la nube y aplicaciones móviles."
+      },
+      {
+        "question": "¿Qué tipo de soporte ofrecen?",
+        "answer": "Proporcionamos soporte técnico 24/7, capacitación integral para su equipo y especialistas en gestión de consultorios dedicados para ayudarlo a tener éxito."
+      }
+    ]
+  },
+  "cta": {
+    "title": "¿Listo para transformar su consultorio dental?",
+    "description": "Únase a cientos de consultorios dentales que confían en Dentagia para gestionar sus operaciones y hacer crecer su negocio.",
+    "buttons": [
+      {
+        "text": "Programar una demostración",
+        "href": "/demo",
+        "variant": "primary"
+      },
+      {
+        "text": "Contáctenos",
+        "href": "/contact",
+        "variant": "secondary"
+      }
+    ]
+  }
+}
+

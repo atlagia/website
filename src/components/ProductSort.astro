@@ -1,0 +1,103 @@
+---
+interface Props {
+  currentSort?: string;
+}
+
+// Sorting options
+const SORT_OPTIONS = [
+  { value: 'price-asc', label: 'Price: Low to High' },
+  { value: 'price-desc', label: 'Price: High to Low' },
+  { value: 'name-asc', label: 'Name: A to Z' },
+  { value: 'name-desc', label: 'Name: Z to A' },
+  { value: 'newest', label: 'Newest Arrivals' },
+  { value: 'bestselling', label: 'Best Selling' }
+];
+
+const { 
+  currentSort = ''
+} = Astro.props;
+---
+
+<div 
+  id="product-sort-container" 
+  class="
+    bg-white 
+    border 
+    border-gray-200 
+    rounded-lg 
+    p-4 
+    w-full 
+    max-w-[250px]
+    shadow-sm
+    mb-4
+  "
+>
+  <div>
+    <h3 class="
+      text-sm 
+      font-bold 
+      uppercase 
+      text-gray-800 
+      mb-2 
+      tracking-wider
+    ">
+      SORT BY
+    </h3>
+    <select 
+      id="sort-select"
+      name="sort"
+      class="
+        w-full 
+        border 
+        border-gray-300 
+        rounded 
+        py-2 
+        px-3 
+        text-sm 
+        text-gray-700
+        focus:outline-none 
+        focus:ring-2 
+        focus:ring-blue-500
+      "
+    >
+      {SORT_OPTIONS.map(option => (
+        <option 
+          value={option.value} 
+          selected={currentSort === option.value}
+        >
+          {option.label}
+        </option>
+      ))}
+    </select>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const sortSelect = document.getElementById('sort-select');
+    
+    sortSelect.addEventListener('change', (e) => {
+      e.preventDefault();
+      
+      // Collect existing filters from URL
+      const currentUrl = new URL(window.location.href);
+      const searchParams = new URLSearchParams(currentUrl.search);
+      
+      // Remove existing sort parameter if exists
+      searchParams.delete('sort');
+      
+      // Add new sort parameter
+      searchParams.append('sort', sortSelect.value);
+      
+      // Update URL
+      currentUrl.search = searchParams.toString();
+      window.location.href = currentUrl.toString();
+    });
+  });
+</script>
+
+<style>
+  #sort-select option {
+    padding: 8px;
+  }
+</style>

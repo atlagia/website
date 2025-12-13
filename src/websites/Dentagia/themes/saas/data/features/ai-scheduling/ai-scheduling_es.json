@@ -1,0 +1,182 @@
+{
+  "hero": {
+    "subtitle": "Inteligencia impulsada por IA",
+    "title": "Programación de citas impulsada por IA",
+    "description": "Programación revolucionaria impulsada por IA que aprende de los patrones de su consultorio, optimiza su calendario automáticamente y maximiza la eficiencia del consultorio.",
+    "icon": "brain",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "70%",
+        "label": "Reducción de ausencias"
+      },
+      {
+        "value": "10hrs",
+        "label": "Tiempo ahorrado/semana"
+      },
+      {
+        "value": "95%",
+        "label": "Optimización"
+      }
+    ]
+  },
+  "features": {
+    "title": "Características de programación IA",
+    "subtitle": "Automatización inteligente",
+    "description": "Programación avanzada impulsada por IA que aprende y se adapta a las necesidades de su consultorio.",
+    "items": [
+      {
+        "icon": "brain",
+        "title": "Programación predictiva",
+        "description": "La IA analiza datos históricos para predecir momentos óptimos de citas y reducir ausencias.",
+        "highlights": [
+          "Reconocimiento de patrones",
+          "Predicción de ausencias",
+          "Sugerencias de momentos óptimos",
+          "Análisis de comportamiento del paciente",
+          "Optimización de calendario"
+        ],
+        "stats": {
+          "value": "70%",
+          "label": "Reducción de ausencias"
+        }
+      },
+      {
+        "icon": "zap",
+        "title": "Llenado automático de espacios",
+        "description": "La IA llena automáticamente cancelaciones y espacios en su calendario con pacientes en lista de espera o reprogramación optimizada.",
+        "highlights": [
+          "Detección automática de espacios",
+          "Gestión de listas de espera",
+          "Reprogramación inteligente",
+          "Optimización de ingresos",
+          "Maximización de eficiencia"
+        ],
+        "stats": {
+          "value": "95%",
+          "label": "Eficiencia"
+        }
+      },
+      {
+        "icon": "trending-up",
+        "title": "Optimización de ingresos",
+        "description": "La IA optimiza su calendario para maximizar ingresos sugiriendo espacios de citas de alto valor.",
+        "highlights": [
+          "Maximización de ingresos",
+          "Análisis de valor de citas",
+          "Sugerencias de espacios óptimos",
+          "Insights de crecimiento del consultorio",
+          "Seguimiento de rendimiento"
+        ],
+        "stats": {
+          "value": "35%",
+          "label": "Crecimiento de ingresos"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Éxito de programación IA",
+    "description": "Vea cómo la IA transforma la programación de consultorios",
+    "stats": [
+      {
+        "icon": "brain",
+        "value": "70%",
+        "label": "Reducción de ausencias"
+      },
+      {
+        "icon": "clock",
+        "value": "10hrs",
+        "label": "Tiempo ahorrado"
+      },
+      {
+        "icon": "trending-up",
+        "value": "35%",
+        "label": "Crecimiento de ingresos"
+      },
+      {
+        "icon": "award",
+        "value": "95%",
+        "label": "Eficiencia"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Dr. Sarah Martinez",
+        "role": "Propietario del consultorio, Downtown Dental Clinic",
+        "quote": "La programación impulsada por IA sola nos ahorra 10 horas por semana. Es como tener un asistente inteligente que nunca duerme."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Beneficios de la programación IA",
+    "subtitle": "Automatización inteligente",
+    "description": "Experimente el poder de la optimización de programación impulsada por IA.",
+    "items": [
+      {
+        "title": "Reducir ausencias",
+        "description": "La IA predice y previene ausencias con programación inteligente y recordatorios.",
+        "icon": "bell",
+        "color": "teal",
+        "stats": {
+          "value": "70%",
+          "label": "Reducción"
+        },
+        "highlights": [
+          "Predicción de ausencias",
+          "Programación óptima",
+          "Recordatorios automatizados",
+          "Análisis de comportamiento del paciente"
+        ]
+      },
+      {
+        "title": "Maximizar eficiencia",
+        "description": "La IA optimiza su calendario para maximizar la eficiencia y los ingresos del consultorio.",
+        "icon": "trending-up",
+        "color": "cyan",
+        "stats": {
+          "value": "95%",
+          "label": "Eficiencia"
+        },
+        "highlights": [
+          "Optimización de calendario",
+          "Llenado de espacios",
+          "Maximización de ingresos",
+          "Asignación de recursos"
+        ]
+      },
+      {
+        "title": "Ahorrar tiempo",
+        "description": "La programación y optimización automatizadas ahorran horas de trabajo administrativo.",
+        "icon": "clock",
+        "color": "blue",
+        "stats": {
+          "value": "10hrs",
+          "label": "Por semana"
+        },
+        "highlights": [
+          "Programación automatizada",
+          "Trabajo manual reducido",
+          "Flujos de trabajo optimizados",
+          "Optimización de tiempo"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "¿Listo para la programación impulsada por IA?",
+    "description": "Vea cómo la programación IA de Dentagia puede transformar las operaciones de su consultorio.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Programar una demostración",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Aprender más",
+      "link": "/features"
+    }
+  }
+}
+

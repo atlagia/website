@@ -1,0 +1,249 @@
+{
+  "navigation": [
+    {
+      "name": "Funciones",
+      "href": "/features",
+      "megaMenu": {
+        "categories": [
+          {
+            "title": "Gestión del consultorio",
+            "icon": "briefcase",
+            "items": [
+              {
+                "name": "Gestión de pacientes",
+                "href": "/features/patient-management"
+              },
+              {
+                "name": "Programación de citas",
+                "href": "/features/scheduling"
+              },
+              {
+                "name": "Facturación y pagos",
+                "href": "/features/billing"
+              },
+              {
+                "name": "Planificación de tratamientos",
+                "href": "/features/treatment-planning"
+              }
+            ]
+          },
+          {
+            "title": "IA y automatización",
+            "icon": "zap",
+            "items": [
+              {
+                "name": "Programación impulsada por IA",
+                "href": "/features/ai-scheduling"
+              },
+              {
+                "name": "Insights de pacientes",
+                "href": "/features/patient-insights"
+              },
+              {
+                "name": "Recordatorios automatizados",
+                "href": "/features/reminders"
+              },
+              {
+                "name": "Análisis del consultorio",
+                "href": "/features/analytics"
+              }
+            ]
+          },
+          {
+            "title": "Seguridad y cumplimiento",
+            "icon": "shield",
+            "items": [
+              {
+                "name": "Cumplimiento HIPAA",
+                "href": "/features/hipaa"
+              },
+              {
+                "name": "Seguridad cloud",
+                "href": "/features/security"
+              },
+              {
+                "name": "Cifrado de datos",
+                "href": "/features/encryption"
+              },
+              {
+                "name": "Copia de seguridad y recuperación",
+                "href": "/features/backup"
+              }
+            ]
+          }
+        ],
+        "featured": {
+          "badge": "Nuevo",
+          "title": "Gestión dental impulsada por IA",
+          "description": "Software moderno, seguro y basado en la nube para consultorios dentales",
+          "link": {
+            "text": "Explorar funciones",
+            "href": "/features"
+          }
+        }
+      }
+    },
+    {
+      "name": "Soluciones",
+      "href": "/solutions",
+      "megaMenu": {
+        "categories": [
+          {
+            "title": "Tipos de consultorio",
+            "icon": "building",
+            "items": [
+              {
+                "name": "Consultorios individuales",
+                "href": "/solutions/solo-practice"
+              },
+              {
+                "name": "Multi-profesional",
+                "href": "/solutions/multi-practitioner"
+              },
+              {
+                "name": "Multi-ubicación",
+                "href": "/solutions/multi-location"
+              },
+              {
+                "name": "Consultorios especializados",
+                "href": "/solutions/specialty"
+              }
+            ]
+          },
+          {
+            "title": "Crecimiento del consultorio",
+            "icon": "trending-up",
+            "items": [
+              {
+                "name": "Retención de pacientes",
+                "href": "/solutions/patient-retention"
+              },
+              {
+                "name": "Optimización de ingresos",
+                "href": "/solutions/revenue"
+              },
+              {
+                "name": "Automatización de marketing",
+                "href": "/solutions/marketing"
+              },
+              {
+                "name": "Análisis del consultorio",
+                "href": "/solutions/analytics"
+              }
+            ]
+          },
+          {
+            "title": "Integración",
+            "icon": "link",
+            "items": [
+              {
+                "name": "Integración de seguros",
+                "href": "/solutions/insurance"
+              },
+              {
+                "name": "Procesamiento de pagos",
+                "href": "/solutions/payments"
+              },
+              {
+                "name": "Integración de laboratorio",
+                "href": "/solutions/lab"
+              },
+              {
+                "name": "Sistemas de imagen",
+                "href": "/solutions/imaging"
+              }
+            ]
+          }
+        ],
+        "featured": {
+          "badge": "Destacado",
+          "title": "Plataforma basada en la nube",
+          "description": "Solución segura y escalable para consultorios dentales",
+          "link": {
+            "text": "Saber más",
+            "href": "/platform"
+          }
+        }
+      }
+    },
+    {
+      "name": "Plataforma",
+      "href": "/platform",
+      "megaMenu": {
+        "categories": [
+          {
+            "title": "Tecnología",
+            "icon": "cpu",
+            "items": [
+              {
+                "name": "Infraestructura cloud",
+                "href": "/platform/cloud"
+              },
+              {
+                "name": "Tecnología IA",
+                "href": "/platform/ai"
+              },
+              {
+                "name": "Seguridad y cumplimiento",
+                "href": "/platform/security"
+              },
+              {
+                "name": "Acceso móvil",
+                "href": "/platform/mobile"
+              }
+            ]
+          }
+        ],
+        "featured": {
+          "badge": "Nuevo",
+          "title": "Plataforma cloud moderna",
+          "description": "Infraestructura segura y escalable para consultorios dentales",
+          "link": {
+            "text": "Saber más",
+            "href": "/platform"
+          }
+        }
+      }
+    },
+    {
+      "name": "Recursos",
+      "href": "/resources"
+    },
+    {
+      "name": "Precios",
+      "href": "/pricing"
+    }
+  ],
+  "auth": {
+    "signIn": {
+      "text": "Contáctenos",
+      "href": "/contact"
+    },
+    "getStarted": {
+      "text": "Programar demostración",
+      "href": "/demo"
+    }
+  },
+  "languages": [
+    {
+      "code": "en",
+      "name": "English"
+    },
+    {
+      "code": "fr",
+      "name": "Français"
+    },
+    {
+      "code": "de",
+      "name": "Deutsch"
+    },
+    {
+      "code": "es",
+      "name": "Español"
+    },
+    {
+      "code": "ar",
+      "name": "العربية"
+    }
+  ]
+}

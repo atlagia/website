@@ -1,0 +1,233 @@
+{
+  "hero": {
+    "subtitle": "Gestion complète des patients",
+    "title": "Dossiers patients complets et gestion",
+    "description": "Gérez toutes les informations patients, antécédents médicaux, plans de traitement et communications dans une plateforme sécurisée basée sur le cloud conçue pour les cabinets dentaires modernes.",
+    "icon": "users",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "100%",
+        "label": "Dossiers numériques"
+      },
+      {
+        "value": "95%",
+        "label": "Rétention patient"
+      },
+      {
+        "value": "50%",
+        "label": "Temps économisé"
+      }
+    ]
+  },
+  "features": {
+    "title": "Fonctionnalités de gestion patient",
+    "subtitle": "Soins patients complets",
+    "description": "Tout ce dont vous avez besoin pour gérer les dossiers patients, antécédents médicaux, plans de traitement et communications dans une plateforme intégrée.",
+    "categories": [
+      {
+        "name": "Dossiers patients",
+        "description": "Dossiers patients numériques complets avec antécédents médicaux détaillés"
+      },
+      {
+        "name": "Gestion des traitements",
+        "description": "Outils avancés de planification de traitement et de gestion de cas"
+      }
+    ],
+    "items": [
+      {
+        "icon": "users",
+        "title": "Dossiers patients numériques",
+        "description": "Profils patients complets avec données démographiques, informations de contact, détails d'assurance et antécédents médicaux dans un emplacement sécurisé.",
+        "category": "Dossiers patients",
+        "highlights": [
+          "Profils patients complets avec toutes les données démographiques",
+          "Suivi des antécédents médicaux et dentaires",
+          "Informations d'assurance et éligibilité",
+          "Contact d'urgence et informations familiales",
+          "Pièces jointes photos et documents"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "Dossiers numériques"
+        }
+      },
+      {
+        "icon": "clipboard",
+        "title": "Suivi des antécédents médicaux",
+        "description": "Suivez les antécédents médicaux et dentaires complets incluant allergies, médicaments, traitements précédents et conditions en cours.",
+        "category": "Dossiers patients",
+        "highlights": [
+          "Documentation complète des antécédents médicaux",
+          "Suivi des allergies et médicaments",
+          "Dossiers de traitements précédents",
+          "Surveillance des conditions en cours",
+          "Antécédents médicaux familiaux"
+        ],
+        "stats": {
+          "value": "95%",
+          "label": "Précision"
+        }
+      },
+      {
+        "icon": "calendar",
+        "title": "Planification de traitement",
+        "description": "Créez, gérez et suivez les plans de traitement avec procédures détaillées, calendriers et estimations de coûts.",
+        "category": "Gestion des traitements",
+        "highlights": [
+          "Planification de traitement multi-phases",
+          "Planification et suivi des procédures",
+          "Estimation des coûts et planification financière",
+          "Suivi de la progression du traitement",
+          "Outils de présentation de cas"
+        ],
+        "stats": {
+          "value": "80%",
+          "label": "Planification plus rapide"
+        }
+      },
+      {
+        "icon": "trending-up",
+        "title": "Portail de communication patient",
+        "description": "Portail patient sécurisé pour la planification de rendez-vous, la consultation de plans de traitement, le traitement des paiements et la messagerie sécurisée.",
+        "category": "Gestion des traitements",
+        "highlights": [
+          "Demandes de rendez-vous en ligne",
+          "Accès et approbation des plans de traitement",
+          "Messagerie sécurisée avec le cabinet",
+          "Traitement des paiements et relevés",
+          "Partage et téléchargement de documents"
+        ],
+        "stats": {
+          "value": "90%",
+          "label": "Engagement"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Voir la gestion patient en action",
+    "description": "Découvrez comment les cabinets dentaires rationalisent les soins patients avec notre système de gestion complet",
+    "stats": [
+      {
+        "icon": "users",
+        "value": "10,000+",
+        "label": "Dossiers patients"
+      },
+      {
+        "icon": "trending-up",
+        "value": "95%",
+        "label": "Taux de rétention"
+      },
+      {
+        "icon": "clock",
+        "value": "50%",
+        "label": "Temps économisé"
+      },
+      {
+        "icon": "award",
+        "value": "98%",
+        "label": "Satisfaction"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Dr. Sarah Martinez",
+        "role": "Propriétaire du cabinet, Downtown Dental",
+        "quote": "Le système de gestion patient a complètement transformé la façon dont nous gérons les dossiers patients. Tout est organisé, sécurisé et facilement accessible de n'importe où."
+      },
+      {
+        "author": "Emily Rodriguez",
+        "role": "Gestionnaire de cabinet, Family Dental Care",
+        "quote": "Nous avons réduit le temps administratif de 50% et nos patients adorent le portail en ligne. Cela a rendu notre cabinet beaucoup plus efficace."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Avantages de la gestion patient",
+    "subtitle": "Transformez votre cabinet",
+    "description": "Découvrez les avantages d'une gestion patient complète conçue pour les cabinets dentaires modernes.",
+    "items": [
+      {
+        "title": "Efficacité améliorée",
+        "description": "Rationalisez la gestion des dossiers patients et réduisez les frais généraux administratifs avec des flux de travail automatisés.",
+        "icon": "zap",
+        "color": "teal",
+        "stats": {
+          "value": "50%",
+          "label": "Temps économisé"
+        },
+        "highlights": [
+          "Recherche et consultation rapides des patients",
+          "Saisie et mise à jour automatisées des données",
+          "Planification de rendez-vous rationalisée",
+          "Réduction des documents papier et classement"
+        ]
+      },
+      {
+        "title": "Meilleurs soins patients",
+        "description": "Accédez instantanément aux informations patients complètes pour prendre de meilleures décisions de soins éclairées.",
+        "icon": "users",
+        "color": "cyan",
+        "stats": {
+          "value": "95%",
+          "label": "Rétention patient"
+        },
+        "highlights": [
+          "Accès complet aux antécédents médicaux",
+          "Suivi des plans de traitement",
+          "Outils de communication patient",
+          "Coordination des soins"
+        ]
+      },
+      {
+        "title": "Sécurité renforcée",
+        "description": "Stockage de données patients conforme HIPAA avec chiffrement, contrôles d'accès et pistes d'audit.",
+        "icon": "shield",
+        "color": "blue",
+        "stats": {
+          "value": "100%",
+          "label": "Conforme HIPAA"
+        },
+        "highlights": [
+          "Chiffrement de bout en bout",
+          "Contrôles d'accès basés sur les rôles",
+          "Pistes d'audit complètes",
+          "Stockage cloud sécurisé"
+        ]
+      },
+      {
+        "title": "Revenus accrus",
+        "description": "Une meilleure gestion patient conduit à une amélioration de l'acceptation des traitements et à la croissance du cabinet.",
+        "icon": "trending-up",
+        "color": "indigo",
+        "stats": {
+          "value": "35%",
+          "label": "Croissance du revenu"
+        },
+        "highlights": [
+          "Amélioration de l'acceptation des traitements",
+          "Meilleure rétention patient",
+          "Processus de facturation rationalisés",
+          "Expérience patient améliorée"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prêt à transformer la gestion patient ?",
+    "description": "Découvrez comment les fonctionnalités de gestion patient de Dentagia peuvent rationaliser les opérations de votre cabinet et améliorer les soins patients.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Planifier une démo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "En savoir plus",
+      "link": "/features"
+    }
+  }
+}
+

@@ -1,0 +1,464 @@
+---
+import { SITE_TITLE } from '../consts';
+import * as LucideIcons from 'lucide-react';
+import { getLangFromUrl } from '@utils/i18n';
+
+const { 
+  Zap,
+  Shield,
+  Users,
+  Rocket,
+  CheckCircle,
+  TrendingUp,
+  Settings,
+  Award,
+  Play,
+  ArrowRight,
+  Mail,
+  Building,
+  User,
+  Briefcase,
+  MessageSquare,
+  ChevronDown
+} = LucideIcons;
+
+const theme = import.meta.env.THEME || 'default';
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'GiaConnect';
+
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+
+// Get current language and load appropriate content
+const currentLang = getLangFromUrl(Astro.url);
+const demoData = await import(`../data/demo/demo_${currentLang}.json`).catch(() => 
+  import(`../data/demo/demo_en.json`)
+);
+
+const {
+  pageTitle,
+  pageDescription,
+  hero,
+  features,
+  demoForm,
+  benefits,
+  testimonials,
+  video,
+  faq,
+  cta
+} = demoData;
+
+const iconMap = {
+  'zap': Zap,
+  'shield': Shield,
+  'users': Users,
+  'rocket': Rocket,
+  'check-circle': CheckCircle,
+  'trending-up': TrendingUp,
+  'settings': Settings,
+  'award': Award
+};
+
+const getIcon = (iconName: string) => {
+  return iconMap[iconName.toLowerCase()] || Zap;
+};
+---
+
+<!doctype html>
+<html lang={currentLang} class="scroll-smooth">
+  <head>
+    <BaseHead 
+      title={`${pageTitle} | ${siteName}`}
+      description={pageDescription}
+    />
+  </head>
+  <body class="bg-gray-50">
+    <Header />
+    
+    <!-- Hero Section -->
+    <section class="relative min-h-[85vh] flex items-center py-20 overflow-hidden">
+      <!-- Background Effects -->
+      <div class="absolute inset-0 bg-gradient-to-br from-purple-600 via-blue-600 to-pink-600">
+        <div class="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(to_bottom,transparent,black,transparent)] opacity-20"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent"></div>
+      </div>
+
+      <div class="relative container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center text-white">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 mb-8">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute h-full w-full rounded-full bg-white opacity-75"></span>
+              <span class="rounded-full h-2 w-2 bg-white"></span>
+            </span>
+            <span class="text-sm font-medium">{hero.badge}</span>
+          </div>
+
+          <h1 class="text-5xl lg:text-6xl font-bold leading-tight mb-8">
+            {hero.title}
+          </h1>
+
+          <p class="text-xl mb-12 max-w-3xl mx-auto text-white/90">
+            {hero.description}
+          </p>
+
+          <div class="flex items-center justify-center gap-4 flex-wrap">
+            <a 
+              href={hero.cta.primary.href}
+              class="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-white text-purple-600 font-semibold hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-0.5"
+            >
+              <span>{hero.cta.primary.text}</span>
+              <ArrowRight class="w-5 h-5" />
+            </a>
+            <a 
+              href={hero.cta.secondary.href}
+              class="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-white/10 backdrop-blur-sm text-white font-semibold hover:bg-white/20 transition-all duration-300 border border-white/30"
+            >
+              <Play class="w-5 h-5" />
+              <span>{hero.cta.secondary.text}</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-24 bg-white relative">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          {features.map((feature) => {
+            const Icon = getIcon(feature.icon);
+            return (
+              <div class="text-center">
+                <div class="w-16 h-16 bg-gradient-to-br from-purple-100 to-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                  <Icon class="w-8 h-8 text-purple-600" />
+                </div>
+                <h3 class="text-xl font-semibold mb-3 text-gray-900">{feature.title}</h3>
+                <p class="text-gray-600">{feature.description}</p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    <!-- Demo Form Section -->
+    <section id="demo-form" class="py-24 bg-gradient-to-br from-gray-50 to-purple-50 relative">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold mb-4 text-gray-900">{demoForm.title}</h2>
+            <p class="text-xl text-gray-600">{demoForm.subtitle}</p>
+          </div>
+
+          <div class="bg-white rounded-3xl shadow-2xl p-8 md:p-12">
+            <form id="demo-form" method="POST" action="#" class="space-y-6">
+              <!-- Full Name -->
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2">
+                  {demoForm.fields.fullName.label} {demoForm.fields.fullName.required && <span class="text-red-500">*</span>}
+                </label>
+                <div class="relative">
+                  <User class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+                  <input
+                    type="text"
+                    name="fullName"
+                    placeholder={demoForm.fields.fullName.placeholder}
+                    required={demoForm.fields.fullName.required}
+                    class="w-full pl-12 pr-4 py-3 rounded-xl border-2 border-gray-200 focus:border-purple-600 focus:outline-none transition-colors"
+                  />
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2">
+                  {demoForm.fields.email.label} {demoForm.fields.email.required && <span class="text-red-500">*</span>}
+                </label>
+                <div class="relative">
+                  <Mail class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder={demoForm.fields.email.placeholder}
+                    required={demoForm.fields.email.required}
+                    class="w-full pl-12 pr-4 py-3 rounded-xl border-2 border-gray-200 focus:border-purple-600 focus:outline-none transition-colors"
+                  />
+                </div>
+              </div>
+
+              <!-- Company -->
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2">
+                  {demoForm.fields.company.label} {demoForm.fields.company.required && <span class="text-red-500">*</span>}
+                </label>
+                <div class="relative">
+                  <Building class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+                  <input
+                    type="text"
+                    name="company"
+                    placeholder={demoForm.fields.company.placeholder}
+                    required={demoForm.fields.company.required}
+                    class="w-full pl-12 pr-4 py-3 rounded-xl border-2 border-gray-200 focus:border-purple-600 focus:outline-none transition-colors"
+                  />
+                </div>
+              </div>
+
+              <!-- Industry -->
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2">
+                  {demoForm.fields.industry.label} {demoForm.fields.industry.required && <span class="text-red-500">*</span>}
+                </label>
+                <div class="relative">
+                  <Briefcase class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+                  <select
+                    name="industry"
+                    required={demoForm.fields.industry.required}
+                    class="w-full pl-12 pr-4 py-3 rounded-xl border-2 border-gray-200 focus:border-purple-600 focus:outline-none transition-colors appearance-none"
+                  >
+                    <option value="">{demoForm.fields.industry.placeholder}</option>
+                    {demoForm.fields.industry.options.map((option) => (
+                      <option value={option}>{option}</option>
+                    ))}
+                  </select>
+                  <ChevronDown class="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none" />
+                </div>
+              </div>
+
+              <!-- Use Case -->
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2">
+                  {demoForm.fields.useCase.label}
+                </label>
+                <div class="relative">
+                  <MessageSquare class="absolute left-4 top-4 w-5 h-5 text-gray-400" />
+                  <textarea
+                    name="useCase"
+                    placeholder={demoForm.fields.useCase.placeholder}
+                    rows="4"
+                    class="w-full pl-12 pr-4 py-3 rounded-xl border-2 border-gray-200 focus:border-purple-600 focus:outline-none transition-colors resize-none"
+                  ></textarea>
+                </div>
+              </div>
+
+              <!-- Submit Button -->
+              <button
+                type="submit"
+                class="w-full py-4 rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold text-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-0.5"
+              >
+                {demoForm.submitButton}
+              </button>
+
+              <!-- Consent -->
+              <p class="text-sm text-gray-500 text-center">
+                {demoForm.consent}
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-24 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-4xl font-bold mb-6 text-gray-900">{benefits.title}</h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          {benefits.items.map((benefit) => {
+            const Icon = getIcon(benefit.icon);
+            return (
+              <div class="bg-gradient-to-br from-gray-50 to-purple-50 rounded-2xl p-8 hover:shadow-xl transition-shadow duration-300">
+                <div class="w-12 h-12 bg-gradient-to-br from-purple-600 to-blue-600 rounded-xl flex items-center justify-center mb-6">
+                  <Icon class="w-6 h-6 text-white" />
+                </div>
+                <h3 class="text-xl font-semibold mb-3 text-gray-900">{benefit.title}</h3>
+                <p class="text-gray-600">{benefit.description}</p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video" class="py-24 bg-gradient-to-br from-purple-50 to-blue-50">
+      <div class="container mx-auto px-4">
+        <div class="max-w-5xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold mb-4 text-gray-900">{video.title}</h2>
+            <p class="text-xl text-gray-600">{video.description}</p>
+          </div>
+
+          <div class="relative rounded-3xl overflow-hidden shadow-2xl group">
+            <div class="aspect-video bg-gray-900">
+              <iframe
+                class="w-full h-full"
+                src={video.videoUrl}
+                title="Demo Video"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-24 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-4xl font-bold mb-6 text-gray-900">{testimonials.title}</h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {testimonials.items.map((testimonial) => (
+            <div class="bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl p-8 shadow-lg">
+              <p class="text-lg text-gray-700 mb-6 italic">"{testimonial.quote}"</p>
+              <div class="flex items-center gap-4">
+                <img 
+                  src={testimonial.image} 
+                  alt={testimonial.author}
+                  class="w-16 h-16 rounded-full"
+                />
+                <div>
+                  <div class="font-semibold text-gray-900">{testimonial.author}</div>
+                  <div class="text-gray-600">{testimonial.role}</div>
+                  <div class="text-sm text-gray-500">{testimonial.company}</div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-24 bg-gradient-to-br from-gray-50 to-purple-50">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold mb-6 text-gray-900">{faq.title}</h2>
+          </div>
+
+          <div class="space-y-4">
+            {faq.items.map((item, index) => (
+              <details class="group bg-white rounded-2xl p-6 shadow-lg">
+                <summary class="flex items-center justify-between cursor-pointer list-none">
+                  <h3 class="text-lg font-semibold text-gray-900">{item.question}</h3>
+                  <ChevronDown class="w-5 h-5 text-gray-400 transition-transform group-open:rotate-180" />
+                </summary>
+                <p class="mt-4 text-gray-600 leading-relaxed">{item.answer}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="py-24 bg-gradient-to-r from-purple-600 via-blue-600 to-pink-600 relative overflow-hidden">
+      <div class="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-10"></div>
+      
+      <div class="relative container mx-auto px-4 text-center">
+        <div class="max-w-3xl mx-auto text-white">
+          <h2 class="text-4xl font-bold mb-6">{cta.title}</h2>
+          <p class="text-xl mb-8 text-white/90">
+            {cta.description}
+          </p>
+          <a 
+            href={cta.button.href}
+            class="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-white text-purple-600 font-bold hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-0.5"
+          >
+            <span>{cta.button.text}</span>
+            <ArrowRight class="w-5 h-5" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <Footer />
+
+    <script>
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+
+      // Form submission handling
+      const form = document.getElementById('demo-form');
+      const submitButton = form?.querySelector('button[type="submit"]');
+      let isSubmitting = false;
+      
+      form?.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        // Prevent multiple submissions
+        if (isSubmitting) {
+          return;
+        }
+        
+        isSubmitting = true;
+        const originalButtonText = submitButton?.textContent;
+        if (submitButton) {
+          submitButton.disabled = true;
+          submitButton.textContent = 'Submitting...';
+        }
+        
+        const formData = new FormData(form);
+        const submissionData = {
+          fullName: formData.get('fullName') || '',
+          email: formData.get('email') || '',
+          company: formData.get('company') || '',
+          industry: formData.get('industry') || '',
+          useCase: formData.get('useCase') || '',
+          submissionTimestamp: new Date().toISOString()
+        };
+        
+        try {
+          // You can add API call here if needed
+          // For now, just show success message
+          await new Promise(resolve => setTimeout(resolve, 500)); // Simulate API call
+          
+          form.reset();
+          alert('Demo request submitted! We\'ll send you access details shortly.');
+        } catch (error) {
+          console.error('Form submission error:', error);
+          alert('Sorry, there was an error processing your request. Please try again.');
+        } finally {
+          isSubmitting = false;
+          if (submitButton) {
+            submitButton.disabled = false;
+            submitButton.textContent = originalButtonText;
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
+
+<style>
+  /* Smooth transitions */
+  * {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom details styling */
+  details summary::-webkit-details-marker {
+    display: none;
+  }
+</style>
+

@@ -1,0 +1,182 @@
+{
+  "hero": {
+    "subtitle": "KI-gestützte Intelligenz",
+    "title": "KI-gestützte Terminplanung",
+    "description": "Revolutionäre KI-gestützte Terminplanung, die aus den Mustern Ihrer Praxis lernt, Ihren Kalender automatisch optimiert und die Praxiseffizienz maximiert.",
+    "icon": "brain",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "70%",
+        "label": "Reduzierung von Absagen"
+      },
+      {
+        "value": "10hrs",
+        "label": "Zeit gespart/Woche"
+      },
+      {
+        "value": "95%",
+        "label": "Optimierung"
+      }
+    ]
+  },
+  "features": {
+    "title": "KI-Terminplanungs-Funktionen",
+    "subtitle": "Intelligente Automatisierung",
+    "description": "Fortgeschrittene KI-gestützte Terminplanung, die sich an die Bedürfnisse Ihrer Praxis anpasst und lernt.",
+    "items": [
+      {
+        "icon": "brain",
+        "title": "Prädiktive Terminplanung",
+        "description": "KI analysiert historische Daten, um optimale Terminzeiten vorherzusagen und Absagen zu reduzieren.",
+        "highlights": [
+          "Mustererkennung",
+          "Absagenvorhersage",
+          "Vorschläge für optimale Zeiten",
+          "Patientenverhaltensanalyse",
+          "Kalenderoptimierung"
+        ],
+        "stats": {
+          "value": "70%",
+          "label": "Reduzierung von Absagen"
+        }
+      },
+      {
+        "icon": "zap",
+        "title": "Automatisches Slot-Auffüllen",
+        "description": "KI füllt automatisch Stornierungen und Slots in Ihrem Kalender mit Wartelistenpatienten oder optimierter Neuplanung.",
+        "highlights": [
+          "Automatische Slot-Erkennung",
+          "Wartelistenverwaltung",
+          "Intelligente Neuplanung",
+          "Umsatzoptimierung",
+          "Effizienzmaximierung"
+        ],
+        "stats": {
+          "value": "95%",
+          "label": "Efficienz"
+        }
+      },
+      {
+        "icon": "trending-up",
+        "title": "Umsatzoptimierung",
+        "description": "KI optimiert Ihren Kalender, um den Umsatz zu maximieren, indem Terminslots mit hohem Wert vorgeschlagen werden.",
+        "highlights": [
+          "Umsatzmaximierung",
+          "Terminwertanalyse",
+          "Vorschläge für optimale Slots",
+          "Praxiswachstums-Insights",
+          "Leistungsverfolgung"
+        ],
+        "stats": {
+          "value": "35%",
+          "label": "Umsatzwachstum"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "KI-Terminplanungs-Erfolg",
+    "description": "Sehen Sie, wie KI die Terminplanung von Praxen transformiert",
+    "stats": [
+      {
+        "icon": "brain",
+        "value": "70%",
+        "label": "Reduzierung von Absagen"
+      },
+      {
+        "icon": "clock",
+        "value": "10hrs",
+        "label": "Zeit gespart"
+      },
+      {
+        "icon": "trending-up",
+        "value": "35%",
+        "label": "Umsatzwachstum"
+      },
+      {
+        "icon": "award",
+        "value": "95%",
+        "label": "Efficienz"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Dr. Sarah Martinez",
+        "role": "Praxisinhaber, Downtown Dental Clinic",
+        "quote": "Die KI-gestützte Terminplanung allein spart uns 10 Stunden pro Woche. Es ist wie ein intelligenter Assistent, der nie schläft."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Vorteile der KI-Terminplanung",
+    "subtitle": "Intelligente Automatisierung",
+    "description": "Erleben Sie die Kraft der KI-gestützten Terminplanungsoptimierung.",
+    "items": [
+      {
+        "title": "Absagen reduzieren",
+        "description": "KI sagt Absagen vorher und verhindert sie mit intelligenter Terminplanung und Erinnerungen.",
+        "icon": "bell",
+        "color": "teal",
+        "stats": {
+          "value": "70%",
+          "label": "Reduzierung"
+        },
+        "highlights": [
+          "Absagenvorhersage",
+          "Optimale Terminplanung",
+          "Automatisierte Erinnerungen",
+          "Patientenverhaltensanalyse"
+        ]
+      },
+      {
+        "title": "Effizienz maximieren",
+        "description": "KI optimiert Ihren Kalender, um die Effizienz und den Umsatz Ihrer Praxis zu maximieren.",
+        "icon": "trending-up",
+        "color": "cyan",
+        "stats": {
+          "value": "95%",
+          "label": "Efficienz"
+        },
+        "highlights": [
+          "Kalenderoptimierung",
+          "Slot-Auffüllung",
+          "Umsatzmaximierung",
+          "Ressourcenzuweisung"
+        ]
+      },
+      {
+        "title": "Zeit sparen",
+        "description": "Automatisierte Terminplanung und Optimierung sparen Stunden an Verwaltungsarbeit.",
+        "icon": "clock",
+        "color": "blue",
+        "stats": {
+          "value": "10hrs",
+          "label": "Pro Woche"
+        },
+        "highlights": [
+          "Automatisierte Terminplanung",
+          "Reduzierte manuelle Arbeit",
+          "Optimierte Workflows",
+          "Zeitoptimierung"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Bereit für KI-gestützte Terminplanung?",
+    "description": "Sehen Sie, wie die KI-Terminplanung von Dentagia Ihre Praxisabläufe transformieren kann.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Demo vereinbaren",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Mehr erfahren",
+      "link": "/features"
+    }
+  }
+}
+

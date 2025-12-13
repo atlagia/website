@@ -1,0 +1,182 @@
+{
+  "hero": {
+    "subtitle": "Análisis impulsado por IA",
+    "title": "Insights de pacientes y análisis predictivo",
+    "description": "Aproveche el análisis impulsado por IA para obtener insights profundos sobre el comportamiento del paciente, predecir necesidades de tratamiento y optimizar estrategias de crecimiento del consultorio.",
+    "icon": "trending-up",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "35%",
+        "label": "Crecimiento de ingresos"
+      },
+      {
+        "value": "95%",
+        "label": "Precisión de predicción"
+      },
+      {
+        "value": "60%",
+        "label": "Mejores decisiones"
+      }
+    ]
+  },
+  "features": {
+    "title": "Características de insights de pacientes",
+    "subtitle": "Inteligencia basada en datos",
+    "description": "Análisis avanzado e insights impulsados por IA para ayudarle a entender y hacer crecer su consultorio.",
+    "items": [
+      {
+        "icon": "brain",
+        "title": "Análisis predictivo",
+        "description": "La IA analiza datos de pacientes para predecir necesidades de tratamiento, patrones de citas y comportamiento del paciente.",
+        "highlights": [
+          "Predicciones de tratamiento",
+          "Pronóstico de citas",
+          "Análisis de comportamiento del paciente",
+          "Evaluación de riesgos",
+          "Identificación de tendencias"
+        ],
+        "stats": {
+          "value": "95%",
+          "label": "Precisión"
+        }
+      },
+      {
+        "icon": "trending-up",
+        "title": "Insights de crecimiento del consultorio",
+        "description": "Insights basados en datos sobre el rendimiento del consultorio, oportunidades de ingresos y estrategias de crecimiento.",
+        "highlights": [
+          "Análisis de ingresos",
+          "Métricas de rendimiento",
+          "Oportunidades de crecimiento",
+          "Insights de mercado",
+          "Recomendaciones estratégicas"
+        ],
+        "stats": {
+          "value": "35%",
+          "label": "Crecimiento de ingresos"
+        }
+      },
+      {
+        "icon": "users",
+        "title": "Segmentación de pacientes",
+        "description": "Segmente pacientes por comportamiento, necesidades de tratamiento y valor para optimizar estrategias de marketing y atención.",
+        "highlights": [
+          "Segmentación conductual",
+          "Grupos basados en tratamiento",
+          "Análisis de valor",
+          "Marketing dirigido",
+          "Atención personalizada"
+        ],
+        "stats": {
+          "value": "60%",
+          "label": "Mejores decisiones"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Éxito de insights de pacientes",
+    "description": "Vea cómo el análisis IA transforma los consultorios",
+    "stats": [
+      {
+        "icon": "brain",
+        "value": "95%",
+        "label": "Precisión"
+      },
+      {
+        "icon": "trending-up",
+        "value": "35%",
+        "label": "Crecimiento de ingresos"
+      },
+      {
+        "icon": "users",
+        "value": "60%",
+        "label": "Mejores decisiones"
+      },
+      {
+        "icon": "award",
+        "value": "100%",
+        "label": "Impulsado por IA"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Dr. Michael Chen",
+        "role": "Dentista principal",
+        "quote": "La característica de insights de pacientes nos ha ayudado a entender mejor nuestro consultorio y aumentar los ingresos en un 35%. Las predicciones IA son increíblemente precisas."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Beneficios de insights de pacientes",
+    "subtitle": "Crecimiento basado en datos",
+    "description": "Experimente el poder del análisis impulsado por IA.",
+    "items": [
+      {
+        "title": "Precisión predictiva",
+        "description": "Las predicciones IA le ayudan a anticipar necesidades de pacientes y optimizar la programación.",
+        "icon": "brain",
+        "color": "teal",
+        "stats": {
+          "value": "95%",
+          "label": "Precisión"
+        },
+        "highlights": [
+          "Predicciones de tratamiento",
+          "Pronóstico de citas",
+          "Análisis de comportamiento",
+          "Evaluación de riesgos"
+        ]
+      },
+      {
+        "title": "Crecimiento de ingresos",
+        "description": "Los insights basados en datos identifican oportunidades para hacer crecer los ingresos del consultorio.",
+        "icon": "trending-up",
+        "color": "cyan",
+        "stats": {
+          "value": "35%",
+          "label": "Crecimiento"
+        },
+        "highlights": [
+          "Análisis de ingresos",
+          "Identificación de oportunidades",
+          "Recomendaciones estratégicas",
+          "Seguimiento de rendimiento"
+        ]
+      },
+      {
+        "title": "Mejores decisiones",
+        "description": "Los insights completos permiten mejores decisiones estratégicas y operativas.",
+        "icon": "users",
+        "color": "blue",
+        "stats": {
+          "value": "60%",
+          "label": "Mejora"
+        },
+        "highlights": [
+          "Decisiones basadas en datos",
+          "Planificación estratégica",
+          "Optimización de rendimiento",
+          "Insights de mercado"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "¿Listo para insights impulsados por IA?",
+    "description": "Vea cómo los insights de pacientes de Dentagia pueden transformar el crecimiento de su consultorio.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Programar una demostración",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Aprender más",
+      "link": "/features"
+    }
+  }
+}
+

@@ -1,109 +1,227 @@
 {
   "navigation": [
     {
-      "name": "منتجاتنا الذكية",
-      "href": "/products",
+      "name": "القطاعات",
+      "href": "/industries",
       "megaMenu": {
         "categories": [
           {
-            "title": "التسويق",
-            "icon": "marketing",
+            "title": "الرعاية الصحية",
+            "icon": "stethoscope",
             "items": [
               {
-                "name": "منشئ المحتوى الذكي",
-                "href": "/ai-content-generator"
+                "name": "العيادات الطبية",
+                "href": "/solutions/medical-solution"
               },
               {
-                "name": "أتمتة وسائل التواصل",
-                "href": "/social-media-automation"
+                "name": "المستشفيات",
+                "href": "/solutions/hospital-solution"
               },
               {
-                "name": "التسويق عبر البريد الإلكتروني",
-                "href": "/email-marketing-ai"
+                "name": "العيادات",
+                "href": "/solutions/clinic-solution"
               },
               {
-                "name": "لوحة التحليلات",
-                "href": "/analytics-dashboard"
+                "name": "الصيدليات",
+                "href": "/solutions/pharmacy-solution"
               }
             ]
           },
           {
-            "title": "التجارة الإلكترونية",
-            "icon": "ecommerce",
+            "title": "الخدمات المهنية",
+            "icon": "briefcase",
             "items": [
               {
-                "name": "محسن المنتجات",
-                "href": "/product-optimization"
+                "name": "عيادات الأسنان",
+                "href": "/solutions/dental-solution"
               },
               {
-                "name": "إدارة المخزون",
-                "href": "/inventory-management"
+                "name": "العيادات البيطرية",
+                "href": "/solutions/veterinary-solution"
               },
               {
-                "name": "ذكاء التسعير",
-                "href": "/pricing-intelligence"
+                "name": "مراكز الأشعة",
+                "href": "/solutions/radiology-solution"
               },
               {
-                "name": "تحليل العملاء",
-                "href": "/customer-insights"
+                "name": "المختبرات",
+                "href": "/solutions/laboratory-solution"
               }
             ]
           },
           {
-            "title": "تحسين محركات البحث",
-            "icon": "seo",
+            "title": "التجارة والتوزيع",
+            "icon": "shopping-bag",
             "items": [
               {
-                "name": "بحث الكلمات المفتاحية",
-                "href": "/keyword-research"
+                "name": "التجارة الإلكترونية",
+                "href": "/solutions/ecommerce-solution"
               },
               {
-                "name": "تحسين المحتوى",
-                "href": "/content-optimization"
+                "name": "متاجر التجزئة",
+                "href": "/solutions/retail-stores"
               },
               {
-                "name": "محلل الروابط",
-                "href": "/backlink-analyzer"
+                "name": "المطاعم",
+                "href": "/solutions/restaurants"
               },
               {
-                "name": "تحليل المنافسين",
-                "href": "/competitor-analysis"
+                "name": "تجارة الجملة",
+                "href": "/solutions/wholesale"
               }
             ]
           }
         ],
         "featured": {
           "badge": "جديد",
-          "title": "محرر المنتجات الشامل",
-          "description": "حسّن كامل منتجاتك في دقائق",
+          "title": "حلول ذكاء اصطناعي حسب القطاع",
+          "description": "أتمتة ذكية مخصصة لقطاعك",
           "link": {
-            "text": "اكتشف المزيد",
-            "href": "/bulk-editor"
+            "text": "استكشف الحلول",
+            "href": "/solutions"
           }
         }
       }
     },
     {
-      "name": "الفئات",
-      "href": "/categories"
+      "name": "الحلول",
+      "href": "/solutions",
+      "megaMenu": {
+        "categories": [
+          {
+            "title": "العمليات",
+            "icon": "settings",
+            "items": [
+              {
+                "name": "أتمتة سير العمل",
+                "href": "/solutions/workflow"
+              },
+              {
+                "name": "معالجة المستندات",
+                "href": "/solutions/documents"
+              },
+              {
+                "name": "تخطيط الموارد",
+                "href": "/solutions/planning"
+              },
+              {
+                "name": "التحليلات والتقارير",
+                "href": "/solutions/analytics"
+              }
+            ]
+          },
+          {
+            "title": "تجربة العملاء",
+            "icon": "users",
+            "items": [
+              {
+                "name": "دعم ذكي",
+                "href": "/solutions/chat-support"
+              },
+              {
+                "name": "تحليلات العملاء",
+                "href": "/solutions/customer-analytics"
+              },
+              {
+                "name": "التخصيص",
+                "href": "/solutions/personalization"
+              },
+              {
+                "name": "أدوات المشاركة",
+                "href": "/solutions/engagement"
+              }
+            ]
+          },
+          {
+            "title": "النمو",
+            "icon": "trending-up",
+            "items": [
+              {
+                "name": "التسويق الذكي",
+                "href": "/solutions/marketing"
+              },
+              {
+                "name": "ذكاء المبيعات",
+                "href": "/solutions/sales"
+              },
+              {
+                "name": "دراسات السوق",
+                "href": "/solutions/research"
+              },
+              {
+                "name": "ذكاء الأعمال",
+                "href": "/solutions/intelligence"
+              }
+            ]
+          }
+        ],
+        "featured": {
+          "badge": "مميز",
+          "title": "حزمة ذكاء اصطناعي للمؤسسات",
+          "description": "منصة تحول ذكاء اصطناعي متكاملة",
+          "link": {
+            "text": "اعرف المزيد",
+            "href": "/enterprise"
+          }
+        }
+      }
     },
     {
-      "name": "التوثيق",
-      "href": "/documentation"
+      "name": "المنصة",
+      "href": "/platform",
+      "megaMenu": {
+        "categories": [
+          {
+            "title": "الميزات الأساسية",
+            "icon": "cpu",
+            "items": [
+              {
+                "name": "محرك الذكاء الاصطناعي",
+                "href": "/platform/ai-engine"
+              },
+              {
+                "name": "مركز التكامل",
+                "href": "/platform/integrations"
+              },
+              {
+                "name": "الأمان",
+                "href": "/platform/security"
+              },
+              {
+                "name": "الوصول إلى واجهة برمجة التطبيقات",
+                "href": "/platform/api"
+              }
+            ]
+          }
+        ],
+        "featured": {
+          "badge": "جديد",
+          "title": "بوابة المطورين",
+          "description": "طور باستخدام منصة الذكاء الاصطناعي لدينا",
+          "link": {
+            "text": "ابدأ الآن",
+            "href": "/developers"
+          }
+        }
+      }
     },
     {
-      "name": "الدعم",
-      "href": "/support"
+      "name": "الموارد",
+      "href": "/resources"
+    },
+    {
+      "name": "الأسعار",
+      "href": "/pricing"
     }
   ],
   "auth": {
     "signIn": {
-      "text": "تسجيل الدخول",
-      "href": "https://app.atlagia.com/login"
+      "text": "تواصل معنا",
+      "href": "/contact"
     },
     "getStarted": {
       "text": "ابدأ الآن",
-      "href": "https://app.atlagia.com/signup"
+      "href": "/ar/discuss-project"
     }
   },
   "languages": [
@@ -120,8 +238,8 @@
       "name": "Deutsch"
     },
     {
-      "code": "it",
-      "name": "Italiano"
+      "code": "es",
+      "name": "Español"
     },
     {
       "code": "ar",

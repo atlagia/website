@@ -14,38 +14,62 @@ interface Props {
 const { subtitle, title, description, benefits } = Astro.props;
 ---
 
-<section class="relative py-24 px-4 overflow-hidden bg-[#f9faff]">
-  <!-- Animated Background Elements -->
+<section class="relative py-24 px-4 overflow-hidden bg-gradient-to-b from-white to-[#f8f9ff]">
+  <!-- Background Effects -->
   <div class="absolute inset-0 z-0">
-    <!-- Animated Gradient Blobs -->
-    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-bl from-purple-500/10 to-blue-500/10 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
-    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-tr from-pink-500/10 to-cyan-500/10 rounded-full blur-3xl animate-blob"></div>
+    <!-- Animated Gradient Orbs -->
+    <div class="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-gradient-to-br from-purple-500/5 via-pink-500/5 to-blue-500/5 rounded-full blur-3xl animate-float"></div>
+    <div class="absolute bottom-1/3 left-1/4 w-[400px] h-[400px] bg-gradient-to-tr from-blue-500/5 via-purple-500/5 to-pink-500/5 rounded-full blur-3xl animate-float-delayed"></div>
+    <!-- Decorative Grid -->
+    <div class="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-5"></div>
   </div>
 
   <div class="relative z-10 max-w-7xl mx-auto">
     <!-- Header -->
     <div class="text-center mb-16">
-      <span class="inline-block px-4 py-1.5 mb-4 text-sm font-semibold rounded-full bg-pink-50 text-pink-600 border border-pink-100" id="content-subtitle">
-        {subtitle}
-      </span>
-      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6" id="content-title">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/50 border border-purple-100/20 backdrop-blur-sm shadow-sm hover:shadow-md transition-all duration-300 mb-8">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-pink-600 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-gradient-to-r from-pink-600 to-purple-600"></span>
+        </span>
+        <span class="text-sm font-medium text-[#C026D3]">
+          {subtitle}
+        </span>
+      </div>
+      
+      <h2 class="text-4xl lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#C026D3] to-[#DB2777] leading-tight max-w-4xl mx-auto mb-8 pb-4">
         {title}
       </h2>
-      <p class="text-xl text-gray-600 max-w-3xl mx-auto" id="content-description">
+      
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">
         {description}
       </p>
     </div>
 
     <!-- Benefits Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {benefits.map((benefit, index) => (
-        <div class="group p-8 rounded-2xl bg-white/50 backdrop-blur-sm hover:bg-white/80 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-          <h3 class="text-2xl font-bold text-gray-900 mb-4" id={`content-benefit-${index}-title`}>
-            {benefit.title}
-          </h3>
-          <p class="text-gray-600 leading-relaxed" id={`content-benefit-${index}-description`}>
-            {benefit.description}
-          </p>
+        <div class="group relative">
+          <!-- Card Background -->
+          <div class="absolute inset-0 bg-gradient-to-br from-white/50 to-white/90 rounded-2xl shadow-sm transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1"></div>
+          <!-- Card Content -->
+          <div class="relative p-8 rounded-2xl backdrop-blur-sm">
+            <div class="mb-6">
+              <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-pink-500/10 to-purple-500/10 flex items-center justify-center">
+                <div class="w-6 h-6 text-pink-600">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">
+              {benefit.title}
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              {benefit.description}
+            </p>
+          </div>
         </div>
       ))}
     </div>
@@ -53,30 +77,19 @@ const { subtitle, title, description, benefits } = Astro.props;
 </section>
 
 <style>
-  @keyframes blob {
-    0% {
-      transform: translate(-50%, -50%) scale(1) rotate(0deg);
-    }
-    33% {
-      transform: translate(-50%, -50%) scale(1.1) rotate(120deg);
-    }
-    66% {
-      transform: translate(-50%, -50%) scale(0.9) rotate(240deg);
-    }
-    100% {
-      transform: translate(-50%, -50%) scale(1) rotate(360deg);
-    }
+  @keyframes float {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(10px, -10px) rotate(1deg); }
+    50% { transform: translate(0, -15px) rotate(-1deg); }
+    75% { transform: translate(-10px, -5px) rotate(1deg); }
   }
 
-  .animate-blob {
-    animation: blob 20s infinite linear;
+  .animate-float {
+    animation: float 20s ease-in-out infinite;
   }
 
-  .animation-delay-2000 {
-    animation-delay: 2s;
-  }
-
-  .animation-delay-4000 {
-    animation-delay: 4s;
+  .animate-float-delayed {
+    animation: float 20s ease-in-out infinite;
+    animation-delay: -10s;
   }
 </style> 

@@ -12,7 +12,14 @@ const { default: Footer } = await import(`../../themes/${theme}/components/Foote
 
 const { lang } = Astro.params;
 // Add default language handling
-const currentLang = lang && ['en', 'fr', 'de', 'es', 'it'].includes(lang) ? lang : 'en';
+// Get allowed languages from environment variable
+const getAllowedLanguages = (): string[] => {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  return allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+};
+
+const allowedLanguages = getAllowedLanguages();
+const currentLang = lang && allowedLanguages.includes(lang) ? lang : 'en';
 const collections = await getAllCollections(currentLang.toUpperCase());
 
 // Format price to locale string
@@ -25,7 +32,7 @@ const formatPrice = (amount: string, currencyCode: string) => {
 
 // Generate static paths for supported languages
 export const getStaticPaths = () => {
-  const languages = ['en', 'fr', 'de', 'es', 'it'];
+  const languages = allowedLanguages;
   return languages.map(lang => ({
     params: { lang }
   }));

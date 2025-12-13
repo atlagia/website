@@ -1,6 +1,13 @@
 import type { APIRoute } from 'astro';
 import fs from 'fs/promises';
 import path from 'path';
+import { getEnvVar } from '../lib/env';
+
+// Get allowed languages from environment variable
+const getAllowedLanguages = (): string[] => {
+  const allowedLanguages = getEnvVar('ALLOWED_LANGUAGES') || 'en';
+  return allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+};
 
 interface ThemePage {
   path: string;
@@ -57,7 +64,8 @@ const staticPages = [
 export const prerender = true;
 
 export const getStaticPaths = () => {
-  return ['', 'en', 'fr', 'de', 'es', 'it'].map(lang => ({ params: { lang: lang || 'default' } }));
+  const allowedLanguages = getAllowedLanguages();
+  return ['', ...allowedLanguages].map(lang => ({ params: { lang: lang || 'default' } }));
 };
 
 async function getThemePages(): Promise<ThemePage[]> {

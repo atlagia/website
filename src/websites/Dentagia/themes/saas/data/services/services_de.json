@@ -1,0 +1,237 @@
+{
+  "pageTitle": "Zahnarztpraxis-Management-Services",
+  "pageDescription": "Erkunden Sie unser umfassendes Serviceangebot, das darauf ausgelegt ist, Ihrer Zahnarztpraxis mit KI-gestützten Lösungen zum Erfolg zu verhelfen.",
+  "hero": {
+    "badge": "Unsere Services",
+    "title": "Vollständige Praxismanagement-Services",
+    "description": "Entdecken Sie unser umfassendes Serviceangebot, das darauf ausgelegt ist, Ihrer Zahnarztpraxis mit modernen, KI-gestützten Praxismanagement-Lösungen zum Erfolg zu verhelfen.",
+    "cta": {
+      "primary": {
+        "text": "Services erkunden",
+        "href": "#services"
+      },
+      "secondary": {
+        "text": "Loslegen",
+        "href": "/contact"
+      }
+    }
+  },
+  "stats": [
+    {
+      "value": "500+",
+      "label": "Zahnarztpraxen"
+    },
+    {
+      "value": "99.9%",
+      "label": "Verfügbarkeit"
+    },
+    {
+      "value": "50%",
+      "label": "Zeit gespart"
+    },
+    {
+      "value": "24/7",
+      "label": "Support"
+    }
+  ],
+  "services": [
+    {
+      "category": "Praxismanagement",
+      "description": "Vollständige Praxismanagement-Lösungen für Ihre Zahnarztpraxis",
+      "items": [
+        {
+          "icon": "users",
+          "name": "Patientenmanagement",
+          "description": "Umfassende Patientenakten, Krankengeschichte und Behandlungsplanung",
+          "features": ["Digitale Patientenakten", "Krankengeschichte-Verfolgung", "Behandlungsplanung", "Patientenportal"],
+          "color": "blue"
+        },
+        {
+          "icon": "calendar",
+          "name": "KI-gestützte Terminplanung",
+          "description": "Intelligente Terminplanung, die Ihren Kalender optimiert",
+          "features": ["Intelligente Planung", "Automatisierte Erinnerungen", "Wartelistenverwaltung", "Absagen-Reduzierung"],
+          "color": "purple"
+        },
+        {
+          "icon": "credit-card",
+          "name": "Abrechnung und Zahlungen",
+          "description": "Optimierte Abrechnung, Rechnungsstellung und Zahlungsabwicklung",
+          "features": ["Automatisierte Rechnungsstellung", "Zahlungsabwicklung", "Versicherungsanträge", "Finanzberichterstattung"],
+          "color": "indigo"
+        },
+        {
+          "icon": "bar-chart",
+          "name": "Praxisanalysen",
+          "description": "Datenbasierte Insights, um Ihre Praxis zu verstehen und zu entwickeln",
+          "features": ["Leistungskennzahlen", "Patientenanalysen", "Umsatzverfolgung", "Wachstums-Insights"],
+          "color": "cyan"
+        }
+      ]
+    },
+    {
+      "category": "Klinische Tools",
+      "description": "Fortgeschrittene klinische Tools für moderne Zahnarztpraxen",
+      "items": [
+        {
+          "icon": "file-text",
+          "name": "Digitale Akten",
+          "description": "Vollständige digitale Patientenakten und Dokumentation",
+          "features": ["Medizinische Akten", "Behandlungspläne", "Röntgen-Verwaltung", "Klinische Notizen"],
+          "color": "rose"
+        },
+        {
+          "icon": "clipboard",
+          "name": "Behandlungsplanung",
+          "description": "Fortgeschrittene Behandlungsplanungs- und Dokumentationstools",
+          "features": ["Behandlungspläne", "Fallpräsentation", "Fortschrittsverfolgung", "Ergebnisanalyse"],
+          "color": "amber"
+        },
+        {
+          "icon": "shield",
+          "name": "HIPAA-Compliance",
+          "description": "Unternehmenstaugliche Sicherheit und HIPAA-Compliance",
+          "features": ["Datenverschlüsselung", "Zugriffskontrolle", "Audit-Protokolle", "Compliance-Management"],
+          "color": "lime"
+        },
+        {
+          "icon": "cloud",
+          "name": "Cloud-Speicher",
+          "description": "Sicherer cloudbasierter Datenspeicher und Backup",
+          "features": ["Automatische Backups", "Datenwiederherstellung", "Multi-Geräte-Zugriff", "Echtzeit-Synchronisation"],
+          "color": "green"
+        }
+      ]
+    },
+    {
+      "category": "Support-Services",
+      "description": "Umfassender Support und Schulung für Ihre Praxis",
+      "items": [
+        {
+          "icon": "headphones",
+          "name": "24/7 Support",
+          "description": "Rund-um-die-Uhr technischer Support und Hilfe",
+          "features": ["Help Desk", "Systemüberwachung", "Problemlösung", "Leistungsoptimierung"],
+          "color": "sky"
+        },
+        {
+          "icon": "graduation-cap",
+          "name": "Schulung & Onboarding",
+          "description": "Umfassende Schulung für Ihr Team",
+          "features": ["Team-Schulung", "Video-Tutorials", "Dokumentation", "Best Practices"],
+          "color": "cyan"
+        },
+        {
+          "icon": "settings",
+          "name": "Anpassung",
+          "description": "Maßgeschneiderte Lösungen für Ihre spezifischen Praxisanforderungen",
+          "features": ["Workflow-Anpassung", "Berichts-Anpassung", "Integrations-Einrichtung", "Praxis-Konfiguration"],
+          "color": "blue"
+        },
+        {
+          "icon": "zap",
+          "name": "System-Updates",
+          "description": "Regelmäßige Updates und neue Feature-Releases",
+          "features": ["Automatische Updates", "Neue Features", "Sicherheits-Patches", "Leistungsverbesserungen"],
+          "color": "indigo"
+        }
+      ]
+    }
+  ],
+  "features": {
+    "title": "Was Wir Bieten",
+    "description": "Unsere Services kommen mit umfassenden Funktionen und Support",
+    "items": [
+      {
+        "icon": "cloud",
+        "title": "Cloudbasierte Plattform",
+        "description": "Greifen Sie von überall, jederzeit sicher auf Ihre Praxisdaten zu"
+      },
+      {
+        "icon": "shield",
+        "title": "HIPAA-konform",
+        "description": "Unternehmenstaugliche Sicherheit mit verschlüsselter Datenspeicherung"
+      },
+      {
+        "icon": "zap",
+        "title": "KI-gestützt",
+        "description": "Intelligente Automatisierung für Terminplanung und Praxis-Insights"
+      },
+      {
+        "icon": "trending-up",
+        "title": "Praxiswachstum",
+        "description": "Tools, die entwickelt wurden, um Ihre Praxis zu entwickeln"
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Service-Vorteile",
+    "description": "Erleben Sie die Vorteile der Verwendung von Dentagia für Ihre Praxis.",
+    "items": [
+      {
+        "icon": "rocket",
+        "title": "Effizienz",
+        "description": "Optimierte Abläufe, die Zeit sparen und die Verwaltungsbelastung reduzieren",
+        "stats": "50%",
+        "label": "Zeit gespart"
+      },
+      {
+        "icon": "target",
+        "title": "Zuverlässigkeit",
+        "description": "Sichere, zuverlässige Plattform mit 99,9% Verfügbarkeitsgarantie",
+        "stats": "99.9%",
+        "label": "Verfügbarkeit"
+      },
+      {
+        "icon": "lightbulb",
+        "title": "Innovation",
+        "description": "Modernste KI-Technologie für moderne Zahnarztpraxen",
+        "stats": "500+",
+        "label": "Praxen"
+      },
+      {
+        "icon": "users",
+        "title": "Support",
+        "description": "Dediziertes Support-Team verfügbar 24/7 für Ihre Praxis",
+        "stats": "24/7",
+        "label": "Support"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Was Unsere Kunden Sagen",
+    "description": "Hören Sie von Zahnarztpraxen, die von Dentagia profitiert haben",
+    "items": [
+      {
+        "quote": "Dentagia hat transformiert, wie wir unsere Praxis führen. Die KI-gestützte Terminplanung allein spart uns 10 Stunden pro Woche, und unsere Patientenzufriedenheitswerte waren noch nie höher.",
+        "author": "Dr. Sarah Martinez",
+        "role": "Praxisinhaberin",
+        "company": "Zahnarztpraxis Zentrum",
+        "image": "/images/testimonials/sarah.jpg"
+      },
+      {
+        "quote": "Der Wechsel zu Dentagia war die beste Entscheidung, die wir getroffen haben. Das Patientenmanagementsystem ist intuitiv, die Abrechnung ist automatisiert, und die Analysen helfen uns, unsere Praxis besser zu verstehen.",
+        "author": "Dr. Michael Chen",
+        "role": "Leitender Zahnarzt",
+        "company": "Family Dental Care",
+        "image": "/images/testimonials/michael.jpg"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Bereit zum Loslegen?",
+    "description": "Schließen Sie sich Hunderten von Zahnarztpraxen an, die ihre Abläufe mit Dentagia transformiert haben.",
+    "buttons": [
+      {
+        "text": "Kontaktieren Sie uns",
+        "href": "/contact",
+        "variant": "primary"
+      },
+      {
+        "text": "Demo vereinbaren",
+        "href": "/demo",
+        "variant": "secondary"
+      }
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "container": {
+    "maxWidth": "max-w-7xl",
+    "margin": "mx-auto",
+    "padding": "px-4 pb-8 pt-[100px]",
+    "background": "bg-gray-900 text-white"
+  },
+  "title": {
+    "fontSize": "text-4xl md:text-5xl",
+    "fontWeight": "font-black",
+    "margin": "mb-12",
+    "color": "text-red-500 uppercase tracking-tight"
+  },
+  "grid": {
+    "columns": "grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4",
+    "gap": "gap-8",
+    "background": "bg-gray-800 p-6 rounded-xl"
+  },
+  "pagination": {
+    "container": "flex justify-center items-center gap-6 mt-12 bg-gray-800 py-4 rounded-lg",
+    "button": "px-6 py-3 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors uppercase font-bold tracking-wider",
+    "text": "text-gray-300 font-semibold"
+  },
+  "footer": {
+    "textAlign": "text-center",
+    "textSize": "text-sm",
+    "textColor": "text-gray-400",
+    "margin": "mt-8 pt-8 border-t border-gray-700"
+  },
+  "fadeIn": {
+    "animation": "fadeIn 0.7s ease-out",
+    "keyframes": {
+      "from": { "opacity": 0, "transform": "translateY(20px)" },
+      "to": { "opacity": 1, "transform": "translateY(0)" }
+    }
+  }
+}

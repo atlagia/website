@@ -1,94 +1,204 @@
 {
+  "pageTitle": "About GiaConnect",
+  "pageDescription": "Learn about GiaConnect's mission, values, and commitment to transforming industries through innovative AI solutions.",
   "hero": {
-    "subtitle": "ABOUT US",
-    "title": "Empowering E-Commerce Success",
-    "description": "Learn about our mission to revolutionize e-commerce through innovative AI solutions and dedicated support."
+    "badge": "Our Story",
+    "title": "Empowering Industries Through AI Innovation",
+    "description": "GiaConnect is at the forefront of AI-driven transformation, helping businesses across industries leverage cutting-edge technology to achieve operational excellence.",
+    "image": "/images/about/hero.jpg"
   },
-  "welcome": {
-    "subtitle": "WELCOME TO ATALSIA",
-    "title": "Empowering Your E-Commerce Success",
-    "description": "At Atalsia, we empower e-commerce success through cutting-edge AI technology. Explore our journey and mission to revolutionize online business management.",
-    "image": "https://atlasia.cloud/wp-content/uploads/2024/05/kepart_vector_laptop_Ai_Platform_e-commerce_AI_Revolution_light_9efcda5c-d120-4d45-88f3-86546b4c5dc6.png",
-    "features": [
+  "mission": {
+    "title": "Our Mission",
+    "description": "To revolutionize industries by making AI accessible, practical, and impactful for businesses of all sizes.",
+    "items": [
       {
-        "icon": "BarChart",
-        "title": "AI-Powered Sales Optimization",
-        "description": "Harness the power of AI algorithms to analyze customer behavior, predict trends, and recommend personalized strategies to maximize the revenue potential of your e-commerce business.",
-        "color": "pink"
+        "title": "Accessibility",
+        "description": "Making advanced AI solutions accessible to businesses of all sizes and technical capabilities",
+        "icon": "Globe"
       },
       {
-        "icon": "Zap",
-        "title": "Streamlined Workflow Automation",
-        "description": "Automate repetitive tasks and streamline your workflow with Atalsia's advanced automation features, allowing you to save time and focus on strategic decision-making.",
-        "color": "blue"
+        "title": "Innovation",
+        "description": "Continuously pushing the boundaries of what's possible with AI technology",
+        "icon": "Lightbulb"
+      },
+      {
+        "title": "Impact",
+        "description": "Delivering measurable results and transformative outcomes for our clients",
+        "icon": "Target"
       }
     ]
   },
-  "platforms": [
-    {
-      "name": "WooCommerce",
-      "logo": "https://atlasia.cloud/wp-content/uploads/2024/05/woocommerce-03.png"
-    },
-    {
-      "name": "Shopify",
-      "logo": "https://atlasia.cloud/wp-content/uploads/2024/05/1655873659shopify-black-logo.webp"
-    },
-    {
-      "name": "PrestaShop",
-      "logo": "https://atlasia.cloud/wp-content/uploads/2024/05/PREST_LOGO_RVB_noir_hd.png"
-    },
-    {
-      "name": "Magento",
-      "logo": "https://atlasia.cloud/wp-content/uploads/2024/05/magento-1-logo-black-and-white.png"
-    },
-    {
-      "name": "BigCommerce",
-      "logo": "https://atlasia.cloud/wp-content/uploads/2024/05/logo.png"
-    },
-    {
-      "name": "Wix",
-      "logo": "https://atlasia.cloud/wp-content/uploads/2024/05/wix-com-website-logo-1.png"
-    }
-  ],
-  "innovation": {
-    "subtitle": "ATALSIA",
-    "title": "From Inception to Innovation",
-    "description": "Atalsia began with a vision to revolutionize e-commerce through innovative technology. Founded by passionate entrepreneurs, we've achieved significant milestones, fueled by dedication to innovation and customer satisfaction. As leaders in the industry, we're committed to shaping the future of e-commerce by providing cutting-edge solutions, including AI-powered sales optimization and streamlined workflow automation.",
-    "image": "https://atlasia.cloud/wp-content/uploads/2024/05/kepart_vector_laptop_Ai_Platform_e-commerce_AI_Revolution_light_7499ff5e-638e-4223-a072-cc4dad6c0810.png",
-    "milestones": [
-      {
-        "number": "01",
-        "title": "Endless Possibilities"
-      },
-      {
-        "number": "02",
-        "title": "Process Optimization"
-      }
-    ],
-    "cta": {
-      "text": "Discover Now",
-      "link": "/discover"
-    }
-  },
-  "testimonials": {
-    "title": "Entrust Your Growth to Professionals",
-    "description": "Discover firsthand experiences from our satisfied users who have achieved remarkable results with Atalsia's innovative e-commerce solutions.",
-    "cta": {
-      "text": "About Us",
-      "link": "/about-us"
-    },
+  "values": {
+    "title": "Our Values",
+    "description": "The principles that guide everything we do at GiaConnect",
     "items": [
       {
-        "content": "Atalsia's AI-powered keyword suggestions and personalization tools have been a game changer for our business. Our conversion rates have improved significantly, and we couldn't be happier with the results.",
-        "name": "Sarah Thompson",
-        "position": "E-commerce Entrepreneur",
-        "image": "/images/testimonials/sarah.jpg"
+        "title": "Excellence",
+        "description": "We strive for excellence in every aspect of our work, from product development to customer service",
+        "icon": "Award"
       },
       {
-        "content": "As an online store owner, Atalsia's AI tools have revolutionized our approach to SEO and product management. The Universal Bulk Editor saved us countless hours, and our organic traffic has increased by 50% in just three months.",
-        "name": "Michael Chen",
-        "position": "Digital Marketing Manager",
-        "image": "/images/testimonials/michael.jpg"
+        "title": "Integrity",
+        "description": "We maintain the highest standards of integrity and transparency in all our operations",
+        "icon": "Shield"
+      },
+      {
+        "title": "Innovation",
+        "description": "We constantly innovate to stay ahead of industry trends and meet evolving needs",
+        "icon": "Zap"
+      },
+      {
+        "title": "Partnership",
+        "description": "We believe in building strong partnerships with our clients and stakeholders",
+        "icon": "Handshake"
+      }
+    ]
+  },
+  "team": {
+    "title": "Our Team",
+    "description": "Meet the passionate individuals behind GiaConnect's success",
+    "leadership": {
+      "title": "Leadership Team",
+      "members": [
+        {
+          "name": "Sarah Johnson",
+          "role": "CEO & Founder",
+          "bio": "20+ years of experience in AI and technology innovation",
+          "image": "/images/team/sarah.jpg"
+        },
+        {
+          "name": "Michael Chen",
+          "role": "CTO",
+          "bio": "Expert in machine learning and enterprise architecture",
+          "image": "/images/team/michael.jpg"
+        },
+        {
+          "name": "Emma Rodriguez",
+          "role": "Head of Product",
+          "bio": "Product strategy and innovation specialist",
+          "image": "/images/team/emma.jpg"
+        }
+      ]
+    }
+  },
+  "history": {
+    "title": "Our Journey",
+    "description": "From startup to industry leader in AI solutions",
+    "timeline": [
+      {
+        "year": "2020",
+        "title": "Foundation",
+        "description": "GiaConnect was founded with a vision to democratize AI technology"
+      },
+      {
+        "year": "2021",
+        "title": "First Milestone",
+        "description": "Launched our first AI-powered solution for healthcare"
+      },
+      {
+        "year": "2022",
+        "title": "Expansion",
+        "description": "Expanded to multiple industries and reached 100+ clients"
+      },
+      {
+        "year": "2023",
+        "title": "Innovation",
+        "description": "Introduced advanced AI models and expanded global presence"
+      },
+      {
+        "year": "2024",
+        "title": "Leadership",
+        "description": "Recognized as a leader in AI solutions across industries"
+      }
+    ]
+  },
+  "achievements": {
+    "title": "Our Achievements",
+    "description": "Recognition and milestones that showcase our impact",
+    "items": [
+      {
+        "title": "Industry Awards",
+        "description": "Multiple awards for innovation and excellence in AI solutions",
+        "icon": "Trophy"
+      },
+      {
+        "title": "Client Success",
+        "description": "Over 500 successful implementations across industries",
+        "icon": "Users"
+      },
+      {
+        "title": "Global Reach",
+        "description": "Operating in 20+ countries with a diverse client base",
+        "icon": "Globe"
+      },
+      {
+        "title": "Innovation Patents",
+        "description": "Multiple patents for AI technology and methodologies",
+        "icon": "Lightbulb"
+      }
+    ]
+  },
+  "partners": {
+    "title": "Our Partners",
+    "description": "Working with industry leaders to deliver exceptional solutions",
+    "categories": [
+      {
+        "category": "Technology Partners",
+        "items": [
+          { "name": "Microsoft", "logo": "/images/partners/microsoft.svg" },
+          { "name": "AWS", "logo": "/images/partners/aws.svg" },
+          { "name": "Google Cloud", "logo": "/images/partners/gcp.svg" }
+        ]
+      },
+      {
+        "category": "Industry Partners",
+        "items": [
+          { "name": "Healthcare Alliance", "logo": "/images/partners/healthcare.svg" },
+          { "name": "Manufacturing Group", "logo": "/images/partners/manufacturing.svg" },
+          { "name": "Retail Consortium", "logo": "/images/partners/retail.svg" }
+        ]
+      }
+    ]
+  },
+  "culture": {
+    "title": "Our Culture",
+    "description": "A workplace that fosters innovation and growth",
+    "items": [
+      {
+        "title": "Innovation First",
+        "description": "We encourage creative thinking and novel approaches to problem-solving",
+        "icon": "Lightbulb"
+      },
+      {
+        "title": "Continuous Learning",
+        "description": "We invest in our team's growth and development",
+        "icon": "GraduationCap"
+      },
+      {
+        "title": "Work-Life Balance",
+        "description": "We promote a healthy balance between work and personal life",
+        "icon": "Heart"
+      },
+      {
+        "title": "Diversity & Inclusion",
+        "description": "We celebrate diversity and foster an inclusive environment",
+        "icon": "Users"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Join Our Journey",
+    "description": "Be part of the future of AI-driven innovation",
+    "buttons": [
+      {
+        "text": "View Careers",
+        "href": "/careers",
+        "variant": "primary"
+      },
+      {
+        "text": "Contact Us",
+        "href": "/contact",
+        "variant": "secondary"
       }
     ]
   }

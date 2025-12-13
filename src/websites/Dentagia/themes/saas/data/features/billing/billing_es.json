@@ -1,0 +1,198 @@
+{
+  "hero": {
+    "subtitle": "Facturación optimizada",
+    "title": "Facturación automatizada y procesamiento de pagos",
+    "description": "Simplifique la facturación, facturas y procesamiento de pagos con flujos de trabajo automatizados, integración de seguros e informes financieros completos.",
+    "icon": "credit-card",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "80%",
+        "label": "Procesamiento más rápido"
+      },
+      {
+        "value": "50%",
+        "label": "Tiempo ahorrado"
+      },
+      {
+        "value": "95%",
+        "label": "Precisión"
+      }
+    ]
+  },
+  "features": {
+    "title": "Características de facturación",
+    "subtitle": "Gestión financiera",
+    "description": "Herramientas completas de facturación y procesamiento de pagos diseñadas para optimizar las operaciones financieras de su consultorio.",
+    "items": [
+      {
+        "icon": "credit-card",
+        "title": "Facturación automatizada",
+        "description": "Genere facturas automáticamente basadas en tratamientos, con plantillas personalizables y recordatorios de pago automáticos.",
+        "highlights": [
+          "Generación automática de facturas",
+          "Plantillas de factura personalizables",
+          "Recordatorios de pago",
+          "Planes de pago múltiples",
+          "Facturación recurrente"
+        ],
+        "stats": {
+          "value": "80%",
+          "label": "Procesamiento más rápido"
+        }
+      },
+      {
+        "icon": "trending-up",
+        "title": "Reclamaciones de seguros",
+        "description": "Presentación optimizada de reclamaciones de seguros con verificación de elegibilidad en tiempo real y seguimientos automatizados.",
+        "highlights": [
+          "Presentación electrónica de reclamaciones",
+          "Verificaciones de elegibilidad en tiempo real",
+          "Seguimientos automatizados",
+          "Seguimiento del estado de reclamaciones",
+          "Gestión de denegaciones"
+        ],
+        "stats": {
+          "value": "95%",
+          "label": "Tasa de aprobación"
+        }
+      },
+      {
+        "icon": "users",
+        "title": "Procesamiento de pagos",
+        "description": "Acepte pagos en línea y en persona con múltiples métodos de pago y procesamiento seguro.",
+        "highlights": [
+          "Procesamiento con tarjeta de crédito",
+          "Transferencias ACH y bancarias",
+          "Planes de pago",
+          "Portal de pago en línea",
+          "Procesamiento seguro"
+        ],
+        "stats": {
+          "value": "50%",
+          "label": "Tiempo ahorrado"
+        }
+      },
+      {
+        "icon": "trending-up",
+        "title": "Informes financieros",
+        "description": "Informes y análisis financieros completos para rastrear ingresos, cobros y rendimiento del consultorio.",
+        "highlights": [
+          "Seguimiento de ingresos",
+          "Análisis de cobros",
+          "Informes financieros",
+          "Análisis de tendencias",
+          "Rendimiento del consultorio"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "Visibilidad"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Historias de éxito de facturación",
+    "description": "Vea cómo los consultorios optimizan sus operaciones de facturación",
+    "stats": [
+      {
+        "icon": "credit-card",
+        "value": "80%",
+        "label": "Procesamiento más rápido"
+      },
+      {
+        "icon": "clock",
+        "value": "50%",
+        "label": "Tiempo ahorrado"
+      },
+      {
+        "icon": "trending-up",
+        "value": "95%",
+        "label": "Precisión"
+      },
+      {
+        "icon": "users",
+        "value": "100%",
+        "label": "Automatización"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Emily Rodriguez",
+        "role": "Gerente del consultorio, Centro de Odontología Estética",
+        "quote": "La automatización de facturación ha reducido nuestro tiempo administrativo en un 50%. Procesamos reclamaciones más rápido y cobramos pagos de manera más eficiente."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Beneficios de la facturación",
+    "subtitle": "Excelencia financiera",
+    "description": "Experimente las ventajas de la facturación automatizada y el procesamiento de pagos.",
+    "items": [
+      {
+        "title": "Procesamiento más rápido",
+        "description": "Los flujos de trabajo automatizados procesan facturas y reclamaciones mucho más rápido que los métodos manuales.",
+        "icon": "zap",
+        "color": "teal",
+        "stats": {
+          "value": "80%",
+          "label": "Más rápido"
+        },
+        "highlights": [
+          "Facturación automatizada",
+          "Reclamaciones electrónicas",
+          "Procesamiento instantáneo",
+          "Retrasos reducidos"
+        ]
+      },
+      {
+        "title": "Ahorrar tiempo",
+        "description": "La automatización elimina la entrada manual de datos y reduce los gastos administrativos.",
+        "icon": "clock",
+        "color": "cyan",
+        "stats": {
+          "value": "50%",
+          "label": "Tiempo ahorrado"
+        },
+        "highlights": [
+          "Flujos de trabajo automatizados",
+          "Papeleo reducido",
+          "Procesos optimizados",
+          "Menos entrada manual"
+        ]
+      },
+      {
+        "title": "Mejorar cobros",
+        "description": "Un mejor seguimiento y recordatorios automatizados mejoran las tasas de cobro de pagos.",
+        "icon": "trending-up",
+        "color": "blue",
+        "stats": {
+          "value": "95%",
+          "label": "Tasa de cobro"
+        },
+        "highlights": [
+          "Recordatorios de pago",
+          "Seguimiento de cobros",
+          "Planes de pago",
+          "Mejor visibilidad"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "¿Listo para optimizar su facturación?",
+    "description": "Vea cómo las características de facturación de Dentagia pueden transformar sus operaciones financieras.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Programar una demostración",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Aprender más",
+      "link": "/features"
+    }
+  }
+}
+

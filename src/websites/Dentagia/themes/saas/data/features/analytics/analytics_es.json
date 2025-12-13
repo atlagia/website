@@ -1,0 +1,198 @@
+{
+  "hero": {
+    "subtitle": "Análisis del consultorio",
+    "title": "Análisis y reportes integrales del consultorio",
+    "description": "Obtenga insights profundos sobre el rendimiento de su consultorio con análisis completo, paneles en tiempo real y reportes accionables que impulsan el crecimiento.",
+    "icon": "trending-up",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "Tiempo real",
+        "label": "Análisis"
+      },
+      {
+        "value": "35%",
+        "label": "Crecimiento de ingresos"
+      },
+      {
+        "value": "100%",
+        "label": "Visibilidad"
+      }
+    ]
+  },
+  "features": {
+    "title": "Características de análisis",
+    "subtitle": "Insights basados en datos",
+    "description": "Herramientas completas de análisis y reportes para entender y optimizar el rendimiento de su consultorio.",
+    "items": [
+      {
+        "icon": "trending-up",
+        "title": "Paneles en tiempo real",
+        "description": "Monitoree el rendimiento del consultorio en tiempo real con paneles personalizables y métricas clave.",
+        "highlights": [
+          "Métricas en tiempo real",
+          "Paneles personalizables",
+          "Indicadores clave de rendimiento",
+          "Análisis visual",
+          "Seguimiento de rendimiento"
+        ],
+        "stats": {
+          "value": "Tiempo real",
+          "label": "Análisis"
+        }
+      },
+      {
+        "icon": "users",
+        "title": "Análisis de ingresos",
+        "description": "Rastree ingresos, cobros y rendimiento financiero con análisis y reportes detallados.",
+        "highlights": [
+          "Seguimiento de ingresos",
+          "Análisis de cobros",
+          "Reportes financieros",
+          "Análisis de tendencias",
+          "Pronósticos"
+        ],
+        "stats": {
+          "value": "35%",
+          "label": "Crecimiento de ingresos"
+        }
+      },
+      {
+        "icon": "calendar",
+        "title": "Análisis de citas",
+        "description": "Analice patrones de citas, ausencias y eficiencia de programación para optimizar operaciones.",
+        "highlights": [
+          "Patrones de citas",
+          "Análisis de ausencias",
+          "Eficiencia de programación",
+          "Seguimiento de utilización",
+          "Insights de optimización"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "Visibilidad"
+        }
+      },
+      {
+        "icon": "brain",
+        "title": "Análisis de pacientes",
+        "description": "Entienda el comportamiento del paciente, retención y valor con análisis completo de pacientes.",
+        "highlights": [
+          "Comportamiento del paciente",
+          "Análisis de retención",
+          "Segmentación de valor",
+          "Patrones de tratamiento",
+          "Métricas de compromiso"
+        ],
+        "stats": {
+          "value": "95%",
+          "label": "Insights"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Historias de éxito de análisis",
+    "description": "Vea cómo el análisis transforma la gestión de consultorios",
+    "stats": [
+      {
+        "icon": "trending-up",
+        "value": "35%",
+        "label": "Crecimiento de ingresos"
+      },
+      {
+        "icon": "clock",
+        "value": "Tiempo real",
+        "label": "Análisis"
+      },
+      {
+        "icon": "users",
+        "value": "100%",
+        "label": "Visibilidad"
+      },
+      {
+        "icon": "award",
+        "value": "95%",
+        "label": "Insights"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Dr. Sarah Martinez",
+        "role": "Propietario del consultorio",
+        "quote": "El panel de análisis nos da visibilidad completa sobre nuestro consultorio. Hemos aumentado los ingresos en un 35% usando insights basados en datos."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Beneficios del análisis",
+    "subtitle": "Excelencia basada en datos",
+    "description": "Experimente el poder del análisis completo del consultorio.",
+    "items": [
+      {
+        "title": "Insights en tiempo real",
+        "description": "Monitoree el rendimiento del consultorio en tiempo real con análisis y paneles instantáneos.",
+        "icon": "zap",
+        "color": "teal",
+        "stats": {
+          "value": "Tiempo real",
+          "label": "Análisis"
+        },
+        "highlights": [
+          "Paneles en tiempo real",
+          "Métricas instantáneas",
+          "Actualizaciones en vivo",
+          "Monitoreo de rendimiento"
+        ]
+      },
+      {
+        "title": "Crecimiento de ingresos",
+        "description": "Los insights basados en datos identifican oportunidades para hacer crecer los ingresos del consultorio.",
+        "icon": "trending-up",
+        "color": "cyan",
+        "stats": {
+          "value": "35%",
+          "label": "Crecimiento"
+        },
+        "highlights": [
+          "Análisis de ingresos",
+          "Identificación de oportunidades",
+          "Seguimiento de rendimiento",
+          "Estrategias de crecimiento"
+        ]
+      },
+      {
+        "title": "Visibilidad completa",
+        "description": "El análisis completo proporciona visibilidad completa sobre todos los aspectos de su consultorio.",
+        "icon": "users",
+        "color": "blue",
+        "stats": {
+          "value": "100%",
+          "label": "Visibilidad"
+        },
+        "highlights": [
+          "Métricas completas",
+          "Análisis multidimensional",
+          "Reportes completos",
+          "Insights estratégicos"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "¿Listo para el análisis del consultorio?",
+    "description": "Vea cómo el análisis de Dentagia puede transformar el rendimiento de su consultorio.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Programar una demostración",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Aprender más",
+      "link": "/features"
+    }
+  }
+}
+

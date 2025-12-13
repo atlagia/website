@@ -1,0 +1,182 @@
+{
+  "hero": {
+    "subtitle": "Digitale Behandlungsplanung",
+    "title": "Fortgeschrittene Behandlungsplanung und Fallverwaltung",
+    "description": "Erstellen Sie umfassende digitale Behandlungspläne, verfolgen Sie den Patientenfortschritt und verwalten Sie komplexe Fälle mit fortgeschrittenen Tools für moderne Zahnarztpraxen.",
+    "icon": "clipboard",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "80%",
+        "label": "Schnellere Planung"
+      },
+      {
+        "value": "95%",
+        "label": "Genauigkeit"
+      },
+      {
+        "value": "90%",
+        "label": "Akzeptanzrate"
+      }
+    ]
+  },
+  "features": {
+    "title": "Behandlungsplanungs-Funktionen",
+    "subtitle": "Umfassende Fallverwaltung",
+    "description": "Fortgeschrittene Tools zum Erstellen, Verwalten und Verfolgen von Behandlungsplänen und Patientenfallen.",
+    "items": [
+      {
+        "icon": "clipboard",
+        "title": "Digitale Behandlungspläne",
+        "description": "Erstellen Sie umfassende Behandlungspläne mit Verfahren, Zeitplänen und Kostenschätzungen im digitalen Format.",
+        "highlights": [
+          "Mehrphasige Behandlungsplanung",
+          "Verfahrensplanung",
+          "Kostenschätzung",
+          "Zeitplanverwaltung",
+          "Fallpräsentations-Tools"
+        ],
+        "stats": {
+          "value": "80%",
+          "label": "Schnellere Planung"
+        }
+      },
+      {
+        "icon": "trending-up",
+        "title": "Fallverwaltung",
+        "description": "Verfolgen Sie Patientenfallen von der ersten Konsultation bis zur Behandlungsabschluss mit umfassenden Fallverwaltungs-Tools.",
+        "highlights": [
+          "Fallverfolgung",
+          "Fortschrittsüberwachung",
+          "Behandlungsverlauf",
+          "Ergebnisverfolgung",
+          "Fallanalyse"
+        ],
+        "stats": {
+          "value": "95%",
+          "label": "Genauigkeit"
+        }
+      },
+      {
+        "icon": "users",
+        "title": "Patientenkommunikation",
+        "description": "Teilen Sie Behandlungspläne mit Patienten, erhalten Sie Genehmigungen und kommunizieren Sie über den Behandlungsfortschritt.",
+        "highlights": [
+          "Planfreigabe",
+          "Patientengenehmigung",
+          "Fortschrittsaktualisierungen",
+          "Sichere Nachrichtenübermittlung",
+          "Dokumentenfreigabe"
+        ],
+        "stats": {
+          "value": "90%",
+          "label": "Akzeptanzrate"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Behandlungsplanungs-Erfolg",
+    "description": "Sehen Sie, wie Praxen die Behandlungsplanung optimieren",
+    "stats": [
+      {
+        "icon": "clipboard",
+        "value": "80%",
+        "label": "Schnellere Planung"
+      },
+      {
+        "icon": "trending-up",
+        "value": "95%",
+        "label": "Genauigkeit"
+      },
+      {
+        "icon": "users",
+        "value": "90%",
+        "label": "Akzeptanz"
+      },
+      {
+        "icon": "award",
+        "value": "100%",
+        "label": "Digital"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Dr. Sarah Martinez",
+        "role": "Praxisinhaber",
+        "quote": "Die Behandlungsplanung ist so viel einfacher geworden. Wir können in wenigen Minuten umfassende Pläne erstellen und sie sofort mit Patienten teilen."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Vorteile der Behandlungsplanung",
+    "subtitle": "Optimierte Fallverwaltung",
+    "description": "Erleben Sie die Vorteile digitaler Behandlungsplanung.",
+    "items": [
+      {
+        "title": "Schnellere Planung",
+        "description": "Erstellen Sie Behandlungspläne viel schneller mit digitalen Tools und Vorlagen.",
+        "icon": "zap",
+        "color": "teal",
+        "stats": {
+          "value": "80%",
+          "label": "Schneller"
+        },
+        "highlights": [
+          "Digitale Vorlagen",
+          "Schnelle Planerstellung",
+          "Automatisierte Berechnungen",
+          "Optimierte Workflows"
+        ]
+      },
+      {
+        "title": "Bessere Genauigkeit",
+        "description": "Digitale Pläne reduzieren Fehler und verbessern die Behandlungsgenauigkeit.",
+        "icon": "check-circle",
+        "color": "cyan",
+        "stats": {
+          "value": "95%",
+          "label": "Genauigkeit"
+        },
+        "highlights": [
+          "Fehlerreduzierung",
+          "Konsistente Formatierung",
+          "Präzise Berechnungen",
+          "Bessere Dokumentation"
+        ]
+      },
+      {
+        "title": "Höhere Akzeptanz",
+        "description": "Bessere Präsentation und Kommunikation verbessern die Behandlungsakzeptanzraten.",
+        "icon": "trending-up",
+        "color": "blue",
+        "stats": {
+          "value": "90%",
+          "label": "Akzeptanz"
+        },
+        "highlights": [
+          "Bessere Präsentation",
+          "Klare Kommunikation",
+          "Visuelle Hilfsmittel",
+          "Patientenengagement"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Bereit, die Behandlungsplanung zu optimieren?",
+    "description": "Sehen Sie, wie die Behandlungsplanungs-Funktionen von Dentagia Ihre Fallverwaltung transformieren können.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Demo vereinbaren",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Mehr erfahren",
+      "link": "/features"
+    }
+  }
+}
+

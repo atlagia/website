@@ -1,0 +1,182 @@
+{
+  "hero": {
+    "subtitle": "Comunicazione automatizzata",
+    "title": "Promemoria appuntamenti automatizzati",
+    "description": "Riduci assenze e migliora comunicazione pazienti con promemoria automatizzati intelligenti via SMS e email che si adattano alle preferenze pazienti.",
+    "icon": "bell",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "70%",
+        "label": "Riduzione assenze"
+      },
+      {
+        "value": "95%",
+        "label": "Tasso consegna"
+      },
+      {
+        "value": "60%",
+        "label": "Tasso risposta"
+      }
+    ]
+  },
+  "features": {
+    "title": "Funzionalità promemoria",
+    "subtitle": "Comunicazione intelligente",
+    "description": "Promemoria automatizzati intelligenti che tengono informati i pazienti e riducono appuntamenti persi.",
+    "items": [
+      {
+        "icon": "bell",
+        "title": "Promemoria multi-canale",
+        "description": "Invia promemoria via SMS, email e chiamate telefoniche in base alle preferenze pazienti e tipo appuntamento.",
+        "highlights": [
+          "Promemoria SMS",
+          "Notifiche email",
+          "Opzioni chiamate telefoniche",
+          "Consegna basata su preferenze",
+          "Supporto multi-lingua"
+        ],
+        "stats": {
+          "value": "95%",
+          "label": "Tasso consegna"
+        }
+      },
+      {
+        "icon": "clock",
+        "title": "Timing intelligente",
+        "description": "L'IA determina il timing ottimale promemoria basato su storico paziente e tipo appuntamento.",
+        "highlights": [
+          "Timing ottimale",
+          "Analisi storico paziente",
+          "Programmazione basata su appuntamenti",
+          "Gestione fusi orari",
+          "Intervalli personalizzabili"
+        ],
+        "stats": {
+          "value": "70%",
+          "label": "Riduzione assenze"
+        }
+      },
+      {
+        "icon": "users",
+        "title": "Richieste conferma",
+        "description": "Richiedi conferme automaticamente e gestisci risposte per ottimizzare la pianificazione.",
+        "highlights": [
+          "Richieste conferma",
+          "Gestione risposte",
+          "Aggiornamenti automatici",
+          "Gestione liste d'attesa",
+          "Gestione cancellazioni"
+        ],
+        "stats": {
+          "value": "60%",
+          "label": "Tasso risposta"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Storie di successo promemoria",
+    "description": "Vedi come i promemoria automatizzati trasformano gli studi",
+    "stats": [
+      {
+        "icon": "bell",
+        "value": "95%",
+        "label": "Tasso consegna"
+      },
+      {
+        "icon": "trending-up",
+        "value": "70%",
+        "label": "Riduzione assenze"
+      },
+      {
+        "icon": "users",
+        "value": "60%",
+        "label": "Tasso risposta"
+      },
+      {
+        "icon": "award",
+        "value": "100%",
+        "label": "Automatizzato"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Emily Rodriguez",
+        "role": "Responsabile studio",
+        "quote": "I promemoria automatizzati hanno ridotto le nostre assenze del 70%. I pazienti apprezzano i promemoria tempestivi e risparmiamo ore di chiamate telefoniche."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Vantaggi promemoria",
+    "subtitle": "Comunicazione migliorata",
+    "description": "Sperimenta i vantaggi della comunicazione pazienti automatizzata.",
+    "items": [
+      {
+        "title": "Ridurre assenze",
+        "description": "I promemoria tempestivi riducono significativamente gli appuntamenti persi.",
+        "icon": "bell",
+        "color": "teal",
+        "stats": {
+          "value": "70%",
+          "label": "Riduzione"
+        },
+        "highlights": [
+          "Promemoria tempestivi",
+          "Canali multipli",
+          "Richieste conferma",
+          "Gestione risposte"
+        ]
+      },
+      {
+        "title": "Consegna elevata",
+        "description": "La consegna multi-canale garantisce che i promemoria raggiungano i pazienti in modo affidabile.",
+        "icon": "check-circle",
+        "color": "cyan",
+        "stats": {
+          "value": "95%",
+          "label": "Tasso consegna"
+        },
+        "highlights": [
+          "Consegna SMS",
+          "Consegna email",
+          "Opzioni telefoniche",
+          "Consegna affidabile"
+        ]
+      },
+      {
+        "title": "Migliore coinvolgimento",
+        "description": "I promemoria automatizzati migliorano coinvolgimento e comunicazione pazienti.",
+        "icon": "users",
+        "color": "blue",
+        "stats": {
+          "value": "60%",
+          "label": "Tasso risposta"
+        },
+        "highlights": [
+          "Coinvolgimento paziente",
+          "Monitoraggio risposte",
+          "Storico comunicazione",
+          "Gestione preferenze"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Pronto per promemoria automatizzati?",
+    "description": "Vedi come il sistema promemoria di Dentagia può ridurre assenze e migliorare comunicazione.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Prenota una demo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Scopri di più",
+      "link": "/features"
+    }
+  }
+}
+

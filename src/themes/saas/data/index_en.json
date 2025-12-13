@@ -1,369 +1,657 @@
 {
-  "siteTitle": "Atasia - AI-Powered Growth Platform",
-  "siteDescription": "Whether you're running an e-commerce store, SaaS platform, digital agency, or content site - our AI solutions help you grow and optimize your online presence",
+  "siteTitle": "Atlagia - AI-Powered Digital Solutions & Development Agency",
+  "siteDescription": "We craft intelligent digital solutions and develop cutting-edge AI applications that transform businesses across industries. Your partner for innovation and digital excellence.",
   "sections": [
     {
       "type": "welcomeSection",
-      "badge": "AI-Powered Automation",
-      "title": "Grow Faster with <span class=\"text-pink-600\">AI-Powered</span> Automation",
-      "description": "Unlock your business potential with AI automation—boost visibility, streamline operations, and scale effortlessly, whether you run an e-commerce store, SaaS platform, digital agency, or content site!",
-      "blogLinkText": "See How It Works",
-      "getStartedText": "Get Started Free",
-      "blogLink": "/how-it-works",
-      "heroImage": "https://cdn.atlagia.com/ATLAS-1.webp",
-      "partnerLogos": [
-        {
-          "src": "https://cdn.atlagia.com/1655873659shopify-black-logo.webp",
-          "alt": "Shopify"
-        },
-        {
-          "src": "https://cdn.atlagia.com/wix-com-website-logo-1.webp",
-          "alt": "Wix"
-        },
-        {
-          "src": "https://cdn.atlagia.com/woocommerce-03.webp",
-          "alt": "WordPress"
-        }
-      ]
-    },{
-      "type": "aboutSection",
-      "subtitle": "ABOUT US",
-      "title": "The Edge Your Digital Business Needs",
+      "badge": "Digital Innovation Agency",
+      "title": "We <span class='text-gradient'>Design & Develop</span> AI-Powered Solutions for the Digital Future",
+      "description": "Transform your business with our expertise in AI development, custom software solutions, and digital innovation. We specialize in creating intelligent systems that drive efficiency, automation, and growth across every industry.",
+      "blogLinkText": "Explore Solutions",
+      "getStartedText": "Discuss Your Project",
+      "getStartedLink": "/discuss-project",
+      "blogLink": "/solutions",
+      "heroImage": "https://cdn.atlagia.com/GiaConnect/images/670e6478-6043-4aec-a731-a0d4468e6d4e.png",
       "features": [
         {
-          "icon": "https://cdn.atlagia.com/kepart_global_seo_enhancer_vector_f1860727-592d-44ee-8095-d293f95a7f14.webp",
-          "title": "AI-Powered SEO Optimization",
-          "keywords": ["SEO", "Rank", "Analytics"],
-          "description": "Boost your search rankings and drive organic traffic with advanced AI algorithms.",
-          "bullets": [
-            "Smart keyword research & optimization",
-            "Content optimization suggestions",
-            "Competitor analysis",
-            "Search ranking monitoring"
-          ],
-          "backgroundSvg": "<svg width='100%' height='100%' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='grid1' width='10' height='10' patternUnits='userSpaceOnUse'><path d='M 10 0 L 0 0 0 10' fill='none' stroke='currentColor' stroke-width='0.5' opacity='0.1'/></pattern><pattern id='circuit1' width='30' height='30' patternUnits='userSpaceOnUse'><circle cx='15' cy='15' r='1' fill='currentColor' opacity='0.1'/><path d='M30 15 H20 M15 0 V10' stroke='currentColor' stroke-width='0.5' opacity='0.1'/></pattern><linearGradient id='headGrad1' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:#00a99d;stop-opacity:0.15'/><stop offset='100%' style='stop-color:#FF6B6B;stop-opacity:0.15'/></linearGradient></defs><g transform='translate(100, 50)'><path d='M100,0 h100 a50,50 0 0 1 50,50 v150 a50,50 0 0 1 -50,50 h-100 a50,50 0 0 1 -50,-50 v-150 a50,50 0 0 1 50,-50' fill='url(#headGrad1)' stroke='currentColor' stroke-width='3'/><rect width='300' height='250' fill='url(#grid1)'/><rect width='300' height='250' fill='url(#circuit1)'/><circle cx='80' cy='100' r='30' fill='#00a99d' fill-opacity='0.2' stroke='currentColor' stroke-width='3'/><circle cx='220' cy='100' r='30' fill='#00a99d' fill-opacity='0.2' stroke='currentColor' stroke-width='3'/><path d='M80,100 v-20 h140 v20' stroke='currentColor' stroke-width='3' fill='none'/><path d='M120,180 q40,40 80,0' stroke='currentColor' stroke-width='3' fill='none'/><g stroke='currentColor' stroke-width='2'><line x1='0' y1='40' x2='300' y2='40'/><line x1='20' y1='60' x2='280' y2='60'/></g><text x='20' y='20' font-size='12' fill='currentColor' opacity='0.6'>SEO</text><text x='250' y='20' font-size='12' fill='currentColor' opacity='0.6'>RANK</text></g></svg>"
+          "icon": "Globe",
+          "title": "Digital Solutions",
+          "description": "Custom software development and digital transformation solutions"
         },
         {
-          "icon": "https://cdn.atlagia.com/kepart_AI-Powered_Keyword_Suggestions_vector_364432f3-f7a7-44a8-bf02-ed377f95bbbc-1.webp",
-          "title": "AI-Powered Marketing Optimization",
-          "keywords": ["Growth", "ROI", "Reach"],
-          "description": "Maximize your marketing ROI with data-driven insights and automated campaigns.",
-          "bullets": [
-            "AI-generated marketing content",
-            "Campaign performance analysis",
-            "Audience targeting optimization",
-            "Multi-channel marketing automation"
-          ],
-          "backgroundSvg": "<svg width='100%' height='100%' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='dots1' width='10' height='10' patternUnits='userSpaceOnUse'><circle cx='5' cy='5' r='1' fill='currentColor' opacity='0.1'/></pattern><pattern id='waves1' width='20' height='10' patternUnits='userSpaceOnUse'><path d='M 0 5 C 5 0, 10 10, 20 5' stroke='currentColor' stroke-width='0.5' opacity='0.1' fill='none'/></pattern><linearGradient id='headGrad2' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:#FF6B6B;stop-opacity:0.15'/><stop offset='100%' style='stop-color:#00a99d;stop-opacity:0.15'/></linearGradient></defs><g transform='translate(100, 50)'><path d='M100,20 l100,-20 l50,50 v150 l-50,50 l-100,-20 l-50,-50 v-110 z' fill='url(#headGrad2)' stroke='currentColor' stroke-width='3'/><rect width='300' height='250' fill='url(#dots1)'/><rect width='300' height='250' fill='url(#waves1)'/><circle cx='80' cy='100' r='25' fill='#FF6B6B' fill-opacity='0.2' stroke='currentColor' stroke-width='3'/><circle cx='220' cy='100' r='25' fill='#FF6B6B' fill-opacity='0.2' stroke='currentColor' stroke-width='3'/><path d='M120,160 q30,30 60,0' stroke='currentColor' stroke-width='3' fill='none'/><g stroke='currentColor' stroke-width='3'><path d='M20,80 q-20,-20 -20,-40'/><path d='M280,80 q20,-20 20,-40'/></g><text x='30' y='30' font-size='12' fill='currentColor' opacity='0.6'>GROWTH</text><text x='220' y='30' font-size='12' fill='currentColor' opacity='0.6'>ROI</text></g></svg>"
+          "icon": "Zap",
+          "title": "AI Development",
+          "description": "Advanced AI systems and machine learning solutions development"
         },
         {
-          "icon": "https://cdn.atlagia.com/kepart_ecomerce_products_edit_vector_d99c2857-4476-4cce-b562-dfb299182da8.webp",
-          "title": "AI-Powered Business Management",
-          "keywords": ["System", "Flow", "Data"],
-          "description": "Streamline operations and automate workflows with intelligent AI tools.",
-          "bullets": [
-            "Automated workflow optimization",
-            "Inventory management",
-            "Sales forecasting",
-            "Performance analytics"
-          ],
-          "backgroundSvg": "<svg width='100%' height='100%' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='circuit2' width='20' height='20' patternUnits='userSpaceOnUse'><path d='M 0 10 L 10 10 M 10 0 L 10 20' fill='none' stroke='currentColor' stroke-width='0.5' opacity='0.1'/></pattern><pattern id='grid2' width='40' height='40' patternUnits='userSpaceOnUse'><path d='M 40 0 L 0 0 0 40' fill='none' stroke='currentColor' stroke-width='1' opacity='0.05'/><circle cx='0' cy='0' r='2' fill='currentColor' opacity='0.1'/></pattern><linearGradient id='headGrad3' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:#00a99d;stop-opacity:0.15'/><stop offset='100%' style='stop-color:#4B0082;stop-opacity:0.15'/></linearGradient></defs><g transform='translate(100, 50)'><path d='M50,50 h200 v200 h-200 z' fill='url(#headGrad3)' stroke='currentColor' stroke-width='3'/><rect width='300' height='250' fill='url(#circuit2)'/><rect width='300' height='250' fill='url(#grid2)'/><rect x='70' y='80' width='40' height='40' fill='#00a99d' fill-opacity='0.2' stroke='currentColor' stroke-width='3'/><rect x='190' y='80' width='40' height='40' fill='#00a99d' fill-opacity='0.2' stroke='currentColor' stroke-width='3'/><path d='M100,180 h100' stroke='currentColor' stroke-width='3' fill='none'/><text x='40' y='40' font-size='12' fill='currentColor' opacity='0.6'>SYSTEM</text><text x='200' y='40' font-size='12' fill='currentColor' opacity='0.6'>FLOW</text></g></svg>"
+          "icon": "Users",
+          "title": "Industry Solutions",
+          "description": "Specialized solutions for e-commerce, healthcare, finance, and more"
         },
         {
-          "icon": "https://cdn.atlagia.com/kepart__91c4c28d-f806-4ef4-86a5-00ed63c2c7d4-1.webp",
-          "title": "AI Customer Support Agent",
-          "keywords": ["24/7", "Help", "Chat"],
-          "description": "Provide 24/7 AI-driven customer support across all platforms.",
-          "bullets": [
-            "24/7 automated responses",
-            "Multi-language support",
-            "Smart ticket routing",
-            "Customer sentiment analysis"
-          ],
-          "backgroundSvg": "<svg width='100%' height='100%' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='waves2' width='20' height='20' patternUnits='userSpaceOnUse'><path d='M 0 10 C 5 5, 15 15, 20 10' fill='none' stroke='currentColor' stroke-width='0.5' opacity='0.1'/></pattern><pattern id='dots2' width='20' height='20' patternUnits='userSpaceOnUse'><circle cx='10' cy='10' r='1' fill='currentColor' opacity='0.1'/><circle cx='0' cy='0' r='1' fill='currentColor' opacity='0.1'/></pattern><linearGradient id='headGrad4' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:#4B0082;stop-opacity:0.15'/><stop offset='100%' style='stop-color:#FF6B6B;stop-opacity:0.15'/></linearGradient></defs><g transform='translate(100, 50)'><path d='M150,0 C230,0 280,50 280,130 C280,210 230,260 150,260 C70,260 20,210 20,130 C20,50 70,0 150,0' fill='url(#headGrad4)' stroke='currentColor' stroke-width='3'/><rect width='300' height='250' fill='url(#waves2)'/><rect width='300' height='250' fill='url(#dots2)'/><circle cx='90' cy='100' r='30' fill='#FF6B6B' fill-opacity='0.2' stroke='currentColor' stroke-width='3'/><circle cx='210' cy='100' r='30' fill='#FF6B6B' fill-opacity='0.2' stroke='currentColor' stroke-width='3'/><path d='M90,170 q60,40 120,0' stroke='currentColor' stroke-width='3' fill='none'/><text x='50' y='30' font-size='12' fill='currentColor' opacity='0.6'>24/7</text><text x='200' y='30' font-size='12' fill='currentColor' opacity='0.6'>HELP</text></g></svg>"
+          "icon": "Brain",
+          "title": "Tech Innovation",
+          "description": "Cutting-edge technology integration and innovative development"
         }
       ],
-      "ctaText": "See How It Works",
-      "ctaLink": "/how-it-works"
+      "partnerLogos": [
+        {
+          "src": "https://cdn.atlagia.com/GiaConnect/images/processed-3bb4b721-db62-4347-82ed-b11735f18565.png",
+          "alt": "Shopify Partner"
+        },
+        {
+          "src": "https://cdn.atlagia.com/GiaConnect/images/processed-d4ae1096-ccab-49e9-91f5-1d6504936092.png",
+          "alt": "Wix Partner"
+        },
+        {
+          "src": "https://cdn.atlagia.com/GiaConnect/images/a3550c4a-95d2-4341-9ed7-2a5de91b0b66.png",
+          "alt": "WooCommerce Partner"
+        }
+      ]
+    },
+    {
+      "type": "aboutSection",
+      "subtitle": "WHO WE ARE",
+      "title": "Crafting Tomorrow's Digital Landscape with AI Innovation",
+      "features": [
+        {
+          "icon": "ai-development",
+          "title": "AI Development & Integration",
+          "keywords": [
+            "Development",
+            "Innovation",
+            "AI"
+          ],
+          "description": "We specialize in developing and integrating cutting-edge AI solutions that transform business operations.",
+          "bullets": [
+            "Custom AI model development",
+            "Machine learning integration",
+            "Natural language processing",
+            "Computer vision solutions"
+          ],
+          "backgroundSvg": "<svg width='100%' height='100%' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='grid1' width='20' height='20' patternUnits='userSpaceOnUse'><path d='M 20 0 L 0 0 0 20' fill='none' stroke='currentColor' stroke-width='0.5' opacity='0.1'/></pattern></defs><rect width='100%' height='100%' fill='url(#grid1)'/></svg>"
+        },
+        {
+          "icon": "software-solutions",
+          "title": "Software Solutions",
+          "keywords": [
+            "Software",
+            "Development",
+            "Solutions"
+          ],
+          "description": "End-to-end software development services tailored to your industry needs.",
+          "bullets": [
+            "Custom software development",
+            "Web & mobile applications",
+            "Cloud-native solutions",
+            "API development & integration"
+          ],
+          "backgroundSvg": "<svg width='100%' height='100%' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='code' width='20' height='20' patternUnits='userSpaceOnUse'><path d='M 0 10 L 10 0 M 20 10 L 10 20' stroke='currentColor' stroke-width='0.5' opacity='0.1'/></pattern></defs><rect width='100%' height='100%' fill='url(#code)'/></svg>"
+        },
+        {
+          "icon": "digital-transformation",
+          "title": "Digital Transformation",
+          "keywords": [
+            "Transform",
+            "Innovate",
+            "Grow"
+          ],
+          "description": "Guide your business through comprehensive digital transformation.",
+          "bullets": [
+            "Process automation",
+            "Digital strategy consulting",
+            "Technology modernization",
+            "Data-driven solutions"
+          ],
+          "backgroundSvg": "<svg width='100%' height='100%' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='circuit' width='40' height='40' patternUnits='userSpaceOnUse'><circle cx='20' cy='20' r='1' fill='currentColor' opacity='0.1'/><path d='M 40 20 H 30 M 20 0 V 10' stroke='currentColor' stroke-width='0.5' opacity='0.1'/></pattern></defs><rect width='100%' height='100%' fill='url(#circuit)'/></svg>"
+        },
+        {
+          "icon": "industry-solutions",
+          "title": "Industry Solutions",
+          "keywords": [
+            "Specialized",
+            "Industry",
+            "Expert"
+          ],
+          "description": "Industry-specific solutions powered by advanced technology.",
+          "bullets": [
+            "E-commerce platforms",
+            "Healthcare systems",
+            "FinTech solutions",
+            "Enterprise applications"
+          ],
+          "backgroundSvg": "<svg width='100%' height='100%' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='dots' width='20' height='20' patternUnits='userSpaceOnUse'><circle cx='10' cy='10' r='1' fill='currentColor' opacity='0.1'/></pattern></defs><rect width='100%' height='100%' fill='url(#dots)'/></svg>"
+        }
+      ],
+      "ctaText": "Explore Our Services",
+      "ctaLink": "/services"
     },
     {
       "type": "whoWeAreSection",
-      "subtitle": "WHO WE ARE",
-      "title": "Atlasia: Your AI Partner for Digital Success",
-      "description": "At Atlasia, we are more than just a technology provider — we are your dedicated AI partner committed to helping online businesses thrive. Our mission is to empower businesses of all types with advanced AI solutions that drive growth, enhance efficiency, and optimize performance across the digital landscape.",
-      "image": "https://cdn.atlagia.com/kepart_vector_laptop_Ai_Platform_e-commerce_Revolution_light_ba_06524236-8880-4362-9e92-06f3aad37244.webp",
+      "subtitle": "INNOVATION LEADERS",
+      "title": "Pioneering AI Solutions for Digital Excellence",
+      "description": "As industry leaders in AI development and digital transformation, we're revolutionizing how businesses operate in the digital age. Our team of expert developers and AI specialists creates cutting-edge solutions that drive innovation, efficiency, and growth. From custom AI development to enterprise-scale digital transformation, we deliver results that exceed expectations.",
+      "image": "https://cdn.atlagia.com/GiaConnect/images/9304b8fc-6ad2-4ee5-944d-5b6472cf005b.png",
       "stats": [
         {
-          "value": "1000+",
-          "label": "Happy Customers"
+          "value": "98%",
+          "label": "Client Satisfaction"
         },
         {
-          "value": "20%",
-          "label": "Average Growth Rate"
+          "value": "500+",
+          "label": "Projects Delivered"
+        },
+        {
+          "value": "85%",
+          "label": "Faster Development"
+        },
+        {
+          "value": "24/7",
+          "label": "AI Support"
         }
       ]
     },
     {
       "type": "bannerSection",
-      "subtitle": "HUGE HONOR",
-      "headline": "Our Awards",
-      "description": "Recognized for excellence in AI-powered solutions",
+      "subtitle": "TRANSFORMATIVE SOLUTIONS",
+      "headline": "Empowering Business Growth Through AI Innovation",
+      "description": "Discover how our cutting-edge AI solutions and expert development services can transform your business operations and drive unprecedented growth in the digital age.",
       "backgroundImage": "/images/banner-bg.jpg",
-      "button1Text": "Browse Products",
-      "button1Link": "/products",
-      "button2Text": "Sell on Digivast",
-      "button2Link": "/become-seller",
+      "button1Text": "Explore Solutions",
+      "button1Link": "/solutions",
+      "button2Text": "Schedule Demo",
+      "button2Link": "/demo",
       "cards": [
         {
-          "title": "Universal Bulk Editor",
-          "description": "Streamlines the editing process for vast inventories, allowing seamless updates and modifications across multiple marketplaces and platforms from a single dashboard."
+          "title": "AI-Powered Development",
+          "description": "Leverage the power of artificial intelligence to build smarter, more efficient applications that adapt and scale with your business needs."
         },
         {
-          "title": "Global SEO Enhancer",
-          "description": "Harnesses AI to optimize your content for different markets and languages, ensuring your products rank highly wherever your customers are searching."
+          "title": "Digital Transformation",
+          "description": "Transform your business with comprehensive digital solutions that streamline operations and enhance customer experiences."
         },
         {
-          "title": "AI-Driven Content Generation",
-          "description": "Automatically generates engaging and SEO-optimized content for your products and marketing materials."
+          "title": "Custom Software Solutions",
+          "description": "Get tailored software solutions that perfectly align with your business objectives and provide competitive advantages."
         },
         {
-          "title": "Bulk Meta Tag Optimization",
-          "description": "Enables bulk optimization of meta tags across your entire product catalog for maximum search visibility."
+          "title": "Cloud & DevOps",
+          "description": "Optimize your infrastructure with cloud-native solutions and automated DevOps practices for maximum efficiency and reliability."
         }
       ]
-    },{
+    },
+    {
       "type": "benefitsSection",
-      "subtitle": "BENEFITS",
-      "title": "Why Choose Atalsia?",
-      "description": "Experience the Benefits of AI-Powered E-Commerce Management",
+      "subtitle": "WHY CHOOSE US",
+      "title": "Driving Digital Excellence Through Innovation",
+      "description": "Partner with us to transform your digital presence with cutting-edge technology and expert solutions",
       "benefits": [
         {
-          "title": "AI-Driven Sales Optimization",
-          "description": "Atalsia's advanced AI algorithms analyze customer behavior, market trends, and product data to suggest personalized recommendations and strategies that drive increased sales and revenue."
+          "title": "Expert Development Team",
+          "description": "Our seasoned developers and AI specialists bring years of experience in creating sophisticated digital solutions across industries."
         },
         {
-          "title": "Efficient Time Management",
-          "description": "With Atalsia's streamlined workflow and automation features, tasks that would typically take hours can now be completed in minutes, allowing e-commerce professionals to focus their time and energy on strategic decision-making and business growth."
+          "title": "Custom Solutions",
+          "description": "We craft tailored solutions that perfectly align with your business goals, ensuring maximum impact and ROI."
         },
         {
-          "title": "SEO Enhancement Tools",
-          "description": "Atalsia's AI-driven SEO tools optimize keywords and meta tags, enhancing search rankings effortlessly. Elevate your online store's visibility and attract more organic traffic with streamlined SEO management. Stand out in search results for greater brand exposure and growth."
+          "title": "Innovative Technology",
+          "description": "Stay ahead with our cutting-edge tech stack, including the latest in AI, cloud computing, and development frameworks."
+        },
+        {
+          "title": "Agile Methodology",
+          "description": "Our agile approach ensures rapid development, continuous improvement, and flexibility to adapt to changing needs."
+        },
+        {
+          "title": "Comprehensive Support",
+          "description": "From initial concept to post-launch maintenance, we provide end-to-end support for your digital journey."
+        },
+        {
+          "title": "Industry Expertise",
+          "description": "Deep understanding of various industries allows us to deliver solutions that address sector-specific challenges."
         }
       ]
-    },{
-      "type": "bloggerSection",
-      "subtitle": "ATLASIA BLOGGER",
-      "title": "Automate Content with Atalsia AI",
-      "description": "Effortlessly generate engaging, SEO-friendly blog posts with Atalsia's AI-powered tool, streamlining your content creation process.",
-      "buttonText": "Discover Now",
-      "buttonLink": "/blogger",
-      "image": "https://cdn.atlagia.com/kepart_vector_laptop_Ai_Platform_e-commerce_Auto_Blogger_Revolu_d6ffb19e-1f2b-47a0-a7ff-6465f0a24e95.webp"
-    },{
-      "type": "reviewsSection",
-      "reviews": [
+    },
+    {
+      "type": "projectsSection",
+      "subtitle": "OUR PROJECTS",
+      "title": "Transforming Industries Through Innovation",
+      "description": "Explore our portfolio of successful digital transformations across various industries.",
+      "projects": [
         {
-          "rating": 5,
-          "content": "The level of support and customization available with the Enterprise Plan is outstanding. Our dedicated account manager has helped us optimize our store's performance and achieve remarkable growth.",
-          "author": "David Lee",
-          "position": "E-commerce Entrepreneur"
+          "title": "E-commerce Platform",
+          "category": "Retail & E-commerce",
+          "description": "AI-powered e-commerce platform with advanced recommendation system and automated inventory management.",
+          "image": "https://cdn.atlagia.com/projects/ecommerce-platform.webp",
+          "stats": {
+            "conversion": "+150%",
+            "automation": "85%",
+            "efficiency": "3x"
+          },
+          "technologies": [
+            "AI/ML",
+            "React",
+            "Node.js",
+            "AWS"
+          ]
         },
         {
-          "rating": 5,
-          "content": "As an online store owner, Atalsia's AI tools have revolutionized our approach to SEO and product management. The Universal Bulk Editor saved us countless hours, and our organic traffic has increased by 50% in just three months!",
-          "author": "Michael Chen",
-          "position": "Digital Marketing Manager"
+          "title": "Healthcare Management System",
+          "category": "Healthcare",
+          "description": "Integrated healthcare platform with patient management, telemedicine, and AI diagnostics support.",
+          "image": "https://cdn.atlagia.com/projects/healthcare-system.webp",
+          "stats": {
+            "efficiency": "+200%",
+            "accuracy": "99.9%",
+            "satisfaction": "98%"
+          },
+          "technologies": [
+            "Python",
+            "TensorFlow",
+            "React",
+            "Cloud"
+          ]
         },
         {
-          "rating": 5,
-          "content": "Atalsia's AI-powered keyword suggestions and personalization tools have been a game changer for our business. Our conversion rates have improved significantly, and we couldn't be happier with the results.",
-          "author": "Sarah Thompson",
-          "position": "E-commerce Entrepreneur"
+          "title": "FinTech Analytics Dashboard",
+          "category": "Finance",
+          "description": "Real-time financial analytics platform with AI-driven insights and automated reporting.",
+          "image": "https://cdn.atlagia.com/projects/fintech-dashboard.webp",
+          "stats": {
+            "processing": "Real-time",
+            "accuracy": "99.99%",
+            "automation": "90%"
+          },
+          "technologies": [
+            "Vue.js",
+            "Python",
+            "AI/ML",
+            "AWS"
+          ]
+        },
+        {
+          "title": "Smart Manufacturing System",
+          "category": "Manufacturing",
+          "description": "IoT-enabled manufacturing system with predictive maintenance and automated quality control.",
+          "image": "https://cdn.atlagia.com/projects/manufacturing-system.webp",
+          "stats": {
+            "downtime": "-75%",
+            "quality": "+95%",
+            "efficiency": "4x"
+          },
+          "technologies": [
+            "IoT",
+            "AI/ML",
+            "Cloud",
+            "React"
+          ]
         }
-      ]
-    },{
-      "type": "pricingSection",
-      "subtitle": "CHOOSE YOUR PLAN",
-      "title": "Flexible Pricing Plans to Suit Your Needs",
-      "description": "Select the perfect plan for your business. Start with a free demo and upgrade as you grow. All plans include a 14-day money-back guarantee",
-      "plans": [
+      ],
+      "buttonText": "View All Projects",
+      "buttonLink": "/projects"
+    },
+    {
+      "type": "technologiesSection",
+      "subtitle": "TECH STACK",
+      "title": "Our Technology Expertise",
+      "description": "We leverage cutting-edge technologies to deliver exceptional solutions that drive business growth and innovation.",
+      "categories": [
         {
-          "name": "Starter Plan",
-          "price": "9 $",
-          "period": "Per Month",
-          "buttonText": "Start Now",
-          "buttonLink": "/signup",
-          "features": [
+          "name": "Frontend Development",
+          "description": "Modern web technologies for creating responsive and interactive user interfaces.",
+          "technologies": [
             {
-              "text": "Access to AI-powered SEO Enhancer",
-              "included": true
+              "name": "React",
+              "icon": "react",
+              "level": "Expert",
+              "description": "Building dynamic and scalable web applications"
             },
             {
-              "text": "Use of Universal Bulk Editor (up to 300 products)",
-              "included": true
+              "name": "Vue.js",
+              "icon": "vue",
+              "level": "Advanced",
+              "description": "Creating reactive and performant user interfaces"
             },
             {
-              "text": "Basic AI-Powered Personalization",
-              "included": true
+              "name": "Next.js",
+              "icon": "nextjs",
+              "level": "Expert",
+              "description": "Server-side rendering and static site generation"
             },
             {
-              "text": "Email Support",
-              "included": true
+              "name": "TypeScript",
+              "icon": "typescript",
+              "level": "Advanced",
+              "description": "Type-safe JavaScript development"
             }
           ]
         },
         {
-          "name": "Basic Plan",
-          "price": "19 $",
-          "period": "Per Month",
-          "buttonText": "Start Now",
-          "buttonLink": "/signup",
-          "features": [
+          "name": "Backend Development",
+          "description": "Robust server-side technologies for building scalable applications.",
+          "technologies": [
             {
-              "text": "AI-powered SEO Enhancer",
-              "included": true
+              "name": "Node.js",
+              "icon": "nodejs",
+              "level": "Expert",
+              "description": "High-performance server-side applications"
             },
             {
-              "text": "Universal Bulk Editor (up to 1000 products)",
-              "included": true
+              "name": "Python",
+              "icon": "python",
+              "level": "Advanced",
+              "description": "Data processing and machine learning"
             },
             {
-              "text": "Basic AI Personalization",
-              "included": true
+              "name": "Go",
+              "icon": "golang",
+              "level": "Intermediate",
+              "description": "Fast and efficient backend services"
             },
             {
-              "text": "AI Keyword Suggestions",
-              "included": true
-            },
-            {
-              "text": "Email Support",
-              "included": true
+              "name": "Java",
+              "icon": "java",
+              "level": "Advanced",
+              "description": "Enterprise-grade applications"
             }
           ]
         },
         {
-          "name": "Pro Plan",
-          "price": "79 $",
-          "period": "Per Month",
-          "isPopular": true,
-          "buttonText": "Start Now",
-          "buttonLink": "/signup",
-          "features": [
+          "name": "AI & Machine Learning",
+          "description": "Advanced AI technologies for intelligent solutions.",
+          "technologies": [
             {
-              "text": "All Basic Plan features",
-              "included": true
+              "name": "TensorFlow",
+              "icon": "tensorflow",
+              "level": "Advanced",
+              "description": "Deep learning and neural networks"
             },
             {
-              "text": "Unlimited Bulk Editor access",
-              "included": true
+              "name": "PyTorch",
+              "icon": "pytorch",
+              "level": "Advanced",
+              "description": "Dynamic neural networks"
             },
             {
-              "text": "Advanced AI Personalization",
-              "included": true
+              "name": "OpenAI",
+              "icon": "openai",
+              "level": "Expert",
+              "description": "Natural language processing"
             },
             {
-              "text": "Priority AI Keyword Suggestions",
-              "included": true
-            },
-            {
-              "text": "Advanced SEO Tools",
-              "included": true
-            },
-            {
-              "text": "Analytics and Reporting Dashboard",
-              "included": true
-            },
-            {
-              "text": "Priority Email Support",
-              "included": true
-            },
-            {
-              "text": "New Features and Updates",
-              "included": true
+              "name": "Scikit-learn",
+              "icon": "scikit",
+              "level": "Advanced",
+              "description": "Machine learning algorithms"
             }
           ]
         },
         {
-          "name": "Enterprise Plan",
-          "price": "199 $",
-          "period": "Per Month",
-          "buttonText": "Contact Sales",
-          "buttonLink": "/contact",
-          "features": [
+          "name": "Cloud & DevOps",
+          "description": "Cloud infrastructure and development operations tools.",
+          "technologies": [
             {
-              "text": "All Pro Plan features",
-              "included": true
+              "name": "AWS",
+              "icon": "aws",
+              "level": "Expert",
+              "description": "Cloud infrastructure and services"
             },
             {
-              "text": "Dedicated Account Manager",
-              "included": true
+              "name": "Docker",
+              "icon": "docker",
+              "level": "Advanced",
+              "description": "Containerization and deployment"
             },
             {
-              "text": "Customized AI Solutions",
-              "included": true
+              "name": "Kubernetes",
+              "icon": "kubernetes",
+              "level": "Advanced",
+              "description": "Container orchestration"
             },
             {
-              "text": "Multi-CMS Integration",
-              "included": true
-            },
-            {
-              "text": "Advanced Analytics and Insights",
-              "included": true
-            },
-            {
-              "text": "24/7 Priority Support",
-              "included": true
-            },
-            {
-              "text": "Personalized Onboarding and Training",
-              "included": true
-            },
-            {
-              "text": "Monthly Optimization Reviews",
-              "included": true
+              "name": "CI/CD",
+              "icon": "cicd",
+              "level": "Expert",
+              "description": "Continuous integration and deployment"
             }
           ]
         }
       ]
     },
     {
-      "type": "ctaSection",
-      "subtitle": "GET STARTED TODAY",
-      "title": "Transform Your E-commerce Business with AI-Powered Solutions",
-      "description": "Join thousands of successful businesses already using Atalsia. Start your 14-day free trial today and experience the power of AI-driven e-commerce optimization.",
-      "primaryButtonText": "Start Free Trial",
-      "primaryButtonLink": "/signup",
-      "secondaryButtonText": "Schedule Demo",
-      "secondaryButtonLink": "/demo",
-      "stats": [
+      "type": "processSection",
+      "subtitle": "OUR PROCESS",
+      "title": "How We Deliver Excellence",
+      "description": "Our proven process ensures consistent quality and successful project delivery through every stage of development.",
+      "steps": [
         {
-          "value": "14K+",
-          "label": "Active Users"
+          "number": "01",
+          "title": "Discovery & Planning",
+          "description": "We analyze your requirements, define project scope, and create a detailed roadmap for success.",
+          "icon": "search"
         },
         {
-          "value": "50M+",
-          "label": "Products Optimized"
+          "number": "02",
+          "title": "Design & Architecture",
+          "description": "Our team creates scalable architecture and intuitive designs that align with your business goals.",
+          "icon": "layout"
         },
         {
-          "value": "98%",
-          "label": "Customer Satisfaction"
+          "number": "03",
+          "title": "Development",
+          "description": "We build robust solutions using cutting-edge technologies and best practices.",
+          "icon": "code"
+        },
+        {
+          "number": "04",
+          "title": "Testing & Launch",
+          "description": "Thorough testing ensures quality, followed by smooth deployment and ongoing support.",
+          "icon": "check-circle"
+        }
+      ]
+    },
+    {
+      "type": "reviewsSection",
+      "reviews": [
+        {
+          "name": "Sarah Johnson",
+          "role": "CTO",
+          "company": "TechVision Inc",
+          "image": "/images/testimonials/sarah.jpg",
+          "content": "Working with this team has been transformative for our business. Their AI solutions have automated our core processes, reducing operational costs by 60% while improving accuracy.",
+          "rating": 5
+        },
+        {
+          "name": "Michael Chen",
+          "role": "CEO",
+          "company": "InnovatePro",
+          "image": "/images/testimonials/michael.jpg",
+          "content": "The level of expertise and professionalism is outstanding. They didn't just provide a solution; they became strategic partners in our digital transformation journey.",
+          "rating": 5
+        },
+        {
+          "name": "Emily Rodriguez",
+          "role": "Director of Operations",
+          "company": "GlobalTech",
+          "image": "/images/testimonials/emily.jpg",
+          "content": "Their AI-powered automation solutions have revolutionized our customer service. We're now able to provide 24/7 support with 98% customer satisfaction.",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "type": "achievementsSection",
+      "subtitle": "OUR IMPACT",
+      "title": "Driving Digital Excellence",
+      "description": "Our track record of success speaks through numbers. Here's how we've helped businesses transform and grow with AI-powered solutions.",
+      "achievements": [
+        {
+          "value": "500+",
+          "label": "Projects",
+          "description": "Successfully delivered AI and automation solutions across various industries",
+          "icon": "rocket"
+        },
+        {
+          "value": "95%",
+          "label": "Success Rate",
+          "description": "Client satisfaction and project completion rate above industry standards",
+          "icon": "chart"
+        },
+        {
+          "value": "60%",
+          "label": "Cost Reduction",
+          "description": "Average operational cost savings achieved for our clients",
+          "icon": "trending-up"
         },
         {
           "value": "24/7",
-          "label": "Expert Support"
+          "label": "Support",
+          "description": "Round-the-clock AI-powered assistance and technical support",
+          "icon": "headphones"
         }
-      ],
-      "partnerLogos": [
+      ]
+    },
+    {
+      "type": "industryFeaturesSection",
+      "subtitle": "INDUSTRY SOLUTIONS",
+      "title": "AI Solutions for Every Industry",
+      "description": "Discover how Atlaga's AI platform can transform your specific industry with tailored solutions and automation tools.",
+      "industries": [
         {
-          "src": "https://cdn.atlagia.com/1655873659shopify-black-logo.png",
-          "alt": "Shopify"
+          "icon": "ShoppingCart",
+          "title": "E-commerce",
+          "description": "Streamline your online store operations with AI-powered automation and customer engagement tools.",
+          "features": [
+            "Automated inventory management",
+            "AI customer support",
+            "Smart product recommendations",
+            "Automated marketing campaigns"
+          ],
+          "processIcons": [
+            "Package",
+            "Bot",
+            "Users",
+            "CreditCard"
+          ]
         },
         {
-          "src": "https://cdn.atlagia.com/wix-com-website-logo-1.png",
-          "alt": "Wix"
+          "icon": "Stethoscope",
+          "title": "Healthcare",
+          "description": "Transform patient care and practice management with intelligent automation solutions.",
+          "features": [
+            "Automated appointment scheduling",
+            "Patient record management",
+            "AI-powered diagnostics assistance",
+            "Practice workflow automation"
+          ],
+          "processIcons": [
+            "Calendar",
+            "FileText",
+            "Brain",
+            "StethoscopeAlt"
+          ]
         },
         {
-          "src": "https://cdn.atlagia.com/woocommerce-03.png",
-          "alt": "WordPress"
+          "icon": "Briefcase",
+          "title": "Digital Agencies",
+          "description": "Scale your agency operations and deliver better results with AI-powered tools.",
+          "features": [
+            "Automated project management",
+            "Content creation automation",
+            "Client reporting automation",
+            "Resource optimization"
+          ],
+          "processIcons": [
+            "PenTool",
+            "Bot",
+            "BarChart",
+            "Target"
+          ]
+        },
+        {
+          "icon": "Rocket",
+          "title": "Startups",
+          "description": "Launch and scale your startup faster with comprehensive AI automation tools.",
+          "features": [
+            "Quick MVP development",
+            "Automated operations",
+            "Growth automation",
+            "Cost-effective scaling"
+          ],
+          "processIcons": [
+            "Code",
+            "Zap",
+            "Brain",
+            "Rocket"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "automationFeaturesSection",
+      "subtitle": "AI AUTOMATION",
+      "title": "Transform Your Business with AI Automation",
+      "description": "Discover how our AI automation tools can revolutionize your operations and drive growth across every aspect of your business.",
+      "features": [
+        {
+          "icon": "Workflow",
+          "title": "Workflow Automation",
+          "description": "Streamline your business processes with intelligent workflow automation that learns and adapts to your needs.",
+          "metrics": [
+            {
+              "value": "70%",
+              "label": "Time Saved"
+            },
+            {
+              "value": "90%",
+              "label": "Error Reduction"
+            }
+          ]
+        },
+        {
+          "icon": "Headphones",
+          "title": "Customer Service AI",
+          "description": "Provide 24/7 customer support with AI agents that handle inquiries, resolve issues, and improve satisfaction.",
+          "metrics": [
+            {
+              "value": "24/7",
+              "label": "Support Coverage"
+            },
+            {
+              "value": "85%",
+              "label": "Resolution Rate"
+            }
+          ]
+        },
+        {
+          "icon": "Megaphone",
+          "title": "Marketing Automation",
+          "description": "Automate your marketing campaigns with AI-powered targeting, content creation, and optimization.",
+          "metrics": [
+            {
+              "value": "3x",
+              "label": "ROI Increase"
+            },
+            {
+              "value": "60%",
+              "label": "Cost Reduction"
+            }
+          ]
+        },
+        {
+          "icon": "BarChart",
+          "title": "Smart Analytics",
+          "description": "Get actionable insights with AI-powered analytics that help you make data-driven decisions.",
+          "metrics": [
+            {
+              "value": "95%",
+              "label": "Accuracy"
+            },
+            {
+              "value": "50%",
+              "label": "Faster Insights"
+            }
+          ]
         }
       ]
     },
@@ -371,7 +659,7 @@
       "type": "emailSignupSection",
       "subtitle": "NEWSLETTER",
       "title": "Stay Updated with AI Innovations",
-      "description": "Join our newsletter and get the latest updates on AI-powered e-commerce solutions, industry insights, and exclusive offers.",
+      "description": "Join our newsletter and get the latest updates on AI-powered business solutions, industry insights, and exclusive offers.",
       "buttonText": "Subscribe Now",
       "placeholder": "Enter your work email",
       "features": [

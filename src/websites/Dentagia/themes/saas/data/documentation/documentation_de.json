@@ -1,0 +1,298 @@
+{
+  "pageTitle": "Dokumentation - Dentagia",
+  "pageDescription": "Vollständige Anleitungen, API-Referenzen und Tutorials, um das Beste aus Dentagias Praxismanagement-Plattform herauszuholen",
+  "hero": {
+    "badge": "Entwickler-Ressourcen",
+    "title": "Dokumentation & Anleitungen",
+    "description": "Alles, was Sie benötigen, um mit Dentagias Praxismanagement-Plattform zu bauen, zu integrieren und zu skalieren",
+    "searchPlaceholder": "Dokumentation durchsuchen...",
+    "quickLinks": [
+      {
+        "text": "Erste Schritte",
+        "href": "#getting-started"
+      },
+      {
+        "text": "API-Referenz",
+        "href": "#api-reference"
+      },
+      {
+        "text": "Tutorials",
+        "href": "#tutorials"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "getting-started",
+      "title": "Erste Schritte",
+      "description": "Schnellstart-Anleitungen, um Ihre Reise mit Dentagia zu beginnen",
+      "icon": "Rocket",
+      "items": [
+        {
+          "title": "Schnellstart-Anleitung",
+          "description": "Starten Sie Ihre Zahnarztpraxis in 5 Minuten",
+          "icon": "Zap",
+          "link": "/de/docs/quick-start"
+        },
+        {
+          "title": "Praxis-Einrichtung",
+          "description": "Schritt-für-Schritt-Anweisungen zur Einrichtung Ihrer Praxis",
+          "icon": "Download",
+          "link": "/de/docs/practice-setup"
+        },
+        {
+          "title": "Konfiguration",
+          "description": "Konfigurieren Sie Ihre Praxismanagement-Einstellungen",
+          "icon": "Settings",
+          "link": "/de/docs/configuration"
+        },
+        {
+          "title": "Erste Patientenakte",
+          "description": "Erstellen Sie Ihre erste Patientenakte und Termin",
+          "icon": "FileText",
+          "link": "/de/docs/first-patient"
+        }
+      ]
+    },
+    {
+      "id": "api-reference",
+      "title": "API-Referenz",
+      "description": "Vollständige API-Dokumentation und Endpunkte für Praxismanagement",
+      "icon": "Code",
+      "items": [
+        {
+          "title": "Authentifizierung",
+          "description": "API-Authentifizierung und Sicherheit für HIPAA-Compliance",
+          "icon": "Lock",
+          "link": "/de/docs/api/authentication"
+        },
+        {
+          "title": "REST API",
+          "description": "RESTful API-Endpunkte für Patientenmanagement, Terminplanung und Abrechnung",
+          "icon": "Server",
+          "link": "/de/docs/api/rest"
+        },
+        {
+          "title": "Patienten-API",
+          "description": "Verwalten Sie Patientenakten, Krankengeschichte und Behandlungspläne",
+          "icon": "Users",
+          "link": "/de/docs/api/patients"
+        },
+        {
+          "title": "Terminplanungs-API",
+          "description": "KI-gestützte Terminplanung und Kalenderverwaltung",
+          "icon": "Calendar",
+          "link": "/de/docs/api/scheduling"
+        },
+        {
+          "title": "Abrechnungs-API",
+          "description": "Abrechnungs-, Rechnungsstellungs- und Zahlungsabwicklungs-Endpunkte",
+          "icon": "CreditCard",
+          "link": "/de/docs/api/billing"
+        },
+        {
+          "title": "Webhooks",
+          "description": "Echtzeit-Ereignisbenachrichtigungen für Praxisereignisse",
+          "icon": "Webhook",
+          "link": "/de/docs/api/webhooks"
+        }
+      ]
+    },
+    {
+      "id": "tutorials",
+      "title": "Tutorials",
+      "description": "Schritt-für-Schritt-Anleitungen und Beispiele für Praxismanagement",
+      "icon": "BookOpen",
+      "items": [
+        {
+          "title": "Patientenmanagement",
+          "description": "Vollständige Anleitung zur Verwaltung von Patientenakten und Krankengeschichte",
+          "icon": "Users",
+          "link": "/de/docs/tutorials/patient-management"
+        },
+        {
+          "title": "KI-Terminplanungs-Einrichtung",
+          "description": "Richten Sie KI-gestützte Terminplanung ein und optimieren Sie sie",
+          "icon": "Calendar",
+          "link": "/de/docs/tutorials/ai-scheduling"
+        },
+        {
+          "title": "Abrechnungsautomatisierung",
+          "description": "Automatisieren Sie Abrechnung, Rechnungsstellung und Zahlungsabwicklung",
+          "icon": "CreditCard",
+          "link": "/de/docs/tutorials/billing-automation"
+        },
+        {
+          "title": "Praxisanalysen",
+          "description": "Richten Sie Praxisanalysen und Berichterstattung ein und verwenden Sie sie",
+          "icon": "BarChart",
+          "link": "/de/docs/tutorials/analytics"
+        },
+        {
+          "title": "HIPAA-Compliance",
+          "description": "Stellen Sie sicher, dass Ihre Praxis HIPAA-Compliance-Anforderungen erfüllt",
+          "icon": "Shield",
+          "link": "/de/docs/tutorials/hipaa-compliance"
+        },
+        {
+          "title": "Benutzerdefinierte Integrationen",
+          "description": "Integrieren Sie mit Zahnbildgebungssystemen und anderen Tools",
+          "icon": "Puzzle",
+          "link": "/de/docs/tutorials/integrations"
+        }
+      ]
+    },
+    {
+      "id": "guides",
+      "title": "Anleitungen",
+      "description": "Detaillierte Anleitungen für erweiterte Funktionen und Best Practices",
+      "icon": "Map",
+      "items": [
+        {
+          "title": "HIPAA-Sicherheits-Best Practices",
+          "description": "Sichern Sie Ihre Praxisdaten und stellen Sie HIPAA-Compliance sicher",
+          "icon": "Shield",
+          "link": "/de/docs/guides/security"
+        },
+        {
+          "title": "Praxis-Leistungsoptimierung",
+          "description": "Optimieren Sie Ihre Praxisabläufe für Effizienz und Wachstum",
+          "icon": "Gauge",
+          "link": "/de/docs/guides/performance"
+        },
+        {
+          "title": "Datenmigration",
+          "description": "Migrieren Sie von Ihrem bestehenden Praxismanagement-System",
+          "icon": "Upload",
+          "link": "/de/docs/guides/migration"
+        },
+        {
+          "title": "Praxisanalysen & Berichterstattung",
+          "description": "Verfolgen und analysieren Sie Ihre Praxisleistung",
+          "icon": "BarChart",
+          "link": "/de/docs/guides/analytics"
+        }
+      ]
+    }
+  ],
+  "sdks": {
+    "title": "SDKs & Bibliotheken",
+    "description": "Offizielle SDKs und Bibliotheken für beliebte Sprachen",
+    "items": [
+      {
+        "name": "Python",
+        "icon": "Code",
+        "description": "Offizielles Python SDK für Dentagia API",
+        "version": "v2.1.0",
+        "link": "https://github.com/dentagia/python-sdk",
+        "installCommand": "pip install dentagia"
+      },
+      {
+        "name": "JavaScript",
+        "icon": "Code",
+        "description": "Offizielles JavaScript SDK für Dentagia API",
+        "version": "v3.0.2",
+        "link": "https://github.com/dentagia/js-sdk",
+        "installCommand": "npm install @dentagia/sdk"
+      },
+      {
+        "name": "TypeScript",
+        "icon": "Code",
+        "description": "Offizielles TypeScript SDK für Dentagia API",
+        "version": "v3.0.2",
+        "link": "https://github.com/dentagia/ts-sdk",
+        "installCommand": "npm install @dentagia/sdk-ts"
+      },
+      {
+        "name": "Java",
+        "icon": "Code",
+        "description": "Offizielles Java SDK für Dentagia API",
+        "version": "v1.5.0",
+        "link": "https://github.com/dentagia/java-sdk",
+        "installCommand": "maven: com.dentagia:sdk:1.5.0"
+      },
+      {
+        "name": "Go",
+        "icon": "Code",
+        "description": "Offizielles Go SDK für Dentagia API",
+        "version": "v1.3.0",
+        "link": "https://github.com/dentagia/go-sdk",
+        "installCommand": "go get github.com/dentagia/sdk"
+      },
+      {
+        "name": "Ruby",
+        "icon": "Code",
+        "description": "Offizielles Ruby SDK für Dentagia API",
+        "version": "v2.0.1",
+        "link": "https://github.com/dentagia/ruby-sdk",
+        "installCommand": "gem install dentagia"
+      }
+    ]
+  },
+  "resources": {
+    "title": "Zusätzliche Ressourcen",
+    "description": "Weitere Tools und Ressourcen, um mit Dentagia erfolgreich zu sein",
+    "items": [
+      {
+        "title": "API-Status",
+        "description": "Echtzeit-API-Status und Verfügbarkeit",
+        "icon": "Activity",
+        "link": "https://status.dentagia.com",
+        "external": true
+      },
+      {
+        "title": "Entwickler-Forum",
+        "description": "Verbinden Sie sich mit anderen Entwicklern und Praxismanagern",
+        "icon": "Users",
+        "link": "https://community.dentagia.com",
+        "external": true
+      },
+      {
+        "title": "GitHub-Repository",
+        "description": "Quellcode und Beispiele ansehen",
+        "icon": "Github",
+        "link": "https://github.com/dentagia",
+        "external": true
+      },
+      {
+        "title": "Änderungsprotokoll",
+        "description": "Neueste Updates und Releases",
+        "icon": "FileText",
+        "link": "/de/changelog",
+        "external": false
+      },
+      {
+        "title": "Video-Tutorials",
+        "description": "Lernen Sie durch Video-Anleitungen für Praxismanagement",
+        "icon": "Video",
+        "link": "/de/tutorials",
+        "external": false
+      },
+      {
+        "title": "Support-Zentrum",
+        "description": "Holen Sie sich Hilfe von unserem Team",
+        "icon": "HelpCircle",
+        "link": "/de/contact",
+        "external": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "Brauchen Sie Hilfe?",
+    "description": "Unser Support-Team ist hier, um Ihnen zu helfen, mit Dentagia erfolgreich zu sein",
+    "buttons": [
+      {
+        "text": "Support Kontaktieren",
+        "href": "/de/contact",
+        "variant": "primary",
+        "icon": "MessageSquare"
+      },
+      {
+        "text": "Demo Vereinbaren",
+        "href": "/de/demo",
+        "variant": "secondary",
+        "icon": "Calendar"
+      }
+    ]
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "hero": {
+    "subtitle": "Digital Treatment Planning",
+    "title": "Advanced Treatment Planning & Case Management",
+    "description": "Create comprehensive digital treatment plans, track patient progress, and manage complex cases with advanced tools designed for modern dental practices.",
+    "icon": "clipboard",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "80%",
+        "label": "Faster Planning"
+      },
+      {
+        "value": "95%",
+        "label": "Accuracy"
+      },
+      {
+        "value": "90%",
+        "label": "Acceptance Rate"
+      }
+    ]
+  },
+  "features": {
+    "title": "Treatment Planning Features",
+    "subtitle": "Comprehensive Case Management",
+    "description": "Advanced tools for creating, managing, and tracking treatment plans and patient cases.",
+    "items": [
+      {
+        "icon": "clipboard",
+        "title": "Digital Treatment Plans",
+        "description": "Create comprehensive treatment plans with procedures, timelines, and cost estimates in a digital format.",
+        "highlights": [
+          "Multi-phase treatment planning",
+          "Procedure scheduling",
+          "Cost estimation",
+          "Timeline management",
+          "Case presentation tools"
+        ],
+        "stats": {
+          "value": "80%",
+          "label": "Faster Planning"
+        }
+      },
+      {
+        "icon": "trending-up",
+        "title": "Case Management",
+        "description": "Track patient cases from initial consultation through treatment completion with comprehensive case management tools.",
+        "highlights": [
+          "Case tracking",
+          "Progress monitoring",
+          "Treatment history",
+          "Outcome tracking",
+          "Case analytics"
+        ],
+        "stats": {
+          "value": "95%",
+          "label": "Accuracy"
+        }
+      },
+      {
+        "icon": "users",
+        "title": "Patient Communication",
+        "description": "Share treatment plans with patients, get approvals, and communicate about treatment progress.",
+        "highlights": [
+          "Plan sharing",
+          "Patient approval",
+          "Progress updates",
+          "Secure messaging",
+          "Document sharing"
+        ],
+        "stats": {
+          "value": "90%",
+          "label": "Acceptance Rate"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Treatment Planning Success",
+    "description": "See how practices streamline treatment planning",
+    "stats": [
+      {
+        "icon": "clipboard",
+        "value": "80%",
+        "label": "Faster Planning"
+      },
+      {
+        "icon": "trending-up",
+        "value": "95%",
+        "label": "Accuracy"
+      },
+      {
+        "icon": "users",
+        "value": "90%",
+        "label": "Acceptance"
+      },
+      {
+        "icon": "award",
+        "value": "100%",
+        "label": "Digital"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Dr. Sarah Martinez",
+        "role": "Practice Owner",
+        "quote": "Treatment planning has become so much easier. We can create comprehensive plans in minutes and share them with patients instantly."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Treatment Planning Benefits",
+    "subtitle": "Streamlined Case Management",
+    "description": "Experience the advantages of digital treatment planning.",
+    "items": [
+      {
+        "title": "Faster Planning",
+        "description": "Create treatment plans much faster with digital tools and templates.",
+        "icon": "zap",
+        "color": "teal",
+        "stats": {
+          "value": "80%",
+          "label": "Faster"
+        },
+        "highlights": [
+          "Digital templates",
+          "Quick plan creation",
+          "Automated calculations",
+          "Streamlined workflows"
+        ]
+      },
+      {
+        "title": "Better Accuracy",
+        "description": "Digital plans reduce errors and improve treatment accuracy.",
+        "icon": "check-circle",
+        "color": "cyan",
+        "stats": {
+          "value": "95%",
+          "label": "Accuracy"
+        },
+        "highlights": [
+          "Error reduction",
+          "Consistent formatting",
+          "Accurate calculations",
+          "Better documentation"
+        ]
+      },
+      {
+        "title": "Higher Acceptance",
+        "description": "Better presentation and communication improve treatment acceptance rates.",
+        "icon": "trending-up",
+        "color": "blue",
+        "stats": {
+          "value": "90%",
+          "label": "Acceptance"
+        },
+        "highlights": [
+          "Better presentation",
+          "Clear communication",
+          "Visual aids",
+          "Patient engagement"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Streamline Treatment Planning?",
+    "description": "See how Dentagia's treatment planning features can transform your case management.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Schedule a Demo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Learn More",
+      "link": "/features"
+    }
+  }
+}
+

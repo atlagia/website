@@ -1,0 +1,236 @@
+{
+  "pageTitle": "Carriere presso Dentagia",
+  "pageDescription": "Unisciti al nostro team di innovatori e modella il futuro della gestione di studi dentistici con soluzioni alimentate da IA",
+  "hero": {
+    "badge": "Stiamo Assumendo",
+    "title": "Unisciti al Nostro Team di Innovatori",
+    "description": "Aiutaci a modellare il futuro della gestione di studi dentistici e trasformare il modo in cui gli studi dentistici operano. Cerchiamo persone appassionate che prosperano con sfide e innovazione nella tecnologia sanitaria.",
+    "cta": {
+      "primary": {
+        "text": "Vedi Posizioni Aperte",
+        "href": "#open-positions"
+      },
+      "secondary": {
+        "text": "Scopri il Nostro Processo",
+        "href": "#application-process"
+      }
+    }
+  },
+  "values": {
+    "title": "I Nostri Valori",
+    "description": "Questi principi guidano tutto ciò che facciamo e definiscono la nostra cultura aziendale.",
+    "items": [
+      {
+        "title": "Innovazione",
+        "description": "Spingiamo i confini e abbracciamo tecnologie IA all'avanguardia per risolvere sfide complesse di gestione di studi dentistici.",
+        "icon": "lightbulb"
+      },
+      {
+        "title": "Collaborazione",
+        "description": "Crediamo nel potere di team diversificati che lavorano insieme verso obiettivi comuni nella tecnologia sanitaria.",
+        "icon": "users"
+      },
+      {
+        "title": "Eccellenza",
+        "description": "Ci sforziamo per la massima qualità in tutto ciò che facciamo, dal codice al servizio clienti per studi dentistici.",
+        "icon": "award"
+      },
+      {
+        "title": "Integrità",
+        "description": "Agiamo con onestà, trasparenza e responsabilità etica, specialmente quando gestiamo dati pazienti sensibili.",
+        "icon": "shield"
+      }
+    ]
+  },
+  "openPositions": {
+    "title": "Posizioni Aperte",
+    "description": "Esplora le nostre offerte di lavoro attuali e trova opportunità che corrispondono alle tue competenze e obiettivi di carriera.",
+    "positions": [
+      {
+        "id": "ai-engineer",
+        "title": "Ingegnere IA - Sanità",
+        "department": "Ingegneria",
+        "type": "Tempo pieno",
+        "location": "San Francisco / Remoto",
+        "description": "Progetta e implementa soluzioni IA all'avanguardia per la gestione di studi dentistici, inclusa ottimizzazione della pianificazione e insights sui pazienti.",
+        "requirements": [
+          "5+ anni di esperienza nello sviluppo IA/ML",
+          "Esperienza con sistemi di gestione di studi dentistici o sanitari",
+          "Conoscenza solida di TensorFlow, PyTorch o framework simili",
+          "Esperienza con elaborazione del linguaggio naturale o analisi predittiva",
+          "Competenze di programmazione solide in Python",
+          "Comprensione dei requisiti di conformità HIPAA"
+        ],
+        "posted": "2 settimane fa"
+      },
+      {
+        "id": "frontend-developer",
+        "title": "Sviluppatore Frontend",
+        "department": "Ingegneria",
+        "type": "Tempo pieno",
+        "location": "New York / Remoto",
+        "description": "Costruisci interfacce utente intuitive e responsive per la nostra piattaforma di gestione di studi dentistici alimentata da IA.",
+        "requirements": [
+          "3+ anni di esperienza con React e JavaScript moderno",
+          "Competenza in TypeScript e librerie di gestione dello stato",
+          "Esperienza con design responsive e framework CSS",
+          "Comprensione degli standard di accessibilità web",
+          "Esperienza con software sanitario o dentale è un plus",
+          "Conoscenza di framework di test"
+        ],
+        "posted": "1 settimana fa"
+      },
+      {
+        "id": "product-manager",
+        "title": "Product Manager - Sanità",
+        "department": "Prodotto",
+        "type": "Tempo pieno",
+        "location": "Remoto",
+        "description": "Guida lo sviluppo dei nostri prodotti di gestione di studi dentistici dalla concezione al lancio.",
+        "requirements": [
+          "4+ anni di esperienza nella gestione del prodotto",
+          "Background in sanità, SaaS o software di gestione di studi dentistici",
+          "Forti capacità analitiche e di risoluzione dei problemi",
+          "Eccellenti capacità di gestione degli stakeholder",
+          "Comprensione dei flussi di lavoro di studi dentistici è un plus",
+          "Background tecnico è un plus"
+        ],
+        "posted": "3 giorni fa"
+      },
+      {
+        "id": "ux-designer",
+        "title": "Designer UX - Sanità",
+        "department": "Design",
+        "type": "Tempo pieno",
+        "location": "Londra / Remoto",
+        "description": "Crea design centrati sull'utente per applicazioni complesse di gestione di studi dentistici.",
+        "requirements": [
+          "3+ anni di esperienza nel design UX",
+          "Portfolio solido che mostra processo di design centrato sull'utente",
+          "Esperienza con sistemi di design e strumenti (Figma, Adobe XD)",
+          "Comprensione degli standard di accessibilità",
+          "Esperienza con design di software sanitario o dentale è un plus",
+          "Capacità di condurre ricerca e test utente"
+        ],
+        "posted": "1 mese fa"
+      },
+      {
+        "id": "data-scientist",
+        "title": "Data Scientist - Analisi Sanitarie",
+        "department": "Dati",
+        "type": "Tempo pieno",
+        "location": "Remoto",
+        "description": "Analizza set di dati complessi e costruisci modelli predittivi per alimentare le nostre soluzioni IA di gestione di studi dentistici.",
+        "requirements": [
+          "Laurea Magistrale o Dottorato in Informatica, Statistica o campo correlato",
+          "Forte esperienza con algoritmi di machine learning",
+          "Esperienza con dati sanitari e conformità HIPAA",
+          "Competenza in Python, R o linguaggi simili",
+          "Esperienza con tecnologie big data",
+          "Forti capacità analitiche e di risoluzione dei problemi"
+        ],
+        "posted": "2 settimane fa"
+      },
+      {
+        "id": "devops-engineer",
+        "title": "Ingegnere DevOps - Sanità",
+        "department": "Operazioni",
+        "type": "Tempo pieno",
+        "location": "Berlino / Remoto",
+        "description": "Costruisci e mantieni la nostra infrastruttura cloud e pipeline di deployment per sistemi di gestione di studi dentistici conformi HIPAA.",
+        "requirements": [
+          "3+ anni di esperienza in DevOps o Ingegneria dell'Affidabilità del Sito",
+          "Esperienza con AWS, Azure o GCP",
+          "Conoscenza di containerizzazione e orchestrazione (Docker, Kubernetes)",
+          "Esperienza con strumenti CI/CD",
+          "Comprensione della sicurezza dei dati sanitari e conformità HIPAA",
+          "Competenze di scripting e automazione"
+        ],
+        "posted": "3 settimane fa"
+      }
+    ]
+  },
+  "perks": {
+    "title": "Vantaggi e Benefici",
+    "description": "Crediamo nel prendersi cura del nostro team con benefici competitivi e un ambiente di lavoro di supporto.",
+    "items": [
+      {
+        "title": "Lavoro Flessibile",
+        "description": "Lavora da qualsiasi luogo con orari flessibili per raggiungere il tuo migliore equilibrio lavoro-vita.",
+        "icon": "globe"
+      },
+      {
+        "title": "Compensazione Competitiva",
+        "description": "Offriamo stipendi leader del settore, opzioni di equity e bonus di performance.",
+        "icon": "dollar-sign"
+      },
+      {
+        "title": "Benefici Sanitari",
+        "description": "Assicurazione sanitaria, dentale e visiva completa per te e i tuoi dipendenti.",
+        "icon": "heart"
+      },
+      {
+        "title": "Sviluppo Professionale",
+        "description": "Apprendimento continuo con borse di studio educative, conferenze e programmi di formazione.",
+        "icon": "graduation-cap"
+      },
+      {
+        "title": "Eventi del Team",
+        "description": "Ritiri regolari del team, eventi sociali e attività collaborative.",
+        "icon": "users"
+      },
+      {
+        "title": "Attrezzatura Tech",
+        "description": "Ultimo hardware e software per assicurarti di avere gli strumenti necessari per avere successo.",
+        "icon": "laptop"
+      }
+    ]
+  },
+  "process": {
+    "title": "Il Nostro Processo di Candidatura",
+    "description": "Abbiamo progettato un processo semplice per aiutarci a trovare i migliori talenti rispettando il tuo tempo.",
+    "steps": [
+      {
+        "step": "1",
+        "title": "Revisione della Candidatura",
+        "description": "Il nostro team esamina la tua candidatura per valutare le tue qualifiche ed esperienza."
+      },
+      {
+        "step": "2",
+        "title": "Colloquio Iniziale",
+        "description": "Una conversazione con il nostro team di reclutamento per saperne di più sul tuo background e aspirazioni."
+      },
+      {
+        "step": "3",
+        "title": "Valutazione Tecnica",
+        "description": "A seconda del ruolo, completerai una valutazione tecnica o uno studio di caso."
+      },
+      {
+        "step": "4",
+        "title": "Colloqui del Team",
+        "description": "Incontra potenziali membri del team e leader per esplorare l'adattamento del team e la collaborazione."
+      },
+      {
+        "step": "5",
+        "title": "Decisione Finale",
+        "description": "Forniremo feedback e potenzialmente estenderemo un'offerta per unirti al nostro team."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Pronto a Fare la Differenza?",
+    "description": "Unisciti al nostro team e aiuta a modellare il futuro della gestione di studi dentistici. Cerchiamo persone appassionate che vogliono fare la differenza nella tecnologia sanitaria.",
+    "buttons": [
+      {
+        "text": "Sfoglia Posizioni Aperte",
+        "href": "#open-positions",
+        "variant": "primary"
+      },
+      {
+        "text": "Contatta il Reclutamento",
+        "href": "/contact",
+        "variant": "secondary"
+      }
+    ]
+  }
+}

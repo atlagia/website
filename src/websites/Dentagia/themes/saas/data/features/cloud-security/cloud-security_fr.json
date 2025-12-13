@@ -1,0 +1,182 @@
+{
+  "hero": {
+    "subtitle": "Sécurité cloud",
+    "title": "Infrastructure cloud sécurisée",
+    "description": "Sécurité cloud de niveau entreprise avec sauvegardes automatiques, reprise après sinistre et garantie de disponibilité de 99,9% pour les données de votre cabinet dentaire.",
+    "icon": "cloud",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "99.9%",
+        "label": "Disponibilité"
+      },
+      {
+        "value": "256-bit",
+        "label": "Chiffrement"
+      },
+      {
+        "value": "24/7",
+        "label": "Surveillance"
+      }
+    ]
+  },
+  "features": {
+    "title": "Fonctionnalités de sécurité cloud",
+    "subtitle": "Infrastructure entreprise",
+    "description": "Infrastructure cloud sécurisée et évolutive conçue pour la protection des données des cabinets dentaires.",
+    "items": [
+      {
+        "icon": "cloud",
+        "title": "Stockage cloud sécurisé",
+        "description": "Stockage cloud de niveau entreprise avec sauvegardes redondantes et capacités de reprise après sinistre.",
+        "highlights": [
+          "Stockage redondant",
+          "Sauvegardes automatiques",
+          "Reprise après sinistre",
+          "Redondance des données",
+          "Distribution géographique"
+        ],
+        "stats": {
+          "value": "99.9%",
+          "label": "Disponibilité"
+        }
+      },
+      {
+        "icon": "shield",
+        "title": "Surveillance de sécurité",
+        "description": "Surveillance de sécurité 24/7 et détection de menaces pour protéger les données de votre cabinet.",
+        "highlights": [
+          "Surveillance 24/7",
+          "Détection de menaces",
+          "Prévention d'intrusion",
+          "Alertes de sécurité",
+          "Réponse aux incidents"
+        ],
+        "stats": {
+          "value": "24/7",
+          "label": "Surveillance"
+        }
+      },
+      {
+        "icon": "database",
+        "title": "Sauvegardes automatiques",
+        "description": "Sauvegardes quotidiennes automatiques avec récupération à un point dans le temps et politiques de rétention des données.",
+        "highlights": [
+          "Sauvegardes quotidiennes",
+          "Récupération à un point dans le temps",
+          "Rétention des données",
+          "Vérification des sauvegardes",
+          "Tests de récupération"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "Protégé"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Assurance de sécurité cloud",
+    "description": "Sécurité de niveau entreprise pour votre cabinet",
+    "stats": [
+      {
+        "icon": "cloud",
+        "value": "99.9%",
+        "label": "Disponibilité"
+      },
+      {
+        "icon": "shield",
+        "value": "24/7",
+        "label": "Surveillance"
+      },
+      {
+        "icon": "database",
+        "value": "100%",
+        "label": "Protégé"
+      },
+      {
+        "icon": "award",
+        "value": "256-bit",
+        "label": "Chiffrement"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Dr. Michael Chen",
+        "role": "Dentiste principal",
+        "quote": "La sécurité cloud nous donne une confiance totale. Nos données sont toujours protégées et accessibles, avec 99,9% de disponibilité."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Avantages de la sécurité cloud",
+    "subtitle": "Protection fiable",
+    "description": "Découvrez la tranquillité d'esprit qui vient avec la sécurité cloud entreprise.",
+    "items": [
+      {
+        "title": "Haute disponibilité",
+        "description": "Garantie de disponibilité de 99,9% garantit que les données de votre cabinet sont toujours accessibles.",
+        "icon": "cloud",
+        "color": "teal",
+        "stats": {
+          "value": "99.9%",
+          "label": "Disponibilité"
+        },
+        "highlights": [
+          "Infrastructure fiable",
+          "Systèmes redondants",
+          "Reprise après sinistre",
+          "Haute disponibilité"
+        ]
+      },
+      {
+        "title": "Surveillance 24/7",
+        "description": "Surveillance de sécurité continue protège vos données 24 heures sur 24, 7 jours sur 7.",
+        "icon": "shield",
+        "color": "cyan",
+        "stats": {
+          "value": "24/7",
+          "label": "Surveillance"
+        },
+        "highlights": [
+          "Surveillance continue",
+          "Détection de menaces",
+          "Alertes de sécurité",
+          "Réponse aux incidents"
+        ]
+      },
+      {
+        "title": "Protection des données",
+        "description": "Sauvegarde et récupération complètes garantissent que vos données sont toujours protégées.",
+        "icon": "database",
+        "color": "blue",
+        "stats": {
+          "value": "100%",
+          "label": "Protégé"
+        },
+        "highlights": [
+          "Sauvegardes automatiques",
+          "Récupération à un point dans le temps",
+          "Redondance des données",
+          "Tests de récupération"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prêt pour une infrastructure cloud sécurisée ?",
+    "description": "Découvrez comment la sécurité cloud de Dentagia protège les données de votre cabinet.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Planifier une démo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "En savoir plus",
+      "link": "/features"
+    }
+  }
+}
+

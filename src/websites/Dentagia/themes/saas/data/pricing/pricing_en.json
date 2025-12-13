@@ -1,0 +1,459 @@
+{
+  "pageTitle": "Pricing - Dentagia Dental Practice Management",
+  "pageDescription": "Flexible pricing plans for dental practices of all sizes. Choose the plan that fits your practice needs.",
+  "hero": {
+    "badge": "Simple, Transparent Pricing",
+    "title": "Choose the Right Plan for Your Practice",
+    "description": "Flexible pricing plans designed for dental practices of all sizes. Start with our essential plan and scale as your practice grows.",
+    "cta": {
+      "text": "Contact Sales",
+      "href": "/contact"
+    }
+  },
+  "plans": [
+    {
+      "name": "Essential",
+      "description": "Perfect for solo practitioners and small practices",
+      "price": "$199",
+      "period": "per month",
+      "features": [
+        "Up to 2 practitioners",
+        "Patient management",
+        "Basic scheduling",
+        "Billing & invoicing",
+        "Cloud storage (50GB)",
+        "Email support",
+        "Mobile app access"
+      ],
+      "cta": {
+        "text": "Get Started",
+        "href": "/contact",
+        "variant": "outline"
+      },
+      "popular": false
+    },
+    {
+      "name": "Professional",
+      "description": "Ideal for growing practices with multiple practitioners",
+      "price": "$399",
+      "period": "per month",
+      "features": [
+        "Up to 5 practitioners",
+        "AI-powered scheduling",
+        "Advanced patient management",
+        "Automated billing & payments",
+        "Practice analytics",
+        "Cloud storage (200GB)",
+        "Priority support",
+        "Mobile app access",
+        "Custom reporting"
+      ],
+      "cta": {
+        "text": "Get Started",
+        "href": "/contact",
+        "variant": "primary"
+      },
+      "popular": true
+    },
+    {
+      "name": "Enterprise",
+      "description": "For large practices and multi-location groups",
+      "price": "Custom",
+      "period": "per month",
+      "features": [
+        "Unlimited practitioners",
+        "Multi-location management",
+        "Advanced AI features",
+        "Complete practice analytics",
+        "Unlimited cloud storage",
+        "24/7 dedicated support",
+        "Custom integrations",
+        "White-label options",
+        "Advanced security features",
+        "Dedicated account manager"
+      ],
+      "cta": {
+        "text": "Contact Sales",
+        "href": "/contact",
+        "variant": "outline"
+      },
+      "popular": false
+    }
+  ],
+  "benefits": {
+    "title": "Practice Benefits",
+    "description": "Everything you need to run a successful dental practice",
+    "items": [
+      {
+        "icon": "Shield",
+        "title": "HIPAA Compliant Security",
+        "description": "Enterprise-grade security and HIPAA compliance",
+        "items": [
+          "End-to-end encryption",
+          "Regular security audits",
+          "HIPAA compliance certification",
+          "Secure data backups"
+        ]
+      },
+      {
+        "icon": "Cloud",
+        "title": "Cloud-Based Access",
+        "description": "Access your practice data from anywhere, anytime",
+        "items": [
+          "Multi-device access",
+          "Real-time synchronization",
+          "Automatic backups",
+          "99.9% uptime guarantee"
+        ]
+      },
+      {
+        "icon": "Zap",
+        "title": "AI-Powered Automation",
+        "description": "Intelligent automation and insights",
+        "items": [
+          "AI scheduling optimization",
+          "Predictive analytics",
+          "Automated patient reminders",
+          "Practice growth insights"
+        ]
+      },
+      {
+        "icon": "Users",
+        "title": "Complete Practice Management",
+        "description": "All-in-one solution for your practice",
+        "items": [
+          "Patient management",
+          "Appointment scheduling",
+          "Billing & invoicing",
+          "Treatment planning"
+        ]
+      }
+    ]
+  },
+  "industries": {
+    "title": "Perfect for Every Practice Type",
+    "description": "Dentagia works for dental practices of all sizes and specialties",
+    "items": [
+      {
+        "icon": "Home",
+        "name": "Solo Practices",
+        "description": "Perfect for independent practitioners",
+        "solutions": [
+          {
+            "name": "Essential Plan",
+            "link": "/pricing"
+          },
+          {
+            "name": "Patient Management",
+            "link": "/features"
+          }
+        ]
+      },
+      {
+        "icon": "Users",
+        "name": "Multi-Practitioner Clinics",
+        "description": "Ideal for clinics with multiple dentists",
+        "solutions": [
+          {
+            "name": "Professional Plan",
+            "link": "/pricing"
+          },
+          {
+            "name": "Team Collaboration",
+            "link": "/features"
+          }
+        ]
+      },
+      {
+        "icon": "Building",
+        "name": "Multi-Location Groups",
+        "description": "Centralized management for dental groups",
+        "solutions": [
+          {
+            "name": "Enterprise Plan",
+            "link": "/pricing"
+          },
+          {
+            "name": "Multi-Location",
+            "link": "/features"
+          }
+        ]
+      },
+      {
+        "icon": "Stethoscope",
+        "name": "Specialty Practices",
+        "description": "Customized for orthodontics, periodontics, and more",
+        "solutions": [
+          {
+            "name": "Specialty Features",
+            "link": "/features"
+          },
+          {
+            "name": "Custom Solutions",
+            "link": "/contact"
+          }
+        ]
+      }
+    ]
+  },
+  "successMetrics": {
+    "title": "Proven Results",
+    "description": "See how Dentagia helps practices succeed",
+    "items": [
+      {
+        "icon": "TrendingUp",
+        "value": "35%",
+        "title": "Revenue Growth",
+        "description": "Average revenue increase after implementation"
+      },
+      {
+        "icon": "Clock",
+        "value": "50%",
+        "title": "Time Saved",
+        "description": "Reduction in administrative time"
+      },
+      {
+        "icon": "Building",
+        "value": "500+",
+        "title": "Dental Practices",
+        "description": "Trust Dentagia for their practice management"
+      },
+      {
+        "icon": "Star",
+        "value": "98%",
+        "title": "Satisfaction",
+        "description": "Customer satisfaction rating"
+      }
+    ]
+  },
+  "globalFeatures": {
+    "title": "Comprehensive Features",
+    "description": "Everything you need in one platform",
+    "features": [
+      {
+        "category": "Practice Management",
+        "items": [
+          "Patient records & medical history",
+          "Appointment scheduling",
+          "Treatment planning",
+          "Clinical documentation"
+        ]
+      },
+      {
+        "category": "Billing & Payments",
+        "items": [
+          "Automated invoicing",
+          "Payment processing",
+          "Insurance claims",
+          "Financial reporting"
+        ]
+      }
+    ]
+  },
+  "integrations": {
+    "title": "Seamless Integrations",
+    "description": "Connect with the tools you already use",
+    "categories": [
+      {
+        "category": "Dental Imaging",
+        "items": [
+          {
+            "name": "X-Ray Systems",
+            "icon": "Database"
+          },
+          {
+            "name": "3D Imaging",
+            "icon": "Database2"
+          },
+          {
+            "name": "Intraoral Cameras",
+            "icon": "Database"
+          }
+        ]
+      },
+      {
+        "category": "Payment Processing",
+        "items": [
+          {
+            "name": "Stripe",
+            "icon": "Code"
+          },
+          {
+            "name": "Square",
+            "icon": "Code"
+          },
+          {
+            "name": "PayPal",
+            "icon": "Code"
+          }
+        ]
+      },
+      {
+        "category": "Cloud Services",
+        "items": [
+          {
+            "name": "AWS",
+            "icon": "CloudAws"
+          },
+          {
+            "name": "Google Cloud",
+            "icon": "CloudGoogle"
+          },
+          {
+            "name": "Microsoft Azure",
+            "icon": "CloudMicrosoft"
+          }
+        ]
+      }
+    ]
+  },
+  "features": {
+    "title": "All Plans Include",
+    "description": "Essential features available in every plan",
+    "items": [
+      {
+        "icon": "shield",
+        "title": "HIPAA Compliant",
+        "description": "Enterprise-grade security and HIPAA compliance"
+      },
+      {
+        "icon": "cloud",
+        "title": "Cloud-Based",
+        "description": "Access your practice data from anywhere, anytime"
+      },
+      {
+        "icon": "zap",
+        "title": "AI-Powered",
+        "description": "Intelligent automation and insights"
+      },
+      {
+        "icon": "smartphone",
+        "title": "Mobile Access",
+        "description": "Full-featured mobile app for iOS and Android"
+      },
+      {
+        "icon": "refresh-cw",
+        "title": "Automatic Updates",
+        "description": "Regular updates and new features at no extra cost"
+      },
+      {
+        "icon": "headphones",
+        "title": "Support",
+        "description": "Dedicated support team to help your practice succeed"
+      }
+    ]
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions",
+    "description": "Common questions about Dentagia pricing",
+    "items": [
+      {
+        "question": "Can I change plans later?",
+        "answer": "Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate any charges."
+      },
+      {
+        "question": "Is there a setup fee?",
+        "answer": "No setup fees for Essential and Professional plans. Enterprise plans may include setup and migration services."
+      },
+      {
+        "question": "What payment methods do you accept?",
+        "answer": "We accept all major credit cards, ACH transfers, and can arrange annual billing for Enterprise customers."
+      },
+      {
+        "question": "Do you offer discounts for annual billing?",
+        "answer": "Yes, we offer a 15% discount when you pay annually. Contact our sales team for more information."
+      },
+      {
+        "question": "What happens if I exceed my plan limits?",
+        "answer": "We'll notify you before you reach your limits. You can upgrade your plan or purchase additional capacity as needed."
+      },
+      {
+        "question": "Is there a free trial?",
+        "answer": "Yes, we offer a 14-day free trial with full access to all features. No credit card required to start."
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "What Our Customers Say",
+    "items": [
+      {
+        "quote": "The Professional plan was perfect for our practice. The AI-powered scheduling alone pays for itself by reducing no-shows.",
+        "author": "Dr. Sarah Martinez",
+        "role": "Practice Owner",
+        "company": "Downtown Dental Clinic"
+      },
+      {
+        "quote": "We upgraded to Enterprise as we expanded to multiple locations. The multi-location management features are invaluable.",
+        "author": "Dr. Michael Chen",
+        "role": "Practice Director",
+        "company": "Family Dental Group"
+      }
+    ]
+  },
+  "implementation": {
+    "title": "Simple Implementation Process",
+    "description": "Get up and running quickly with our streamlined setup",
+    "steps": [
+      {
+        "number": "1",
+        "title": "Schedule Demo",
+        "description": "See Dentagia in action with a personalized demo"
+      },
+      {
+        "number": "2",
+        "title": "Quick Setup",
+        "description": "Our team helps you migrate data and configure your practice"
+      },
+      {
+        "number": "3",
+        "title": "Training",
+        "description": "Comprehensive training for your team"
+      },
+      {
+        "number": "4",
+        "title": "Go Live",
+        "description": "Launch with 24/7 support available"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "description": "Our team is here to help you choose the right plan",
+    "options": [
+      {
+        "icon": "Phone",
+        "title": "Call Us",
+        "description": "Speak with our sales team",
+        "link": "tel:+33756756240"
+      },
+      {
+        "icon": "MessageSquare",
+        "title": "Email Us",
+        "description": "Send us your questions",
+        "link": "mailto:contact@dentagia.com"
+      },
+      {
+        "icon": "Calendar",
+        "title": "Schedule Demo",
+        "description": "Book a personalized demo",
+        "link": "/demo"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Get Started?",
+    "description": "Start your 14-day free trial today. No credit card required.",
+    "buttons": [
+      {
+        "text": "Start Free Trial",
+        "href": "/demo",
+        "variant": "primary"
+      },
+      {
+        "text": "Contact Sales",
+        "href": "/contact",
+        "variant": "secondary"
+      }
+    ]
+  }
+}

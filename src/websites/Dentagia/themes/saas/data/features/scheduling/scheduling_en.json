@@ -1,0 +1,198 @@
+{
+  "hero": {
+    "subtitle": "Intelligent Scheduling",
+    "title": "AI-Powered Appointment Scheduling",
+    "description": "Optimize your practice calendar with intelligent scheduling that reduces no-shows, fills cancellations automatically, and maximizes practice efficiency.",
+    "icon": "calendar",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "70%",
+        "label": "No-Show Reduction"
+      },
+      {
+        "value": "10hrs",
+        "label": "Time Saved/Week"
+      },
+      {
+        "value": "95%",
+        "label": "Efficiency"
+      }
+    ]
+  },
+  "features": {
+    "title": "Scheduling Features",
+    "subtitle": "Smart Calendar Management",
+    "description": "Advanced scheduling tools designed to maximize your practice efficiency and reduce administrative overhead.",
+    "items": [
+      {
+        "icon": "calendar",
+        "title": "Multi-Provider Scheduling",
+        "description": "Manage schedules for multiple dentists, hygienists, and specialists in one unified calendar system.",
+        "highlights": [
+          "Unified calendar for all providers",
+          "Resource and room allocation",
+          "Conflict detection and resolution",
+          "Multi-location support",
+          "Recurring appointment templates"
+        ],
+        "stats": {
+          "value": "95%",
+          "label": "Efficiency"
+        }
+      },
+      {
+        "icon": "bell",
+        "title": "Automated Reminders",
+        "description": "Reduce no-shows with automated SMS and email reminders sent at optimal times before appointments.",
+        "highlights": [
+          "SMS and email reminders",
+          "Customizable reminder timing",
+          "Confirmation requests",
+          "Waitlist management",
+          "Cancellation notifications"
+        ],
+        "stats": {
+          "value": "70%",
+          "label": "No-Show Reduction"
+        }
+      },
+      {
+        "icon": "users",
+        "title": "Online Booking",
+        "description": "Allow patients to book appointments online 24/7 with real-time availability and automatic confirmations.",
+        "highlights": [
+          "24/7 online booking",
+          "Real-time availability",
+          "Automatic confirmations",
+          "Patient self-service",
+          "Mobile-friendly interface"
+        ],
+        "stats": {
+          "value": "40%",
+          "label": "Booking Increase"
+        }
+      },
+      {
+        "icon": "trending-up",
+        "title": "Calendar Optimization",
+        "description": "AI-powered calendar optimization that learns from your practice patterns to maximize efficiency.",
+        "highlights": [
+          "AI-powered optimization",
+          "Pattern recognition",
+          "Automatic gap filling",
+          "Efficiency analytics",
+          "Revenue optimization"
+        ],
+        "stats": {
+          "value": "10hrs",
+          "label": "Time Saved/Week"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Scheduling Success Stories",
+    "description": "See how practices are transforming their scheduling operations",
+    "stats": [
+      {
+        "icon": "calendar",
+        "value": "70%",
+        "label": "No-Show Reduction"
+      },
+      {
+        "icon": "clock",
+        "value": "10hrs",
+        "label": "Time Saved"
+      },
+      {
+        "icon": "trending-up",
+        "value": "40%",
+        "label": "Booking Increase"
+      },
+      {
+        "icon": "users",
+        "value": "95%",
+        "label": "Efficiency"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Dr. Michael Chen",
+        "role": "Lead Dentist, Family Dental Care",
+        "quote": "The AI-powered scheduling has completely eliminated our no-show problem. We save 10 hours per week on scheduling alone."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Scheduling Benefits",
+    "subtitle": "Transform Your Calendar",
+    "description": "Experience the advantages of intelligent appointment scheduling.",
+    "items": [
+      {
+        "title": "Reduce No-Shows",
+        "description": "Automated reminders and confirmations significantly reduce missed appointments.",
+        "icon": "bell",
+        "color": "teal",
+        "stats": {
+          "value": "70%",
+          "label": "Reduction"
+        },
+        "highlights": [
+          "Automated reminders",
+          "Confirmation requests",
+          "Waitlist management",
+          "Cancellation handling"
+        ]
+      },
+      {
+        "title": "Save Time",
+        "description": "Automated scheduling and optimization save hours of administrative work each week.",
+        "icon": "clock",
+        "color": "cyan",
+        "stats": {
+          "value": "10hrs",
+          "label": "Per Week"
+        },
+        "highlights": [
+          "Automated scheduling",
+          "Calendar optimization",
+          "Reduced phone calls",
+          "Streamlined workflows"
+        ]
+      },
+      {
+        "title": "Increase Bookings",
+        "description": "24/7 online booking and optimized scheduling increase appointment volume.",
+        "icon": "trending-up",
+        "color": "blue",
+        "stats": {
+          "value": "40%",
+          "label": "Increase"
+        },
+        "highlights": [
+          "Online booking",
+          "Optimized scheduling",
+          "Gap filling",
+          "Revenue growth"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Optimize Your Scheduling?",
+    "description": "See how Dentagia's intelligent scheduling can transform your practice operations.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Schedule a Demo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Learn More",
+      "link": "/features"
+    }
+  }
+}
+

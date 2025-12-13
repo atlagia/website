@@ -1,0 +1,67 @@
+{
+  "hero": {
+    "subtitle": "GET IN TOUCH",
+    "title": "Let's Talk About Your Dental Practice",
+    "description": "Have questions about Dentagia's AI-powered practice management software? We're here to help you optimize your practice operations and grow your dental practice."
+  },
+  "contactInfo": [
+    {
+      "icon": "Mail",
+      "title": "Email Us",
+      "content": "contact@dentagia.com",
+      "description": "Our friendly team is here to help with your practice management needs.",
+      "link": "mailto:contact@dentagia.com"
+    },
+    {
+      "icon": "Phone",
+      "title": "Call Us",
+      "content": "+33756756240",
+      "description": "Mon-Fri from 9am to 6pm (CET).",
+      "link": "tel:+33756756240"
+    },
+    {
+      "icon": "MapPin",
+      "title": "Office",
+      "content": "VIZILLE, FRANCE",
+      "description": "98 AV ARISTIDE BRIAND, 38220",
+      "link": "https://maps.google.com/maps?q=98 AV ARISTIDE BRIAND, VIZILLE, 38220, FRANCE"
+    }
+  ],
+  "form": {
+    "title": "Send us a Message",
+    "fields": {
+      "firstName": {
+        "label": "First Name",
+        "placeholder": "Enter your first name"
+      },
+      "lastName": {
+        "label": "Last Name",
+        "placeholder": "Enter your last name"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Enter your email"
+      },
+      "subject": {
+        "label": "Subject",
+        "placeholder": "Enter subject"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Tell us about your practice needs or questions"
+      }
+    },
+    "submitButton": "Send Message"
+  },
+  "support": {
+    "hours": {
+      "title": "Support Hours",
+      "content": "Monday - Friday, 9 AM - 6 PM (CET)"
+    },
+    "additional": {
+      "title": "Company Information",
+      "description": "EASY-WAY INFORMATICIENS A TEMPS PARTAG SARL",
+      "email": "support@dentagia.com"
+    }
+  }
+}

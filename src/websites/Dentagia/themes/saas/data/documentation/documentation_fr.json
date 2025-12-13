@@ -1,0 +1,298 @@
+{
+  "pageTitle": "Documentation - Dentagia",
+  "pageDescription": "Guides complets, références API et tutoriels pour tirer le meilleur parti de la plateforme de gestion de cabinet dentaire Dentagia",
+  "hero": {
+    "badge": "Ressources Développeur",
+    "title": "Documentation & Guides",
+    "description": "Tout ce dont vous avez besoin pour construire, intégrer et évoluer avec la plateforme de gestion de cabinet dentaire Dentagia",
+    "searchPlaceholder": "Rechercher dans la documentation...",
+    "quickLinks": [
+      {
+        "text": "Démarrage",
+        "href": "#getting-started"
+      },
+      {
+        "text": "Référence API",
+        "href": "#api-reference"
+      },
+      {
+        "text": "Tutoriels",
+        "href": "#tutorials"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "getting-started",
+      "title": "Démarrage",
+      "description": "Guides de démarrage rapide pour commencer votre parcours avec Dentagia",
+      "icon": "Rocket",
+      "items": [
+        {
+          "title": "Guide de Démarrage Rapide",
+          "description": "Mettez votre cabinet dentaire en route en 5 minutes",
+          "icon": "Zap",
+          "link": "/fr/docs/quick-start"
+        },
+        {
+          "title": "Configuration du Cabinet",
+          "description": "Instructions étape par étape pour configurer votre cabinet",
+          "icon": "Download",
+          "link": "/fr/docs/practice-setup"
+        },
+        {
+          "title": "Configuration",
+          "description": "Configurez vos paramètres de gestion de cabinet",
+          "icon": "Settings",
+          "link": "/fr/docs/configuration"
+        },
+        {
+          "title": "Premier Dossier Patient",
+          "description": "Créez votre premier dossier patient et rendez-vous",
+          "icon": "FileText",
+          "link": "/fr/docs/first-patient"
+        }
+      ]
+    },
+    {
+      "id": "api-reference",
+      "title": "Référence API",
+      "description": "Documentation API complète et points de terminaison pour la gestion de cabinet dentaire",
+      "icon": "Code",
+      "items": [
+        {
+          "title": "Authentification",
+          "description": "Authentification API et sécurité pour conformité HIPAA",
+          "icon": "Lock",
+          "link": "/fr/docs/api/authentication"
+        },
+        {
+          "title": "API REST",
+          "description": "Points de terminaison API RESTful pour gestion patients, planification et facturation",
+          "icon": "Server",
+          "link": "/fr/docs/api/rest"
+        },
+        {
+          "title": "API Patients",
+          "description": "Gérer les dossiers patients, historique médical et plans de traitement",
+          "icon": "Users",
+          "link": "/fr/docs/api/patients"
+        },
+        {
+          "title": "API Planification",
+          "description": "Planification de rendez-vous propulsée par l'IA et gestion de calendrier",
+          "icon": "Calendar",
+          "link": "/fr/docs/api/scheduling"
+        },
+        {
+          "title": "API Facturation",
+          "description": "Points de terminaison de facturation, facturation et traitement des paiements",
+          "icon": "CreditCard",
+          "link": "/fr/docs/api/billing"
+        },
+        {
+          "title": "Webhooks",
+          "description": "Notifications d'événements en temps réel pour événements de cabinet",
+          "icon": "Webhook",
+          "link": "/fr/docs/api/webhooks"
+        }
+      ]
+    },
+    {
+      "id": "tutorials",
+      "title": "Tutoriels",
+      "description": "Guides étape par étape et exemples pour la gestion de cabinet dentaire",
+      "icon": "BookOpen",
+      "items": [
+        {
+          "title": "Gestion des Patients",
+          "description": "Guide complet pour gérer les dossiers patients et l'historique médical",
+          "icon": "Users",
+          "link": "/fr/docs/tutorials/patient-management"
+        },
+        {
+          "title": "Configuration Planification IA",
+          "description": "Configurer et optimiser la planification de rendez-vous propulsée par l'IA",
+          "icon": "Calendar",
+          "link": "/fr/docs/tutorials/ai-scheduling"
+        },
+        {
+          "title": "Automatisation de la Facturation",
+          "description": "Automatiser la facturation, la facturation et le traitement des paiements",
+          "icon": "CreditCard",
+          "link": "/fr/docs/tutorials/billing-automation"
+        },
+        {
+          "title": "Analytique du Cabinet",
+          "description": "Configurer et utiliser l'analytique et les rapports du cabinet",
+          "icon": "BarChart",
+          "link": "/fr/docs/tutorials/analytics"
+        },
+        {
+          "title": "Conformité HIPAA",
+          "description": "Assurez-vous que votre cabinet répond aux exigences de conformité HIPAA",
+          "icon": "Shield",
+          "link": "/fr/docs/tutorials/hipaa-compliance"
+        },
+        {
+          "title": "Intégrations Personnalisées",
+          "description": "Intégrer avec systèmes d'imagerie dentaire et autres outils",
+          "icon": "Puzzle",
+          "link": "/fr/docs/tutorials/integrations"
+        }
+      ]
+    },
+    {
+      "id": "guides",
+      "title": "Guides",
+      "description": "Guides approfondis pour fonctionnalités avancées et meilleures pratiques",
+      "icon": "Map",
+      "items": [
+        {
+          "title": "Meilleures Pratiques de Sécurité HIPAA",
+          "description": "Sécurisez les données de votre cabinet et assurez la conformité HIPAA",
+          "icon": "Shield",
+          "link": "/fr/docs/guides/security"
+        },
+        {
+          "title": "Optimisation des Performances du Cabinet",
+          "description": "Optimisez les opérations de votre cabinet pour l'efficacité et la croissance",
+          "icon": "Gauge",
+          "link": "/fr/docs/guides/performance"
+        },
+        {
+          "title": "Migration de Données",
+          "description": "Migrer depuis votre système de gestion de cabinet existant",
+          "icon": "Upload",
+          "link": "/fr/docs/guides/migration"
+        },
+        {
+          "title": "Analytique et Rapports du Cabinet",
+          "description": "Suivre et analyser les performances de votre cabinet",
+          "icon": "BarChart",
+          "link": "/fr/docs/guides/analytics"
+        }
+      ]
+    }
+  ],
+  "sdks": {
+    "title": "SDKs & Bibliothèques",
+    "description": "SDKs et bibliothèques officiels pour langages populaires",
+    "items": [
+      {
+        "name": "Python",
+        "icon": "Code",
+        "description": "SDK Python officiel pour API Dentagia",
+        "version": "v2.1.0",
+        "link": "https://github.com/dentagia/python-sdk",
+        "installCommand": "pip install dentagia"
+      },
+      {
+        "name": "JavaScript",
+        "icon": "Code",
+        "description": "SDK JavaScript officiel pour API Dentagia",
+        "version": "v3.0.2",
+        "link": "https://github.com/dentagia/js-sdk",
+        "installCommand": "npm install @dentagia/sdk"
+      },
+      {
+        "name": "TypeScript",
+        "icon": "Code",
+        "description": "SDK TypeScript officiel pour API Dentagia",
+        "version": "v3.0.2",
+        "link": "https://github.com/dentagia/ts-sdk",
+        "installCommand": "npm install @dentagia/sdk-ts"
+      },
+      {
+        "name": "Java",
+        "icon": "Code",
+        "description": "SDK Java officiel pour API Dentagia",
+        "version": "v1.5.0",
+        "link": "https://github.com/dentagia/java-sdk",
+        "installCommand": "maven: com.dentagia:sdk:1.5.0"
+      },
+      {
+        "name": "Go",
+        "icon": "Code",
+        "description": "SDK Go officiel pour API Dentagia",
+        "version": "v1.3.0",
+        "link": "https://github.com/dentagia/go-sdk",
+        "installCommand": "go get github.com/dentagia/sdk"
+      },
+      {
+        "name": "Ruby",
+        "icon": "Code",
+        "description": "SDK Ruby officiel pour API Dentagia",
+        "version": "v2.0.1",
+        "link": "https://github.com/dentagia/ruby-sdk",
+        "installCommand": "gem install dentagia"
+      }
+    ]
+  },
+  "resources": {
+    "title": "Ressources Supplémentaires",
+    "description": "Plus d'outils et ressources pour vous aider à réussir avec Dentagia",
+    "items": [
+      {
+        "title": "Statut API",
+        "description": "Statut API en temps réel et disponibilité",
+        "icon": "Activity",
+        "link": "https://status.dentagia.com",
+        "external": true
+      },
+      {
+        "title": "Forum Développeur",
+        "description": "Connectez-vous avec d'autres développeurs et gestionnaires de cabinet",
+        "icon": "Users",
+        "link": "https://community.dentagia.com",
+        "external": true
+      },
+      {
+        "title": "Dépôt GitHub",
+        "description": "Voir le code source et exemples",
+        "icon": "Github",
+        "link": "https://github.com/dentagia",
+        "external": true
+      },
+      {
+        "title": "Journal des Modifications",
+        "description": "Dernières mises à jour et versions",
+        "icon": "FileText",
+        "link": "/fr/changelog",
+        "external": false
+      },
+      {
+        "title": "Tutoriels Vidéo",
+        "description": "Apprendre grâce à des guides vidéo pour la gestion de cabinet",
+        "icon": "Video",
+        "link": "/fr/tutorials",
+        "external": false
+      },
+      {
+        "title": "Centre de Support",
+        "description": "Obtenez de l'aide de notre équipe",
+        "icon": "HelpCircle",
+        "link": "/fr/contact",
+        "external": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "Besoin d'Aide ?",
+    "description": "Notre équipe de support est là pour vous aider à réussir avec Dentagia",
+    "buttons": [
+      {
+        "text": "Contacter le Support",
+        "href": "/fr/contact",
+        "variant": "primary",
+        "icon": "MessageSquare"
+      },
+      {
+        "text": "Planifier une Démo",
+        "href": "/fr/demo",
+        "variant": "secondary",
+        "icon": "Calendar"
+      }
+    ]
+  }
+}

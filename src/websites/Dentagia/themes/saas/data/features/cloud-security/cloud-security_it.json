@@ -1,0 +1,182 @@
+{
+  "hero": {
+    "subtitle": "Sicurezza cloud",
+    "title": "Infrastruttura cloud sicura",
+    "description": "Sicurezza cloud di livello aziendale con backup automatici, ripristino di emergenza e garanzia disponibilità 99.9% per i dati del tuo studio dentistico.",
+    "icon": "cloud",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "99.9%",
+        "label": "Disponibilità"
+      },
+      {
+        "value": "256-bit",
+        "label": "Crittografia"
+      },
+      {
+        "value": "24/7",
+        "label": "Monitoraggio"
+      }
+    ]
+  },
+  "features": {
+    "title": "Funzionalità sicurezza cloud",
+    "subtitle": "Infrastruttura aziendale",
+    "description": "Infrastruttura cloud sicura e scalabile progettata per la protezione dati studi dentistici.",
+    "items": [
+      {
+        "icon": "cloud",
+        "title": "Archiviazione cloud sicura",
+        "description": "Archiviazione cloud di livello aziendale con backup ridondanti e capacità ripristino di emergenza.",
+        "highlights": [
+          "Archiviazione ridondante",
+          "Backup automatici",
+          "Ripristino di emergenza",
+          "Ridondanza dati",
+          "Distribuzione geografica"
+        ],
+        "stats": {
+          "value": "99.9%",
+          "label": "Disponibilità"
+        }
+      },
+      {
+        "icon": "shield",
+        "title": "Monitoraggio sicurezza",
+        "description": "Monitoraggio sicurezza 24/7 e rilevamento minacce per proteggere i dati del tuo studio.",
+        "highlights": [
+          "Monitoraggio 24/7",
+          "Rilevamento minacce",
+          "Prevenzione intrusioni",
+          "Alert sicurezza",
+          "Risposta incidenti"
+        ],
+        "stats": {
+          "value": "24/7",
+          "label": "Monitoraggio"
+        }
+      },
+      {
+        "icon": "database",
+        "title": "Backup automatici",
+        "description": "Backup giornalieri automatici con ripristino a un punto nel tempo e politiche conservazione dati.",
+        "highlights": [
+          "Backup giornalieri",
+          "Ripristino a un punto nel tempo",
+          "Conservazione dati",
+          "Verifica backup",
+          "Test ripristino"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "Protetto"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Garanzia sicurezza cloud",
+    "description": "Sicurezza di livello aziendale per il tuo studio",
+    "stats": [
+      {
+        "icon": "cloud",
+        "value": "99.9%",
+        "label": "Disponibilità"
+      },
+      {
+        "icon": "shield",
+        "value": "24/7",
+        "label": "Monitoraggio"
+      },
+      {
+        "icon": "database",
+        "value": "100%",
+        "label": "Protetto"
+      },
+      {
+        "icon": "award",
+        "value": "256-bit",
+        "label": "Crittografia"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Dr. Michael Chen",
+        "role": "Dentista principale",
+        "quote": "La sicurezza cloud ci dà totale fiducia. I nostri dati sono sempre protetti e accessibili, con 99.9% di disponibilità."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Vantaggi sicurezza cloud",
+    "subtitle": "Protezione affidabile",
+    "description": "Sperimenta la tranquillità che viene con la sicurezza cloud aziendale.",
+    "items": [
+      {
+        "title": "Alta disponibilità",
+        "description": "Garanzia disponibilità 99.9% garantisce che i dati del tuo studio siano sempre accessibili.",
+        "icon": "cloud",
+        "color": "teal",
+        "stats": {
+          "value": "99.9%",
+          "label": "Disponibilità"
+        },
+        "highlights": [
+          "Infrastruttura affidabile",
+          "Sistemi ridondanti",
+          "Ripristino di emergenza",
+          "Alta disponibilità"
+        ]
+      },
+      {
+        "title": "Monitoraggio 24/7",
+        "description": "Monitoraggio sicurezza continuo protegge i tuoi dati 24 ore su 24, 7 giorni su 7.",
+        "icon": "shield",
+        "color": "cyan",
+        "stats": {
+          "value": "24/7",
+          "label": "Monitoraggio"
+        },
+        "highlights": [
+          "Monitoraggio continuo",
+          "Rilevamento minacce",
+          "Alert sicurezza",
+          "Risposta incidenti"
+        ]
+      },
+      {
+        "title": "Protezione dati",
+        "description": "Backup e ripristino completi garantiscono che i tuoi dati siano sempre protetti.",
+        "icon": "database",
+        "color": "blue",
+        "stats": {
+          "value": "100%",
+          "label": "Protetto"
+        },
+        "highlights": [
+          "Backup automatici",
+          "Ripristino a un punto nel tempo",
+          "Ridondanza dati",
+          "Test ripristino"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Pronto per infrastruttura cloud sicura?",
+    "description": "Vedi come la sicurezza cloud di Dentagia protegge i dati del tuo studio.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Prenota una demo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Scopri di più",
+      "link": "/features"
+    }
+  }
+}
+

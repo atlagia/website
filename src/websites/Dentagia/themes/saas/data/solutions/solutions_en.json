@@ -1,0 +1,295 @@
+{
+  "pageTitle": "Dental Practice Solutions - Dentagia",
+  "pageDescription": "Comprehensive solutions for dental practices of all sizes. AI-powered, cloud-based practice management software.",
+  "hero": {
+    "badge": "Practice Solutions",
+    "title": "Solutions for Every Dental Practice",
+    "description": "Discover how Dentagia's modern, secure, cloud-based platform can transform your dental practice operations with AI-powered solutions designed for practices of all sizes.",
+    "cta": {
+      "primary": {
+        "text": "Explore Features",
+        "href": "#solutions"
+      },
+      "secondary": {
+        "text": "Schedule Demo",
+        "href": "/demo"
+      }
+    }
+  },
+  "stats": [
+    {
+      "value": "500+",
+      "label": "Dental Practices"
+    },
+    {
+      "value": "99.9%",
+      "label": "Uptime"
+    },
+    {
+      "value": "50%",
+      "label": "Time Saved"
+    },
+    {
+      "value": "24/7",
+      "label": "Support"
+    }
+  ],
+  "solutions": [
+    {
+      "category": "Practice Types",
+      "description": "Solutions tailored to your practice size and structure",
+      "items": [
+        {
+          "icon": "user",
+          "name": "Solo Practices",
+          "description": "Complete practice management for solo practitioners with AI-powered scheduling and patient management",
+          "href": "/solutions/solo-practice",
+          "color": "cyan"
+        },
+        {
+          "icon": "users",
+          "name": "Multi-Practitioner",
+          "description": "Streamlined operations for practices with multiple dentists and staff members",
+          "href": "/solutions/multi-practitioner",
+          "color": "teal"
+        },
+        {
+          "icon": "building",
+          "name": "Multi-Location",
+          "description": "Centralized management system for dental practices with multiple locations",
+          "href": "/solutions/multi-location",
+          "color": "blue"
+        },
+        {
+          "icon": "star",
+          "name": "Specialty Practices",
+          "description": "Advanced tools for cosmetic, orthodontic, pediatric, and other specialty practices",
+          "href": "/solutions/specialty",
+          "color": "purple"
+        }
+      ]
+    },
+    {
+      "category": "Practice Management",
+      "description": "Core features for running your dental practice efficiently",
+      "items": [
+        {
+          "icon": "users",
+          "name": "Patient Management",
+          "description": "Complete patient records, medical history, and treatment plans in one secure platform",
+          "href": "/features/patient-management",
+          "color": "indigo"
+        },
+        {
+          "icon": "calendar",
+          "name": "AI Scheduling",
+          "description": "Intelligent appointment scheduling that optimizes your calendar and reduces no-shows",
+          "href": "/features/ai-scheduling",
+          "color": "pink"
+        },
+        {
+          "icon": "credit-card",
+          "name": "Billing & Payments",
+          "description": "Streamlined billing, invoicing, and payment processing with insurance integration",
+          "href": "/features/billing",
+          "color": "rose"
+        },
+        {
+          "icon": "clipboard",
+          "name": "Treatment Planning",
+          "description": "Digital treatment plans, documentation, and case management tools",
+          "href": "/features/treatment-planning",
+          "color": "amber"
+        }
+      ]
+    },
+    {
+      "category": "AI & Automation",
+      "description": "Intelligent automation powered by advanced AI technology",
+      "items": [
+        {
+          "icon": "brain",
+          "name": "AI-Powered Insights",
+          "description": "Predictive analytics and patient behavior insights to help grow your practice",
+          "href": "/features/patient-insights",
+          "color": "violet"
+        },
+        {
+          "icon": "bell",
+          "name": "Automated Reminders",
+          "description": "Smart appointment reminders and follow-ups via SMS and email",
+          "href": "/features/reminders",
+          "color": "emerald"
+        },
+        {
+          "icon": "trending-up",
+          "name": "Practice Analytics",
+          "description": "Data-driven insights into practice performance, revenue, and growth opportunities",
+          "href": "/features/analytics",
+          "color": "lime"
+        },
+        {
+          "icon": "zap",
+          "name": "Workflow Automation",
+          "description": "Automate routine tasks and streamline practice operations",
+          "href": "/features/automation",
+          "color": "orange"
+        }
+      ]
+    },
+    {
+      "category": "Security & Compliance",
+      "description": "Enterprise-grade security and HIPAA compliance for your practice",
+      "items": [
+        {
+          "icon": "shield",
+          "name": "HIPAA Compliance",
+          "description": "Full HIPAA compliance certification and security standards for patient data protection",
+          "href": "/features/hipaa",
+          "color": "green"
+        },
+        {
+          "icon": "lock",
+          "name": "Data Encryption",
+          "description": "End-to-end encryption and secure cloud storage for all patient data",
+          "href": "/features/encryption",
+          "color": "sky"
+        },
+        {
+          "icon": "cloud",
+          "name": "Cloud Infrastructure",
+          "description": "Secure, scalable cloud platform with automatic backups and disaster recovery",
+          "href": "/platform/cloud",
+          "color": "cyan"
+        },
+        {
+          "icon": "smartphone",
+          "name": "Mobile Access",
+          "description": "Access your practice data securely from any device, anywhere",
+          "href": "/platform/mobile",
+          "color": "blue"
+        }
+      ]
+    }
+  ],
+  "features": {
+    "title": "Powerful Features for Dental Practices",
+    "description": "Our platform comes packed with features designed specifically for dental practice management",
+    "items": [
+      {
+        "icon": "cloud",
+        "title": "Cloud-Based Platform",
+        "description": "Access your practice data securely from anywhere, anytime with our cloud-based infrastructure"
+      },
+      {
+        "icon": "shield",
+        "title": "HIPAA Compliant",
+        "description": "Enterprise-grade security with full HIPAA compliance and encrypted data storage"
+      },
+      {
+        "icon": "zap",
+        "title": "AI-Powered",
+        "description": "Intelligent automation and AI-driven insights to optimize your practice operations"
+      },
+      {
+        "icon": "smartphone",
+        "title": "Mobile Access",
+        "description": "Full mobile app access for managing your practice on the go"
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Benefits for Your Dental Practice",
+    "description": "Experience the advantages of modern, secure, cloud-based dental practice management.",
+    "items": [
+      {
+        "icon": "trending-up",
+        "title": "Practice Growth",
+        "description": "AI-powered insights and analytics help you grow your practice and increase revenue",
+        "stats": "35%",
+        "label": "Revenue Growth"
+      },
+      {
+        "icon": "clock",
+        "title": "Time Savings",
+        "description": "Automate routine tasks and streamline operations to save time for patient care",
+        "stats": "50%",
+        "label": "Time Saved"
+      },
+      {
+        "icon": "shield",
+        "title": "Security & Compliance",
+        "description": "HIPAA-compliant platform with enterprise-grade security and data protection",
+        "stats": "99.9%",
+        "label": "Uptime"
+      },
+      {
+        "icon": "users",
+        "title": "Patient Satisfaction",
+        "description": "Improve patient experience with streamlined scheduling, communication, and care",
+        "stats": "98%",
+        "label": "Satisfaction Rate"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "What Dental Practices Say",
+    "description": "Hear from dental professionals who have transformed their practice with Dentagia",
+    "items": [
+      {
+        "quote": "Dentagia has transformed how we run our practice. The AI-powered scheduling alone saves us 10 hours per week, and our patient satisfaction scores have never been higher.",
+        "author": "Dr. Sarah Martinez",
+        "role": "Practice Owner",
+        "image": "/images/testimonials/sarah.jpg"
+      },
+      {
+        "quote": "Switching to Dentagia was the best decision we made. The patient management system is intuitive, billing is automated, and our revenue has increased by 35%.",
+        "author": "Dr. Michael Chen",
+        "role": "Lead Dentist",
+        "image": "/images/testimonials/michael.jpg"
+      }
+    ]
+  },
+  "integrations": {
+    "title": "Works With Your Practice Tools",
+    "description": "Seamlessly integrate with insurance providers, payment processors, lab systems, and imaging software"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "description": "Find answers to common questions about Dentagia's dental practice management solutions",
+    "items": [
+      {
+        "question": "How does the AI-powered scheduling work?",
+        "answer": "Our AI system learns from your practice patterns and automatically optimizes appointment scheduling, fills cancellations, and reduces no-shows by up to 70%."
+      },
+      {
+        "question": "Is Dentagia HIPAA compliant?",
+        "answer": "Yes, Dentagia is fully HIPAA compliant with enterprise-grade security, end-to-end encryption, and complete audit trails for all patient data access."
+      },
+      {
+        "question": "Can I access my practice data from mobile devices?",
+        "answer": "Yes, Dentagia is fully accessible from desktop, tablet, and mobile devices with our secure cloud-based platform and mobile apps."
+      },
+      {
+        "question": "What kind of support do you offer?",
+        "answer": "We provide 24/7 technical support, comprehensive training for your team, and dedicated practice management specialists to help you succeed."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Transform Your Dental Practice?",
+    "description": "Join hundreds of dental practices that trust Dentagia to manage their operations and grow their business.",
+    "buttons": [
+      {
+        "text": "Schedule a Demo",
+        "href": "/demo",
+        "variant": "primary"
+      },
+      {
+        "text": "Contact Us",
+        "href": "/contact",
+        "variant": "secondary"
+      }
+    ]
+  }
+}

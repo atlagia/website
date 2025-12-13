@@ -1,0 +1,153 @@
+---
+import { FaReact, FaVuejs, FaNodeJs, FaPython, FaJava, FaDocker, FaAws, FaCode, FaServer, FaBrain, FaCloud } from 'react-icons/fa';
+
+interface Technology {
+  name: string;
+  icon: string;
+  level: string;
+  description: string;
+}
+
+interface Category {
+  name: string;
+  description: string;
+  technologies: Technology[];
+}
+
+interface Props {
+  subtitle: string;
+  title: string;
+  description: string;
+  categories: Category[];
+}
+
+const { subtitle, title, description, categories } = Astro.props;
+
+// Icon mapping object
+const iconMap = {
+  'react': FaReact,
+  'vue': FaVuejs,
+  'nextjs': FaCode,
+  'typescript': FaCode,
+  'nodejs': FaNodeJs,
+  'python': FaPython,
+  'golang': FaCode,
+  'java': FaJava,
+  'tensorflow': FaBrain,
+  'pytorch': FaBrain,
+  'openai': FaBrain,
+  'scikit': FaBrain,
+  'aws': FaAws,
+  'docker': FaDocker,
+  'kubernetes': FaServer,
+  'cicd': FaCloud
+};
+
+// Function to get icon component
+const getIconComponent = (iconName: string) => {
+  return iconMap[iconName as keyof typeof iconMap] || FaCode;
+};
+---
+
+<section class="relative py-32 overflow-hidden bg-gradient-to-b from-teal-50/30 via-white to-cyan-50/30">
+  <!-- Background Effects -->
+  <div class="absolute inset-0 z-0">
+    <!-- Animated Gradient Orbs -->
+    <div class="absolute top-1/4 right-1/3 w-[800px] h-[800px] bg-gradient-to-br from-teal-500/8 via-cyan-500/8 to-blue-500/8 rounded-full blur-3xl animate-float"></div>
+    <div class="absolute bottom-1/4 left-1/3 w-[600px] h-[600px] bg-gradient-to-tr from-blue-500/8 via-teal-500/8 to-cyan-500/8 rounded-full blur-3xl animate-float-delayed"></div>
+    
+    <!-- Grid Pattern -->
+    <div class="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-5"></div>
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-4">
+    <!-- Header Section -->
+    <div class="text-center mb-20">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 border border-teal-200/50 backdrop-blur-sm shadow-sm hover:shadow-md transition-all duration-300 mb-8">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-500 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-gradient-to-r from-teal-500 to-cyan-500"></span>
+        </span>
+        <span class="text-sm font-medium bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent">
+          {subtitle}
+        </span>
+      </div>
+      
+      <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+        {title}
+      </h2>
+      
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+        {description}
+      </p>
+    </div>
+
+    <!-- Categories Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {categories.map((category) => (
+        <div class="group relative">
+          <!-- Card Background -->
+          <div class="absolute inset-0 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg border border-teal-100/30 transition-all duration-500 group-hover:border-teal-300/50 group-hover:shadow-xl"></div>
+          
+          <!-- Content -->
+          <div class="relative p-8">
+            <h3 class="text-2xl font-bold text-gray-900 mb-2 group-hover:text-teal-600 transition-colors duration-300">
+              {category.name}
+            </h3>
+            <p class="text-gray-600 mb-8">
+              {category.description}
+            </p>
+
+            <!-- Technologies Grid -->
+            <div class="grid grid-cols-2 gap-6">
+              {category.technologies.map((tech) => {
+                const IconComponent = getIconComponent(tech.icon);
+                return (
+                  <div class="group/tech relative">
+                    <div class="absolute inset-0 bg-teal-50/50 rounded-xl transition-all duration-300 group-hover/tech:bg-teal-100/50"></div>
+                    <div class="relative p-4">
+                      <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-teal-500/10 via-cyan-500/10 to-blue-500/10 flex items-center justify-center group-hover/tech:from-teal-500/20 group-hover/tech:via-cyan-500/20 group-hover/tech:to-blue-500/20 transition-all duration-300">
+                          <IconComponent class="w-6 h-6 text-teal-600" />
+                        </div>
+                        <div>
+                          <h4 class="text-gray-900 font-medium mb-1">
+                            {tech.name}
+                          </h4>
+                          <span class="inline-block px-2 py-1 text-xs rounded-full bg-teal-100 text-teal-700 mb-2">
+                            {tech.level}
+                          </span>
+                          <p class="text-sm text-gray-600">
+                            {tech.description}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes float {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(10px, -10px) rotate(1deg); }
+    50% { transform: translate(0, -15px) rotate(-1deg); }
+    75% { transform: translate(-10px, -5px) rotate(1deg); }
+  }
+
+  .animate-float {
+    animation: float 20s ease-in-out infinite;
+  }
+
+  .animate-float-delayed {
+    animation: float 20s ease-in-out infinite;
+    animation-delay: -10s;
+  }
+</style> 

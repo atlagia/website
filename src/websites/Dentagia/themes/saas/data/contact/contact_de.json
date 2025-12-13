@@ -1,0 +1,67 @@
+{
+  "hero": {
+    "subtitle": "KONTAKT",
+    "title": "Lassen Sie uns über Ihre Zahnarztpraxis sprechen",
+    "description": "Haben Sie Fragen zu Dentagias KI-gestützter Praxismanagement-Software? Wir sind hier, um Ihnen zu helfen, Ihre Praxisabläufe zu optimieren und Ihre Zahnarztpraxis zu entwickeln."
+  },
+  "contactInfo": [
+    {
+      "icon": "Mail",
+      "title": "E-Mail senden",
+      "content": "contact@dentagia.com",
+      "description": "Unser freundliches Team ist hier, um Ihnen bei Ihren Praxismanagement-Bedürfnissen zu helfen.",
+      "link": "mailto:contact@dentagia.com"
+    },
+    {
+      "icon": "Phone",
+      "title": "Anrufen",
+      "content": "+33756756240",
+      "description": "Mo-Fr von 9:00 bis 18:00 Uhr (MEZ).",
+      "link": "tel:+33756756240"
+    },
+    {
+      "icon": "MapPin",
+      "title": "Büro",
+      "content": "VIZILLE, FRANKREICH",
+      "description": "98 AV ARISTIDE BRIAND, 38220",
+      "link": "https://maps.google.com/maps?q=98 AV ARISTIDE BRIAND, VIZILLE, 38220, FRANCE"
+    }
+  ],
+  "form": {
+    "title": "Senden Sie uns eine Nachricht",
+    "fields": {
+      "firstName": {
+        "label": "Vorname",
+        "placeholder": "Geben Sie Ihren Vornamen ein"
+      },
+      "lastName": {
+        "label": "Nachname",
+        "placeholder": "Geben Sie Ihren Nachnamen ein"
+      },
+      "email": {
+        "label": "E-Mail",
+        "placeholder": "Geben Sie Ihre E-Mail ein"
+      },
+      "subject": {
+        "label": "Betreff",
+        "placeholder": "Geben Sie den Betreff ein"
+      },
+      "message": {
+        "label": "Nachricht",
+        "placeholder": "Erzählen Sie uns von den Bedürfnissen oder Fragen Ihrer Praxis"
+      }
+    },
+    "submitButton": "Nachricht senden"
+  },
+  "support": {
+    "hours": {
+      "title": "Support-Zeiten",
+      "content": "Montag - Freitag, 9:00 - 18:00 Uhr (MEZ)"
+    },
+    "additional": {
+      "title": "Firmeninformationen",
+      "description": "EASY-WAY INFORMATICIENS A TEMPS PARTAG SARL",
+      "email": "support@dentagia.com"
+    }
+  }
+}

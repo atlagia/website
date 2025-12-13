@@ -1,103 +1,235 @@
 {
+  "pageTitle": "Nos Services",
+  "pageDescription": "Découvrez notre gamme complète de services professionnels conçus pour aider votre entreprise à prospérer à l'ère numérique.",
   "hero": {
-    "subtitle": "ATALSIA",
-    "title": "Nos Services : Optimiser Votre Succès E-Commerce",
-    "description": "Transformez votre entreprise e-commerce avec notre suite de solutions alimentées par l'IA. De l'optimisation des ventes à l'automatisation des flux de travail, nous vous aidons à atteindre une croissance durable.",
-    "image": "https://atlasia.cloud/wp-content/uploads/2024/05/kepart_vector_laptop_Ai_Platform_e-commerce_AI_Revolution_light_7499ff5e-638e-4223-a072-cc4dad6c0810-1.png"
+    "badge": "Nos Services",
+    "title": "Services Professionnels pour Votre Succès",
+    "description": "Découvrez notre gamme complète de services conçus pour aider votre entreprise à prospérer à l'ère numérique.",
+    "cta": {
+      "primary": {
+        "text": "Explorer les Services",
+        "href": "#services"
+      },
+      "secondary": {
+        "text": "Commencer",
+        "href": "/contact"
+      }
+    }
   },
   "stats": [
     {
-      "value": "1000+",
-      "label": "Clients Satisfaits"
+      "value": "500+",
+      "label": "Projets Réalisés"
     },
     {
-      "value": "20%",
-      "label": "Augmentation Moyenne des Ventes"
+      "value": "99.9%",
+      "label": "Taux de Réussite"
+    },
+    {
+      "value": "45%",
+      "label": "Taux d'Innovation"
+    },
+    {
+      "value": "24/7",
+      "label": "Support"
     }
   ],
   "services": [
     {
-      "icon": "BarChart2",
-      "title": "Optimisation des Ventes par IA",
-      "description": "Exploitez la puissance des algorithmes d'IA pour analyser le comportement des clients, prédire les tendances et recommander des stratégies personnalisées.",
-      "link": "/services/optimisation-ventes",
-      "image": "/images/services/sales-optimization.svg"
+      "category": "Services de Développement",
+      "description": "Solutions de développement logiciel personnalisées pour vos besoins business",
+      "items": [
+        {
+          "icon": "code",
+          "name": "Développement Logiciel Sur Mesure",
+          "description": "Solutions logicielles adaptées construites avec des technologies de pointe",
+          "features": ["Applications Web", "Applications Mobiles", "Logiciels Desktop", "Développement API"],
+          "color": "blue"
+        },
+        {
+          "icon": "brain",
+          "name": "IA & Machine Learning",
+          "description": "Solutions intelligentes propulsées par l'IA et le ML avancés",
+          "features": ["Analyses Prédictives", "Traitement du Langage Naturel", "Vision par Ordinateur", "Apprentissage Profond"],
+          "color": "purple"
+        },
+        {
+          "icon": "database",
+          "name": "Ingénierie des Données",
+          "description": "Solutions complètes de gestion et d'analyse des données",
+          "features": ["Entrepôt de Données", "Pipelines ETL", "Traitement Big Data", "Visualisation des Données"],
+          "color": "indigo"
+        },
+        {
+          "icon": "network",
+          "name": "Solutions Cloud",
+          "description": "Infrastructure et services cloud évolutifs",
+          "features": ["Migration Cloud", "DevOps", "Conteneurisation", "Architecture Serverless"],
+          "color": "cyan"
+        }
+      ]
     },
     {
-      "icon": "Zap",
-      "title": "Automatisation des Flux de Travail",
-      "description": "Automatisez les tâches répétitives et optimisez vos opérations avec nos fonctionnalités d'automatisation avancées.",
-      "link": "/services/automatisation-flux",
-      "image": "/images/services/workflow-automation.svg"
+      "category": "Services de Conseil",
+      "description": "Guidance experte pour votre transformation numérique",
+      "items": [
+        {
+          "icon": "settings",
+          "name": "Transformation Numérique",
+          "description": "Planification stratégique et mise en œuvre des initiatives numériques",
+          "features": ["Automatisation des Processus", "Stratégie Numérique", "Gestion du Changement", "Feuille de Route Technologique"],
+          "color": "rose"
+        },
+        {
+          "icon": "cpu",
+          "name": "Conseil Technologique",
+          "description": "Conseils d'experts sur la sélection et la mise en œuvre des technologies",
+          "features": ["Conception d'Architecture", "Évaluation de la Sécurité", "Optimisation des Performances", "Planification de l'Évolutivité"],
+          "color": "amber"
+        },
+        {
+          "icon": "file-text",
+          "name": "Gestion de Projet",
+          "description": "Gestion et livraison professionnelle de projets",
+          "features": ["Développement Agile", "Gestion des Risques", "Planification des Ressources", "Assurance Qualité"],
+          "color": "lime"
+        },
+        {
+          "icon": "bar-chart",
+          "name": "Analyse Business",
+          "description": "Insights basés sur les données pour la croissance business",
+          "features": ["Business Intelligence", "Métriques de Performance", "Analyse de Marché", "Intelligence Concurrentielle"],
+          "color": "green"
+        }
+      ]
     },
     {
-      "icon": "Search",
-      "title": "Outils d'Optimisation SEO",
-      "description": "Augmentez votre visibilité en ligne avec nos outils SEO alimentés par l'IA. Optimisez le contenu et suivez vos classements.",
-      "link": "/services/outils-seo",
-      "image": "/images/services/seo-tools.svg"
+      "category": "Services de Support",
+      "description": "Solutions complètes de support et de maintenance",
+      "items": [
+        {
+          "icon": "shield",
+          "name": "Services de Sécurité",
+          "description": "Solutions de sécurité de niveau entreprise",
+          "features": ["Audits de Sécurité", "Tests de Pénétration", "Gestion de la Conformité", "Formation à la Sécurité"],
+          "color": "sky"
+        },
+        {
+          "icon": "clock",
+          "name": "Support 24/7",
+          "description": "Support technique et maintenance en continu",
+          "features": ["Help Desk", "Surveillance Système", "Gestion des Incidents", "Optimisation des Performances"],
+          "color": "cyan"
+        },
+        {
+          "icon": "globe",
+          "name": "Services Mondiaux",
+          "description": "Support et conseil internationaux",
+          "features": ["Support Multilingue", "Déploiement Mondial", "Gestion de la Conformité", "Expertise Locale"],
+          "color": "blue"
+        },
+        {
+          "icon": "zap",
+          "name": "Formation & Ateliers",
+          "description": "Formation complète et développement des compétences",
+          "features": ["Formation Technique", "Ateliers", "Programmes de Certification", "Transfert de Connaissances"],
+          "color": "indigo"
+        }
+      ]
     }
   ],
-  "awards": [
-    {
-      "title": "Génération de Contenu IA",
-      "description": "Reconnu pour sa technologie innovante de génération de contenu IA qui aide les entreprises à créer des descriptions de produits engageantes.",
-      "year": "2023",
-      "image": "/images/awards/content-generation.svg"
-    },
-    {
-      "title": "Optimisation des Meta Tags",
-      "description": "Outils d'optimisation primés qui rationalisent les flux de travail SEO et améliorent les classements de recherche.",
-      "year": "2023",
-      "image": "/images/awards/meta-optimization.svg"
-    },
-    {
-      "title": "Éditeur en Masse Universel",
-      "description": "Solution révolutionnaire d'édition en masse qui aide les boutiques e-commerce à gérer les modifications de produits sur plusieurs plateformes.",
-      "year": "2023",
-      "image": "/images/awards/bulk-editor.svg"
-    },
-    {
-      "title": "Optimisation SEO Globale",
-      "description": "Outil SEO innovant alimenté par l'IA qui aide les entreprises à améliorer leur classement et leur visibilité dans les recherches globales.",
-      "year": "2023",
-      "image": "/images/awards/seo-enhancer.svg"
-    }
-  ],
-  "workflow": {
-    "subtitle": "ATALSIA",
-    "title": "Automatisation des Flux de Travail Optimisée",
-    "description": "Prenez le contrôle total de vos opérations e-commerce avec notre automatisation des flux de travail alimentée par l'IA. Rationalisez les processus et concentrez-vous sur les décisions stratégiques.",
-    "image": "/images/services/workflow-detail.svg",
-    "cta": {
-      "text": "Découvrir",
-      "link": "/demo"
-    }
+  "features": {
+    "title": "Ce que Nous Offrons",
+    "description": "Nos services sont accompagnés de fonctionnalités et d'un support complets",
+    "items": [
+      {
+        "icon": "code",
+        "title": "Développement Sur Mesure",
+        "description": "Solutions adaptées construites avec des technologies de pointe"
+      },
+      {
+        "icon": "database",
+        "title": "Gestion des Données",
+        "description": "Systèmes sécurisés et efficaces de gestion des données"
+      },
+      {
+        "icon": "network",
+        "title": "Intégration",
+        "description": "Intégration transparente avec les systèmes existants"
+      },
+      {
+        "icon": "monitor",
+        "title": "Interface Utilisateur",
+        "description": "Design intuitif et responsive"
+      }
+    ]
   },
-  "platforms": [
-    {
-      "name": "WooCommerce",
-      "logo": "https://atlasia.cloud/wp-content/uploads/2024/05/woocommerce-03.png"
-    },
-    {
-      "name": "Shopify",
-      "logo": "https://atlasia.cloud/wp-content/uploads/2024/05/1655873659shopify-black-logo.webp"
-    },
-    {
-      "name": "PrestaShop",
-      "logo": "https://atlasia.cloud/wp-content/uploads/2024/05/PREST_LOGO_RVB_noir_hd.png"
-    },
-    {
-      "name": "Magento",
-      "logo": "https://atlasia.cloud/wp-content/uploads/2024/05/magento-1-logo-black-and-white.png"
-    },
-    {
-      "name": "BigCommerce",
-      "logo": "https://atlasia.cloud/wp-content/uploads/2024/05/logo.png"
-    },
-    {
-      "name": "Wix",
-      "logo": "https://atlasia.cloud/wp-content/uploads/2024/05/wix-com-website-logo-1.png"
-    }
-  ]
-}
+  "benefits": {
+    "title": "Avantages de Nos Services",
+    "description": "Découvrez les avantages de travailler avec notre équipe.",
+    "items": [
+      {
+        "icon": "rocket",
+        "title": "Innovation",
+        "description": "Solutions de pointe qui transforment votre entreprise",
+        "stats": "45%",
+        "label": "Taux d'Innovation"
+      },
+      {
+        "icon": "target",
+        "title": "Précision",
+        "description": "Livraison de services précise et fiable",
+        "stats": "99.9%",
+        "label": "Taux de Réussite"
+      },
+      {
+        "icon": "lightbulb",
+        "title": "Expertise",
+        "description": "Connaissance approfondie du secteur et expertise technique",
+        "stats": "3x",
+        "label": "Niveau d'Expérience"
+      },
+      {
+        "icon": "users",
+        "title": "Collaboration",
+        "description": "Partenariats solides avec les clients et les équipes",
+        "stats": "96%",
+        "label": "Satisfaction Client"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Ce que Disent Nos Clients",
+    "description": "Découvrez les témoignages d'entreprises qui ont bénéficié de nos services",
+    "items": [
+      {
+        "quote": "L'expertise et le dévouement de l'équipe ont été évidents tout au long de notre projet. Leurs solutions innovantes ont transformé nos opérations.",
+        "author": "Sarah Chen",
+        "role": "CTO, Tech Solutions",
+        "image": "/images/testimonials/sarah.jpg"
+      },
+      {
+        "quote": "Leur approche globale de la livraison de services et leur attention aux détails ont fait toute la différence dans le succès de notre projet.",
+        "author": "John Smith",
+        "role": "CEO, Digital Innovations",
+        "image": "/images/testimonials/john.jpg"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prêt à Commencer ?",
+    "description": "Rejoignez des centaines d'entreprises qui ont transformé leurs opérations avec nos services.",
+    "buttons": [
+      {
+        "text": "Nous Contacter",
+        "href": "/contact",
+        "variant": "primary"
+      },
+      {
+        "text": "Planifier une Démo",
+        "href": "/demo",
+        "variant": "secondary"
+      }
+    ]
+  }
+} 

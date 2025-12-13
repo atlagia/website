@@ -1,0 +1,283 @@
+{
+  "pageTitle": "Dentagia Plattform",
+  "pageDescription": "Erkunden Sie die erweiterten KI-gestützten Praxismanagement-Plattformfunktionen von Dentagia.",
+  "hero": {
+    "badge": "Plattform-Übersicht",
+    "title": "Fortgeschrittene Praxismanagement-Plattform für Zahnarztpraxen",
+    "description": "Entdecken Sie unsere unternehmenstaugliche Praxismanagement-Plattform, die modernste KI-Technologie mit cloudbasierter Infrastruktur, unübertroffener Sicherheit und Skalierbarkeit kombiniert.",
+    "cta": {
+      "primary": {
+        "text": "Funktionen erkunden",
+        "href": "#features"
+      },
+      "secondary": {
+        "text": "Dokumentation ansehen",
+        "href": "/documentation"
+      }
+    }
+  },
+  "techSpecs": [
+    {
+      "title": "Verfügbarkeit",
+      "value": "99.9%",
+      "unit": "garantiert"
+    },
+    {
+      "title": "Antwortzeit",
+      "value": "<100",
+      "unit": "Millisekunden"
+    },
+    {
+      "title": "Rechenzentren",
+      "value": "Global",
+      "unit": "Cloud-Infrastruktur"
+    },
+    {
+      "title": "Praxen",
+      "value": "500+",
+      "unit": "Zahnarztpraxen"
+    }
+  ],
+  "features": [
+    {
+      "category": "Praxismanagement-Kern",
+      "description": "Wesentliche Praxismanagement-Fähigkeiten",
+      "items": [
+        {
+          "icon": "Users",
+          "name": "Patientenmanagement",
+          "description": "Umfassende Patientenakten und Krankengeschichte-Verwaltung",
+          "highlights": [
+            "Digitale Patientenakten",
+            "Krankengeschichte-Verfolgung",
+            "Behandlungsplanung",
+            "Patientenportal-Zugriff"
+          ],
+          "stats": {
+            "value": "100%",
+            "label": "Digitale Akten"
+          }
+        },
+        {
+          "icon": "Calendar",
+          "name": "KI-gestützte Terminplanung",
+          "description": "Intelligente Terminplanung und Kalenderoptimierung",
+          "highlights": [
+            "Intelligente Planung",
+            "Automatisierte Erinnerungen",
+            "Wartelistenverwaltung",
+            "Absagen-Reduzierung"
+          ],
+          "stats": {
+            "value": "70%",
+            "label": "Absagen-Reduzierung"
+          }
+        },
+        {
+          "icon": "CreditCard",
+          "name": "Abrechnung und Zahlungen",
+          "description": "Optimierte Abrechnung, Rechnungsstellung und Zahlungsabwicklung",
+          "highlights": [
+            "Automatisierte Rechnungsstellung",
+            "Zahlungsabwicklung",
+            "Versicherungsanträge",
+            "Finanzberichterstattung"
+          ],
+          "stats": {
+            "value": "80%",
+            "label": "Schnellere Bearbeitung"
+          }
+        },
+        {
+          "icon": "BarChart",
+          "name": "Praxisanalysen",
+          "description": "Datenbasierte Insights für Praxiswachstum und -optimierung",
+          "highlights": [
+            "Leistungskennzahlen",
+            "Patientenanalysen",
+            "Umsatzverfolgung",
+            "Wachstums-Insights"
+          ],
+          "stats": {
+            "value": "35%",
+            "label": "Umsatzwachstum"
+          }
+        }
+      ]
+    },
+    {
+      "category": "Cloud-Infrastruktur",
+      "description": "Sichere und skalierbare cloudbasierte Plattform",
+      "items": [
+        {
+          "icon": "Cloud",
+          "name": "Cloudbasierter Zugriff",
+          "description": "Greifen Sie von überall, jederzeit auf Ihre Praxisdaten zu",
+          "highlights": [
+            "Multi-Geräte-Zugriff",
+            "Echtzeit-Synchronisation",
+            "Automatische Backups",
+            "Globale Verfügbarkeit"
+          ],
+          "stats": {
+            "value": "99.9%",
+            "label": "Verfügbarkeit"
+          }
+        },
+        {
+          "icon": "Shield",
+          "name": "HIPAA-Compliance",
+          "description": "Unternehmenstaugliche Sicherheit und HIPAA-Compliance",
+          "highlights": [
+            "Ende-zu-Ende-Verschlüsselung",
+            "HIPAA-Compliance",
+            "Zugriffskontrolle",
+            "Audit-Protokolle"
+          ],
+          "stats": {
+            "value": "256-bit",
+            "label": "Verschlüsselung"
+          }
+        },
+        {
+          "icon": "Database",
+          "name": "Datenverwaltung",
+          "description": "Sichere Speicherung und Verwaltung von Patientendaten",
+          "highlights": [
+            "Sichere Speicherung",
+            "Daten-Backup",
+            "Disaster Recovery",
+            "Datenaufbewahrung"
+          ],
+          "stats": {
+            "value": "100%",
+            "label": "Datensicherheit"
+          }
+        },
+        {
+          "icon": "Zap",
+          "name": "KI-Integration",
+          "description": "Fortgeschrittene KI-Fähigkeiten für Praxisoptimierung",
+          "highlights": [
+            "Intelligente Planung",
+            "Prädiktive Analysen",
+            "Automatisierte Erinnerungen",
+            "Praxis-Insights"
+          ],
+          "stats": {
+            "value": "50%",
+            "label": "Zeit gespart"
+          }
+        }
+      ]
+    },
+    {
+      "category": "Praxis-Tools",
+      "description": "Umfassende Tools für Zahnarztpraxis-Operationen",
+      "items": [
+        {
+          "icon": "FileText",
+          "name": "Klinische Dokumentation",
+          "description": "Vollständige digitale klinische Akten und Dokumentation",
+          "highlights": [
+            "Behandlungspläne",
+            "Klinische Notizen",
+            "Röntgen-Verwaltung",
+            "Fortschrittsverfolgung"
+          ],
+          "stats": {
+            "value": "100%",
+            "label": "Digitale Akten"
+          }
+        },
+        {
+          "icon": "MessageSquare",
+          "name": "Patientenkommunikation",
+          "description": "Automatisierte Patientenkommunikation und -engagement",
+          "highlights": [
+            "Terminerinnerungen",
+            "Nachfassaktionen",
+            "SMS & E-Mail",
+            "Patientenportal"
+          ],
+          "stats": {
+            "value": "95%",
+            "label": "Erinnerungszustellung"
+          }
+        },
+        {
+          "icon": "Workflow",
+          "name": "Workflow-Automatisierung",
+          "description": "Automatisierte Workflows für Praxiseffizienz",
+          "highlights": [
+            "Termin-Automatisierung",
+            "Abrechnungs-Automatisierung",
+            "Berichtserstellung",
+            "Aufgabenverwaltung"
+          ],
+          "stats": {
+            "value": "50%",
+            "label": "Zeit gespart"
+          }
+        },
+        {
+          "icon": "LineChart",
+          "name": "Berichterstattung & Analysen",
+          "description": "Umfassende Berichterstattung und Praxisanalysen",
+          "highlights": [
+            "Finanzberichte",
+            "Praxis-Kennzahlen",
+            "Patientenberichte",
+            "Benutzerdefinierte Berichte"
+          ],
+          "stats": {
+            "value": "Echtzeit",
+            "label": "Analysen"
+          }
+        }
+      ]
+    }
+  ],
+  "integrations": [
+    {
+      "name": "AWS Cloud",
+      "icon": "CloudAws"
+    },
+    {
+      "name": "Google Cloud",
+      "icon": "CloudGoogle"
+    },
+    {
+      "name": "Microsoft Azure",
+      "icon": "CloudMicrosoft"
+    },
+    {
+      "name": "Zahnbildgebung",
+      "icon": "Image"
+    },
+    {
+      "name": "Versicherungsanbieter",
+      "icon": "Shield"
+    },
+    {
+      "name": "Zahlungsgateways",
+      "icon": "CreditCard"
+    }
+  ],
+  "cta": {
+    "title": "Bereit zum Loslegen?",
+    "description": "Erleben Sie die Kraft von Dentagias Praxismanagement-Plattform mit einer personalisierten Demo.",
+    "buttons": [
+      {
+        "text": "Demo vereinbaren",
+        "href": "/demo",
+        "variant": "primary"
+      },
+      {
+        "text": "Dokumentation ansehen",
+        "href": "/documentation",
+        "variant": "secondary"
+      }
+    ]
+  }
+}

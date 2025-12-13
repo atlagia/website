@@ -1,0 +1,107 @@
+{
+  "container": {
+    "maxWidth": "min-h-screen bg-gray-50",
+    "margin": "max-w-7xl mx-auto",
+    "padding": "px-4 pt-24 pb-16",
+    "background": "bg-gray-50",
+    "textColor": "text-gray-900"
+  },
+  "breadcrumb": {
+    "container": "flex mb-8 text-sm",
+    "list": "flex items-center space-x-2",
+    "homeLink": "text-gray-500 hover:text-gray-700",
+    "separator": "text-gray-400",
+    "currentPage": "text-gray-900 font-medium"
+  },
+  "header": {
+    "background": "bg-gray-50",
+    "padding": "py-16",
+    "textAlign": "text-center",
+    "container": "text-center mb-16 relative overflow-hidden rounded-2xl",
+    "imageOverlay": "absolute inset-0 z-0",
+    "image": "w-full h-full object-cover opacity-30 filter brightness-50",
+    "contentContainer": "relative z-10 py-16 px-4"
+  },
+  "title": {
+    "fontSize": "text-4xl",
+    "fontWeight": "font-bold",
+    "color": "text-white",
+    "textShadow": "drop-shadow-md",
+    "margin": "mb-4"
+  },
+  "subtitle": {
+    "fontSize": "text-lg",
+    "color": "text-white/80",
+    "maxWidth": "max-w-2xl",
+    "margin": "mx-auto"
+  },
+  "grid": {
+    "columns": "grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4",
+    "gap": "gap-6",
+    "background": "bg-white",
+    "padding": "p-4",
+    "container": "mb-12 rounded-xl shadow-sm"
+  },
+  "card": {
+    "container": "block",
+    "productCard": {
+      "background": "bg-white",
+      "border": "rounded-xl",
+      "shadow": "shadow-sm hover:shadow-lg",
+      "transition": "transition-all duration-300"
+    },
+    "imageContainer": {
+      "aspectRatio": "aspect-[3/4]",
+      "background": "bg-gray-50",
+      "overflow": "overflow-hidden",
+      "position": "relative"
+    },
+    "image": {
+      "sizing": "w-full h-full object-contain p-4",
+      "hover": "group-hover:scale-105",
+      "transition": "transition-transform duration-300"
+    },
+    "noImagePlaceholder": "w-full h-full flex items-center justify-center text-gray-400",
+    "content": "p-4",
+    "title": {
+      "fontSize": "text-lg",
+      "fontWeight": "font-medium",
+      "color": "text-gray-900",
+      "hover": "group-hover:text-blue-600",
+      "truncate": "truncate mb-1"
+    },
+    "price": {
+      "fontSize": "text-sm",
+      "fontWeight": "font-semibold",
+      "color": "text-gray-900"
+    }
+  },
+  "quickAddButton": {
+    "base": "absolute bottom-2 left-2 right-2 bg-blue-950 text-white py-2 rounded-md text-sm font-medium",
+    "hover": "hover:bg-blue-900",
+    "visibility": "opacity-0 group-hover:opacity-100",
+    "transition": "transition-opacity duration-300",
+    "focus": "focus:outline-none focus:ring-2 focus:ring-blue-700 focus:ring-opacity-50"
+  },
+  "pagination": {
+    "container": "flex justify-between items-center bg-white rounded-lg shadow-sm p-4",
+    "button": "flex items-center space-x-2 px-4 py-2 rounded-md transition-colors group",
+    "text": "text-sm font-medium text-gray-600"
+  },
+  "emptyState": {
+    "background": "bg-white",
+    "padding": "py-16",
+    "textAlign": "text-center",
+    "borderRadius": "rounded-2xl",
+    "shadow": "shadow-sm",
+    "container": "max-w-md mx-auto",
+    "title": "text-2xl font-semibold text-gray-900 mb-2",
+    "description": "text-gray-600"
+  },
+  "footer": {
+    "textAlign": "text-center",
+    "textSize": "text-sm",
+    "textColor": "text-gray-500",
+    "margin": "mt-8 pt-4"
+  }
+}

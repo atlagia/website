@@ -1,0 +1,236 @@
+{
+  "pageTitle": "Carrières chez Dentagia",
+  "pageDescription": "Rejoignez notre équipe d'innovateurs et façonnez l'avenir de la gestion de cabinet dentaire avec des solutions propulsées par l'IA",
+  "hero": {
+    "badge": "Nous Recrutons",
+    "title": "Rejoignez Notre Équipe d'Innovateurs",
+    "description": "Aidez-nous à façonner l'avenir de la gestion de cabinet dentaire et à transformer la façon dont les cabinets dentaires fonctionnent. Nous recherchons des personnes passionnées qui s'épanouissent dans les défis et l'innovation en technologie de santé.",
+    "cta": {
+      "primary": {
+        "text": "Voir les Postes Ouverts",
+        "href": "#open-positions"
+      },
+      "secondary": {
+        "text": "Notre Processus",
+        "href": "#application-process"
+      }
+    }
+  },
+  "values": {
+    "title": "Nos Valeurs",
+    "description": "Ces principes guident tout ce que nous faisons et définissent notre culture d'entreprise.",
+    "items": [
+      {
+        "title": "Innovation",
+        "description": "Nous repoussons les limites et adoptons les technologies IA de pointe pour résoudre les défis complexes de gestion de cabinet dentaire.",
+        "icon": "lightbulb"
+      },
+      {
+        "title": "Collaboration",
+        "description": "Nous croyons au pouvoir d'équipes diverses travaillant ensemble vers des objectifs communs en technologie de santé.",
+        "icon": "users"
+      },
+      {
+        "title": "Excellence",
+        "description": "Nous visons la plus haute qualité dans tout ce que nous faisons, du code au service client pour les cabinets dentaires.",
+        "icon": "award"
+      },
+      {
+        "title": "Intégrité",
+        "description": "Nous agissons avec honnêteté, transparence et responsabilité éthique, surtout lors de la gestion de données patients sensibles.",
+        "icon": "shield"
+      }
+    ]
+  },
+  "openPositions": {
+    "title": "Postes Ouverts",
+    "description": "Explorez nos offres d'emploi actuelles et trouvez des opportunités qui correspondent à vos compétences et objectifs de carrière.",
+    "positions": [
+      {
+        "id": "ai-engineer",
+        "title": "Ingénieur IA - Santé",
+        "department": "Ingénierie",
+        "type": "Temps plein",
+        "location": "San Francisco / Télétravail",
+        "description": "Concevoir et implémenter des solutions IA de pointe pour la gestion de cabinet dentaire, incluant l'optimisation de planification et les insights patients.",
+        "requirements": [
+          "5+ ans d'expérience en développement IA/ML",
+          "Expérience avec les systèmes de gestion de cabinet dentaire ou de santé",
+          "Solide connaissance de TensorFlow, PyTorch ou frameworks similaires",
+          "Expérience en traitement du langage naturel ou analytique prédictive",
+          "Solides compétences en programmation Python",
+          "Compréhension des exigences de conformité HIPAA"
+        ],
+        "posted": "Il y a 2 semaines"
+      },
+      {
+        "id": "frontend-developer",
+        "title": "Développeur Frontend",
+        "department": "Ingénierie",
+        "type": "Temps plein",
+        "location": "New York / Télétravail",
+        "description": "Construire des interfaces utilisateur intuitives et réactives pour notre plateforme de gestion de cabinet dentaire propulsée par l'IA.",
+        "requirements": [
+          "3+ ans d'expérience avec React et JavaScript moderne",
+          "Maîtrise de TypeScript et des bibliothèques de gestion d'état",
+          "Expérience en design réactif et frameworks CSS",
+          "Compréhension des standards d'accessibilité web",
+          "Expérience avec les logiciels de santé ou dentaires est un plus",
+          "Connaissance des frameworks de test"
+        ],
+        "posted": "Il y a 1 semaine"
+      },
+      {
+        "id": "product-manager",
+        "title": "Chef de Produit - Santé",
+        "department": "Produit",
+        "type": "Temps plein",
+        "location": "Télétravail",
+        "description": "Diriger le développement de nos produits de gestion de cabinet dentaire de la conception au lancement.",
+        "requirements": [
+          "4+ ans d'expérience en gestion de produit",
+          "Expérience en santé, SaaS ou logiciels de gestion de cabinet dentaire",
+          "Solides capacités analytiques et de résolution de problèmes",
+          "Excellentes compétences en gestion des parties prenantes",
+          "Compréhension des flux de travail de cabinet dentaire est un plus",
+          "Formation technique est un plus"
+        ],
+        "posted": "Il y a 3 jours"
+      },
+      {
+        "id": "ux-designer",
+        "title": "Designer UX - Santé",
+        "department": "Design",
+        "type": "Temps plein",
+        "location": "Londres / Télétravail",
+        "description": "Créer des designs centrés utilisateur pour des applications complexes de gestion de cabinet dentaire.",
+        "requirements": [
+          "3+ ans d'expérience en design UX",
+          "Portfolio solide montrant un processus de design centré utilisateur",
+          "Expérience avec les systèmes de design et outils (Figma, Adobe XD)",
+          "Compréhension des standards d'accessibilité",
+          "Expérience avec le design de logiciels de santé ou dentaires est un plus",
+          "Capacité à mener des recherches et tests utilisateurs"
+        ],
+        "posted": "Il y a 1 mois"
+      },
+      {
+        "id": "data-scientist",
+        "title": "Data Scientist - Analytique Santé",
+        "department": "Données",
+        "type": "Temps plein",
+        "location": "Télétravail",
+        "description": "Analyser des ensembles de données complexes et construire des modèles prédictifs pour alimenter nos solutions IA de gestion de cabinet dentaire.",
+        "requirements": [
+          "Master ou Doctorat en Informatique, Statistiques ou domaine connexe",
+          "Solide expérience avec les algorithmes d'apprentissage automatique",
+          "Expérience avec les données de santé et conformité HIPAA",
+          "Maîtrise de Python, R ou langages similaires",
+          "Expérience avec les technologies de big data",
+          "Solides compétences analytiques et de résolution de problèmes"
+        ],
+        "posted": "Il y a 2 semaines"
+      },
+      {
+        "id": "devops-engineer",
+        "title": "Ingénieur DevOps - Santé",
+        "department": "Opérations",
+        "type": "Temps plein",
+        "location": "Berlin / Télétravail",
+        "description": "Construire et maintenir notre infrastructure cloud et pipelines de déploiement pour systèmes de gestion de cabinet dentaire conformes HIPAA.",
+        "requirements": [
+          "3+ ans d'expérience en DevOps ou Ingénierie de Fiabilité de Site",
+          "Expérience avec AWS, Azure ou GCP",
+          "Connaissance de la conteneurisation et orchestration (Docker, Kubernetes)",
+          "Expérience avec outils CI/CD",
+          "Compréhension de la sécurité des données de santé et conformité HIPAA",
+          "Compétences en script et automatisation"
+        ],
+        "posted": "Il y a 3 semaines"
+      }
+    ]
+  },
+  "perks": {
+    "title": "Avantages & Bénéfices",
+    "description": "Nous croyons en prendre soin de notre équipe avec des avantages compétitifs et un environnement de travail favorable.",
+    "items": [
+      {
+        "title": "Travail Flexible",
+        "description": "Travaillez de n'importe où avec des horaires flexibles pour atteindre votre meilleur équilibre travail-vie.",
+        "icon": "globe"
+      },
+      {
+        "title": "Rémunération Compétitive",
+        "description": "Nous offrons des salaires de premier plan, des options d'actions et des primes de performance.",
+        "icon": "dollar-sign"
+      },
+      {
+        "title": "Avantages Santé",
+        "description": "Assurance santé, dentaire et visuelle complète pour vous et vos personnes à charge.",
+        "icon": "heart"
+      },
+      {
+        "title": "Développement Professionnel",
+        "description": "Apprentissage continu avec allocations d'éducation, conférences et programmes de formation.",
+        "icon": "graduation-cap"
+      },
+      {
+        "title": "Événements d'Équipe",
+        "description": "Retraites d'équipe régulières, événements sociaux et activités collaboratives.",
+        "icon": "users"
+      },
+      {
+        "title": "Équipement Tech",
+        "description": "Dernier matériel et logiciels pour vous assurer d'avoir les outils nécessaires pour réussir.",
+        "icon": "laptop"
+      }
+    ]
+  },
+  "process": {
+    "title": "Notre Processus de Candidature",
+    "description": "Nous avons conçu un processus simple pour nous aider à trouver les meilleurs talents tout en respectant votre temps.",
+    "steps": [
+      {
+        "step": "1",
+        "title": "Examen de Candidature",
+        "description": "Notre équipe examine votre candidature pour évaluer vos qualifications et expérience."
+      },
+      {
+        "step": "2",
+        "title": "Entretien Initial",
+        "description": "Une conversation avec notre équipe de recrutement pour en savoir plus sur votre parcours et vos aspirations."
+      },
+      {
+        "step": "3",
+        "title": "Évaluation Technique",
+        "description": "Selon le poste, vous compléterez une évaluation technique ou une étude de cas."
+      },
+      {
+        "step": "4",
+        "title": "Entretiens d'Équipe",
+        "description": "Rencontrez des membres potentiels de l'équipe et des dirigeants pour explorer l'adéquation et la collaboration."
+      },
+      {
+        "step": "5",
+        "title": "Décision Finale",
+        "description": "Nous fournirons des commentaires et potentiellement une offre pour rejoindre notre équipe."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prêt à Faire une Différence ?",
+    "description": "Rejoignez notre équipe et aidez à façonner l'avenir de la gestion de cabinet dentaire. Nous recherchons des personnes passionnées qui veulent faire une différence en technologie de santé.",
+    "buttons": [
+      {
+        "text": "Parcourir les Postes Ouverts",
+        "href": "#open-positions",
+        "variant": "primary"
+      },
+      {
+        "text": "Contacter le Recrutement",
+        "href": "/contact",
+        "variant": "secondary"
+      }
+    ]
+  }
+}

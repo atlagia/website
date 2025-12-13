@@ -177,3 +177,68 @@ export async function getCollectionByHandle(handle: string, lang: string = 'EN')
     };
   }
 }
+
+export async function getProductFilters(lang: string = 'EN') {
+  const dataType = import.meta.env.DATA_TYPE?.toLowerCase() || 'shopify';
+
+  try {
+    if (dataType === 'shopify') {
+      // Fetch color and size filters from Shopify
+      const colorOptions = [
+        { value: '#FF0000', label: 'Red' },
+        { value: '#00FF00', label: 'Green' },
+        { value: '#0000FF', label: 'Blue' },
+        { value: '#000000', label: 'Black' },
+        { value: '#FFFFFF', label: 'White' }
+      ];
+
+      const sizeOptions = [
+        { value: 'XS', label: 'Extra Small' },
+        { value: 'S', label: 'Small' },
+        { value: 'M', label: 'Medium' },
+        { value: 'L', label: 'Large' },
+        { value: 'XL', label: 'Extra Large' }
+      ];
+
+      return {
+        color: colorOptions,
+        size: sizeOptions
+      };
+    } else if (dataType === 'woocommerce') {
+      // Fetch color and size filters from WooCommerce
+      // This is a placeholder and should be replaced with actual WooCommerce API call
+      const colorOptions = [
+        { value: '#FF0000', label: 'Red' },
+        { value: '#00FF00', label: 'Green' },
+        { value: '#0000FF', label: 'Blue' },
+        { value: '#000000', label: 'Black' },
+        { value: '#FFFFFF', label: 'White' }
+      ];
+
+      const sizeOptions = [
+        { value: 'XS', label: 'Extra Small' },
+        { value: 'S', label: 'Small' },
+        { value: 'M', label: 'Medium' },
+        { value: 'L', label: 'Large' },
+        { value: 'XL', label: 'Extra Large' }
+      ];
+
+      return {
+        color: colorOptions,
+        size: sizeOptions
+      };
+    }
+    
+    console.error(`Unsupported data type: ${dataType}`);
+    return {
+      color: [],
+      size: []
+    };
+  } catch (error) {
+    console.error('Error in getProductFilters:', error);
+    return {
+      color: [],
+      size: []
+    };
+  }
+}

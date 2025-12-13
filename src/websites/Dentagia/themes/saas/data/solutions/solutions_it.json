@@ -1,0 +1,295 @@
+{
+  "pageTitle": "Soluzioni per studi dentistici - Dentagia",
+  "pageDescription": "Soluzioni complete per studi dentistici di tutte le dimensioni. Software di gestione dello studio alimentato da IA e basato su cloud.",
+  "hero": {
+    "badge": "Soluzioni per studi",
+    "title": "Soluzioni per ogni studio dentistico",
+    "description": "Scopri come la piattaforma moderna, sicura e basata su cloud di Dentagia può trasformare le operazioni del tuo studio dentistico con soluzioni alimentate da IA progettate per studi di tutte le dimensioni.",
+    "cta": {
+      "primary": {
+        "text": "Esplora funzionalità",
+        "href": "#solutions"
+      },
+      "secondary": {
+        "text": "Prenota una demo",
+        "href": "/demo"
+      }
+    }
+  },
+  "stats": [
+    {
+      "value": "500+",
+      "label": "Studi dentistici"
+    },
+    {
+      "value": "99.9%",
+      "label": "Disponibilità"
+    },
+    {
+      "value": "50%",
+      "label": "Tempo risparmiato"
+    },
+    {
+      "value": "24/7",
+      "label": "Supporto"
+    }
+  ],
+  "solutions": [
+    {
+      "category": "Tipi di studio",
+      "description": "Soluzioni su misura per le dimensioni e la struttura del tuo studio",
+      "items": [
+        {
+          "icon": "user",
+          "name": "Studi individuali",
+          "description": "Gestione completa dello studio per professionisti individuali con pianificazione alimentata da IA e gestione pazienti",
+          "href": "/solutions/solo-practice",
+          "color": "cyan"
+        },
+        {
+          "icon": "users",
+          "name": "Multi-professionale",
+          "description": "Operazioni semplificate per studi con più dentisti e membri del personale",
+          "href": "/solutions/multi-practitioner",
+          "color": "teal"
+        },
+        {
+          "icon": "building",
+          "name": "Multi-sede",
+          "description": "Sistema di gestione centralizzato per studi dentistici con più sedi",
+          "href": "/solutions/multi-location",
+          "color": "blue"
+        },
+        {
+          "icon": "star",
+          "name": "Studi specializzati",
+          "description": "Strumenti avanzati per studi estetici, ortodontici, pediatrici e altri studi specializzati",
+          "href": "/solutions/specialty",
+          "color": "purple"
+        }
+      ]
+    },
+    {
+      "category": "Gestione dello studio",
+      "description": "Funzionalità principali per gestire efficacemente il tuo studio dentistico",
+      "items": [
+        {
+          "icon": "users",
+          "name": "Gestione pazienti",
+          "description": "Cartelle pazienti complete, anamnesi mediche e piani di trattamento su una piattaforma sicura",
+          "href": "/features/patient-management",
+          "color": "indigo"
+        },
+        {
+          "icon": "calendar",
+          "name": "Pianificazione IA",
+          "description": "Pianificazione intelligente degli appuntamenti che ottimizza il tuo calendario e riduce le assenze",
+          "href": "/features/ai-scheduling",
+          "color": "pink"
+        },
+        {
+          "icon": "credit-card",
+          "name": "Fatturazione e pagamenti",
+          "description": "Fatturazione, fatturazione ed elaborazione dei pagamenti semplificate con integrazione assicurativa",
+          "href": "/features/billing",
+          "color": "rose"
+        },
+        {
+          "icon": "clipboard",
+          "name": "Pianificazione trattamenti",
+          "description": "Piani di trattamento digitali, documentazione e strumenti di gestione dei casi",
+          "href": "/features/treatment-planning",
+          "color": "amber"
+        }
+      ]
+    },
+    {
+      "category": "IA e automazione",
+      "description": "Automatizzazione intelligente alimentata da tecnologia IA avanzata",
+      "items": [
+        {
+          "icon": "brain",
+          "name": "Insights alimentati da IA",
+          "description": "Analisi predittive e insights sul comportamento dei pazienti per aiutare a far crescere il tuo studio",
+          "href": "/features/patient-insights",
+          "color": "violet"
+        },
+        {
+          "icon": "bell",
+          "name": "Promemoria automatizzati",
+          "description": "Promemoria intelligenti per appuntamenti e follow-up via SMS ed email",
+          "href": "/features/reminders",
+          "color": "emerald"
+        },
+        {
+          "icon": "trending-up",
+          "name": "Analisi dello studio",
+          "description": "Insights basati sui dati sulle prestazioni dello studio, ricavi e opportunità di crescita",
+          "href": "/features/analytics",
+          "color": "lime"
+        },
+        {
+          "icon": "zap",
+          "name": "Automatizzazione flussi di lavoro",
+          "description": "Automatizza attività di routine e semplifica le operazioni dello studio",
+          "href": "/features/automation",
+          "color": "orange"
+        }
+      ]
+    },
+    {
+      "category": "Sicurezza e conformità",
+      "description": "Sicurezza di livello aziendale e conformità HIPAA per il tuo studio",
+      "items": [
+        {
+          "icon": "shield",
+          "name": "Conformità HIPAA",
+          "description": "Certificazione completa di conformità HIPAA e standard di sicurezza per la protezione dei dati dei pazienti",
+          "href": "/features/hipaa",
+          "color": "green"
+        },
+        {
+          "icon": "lock",
+          "name": "Crittografia dati",
+          "description": "Crittografia end-to-end e archiviazione cloud sicura per tutti i dati dei pazienti",
+          "href": "/features/encryption",
+          "color": "sky"
+        },
+        {
+          "icon": "cloud",
+          "name": "Infrastruttura cloud",
+          "description": "Piattaforma cloud sicura e scalabile con backup automatici e ripristino di emergenza",
+          "href": "/platform/cloud",
+          "color": "cyan"
+        },
+        {
+          "icon": "smartphone",
+          "name": "Accesso mobile",
+          "description": "Accedi ai dati del tuo studio in modo sicuro da qualsiasi dispositivo, ovunque",
+          "href": "/platform/mobile",
+          "color": "blue"
+        }
+      ]
+    }
+  ],
+  "features": {
+    "title": "Funzionalità potenti per studi dentistici",
+    "description": "La nostra piattaforma è ricca di funzionalità progettate specificamente per la gestione di studi dentistici",
+    "items": [
+      {
+        "icon": "cloud",
+        "title": "Piattaforma basata su cloud",
+        "description": "Accedi ai dati del tuo studio in modo sicuro da qualsiasi luogo, in qualsiasi momento con la nostra infrastruttura cloud"
+      },
+      {
+        "icon": "shield",
+        "title": "Conforme HIPAA",
+        "description": "Sicurezza di livello aziendale con conformità HIPAA completa e archiviazione dati crittografata"
+      },
+      {
+        "icon": "zap",
+        "title": "Alimentato da IA",
+        "description": "Automatizzazione intelligente e insights alimentati da IA per ottimizzare le operazioni del tuo studio"
+      },
+      {
+        "icon": "smartphone",
+        "title": "Accesso mobile",
+        "description": "Accesso completo all'app mobile per gestire il tuo studio in movimento"
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Vantaggi per il tuo studio dentistico",
+    "description": "Sperimenta i vantaggi della gestione moderna, sicura e basata su cloud di studi dentistici.",
+    "items": [
+      {
+        "icon": "trending-up",
+        "title": "Crescita dello studio",
+        "description": "Insights e analisi alimentati da IA ti aiutano a far crescere il tuo studio e aumentare i ricavi",
+        "stats": "35%",
+        "label": "Crescita ricavi"
+      },
+      {
+        "icon": "clock",
+        "title": "Risparmio di tempo",
+        "description": "Automatizza attività di routine e semplifica le operazioni per risparmiare tempo per l'assistenza ai pazienti",
+        "stats": "50%",
+        "label": "Tempo risparmiato"
+      },
+      {
+        "icon": "shield",
+        "title": "Sicurezza e conformità",
+        "description": "Piattaforma conforme HIPAA con sicurezza di livello aziendale e protezione dei dati",
+        "stats": "99.9%",
+        "label": "Disponibilità"
+      },
+      {
+        "icon": "users",
+        "title": "Soddisfazione pazienti",
+        "description": "Migliora l'esperienza del paziente con pianificazione semplificata, comunicazione e assistenza",
+        "stats": "98%",
+        "label": "Tasso di soddisfazione"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Cosa dicono gli studi dentistici",
+    "description": "Ascolta i professionisti dentali che hanno trasformato il loro studio con Dentagia",
+    "items": [
+      {
+        "quote": "Dentagia ha trasformato il modo in cui gestiamo il nostro studio. La pianificazione alimentata da IA da sola ci fa risparmiare 10 ore alla settimana, e i nostri punteggi di soddisfazione dei pazienti non sono mai stati così alti.",
+        "author": "Dr. Sarah Martinez",
+        "role": "Proprietario dello studio",
+        "image": "/images/testimonials/sarah.jpg"
+      },
+      {
+        "quote": "Passare a Dentagia è stata la migliore decisione che abbiamo preso. Il sistema di gestione dei pazienti è intuitivo, la fatturazione è automatizzata e i nostri ricavi sono aumentati del 35%.",
+        "author": "Dr. Michael Chen",
+        "role": "Dentista principale",
+        "image": "/images/testimonials/michael.jpg"
+      }
+    ]
+  },
+  "integrations": {
+    "title": "Funziona con i tuoi strumenti dello studio",
+    "description": "Integrati perfettamente con fornitori di assicurazioni, processori di pagamento, sistemi di laboratorio e software di imaging"
+  },
+  "faq": {
+    "title": "Domande frequenti",
+    "description": "Trova risposte a domande comuni sulle soluzioni di gestione di studi dentistici di Dentagia",
+    "items": [
+      {
+        "question": "Come funziona la pianificazione alimentata da IA?",
+        "answer": "Il nostro sistema IA impara dai modelli del tuo studio e ottimizza automaticamente la pianificazione degli appuntamenti, riempie le cancellazioni e riduce le assenze fino al 70%."
+      },
+      {
+        "question": "Dentagia è conforme HIPAA?",
+        "answer": "Sì, Dentagia è completamente conforme HIPAA con sicurezza di livello aziendale, crittografia end-to-end e piste di audit complete per tutti gli accessi ai dati dei pazienti."
+      },
+      {
+        "question": "Posso accedere ai dati del mio studio da dispositivi mobili?",
+        "answer": "Sì, Dentagia è completamente accessibile da desktop, tablet e dispositivi mobili con la nostra piattaforma sicura basata su cloud e app mobili."
+      },
+      {
+        "question": "Che tipo di supporto offrite?",
+        "answer": "Forniamo supporto tecnico 24/7, formazione completa per il tuo team e specialisti dedicati alla gestione dello studio per aiutarti a avere successo."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Pronto a trasformare il tuo studio dentistico?",
+    "description": "Unisciti a centinaia di studi dentistici che si fidano di Dentagia per gestire le loro operazioni e far crescere il loro business.",
+    "buttons": [
+      {
+        "text": "Prenota una demo",
+        "href": "/demo",
+        "variant": "primary"
+      },
+      {
+        "text": "Contattaci",
+        "href": "/contact",
+        "variant": "secondary"
+      }
+    ]
+  }
+}

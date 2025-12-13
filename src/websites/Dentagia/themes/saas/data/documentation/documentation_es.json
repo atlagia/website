@@ -1,0 +1,298 @@
+{
+  "pageTitle": "Documentación - Dentagia",
+  "pageDescription": "Guías completas, referencias API y tutoriales para aprovechar al máximo la plataforma de gestión de consultorios dentales de Dentagia",
+  "hero": {
+    "badge": "Recursos para Desarrolladores",
+    "title": "Documentación y Guías",
+    "description": "Todo lo que necesita para construir, integrar y escalar con la plataforma de gestión de consultorios dentales de Dentagia",
+    "searchPlaceholder": "Buscar documentación...",
+    "quickLinks": [
+      {
+        "text": "Primeros Pasos",
+        "href": "#getting-started"
+      },
+      {
+        "text": "Referencia API",
+        "href": "#api-reference"
+      },
+      {
+        "text": "Tutoriales",
+        "href": "#tutorials"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "getting-started",
+      "title": "Primeros Pasos",
+      "description": "Guías de inicio rápido para comenzar su viaje con Dentagia",
+      "icon": "Rocket",
+      "items": [
+        {
+          "title": "Guía de Inicio Rápido",
+          "description": "Ponga en marcha su consultorio dental en 5 minutos",
+          "icon": "Zap",
+          "link": "/es/docs/quick-start"
+        },
+        {
+          "title": "Configuración del Consultorio",
+          "description": "Instrucciones paso a paso para configurar su consultorio",
+          "icon": "Download",
+          "link": "/es/docs/practice-setup"
+        },
+        {
+          "title": "Configuración",
+          "description": "Configure los ajustes de gestión de su consultorio",
+          "icon": "Settings",
+          "link": "/es/docs/configuration"
+        },
+        {
+          "title": "Primer Registro de Paciente",
+          "description": "Cree su primer registro de paciente y cita",
+          "icon": "FileText",
+          "link": "/es/docs/first-patient"
+        }
+      ]
+    },
+    {
+      "id": "api-reference",
+      "title": "Referencia API",
+      "description": "Documentación API completa y endpoints para gestión de consultorios dentales",
+      "icon": "Code",
+      "items": [
+        {
+          "title": "Autenticación",
+          "description": "Autenticación API y seguridad para cumplimiento HIPAA",
+          "icon": "Lock",
+          "link": "/es/docs/api/authentication"
+        },
+        {
+          "title": "API REST",
+          "description": "Endpoints API RESTful para gestión de pacientes, programación y facturación",
+          "icon": "Server",
+          "link": "/es/docs/api/rest"
+        },
+        {
+          "title": "API de Pacientes",
+          "description": "Gestionar registros de pacientes, historiales médicos y planes de tratamiento",
+          "icon": "Users",
+          "link": "/es/docs/api/patients"
+        },
+        {
+          "title": "API de Programación",
+          "description": "Programación de citas impulsada por IA y gestión de calendario",
+          "icon": "Calendar",
+          "link": "/es/docs/api/scheduling"
+        },
+        {
+          "title": "API de Facturación",
+          "description": "Endpoints de facturación, facturación y procesamiento de pagos",
+          "icon": "CreditCard",
+          "link": "/es/docs/api/billing"
+        },
+        {
+          "title": "Webhooks",
+          "description": "Notificaciones de eventos en tiempo real para eventos del consultorio",
+          "icon": "Webhook",
+          "link": "/es/docs/api/webhooks"
+        }
+      ]
+    },
+    {
+      "id": "tutorials",
+      "title": "Tutoriales",
+      "description": "Guías paso a paso y ejemplos para gestión de consultorios dentales",
+      "icon": "BookOpen",
+      "items": [
+        {
+          "title": "Gestión de Pacientes",
+          "description": "Guía completa para gestionar registros de pacientes e historiales médicos",
+          "icon": "Users",
+          "link": "/es/docs/tutorials/patient-management"
+        },
+        {
+          "title": "Configuración de Programación IA",
+          "description": "Configure y optimice la programación de citas impulsada por IA",
+          "icon": "Calendar",
+          "link": "/es/docs/tutorials/ai-scheduling"
+        },
+        {
+          "title": "Automatización de Facturación",
+          "description": "Automatice facturación, facturación y procesamiento de pagos",
+          "icon": "CreditCard",
+          "link": "/es/docs/tutorials/billing-automation"
+        },
+        {
+          "title": "Análisis del Consultorio",
+          "description": "Configure y use análisis e informes del consultorio",
+          "icon": "BarChart",
+          "link": "/es/docs/tutorials/analytics"
+        },
+        {
+          "title": "Cumplimiento HIPAA",
+          "description": "Asegúrese de que su consultorio cumpla con los requisitos de cumplimiento HIPAA",
+          "icon": "Shield",
+          "link": "/es/docs/tutorials/hipaa-compliance"
+        },
+        {
+          "title": "Integraciones Personalizadas",
+          "description": "Integre con sistemas de imagen dental y otras herramientas",
+          "icon": "Puzzle",
+          "link": "/es/docs/tutorials/integrations"
+        }
+      ]
+    },
+    {
+      "id": "guides",
+      "title": "Guías",
+      "description": "Guías en profundidad para características avanzadas y mejores prácticas",
+      "icon": "Map",
+      "items": [
+        {
+          "title": "Mejores Prácticas de Seguridad HIPAA",
+          "description": "Proteja los datos de su consultorio y asegure el cumplimiento HIPAA",
+          "icon": "Shield",
+          "link": "/es/docs/guides/security"
+        },
+        {
+          "title": "Optimización del Rendimiento del Consultorio",
+          "description": "Optimice las operaciones de su consultorio para eficiencia y crecimiento",
+          "icon": "Gauge",
+          "link": "/es/docs/guides/performance"
+        },
+        {
+          "title": "Migración de Datos",
+          "description": "Migre desde su sistema de gestión de consultorios existente",
+          "icon": "Upload",
+          "link": "/es/docs/guides/migration"
+        },
+        {
+          "title": "Análisis e Informes del Consultorio",
+          "description": "Rastree y analice el rendimiento de su consultorio",
+          "icon": "BarChart",
+          "link": "/es/docs/guides/analytics"
+        }
+      ]
+    }
+  ],
+  "sdks": {
+    "title": "SDKs y Bibliotecas",
+    "description": "SDKs y bibliotecas oficiales para lenguajes populares",
+    "items": [
+      {
+        "name": "Python",
+        "icon": "Code",
+        "description": "SDK Python oficial para API Dentagia",
+        "version": "v2.1.0",
+        "link": "https://github.com/dentagia/python-sdk",
+        "installCommand": "pip install dentagia"
+      },
+      {
+        "name": "JavaScript",
+        "icon": "Code",
+        "description": "SDK JavaScript oficial para API Dentagia",
+        "version": "v3.0.2",
+        "link": "https://github.com/dentagia/js-sdk",
+        "installCommand": "npm install @dentagia/sdk"
+      },
+      {
+        "name": "TypeScript",
+        "icon": "Code",
+        "description": "SDK TypeScript oficial para API Dentagia",
+        "version": "v3.0.2",
+        "link": "https://github.com/dentagia/ts-sdk",
+        "installCommand": "npm install @dentagia/sdk-ts"
+      },
+      {
+        "name": "Java",
+        "icon": "Code",
+        "description": "SDK Java oficial para API Dentagia",
+        "version": "v1.5.0",
+        "link": "https://github.com/dentagia/java-sdk",
+        "installCommand": "maven: com.dentagia:sdk:1.5.0"
+      },
+      {
+        "name": "Go",
+        "icon": "Code",
+        "description": "SDK Go oficial para API Dentagia",
+        "version": "v1.3.0",
+        "link": "https://github.com/dentagia/go-sdk",
+        "installCommand": "go get github.com/dentagia/sdk"
+      },
+      {
+        "name": "Ruby",
+        "icon": "Code",
+        "description": "SDK Ruby oficial para API Dentagia",
+        "version": "v2.0.1",
+        "link": "https://github.com/dentagia/ruby-sdk",
+        "installCommand": "gem install dentagia"
+      }
+    ]
+  },
+  "resources": {
+    "title": "Recursos Adicionales",
+    "description": "Más herramientas y recursos para ayudarlo a tener éxito con Dentagia",
+    "items": [
+      {
+        "title": "Estado de la API",
+        "description": "Estado de la API en tiempo real y disponibilidad",
+        "icon": "Activity",
+        "link": "https://status.dentagia.com",
+        "external": true
+      },
+      {
+        "title": "Foro de Desarrolladores",
+        "description": "Conéctese con otros desarrolladores y gerentes de consultorios",
+        "icon": "Users",
+        "link": "https://community.dentagia.com",
+        "external": true
+      },
+      {
+        "title": "Repositorio GitHub",
+        "description": "Ver código fuente y ejemplos",
+        "icon": "Github",
+        "link": "https://github.com/dentagia",
+        "external": true
+      },
+      {
+        "title": "Registro de Cambios",
+        "description": "Últimas actualizaciones y lanzamientos",
+        "icon": "FileText",
+        "link": "/es/changelog",
+        "external": false
+      },
+      {
+        "title": "Tutoriales en Video",
+        "description": "Aprenda a través de guías en video para gestión de consultorios",
+        "icon": "Video",
+        "link": "/es/tutorials",
+        "external": false
+      },
+      {
+        "title": "Centro de Soporte",
+        "description": "Obtenga ayuda de nuestro equipo",
+        "icon": "HelpCircle",
+        "link": "/es/contact",
+        "external": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "¿Necesita Ayuda?",
+    "description": "Nuestro equipo de soporte está aquí para ayudarlo a tener éxito con Dentagia",
+    "buttons": [
+      {
+        "text": "Contactar Soporte",
+        "href": "/es/contact",
+        "variant": "primary",
+        "icon": "MessageSquare"
+      },
+      {
+        "text": "Programar Demostración",
+        "href": "/es/demo",
+        "variant": "secondary",
+        "icon": "Calendar"
+      }
+    ]
+  }
+}

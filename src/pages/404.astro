@@ -2,12 +2,14 @@
 import { getLangFromUrl, useTranslations } from '../utils/i18n';
 import { Search, Home, ShoppingBag, BookOpen, Phone, ArrowRight } from 'lucide-react';
 
-const theme = import.meta.env.THEME || 'default';
+// Get website name from environment
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'Drivon';
+const theme = import.meta.env.THEME || 'bikes';
 
-// Dynamic imports for theme components
-const { default: BaseHead } = await import(`../themes/${theme}/components/BaseHead.astro`);
-const { default: Header } = await import(`../themes/${theme}/components/Header.astro`);
-const { default: Footer } = await import(`../themes/${theme}/components/Footer.astro`);
+// Import components from website theme
+const { default: BaseHead } = await import(`@websites/${siteName}/themes/${theme}/components/BaseHead.astro`);
+const { default: Header } = await import(`@websites/${siteName}/themes/${theme}/components/Header.astro`);
+const { default: Footer } = await import(`@websites/${siteName}/themes/${theme}/components/Footer.astro`);
 
 // Get language and translations
 const lang = getLangFromUrl(Astro.url) || 'en';

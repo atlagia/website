@@ -1,0 +1,249 @@
+{
+  "navigation": [
+    {
+      "name": "Funktionen",
+      "href": "/features",
+      "megaMenu": {
+        "categories": [
+          {
+            "title": "Praxismanagement",
+            "icon": "briefcase",
+            "items": [
+              {
+                "name": "Patientenmanagement",
+                "href": "/features/patient-management"
+              },
+              {
+                "name": "Terminplanung",
+                "href": "/features/scheduling"
+              },
+              {
+                "name": "Abrechnung und Zahlungen",
+                "href": "/features/billing"
+              },
+              {
+                "name": "Behandlungsplanung",
+                "href": "/features/treatment-planning"
+              }
+            ]
+          },
+          {
+            "title": "KI und Automatisierung",
+            "icon": "zap",
+            "items": [
+              {
+                "name": "KI-gestützte Terminplanung",
+                "href": "/features/ai-scheduling"
+              },
+              {
+                "name": "Patienten-Insights",
+                "href": "/features/patient-insights"
+              },
+              {
+                "name": "Automatisierte Erinnerungen",
+                "href": "/features/reminders"
+              },
+              {
+                "name": "Praxisanalysen",
+                "href": "/features/analytics"
+              }
+            ]
+          },
+          {
+            "title": "Sicherheit und Compliance",
+            "icon": "shield",
+            "items": [
+              {
+                "name": "HIPAA-Compliance",
+                "href": "/features/hipaa"
+              },
+              {
+                "name": "Cloud-Sicherheit",
+                "href": "/features/security"
+              },
+              {
+                "name": "Datenverschlüsselung",
+                "href": "/features/encryption"
+              },
+              {
+                "name": "Backup und Wiederherstellung",
+                "href": "/features/backup"
+              }
+            ]
+          }
+        ],
+        "featured": {
+          "badge": "Neu",
+          "title": "KI-gestützte Zahnarztverwaltung",
+          "description": "Moderne, sichere, cloudbasierte Software für Zahnarztpraxen",
+          "link": {
+            "text": "Funktionen erkunden",
+            "href": "/features"
+          }
+        }
+      }
+    },
+    {
+      "name": "Lösungen",
+      "href": "/solutions",
+      "megaMenu": {
+        "categories": [
+          {
+            "title": "Praxisarten",
+            "icon": "building",
+            "items": [
+              {
+                "name": "Einzelpraxen",
+                "href": "/solutions/solo-practice"
+              },
+              {
+                "name": "Mehrzahnarztpraxen",
+                "href": "/solutions/multi-practitioner"
+              },
+              {
+                "name": "Multi-Standort",
+                "href": "/solutions/multi-location"
+              },
+              {
+                "name": "Fachpraxen",
+                "href": "/solutions/specialty"
+              }
+            ]
+          },
+          {
+            "title": "Praxiswachstum",
+            "icon": "trending-up",
+            "items": [
+              {
+                "name": "Patientenbindung",
+                "href": "/solutions/patient-retention"
+              },
+              {
+                "name": "Umsatzoptimierung",
+                "href": "/solutions/revenue"
+              },
+              {
+                "name": "Marketing-Automatisierung",
+                "href": "/solutions/marketing"
+              },
+              {
+                "name": "Praxisanalysen",
+                "href": "/solutions/analytics"
+              }
+            ]
+          },
+          {
+            "title": "Integration",
+            "icon": "link",
+            "items": [
+              {
+                "name": "Versicherungsintegration",
+                "href": "/solutions/insurance"
+              },
+              {
+                "name": "Zahlungsabwicklung",
+                "href": "/solutions/payments"
+              },
+              {
+                "name": "Laborintegration",
+                "href": "/solutions/lab"
+              },
+              {
+                "name": "Bildgebungssysteme",
+                "href": "/solutions/imaging"
+              }
+            ]
+          }
+        ],
+        "featured": {
+          "badge": "Empfohlen",
+          "title": "Cloudbasierte Plattform",
+          "description": "Sichere, skalierbare Lösung für Zahnarztpraxen",
+          "link": {
+            "text": "Mehr erfahren",
+            "href": "/platform"
+          }
+        }
+      }
+    },
+    {
+      "name": "Plattform",
+      "href": "/platform",
+      "megaMenu": {
+        "categories": [
+          {
+            "title": "Technologie",
+            "icon": "cpu",
+            "items": [
+              {
+                "name": "Cloud-Infrastruktur",
+                "href": "/platform/cloud"
+              },
+              {
+                "name": "KI-Technologie",
+                "href": "/platform/ai"
+              },
+              {
+                "name": "Sicherheit und Compliance",
+                "href": "/platform/security"
+              },
+              {
+                "name": "Mobiler Zugriff",
+                "href": "/platform/mobile"
+              }
+            ]
+          }
+        ],
+        "featured": {
+          "badge": "Neu",
+          "title": "Moderne Cloud-Plattform",
+          "description": "Sichere, skalierbare Infrastruktur für Zahnarztpraxen",
+          "link": {
+            "text": "Mehr erfahren",
+            "href": "/platform"
+          }
+        }
+      }
+    },
+    {
+      "name": "Ressourcen",
+      "href": "/resources"
+    },
+    {
+      "name": "Preise",
+      "href": "/pricing"
+    }
+  ],
+  "auth": {
+    "signIn": {
+      "text": "Kontaktieren Sie uns",
+      "href": "/contact"
+    },
+    "getStarted": {
+      "text": "Demo vereinbaren",
+      "href": "/demo"
+    }
+  },
+  "languages": [
+    {
+      "code": "en",
+      "name": "English"
+    },
+    {
+      "code": "fr",
+      "name": "Français"
+    },
+    {
+      "code": "de",
+      "name": "Deutsch"
+    },
+    {
+      "code": "es",
+      "name": "Español"
+    },
+    {
+      "code": "ar",
+      "name": "العربية"
+    }
+  ]
+}

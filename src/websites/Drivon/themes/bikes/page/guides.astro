@@ -1,0 +1,235 @@
+---
+import { getLangFromUrl, useTranslations, isValidLanguage } from '@utils/i18n';
+
+const { lang } = Astro.params;
+if (!isValidLanguage(lang)) {
+  return Astro.redirect('/en');
+}
+
+const translations = await useTranslations(lang);
+const jsonData = translations.default;
+
+const SITE_TITLE = `Buying Guides - ${jsonData.siteTitle || 'Drivon'}`;
+const SITE_DESCRIPTION = 'Complete buying guides for driver merchandise. Find the perfect automotive gear with our expert guides.';
+
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+
+export async function getStaticPaths() {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  const languages = allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+  
+  return languages.map(lang => ({ params: { lang } }));
+}
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} isHomePage={false} />
+  </head>
+  <body>
+    <Header />
+    <main class="min-h-screen bg-gray-50">
+      <div class="max-w-6xl mx-auto px-4 py-16">
+        <!-- Header Section -->
+        <div class="text-center mb-16">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Buying Guides</h1>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Expert guides to help you choose the perfect driver merchandise for your automotive passion
+          </p>
+        </div>
+
+        <!-- Guide Categories -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <!-- Size Guide -->
+          <div class="bg-white rounded-2xl shadow-sm p-8 hover:shadow-md transition-shadow">
+            <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">Size Guide</h3>
+            <p class="text-gray-600 mb-6 text-center">Find your perfect fit with our comprehensive sizing charts and measurement guides.</p>
+            <a href="/size-chart" class="block w-full bg-red-600 text-white text-center py-3 rounded-lg hover:bg-red-700 transition-colors">
+              View Size Chart
+            </a>
+          </div>
+
+          <!-- Material Guide -->
+          <div class="bg-white rounded-2xl shadow-sm p-8 hover:shadow-md transition-shadow">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">Material Guide</h3>
+            <p class="text-gray-600 mb-6 text-center">Learn about different materials used in our automotive merchandise and their benefits.</p>
+            <button class="block w-full bg-blue-600 text-white text-center py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              Coming Soon
+            </button>
+          </div>
+
+          <!-- Care Guide -->
+          <div class="bg-white rounded-2xl shadow-sm p-8 hover:shadow-md transition-shadow">
+            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">Care Guide</h3>
+            <p class="text-gray-600 mb-6 text-center">Keep your driver merchandise looking great with our care and maintenance tips.</p>
+            <button class="block w-full bg-green-600 text-white text-center py-3 rounded-lg hover:bg-green-700 transition-colors">
+              Coming Soon
+            </button>
+          </div>
+        </div>
+
+        <!-- Quick Start Guide -->
+        <div class="bg-white rounded-2xl shadow-sm p-8 mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Quick Start Guide</h2>
+          <div class="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-4">For New Customers</h3>
+              <ol class="space-y-3 text-gray-700">
+                <li class="flex items-start">
+                  <span class="w-6 h-6 bg-red-100 text-red-600 rounded-full flex items-center justify-center text-sm font-semibold mr-3 mt-0.5 flex-shrink-0">1</span>
+                  <span>Browse our collections to find your style</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="w-6 h-6 bg-red-100 text-red-600 rounded-full flex items-center justify-center text-sm font-semibold mr-3 mt-0.5 flex-shrink-0">2</span>
+                  <span>Use our size chart to find your perfect fit</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="w-6 h-6 bg-red-100 text-red-600 rounded-full flex items-center justify-center text-sm font-semibold mr-3 mt-0.5 flex-shrink-0">3</span>
+                  <span>Add items to cart and proceed to checkout</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="w-6 h-6 bg-red-100 text-red-600 rounded-full flex items-center justify-center text-sm font-semibold mr-3 mt-0.5 flex-shrink-0">4</span>
+                  <span>Enjoy free shipping on orders over $75</span>
+                </li>
+              </ol>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-4">For Returning Customers</h3>
+              <ol class="space-y-3 text-gray-700">
+                <li class="flex items-start">
+                  <span class="w-6 h-6 bg-red-100 text-red-600 rounded-full flex items-center justify-center text-sm font-semibold mr-3 mt-0.5 flex-shrink-0">1</span>
+                  <span>Log into your account for faster checkout</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="w-6 h-6 bg-red-100 text-red-600 rounded-full flex items-center justify-center text-sm font-semibold mr-3 mt-0.5 flex-shrink-0">2</span>
+                  <span>Check out our new arrivals and limited editions</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="w-6 h-6 bg-red-100 text-red-600 rounded-full flex items-center justify-center text-sm font-semibold mr-3 mt-0.5 flex-shrink-0">3</span>
+                  <span>Use saved payment methods for quick checkout</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="w-6 h-6 bg-red-100 text-red-600 rounded-full flex items-center justify-center text-sm font-semibold mr-3 mt-0.5 flex-shrink-0">4</span>
+                  <span>Track your orders and manage returns easily</span>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Categories Guide -->
+        <div class="bg-white rounded-2xl shadow-sm p-8 mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Product Categories Guide</h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="text-center">
+              <div class="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-10 h-10 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">Racing Hoodies</h3>
+              <p class="text-gray-600 mb-4">Premium hoodies inspired by racing culture with authentic automotive designs.</p>
+              <a href="/racing-hoodies" class="text-red-600 hover:text-red-700 font-medium">Shop Hoodies →</a>
+            </div>
+
+            <div class="text-center">
+              <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">Car Culture Tees</h3>
+              <p class="text-gray-600 mb-4">Classic t-shirts featuring iconic car brands and racing legends.</p>
+              <a href="/car-culture-tees" class="text-blue-600 hover:text-blue-700 font-medium">Shop Tees →</a>
+            </div>
+
+            <div class="text-center">
+              <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">Driver Accessories</h3>
+              <p class="text-gray-600 mb-4">Essential accessories to complete your automotive culture look.</p>
+              <a href="/driver-accessories" class="text-green-600 hover:text-green-700 font-medium">Shop Accessories →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="bg-gradient-to-r from-red-50 to-gray-50 rounded-2xl p-8">
+          <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Frequently Asked Questions</h2>
+          <div class="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-4">Shopping Questions</h3>
+              <div class="space-y-4">
+                <div>
+                  <h4 class="font-semibold text-gray-900 mb-2">How do I find my size?</h4>
+                  <p class="text-gray-600">Use our comprehensive size chart and measurement guide to find your perfect fit.</p>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-900 mb-2">What payment methods do you accept?</h4>
+                  <p class="text-gray-600">We accept all major credit cards, PayPal, and other secure payment methods.</p>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-900 mb-2">Do you ship internationally?</h4>
+                  <p class="text-gray-600">Yes, we ship worldwide with various shipping options and delivery times.</p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-4">Product Questions</h3>
+              <div class="space-y-4">
+                <div>
+                  <h4 class="font-semibold text-gray-900 mb-2">What materials do you use?</h4>
+                  <p class="text-gray-600">We use high-quality materials like cotton, polyester blends, and premium fabrics.</p>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-900 mb-2">How do I care for my merchandise?</h4>
+                  <p class="text-gray-600">Follow the care instructions on the label. Most items are machine washable.</p>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-900 mb-2">Are your designs officially licensed?</h4>
+                  <p class="text-gray-600">We create original designs inspired by automotive culture while respecting trademark guidelines.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="text-center mt-12">
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Need More Help?</h3>
+          <p class="text-gray-600 mb-6">Our customer service team is here to help with any questions about our driver merchandise</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/contact" class="bg-red-600 text-white px-8 py-3 rounded-lg hover:bg-red-700 transition-colors font-medium">
+              Contact Support
+            </a>
+            <a href="/collections" class="bg-gray-200 text-gray-800 px-8 py-3 rounded-lg hover:bg-gray-300 transition-colors font-medium">
+              Browse Collections
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>

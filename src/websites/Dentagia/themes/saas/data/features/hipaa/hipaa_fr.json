@@ -1,0 +1,198 @@
+{
+  "hero": {
+    "subtitle": "Conformité HIPAA",
+    "title": "Sécurité et conformité conformes HIPAA",
+    "description": "Sécurité de niveau entreprise avec conformité HIPAA complète, garantissant que vos données patients sont protégées avec les normes de sécurité et confidentialité les plus élevées.",
+    "icon": "shield",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "100%",
+        "label": "Conforme HIPAA"
+      },
+      {
+        "value": "256-bit",
+        "label": "Chiffrement"
+      },
+      {
+        "value": "99.9%",
+        "label": "Disponibilité"
+      }
+    ]
+  },
+  "features": {
+    "title": "Fonctionnalités de conformité HIPAA",
+    "subtitle": "Sécurité entreprise",
+    "description": "Fonctionnalités de conformité et sécurité HIPAA complètes conçues pour protéger toutes les données patients.",
+    "items": [
+      {
+        "icon": "shield",
+        "title": "Conformité HIPAA complète",
+        "description": "Conformité HIPAA complète avec toutes les sauvegardes, politiques et procédures requises en place.",
+        "highlights": [
+          "Infrastructure conforme HIPAA",
+          "Sauvegardes requises implémentées",
+          "Documentation de conformité",
+          "Audits et évaluations réguliers",
+          "Certification et validation"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "Conforme"
+        }
+      },
+      {
+        "icon": "lock",
+        "title": "Chiffrement des données",
+        "description": "Chiffrement de bout en bout pour toutes les données patients en transit et au repos avec sécurité de niveau militaire.",
+        "highlights": [
+          "Chiffrement 256-bit",
+          "Protection des données au repos",
+          "Sécurité des données en transit",
+          "Gestion des clés",
+          "Normes de chiffrement"
+        ],
+        "stats": {
+          "value": "256-bit",
+          "label": "Chiffrement"
+        }
+      },
+      {
+        "icon": "users",
+        "title": "Contrôles d'accès",
+        "description": "Contrôles d'accès basés sur les rôles avec permissions granulaires et pistes d'audit complètes.",
+        "highlights": [
+          "Accès basé sur les rôles",
+          "Permissions granulaires",
+          "Authentification multi-facteurs",
+          "Journalisation d'accès",
+          "Pistes d'audit"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "Contrôlé"
+        }
+      },
+      {
+        "icon": "database",
+        "title": "Pistes d'audit",
+        "description": "Pistes d'audit complètes pour tous les accès, modifications et activités système des données patients.",
+        "highlights": [
+          "Journalisation complète",
+          "Suivi d'accès",
+          "Historique des modifications",
+          "Rapports de conformité",
+          "Analyse médico-légale"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "Suivi"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Assurance de conformité HIPAA",
+    "description": "Sécurité de niveau entreprise pour votre cabinet",
+    "stats": [
+      {
+        "icon": "shield",
+        "value": "100%",
+        "label": "Conforme HIPAA"
+      },
+      {
+        "icon": "lock",
+        "value": "256-bit",
+        "label": "Chiffrement"
+      },
+      {
+        "icon": "database",
+        "value": "100%",
+        "label": "Pistes d'audit"
+      },
+      {
+        "icon": "award",
+        "value": "99.9%",
+        "label": "Disponibilité"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Dr. Michael Chen",
+        "role": "Dentiste principal, Family Dental Care",
+        "quote": "La conformité HIPAA était une préoccupation majeure pour nous. Les fonctionnalités de sécurité de Dentagia nous donnent une confiance totale que nos données patients sont protégées."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Avantages de la conformité HIPAA",
+    "subtitle": "Sécurité et confiance",
+    "description": "Découvrez la tranquillité d'esprit qui vient avec la conformité HIPAA complète.",
+    "items": [
+      {
+        "title": "Conformité complète",
+        "description": "Conformité HIPAA complète avec toutes les sauvegardes et documentation requises.",
+        "icon": "shield",
+        "color": "teal",
+        "stats": {
+          "value": "100%",
+          "label": "Conforme"
+        },
+        "highlights": [
+          "Infrastructure conforme HIPAA",
+          "Sauvegardes requises",
+          "Documentation de conformité",
+          "Audits réguliers"
+        ]
+      },
+      {
+        "title": "Protection des données",
+        "description": "Chiffrement et sécurité de niveau militaire protègent toutes les données patients.",
+        "icon": "lock",
+        "color": "cyan",
+        "stats": {
+          "value": "256-bit",
+          "label": "Chiffrement"
+        },
+        "highlights": [
+          "Chiffrement de bout en bout",
+          "Stockage sécurisé",
+          "Sauvegardes chiffrées",
+          "Gestion des clés"
+        ]
+      },
+      {
+        "title": "Contrôle d'accès",
+        "description": "Contrôles d'accès granulaires garantissent que seul le personnel autorisé peut accéder aux données patients.",
+        "icon": "users",
+        "color": "blue",
+        "stats": {
+          "value": "100%",
+          "label": "Contrôlé"
+        },
+        "highlights": [
+          "Accès basé sur les rôles",
+          "Permissions granulaires",
+          "Authentification multi-facteurs",
+          "Journalisation d'accès"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prêt pour la sécurité conforme HIPAA ?",
+    "description": "Découvrez comment les fonctionnalités de sécurité de Dentagia protègent votre cabinet et vos données patients.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Planifier une démo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "En savoir plus",
+      "link": "/features"
+    }
+  }
+}
+

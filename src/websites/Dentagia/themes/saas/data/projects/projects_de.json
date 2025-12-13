@@ -1,0 +1,297 @@
+{
+  "pageTitle": "Erfolgsgeschichten von Zahnarztpraxen",
+  "pageDescription": "Erkunden Sie Erfolgsgeschichten und Fallstudien von Zahnarztpraxen, die Dentagias Praxismanagement-Plattform verwenden.",
+  "hero": {
+    "badge": "Erfolgsgeschichten",
+    "title": "Wie Zahnarztpraxen mit Dentagia Wachsen",
+    "description": "Entdecken Sie, wie Zahnarztpraxen im ganzen Land ihre Abläufe transformieren und mit Dentagias KI-gestützter Praxismanagement-Plattform wachsen.",
+    "cta": {
+      "primary": {
+        "text": "Geschichten Ansehen",
+        "href": "#projects"
+      },
+      "secondary": {
+        "text": "Ihre Reise Starten",
+        "href": "/contact"
+      }
+    }
+  },
+  "stats": [
+    {
+      "value": "500+",
+      "label": "Zahnarztpraxen"
+    },
+    {
+      "value": "99.9%",
+      "label": "Verfügbarkeit"
+    },
+    {
+      "value": "50%",
+      "label": "Zeit Gespart"
+    },
+    {
+      "value": "24/7",
+      "label": "Support"
+    }
+  ],
+  "projects": [
+    {
+      "category": "Allgemeine Zahnmedizin",
+      "description": "Transformation allgemeiner Zahnarztpraxen mit KI-gestützten Lösungen",
+      "items": [
+        {
+          "icon": "building",
+          "name": "Zahnarztpraxis Zentrum",
+          "description": "Mehrzahnarztpraxis mit KI-gestützter Terminplanung und automatisierter Patientenkommunikation",
+          "image": "/images/projects/downtown-dental.webp",
+          "stats": {
+            "value": "+60%",
+            "label": "Effizienzsteigerung"
+          },
+          "tags": ["KI-Terminplanung", "Mehrzahnarzt", "Praxismanagement"],
+          "color": "blue"
+        },
+        {
+          "icon": "home",
+          "name": "Family Dental Care",
+          "description": "Einzelpraxis-Transformation mit Patientenmanagement und Abrechnungsautomatisierung",
+          "image": "/images/projects/family-dental.webp",
+          "stats": {
+            "value": "+35%",
+            "label": "Umsatzwachstum"
+          },
+          "tags": ["Einzelpraxis", "Abrechnungsautomatisierung", "Patientenmanagement"],
+          "color": "indigo"
+        },
+        {
+          "icon": "users",
+          "name": "Gemeinschaftszahnarztzentrum",
+          "description": "Gemeinschaftspraxis mit umfassendem Patientenmanagement und Analysen",
+          "image": "/images/projects/community-dental.webp",
+          "stats": {
+            "value": "+50%",
+            "label": "Patientenzufriedenheit"
+          },
+          "tags": ["Gemeinschaftspraxis", "Analysen", "Management"],
+          "color": "purple"
+        },
+        {
+          "icon": "calendar",
+          "name": "Nachbarschaftszahnarzt",
+          "description": "Praxisoptimierung mit KI-Terminplanung und Workflow-Automatisierung",
+          "image": "/images/projects/neighborhood-dental.webp",
+          "stats": {
+            "value": "15Std/Woche",
+            "label": "Zeit Gespart"
+          },
+          "tags": ["KI-Terminplanung", "Automatisierung", "Effizienz"],
+          "color": "pink"
+        }
+      ]
+    },
+    {
+      "category": "Fachpraxen",
+      "description": "Spezialisierte Zahnarztpraxen, die Exzellenz erreichen",
+      "items": [
+        {
+          "icon": "sparkles",
+          "name": "Zentrum für Ästhetische Zahnmedizin",
+          "description": "Hochwertige ästhetische Praxis mit fortgeschrittener Behandlungsplanung und Patientenkommunikation",
+          "image": "/images/projects/cosmetic-dental.webp",
+          "stats": {
+            "value": "+45%",
+            "label": "Konversionsrate"
+          },
+          "tags": ["Ästhetik", "Behandlungsplanung", "Patientenportal"],
+          "color": "rose"
+        },
+        {
+          "icon": "heart",
+          "name": "Kinderzahnarztgruppe",
+          "description": "Multi-Standort-Kinderpraxis mit zentralisiertem Management",
+          "image": "/images/projects/pediatric-dental.webp",
+          "stats": {
+            "value": "100%",
+            "label": "Koordination"
+          },
+          "tags": ["Multi-Standort", "Kinderzahnmedizin", "Zentralisiert"],
+          "color": "amber"
+        },
+        {
+          "icon": "smile",
+          "name": "Orthodontiepraxis",
+          "description": "Orthodontiepraxis mit Behandlungsverfolgung und Patientenengagement",
+          "image": "/images/projects/orthodontic-dental.webp",
+          "stats": {
+            "value": "+55%",
+            "label": "Patientenbindung"
+          },
+          "tags": ["Orthodontie", "Behandlungsverfolgung", "Engagement"],
+          "color": "lime"
+        },
+        {
+          "icon": "tooth",
+          "name": "Zentrum für Oralchirurgie",
+          "description": "Chirurgische Praxis mit fortgeschrittener Terminplanung und Fallmanagement",
+          "image": "/images/projects/oral-surgery.webp",
+          "stats": {
+            "value": "+40%",
+            "label": "Falleffizienz"
+          },
+          "tags": ["Oralchirurgie", "Fallmanagement", "Terminplanung"],
+          "color": "green"
+        }
+      ]
+    },
+    {
+      "category": "Multi-Standort-Praxen",
+      "description": "Große Praxen, die mehrere Standorte verwalten",
+      "items": [
+        {
+          "icon": "map-pin",
+          "name": "Regionale Zahnarztgruppe",
+          "description": "Multi-Standort-Praxis mit einheitlichen Patientenakten und Terminplanung",
+          "image": "/images/projects/regional-dental.webp",
+          "stats": {
+            "value": "+70%",
+            "label": "Betriebseffizienz"
+          },
+          "tags": ["Multi-Standort", "Einheitliche Akten", "Cloud-Sync"],
+          "color": "sky"
+        },
+        {
+          "icon": "building-2",
+          "name": "Zahnarztnetzwerk",
+          "description": "Netzwerk von Praxen mit zentralisierter Abrechnung und Berichterstattung",
+          "image": "/images/projects/dental-network.webp",
+          "stats": {
+            "value": "+55%",
+            "label": "Umsatzwachstum"
+          },
+          "tags": ["Netzwerk", "Zentralisierte Abrechnung", "Berichterstattung"],
+          "color": "cyan"
+        },
+        {
+          "icon": "globe",
+          "name": "Landesweite Zahnmedizin",
+          "description": "Landesweite Praxisgruppe mit umfassendem Management",
+          "image": "/images/projects/statewide-dental.webp",
+          "stats": {
+            "value": "100%",
+            "label": "Datensynchronisation"
+          },
+          "tags": ["Landesweit", "Management", "Cloud"],
+          "color": "blue"
+        },
+        {
+          "icon": "trending-up",
+          "name": "Wachsende Zahnarztkette",
+          "description": "Schnell expandierende Praxiskette mit skalierbaren Lösungen",
+          "image": "/images/projects/dental-chain.webp",
+          "stats": {
+            "value": "+80%",
+            "label": "Skalierbarkeit"
+          },
+          "tags": ["Kette", "Skalierbar", "Wachstum"],
+          "color": "indigo"
+        }
+      ]
+    }
+  ],
+  "features": {
+    "title": "Praxisfunktionen",
+    "description": "Unsere Plattform kommt mit umfassenden Funktionen für Zahnarztpraxen",
+    "items": [
+      {
+        "icon": "users",
+        "title": "Patientenmanagement",
+        "description": "Vollständige digitale Patientenakten und Krankengeschichte"
+      },
+      {
+        "icon": "calendar",
+        "title": "KI-Terminplanung",
+        "description": "Intelligente Terminplanung und Optimierung"
+      },
+      {
+        "icon": "credit-card",
+        "title": "Abrechnung & Zahlungen",
+        "description": "Optimierte Abrechnung und Zahlungsabwicklung"
+      },
+      {
+        "icon": "bar-chart",
+        "title": "Praxisanalysen",
+        "description": "Datenbasierte Insights für Praxiswachstum"
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Praxisvorteile",
+    "description": "Erleben Sie die Vorteile der Verwendung von Dentagia für Ihre Praxis.",
+    "items": [
+      {
+        "icon": "rocket",
+        "title": "Effizienz",
+        "description": "Optimierte Abläufe, die Zeit sparen und den Verwaltungsaufwand reduzieren",
+        "stats": "50%",
+        "label": "Zeit Gespart"
+      },
+      {
+        "icon": "target",
+        "title": "Wachstum",
+        "description": "Tools und Insights, um Ihrer Praxis beim Wachstum zu helfen",
+        "stats": "35%",
+        "label": "Umsatzwachstum"
+      },
+      {
+        "icon": "lightbulb",
+        "title": "Innovation",
+        "description": "Zukunftsweisende KI-Technologie für moderne Zahnarztpraxen",
+        "stats": "500+",
+        "label": "Praxen"
+      },
+      {
+        "icon": "users",
+        "title": "Support",
+        "description": "Dediziertes Support-Team verfügbar 24/7 für Ihre Praxis",
+        "stats": "24/7",
+        "label": "Support"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Praxisstimmen",
+    "description": "Hören Sie von Zahnarztpraxen, die ihre Abläufe mit Dentagia transformiert haben",
+    "items": [
+      {
+        "quote": "Dentagia hat transformiert, wie wir unsere Praxis führen. Die KI-gestützte Terminplanung allein spart uns 10 Stunden pro Woche, und unsere Patientenzufriedenheitswerte waren noch nie höher.",
+        "author": "Dr. Sarah Martinez",
+        "role": "Praxisinhaberin",
+        "company": "Zahnarztpraxis Zentrum",
+        "image": "/images/testimonials/sarah.jpg"
+      },
+      {
+        "quote": "Der Wechsel zu Dentagia war die beste Entscheidung, die wir getroffen haben. Das Patientenmanagementsystem ist intuitiv, die Abrechnung ist automatisiert, und die Analysen helfen uns, unsere Praxis besser zu verstehen.",
+        "author": "Dr. Michael Chen",
+        "role": "Leitender Zahnarzt",
+        "company": "Family Dental Care",
+        "image": "/images/testimonials/michael.jpg"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Bereit, Ihre Praxis zu Transformieren?",
+    "description": "Schließen Sie sich Hunderten von Zahnarztpraxen an, die ihre Abläufe mit Dentagia transformiert haben.",
+    "buttons": [
+      {
+        "text": "Demo Vereinbaren",
+        "href": "/demo",
+        "variant": "primary"
+      },
+      {
+        "text": "Kontaktieren Sie Uns",
+        "href": "/contact",
+        "variant": "secondary"
+      }
+    ]
+  }
+}

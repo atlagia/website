@@ -1,13 +1,125 @@
 ---
-import Layout from '@layouts/Layoutp.astro';
-import { getCollectionByHandle, getAllCollections } from '../../lib/controller';
-import { ArrowRight } from 'lucide-react';
+import Layoutc from '@layouts/Layoutc.astro';
+import { getCollectionByHandle, getAllCollections } from '@libs/controller';
+import { filterProducts } from '@libs/shopify';
+import { ArrowRight, Grid, List, Filter } from 'lucide-react';
+import FilterSidebar from '@components/FilterSidebar.astro';
+import SortDropdown from '@components/SortDropdown.astro';
+import ReactiveProductCard from '@components/ReactiveProductCard.tsx';
+// Dynamic imports based on environment
+const SITE_NAME = import.meta.env.PUBLIC_SITE_NAME || 'RidWear';
+const THEME = import.meta.env.THEME || 'default';
+
+let contentData;
+let filterData;
+
+try {
+  // Try to load from current website theme path
+  contentData = await import(`@websites/${SITE_NAME}/themes/${THEME}/data/collection-content.json`);
+  filterData = await import(`@websites/${SITE_NAME}/themes/${THEME}/data/collection-filters.json`);
+} catch (error) {
+  // Fallback to default data
+  contentData = await import('@data/collection-content.json');
+  filterData = await import('@data/collection-filters.json');
+}
 
 const { lang = 'en', collections: handle } = Astro.params;
-const collection = await getCollectionByHandle(handle, lang?.toUpperCase());
 const baseUrl = import.meta.env.DOMAINE || 'https://ridwear.com';
 const storeName = import.meta.env.PUBLIC_SITE_NAME || 'RidWear';
-const languages = ['en', 'fr', 'de', 'es', 'it'];
+// Get allowed languages from environment variable
+const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+const languages = allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+
+// Get content for current language
+const content = contentData.default[lang] || contentData.default.en;
+
+// Parse current filters from URL
+const url = new URL(Astro.request.url);
+const currentFilters: Record<string, string[]> = {};
+const filters: any = {};
+
+// Parse filter parameters
+url.searchParams.forEach((value, key) => {
+  if (key === 'color' || key === 'size' || key === 'availability') {
+    if (!currentFilters[key]) currentFilters[key] = [];
+    currentFilters[key].push(value);
+    if (!filters[key]) filters[key] = [];
+    filters[key].push(value);
+  }
+});
+
+// Parse price filter
+const priceFilter = url.searchParams.get('price');
+if (priceFilter) {
+  filters.price = priceFilter;
+}
+
+// Get current sort parameter
+const currentSort = url.searchParams.get('sort') || '';
+
+// Check if any filters are applied
+const hasFilters = Object.keys(filters).length > 0;
+
+// Get collection data
+let collection = await getCollectionByHandle(handle, lang?.toUpperCase());
+
+// Apply filters if any are present
+if (hasFilters) {
+  console.log('🔍 Applying filters to collection:', filters);
+  
+  // Get all products from the collection
+  const allProducts = collection.products.edges;
+  
+  // Apply filters to the products
+  let filteredProducts = allProducts;
+
+  // Apply color filter
+  if (filters.color && filters.color.length > 0) {
+    filteredProducts = filteredProducts.filter(({ node: product }) => {
+      const productColors = product.options?.find(opt => 
+        opt.name?.toLowerCase() === 'color'
+      )?.values || [];
+      
+      return filters.color.some(filterColor => 
+        productColors.some(productColor => 
+          productColor.toLowerCase().includes(filterColor.toLowerCase())
+        )
+      );
+    });
+  }
+
+  // Apply size filter
+  if (filters.size && filters.size.length > 0) {
+    filteredProducts = filteredProducts.filter(({ node: product }) => {
+      const productSizes = product.options?.find(opt => 
+        opt.name?.toLowerCase() === 'size'
+      )?.values || [];
+      
+      return filters.size.some(filterSize => 
+        productSizes.some(productSize => 
+          productSize.toLowerCase() === filterSize.toLowerCase()
+        )
+      );
+    });
+  }
+
+  // Apply price filter
+  if (filters.price) {
+    const [minPrice, maxPrice] = filters.price.split('-').map(p => parseFloat(p));
+    filteredProducts = filteredProducts.filter(({ node: product }) => {
+      const price = parseFloat(product.variants.edges[0]?.node?.price?.amount || '0');
+      return price >= minPrice && (isNaN(maxPrice) || price <= maxPrice);
+    });
+  }
+
+  // Update collection with filtered products
+  collection = {
+    ...collection,
+    products: {
+      edges: filteredProducts
+    }
+  };
+}
 
 // SEO Helpers
 const generateSEOTitle = (collection) => {
@@ -112,15 +224,18 @@ const formatPrice = (amount: string, currencyCode: string) => {
 };
 ---
 
-<Layout 
+<Layoutc 
   title={seoTitle}
   description={seoDescription}
   image={collection.image?.url}
   schemas={[breadcrumbSchema, collectionSchema]}
-  alternateUrls={languages.map(language => ({
-    lang: language,
-    url: `/${language}/collections/${handle}`
-  }))}
+  alternateUrls={languages
+    .filter(language => language !== lang) // Remove current language to avoid self-reference
+    .map(language => ({
+      lang: language,
+      url: `/${language}/collections/${handle}`
+    }))}
+  lang={lang}
 >
   <div class="min-h-screen bg-gray-50">
     <main class="max-w-7xl mx-auto px-4 pt-24 pb-16">
@@ -128,11 +243,11 @@ const formatPrice = (amount: string, currencyCode: string) => {
       <nav class="flex mb-8 text-sm" aria-label="Breadcrumb">
         <ol class="flex items-center space-x-2">
           <li>
-            <a href={`/${lang}`} class="text-gray-500 hover:text-gray-700">Home</a>
+            <a href={`/${lang}`} class="text-gray-500 hover:text-gray-700">{content.breadcrumbs.home}</a>
           </li>
           <li class="text-gray-400">/</li>
           <li>
-            <a href={`/${lang}/collections`} class="text-gray-500 hover:text-gray-700">Collections</a>
+            <a href={`/${lang}/collections`} class="text-gray-500 hover:text-gray-700">{content.breadcrumbs.collections}</a>
           </li>
           <li class="text-gray-400">/</li>
           <li class="text-gray-900 font-medium">{collection.title}</li>
@@ -164,63 +279,196 @@ const formatPrice = (amount: string, currencyCode: string) => {
         )}
       </header>
 
-      {/* Products Grid */}
-      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {collection.products.edges.map(({ node: product }) => {
-          const firstVariant = product.variants.edges[0]?.node;
-          const price = firstVariant?.price;
-          
-          return (
-            <a 
-              href={`/${lang}/products/${product.handle}`}
-              class="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100"
-            >
-              <div class="aspect-[3/4] overflow-hidden bg-gray-100">
-                {product.images?.edges[0]?.node ? (
-                  <img
-                    src={product.images.edges[0].node.url}
-                    alt={product.images.edges[0].node.altText || product.title}
-                    class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
-                  />
-                ) : (
-                  <div class="w-full h-full flex items-center justify-center bg-gray-50">
-                    <span class="text-gray-400">No image available</span>
-                  </div>
-                )}
-              </div>
-              
-              <div class="p-4">
-                <h2 class="text-lg font-medium mb-2 text-gray-900 group-hover:text-blue-600 transition-colors">
-                  {product.title}
-                </h2>
-                
-                <div class="flex items-center justify-between mt-2">
-                  {price && (
-                    <span class="text-sm font-medium text-gray-900">
-                      {formatPrice(price.amount, price.currencyCode)}
-                    </span>
-                  )}
-                  <span class="text-blue-600 group-hover:translate-x-1 transition-transform duration-300">
-                    <ArrowRight className="w-5 h-5" />
-                  </span>
-                </div>
-              </div>
-            </a>
-          );
-        })}
+      {/* Mobile Filter Toggle */}
+      <div class="lg:hidden mb-6">
+        <button 
+          id="mobile-filter-toggle"
+          class="w-full flex items-center justify-center gap-2 px-4 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+          </svg>
+          Filters & Sort
+        </button>
       </div>
 
-      {/* Empty State */}
-      {collection.products.edges.length === 0 && (
-        <div class="text-center py-16 bg-white rounded-2xl shadow-sm">
-          <div class="max-w-md mx-auto">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-2">No Products Found</h2>
-            <p class="text-gray-600">
-              No products available in this collection at the moment. Please check back soon!
-            </p>
+      {/* Main Content with Sidebar */}
+      <div class="flex flex-col lg:flex-row gap-8">
+        {/* Mobile Filter Overlay */}
+        <div 
+          id="mobile-filter-overlay"
+          class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden lg:hidden"
+        ></div>
+
+        {/* Sidebar Filters */}
+        <aside 
+          id="filter-sidebar"
+          class="w-full lg:w-80 flex-shrink-0 fixed lg:relative top-0 left-0 h-full lg:h-auto bg-white z-40 lg:z-auto transform -translate-x-full lg:translate-x-0 lg:top-auto lg:left-auto lg:transform-none transition-transform duration-300 ease-in-out lg:block"
+        >
+          <div class="p-4 lg:p-0">
+            <div class="flex items-center justify-between mb-4 lg:hidden">
+              <h3 class="text-lg font-semibold">Filters</h3>
+              <button 
+                id="close-mobile-filters"
+                class="p-2 hover:bg-gray-100 rounded-full"
+              >
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <FilterSidebar 
+              language={lang} 
+              currentFilters={currentFilters} 
+              filterData={filterData.default} 
+              currentSort={currentSort}
+              priceFilter={priceFilter}
+            />
           </div>
+        </aside>
+
+        {/* Main Content Area */}
+        <div class="flex-1 w-full">
+          {/* Top Controls */}
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 gap-4">
+            <!-- View Toggle -->
+            <div class="flex items-center space-x-2">
+              <button class="p-2 rounded-md bg-white border border-gray-300 hover:bg-gray-50 transition-colors">
+                <Grid className="w-5 h-5 text-gray-600" />
+              </button>
+              <button class="p-2 rounded-md bg-gray-50 border border-gray-300 hover:bg-gray-100 transition-colors">
+                <List className="w-5 h-5 text-gray-600" />
+              </button>
+            </div>
+
+            <!-- Sort Dropdown and Product Count -->
+            <div class="flex items-center gap-4">
+              <SortDropdown language={lang} currentSort={currentSort} />
+              <div class="text-sm text-gray-600 hidden sm:block">
+                {collection.products.edges.length} {content.collections.count}
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile Product Count */}
+          <div class="text-sm text-gray-600 mb-4 sm:hidden">
+            {collection.products.edges.length} {content.collections.count}
+          </div>
+
+          {/* Products Grid */}
+          <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
+            {collection.products.edges.map(({ node: product }) => {
+              const firstVariant = product.variants.edges[0]?.node;
+              const price = firstVariant?.price;
+              const compareAtPrice = firstVariant?.compareAtPrice;
+              
+              return (
+                <ReactiveProductCard 
+                  client:load
+                  product={{
+                    id: product.id,
+                    title: product.title,
+                    handle: product.handle,
+                    price: price || { amount: '0', currencyCode: 'USD' },
+                    compareAtPrice: compareAtPrice,
+                    image: product.images?.edges[0]?.node
+                  }}
+                  lang={lang}
+                  content={content}
+                />
+              );
+            })}
+          </div>
+
+          {/* Load More Section */}
+          {collection.products.edges.length > 0 && (
+            <div class="text-center mt-12">
+              <div class="mb-4 text-sm text-gray-600">
+                {content.collections.viewed} {Math.min(12, collection.products.edges.length)} {content.collections.of} {collection.products.edges.length} {content.collections.products}
+              </div>
+              <button class="bg-white border border-gray-300 text-gray-700 px-6 py-3 rounded-md hover:bg-gray-50 transition-colors font-medium">
+                {content.collections.loadMore}
+              </button>
+            </div>
+          )}
+
+          {/* Empty State */}
+          {collection.products.edges.length === 0 && (
+            <div class="text-center py-16 bg-white rounded-2xl shadow-sm">
+              <div class="max-w-md mx-auto">
+                <h2 class="text-2xl font-semibold text-gray-900 mb-2">{content.collections.noProducts}</h2>
+                <p class="text-gray-600">
+                  {content.collections.noProductsDescription}
+                </p>
+              </div>
+            </div>
+          )}
         </div>
-      )}
+      </div>
     </main>
   </div>
-</Layout> 
+</Layoutc>
+
+<script>
+  // Handle dynamic loading states
+  document.addEventListener('astro:page-load', () => {
+    const grid = document.querySelector('.grid');
+    if (grid) {
+      grid.classList.add('fade-in');
+    }
+    
+    // Initialize mobile filter functionality
+    initializeMobileFilters();
+  });
+
+  function initializeMobileFilters() {
+    const mobileFilterToggle = document.getElementById('mobile-filter-toggle');
+    const mobileFilterOverlay = document.getElementById('mobile-filter-overlay');
+    const filterSidebar = document.getElementById('filter-sidebar');
+    const closeMobileFilters = document.getElementById('close-mobile-filters');
+
+    if (!mobileFilterToggle || !filterSidebar) return;
+
+    // Open mobile filters
+    mobileFilterToggle.addEventListener('click', () => {
+      filterSidebar.classList.remove('-translate-x-full');
+      mobileFilterOverlay.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    });
+
+    // Close mobile filters
+    const closeFilters = () => {
+      filterSidebar.classList.add('-translate-x-full');
+      mobileFilterOverlay.classList.add('hidden');
+      document.body.style.overflow = '';
+    };
+
+    closeMobileFilters?.addEventListener('click', closeFilters);
+    mobileFilterOverlay?.addEventListener('click', closeFilters);
+
+    // Close on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeFilters();
+      }
+    });
+  }
+</script>
+
+<style>
+  .fade-in {
+    animation: fadeIn 0.5s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style> 

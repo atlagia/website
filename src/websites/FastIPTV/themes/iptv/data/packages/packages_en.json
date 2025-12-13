@@ -1,0 +1,135 @@
+{
+  "pageTitle": "Packages & Bundles",
+  "pageDescription": "Choose the perfect StreamVista package for your entertainment needs",
+  "heroTitle": "Packages & Bundles",
+  "heroDescription": "Choose from our curated packages or create your own custom bundle.",
+  "packages": {
+    "featured": {
+      "name": "12 Month Stronger IPTV",
+      "price": "59.99",
+      "duration": "year",
+      "description": "Best value with annual billing - save big on premium IPTV service",
+      "features": [
+        "+32,000 Premium IPTV Channels",
+        "+140,000 Fast IPTV Movies & Series",
+        "8k/ 4K / Ultra HD Stronger IPTV Quality",
+        "Catch Up /EPG For All Fast IPTV Channels",
+        "FREE Premium IPTV Channels & VOD Updates",
+        "99.9% Fast IPTV Server Uptime",
+        "All Devices Supported for Stronger IPTV",
+        "AntiFreeeze Technology for Fast IPTV",
+        "24/7 Premium IPTV Technical Assistance"
+      ],
+      "savings": "Best Value",
+      "checkoutUrl": "https://pays.myatlagia.store/checkout?cart=%7B%22items%22%3A%5B%7B%22title%22%3A%2212%20Month%20Stronger%20IPTV%22%2C%22price%22%3A5999%2C%22currency%22%3A%22USD%22%2C%22quantity%22%3A1%2C%22image%22%3A%22https%3A%2F%2Fvia.placeholder.com%2F100%22%7D%5D%2C%22total%22%3A5999%7D&store=FastTV&shop_domain=pays.myatlagia.store"
+    },
+    "bundles": [
+      {
+        "name": "1 Month Fast IPTV",
+        "price": "16.99",
+        "duration": "month",
+        "description": "Perfect for trying our premium IPTV service",
+        "features": [
+          "+32,000 Fast IPTV Channels",
+          "+140,000 Premium IPTV Movies & Series",
+          "8k/ 4K / Ultra HD Stronger IPTV Quality",
+          "Catch Up /EPG For All Fast IPTV Channels",
+          "FREE Premium IPTV Channels & VOD Updates",
+          "99.9% Fast IPTV Server Uptime",
+          "All Devices Supported for Stronger IPTV",
+          "AntiFreeeze Technology for Fast IPTV",
+          "24/7 Premium IPTV Technical Assistance"
+        ],
+        "highlight": "Most Popular",
+        "checkoutUrl": "https://pays.myatlagia.store/checkout?cart=%7B%22items%22%3A%5B%7B%22title%22%3A%221%20Month%20Fast%20IPTV%22%2C%22price%22%3A1699%2C%22currency%22%3A%22USD%22%2C%22quantity%22%3A1%2C%22image%22%3A%22https%3A%2F%2Fvia.placeholder.com%2F100%22%7D%5D%2C%22total%22%3A1699%7D&store=FastTV&shop_domain=pays.myatlagia.store"
+      },
+      {
+        "name": "3 Month Fast IPTV",
+        "price": "29.99",
+        "duration": "quarter",
+        "description": "Great value for quarterly premium IPTV subscription",
+        "features": [
+          "+32,000 Stronger IPTV Channels",
+          "+140,000 Premium IPTV Movies & Series",
+          "8k/ 4K / Ultra HD Fast IPTV Quality",
+          "Catch Up /EPG For All Premium IPTV Channels",
+          "FREE Fast IPTV Channels & VOD Updates",
+          "99.9% Stronger IPTV Server Uptime",
+          "All Devices Supported for Fast IPTV",
+          "AntiFreeeze Technology for Premium IPTV",
+          "24/7 Stronger IPTV Technical Assistance"
+        ],
+        "highlight": "Best for Sports",
+        "checkoutUrl": "https://pays.myatlagia.store/checkout?cart=%7B%22items%22%3A%5B%7B%22title%22%3A%223%20Month%20Fast%20IPTV%22%2C%22price%22%3A2999%2C%22currency%22%3A%22USD%22%2C%22quantity%22%3A1%2C%22image%22%3A%22https%3A%2F%2Fvia.placeholder.com%2F100%22%7D%5D%2C%22total%22%3A2999%7D&store=FastTV&shop_domain=pays.myatlagia.store"
+      }
+    ],
+    "addons": [
+      {
+        "name": "Extra Device",
+        "price": "4.99",
+        "description": "Add one more device to any package"
+      },
+      {
+        "name": "Premium Sports",
+        "price": "9.99",
+        "description": "Add premium sports channels to any package"
+      },
+      {
+        "name": "4K Upgrade",
+        "price": "5.99",
+        "description": "Upgrade to 4K quality where available"
+      },
+      {
+        "name": "International",
+        "price": "7.99",
+        "description": "Add international channels from select regions"
+      }
+    ]
+  },
+  "specialOffers": [
+    {
+      "name": "Annual Subscription",
+      "description": "Save 20% with annual billing",
+      "badge": "Best Value"
+    },
+    {
+      "name": "Student Discount",
+      "description": "50% off for verified students",
+      "badge": "Limited Time"
+    },
+    {
+      "name": "Family Share",
+      "description": "Add up to 5 family members at 50% off",
+      "badge": "Popular"
+    }
+  ],
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": [
+      {
+        "question": "Can I change my package later?",
+        "answer": "Yes, you can upgrade, downgrade, or customize your package at any time. Changes will take effect on your next billing cycle."
+      },
+      {
+        "question": "How do add-ons work?",
+        "answer": "Add-ons can be added to any package and are billed monthly. You can add or remove them at any time."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Get Started?",
+    "description": "Try any package free for 7 days. Cancel anytime.",
+    "buttons": [
+      {
+        "text": "Start Free Trial",
+        "link": "/signup",
+        "style": "primary"
+      },
+      {
+        "text": "Contact Sales",
+        "link": "/contact",
+        "style": "secondary"
+      }
+    ]
+  }
+}

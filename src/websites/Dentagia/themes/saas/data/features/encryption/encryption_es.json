@@ -1,0 +1,182 @@
+{
+  "hero": {
+    "subtitle": "Cifrado de datos",
+    "title": "Cifrado de extremo a extremo de datos",
+    "description": "Cifrado de nivel militar de 256 bits protege todos los datos de pacientes en tránsito y en reposo, garantizando el más alto nivel de seguridad para su consultorio dental.",
+    "icon": "lock",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "256-bit",
+        "label": "Cifrado"
+      },
+      {
+        "value": "100%",
+        "label": "Protegido"
+      },
+      {
+        "value": "Extremo a extremo",
+        "label": "Seguridad"
+      }
+    ]
+  },
+  "features": {
+    "title": "Características de cifrado",
+    "subtitle": "Seguridad de nivel militar",
+    "description": "Características completas de cifrado y seguridad para proteger todos los datos de pacientes.",
+    "items": [
+      {
+        "icon": "lock",
+        "title": "Cifrado de 256 bits",
+        "description": "Cifrado AES de 256 bits de nivel militar para todos los datos en reposo y en tránsito.",
+        "highlights": [
+          "Cifrado AES de 256 bits",
+          "Protección de datos en reposo",
+          "Seguridad de datos en tránsito",
+          "Gestión de claves",
+          "Estándares de cifrado"
+        ],
+        "stats": {
+          "value": "256-bit",
+          "label": "Cifrado"
+        }
+      },
+      {
+        "icon": "shield",
+        "title": "Protección de extremo a extremo",
+        "description": "Protección completa de datos desde la entrada hasta el almacenamiento con cifrado de extremo a extremo.",
+        "highlights": [
+          "Cifrado de extremo a extremo",
+          "Protección completa del flujo de datos",
+          "Transmisión segura",
+          "Almacenamiento cifrado",
+          "Arquitectura de conocimiento cero"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "Protegido"
+        }
+      },
+      {
+        "icon": "database",
+        "title": "Gestión de claves",
+        "description": "Gestión segura de claves y políticas de rotación garantizan que las claves de cifrado estén siempre protegidas.",
+        "highlights": [
+          "Almacenamiento seguro de claves",
+          "Rotación de claves",
+          "Controles de acceso",
+          "Políticas de gestión de claves",
+          "Estándares de cumplimiento"
+        ],
+        "stats": {
+          "value": "Extremo a extremo",
+          "label": "Seguridad"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Seguridad de cifrado",
+    "description": "Protección de nivel militar para sus datos",
+    "stats": [
+      {
+        "icon": "lock",
+        "value": "256-bit",
+        "label": "Cifrado"
+      },
+      {
+        "icon": "shield",
+        "value": "100%",
+        "label": "Protegido"
+      },
+      {
+        "icon": "database",
+        "value": "Extremo a extremo",
+        "label": "Seguridad"
+      },
+      {
+        "icon": "award",
+        "value": "Militar",
+        "label": "Nivel"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Dr. Sarah Martinez",
+        "role": "Propietario del consultorio",
+        "quote": "El cifrado nos da total confianza de que nuestros datos de pacientes están protegidos con los más altos estándares de seguridad."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Beneficios del cifrado",
+    "subtitle": "Seguridad máxima",
+    "description": "Experimente la tranquilidad que viene con el cifrado de nivel militar.",
+    "items": [
+      {
+        "title": "Protección de nivel militar",
+        "description": "El cifrado de 256 bits proporciona el más alto nivel de protección de datos disponible.",
+        "icon": "lock",
+        "color": "teal",
+        "stats": {
+          "value": "256-bit",
+          "label": "Cifrado"
+        },
+        "highlights": [
+          "Cifrado de nivel militar",
+          "Estándar AES-256",
+          "Seguridad líder en la industria",
+          "Listo para cumplimiento"
+        ]
+      },
+      {
+        "title": "Protección completa",
+        "description": "El cifrado de extremo a extremo protege los datos durante todo su ciclo de vida completo.",
+        "icon": "shield",
+        "color": "cyan",
+        "stats": {
+          "value": "100%",
+          "label": "Protegido"
+        },
+        "highlights": [
+          "Cifrado de extremo a extremo",
+          "Flujo completo de datos",
+          "Transmisión segura",
+          "Almacenamiento cifrado"
+        ]
+      },
+      {
+        "title": "Gestión segura de claves",
+        "description": "La gestión profesional de claves garantiza que las claves de cifrado estén siempre seguras.",
+        "icon": "database",
+        "color": "blue",
+        "stats": {
+          "value": "Extremo a extremo",
+          "label": "Seguridad"
+        },
+        "highlights": [
+          "Almacenamiento seguro de claves",
+          "Rotación de claves",
+          "Controles de acceso",
+          "Políticas de gestión"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "¿Listo para cifrado de nivel militar?",
+    "description": "Vea cómo el cifrado de Dentagia protege sus datos de pacientes.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Programar una demostración",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Aprender más",
+      "link": "/features"
+    }
+  }
+}
+

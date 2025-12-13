@@ -1,0 +1,169 @@
+{
+  "pageTitle": "Schedule a Demo",
+  "pageDescription": "Experience the power of Dentagia's AI-powered dental practice management software with our interactive demo",
+  "hero": {
+    "badge": "Interactive Demo",
+    "title": "See Dentagia in Action",
+    "description": "Try our AI-powered dental practice management platform firsthand. No credit card required, no installation needed. Get started in seconds and see how Dentagia can transform your practice.",
+    "cta": {
+      "primary": {
+        "text": "Schedule Demo",
+        "href": "#demo-form"
+      },
+      "secondary": {
+        "text": "Watch Video",
+        "href": "#video"
+      }
+    }
+  },
+  "features": [
+    {
+      "icon": "zap",
+      "title": "Instant Access",
+      "description": "Start exploring immediately with pre-loaded sample dental practice data"
+    },
+    {
+      "icon": "shield",
+      "title": "Secure & Private",
+      "description": "Your demo data is isolated and automatically deleted after 24 hours. HIPAA-compliant security."
+    },
+    {
+      "icon": "users",
+      "title": "Guided Tour",
+      "description": "Step-by-step walkthrough of key features including patient management, scheduling, and billing"
+    },
+    {
+      "icon": "rocket",
+      "title": "Full Features",
+      "description": "Experience all premium features including AI-powered scheduling and practice analytics"
+    }
+  ],
+  "demoForm": {
+    "title": "Request Your Personal Demo",
+    "subtitle": "Fill out the form below and we'll set up a customized demo environment for your practice",
+    "fields": {
+      "fullName": {
+        "label": "Full Name",
+        "placeholder": "Dr. John Doe",
+        "required": true
+      },
+      "email": {
+        "label": "Work Email",
+        "placeholder": "john@dentalpractice.com",
+        "required": true
+      },
+      "company": {
+        "label": "Practice Name",
+        "placeholder": "Your Dental Practice",
+        "required": true
+      },
+      "industry": {
+        "label": "Practice Type",
+        "placeholder": "Select your practice type",
+        "options": [
+          "General Dentistry",
+          "Cosmetic Dentistry",
+          "Pediatric Dentistry",
+          "Orthodontics",
+          "Oral Surgery",
+          "Periodontics",
+          "Endodontics",
+          "Multi-Specialty",
+          "Other"
+        ],
+        "required": true
+      },
+      "useCase": {
+        "label": "What would you like to explore?",
+        "placeholder": "Tell us about your practice management needs...",
+        "required": false
+      }
+    },
+    "submitButton": "Schedule My Demo",
+    "consent": "By submitting this form, you agree to our Privacy Policy and Terms of Service"
+  },
+  "benefits": {
+    "title": "Why Try Our Demo?",
+    "items": [
+      {
+        "icon": "check-circle",
+        "title": "Real Practice Scenarios",
+        "description": "Explore use cases specific to dental practices with realistic patient data and appointment scenarios"
+      },
+      {
+        "icon": "trending-up",
+        "title": "See ROI Potential",
+        "description": "Understand how Dentagia can improve your practice efficiency, reduce no-shows, and increase revenue"
+      },
+      {
+        "icon": "settings",
+        "title": "Customization Options",
+        "description": "Discover how to tailor the platform to your specific practice needs and workflows"
+      },
+      {
+        "icon": "award",
+        "title": "Expert Support",
+        "description": "Get answers from our dental practice management specialists during your demo"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "What Our Demo Users Say",
+    "items": [
+      {
+        "quote": "The demo was incredibly intuitive. Within 10 minutes, I could see exactly how Dentagia would transform our practice operations and save us hours each week.",
+        "author": "Dr. Sarah Martinez",
+        "role": "Practice Owner",
+        "company": "Downtown Dental Clinic",
+        "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah"
+      },
+      {
+        "quote": "I've tried many practice management demos, but Dentagia stood out. The AI-powered scheduling and patient management features are exactly what we needed.",
+        "author": "Dr. Michael Chen",
+        "role": "Lead Dentist",
+        "company": "Family Dental Care",
+        "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Michael"
+      }
+    ]
+  },
+  "video": {
+    "title": "Watch a Quick Overview",
+    "description": "See how Dentagia works in just 2 minutes",
+    "thumbnail": "https://via.placeholder.com/800x450/6366f1/ffffff?text=Dentagia+Demo+Video",
+    "duration": "2:30",
+    "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "question": "How long does the demo last?",
+        "answer": "Your personal demo environment remains active for 24 hours, giving you plenty of time to explore at your own pace and see how Dentagia fits your practice."
+      },
+      {
+        "question": "Is any installation required?",
+        "answer": "No installation needed! Our demo runs entirely in your web browser. Simply click the link we send you and start exploring."
+      },
+      {
+        "question": "Will I have access to all features?",
+        "answer": "Yes, you'll have access to all premium features during your demo period, including AI-powered scheduling, patient management, billing, and practice analytics."
+      },
+      {
+        "question": "Can I import my own practice data?",
+        "answer": "The demo comes with sample dental practice data, but you can also upload your own data to see how the platform works with your real practice information."
+      },
+      {
+        "question": "What happens after the demo expires?",
+        "answer": "All demo data is automatically deleted after 24 hours. If you'd like to continue, we can help you set up a trial account or schedule a personalized consultation."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Transform Your Practice?",
+    "description": "Join hundreds of dental practices already using Dentagia to streamline operations and grow their practice.",
+    "button": {
+      "text": "Schedule Your Demo Now",
+      "href": "#demo-form"
+    }
+  }
+}

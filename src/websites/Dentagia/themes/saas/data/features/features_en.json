@@ -1,0 +1,236 @@
+{
+  "pageTitle": "Dental Practice Features - Dentagia",
+  "pageDescription": "Comprehensive features for dental practice management. AI-powered, cloud-based tools designed for modern dental practices.",
+  "hero": {
+    "badge": "Practice Features",
+    "title": "Powerful Features for Your Dental Practice",
+    "description": "Discover Dentagia's comprehensive suite of features designed to streamline operations, enhance patient care, and grow your dental practice with AI-powered tools.",
+    "cta": {
+      "primary": {
+        "text": "Explore Features",
+        "href": "#features"
+      },
+      "secondary": {
+        "text": "Schedule Demo",
+        "href": "/demo"
+      }
+    }
+  },
+  "stats": [
+    {
+      "value": "50+",
+      "label": "Features"
+    },
+    {
+      "value": "99.9%",
+      "label": "Uptime"
+    },
+    {
+      "value": "24/7",
+      "label": "Support"
+    },
+    {
+      "value": "500+",
+      "label": "Practices"
+    }
+  ],
+  "features": [
+    {
+      "category": "Practice Management",
+      "description": "Core features for running your dental practice efficiently",
+      "items": [
+        {
+          "icon": "users",
+          "name": "Patient Management",
+          "description": "Complete patient records, medical history, and treatment plans in one secure platform",
+          "href": "/features/patient-management",
+          "color": "teal"
+        },
+        {
+          "icon": "calendar",
+          "name": "Appointment Scheduling",
+          "description": "Intelligent appointment scheduling that optimizes your calendar and reduces no-shows",
+          "href": "/features/scheduling",
+          "color": "cyan"
+        },
+        {
+          "icon": "credit-card",
+          "name": "Billing & Payments",
+          "description": "Streamlined billing, invoicing, and payment processing with insurance integration",
+          "href": "/features/billing",
+          "color": "blue"
+        },
+        {
+          "icon": "clipboard",
+          "name": "Treatment Planning",
+          "description": "Digital treatment plans, documentation, and case management tools",
+          "href": "/features/treatment-planning",
+          "color": "indigo"
+        }
+      ]
+    },
+    {
+      "category": "AI & Automation",
+      "description": "Intelligent automation powered by advanced AI technology",
+      "items": [
+        {
+          "icon": "brain",
+          "name": "AI-Powered Scheduling",
+          "description": "Smart scheduling that learns from your practice patterns and optimizes appointments automatically",
+          "href": "/features/ai-scheduling",
+          "color": "purple"
+        },
+        {
+          "icon": "trending-up",
+          "name": "Patient Insights",
+          "description": "Predictive analytics and patient behavior insights to help grow your practice",
+          "href": "/features/patient-insights",
+          "color": "pink"
+        },
+        {
+          "icon": "bell",
+          "name": "Automated Reminders",
+          "description": "Smart appointment reminders and follow-ups via SMS and email",
+          "href": "/features/reminders",
+          "color": "emerald"
+        },
+        {
+          "icon": "zap",
+          "name": "Practice Analytics",
+          "description": "Data-driven insights into practice performance, revenue, and growth opportunities",
+          "href": "/features/analytics",
+          "color": "orange"
+        }
+      ]
+    },
+    {
+      "category": "Security & Compliance",
+      "description": "Enterprise-grade security and HIPAA compliance for your practice",
+      "items": [
+        {
+          "icon": "shield",
+          "name": "HIPAA Compliance",
+          "description": "Full HIPAA compliance certification and security standards for patient data protection",
+          "href": "/features/hipaa",
+          "color": "green"
+        },
+        {
+          "icon": "cloud",
+          "name": "Cloud Security",
+          "description": "Secure, scalable cloud platform with automatic backups and disaster recovery",
+          "href": "/features/cloud-security",
+          "color": "sky"
+        },
+        {
+          "icon": "lock",
+          "name": "Data Encryption",
+          "description": "End-to-end encryption and secure cloud storage for all patient data",
+          "href": "/features/encryption",
+          "color": "cyan"
+        },
+        {
+          "icon": "database",
+          "name": "Backup & Recovery",
+          "description": "Automatic daily backups with point-in-time recovery and disaster recovery plans",
+          "href": "/features/backup-recovery",
+          "color": "blue"
+        }
+      ]
+    }
+  ],
+  "benefits": {
+    "title": "Why Choose Dentagia Features",
+    "description": "Experience the advantages of modern, secure, cloud-based dental practice management.",
+    "items": [
+      {
+        "icon": "trending-up",
+        "title": "Practice Growth",
+        "description": "AI-powered insights and analytics help you grow your practice and increase revenue",
+        "stats": "35%",
+        "label": "Revenue Growth"
+      },
+      {
+        "icon": "clock",
+        "title": "Time Savings",
+        "description": "Automate routine tasks and streamline operations to save time for patient care",
+        "stats": "50%",
+        "label": "Time Saved"
+      },
+      {
+        "icon": "shield",
+        "title": "Security & Compliance",
+        "description": "HIPAA-compliant platform with enterprise-grade security and data protection",
+        "stats": "99.9%",
+        "label": "Uptime"
+      },
+      {
+        "icon": "users",
+        "title": "Patient Satisfaction",
+        "description": "Improve patient experience with streamlined scheduling, communication, and care",
+        "stats": "98%",
+        "label": "Satisfaction Rate"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "What Dental Practices Say",
+    "description": "Hear from dental professionals who have transformed their practice with Dentagia",
+    "items": [
+      {
+        "quote": "Dentagia's patient management feature has completely transformed how we handle patient records. Everything is organized, secure, and easily accessible.",
+        "author": "Dr. Sarah Martinez",
+        "role": "Practice Owner",
+        "image": "/images/testimonials/sarah.jpg"
+      },
+      {
+        "quote": "The AI-powered scheduling feature alone saves us 10 hours per week. It's like having an intelligent assistant that never sleeps.",
+        "author": "Dr. Michael Chen",
+        "role": "Lead Dentist",
+        "image": "/images/testimonials/michael.jpg"
+      }
+    ]
+  },
+  "integrations": {
+    "title": "Works With Your Practice Tools",
+    "description": "Seamlessly integrate with insurance providers, payment processors, lab systems, and imaging software"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "description": "Find answers to common questions about Dentagia's features",
+    "items": [
+      {
+        "question": "How does the AI-powered scheduling work?",
+        "answer": "Our AI system learns from your practice patterns and automatically optimizes appointment scheduling, fills cancellations, and reduces no-shows by up to 70%."
+      },
+      {
+        "question": "Is Dentagia HIPAA compliant?",
+        "answer": "Yes, Dentagia is fully HIPAA compliant with enterprise-grade security, end-to-end encryption, and complete audit trails for all patient data access."
+      },
+      {
+        "question": "Can I customize features to match my practice needs?",
+        "answer": "Yes, Dentagia offers flexible configuration options and customizable workflows to match your practice's unique requirements and preferences."
+      },
+      {
+        "question": "What kind of support do you offer?",
+        "answer": "We provide 24/7 technical support, comprehensive training for your team, and dedicated practice management specialists to help you succeed."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Explore Our Features?",
+    "description": "Join hundreds of dental practices that trust Dentagia to manage their operations and grow their business.",
+    "buttons": [
+      {
+        "text": "Schedule a Demo",
+        "href": "/demo",
+        "variant": "primary"
+      },
+      {
+        "text": "Contact Us",
+        "href": "/contact",
+        "variant": "secondary"
+      }
+    ]
+  }
+}
+

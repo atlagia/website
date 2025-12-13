@@ -1,0 +1,295 @@
+{
+  "pageTitle": "Zahnarztpraxis-Lösungen - Dentagia",
+  "pageDescription": "Umfassende Lösungen für Zahnarztpraxen aller Größen. KI-gestützte, cloudbasierte Praxismanagement-Software.",
+  "hero": {
+    "badge": "Praxislösungen",
+    "title": "Lösungen für jede Zahnarztpraxis",
+    "description": "Entdecken Sie, wie Dentagias moderne, sichere, cloudbasierte Plattform Ihre Zahnarztpraxis mit KI-gestützten Lösungen für Praxen aller Größen transformieren kann.",
+    "cta": {
+      "primary": {
+        "text": "Funktionen erkunden",
+        "href": "#solutions"
+      },
+      "secondary": {
+        "text": "Demo vereinbaren",
+        "href": "/demo"
+      }
+    }
+  },
+  "stats": [
+    {
+      "value": "500+",
+      "label": "Zahnarztpraxen"
+    },
+    {
+      "value": "99.9%",
+      "label": "Verfügbarkeit"
+    },
+    {
+      "value": "50%",
+      "label": "Zeit gespart"
+    },
+    {
+      "value": "24/7",
+      "label": "Support"
+    }
+  ],
+  "solutions": [
+    {
+      "category": "Praxisarten",
+      "description": "Lösungen, die auf Ihre Praxisgröße und -struktur zugeschnitten sind",
+      "items": [
+        {
+          "icon": "user",
+          "name": "Einzelpraxen",
+          "description": "Vollständiges Praxismanagement für Einzelpraktiker mit KI-gestützter Terminplanung und Patientenmanagement",
+          "href": "/solutions/solo-practice",
+          "color": "cyan"
+        },
+        {
+          "icon": "users",
+          "name": "Mehrzahnarztpraxen",
+          "description": "Optimierte Abläufe für Praxen mit mehreren Zahnärzten und Mitarbeitern",
+          "href": "/solutions/multi-practitioner",
+          "color": "teal"
+        },
+        {
+          "icon": "building",
+          "name": "Multi-Standort",
+          "description": "Zentralisiertes Managementsystem für Zahnarztpraxen mit mehreren Standorten",
+          "href": "/solutions/multi-location",
+          "color": "blue"
+        },
+        {
+          "icon": "star",
+          "name": "Fachpraxen",
+          "description": "Fortgeschrittene Tools für ästhetische, kieferorthopädische, pädiatrische und andere Fachpraxen",
+          "href": "/solutions/specialty",
+          "color": "purple"
+        }
+      ]
+    },
+    {
+      "category": "Praxismanagement",
+      "description": "Kernfunktionen für den effizienten Betrieb Ihrer Zahnarztpraxis",
+      "items": [
+        {
+          "icon": "users",
+          "name": "Patientenmanagement",
+          "description": "Vollständige Patientenakten, Krankengeschichte und Behandlungspläne auf einer sicheren Plattform",
+          "href": "/features/patient-management",
+          "color": "indigo"
+        },
+        {
+          "icon": "calendar",
+          "name": "KI-Terminplanung",
+          "description": "Intelligente Terminplanung, die Ihren Kalender optimiert und Absagen reduziert",
+          "href": "/features/ai-scheduling",
+          "color": "pink"
+        },
+        {
+          "icon": "credit-card",
+          "name": "Abrechnung und Zahlungen",
+          "description": "Optimierte Abrechnung, Rechnungsstellung und Zahlungsabwicklung mit Versicherungsintegration",
+          "href": "/features/billing",
+          "color": "rose"
+        },
+        {
+          "icon": "clipboard",
+          "name": "Behandlungsplanung",
+          "description": "Digitale Behandlungspläne, Dokumentation und Fallmanagement-Tools",
+          "href": "/features/treatment-planning",
+          "color": "amber"
+        }
+      ]
+    },
+    {
+      "category": "KI und Automatisierung",
+      "description": "Intelligente Automatisierung, angetrieben von fortgeschrittener KI-Technologie",
+      "items": [
+        {
+          "icon": "brain",
+          "name": "KI-gestützte Insights",
+          "description": "Prädiktive Analysen und Patientenverhaltens-Insights, um Ihre Praxis zu entwickeln",
+          "href": "/features/patient-insights",
+          "color": "violet"
+        },
+        {
+          "icon": "bell",
+          "name": "Automatisierte Erinnerungen",
+          "description": "Intelligente Terminerinnerungen und Nachfassaktionen per SMS und E-Mail",
+          "href": "/features/reminders",
+          "color": "emerald"
+        },
+        {
+          "icon": "trending-up",
+          "name": "Praxisanalysen",
+          "description": "Datenbasierte Insights zu Praxisleistungen, Umsatz und Wachstumschancen",
+          "href": "/features/analytics",
+          "color": "lime"
+        },
+        {
+          "icon": "zap",
+          "name": "Workflow-Automatisierung",
+          "description": "Automatisieren Sie Routineaufgaben und optimieren Sie Praxisabläufe",
+          "href": "/features/automation",
+          "color": "orange"
+        }
+      ]
+    },
+    {
+      "category": "Sicherheit und Compliance",
+      "description": "Unternehmenstaugliche Sicherheit und HIPAA-Compliance für Ihre Praxis",
+      "items": [
+        {
+          "icon": "shield",
+          "name": "HIPAA-Compliance",
+          "description": "Vollständige HIPAA-Compliance-Zertifizierung und Sicherheitsstandards für den Schutz von Patientendaten",
+          "href": "/features/hipaa",
+          "color": "green"
+        },
+        {
+          "icon": "lock",
+          "name": "Datenverschlüsselung",
+          "description": "Ende-zu-Ende-Verschlüsselung und sicherer Cloud-Speicher für alle Patientendaten",
+          "href": "/features/encryption",
+          "color": "sky"
+        },
+        {
+          "icon": "cloud",
+          "name": "Cloud-Infrastruktur",
+          "description": "Sichere, skalierbare Cloud-Plattform mit automatischen Backups und Disaster Recovery",
+          "href": "/platform/cloud",
+          "color": "cyan"
+        },
+        {
+          "icon": "smartphone",
+          "name": "Mobiler Zugriff",
+          "description": "Greifen Sie von jedem Gerät, überall sicher auf Ihre Praxisdaten zu",
+          "href": "/platform/mobile",
+          "color": "blue"
+        }
+      ]
+    }
+  ],
+  "features": {
+    "title": "Leistungsstarke Funktionen für Zahnarztpraxen",
+    "description": "Unsere Plattform ist vollgepackt mit Funktionen, die speziell für das Praxismanagement entwickelt wurden",
+    "items": [
+      {
+        "icon": "cloud",
+        "title": "Cloudbasierte Plattform",
+        "description": "Greifen Sie von überall, jederzeit sicher auf Ihre Praxisdaten zu mit unserer Cloud-Infrastruktur"
+      },
+      {
+        "icon": "shield",
+        "title": "HIPAA-konform",
+        "description": "Unternehmenstaugliche Sicherheit mit vollständiger HIPAA-Compliance und verschlüsselter Datenspeicherung"
+      },
+      {
+        "icon": "zap",
+        "title": "KI-gestützt",
+        "description": "Intelligente Automatisierung und KI-gestützte Insights zur Optimierung Ihrer Praxisabläufe"
+      },
+      {
+        "icon": "smartphone",
+        "title": "Mobiler Zugriff",
+        "description": "Vollständiger mobiler App-Zugriff zur Verwaltung Ihrer Praxis unterwegs"
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Vorteile für Ihre Zahnarztpraxis",
+    "description": "Erleben Sie die Vorteile des modernen, sicheren, cloudbasierten Praxismanagements.",
+    "items": [
+      {
+        "icon": "trending-up",
+        "title": "Praxiswachstum",
+        "description": "KI-gestützte Insights und Analysen helfen Ihnen, Ihre Praxis zu entwickeln und den Umsatz zu steigern",
+        "stats": "35%",
+        "label": "Umsatzwachstum"
+      },
+      {
+        "icon": "clock",
+        "title": "Zeitersparnis",
+        "description": "Automatisieren Sie Routineaufgaben und optimieren Sie Abläufe, um Zeit für die Patientenversorgung zu sparen",
+        "stats": "50%",
+        "label": "Zeit gespart"
+      },
+      {
+        "icon": "shield",
+        "title": "Sicherheit und Compliance",
+        "description": "HIPAA-konforme Plattform mit unternehmenstauglicher Sicherheit und Datenschutz",
+        "stats": "99.9%",
+        "label": "Verfügbarkeit"
+      },
+      {
+        "icon": "users",
+        "title": "Patientenzufriedenheit",
+        "description": "Verbessern Sie die Patientenerfahrung mit optimierter Terminplanung, Kommunikation und Versorgung",
+        "stats": "98%",
+        "label": "Zufriedenheitsrate"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Was Zahnarztpraxen sagen",
+    "description": "Hören Sie von Zahnärzten, die ihre Praxis mit Dentagia transformiert haben",
+    "items": [
+      {
+        "quote": "Dentagia hat transformiert, wie wir unsere Praxis führen. Die KI-gestützte Terminplanung allein spart uns 10 Stunden pro Woche, und unsere Patientenzufriedenheitswerte waren noch nie höher.",
+        "author": "Dr. Sarah Martinez",
+        "role": "Praxisinhaberin",
+        "image": "/images/testimonials/sarah.jpg"
+      },
+      {
+        "quote": "Der Wechsel zu Dentagia war die beste Entscheidung, die wir getroffen haben. Das Patientenmanagementsystem ist intuitiv, die Abrechnung ist automatisiert, und unser Umsatz ist um 35% gestiegen.",
+        "author": "Dr. Michael Chen",
+        "role": "Leitender Zahnarzt",
+        "image": "/images/testimonials/michael.jpg"
+      }
+    ]
+  },
+  "integrations": {
+    "title": "Funktioniert mit Ihren Praxistools",
+    "description": "Nahtlose Integration mit Versicherungsanbietern, Zahlungsabwicklern, Laborsystemen und Bildgebungssoftware"
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "description": "Finden Sie Antworten auf häufige Fragen zu Dentagias Praxismanagement-Lösungen",
+    "items": [
+      {
+        "question": "Wie funktioniert die KI-gestützte Terminplanung?",
+        "answer": "Unser KI-System lernt aus Ihren Praxismustern und optimiert automatisch die Terminplanung, füllt Absagen und reduziert Absagen um bis zu 70%."
+      },
+      {
+        "question": "Ist Dentagia HIPAA-konform?",
+        "answer": "Ja, Dentagia ist vollständig HIPAA-konform mit unternehmenstauglicher Sicherheit, Ende-zu-Ende-Verschlüsselung und vollständigen Audit-Trails für alle Patientendatenzugriffe."
+      },
+      {
+        "question": "Kann ich von mobilen Geräten auf meine Praxisdaten zugreifen?",
+        "answer": "Ja, Dentagia ist vollständig von Desktop, Tablet und mobilen Geräten mit unserer sicheren cloudbasierten Plattform und mobilen Apps zugänglich."
+      },
+      {
+        "question": "Welche Art von Support bieten Sie an?",
+        "answer": "Wir bieten 24/7 technischen Support, umfassende Schulungen für Ihr Team und spezialisierte Praxismanagement-Experten, die Ihnen zum Erfolg verhelfen."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Bereit, Ihre Zahnarztpraxis zu transformieren?",
+    "description": "Schließen Sie sich Hunderten von Zahnarztpraxen an, die Dentagia vertrauen, um ihre Abläufe zu verwalten und ihr Geschäft zu entwickeln.",
+    "buttons": [
+      {
+        "text": "Demo vereinbaren",
+        "href": "/demo",
+        "variant": "primary"
+      },
+      {
+        "text": "Kontaktieren Sie uns",
+        "href": "/contact",
+        "variant": "secondary"
+      }
+    ]
+  }
+}

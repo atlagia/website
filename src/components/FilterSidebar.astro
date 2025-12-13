@@ -1,0 +1,466 @@
+---
+import contentData from '../data/collection-content.json';
+
+interface Props {
+  language: string;
+  currentFilters?: Record<string, string[]>;
+  filterData?: any;
+}
+
+const { language = 'en', currentFilters = {}, filterData } = Astro.props;
+
+// Get content for current language or fallback to English
+const content = contentData[language] || contentData.en;
+
+// Debug: Log content to see what we're getting
+console.log('FilterSidebar - Language:', language);
+console.log('FilterSidebar - Content:', content);
+console.log('FilterSidebar - Filters:', content?.filters);
+
+// Use dynamic filterData or fallback to default
+const filters = filterData || await import('../data/collection-filters.json').then(m => m.default);
+
+// Helper function to get localized label
+const getLabel = (item: any, lang: string) => {
+  return item.label[lang] || item.label.en || item.label;
+};
+
+// Helper function to check if filter is active
+const isFilterActive = (type: string, value: string) => {
+  return currentFilters[type]?.includes(value) || false;
+};
+---
+
+<div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+  <!-- Filter Header -->
+  <div class="flex items-center justify-between mb-6">
+    <h3 class="text-lg font-semibold text-gray-900">{content.filters.title}</h3>
+    <button 
+      id="clear-all-filters"
+      class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors"
+    >
+      {content.filters.clearAll}
+    </button>
+  </div>
+
+  <!-- Color Filter -->
+  {filters.colors && (
+    <div class="filter-section mb-6 active">
+      <button 
+        class="filter-toggle w-full flex items-center justify-between py-3 text-left font-medium text-gray-900 hover:text-gray-700 transition-colors"
+        data-filter-type="color"
+      >
+        <span>Color</span>
+        <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="filter-content mt-3">
+        <div class="grid grid-cols-4 gap-2">
+          {filters.colors.map((color) => (
+            <label class="relative cursor-pointer group">
+              <input 
+                type="checkbox" 
+                class="sr-only" 
+                data-filter="color" 
+                value={color.value}
+                checked={isFilterActive('color', color.value)}
+              />
+              <div 
+                class="w-8 h-8 rounded-full border-2 border-gray-300 group-hover:border-gray-400 transition-colors"
+                style={`background-color: ${color.hex}`}
+                title={getLabel(color, language)}
+              ></div>
+              <div class="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-xs text-gray-600 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
+                {getLabel(color, language)}
+              </div>
+            </label>
+          ))}
+        </div>
+      </div>
+    </div>
+  )}
+
+  <!-- Size Filter -->
+  {filters.sizes && (
+    <div class="filter-section mb-6 active">
+      <button 
+        class="filter-toggle w-full flex items-center justify-between py-3 text-left font-medium text-gray-900 hover:text-gray-700 transition-colors"
+        data-filter-type="size"
+      >
+        <span>Size</span>
+        <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="filter-content mt-3">
+        <div class="grid grid-cols-3 gap-2">
+          {filters.sizes.map((size) => (
+            <label class="relative cursor-pointer">
+              <input 
+                type="checkbox" 
+                class="sr-only" 
+                data-filter="size" 
+                value={size.value}
+                checked={isFilterActive('size', size.value)}
+              />
+              <div class="w-full py-2 px-3 text-center border border-gray-300 rounded-md hover:border-gray-400 hover:bg-gray-50 transition-colors text-sm font-medium">
+                {getLabel(size, language)}
+              </div>
+            </label>
+          ))}
+        </div>
+      </div>
+    </div>
+  )}
+
+  <!-- Categories Filter -->
+  {filters.categories && (
+    <div class="filter-section mb-6 active">
+      <button 
+        class="filter-toggle w-full flex items-center justify-between py-3 text-left font-medium text-gray-900 hover:text-gray-700 transition-colors"
+        data-filter-type="category"
+      >
+        <span>Categories</span>
+        <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="filter-content mt-3">
+        <div class="space-y-2">
+          {filters.categories.map((category) => (
+            <label class="flex items-center cursor-pointer">
+              <input 
+                type="checkbox" 
+                class="sr-only" 
+                data-filter="category" 
+                value={category.value}
+                checked={isFilterActive('category', category.value)}
+              />
+              <div class="w-4 h-4 border border-gray-300 rounded mr-3 flex items-center justify-center">
+                <div class="w-2 h-2 bg-blue-600 rounded-sm opacity-0 transition-opacity"></div>
+              </div>
+              <span class="text-sm text-gray-700">{getLabel(category, language)}</span>
+            </label>
+          ))}
+        </div>
+      </div>
+    </div>
+  )}
+
+  <!-- Languages Filter -->
+  {filters.languages && (
+    <div class="filter-section mb-6 active">
+      <button 
+        class="filter-toggle w-full flex items-center justify-between py-3 text-left font-medium text-gray-900 hover:text-gray-700 transition-colors"
+        data-filter-type="language"
+      >
+        <span>{content.filters.languages}</span>
+        <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="filter-content mt-3">
+        <div class="space-y-2">
+          {filters.languages.map((lang) => (
+            <label class="flex items-center cursor-pointer">
+              <input 
+                type="checkbox" 
+                class="sr-only" 
+                data-filter="language" 
+                value={lang.value}
+                checked={isFilterActive('language', lang.value)}
+              />
+              <div class="w-4 h-4 border border-gray-300 rounded mr-3 flex items-center justify-center">
+                <div class="w-2 h-2 bg-blue-600 rounded-sm opacity-0 transition-opacity"></div>
+              </div>
+              <span class="text-sm text-gray-700">{getLabel(lang, language)}</span>
+            </label>
+          ))}
+        </div>
+      </div>
+    </div>
+  )}
+
+  <!-- Quality Filter -->
+  {filters.quality && (
+    <div class="filter-section mb-6 active">
+      <button 
+        class="filter-toggle w-full flex items-center justify-between py-3 text-left font-medium text-gray-900 hover:text-gray-700 transition-colors"
+        data-filter-type="quality"
+      >
+        <span>{content.filters.quality}</span>
+        <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="filter-content mt-3">
+        <div class="space-y-2">
+          {filters.quality.map((quality) => (
+            <label class="flex items-center cursor-pointer">
+              <input 
+                type="checkbox" 
+                class="sr-only" 
+                data-filter="quality" 
+                value={quality.value}
+                checked={isFilterActive('quality', quality.value)}
+              />
+              <div class="w-4 h-4 border border-gray-300 rounded mr-3 flex items-center justify-center">
+                <div class="w-2 h-2 bg-blue-600 rounded-sm opacity-0 transition-opacity"></div>
+              </div>
+              <span class="text-sm text-gray-700">{getLabel(quality, language)}</span>
+            </label>
+          ))}
+        </div>
+      </div>
+    </div>
+  )}
+
+  <!-- Availability Filter -->
+  {filters.availability && (
+    <div class="filter-section mb-6 active">
+      <button 
+        class="filter-toggle w-full flex items-center justify-between py-3 text-left font-medium text-gray-900 hover:text-gray-700 transition-colors"
+        data-filter-type="availability"
+      >
+        <span>{content.filters.availability}</span>
+        <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="filter-content mt-3">
+        <div class="space-y-2">
+          {filters.availability.map((availability) => (
+            <label class="flex items-center cursor-pointer">
+              <input 
+                type="checkbox" 
+                class="sr-only" 
+                data-filter="availability" 
+                value={availability.value}
+                checked={isFilterActive('availability', availability.value)}
+              />
+              <div class="w-4 h-4 border border-gray-300 rounded mr-3 flex items-center justify-center">
+                <div class="w-2 h-2 bg-blue-600 rounded-sm opacity-0 transition-opacity"></div>
+              </div>
+              <span class="text-sm text-gray-700">{getLabel(availability, language)}</span>
+            </label>
+          ))}
+        </div>
+      </div>
+    </div>
+  )}
+
+  <!-- Price Filter -->
+  {filters.priceRanges && (
+    <div class="filter-section mb-6 active">
+      <button 
+        class="filter-toggle w-full flex items-center justify-between py-3 text-left font-medium text-gray-900 hover:text-gray-700 transition-colors"
+        data-filter-type="price"
+      >
+        <span>{content.filters.price}</span>
+        <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="filter-content mt-3">
+        <div class="space-y-4">
+          {Array.isArray(filters.priceRanges) ? (
+            <!-- Price Range Options (Array) -->
+            <div class="space-y-2">
+              {filters.priceRanges.map((range) => (
+                <label class="flex items-center cursor-pointer">
+                  <input 
+                    type="checkbox" 
+                    class="sr-only" 
+                    data-filter="price" 
+                    value={range.value}
+                    checked={isFilterActive('price', range.value)}
+                  />
+                  <div class="w-4 h-4 border border-gray-300 rounded mr-3 flex items-center justify-center">
+                    <div class="w-2 h-2 bg-blue-600 rounded-sm opacity-0 transition-opacity"></div>
+                  </div>
+                  <span class="text-sm text-gray-700">{getLabel(range, language)}</span>
+                </label>
+              ))}
+            </div>
+          ) : (
+            <!-- Price Range Slider (Object) -->
+            <div class="space-y-4">
+              <div class="relative">
+                <input 
+                  type="range" 
+                  id="price-range"
+                  min={filters.priceRanges.min}
+                  max={filters.priceRanges.max}
+                  step={filters.priceRanges.step}
+                  value={filters.priceRanges.max}
+                  class="w-full price-range-slider"
+                />
+                <div class="flex justify-between text-xs text-gray-500 mt-1">
+                  <span>${filters.priceRanges.min}</span>
+                  <span id="price-range-value">${filters.priceRanges.max}</span>
+                </div>
+              </div>
+              
+              <div class="flex items-center space-x-2">
+                <input 
+                  type="number" 
+                  id="price-min"
+                  min={filters.priceRanges.min}
+                  max={filters.priceRanges.max}
+                  value={filters.priceRanges.min}
+                  placeholder="Min"
+                  class="flex-1 px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+                <span class="text-gray-500">-</span>
+                <input 
+                  type="number" 
+                  id="price-max"
+                  min={filters.priceRanges.min}
+                  max={filters.priceRanges.max}
+                  value={filters.priceRanges.max}
+                  placeholder="Max"
+                  class="flex-1 px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  )}
+
+  <!-- Apply Filters Button -->
+  <button 
+    id="apply-filters"
+    class="w-full py-3 px-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+  >
+    {content.filters.apply}
+  </button>
+</div>
+
+<style>
+  .filter-content {
+    display: none;
+  }
+  
+  .filter-section.active .filter-content {
+    display: block;
+  }
+  
+  .filter-section.active .filter-toggle svg {
+    transform: rotate(180deg);
+  }
+  
+  input[type="checkbox"]:checked + div .bg-blue-600 {
+    opacity: 1;
+  }
+  
+  input[type="checkbox"]:checked + div {
+    border-color: #2563eb;
+  }
+</style>
+
+<script>
+  // Filter toggle functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const filterToggles = document.querySelectorAll('.filter-toggle');
+    
+    filterToggles.forEach(toggle => {
+      toggle.addEventListener('click', function() {
+        const section = this.closest('.filter-section');
+        section.classList.toggle('active');
+      });
+    });
+
+    // Clear all filters
+    const clearAllBtn = document.getElementById('clear-all-filters');
+    if (clearAllBtn) {
+      clearAllBtn.addEventListener('click', function() {
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        checkboxes.forEach(checkbox => {
+          checkbox.checked = false;
+        });
+        
+        // Update URL to remove all filter parameters
+        const url = new URL(window.location);
+        url.searchParams.delete('color');
+        url.searchParams.delete('size');
+        url.searchParams.delete('category');
+        url.searchParams.delete('language');
+        url.searchParams.delete('quality');
+        url.searchParams.delete('availability');
+        url.searchParams.delete('price');
+        window.location.href = url.toString();
+      });
+    }
+
+    // Price range slider functionality
+    const priceRange = document.getElementById('price-range');
+    const priceMin = document.getElementById('price-min');
+    const priceMax = document.getElementById('price-max');
+    const priceRangeValue = document.getElementById('price-range-value');
+    
+    if (priceRange && priceMin && priceMax && priceRangeValue) {
+      // Update slider value display
+      priceRange.addEventListener('input', function() {
+        priceRangeValue.textContent = '$' + this.value;
+        priceMax.value = this.value;
+      });
+      
+      // Update slider when min input changes
+      priceMin.addEventListener('input', function() {
+        if (parseInt(this.value) > parseInt(priceMax.value)) {
+          this.value = priceMax.value;
+        }
+        priceRange.min = this.value;
+      });
+      
+      // Update slider when max input changes
+      priceMax.addEventListener('input', function() {
+        if (parseInt(this.value) < parseInt(priceMin.value)) {
+          this.value = priceMin.value;
+        }
+        priceRange.value = this.value;
+        priceRangeValue.textContent = '$' + this.value;
+      });
+    }
+
+    // Apply filters
+    const applyBtn = document.getElementById('apply-filters');
+    if (applyBtn) {
+      applyBtn.addEventListener('click', function() {
+        const url = new URL(window.location);
+        
+        // Clear existing filter parameters
+        ['color', 'size', 'category', 'language', 'quality', 'availability', 'price'].forEach(param => {
+          url.searchParams.delete(param);
+        });
+        
+        // Add selected filters
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+        checkboxes.forEach(checkbox => {
+          const filterType = checkbox.dataset.filter;
+          const value = checkbox.value;
+          
+          if (url.searchParams.has(filterType)) {
+            url.searchParams.append(filterType, value);
+          } else {
+            url.searchParams.set(filterType, value);
+          }
+        });
+        
+        // Add price range if set
+        if (priceMin && priceMax) {
+          const minPrice = priceMin.value;
+          const maxPrice = priceMax.value;
+          if (minPrice && maxPrice) {
+            url.searchParams.set('price', `${minPrice}-${maxPrice}`);
+          }
+        }
+        
+        window.location.href = url.toString();
+      });
+    }
+  });
+</script>

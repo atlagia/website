@@ -1,0 +1,63 @@
+{
+  "title": "New Arrivals",
+  "description": "Discover our collection of new arrivals produits and équipement.",
+  "hero": {
+    "title": "New Arrivals",
+    "subtitle": "Explore our premium collection of new arrivals produits designed for course enthusiasts.",
+    "cta1": "Acheter Maintenant",
+    "cta2": "En Savoir Plus"
+  },
+  "sections": {
+    "features": {
+      "title": "Pourquoi Nous Choisir",
+      "subtitle": "Qualité premium and service professionnel"
+    },
+    "collection": {
+      "title": "Notre Collection",
+      "subtitle": "Soigneusement sélectionnés products for amateurs de course"
+    }
+  },
+  "features": [
+    {
+      "title": "Qualité Premium",
+      "description": "Only the meilleure qualité materials and construction"
+    },
+    {
+      "title": "Design Professionnel",
+      "description": "Designed by professionnels de course for professionnels de course"
+    },
+    {
+      "title": "Livraison Rapide",
+      "description": "Livraison rapide to get you racing faster"
+    }
+  ],
+  "collections": [
+    {
+      "title": "Produit Vedette",
+      "description": "Our plus populaire new arrivals product",
+      "price": "€99.99",
+      "link": "/collections/featured",
+      "linkText": "Acheter New Arrivals"
+    },
+    {
+      "title": "Nouveautés",
+      "description": "Dernières additions to our new arrivals collection",
+      "price": "€79.99",
+      "link": "/collections/new",
+      "linkText": "Voir Tous New Arrivals"
+    },
+    {
+      "title": "Meilleures Ventes",
+      "description": "Favoris des clients in new arrivals",
+      "price": "€89.99",
+      "link": "/collections/bestsellers",
+      "linkText": "Acheter New Arrivals"
+    }
+  ],
+  "cta": {
+    "title": "Prêt à Courir?",
+    "subtitle": "Get your new arrivals gear today and join the communauté de course.",
+    "button1": "Acheter Collection",
+    "button2": "Nous Contacter"
+  }
+}

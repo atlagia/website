@@ -1,14 +1,58 @@
 ---
-import { fetchBlogPosts } from '../../../utils/shopifyAPI';
+import Layout from '../../../layouts/Layoutc.astro';
 import { ArrowRight } from 'lucide-react';
 
-const theme = import.meta.env.THEME || 'default';
+const { lang } = Astro.params;
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'RidWear';
 
-const { default: BaseHead } = await import(`../../../themes/${theme}/components/BaseHead.astro`);
-const { default: Header } = await import(`../../../themes/${theme}/components/Header.astro`);
-const { default: Footer } = await import(`../../../themes/${theme}/components/Footer.astro`);
+// Try to fetch blog posts, but handle failures gracefully
+let posts = [];
+let blogError = null;
 
-const posts = await fetchBlogPosts();
+try {
+  const { fetchBlogPosts } = await import('../../../utils/shopifyAPI');
+  posts = await fetchBlogPosts();
+} catch (error) {
+  console.warn('Failed to fetch blog posts:', error);
+  blogError = error.message;
+  
+  // Fallback blog posts for when API fails
+  posts = [
+    {
+      id: '1',
+      handle: 'welcome-to-our-blog',
+      title: 'Welcome to Our Blog',
+      published_at: new Date().toISOString(),
+      image: {
+        src: '/images/blog-placeholder.jpg',
+        alt: 'Welcome to our blog'
+      },
+      excerpt: 'Discover the latest news, tips, and insights from our team.'
+    },
+    {
+      id: '2', 
+      handle: 'getting-started-guide',
+      title: 'Getting Started Guide',
+      published_at: new Date(Date.now() - 86400000).toISOString(),
+      image: {
+        src: '/images/blog-placeholder.jpg',
+        alt: 'Getting started guide'
+      },
+      excerpt: 'Everything you need to know to get started with our products.'
+    },
+    {
+      id: '3',
+      handle: 'tips-and-tricks',
+      title: 'Tips and Tricks',
+      published_at: new Date(Date.now() - 172800000).toISOString(),
+      image: {
+        src: '/images/blog-placeholder.jpg',
+        alt: 'Tips and tricks'
+      },
+      excerpt: 'Expert tips to help you get the most out of your experience.'
+    }
+  ];
+}
 
 const formatDate = (date: string) => {
   return new Date(date).toLocaleDateString('en-US', {
@@ -17,56 +61,93 @@ const formatDate = (date: string) => {
     day: 'numeric',
   });
 };
+
+// Generate static paths for all supported languages
+export async function getStaticPaths() {
+  // Get allowed languages from environment variable
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  const languages = allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+  
+  return languages.map(lang => ({
+    params: { lang }
+  }));
+}
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <BaseHead 
-      title="Blog | Latest Posts"
-      description="Read our latest articles about motorcycle gear, riding tips, and industry news."
-    />
-  </head>
-  <body>
-    <Header />
-    <main class="pt-20">
-      <div class="max-w-7xl mx-auto px-4 py-12">
-        <h1 class="text-4xl md:text-5xl font-bold mb-12">Latest Posts</h1>
-        
-        {posts.length > 0 ? (
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {posts.map((post) => (
-              <article class="group">
-                <a href={`/blog/${post.handle}`} class="block">
-                  <div class="relative overflow-hidden rounded-lg mb-4">
-                    <img
-                      src={post.image?.src || '/images/placeholder.jpg'}
-                      alt={post.image?.alt || post.title}
-                      class="w-full aspect-[16/9] object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
-                  </div>
-                  <h2 class="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
-                    {post.title}
-                  </h2>
-                  <div class="flex items-center justify-between">
-                    <time class="text-sm text-gray-500">
-                      {formatDate(post.published_at)}
-                    </time>
-                    <span class="text-primary group-hover:translate-x-1 transition-transform">
-                      <ArrowRight className="w-5 h-5" />
-                    </span>
-                  </div>
-                </a>
-              </article>
-            ))}
+<Layout title={`Blog | ${siteName}`} lang={lang}>
+  <main class="max-w-7xl mx-auto px-4 pb-8 pt-[100px]">
+    {/* Error Notice */}
+    {blogError && (
+      <div class="mb-8 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+        <div class="flex">
+          <div class="flex-shrink-0">
+            <svg class="h-5 w-5 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+            </svg>
           </div>
-        ) : (
-          <div class="text-center py-12">
-            <p class="text-gray-600">No posts available at the moment. Check back soon!</p>
+          <div class="ml-3">
+            <p class="text-sm text-yellow-800">
+              Blog posts are currently unavailable. Showing sample content.
+            </p>
           </div>
-        )}
+        </div>
       </div>
-    </main>
-    <Footer />
-  </body>
-</html>
+    )}
+
+    {/* Page Header */}
+    <header class="text-center mb-16">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Latest Posts</h1>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Read our latest articles, tips, and industry news
+      </p>
+    </header>
+    
+    {/* Blog Posts Grid */}
+    {posts.length > 0 ? (
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {posts.map((post) => (
+          <article class="group bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 overflow-hidden">
+            <a href={`/${lang}/blog/${post.handle}`} class="block">
+              <div class="relative overflow-hidden">
+                <img
+                  src={post.image?.src || '/images/placeholder.jpg'}
+                  alt={post.image?.alt || post.title}
+                  class="w-full aspect-[16/9] object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+              <div class="p-6">
+                <h2 class="text-xl font-semibold mb-3 group-hover:text-blue-600 transition-colors line-clamp-2">
+                  {post.title}
+                </h2>
+                {post.excerpt && (
+                  <p class="text-gray-600 mb-4 line-clamp-3">
+                    {post.excerpt}
+                  </p>
+                )}
+                <div class="flex items-center justify-between">
+                  <time class="text-sm text-gray-500">
+                    {formatDate(post.published_at)}
+                  </time>
+                  <span class="text-blue-600 group-hover:translate-x-1 transition-transform">
+                    <ArrowRight className="w-5 h-5" />
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+        ))}
+      </div>
+    ) : (
+      <div class="text-center py-12">
+        <div class="max-w-md mx-auto">
+          <svg class="mx-auto h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+          </svg>
+          <h3 class="mt-2 text-sm font-medium text-gray-900">No posts available</h3>
+          <p class="mt-1 text-sm text-gray-500">Check back soon for new content!</p>
+        </div>
+      </div>
+    )}
+  </main>
+</Layout>
+

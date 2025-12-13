@@ -1,0 +1,283 @@
+{
+  "pageTitle": "Piattaforma Dentagia",
+  "pageDescription": "Esplora le capacità e funzionalità avanzate della piattaforma di gestione di studi dentistici alimentata da IA di Dentagia.",
+  "hero": {
+    "badge": "Panoramica della Piattaforma",
+    "title": "Piattaforma Avanzata di Gestione dello Studio per Studi Dentistici",
+    "description": "Scopri la nostra piattaforma di gestione di studi dentistici di livello aziendale che combina tecnologia IA all'avanguardia con infrastruttura basata su cloud, sicurezza senza pari e scalabilità.",
+    "cta": {
+      "primary": {
+        "text": "Esplora Funzionalità",
+        "href": "#features"
+      },
+      "secondary": {
+        "text": "Vedi Documentazione",
+        "href": "/documentation"
+      }
+    }
+  },
+  "techSpecs": [
+    {
+      "title": "Disponibilità",
+      "value": "99.9%",
+      "unit": "garantita"
+    },
+    {
+      "title": "Tempo di Risposta",
+      "value": "<100",
+      "unit": "millisecondi"
+    },
+    {
+      "title": "Centri Dati",
+      "value": "Globale",
+      "unit": "infrastruttura cloud"
+    },
+    {
+      "title": "Studi",
+      "value": "500+",
+      "unit": "studi dentistici"
+    }
+  ],
+  "features": [
+    {
+      "category": "Nucleo Gestione Studio",
+      "description": "Capacità essenziali di gestione dello studio",
+      "items": [
+        {
+          "icon": "Users",
+          "name": "Gestione Pazienti",
+          "description": "Gestione completa delle cartelle pazienti e dell'anamnesi medica",
+          "highlights": [
+            "Cartelle Pazienti Digitali",
+            "Monitoraggio Anamnesi Medica",
+            "Pianificazione Trattamenti",
+            "Accesso Portale Paziente"
+          ],
+          "stats": {
+            "value": "100%",
+            "label": "Cartelle Digitali"
+          }
+        },
+        {
+          "icon": "Calendar",
+          "name": "Pianificazione Alimentata da IA",
+          "description": "Pianificazione intelligente degli appuntamenti e ottimizzazione del calendario",
+          "highlights": [
+            "Pianificazione Intelligente",
+            "Promemoria Automatizzati",
+            "Gestione Liste d'Attesa",
+            "Riduzione Assenze"
+          ],
+          "stats": {
+            "value": "70%",
+            "label": "Riduzione Assenze"
+          }
+        },
+        {
+          "icon": "CreditCard",
+          "name": "Fatturazione e Pagamenti",
+          "description": "Fatturazione, fatturazione ed elaborazione pagamenti semplificate",
+          "highlights": [
+            "Fatturazione Automatizzata",
+            "Elaborazione Pagamenti",
+            "Richieste Assicurative",
+            "Rapporti Finanziari"
+          ],
+          "stats": {
+            "value": "80%",
+            "label": "Elaborazione Più Veloce"
+          }
+        },
+        {
+          "icon": "BarChart",
+          "name": "Analisi dello Studio",
+          "description": "Insights basati sui dati per crescita e ottimizzazione dello studio",
+          "highlights": [
+            "Metriche di Prestazione",
+            "Analisi Pazienti",
+            "Monitoraggio Ricavi",
+            "Insights di Crescita"
+          ],
+          "stats": {
+            "value": "35%",
+            "label": "Crescita Ricavi"
+          }
+        }
+      ]
+    },
+    {
+      "category": "Infrastruttura Cloud",
+      "description": "Piattaforma sicura e scalabile basata su cloud",
+      "items": [
+        {
+          "icon": "Cloud",
+          "name": "Accesso Basato su Cloud",
+          "description": "Accedi ai dati del tuo studio da qualsiasi luogo, in qualsiasi momento",
+          "highlights": [
+            "Accesso Multi-Dispositivo",
+            "Sincronizzazione in Tempo Reale",
+            "Backup Automatici",
+            "Disponibilità Globale"
+          ],
+          "stats": {
+            "value": "99.9%",
+            "label": "Disponibilità"
+          }
+        },
+        {
+          "icon": "Shield",
+          "name": "Conformità HIPAA",
+          "description": "Sicurezza di livello aziendale e conformità HIPAA",
+          "highlights": [
+            "Crittografia End-to-End",
+            "Conformità HIPAA",
+            "Controllo Accesso",
+            "Registri di Audit"
+          ],
+          "stats": {
+            "value": "256-bit",
+            "label": "Crittografia"
+          }
+        },
+        {
+          "icon": "Database",
+          "name": "Gestione Dati",
+          "description": "Archiviazione e gestione sicure dei dati dei pazienti",
+          "highlights": [
+            "Archiviazione Sicura",
+            "Backup Dati",
+            "Ripristino di Emergenza",
+            "Conservazione Dati"
+          ],
+          "stats": {
+            "value": "100%",
+            "label": "Sicurezza Dati"
+          }
+        },
+        {
+          "icon": "Zap",
+          "name": "Integrazione IA",
+          "description": "Capacità IA avanzate per ottimizzazione dello studio",
+          "highlights": [
+            "Pianificazione Intelligente",
+            "Analisi Predittive",
+            "Promemoria Automatizzati",
+            "Insights dello Studio"
+          ],
+          "stats": {
+            "value": "50%",
+            "label": "Tempo Risparmiato"
+          }
+        }
+      ]
+    },
+    {
+      "category": "Strumenti dello Studio",
+      "description": "Strumenti completi per operazioni di studi dentistici",
+      "items": [
+        {
+          "icon": "FileText",
+          "name": "Documentazione Clinica",
+          "description": "Cartelle cliniche digitali complete e documentazione",
+          "highlights": [
+            "Piani di Trattamento",
+            "Note Cliniche",
+            "Gestione Radiografie",
+            "Monitoraggio Progressi"
+          ],
+          "stats": {
+            "value": "100%",
+            "label": "Cartelle Digitali"
+          }
+        },
+        {
+          "icon": "MessageSquare",
+          "name": "Comunicazione Pazienti",
+          "description": "Comunicazione e coinvolgimento pazienti automatizzati",
+          "highlights": [
+            "Promemoria Appuntamenti",
+            "Messaggi di Follow-Up",
+            "SMS ed Email",
+            "Portale Paziente"
+          ],
+          "stats": {
+            "value": "95%",
+            "label": "Consegna Promemoria"
+          }
+        },
+        {
+          "icon": "Workflow",
+          "name": "Automatizzazione Flussi di Lavoro",
+          "description": "Flussi di lavoro automatizzati per efficienza dello studio",
+          "highlights": [
+            "Automatizzazione Appuntamenti",
+            "Automatizzazione Fatturazione",
+            "Generazione Rapporti",
+            "Gestione Attività"
+          ],
+          "stats": {
+            "value": "50%",
+            "label": "Tempo Risparmiato"
+          }
+        },
+        {
+          "icon": "LineChart",
+          "name": "Rapporti e Analisi",
+          "description": "Rapporti completi e analisi dello studio",
+          "highlights": [
+            "Rapporti Finanziari",
+            "Metriche dello Studio",
+            "Rapporti Pazienti",
+            "Rapporti Personalizzati"
+          ],
+          "stats": {
+            "value": "Tempo Reale",
+            "label": "Analisi"
+          }
+        }
+      ]
+    }
+  ],
+  "integrations": [
+    {
+      "name": "AWS Cloud",
+      "icon": "CloudAws"
+    },
+    {
+      "name": "Google Cloud",
+      "icon": "CloudGoogle"
+    },
+    {
+      "name": "Microsoft Azure",
+      "icon": "CloudMicrosoft"
+    },
+    {
+      "name": "Imaging Dentale",
+      "icon": "Image"
+    },
+    {
+      "name": "Fornitori Assicurazioni",
+      "icon": "Shield"
+    },
+    {
+      "name": "Gateway di Pagamento",
+      "icon": "CreditCard"
+    }
+  ],
+  "cta": {
+    "title": "Pronto per Iniziare?",
+    "description": "Sperimenta la potenza della piattaforma di gestione dello studio di Dentagia con una demo personalizzata.",
+    "buttons": [
+      {
+        "text": "Prenota una Demo",
+        "href": "/demo",
+        "variant": "primary"
+      },
+      {
+        "text": "Vedi Documentazione",
+        "href": "/documentation",
+        "variant": "secondary"
+      }
+    ]
+  }
+}

@@ -1,18 +1,120 @@
 ---
-import { fetchBlogPost } from '../../../utils/shopifyAPI';
+import Layout from '../../../layouts/Layoutc.astro';
 import '../../../styles/blog.css';
 
-const theme = import.meta.env.THEME || 'default';
+const { lang, slug } = Astro.params;
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'RidWear';
 
-const { default: BaseHead } = await import(`../../../themes/${theme}/components/BaseHead.astro`);
-const { default: Header } = await import(`../../../themes/${theme}/components/Header.astro`);
-const { default: Footer } = await import(`../../../themes/${theme}/components/Footer.astro`);
+// Try to fetch blog post, but handle failures gracefully
+let post = null;
+let blogError = null;
 
-const { slug } = Astro.params;
-const post = await fetchBlogPost(slug);
+try {
+  const { fetchBlogPost } = await import('../../../utils/shopifyAPI');
+  post = await fetchBlogPost(slug);
+} catch (error) {
+  console.warn('Failed to fetch blog post:', error);
+  blogError = error.message;
+}
 
+// If post not found or API failed, create a fallback post
 if (!post) {
-  return Astro.redirect('/404');
+  const fallbackPosts = {
+    'welcome-to-our-blog': {
+      id: '1',
+      handle: 'welcome-to-our-blog',
+      title: 'Welcome to Our Blog',
+      published_at: new Date().toISOString(),
+      author: 'Admin',
+      image: {
+        src: '/images/blog-placeholder.jpg',
+        alt: 'Welcome to our blog'
+      },
+      body_html: `
+        <h2>Welcome to Our Blog!</h2>
+        <p>We're excited to share our latest news, tips, and insights with you. This blog will cover a wide range of topics including product updates, industry news, and helpful guides.</p>
+        <h3>What You Can Expect</h3>
+        <ul>
+          <li>Product announcements and updates</li>
+          <li>Industry insights and trends</li>
+          <li>Helpful guides and tutorials</li>
+          <li>Customer success stories</li>
+        </ul>
+        <p>Stay tuned for regular updates and don't hesitate to reach out if you have any questions or suggestions for future content.</p>
+      `,
+      tags: ['welcome', 'announcement']
+    },
+    'getting-started-guide': {
+      id: '2',
+      handle: 'getting-started-guide', 
+      title: 'Getting Started Guide',
+      published_at: new Date(Date.now() - 86400000).toISOString(),
+      author: 'Support Team',
+      image: {
+        src: '/images/blog-placeholder.jpg',
+        alt: 'Getting started guide'
+      },
+      body_html: `
+        <h2>Getting Started with Our Platform</h2>
+        <p>Welcome! This guide will help you get up and running quickly with our platform.</p>
+        <h3>Step 1: Account Setup</h3>
+        <p>First, you'll need to create an account and verify your email address.</p>
+        <h3>Step 2: Initial Configuration</h3>
+        <p>Configure your preferences and settings to match your needs.</p>
+        <h3>Step 3: Explore Features</h3>
+        <p>Take some time to explore all the features available to you.</p>
+        <p>If you need help at any point, don't hesitate to contact our support team.</p>
+      `,
+      tags: ['guide', 'getting-started', 'tutorial']
+    },
+    'tips-and-tricks': {
+      id: '3',
+      handle: 'tips-and-tricks',
+      title: 'Tips and Tricks',
+      published_at: new Date(Date.now() - 172800000).toISOString(),
+      author: 'Expert Team',
+      image: {
+        src: '/images/blog-placeholder.jpg',
+        alt: 'Tips and tricks'
+      },
+      body_html: `
+        <h2>Expert Tips and Tricks</h2>
+        <p>Here are some expert tips to help you get the most out of our platform.</p>
+        <h3>Keyboard Shortcuts</h3>
+        <p>Learn the essential keyboard shortcuts to work more efficiently.</p>
+        <h3>Customization Options</h3>
+        <p>Discover how to customize the interface to match your workflow.</p>
+        <h3>Advanced Features</h3>
+        <p>Explore advanced features that can save you time and improve your results.</p>
+        <p>These tips are based on feedback from our most successful users.</p>
+      `,
+      tags: ['tips', 'tricks', 'productivity']
+    }
+  };
+
+  post = fallbackPosts[slug] || {
+    id: '404',
+    handle: slug,
+    title: 'Post Not Found',
+    published_at: new Date().toISOString(),
+    author: 'System',
+    image: {
+      src: '/images/blog-placeholder.jpg',
+      alt: 'Post not found'
+    },
+    body_html: `
+      <h2>Post Not Found</h2>
+      <p>Sorry, the blog post you're looking for could not be found.</p>
+      <p>This might be because:</p>
+      <ul>
+        <li>The post has been moved or deleted</li>
+        <li>The URL is incorrect</li>
+        <li>There's a temporary issue with our blog system</li>
+      </ul>
+      <p>Please check the URL or <a href="/${lang}/blog">browse our other posts</a>.</p>
+    `,
+    tags: ['error']
+  };
 }
 
 const formattedDate = new Date(post.published_at).toLocaleDateString('en-US', {
@@ -28,57 +130,71 @@ const metaTitle = post.metafields?.title_tag || `${post.title} | Blog`;
 const metaDescription = post.metafields?.description_tag || defaultDescription;
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <BaseHead 
-      title={metaTitle}
-      description={metaDescription}
-      image={post.image?.src}
-      article={true}
-      publishedTime={post.published_at}
-    />
-  </head>
-  <body>
-    <Header />
-    <main class="pt-20">
-      <article class="max-w-4xl mx-auto px-4 py-12">
-        {post.image?.src && (
+<Layout title={metaTitle} lang={lang}>
+  <main class="max-w-4xl mx-auto px-4 pb-8 pt-[100px]">
+    {/* Error Notice */}
+    {blogError && (
+      <div class="mb-8 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+        <div class="flex">
+          <div class="flex-shrink-0">
+            <svg class="h-5 w-5 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+            </svg>
+          </div>
+          <div class="ml-3">
+            <p class="text-sm text-yellow-800">
+              Blog post content is currently unavailable. Showing sample content.
+            </p>
+          </div>
+        </div>
+      </div>
+    )}
+
+    <article class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
+      {post.image?.src && (
+        <div class="relative">
           <img
             src={post.image.src}
             alt={post.image.alt || post.title}
-            class="w-full aspect-[16/9] object-cover rounded-lg mb-8"
+            class="w-full aspect-[16/9] object-cover"
           />
-        )}
+        </div>
+      )}
+      
+      <div class="p-8">
         <header class="mb-8">
-          <h1 class="text-4xl md:text-5xl font-bold mb-4">{post.title}</h1>
-          <div class="flex items-center gap-4 text-gray-600">
-            <time datetime={post.published_at}>{formattedDate}</time>
+          <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-900">{post.title}</h1>
+          <div class="flex items-center gap-4 text-gray-600 mb-6">
+            <time datetime={post.published_at} class="text-sm">
+              {formattedDate}
+            </time>
             {post.author && (
               <>
-                <span>•</span>
-                <span>{post.author}</span>
+                <span class="text-gray-400">•</span>
+                <span class="text-sm">{post.author}</span>
               </>
             )}
           </div>
         </header>
+        
         <div 
-          class="prose prose-lg max-w-none"
+          class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-700 prose-a:text-blue-600 prose-strong:text-gray-900"
           set:html={post.body_html}
         />
+        
         {post.tags && post.tags.length > 0 && (
-          <div class="mt-8 pt-8 border-t">
+          <div class="mt-8 pt-8 border-t border-gray-200">
+            <h3 class="text-sm font-medium text-gray-900 mb-3">Tags</h3>
             <div class="flex flex-wrap gap-2">
               {post.tags.map(tag => (
-                <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
+                <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm hover:bg-gray-200 transition-colors">
                   {tag}
                 </span>
               ))}
             </div>
           </div>
         )}
-      </article>
-    </main>
-    <Footer />
-  </body>
-</html>
+      </div>
+    </article>
+  </main>
+</Layout>

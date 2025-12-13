@@ -1,0 +1,83 @@
+---
+import contentData from '../data/collection-content.json';
+
+interface Props {
+  language: string;
+  currentSort?: string;
+}
+
+const { language = 'en', currentSort = '' } = Astro.props;
+
+// Get content for current language or fallback to English
+const content = contentData[language] || contentData.en;
+---
+
+<div class="flex items-center space-x-4">
+  <!-- Sort Label -->
+  <span class="text-sm font-medium text-gray-700">{content.sorting.title}</span>
+  
+  <!-- Sort Dropdown -->
+  <div class="relative">
+    <select 
+      id="sort-select"
+      class="appearance-none bg-white border border-gray-300 rounded-md px-4 py-2 pr-8 text-sm font-medium text-gray-700 hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors cursor-pointer"
+      value={currentSort}
+    >
+      <option value="">{content.sorting.options.best_selling}</option>
+      <option value="title_asc">{content.sorting.options.title_asc}</option>
+      <option value="title_desc">{content.sorting.options.title_desc}</option>
+      <option value="price_asc">{content.sorting.options.price_asc}</option>
+      <option value="price_desc">{content.sorting.options.price_desc}</option>
+      <option value="created_desc">{content.sorting.options.created_desc}</option>
+      <option value="created_asc">{content.sorting.options.created_asc}</option>
+    </select>
+    
+    <!-- Custom Dropdown Arrow -->
+    <div class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
+      <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Sort dropdown functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const sortSelect = document.getElementById('sort-select');
+    
+    if (sortSelect) {
+      // Set initial value from URL params
+      const urlParams = new URLSearchParams(window.location.search);
+      const sortParam = urlParams.get('sort');
+      
+      if (sortParam) {
+        sortSelect.value = sortParam;
+      }
+      
+      // Handle sort change
+      sortSelect.addEventListener('change', function() {
+        if (window.collectionPageManager) {
+          window.collectionPageManager.updateSort(this.value);
+        }
+      });
+    }
+  });
+</script>
+
+<style>
+  /* Custom select styling */
+  select {
+    background-image: none;
+  }
+  
+  select:focus {
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  }
+  
+  /* Custom dropdown arrow animation */
+  select:focus + div svg {
+    transform: rotate(180deg);
+    transition: transform 0.2s ease;
+  }
+</style>

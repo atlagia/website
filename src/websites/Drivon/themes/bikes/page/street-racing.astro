@@ -1,0 +1,174 @@
+---
+import Layoutc from '@layouts/Layoutc.astro';
+import { ArrowRight, Zap, Car, Trophy, Star, Flag } from 'lucide-react';
+
+// Generate static paths for allowed languages from environment
+export async function getStaticPaths() {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  const languages = allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+  
+  return languages.map(lang => ({ params: { lang } }));
+}
+
+const { lang = 'en' } = Astro.params;
+const baseUrl = import.meta.env.DOMAINE || 'https://drivon.store';
+const storeName = import.meta.env.PUBLIC_SITE_NAME || 'Drivon';
+
+// Load multilingual data
+let data;
+try {
+  data = await import(`../data/street-racing/street-racing_${lang}.json`);
+} catch (error) {
+  // Fallback to English if language file doesn't exist
+  data = await import(`../data/street-racing/street-racing_en.json`);
+}
+
+const pageData = data.default;
+
+// SEO
+const seoTitle = `${pageData.title} | ${storeName}`;
+const seoDescription = pageData.description;
+---
+
+<Layoutc title={seoTitle} description={seoDescription} lang={lang}>
+  <div class="min-h-screen bg-gray-50">
+    <!-- Hero Section -->
+    <section class="relative h-[60vh] bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+      <div class="absolute inset-0 bg-black/50"></div>
+      <div class="relative z-10 h-full flex items-center justify-center text-center px-4">
+        <div class="max-w-4xl mx-auto">
+          <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">
+            {pageData.hero.title}
+          </h1>
+          <p class="text-xl md:text-2xl text-gray-200 mb-8">
+            {pageData.hero.subtitle}
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href={`/${lang}/street-racing-hoodies`} class="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+              {pageData.hero.cta1}
+            </a>
+            <a href={`/${lang}/street-racing-tees`} class="bg-white/20 hover:bg-white/30 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+              {pageData.hero.cta2}
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Street Racing Features -->
+    <section class="py-20 px-4">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">{pageData.sections.features.title}</h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            {pageData.sections.features.subtitle}
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+          {pageData.features.map((feature, index) => {
+            const icons = [Zap, Car, Trophy];
+            const colors = ['red', 'blue', 'yellow'];
+            const Icon = icons[index];
+            const color = colors[index];
+            return (
+              <div class="bg-white rounded-2xl p-8 shadow-lg">
+                <div class={`w-16 h-16 bg-${color}-100 rounded-full flex items-center justify-center mb-6`}>
+                  <Icon class={`w-8 h-8 text-${color}-600`} />
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">{feature.title}</h3>
+                <p class="text-gray-600">
+                  {feature.description}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    <!-- Street Racing Categories -->
+    <section class="py-20 bg-gray-100">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">{pageData.sections.collection.title}</h2>
+          <p class="text-xl text-gray-600">{pageData.sections.collection.subtitle}</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {pageData.collections.map((product, index) => {
+            const icons = [Zap, Car, Flag];
+            const colors = ['red', 'blue', 'gray'];
+            const Icon = icons[index];
+            const color = colors[index];
+            return (
+              <a href={`/${lang}${product.link}`} class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                <div class={`h-48 bg-gradient-to-br from-${color}-500 to-${color}-700 flex items-center justify-center`}>
+                  <Icon class="w-16 h-16 text-white" />
+                </div>
+                <div class="p-6">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">{product.title}</h3>
+                  <p class="text-gray-600 mb-4">{product.description}</p>
+                  <div class={`flex items-center text-${color}-600 font-semibold group-hover:text-${color}-700`}>
+                    {product.linkText} <ArrowRight class="w-4 h-4 ml-2" />
+                  </div>
+                </div>
+              </a>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    <!-- Street Racing Culture -->
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">{pageData.sections.culture.title}</h2>
+          <p class="text-xl text-gray-600">{pageData.sections.culture.subtitle}</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          {pageData.culture.map((culture, index) => {
+            const icons = [Zap, Car, Star];
+            const colors = ['red', 'blue', 'yellow'];
+            const Icon = icons[index];
+            const color = colors[index];
+            return (
+              <div class="bg-white rounded-2xl p-8 shadow-lg">
+                <div class={`w-20 h-20 bg-${color}-100 rounded-full flex items-center justify-center mb-6 mx-auto`}>
+                  <Icon class={`w-10 h-10 text-${color}-600`} />
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">{culture.title}</h3>
+                <p class="text-gray-600 text-center mb-6">
+                  {culture.description}
+                </p>
+                <a href={`/${lang}${culture.link}`} class={`flex items-center justify-center text-${color}-600 font-semibold hover:text-${color}-700`}>
+                  {culture.linkText} <ArrowRight class="w-4 h-4 ml-2" />
+                </a>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-gray-900 text-white">
+      <div class="max-w-4xl mx-auto text-center px-4">
+        <h2 class="text-4xl font-bold mb-6">{pageData.cta.title}</h2>
+        <p class="text-xl text-gray-300 mb-8">
+          {pageData.cta.subtitle}
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href={`/${lang}/street-racing-hoodies`} class="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+            {pageData.cta.button1}
+          </a>
+          <a href={`/${lang}/street-culture`} class="bg-white/20 hover:bg-white/30 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+            {pageData.cta.button2}
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layoutc>

@@ -1,0 +1,768 @@
+{
+  "siteTitle": "Dentagia - Moderne, sichere, cloudbasierte Zahnarztsoftware mit KI",
+  "siteDescription": "Transformieren Sie Ihre Zahnarztpraxis mit Dentagias KI-gestützter Praxismanagement-Software. Optimieren Sie die Patientenversorgung, automatisieren Sie Arbeitsabläufe und entwickeln Sie Ihre Praxis mit sicheren, cloudbasierten Lösungen für die moderne Zahnmedizin.",
+  "sections": [
+    {
+      "type": "welcomeSection",
+      "badge": "KI-gestützte Zahnarztsoftware",
+      "title": "Entwickeln Sie Ihre Praxis mit <span class='text-gradient'>KI-gestützter</span> Zahnarztverwaltung",
+      "description": "Optimieren Sie Ihre Abläufe, steigern Sie die Effizienz und bieten Sie außergewöhnliche Patientenversorgung mit Dentagias intelligenter Praxismanagement-Plattform.",
+      "blogLinkText": "Funktionen erkunden",
+      "getStartedText": "Demo vereinbaren",
+      "getStartedLink": "/demo",
+      "blogLink": "/features",
+      "heroImage": "https://cdn.atlagia.com/GiaConnect/images/670e6478-6043-4aec-a731-a0d4468e6d4e.png",
+      "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+      "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+      "features": [
+        {
+          "icon": "Cloud",
+          "title": "Cloudbasiert",
+          "description": "Greifen Sie sicher von überall und jederzeit auf Ihre Praxisdaten zu, dank unserer Cloud-Infrastruktur"
+        },
+        {
+          "icon": "Shield",
+          "title": "Sicher & konform",
+          "description": "HIPAA-konforme Sicherheit mit verschlüsselter Datenspeicherung und regelmäßigen Backups"
+        },
+        {
+          "icon": "Zap",
+          "title": "KI-gestützt",
+          "description": "Intelligente Automatisierung für Terminplanung, Patienten-Insights und Praxisanalysen"
+        },
+        {
+          "icon": "TrendingUp",
+          "title": "Praxiswachstum",
+          "description": "Werkzeuge, die entwickelt wurden, um Ihre Praxis zu entwickeln und die Patientenzufriedenheit zu verbessern"
+        }
+      ],
+      "partnerLogos": [
+        {
+          "src": "https://cdn.atlagia.com/GiaConnect/images/processed-3bb4b721-db62-4347-82ed-b11735f18565.png",
+          "alt": "HIPAA-konform"
+        },
+        {
+          "src": "https://cdn.atlagia.com/GiaConnect/images/processed-d4ae1096-ccab-49e9-91f5-1d6504936092.png",
+          "alt": "Cloud-zertifiziert"
+        },
+        {
+          "src": "https://cdn.atlagia.com/GiaConnect/images/a3550c4a-95d2-4341-9ed7-2a5de91b0b66.png",
+          "alt": "KI-gestützt"
+        }
+      ],
+      "trustedBy": "Vertraut von Zahnarztpraxen"
+    },
+    {
+      "type": "aboutSection",
+      "subtitle": "WARUM DENTAGIA",
+      "title": "Alles, was Sie für die Führung einer modernen Zahnarztpraxis benötigen",
+      "features": [
+        {
+          "icon": "ai-development",
+          "title": "KI-gestütztes Patientenmanagement",
+          "keywords": [
+            "KI",
+            "Patient",
+            "Verwaltung"
+          ],
+          "description": "Ein intelligentes Patientenmanagementsystem, das aus Ihren Praxismustern lernt und hilft, Arbeitsabläufe zu optimieren.",
+          "bullets": [
+            "Intelligente Terminplanung",
+            "KI-gestützte Patienten-Insights",
+            "Automatisierte Erinnerungen und Nachfassaktionen",
+            "Prädiktive Analysen für das Praxiswachstum"
+          ],
+          "backgroundSvg": "<svg width='100%' height='100%' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='grid1' width='20' height='20' patternUnits='userSpaceOnUse'><path d='M 20 0 L 0 0 0 20' fill='none' stroke='currentColor' stroke-width='0.5' opacity='0.1'/></pattern></defs><rect width='100%' height='100%' fill='url(#grid1)'/></svg>"
+        },
+        {
+          "icon": "software-solutions",
+          "title": "Vollständige Praxisführung",
+          "keywords": [
+            "Praxis",
+            "Verwaltung",
+            "Software"
+          ],
+          "description": "All-in-One-Lösung zur effizienten und effektiven Verwaltung Ihrer Zahnarztpraxis.",
+          "bullets": [
+            "Patientenakten und Krankengeschichte",
+            "Terminplanung und Kalender",
+            "Abrechnung und Rechnungsstellung",
+            "Behandlungsplanung und Dokumentation"
+          ],
+          "backgroundSvg": "<svg width='100%' height='100%' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='code' width='20' height='20' patternUnits='userSpaceOnUse'><path d='M 0 10 L 10 0 M 20 10 L 10 20' stroke='currentColor' stroke-width='0.5' opacity='0.1'/></pattern></defs><rect width='100%' height='100%' fill='url(#code)'/></svg>"
+        },
+        {
+          "icon": "digital-transformation",
+          "title": "Sichere Cloud-Infrastruktur",
+          "keywords": [
+            "Sicher",
+            "Cloud",
+            "Infrastruktur"
+          ],
+          "description": "Unternehmenstaugliche Sicherheit mit cloudbasierter Zugänglichkeit für moderne Zahnarztpraxen.",
+          "bullets": [
+            "HIPAA-konforme Datenspeicherung",
+            "Automatische Backups und Wiederherstellung",
+            "Multi-Geräte-Zugriff",
+            "Echtzeit-Synchronisation"
+          ],
+          "backgroundSvg": "<svg width='100%' height='100%' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='circuit' width='40' height='40' patternUnits='userSpaceOnUse'><circle cx='20' cy='20' r='1' fill='currentColor' opacity='0.1'/><path d='M 40 20 H 30 M 20 0 V 10' stroke='currentColor' stroke-width='0.5' opacity='0.1'/></pattern></defs><rect width='100%' height='100%' fill='url(#circuit)'/></svg>"
+        },
+        {
+          "icon": "industry-solutions",
+          "title": "Wachstumstools für die Praxis",
+          "keywords": [
+            "Wachstum",
+            "Analytik",
+            "Insights"
+          ],
+          "description": "Datenbasierte Insights und Tools, um Ihrer Praxis beim Wachstum und Gedeihen zu helfen.",
+          "bullets": [
+            "Leistungsanalysen der Praxis",
+            "Insights zur Patientenbindung",
+            "Umsatzverfolgung und Berichterstattung",
+            "Marketing-Automatisierungstools"
+          ],
+          "backgroundSvg": "<svg width='100%' height='100%' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='dots' width='20' height='20' patternUnits='userSpaceOnUse'><circle cx='10' cy='10' r='1' fill='currentColor' opacity='0.1'/></pattern></defs><rect width='100%' height='100%' fill='url(#dots)'/></svg>"
+        }
+      ],
+      "ctaText": "Funktionen erkunden",
+      "ctaLink": "/features"
+    },
+    {
+      "type": "whatsappConversationSection",
+      "title": "KI-gestützte Patientenkommunikation",
+      "subtitle": "Sehen Sie, wie unser KI-Assistent die Terminplanung automatisch verwaltet",
+      "description": "Erleben Sie nahtlose Terminplanung mit unserem intelligenten KI-Assistenten, der natürliche Sprache versteht und automatisch Ihre bevorzugten Zeitslots bucht.",
+      "phoneNumber": "+1 (555) 123-4567",
+      "aiName": "Dentagia KI-Assistent",
+      "messages": [
+        {
+          "text": "Hallo, ich möchte einen Termin für eine Zahnreinigung vereinbaren",
+          "sender": "user",
+          "timestamp": "10:30"
+        },
+        {
+          "text": "Hallo! Ich helfe Ihnen gerne bei der Terminvereinbarung für eine Zahnreinigung. Lassen Sie mich unsere verfügbaren Zeitslots für Sie prüfen.",
+          "sender": "ai",
+          "timestamp": "10:31"
+        },
+        {
+          "text": "Ich habe diese Woche Verfügbarkeiten. Bevorzugen Sie:\n\n📅 Dienstag, 15. März um 14:00 Uhr\n📅 Donnerstag, 17. März um 10:00 Uhr\n📅 Freitag, 18. März um 15:30 Uhr",
+          "sender": "ai",
+          "timestamp": "10:31"
+        },
+        {
+          "text": "Donnerstag um 10 Uhr passt mir",
+          "sender": "user",
+          "timestamp": "10:32"
+        },
+        {
+          "text": "Perfekt! Ich habe Ihren Zahnreinigungstermin für Donnerstag, den 17. März um 10:00 Uhr vereinbart. Der Termin dauert etwa 45 Minuten.",
+          "sender": "ai",
+          "timestamp": "10:32",
+          "type": "appointment",
+          "appointmentData": {
+            "date": "Donnerstag, 17. März",
+            "time": "10:00 Uhr",
+            "service": "Zahnreinigung",
+            "duration": "45 Minuten"
+          }
+        },
+        {
+          "text": "Großartig! Ich sende Ihnen eine Bestätigungsnachricht und eine Erinnerung 24 Stunden vor Ihrem Termin. Gibt es noch etwas, womit ich Ihnen helfen kann?",
+          "sender": "ai",
+          "timestamp": "10:33"
+        },
+        {
+          "text": "Nein, das ist alles. Danke!",
+          "sender": "user",
+          "timestamp": "10:33"
+        },
+        {
+          "text": "Gern geschehen! Wir freuen uns, Sie am 17. März zu sehen. Einen schönen Tag! 😊",
+          "sender": "ai",
+          "timestamp": "10:33"
+        }
+      ]
+    },
+    {
+      "type": "aiAgentSection",
+      "subtitle": "WARUM DENTAGIA WÄHLEN",
+      "title": "Ihr Intelligenter <span class='text-gradient'>Zahnarztpraxis-Assistent</span>",
+      "description": "Schließen Sie sich Hunderten von Zahnarztpraxen an, die Dentagia vertrauen. Erleben Sie die Kraft der KI-gestützten Automatisierung, die aus Ihren Praxismustern lernt und jeden Aspekt Ihrer Zahnarztoperationen optimiert.",
+      "features": [
+        {
+          "icon": "scheduling",
+          "title": "Intelligente Terminplanung",
+          "description": "KI-gestützte Terminoptimierung, die Absagen reduziert und die Praxiseffizienz maximiert.",
+          "metric": {
+            "value": "70%",
+            "label": "Reduzierung von Absagen"
+          }
+        },
+        {
+          "icon": "analytics",
+          "title": "Praxisanalysen",
+          "description": "Echtzeit-Insights und prädiktive Analysen, um Ihre Praxis zu verstehen und zu entwickeln.",
+          "metric": {
+            "value": "35%",
+            "label": "Umsatzwachstum"
+          }
+        },
+        {
+          "icon": "communication",
+          "title": "Patientenkommunikation",
+          "description": "Automatisierte Erinnerungen, Nachfassaktionen und personalisierte Patientenkommunikation per SMS und E-Mail.",
+          "metric": {
+            "value": "95%",
+            "label": "Zustellrate"
+          }
+        },
+        {
+          "icon": "automation",
+          "title": "Workflow-Automatisierung",
+          "description": "Intelligente Automatisierung übernimmt Routineaufgaben und gibt Ihnen Zeit, sich auf die Patientenversorgung zu konzentrieren.",
+          "metric": {
+            "value": "10Std",
+            "label": "Zeit Gespart/Woche"
+          }
+        },
+        {
+          "icon": "patient",
+          "title": "Patienten-Insights",
+          "description": "KI-gestützte Patientenverhaltensanalyse und prädiktive Insights für bessere Versorgungsergebnisse.",
+          "metric": {
+            "value": "60%",
+            "label": "Antwortrate"
+          }
+        },
+        {
+          "icon": "security",
+          "title": "HIPAA-Compliance",
+          "description": "Unternehmenstaugliche Sicherheit mit automatisiertem Compliance-Monitoring und Audit-Protokollen.",
+          "metric": {
+            "value": "100%",
+            "label": "Compliance"
+          }
+        }
+      ],
+      "ctaButton": {
+        "text": "KI-Funktionen Erkunden",
+        "link": "/features/ai-scheduling"
+      },
+      "benefits": [
+        {
+          "title": "Cloud-Zugänglichkeit",
+          "description": "Greifen Sie von überall und auf jedem Gerät auf Ihre Praxisdaten zu. Sie sind nicht mehr an einen einzelnen Computer oder Standort gebunden."
+        },
+        {
+          "title": "HIPAA-konforme Sicherheit",
+          "description": "Unternehmenstaugliche Sicherheit mit verschlüsselter Datenspeicherung, regelmäßigen Backups und Einhaltung der Gesundheitsvorschriften."
+        },
+        {
+          "title": "KI-gestützte Automatisierung",
+          "description": "Intelligente Automatisierung übernimmt Routineaufgaben und gibt Ihnen Zeit, sich auf Patientenversorgung und Praxiswachstum zu konzentrieren."
+        },
+        {
+          "title": "Einfach zu bedienen",
+          "description": "Intuitive Benutzeroberfläche für Zahnärzte. Schneller Start mit minimaler Schulung erforderlich."
+        },
+        {
+          "title": "Umfassender Support",
+          "description": "24/7-Support von unserem Team von Experten für Praxismanagement. Wir sind da, wenn Sie uns brauchen."
+        },
+        {
+          "title": "Skalierbare Lösung",
+          "description": "Wächst mit Ihrer Praxis. Ob Einzelpraxis oder Multi-Standort-Praxis, Dentagia passt sich Ihren Bedürfnissen an."
+        }
+      ]
+    },
+    {
+      "type": "achievementsSection",
+      "subtitle": "UNSERE AUSWIRKUNG",
+      "title": "Zahnarztpraxen beim Gedeihen helfen",
+      "description": "Unsere Erfolgsbilanz spricht für sich. Hier ist, wie Dentagia Zahnarztpraxen beim Wachstum und Erfolg hilft.",
+      "achievements": [
+        {
+          "value": "500+",
+          "label": "Zahnarztpraxen",
+          "description": "Vertrauen Dentagia bei der Verwaltung ihrer Abläufe und Patientenversorgung",
+          "icon": "building"
+        },
+        {
+          "value": "50%",
+          "label": "Zeit gespart",
+          "description": "Durchschnittliche Reduzierung der Verwaltungszeit für Praxen, die Dentagia verwenden",
+          "icon": "clock"
+        },
+        {
+          "value": "35%",
+          "label": "Umsatzwachstum",
+          "description": "Durchschnittliche Umsatzsteigerung für Praxen nach der Implementierung von Dentagia",
+          "icon": "trending-up"
+        },
+        {
+          "value": "99.9%",
+          "label": "Verfügbarkeit",
+          "description": "Zuverlässige Cloud-Infrastruktur, damit Ihre Praxis keinen Takt verpasst",
+          "icon": "server"
+        }
+      ]
+    },
+    {
+      "type": "projectsSection",
+      "subtitle": "ERFOLGSGESCHICHTEN",
+      "title": "Wie Zahnarztpraxen mit Dentagia wachsen",
+      "description": "Sehen Sie, wie Praxen im ganzen Land ihre Abläufe transformieren und mit Dentagia wachsen.",
+      "projects": [
+        {
+          "title": "Zahnarztpraxis Zentrum",
+          "category": "Mehrzahnarztpraxis",
+          "description": "Optimierte Abläufe für eine Praxis mit 5 Zahnärzten mit KI-Terminplanung und automatisierter Patientenkommunikation.",
+          "image": "https://cdn.atlagia.com/projects/ecommerce-platform.webp",
+          "stats": {
+            "efficiency": "+60%",
+            "satisfaction": "98%",
+            "growth": "+40%"
+          },
+          "technologies": [
+            "KI-Terminplanung",
+            "Cloud-Plattform",
+            "Analysen",
+            "Automatisierung"
+          ]
+        },
+        {
+          "title": "Family Dental Care",
+          "category": "Einzelpraxis",
+          "description": "Vollständige Praxistransformation mit Patientenmanagement, automatisierter Abrechnung und Wachstumsanalysen.",
+          "image": "https://cdn.atlagia.com/projects/healthcare-system.webp",
+          "stats": {
+            "time_saved": "15hrs/week",
+            "revenue": "+35%",
+            "patients": "+50%"
+          },
+          "technologies": [
+            "Patientenmanagement",
+            "Automatisierte Abrechnung",
+            "Cloud-Speicher",
+            "KI-Insights"
+          ]
+        },
+        {
+          "title": "Zentrum für Ästhetische Zahnmedizin",
+          "category": "Fachpraxis",
+          "description": "Fortgeschrittene Behandlungsplanungs- und Patientenkommunikationstools für eine hochwertige ästhetische Praxis.",
+          "image": "https://cdn.atlagia.com/projects/fintech-dashboard.webp",
+          "stats": {
+            "conversion": "+45%",
+            "retention": "95%",
+            "satisfaction": "99%"
+          },
+          "technologies": [
+            "Behandlungsplanung",
+            "Patientenportal",
+            "Analysen",
+            "KI-Kommunikation"
+          ]
+        },
+        {
+          "title": "Kinderzahnarztgruppe",
+          "category": "Multi-Standort",
+          "description": "Zentralisiertes Managementsystem, das drei Standorte mit einheitlichen Patientenakten und Terminplanung verbindet.",
+          "image": "https://cdn.atlagia.com/projects/manufacturing-system.webp",
+          "stats": {
+            "coordination": "100%",
+            "efficiency": "+70%",
+            "growth": "+55%"
+          },
+          "technologies": [
+            "Multi-Standort",
+            "Cloud-Synchronisation",
+            "Einheitliche Akten",
+            "Zentralisierte Abrechnung"
+          ]
+        }
+      ],
+      "buttonText": "Alle Geschichten ansehen",
+      "buttonLink": "/stories"
+    },
+    {
+      "type": "industryFeaturesSection",
+      "subtitle": "PRAXIS-FUNKTIONEN",
+      "title": "Alles, was Sie zur Verwaltung Ihrer Praxis benötigen",
+      "description": "Dentagia bietet umfassende Tools, die speziell für Zahnarztpraxen aller Größen entwickelt wurden.",
+      "industries": [
+        {
+          "icon": "Users",
+          "title": "Patientenmanagement",
+          "description": "Vollständige Patientenakten, Krankengeschichte und Behandlungspläne auf einer sicheren Plattform.",
+          "features": [
+            "Digitale Patientenakten",
+            "Verfolgung der Krankengeschichte",
+            "Behandlungsplanungstools",
+            "Patientenkommunikationsportal"
+          ],
+          "processIcons": [
+            "FileText",
+            "Calendar",
+            "Clipboard",
+            "MessageSquare"
+          ]
+        },
+        {
+          "icon": "Calendar",
+          "title": "Terminplanung",
+          "description": "KI-gestützte Terminplanung, die Ihren Kalender optimiert und Absagen reduziert.",
+          "features": [
+            "Intelligente Terminbuchung",
+            "Automatisierte Erinnerungen",
+            "Wartelistenverwaltung",
+            "Kalenderoptimierung"
+          ],
+          "processIcons": [
+            "Clock",
+            "Bell",
+            "List",
+            "TrendingUp"
+          ]
+        },
+        {
+          "icon": "CreditCard",
+          "title": "Abrechnung & Zahlungen",
+          "description": "Optimierte Abrechnung, Zahlungsabwicklung und Versicherungsintegration.",
+          "features": [
+            "Automatisierte Rechnungsstellung",
+            "Zahlungsabwicklung",
+            "Versicherungsanträge",
+            "Finanzberichterstattung"
+          ],
+          "processIcons": [
+            "FileText",
+            "CreditCard",
+            "FileCheck",
+            "BarChart"
+          ]
+        },
+        {
+          "icon": "BarChart",
+          "title": "Praxisanalysen",
+          "description": "Datenbasierte Insights, um Ihre Praxis zu verstehen und zu entwickeln.",
+          "features": [
+            "Leistungskennzahlen",
+            "Patientenanalysen",
+            "Umsatzverfolgung",
+            "Wachstums-Insights"
+          ],
+          "processIcons": [
+            "TrendingUp",
+            "Users",
+            "DollarSign",
+            "Target"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "automationFeaturesSection",
+      "subtitle": "KI-AUTOMATISIERUNG",
+      "title": "Intelligente Automatisierung für Ihre Praxis",
+      "description": "Lassen Sie die KI Routineaufgaben übernehmen, damit Sie sich auf das Wesentliche konzentrieren können: außergewöhnliche Patientenversorgung.",
+      "features": [
+        {
+          "icon": "Workflow",
+          "title": "Automatisierte Terminplanung",
+          "description": "KI-gestützte Terminplanung, die Ihren Kalender optimiert, Absagen automatisch füllt und Absagen reduziert.",
+          "metrics": [
+            {
+              "value": "70%",
+              "label": "Reduzierung von Absagen"
+            },
+            {
+              "value": "10Std",
+              "label": "Zeit gespart/Woche"
+            }
+          ]
+        },
+        {
+          "icon": "MessageSquare",
+          "title": "Patientenkommunikation",
+          "description": "Automatisierte Erinnerungen, Nachfassaktionen und Patientenkommunikation per SMS und E-Mail.",
+          "metrics": [
+            {
+              "value": "95%",
+              "label": "Erinnerungszustellung"
+            },
+            {
+              "value": "60%",
+              "label": "Antwortrate"
+            }
+          ]
+        },
+        {
+          "icon": "FileText",
+          "title": "Abrechnungsautomatisierung",
+          "description": "Automatisierte Abrechnung, Zahlungen und Versicherungsanträge zur Optimierung Ihrer Finanzabläufe.",
+          "metrics": [
+            {
+              "value": "80%",
+              "label": "Schnellere Bearbeitung"
+            },
+            {
+              "value": "50%",
+              "label": "Zeit gespart"
+            }
+          ]
+        },
+        {
+          "icon": "BarChart",
+          "title": "Praxis-Insights",
+          "description": "KI-gestützte Analysen, die umsetzbare Insights zu Leistung und Wachstumschancen bieten.",
+          "metrics": [
+            {
+              "value": "Echtzeit",
+              "label": "Analysen"
+            },
+            {
+              "value": "35%",
+              "label": "Umsatzwachstum"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "technologiesSection",
+      "subtitle": "TECHNOLOGIE",
+      "title": "Auf moderner, sicherer Technologie aufgebaut",
+      "description": "Dentagia nutzt modernste Technologie, um eine sichere, zuverlässige und leistungsstarke Praxismanagement-Plattform zu bieten.",
+      "categories": [
+        {
+          "name": "Cloud-Infrastruktur",
+          "description": "Sichere und skalierbare Cloud-Infrastruktur, die Zuverlässigkeit und Zugänglichkeit gewährleistet.",
+          "technologies": [
+            {
+              "name": "AWS Cloud",
+              "icon": "aws",
+              "level": "Unternehmen",
+              "description": "Sichere Cloud-Infrastruktur mit 99,9% Verfügbarkeit"
+            },
+            {
+              "name": "Datenverschlüsselung",
+              "icon": "shield",
+              "level": "HIPAA-konform",
+              "description": "Ende-zu-Ende-Verschlüsselung für Patientendatensicherheit"
+            },
+            {
+              "name": "Automatisches Backup",
+              "icon": "cloud",
+              "level": "Automatisiert",
+              "description": "Automatische tägliche Backups mit Disaster Recovery"
+            },
+            {
+              "name": "Multi-Gerät",
+              "icon": "devices",
+              "level": "Plattformübergreifend",
+              "description": "Zugriff von Desktop, Tablet oder Mobilgerät"
+            }
+          ]
+        },
+        {
+          "name": "KI & Automatisierung",
+          "description": "Intelligente Automatisierung, angetrieben von fortgeschrittener KI-Technologie.",
+          "technologies": [
+            {
+              "name": "Intelligente Terminplanung",
+              "icon": "calendar",
+              "level": "KI-gestützt",
+              "description": "Intelligente Terminoptimierung"
+            },
+            {
+              "name": "Patienten-Insights",
+              "icon": "brain",
+              "level": "Prädiktiv",
+              "description": "KI-gestützte Patientenverhaltensanalyse"
+            },
+            {
+              "name": "Automatisierte Erinnerungen",
+              "icon": "bell",
+              "level": "Intelligent",
+              "description": "Intelligente Automatisierung der Patientenkommunikation"
+            },
+            {
+              "name": "Praxisanalysen",
+              "icon": "chart",
+              "level": "Datengetrieben",
+              "description": "KI-gestützte Praxisleistungs-Insights"
+            }
+          ]
+        },
+        {
+          "name": "Praxismanagement",
+          "description": "Umfassende Tools zur Verwaltung jedes Aspekts Ihrer Praxis.",
+          "technologies": [
+            {
+              "name": "Patientenakten",
+              "icon": "file",
+              "level": "Umfassend",
+              "description": "Vollständige digitale Patientenakten und Krankengeschichte"
+            },
+            {
+              "name": "Abrechnungssystem",
+              "icon": "credit-card",
+              "level": "Automatisiert",
+              "description": "Optimierte Abrechnung und Zahlungsabwicklung"
+            },
+            {
+              "name": "Behandlungsplanung",
+              "icon": "clipboard",
+              "level": "Fortgeschritten",
+              "description": "Digitale Behandlungspläne und Dokumentation"
+            },
+            {
+              "name": "Berichterstattung",
+              "icon": "bar-chart",
+              "level": "Echtzeit",
+              "description": "Umfassende Praxisanalysen und Berichte in Echtzeit"
+            }
+          ]
+        },
+        {
+          "name": "Sicherheit & Compliance",
+          "description": "Unternehmenstaugliche Sicherheit, die den Standards der Gesundheitsbranche entspricht.",
+          "technologies": [
+            {
+              "name": "HIPAA-Compliance",
+              "icon": "shield-check",
+              "level": "Zertifiziert",
+              "description": "Vollständige HIPAA-Compliance und Zertifizierung"
+            },
+            {
+              "name": "Datenverschlüsselung",
+              "icon": "lock",
+              "level": "256-bit",
+              "description": "Militärische Datenschutzverschlüsselung"
+            },
+            {
+              "name": "Zugriffskontrolle",
+              "icon": "user-check",
+              "level": "Rollenbasiert",
+              "description": "Granulare Zugriffskontrolle und Berechtigungen"
+            },
+            {
+              "name": "Audit-Protokolle",
+              "icon": "file-text",
+              "level": "Umfassend",
+              "description": "Vollständige Nachverfolgbarkeit für Compliance"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "reviewsSection",
+      "reviews": [
+        {
+          "name": "Dr. Sarah Martinez",
+          "role": "Practice Owner",
+          "company": "Downtown Dental Clinic",
+          "image": "/images/testimonials/sarah.jpg",
+          "content": "Dentagia has transformed how we run our practice. The AI-powered scheduling alone saves us 10 hours per week, and our patient satisfaction scores have never been higher. The cloud-based system means we can access everything from anywhere.",
+          "rating": 5
+        },
+        {
+          "name": "Dr. Michael Chen",
+          "role": "Lead Dentist",
+          "company": "Family Dental Care",
+          "image": "/images/testimonials/michael.jpg",
+          "content": "Switching to Dentagia was the best decision we made. The patient management system is intuitive, billing is automated, and the analytics help us understand our practice better. Our revenue has increased by 35% since implementation.",
+          "rating": 5
+        },
+        {
+          "name": "Emily Rodriguez",
+          "role": "Practice Manager",
+          "company": "Cosmetic Dentistry Center",
+          "image": "/images/testimonials/emily.jpg",
+          "content": "The support team is incredible, and the platform is so easy to use. We've reduced administrative time by 50% and our team loves how streamlined everything is. Dentagia truly understands what dental practices need.",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "type": "bannerSection",
+      "subtitle": "ENTWICKELN SIE IHRE PRAXIS",
+      "headline": "Transformieren Sie Ihre Zahnarztpraxis mit KI-gestützten Lösungen",
+      "description": "Entdecken Sie, wie Dentagias moderne, sichere und cloudbasierte Plattform Ihre Abläufe optimieren, die Patientenzufriedenheit verbessern und das Praxiswachstum fördern kann.",
+      "backgroundImage": "/images/banner-bg.jpg",
+      "button1Text": "Funktionen ansehen",
+      "button1Link": "/features",
+      "button2Text": "Demo vereinbaren",
+      "button2Link": "/demo",
+      "cards": [
+        {
+          "title": "KI-gestützte Terminplanung",
+          "description": "Intelligente Terminplanung, die Ihren Kalender optimiert, Absagen reduziert und die Praxiseffizienz maximiert."
+        },
+        {
+          "title": "Patientenmanagement",
+          "description": "Vollständige Patientenakten, Krankengeschichte und Behandlungspläne auf einer sicheren und zugänglichen Plattform."
+        },
+        {
+          "title": "Automatisierte Abrechnung",
+          "description": "Optimieren Sie die Abrechnung mit automatisierten Zahlungen, Versicherungsanträgen und Finanzberichten."
+        },
+        {
+          "title": "Praxisanalysen",
+          "description": "Datenbasierte Insights zu Praxisleistungen, Patiententrends und Wachstumschancen."
+        }
+      ]
+    },
+    {
+      "type": "processSection",
+      "subtitle": "LOSLEGEN",
+      "title": "Einfache Einrichtung, sofortige Ergebnisse",
+      "description": "Der Einstieg mit Dentagia ist schnell und einfach. Unser Team führt Sie durch jeden Schritt, um einen reibungslosen Übergang zu gewährleisten.",
+      "steps": [
+        {
+          "number": "01",
+          "title": "Demo vereinbaren",
+          "description": "Erleben Sie Dentagia in Aktion mit einer personalisierten Demo, die auf die Bedürfnisse Ihrer Praxis zugeschnitten ist.",
+          "icon": "calendar"
+        },
+        {
+          "number": "02",
+          "title": "Schnelle Einrichtung",
+          "description": "Unser Team hilft Ihnen, Ihre Daten zu migrieren und Dentagia für Ihre Praxis in Tagen, nicht Wochen, einzurichten.",
+          "icon": "settings"
+        },
+        {
+          "number": "03",
+          "title": "Schulung & Onboarding",
+          "description": "Umfassende Schulung für Ihr Team, damit sich jeder mit der Plattform wohlfühlt.",
+          "icon": "users"
+        },
+        {
+          "number": "04",
+          "title": "Go-Live & Support",
+          "description": "Starten Sie mit Vertrauen, wissend, dass unser Support-Team 24/7 verfügbar ist, wann immer Sie uns brauchen.",
+          "icon": "rocket"
+        }
+      ]
+    },
+    {
+      "type": "emailSignupSection",
+      "subtitle": "NEWSLETTER",
+      "title": "Bleiben Sie über Insights für Zahnarztpraxen informiert",
+      "description": "Abonnieren Sie unseren Newsletter für die neuesten Tipps zu Praxismanagement, Patientenversorgung und Praxisentwicklung.",
+      "buttonText": "Jetzt abonnieren",
+      "placeholder": "Geben Sie Ihre E-Mail ein",
+      "features": [
+        "Tipps zum Praxismanagement",
+        "Produkt-Updates",
+        "Erfolgsgeschichten",
+        "Nie Spam"
+      ]
+    }
+  ]
+}

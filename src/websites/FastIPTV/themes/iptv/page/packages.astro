@@ -1,0 +1,201 @@
+---
+import { getLangFromUrl, useTranslations } from '@utils/i18n';
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+
+const lang = getLangFromUrl(Astro.url);
+const translations = await useTranslations(lang);
+const jsonData = translations.default;
+
+// Import packages data dynamically
+const packagesData = await import(`../data/packages/packages_${lang}.json`);
+
+const SITE_TITLE = jsonData.siteTitle || 'StreamVista';
+const PAGE_TITLE = packagesData.pageTitle + ' | ' + SITE_TITLE;
+const PAGE_DESCRIPTION = packagesData.pageDescription;
+
+const packages = packagesData.packages;
+const specialOffers = packagesData.specialOffers;
+---
+
+<!doctype html>
+<html lang={lang} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
+  <head>
+    <BaseHead title={PAGE_TITLE} description={PAGE_DESCRIPTION} />
+  </head>
+  <body class="bg-black text-white">
+    <Header />
+    <main class="pt-24"> <!-- Add 96px (24 * 4px) padding to account for header height + extra space -->
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Hero Section */}
+        <div class="text-center space-y-4 mb-12">
+          <h1 class="text-4xl md:text-6xl font-bold gradient-text">
+            {packagesData.heroTitle}
+          </h1>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            {packagesData.heroDescription}
+          </p>
+        </div>
+
+        {/* Featured Package */}
+        <div class="glass rounded-2xl p-8 mb-12 relative overflow-hidden">
+          <div class="absolute top-0 right-0 bg-gradient-to-r from-purple-600 to-emerald-500 text-white px-6 py-2 rounded-bl-2xl">
+            {packages.featured.savings}
+          </div>
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h1 class="text-4xl font-bold mb-4 gradient-text">
+                {packages.featured.name}
+              </h1>
+              <p class="text-gray-300 mb-6">
+                {packages.featured.description}
+              </p>
+              <div class="flex items-baseline mb-8">
+                <span class="text-5xl font-bold">${packages.featured.price}</span>
+                <span class="text-gray-400 ml-2">/{packages.featured.duration}</span>
+              </div>
+              <ul class="space-y-4 mb-8">
+                {packages.featured.features.map(feature => (
+                  <li class="flex items-center text-gray-300">
+                    <svg class="h-5 w-5 text-emerald-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <a
+                href={packages.featured.checkoutUrl}
+                class="inline-block bg-gradient-to-r from-purple-600 to-emerald-500 text-white px-8 py-3 rounded-lg hover:opacity-90 transition-opacity duration-200"
+              >
+                Get Started
+              </a>
+            </div>
+            <div class="relative">
+              <!-- Add package illustration or image here -->
+            </div>
+          </div>
+        </div>
+
+        {/* Bundle Options */}
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+          {packages.bundles.map(bundle => (
+            <div class="glass rounded-xl p-6 space-y-6">
+              {bundle.highlight && (
+                <div class="text-center">
+                  <span class="bg-purple-600 text-white px-4 py-1 rounded-full text-sm">
+                    {bundle.highlight}
+                  </span>
+                </div>
+              )}
+              <div class="text-center space-y-2">
+                <h3 class="text-2xl font-bold">{bundle.name}</h3>
+                <p class="text-gray-400">{bundle.description}</p>
+              </div>
+              <div class="text-center">
+                <div class="flex items-end justify-center gap-1">
+                  <span class="text-3xl font-bold">${bundle.price}</span>
+                  <span class="text-gray-400">/{bundle.duration}</span>
+                </div>
+              </div>
+              <ul class="space-y-3">
+                {bundle.features.map(feature => (
+                  <li class="flex items-center gap-2">
+                    <span class="text-emerald-400">✓</span>
+                    <span class="text-gray-300">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+              <button class="w-full bg-white/10 hover:bg-white/20 text-white font-bold py-2 rounded-lg transition duration-200">
+                Choose Plan
+              </button>
+            </div>
+          ))}
+        </div>
+
+        {/* Add-ons */}
+        <div class="space-y-6 mb-12">
+          <h2 class="text-2xl font-bold text-purple-400">Customize Your Package</h2>
+          <div class="grid md:grid-cols-4 gap-6">
+            {packages.addons.map(addon => (
+              <div class="glass rounded-xl p-6 space-y-4">
+                <div class="flex justify-between items-start">
+                  <div>
+                    <h3 class="font-bold">{addon.name}</h3>
+                    <p class="text-sm text-gray-400">{addon.description}</p>
+                  </div>
+                  <span class="text-lg font-bold">${addon.price}</span>
+                </div>
+                <button class="w-full bg-white/10 hover:bg-white/20 text-white py-2 rounded-lg transition duration-200">
+                  Add
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Special Offers */}
+        <div class="space-y-6 mb-12">
+          <h2 class="text-2xl font-bold text-purple-400">Special Offers</h2>
+          <div class="grid md:grid-cols-3 gap-6">
+            {specialOffers.map(offer => (
+              <div class="glass rounded-xl p-6 space-y-4">
+                <div class="flex items-start justify-between">
+                  <h3 class="font-bold">{offer.name}</h3>
+                  <span class="bg-emerald-600 text-white px-2 py-1 rounded-full text-xs">
+                    {offer.badge}
+                  </span>
+                </div>
+                <p class="text-gray-400">{offer.description}</p>
+                <button class="w-full bg-white/10 hover:bg-white/20 text-white py-2 rounded-lg transition duration-200">
+                  Learn More
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* FAQ Section */}
+        <div class="glass rounded-2xl p-8 space-y-6 mb-12">
+          <h2 class="text-2xl font-bold text-center text-purple-400">
+            {packagesData.faq.title}
+          </h2>
+          <div class="grid md:grid-cols-2 gap-6">
+            {packagesData.faq.questions.map(question => (
+              <div class="space-y-4">
+                <h3 class="font-bold">{question.question}</h3>
+                <p class="text-gray-300">
+                  {question.answer}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div class="glass rounded-2xl p-8 text-center space-y-6 mb-12">
+          <h2 class="text-3xl font-bold gradient-text">{packagesData.cta.title}</h2>
+          <p class="text-xl text-gray-300">
+            {packagesData.cta.description}
+          </p>
+          <div class="flex justify-center gap-4">
+            {packagesData.cta.buttons.map(button => (
+              <a
+                href={button.link}
+                class={`font-bold py-3 px-8 rounded-lg transition duration-200 ${
+                  button.style === 'primary' 
+                    ? 'bg-purple-600 hover:bg-purple-700 text-white' 
+                    : 'bg-white/10 hover:bg-white/20 text-white'
+                }`}
+              >
+                {button.text}
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html> 

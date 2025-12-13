@@ -1,0 +1,295 @@
+{
+  "pageTitle": "Solutions pour cabinets dentaires - Dentagia",
+  "pageDescription": "Solutions complètes pour les cabinets dentaires de toutes tailles. Logiciel de gestion de cabinet propulsé par l'IA et basé sur le cloud.",
+  "hero": {
+    "badge": "Solutions pour cabinets",
+    "title": "Solutions pour chaque cabinet dentaire",
+    "description": "Découvrez comment la plateforme moderne, sécurisée et basée sur le cloud de Dentagia peut transformer les opérations de votre cabinet dentaire avec des solutions propulsées par l'IA conçues pour les cabinets de toutes tailles.",
+    "cta": {
+      "primary": {
+        "text": "Explorer les fonctionnalités",
+        "href": "#solutions"
+      },
+      "secondary": {
+        "text": "Planifier une démo",
+        "href": "/demo"
+      }
+    }
+  },
+  "stats": [
+    {
+      "value": "500+",
+      "label": "Cabinets dentaires"
+    },
+    {
+      "value": "99.9%",
+      "label": "Disponibilité"
+    },
+    {
+      "value": "50%",
+      "label": "Temps économisé"
+    },
+    {
+      "value": "24/7",
+      "label": "Support"
+    }
+  ],
+  "solutions": [
+    {
+      "category": "Types de cabinets",
+      "description": "Solutions adaptées à la taille et à la structure de votre cabinet",
+      "items": [
+        {
+          "icon": "user",
+          "name": "Cabinets individuels",
+          "description": "Gestion complète du cabinet pour les praticiens individuels avec planification propulsée par l'IA et gestion des patients",
+          "href": "/solutions/solo-practice",
+          "color": "cyan"
+        },
+        {
+          "icon": "users",
+          "name": "Multi-praticiens",
+          "description": "Opérations rationalisées pour les cabinets avec plusieurs dentistes et membres du personnel",
+          "href": "/solutions/multi-practitioner",
+          "color": "teal"
+        },
+        {
+          "icon": "building",
+          "name": "Multi-sites",
+          "description": "Système de gestion centralisé pour les cabinets dentaires avec plusieurs emplacements",
+          "href": "/solutions/multi-location",
+          "color": "blue"
+        },
+        {
+          "icon": "star",
+          "name": "Cabinets spécialisés",
+          "description": "Outils avancés pour les cabinets esthétiques, orthodontiques, pédiatriques et autres cabinets spécialisés",
+          "href": "/solutions/specialty",
+          "color": "purple"
+        }
+      ]
+    },
+    {
+      "category": "Gestion du cabinet",
+      "description": "Fonctionnalités essentielles pour gérer efficacement votre cabinet dentaire",
+      "items": [
+        {
+          "icon": "users",
+          "name": "Gestion des patients",
+          "description": "Dossiers patients complets, antécédents médicaux et plans de traitement sur une plateforme sécurisée",
+          "href": "/features/patient-management",
+          "color": "indigo"
+        },
+        {
+          "icon": "calendar",
+          "name": "Planification IA",
+          "description": "Planification intelligente des rendez-vous qui optimise votre calendrier et réduit les absences",
+          "href": "/features/ai-scheduling",
+          "color": "pink"
+        },
+        {
+          "icon": "credit-card",
+          "name": "Facturation et paiements",
+          "description": "Facturation, facturation et traitement des paiements rationalisés avec intégration d'assurance",
+          "href": "/features/billing",
+          "color": "rose"
+        },
+        {
+          "icon": "clipboard",
+          "name": "Planification des traitements",
+          "description": "Plans de traitement numériques, documentation et outils de gestion des cas",
+          "href": "/features/treatment-planning",
+          "color": "amber"
+        }
+      ]
+    },
+    {
+      "category": "IA et automatisation",
+      "description": "Automatisation intelligente propulsée par une technologie IA avancée",
+      "items": [
+        {
+          "icon": "brain",
+          "name": "Insights propulsés par l'IA",
+          "description": "Analytique prédictive et insights sur le comportement des patients pour aider à développer votre cabinet",
+          "href": "/features/patient-insights",
+          "color": "violet"
+        },
+        {
+          "icon": "bell",
+          "name": "Rappels automatisés",
+          "description": "Rappels de rendez-vous intelligents et suivis par SMS et email",
+          "href": "/features/reminders",
+          "color": "emerald"
+        },
+        {
+          "icon": "trending-up",
+          "name": "Analytique du cabinet",
+          "description": "Insights basés sur les données sur les performances du cabinet, les revenus et les opportunités de croissance",
+          "href": "/features/analytics",
+          "color": "lime"
+        },
+        {
+          "icon": "zap",
+          "name": "Automatisation des flux de travail",
+          "description": "Automatiser les tâches de routine et rationaliser les opérations du cabinet",
+          "href": "/features/automation",
+          "color": "orange"
+        }
+      ]
+    },
+    {
+      "category": "Sécurité et conformité",
+      "description": "Sécurité de niveau entreprise et conformité HIPAA pour votre cabinet",
+      "items": [
+        {
+          "icon": "shield",
+          "name": "Conformité HIPAA",
+          "description": "Certification de conformité HIPAA complète et normes de sécurité pour la protection des données patients",
+          "href": "/features/hipaa",
+          "color": "green"
+        },
+        {
+          "icon": "lock",
+          "name": "Chiffrement des données",
+          "description": "Chiffrement de bout en bout et stockage cloud sécurisé pour toutes les données patients",
+          "href": "/features/encryption",
+          "color": "sky"
+        },
+        {
+          "icon": "cloud",
+          "name": "Infrastructure cloud",
+          "description": "Plateforme cloud sécurisée et évolutive avec sauvegardes automatiques et reprise après sinistre",
+          "href": "/platform/cloud",
+          "color": "cyan"
+        },
+        {
+          "icon": "smartphone",
+          "name": "Accès mobile",
+          "description": "Accédez aux données de votre cabinet en toute sécurité depuis n'importe quel appareil, n'importe où",
+          "href": "/platform/mobile",
+          "color": "blue"
+        }
+      ]
+    }
+  ],
+  "features": {
+    "title": "Fonctionnalités puissantes pour les cabinets dentaires",
+    "description": "Notre plateforme est remplie de fonctionnalités conçues spécifiquement pour la gestion de cabinet dentaire",
+    "items": [
+      {
+        "icon": "cloud",
+        "title": "Plateforme basée sur le cloud",
+        "description": "Accédez aux données de votre cabinet en toute sécurité depuis n'importe où, à tout moment avec notre infrastructure cloud"
+      },
+      {
+        "icon": "shield",
+        "title": "Conforme HIPAA",
+        "description": "Sécurité de niveau entreprise avec conformité HIPAA complète et stockage de données chiffré"
+      },
+      {
+        "icon": "zap",
+        "title": "Propulsé par l'IA",
+        "description": "Automatisation intelligente et insights propulsés par l'IA pour optimiser les opérations de votre cabinet"
+      },
+      {
+        "icon": "smartphone",
+        "title": "Accès mobile",
+        "description": "Accès complet à l'application mobile pour gérer votre cabinet en déplacement"
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Avantages pour votre cabinet dentaire",
+    "description": "Découvrez les avantages de la gestion moderne, sécurisée et basée sur le cloud des cabinets dentaires.",
+    "items": [
+      {
+        "icon": "trending-up",
+        "title": "Croissance du cabinet",
+        "description": "Les insights et analytiques propulsés par l'IA vous aident à développer votre cabinet et à augmenter les revenus",
+        "stats": "35%",
+        "label": "Croissance des revenus"
+      },
+      {
+        "icon": "clock",
+        "title": "Gain de temps",
+        "description": "Automatisez les tâches de routine et rationalisez les opérations pour gagner du temps pour les soins aux patients",
+        "stats": "50%",
+        "label": "Temps économisé"
+      },
+      {
+        "icon": "shield",
+        "title": "Sécurité et conformité",
+        "description": "Plateforme conforme HIPAA avec sécurité de niveau entreprise et protection des données",
+        "stats": "99.9%",
+        "label": "Disponibilité"
+      },
+      {
+        "icon": "users",
+        "title": "Satisfaction patient",
+        "description": "Améliorez l'expérience patient avec une planification rationalisée, une communication et des soins améliorés",
+        "stats": "98%",
+        "label": "Taux de satisfaction"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Ce que disent les cabinets dentaires",
+    "description": "Écoutez les professionnels dentaires qui ont transformé leur cabinet avec Dentagia",
+    "items": [
+      {
+        "quote": "Dentagia a transformé la façon dont nous gérons notre cabinet. La planification propulsée par l'IA seule nous fait économiser 10 heures par semaine, et nos scores de satisfaction patient n'ont jamais été aussi élevés.",
+        "author": "Dr. Sarah Martinez",
+        "role": "Propriétaire du cabinet",
+        "image": "/images/testimonials/sarah.jpg"
+      },
+      {
+        "quote": "Passer à Dentagia a été la meilleure décision que nous ayons prise. Le système de gestion des patients est intuitif, la facturation est automatisée, et nos revenus ont augmenté de 35%.",
+        "author": "Dr. Michael Chen",
+        "role": "Dentiste principal",
+        "image": "/images/testimonials/michael.jpg"
+      }
+    ]
+  },
+  "integrations": {
+    "title": "Fonctionne avec vos outils de cabinet",
+    "description": "Intégrez-vous de manière transparente avec les fournisseurs d'assurance, les processeurs de paiement, les systèmes de laboratoire et les logiciels d'imagerie"
+  },
+  "faq": {
+    "title": "Questions fréquemment posées",
+    "description": "Trouvez des réponses aux questions courantes sur les solutions de gestion de cabinet dentaire de Dentagia",
+    "items": [
+      {
+        "question": "Comment fonctionne la planification propulsée par l'IA ?",
+        "answer": "Notre système IA apprend de vos modèles de cabinet et optimise automatiquement la planification des rendez-vous, remplit les annulations et réduit les absences jusqu'à 70%."
+      },
+      {
+        "question": "Dentagia est-il conforme HIPAA ?",
+        "answer": "Oui, Dentagia est entièrement conforme HIPAA avec une sécurité de niveau entreprise, un chiffrement de bout en bout et des pistes d'audit complètes pour tous les accès aux données patients."
+      },
+      {
+        "question": "Puis-je accéder aux données de mon cabinet depuis des appareils mobiles ?",
+        "answer": "Oui, Dentagia est entièrement accessible depuis les ordinateurs de bureau, tablettes et appareils mobiles avec notre plateforme cloud sécurisée et nos applications mobiles."
+      },
+      {
+        "question": "Quel type de support offrez-vous ?",
+        "answer": "Nous fournissons un support technique 24/7, une formation complète pour votre équipe et des spécialistes en gestion de cabinet dédiés pour vous aider à réussir."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prêt à transformer votre cabinet dentaire ?",
+    "description": "Rejoignez des centaines de cabinets dentaires qui font confiance à Dentagia pour gérer leurs opérations et développer leur activité.",
+    "buttons": [
+      {
+        "text": "Planifier une démo",
+        "href": "/demo",
+        "variant": "primary"
+      },
+      {
+        "text": "Contactez-nous",
+        "href": "/contact",
+        "variant": "secondary"
+      }
+    ]
+  }
+}

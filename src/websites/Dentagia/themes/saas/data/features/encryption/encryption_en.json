@@ -1,0 +1,182 @@
+{
+  "hero": {
+    "subtitle": "Data Encryption",
+    "title": "End-to-End Data Encryption",
+    "description": "Military-grade 256-bit encryption protects all patient data in transit and at rest, ensuring the highest level of security for your dental practice.",
+    "icon": "lock",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "256-bit",
+        "label": "Encryption"
+      },
+      {
+        "value": "100%",
+        "label": "Protected"
+      },
+      {
+        "value": "End-to-End",
+        "label": "Security"
+      }
+    ]
+  },
+  "features": {
+    "title": "Encryption Features",
+    "subtitle": "Military-Grade Security",
+    "description": "Comprehensive encryption and security features to protect all patient data.",
+    "items": [
+      {
+        "icon": "lock",
+        "title": "256-Bit Encryption",
+        "description": "Military-grade 256-bit AES encryption for all data at rest and in transit.",
+        "highlights": [
+          "256-bit AES encryption",
+          "Data at rest protection",
+          "Data in transit security",
+          "Key management",
+          "Encryption standards"
+        ],
+        "stats": {
+          "value": "256-bit",
+          "label": "Encryption"
+        }
+      },
+      {
+        "icon": "shield",
+        "title": "End-to-End Protection",
+        "description": "Complete data protection from entry to storage with end-to-end encryption.",
+        "highlights": [
+          "End-to-end encryption",
+          "Complete data flow protection",
+          "Secure transmission",
+          "Encrypted storage",
+          "Zero-knowledge architecture"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "Protected"
+        }
+      },
+      {
+        "icon": "database",
+        "title": "Key Management",
+        "description": "Secure key management and rotation policies ensure encryption keys are always protected.",
+        "highlights": [
+          "Secure key storage",
+          "Key rotation",
+          "Access controls",
+          "Key management policies",
+          "Compliance standards"
+        ],
+        "stats": {
+          "value": "End-to-End",
+          "label": "Security"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Encryption Security",
+    "description": "Military-grade protection for your data",
+    "stats": [
+      {
+        "icon": "lock",
+        "value": "256-bit",
+        "label": "Encryption"
+      },
+      {
+        "icon": "shield",
+        "value": "100%",
+        "label": "Protected"
+      },
+      {
+        "icon": "database",
+        "value": "End-to-End",
+        "label": "Security"
+      },
+      {
+        "icon": "award",
+        "value": "Military",
+        "label": "Grade"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Dr. Sarah Martinez",
+        "role": "Practice Owner",
+        "quote": "The encryption gives us complete confidence that our patient data is protected with the highest security standards."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Encryption Benefits",
+    "subtitle": "Maximum Security",
+    "description": "Experience the peace of mind that comes with military-grade encryption.",
+    "items": [
+      {
+        "title": "Military-Grade Protection",
+        "description": "256-bit encryption provides the highest level of data protection available.",
+        "icon": "lock",
+        "color": "teal",
+        "stats": {
+          "value": "256-bit",
+          "label": "Encryption"
+        },
+        "highlights": [
+          "Military-grade encryption",
+          "AES-256 standard",
+          "Industry-leading security",
+          "Compliance ready"
+        ]
+      },
+      {
+        "title": "Complete Protection",
+        "description": "End-to-end encryption protects data throughout its entire lifecycle.",
+        "icon": "shield",
+        "color": "cyan",
+        "stats": {
+          "value": "100%",
+          "label": "Protected"
+        },
+        "highlights": [
+          "End-to-end encryption",
+          "Complete data flow",
+          "Secure transmission",
+          "Encrypted storage"
+        ]
+      },
+      {
+        "title": "Secure Key Management",
+        "description": "Professional key management ensures encryption keys are always secure.",
+        "icon": "database",
+        "color": "blue",
+        "stats": {
+          "value": "End-to-End",
+          "label": "Security"
+        },
+        "highlights": [
+          "Secure key storage",
+          "Key rotation",
+          "Access controls",
+          "Management policies"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready for Military-Grade Encryption?",
+    "description": "See how Dentagia's encryption protects your patient data.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Schedule a Demo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Learn More",
+      "link": "/features"
+    }
+  }
+}
+

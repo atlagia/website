@@ -1,0 +1,249 @@
+{
+  "navigation": [
+    {
+      "name": "Funzionalità",
+      "href": "/features",
+      "megaMenu": {
+        "categories": [
+          {
+            "title": "Gestione dello studio",
+            "icon": "briefcase",
+            "items": [
+              {
+                "name": "Gestione pazienti",
+                "href": "/features/patient-management"
+              },
+              {
+                "name": "Pianificazione appuntamenti",
+                "href": "/features/scheduling"
+              },
+              {
+                "name": "Fatturazione e pagamenti",
+                "href": "/features/billing"
+              },
+              {
+                "name": "Pianificazione trattamenti",
+                "href": "/features/treatment-planning"
+              }
+            ]
+          },
+          {
+            "title": "IA e automazione",
+            "icon": "zap",
+            "items": [
+              {
+                "name": "Pianificazione alimentata da IA",
+                "href": "/features/ai-scheduling"
+              },
+              {
+                "name": "Insights pazienti",
+                "href": "/features/patient-insights"
+              },
+              {
+                "name": "Promemoria automatizzati",
+                "href": "/features/reminders"
+              },
+              {
+                "name": "Analisi dello studio",
+                "href": "/features/analytics"
+              }
+            ]
+          },
+          {
+            "title": "Sicurezza e conformità",
+            "icon": "shield",
+            "items": [
+              {
+                "name": "Conformità HIPAA",
+                "href": "/features/hipaa"
+              },
+              {
+                "name": "Sicurezza cloud",
+                "href": "/features/security"
+              },
+              {
+                "name": "Crittografia dati",
+                "href": "/features/encryption"
+              },
+              {
+                "name": "Backup e ripristino",
+                "href": "/features/backup"
+              }
+            ]
+          }
+        ],
+        "featured": {
+          "badge": "Nuovo",
+          "title": "Gestione dentale alimentata da IA",
+          "description": "Software moderno, sicuro e basato su cloud per studi dentistici",
+          "link": {
+            "text": "Esplora funzionalità",
+            "href": "/features"
+          }
+        }
+      }
+    },
+    {
+      "name": "Soluzioni",
+      "href": "/solutions",
+      "megaMenu": {
+        "categories": [
+          {
+            "title": "Tipi di studio",
+            "icon": "building",
+            "items": [
+              {
+                "name": "Studi individuali",
+                "href": "/solutions/solo-practice"
+              },
+              {
+                "name": "Multi-professionale",
+                "href": "/solutions/multi-practitioner"
+              },
+              {
+                "name": "Multi-sede",
+                "href": "/solutions/multi-location"
+              },
+              {
+                "name": "Studi specializzati",
+                "href": "/solutions/specialty"
+              }
+            ]
+          },
+          {
+            "title": "Crescita dello studio",
+            "icon": "trending-up",
+            "items": [
+              {
+                "name": "Fidelizzazione pazienti",
+                "href": "/solutions/patient-retention"
+              },
+              {
+                "name": "Ottimizzazione ricavi",
+                "href": "/solutions/revenue"
+              },
+              {
+                "name": "Automatizzazione marketing",
+                "href": "/solutions/marketing"
+              },
+              {
+                "name": "Analisi dello studio",
+                "href": "/solutions/analytics"
+              }
+            ]
+          },
+          {
+            "title": "Integrazione",
+            "icon": "link",
+            "items": [
+              {
+                "name": "Integrazione assicurazioni",
+                "href": "/solutions/insurance"
+              },
+              {
+                "name": "Elaborazione pagamenti",
+                "href": "/solutions/payments"
+              },
+              {
+                "name": "Integrazione laboratorio",
+                "href": "/solutions/lab"
+              },
+              {
+                "name": "Sistemi di imaging",
+                "href": "/solutions/imaging"
+              }
+            ]
+          }
+        ],
+        "featured": {
+          "badge": "In evidenza",
+          "title": "Piattaforma basata su cloud",
+          "description": "Soluzione sicura e scalabile per studi dentistici",
+          "link": {
+            "text": "Scopri di più",
+            "href": "/platform"
+          }
+        }
+      }
+    },
+    {
+      "name": "Piattaforma",
+      "href": "/platform",
+      "megaMenu": {
+        "categories": [
+          {
+            "title": "Tecnologia",
+            "icon": "cpu",
+            "items": [
+              {
+                "name": "Infrastruttura cloud",
+                "href": "/platform/cloud"
+              },
+              {
+                "name": "Tecnologia IA",
+                "href": "/platform/ai"
+              },
+              {
+                "name": "Sicurezza e conformità",
+                "href": "/platform/security"
+              },
+              {
+                "name": "Accesso mobile",
+                "href": "/platform/mobile"
+              }
+            ]
+          }
+        ],
+        "featured": {
+          "badge": "Nuovo",
+          "title": "Piattaforma cloud moderna",
+          "description": "Infrastruttura sicura e scalabile per studi dentistici",
+          "link": {
+            "text": "Scopri di più",
+            "href": "/platform"
+          }
+        }
+      }
+    },
+    {
+      "name": "Risorse",
+      "href": "/resources"
+    },
+    {
+      "name": "Prezzi",
+      "href": "/pricing"
+    }
+  ],
+  "auth": {
+    "signIn": {
+      "text": "Contattaci",
+      "href": "/contact"
+    },
+    "getStarted": {
+      "text": "Prenota una demo",
+      "href": "/demo"
+    }
+  },
+  "languages": [
+    {
+      "code": "en",
+      "name": "English"
+    },
+    {
+      "code": "fr",
+      "name": "Français"
+    },
+    {
+      "code": "de",
+      "name": "Deutsch"
+    },
+    {
+      "code": "es",
+      "name": "Español"
+    },
+    {
+      "code": "ar",
+      "name": "العربية"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+
+> @example/basics@0.0.1 deploy
+> node scripts/deploy-store.js SteamVista
+
+
+🚀 Deploying steamvista...
+📁 Using env file: /home/mac/aiassistant/website/stores/steamvista/.env
+
+> @example/basics@0.0.1 build
+> astro build
+
+16:34:09 [WARN] Unsupported file type /home/mac/aiassistant/website/src/pages/json/default.json found. Prefix filename with an underscore (`_`) to ignore.
+16:34:09 [content] Syncing content
+16:34:09 [content] Synced content
+16:34:09 [types] Generated 101ms
+16:34:09 [build] output: "server"
+16:34:09 [build] directory: /home/mac/aiassistant/website/dist/
+16:34:09 [build] adapter: @astrojs/node
+16:34:09 [build] Collecting build info...
+16:34:09 [build] ✓ Completed in 273ms.
+16:34:10 [build] Building server entrypoints...
+16:34:13 [WARN] [router] getStaticPaths() ignored in dynamic page /src/pages/collections/[...collections].astro. Add `export const prerender = true;` to prerender the page as static HTML during the build process.
+16:34:13 [WARN] [router] getStaticPaths() ignored in dynamic page /src/pages/[lang]/collections/[...collections].astro. Add `export const prerender = true;` to prerender the page as static HTML during the build process.
+16:34:14 [WARN] [router] getStaticPaths() ignored in dynamic page /src/pages/[lang]/[...slug].astro. Add `export const prerender = true;` to prerender the page as static HTML during the build process.
+16:34:14 [WARN] [router] getStaticPaths() ignored in dynamic page /src/pages/index.astro. Add `export const prerender = true;` to prerender the page as static HTML during the build process.
+16:34:17 [WARN] [vite] 
+/anime-pattern.svg referenced in /anime-pattern.svg didn't resolve at build time, it will remain unchanged to be resolved at runtime
+16:34:17 [WARN] [vite] 
+/geometric-pattern.svg referenced in /geometric-pattern.svg didn't resolve at build time, it will remain unchanged to be resolved at runtime
+16:34:17 [WARN] [vite] 
+/grid-pattern.svg referenced in /grid-pattern.svg didn't resolve at build time, it will remain unchanged to be resolved at runtime
+16:34:17 [WARN] [vite] 
+/grid.svg referenced in /grid.svg didn't resolve at build time, it will remain unchanged to be resolved at runtime
+16:34:17 [WARN] [vite] 
+/hexagon-pattern.svg referenced in /hexagon-pattern.svg didn't resolve at build time, it will remain unchanged to be resolved at runtime
+16:34:17 [WARN] [vite] 
+/pattern.svg referenced in /pattern.svg didn't resolve at build time, it will remain unchanged to be resolved at runtime
+16:34:17 [WARN] [vite] 
+/sparkle-pattern.svg referenced in /sparkle-pattern.svg didn't resolve at build time, it will remain unchanged to be resolved at runtime
+16:34:17 [WARN] [vite] 
+/sparkles-pattern.svg referenced in /sparkles-pattern.svg didn't resolve at build time, it will remain unchanged to be resolved at runtime

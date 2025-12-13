@@ -1,0 +1,50 @@
+---
+interface Props {
+  className?: string;
+}
+
+const { className = "" } = Astro.props;
+
+// Get PROJECT_TYPE from environment
+const PROJECT_TYPE = import.meta.env.PROJECT_TYPE || 'default';
+
+// Only show for physical products (hide for IPTV, digital, etc.)
+const isPhysical = !['iptv', 'digital', 'streaming'].includes(PROJECT_TYPE.toLowerCase());
+
+if (!isPhysical) {
+  return null;
+}
+---
+
+<div class={`bg-gradient-to-br from-gray-50 to-white rounded-xl p-6 shadow-sm ${className}`}>
+  <h2 class="text-2xl font-bold mb-4 text-gray-900 flex items-center gap-2">
+    <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+    </svg>
+    Shipping & Delivery
+  </h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+    <div class="text-center p-4 border border-gray-200 rounded-lg">
+      <div class="text-sm font-medium text-gray-900 mb-1">Free Shipping</div>
+      <div class="text-xs text-gray-600">Orders over $75</div>
+      <div class="text-xs text-gray-500 mt-1">5-7 business days</div>
+    </div>
+    
+    <div class="text-center p-4 border border-gray-200 rounded-lg">
+      <div class="text-sm font-medium text-gray-900 mb-1">Express Delivery</div>
+      <div class="text-xs text-gray-600">$9.99</div>
+      <div class="text-xs text-gray-500 mt-1">1-2 business days</div>
+    </div>
+    
+    <div class="text-center p-4 border border-gray-200 rounded-lg">
+      <div class="text-sm font-medium text-gray-900 mb-1">International</div>
+      <div class="text-xs text-gray-600">From $15.99</div>
+      <div class="text-xs text-gray-500 mt-1">10-14 business days</div>
+    </div>
+  </div>
+
+  <div class="text-center text-sm text-gray-600">
+    <p>Processing time: 1-2 business days • Free returns within 30 days</p>
+  </div>
+</div>

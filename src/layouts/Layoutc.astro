@@ -1,0 +1,502 @@
+---
+import BaseHead from '@themes/default/components/BaseHead.astro';
+import Header from '@themes/default/components/Header';
+
+// Dynamic Footer import with fallback
+let Footer;
+try {
+  const siteName = import.meta.env.PUBLIC_SITE_NAME || 'Drivon';
+  const theme = import.meta.env.THEME || 'bikes';
+  const footerModule = await import(`@websites/${siteName}/themes/${theme}/components/Footer.astro`);
+  Footer = footerModule.default;
+  console.log(`✅ Loaded ${siteName}/${theme} Footer for collection layout`);
+} catch (error) {
+  console.log(`⚠️ Theme-specific Footer not found, falling back to default`);
+  const defaultFooter = await import('@themes/default/components/Footer.astro');
+  Footer = defaultFooter.default;
+}
+
+export interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+  schemas?: any[];
+  alternateUrls?: Array<{ lang: string; url: string }>;
+  lang?: string;
+}
+
+const {
+  title,
+  description,
+  image,
+  schemas = [],
+  alternateUrls = [],
+  lang = 'en'
+} = Astro.props;
+
+const baseUrl = import.meta.env.DOMAINE || 'https://driverapparel.com';
+
+// Get theme and site configuration
+const theme = import.meta.env.THEME || 'default';
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'DriverApparel';
+const projectType = import.meta.env.PROJECT_TYPE || 'default';
+
+// Import header styles with fallback logic (same as Layoutp.astro)
+let headerStyles = {};
+try {
+  // Try to load theme-specific header styles first
+  const themeHeaderStyles = await import(`../websites/${siteName}/themes/${theme}/styles/Header.json`);
+  headerStyles = themeHeaderStyles.default;
+  console.log(`✅ Loaded ${siteName}/${theme} header styles for collection layout`);
+} catch (error) {
+  console.log(`⚠️ Theme-specific header styles not found for ${siteName}/${theme}, falling back to default`);
+  try {
+    // Fallback to default theme header styles
+    const defaultHeaderStyles = await import(`../themes/default/styles/Header.json`);
+    headerStyles = defaultHeaderStyles.default;
+    console.log('✅ Loaded default header styles for collection layout');
+  } catch (fallbackError) {
+    console.error('❌ Failed to load both theme and default header styles:', fallbackError);
+    // Provide minimal fallback styles
+    headerStyles = {
+      wrapper: "bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50",
+      container: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+      nav: {
+        wrapper: "flex items-center justify-between h-16",
+        brand: "text-xl font-bold text-gray-900 hover:text-gray-700 transition-colors",
+        menu: { item: "text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors" }
+      },
+      actions: { wrapper: "flex items-center space-x-4" }
+    };
+  }
+}
+
+// Language and currency configuration - only include allowed languages
+const getAllowedLanguages = (): string[] => {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  return allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+};
+
+// Import menu configuration with fallback logic (same as Layoutp.astro)
+let menuConfig = {};
+try {
+  // Try to load theme-specific menu configuration first
+  const themeMenuConfig = await import(`../websites/${siteName}/themes/${theme}/data/store/Menu.json`);
+  menuConfig = themeMenuConfig.default;
+  console.log(`✅ Loaded ${siteName}/${theme} menu config for collection layout`);
+} catch (error) {
+  console.log(`⚠️ Theme-specific menu config not found for ${siteName}/${theme}, using fallback`);
+  // Hardcoded fallback menu - only include allowed languages
+  const allowedLanguages = getAllowedLanguages();
+  menuConfig = {};
+  
+  allowedLanguages.forEach(lang => {
+    switch(lang) {
+      case 'en':
+        menuConfig[lang] = {
+          items: [
+            { label: "Home", href: "/en" },
+            { label: "Collections", href: "/en/collections" },
+            { label: "Products", href: "/en/products" },
+            { label: "About", href: "/en/about" },
+            { label: "Contact", href: "/en/contact" }
+          ]
+        };
+        break;
+      case 'fr':
+        menuConfig[lang] = {
+          items: [
+            { label: "Accueil", href: "/fr" },
+            { label: "Collections", href: "/fr/collections" },
+            { label: "Produits", href: "/fr/products" },
+            { label: "À Propos", href: "/fr/about" },
+            { label: "Contact", href: "/fr/contact" }
+          ]
+        };
+        break;
+      case 'de':
+        menuConfig[lang] = {
+          items: [
+            { label: "Startseite", href: "/de" },
+            { label: "Sammlungen", href: "/de/collections" },
+            { label: "Produkte", href: "/de/products" },
+            { label: "Über uns", href: "/de/about" },
+            { label: "Kontakt", href: "/de/contact" }
+          ]
+        };
+        break;
+      default:
+        // For any other allowed language, use English structure
+        menuConfig[lang] = {
+          items: [
+            { label: "Home", href: `/${lang}` },
+            { label: "Collections", href: `/${lang}/collections` },
+            { label: "Products", href: `/${lang}/products` },
+            { label: "About", href: `/${lang}/about` },
+            { label: "Contact", href: `/${lang}/contact` }
+          ]
+        };
+    }
+  });
+}
+
+const allowedLanguages = getAllowedLanguages();
+const languageNames = {
+  en: "English",
+  fr: "Français", 
+  de: "Deutsch",
+  es: "Español",
+  it: "Italiano",
+  pt: "Português",
+  nl: "Nederlands",
+  ar: "العربية",
+  zh: "中文",
+  tr: "Türkçe",
+  ru: "Русский",
+  ja: "日本語",
+  ko: "한국어",
+  sv: "Svenska",
+  no: "Norsk",
+  da: "Dansk",
+  fi: "Suomi",
+  pl: "Polski",
+  cs: "Čeština",
+  hu: "Magyar",
+  ro: "Română",
+  bg: "Български",
+  hr: "Hrvatski",
+  sk: "Slovenčina",
+  sl: "Slovenščina",
+  et: "Eesti",
+  lv: "Latviešu",
+  lt: "Lietuvių",
+  el: "Ελληνικά",
+  he: "עברית",
+  th: "ไทย",
+  vi: "Tiếng Việt",
+  id: "Bahasa Indonesia",
+  ms: "Bahasa Melayu",
+  tl: "Filipino"
+};
+
+const languages = Object.fromEntries(
+  allowedLanguages.map(lang => [lang, languageNames[lang] || lang])
+);
+
+const currencies = {
+  USD: '$',
+  EUR: '€',
+  GBP: '£',
+  JPY: '¥',
+  CNY: '¥',
+  CAD: 'C$',
+  AUD: 'A$'
+};
+
+// Search and payment configuration
+const searchConfig = {
+  apiEndpoint: "/api/search",
+  lang: lang,
+  placeholder: {
+    en: "Search products...",
+    fr: "Rechercher des produits...",
+    de: "Produkte suchen...",
+    es: "Buscar productos...",
+    it: "Cerca prodotti...",
+    pt: "Pesquisar produtos..."
+  }
+};
+
+const paymentConfig = {
+  method: import.meta.env.PUBLIC_PAYMENT_METHOD || 'infinity',
+  hoodpay: {
+    apiUrl: import.meta.env.HOODPAY_API_URL,
+    businessId: import.meta.env.HOODPAY_BUSINESS_ID,
+    authToken: import.meta.env.HOODPAY_AUTH_TOKEN,
+    redirectUrl: `${import.meta.env.DOMAINE}${import.meta.env.HOODPAY_REDIRECT_URL}`
+  },
+  store: {
+    name: import.meta.env.PUBLIC_SITE_NAME || 'DriverApparel',
+    domain: import.meta.env.DOMAINE || 'https://driverapparel.com'
+  }
+};
+---
+
+<!DOCTYPE html>
+<html lang={lang}>
+  <head>
+    <BaseHead 
+      title={title}
+      description={description}
+      image={image}
+    />
+    
+    <!-- Resource Hints -->
+    <link rel="preconnect" href="https://cdn.shopify.com" />
+    <link rel="dns-prefetch" href="https://cdn.shopify.com" />
+    
+    <!-- Preload critical fonts -->
+    <link
+      rel="preload"
+      href="/fonts/inter-var.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="robots" content="index, follow" />
+    <meta name="format-detection" content="telephone=no" />
+    
+    <!-- Language variants are handled by BaseHead component -->
+    
+    <!-- Schema Markup -->
+    {schemas.map((schema, index) => (
+      <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    ))}
+    
+    <!-- PWA Tags -->
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="manifest" href="/manifest.json" />
+  </head>
+  <body class="bg-gray-50">
+    <!-- Header -->
+    <Header
+      client:load
+      siteName={siteName}
+      menuConfig={menuConfig}
+      languages={languages}
+      allowedLanguages={allowedLanguages}
+      projectType={projectType}
+      currentPath={Astro.url.pathname}
+      currencies={currencies}
+      styles={headerStyles}
+      headerStyles={headerStyles}
+      apiEndpoint="/api/checkout"
+      searchConfig={searchConfig}
+      paymentConfig={paymentConfig}
+    />
+    
+    <!-- Main Content -->
+    <div id="app">
+      <slot />
+    </div>
+    
+    <!-- Footer -->
+    <Footer />
+    
+    <!-- Collection-specific scripts -->
+    <script>
+      // Collection page utilities
+      class CollectionPageManager {
+        constructor() {
+          this.currentFilters = new URLSearchParams(window.location.search);
+          this.init();
+        }
+
+        init() {
+          this.setupFilterListeners();
+          this.setupSortListeners();
+          this.updateActiveFilters();
+        }
+
+        setupFilterListeners() {
+          // Color filter listeners
+          document.querySelectorAll('[data-filter="color"]').forEach(checkbox => {
+            checkbox.addEventListener('change', (e) => {
+              this.updateFilter('color', e.target.value, e.target.checked);
+            });
+          });
+
+          // Size filter listeners
+          document.querySelectorAll('[data-filter="size"]').forEach(checkbox => {
+            checkbox.addEventListener('change', (e) => {
+              this.updateFilter('size', e.target.value, e.target.checked);
+            });
+          });
+
+          // Price range listeners
+          const priceMin = document.getElementById('price-min');
+          const priceMax = document.getElementById('price-max');
+          
+          if (priceMin && priceMax) {
+            [priceMin, priceMax].forEach(input => {
+              input.addEventListener('change', () => {
+                this.updatePriceFilter();
+              });
+            });
+          }
+
+          // Availability filter
+          document.querySelectorAll('[data-filter="availability"]').forEach(checkbox => {
+            checkbox.addEventListener('change', (e) => {
+              this.updateFilter('availability', e.target.value, e.target.checked);
+            });
+          });
+        }
+
+        setupSortListeners() {
+          const sortSelect = document.getElementById('sort-select');
+          if (sortSelect) {
+            sortSelect.addEventListener('change', (e) => {
+              this.updateSort(e.target.value);
+            });
+          }
+        }
+
+        updateFilter(type, value, checked) {
+          if (checked) {
+            this.currentFilters.append(type, value);
+          } else {
+            const values = this.currentFilters.getAll(type);
+            this.currentFilters.delete(type);
+            values.filter(v => v !== value).forEach(v => {
+              this.currentFilters.append(type, v);
+            });
+          }
+          this.applyFilters();
+        }
+
+        updatePriceFilter() {
+          const priceMin = document.getElementById('price-min')?.value;
+          const priceMax = document.getElementById('price-max')?.value;
+          
+          this.currentFilters.delete('price_min');
+          this.currentFilters.delete('price_max');
+          
+          if (priceMin) this.currentFilters.set('price_min', priceMin);
+          if (priceMax) this.currentFilters.set('price_max', priceMax);
+          
+          this.applyFilters();
+        }
+
+        updateSort(sortValue) {
+          if (sortValue) {
+            this.currentFilters.set('sort', sortValue);
+          } else {
+            this.currentFilters.delete('sort');
+          }
+          this.applyFilters();
+        }
+
+        applyFilters() {
+          const newUrl = `${window.location.pathname}${this.currentFilters.toString() ? '?' + this.currentFilters.toString() : ''}`;
+          window.history.pushState({}, '', newUrl);
+          
+          // Trigger custom event for components to react
+          window.dispatchEvent(new CustomEvent('filtersChanged', {
+            detail: Object.fromEntries(this.currentFilters)
+          }));
+        }
+
+        updateActiveFilters() {
+          // Update checkboxes based on current URL params
+          this.currentFilters.forEach((value, key) => {
+            if (key === 'color' || key === 'size' || key === 'availability') {
+              const checkbox = document.querySelector(`[data-filter="${key}"][value="${value}"]`);
+              if (checkbox) checkbox.checked = true;
+            }
+          });
+
+          // Update sort select
+          const sortValue = this.currentFilters.get('sort');
+          const sortSelect = document.getElementById('sort-select');
+          if (sortSelect && sortValue) {
+            sortSelect.value = sortValue;
+          }
+
+          // Update price inputs
+          const priceMin = this.currentFilters.get('price_min');
+          const priceMax = this.currentFilters.get('price_max');
+          const priceMinInput = document.getElementById('price-min');
+          const priceMaxInput = document.getElementById('price-max');
+          
+          if (priceMinInput && priceMin) priceMinInput.value = priceMin;
+          if (priceMaxInput && priceMax) priceMaxInput.value = priceMax;
+        }
+
+        clearAllFilters() {
+          this.currentFilters = new URLSearchParams();
+          this.applyFilters();
+          
+          // Uncheck all filter checkboxes
+          document.querySelectorAll('[data-filter]').forEach(checkbox => {
+            checkbox.checked = false;
+          });
+          
+          // Reset sort
+          const sortSelect = document.getElementById('sort-select');
+          if (sortSelect) sortSelect.value = '';
+          
+          // Reset price inputs
+          const priceMinInput = document.getElementById('price-min');
+          const priceMaxInput = document.getElementById('price-max');
+          if (priceMinInput) priceMinInput.value = '';
+          if (priceMaxInput) priceMaxInput.value = '';
+        }
+      }
+
+      // Initialize when DOM is ready
+      document.addEventListener('DOMContentLoaded', () => {
+        window.collectionPageManager = new CollectionPageManager();
+      });
+
+      // Re-initialize on page transitions
+      document.addEventListener('astro:page-load', () => {
+        window.collectionPageManager = new CollectionPageManager();
+      });
+    </script>
+  </body>
+</html>
+
+<style>
+  /* Collection-specific styles */
+  .filter-section {
+    transition: all 0.3s ease;
+  }
+  
+  .filter-section.collapsed .filter-content {
+    max-height: 0;
+    overflow: hidden;
+  }
+  
+  .filter-section.expanded .filter-content {
+    max-height: 500px;
+  }
+  
+  .product-card {
+    transition: all 0.3s ease;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-2px);
+  }
+  
+  .price-range-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 4px;
+    border-radius: 2px;
+    background: #e5e7eb;
+    outline: none;
+  }
+  
+  .price-range-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #3b82f6;
+    cursor: pointer;
+  }
+  
+  .price-range-slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #3b82f6;
+    cursor: pointer;
+    border: none;
+  }
+</style>

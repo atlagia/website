@@ -1,109 +1,227 @@
 {
   "navigation": [
     {
-      "name": "Products",
-      "href": "/products",
+      "name": "Industries",
+      "href": "/industries",
       "megaMenu": {
         "categories": [
           {
-            "title": "Marketing",
-            "icon": "marketing",
+            "title": "Healthcare",
+            "icon": "stethoscope",
             "items": [
               {
-                "name": "AI Content Generator",
-                "href": "/ai-content-generator"
+                "name": "Medical Practices",
+                "href": "/solutions/medical-solution"
               },
               {
-                "name": "Social Media Automation",
-                "href": "/social-media-automation"
+                "name": "Hospitals",
+                "href": "/solutions/hospital-solution"
               },
               {
-                "name": "Email Marketing AI",
-                "href": "/email-marketing-ai"
+                "name": "Clinics",
+                "href": "/solutions/clinic-solution"
               },
               {
-                "name": "Analytics Dashboard",
-                "href": "/analytics-dashboard"
+                "name": "Pharmacies",
+                "href": "/solutions/pharmacy-solution"
               }
             ]
           },
           {
-            "title": "E-commerce",
-            "icon": "ecommerce",
+            "title": "Professional Services",
+            "icon": "briefcase",
             "items": [
               {
-                "name": "Product Optimizer",
-                "href": "/product-optimization"
+                "name": "Dental Practices",
+                "href": "/solutions/dental-solution"
               },
               {
-                "name": "Inventory Management",
-                "href": "/inventory-management"
+                "name": "Veterinary Practices",
+                "href": "/solutions/veterinary-solution"
               },
               {
-                "name": "Pricing Intelligence",
-                "href": "/pricing-intelligence"
+                "name": "Radiology Centers",
+                "href": "/solutions/radiology-solution"
               },
               {
-                "name": "Customer Insights",
-                "href": "/customer-insights"
+                "name": "Laboratories",
+                "href": "/solutions/laboratory-solution"
               }
             ]
           },
           {
-            "title": "SEO",
-            "icon": "seo",
+            "title": "Retail & Commerce",
+            "icon": "shopping-bag",
             "items": [
               {
-                "name": "AI Keyword Research",
-                "href": "/keyword-research"
+                "name": "E-commerce",
+                "href": "/solutions/ecommerce-solution"
               },
               {
-                "name": "Content Optimization",
-                "href": "/content-optimization"
+                "name": "Retail Stores",
+                "href": "/solutions/retail-stores"
               },
               {
-                "name": "Backlink Analyzer",
-                "href": "/backlink-analyzer"
+                "name": "Restaurants",
+                "href": "/solutions/restaurants"
               },
               {
-                "name": "Competitor Analysis",
-                "href": "/competitor-analysis"
+                "name": "Wholesale",
+                "href": "/solutions/wholesale"
               }
             ]
           }
         ],
         "featured": {
           "badge": "New",
-          "title": "AI-Powered Universal Bulk Editor",
-          "description": "Optimize your entire catalog in minutes",
+          "title": "Industry-Specific AI Solutions",
+          "description": "Tailored AI automation for your industry",
           "link": {
-            "text": "Learn more",
-            "href": "/bulk-editor"
+            "text": "Explore Solutions",
+            "href": "/solutions"
           }
         }
       }
     },
     {
-      "name": "Categories",
-      "href": "/categories"
+      "name": "Solutions",
+      "href": "/solutions",
+      "megaMenu": {
+        "categories": [
+          {
+            "title": "Operations",
+            "icon": "settings",
+            "items": [
+              {
+                "name": "Workflow Automation",
+                "href": "/solutions/workflow"
+              },
+              {
+                "name": "Document Processing",
+                "href": "/solutions/documents"
+              },
+              {
+                "name": "Resource Planning",
+                "href": "/solutions/planning"
+              },
+              {
+                "name": "Analytics & Reports",
+                "href": "/solutions/analytics"
+              }
+            ]
+          },
+          {
+            "title": "Customer Experience",
+            "icon": "users",
+            "items": [
+              {
+                "name": "AI Chat Support",
+                "href": "/solutions/chat-support"
+              },
+              {
+                "name": "Customer Analytics",
+                "href": "/solutions/customer-analytics"
+              },
+              {
+                "name": "Personalization",
+                "href": "/solutions/personalization"
+              },
+              {
+                "name": "Engagement Tools",
+                "href": "/solutions/engagement"
+              }
+            ]
+          },
+          {
+            "title": "Growth",
+            "icon": "trending-up",
+            "items": [
+              {
+                "name": "Marketing AI",
+                "href": "/solutions/marketing"
+              },
+              {
+                "name": "Sales Intelligence",
+                "href": "/solutions/sales"
+              },
+              {
+                "name": "Market Research",
+                "href": "/solutions/research"
+              },
+              {
+                "name": "Business Intelligence",
+                "href": "/solutions/intelligence"
+              }
+            ]
+          }
+        ],
+        "featured": {
+          "badge": "Featured",
+          "title": "Enterprise AI Suite",
+          "description": "Complete AI transformation platform",
+          "link": {
+            "text": "Learn More",
+            "href": "/enterprise"
+          }
+        }
+      }
     },
     {
-      "name": "Documentation",
-      "href": "/documentation"
+      "name": "Platform",
+      "href": "/platform",
+      "megaMenu": {
+        "categories": [
+          {
+            "title": "Core Features",
+            "icon": "cpu",
+            "items": [
+              {
+                "name": "AI Engine",
+                "href": "/platform/ai-engine"
+              },
+              {
+                "name": "Integration Hub",
+                "href": "/platform/integrations"
+              },
+              {
+                "name": "Security",
+                "href": "/platform/security"
+              },
+              {
+                "name": "API Access",
+                "href": "/platform/api"
+              }
+            ]
+          }
+        ],
+        "featured": {
+          "badge": "New",
+          "title": "Developer Portal",
+          "description": "Build with our AI platform",
+          "link": {
+            "text": "Start Building",
+            "href": "/developers"
+          }
+        }
+      }
     },
     {
-      "name": "Support",
-      "href": "/support"
+      "name": "Resources",
+      "href": "/resources"
+    },
+    {
+      "name": "Pricing",
+      "href": "/pricing"
     }
   ],
   "auth": {
     "signIn": {
-      "text": "Sign In",
-      "href": "https://app.atlagia.com/login"
+      "text": "Contact Us",
+      "href": "/contact"
     },
     "getStarted": {
       "text": "Get Started",
-      "href": "https://app.atlagia.com/signup"
+      "href": "/en/discuss-project"
     }
   },
   "languages": [
@@ -120,8 +238,8 @@
       "name": "Deutsch"
     },
     {
-      "code": "it",
-      "name": "Italiano"
+      "code": "es",
+      "name": "Español"
     },
     {
       "code": "ar",

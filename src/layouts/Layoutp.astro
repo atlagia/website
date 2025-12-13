@@ -6,456 +6,131 @@ const theme = import.meta.env.THEME || 'default';
 const siteName = import.meta.env.PUBLIC_SITE_NAME || 'Drivi';
 const PROJECT_TYPE = import.meta.env.PROJECT_TYPE || 'default';
 
-// Import styles
+// Add store name and domain
+const storeName = import.meta.env.PUBLIC_STORE_NAME || 'DefaultStore';
+const storeDomain = import.meta.env.PUBLIC_STORE_DOMAIN || 'localhost';
+
+// Import header styles with fallback logic
 let headerStyles = {};
 try {
-  const { luxuryHeaderStyle } = await import(`../themes/${theme}/styles/header/luxury.mjs`);
-  headerStyles = luxuryHeaderStyle;
+  // Try to load theme-specific header styles first
+  const themeHeaderStyles = await import(`../websites/${siteName}/themes/${theme}/styles/Header.json`);
+  headerStyles = themeHeaderStyles.default;
+  console.log(`✅ Loaded ${siteName}/${theme} header styles`);
 } catch (error) {
-  console.error('Failed to load header styles:', error);
+  console.log(`⚠️ Theme-specific header styles not found for ${siteName}/${theme}, falling back to default`);
+  try {
+    // Fallback to default theme header styles
+    const defaultHeaderStyles = await import(`../themes/default/styles/Header.json`);
+    headerStyles = defaultHeaderStyles.default;
+    console.log('✅ Loaded default header styles');
+  } catch (fallbackError) {
+    console.error('❌ Failed to load both theme and default header styles:', fallbackError);
+    // Provide minimal fallback styles
+    headerStyles = {
+      wrapper: "bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50",
+      container: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+      nav: {
+        wrapper: "flex items-center justify-between h-16",
+        brand: "text-xl font-bold text-gray-900 hover:text-gray-700 transition-colors",
+        menu: { item: "text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors" }
+      },
+      actions: { wrapper: "flex items-center space-x-4" }
+    };
+  }
 }
 
-// Properly handle dynamic imports with default exports
-const { default: BaseHead } = await import(`../themes/${theme}/components/BaseHead.astro`);
-const { default: Footer } = await import(`../themes/${theme}/components/Footer.astro`);
+// Import default BaseHead only
+const { default: BaseHead } = await import(`../themes/default/components/BaseHead.astro`);
 
-// Menu configuration with language-prefixed paths
-const menuConfig = {
-  en: {
-    default: {
-      items: [
-        { label: "Collections", href: "/en/collections" },
-        { label: "Helmets", href: "/en/helmets" },
-        { label: "Jackets", href: "/en/jackets" },
-        { label: "Accessories", href: "/en/accessories" }
-      ]
-    },
-    degital: {
-      items: [
-        { label: "Templates", href: "/en/templates" },
-        { label: "Plugins", href: "/en/plugins" },
-        { label: "Scripts", href: "/en/scripts" },
-        { label: "Resources", href: "/en/resources" }
-      ]
-    },
-    repshoes: {
-      items: [
-        { label: "Nike", href: "/en/collections/nike" },
-        { label: "Adidas", href: "/en/collections/adidas" },
-        { label: "Jordan", href: "/en/collections/jordan" },
-        { label: "Dior", href: "/en/collections/dior" },
-        { label: "Louis Vuitton", href: "/en/collections/louis-vuitton" },
-        { label: "Gucci", href: "/en/collections/gucci" },
-        { label: "Balenciaga", href: "/en/collections/balenciaga" },
-        { label: "Yeezy", href: "/en/collections/yeezy" }
-      ]
-    },
-    repbag: {
-      items: [
-        { label: "Louis Vuitton", href: "/en/collections/louis-vuitton-bags" },
-        { label: "Gucci", href: "/en/collections/gucci-bags" },
-        { label: "Hermès", href: "/en/collections/hermes-bags" },
-        { label: "Chanel", href: "/en/collections/chanel-bags" },
-        { label: "Prada", href: "/en/collections/prada-bags" },
-        { label: "Dior", href: "/en/collections/dior-bags" },
-        { label: "Balenciaga", href: "/en/collections/balenciaga-bags" },
-        { label: "Fendi", href: "/en/collections/fendi-bags" }
-      ]
-    },
-    repwatch: {
-      items: [
-        { label: "Rolex", href: "/en/collections/rolex-watches" },
-        { label: "Patek Philippe", href: "/en/collections/patek-philippe-watches" },
-        { label: "Audemars Piguet", href: "/en/collections/audemars-piguet-watches" },
-        { label: "Richard Mille", href: "/en/collections/richard-mille-watches" },
-        { label: "Cartier", href: "/en/collections/cartier-watches" },
-        { label: "Omega", href: "/en/collections/omega-watches" },
-        { label: "Hublot", href: "/en/collections/hublot-watches" },
-        { label: "Tag Heuer", href: "/en/collections/tag-heuer-watches" }
-      ]
-    }
-  },
-  fr: {
-    default: {
-      items: [
-        { label: "Collections", href: "/fr/collections" },
-        { label: "Casques", href: "/fr/helmets" },
-        { label: "Vestes", href: "/fr/jackets" },
-        { label: "Accessoires", href: "/fr/accessories" }
-      ]
-    },
-    degital: {
-      items: [
-        { label: "Modèles", href: "/fr/templates" },
-        { label: "Extensions", href: "/fr/plugins" },
-        { label: "Scripts", href: "/fr/scripts" },
-        { label: "Ressources", href: "/fr/resources" }
-      ]
-    },
-    repshoes: {
-      items: [
-        { label: "Nike", href: "/fr/collections/nike" },
-        { label: "Adidas", href: "/fr/collections/adidas" },
-        { label: "Jordan", href: "/fr/collections/jordan" },
-        { label: "Dior", href: "/fr/collections/dior" },
-        { label: "Louis Vuitton", href: "/fr/collections/louis-vuitton" },
-        { label: "Gucci", href: "/fr/collections/gucci" },
-        { label: "Balenciaga", href: "/fr/collections/balenciaga" },
-        { label: "Yeezy", href: "/fr/collections/yeezy" }
-      ]
-    },
-    repbag: {
-      items: [
-        { label: "Louis Vuitton", href: "/fr/collections/louis-vuitton-bags" },
-        { label: "Gucci", href: "/fr/collections/gucci-bags" },
-        { label: "Hermès", href: "/fr/collections/hermes-bags" },
-        { label: "Chanel", href: "/fr/collections/chanel-bags" },
-        { label: "Prada", href: "/fr/collections/prada-bags" },
-        { label: "Dior", href: "/fr/collections/dior-bags" },
-        { label: "Balenciaga", href: "/fr/collections/balenciaga-bags" },
-        { label: "Fendi", href: "/fr/collections/fendi-bags" }
-      ]
-    },
-    repwatch: {
-      items: [
-        { label: "Rolex", href: "/fr/collections/rolex-watches" },
-        { label: "Patek Philippe", href: "/fr/collections/patek-philippe-watches" },
-        { label: "Audemars Piguet", href: "/fr/collections/audemars-piguet-watches" },
-        { label: "Richard Mille", href: "/fr/collections/richard-mille-watches" },
-        { label: "Cartier", href: "/fr/collections/cartier-watches" },
-        { label: "Omega", href: "/fr/collections/omega-watches" },
-        { label: "Hublot", href: "/fr/collections/hublot-watches" },
-        { label: "Tag Heuer", href: "/fr/collections/tag-heuer-watches" }
-      ]
-    }
-  },
-  de: {
-    default: {
-      items: [
-        { label: "Kollektionen", href: "/de/collections" },
-        { label: "Helme", href: "/de/helmets" },
-        { label: "Jacken", href: "/de/jackets" },
-        { label: "Zubehör", href: "/de/accessories" }
-      ]
-    },
-    degital: {
-      items: [
-        { label: "Vorlagen", href: "/de/templates" },
-        { label: "Plugins", href: "/de/plugins" },
-        { label: "Skripte", href: "/de/scripts" },
-        { label: "Ressourcen", href: "/de/resources" }
-      ]
-    },
-    repshoes: {
-      items: [
-        { label: "Nike", href: "/de/collections/nike" },
-        { label: "Adidas", href: "/de/collections/adidas" },
-        { label: "Jordan", href: "/de/collections/jordan" },
-        { label: "Dior", href: "/de/collections/dior" },
-        { label: "Louis Vuitton", href: "/de/collections/louis-vuitton" },
-        { label: "Gucci", href: "/de/collections/gucci" },
-        { label: "Balenciaga", href: "/de/collections/balenciaga" },
-        { label: "Yeezy", href: "/de/collections/yeezy" }
-      ]
-    },
-    repbag: {
-      items: [
-        { label: "Louis Vuitton", href: "/de/collections/louis-vuitton-bags" },
-        { label: "Gucci", href: "/de/collections/gucci-bags" },
-        { label: "Hermès", href: "/de/collections/hermes-bags" },
-        { label: "Chanel", href: "/de/collections/chanel-bags" },
-        { label: "Prada", href: "/de/collections/prada-bags" },
-        { label: "Dior", href: "/de/collections/dior-bags" },
-        { label: "Balenciaga", href: "/de/collections/balenciaga-bags" },
-        { label: "Fendi", href: "/de/collections/fendi-bags" }
-      ]
-    },
-    repwatch: {
-      items: [
-        { label: "Rolex", href: "/de/collections/rolex-watches" },
-        { label: "Patek Philippe", href: "/de/collections/patek-philippe-watches" },
-        { label: "Audemars Piguet", href: "/de/collections/audemars-piguet-watches" },
-        { label: "Richard Mille", href: "/de/collections/richard-mille-watches" },
-        { label: "Cartier", href: "/de/collections/cartier-watches" },
-        { label: "Omega", href: "/de/collections/omega-watches" },
-        { label: "Hublot", href: "/de/collections/hublot-watches" },
-        { label: "Tag Heuer", href: "/de/collections/tag-heuer-watches" }
-      ]
-    }
-  },
-  es: {
-    default: {
-      items: [
-        { label: "Colecciones", href: "/es/collections" },
-        { label: "Cascos", href: "/es/helmets" },
-        { label: "Chaquetas", href: "/es/jackets" },
-        { label: "Accesorios", href: "/es/accessories" }
-      ]
-    },
-    degital: {
-      items: [
-        { label: "Plantillas", href: "/es/templates" },
-        { label: "Plugins", href: "/es/plugins" },
-        { label: "Scripts", href: "/es/scripts" },
-        { label: "Recursos", href: "/es/resources" }
-      ]
-    },
-    repshoes: {
-      items: [
-        { label: "Nike", href: "/es/collections/nike" },
-        { label: "Adidas", href: "/es/collections/adidas" },
-        { label: "Jordan", href: "/es/collections/jordan" },
-        { label: "Dior", href: "/es/collections/dior" },
-        { label: "Louis Vuitton", href: "/es/collections/louis-vuitton" },
-        { label: "Gucci", href: "/es/collections/gucci" },
-        { label: "Balenciaga", href: "/es/collections/balenciaga" },
-        { label: "Yeezy", href: "/es/collections/yeezy" }
-      ]
-    },
-    repbag: {
-      items: [
-        { label: "Louis Vuitton", href: "/es/collections/louis-vuitton-bags" },
-        { label: "Gucci", href: "/es/collections/gucci-bags" },
-        { label: "Hermès", href: "/es/collections/hermes-bags" },
-        { label: "Chanel", href: "/es/collections/chanel-bags" },
-        { label: "Prada", href: "/es/collections/prada-bags" },
-        { label: "Dior", href: "/es/collections/dior-bags" },
-        { label: "Balenciaga", href: "/es/collections/balenciaga-bags" },
-        { label: "Fendi", href: "/es/collections/fendi-bags" }
-      ]
-    },
-    repwatch: {
-      items: [
-        { label: "Rolex", href: "/es/collections/rolex-watches" },
-        { label: "Patek Philippe", href: "/es/collections/patek-philippe-watches" },
-        { label: "Audemars Piguet", href: "/es/collections/audemars-piguet-watches" },
-        { label: "Richard Mille", href: "/es/collections/richard-mille-watches" },
-        { label: "Cartier", href: "/es/collections/cartier-watches" },
-        { label: "Omega", href: "/es/collections/omega-watches" },
-        { label: "Hublot", href: "/es/collections/hublot-watches" },
-        { label: "Tag Heuer", href: "/es/collections/tag-heuer-watches" }
-      ]
-    }
-  },
-  it: {
-    default: {
-      items: [
-        { label: "Collezioni", href: "/it/collections" },
-        { label: "Caschi", href: "/it/helmets" },
-        { label: "Giacche", href: "/it/jackets" },
-        { label: "Accessori", href: "/it/accessories" }
-      ]
-    },
-    degital: {
-      items: [
-        { label: "Modelli", href: "/it/templates" },
-        { label: "Plugins", href: "/it/plugins" },
-        { label: "Script", href: "/it/scripts" },
-        { label: "Risorse", href: "/it/resources" }
-      ]
-    },
-    repshoes: {
-      items: [
-        { label: "Nike", href: "/it/collections/nike" },
-        { label: "Adidas", href: "/it/collections/adidas" },
-        { label: "Jordan", href: "/it/collections/jordan" },
-        { label: "Dior", href: "/it/collections/dior" },
-        { label: "Louis Vuitton", href: "/it/collections/louis-vuitton" },
-        { label: "Gucci", href: "/it/collections/gucci" },
-        { label: "Balenciaga", href: "/it/collections/balenciaga" },
-        { label: "Yeezy", href: "/it/collections/yeezy" }
-      ]
-    },
-    repbag: {
-      items: [
-        { label: "Louis Vuitton", href: "/it/collections/louis-vuitton-bags" },
-        { label: "Gucci", href: "/it/collections/gucci-bags" },
-        { label: "Hermès", href: "/it/collections/hermes-bags" },
-        { label: "Chanel", href: "/it/collections/chanel-bags" },
-        { label: "Prada", href: "/it/collections/prada-bags" },
-        { label: "Dior", href: "/it/collections/dior-bags" },
-        { label: "Balenciaga", href: "/it/collections/balenciaga-bags" },
-        { label: "Fendi", href: "/it/collections/fendi-bags" }
-      ]
-    },
-    repwatch: {
-      items: [
-        { label: "Rolex", href: "/it/collections/rolex-watches" },
-        { label: "Patek Philippe", href: "/it/collections/patek-philippe-watches" },
-        { label: "Audemars Piguet", href: "/it/collections/audemars-piguet-watches" },
-        { label: "Richard Mille", href: "/it/collections/richard-mille-watches" },
-        { label: "Cartier", href: "/it/collections/cartier-watches" },
-        { label: "Omega", href: "/it/collections/omega-watches" },
-        { label: "Hublot", href: "/it/collections/hublot-watches" },
-        { label: "Tag Heuer", href: "/it/collections/tag-heuer-watches" }
-      ]
-    }
-  },
-  pt: {
-    default: {
-      items: [
-        { label: "Coleções", href: "/pt/collections" },
-        { label: "Casacos", href: "/pt/helmets" },
-        { label: "Jaquetas", href: "/pt/jackets" },
-        { label: "Acessórios", href: "/pt/accessories" }
-      ]
-    },
-    degital: {
-      items: [
-        { label: "Modelos", href: "/pt/templates" },
-        { label: "Plugins", href: "/pt/plugins" },
-        { label: "Scripts", href: "/pt/scripts" },
-        { label: "Recursos", href: "/pt/resources" }
-      ]
-    },
-    repshoes: {
-      items: [
-        { label: "Nike", href: "/pt/collections/nike" },
-        { label: "Adidas", href: "/pt/collections/adidas" },
-        { label: "Jordan", href: "/pt/collections/jordan" },
-        { label: "Dior", href: "/pt/collections/dior" },
-        { label: "Louis Vuitton", href: "/pt/collections/louis-vuitton" },
-        { label: "Gucci", href: "/pt/collections/gucci" },
-        { label: "Balenciaga", href: "/pt/collections/balenciaga" },
-        { label: "Yeezy", href: "/pt/collections/yeezy" }
-      ]
-    },
-    repbag: {
-      items: [
-        { label: "Louis Vuitton", href: "/pt/collections/louis-vuitton-bags" },
-        { label: "Gucci", href: "/pt/collections/gucci-bags" },
-        { label: "Hermès", href: "/pt/collections/hermes-bags" },
-        { label: "Chanel", href: "/pt/collections/chanel-bags" },
-        { label: "Prada", href: "/pt/collections/prada-bags" },
-        { label: "Dior", href: "/pt/collections/dior-bags" },
-        { label: "Balenciaga", href: "/pt/collections/balenciaga-bags" },
-        { label: "Fendi", href: "/pt/collections/fendi-bags" }
-      ]
-    },
-    repwatch: {
-      items: [
-        { label: "Rolex", href: "/pt/collections/rolex-watches" },
-        { label: "Patek Philippe", href: "/pt/collections/patek-philippe-watches" },
-        { label: "Audemars Piguet", href: "/pt/collections/audemars-piguet-watches" },
-        { label: "Richard Mille", href: "/pt/collections/richard-mille-watches" },
-        { label: "Cartier", href: "/pt/collections/cartier-watches" },
-        { label: "Omega", href: "/pt/collections/omega-watches" },
-        { label: "Hublot", href: "/pt/collections/hublot-watches" },
-        { label: "Tag Heuer", href: "/pt/collections/tag-heuer-watches" }
-      ]
-    }
-  },
-  nl: {
-    default: {
-      items: [
-        { label: "Collecties", href: "/nl/collections" },
-        { label: "Hoeden", href: "/nl/helmets" },
-        { label: "Jassen", href: "/nl/jackets" },
-        { label: "Accessoires", href: "/nl/accessories" }
-      ]
-    },
-    degital: {
-      items: [
-        { label: "Sjablonen", href: "/nl/templates" },
-        { label: "Plugins", href: "/nl/plugins" },
-        { label: "Scripts", href: "/nl/scripts" },
-        { label: "Resources", href: "/nl/resources" }
-      ]
-    },
-    repshoes: {
-      items: [
-        { label: "Nike", href: "/nl/collections/nike" },
-        { label: "Adidas", href: "/nl/collections/adidas" },
-        { label: "Jordan", href: "/nl/collections/jordan" },
-        { label: "Dior", href: "/nl/collections/dior" },
-        { label: "Louis Vuitton", href: "/nl/collections/louis-vuitton" },
-        { label: "Gucci", href: "/nl/collections/gucci" },
-        { label: "Balenciaga", href: "/nl/collections/balenciaga" },
-        { label: "Yeezy", href: "/nl/collections/yeezy" }
-      ]
-    },
-    repbag: {
-      items: [
-        { label: "Louis Vuitton", href: "/nl/collections/louis-vuitton-bags" },
-        { label: "Gucci", href: "/nl/collections/gucci-bags" },
-        { label: "Hermès", href: "/nl/collections/hermes-bags" },
-        { label: "Chanel", href: "/nl/collections/chanel-bags" },
-        { label: "Prada", href: "/nl/collections/prada-bags" },
-        { label: "Dior", href: "/nl/collections/dior-bags" },
-        { label: "Balenciaga", href: "/nl/collections/balenciaga-bags" },
-        { label: "Fendi", href: "/nl/collections/fendi-bags" }
-      ]
-    },
-    repwatch: {
-      items: [
-        { label: "Rolex", href: "/nl/collections/rolex-watches" },
-        { label: "Patek Philippe", href: "/nl/collections/patek-philippe-watches" },
-        { label: "Audemars Piguet", href: "/nl/collections/audemars-piguet-watches" },
-        { label: "Richard Mille", href: "/nl/collections/richard-mille-watches" },
-        { label: "Cartier", href: "/nl/collections/cartier-watches" },
-        { label: "Omega", href: "/nl/collections/omega-watches" },
-        { label: "Hublot", href: "/nl/collections/hublot-watches" },
-        { label: "Tag Heuer", href: "/nl/collections/tag-heuer-watches" }
-      ]
-    }
-  },
-  ru: {
-    default: {
-      items: [
-        { label: "Коллекции", href: "/ru/collections" },
-        { label: "Маски", href: "/ru/helmets" },
-        { label: "Куртки", href: "/ru/jackets" },
-        { label: "Аксессуары", href: "/ru/accessories" }
-      ]
-    },
-    degital: {
-      items: [
-        { label: "Шаблоны", href: "/ru/templates" },
-        { label: "Плагины", href: "/ru/plugins" },
-        { label: "Скрипты", href: "/ru/scripts" },
-        { label: "Ресурсы", href: "/ru/resources" }
-      ]
-    },
-    repshoes: {
-      items: [
-        { label: "Nike", href: "/ru/collections/nike" },
-        { label: "Adidas", href: "/ru/collections/adidas" },
-        { label: "Jordan", href: "/ru/collections/jordan" },
-        { label: "Dior", href: "/ru/collections/dior" },
-        { label: "Louis Vuitton", href: "/ru/collections/louis-vuitton" },
-        { label: "Gucci", href: "/ru/collections/gucci" },
-        { label: "Balenciaga", href: "/ru/collections/balenciaga" },
-        { label: "Yeezy", href: "/ru/collections/yeezy" }
-      ]
-    },
-    repbag: {
-      items: [
-        { label: "Louis Vuitton", href: "/ru/collections/louis-vuitton-bags" },
-        { label: "Gucci", href: "/ru/collections/gucci-bags" },
-        { label: "Hermès", href: "/ru/collections/hermes-bags" },
-        { label: "Chanel", href: "/ru/collections/chanel-bags" },
-        { label: "Prada", href: "/ru/collections/prada-bags" },
-        { label: "Dior", href: "/ru/collections/dior-bags" },
-        { label: "Balenciaga", href: "/ru/collections/balenciaga-bags" },
-        { label: "Fendi", href: "/ru/collections/fendi-bags" }
-      ]
-    },
-    repwatch: {
-      items: [
-        { label: "Rolex", href: "/ru/collections/rolex-watches" },
-        { label: "Patek Philippe", href: "/ru/collections/patek-philippe-watches" },
-        { label: "Audemars Piguet", href: "/ru/collections/audemars-piguet-watches" },
-        { label: "Richard Mille", href: "/ru/collections/richard-mille-watches" },
-        { label: "Cartier", href: "/ru/collections/cartier-watches" },
-        { label: "Omega", href: "/ru/collections/omega-watches" },
-        { label: "Hublot", href: "/ru/collections/hublot-watches" },
-        { label: "Tag Heuer", href: "/ru/collections/tag-heuer-watches" }
-      ]
-    }
+// Import website-specific footer with fallback to theme footer
+let Footer;
+try {
+  // Try to load website-specific footer first
+  const websiteFooter = await import(`../websites/${siteName}/themes/${theme}/components/Footer.astro`);
+  Footer = websiteFooter.default;
+  console.log(`✅ Loaded ${siteName}/${theme} website-specific footer`);
+} catch (error) {
+  console.log(`⚠️ Website-specific footer not found for ${siteName}/${theme}, falling back to theme footer`);
+  try {
+    // Fallback to theme footer
+    const themeFooter = await import(`../themes/${theme}/components/Footer.astro`);
+    Footer = themeFooter.default;
+    console.log('✅ Loaded theme footer');
+  } catch (fallbackError) {
+    console.error('❌ Failed to load both website and theme footers:', fallbackError);
+    // Provide minimal fallback footer
+    Footer = () => `<footer class="bg-gray-900 text-white py-8"><div class="max-w-7xl mx-auto px-4 text-center"><p>&copy; ${new Date().getFullYear()} ${siteName}. All rights reserved.</p></div></footer>`;
   }
+}
+
+// Import menu configuration with fallback logic
+let menuConfig = {};
+try {
+  // Try to load theme-specific menu configuration first
+  const themeMenuConfig = await import(`../websites/${siteName}/themes/${theme}/data/store/Menu.json`);
+  menuConfig = themeMenuConfig.default;
+  console.log(`✅ Loaded ${siteName}/${theme} menu configuration`);
+} catch (error) {
+  console.log(`⚠️ Theme-specific menu config not found for ${siteName}/${theme}, using default menu`);
+  // Fallback to default menu configuration - only include allowed languages
+  const allowedLanguages = getAllowedLanguages();
+  menuConfig = {};
+  
+  allowedLanguages.forEach(lang => {
+    switch(lang) {
+      case 'en':
+        menuConfig[lang] = {
+          items: [
+            { label: "Collections", href: "/en/collections" },
+            { label: "Helmets", href: "/en/helmets" },
+            { label: "Jackets", href: "/en/jackets" },
+            { label: "Accessories", href: "/en/accessories" }
+          ]
+        };
+        break;
+      case 'fr':
+        menuConfig[lang] = {
+          items: [
+            { label: "Collections", href: "/fr/collections" },
+            { label: "Casques", href: "/fr/helmets" },
+            { label: "Vestes", href: "/fr/jackets" },
+            { label: "Accessoires", href: "/fr/accessories" }
+          ]
+        };
+        break;
+      case 'de':
+        menuConfig[lang] = {
+          items: [
+            { label: "Kollektionen", href: "/de/collections" },
+            { label: "Helme", href: "/de/helmets" },
+            { label: "Jacken", href: "/de/jackets" },
+            { label: "Zubehör", href: "/de/accessories" }
+          ]
+        };
+        break;
+      default:
+        // For any other allowed language, use English structure
+        menuConfig[lang] = {
+          items: [
+            { label: "Collections", href: `/${lang}/collections` },
+            { label: "Helmets", href: `/${lang}/helmets` },
+            { label: "Jackets", href: `/${lang}/jackets` },
+            { label: "Accessories", href: `/${lang}/accessories` }
+          ]
+        };
+    }
+  });
+}
+
+// Get allowed languages from environment
+const getAllowedLanguages = (): string[] => {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  return allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
 };
 
-const languages = {
+const allowedLanguages = getAllowedLanguages();
+const languageNames = {
   en: "English",
   fr: "Français",
   de: "Deutsch",
@@ -463,18 +138,69 @@ const languages = {
   it: "Italiano",
   pt: "Português",
   nl: "Nederlands",
-  ru: "Русский"
+  ru: "Русский",
+  ar: "العربية",
+  zh: "中文",
+  tr: "Türkçe",
+  ja: "日本語",
+  ko: "한국어",
+  sv: "Svenska",
+  no: "Norsk",
+  da: "Dansk",
+  fi: "Suomi",
+  pl: "Polski",
+  cs: "Čeština",
+  hu: "Magyar",
+  ro: "Română",
+  bg: "Български",
+  hr: "Hrvatski",
+  sk: "Slovenčina",
+  sl: "Slovenščina",
+  et: "Eesti",
+  lv: "Latviešu",
+  lt: "Lietuvių",
+  el: "Ελληνικά",
+  he: "עברית",
+  th: "ไทย",
+  vi: "Tiếng Việt",
+  id: "Bahasa Indonesia",
+  ms: "Bahasa Melayu",
+  tl: "Filipino"
 };
+
+const languages = Object.fromEntries(
+  allowedLanguages.map(lang => [lang, languageNames[lang] || lang])
+);
 
 interface Props {
   title: string;
+  lang?: string;
+  description?: string;
+  image?: string;
+  isProduct?: boolean;
+  price?: any;
+  availability?: boolean;
+  alternateUrls?: Array<{lang: string, url: string}>;
+  productSchema?: any;
+  breadcrumbSchema?: any;
 }
 
-const { title } = Astro.props;
-
-// Get current path and language
+// Get current path and language first
 const currentPath = Astro.url.pathname;
 const currentLang = currentPath.split('/')[1] || 'en'; // Extract language from path
+
+const { 
+  title, 
+  lang = currentLang, 
+  description, 
+  image, 
+  isProduct = false, 
+  price, 
+  availability, 
+  alternateUrls = [], 
+  productSchema, 
+  breadcrumbSchema 
+} = Astro.props;
 
 // Add currency configuration
 const currencies = {
@@ -482,10 +208,9 @@ const currencies = {
   EUR: '€',
   GBP: '£',
   JPY: '¥',
+  CNY: '¥',
   CAD: 'C$',
-  AUD: 'A$',
-  RUB: '₽',
-  // Add more currencies as needed
+  AUD: 'A$'
 };
 
 // Fetch exchange rates with better error handling
@@ -537,19 +262,72 @@ const paymentConfig = {
     businessId: import.meta.env.HOODPAY_BUSINESS_ID,
     authToken: import.meta.env.HOODPAY_AUTH_TOKEN,
     redirectUrl: `${import.meta.env.DOMAINE}${import.meta.env.HOODPAY_REDIRECT_URL}`
+  },
+  // Add store configuration to paymentConfig
+  store: {
+    name: import.meta.env.PUBLIC_STORE_NAME,
+    domain: import.meta.env.DOMAINE
   }
 };
+
 
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{title}</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
+    <BaseHead 
+      title={title}
+      description={description}
+      image={image}
+      isProduct={isProduct}
+      price={price}
+      availability={availability}
+      alternateUrls={alternateUrls}
+      productSchema={productSchema}
+      breadcrumbSchema={breadcrumbSchema}
+    />
+    
+    <!-- Resource Hints -->
+    <link rel="preconnect" href="https://cdn.shopify.com" />
+    <link rel="dns-prefetch" href="https://cdn.shopify.com" />
+    
+    <!-- Preload critical assets -->
+    {image && (
+      <link 
+        rel="preload" 
+        as="image" 
+        href={image}
+        fetchpriority="high"
+      />
+    )}
+    
+    <!-- Preload critical fonts -->
+    <link
+      rel="preload"
+      href="/fonts/inter-var.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    
+    <!-- Defer non-critical CSS -->
+    <link 
+      rel="stylesheet" 
+      href="/styles/non-critical.css"
+      media="print" 
+      onload="this.media='all'"
+    />
+    
+    <!-- Additional Meta Tags -->
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    
+    <!-- PWA Tags -->
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="manifest" href="/manifest.json" />
+    
     <script define:vars={{ exchangeRates }}>
       // Make exchange rates available globally
       window.exchangeRates = exchangeRates;
@@ -562,10 +340,12 @@ const paymentConfig = {
       siteName={siteName}
       menuConfig={menuConfig}
       languages={languages}
+      allowedLanguages={allowedLanguages}
       projectType={PROJECT_TYPE}
       currentPath={currentPath}
       currencies={currencies}
       styles={headerStyles}
+      headerStyles={headerStyles}
       apiEndpoint={import.meta.env.VITE_API_ENDPOINT}
       searchConfig={searchConfig}
       paymentConfig={paymentConfig}

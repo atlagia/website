@@ -1,0 +1,170 @@
+---
+import { getLangFromUrl, useTranslations } from '@utils/i18n';
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+
+const lang = getLangFromUrl(Astro.url);
+const translations = await useTranslations(lang);
+const jsonData = translations.default;
+
+// Load login data dynamically
+let loginData;
+try {
+  const loginModule = await import(`../data/login/login_${lang}.json`);
+  loginData = loginModule.default;
+} catch (error) {
+  // Fallback to English if language-specific file doesn't exist
+  const loginModule = await import(`../data/login/login_en.json`);
+  loginData = loginModule.default;
+}
+
+const SITE_TITLE = jsonData.siteTitle || 'FastIPTV';
+const PAGE_TITLE = loginData.pageTitle + ' | ' + SITE_TITLE;
+const PAGE_DESCRIPTION = loginData.pageDescription;
+---
+
+<!doctype html>
+<html lang={lang} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
+  <head>
+    <BaseHead title={PAGE_TITLE} description={PAGE_DESCRIPTION} />
+  </head>
+  <body class="bg-black text-white">
+    <Header />
+    <main class="pt-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Hero Section */}
+        <div class="text-center space-y-6 mb-12">
+          <h1 class="text-4xl md:text-6xl font-bold gradient-text">
+            {loginData.heroTitle}
+          </h1>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            {loginData.heroDescription}
+          </p>
+        </div>
+
+        {/* Login Form */}
+        <div class="max-w-md mx-auto glass rounded-2xl p-8 mb-12">
+          <form class="space-y-6">
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-300 mb-2">
+                {loginData.form.emailLabel}
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                placeholder={loginData.form.emailPlaceholder}
+              />
+            </div>
+            
+            <div>
+              <label for="password" class="block text-sm font-medium text-gray-300 mb-2">
+                {loginData.form.passwordLabel}
+              </label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                required
+                class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                placeholder={loginData.form.passwordPlaceholder}
+              />
+            </div>
+
+            <div class="flex items-center justify-between">
+              <div class="flex items-center">
+                <input
+                  id="remember-me"
+                  name="remember-me"
+                  type="checkbox"
+                  class="h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-300 rounded"
+                />
+                <label for="remember-me" class="ml-2 block text-sm text-gray-300">
+                  {loginData.form.rememberMe}
+                </label>
+              </div>
+              <div class="text-sm">
+                <a href="/forgot-password" class="text-purple-400 hover:text-purple-300">
+                  {loginData.form.forgotPassword}
+                </a>
+              </div>
+            </div>
+
+            <button
+              type="submit"
+              class="w-full bg-gradient-to-r from-purple-600 to-emerald-500 text-white font-bold py-3 px-4 rounded-lg hover:opacity-90 transition-opacity duration-200"
+            >
+              {loginData.form.submitButton}
+            </button>
+          </form>
+
+          <div class="mt-6 text-center">
+            <p class="text-gray-300">
+              {loginData.form.noAccount}
+              <a href="/signup" class="text-purple-400 hover:text-purple-300 font-medium">
+                {loginData.form.signupLink}
+              </a>
+            </p>
+          </div>
+        </div>
+
+        {/* Benefits Section */}
+        <div class="glass rounded-2xl p-8 mb-12">
+          <h2 class="text-2xl font-bold text-center mb-8">{loginData.benefits.title}</h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {loginData.benefits.list.map(benefit => (
+              <div class="text-center space-y-3">
+                <div class="w-12 h-12 bg-gradient-to-r from-purple-600 to-emerald-500 rounded-full flex items-center justify-center mx-auto">
+                  <span class="text-white text-xl">{benefit.icon}</span>
+                </div>
+                <h3 class="font-semibold">{benefit.title}</h3>
+                <p class="text-sm text-gray-400">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Social Proof */}
+        <div class="glass rounded-xl p-6 mb-12">
+          <div class="text-center space-y-4">
+            <p class="text-lg font-semibold">{loginData.socialProof.title}</p>
+            <div class="flex justify-center items-center gap-8 text-sm">
+              <div class="flex items-center gap-2">
+                <span class="text-yellow-400">★★★★★</span>
+                <span>{loginData.socialProof.rating}</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-emerald-400">👥</span>
+                <span>{loginData.socialProof.users}</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-blue-400">📺</span>
+                <span>{loginData.socialProof.channels}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* FAQ Section */}
+        <div class="glass rounded-2xl p-8 mb-12">
+          <h2 class="text-2xl font-bold text-center mb-8">{loginData.faq.title}</h2>
+          <div class="grid md:grid-cols-2 gap-6">
+            {loginData.faq.questions.map(question => (
+              <div class="space-y-2">
+                <h3 class="font-semibold">{question.question}</h3>
+                <p class="text-gray-300 text-sm">{question.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+      </div>
+    </main>
+    <Footer />
+
+  </body>
+</html>

@@ -1,0 +1,129 @@
+---
+import Layoutc from '@layouts/Layoutc.astro';
+import { ArrowRight, Users, Target, TrendingUp, Star, Award } from 'lucide-react';
+
+// Generate static paths for allowed languages from environment
+export async function getStaticPaths() {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  const languages = allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+  
+  return languages.map(lang => ({ params: { lang } }));
+}
+
+const { lang = 'en' } = Astro.params;
+const baseUrl = import.meta.env.DOMAINE || 'https://drivon.store';
+const storeName = import.meta.env.PUBLIC_SITE_NAME || 'Drivon';
+
+// Load language-specific data
+let pageData;
+try {
+  pageData = await import(`../data/management-professional/management-professional_${lang}.json`);
+} catch (error) {
+  // Fallback to English if language file doesn't exist
+  pageData = await import(`../data/management-professional/management-professional_en.json`);
+}
+
+const data = pageData.default;
+
+// SEO
+const seoTitle = `${data.title} | ${storeName}`;
+const seoDescription = data.description;
+---
+
+<Layoutc title={seoTitle} description={seoDescription} lang={lang}>
+  <div class="min-h-screen bg-gray-50">
+    <!-- Hero Section -->
+    <section class="relative h-[60vh] bg-gradient-to-br from-purple-900 via-indigo-800 to-blue-900">
+      <div class="absolute inset-0 bg-black/50"></div>
+      <div class="relative z-10 h-full flex items-center justify-center text-center px-4">
+        <div class="max-w-4xl mx-auto">
+          <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">
+            {data.hero.title}
+          </h1>
+          <p class="text-xl md:text-2xl text-gray-200 mb-8">
+            {data.hero.subtitle}
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href={`/${lang}/collections`} class="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+              {data.hero.cta1}
+            </a>
+            <a href={`/${lang}/professional-series`} class="bg-white/20 hover:bg-white/30 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+              {data.hero.cta2}
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Management Professional Features -->
+    <section class="py-20 px-4">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">{data.sections.features.title}</h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            {data.sections.features.subtitle}
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+          {data.features.map(feature => (
+            <div class="bg-white rounded-2xl p-8 shadow-lg">
+              <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                <Users class="w-8 h-8 text-purple-600" />
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">{feature.title}</h3>
+              <p class="text-gray-600">
+                {feature.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Management Professional Collection -->
+    <section class="py-20 bg-gray-100">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">{data.sections.collection.title}</h2>
+          <p class="text-xl text-gray-600">{data.sections.collection.subtitle}</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {data.collections.map(product => (
+            <a href={`/${lang}${product.link}`} class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+              <div class="h-48 bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center">
+                <Target class="w-16 h-16 text-white" />
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-gray-900 mb-2">{product.title}</h3>
+                <p class="text-gray-600 mb-4">{product.description}</p>
+                <div class="flex items-center text-purple-600 font-semibold group-hover:text-purple-700">
+                  {product.linkText} <ArrowRight class="w-4 h-4 ml-2" />
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-gray-900 text-white">
+      <div class="max-w-4xl mx-auto text-center px-4">
+        <h2 class="text-4xl font-bold mb-6">{data.cta.title}</h2>
+        <p class="text-xl text-gray-300 mb-8">
+          {data.cta.subtitle}
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href={`/${lang}/collections`} class="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+            {data.cta.button1}
+          </a>
+          <a href={`/${lang}/professional-series`} class="bg-white/20 hover:bg-white/30 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+            {data.cta.button2}
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layoutc>

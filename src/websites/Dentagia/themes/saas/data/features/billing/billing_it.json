@@ -1,0 +1,198 @@
+{
+  "hero": {
+    "subtitle": "Fatturazione semplificata",
+    "title": "Fatturazione automatizzata ed elaborazione pagamenti",
+    "description": "Semplifica fatturazione, fatture ed elaborazione pagamenti con flussi di lavoro automatizzati, integrazione assicurativa e report finanziari completi.",
+    "icon": "credit-card",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "80%",
+        "label": "Elaborazione più veloce"
+      },
+      {
+        "value": "50%",
+        "label": "Tempo risparmiato"
+      },
+      {
+        "value": "95%",
+        "label": "Precisione"
+      }
+    ]
+  },
+  "features": {
+    "title": "Funzionalità di fatturazione",
+    "subtitle": "Gestione finanziaria",
+    "description": "Strumenti completi di fatturazione ed elaborazione pagamenti progettati per semplificare le operazioni finanziarie del tuo studio.",
+    "items": [
+      {
+        "icon": "credit-card",
+        "title": "Fatturazione automatizzata",
+        "description": "Genera fatture automaticamente basate sui trattamenti, con modelli personalizzabili e promemoria pagamento automatici.",
+        "highlights": [
+          "Generazione automatica fatture",
+          "Modelli fattura personalizzabili",
+          "Promemoria pagamento",
+          "Piani di pagamento multipli",
+          "Fatturazione ricorrente"
+        ],
+        "stats": {
+          "value": "80%",
+          "label": "Elaborazione più veloce"
+        }
+      },
+      {
+        "icon": "trending-up",
+        "title": "Richieste assicurative",
+        "description": "Invio semplificato richieste assicurative con verifica eleggibilità in tempo reale e follow-up automatizzati.",
+        "highlights": [
+          "Invio elettronico richieste",
+          "Verifiche eleggibilità in tempo reale",
+          "Follow-up automatizzati",
+          "Monitoraggio stato richieste",
+          "Gestione rifiuti"
+        ],
+        "stats": {
+          "value": "95%",
+          "label": "Tasso approvazione"
+        }
+      },
+      {
+        "icon": "users",
+        "title": "Elaborazione pagamenti",
+        "description": "Accetta pagamenti online e di persona con metodi di pagamento multipli ed elaborazione sicura.",
+        "highlights": [
+          "Elaborazione carta di credito",
+          "Bonifici ACH e bancari",
+          "Piani di pagamento",
+          "Portale pagamento online",
+          "Elaborazione sicura"
+        ],
+        "stats": {
+          "value": "50%",
+          "label": "Tempo risparmiato"
+        }
+      },
+      {
+        "icon": "trending-up",
+        "title": "Report finanziari",
+        "description": "Report e analisi finanziari completi per monitorare entrate, incassi e performance dello studio.",
+        "highlights": [
+          "Monitoraggio entrate",
+          "Analisi incassi",
+          "Report finanziari",
+          "Analisi tendenze",
+          "Performance studio"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "Visibilità"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Storie di successo fatturazione",
+    "description": "Vedi come gli studi semplificano le loro operazioni di fatturazione",
+    "stats": [
+      {
+        "icon": "credit-card",
+        "value": "80%",
+        "label": "Elaborazione più veloce"
+      },
+      {
+        "icon": "clock",
+        "value": "50%",
+        "label": "Tempo risparmiato"
+      },
+      {
+        "icon": "trending-up",
+        "value": "95%",
+        "label": "Precisione"
+      },
+      {
+        "icon": "users",
+        "value": "100%",
+        "label": "Automatizzazione"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Emily Rodriguez",
+        "role": "Responsabile studio, Centro Odontoiatria Estetica",
+        "quote": "L'automatizzazione della fatturazione ha ridotto il nostro tempo amministrativo del 50%. Elaboriamo le richieste più velocemente e incassiamo i pagamenti in modo più efficiente."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Vantaggi della fatturazione",
+    "subtitle": "Eccellenza finanziaria",
+    "description": "Sperimenta i vantaggi della fatturazione automatizzata e dell'elaborazione pagamenti.",
+    "items": [
+      {
+        "title": "Elaborazione più veloce",
+        "description": "I flussi di lavoro automatizzati elaborano fatture e richieste molto più velocemente dei metodi manuali.",
+        "icon": "zap",
+        "color": "teal",
+        "stats": {
+          "value": "80%",
+          "label": "Più veloce"
+        },
+        "highlights": [
+          "Fatturazione automatizzata",
+          "Richieste elettroniche",
+          "Elaborazione istantanea",
+          "Ritardi ridotti"
+        ]
+      },
+      {
+        "title": "Risparmiare tempo",
+        "description": "L'automatizzazione elimina l'inserimento manuale dei dati e riduce i costi amministrativi.",
+        "icon": "clock",
+        "color": "cyan",
+        "stats": {
+          "value": "50%",
+          "label": "Tempo risparmiato"
+        },
+        "highlights": [
+          "Flussi di lavoro automatizzati",
+          "Documentazione cartacea ridotta",
+          "Processi semplificati",
+          "Meno inserimento manuale"
+        ]
+      },
+      {
+        "title": "Migliorare incassi",
+        "description": "Un migliore monitoraggio e promemoria automatizzati migliorano i tassi di incasso pagamenti.",
+        "icon": "trending-up",
+        "color": "blue",
+        "stats": {
+          "value": "95%",
+          "label": "Tasso incasso"
+        },
+        "highlights": [
+          "Promemoria pagamento",
+          "Monitoraggio incassi",
+          "Piani di pagamento",
+          "Migliore visibilità"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Pronto a semplificare la tua fatturazione?",
+    "description": "Vedi come le funzionalità di fatturazione di Dentagia possono trasformare le tue operazioni finanziarie.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Prenota una demo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Scopri di più",
+      "link": "/features"
+    }
+  }
+}
+

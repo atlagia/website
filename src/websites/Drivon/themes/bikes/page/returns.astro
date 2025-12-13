@@ -1,0 +1,329 @@
+---
+import { getLangFromUrl, useTranslations, isValidLanguage } from '@utils/i18n';
+
+// Get the language parameter from the URL
+const { lang } = Astro.params;
+
+// Validate language and redirect to /en if invalid
+if (!isValidLanguage(lang)) {
+  return Astro.redirect('/en');
+}
+
+const translations = await useTranslations(lang);
+const jsonData = translations.default;
+
+// Get site title and description from language-specific data
+const SITE_TITLE = `Returns & Exchanges - ${jsonData.siteTitle || 'Drivon'}`;
+const SITE_DESCRIPTION = 'Easy returns and exchanges for Drivon driver merchandise. 30-day return policy with free return shipping.';
+
+// Dynamic imports based on environment
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+
+// Generate static paths for all supported languages
+export async function getStaticPaths() {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  const languages = allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+  
+  return languages.map(lang => ({ params: { lang } }));
+}
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <BaseHead 
+      title={SITE_TITLE} 
+      description={SITE_DESCRIPTION} 
+      isHomePage={false}
+    />
+  </head>
+  <body>
+    <Header />
+    <main class="min-h-screen bg-gray-50">
+      <div class="max-w-6xl mx-auto px-4 py-16">
+        <!-- Header Section -->
+        <div class="text-center mb-16">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Returns & Exchanges</h1>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Easy returns and exchanges for all your driver merchandise. We want you to love your purchase!
+          </p>
+        </div>
+
+        <!-- Return Policy Highlights -->
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+          <div class="bg-white rounded-2xl shadow-sm p-8 text-center">
+            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">30-Day Returns</h3>
+            <p class="text-gray-600 mb-6">Return any item within 30 days of delivery</p>
+            <div class="text-3xl font-bold text-green-600 mb-2">FREE</div>
+            <p class="text-sm text-gray-500">Return shipping included</p>
+          </div>
+
+          <div class="bg-white rounded-2xl shadow-sm p-8 text-center border-2 border-green-200">
+            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Easy Exchanges</h3>
+            <p class="text-gray-600 mb-6">Exchange for different size or color</p>
+            <div class="text-3xl font-bold text-green-600 mb-2">FREE</div>
+            <p class="text-sm text-gray-500">No restocking fees</p>
+            <div class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full mt-4 inline-block">
+              POPULAR
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl shadow-sm p-8 text-center">
+            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Full Refund</h3>
+            <p class="text-gray-600 mb-6">100% money back guarantee</p>
+            <div class="text-3xl font-bold text-green-600 mb-2">100%</div>
+            <p class="text-sm text-gray-500">Original payment method</p>
+          </div>
+        </div>
+
+        <!-- Return Process -->
+        <div class="bg-white rounded-2xl shadow-sm p-8 mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">How to Return or Exchange</h2>
+          <div class="grid md:grid-cols-4 gap-8">
+            <div class="text-center">
+              <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span class="text-2xl font-bold text-red-600">1</span>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">Start Return</h3>
+              <p class="text-gray-600">Log into your account and select the items you want to return or exchange</p>
+            </div>
+            <div class="text-center">
+              <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span class="text-2xl font-bold text-red-600">2</span>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">Print Label</h3>
+              <p class="text-gray-600">Print the prepaid return shipping label and packing slip</p>
+            </div>
+            <div class="text-center">
+              <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span class="text-2xl font-bold text-red-600">3</span>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">Package Items</h3>
+              <p class="text-gray-600">Pack items in original packaging with all tags attached</p>
+            </div>
+            <div class="text-center">
+              <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span class="text-2xl font-bold text-red-600">4</span>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">Ship Back</h3>
+              <p class="text-gray-600">Drop off at any authorized carrier location or schedule pickup</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Return Conditions -->
+        <div class="grid lg:grid-cols-2 gap-12 mb-16">
+          <!-- Eligible for Return -->
+          <div class="bg-white rounded-2xl shadow-sm p-8">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">✅ Eligible for Return</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <svg class="w-6 h-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <div>
+                  <h4 class="font-semibold text-gray-900">Unworn Items</h4>
+                  <p class="text-gray-600">Items must be in original condition with tags attached</p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-6 h-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <div>
+                  <h4 class="font-semibold text-gray-900">Original Packaging</h4>
+                  <p class="text-gray-600">Items must be in original packaging with all accessories</p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-6 h-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <div>
+                  <h4 class="font-semibold text-gray-900">Within 30 Days</h4>
+                  <p class="text-gray-600">Return must be initiated within 30 days of delivery</p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-6 h-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <div>
+                  <h4 class="font-semibold text-gray-900">Size Exchanges</h4>
+                  <p class="text-gray-600">Exchange for different size or color at no extra cost</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Not Eligible for Return -->
+          <div class="bg-white rounded-2xl shadow-sm p-8">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">❌ Not Eligible for Return</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <svg class="w-6 h-6 text-red-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+                <div>
+                  <h4 class="font-semibold text-gray-900">Worn or Damaged Items</h4>
+                  <p class="text-gray-600">Items that show signs of wear, damage, or use</p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-6 h-6 text-red-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+                <div>
+                  <h4 class="font-semibold text-gray-900">Personalized Items</h4>
+                  <p class="text-gray-600">Custom or personalized merchandise cannot be returned</p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-6 h-6 text-red-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+                <div>
+                  <h4 class="font-semibold text-gray-900">Final Sale Items</h4>
+                  <p class="text-gray-600">Items marked as final sale are not returnable</p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-6 h-6 text-red-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+                <div>
+                  <h4 class="font-semibold text-gray-900">After 30 Days</h4>
+                  <p class="text-gray-600">Returns initiated after 30 days will not be accepted</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Refund Timeline -->
+        <div class="bg-white rounded-2xl shadow-sm p-8 mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Refund Timeline</h2>
+          <div class="grid md:grid-cols-4 gap-8">
+            <div class="text-center">
+              <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Package Received</h3>
+              <p class="text-gray-600 text-sm">1-2 business days</p>
+            </div>
+            <div class="text-center">
+              <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Quality Check</h3>
+              <p class="text-gray-600 text-sm">1-2 business days</p>
+            </div>
+            <div class="text-center">
+              <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Refund Processed</h3>
+              <p class="text-gray-600 text-sm">1-2 business days</p>
+            </div>
+            <div class="text-center">
+              <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Refund Received</h3>
+              <p class="text-gray-600 text-sm">3-5 business days</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Exchange Process -->
+        <div class="bg-gradient-to-r from-red-50 to-gray-50 rounded-2xl p-8 mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Exchange Process</h2>
+          <div class="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-4">Size Exchanges</h3>
+              <ul class="space-y-3 text-gray-700">
+                <li class="flex items-start">
+                  <span class="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  Free size exchanges within 30 days
+                </li>
+                <li class="flex items-start">
+                  <span class="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  Prepaid return shipping label included
+                </li>
+                <li class="flex items-start">
+                  <span class="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  New item shipped immediately upon receipt
+                </li>
+                <li class="flex items-start">
+                  <span class="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  No restocking fees or additional charges
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-4">Color Exchanges</h3>
+              <ul class="space-y-3 text-gray-700">
+                <li class="flex items-start">
+                  <span class="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  Exchange for different color at no cost
+                </li>
+                <li class="flex items-start">
+                  <span class="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  Subject to availability in desired color
+                </li>
+                <li class="flex items-start">
+                  <span class="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  If color not available, full refund provided
+                </li>
+                <li class="flex items-start">
+                  <span class="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  Exchange processed within 2-3 business days
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl p-8 text-center">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Need Help with Returns?</h2>
+          <p class="text-gray-600 mb-6">Our customer service team is here to help with any return or exchange questions</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/contact" class="bg-red-600 text-white px-8 py-3 rounded-lg hover:bg-red-700 transition-colors font-medium">
+              Contact Support
+            </a>
+            <a href="/size-chart" class="bg-gray-200 text-gray-800 px-8 py-3 rounded-lg hover:bg-gray-300 transition-colors font-medium">
+              Size Chart
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>

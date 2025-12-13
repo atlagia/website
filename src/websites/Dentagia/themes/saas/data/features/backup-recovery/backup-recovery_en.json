@@ -1,0 +1,182 @@
+{
+  "hero": {
+    "subtitle": "Data Protection",
+    "title": "Automatic Backup & Disaster Recovery",
+    "description": "Protect your practice data with automatic daily backups, point-in-time recovery, and comprehensive disaster recovery plans.",
+    "icon": "database",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "Daily",
+        "label": "Backups"
+      },
+      {
+        "value": "100%",
+        "label": "Recovery"
+      },
+      {
+        "value": "24/7",
+        "label": "Protection"
+      }
+    ]
+  },
+  "features": {
+    "title": "Backup & Recovery Features",
+    "subtitle": "Complete Data Protection",
+    "description": "Comprehensive backup and recovery solutions to protect your practice data.",
+    "items": [
+      {
+        "icon": "database",
+        "title": "Automatic Daily Backups",
+        "description": "Automatic daily backups with encrypted storage and multiple retention policies.",
+        "highlights": [
+          "Daily automatic backups",
+          "Encrypted storage",
+          "Multiple retention policies",
+          "Backup verification",
+          "Incremental backups"
+        ],
+        "stats": {
+          "value": "Daily",
+          "label": "Backups"
+        }
+      },
+      {
+        "icon": "clock",
+        "title": "Point-in-Time Recovery",
+        "description": "Recover data to any point in time with granular recovery options and minimal data loss.",
+        "highlights": [
+          "Point-in-time recovery",
+          "Granular recovery",
+          "Minimal data loss",
+          "Quick recovery times",
+          "Recovery testing"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "Recovery"
+        }
+      },
+      {
+        "icon": "shield",
+        "title": "Disaster Recovery",
+        "description": "Comprehensive disaster recovery plans with automated failover and business continuity.",
+        "highlights": [
+          "Disaster recovery plans",
+          "Automated failover",
+          "Business continuity",
+          "Geographic redundancy",
+          "Recovery procedures"
+        ],
+        "stats": {
+          "value": "24/7",
+          "label": "Protection"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Backup & Recovery Assurance",
+    "description": "Complete data protection for your practice",
+    "stats": [
+      {
+        "icon": "database",
+        "value": "Daily",
+        "label": "Backups"
+      },
+      {
+        "icon": "clock",
+        "value": "100%",
+        "label": "Recovery"
+      },
+      {
+        "icon": "shield",
+        "value": "24/7",
+        "label": "Protection"
+      },
+      {
+        "icon": "award",
+        "value": "100%",
+        "label": "Reliable"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Dr. Michael Chen",
+        "role": "Lead Dentist",
+        "quote": "The automatic backup system gives us complete peace of mind. We know our data is always protected and recoverable."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Backup & Recovery Benefits",
+    "subtitle": "Complete Protection",
+    "description": "Experience the security of comprehensive backup and recovery.",
+    "items": [
+      {
+        "title": "Daily Backups",
+        "description": "Automatic daily backups ensure your data is always protected.",
+        "icon": "database",
+        "color": "teal",
+        "stats": {
+          "value": "Daily",
+          "label": "Backups"
+        },
+        "highlights": [
+          "Automatic backups",
+          "Daily schedules",
+          "Encrypted storage",
+          "Multiple copies"
+        ]
+      },
+      {
+        "title": "Complete Recovery",
+        "description": "Point-in-time recovery ensures you can restore data to any moment.",
+        "icon": "clock",
+        "color": "cyan",
+        "stats": {
+          "value": "100%",
+          "label": "Recovery"
+        },
+        "highlights": [
+          "Point-in-time recovery",
+          "Granular recovery",
+          "Quick restoration",
+          "Minimal downtime"
+        ]
+      },
+      {
+        "title": "24/7 Protection",
+        "description": "Continuous protection ensures your data is always safe.",
+        "icon": "shield",
+        "color": "blue",
+        "stats": {
+          "value": "24/7",
+          "label": "Protection"
+        },
+        "highlights": [
+          "Continuous monitoring",
+          "Automated backups",
+          "Disaster recovery",
+          "Business continuity"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready for Complete Data Protection?",
+    "description": "See how Dentagia's backup and recovery protects your practice data.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Schedule a Demo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Learn More",
+      "link": "/features"
+    }
+  }
+}
+

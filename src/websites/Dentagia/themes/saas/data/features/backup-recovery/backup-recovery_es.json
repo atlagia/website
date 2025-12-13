@@ -1,0 +1,182 @@
+{
+  "hero": {
+    "subtitle": "Protección de datos",
+    "title": "Copia de seguridad automática y recuperación ante desastres",
+    "description": "Proteja los datos de su consultorio con copias de seguridad diarias automáticas, recuperación a un punto en el tiempo y planes completos de recuperación ante desastres.",
+    "icon": "database",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "Diario",
+        "label": "Copias de seguridad"
+      },
+      {
+        "value": "100%",
+        "label": "Recuperación"
+      },
+      {
+        "value": "24/7",
+        "label": "Protección"
+      }
+    ]
+  },
+  "features": {
+    "title": "Características de copia de seguridad y recuperación",
+    "subtitle": "Protección completa de datos",
+    "description": "Soluciones completas de copia de seguridad y recuperación para proteger los datos de su consultorio.",
+    "items": [
+      {
+        "icon": "database",
+        "title": "Copias de seguridad diarias automáticas",
+        "description": "Copias de seguridad diarias automáticas con almacenamiento cifrado y múltiples políticas de retención.",
+        "highlights": [
+          "Copias de seguridad automáticas diarias",
+          "Almacenamiento cifrado",
+          "Múltiples políticas de retención",
+          "Verificación de copias de seguridad",
+          "Copias de seguridad incrementales"
+        ],
+        "stats": {
+          "value": "Diario",
+          "label": "Copias de seguridad"
+        }
+      },
+      {
+        "icon": "clock",
+        "title": "Recuperación a un punto en el tiempo",
+        "description": "Recupere datos a cualquier punto en el tiempo con opciones de recuperación granulares y pérdida mínima de datos.",
+        "highlights": [
+          "Recuperación a un punto en el tiempo",
+          "Recuperación granular",
+          "Pérdida mínima de datos",
+          "Tiempos de recuperación rápidos",
+          "Pruebas de recuperación"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "Recuperación"
+        }
+      },
+      {
+        "icon": "shield",
+        "title": "Recuperación ante desastres",
+        "description": "Planes completos de recuperación ante desastres con conmutación por error automática y continuidad del negocio.",
+        "highlights": [
+          "Planes de recuperación ante desastres",
+          "Conmutación por error automática",
+          "Continuidad del negocio",
+          "Redundancia geográfica",
+          "Procedimientos de recuperación"
+        ],
+        "stats": {
+          "value": "24/7",
+          "label": "Protección"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Garantía de copia de seguridad y recuperación",
+    "description": "Protección completa de datos para su consultorio",
+    "stats": [
+      {
+        "icon": "database",
+        "value": "Diario",
+        "label": "Copias de seguridad"
+      },
+      {
+        "icon": "clock",
+        "value": "100%",
+        "label": "Recuperación"
+      },
+      {
+        "icon": "shield",
+        "value": "24/7",
+        "label": "Protección"
+      },
+      {
+        "icon": "award",
+        "value": "100%",
+        "label": "Confiable"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Dr. Michael Chen",
+        "role": "Dentista principal",
+        "quote": "El sistema de copia de seguridad automática nos da total tranquilidad. Sabemos que nuestros datos están siempre protegidos y recuperables."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Beneficios de copia de seguridad y recuperación",
+    "subtitle": "Protección completa",
+    "description": "Experimente la seguridad de la copia de seguridad y recuperación completas.",
+    "items": [
+      {
+        "title": "Copias de seguridad diarias",
+        "description": "Las copias de seguridad diarias automáticas garantizan que sus datos estén siempre protegidos.",
+        "icon": "database",
+        "color": "teal",
+        "stats": {
+          "value": "Diario",
+          "label": "Copias de seguridad"
+        },
+        "highlights": [
+          "Copias de seguridad automáticas",
+          "Programas diarios",
+          "Almacenamiento cifrado",
+          "Múltiples copias"
+        ]
+      },
+      {
+        "title": "Recuperación completa",
+        "description": "La recuperación a un punto en el tiempo garantiza que pueda restaurar datos a cualquier momento.",
+        "icon": "clock",
+        "color": "cyan",
+        "stats": {
+          "value": "100%",
+          "label": "Recuperación"
+        },
+        "highlights": [
+          "Recuperación a un punto en el tiempo",
+          "Recuperación granular",
+          "Restauración rápida",
+          "Tiempo de inactividad mínimo"
+        ]
+      },
+      {
+        "title": "Protección 24/7",
+        "description": "La protección continua garantiza que sus datos estén siempre seguros.",
+        "icon": "shield",
+        "color": "blue",
+        "stats": {
+          "value": "24/7",
+          "label": "Protección"
+        },
+        "highlights": [
+          "Monitoreo continuo",
+          "Copias de seguridad automatizadas",
+          "Recuperación ante desastres",
+          "Continuidad del negocio"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "¿Listo para protección completa de datos?",
+    "description": "Vea cómo la copia de seguridad y recuperación de Dentagia protegen los datos de su consultorio.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Programar una demostración",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Aprender más",
+      "link": "/features"
+    }
+  }
+}
+

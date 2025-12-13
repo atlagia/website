@@ -1,0 +1,159 @@
+---
+import Layoutc from '@layouts/Layoutc.astro';
+import { ArrowRight, Star, Trophy, Crown, Award, Zap } from 'lucide-react';
+
+// Generate static paths for allowed languages from environment
+export async function getStaticPaths() {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  const languages = allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+  
+  return languages.map(lang => ({ params: { lang } }));
+}
+
+const { lang = 'en' } = Astro.params;
+const baseUrl = import.meta.env.DOMAINE || 'https://drivon.store';
+const storeName = import.meta.env.PUBLIC_SITE_NAME || 'Drivon';
+
+// SEO
+const seoTitle = `Supra Tees | ${storeName}`;
+const seoDescription = "Premium tees celebrating the legendary Toyota Supra. From JDM culture to racing heritage, wear the passion of the Supra legend.";
+---
+<Layoutc title={seoTitle} description={seoDescription} lang={lang}>
+  <div class="min-h-screen bg-gray-50">
+    <!-- Hero Section -->
+    <section class="relative h-[60vh] bg-gradient-to-br from-pink-900 via-rose-800 to-red-900">
+      <div class="absolute inset-0 bg-black/50"></div>
+      <div class="relative z-10 h-full flex items-center justify-center text-center px-4">
+        <div class="max-w-4xl mx-auto">
+          <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">
+            Supra Tees
+          </h1>
+          <p class="text-xl md:text-2xl text-gray-200 mb-8">
+            Premium tees celebrating the legendary Toyota Supra
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href={`/${lang}/collections`} class="bg-pink-600 hover:bg-pink-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+              Shop Supra Tees
+            </a>
+            <a href={`/${lang}/jdm-culture-tees`} class="bg-white/20 hover:bg-white/30 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+              JDM Culture
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Supra Tees Features -->
+    <section class="py-20 px-4">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">Premium Supra Tees</h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            From JDM culture to racing heritage, our Supra tees celebrate the legendary Toyota Supra with authentic designs and premium quality.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mb-6">
+              <Crown class="w-8 h-8 text-pink-600" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">JDM Legend</h3>
+            <p class="text-gray-600">
+              Celebrate the legendary Toyota Supra that has defined JDM culture and continues to inspire car enthusiasts worldwide.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <div class="w-16 h-16 bg-rose-100 rounded-full flex items-center justify-center mb-6">
+              <Star class="w-8 h-8 text-rose-600" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Racing Heritage</h3>
+            <p class="text-gray-600">
+              Honor the legendary Supra and its racing heritage that has shaped JDM culture and inspired generations of car enthusiasts.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
+              <Trophy class="w-8 h-8 text-red-600" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Premium Quality</h3>
+            <p class="text-gray-600">
+              Every tee is crafted with premium materials and attention to detail, ensuring comfort and durability for the Supra enthusiast.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Supra Tees Categories -->
+    <section class="py-20 bg-gray-100">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">Supra Tees Collection</h2>
+          <p class="text-xl text-gray-600">Celebrate the legendary Toyota Supra</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <a href={`/${lang}/collections`} class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+            <div class="h-48 bg-gradient-to-br from-pink-500 to-pink-700 flex items-center justify-center">
+              <Crown class="w-16 h-16 text-white" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Supra JDM Tees</h3>
+              <p class="text-gray-600 mb-4">Premium tees celebrating Supra JDM culture</p>
+              <div class="flex items-center text-pink-600 font-semibold group-hover:text-pink-700">
+                Shop Supra JDM <ArrowRight class="w-4 h-4 ml-2" />
+              </div>
+            </div>
+          </a>
+
+          <a href={`/${lang}/collections`} class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+            <div class="h-48 bg-gradient-to-br from-rose-500 to-rose-700 flex items-center justify-center">
+              <Star class="w-16 h-16 text-white" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Supra Racing Tees</h3>
+              <p class="text-gray-600 mb-4">Classic tees honoring Supra racing heritage</p>
+              <div class="flex items-center text-rose-600 font-semibold group-hover:text-rose-700">
+                Shop Supra Racing <ArrowRight class="w-4 h-4 ml-2" />
+              </div>
+            </div>
+          </a>
+
+          <a href={`/${lang}/collections`} class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+            <div class="h-48 bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center">
+              <Trophy class="w-16 h-16 text-white" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Supra Legends Tees</h3>
+              <p class="text-gray-600 mb-4">Tees celebrating Supra racing legends</p>
+              <div class="flex items-center text-red-600 font-semibold group-hover:text-red-700">
+                Shop Supra Legends <ArrowRight class="w-4 h-4 ml-2" />
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-gray-900 text-white">
+      <div class="max-w-4xl mx-auto text-center px-4">
+        <h2 class="text-4xl font-bold mb-6">Wear Supra Heritage</h2>
+        <p class="text-xl text-gray-300 mb-8">
+          Join the global Supra community and celebrate the legendary Toyota Supra with our premium Supra tees collection.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href={`/${lang}/collections`} class="bg-pink-600 hover:bg-pink-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+            Shop Supra Tees Collection
+          </a>
+          <a href={`/${lang}/jdm-culture-tees`} class="bg-white/20 hover:bg-white/30 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+            Explore JDM Culture
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layoutc>

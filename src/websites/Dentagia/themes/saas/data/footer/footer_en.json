@@ -1,0 +1,180 @@
+{
+  "company": {
+    "title": "Company",
+    "links": [
+      {
+        "name": "About",
+        "href": "/about"
+      },
+      {
+        "name": "Careers",
+        "href": "/careers"
+      },
+      {
+        "name": "Press",
+        "href": "/press"
+      },
+      {
+        "name": "Blog",
+        "href": "/blog"
+      }
+    ]
+  },
+  "product": {
+    "title": "Features",
+    "links": [
+      {
+        "name": "Patient Management",
+        "href": "/features/patient-management"
+      },
+      {
+        "name": "AI Scheduling",
+        "href": "/features/ai-scheduling"
+      },
+      {
+        "name": "Billing & Payments",
+        "href": "/features/billing"
+      },
+      {
+        "name": "Practice Analytics",
+        "href": "/features/analytics"
+      },
+      {
+        "name": "Cloud Platform",
+        "href": "/platform/cloud"
+      },
+      {
+        "name": "Security & HIPAA",
+        "href": "/features/hipaa"
+      },
+      {
+        "name": "Mobile Access",
+        "href": "/platform/mobile"
+      },
+      {
+        "name": "Integrations",
+        "href": "/platform/integrations"
+      }
+    ]
+  },
+  "services": {
+    "title": "Practice Solutions",
+    "links": [
+      {
+        "name": "Solo Practices",
+        "href": "/solutions/solo-practice"
+      },
+      {
+        "name": "Multi-Practitioner",
+        "href": "/solutions/multi-practitioner"
+      },
+      {
+        "name": "Multi-Location",
+        "href": "/solutions/multi-location"
+      },
+      {
+        "name": "Practice Setup",
+        "href": "/services/setup"
+      }
+    ]
+  },
+  "resources": {
+    "title": "Resources",
+    "links": [
+      {
+        "name": "Documentation",
+        "href": "/documentation"
+      },
+      {
+        "name": "API Reference",
+        "href": "/api"
+      },
+      {
+        "name": "Support",
+        "href": "/support"
+      },
+      {
+        "name": "Status",
+        "href": "/status"
+      }
+    ]
+  },
+  "legal": {
+    "title": "Legal",
+    "links": [
+      {
+        "name": "Privacy",
+        "href": "/privacy"
+      },
+      {
+        "name": "Terms",
+        "href": "/terms"
+      },
+      {
+        "name": "Cookie Policy",
+        "href": "/cookie-policy"
+      }
+    ]
+  },
+  "social": {
+    "title": "Social",
+    "links": [
+      {
+        "name": "YouTube",
+        "href": "https://www.youtube.com/@Atlagia",
+        "icon": "youtube"
+      },
+      {
+        "name": "Instagram",
+        "href": "https://www.instagram.com/atlagia/",
+        "icon": "instagram"
+      },
+      {
+        "name": "Twitter",
+        "href": "https://twitter.com/atlagia",
+        "icon": "twitter"
+      },
+      {
+        "name": "LinkedIn",
+        "href": "https://linkedin.com/company/atlagia",
+        "icon": "linkedin"
+      },
+      {
+        "name": "GitHub",
+        "href": "https://github.com/atlagia",
+        "icon": "github"
+      }
+    ]
+  },
+  "newsletter": {
+    "title": "Subscribe to our newsletter",
+    "description": "Stay updated with dental practice management tips, product updates, and industry insights.",
+    "buttonText": "Subscribe",
+    "placeholderText": "Enter your email"
+  },
+  "copyright": {
+    "text": "© 2025 Atlagia. All rights reserved.",
+    "links": [
+      {
+        "name": "Privacy Policy",
+        "href": "/privacy"
+      },
+      {
+        "name": "Terms of Service",
+        "href": "/terms"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact Information",
+    "addressTitle": "Address",
+    "contactTitle": "Contact",
+    "company": "ATLAGIA INC.",
+    "address": "1940 COMMERCE STREET SUITE 308",
+    "city": "YORKTOWN HEIGHTS",
+    "postalCode": "NY 10598",
+    "country": "United States",
+    "email": "contact@dentagia.com",
+    "phone": "+1 2035 472 248"
+  }
+} 

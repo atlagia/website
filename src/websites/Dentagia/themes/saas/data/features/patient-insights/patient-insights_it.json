@@ -1,0 +1,182 @@
+{
+  "hero": {
+    "subtitle": "Analisi alimentata da IA",
+    "title": "Insights pazienti e analisi predittiva",
+    "description": "Sfrutta l'analisi alimentata da IA per ottenere insights approfonditi sul comportamento paziente, prevedere esigenze trattamento e ottimizzare strategie crescita studio.",
+    "icon": "trending-up",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "35%",
+        "label": "Crescita entrate"
+      },
+      {
+        "value": "95%",
+        "label": "Precisione previsione"
+      },
+      {
+        "value": "60%",
+        "label": "Decisioni migliori"
+      }
+    ]
+  },
+  "features": {
+    "title": "Funzionalità insights pazienti",
+    "subtitle": "Intelligenza basata su dati",
+    "description": "Analisi avanzata e insights alimentati da IA per aiutarti a capire e far crescere il tuo studio.",
+    "items": [
+      {
+        "icon": "brain",
+        "title": "Analisi predittiva",
+        "description": "L'IA analizza dati pazienti per prevedere esigenze trattamento, pattern appuntamenti e comportamento paziente.",
+        "highlights": [
+          "Previsioni trattamento",
+          "Previsione appuntamenti",
+          "Analisi comportamento paziente",
+          "Valutazione rischi",
+          "Identificazione tendenze"
+        ],
+        "stats": {
+          "value": "95%",
+          "label": "Precisione"
+        }
+      },
+      {
+        "icon": "trending-up",
+        "title": "Insights crescita studio",
+        "description": "Insights basati su dati su performance studio, opportunità entrate e strategie crescita.",
+        "highlights": [
+          "Analisi entrate",
+          "Metriche performance",
+          "Opportunità crescita",
+          "Insights mercato",
+          "Raccomandazioni strategiche"
+        ],
+        "stats": {
+          "value": "35%",
+          "label": "Crescita entrate"
+        }
+      },
+      {
+        "icon": "users",
+        "title": "Segmentazione pazienti",
+        "description": "Segmenta pazienti per comportamento, esigenze trattamento e valore per ottimizzare strategie marketing e assistenza.",
+        "highlights": [
+          "Segmentazione comportamentale",
+          "Gruppi basati su trattamento",
+          "Analisi valore",
+          "Marketing mirato",
+          "Assistenza personalizzata"
+        ],
+        "stats": {
+          "value": "60%",
+          "label": "Decisioni migliori"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Successo insights pazienti",
+    "description": "Vedi come l'analisi IA trasforma gli studi",
+    "stats": [
+      {
+        "icon": "brain",
+        "value": "95%",
+        "label": "Precisione"
+      },
+      {
+        "icon": "trending-up",
+        "value": "35%",
+        "label": "Crescita entrate"
+      },
+      {
+        "icon": "users",
+        "value": "60%",
+        "label": "Decisioni migliori"
+      },
+      {
+        "icon": "award",
+        "value": "100%",
+        "label": "Alimentato da IA"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Dr. Michael Chen",
+        "role": "Dentista principale",
+        "quote": "La funzionalità insights pazienti ci ha aiutato a capire meglio il nostro studio e aumentare le entrate del 35%. Le previsioni IA sono incredibilmente precise."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Vantaggi insights pazienti",
+    "subtitle": "Crescita basata su dati",
+    "description": "Sperimenta il potere dell'analisi alimentata da IA.",
+    "items": [
+      {
+        "title": "Precisione predittiva",
+        "description": "Le previsioni IA ti aiutano ad anticipare esigenze pazienti e ottimizzare la pianificazione.",
+        "icon": "brain",
+        "color": "teal",
+        "stats": {
+          "value": "95%",
+          "label": "Precisione"
+        },
+        "highlights": [
+          "Previsioni trattamento",
+          "Previsione appuntamenti",
+          "Analisi comportamento",
+          "Valutazione rischi"
+        ]
+      },
+      {
+        "title": "Crescita entrate",
+        "description": "Gli insights basati su dati identificano opportunità per far crescere le entrate dello studio.",
+        "icon": "trending-up",
+        "color": "cyan",
+        "stats": {
+          "value": "35%",
+          "label": "Crescita"
+        },
+        "highlights": [
+          "Analisi entrate",
+          "Identificazione opportunità",
+          "Raccomandazioni strategiche",
+          "Monitoraggio performance"
+        ]
+      },
+      {
+        "title": "Decisioni migliori",
+        "description": "Gli insights completi consentono migliori decisioni strategiche e operative.",
+        "icon": "users",
+        "color": "blue",
+        "stats": {
+          "value": "60%",
+          "label": "Miglioramento"
+        },
+        "highlights": [
+          "Decisioni basate su dati",
+          "Pianificazione strategica",
+          "Ottimizzazione performance",
+          "Insights mercato"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Pronto per insights alimentati da IA?",
+    "description": "Vedi come gli insights pazienti di Dentagia possono trasformare la crescita del tuo studio.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Prenota una demo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Scopri di più",
+      "link": "/features"
+    }
+  }
+}
+

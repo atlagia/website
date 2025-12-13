@@ -1,0 +1,298 @@
+{
+  "pageTitle": "Documentation - Dentagia",
+  "pageDescription": "Complete guides, API references, and tutorials to help you get the most out of Dentagia's dental practice management platform",
+  "hero": {
+    "badge": "Developer Resources",
+    "title": "Documentation & Guides",
+    "description": "Everything you need to build, integrate, and scale with Dentagia's dental practice management platform",
+    "searchPlaceholder": "Search documentation...",
+    "quickLinks": [
+      {
+        "text": "Getting Started",
+        "href": "#getting-started"
+      },
+      {
+        "text": "API Reference",
+        "href": "#api-reference"
+      },
+      {
+        "text": "Tutorials",
+        "href": "#tutorials"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "getting-started",
+      "title": "Getting Started",
+      "description": "Quick start guides to help you begin your journey with Dentagia",
+      "icon": "Rocket",
+      "items": [
+        {
+          "title": "Quick Start Guide",
+          "description": "Get your dental practice up and running in 5 minutes",
+          "icon": "Zap",
+          "link": "/en/docs/quick-start"
+        },
+        {
+          "title": "Practice Setup",
+          "description": "Step-by-step instructions for setting up your practice",
+          "icon": "Download",
+          "link": "/en/docs/practice-setup"
+        },
+        {
+          "title": "Configuration",
+          "description": "Configure your practice management settings",
+          "icon": "Settings",
+          "link": "/en/docs/configuration"
+        },
+        {
+          "title": "First Patient Record",
+          "description": "Create your first patient record and appointment",
+          "icon": "FileText",
+          "link": "/en/docs/first-patient"
+        }
+      ]
+    },
+    {
+      "id": "api-reference",
+      "title": "API Reference",
+      "description": "Complete API documentation and endpoints for dental practice management",
+      "icon": "Code",
+      "items": [
+        {
+          "title": "Authentication",
+          "description": "API authentication and security for HIPAA compliance",
+          "icon": "Lock",
+          "link": "/en/docs/api/authentication"
+        },
+        {
+          "title": "REST API",
+          "description": "RESTful API endpoints for patient management, scheduling, and billing",
+          "icon": "Server",
+          "link": "/en/docs/api/rest"
+        },
+        {
+          "title": "Patient API",
+          "description": "Manage patient records, medical history, and treatment plans",
+          "icon": "Users",
+          "link": "/en/docs/api/patients"
+        },
+        {
+          "title": "Scheduling API",
+          "description": "AI-powered appointment scheduling and calendar management",
+          "icon": "Calendar",
+          "link": "/en/docs/api/scheduling"
+        },
+        {
+          "title": "Billing API",
+          "description": "Billing, invoicing, and payment processing endpoints",
+          "icon": "CreditCard",
+          "link": "/en/docs/api/billing"
+        },
+        {
+          "title": "Webhooks",
+          "description": "Real-time event notifications for practice events",
+          "icon": "Webhook",
+          "link": "/en/docs/api/webhooks"
+        }
+      ]
+    },
+    {
+      "id": "tutorials",
+      "title": "Tutorials",
+      "description": "Step-by-step guides and examples for dental practice management",
+      "icon": "BookOpen",
+      "items": [
+        {
+          "title": "Patient Management",
+          "description": "Complete guide to managing patient records and medical history",
+          "icon": "Users",
+          "link": "/en/docs/tutorials/patient-management"
+        },
+        {
+          "title": "AI Scheduling Setup",
+          "description": "Set up and optimize AI-powered appointment scheduling",
+          "icon": "Calendar",
+          "link": "/en/docs/tutorials/ai-scheduling"
+        },
+        {
+          "title": "Billing Automation",
+          "description": "Automate billing, invoicing, and payment processing",
+          "icon": "CreditCard",
+          "link": "/en/docs/tutorials/billing-automation"
+        },
+        {
+          "title": "Practice Analytics",
+          "description": "Set up and use practice analytics and reporting",
+          "icon": "BarChart",
+          "link": "/en/docs/tutorials/analytics"
+        },
+        {
+          "title": "HIPAA Compliance",
+          "description": "Ensure your practice meets HIPAA compliance requirements",
+          "icon": "Shield",
+          "link": "/en/docs/tutorials/hipaa-compliance"
+        },
+        {
+          "title": "Custom Integrations",
+          "description": "Integrate with dental imaging systems and other tools",
+          "icon": "Puzzle",
+          "link": "/en/docs/tutorials/integrations"
+        }
+      ]
+    },
+    {
+      "id": "guides",
+      "title": "Guides",
+      "description": "In-depth guides for advanced features and best practices",
+      "icon": "Map",
+      "items": [
+        {
+          "title": "HIPAA Security Best Practices",
+          "description": "Secure your practice data and ensure HIPAA compliance",
+          "icon": "Shield",
+          "link": "/en/docs/guides/security"
+        },
+        {
+          "title": "Practice Performance Optimization",
+          "description": "Optimize your practice operations for efficiency and growth",
+          "icon": "Gauge",
+          "link": "/en/docs/guides/performance"
+        },
+        {
+          "title": "Data Migration",
+          "description": "Migrate from your existing practice management system",
+          "icon": "Upload",
+          "link": "/en/docs/guides/migration"
+        },
+        {
+          "title": "Practice Analytics & Reporting",
+          "description": "Track and analyze your practice performance",
+          "icon": "BarChart",
+          "link": "/en/docs/guides/analytics"
+        }
+      ]
+    }
+  ],
+  "sdks": {
+    "title": "SDKs & Libraries",
+    "description": "Official SDKs and libraries for popular languages",
+    "items": [
+      {
+        "name": "Python",
+        "icon": "Code",
+        "description": "Official Python SDK for Dentagia API",
+        "version": "v2.1.0",
+        "link": "https://github.com/dentagia/python-sdk",
+        "installCommand": "pip install dentagia"
+      },
+      {
+        "name": "JavaScript",
+        "icon": "Code",
+        "description": "Official JavaScript SDK for Dentagia API",
+        "version": "v3.0.2",
+        "link": "https://github.com/dentagia/js-sdk",
+        "installCommand": "npm install @dentagia/sdk"
+      },
+      {
+        "name": "TypeScript",
+        "icon": "Code",
+        "description": "Official TypeScript SDK for Dentagia API",
+        "version": "v3.0.2",
+        "link": "https://github.com/dentagia/ts-sdk",
+        "installCommand": "npm install @dentagia/sdk-ts"
+      },
+      {
+        "name": "Java",
+        "icon": "Code",
+        "description": "Official Java SDK for Dentagia API",
+        "version": "v1.5.0",
+        "link": "https://github.com/dentagia/java-sdk",
+        "installCommand": "maven: com.dentagia:sdk:1.5.0"
+      },
+      {
+        "name": "Go",
+        "icon": "Code",
+        "description": "Official Go SDK for Dentagia API",
+        "version": "v1.3.0",
+        "link": "https://github.com/dentagia/go-sdk",
+        "installCommand": "go get github.com/dentagia/sdk"
+      },
+      {
+        "name": "Ruby",
+        "icon": "Code",
+        "description": "Official Ruby SDK for Dentagia API",
+        "version": "v2.0.1",
+        "link": "https://github.com/dentagia/ruby-sdk",
+        "installCommand": "gem install dentagia"
+      }
+    ]
+  },
+  "resources": {
+    "title": "Additional Resources",
+    "description": "More tools and resources to help you succeed with Dentagia",
+    "items": [
+      {
+        "title": "API Status",
+        "description": "Real-time API status and uptime",
+        "icon": "Activity",
+        "link": "https://status.dentagia.com",
+        "external": true
+      },
+      {
+        "title": "Developer Forum",
+        "description": "Connect with other developers and dental practice managers",
+        "icon": "Users",
+        "link": "https://community.dentagia.com",
+        "external": true
+      },
+      {
+        "title": "GitHub Repository",
+        "description": "View source code and examples",
+        "icon": "Github",
+        "link": "https://github.com/dentagia",
+        "external": true
+      },
+      {
+        "title": "Changelog",
+        "description": "Latest updates and releases",
+        "icon": "FileText",
+        "link": "/en/changelog",
+        "external": false
+      },
+      {
+        "title": "Video Tutorials",
+        "description": "Learn through video guides for practice management",
+        "icon": "Video",
+        "link": "/en/tutorials",
+        "external": false
+      },
+      {
+        "title": "Support Center",
+        "description": "Get help from our team",
+        "icon": "HelpCircle",
+        "link": "/en/contact",
+        "external": false
+      }
+    ]
+  },
+  "cta": {
+    "title": "Need Help?",
+    "description": "Our support team is here to help you succeed with Dentagia",
+    "buttons": [
+      {
+        "text": "Contact Support",
+        "href": "/en/contact",
+        "variant": "primary",
+        "icon": "MessageSquare"
+      },
+      {
+        "text": "Schedule Demo",
+        "href": "/en/demo",
+        "variant": "secondary",
+        "icon": "Calendar"
+      }
+    ]
+  }
+}

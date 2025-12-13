@@ -1,0 +1,198 @@
+{
+  "hero": {
+    "subtitle": "Streamlined Billing",
+    "title": "Automated Billing & Payment Processing",
+    "description": "Simplify billing, invoicing, and payment processing with automated workflows, insurance integration, and comprehensive financial reporting.",
+    "icon": "credit-card",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "80%",
+        "label": "Faster Processing"
+      },
+      {
+        "value": "50%",
+        "label": "Time Saved"
+      },
+      {
+        "value": "95%",
+        "label": "Accuracy"
+      }
+    ]
+  },
+  "features": {
+    "title": "Billing Features",
+    "subtitle": "Financial Management",
+    "description": "Comprehensive billing and payment processing tools designed to streamline your practice's financial operations.",
+    "items": [
+      {
+        "icon": "credit-card",
+        "title": "Automated Invoicing",
+        "description": "Generate invoices automatically based on treatments, with customizable templates and automatic payment reminders.",
+        "highlights": [
+          "Automatic invoice generation",
+          "Customizable invoice templates",
+          "Payment reminders",
+          "Multi-payment plans",
+          "Recurring billing"
+        ],
+        "stats": {
+          "value": "80%",
+          "label": "Faster Processing"
+        }
+      },
+      {
+        "icon": "trending-up",
+        "title": "Insurance Claims",
+        "description": "Streamlined insurance claim submission with real-time eligibility verification and automated follow-ups.",
+        "highlights": [
+          "Electronic claim submission",
+          "Real-time eligibility checks",
+          "Automated follow-ups",
+          "Claim status tracking",
+          "Denial management"
+        ],
+        "stats": {
+          "value": "95%",
+          "label": "Approval Rate"
+        }
+      },
+      {
+        "icon": "users",
+        "title": "Payment Processing",
+        "description": "Accept payments online and in-person with multiple payment methods and secure processing.",
+        "highlights": [
+          "Credit card processing",
+          "ACH and bank transfers",
+          "Payment plans",
+          "Online payment portal",
+          "Secure processing"
+        ],
+        "stats": {
+          "value": "50%",
+          "label": "Time Saved"
+        }
+      },
+      {
+        "icon": "trending-up",
+        "title": "Financial Reporting",
+        "description": "Comprehensive financial reports and analytics to track revenue, collections, and practice performance.",
+        "highlights": [
+          "Revenue reports",
+          "Collection analytics",
+          "Insurance tracking",
+          "Payment trends",
+          "Practice performance"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "Visibility"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Billing Success Stories",
+    "description": "See how practices are streamlining their billing operations",
+    "stats": [
+      {
+        "icon": "credit-card",
+        "value": "80%",
+        "label": "Faster Processing"
+      },
+      {
+        "icon": "clock",
+        "value": "50%",
+        "label": "Time Saved"
+      },
+      {
+        "icon": "trending-up",
+        "value": "95%",
+        "label": "Accuracy"
+      },
+      {
+        "icon": "users",
+        "value": "100%",
+        "label": "Automation"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Emily Rodriguez",
+        "role": "Practice Manager, Cosmetic Dentistry Center",
+        "quote": "Billing automation has reduced our administrative time by 50%. We process claims faster and collect payments more efficiently."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Billing Benefits",
+    "subtitle": "Financial Excellence",
+    "description": "Experience the advantages of automated billing and payment processing.",
+    "items": [
+      {
+        "title": "Faster Processing",
+        "description": "Automated workflows process invoices and claims much faster than manual methods.",
+        "icon": "zap",
+        "color": "teal",
+        "stats": {
+          "value": "80%",
+          "label": "Faster"
+        },
+        "highlights": [
+          "Automated invoicing",
+          "Electronic claims",
+          "Instant processing",
+          "Reduced delays"
+        ]
+      },
+      {
+        "title": "Save Time",
+        "description": "Automation eliminates manual data entry and reduces administrative overhead.",
+        "icon": "clock",
+        "color": "cyan",
+        "stats": {
+          "value": "50%",
+          "label": "Time Saved"
+        },
+        "highlights": [
+          "Automated workflows",
+          "Reduced paperwork",
+          "Streamlined processes",
+          "Less manual entry"
+        ]
+      },
+      {
+        "title": "Improve Collections",
+        "description": "Better tracking and automated reminders improve payment collection rates.",
+        "icon": "trending-up",
+        "color": "blue",
+        "stats": {
+          "value": "95%",
+          "label": "Collection Rate"
+        },
+        "highlights": [
+          "Payment reminders",
+          "Collection tracking",
+          "Payment plans",
+          "Better visibility"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Streamline Your Billing?",
+    "description": "See how Dentagia's billing features can transform your financial operations.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Schedule a Demo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Learn More",
+      "link": "/features"
+    }
+  }
+}
+

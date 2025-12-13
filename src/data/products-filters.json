@@ -1,0 +1,355 @@
+{
+  "colors": [
+    {
+      "value": "black",
+      "hex": "#000000",
+      "label": {
+        "en": "Black",
+        "fr": "Noir",
+        "de": "Schwarz",
+        "es": "Negro",
+        "it": "Nero",
+        "pt": "Preto",
+        "nl": "Zwart",
+        "ru": "Черный"
+      }
+    },
+    {
+      "value": "white",
+      "hex": "#FFFFFF",
+      "label": {
+        "en": "White",
+        "fr": "Blanc",
+        "de": "Weiß",
+        "es": "Blanco",
+        "it": "Bianco",
+        "pt": "Branco",
+        "nl": "Wit",
+        "ru": "Белый"
+      }
+    },
+    {
+      "value": "red",
+      "hex": "#FF0000",
+      "label": {
+        "en": "Red",
+        "fr": "Rouge",
+        "de": "Rot",
+        "es": "Rojo",
+        "it": "Rosso",
+        "pt": "Vermelho",
+        "nl": "Rood",
+        "ru": "Красный"
+      }
+    },
+    {
+      "value": "blue",
+      "hex": "#0000FF",
+      "label": {
+        "en": "Blue",
+        "fr": "Bleu",
+        "de": "Blau",
+        "es": "Azul",
+        "it": "Blu",
+        "pt": "Azul",
+        "nl": "Blauw",
+        "ru": "Синий"
+      }
+    },
+    {
+      "value": "green",
+      "hex": "#00FF00",
+      "label": {
+        "en": "Green",
+        "fr": "Vert",
+        "de": "Grün",
+        "es": "Verde",
+        "it": "Verde",
+        "pt": "Verde",
+        "nl": "Groen",
+        "ru": "Зеленый"
+      }
+    },
+    {
+      "value": "yellow",
+      "hex": "#FFFF00",
+      "label": {
+        "en": "Yellow",
+        "fr": "Jaune",
+        "de": "Gelb",
+        "es": "Amarillo",
+        "it": "Giallo",
+        "pt": "Amarelo",
+        "nl": "Geel",
+        "ru": "Желтый"
+      }
+    },
+    {
+      "value": "orange",
+      "hex": "#FFA500",
+      "label": {
+        "en": "Orange",
+        "fr": "Orange",
+        "de": "Orange",
+        "es": "Naranja",
+        "it": "Arancione",
+        "pt": "Laranja",
+        "nl": "Oranje",
+        "ru": "Оранжевый"
+      }
+    },
+    {
+      "value": "purple",
+      "hex": "#800080",
+      "label": {
+        "en": "Purple",
+        "fr": "Violet",
+        "de": "Lila",
+        "es": "Morado",
+        "it": "Viola",
+        "pt": "Roxo",
+        "nl": "Paars",
+        "ru": "Фиолетовый"
+      }
+    }
+  ],
+  "sizes": [
+    {
+      "value": "xs",
+      "label": {
+        "en": "XS",
+        "fr": "XS",
+        "de": "XS",
+        "es": "XS",
+        "it": "XS",
+        "pt": "XS",
+        "nl": "XS",
+        "ru": "XS"
+      }
+    },
+    {
+      "value": "s",
+      "label": {
+        "en": "S",
+        "fr": "S",
+        "de": "S",
+        "es": "S",
+        "it": "S",
+        "pt": "S",
+        "nl": "S",
+        "ru": "S"
+      }
+    },
+    {
+      "value": "m",
+      "label": {
+        "en": "M",
+        "fr": "M",
+        "de": "M",
+        "es": "M",
+        "it": "M",
+        "pt": "M",
+        "nl": "M",
+        "ru": "M"
+      }
+    },
+    {
+      "value": "l",
+      "label": {
+        "en": "L",
+        "fr": "L",
+        "de": "L",
+        "es": "L",
+        "it": "L",
+        "pt": "L",
+        "nl": "L",
+        "ru": "L"
+      }
+    },
+    {
+      "value": "xl",
+      "label": {
+        "en": "XL",
+        "fr": "XL",
+        "de": "XL",
+        "es": "XL",
+        "it": "XL",
+        "pt": "XL",
+        "nl": "XL",
+        "ru": "XL"
+      }
+    },
+    {
+      "value": "xxl",
+      "label": {
+        "en": "XXL",
+        "fr": "XXL",
+        "de": "XXL",
+        "es": "XXL",
+        "it": "XXL",
+        "pt": "XXL",
+        "nl": "XXL",
+        "ru": "XXL"
+      }
+    }
+  ],
+  "availability": [
+    {
+      "value": "in-stock",
+      "label": {
+        "en": "In Stock",
+        "fr": "En Stock",
+        "de": "Auf Lager",
+        "es": "En Stock",
+        "it": "Disponibile",
+        "pt": "Em Estoque",
+        "nl": "Op Voorraad",
+        "ru": "В наличии"
+      }
+    },
+    {
+      "value": "low-stock",
+      "label": {
+        "en": "Low Stock",
+        "fr": "Stock Faible",
+        "de": "Wenig auf Lager",
+        "es": "Stock Bajo",
+        "it": "Scorte Basse",
+        "pt": "Estoque Baixo",
+        "nl": "Lage Voorraad",
+        "ru": "Мало в наличии"
+      }
+    },
+    {
+      "value": "out-of-stock",
+      "label": {
+        "en": "Out of Stock",
+        "fr": "Rupture de Stock",
+        "de": "Nicht auf Lager",
+        "es": "Agotado",
+        "it": "Esaurito",
+        "pt": "Fora de Estoque",
+        "nl": "Uitverkocht",
+        "ru": "Нет в наличии"
+      }
+    },
+    {
+      "value": "pre-order",
+      "label": {
+        "en": "Pre-order",
+        "fr": "Pré-commande",
+        "de": "Vorbestellung",
+        "es": "Pre-pedido",
+        "it": "Pre-ordine",
+        "pt": "Pré-encomenda",
+        "nl": "Pre-order",
+        "ru": "Предзаказ"
+      }
+    },
+    {
+      "value": "coming-soon",
+      "label": {
+        "en": "Coming Soon",
+        "fr": "Bientôt Disponible",
+        "de": "Demnächst Verfügbar",
+        "es": "Próximamente",
+        "it": "Prossimamente",
+        "pt": "Em Breve",
+        "nl": "Binnenkort",
+        "ru": "Скоро"
+      }
+    }
+  ],
+  "priceRanges": [
+    {
+      "value": "under-10",
+      "label": {
+        "en": "Under $10",
+        "fr": "Moins de 10$",
+        "de": "Unter 10$",
+        "es": "Menos de $10",
+        "it": "Sotto $10",
+        "pt": "Abaixo de $10",
+        "nl": "Onder $10",
+        "ru": "До $10"
+      },
+      "min": 0,
+      "max": 10
+    },
+    {
+      "value": "10-25",
+      "label": {
+        "en": "$10 - $25",
+        "fr": "10$ - 25$",
+        "de": "10$ - 25$",
+        "es": "$10 - $25",
+        "it": "$10 - $25",
+        "pt": "$10 - $25",
+        "nl": "$10 - $25",
+        "ru": "$10 - $25"
+      },
+      "min": 10,
+      "max": 25
+    },
+    {
+      "value": "25-50",
+      "label": {
+        "en": "$25 - $50",
+        "fr": "25$ - 50$",
+        "de": "25$ - 50$",
+        "es": "$25 - $50",
+        "it": "$25 - $50",
+        "pt": "$25 - $50",
+        "nl": "$25 - $50",
+        "ru": "$25 - $50"
+      },
+      "min": 25,
+      "max": 50
+    },
+    {
+      "value": "50-100",
+      "label": {
+        "en": "$50 - $100",
+        "fr": "50$ - 100$",
+        "de": "50$ - 100$",
+        "es": "$50 - $100",
+        "it": "$50 - $100",
+        "pt": "$50 - $100",
+        "nl": "$50 - $100",
+        "ru": "$50 - $100"
+      },
+      "min": 50,
+      "max": 100
+    },
+    {
+      "value": "100-200",
+      "label": {
+        "en": "$100 - $200",
+        "fr": "100$ - 200$",
+        "de": "100$ - 200$",
+        "es": "$100 - $200",
+        "it": "$100 - $200",
+        "pt": "$100 - $200",
+        "nl": "$100 - $200",
+        "ru": "$100 - $200"
+      },
+      "min": 100,
+      "max": 200
+    },
+    {
+      "value": "over-200",
+      "label": {
+        "en": "Over $200",
+        "fr": "Plus de 200$",
+        "de": "Über 200$",
+        "es": "Más de $200",
+        "it": "Oltre $200",
+        "pt": "Acima de $200",
+        "nl": "Boven $200",
+        "ru": "Свыше $200"
+      },
+      "min": 200,
+      "max": null
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "hero": {
+    "subtitle": "Comunicación automatizada",
+    "title": "Recordatorios automatizados de citas",
+    "description": "Reduzca las ausencias y mejore la comunicación con los pacientes con recordatorios automatizados inteligentes por SMS y correo electrónico que se adaptan a las preferencias del paciente.",
+    "icon": "bell",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "70%",
+        "label": "Reducción de ausencias"
+      },
+      {
+        "value": "95%",
+        "label": "Tasa de entrega"
+      },
+      {
+        "value": "60%",
+        "label": "Tasa de respuesta"
+      }
+    ]
+  },
+  "features": {
+    "title": "Características de recordatorios",
+    "subtitle": "Comunicación inteligente",
+    "description": "Recordatorios automatizados inteligentes que mantienen informados a los pacientes y reducen las citas perdidas.",
+    "items": [
+      {
+        "icon": "bell",
+        "title": "Recordatorios multicanal",
+        "description": "Envíe recordatorios por SMS, correo electrónico y llamadas telefónicas según las preferencias del paciente y el tipo de cita.",
+        "highlights": [
+          "Recordatorios SMS",
+          "Notificaciones por correo electrónico",
+          "Opciones de llamadas telefónicas",
+          "Entrega basada en preferencias",
+          "Soporte multidioma"
+        ],
+        "stats": {
+          "value": "95%",
+          "label": "Tasa de entrega"
+        }
+      },
+      {
+        "icon": "clock",
+        "title": "Momento inteligente",
+        "description": "La IA determina el momento óptimo de recordatorios basado en el historial del paciente y el tipo de cita.",
+        "highlights": [
+          "Momento óptimo",
+          "Análisis del historial del paciente",
+          "Programación basada en citas",
+          "Manejo de zonas horarias",
+          "Intervalos personalizables"
+        ],
+        "stats": {
+          "value": "70%",
+          "label": "Reducción de ausencias"
+        }
+      },
+      {
+        "icon": "users",
+        "title": "Solicitudes de confirmación",
+        "description": "Solicite confirmaciones automáticamente y maneje respuestas para optimizar la programación.",
+        "highlights": [
+          "Solicitudes de confirmación",
+          "Manejo de respuestas",
+          "Actualizaciones automáticas",
+          "Gestión de listas de espera",
+          "Manejo de cancelaciones"
+        ],
+        "stats": {
+          "value": "60%",
+          "label": "Tasa de respuesta"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Historias de éxito de recordatorios",
+    "description": "Vea cómo los recordatorios automatizados transforman los consultorios",
+    "stats": [
+      {
+        "icon": "bell",
+        "value": "95%",
+        "label": "Tasa de entrega"
+      },
+      {
+        "icon": "trending-up",
+        "value": "70%",
+        "label": "Reducción de ausencias"
+      },
+      {
+        "icon": "users",
+        "value": "60%",
+        "label": "Tasa de respuesta"
+      },
+      {
+        "icon": "award",
+        "value": "100%",
+        "label": "Automatizado"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Emily Rodriguez",
+        "role": "Gerente del consultorio",
+        "quote": "Los recordatorios automatizados han reducido nuestras ausencias en un 70%. Los pacientes aprecian los recordatorios oportunos y ahorramos horas de llamadas telefónicas."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Beneficios de recordatorios",
+    "subtitle": "Comunicación mejorada",
+    "description": "Experimente las ventajas de la comunicación automatizada con pacientes.",
+    "items": [
+      {
+        "title": "Reducir ausencias",
+        "description": "Los recordatorios oportunos reducen significativamente las citas perdidas.",
+        "icon": "bell",
+        "color": "teal",
+        "stats": {
+          "value": "70%",
+          "label": "Reducción"
+        },
+        "highlights": [
+          "Recordatorios oportunos",
+          "Múltiples canales",
+          "Solicitudes de confirmación",
+          "Manejo de respuestas"
+        ]
+      },
+      {
+        "title": "Alta entrega",
+        "description": "La entrega multicanal garantiza que los recordatorios lleguen a los pacientes de manera confiable.",
+        "icon": "check-circle",
+        "color": "cyan",
+        "stats": {
+          "value": "95%",
+          "label": "Tasa de entrega"
+        },
+        "highlights": [
+          "Entrega SMS",
+          "Entrega por correo electrónico",
+          "Opciones telefónicas",
+          "Entrega confiable"
+        ]
+      },
+      {
+        "title": "Mejor compromiso",
+        "description": "Los recordatorios automatizados mejoran el compromiso y la comunicación con los pacientes.",
+        "icon": "users",
+        "color": "blue",
+        "stats": {
+          "value": "60%",
+          "label": "Tasa de respuesta"
+        },
+        "highlights": [
+          "Compromiso del paciente",
+          "Seguimiento de respuestas",
+          "Historial de comunicación",
+          "Gestión de preferencias"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "¿Listo para recordatorios automatizados?",
+    "description": "Vea cómo el sistema de recordatorios de Dentagia puede reducir ausencias y mejorar la comunicación.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Programar una demostración",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Aprender más",
+      "link": "/features"
+    }
+  }
+}
+

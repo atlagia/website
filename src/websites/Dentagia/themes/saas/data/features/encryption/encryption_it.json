@@ -1,0 +1,182 @@
+{
+  "hero": {
+    "subtitle": "Crittografia dati",
+    "title": "Crittografia dati end-to-end",
+    "description": "Crittografia di livello militare 256-bit protegge tutti i dati pazienti in transito e a riposo, garantendo il più alto livello di sicurezza per il tuo studio dentistico.",
+    "icon": "lock",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "256-bit",
+        "label": "Crittografia"
+      },
+      {
+        "value": "100%",
+        "label": "Protetto"
+      },
+      {
+        "value": "End-to-end",
+        "label": "Sicurezza"
+      }
+    ]
+  },
+  "features": {
+    "title": "Funzionalità crittografia",
+    "subtitle": "Sicurezza di livello militare",
+    "description": "Funzionalità complete di crittografia e sicurezza per proteggere tutti i dati pazienti.",
+    "items": [
+      {
+        "icon": "lock",
+        "title": "Crittografia 256-bit",
+        "description": "Crittografia AES 256-bit di livello militare per tutti i dati a riposo e in transito.",
+        "highlights": [
+          "Crittografia AES 256-bit",
+          "Protezione dati a riposo",
+          "Sicurezza dati in transito",
+          "Gestione chiavi",
+          "Standard crittografia"
+        ],
+        "stats": {
+          "value": "256-bit",
+          "label": "Crittografia"
+        }
+      },
+      {
+        "icon": "shield",
+        "title": "Protezione end-to-end",
+        "description": "Protezione completa dati dall'ingresso all'archiviazione con crittografia end-to-end.",
+        "highlights": [
+          "Crittografia end-to-end",
+          "Protezione completa flusso dati",
+          "Trasmissione sicura",
+          "Archiviazione crittografata",
+          "Architettura zero-knowledge"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "Protetto"
+        }
+      },
+      {
+        "icon": "database",
+        "title": "Gestione chiavi",
+        "description": "Gestione sicura chiavi e politiche rotazione garantiscono che le chiavi crittografia siano sempre protette.",
+        "highlights": [
+          "Archiviazione sicura chiavi",
+          "Rotazione chiavi",
+          "Controlli accesso",
+          "Politiche gestione chiavi",
+          "Standard conformità"
+        ],
+        "stats": {
+          "value": "End-to-end",
+          "label": "Sicurezza"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Sicurezza crittografia",
+    "description": "Protezione di livello militare per i tuoi dati",
+    "stats": [
+      {
+        "icon": "lock",
+        "value": "256-bit",
+        "label": "Crittografia"
+      },
+      {
+        "icon": "shield",
+        "value": "100%",
+        "label": "Protetto"
+      },
+      {
+        "icon": "database",
+        "value": "End-to-end",
+        "label": "Sicurezza"
+      },
+      {
+        "icon": "award",
+        "value": "Militare",
+        "label": "Livello"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Dr. Sarah Martinez",
+        "role": "Proprietario studio",
+        "quote": "La crittografia ci dà totale fiducia che i nostri dati pazienti siano protetti con i più alti standard di sicurezza."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Vantaggi crittografia",
+    "subtitle": "Sicurezza massima",
+    "description": "Sperimenta la tranquillità che viene con la crittografia di livello militare.",
+    "items": [
+      {
+        "title": "Protezione di livello militare",
+        "description": "La crittografia 256-bit fornisce il più alto livello di protezione dati disponibile.",
+        "icon": "lock",
+        "color": "teal",
+        "stats": {
+          "value": "256-bit",
+          "label": "Crittografia"
+        },
+        "highlights": [
+          "Crittografia di livello militare",
+          "Standard AES-256",
+          "Sicurezza leader del settore",
+          "Pronto per conformità"
+        ]
+      },
+      {
+        "title": "Protezione completa",
+        "description": "La crittografia end-to-end protegge i dati durante tutto il loro ciclo di vita completo.",
+        "icon": "shield",
+        "color": "cyan",
+        "stats": {
+          "value": "100%",
+          "label": "Protetto"
+        },
+        "highlights": [
+          "Crittografia end-to-end",
+          "Flusso completo dati",
+          "Trasmissione sicura",
+          "Archiviazione crittografata"
+        ]
+      },
+      {
+        "title": "Gestione sicura chiavi",
+        "description": "La gestione professionale chiavi garantisce che le chiavi crittografia siano sempre sicure.",
+        "icon": "database",
+        "color": "blue",
+        "stats": {
+          "value": "End-to-end",
+          "label": "Sicurezza"
+        },
+        "highlights": [
+          "Archiviazione sicura chiavi",
+          "Rotazione chiavi",
+          "Controlli accesso",
+          "Politiche gestione"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Pronto per crittografia di livello militare?",
+    "description": "Vedi come la crittografia di Dentagia protegge i tuoi dati pazienti.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Prenota una demo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Scopri di più",
+      "link": "/features"
+    }
+  }
+}
+

@@ -1,0 +1,182 @@
+{
+  "hero": {
+    "subtitle": "Datenschutz",
+    "title": "Automatisches Backup und Disaster Recovery",
+    "description": "Schützen Sie Ihre Praxisdaten mit automatischen täglichen Backups, Point-in-Time-Wiederherstellung und umfassenden Disaster-Recovery-Plänen.",
+    "icon": "database",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "Täglich",
+        "label": "Backups"
+      },
+      {
+        "value": "100%",
+        "label": "Wiederherstellung"
+      },
+      {
+        "value": "24/7",
+        "label": "Schutz"
+      }
+    ]
+  },
+  "features": {
+    "title": "Backup- und Wiederherstellungs-Funktionen",
+    "subtitle": "Vollständiger Datenschutz",
+    "description": "Umfassende Backup- und Wiederherstellungslösungen zum Schutz Ihrer Praxisdaten.",
+    "items": [
+      {
+        "icon": "database",
+        "title": "Automatische tägliche Backups",
+        "description": "Automatische tägliche Backups mit verschlüsselter Speicherung und mehreren Aufbewahrungsrichtlinien.",
+        "highlights": [
+          "Automatische tägliche Backups",
+          "Verschlüsselte Speicherung",
+          "Mehrere Aufbewahrungsrichtlinien",
+          "Backup-Verifizierung",
+          "Inkrementelle Backups"
+        ],
+        "stats": {
+          "value": "Täglich",
+          "label": "Backups"
+        }
+      },
+      {
+        "icon": "clock",
+        "title": "Point-in-Time-Wiederherstellung",
+        "description": "Stellen Sie Daten zu jedem Zeitpunkt mit granularen Wiederherstellungsoptionen und minimalem Datenverlust wieder her.",
+        "highlights": [
+          "Point-in-Time-Wiederherstellung",
+          "Granulare Wiederherstellung",
+          "Minimaler Datenverlust",
+          "Schnelle Wiederherstellungszeiten",
+          "Wiederherstellungstests"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "Wiederherstellung"
+        }
+      },
+      {
+        "icon": "shield",
+        "title": "Disaster Recovery",
+        "description": "Umfassende Disaster-Recovery-Pläne mit automatischem Failover und Geschäftskontinuität.",
+        "highlights": [
+          "Disaster-Recovery-Pläne",
+          "Automatisches Failover",
+          "Geschäftskontinuität",
+          "Geografische Redundanz",
+          "Wiederherstellungsverfahren"
+        ],
+        "stats": {
+          "value": "24/7",
+          "label": "Schutz"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Backup- und Wiederherstellungs-Garantie",
+    "description": "Vollständiger Datenschutz für Ihre Praxis",
+    "stats": [
+      {
+        "icon": "database",
+        "value": "Täglich",
+        "label": "Backups"
+      },
+      {
+        "icon": "clock",
+        "value": "100%",
+        "label": "Wiederherstellung"
+      },
+      {
+        "icon": "shield",
+        "value": "24/7",
+        "label": "Schutz"
+      },
+      {
+        "icon": "award",
+        "value": "100%",
+        "label": "Zuverlässig"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Dr. Michael Chen",
+        "role": "Leitender Zahnarzt",
+        "quote": "Das automatische Backup-System gibt uns vollständige Ruhe. Wir wissen, dass unsere Daten immer geschützt und wiederherstellbar sind."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Vorteile von Backup und Wiederherstellung",
+    "subtitle": "Vollständiger Schutz",
+    "description": "Erleben Sie die Sicherheit umfassender Backup- und Wiederherstellungsfunktionen.",
+    "items": [
+      {
+        "title": "Tägliche Backups",
+        "description": "Automatische tägliche Backups stellen sicher, dass Ihre Daten immer geschützt sind.",
+        "icon": "database",
+        "color": "teal",
+        "stats": {
+          "value": "Täglich",
+          "label": "Backups"
+        },
+        "highlights": [
+          "Automatische Backups",
+          "Tägliche Zeitpläne",
+          "Verschlüsselte Speicherung",
+          "Mehrere Kopien"
+        ]
+      },
+      {
+        "title": "Vollständige Wiederherstellung",
+        "description": "Point-in-Time-Wiederherstellung stellt sicher, dass Sie Daten zu jedem Zeitpunkt wiederherstellen können.",
+        "icon": "clock",
+        "color": "cyan",
+        "stats": {
+          "value": "100%",
+          "label": "Wiederherstellung"
+        },
+        "highlights": [
+          "Point-in-Time-Wiederherstellung",
+          "Granulare Wiederherstellung",
+          "Schnelle Wiederherstellung",
+          "Minimale Ausfallzeit"
+        ]
+      },
+      {
+        "title": "24/7-Schutz",
+        "description": "Kontinuierlicher Schutz stellt sicher, dass Ihre Daten immer sicher sind.",
+        "icon": "shield",
+        "color": "blue",
+        "stats": {
+          "value": "24/7",
+          "label": "Schutz"
+        },
+        "highlights": [
+          "Kontinuierliche Überwachung",
+          "Automatisierte Backups",
+          "Disaster Recovery",
+          "Geschäftskontinuität"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Bereit für vollständigen Datenschutz?",
+    "description": "Sehen Sie, wie Backup und Wiederherstellung von Dentagia Ihre Praxisdaten schützen.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Demo vereinbaren",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Mehr erfahren",
+      "link": "/features"
+    }
+  }
+}
+

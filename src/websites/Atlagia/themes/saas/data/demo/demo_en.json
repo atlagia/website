@@ -1,0 +1,169 @@
+{
+  "pageTitle": "Live Demo",
+  "pageDescription": "Experience the power of AI-driven automation with our interactive demo",
+  "hero": {
+    "badge": "Interactive Demo",
+    "title": "See Our Platform in Action",
+    "description": "Try our AI-powered solutions firsthand. No credit card required, no installation needed. Get started in seconds.",
+    "cta": {
+      "primary": {
+        "text": "Start Demo",
+        "href": "#demo-form"
+      },
+      "secondary": {
+        "text": "Watch Video",
+        "href": "#video"
+      }
+    }
+  },
+  "features": [
+    {
+      "icon": "zap",
+      "title": "Instant Access",
+      "description": "Start exploring immediately with pre-loaded sample data"
+    },
+    {
+      "icon": "shield",
+      "title": "Secure & Private",
+      "description": "Your demo data is isolated and automatically deleted after 24 hours"
+    },
+    {
+      "icon": "users",
+      "title": "Guided Tour",
+      "description": "Step-by-step walkthrough of key features and capabilities"
+    },
+    {
+      "icon": "rocket",
+      "title": "Full Features",
+      "description": "Experience all premium features without limitations"
+    }
+  ],
+  "demoForm": {
+    "title": "Request Your Personal Demo",
+    "subtitle": "Fill out the form below and we'll set up a customized demo environment for you",
+    "fields": {
+      "fullName": {
+        "label": "Full Name",
+        "placeholder": "John Doe",
+        "required": true
+      },
+      "email": {
+        "label": "Work Email",
+        "placeholder": "john@company.com",
+        "required": true
+      },
+      "company": {
+        "label": "Company Name",
+        "placeholder": "Your Company Inc.",
+        "required": true
+      },
+      "industry": {
+        "label": "Industry",
+        "placeholder": "Select your industry",
+        "options": [
+          "Healthcare",
+          "E-commerce",
+          "Finance",
+          "Education",
+          "Manufacturing",
+          "Retail",
+          "Technology",
+          "Other"
+        ],
+        "required": true
+      },
+      "useCase": {
+        "label": "What would you like to explore?",
+        "placeholder": "Tell us about your use case...",
+        "required": false
+      }
+    },
+    "submitButton": "Launch My Demo",
+    "consent": "By submitting this form, you agree to our Privacy Policy and Terms of Service"
+  },
+  "benefits": {
+    "title": "Why Try Our Demo?",
+    "items": [
+      {
+        "icon": "check-circle",
+        "title": "Real-World Scenarios",
+        "description": "Explore use cases specific to your industry with realistic data"
+      },
+      {
+        "icon": "trending-up",
+        "title": "See ROI Potential",
+        "description": "Understand how our solution can improve your business metrics"
+      },
+      {
+        "icon": "settings",
+        "title": "Customization Options",
+        "description": "Discover how to tailor the platform to your specific needs"
+      },
+      {
+        "icon": "award",
+        "title": "Expert Support",
+        "description": "Get answers from our solution specialists during your demo"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "What Our Demo Users Say",
+    "items": [
+      {
+        "quote": "The demo was incredibly intuitive. Within 10 minutes, I could see exactly how this would transform our operations.",
+        "author": "Sarah Johnson",
+        "role": "Operations Director",
+        "company": "TechCorp Inc.",
+        "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah"
+      },
+      {
+        "quote": "I've tried many demos, but this one stood out. The guided tour made it easy to understand the value proposition.",
+        "author": "Michael Chen",
+        "role": "CTO",
+        "company": "InnovateLabs",
+        "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Michael"
+      }
+    ]
+  },
+  "video": {
+    "title": "Watch a Quick Overview",
+    "description": "See how our platform works in just 2 minutes",
+    "thumbnail": "https://via.placeholder.com/800x450/6366f1/ffffff?text=Demo+Video",
+    "duration": "2:30",
+    "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "question": "How long does the demo last?",
+        "answer": "Your personal demo environment remains active for 24 hours, giving you plenty of time to explore at your own pace."
+      },
+      {
+        "question": "Is any installation required?",
+        "answer": "No installation needed! Our demo runs entirely in your web browser. Simply click the link we send you."
+      },
+      {
+        "question": "Will I have access to all features?",
+        "answer": "Yes, you'll have access to all premium features during your demo period."
+      },
+      {
+        "question": "Can I import my own data?",
+        "answer": "The demo comes with sample data, but you can also upload your own data to see how the platform works with real information."
+      },
+      {
+        "question": "What happens after the demo expires?",
+        "answer": "All demo data is automatically deleted after 24 hours. If you'd like to continue, we can help you set up a trial account."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Transform Your Business?",
+    "description": "Join thousands of companies already using our platform to automate and optimize their operations.",
+    "button": {
+      "text": "Start Your Demo Now",
+      "href": "#demo-form"
+    }
+  }
+}
+

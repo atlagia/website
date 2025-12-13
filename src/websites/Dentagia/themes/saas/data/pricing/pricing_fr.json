@@ -1,0 +1,459 @@
+{
+  "pageTitle": "Tarifs - Gestion de cabinet dentaire Dentagia",
+  "pageDescription": "Plans tarifaires flexibles pour les cabinets dentaires de toutes tailles. Choisissez le plan qui correspond aux besoins de votre cabinet.",
+  "hero": {
+    "badge": "Tarification Simple et Transparente",
+    "title": "Choisissez le Plan Adapté à Votre Cabinet",
+    "description": "Plans tarifaires flexibles conçus pour les cabinets dentaires de toutes tailles. Commencez avec notre plan essentiel et évoluez au fur et à mesure que votre cabinet grandit.",
+    "cta": {
+      "text": "Contacter les Ventes",
+      "href": "/contact"
+    }
+  },
+  "plans": [
+    {
+      "name": "Essentiel",
+      "description": "Parfait pour les praticiens individuels et les petits cabinets",
+      "price": "199€",
+      "period": "par mois",
+      "features": [
+        "Jusqu'à 2 praticiens",
+        "Gestion des patients",
+        "Planification de base",
+        "Facturation et facturation",
+        "Stockage cloud (50 Go)",
+        "Support par email",
+        "Accès application mobile"
+      ],
+      "cta": {
+        "text": "Commencer",
+        "href": "/contact",
+        "variant": "outline"
+      },
+      "popular": false
+    },
+    {
+      "name": "Professionnel",
+      "description": "Idéal pour les cabinets en croissance avec plusieurs praticiens",
+      "price": "399€",
+      "period": "par mois",
+      "features": [
+        "Jusqu'à 5 praticiens",
+        "Planification propulsée par l'IA",
+        "Gestion avancée des patients",
+        "Facturation et paiements automatisés",
+        "Analytique du cabinet",
+        "Stockage cloud (200 Go)",
+        "Support prioritaire",
+        "Accès application mobile",
+        "Rapports personnalisés"
+      ],
+      "cta": {
+        "text": "Commencer",
+        "href": "/contact",
+        "variant": "primary"
+      },
+      "popular": true
+    },
+    {
+      "name": "Entreprise",
+      "description": "Pour les grands cabinets et groupes multi-sites",
+      "price": "Sur mesure",
+      "period": "par mois",
+      "features": [
+        "Pratiquants illimités",
+        "Gestion multi-sites",
+        "Fonctionnalités IA avancées",
+        "Analytique complète du cabinet",
+        "Stockage cloud illimité",
+        "Support dédié 24/7",
+        "Intégrations personnalisées",
+        "Options white-label",
+        "Fonctionnalités de sécurité avancées",
+        "Gestionnaire de compte dédié"
+      ],
+      "cta": {
+        "text": "Contacter les Ventes",
+        "href": "/contact",
+        "variant": "outline"
+      },
+      "popular": false
+    }
+  ],
+  "benefits": {
+    "title": "Avantages du Cabinet",
+    "description": "Tout ce dont vous avez besoin pour gérer un cabinet dentaire réussi",
+    "items": [
+      {
+        "icon": "Shield",
+        "title": "Sécurité Conforme HIPAA",
+        "description": "Sécurité de niveau entreprise et conformité HIPAA",
+        "items": [
+          "Chiffrement de bout en bout",
+          "Audits de sécurité réguliers",
+          "Certification de conformité HIPAA",
+          "Sauvegardes de données sécurisées"
+        ]
+      },
+      {
+        "icon": "Cloud",
+        "title": "Accès Basé sur le Cloud",
+        "description": "Accédez aux données de votre cabinet depuis n'importe où, à tout moment",
+        "items": [
+          "Accès multi-appareils",
+          "Synchronisation en temps réel",
+          "Sauvegardes automatiques",
+          "Garantie de disponibilité 99,9%"
+        ]
+      },
+      {
+        "icon": "Zap",
+        "title": "Automatisation Propulsée par l'IA",
+        "description": "Automatisation intelligente et insights",
+        "items": [
+          "Optimisation de planification IA",
+          "Analytique prédictive",
+          "Rappels patients automatisés",
+          "Insights de croissance du cabinet"
+        ]
+      },
+      {
+        "icon": "Users",
+        "title": "Gestion Complète du Cabinet",
+        "description": "Solution tout-en-un pour votre cabinet",
+        "items": [
+          "Gestion des patients",
+          "Planification des rendez-vous",
+          "Facturation et facturation",
+          "Planification des traitements"
+        ]
+      }
+    ]
+  },
+  "industries": {
+    "title": "Parfait pour Tous les Types de Cabinet",
+    "description": "Dentagia fonctionne pour les cabinets dentaires de toutes tailles et spécialités",
+    "items": [
+      {
+        "icon": "Home",
+        "name": "Cabinets Individuels",
+        "description": "Parfait pour les praticiens indépendants",
+        "solutions": [
+          {
+            "name": "Plan Essentiel",
+            "link": "/pricing"
+          },
+          {
+            "name": "Gestion des Patients",
+            "link": "/features"
+          }
+        ]
+      },
+      {
+        "icon": "Users",
+        "name": "Cliniques Multi-Praticiens",
+        "description": "Idéal pour les cliniques avec plusieurs dentistes",
+        "solutions": [
+          {
+            "name": "Plan Professionnel",
+            "link": "/pricing"
+          },
+          {
+            "name": "Collaboration d'Équipe",
+            "link": "/features"
+          }
+        ]
+      },
+      {
+        "icon": "Building",
+        "name": "Groupes Multi-Sites",
+        "description": "Gestion centralisée pour les groupes dentaires",
+        "solutions": [
+          {
+            "name": "Plan Entreprise",
+            "link": "/pricing"
+          },
+          {
+            "name": "Multi-Sites",
+            "link": "/features"
+          }
+        ]
+      },
+      {
+        "icon": "Stethoscope",
+        "name": "Cabinets Spécialisés",
+        "description": "Personnalisé pour l'orthodontie, la parodontologie et plus",
+        "solutions": [
+          {
+            "name": "Fonctionnalités Spécialisées",
+            "link": "/features"
+          },
+          {
+            "name": "Solutions Personnalisées",
+            "link": "/contact"
+          }
+        ]
+      }
+    ]
+  },
+  "successMetrics": {
+    "title": "Résultats Prouvés",
+    "description": "Découvrez comment Dentagia aide les cabinets à réussir",
+    "items": [
+      {
+        "icon": "TrendingUp",
+        "value": "35%",
+        "title": "Croissance du Revenu",
+        "description": "Augmentation moyenne du revenu après implémentation"
+      },
+      {
+        "icon": "Clock",
+        "value": "50%",
+        "title": "Temps Économisé",
+        "description": "Réduction du temps administratif"
+      },
+      {
+        "icon": "Building",
+        "value": "500+",
+        "title": "Cabinets Dentaires",
+        "description": "Font confiance à Dentagia pour leur gestion de cabinet"
+      },
+      {
+        "icon": "Star",
+        "value": "98%",
+        "title": "Satisfaction",
+        "description": "Note de satisfaction client"
+      }
+    ]
+  },
+  "globalFeatures": {
+    "title": "Fonctionnalités Complètes",
+    "description": "Tout ce dont vous avez besoin dans une seule plateforme",
+    "features": [
+      {
+        "category": "Gestion du Cabinet",
+        "items": [
+          "Dossiers patients et historique médical",
+          "Planification des rendez-vous",
+          "Planification des traitements",
+          "Documentation clinique"
+        ]
+      },
+      {
+        "category": "Facturation et Paiements",
+        "items": [
+          "Facturation automatisée",
+          "Traitement des paiements",
+          "Demandes d'assurance",
+          "Rapports financiers"
+        ]
+      }
+    ]
+  },
+  "integrations": {
+    "title": "Intégrations Transparentes",
+    "description": "Connectez-vous aux outils que vous utilisez déjà",
+    "categories": [
+      {
+        "category": "Imagerie Dentaire",
+        "items": [
+          {
+            "name": "Systèmes de Radiographie",
+            "icon": "Database"
+          },
+          {
+            "name": "Imagerie 3D",
+            "icon": "Database2"
+          },
+          {
+            "name": "Caméras Intraorales",
+            "icon": "Database"
+          }
+        ]
+      },
+      {
+        "category": "Traitement des Paiements",
+        "items": [
+          {
+            "name": "Stripe",
+            "icon": "Code"
+          },
+          {
+            "name": "Square",
+            "icon": "Code"
+          },
+          {
+            "name": "PayPal",
+            "icon": "Code"
+          }
+        ]
+      },
+      {
+        "category": "Services Cloud",
+        "items": [
+          {
+            "name": "AWS",
+            "icon": "CloudAws"
+          },
+          {
+            "name": "Google Cloud",
+            "icon": "CloudGoogle"
+          },
+          {
+            "name": "Microsoft Azure",
+            "icon": "CloudMicrosoft"
+          }
+        ]
+      }
+    ]
+  },
+  "features": {
+    "title": "Tous les Plans Incluent",
+    "description": "Fonctionnalités essentielles disponibles dans chaque plan",
+    "items": [
+      {
+        "icon": "shield",
+        "title": "Conforme HIPAA",
+        "description": "Sécurité de niveau entreprise et conformité HIPAA"
+      },
+      {
+        "icon": "cloud",
+        "title": "Basé sur le cloud",
+        "description": "Accédez aux données de votre cabinet depuis n'importe où, à tout moment"
+      },
+      {
+        "icon": "zap",
+        "title": "Propulsé par l'IA",
+        "description": "Automatisation intelligente et insights"
+      },
+      {
+        "icon": "smartphone",
+        "title": "Accès mobile",
+        "description": "Application mobile complète pour iOS et Android"
+      },
+      {
+        "icon": "refresh-cw",
+        "title": "Mises à jour automatiques",
+        "description": "Mises à jour régulières et nouvelles fonctionnalités sans coût supplémentaire"
+      },
+      {
+        "icon": "headphones",
+        "title": "Support",
+        "description": "Équipe de support dédiée pour aider votre cabinet à réussir"
+      }
+    ]
+  },
+  "faqs": {
+    "title": "Questions Fréquemment Posées",
+    "description": "Questions courantes sur les tarifs Dentagia",
+    "items": [
+      {
+        "question": "Puis-je changer de plan plus tard ?",
+        "answer": "Oui, vous pouvez mettre à niveau ou réduire votre plan à tout moment. Les changements prennent effet immédiatement, et nous ajusterons les frais au prorata."
+      },
+      {
+        "question": "Y a-t-il des frais d'installation ?",
+        "answer": "Aucun frais d'installation pour les plans Essentiel et Professionnel. Les plans Entreprise peuvent inclure des services d'installation et de migration."
+      },
+      {
+        "question": "Quels modes de paiement acceptez-vous ?",
+        "answer": "Nous acceptons toutes les principales cartes de crédit, les virements ACH, et pouvons organiser la facturation annuelle pour les clients Entreprise."
+      },
+      {
+        "question": "Offrez-vous des réductions pour la facturation annuelle ?",
+        "answer": "Oui, nous offrons une réduction de 15% lorsque vous payez annuellement. Contactez notre équipe commerciale pour plus d'informations."
+      },
+      {
+        "question": "Que se passe-t-il si je dépasse les limites de mon plan ?",
+        "answer": "Nous vous avertirons avant d'atteindre vos limites. Vous pouvez mettre à niveau votre plan ou acheter une capacité supplémentaire si nécessaire."
+      },
+      {
+        "question": "Y a-t-il un essai gratuit ?",
+        "answer": "Oui, nous offrons un essai gratuit de 14 jours avec accès complet à toutes les fonctionnalités. Aucune carte de crédit requise pour commencer."
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Ce Que Disent Nos Clients",
+    "items": [
+      {
+        "quote": "Le plan Professionnel était parfait pour notre cabinet. La planification propulsée par l'IA seule se paie en réduisant les absences.",
+        "author": "Dr. Sarah Martinez",
+        "role": "Propriétaire du cabinet",
+        "company": "Clinique Dentaire du Centre"
+      },
+      {
+        "quote": "Nous sommes passés à Entreprise lors de notre expansion vers plusieurs sites. Les fonctionnalités de gestion multi-sites sont inestimables.",
+        "author": "Dr. Michael Chen",
+        "role": "Directeur du cabinet",
+        "company": "Groupe Dentaire Familial"
+      }
+    ]
+  },
+  "implementation": {
+    "title": "Processus d'Implémentation Simple",
+    "description": "Mettez-vous en route rapidement avec notre configuration rationalisée",
+    "steps": [
+      {
+        "number": "1",
+        "title": "Planifier une Démo",
+        "description": "Découvrez Dentagia en action avec une démo personnalisée"
+      },
+      {
+        "number": "2",
+        "title": "Configuration Rapide",
+        "description": "Notre équipe vous aide à migrer les données et configurer votre cabinet"
+      },
+      {
+        "number": "3",
+        "title": "Formation",
+        "description": "Formation complète pour votre équipe"
+      },
+      {
+        "number": "4",
+        "title": "Mise en Ligne",
+        "description": "Lancez avec un support 24/7 disponible"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contactez-Nous",
+    "description": "Notre équipe est là pour vous aider à choisir le bon plan",
+    "options": [
+      {
+        "icon": "Phone",
+        "title": "Appelez-Nous",
+        "description": "Parlez avec notre équipe commerciale",
+        "link": "tel:+33756756240"
+      },
+      {
+        "icon": "MessageSquare",
+        "title": "Envoyez-Nous un Email",
+        "description": "Envoyez-nous vos questions",
+        "link": "mailto:contact@dentagia.com"
+      },
+      {
+        "icon": "Calendar",
+        "title": "Planifier une Démo",
+        "description": "Réservez une démo personnalisée",
+        "link": "/demo"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prêt à Commencer ?",
+    "description": "Commencez votre essai gratuit de 14 jours aujourd'hui. Aucune carte de crédit requise.",
+    "buttons": [
+      {
+        "text": "Commencer l'Essai Gratuit",
+        "href": "/demo",
+        "variant": "primary"
+      },
+      {
+        "text": "Contacter les Ventes",
+        "href": "/contact",
+        "variant": "secondary"
+      }
+    ]
+  }
+} 

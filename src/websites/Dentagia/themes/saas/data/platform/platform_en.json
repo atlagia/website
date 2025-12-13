@@ -1,0 +1,283 @@
+{
+  "pageTitle": "Dentagia Platform",
+  "pageDescription": "Explore Dentagia's advanced AI-powered dental practice management platform capabilities and features.",
+  "hero": {
+    "badge": "Platform Overview",
+    "title": "Advanced Practice Management Platform for Dental Practices",
+    "description": "Discover our enterprise-grade dental practice management platform that combines cutting-edge AI technology with cloud-based infrastructure, unmatched security, and scalability.",
+    "cta": {
+      "primary": {
+        "text": "Explore Features",
+        "href": "#features"
+      },
+      "secondary": {
+        "text": "View Documentation",
+        "href": "/documentation"
+      }
+    }
+  },
+  "techSpecs": [
+    {
+      "title": "Uptime",
+      "value": "99.9%",
+      "unit": "guaranteed"
+    },
+    {
+      "title": "Response Time",
+      "value": "<100",
+      "unit": "milliseconds"
+    },
+    {
+      "title": "Data Centers",
+      "value": "Global",
+      "unit": "cloud infrastructure"
+    },
+    {
+      "title": "Practices",
+      "value": "500+",
+      "unit": "dental practices"
+    }
+  ],
+  "features": [
+    {
+      "category": "Practice Management Core",
+      "description": "Essential practice management capabilities",
+      "items": [
+        {
+          "icon": "Users",
+          "name": "Patient Management",
+          "description": "Comprehensive patient records and medical history management",
+          "highlights": [
+            "Digital Patient Records",
+            "Medical History Tracking",
+            "Treatment Planning",
+            "Patient Portal Access"
+          ],
+          "stats": {
+            "value": "100%",
+            "label": "Digital Records"
+          }
+        },
+        {
+          "icon": "Calendar",
+          "name": "AI-Powered Scheduling",
+          "description": "Intelligent appointment scheduling and calendar optimization",
+          "highlights": [
+            "Smart Scheduling",
+            "Automated Reminders",
+            "Waitlist Management",
+            "No-Show Reduction"
+          ],
+          "stats": {
+            "value": "70%",
+            "label": "No-Show Reduction"
+          }
+        },
+        {
+          "icon": "CreditCard",
+          "name": "Billing & Payments",
+          "description": "Streamlined billing, invoicing, and payment processing",
+          "highlights": [
+            "Automated Invoicing",
+            "Payment Processing",
+            "Insurance Claims",
+            "Financial Reporting"
+          ],
+          "stats": {
+            "value": "80%",
+            "label": "Faster Processing"
+          }
+        },
+        {
+          "icon": "BarChart",
+          "name": "Practice Analytics",
+          "description": "Data-driven insights for practice growth and optimization",
+          "highlights": [
+            "Performance Metrics",
+            "Patient Analytics",
+            "Revenue Tracking",
+            "Growth Insights"
+          ],
+          "stats": {
+            "value": "35%",
+            "label": "Revenue Growth"
+          }
+        }
+      ]
+    },
+    {
+      "category": "Cloud Infrastructure",
+      "description": "Secure and scalable cloud-based platform",
+      "items": [
+        {
+          "icon": "Cloud",
+          "name": "Cloud-Based Access",
+          "description": "Access your practice data from anywhere, anytime",
+          "highlights": [
+            "Multi-Device Access",
+            "Real-Time Sync",
+            "Automatic Backups",
+            "Global Availability"
+          ],
+          "stats": {
+            "value": "99.9%",
+            "label": "Uptime"
+          }
+        },
+        {
+          "icon": "Shield",
+          "name": "HIPAA Compliance",
+          "description": "Enterprise-grade security and HIPAA compliance",
+          "highlights": [
+            "End-to-End Encryption",
+            "HIPAA Compliance",
+            "Access Control",
+            "Audit Logs"
+          ],
+          "stats": {
+            "value": "256-bit",
+            "label": "Encryption"
+          }
+        },
+        {
+          "icon": "Database",
+          "name": "Data Management",
+          "description": "Secure patient data storage and management",
+          "highlights": [
+            "Secure Storage",
+            "Data Backup",
+            "Disaster Recovery",
+            "Data Retention"
+          ],
+          "stats": {
+            "value": "100%",
+            "label": "Data Security"
+          }
+        },
+        {
+          "icon": "Zap",
+          "name": "AI Integration",
+          "description": "Advanced AI capabilities for practice optimization",
+          "highlights": [
+            "Smart Scheduling",
+            "Predictive Analytics",
+            "Automated Reminders",
+            "Practice Insights"
+          ],
+          "stats": {
+            "value": "50%",
+            "label": "Time Saved"
+          }
+        }
+      ]
+    },
+    {
+      "category": "Practice Tools",
+      "description": "Comprehensive tools for dental practice operations",
+      "items": [
+        {
+          "icon": "FileText",
+          "name": "Clinical Documentation",
+          "description": "Complete digital clinical records and documentation",
+          "highlights": [
+            "Treatment Plans",
+            "Clinical Notes",
+            "X-Ray Management",
+            "Progress Tracking"
+          ],
+          "stats": {
+            "value": "100%",
+            "label": "Digital Records"
+          }
+        },
+        {
+          "icon": "MessageSquare",
+          "name": "Patient Communication",
+          "description": "Automated patient communication and engagement",
+          "highlights": [
+            "Appointment Reminders",
+            "Follow-Up Messages",
+            "SMS & Email",
+            "Patient Portal"
+          ],
+          "stats": {
+            "value": "95%",
+            "label": "Reminder Delivery"
+          }
+        },
+        {
+          "icon": "Workflow",
+          "name": "Workflow Automation",
+          "description": "Automated workflows for practice efficiency",
+          "highlights": [
+            "Appointment Automation",
+            "Billing Automation",
+            "Report Generation",
+            "Task Management"
+          ],
+          "stats": {
+            "value": "50%",
+            "label": "Time Saved"
+          }
+        },
+        {
+          "icon": "LineChart",
+          "name": "Reporting & Analytics",
+          "description": "Comprehensive reporting and practice analytics",
+          "highlights": [
+            "Financial Reports",
+            "Practice Metrics",
+            "Patient Reports",
+            "Custom Reports"
+          ],
+          "stats": {
+            "value": "Real-Time",
+            "label": "Analytics"
+          }
+        }
+      ]
+    }
+  ],
+  "integrations": [
+    {
+      "name": "AWS Cloud",
+      "icon": "CloudAws"
+    },
+    {
+      "name": "Google Cloud",
+      "icon": "CloudGoogle"
+    },
+    {
+      "name": "Microsoft Azure",
+      "icon": "CloudMicrosoft"
+    },
+    {
+      "name": "Dental Imaging",
+      "icon": "Image"
+    },
+    {
+      "name": "Insurance Providers",
+      "icon": "Shield"
+    },
+    {
+      "name": "Payment Gateways",
+      "icon": "CreditCard"
+    }
+  ],
+  "cta": {
+    "title": "Ready to Get Started?",
+    "description": "Experience the power of Dentagia's practice management platform with a personalized demo.",
+    "buttons": [
+      {
+        "text": "Schedule a Demo",
+        "href": "/demo",
+        "variant": "primary"
+      },
+      {
+        "text": "View Documentation",
+        "href": "/documentation",
+        "variant": "secondary"
+      }
+    ]
+  }
+}

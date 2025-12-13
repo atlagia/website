@@ -1,0 +1,233 @@
+{
+  "hero": {
+    "subtitle": "Complete Patient Management",
+    "title": "Comprehensive Patient Records & Management",
+    "description": "Manage all patient information, medical history, treatment plans, and communications in one secure, cloud-based platform designed for modern dental practices.",
+    "icon": "users",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "100%",
+        "label": "Digital Records"
+      },
+      {
+        "value": "95%",
+        "label": "Patient Retention"
+      },
+      {
+        "value": "50%",
+        "label": "Time Saved"
+      }
+    ]
+  },
+  "features": {
+    "title": "Patient Management Features",
+    "subtitle": "Comprehensive Patient Care",
+    "description": "Everything you need to manage patient records, medical history, treatment plans, and communications in one integrated platform.",
+    "categories": [
+      {
+        "name": "Patient Records",
+        "description": "Complete digital patient records with comprehensive medical history"
+      },
+      {
+        "name": "Treatment Management",
+        "description": "Advanced treatment planning and case management tools"
+      }
+    ],
+    "items": [
+      {
+        "icon": "users",
+        "title": "Digital Patient Records",
+        "description": "Complete patient profiles with demographics, contact information, insurance details, and medical history all in one secure location.",
+        "category": "Patient Records",
+        "highlights": [
+          "Comprehensive patient profiles with all demographics",
+          "Medical and dental history tracking",
+          "Insurance information and eligibility",
+          "Emergency contact and family information",
+          "Photo and document attachments"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "Digital Records"
+        }
+      },
+      {
+        "icon": "clipboard",
+        "title": "Medical History Tracking",
+        "description": "Track complete medical and dental history including allergies, medications, previous treatments, and ongoing conditions.",
+        "category": "Patient Records",
+        "highlights": [
+          "Complete medical history documentation",
+          "Allergy and medication tracking",
+          "Previous treatment records",
+          "Ongoing condition monitoring",
+          "Family medical history"
+        ],
+        "stats": {
+          "value": "95%",
+          "label": "Accuracy"
+        }
+      },
+      {
+        "icon": "calendar",
+        "title": "Treatment Planning",
+        "description": "Create, manage, and track treatment plans with detailed procedures, timelines, and cost estimates.",
+        "category": "Treatment Management",
+        "highlights": [
+          "Multi-phase treatment planning",
+          "Procedure scheduling and tracking",
+          "Cost estimation and financial planning",
+          "Treatment progress monitoring",
+          "Case presentation tools"
+        ],
+        "stats": {
+          "value": "80%",
+          "label": "Faster Planning"
+        }
+      },
+      {
+        "icon": "trending-up",
+        "title": "Patient Communication Portal",
+        "description": "Secure patient portal for appointment scheduling, treatment plan viewing, payment processing, and secure messaging.",
+        "category": "Treatment Management",
+        "highlights": [
+          "Online appointment requests",
+          "Treatment plan access and approval",
+          "Secure messaging with practice",
+          "Payment processing and statements",
+          "Document sharing and downloads"
+        ],
+        "stats": {
+          "value": "90%",
+          "label": "Engagement"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "See Patient Management In Action",
+    "description": "Discover how dental practices streamline patient care with our comprehensive management system",
+    "stats": [
+      {
+        "icon": "users",
+        "value": "10,000+",
+        "label": "Patient Records"
+      },
+      {
+        "icon": "trending-up",
+        "value": "95%",
+        "label": "Retention Rate"
+      },
+      {
+        "icon": "clock",
+        "value": "50%",
+        "label": "Time Saved"
+      },
+      {
+        "icon": "award",
+        "value": "98%",
+        "label": "Satisfaction"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Dr. Sarah Martinez",
+        "role": "Practice Owner, Downtown Dental",
+        "quote": "The patient management system has completely transformed how we handle patient records. Everything is organized, secure, and easily accessible from anywhere."
+      },
+      {
+        "author": "Emily Rodriguez",
+        "role": "Practice Manager, Family Dental Care",
+        "quote": "We've reduced administrative time by 50% and our patients love the online portal. It's made our practice so much more efficient."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Benefits of Patient Management",
+    "subtitle": "Transform Your Practice",
+    "description": "Experience the advantages of comprehensive patient management designed for modern dental practices.",
+    "items": [
+      {
+        "title": "Improved Efficiency",
+        "description": "Streamline patient record management and reduce administrative overhead with automated workflows.",
+        "icon": "zap",
+        "color": "teal",
+        "stats": {
+          "value": "50%",
+          "label": "Time Saved"
+        },
+        "highlights": [
+          "Quick patient lookup and search",
+          "Automated data entry and updates",
+          "Streamlined appointment scheduling",
+          "Reduced paperwork and filing"
+        ]
+      },
+      {
+        "title": "Better Patient Care",
+        "description": "Access complete patient information instantly to provide better, more informed care decisions.",
+        "icon": "users",
+        "color": "cyan",
+        "stats": {
+          "value": "95%",
+          "label": "Patient Retention"
+        },
+        "highlights": [
+          "Complete medical history access",
+          "Treatment plan tracking",
+          "Patient communication tools",
+          "Care coordination"
+        ]
+      },
+      {
+        "title": "Enhanced Security",
+        "description": "HIPAA-compliant patient data storage with encryption, access controls, and audit trails.",
+        "icon": "shield",
+        "color": "blue",
+        "stats": {
+          "value": "100%",
+          "label": "HIPAA Compliant"
+        },
+        "highlights": [
+          "End-to-end encryption",
+          "Role-based access controls",
+          "Complete audit trails",
+          "Secure cloud storage"
+        ]
+      },
+      {
+        "title": "Increased Revenue",
+        "description": "Better patient management leads to improved treatment acceptance and practice growth.",
+        "icon": "trending-up",
+        "color": "indigo",
+        "stats": {
+          "value": "35%",
+          "label": "Revenue Growth"
+        },
+        "highlights": [
+          "Improved treatment acceptance",
+          "Better patient retention",
+          "Streamlined billing processes",
+          "Enhanced patient experience"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Transform Patient Management?",
+    "description": "See how Dentagia's patient management features can streamline your practice operations and improve patient care.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Schedule a Demo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Learn More",
+      "link": "/features"
+    }
+  }
+}
+

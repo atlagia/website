@@ -1,0 +1,122 @@
+---
+import { getLangFromUrl, useTranslations } from '@utils/i18n';
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+
+const lang = getLangFromUrl(Astro.url);
+const translations = await useTranslations(lang);
+const jsonData = translations.default;
+
+const SITE_TITLE = jsonData.siteTitle || 'StreamVista';
+const PAGE_TITLE = 'About Us | ' + SITE_TITLE;
+const PAGE_DESCRIPTION = 'Learn about StreamVista\'s mission to revolutionize TV streaming';
+---
+
+<!doctype html>
+<html lang={lang} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
+  <head>
+    <BaseHead title={PAGE_TITLE} description={PAGE_DESCRIPTION} />
+  </head>
+  <body class="bg-black text-white">
+    <Header />
+    <main class="container mx-auto px-4 py-16 max-w-6xl">
+      <section class="space-y-12">
+        {/* Hero Section */}
+        <div class="text-center space-y-4">
+          <h1 class="text-4xl md:text-6xl font-bold gradient-text">
+            Revolutionizing Entertainment
+          </h1>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            StreamVista is on a mission to make premium entertainment accessible to everyone, everywhere.
+          </p>
+        </div>
+
+        {/* Mission Section */}
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="space-y-6">
+            <h2 class="text-3xl font-bold text-purple-400">Our Mission</h2>
+            <p class="text-gray-300">
+              At StreamVista, we believe that entertainment should be accessible, affordable, and exceptional. 
+              Our platform brings together thousands of channels and on-demand content from around the world, 
+              delivered through cutting-edge streaming technology.
+            </p>
+          </div>
+          <div class="glass rounded-2xl p-8">
+            <ul class="space-y-4">
+              <li class="flex items-center gap-4">
+                <span class="text-emerald-400 text-2xl">✓</span>
+                <span>Global Content Access</span>
+              </li>
+              <li class="flex items-center gap-4">
+                <span class="text-emerald-400 text-2xl">✓</span>
+                <span>Premium Quality Streaming</span>
+              </li>
+              <li class="flex items-center gap-4">
+                <span class="text-emerald-400 text-2xl">✓</span>
+                <span>Affordable Entertainment</span>
+              </li>
+              <li class="flex items-center gap-4">
+                <span class="text-emerald-400 text-2xl">✓</span>
+                <span>Multi-Device Support</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Values Section */}
+        <div class="space-y-8">
+          <h2 class="text-3xl font-bold text-center text-purple-400">Our Values</h2>
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="glass rounded-xl p-6 hover-scale hover-glow">
+              <h3 class="text-xl font-bold mb-4">Innovation</h3>
+              <p class="text-gray-300">
+                Constantly pushing the boundaries of streaming technology to provide the best experience.
+              </p>
+            </div>
+            <div class="glass rounded-xl p-6 hover-scale hover-glow">
+              <h3 class="text-xl font-bold mb-4">Quality</h3>
+              <p class="text-gray-300">
+                Delivering crystal-clear HD and 4K content with minimal buffering.
+              </p>
+            </div>
+            <div class="glass rounded-xl p-6 hover-scale hover-glow">
+              <h3 class="text-xl font-bold mb-4">Reliability</h3>
+              <p class="text-gray-300">
+                Ensuring 99.9% uptime and consistent streaming performance.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Team Section */}
+        <div class="space-y-8">
+          <h2 class="text-3xl font-bold text-center text-purple-400">Our Team</h2>
+          <div class="grid md:grid-cols-4 gap-8">
+            <div class="text-center space-y-4">
+              <div class="w-32 h-32 mx-auto rounded-full bg-gradient-to-r from-purple-600 to-emerald-600"></div>
+              <h3 class="font-bold">Sarah Chen</h3>
+              <p class="text-gray-400">CEO & Founder</p>
+            </div>
+            <div class="text-center space-y-4">
+              <div class="w-32 h-32 mx-auto rounded-full bg-gradient-to-r from-purple-600 to-emerald-600"></div>
+              <h3 class="font-bold">Michael Rodriguez</h3>
+              <p class="text-gray-400">CTO</p>
+            </div>
+            <div class="text-center space-y-4">
+              <div class="w-32 h-32 mx-auto rounded-full bg-gradient-to-r from-purple-600 to-emerald-600"></div>
+              <h3 class="font-bold">Emma Thompson</h3>
+              <p class="text-gray-400">Head of Content</p>
+            </div>
+            <div class="text-center space-y-4">
+              <div class="w-32 h-32 mx-auto rounded-full bg-gradient-to-r from-purple-600 to-emerald-600"></div>
+              <h3 class="font-bold">David Kim</h3>
+              <p class="text-gray-400">Head of Operations</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html> 

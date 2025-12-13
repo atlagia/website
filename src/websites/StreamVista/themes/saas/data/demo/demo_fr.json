@@ -1,0 +1,169 @@
+{
+  "pageTitle": "Démo en Direct",
+  "pageDescription": "Découvrez la puissance de l'automatisation pilotée par l'IA avec notre démo interactive",
+  "hero": {
+    "badge": "Démo Interactive",
+    "title": "Voyez Notre Plateforme en Action",
+    "description": "Essayez nos solutions alimentées par l'IA de première main. Aucune carte de crédit requise, aucune installation nécessaire. Commencez en quelques secondes.",
+    "cta": {
+      "primary": {
+        "text": "Démarrer la Démo",
+        "href": "#demo-form"
+      },
+      "secondary": {
+        "text": "Voir la Vidéo",
+        "href": "#video"
+      }
+    }
+  },
+  "features": [
+    {
+      "icon": "zap",
+      "title": "Accès Instantané",
+      "description": "Commencez à explorer immédiatement avec des données d'exemple préchargées"
+    },
+    {
+      "icon": "shield",
+      "title": "Sécurisé et Privé",
+      "description": "Vos données de démo sont isolées et automatiquement supprimées après 24 heures"
+    },
+    {
+      "icon": "users",
+      "title": "Visite Guidée",
+      "description": "Parcours étape par étape des fonctionnalités et capacités clés"
+    },
+    {
+      "icon": "rocket",
+      "title": "Fonctionnalités Complètes",
+      "description": "Découvrez toutes les fonctionnalités premium sans limitations"
+    }
+  ],
+  "demoForm": {
+    "title": "Demandez Votre Démo Personnalisée",
+    "subtitle": "Remplissez le formulaire ci-dessous et nous configurerons un environnement de démo personnalisé pour vous",
+    "fields": {
+      "fullName": {
+        "label": "Nom Complet",
+        "placeholder": "Jean Dupont",
+        "required": true
+      },
+      "email": {
+        "label": "Email Professionnel",
+        "placeholder": "jean@entreprise.com",
+        "required": true
+      },
+      "company": {
+        "label": "Nom de l'Entreprise",
+        "placeholder": "Votre Entreprise SA",
+        "required": true
+      },
+      "industry": {
+        "label": "Secteur d'Activité",
+        "placeholder": "Sélectionnez votre secteur",
+        "options": [
+          "Santé",
+          "E-commerce",
+          "Finance",
+          "Éducation",
+          "Fabrication",
+          "Commerce de Détail",
+          "Technologie",
+          "Autre"
+        ],
+        "required": true
+      },
+      "useCase": {
+        "label": "Qu'aimeriez-vous explorer?",
+        "placeholder": "Parlez-nous de votre cas d'usage...",
+        "required": false
+      }
+    },
+    "submitButton": "Lancer Ma Démo",
+    "consent": "En soumettant ce formulaire, vous acceptez notre Politique de Confidentialité et nos Conditions d'Utilisation"
+  },
+  "benefits": {
+    "title": "Pourquoi Essayer Notre Démo?",
+    "items": [
+      {
+        "icon": "check-circle",
+        "title": "Scénarios Réels",
+        "description": "Explorez des cas d'usage spécifiques à votre secteur avec des données réalistes"
+      },
+      {
+        "icon": "trending-up",
+        "title": "Voir le Potentiel ROI",
+        "description": "Comprenez comment notre solution peut améliorer vos indicateurs commerciaux"
+      },
+      {
+        "icon": "settings",
+        "title": "Options de Personnalisation",
+        "description": "Découvrez comment adapter la plateforme à vos besoins spécifiques"
+      },
+      {
+        "icon": "award",
+        "title": "Support Expert",
+        "description": "Obtenez des réponses de nos spécialistes pendant votre démo"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Ce Que Disent Nos Utilisateurs de Démo",
+    "items": [
+      {
+        "quote": "La démo était incroyablement intuitive. En 10 minutes, je pouvais voir exactement comment cela transformerait nos opérations.",
+        "author": "Sarah Johnson",
+        "role": "Directrice des Opérations",
+        "company": "TechCorp Inc.",
+        "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah"
+      },
+      {
+        "quote": "J'ai essayé de nombreuses démos, mais celle-ci se démarque. La visite guidée a facilité la compréhension de la proposition de valeur.",
+        "author": "Michael Chen",
+        "role": "Directeur Technique",
+        "company": "InnovateLabs",
+        "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Michael"
+      }
+    ]
+  },
+  "video": {
+    "title": "Regardez un Aperçu Rapide",
+    "description": "Voyez comment fonctionne notre plateforme en seulement 2 minutes",
+    "thumbnail": "https://via.placeholder.com/800x450/6366f1/ffffff?text=Video+Demo",
+    "duration": "2:30",
+    "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+  },
+  "faq": {
+    "title": "Questions Fréquemment Posées",
+    "items": [
+      {
+        "question": "Combien de temps dure la démo?",
+        "answer": "Votre environnement de démo personnel reste actif pendant 24 heures, vous donnant tout le temps d'explorer à votre rythme."
+      },
+      {
+        "question": "Une installation est-elle nécessaire?",
+        "answer": "Aucune installation nécessaire! Notre démo s'exécute entièrement dans votre navigateur web. Cliquez simplement sur le lien que nous vous envoyons."
+      },
+      {
+        "question": "Aurai-je accès à toutes les fonctionnalités?",
+        "answer": "Oui, vous aurez accès à toutes les fonctionnalités premium pendant votre période de démo."
+      },
+      {
+        "question": "Puis-je importer mes propres données?",
+        "answer": "La démo est fournie avec des données d'exemple, mais vous pouvez également télécharger vos propres données pour voir comment la plateforme fonctionne avec des informations réelles."
+      },
+      {
+        "question": "Que se passe-t-il après l'expiration de la démo?",
+        "answer": "Toutes les données de démo sont automatiquement supprimées après 24 heures. Si vous souhaitez continuer, nous pouvons vous aider à créer un compte d'essai."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prêt à Transformer Votre Entreprise?",
+    "description": "Rejoignez des milliers d'entreprises qui utilisent déjà notre plateforme pour automatiser et optimiser leurs opérations.",
+    "button": {
+      "text": "Démarrez Votre Démo Maintenant",
+      "href": "#demo-form"
+    }
+  }
+}
+

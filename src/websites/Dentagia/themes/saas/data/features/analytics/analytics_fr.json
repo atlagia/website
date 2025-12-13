@@ -1,0 +1,198 @@
+{
+  "hero": {
+    "subtitle": "Analytique du cabinet",
+    "title": "Analytique et rapports complets du cabinet",
+    "description": "Obtenez des insights approfondis sur la performance de votre cabinet avec une analytique complète, des tableaux de bord en temps réel et des rapports exploitables qui stimulent la croissance.",
+    "icon": "trending-up",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "Temps réel",
+        "label": "Analytique"
+      },
+      {
+        "value": "35%",
+        "label": "Croissance du revenu"
+      },
+      {
+        "value": "100%",
+        "label": "Visibilité"
+      }
+    ]
+  },
+  "features": {
+    "title": "Fonctionnalités d'analytique",
+    "subtitle": "Insights basés sur les données",
+    "description": "Outils d'analytique et de reporting complets pour comprendre et optimiser la performance de votre cabinet.",
+    "items": [
+      {
+        "icon": "trending-up",
+        "title": "Tableaux de bord en temps réel",
+        "description": "Surveillez la performance du cabinet en temps réel avec des tableaux de bord personnalisables et des métriques clés.",
+        "highlights": [
+          "Métriques en temps réel",
+          "Tableaux de bord personnalisables",
+          "Indicateurs de performance clés",
+          "Analytique visuelle",
+          "Suivi de performance"
+        ],
+        "stats": {
+          "value": "Temps réel",
+          "label": "Analytique"
+        }
+      },
+      {
+        "icon": "users",
+        "title": "Analytique de revenus",
+        "description": "Suivez les revenus, encaissements et performance financière avec une analytique et des rapports détaillés.",
+        "highlights": [
+          "Suivi des revenus",
+          "Analyse des encaissements",
+          "Rapports financiers",
+          "Analyse de tendances",
+          "Prévision"
+        ],
+        "stats": {
+          "value": "35%",
+          "label": "Croissance du revenu"
+        }
+      },
+      {
+        "icon": "calendar",
+        "title": "Analytique de rendez-vous",
+        "description": "Analysez les modèles de rendez-vous, absences et efficacité de planification pour optimiser les opérations.",
+        "highlights": [
+          "Modèles de rendez-vous",
+          "Analyse d'absences",
+          "Efficacité de planification",
+          "Suivi d'utilisation",
+          "Insights d'optimisation"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "Visibilité"
+        }
+      },
+      {
+        "icon": "brain",
+        "title": "Analytique patient",
+        "description": "Comprenez le comportement patient, la rétention et la valeur avec une analytique patient complète.",
+        "highlights": [
+          "Comportement patient",
+          "Analyse de rétention",
+          "Segmentation de valeur",
+          "Modèles de traitement",
+          "Métriques d'engagement"
+        ],
+        "stats": {
+          "value": "95%",
+          "label": "Insights"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Histoires de succès d'analytique",
+    "description": "Découvrez comment l'analytique transforme la gestion des cabinets",
+    "stats": [
+      {
+        "icon": "trending-up",
+        "value": "35%",
+        "label": "Croissance du revenu"
+      },
+      {
+        "icon": "clock",
+        "value": "Temps réel",
+        "label": "Analytique"
+      },
+      {
+        "icon": "users",
+        "value": "100%",
+        "label": "Visibilité"
+      },
+      {
+        "icon": "award",
+        "value": "95%",
+        "label": "Insights"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Dr. Sarah Martinez",
+        "role": "Propriétaire du cabinet",
+        "quote": "Le tableau de bord d'analytique nous donne une visibilité complète sur notre cabinet. Nous avons augmenté les revenus de 35% en utilisant des insights basés sur les données."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Avantages de l'analytique",
+    "subtitle": "Excellence basée sur les données",
+    "description": "Découvrez la puissance de l'analytique complète du cabinet.",
+    "items": [
+      {
+        "title": "Insights en temps réel",
+        "description": "Surveillez la performance du cabinet en temps réel avec une analytique et des tableaux de bord instantanés.",
+        "icon": "zap",
+        "color": "teal",
+        "stats": {
+          "value": "Temps réel",
+          "label": "Analytique"
+        },
+        "highlights": [
+          "Tableaux de bord en temps réel",
+          "Métriques instantanées",
+          "Mises à jour en direct",
+          "Surveillance de performance"
+        ]
+      },
+      {
+        "title": "Croissance du revenu",
+        "description": "Les insights basés sur les données identifient les opportunités de croissance des revenus du cabinet.",
+        "icon": "trending-up",
+        "color": "cyan",
+        "stats": {
+          "value": "35%",
+          "label": "Croissance"
+        },
+        "highlights": [
+          "Analytique de revenus",
+          "Identification d'opportunités",
+          "Suivi de performance",
+          "Stratégies de croissance"
+        ]
+      },
+      {
+        "title": "Visibilité complète",
+        "description": "L'analytique complète fournit une visibilité complète sur tous les aspects de votre cabinet.",
+        "icon": "users",
+        "color": "blue",
+        "stats": {
+          "value": "100%",
+          "label": "Visibilité"
+        },
+        "highlights": [
+          "Métriques complètes",
+          "Analyse multi-dimensionnelle",
+          "Reporting complet",
+          "Insights stratégiques"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prêt pour l'analytique du cabinet ?",
+    "description": "Découvrez comment l'analytique de Dentagia peut transformer la performance de votre cabinet.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Planifier une démo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "En savoir plus",
+      "link": "/features"
+    }
+  }
+}
+

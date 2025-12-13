@@ -1,0 +1,182 @@
+{
+  "hero": {
+    "subtitle": "Cloud-Sicherheit",
+    "title": "Sichere Cloud-Infrastruktur",
+    "description": "Unternehmenstaugliche Cloud-Sicherheit mit automatischen Backups, Disaster Recovery und 99.9% Verfügbarkeitsgarantie für Ihre Zahnarztpraxis-Daten.",
+    "icon": "cloud",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "99.9%",
+        "label": "Verfügbarkeit"
+      },
+      {
+        "value": "256-bit",
+        "label": "Verschlüsselung"
+      },
+      {
+        "value": "24/7",
+        "label": "Überwachung"
+      }
+    ]
+  },
+  "features": {
+    "title": "Cloud-Sicherheits-Funktionen",
+    "subtitle": "Unternehmenstaugliche Infrastruktur",
+    "description": "Sichere, skalierbare Cloud-Infrastruktur zum Schutz von Zahnarztpraxis-Daten.",
+    "items": [
+      {
+        "icon": "cloud",
+        "title": "Sicherer Cloud-Speicher",
+        "description": "Unternehmenstauglicher Cloud-Speicher mit redundanten Backups und Disaster-Recovery-Fähigkeiten.",
+        "highlights": [
+          "Redundante Speicherung",
+          "Automatische Backups",
+          "Disaster Recovery",
+          "Datenredundanz",
+          "Geografische Verteilung"
+        ],
+        "stats": {
+          "value": "99.9%",
+          "label": "Verfügbarkeit"
+        }
+      },
+      {
+        "icon": "shield",
+        "title": "Sicherheitsüberwachung",
+        "description": "24/7-Sicherheitsüberwachung und Bedrohungserkennung zum Schutz Ihrer Praxisdaten.",
+        "highlights": [
+          "24/7-Überwachung",
+          "Bedrohungserkennung",
+          "Intrusionsprävention",
+          "Sicherheitswarnungen",
+          "Incident-Response"
+        ],
+        "stats": {
+          "value": "24/7",
+          "label": "Überwachung"
+        }
+      },
+      {
+        "icon": "database",
+        "title": "Automatische Backups",
+        "description": "Tägliche automatische Backups mit Point-in-Time-Wiederherstellung und Datenaufbewahrungsrichtlinien.",
+        "highlights": [
+          "Tägliche Backups",
+          "Point-in-Time-Wiederherstellung",
+          "Datenaufbewahrung",
+          "Backup-Verifizierung",
+          "Wiederherstellungstests"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "Geschützt"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Cloud-Sicherheits-Garantie",
+    "description": "Unternehmenstaugliche Sicherheit für Ihre Praxis",
+    "stats": [
+      {
+        "icon": "cloud",
+        "value": "99.9%",
+        "label": "Verfügbarkeit"
+      },
+      {
+        "icon": "shield",
+        "value": "24/7",
+        "label": "Überwachung"
+      },
+      {
+        "icon": "database",
+        "value": "100%",
+        "label": "Geschützt"
+      },
+      {
+        "icon": "award",
+        "value": "256-bit",
+        "label": "Verschlüsselung"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Dr. Michael Chen",
+        "role": "Leitender Zahnarzt",
+        "quote": "Die Cloud-Sicherheit gibt uns volles Vertrauen. Unsere Daten sind immer geschützt und zugänglich, mit 99.9% Verfügbarkeit."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Vorteile der Cloud-Sicherheit",
+    "subtitle": "Zuverlässiger Schutz",
+    "description": "Erleben Sie die Ruhe, die mit unternehmenstauglicher Cloud-Sicherheit einhergeht.",
+    "items": [
+      {
+        "title": "Hohe Verfügbarkeit",
+        "description": "99.9% Verfügbarkeitsgarantie stellt sicher, dass Ihre Praxisdaten immer zugänglich sind.",
+        "icon": "cloud",
+        "color": "teal",
+        "stats": {
+          "value": "99.9%",
+          "label": "Verfügbarkeit"
+        },
+        "highlights": [
+          "Zuverlässige Infrastruktur",
+          "Redundante Systeme",
+          "Disaster Recovery",
+          "Hohe Verfügbarkeit"
+        ]
+      },
+      {
+        "title": "24/7-Überwachung",
+        "description": "Kontinuierliche Sicherheitsüberwachung schützt Ihre Daten rund um die Uhr.",
+        "icon": "shield",
+        "color": "cyan",
+        "stats": {
+          "value": "24/7",
+          "label": "Überwachung"
+        },
+        "highlights": [
+          "Kontinuierliche Überwachung",
+          "Bedrohungserkennung",
+          "Sicherheitswarnungen",
+          "Incident-Response"
+        ]
+      },
+      {
+        "title": "Datenschutz",
+        "description": "Umfassende Backup- und Wiederherstellungsfunktionen stellen sicher, dass Ihre Daten immer geschützt sind.",
+        "icon": "database",
+        "color": "blue",
+        "stats": {
+          "value": "100%",
+          "label": "Geschützt"
+        },
+        "highlights": [
+          "Automatische Backups",
+          "Point-in-Time-Wiederherstellung",
+          "Datenredundanz",
+          "Wiederherstellungstests"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Bereit für sichere Cloud-Infrastruktur?",
+    "description": "Sehen Sie, wie die Cloud-Sicherheit von Dentagia Ihre Praxisdaten schützt.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Demo vereinbaren",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Mehr erfahren",
+      "link": "/features"
+    }
+  }
+}
+

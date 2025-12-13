@@ -13,17 +13,28 @@ const PROJECT_TYPE = import.meta.env.PROJECT_TYPE || 'default';
 
 function getProductCategory(title: string): string {
   // First priority: Check PROJECT_TYPE for rep products
-  if (PROJECT_TYPE === 'repbag') {
+  const PROJECT_TYPE_LOWER = PROJECT_TYPE.toLowerCase();
+  const title_lower = title.toLowerCase();
+  
+  if (PROJECT_TYPE_LOWER === 'repbag') {
     return 'bag';
   }
-  if (PROJECT_TYPE === 'repshoes') {
+  if (PROJECT_TYPE_LOWER === 'repshoes') {
     return 'shoes';
   }
-  if (PROJECT_TYPE === 'repwatch') {
+  if (PROJECT_TYPE_LOWER === 'repwatch') {
     return 'watch';
   }
   
-  const title_lower = title.toLowerCase();
+  // IPTV-specific detection
+  if (PROJECT_TYPE_LOWER === 'iptv') {
+    if (title_lower.includes('iptv') || 
+        title_lower.includes('subscription') || 
+        title_lower.includes('smart tv') || 
+        title_lower.includes('streaming')) {
+      return 'iptv';
+    }
+  }
   
   // Second priority: Check if it's a watch
   if (title_lower.includes('watch') ||
@@ -36,7 +47,7 @@ function getProductCategory(title: string): string {
   }
 
   // Third priority: Check if it's a digital product
-  if (PROJECT_TYPE === 'degital') {
+  if (PROJECT_TYPE_LOWER === 'degital') {
     if (title_lower.includes('template') || title_lower.includes('theme')) {
       return 'template';
     }
@@ -95,7 +106,9 @@ function getProductCategory(title: string): string {
     return 'jacket';
   }
   
-  return PROJECT_TYPE === 'shoes' ? 'shoes' : 'jacket'; // default fallback
+  return PROJECT_TYPE_LOWER === 'shoes' ? 'shoes' : 
+         PROJECT_TYPE_LOWER === 'iptv' ? 'iptv' : 
+         'jacket'; // default fallback
 }
 
 // Get content for current language or fallback to English
@@ -105,7 +118,9 @@ const category = getProductCategory(productTitle);
 // Get features for the category, fallback to English if not available in current language
 const features = content.categories[category]?.features || 
                 featuresContent.en.categories[category]?.features || 
-                featuresContent.en.categories[PROJECT_TYPE === 'degital' ? 'digital' : 'jacket'].features; // ultimate fallback
+                featuresContent.en.categories[PROJECT_TYPE_LOWER === 'degital' ? 'digital' : 
+                                               PROJECT_TYPE_LOWER === 'iptv' ? 'iptv' : 
+                                               'jacket'].features; // ultimate fallback
 
 const theme = import.meta.env.THEME || 'default';
 let styles = {};
@@ -118,16 +133,48 @@ try {
 }
 ---
 
-<div class={styles.wrapper}>
-  <h3 class={styles.title}>{content.title}</h3>
-  <ul class={styles.list}>
-    {features.map((feature) => (
-      <li class={styles.item}>
-        <svg class={styles.icon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+<div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 shadow-lg border border-blue-100">
+  <div class="text-center mb-8">
+    <h3 class="text-3xl font-bold text-gray-900 mb-3 flex items-center justify-center gap-3">
+      <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
         </svg>
-        <span class={styles.text}>{feature}</span>
-      </li>
+      </div>
+      {content.title}
+    </h3>
+    <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 mx-auto rounded-full"></div>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    {features.map((feature, index) => (
+      <div class="group relative bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md hover:border-blue-200 transition-all duration-300 hover:-translate-y-1">
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+          </div>
+          <div class="flex-1">
+            <p class="text-gray-800 font-medium leading-relaxed group-hover:text-gray-900 transition-colors duration-300">
+              {feature}
+            </p>
+          </div>
+        </div>
+        
+        <!-- Decorative element -->
+        <div class="absolute top-4 right-4 w-2 h-2 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+      </div>
     ))}
-  </ul>
+  </div>
+  
+  <!-- Bottom accent -->
+  <div class="mt-8 text-center">
+    <div class="inline-flex items-center gap-2 text-sm text-gray-600 bg-white/60 px-4 py-2 rounded-full border border-gray-200">
+      <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+      </svg>
+      <span>All features included</span>
+    </div>
+  </div>
 </div> 

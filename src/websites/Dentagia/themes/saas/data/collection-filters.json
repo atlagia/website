@@ -1,0 +1,209 @@
+{
+  "categories": [
+    {
+      "value": "features",
+      "label": {
+        "en": "Features",
+        "fr": "Fonctionnalités",
+        "de": "Funktionen",
+        "es": "Funcionalidades",
+        "it": "Funzionalità",
+        "ar": "الميزات"
+      }
+    },
+    {
+      "value": "solutions",
+      "label": {
+        "en": "Solutions",
+        "fr": "Solutions",
+        "de": "Lösungen",
+        "es": "Soluciones",
+        "it": "Soluzioni",
+        "ar": "الحلول"
+      }
+    },
+    {
+      "value": "resources",
+      "label": {
+        "en": "Resources",
+        "fr": "Ressources",
+        "de": "Ressourcen",
+        "es": "Recursos",
+        "it": "Risorse",
+        "ar": "الموارد"
+      }
+    },
+    {
+      "value": "integrations",
+      "label": {
+        "en": "Integrations",
+        "fr": "Intégrations",
+        "de": "Integrationen",
+        "es": "Integraciones",
+        "it": "Integrazioni",
+        "ar": "التكاملات"
+      }
+    }
+  ],
+  "types": [
+    {
+      "value": "ai_powered",
+      "label": {
+        "en": "AI-Powered",
+        "fr": "Propulsé par IA",
+        "de": "KI-gestützt",
+        "es": "Impulsado por IA",
+        "it": "Alimentato da IA",
+        "ar": "مدعوم بالذكاء الاصطناعي"
+      }
+    },
+    {
+      "value": "cloud_based",
+      "label": {
+        "en": "Cloud-Based",
+        "fr": "Basé sur le Cloud",
+        "de": "Cloud-basiert",
+        "es": "Basado en la Nube",
+        "it": "Basato su Cloud",
+        "ar": "قائم على السحابة"
+      }
+    },
+    {
+      "value": "automation",
+      "label": {
+        "en": "Automation",
+        "fr": "Automatisation",
+        "de": "Automatisierung",
+        "es": "Automatización",
+        "it": "Automatizzazione",
+        "ar": "الأتمتة"
+      }
+    },
+    {
+      "value": "analytics",
+      "label": {
+        "en": "Analytics",
+        "fr": "Analytique",
+        "de": "Analysen",
+        "es": "Análisis",
+        "it": "Analisi",
+        "ar": "التحليلات"
+      }
+    },
+    {
+      "value": "communication",
+      "label": {
+        "en": "Communication",
+        "fr": "Communication",
+        "de": "Kommunikation",
+        "es": "Comunicación",
+        "it": "Comunicazione",
+        "ar": "الاتصال"
+      }
+    },
+    {
+      "value": "security",
+      "label": {
+        "en": "Security",
+        "fr": "Sécurité",
+        "de": "Sicherheit",
+        "es": "Seguridad",
+        "it": "Sicurezza",
+        "ar": "الأمان"
+      }
+    }
+  ],
+  "compliance": [
+    {
+      "value": "hipaa_compliant",
+      "label": {
+        "en": "HIPAA Compliant",
+        "fr": "Conforme HIPAA",
+        "de": "HIPAA-konform",
+        "es": "Conforme a HIPAA",
+        "it": "Conforme HIPAA",
+        "ar": "متوافق مع HIPAA"
+      }
+    },
+    {
+      "value": "gdpr_compliant",
+      "label": {
+        "en": "GDPR Compliant",
+        "fr": "Conforme RGPD",
+        "de": "DSGVO-konform",
+        "es": "Conforme a GDPR",
+        "it": "Conforme GDPR",
+        "ar": "متوافق مع GDPR"
+      }
+    },
+    {
+      "value": "soc2",
+      "label": {
+        "en": "SOC 2 Certified",
+        "fr": "Certifié SOC 2",
+        "de": "SOC 2 zertifiziert",
+        "es": "Certificado SOC 2",
+        "it": "Certificato SOC 2",
+        "ar": "معتمد SOC 2"
+      }
+    },
+    {
+      "value": "encrypted",
+      "label": {
+        "en": "End-to-End Encrypted",
+        "fr": "Chiffré de Bout en Bout",
+        "de": "Ende-zu-Ende verschlüsselt",
+        "es": "Cifrado de Extremo a Extremo",
+        "it": "Crittografato End-to-End",
+        "ar": "مشفر من طرف إلى طرف"
+      }
+    }
+  ],
+  "availability": [
+    {
+      "value": "available",
+      "label": {
+        "en": "Available Now",
+        "fr": "Disponible Maintenant",
+        "de": "Jetzt Verfügbar",
+        "es": "Disponible Ahora",
+        "it": "Disponibile Ora",
+        "ar": "متاح الآن"
+      }
+    },
+    {
+      "value": "coming_soon",
+      "label": {
+        "en": "Coming Soon",
+        "fr": "Bientôt Disponible",
+        "de": "Demnächst",
+        "es": "Próximamente",
+        "it": "Prossimamente",
+        "ar": "قريباً"
+      }
+    },
+    {
+      "value": "beta",
+      "label": {
+        "en": "Beta",
+        "fr": "Bêta",
+        "de": "Beta",
+        "es": "Beta",
+        "it": "Beta",
+        "ar": "تجريبي"
+      }
+    },
+    {
+      "value": "enterprise",
+      "label": {
+        "en": "Enterprise Only",
+        "fr": "Entreprise Uniquement",
+        "de": "Nur Enterprise",
+        "es": "Solo Empresa",
+        "it": "Solo Enterprise",
+        "ar": "للمؤسسات فقط"
+      }
+    }
+  ]
+}
+

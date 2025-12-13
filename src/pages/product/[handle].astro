@@ -7,7 +7,6 @@ import Reviews from '@components/Reviews.astro';
 import ProductFAQ from '@components/ProductFAQ.astro';
 import { ChevronLeft, ChevronRight, Info } from 'lucide-react';
 import ProductCard from '@themes/default/components/ProductCard';
-import BaseHead from '@themes/default/components/BaseHead.astro';
 import ProductSpecs from '@components/ProductSpecs.astro';
 import KeyFeatures from '@components/KeyFeatures.astro';
 import ProductLoading from '@components/ProductLoading.astro';
@@ -15,14 +14,24 @@ import { useCurrencyStore } from '../../store/currency';
 import { getReviewStats, getReviews } from '../../lib/db';
 import { generateCacheKey, getCachedPage, cachePageContent } from '@libs/cache';
 import WhatsAppButton from '@components/WhatsAppButton.astro';
-
+import ShippingInfo from '@components/ShippingInfo.astro';
+import ProductWarranty from '@components/ProductWarranty.astro';
+import CareInstructions from '@components/CareInstructions.astro';
+import RecentlyViewed from '@components/RecentlyViewed.astro';
 
 const { lang, handle } = Astro.params;
-const supportedLanguages = ['en', 'fr', 'de', 'es', 'it'];
-const siteName = import.meta.env.PUBLIC_SITE_NAME;
-const hasChartData = import.meta.env.PUBLIC_HAS_CHART_DATA === true;
-const apiEndpoint = import.meta.env.VITE_API_ENDPOINT|| '/api/checkout';
+// Get allowed languages from environment variable
+const getAllowedLanguages = (): string[] => {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  return allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+};
 
+const supportedLanguages = getAllowedLanguages();
+const siteName = import.meta.env.PUBLIC_SITE_NAME;
+const apiEndpoint = import.meta.env.VITE_API_ENDPOINT|| '/api/checkout';
+const hasChartData = import.meta.env.PUBLIC_HAS_CHART_DATA === true;
+const PROJECT_TYPE = import.meta.env.PROJECT_TYPE || 'default';
+const whatsappEnabled = import.meta.env.PUBLIC_WHATSAPP_ENABLED === 'true';
 let product;
 let relatedProducts;
 let error;
@@ -209,7 +218,7 @@ const productSchema = {
   "@context": "https://schema.org/",
   "@type": "Product",
   "name": product.title,
-  "description": product.description,
+  "description": product.description?.length > 5000 ? product.description.substring(0, 5000) + "..." : product.description,
   "image": product.processedImages.map(img => img.url),
   "sku": product.id,
   "offers": {
@@ -228,7 +237,42 @@ const productSchema = {
       ? "https://schema.org/InStock" 
       : "https://schema.org/OutOfStock",
     "priceValidUntil": new Date(Date.now() + 90 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
-    "url": Astro.url.href
+    "url": Astro.url.href,
+    "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+      "merchantReturnDays": 30,
+      "returnMethod": "https://schema.org/ReturnByMail",
+      "returnFees": "https://schema.org/FreeReturn"
+    },
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": {
+        "@type": "MonetaryAmount",
+        "value": "0",
+        "currency": metaPrice.currency
+      },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "businessDays": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+        },
+        "cutoffTime": "14:00",
+        "handlingTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 1,
+          "maxValue": 2,
+          "unitCode": "DAY"
+        },
+        "transitTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 3,
+          "maxValue": 7,
+          "unitCode": "DAY"
+        }
+      }
+    }
   },
   "aggregateRating": reviewStats ? {
     "@type": "AggregateRating",
@@ -283,7 +327,7 @@ const breadcrumbSchema = {
   ]
 };
 
-// Generate alternate language URLs
+// Generate alternate language URLs (include all languages, BaseHead will handle self-reference)
 const alternateUrls = supportedLanguages.map(l => ({
   lang: l,
   url: `${Astro.url.origin}/${l}/products/${handle}`
@@ -339,82 +383,32 @@ console.log('Processed product data:', {
 // Get initial currency data
 const initialCurrency = 'USD'; // Or get from store/session
 
+// Add only this new import
+const theme = import.meta.env.THEME || 'default';
+const productTheme = import.meta.env.PRODUCTTHEME || 'default';
+let styles = {};
+
+try {
+  styles = await import(`../../../themes/${theme}/styles/products/${productTheme}.mjs`);
+} catch (error) {
+  console.error('Failed to load product styles:', error);
+}
+
+const { luxuryProductStyle = {} } = styles;
 ---
 
-<!DOCTYPE html>
-<html lang={lang}>
-  <head>
-    <BaseHead 
-      title={product.seo?.title || `${product.title} | ${siteName}`}
-      description={product.seo?.description || metaDescription}
-      image={product.processedImages[0].url}
-      isProduct={true}
-      price={metaPrice}
-      availability={product.processedVariants[0].availableForSale}
-    />
-    
-    <!-- Resource Hints -->
-    <link rel="preconnect" href="https://cdn.shopify.com" />
-    <link rel="dns-prefetch" href="https://cdn.shopify.com" />
-    
-    <!-- Preload critical assets -->
-    <link 
-      rel="preload" 
-      as="image" 
-      href={product.processedImages[0].url}
-      fetchpriority="high"
-    />
-    
-    <!-- Preload critical fonts -->
-    <link
-      rel="preload"
-      href="/fonts/inter-var.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    
-    <!-- Defer non-critical CSS -->
-    <link 
-      rel="stylesheet" 
-      href="/styles/non-critical.css"
-      media="print" 
-      onload="this.media='all'"
-    />
-    
-    <!-- Additional SEO Meta Tags -->
-    <meta name="robots" content="index, follow" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    
-    <!-- Open Graph Product Specific -->
-    <meta property="og:price:amount" content={metaPrice.amount} />
-    <meta property="og:price:currency" content={metaPrice.currency} />
-    <meta property="product:availability" content={product.processedVariants[0].availableForSale ? "in stock" : "out of stock"} />
-    
-    <!-- Language variants -->
-    {alternateUrls.map(({ lang, url }) => (
-      <link rel="alternate" hreflang={lang} href={url} />
-    ))}
-    <link rel="alternate" hreflang="x-default" href={`${Astro.url.origin}/en/products/${handle}`} />
-    
-    <!-- Additional Schema Markup -->
-    <script type="application/ld+json" set:html={JSON.stringify(productSchema)} />
-    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
-    
-    <!-- Mobile Optimization -->
-    <link rel="preload" as="image" href={product.processedImages[0].url} />
-    {product.processedImages.slice(1).map(img => (
-      <link rel="prefetch" as="image" href={img.url} />
-    ))}
-    
-    <!-- PWA Tags -->
-    <meta name="theme-color" content="#ffffff" />
-    <link rel="manifest" href="/manifest.json" />
-  </head>
-  <body>
-    <Layout title={`${product.title} | ${siteName}`}>
+<Layout 
+  title={product.seo?.title || `${product.title} | ${siteName}`}
+  lang={lang}
+  description={product.seo?.description || metaDescription}
+  image={product.processedImages[0].url}
+  isProduct={true}
+  price={metaPrice}
+  availability={product.processedVariants[0].availableForSale}
+  alternateUrls={alternateUrls}
+  productSchema={productSchema}
+  breadcrumbSchema={breadcrumbSchema}
+>
       <div id="product-wrapper" class="relative">
         <div 
           id="product-content" 
@@ -425,19 +419,23 @@ const initialCurrency = 'USD'; // Or get from store/session
           <nav aria-label="Breadcrumb" class="max-w-7xl mx-auto px-4 py-4 overflow-x-auto">
             <ol class="flex flex-nowrap items-center text-sm text-gray-600 whitespace-nowrap min-w-0">
               <li class="flex items-center">
-                <a href={`/${lang}`} class="hover:text-blue-600 truncate">Home</a>
+                <a href={`/${lang}`} class={luxuryProductStyle.breadcrumb?.link}>
+                  Home
+                </a>
               </li>
               <li class="flex items-center">
                 <svg class="h-5 w-5 text-gray-400 mx-1" viewBox="0 0 20 20" fill="currentColor">
                   <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
                 </svg>
-                <a href={`/${lang}/products`} class="hover:text-blue-600 truncate">Products</a>
+                <a href={`/${lang}/products`} class={luxuryProductStyle.breadcrumb?.link}>
+                  Products
+                </a>
               </li>
               <li class="flex items-center">
                 <svg class="h-5 w-5 text-gray-400 mx-1" viewBox="0 0 20 20" fill="currentColor">
                   <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
                 </svg>
-                <span class="text-gray-900 truncate" title={product.title}>{product.title}</span>
+                <span class={luxuryProductStyle.breadcrumb?.current} title={product.title}>{product.title}</span>
               </li>
             </ol>
           </nav>
@@ -554,7 +552,9 @@ const initialCurrency = 'USD'; // Or get from store/session
               <!-- Product Info -->
               <div class="space-y-8 relative" style="z-index: 50;">
                 <div>
-                  <h1 class="text-3xl font-bold mb-2">{product.title}</h1>
+                  <h1 class={luxuryProductStyle.title}>
+                    {product.title}
+                  </h1>
                   {reviewStats && (
                     <div class="flex items-center gap-2 text-sm text-gray-600">
                       <div class="flex items-center">
@@ -614,6 +614,20 @@ const initialCurrency = 'USD'; // Or get from store/session
                   language={lang}
                   apiEndpoint={apiEndpoint}
                   hasChartData={hasChartData}
+                  projectType={PROJECT_TYPE}
+                  paymentConfig={{
+                    method: import.meta.env.PUBLIC_PAYMENT_METHOD || 'infinity',
+                    hoodpay: {
+                      apiUrl: import.meta.env.HOODPAY_API_URL,
+                      businessId: import.meta.env.HOODPAY_BUSINESS_ID,
+                      authToken: import.meta.env.HOODPAY_AUTH_TOKEN,
+                      redirectUrl: `${import.meta.env.DOMAINE}${import.meta.env.HOODPAY_REDIRECT_URL}`
+                    },
+                    store: {
+                      name: import.meta.env.PUBLIC_SITE_NAME || 'StreamVista',
+                      domain: import.meta.env.DOMAINE || 'pay.drivi.store'
+                    }
+                  }}
                 />
 
                 <!-- Add debug output in development -->
@@ -623,160 +637,175 @@ const initialCurrency = 'USD'; // Or get from store/session
                   </script>
                 )}
 
-                <!-- Product Description - Optimized for Dynamic Content -->
-                <div class="bg-gradient-to-br from-gray-50 to-white rounded-xl p-6 shadow-sm">
-                  <h2 class="text-2xl font-bold mb-4 text-gray-900 flex items-center gap-2">
-                    <Info className="w-6 h-6 text-blue-600" />
-                    Product Details
-                  </h2>
+                <!-- Product Description - Enhanced with Modern Styling -->
+                <div class="bg-gradient-to-br from-gray-50 to-slate-50 rounded-2xl p-8 shadow-lg border border-gray-200">
+                  <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-3 flex items-center justify-center gap-3">
+                      <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center">
+                        <Info className="w-6 h-6 text-white" />
+                      </div>
+                      Product Details
+                    </h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 mx-auto rounded-full"></div>
+                  </div>
                   
-                  <div class="relative">
-                    <div 
-                      id="description-content"
-                      set:html={product.descriptionHtml} 
-                      class="
-                        text-gray-700 
-                        [&>p]:mb-6 
-                        [&>p]:leading-relaxed 
-                        [&>p]:text-base
-
-                        [&>h2]:text-xl 
-                        [&>h2]:font-bold 
-                        [&>h2]:text-gray-900 
-                        [&>h2]:mt-10 
-                        [&>h2]:mb-6
-                        [&>h2]:pb-2
-                        [&>h2]:border-b
-                        [&>h2]:border-gray-200
-
-                        [&>h3]:text-xl 
-                        [&>h3]:font-semibold 
-                        [&>h3]:text-gray-800 
-                        [&>h3]:mt-8 
-                        [&>h3]:mb-4
-                        [&>h3]:flex
-                        [&>h3]:items-center
-                        [&>h3]:gap-2
-
-                        [&>h4]:text-lg 
-                        [&>h4]:font-semibold 
-                        [&>h4]:text-gray-800 
-                        [&>h4]:mt-6 
-                        [&>h4]:mb-3
-
-                        [&>ul]:list-disc 
-                        [&>ul]:ml-6 
-                        [&>ul]:mb-6 
-                        [&>ul>li]:mb-2
-                        [&>ul>li]:text-gray-700
-
-                        [&>ol]:list-decimal 
-                        [&>ol]:ml-6 
-                        [&>ol]:mb-6 
-                        [&>ol>li]:mb-2
-                        [&>ol>li]:text-gray-700
-
-                        [&>strong]:font-bold
-                        [&>strong]:text-gray-900
-
-                        [&>em]:italic
-                        
-                        [&>a]:text-blue-600 
-                        [&>a]:underline 
-                        [&>a:hover]:text-blue-800
-
-                        [&>blockquote]:pl-4 
-                        [&>blockquote]:border-l-4 
-                        [&>blockquote]:border-gray-200 
-                        [&>blockquote]:italic
-                        [&>blockquote]:text-gray-600
-                        [&>blockquote]:my-6
-
-                        [&>img]:rounded-lg
-                        [&>img]:shadow-md
-                        [&>img]:my-4
-
-                        [&>table]:w-full
-                        [&>table]:border-collapse
-                        [&>table]:mb-6
-                        [&>table]:bg-white
-                        [&>table]:shadow-sm
-                        [&>table]:rounded-lg
-                        [&>table]:overflow-hidden
-                        [&>table]:border
-                        [&>table]:border-gray-200
-
-                        [&>table>thead]:bg-gray-50
-                        [&>table>thead>tr]:border-b
-                        [&>table>thead>tr]:border-gray-200
-
-                        [&>table>thead>tr>th]:px-6
-                        [&>table>thead>tr>th]:py-3
-                        [&>table>thead>tr>th]:text-left
-                        [&>table>thead>tr>th]:font-semibold
-                        [&>table>thead>tr>th]:text-gray-900
-                        [&>table>thead>tr>th]:text-sm
-                        [&>table>thead>tr>th]:uppercase
-                        [&>table>thead>tr>th]:tracking-wider
-
-                        [&>table>tbody>tr]:border-b
-                        [&>table>tbody>tr]:border-gray-200
-                        [&>table>tbody>tr]:last:border-b-0
-                        [&>table>tbody>tr:hover]:bg-gray-50
-
-                        [&>table>tbody>tr>td]:px-6
-                        [&>table>tbody>tr>td]:py-4
-                        [&>table>tbody>tr>td]:text-sm
-                        [&>table>tbody>tr>td]:text-gray-700
-                        [&>table>tbody>tr>td]:whitespace-normal
-
-                        [&>table>tbody>tr>td:first-child]:font-medium
-                        [&>table>tbody>tr>td:first-child]:text-gray-900
-
-                        [&>table>tfoot]:bg-gray-50
-                        [&>table>tfoot>tr]:border-t
-                        [&>table>tfoot>tr]:border-gray-200
-                        [&>table>tfoot>tr>td]:px-6
-                        [&>table>tfoot>tr>td]:py-3
-                        [&>table>tfoot>tr>td]:text-sm
-                        [&>table>tfoot>tr>td]:font-semibold
-
-                        [&>*:first-child]:mt-0
-                        [&>*:last-child]:mb-0
-                        max-h-[300px]
-                        overflow-hidden
-                        transition-[max-height]
-                        duration-500
-                        ease-in-out
-                      "
-                    />
-                    
-                    <!-- Gradient Overlay -->
-                    <div 
-                      id="description-overlay"
-                      class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent pointer-events-none transition-opacity duration-300"
-                    ></div>
-                    
-                    <!-- Show More Button -->
-                    <button
-                      id="show-more-btn"
-                      class="mt-4 w-full py-2 px-4 text-sm font-medium text-gray-600 hover:text-gray-900 
-                             border border-gray-200 rounded-lg hover:bg-gray-50 transition-all duration-200
-                             flex items-center justify-center gap-2"
-                      aria-expanded="false"
-                    >
-                      <span id="show-more-text">Show More</span>
-                      <svg 
-                        id="show-more-icon"
-                        class="w-4 h-4 transition-transform duration-200"
-                        viewBox="0 0 24 24" 
-                        fill="none" 
-                        stroke="currentColor" 
-                        stroke-width="2"
+                  <!-- Description Content -->
+                  <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+                    <div class="relative">
+                      <div 
+                        id="description-content" 
+                        class="prose prose-sm max-w-none overflow-hidden transition-all duration-300"
+                        style="max-height: 200px;"
                       >
-                        <path d="M19 9l-7 7-7-7" />
+                        <div 
+                          set:html={product.descriptionHtml} 
+                          class="
+                            text-gray-700 
+                            [&>p]:mb-6 
+                            [&>p]:leading-relaxed 
+                            [&>p]:text-base
+
+                            [&>hr]:my-8
+                            [&>hr]:border-t
+                            [&>hr]:border-gray-200
+
+                            [&>h2]:text-xl 
+                            [&>h2]:font-bold 
+                            [&>h2]:text-gray-900 
+                            [&>h2]:mt-10 
+                            [&>h2]:mb-6
+                            [&>h2]:pb-2
+                            [&>h2]:border-b
+                            [&>h2]:border-gray-200
+
+                            [&>h3]:text-xl 
+                            [&>h3]:font-semibold 
+                            [&>h3]:text-gray-800 
+                            [&>h3]:mt-8 
+                            [&>h3]:mb-4
+                            [&>h3]:flex
+                            [&>h3]:items-center
+                            [&>h3]:gap-2
+
+                            [&>h4]:text-lg 
+                            [&>h4]:font-semibold 
+                            [&>h4]:text-gray-800 
+                            [&>h4]:mt-6 
+                            [&>h4]:mb-3
+
+                            [&>ul]:list-disc 
+                            [&>ul]:ml-6 
+                            [&>ul]:mb-6 
+                            [&>ul>li]:mb-2
+                            [&>ul>li]:text-gray-700
+
+                            [&>ol]:list-decimal 
+                            [&>ol]:ml-6 
+                            [&>ol]:mb-6 
+                            [&>ol>li]:mb-2
+                            [&>ol>li]:text-gray-700
+
+                            [&>strong]:font-bold
+                            [&>strong]:text-gray-900
+
+                            [&>em]:italic
+                            
+                            [&>a]:text-blue-600 
+                            [&>a]:underline 
+                            [&>a:hover]:text-blue-800
+
+                            [&>blockquote]:pl-4 
+                            [&>blockquote]:border-l-4 
+                            [&>blockquote]:border-gray-200 
+                            [&>blockquote]:italic
+                            [&>blockquote]:text-gray-600
+                            [&>blockquote]:my-6
+
+                            [&>img]:rounded-lg
+                            [&>img]:shadow-md
+                            [&>img]:my-4
+
+                            [&>table]:w-full
+                            [&>table]:border-collapse
+                            [&>table]:mb-6
+                            [&>table]:bg-white
+                            [&>table]:shadow-sm
+                            [&>table]:rounded-lg
+                            [&>table]:overflow-hidden
+                            [&>table]:border
+                            [&>table]:border-gray-200
+
+                            [&>table>thead]:bg-gray-50
+                            [&>table>thead>tr]:border-b
+                            [&>table>thead>tr]:border-gray-200
+
+                            [&>table>thead>tr>th]:px-6
+                            [&>table>thead>tr>th]:py-3
+                            [&>table>thead>tr>th]:text-left
+                            [&>table>thead>tr>th]:font-semibold
+                            [&>table>thead>tr>th]:text-gray-900
+                            [&>table>thead>tr>th]:text-sm
+                            [&>table>thead>tr>th]:uppercase
+                            [&>table>thead>tr>th]:tracking-wider
+
+                            [&>table>tbody>tr]:border-b
+                            [&>table>tbody>tr]:border-gray-200
+                            [&>table>tbody>tr]:last:border-b-0
+                            [&>table>tbody>tr:hover]:bg-gray-50
+
+                            [&>table>tbody>tr>td]:px-6
+                            [&>table>tbody>tr>td]:py-4
+                            [&>table>tbody>tr>td]:text-sm
+                            [&>table>tbody>tr>td]:text-gray-700
+                            [&>table>tbody>tr>td]:whitespace-normal
+
+                            [&>table>tbody>tr>td:first-child]:font-medium
+                            [&>table>tbody>tr>td:first-child]:text-gray-900
+
+                            [&>table>tfoot]:bg-gray-50
+                            [&>table>tfoot>tr]:border-t
+                            [&>table>tfoot>tr]:border-gray-200
+                            [&>table>tfoot>tr>td]:px-6
+                            [&>table>tfoot>tr>td]:py-3
+                            [&>table>tfoot>tr>td]:text-sm
+                            [&>table>tfoot>tr>td]:font-semibold
+
+                            [&>*:first-child]:mt-0
+                            [&>*:last-child]:mb-0
+                          "
+                        />
+                        <!-- Gradient Overlay -->
+                        <div 
+                          id="description-overlay"
+                          class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent"
+                        ></div>
+                      </div>
+                      
+                      <!-- Show More Button with Enhanced Styling -->
+                      <div class="mt-6 text-center">
+                        <button
+                          id="show-more-btn"
+                          class="inline-flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-gray-900 
+                                 bg-white/60 px-6 py-3 rounded-full border border-gray-200 hover:border-blue-200 
+                                 hover:bg-blue-50 transition-all duration-200 shadow-sm hover:shadow-md"
+                        >
+                          <span id="show-more-text">Show More</span>
+                          <svg id="show-more-icon" class="w-4 h-4 transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Bottom accent -->
+                  <div class="mt-6 text-center">
+                    <div class="inline-flex items-center gap-2 text-sm text-gray-600 bg-white/60 px-4 py-2 rounded-full border border-gray-200">
+                      <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                       </svg>
-                    </button>
+                      <span>Detailed product information</span>
+                    </div>
                   </div>
                 </div>
 
@@ -787,7 +816,12 @@ const initialCurrency = 'USD'; // Or get from store/session
                 <ProductSpecs productTitle={product.title} language={lang} />
 
                 <!-- Size Chart Component -->
-                <SizeChart productTitle={product.title} language={lang} />
+                <SizeChart 
+                  productTitle={product.title} 
+                  language={lang} 
+                  handle={handle}
+                  let:hasChartData
+                />
 
                 <!-- Reviews Component -->
                 <Reviews language={lang} />
@@ -797,9 +831,26 @@ const initialCurrency = 'USD'; // Or get from store/session
               </div>
             </div>
 
+            <!-- Additional Product Information Sections -->
+            <div class="mt-16 space-y-8">
+              <!-- Shipping Information (only for physical products) -->
+              <ShippingInfo />
+              
+              <!-- Product Warranty (only for physical products) -->
+              <ProductWarranty />
+              
+              <!-- Care Instructions (only for physical products) -->
+              <CareInstructions />
+              
+              <!-- Recently Viewed Products -->
+              <RecentlyViewed />
+            </div>
+
             <!-- Related Products -->
             <div class="mt-16 border-t pt-16">
-              <h2 class="text-2xl font-bold mb-8">Related Products</h2>
+              <h2 class={luxuryProductStyle.related?.title}>
+                Related Products
+              </h2>
               
               {/* Debug output */}
               {import.meta.env.DEV && (
@@ -957,11 +1008,8 @@ const initialCurrency = 'USD'; // Or get from store/session
           window.productPageManager = new ProductPageManager();
         }
       </script>
-            <WhatsAppButton productTitle={product.title} />
-
-    </Layout>
-  </body>
-</html>
+      {whatsappEnabled && <WhatsAppButton productTitle={product.title} />}
+</Layout>
 
 <script>
   class ImageGallery {
@@ -1162,6 +1210,23 @@ const initialCurrency = 'USD'; // Or get from store/session
   }
 </style>
 
+<style>
+  #description-content {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  #show-more-btn:hover #show-more-icon {
+    transform: translateY(2px);
+  }
+
+  /* Add specific transition for max-height */
+  .expanded {
+    max-height: none !important;
+  }
+</style>
+
 <script>
   function initializeShowMore() {
     const content = document.getElementById('description-content');
@@ -1173,7 +1238,7 @@ const initialCurrency = 'USD'; // Or get from store/session
     if (!content || !overlay || !button || !buttonText || !buttonIcon) return;
 
     // Check if content needs show more button
-    const needsShowMore = content.scrollHeight > 300;
+    const needsShowMore = content.scrollHeight > 200;
     
     if (!needsShowMore) {
       overlay.style.display = 'none';
@@ -1196,7 +1261,7 @@ const initialCurrency = 'USD'; // Or get from store/session
         button.setAttribute('aria-expanded', 'true');
       } else {
         // Collapse
-        content.style.maxHeight = '300px';
+        content.style.maxHeight = '200px';
         overlay.style.opacity = '1';
         buttonText.textContent = 'Show More';
         buttonIcon.style.transform = 'rotate(0)';
@@ -1205,7 +1270,7 @@ const initialCurrency = 'USD'; // Or get from store/session
     });
 
     // Set initial state
-    content.style.maxHeight = '300px';
+    content.style.maxHeight = '200px';
     overlay.style.opacity = '1';
     button.style.display = needsShowMore ? 'flex' : 'none';
 
@@ -1231,20 +1296,3 @@ const initialCurrency = 'USD'; // Or get from store/session
   // Re-initialize on view transitions
   document.addEventListener('astro:page-load', initializeShowMore);
 </script>
-
-<style>
-  #description-content {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-  }
-
-  #show-more-btn:hover #show-more-icon {
-    transform: translateY(2px);
-  }
-
-  /* Add specific transition for max-height */
-  .expanded {
-    max-height: none !important;
-  }
-</style>

@@ -1,0 +1,237 @@
+{
+  "pageTitle": "Servizi di Gestione di Studi Dentistici",
+  "pageDescription": "Esplora la nostra gamma completa di servizi progettati per aiutare il tuo studio dentistico a prosperare con soluzioni alimentate da IA.",
+  "hero": {
+    "badge": "I Nostri Servizi",
+    "title": "Servizi Completi di Gestione dello Studio",
+    "description": "Scopri la nostra gamma completa di servizi progettati per aiutare il tuo studio dentistico a prosperare con soluzioni moderne di gestione dello studio alimentate da IA.",
+    "cta": {
+      "primary": {
+        "text": "Esplora Servizi",
+        "href": "#services"
+      },
+      "secondary": {
+        "text": "Inizia",
+        "href": "/contact"
+      }
+    }
+  },
+  "stats": [
+    {
+      "value": "500+",
+      "label": "Studi Dentistici"
+    },
+    {
+      "value": "99.9%",
+      "label": "Disponibilità"
+    },
+    {
+      "value": "50%",
+      "label": "Tempo Risparmiato"
+    },
+    {
+      "value": "24/7",
+      "label": "Supporto"
+    }
+  ],
+  "services": [
+    {
+      "category": "Gestione dello Studio",
+      "description": "Soluzioni complete di gestione dello studio per il tuo studio dentistico",
+      "items": [
+        {
+          "icon": "users",
+          "name": "Gestione Pazienti",
+          "description": "Cartelle pazienti complete, anamnesi mediche e pianificazione trattamenti",
+          "features": ["Cartelle Pazienti Digitali", "Monitoraggio Anamnesi Medica", "Pianificazione Trattamenti", "Portale Paziente"],
+          "color": "blue"
+        },
+        {
+          "icon": "calendar",
+          "name": "Pianificazione Alimentata da IA",
+          "description": "Pianificazione intelligente degli appuntamenti che ottimizza il tuo calendario",
+          "features": ["Pianificazione Intelligente", "Promemoria Automatizzati", "Gestione Liste d'Attesa", "Riduzione Assenze"],
+          "color": "purple"
+        },
+        {
+          "icon": "credit-card",
+          "name": "Fatturazione e Pagamenti",
+          "description": "Fatturazione, fatturazione ed elaborazione pagamenti semplificate",
+          "features": ["Fatturazione Automatizzata", "Elaborazione Pagamenti", "Richieste Assicurative", "Rapporti Finanziari"],
+          "color": "indigo"
+        },
+        {
+          "icon": "bar-chart",
+          "name": "Analisi dello Studio",
+          "description": "Insights basati sui dati per comprendere e far crescere il tuo studio",
+          "features": ["Metriche di Prestazione", "Analisi Pazienti", "Monitoraggio Ricavi", "Insights di Crescita"],
+          "color": "cyan"
+        }
+      ]
+    },
+    {
+      "category": "Strumenti Clinici",
+      "description": "Strumenti clinici avanzati per studi dentistici moderni",
+      "items": [
+        {
+          "icon": "file-text",
+          "name": "Cartelle Digitali",
+          "description": "Cartelle pazienti digitali complete e documentazione",
+          "features": ["Cartelle Mediche", "Piani di Trattamento", "Gestione Radiografie", "Note Cliniche"],
+          "color": "rose"
+        },
+        {
+          "icon": "clipboard",
+          "name": "Pianificazione Trattamenti",
+          "description": "Strumenti avanzati di pianificazione e documentazione trattamenti",
+          "features": ["Piani di Trattamento", "Presentazione Casi", "Monitoraggio Progressi", "Analisi Risultati"],
+          "color": "amber"
+        },
+        {
+          "icon": "shield",
+          "name": "Conformità HIPAA",
+          "description": "Sicurezza di livello aziendale e conformità HIPAA",
+          "features": ["Crittografia Dati", "Controllo Accesso", "Registri di Audit", "Gestione Conformità"],
+          "color": "lime"
+        },
+        {
+          "icon": "cloud",
+          "name": "Archiviazione Cloud",
+          "description": "Archiviazione e backup dati sicuri basati su cloud",
+          "features": ["Backup Automatici", "Ripristino Dati", "Accesso Multi-Dispositivo", "Sincronizzazione in Tempo Reale"],
+          "color": "green"
+        }
+      ]
+    },
+    {
+      "category": "Servizi di Supporto",
+      "description": "Supporto e formazione completi per il tuo studio",
+      "items": [
+        {
+          "icon": "headphones",
+          "name": "Supporto 24/7",
+          "description": "Supporto tecnico e assistenza disponibili 24 ore su 24, 7 giorni su 7",
+          "features": ["Help Desk", "Monitoraggio Sistema", "Risoluzione Problemi", "Ottimizzazione Prestazioni"],
+          "color": "sky"
+        },
+        {
+          "icon": "graduation-cap",
+          "name": "Formazione e Onboarding",
+          "description": "Formazione completa per il tuo team",
+          "features": ["Formazione Team", "Tutorial Video", "Documentazione", "Migliori Pratiche"],
+          "color": "cyan"
+        },
+        {
+          "icon": "settings",
+          "name": "Personalizzazione",
+          "description": "Soluzioni su misura per le esigenze specifiche del tuo studio",
+          "features": ["Personalizzazione Flussi di Lavoro", "Personalizzazione Rapporti", "Configurazione Integrazione", "Configurazione Studio"],
+          "color": "blue"
+        },
+        {
+          "icon": "zap",
+          "name": "Aggiornamenti Sistema",
+          "description": "Aggiornamenti regolari e nuove versioni di funzionalità",
+          "features": ["Aggiornamenti Automatici", "Nuove Funzionalità", "Patch di Sicurezza", "Miglioramenti Prestazioni"],
+          "color": "indigo"
+        }
+      ]
+    }
+  ],
+  "features": {
+    "title": "Cosa Offriamo",
+    "description": "I nostri servizi vengono con funzionalità e supporto completi",
+    "items": [
+      {
+        "icon": "cloud",
+        "title": "Piattaforma Basata su Cloud",
+        "description": "Accedi ai dati del tuo studio in modo sicuro da qualsiasi luogo, in qualsiasi momento"
+      },
+      {
+        "icon": "shield",
+        "title": "Conforme HIPAA",
+        "description": "Sicurezza di livello aziendale con archiviazione dati crittografata"
+      },
+      {
+        "icon": "zap",
+        "title": "Alimentato da IA",
+        "description": "Automatizzazione intelligente per pianificazione e insights dello studio"
+      },
+      {
+        "icon": "trending-up",
+        "title": "Crescita dello Studio",
+        "description": "Strumenti progettati per aiutare a far crescere il tuo studio"
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Vantaggi dei Servizi",
+    "description": "Sperimenta i vantaggi dell'uso di Dentagia per il tuo studio.",
+    "items": [
+      {
+        "icon": "rocket",
+        "title": "Efficienza",
+        "description": "Operazioni semplificate che fanno risparmiare tempo e riducono il carico amministrativo",
+        "stats": "50%",
+        "label": "Tempo Risparmiato"
+      },
+      {
+        "icon": "target",
+        "title": "Affidabilità",
+        "description": "Piattaforma sicura e affidabile con garanzia di disponibilità del 99,9%",
+        "stats": "99.9%",
+        "label": "Disponibilità"
+      },
+      {
+        "icon": "lightbulb",
+        "title": "Innovazione",
+        "description": "Tecnologia IA all'avanguardia progettata per studi dentistici moderni",
+        "stats": "500+",
+        "label": "Studi"
+      },
+      {
+        "icon": "users",
+        "title": "Supporto",
+        "description": "Team di supporto dedicato disponibile 24/7 per il tuo studio",
+        "stats": "24/7",
+        "label": "Supporto"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Cosa Dicono i Nostri Clienti",
+    "description": "Ascolta gli studi dentistici che hanno beneficiato di Dentagia",
+    "items": [
+      {
+        "quote": "Dentagia ha trasformato il modo in cui gestiamo il nostro studio. La pianificazione alimentata da IA da sola ci fa risparmiare 10 ore alla settimana, e i nostri punteggi di soddisfazione dei pazienti non sono mai stati così alti.",
+        "author": "Dr. Sarah Martinez",
+        "role": "Proprietario dello Studio",
+        "company": "Studio Dentistico del Centro",
+        "image": "/images/testimonials/sarah.jpg"
+      },
+      {
+        "quote": "Passare a Dentagia è stata la migliore decisione che abbiamo preso. Il sistema di gestione dei pazienti è intuitivo, la fatturazione è automatizzata, e le analisi ci aiutano a capire meglio il nostro studio.",
+        "author": "Dr. Michael Chen",
+        "role": "Dentista Principale",
+        "company": "Family Dental Care",
+        "image": "/images/testimonials/michael.jpg"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Pronto per Iniziare?",
+    "description": "Unisciti a centinaia di studi dentistici che hanno trasformato le loro operazioni con Dentagia.",
+    "buttons": [
+      {
+        "text": "Contattaci",
+        "href": "/contact",
+        "variant": "primary"
+      },
+      {
+        "text": "Prenota una Demo",
+        "href": "/demo",
+        "variant": "secondary"
+      }
+    ]
+  }
+}

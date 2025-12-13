@@ -1,0 +1,198 @@
+{
+  "hero": {
+    "subtitle": "Practice Analytics",
+    "title": "Comprehensive Practice Analytics & Reporting",
+    "description": "Gain deep insights into your practice performance with comprehensive analytics, real-time dashboards, and actionable reports that drive growth.",
+    "icon": "trending-up",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "Real-Time",
+        "label": "Analytics"
+      },
+      {
+        "value": "35%",
+        "label": "Revenue Growth"
+      },
+      {
+        "value": "100%",
+        "label": "Visibility"
+      }
+    ]
+  },
+  "features": {
+    "title": "Analytics Features",
+    "subtitle": "Data-Driven Insights",
+    "description": "Comprehensive analytics and reporting tools to understand and optimize your practice performance.",
+    "items": [
+      {
+        "icon": "trending-up",
+        "title": "Real-Time Dashboards",
+        "description": "Monitor practice performance in real-time with customizable dashboards and key metrics.",
+        "highlights": [
+          "Real-time metrics",
+          "Customizable dashboards",
+          "Key performance indicators",
+          "Visual analytics",
+          "Performance tracking"
+        ],
+        "stats": {
+          "value": "Real-Time",
+          "label": "Analytics"
+        }
+      },
+      {
+        "icon": "users",
+        "title": "Revenue Analytics",
+        "description": "Track revenue, collections, and financial performance with detailed analytics and reporting.",
+        "highlights": [
+          "Revenue tracking",
+          "Collection analysis",
+          "Financial reports",
+          "Trend analysis",
+          "Forecasting"
+        ],
+        "stats": {
+          "value": "35%",
+          "label": "Revenue Growth"
+        }
+      },
+      {
+        "icon": "calendar",
+        "title": "Appointment Analytics",
+        "description": "Analyze appointment patterns, no-shows, and scheduling efficiency to optimize operations.",
+        "highlights": [
+          "Appointment patterns",
+          "No-show analysis",
+          "Scheduling efficiency",
+          "Utilization tracking",
+          "Optimization insights"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "Visibility"
+        }
+      },
+      {
+        "icon": "brain",
+        "title": "Patient Analytics",
+        "description": "Understand patient behavior, retention, and value with comprehensive patient analytics.",
+        "highlights": [
+          "Patient behavior",
+          "Retention analysis",
+          "Value segmentation",
+          "Treatment patterns",
+          "Engagement metrics"
+        ],
+        "stats": {
+          "value": "95%",
+          "label": "Insights"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Analytics Success Stories",
+    "description": "See how analytics transform practice management",
+    "stats": [
+      {
+        "icon": "trending-up",
+        "value": "35%",
+        "label": "Revenue Growth"
+      },
+      {
+        "icon": "clock",
+        "value": "Real-Time",
+        "label": "Analytics"
+      },
+      {
+        "icon": "users",
+        "value": "100%",
+        "label": "Visibility"
+      },
+      {
+        "icon": "award",
+        "value": "95%",
+        "label": "Insights"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Dr. Sarah Martinez",
+        "role": "Practice Owner",
+        "quote": "The analytics dashboard gives us complete visibility into our practice. We've grown revenue by 35% using data-driven insights."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Analytics Benefits",
+    "subtitle": "Data-Driven Excellence",
+    "description": "Experience the power of comprehensive practice analytics.",
+    "items": [
+      {
+        "title": "Real-Time Insights",
+        "description": "Monitor practice performance in real-time with instant analytics and dashboards.",
+        "icon": "zap",
+        "color": "teal",
+        "stats": {
+          "value": "Real-Time",
+          "label": "Analytics"
+        },
+        "highlights": [
+          "Real-time dashboards",
+          "Instant metrics",
+          "Live updates",
+          "Performance monitoring"
+        ]
+      },
+      {
+        "title": "Revenue Growth",
+        "description": "Data-driven insights identify opportunities to grow practice revenue.",
+        "icon": "trending-up",
+        "color": "cyan",
+        "stats": {
+          "value": "35%",
+          "label": "Growth"
+        },
+        "highlights": [
+          "Revenue analytics",
+          "Opportunity identification",
+          "Performance tracking",
+          "Growth strategies"
+        ]
+      },
+      {
+        "title": "Complete Visibility",
+        "description": "Comprehensive analytics provide complete visibility into all aspects of your practice.",
+        "icon": "users",
+        "color": "blue",
+        "stats": {
+          "value": "100%",
+          "label": "Visibility"
+        },
+        "highlights": [
+          "Complete metrics",
+          "Multi-dimensional analysis",
+          "Comprehensive reporting",
+          "Strategic insights"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready for Practice Analytics?",
+    "description": "See how Dentagia's analytics can transform your practice performance.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Schedule a Demo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Learn More",
+      "link": "/features"
+    }
+  }
+}
+

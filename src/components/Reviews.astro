@@ -13,7 +13,23 @@ const {
 } = Astro.props;
 
 // Fetch reviews using the separated database logic
-const { reviews, error } = await getReviews(language, storeName);
+let reviews = [];
+let error = null;
+
+try {
+  const result = await getReviews(language, storeName);
+  reviews = result.reviews || [];
+  error = result.error;
+} catch (fetchError) {
+  console.error('Error fetching reviews:', fetchError);
+  error = fetchError;
+  reviews = [];
+}
+
+// If no reviews, return an empty fragment
+if (reviews.length === 0) {
+  return Astro.slots.render('fallback') || '';
+}
 
 // Get content for current language, fallback to English
 const content = reviewsContent[language] || reviewsContent['en'];

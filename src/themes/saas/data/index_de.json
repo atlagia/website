@@ -1,387 +1,673 @@
 {
-  "siteTitle": "Atasia - KI-gestützte Wachstumsplattform",
-  "siteDescription": "Egal, ob Sie einen E-Commerce-Shop, eine SaaS-Plattform, eine Digitalagentur oder eine Content-Website betreiben – unsere KI-Lösungen helfen Ihnen, Ihre Online-Präsenz zu optimieren und zu wachsen.",
+  "siteTitle": "Atlagia - KI-gestützte Digitale Lösungen & Entwicklungsagentur",
+  "siteDescription": "Wir entwickeln intelligente digitale Lösungen und fortschrittliche KI-Anwendungen, die Unternehmen in verschiedenen Branchen transformieren. Ihr Partner für Innovation und digitale Exzellenz.",
   "sections": [
     {
       "type": "welcomeSection",
-      "badge": "KI-gestützte Automatisierung",
-      "title": "Wachsen Sie schneller mit <span class=\"text-pink-600\">KI-gestützter</span> Automatisierung",
-      "description": "Entfesseln Sie das Potenzial Ihres Unternehmens mit KI-Automatisierung – steigern Sie die Sichtbarkeit, optimieren Sie Abläufe und skalieren Sie mühelos, egal ob Sie einen E-Commerce-Shop, eine SaaS-Plattform, eine Digitalagentur oder eine Content-Website betreiben!",
-      "blogLinkText": "Erfahren Sie, wie es funktioniert",
-      "getStartedText": "Kostenlos starten",
-      "blogLink": "/how-it-works",
-      "heroImage": "https://cdn.atlagia.com/ATLAS-1.webp",
+      "badge": "Agentur für Digitale Innovation",
+      "title": "Wir <span class='text-gradient'>Entwerfen & Entwickeln</span> KI-gestützte Lösungen für die Digitale Zukunft",
+      "description": "Transformieren Sie Ihr Unternehmen mit unserer Expertise in der KI-Entwicklung, maßgeschneiderten Softwarelösungen und digitaler Innovation. Wir sind spezialisiert auf die Erstellung intelligenter Systeme, die Effizienz, Automatisierung und Wachstum in jeder Branche vorantreiben.",
+      "blogLinkText": "Lösungen Entdecken",
+      "getStartedText": "Ihr Projekt Besprechen",
+      "getStartedLink": "/discuss-project",
+      "blogLink": "/solutions",
+      "heroImage": "https://cdn.atlagia.com/GiaConnect/images/670e6478-6043-4aec-a731-a0d4468e6d4e.png",
+      "features": [
+        {
+          "icon": "Globe",
+          "title": "Digitale Lösungen",
+          "description": "Maßgeschneiderte Softwareentwicklung und digitale Transformationslösungen"
+        },
+        {
+          "icon": "Zap",
+          "title": "KI-Entwicklung",
+          "description": "Entwicklung fortschrittlicher KI-Systeme und maschineller Lernlösungen"
+        },
+        {
+          "icon": "Users",
+          "title": "Branchenspezifische Lösungen",
+          "description": "Spezialisierte Lösungen für E-Commerce, Gesundheitswesen, Finanzen und mehr"
+        },
+        {
+          "icon": "Brain",
+          "title": "Technologische Innovation",
+          "description": "Integration modernster Technologien und innovative Entwicklung"
+        }
+      ],
       "partnerLogos": [
         {
-          "src": "https://cdn.atlagia.com/1655873659shopify-black-logo.webp",
-          "alt": "Shopify"
+          "src": "https://cdn.atlagia.com/GiaConnect/images/processed-3bb4b721-db62-4347-82ed-b11735f18565.png",
+          "alt": "Shopify Partner"
         },
         {
-          "src": "https://cdn.atlagia.com/wix-com-website-logo-1.webp",
-          "alt": "Wix"
+          "src": "https://cdn.atlagia.com/GiaConnect/images/processed-d4ae1096-ccab-49e9-91f5-1d6504936092.png",
+          "alt": "Wix Partner"
         },
         {
-          "src": "https://cdn.atlagia.com/woocommerce-03.webp",
-          "alt": "WordPress"
+          "src": "https://cdn.atlagia.com/GiaConnect/images/a3550c4a-95d2-4341-9ed7-2a5de91b0b66.png",
+          "alt": "WooCommerce Partner"
         }
       ]
     },
     {
       "type": "aboutSection",
-      "subtitle": "ÜBER UNS",
-      "title": "Der Vorsprung, den Ihr digitales Unternehmen braucht",
+      "subtitle": "WER WIR SIND",
+      "title": "Gestaltung der Digitalen Landschaft von Morgen mit KI-Innovation",
       "features": [
         {
-          "icon": "https://cdn.atlagia.com/kepart_global_seo_enhancer_vector_f1860727-592d-44ee-8095-d293f95a7f14.webp",
-          "title": "KI-gestützte SEO-Optimierung",
-          "keywords": ["SEO", "Ranking", "Analytik"],
-          "description": "Verbessern Sie Ihre Suchmaschinenplatzierungen und steigern Sie den organischen Traffic mit fortschrittlichen KI-Algorithmen.",
-          "bullets": [
-            "Intelligente Keyword-Recherche & Optimierung",
-            "Inhaltsoptimierungsvorschläge",
-            "Wettbewerbsanalyse",
-            "Überwachung der Suchmaschinenplatzierung"
+          "icon": "ai-development",
+          "title": "KI-Entwicklung & Integration",
+          "keywords": [
+            "Entwicklung",
+            "Innovation",
+            "KI"
           ],
-          "backgroundSvg": "<svg width='100%' height='100%' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='grid1' width='10' height='10' patternUnits='userSpaceOnUse'><path d='M 10 0 L 0 0 0 10' fill='none' stroke='currentColor' stroke-width='0.5' opacity='0.1'/></pattern><pattern id='circuit1' width='30' height='30' patternUnits='userSpaceOnUse'><circle cx='15' cy='15' r='1' fill='currentColor' opacity='0.1'/><path d='M30 15 H20 M15 0 V10' stroke='currentColor' stroke-width='0.5' opacity='0.1'/></pattern><linearGradient id='headGrad1' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:#00a99d;stop-opacity:0.15'/><stop offset='100%' style='stop-color:#FF6B6B;stop-opacity:0.15'/></linearGradient></defs><g transform='translate(100, 50)'><path d='M100,0 h100 a50,50 0 0 1 50,50 v150 a50,50 0 0 1 -50,50 h-100 a50,50 0 0 1 -50,-50 v-150 a50,50 0 0 1 50,-50' fill='url(#headGrad1)' stroke='currentColor' stroke-width='3'/><rect width='300' height='250' fill='url(#grid1)'/><rect width='300' height='250' fill='url(#circuit1)'/><circle cx='80' cy='100' r='30' fill='#00a99d' fill-opacity='0.2' stroke='currentColor' stroke-width='3'/><circle cx='220' cy='100' r='30' fill='#00a99d' fill-opacity='0.2' stroke='currentColor' stroke-width='3'/><path d='M80,100 v-20 h140 v20' stroke='currentColor' stroke-width='3' fill='none'/><path d='M120,180 q40,40 80,0' stroke='currentColor' stroke-width='3' fill='none'/><g stroke='currentColor' stroke-width='2'><line x1='0' y1='40' x2='300' y2='40'/><line x1='20' y1='60' x2='280' y2='60'/></g><text x='20' y='20' font-size='12' fill='currentColor' opacity='0.6'>SEO</text><text x='250' y='20' font-size='12' fill='currentColor' opacity='0.6'>RANK</text></g></svg>"
+          "description": "Wir sind spezialisiert auf die Entwicklung und Integration modernster KI-Lösungen, die Geschäftsabläufe transformieren.",
+          "bullets": [
+            "Entwicklung maßgeschneiderter KI-Modelle",
+            "Integration maschinellen Lernens",
+            "Verarbeitung natürlicher Sprache",
+            "Lösungen für Computer Vision"
+          ],
+          "backgroundSvg": "<svg width='100%' height='100%' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='grid1' width='20' height='20' patternUnits='userSpaceOnUse'><path d='M 20 0 L 0 0 0 20' fill='none' stroke='currentColor' stroke-width='0.5' opacity='0.1'/></pattern></defs><rect width='100%' height='100%' fill='url(#grid1)'/></svg>"
         },
         {
-          "icon": "https://cdn.atlagia.com/kepart_AI-Powered_Keyword_Suggestions_vector_364432f3-f7a7-44a8-bf02-ed377f95bbbc-1.webp",
-          "title": "KI-gestützte Marketing-Optimierung",
-          "keywords": ["Wachstum", "ROI", "Reichweite"],
-          "description": "Maximieren Sie Ihren Marketing-ROI mit datengestützten Einblicken und automatisierten Kampagnen.",
-          "bullets": [
-            "KI-generierte Marketinginhalte",
-            "Analyse der Kampagnenleistung",
-            "Optimierung der Zielgruppenansprache",
-            "Multi-Channel-Marketing-Automatisierung"
+          "icon": "software-solutions",
+          "title": "Softwarelösungen",
+          "keywords": [
+            "Software",
+            "Entwicklung",
+            "Lösungen"
           ],
-          "backgroundSvg": "<svg width='100%' height='100%' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='dots1' width='10' height='10' patternUnits='userSpaceOnUse'><circle cx='5' cy='5' r='1' fill='currentColor' opacity='0.1'/></pattern><pattern id='waves1' width='20' height='10' patternUnits='userSpaceOnUse'><path d='M 0 5 C 5 0, 10 10, 20 5' stroke='currentColor' stroke-width='0.5' opacity='0.1' fill='none'/></pattern><linearGradient id='headGrad2' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:#FF6B6B;stop-opacity:0.15'/><stop offset='100%' style='stop-color:#00a99d;stop-opacity:0.15'/></linearGradient></defs><g transform='translate(100, 50)'><path d='M100,20 l100,-20 l50,50 v150 l-50,50 l-100,-20 l-50,-50 v-110 z' fill='url(#headGrad2)' stroke='currentColor' stroke-width='3'/><rect width='300' height='250' fill='url(#dots1)'/><rect width='300' height='250' fill='url(#waves1)'/><circle cx='80' cy='100' r='25' fill='#FF6B6B' fill-opacity='0.2' stroke='currentColor' stroke-width='3'/><circle cx='220' cy='100' r='25' fill='#FF6B6B' fill-opacity='0.2' stroke='currentColor' stroke-width='3'/><path d='M120,160 q30,30 60,0' stroke='currentColor' stroke-width='3' fill='none'/><g stroke='currentColor' stroke-width='3'><path d='M20,80 q-20,-20 -20,-40'/><path d='M280,80 q20,-20 20,-40'/></g><text x='30' y='30' font-size='12' fill='currentColor' opacity='0.6'>WACHSTUM</text><text x='220' y='30' font-size='12' fill='currentColor' opacity='0.6'>ROI</text></g></svg>"
+          "description": "End-to-End-Softwareentwicklungsdienste, die auf die Bedürfnisse Ihrer Branche zugeschnitten sind.",
+          "bullets": [
+            "Maßgeschneiderte Softwareentwicklung",
+            "Web- & mobile Anwendungen",
+            "Cloud-native Lösungen",
+            "API-Entwicklung & Integration"
+          ],
+          "backgroundSvg": "<svg width='100%' height='100%' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='code' width='20' height='20' patternUnits='userSpaceOnUse'><path d='M 0 10 L 10 0 M 20 10 L 10 20' stroke='currentColor' stroke-width='0.5' opacity='0.1'/></pattern></defs><rect width='100%' height='100%' fill='url(#code)'/></svg>"
         },
         {
-          "icon": "https://cdn.atlagia.com/kepart_ecomerce_products_edit_vector_d99c2857-4476-4cce-b562-dfb299182da8.webp",
-          "title": "KI-gestützte Geschäftsverwaltung",
-          "keywords": ["System", "Ablauf", "Daten"],
-          "description": "Optimieren Sie Abläufe und automatisieren Sie Workflows mit intelligenten KI-Tools.",
-          "bullets": [
-            "Automatisierte Workflow-Optimierung",
-            "Bestandsverwaltung",
-            "Verkaufsprognosen",
-            "Leistungsanalysen"
+          "icon": "digital-transformation",
+          "title": "Digitale Transformation",
+          "keywords": [
+            "Transformieren",
+            "Innovieren",
+            "Wachsen"
           ],
-          "backgroundSvg": "<svg width='100%' height='100%' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='circuit2' width='20' height='20' patternUnits='userSpaceOnUse'><path d='M 0 10 L 10 10 M 10 0 L 10 20' fill='none' stroke='currentColor' stroke-width='0.5' opacity='0.1'/></pattern><pattern id='grid2' width='40' height='40' patternUnits='userSpaceOnUse'><path d='M 40 0 L 0 0 0 40' fill='none' stroke='currentColor' stroke-width='1' opacity='0.05'/><circle cx='0' cy='0' r='2' fill='currentColor' opacity='0.1'/></pattern><linearGradient id='headGrad3' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:#00a99d;stop-opacity:0.15'/><stop offset='100%' style='stop-color:#4B0082;stop-opacity:0.15'/></linearGradient></defs><g transform='translate(100, 50)'><path d='M50,50 h200 v200 h-200 z' fill='url(#headGrad3)' stroke='currentColor' stroke-width='3'/><rect width='300' height='250' fill='url(#circuit2)'/><rect width='300' height='250' fill='url(#grid2)'/><rect x='70' y='80' width='40' height='40' fill='#00a99d' fill-opacity='0.2' stroke='currentColor' stroke-width='3'/><rect x='190' y='80' width='40' height='40' fill='#00a99d' fill-opacity='0.2' stroke='currentColor' stroke-width='3'/><path d='M100,180 h100' stroke='currentColor' stroke-width='3' fill='none'/><text x='40' y='40' font-size='12' fill='currentColor' opacity='0.6'>SYSTEM</text><text x='200' y='40' font-size='12' fill='currentColor' opacity='0.6'>ABLAUF</text></g></svg>"
+          "description": "Führen Sie Ihr Unternehmen durch eine umfassende digitale Transformation.",
+          "bullets": [
+            "Prozessautomatisierung",
+            "Beratung zur digitalen Strategie",
+            "Technologiemodernisierung",
+            "Datengetriebene Lösungen"
+          ],
+          "backgroundSvg": "<svg width='100%' height='100%' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='circuit' width='40' height='40' patternUnits='userSpaceOnUse'><circle cx='20' cy='20' r='1' fill='currentColor' opacity='0.1'/><path d='M 40 20 H 30 M 20 0 V 10' stroke='currentColor' stroke-width='0.5' opacity='0.1'/></pattern></defs><rect width='100%' height='100%' fill='url(#circuit)'/></svg>"
         },
         {
-          "icon": "https://cdn.atlagia.com/kepart__91c4c28d-f806-4ef4-86a5-00ed63c2c7d4-1.webp",
-          "title": "KI-Kundensupport-Agent",
-          "keywords": ["24/7", "Hilfe", "Chat"],
-          "description": "Bieten Sie 24/7 KI-gestützten Kundensupport auf allen Plattformen.",
-          "bullets": [
-            "24/7 automatisierte Antworten",
-            "Mehrsprachiger Support",
-            "Intelligente Ticket-Routing",
-            "Kundensentiment-Analyse"
+          "icon": "industry-solutions",
+          "title": "Branchenspezifische Lösungen",
+          "keywords": [
+            "Spezialisiert",
+            "Branche",
+            "Experte"
           ],
-          "backgroundSvg": "<svg width='100%' height='100%' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='waves2' width='20' height='20' patternUnits='userSpaceOnUse'><path d='M 0 10 C 5 5, 15 15, 20 10' fill='none' stroke='currentColor' stroke-width='0.5' opacity='0.1'/></pattern><pattern id='dots2' width='20' height='20' patternUnits='userSpaceOnUse'><circle cx='10' cy='10' r='1' fill='currentColor' opacity='0.1'/><circle cx='0' cy='0' r='1' fill='currentColor' opacity='0.1'/></pattern><linearGradient id='headGrad4' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:#4B0082;stop-opacity:0.15'/><stop offset='100%' style='stop-color:#FF6B6B;stop-opacity:0.15'/></linearGradient></defs><g transform='translate(100, 50)'><path d='M150,0 C230,0 280,50 280,130 C280,210 230,260 150,260 C70,260 20,210 20,130 C20,50 70,0 150,0' fill='url(#headGrad4)' stroke='currentColor' stroke-width='3'/><rect width='300' height='250' fill='url(#waves2)'/><rect width='300' height='250' fill='url(#dots2)'/><circle cx='90' cy='100' r='30' fill='#FF6B6B' fill-opacity='0.2' stroke='currentColor' stroke-width='3'/><circle cx='210' cy='100' r='30' fill='#FF6B6B' fill-opacity='0.2' stroke='currentColor' stroke-width='3'/><path d='M90,170 q60,40 120,0' stroke='currentColor' stroke-width='3' fill='none'/><text x='50' y='30' font-size='12' fill='currentColor' opacity='0.6'>24/7</text><text x='200' y='30' font-size='12' fill='currentColor' opacity='0.6'>HILFE</text></g></svg>"
+          "description": "Branchenspezifische Lösungen, die durch fortschrittliche Technologie unterstützt werden.",
+          "bullets": [
+            "E-Commerce-Plattformen",
+            "Gesundheitssysteme",
+            "FinTech-Lösungen",
+            "Unternehmensanwendungen"
+          ],
+          "backgroundSvg": "<svg width='100%' height='100%' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='dots' width='20' height='20' patternUnits='userSpaceOnUse'><circle cx='10' cy='10' r='1' fill='currentColor' opacity='0.1'/></pattern></defs><rect width='100%' height='100%' fill='url(#dots)'/></svg>"
         }
       ],
-      "ctaText": "Erfahren Sie, wie es funktioniert",
-      "ctaLink": "/how-it-works"
+      "ctaText": "Unsere Dienstleistungen Entdecken",
+      "ctaLink": "/services"
     },
     {
       "type": "whoWeAreSection",
-      "subtitle": "WER WIR SIND",
-      "title": "Atlasia: Ihr KI-Partner für digitalen Erfolg",
-      "description": "Bei Atlasia sind wir mehr als nur ein Technologieanbieter – wir sind Ihr engagierter KI-Partner, der sich dafür einsetzt, dass Online-Unternehmen florieren. Unsere Mission ist es, Unternehmen aller Art mit fortschrittlichen KI-Lösungen auszustatten, die Wachstum fördern, Effizienz steigern und die Leistung im digitalen Umfeld optimieren.",
-      "image": "https://cdn.atlagia.com/kepart_vector_laptop_Ai_Platform_e-commerce_Revolution_light_ba_06524236-8880-4362-9e92-06f3aad37244.webp",
+      "subtitle": "INNOVATIONSFÜHRER",
+      "title": "Pionierarbeit bei KI-Lösungen für Digitale Exzellenz",
+      "description": "Als Branchenführer in der KI-Entwicklung und digitalen Transformation revolutionieren wir die Art und Weise, wie Unternehmen im digitalen Zeitalter operieren. Unser Team aus erfahrenen Entwicklern und KI-Spezialisten erstellt modernste Lösungen, die Innovation, Effizienz und Wachstum vorantreiben. Von der maßgeschneiderten KI-Entwicklung bis zur digitalen Transformation im Unternehmensmaßstab liefern wir Ergebnisse, die die Erwartungen übertreffen.",
+      "image": "https://cdn.atlagia.com/GiaConnect/images/9304b8fc-6ad2-4ee5-944d-5b6472cf005b.png",
       "stats": [
-        {
-          "value": "1000+",
-          "label": "Zufriedene Kunden"
-        },
-        {
-          "value": "20%",
-          "label": "Durchschnittliche Wachstumsrate"
-        }
-      ]
-    },
-    {
-      "type": "bannerSection",
-      "subtitle": "GROSSE EHRE",
-      "headline": "Unsere Auszeichnungen",
-      "description": "Anerkannt für Exzellenz in KI-gestützten Lösungen",
-      "backgroundImage": "/images/banner-bg.jpg",
-      "button1Text": "Produkte durchsuchen",
-      "button1Link": "/products",
-      "button2Text": "Auf Digivast verkaufen",
-      "button2Link": "/become-seller",
-      "cards": [
-        {
-          "title": "Universeller Bulk-Editor",
-          "description": "Vereinfacht den Bearbeitungsprozess für große Bestände und ermöglicht nahtlose Updates und Änderungen über mehrere Marktplätze und Plattformen hinweg von einem einzigen Dashboard aus."
-        },
-        {
-          "title": "Globaler SEO-Enhancer",
-          "description": "Nutzen Sie KI, um Ihre Inhalte für verschiedene Märkte und Sprachen zu optimieren und sicherzustellen, dass Ihre Produkte überall dort hoch ranken, wo Ihre Kunden suchen."
-        },
-        {
-          "title": "KI-gesteuerte Inhaltserstellung",
-          "description": "Generiert automatisch ansprechende und SEO-optimierte Inhalte für Ihre Produkte und Marketingmaterialien."
-        },
-        {
-          "title": "Bulk-Meta-Tag-Optimierung",
-          "description": "Ermöglicht die Massenoptimierung von Meta-Tags in Ihrem gesamten Produktkatalog für maximale Suchsichtbarkeit."
-        }
-      ]
-    },
-    {
-      "type": "benefitsSection",
-      "subtitle": "VORTEILE",
-      "title": "Warum Atalsia wählen?",
-      "description": "Erleben Sie die Vorteile des KI-gestützten E-Commerce-Managements",
-      "benefits": [
-        {
-          "title": "KI-gesteuerte Verkaufsoptimierung",
-          "description": "Die fortschrittlichen KI-Algorithmen von Atalsia analysieren das Kundenverhalten, Markttrends und Produktdaten, um personalisierte Empfehlungen und Strategien vorzuschlagen, die den Umsatz und die Einnahmen steigern."
-        },
-        {
-          "title": "Effizientes Zeitmanagement",
-          "description": "Mit den optimierten Workflows und Automatisierungsfunktionen von Atalsia können Aufgaben, die normalerweise Stunden dauern würden, jetzt in Minuten erledigt werden, sodass E-Commerce-Profis ihre Zeit und Energie auf strategische Entscheidungen und Unternehmenswachstum konzentrieren können."
-        },
-        {
-          "title": "SEO-Optimierungstools",
-          "description": "Die KI-gesteuerten SEO-Tools von Atalsia optimieren Keywords und Meta-Tags und verbessern mühelos die Suchplatzierungen. Erhöhen Sie die Sichtbarkeit Ihres Online-Shops und ziehen Sie mehr organischen Traffic mit optimiertem SEO-Management an. Heben Sie sich in den Suchergebnissen ab für mehr Markenbekanntheit und Wachstum."
-        }
-      ]
-    },
-    {
-      "type": "bloggerSection",
-      "subtitle": "ATLASIA BLOGGER",
-      "title": "Automatisieren Sie Inhalte mit Atalsia KI",
-      "description": "Erstellen Sie mühelos ansprechende, SEO-freundliche Blogbeiträge mit dem KI-gestützten Tool von Atalsia und optimieren Sie Ihren Content-Erstellungsprozess.",
-      "buttonText": "Jetzt entdecken",
-      "buttonLink": "/blogger",
-      "image": "https://cdn.atlagia.com/kepart_vector_laptop_Ai_Platform_e-commerce_Auto_Blogger_Revolu_d6ffb19e-1f2b-47a0-a7ff-6465f0a24e95.webp"
-    },
-    {
-      "type": "reviewsSection",
-      "reviews": [
-        {
-          "rating": 5,
-          "content": "Das Maß an Unterstützung und Anpassung, das mit dem Enterprise-Plan verfügbar ist, ist herausragend. Unser dedizierter Account-Manager hat uns geholfen, die Leistung unseres Shops zu optimieren und bemerkenswertes Wachstum zu erzielen.",
-          "author": "David Lee",
-          "position": "E-Commerce-Unternehmer"
-        },
-        {
-          "rating": 5,
-          "content": "Als Online-Shop-Besitzer haben die KI-Tools von Atalsia unsere Herangehensweise an SEO und Produktmanagement revolutioniert. Der universelle Bulk-Editor hat uns unzählige Stunden gespart, und unser organischer Traffic ist in nur drei Monaten um 50 % gestiegen!",
-          "author": "Michael Chen",
-          "position": "Digital Marketing Manager"
-        },
-        {
-          "rating": 5,
-          "content": "Die KI-gestützten Keyword-Vorschläge und Personalisierungstools von Atalsia waren ein Game-Changer für unser Geschäft. Unsere Konversionsraten haben sich erheblich verbessert, und wir könnten nicht zufriedener mit den Ergebnissen sein.",
-          "author": "Sarah Thompson",
-          "position": "E-Commerce-Unternehmerin"
-        }
-      ]
-    },
-    {
-      "type": "pricingSection",
-      "subtitle": "WÄHLEN SIE IHREN PLAN",
-      "title": "Flexible Preispläne, die zu Ihren Bedürfnissen passen",
-      "description": "Wählen Sie den perfekten Plan für Ihr Unternehmen. Beginnen Sie mit einer kostenlosen Demo und upgraden Sie, während Sie wachsen. Alle Pläne beinhalten eine 14-tägige Geld-zurück-Garantie",
-      "plans": [
-        {
-          "name": "Starter-Plan",
-          "price": "9 €",
-          "period": "Pro Monat",
-          "buttonText": "Jetzt starten",
-          "buttonLink": "/signup",
-          "features": [
-            {
-              "text": "Zugang zum KI-gestützten SEO-Enhancer",
-              "included": true
-            },
-            {
-              "text": "Verwendung des universellen Bulk-Editors (bis zu 300 Produkte)",
-              "included": true
-            },
-            {
-              "text": "Grundlegende KI-gestützte Personalisierung",
-              "included": true
-            },
-            {
-              "text": "E-Mail-Support",
-              "included": true
-            }
-          ]
-        },
-        {
-          "name": "Basis-Plan",
-          "price": "19 €",
-          "period": "Pro Monat",
-          "buttonText": "Jetzt starten",
-          "buttonLink": "/signup",
-          "features": [
-            {
-              "text": "KI-gestützter SEO-Enhancer",
-              "included": true
-            },
-            {
-              "text": "Universeller Bulk-Editor (bis zu 1000 Produkte)",
-              "included": true
-            },
-            {
-              "text": "Grundlegende KI-Personalisierung",
-              "included": true
-            },
-            {
-              "text": "KI-Keyword-Vorschläge",
-              "included": true
-            },
-            {
-              "text": "E-Mail-Support",
-              "included": true
-            }
-          ]
-        },
-        {
-          "name": "Pro-Plan",
-          "price": "79 €",
-          "period": "Pro Monat",
-          "isPopular": true,
-          "buttonText": "Jetzt starten",
-          "buttonLink": "/signup",
-          "features": [
-            {
-              "text": "Alle Basis-Plan-Funktionen",
-              "included": true
-            },
-            {
-              "text": "Unbegrenzter Zugriff auf den Bulk-Editor",
-              "included": true
-            },
-            {
-              "text": "Erweiterte KI-Personalisierung",
-              "included": true
-            },
-            {
-              "text": "Priorisierte KI-Keyword-Vorschläge",
-              "included": true
-            },
-            {
-              "text": "Erweiterte SEO-Tools",
-              "included": true
-            },
-            {
-              "text": "Analyse- und Berichtsdashboard",
-              "included": true
-            },
-            {
-              "text": "Priorisierter E-Mail-Support",
-              "included": true
-            },
-            {
-              "text": "Neue Funktionen und Updates",
-              "included": true
-            }
-          ]
-        },
-        {
-          "name": "Enterprise-Plan",
-          "price": "199 €",
-          "period": "Pro Monat",
-          "buttonText": "Vertrieb kontaktieren",
-          "buttonLink": "/contact",
-          "features": [
-            {
-              "text": "Alle Pro-Plan-Funktionen",
-              "included": true
-            },
-            {
-              "text": "Dedizierter Account-Manager",
-              "included": true
-            },
-            {
-              "text": "Individuelle KI-Lösungen",
-              "included": true
-            },
-            {
-              "text": "Multi-CMS-Integration",
-              "included": true
-            },
-            {
-              "text": "Erweiterte Analysen und Einblicke",
-              "included": true
-            },
-            {
-              "text": "24/7 Prioritätssupport",
-              "included": true
-            },
-            {
-              "text": "Personalisierte Einführung und Schulung",
-              "included": true
-            },
-            {
-              "text": "Monatliche Optimierungsüberprüfungen",
-              "included": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "ctaSection",
-      "subtitle": "HEUTE STARTEN",
-      "title": "Transformieren Sie Ihr E-Commerce-Geschäft mit KI-gestützten Lösungen",
-      "description": "Schließen Sie sich Tausenden erfolgreicher Unternehmen an, die bereits Atalsia nutzen. Starten Sie noch heute Ihre 14-tägige kostenlose Testversion und erleben Sie die Kraft der KI-gesteuerten E-Commerce-Optimierung.",
-      "primaryButtonText": "Kostenlose Testversion starten",
-      "primaryButtonLink": "/signup",
-      "secondaryButtonText": "Demo vereinbaren",
-      "secondaryButtonLink": "/demo",
-      "stats": [
-        {
-          "value": "14K+",
-          "label": "Aktive Nutzer"
-        },
-        {
-          "value": "50M+",
-          "label": "Optimierte Produkte"
-        },
         {
           "value": "98%",
           "label": "Kundenzufriedenheit"
         },
         {
+          "value": "500+",
+          "label": "Projekte Geliefert"
+        },
+        {
+          "value": "85%",
+          "label": "Schnellere Entwicklung"
+        },
+        {
           "value": "24/7",
-          "label": "Experten-Support"
+          "label": "KI-Support"
+        }
+      ]
+    },
+    {
+      "type": "bannerSection",
+      "subtitle": "TRANSFORMATIVE LÖSUNGEN",
+      "headline": "Unternehmenswachstum Durch KI-Innovation Fördern",
+      "description": "Entdecken Sie, wie unsere modernsten KI-Lösungen und Expertendienstleistungen Ihre Geschäftsabläufe transformieren und beispielloses Wachstum im digitalen Zeitalter vorantreiben können.",
+      "backgroundImage": "/images/banner-bg.jpg",
+      "button1Text": "Lösungen Entdecken",
+      "button1Link": "/solutions",
+      "button2Text": "Demo Planen",
+      "button2Link": "/demo",
+      "cards": [
+        {
+          "title": "KI-gestützte Entwicklung",
+          "description": "Nutzen Sie die Kraft der künstlichen Intelligenz, um intelligentere, effizientere Anwendungen zu erstellen, die sich an die Bedürfnisse Ihres Unternehmens anpassen und skalieren."
+        },
+        {
+          "title": "Digitale Transformation",
+          "description": "Transformieren Sie Ihr Unternehmen mit umfassenden digitalen Lösungen, die Abläufe optimieren und Kundenerfahrungen verbessern."
+        },
+        {
+          "title": "Maßgeschneiderte Softwarelösungen",
+          "description": "Erhalten Sie maßgeschneiderte Softwarelösungen, die perfekt auf Ihre Geschäftsziele abgestimmt sind und Wettbewerbsvorteile bieten."
+        },
+        {
+          "title": "Cloud & DevOps",
+          "description": "Optimieren Sie Ihre Infrastruktur mit cloud-nativen Lösungen und automatisierten DevOps-Praktiken für maximale Effizienz und Zuverlässigkeit."
+        }
+      ]
+    },
+    {
+      "type": "benefitsSection",
+      "subtitle": "WARUM UNS WÄHLEN",
+      "title": "Digitale Exzellenz Durch Innovation Vorantreiben",
+      "description": "Partnern Sie mit uns, um Ihre digitale Präsenz mit modernster Technologie und Expertenlösungen zu transformieren",
+      "benefits": [
+        {
+          "title": "Expertenentwicklungsteam",
+          "description": "Unsere erfahrenen Entwickler und KI-Spezialisten bringen jahrelange Erfahrung in der Erstellung anspruchsvoller digitaler Lösungen über Branchen hinweg mit."
+        },
+        {
+          "title": "Maßgeschneiderte Lösungen",
+          "description": "Wir entwickeln maßgeschneiderte Lösungen, die perfekt auf Ihre Geschäftsziele abgestimmt sind und maximalen Einfluss und ROI gewährleisten."
+        },
+        {
+          "title": "Innovative Technologie",
+          "description": "Bleiben Sie mit unserem modernsten Technologiestack, einschließlich der neuesten Entwicklungen in KI, Cloud-Computing und Entwicklungsframeworks, an der Spitze."
+        },
+        {
+          "title": "Agile Methodik",
+          "description": "Unser agiler Ansatz gewährleistet schnelle Entwicklung, kontinuierliche Verbesserung und Flexibilität, um sich an sich ändernde Bedürfnisse anzupassen."
+        },
+        {
+          "title": "Umfassender Support",
+          "description": "Vom ersten Konzept bis zur Wartung nach dem Start bieten wir umfassende Unterstützung für Ihre digitale Reise."
+        },
+        {
+          "title": "Branchenspezifische Expertise",
+          "description": "Ein tiefes Verständnis verschiedener Branchen ermöglicht es uns, Lösungen zu liefern, die branchenspezifische Herausforderungen adressieren."
+        }
+      ]
+    },
+    {
+      "type": "projectsSection",
+      "subtitle": "UNSERE PROJEKTE",
+      "title": "Branchen Durch Innovation Transformieren",
+      "description": "Entdecken Sie unser Portfolio erfolgreicher digitaler Transformationen in verschiedenen Branchen.",
+      "projects": [
+        {
+          "title": "E-Commerce-Plattform",
+          "category": "Einzelhandel & E-Commerce",
+          "description": "KI-gestützte E-Commerce-Plattform mit fortschrittlichem Empfehlungssystem und automatisierter Bestandsverwaltung.",
+          "image": "https://cdn.atlagia.com/projects/ecommerce-platform.webp",
+          "stats": {
+            "conversion": "+150%",
+            "automation": "85%",
+            "efficiency": "3x"
+          },
+          "technologies": [
+            "KI/ML",
+            "React",
+            "Node.js",
+            "AWS"
+          ]
+        },
+        {
+          "title": "Gesundheitsmanagementsystem",
+          "category": "Gesundheitswesen",
+          "description": "Integrierte Gesundheitsplattform mit Patientenmanagement, Telemedizin und KI-Diagnoseunterstützung.",
+          "image": "https://cdn.atlagia.com/projects/healthcare-system.webp",
+          "stats": {
+            "efficiency": "+200%",
+            "accuracy": "99.9%",
+            "satisfaction": "98%"
+          },
+          "technologies": [
+            "Python",
+            "TensorFlow",
+            "React",
+            "Cloud"
+          ]
+        },
+        {
+          "title": "FinTech-Analyse-Dashboard",
+          "category": "Finanzen",
+          "description": "Echtzeit-Finanzanalyseplattform mit KI-gesteuerten Einblicken und automatisierter Berichterstattung.",
+          "image": "https://cdn.atlagia.com/projects/fintech-dashboard.webp",
+          "stats": {
+            "processing": "Echtzeit",
+            "accuracy": "99.99%",
+            "automation": "90%"
+          },
+          "technologies": [
+            "Vue.js",
+            "Python",
+            "KI/ML",
+            "AWS"
+          ]
+        },
+        {
+          "title": "Intelligentes Fertigungssystem",
+          "category": "Fertigung",
+          "description": "IoT-fähiges Fertigungssystem mit vorausschauender Wartung und automatisierter Qualitätskontrolle.",
+          "image": "https://cdn.atlagia.com/projects/manufacturing-system.webp",
+          "stats": {
+            "downtime": "-75%",
+            "quality": "+95%",
+            "efficiency": "4x"
+          },
+          "technologies": [
+            "IoT",
+            "KI/ML",
+            "Cloud",
+            "React"
+          ]
         }
       ],
-      "partnerLogos": [
+      "buttonText": "Alle Projekte Ansehen",
+      "buttonLink": "/projects"
+    },
+    {
+      "type": "technologiesSection",
+      "subtitle": "TECH STACK",
+      "title": "Unsere Technologische Expertise",
+      "description": "Wir nutzen modernste Technologien, um außergewöhnliche Lösungen zu liefern, die Unternehmenswachstum und Innovation vorantreiben.",
+      "categories": [
         {
-          "src": "https://cdn.atlagia.com/1655873659shopify-black-logo.png",
-          "alt": "Shopify"
+          "name": "Frontend-Entwicklung",
+          "description": "Moderne Webtechnologien zur Erstellung reaktionsschneller und interaktiver Benutzeroberflächen.",
+          "technologies": [
+            {
+              "name": "React",
+              "icon": "react",
+              "level": "Experte",
+              "description": "Erstellung dynamischer und skalierbarer Webanwendungen"
+            },
+            {
+              "name": "Vue.js",
+              "icon": "vue",
+              "level": "Fortgeschritten",
+              "description": "Erstellung reaktiver und leistungsstarker Benutzeroberflächen"
+            },
+            {
+              "name": "Next.js",
+              "icon": "nextjs",
+              "level": "Experte",
+              "description": "Serverseitiges Rendering und statische Seitengenerierung"
+            },
+            {
+              "name": "TypeScript",
+              "icon": "typescript",
+              "level": "Fortgeschritten",
+              "description": "Typensichere JavaScript-Entwicklung"
+            }
+          ]
         },
         {
-          "src": "https://cdn.atlagia.com/wix-com-website-logo-1.png",
-          "alt": "Wix"
+          "name": "Backend-Entwicklung",
+          "description": "Robuste serverseitige Technologien zum Aufbau skalierbarer Anwendungen.",
+          "technologies": [
+            {
+              "name": "Node.js",
+              "icon": "nodejs",
+              "level": "Experte",
+              "description": "Hochleistungsfähige serverseitige Anwendungen"
+            },
+            {
+              "name": "Python",
+              "icon": "python",
+              "level": "Fortgeschritten",
+              "description": "Datenverarbeitung und maschinelles Lernen"
+            },
+            {
+              "name": "Go",
+              "icon": "golang",
+              "level": "Mittelstufe",
+              "description": "Schnelle und effiziente Backend-Dienste"
+            },
+            {
+              "name": "Java",
+              "icon": "java",
+              "level": "Fortgeschritten",
+              "description": "Unternehmensanwendungen"
+            }
+          ]
         },
         {
-          "src": "https://cdn.atlagia.com/woocommerce-03.png",
-          "alt": "WordPress"
+          "name": "KI & Maschinelles Lernen",
+          "description": "Fortschrittliche KI-Technologien für intelligente Lösungen.",
+          "technologies": [
+            {
+              "name": "TensorFlow",
+              "icon": "tensorflow",
+              "level": "Fortgeschritten",
+              "description": "Tiefes Lernen und neuronale Netze"
+            },
+            {
+              "name": "PyTorch",
+              "icon": "pytorch",
+              "level": "Fortgeschritten",
+              "description": "Dynamische neuronale Netze"
+            },
+            {
+              "name": "OpenAI",
+              "icon": "openai",
+              "level": "Experte",
+              "description": "Verarbeitung natürlicher Sprache"
+            },
+            {
+              "name": "Scikit-learn",
+              "icon": "scikit",
+              "level": "Fortgeschritten",
+              "description": "Algorithmen des maschinellen Lernens"
+            }
+          ]
+        },
+        {
+          "name": "Cloud & DevOps",
+          "description": "Cloud-Infrastruktur und Entwicklungsoperationstools.",
+          "technologies": [
+            {
+              "name": "AWS",
+              "icon": "aws",
+              "level": "Experte",
+              "description": "Cloud-Infrastruktur und -Dienste"
+            },
+            {
+              "name": "Docker",
+              "icon": "docker",
+              "level": "Fortgeschritten",
+              "description": "Containerisierung und Bereitstellung"
+            },
+            {
+              "name": "Kubernetes",
+              "icon": "kubernetes",
+              "level": "Fortgeschritten",
+              "description": "Container-Orchestrierung"
+            },
+            {
+              "name": "CI/CD",
+              "icon": "cicd",
+              "level": "Experte",
+              "description": "Kontinuierliche Integration und Bereitstellung"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "processSection",
+      "subtitle": "UNSER PROZESS",
+      "title": "Wie Wir Exzellenz Liefern",
+      "description": "Unser bewährter Prozess stellt durch jede Entwicklungsphase hinweg konsistente Qualität und erfolgreiche Projektlieferung sicher.",
+      "steps": [
+        {
+          "number": "01",
+          "title": "Entdeckung & Planung",
+          "description": "Wir analysieren Ihre Anforderungen, definieren den Projektumfang und erstellen eine detaillierte Roadmap für den Erfolg.",
+          "icon": "search"
+        },
+        {
+          "number": "02",
+          "title": "Design & Architektur",
+          "description": "Unser Team erstellt skalierbare Architekturen und intuitive Designs, die mit Ihren Geschäftszielen übereinstimmen.",
+          "icon": "layout"
+        },
+        {
+          "number": "03",
+          "title": "Entwicklung",
+          "description": "Wir bauen robuste Lösungen mit modernsten Technologien und Best Practices.",
+          "icon": "code"
+        },
+        {
+          "number": "04",
+          "title": "Testen & Starten",
+          "description": "Gründliche Tests gewährleisten Qualität, gefolgt von einer reibungslosen Bereitstellung und kontinuierlichem Support.",
+          "icon": "check-circle"
+        }
+      ]
+    },
+    {
+      "type": "reviewsSection",
+      "subtitle": "KUNDENBEWERTUNGEN",
+      "title": "Was Unsere Kunden Sagen",
+      "description": "Entdecken Sie, warum führende Unternehmen uns vertrauen, um außergewöhnliche KI-gestützte Lösungen zu liefern, die ihren Erfolg vorantreiben.",
+      "reviews": [
+        {
+          "name": "Sarah Johnson",
+          "role": "CTO",
+          "company": "TechVision Inc",
+          "image": "/images/testimonials/sarah.jpg",
+          "content": "Die Zusammenarbeit mit diesem Team war transformativ für unser Unternehmen. Ihre KI-gestützten Lösungen haben unsere Kernprozesse automatisiert und die Betriebskosten um 60% reduziert, während gleichzeitig die Genauigkeit verbessert wurde.",
+          "rating": 5
+        },
+        {
+          "name": "Michael Chen",
+          "role": "CEO",
+          "company": "InnovatePro",
+          "image": "/images/testimonials/michael.jpg",
+          "content": "Das Niveau an Expertise und Professionalität ist außergewöhnlich. Sie haben nicht nur eine Lösung geliefert; sie sind strategische Partner in unserer digitalen Transformationsreise geworden.",
+          "rating": 5
+        },
+        {
+          "name": "Emily Rodriguez",
+          "role": "Geschäftsführerin",
+          "company": "GlobalTech",
+          "image": "/images/testimonials/emily.jpg",
+          "content": "Ihre KI-gestützten Automatisierungslösungen haben unseren Kundenservice revolutioniert. Wir können jetzt 24/7 Support mit einer Kundenzufriedenheitsrate von 98% anbieten.",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "type": "achievementsSection",
+      "subtitle": "UNSER EINFLUSS",
+      "title": "Digitale Exzellenz Vorantreiben",
+      "description": "Unser Erfolgsausweis spricht durch Zahlen. So haben wir Unternehmen geholfen, sich zu transformieren und mit KI-gestützten Lösungen zu wachsen.",
+      "achievements": [
+        {
+          "value": "500+",
+          "label": "Projekte",
+          "description": "Erfolgreich gelieferte KI- und Automatisierungslösungen in verschiedenen Branchen",
+          "icon": "rocket"
+        },
+        {
+          "value": "95%",
+          "label": "Erfolgsquote",
+          "description": "Kundenzufriedenheit und Projektabschlussrate über den Branchenstandards",
+          "icon": "chart"
+        },
+        {
+          "value": "60%",
+          "label": "Kostenreduktion",
+          "description": "Durchschnittliche Einsparungen bei den Betriebskosten für unsere Kunden",
+          "icon": "trending-up"
+        },
+        {
+          "value": "24/7",
+          "label": "Support",
+          "description": "Rund-um-die-Uhr KI-gestützte Unterstützung und technischer Support",
+          "icon": "headphones"
+        }
+      ]
+    },
+    {
+      "type": "industryFeaturesSection",
+      "subtitle": "BRANCHENLÖSUNGEN",
+      "title": "KI-Lösungen für Jede Branche",
+      "description": "Entdecken Sie, wie die KI-Plattform von Atlaga Ihre spezifische Branche mit maßgeschneiderten Lösungen und Automatisierungstools transformieren kann.",
+      "industries": [
+        {
+          "icon": "ShoppingCart",
+          "title": "E-Commerce",
+          "description": "Optimieren Sie die Abläufe Ihres Online-Shops mit KI-gestützter Automatisierung und Kundenbindungstools.",
+          "features": [
+            "Automatisierte Bestandsverwaltung",
+            "KI-Kundensupport",
+            "Intelligente Produktempfehlungen",
+            "Automatisierte Marketingkampagnen"
+          ],
+          "processIcons": [
+            "Package",
+            "Bot",
+            "Users",
+            "CreditCard"
+          ]
+        },
+        {
+          "icon": "Stethoscope",
+          "title": "Gesundheitswesen",
+          "description": "Transformieren Sie die Patientenversorgung und das Praxismanagement mit intelligenten Automatisierungslösungen.",
+          "features": [
+            "Automatisierte Terminplanung",
+            "Patientenaktenverwaltung",
+            "KI-gestützte Diagnostikunterstützung",
+            "Automatisierung von Praxisabläufen"
+          ],
+          "processIcons": [
+            "Calendar",
+            "FileText",
+            "Brain",
+            "StethoscopeAlt"
+          ]
+        },
+        {
+          "icon": "Briefcase",
+          "title": "Digitale Agenturen",
+          "description": "Skalieren Sie Ihre Agenturabläufe und liefern Sie bessere Ergebnisse mit KI-gestützten Tools.",
+          "features": [
+            "Automatisiertes Projektmanagement",
+            "Automatisierung der Inhaltserstellung",
+            "Automatisierung der Kundenberichterstattung",
+            "Ressourcenoptimierung"
+          ],
+          "processIcons": [
+            "PenTool",
+            "Bot",
+            "BarChart",
+            "Target"
+          ]
+        },
+        {
+          "icon": "Rocket",
+          "title": "Startups",
+          "description": "Starten und skalieren Sie Ihr Startup schneller mit umfassenden KI-Automatisierungstools.",
+          "features": [
+            "Schnelle MVP-Entwicklung",
+            "Automatisierte Abläufe",
+            "Wachstumsautomatisierung",
+            "Kosteneffiziente Skalierung"
+          ],
+          "processIcons": [
+            "Code",
+            "Zap",
+            "Brain",
+            "Rocket"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "automationFeaturesSection",
+      "subtitle": "KI-AUTOMATISIERUNG",
+      "title": "Transformieren Sie Ihr Unternehmen mit KI-Automatisierung",
+      "description": "Entdecken Sie, wie unsere KI-Automatisierungstools Ihre Abläufe revolutionieren und Wachstum in jedem Aspekt Ihres Unternehmens vorantreiben können.",
+      "features": [
+        {
+          "icon": "Workflow",
+          "title": "Workflow-Automatisierung",
+          "description": "Optimieren Sie Ihre Geschäftsprozesse mit intelligenter Workflow-Automatisierung, die lernt und sich an Ihre Bedürfnisse anpasst.",
+          "metrics": [
+            {
+              "value": "70%",
+              "label": "Zeitersparnis"
+            },
+            {
+              "value": "90%",
+              "label": "Fehlerreduktion"
+            }
+          ]
+        },
+        {
+          "icon": "Headphones",
+          "title": "KI-Kundendienst",
+          "description": "Bieten Sie 24/7 Kundensupport mit KI-Agenten, die Anfragen bearbeiten, Probleme lösen und die Zufriedenheit verbessern.",
+          "metrics": [
+            {
+              "value": "24/7",
+              "label": "Supportabdeckung"
+            },
+            {
+              "value": "85%",
+              "label": "Lösungsrate"
+            }
+          ]
+        },
+        {
+          "icon": "Megaphone",
+          "title": "Marketing-Automatisierung",
+          "description": "Automatisieren Sie Ihre Marketingkampagnen mit KI-gestütztem Targeting, Inhaltserstellung und Optimierung.",
+          "metrics": [
+            {
+              "value": "3x",
+              "label": "ROI-Steigerung"
+            },
+            {
+              "value": "60%",
+              "label": "Kostenreduktion"
+            }
+          ]
+        },
+        {
+          "icon": "BarChart",
+          "title": "Intelligente Analytik",
+          "description": "Erhalten Sie umsetzbare Einblicke mit KI-gestützter Analytik, die Ihnen hilft, datengetriebene Entscheidungen zu treffen.",
+          "metrics": [
+            {
+              "value": "95%",
+              "label": "Genauigkeit"
+            },
+            {
+              "value": "50%",
+              "label": "Schnellere Einblicke"
+            }
+          ]
         }
       ]
     },
     {
       "type": "emailSignupSection",
       "subtitle": "NEWSLETTER",
-      "title": "Bleiben Sie mit KI-Innovationen auf dem Laufenden",
-      "description": "Abonnieren Sie unseren Newsletter und erhalten Sie die neuesten Updates zu KI-gestützten E-Commerce-Lösungen, Brancheneinblicken und exklusiven Angeboten.",
-      "buttonText": "Jetzt abonnieren",
-      "placeholder": "Geben Sie Ihre geschäftliche E-Mail-Adresse ein",
+      "title": "Bleiben Sie über KI-Innovationen auf dem Laufenden",
+      "description": "Abonnieren Sie unseren Newsletter und erhalten Sie die neuesten Updates zu KI-gestützten Geschäftslösungen, Brancheneinblicken und exklusiven Angeboten.",
+      "buttonText": "Jetzt Abonnieren",
+      "placeholder": "Geben Sie Ihre Arbeits-E-Mail ein",
       "features": [
         "Wöchentliche KI-Einblicke",
-        "Produktupdates",
+        "Produktaktualisierungen",
         "Erfolgsgeschichten",
         "Kein Spam, versprochen"
       ]

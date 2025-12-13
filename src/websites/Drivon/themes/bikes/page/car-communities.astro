@@ -1,0 +1,212 @@
+---
+import Layoutc from '@layouts/Layoutc.astro';
+import { ArrowRight, Users, MessageCircle, Calendar, Globe, Heart } from 'lucide-react';
+
+// Generate static paths for allowed languages from environment
+export async function getStaticPaths() {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  const languages = allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+  
+  return languages.map(lang => ({ params: { lang } }));
+}
+
+const { lang = 'en' } = Astro.params;
+const baseUrl = import.meta.env.DOMAINE || 'https://drivon.store';
+const storeName = import.meta.env.PUBLIC_SITE_NAME || 'Drivon';
+
+// SEO
+const seoTitle = `Car Communities | ${storeName}`;
+const seoDescription = "Connect with automotive enthusiasts worldwide. Join car communities, share your passion, and discover like-minded drivers.";
+---
+
+<Layoutc title={seoTitle} description={seoDescription} lang={lang}>
+  <div class="min-h-screen bg-gray-50">
+    <!-- Hero Section -->
+    <section class="relative h-[60vh] bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900">
+      <div class="absolute inset-0 bg-black/40"></div>
+      <div class="relative z-10 h-full flex items-center justify-center text-center px-4">
+        <div class="max-w-4xl mx-auto">
+          <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">
+            Car Communities
+          </h1>
+          <p class="text-xl md:text-2xl text-gray-200 mb-8">
+            Connect with automotive enthusiasts worldwide
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href={`/${lang}/about`} class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+              Join Community
+            </a>
+            <a href={`/${lang}/collections`} class="bg-white/20 hover:bg-white/30 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+              Shop Community Gear
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community Features -->
+    <section class="py-20 px-4">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">Global Automotive Community</h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            From local car meets to international racing events, connect with passionate automotive enthusiasts from around the world.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+              <Users class="w-8 h-8 text-blue-600" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Local Communities</h3>
+            <p class="text-gray-600">
+              Connect with car enthusiasts in your area. Join local car meets, track days, and automotive events.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+              <MessageCircle class="w-8 h-8 text-green-600" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Online Forums</h3>
+            <p class="text-gray-600">
+              Share your passion, get advice, and connect with fellow enthusiasts in our vibrant online community.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+              <Calendar class="w-8 h-8 text-purple-600" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Events & Meetups</h3>
+            <p class="text-gray-600">
+              Discover automotive events, car shows, and racing events happening in your area and around the world.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community Categories -->
+    <section class="py-20 bg-gray-100">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">Community Categories</h2>
+          <p class="text-xl text-gray-600">Find your automotive community</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <a href={`/${lang}/formula1-collection`} class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+            <div class="h-48 bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center">
+              <Globe class="w-16 h-16 text-white" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Formula 1 Fans</h3>
+              <p class="text-gray-600 mb-4">Connect with F1 enthusiasts worldwide</p>
+              <div class="flex items-center text-red-600 font-semibold group-hover:text-red-700">
+                Join F1 Community <ArrowRight class="w-4 h-4 ml-2" />
+              </div>
+            </div>
+          </a>
+
+          <a href={`/${lang}/rally-racing`} class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+            <div class="h-48 bg-gradient-to-br from-yellow-500 to-yellow-700 flex items-center justify-center">
+              <Heart class="w-16 h-16 text-white" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Rally Enthusiasts</h3>
+              <p class="text-gray-600 mb-4">Join the rally racing community</p>
+              <div class="flex items-center text-yellow-600 font-semibold group-hover:text-yellow-700">
+                Join Rally Community <ArrowRight class="w-4 h-4 ml-2" />
+              </div>
+            </div>
+          </a>
+
+          <a href={`/${lang}/street-culture`} class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+            <div class="h-48 bg-gradient-to-br from-gray-500 to-gray-700 flex items-center justify-center">
+              <Users class="w-16 h-16 text-white" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Street Culture</h3>
+              <p class="text-gray-600 mb-4">Connect with street racing enthusiasts</p>
+              <div class="flex items-center text-gray-600 font-semibold group-hover:text-gray-700">
+                Join Street Community <ArrowRight class="w-4 h-4 ml-2" />
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community Benefits -->
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">Why Join Our Community?</h2>
+          <p class="text-xl text-gray-600">Be part of something bigger than just a brand</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="text-center">
+            <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+              <Users class="w-10 h-10 text-blue-600" />
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Global Network</h3>
+            <p class="text-gray-600">
+              Connect with automotive enthusiasts from every corner of the world.
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+              <MessageCircle class="w-10 h-10 text-green-600" />
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Expert Knowledge</h3>
+            <p class="text-gray-600">
+              Learn from experienced enthusiasts and share your own automotive knowledge.
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+              <Calendar class="w-10 h-10 text-purple-600" />
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Exclusive Events</h3>
+            <p class="text-gray-600">
+              Get access to exclusive automotive events and community meetups.
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+              <Heart class="w-10 h-10 text-red-600" />
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Shared Passion</h3>
+            <p class="text-gray-600">
+              Connect with people who share your passion for automotive culture.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-gray-900 text-white">
+      <div class="max-w-4xl mx-auto text-center px-4">
+        <h2 class="text-4xl font-bold mb-6">Join the Global Automotive Community</h2>
+        <p class="text-xl text-gray-300 mb-8">
+          Connect with passionate automotive enthusiasts worldwide. Share your love for cars, racing, and automotive culture.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href={`/${lang}/about`} class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+            Join Our Community
+          </a>
+          <a href={`/${lang}/contact`} class="bg-white/20 hover:bg-white/30 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layoutc>

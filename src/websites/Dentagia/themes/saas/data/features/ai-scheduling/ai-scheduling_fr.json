@@ -1,0 +1,182 @@
+{
+  "hero": {
+    "subtitle": "Intelligence propulsée par l'IA",
+    "title": "Planification de rendez-vous propulsée par l'IA",
+    "description": "Planification IA révolutionnaire qui apprend de vos modèles de cabinet, optimise votre calendrier automatiquement et maximise l'efficacité du cabinet.",
+    "icon": "brain",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "70%",
+        "label": "Réduction des absences"
+      },
+      {
+        "value": "10hrs",
+        "label": "Temps gagné/semaine"
+      },
+      {
+        "value": "95%",
+        "label": "Optimisation"
+      }
+    ]
+  },
+  "features": {
+    "title": "Fonctionnalités de planification IA",
+    "subtitle": "Automatisation intelligente",
+    "description": "Planification avancée propulsée par l'IA qui apprend et s'adapte aux besoins de votre cabinet.",
+    "items": [
+      {
+        "icon": "brain",
+        "title": "Planification prédictive",
+        "description": "L'IA analyse les données historiques pour prédire les moments de rendez-vous optimaux et réduire les absences.",
+        "highlights": [
+          "Reconnaissance de modèles",
+          "Prédiction d'absences",
+          "Suggestions de moments optimaux",
+          "Analyse du comportement patient",
+          "Optimisation du calendrier"
+        ],
+        "stats": {
+          "value": "70%",
+          "label": "Réduction des absences"
+        }
+      },
+      {
+        "icon": "zap",
+        "title": "Remplissage automatique des créneaux",
+        "description": "L'IA remplit automatiquement les annulations et créneaux dans votre planning avec des patients en liste d'attente ou une replanification optimisée.",
+        "highlights": [
+          "Détection automatique des créneaux",
+          "Gestion des listes d'attente",
+          "Replanification intelligente",
+          "Optimisation des revenus",
+          "Maximisation de l'efficacité"
+        ],
+        "stats": {
+          "value": "95%",
+          "label": "Efficacité"
+        }
+      },
+      {
+        "icon": "trending-up",
+        "title": "Optimisation des revenus",
+        "description": "L'IA optimise votre planning pour maximiser les revenus en suggérant des créneaux de rendez-vous à haute valeur.",
+        "highlights": [
+          "Maximisation des revenus",
+          "Analyse de la valeur des rendez-vous",
+          "Suggestions de créneaux optimaux",
+          "Insights de croissance du cabinet",
+          "Suivi de performance"
+        ],
+        "stats": {
+          "value": "35%",
+          "label": "Croissance du revenu"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Succès de la planification IA",
+    "description": "Découvrez comment l'IA transforme la planification des cabinets",
+    "stats": [
+      {
+        "icon": "brain",
+        "value": "70%",
+        "label": "Réduction des absences"
+      },
+      {
+        "icon": "clock",
+        "value": "10hrs",
+        "label": "Temps économisé"
+      },
+      {
+        "icon": "trending-up",
+        "value": "35%",
+        "label": "Croissance du revenu"
+      },
+      {
+        "icon": "award",
+        "value": "95%",
+        "label": "Efficacité"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Dr. Sarah Martinez",
+        "role": "Propriétaire du cabinet, Downtown Dental Clinic",
+        "quote": "La planification propulsée par l'IA seule nous fait économiser 10 heures par semaine. C'est comme avoir un assistant intelligent qui ne dort jamais."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Avantages de la planification IA",
+    "subtitle": "Automatisation intelligente",
+    "description": "Découvrez la puissance de l'optimisation de planification propulsée par l'IA.",
+    "items": [
+      {
+        "title": "Réduire les absences",
+        "description": "L'IA prédit et prévient les absences avec une planification intelligente et des rappels.",
+        "icon": "bell",
+        "color": "teal",
+        "stats": {
+          "value": "70%",
+          "label": "Réduction"
+        },
+        "highlights": [
+          "Prédiction d'absences",
+          "Planification optimale",
+          "Rappels automatisés",
+          "Analyse du comportement patient"
+        ]
+      },
+      {
+        "title": "Maximiser l'efficacité",
+        "description": "L'IA optimise votre calendrier pour maximiser l'efficacité et les revenus du cabinet.",
+        "icon": "trending-up",
+        "color": "cyan",
+        "stats": {
+          "value": "95%",
+          "label": "Efficacité"
+        },
+        "highlights": [
+          "Optimisation du calendrier",
+          "Remplissage des créneaux",
+          "Maximisation des revenus",
+          "Allocation de ressources"
+        ]
+      },
+      {
+        "title": "Gagner du temps",
+        "description": "La planification et l'optimisation automatisées économisent des heures de travail administratif.",
+        "icon": "clock",
+        "color": "blue",
+        "stats": {
+          "value": "10hrs",
+          "label": "Par semaine"
+        },
+        "highlights": [
+          "Planification automatisée",
+          "Travail manuel réduit",
+          "Flux de travail rationalisés",
+          "Optimisation du temps"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prêt pour la planification propulsée par l'IA ?",
+    "description": "Découvrez comment la planification IA de Dentagia peut transformer les opérations de votre cabinet.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Planifier une démo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "En savoir plus",
+      "link": "/features"
+    }
+  }
+}
+

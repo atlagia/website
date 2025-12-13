@@ -1,0 +1,283 @@
+{
+  "pageTitle": "Plateforme Dentagia",
+  "pageDescription": "Explorez les capacités et fonctionnalités avancées de la plateforme de gestion de cabinet dentaire propulsée par l'IA de Dentagia.",
+  "hero": {
+    "badge": "Aperçu de la Plateforme",
+    "title": "Plateforme de Gestion de Cabinet Avancée pour Cabinets Dentaires",
+    "description": "Découvrez notre plateforme de gestion de cabinet dentaire de niveau entreprise qui combine une technologie IA de pointe avec une infrastructure basée sur le cloud, une sécurité inégalée et une évolutivité.",
+    "cta": {
+      "primary": {
+        "text": "Explorer les Fonctionnalités",
+        "href": "#features"
+      },
+      "secondary": {
+        "text": "Voir la Documentation",
+        "href": "/documentation"
+      }
+    }
+  },
+  "techSpecs": [
+    {
+      "title": "Disponibilité",
+      "value": "99.9%",
+      "unit": "garantie"
+    },
+    {
+      "title": "Temps de Réponse",
+      "value": "<100",
+      "unit": "millisecondes"
+    },
+    {
+      "title": "Centres de Données",
+      "value": "Mondial",
+      "unit": "infrastructure cloud"
+    },
+    {
+      "title": "Cabinets",
+      "value": "500+",
+      "unit": "cabinets dentaires"
+    }
+  ],
+  "features": [
+    {
+      "category": "Noyau de Gestion du Cabinet",
+      "description": "Capacités essentielles de gestion de cabinet",
+      "items": [
+        {
+          "icon": "Users",
+          "name": "Gestion des Patients",
+          "description": "Gestion complète des dossiers patients et de l'historique médical",
+          "highlights": [
+            "Dossiers Patients Numériques",
+            "Suivi de l'Historique Médical",
+            "Planification des Traitements",
+            "Accès Portail Patient"
+          ],
+          "stats": {
+            "value": "100%",
+            "label": "Dossiers Numériques"
+          }
+        },
+        {
+          "icon": "Calendar",
+          "name": "Planification Propulsée par l'IA",
+          "description": "Planification intelligente des rendez-vous et optimisation du calendrier",
+          "highlights": [
+            "Planification Intelligente",
+            "Rappels Automatisés",
+            "Gestion des Listes d'Attente",
+            "Réduction des Absences"
+          ],
+          "stats": {
+            "value": "70%",
+            "label": "Réduction des Absences"
+          }
+        },
+        {
+          "icon": "CreditCard",
+          "name": "Facturation et Paiements",
+          "description": "Facturation, facturation et traitement des paiements rationalisés",
+          "highlights": [
+            "Facturation Automatisée",
+            "Traitement des Paiements",
+            "Demandes d'Assurance",
+            "Rapports Financiers"
+          ],
+          "stats": {
+            "value": "80%",
+            "label": "Traitement Plus Rapide"
+          }
+        },
+        {
+          "icon": "BarChart",
+          "name": "Analytique du Cabinet",
+          "description": "Insights basés sur les données pour la croissance et l'optimisation du cabinet",
+          "highlights": [
+            "Métriques de Performance",
+            "Analytique Patient",
+            "Suivi des Revenus",
+            "Insights de Croissance"
+          ],
+          "stats": {
+            "value": "35%",
+            "label": "Croissance des Revenus"
+          }
+        }
+      ]
+    },
+    {
+      "category": "Infrastructure Cloud",
+      "description": "Plateforme basée sur le cloud sécurisée et évolutive",
+      "items": [
+        {
+          "icon": "Cloud",
+          "name": "Accès Basé sur le Cloud",
+          "description": "Accédez aux données de votre cabinet depuis n'importe où, à tout moment",
+          "highlights": [
+            "Accès Multi-Appareils",
+            "Synchronisation en Temps Réel",
+            "Sauvegardes Automatiques",
+            "Disponibilité Mondiale"
+          ],
+          "stats": {
+            "value": "99.9%",
+            "label": "Disponibilité"
+          }
+        },
+        {
+          "icon": "Shield",
+          "name": "Conformité HIPAA",
+          "description": "Sécurité de niveau entreprise et conformité HIPAA",
+          "highlights": [
+            "Chiffrement de Bout en Bout",
+            "Conformité HIPAA",
+            "Contrôle d'Accès",
+            "Journaux d'Audit"
+          ],
+          "stats": {
+            "value": "256-bit",
+            "label": "Chiffrement"
+          }
+        },
+        {
+          "icon": "Database",
+          "name": "Gestion des Données",
+          "description": "Stockage et gestion sécurisés des données patients",
+          "highlights": [
+            "Stockage Sécurisé",
+            "Sauvegarde des Données",
+            "Reprise après Sinistre",
+            "Rétention des Données"
+          ],
+          "stats": {
+            "value": "100%",
+            "label": "Sécurité des Données"
+          }
+        },
+        {
+          "icon": "Zap",
+          "name": "Intégration IA",
+          "description": "Capacités IA avancées pour l'optimisation du cabinet",
+          "highlights": [
+            "Planification Intelligente",
+            "Analytique Prédictive",
+            "Rappels Automatisés",
+            "Insights du Cabinet"
+          ],
+          "stats": {
+            "value": "50%",
+            "label": "Temps Économisé"
+          }
+        }
+      ]
+    },
+    {
+      "category": "Outils de Cabinet",
+      "description": "Outils complets pour les opérations de cabinet dentaire",
+      "items": [
+        {
+          "icon": "FileText",
+          "name": "Documentation Clinique",
+          "description": "Dossiers cliniques numériques complets et documentation",
+          "highlights": [
+            "Plans de Traitement",
+            "Notes Cliniques",
+            "Gestion des Radiographies",
+            "Suivi des Progrès"
+          ],
+          "stats": {
+            "value": "100%",
+            "label": "Dossiers Numériques"
+          }
+        },
+        {
+          "icon": "MessageSquare",
+          "name": "Communication Patient",
+          "description": "Communication et engagement patient automatisés",
+          "highlights": [
+            "Rappels de Rendez-vous",
+            "Messages de Suivi",
+            "SMS et Email",
+            "Portail Patient"
+          ],
+          "stats": {
+            "value": "95%",
+            "label": "Livraison des Rappels"
+          }
+        },
+        {
+          "icon": "Workflow",
+          "name": "Automatisation des Flux de Travail",
+          "description": "Flux de travail automatisés pour l'efficacité du cabinet",
+          "highlights": [
+            "Automatisation des Rendez-vous",
+            "Automatisation de la Facturation",
+            "Génération de Rapports",
+            "Gestion des Tâches"
+          ],
+          "stats": {
+            "value": "50%",
+            "label": "Temps Économisé"
+          }
+        },
+        {
+          "icon": "LineChart",
+          "name": "Rapports et Analytique",
+          "description": "Rapports complets et analytique du cabinet",
+          "highlights": [
+            "Rapports Financiers",
+            "Métriques du Cabinet",
+            "Rapports Patients",
+            "Rapports Personnalisés"
+          ],
+          "stats": {
+            "value": "Temps Réel",
+            "label": "Analytique"
+          }
+        }
+      ]
+    }
+  ],
+  "integrations": [
+    {
+      "name": "AWS Cloud",
+      "icon": "CloudAws"
+    },
+    {
+      "name": "Google Cloud",
+      "icon": "CloudGoogle"
+    },
+    {
+      "name": "Microsoft Azure",
+      "icon": "CloudMicrosoft"
+    },
+    {
+      "name": "Imagerie Dentaire",
+      "icon": "Image"
+    },
+    {
+      "name": "Fournisseurs d'Assurance",
+      "icon": "Shield"
+    },
+    {
+      "name": "Passerelles de Paiement",
+      "icon": "CreditCard"
+    }
+  ],
+  "cta": {
+    "title": "Prêt à Commencer ?",
+    "description": "Découvrez la puissance de la plateforme de gestion de cabinet de Dentagia avec une démo personnalisée.",
+    "buttons": [
+      {
+        "text": "Planifier une Démo",
+        "href": "/demo",
+        "variant": "primary"
+      },
+      {
+        "text": "Voir la Documentation",
+        "href": "/documentation",
+        "variant": "secondary"
+      }
+    ]
+  }
+}

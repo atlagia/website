@@ -1,0 +1,211 @@
+---
+import Layoutc from '@layouts/Layoutc.astro';
+import { ArrowRight, Trophy, Star, Crown, Zap, Award } from 'lucide-react';
+
+// Generate static paths for allowed languages from environment
+export async function getStaticPaths() {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  const languages = allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+  
+  return languages.map(lang => ({ params: { lang } }));
+}
+
+const { lang = 'en' } = Astro.params;
+const baseUrl = import.meta.env.DOMAINE || 'https://drivon.store';
+const storeName = import.meta.env.PUBLIC_SITE_NAME || 'Drivon';
+
+// SEO
+const seoTitle = `F1 Hoodies | ${storeName}`;
+const seoDescription = "Premium F1 hoodies celebrating Formula 1 legends. From world champions to racing icons, wear the heritage of Formula 1.";
+---
+
+<Layoutc title={seoTitle} description={seoDescription} lang={lang}>
+  <div class="min-h-screen bg-gray-50">
+    <!-- Hero Section -->
+    <section class="relative h-[60vh] bg-gradient-to-br from-red-900 via-red-800 to-black">
+      <div class="absolute inset-0 bg-black/50"></div>
+      <div class="relative z-10 h-full flex items-center justify-center text-center px-4">
+        <div class="max-w-4xl mx-auto">
+          <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">
+            F1 Hoodies
+          </h1>
+          <p class="text-xl md:text-2xl text-gray-200 mb-8">
+            Premium hoodies celebrating Formula 1 legends
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href={`/${lang}/collections`} class="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+              Shop F1 Hoodies
+            </a>
+            <a href={`/${lang}/f1-legends`} class="bg-white/20 hover:bg-white/30 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+              F1 Legends
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- F1 Hoodies Features -->
+    <section class="py-20 px-4">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">Premium F1 Hoodies</h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            From world champions to racing icons, our F1 hoodies celebrate the greatest drivers in Formula 1 history with authentic designs and premium quality.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
+              <Crown class="w-8 h-8 text-red-600" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">World Champions</h3>
+            <p class="text-gray-600">
+              Celebrate the legendary F1 drivers who have conquered the world championship and earned their place in racing history.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+              <Star class="w-8 h-8 text-blue-600" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Racing Icons</h3>
+            <p class="text-gray-600">
+              Honor the legendary drivers who have shaped Formula 1 and inspired generations of racing fans worldwide.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-6">
+              <Trophy class="w-8 h-8 text-yellow-600" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Premium Quality</h3>
+            <p class="text-gray-600">
+              Every hoodie is crafted with premium materials and attention to detail, ensuring comfort and durability for the F1 enthusiast.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- F1 Hoodies Categories -->
+    <section class="py-20 bg-gray-100">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">F1 Hoodies Collection</h2>
+          <p class="text-xl text-gray-600">Celebrate Formula 1 legends</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <a href={`/${lang}/collections`} class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+            <div class="h-48 bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center">
+              <Crown class="w-16 h-16 text-white" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">F1 Champions Hoodies</h3>
+              <p class="text-gray-600 mb-4">Premium hoodies celebrating F1 world champions</p>
+              <div class="flex items-center text-red-600 font-semibold group-hover:text-red-700">
+                Shop Champions Hoodies <ArrowRight class="w-4 h-4 ml-2" />
+              </div>
+            </div>
+          </a>
+
+          <a href={`/${lang}/collections`} class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+            <div class="h-48 bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center">
+              <Star class="w-16 h-16 text-white" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">F1 Legends Hoodies</h3>
+              <p class="text-gray-600 mb-4">Classic hoodies honoring F1 racing icons</p>
+              <div class="flex items-center text-blue-600 font-semibold group-hover:text-blue-700">
+                Shop Legends Hoodies <ArrowRight class="w-4 h-4 ml-2" />
+              </div>
+            </div>
+          </a>
+
+          <a href={`/${lang}/collections`} class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+            <div class="h-48 bg-gradient-to-br from-yellow-500 to-yellow-700 flex items-center justify-center">
+              <Trophy class="w-16 h-16 text-white" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">F1 Heritage Hoodies</h3>
+              <p class="text-gray-600 mb-4">Hoodies celebrating F1 racing heritage</p>
+              <div class="flex items-center text-yellow-600 font-semibold group-hover:text-yellow-700">
+                Shop Heritage Hoodies <ArrowRight class="w-4 h-4 ml-2" />
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- F1 Hoodies Spotlight -->
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">F1 Hoodies Features</h2>
+          <p class="text-xl text-gray-600">Premium quality and authentic designs</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <div class="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+              <Zap class="w-10 h-10 text-red-600" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">Premium Materials</h3>
+            <p class="text-gray-600 text-center mb-6">
+              Crafted with premium cotton and attention to detail, ensuring comfort and durability for the F1 enthusiast.
+            </p>
+            <a href={`/${lang}/collections`} class="flex items-center justify-center text-red-600 font-semibold hover:text-red-700">
+              Shop Premium Hoodies <ArrowRight class="w-4 h-4 ml-2" />
+            </a>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+              <Award class="w-10 h-10 text-blue-600" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">Authentic Designs</h3>
+            <p class="text-gray-600 text-center mb-6">
+              Featuring authentic F1 designs that celebrate the heritage and culture of Formula 1 racing.
+            </p>
+            <a href={`/${lang}/collections`} class="flex items-center justify-center text-blue-600 font-semibold hover:text-blue-700">
+              Shop Authentic Designs <ArrowRight class="w-4 h-4 ml-2" />
+            </a>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <div class="w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+              <Crown class="w-10 h-10 text-yellow-600" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">F1 Heritage</h3>
+            <p class="text-gray-600 text-center mb-6">
+              Each hoodie tells a story of F1 heritage, from world champions to racing legends and iconic moments.
+            </p>
+            <a href={`/${lang}/f1-legends`} class="flex items-center justify-center text-yellow-600 font-semibold hover:text-yellow-700">
+              Explore F1 Heritage <ArrowRight class="w-4 h-4 ml-2" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-gray-900 text-white">
+      <div class="max-w-4xl mx-auto text-center px-4">
+        <h2 class="text-4xl font-bold mb-6">Wear F1 Heritage</h2>
+        <p class="text-xl text-gray-300 mb-8">
+          Join the global F1 community and celebrate the greatest drivers in Formula 1 history with our premium F1 hoodies collection.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href={`/${lang}/collections`} class="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+            Shop F1 Hoodies Collection
+          </a>
+          <a href={`/${lang}/f1-legends`} class="bg-white/20 hover:bg-white/30 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+            Explore F1 Legends
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layoutc>

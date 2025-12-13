@@ -1,0 +1,223 @@
+{
+  "pageTitle": "Ressourcen - Dentagia",
+  "pageDescription": "Zugriff auf umfassende Dokumentation, Anleitungen, Fallstudien und weitere Ressourcen, um Ihrer Zahnarztpraxis zum Erfolg mit Dentagia zu verhelfen.",
+  "hero": {
+    "badge": "Ressourcen & Dokumentation",
+    "title": "Ressourcen, um Ihrer Praxis zum Erfolg zu Verhelfen",
+    "description": "Zugriff auf umfassende Dokumentation, Anleitungen, Tutorials und Fallstudien, um das Beste aus Dentagias Praxismanagement-Plattform herauszuholen.",
+    "cta": {
+      "primary": {
+        "text": "Dokumentation durchsuchen",
+        "href": "/documentation"
+      },
+      "secondary": {
+        "text": "Anleitungen ansehen",
+        "href": "#guides"
+      }
+    }
+  },
+  "resourceCategories": [
+    {
+      "title": "Dokumentation",
+      "icon": "Book",
+      "description": "Umfassende Anleitungen und Plattform-Dokumentation",
+      "items": [
+        {
+          "title": "Erste Schritte Anleitung",
+          "description": "Schnellstart-Anleitung für neue Dentagia-Benutzer",
+          "icon": "BookOpen",
+          "link": "/documentation/getting-started",
+          "tag": "Wesentlich"
+        },
+        {
+          "title": "Patientenmanagement-Anleitung",
+          "description": "Vollständige Anleitung zur Verwaltung von Patientenakten",
+          "icon": "FileCode",
+          "link": "/documentation/patient-management",
+          "tag": "Praxis"
+        },
+        {
+          "title": "Terminplanungs-Anleitung",
+          "description": "Wie man KI-gestützte Terminplanungsfunktionen verwendet",
+          "icon": "FileText",
+          "link": "/documentation/scheduling",
+          "tag": "Praxis"
+        },
+        {
+          "title": "Abrechnung und Zahlungen Anleitung",
+          "description": "Schritt-für-Schritt-Tutorials zu Abrechnung und Zahlungen",
+          "icon": "ChevronRight",
+          "link": "/documentation/billing",
+          "tag": "Finanziell"
+        }
+      ]
+    },
+    {
+      "title": "Lernzentrum",
+      "icon": "GraduationCap",
+      "description": "Bildungsressourcen und Tutorials für Zahnarztpraxen",
+      "items": [
+        {
+          "title": "Video-Tutorials",
+          "description": "Schritt-für-Schritt-Video-Anleitungen für Praxismanagement",
+          "icon": "Video",
+          "link": "/learn/tutorials",
+          "tag": "Video"
+        },
+        {
+          "title": "Best Practices",
+          "description": "Best Practices und Tipps für Praxismanagement",
+          "icon": "Star",
+          "link": "/learn/best-practices",
+          "tag": "Anleitung"
+        },
+        {
+          "title": "Schulungsmaterialien",
+          "description": "Schulungsressourcen für Ihr Praxisteam",
+          "icon": "FileCode",
+          "link": "/learn/training",
+          "tag": "Schulung"
+        },
+        {
+          "title": "Community-Foren",
+          "description": "Diskussion und Support von anderen Praxen",
+          "icon": "MessageSquare",
+          "link": "/community",
+          "tag": "Support"
+        }
+      ]
+    },
+    {
+      "title": "Fallstudien",
+      "icon": "BarChart",
+      "description": "Erfolgsgeschichten von Zahnarztpraxen, die Dentagia verwenden",
+      "items": [
+        {
+          "title": "Zahnarztpraxis Zentrum",
+          "description": "Transformation einer Mehrzahnarztpraxis",
+          "icon": "Users",
+          "link": "/case-studies/downtown-dental",
+          "tag": "Zahnarztpraxis"
+        },
+        {
+          "title": "Family Dental Care",
+          "description": "Wachstum und Effizienz einer Einzelpraxis",
+          "icon": "BarChart",
+          "link": "/case-studies/family-dental",
+          "tag": "Zahnarztpraxis"
+        },
+        {
+          "title": "Zentrum für Ästhetische Zahnmedizin",
+          "description": "Optimierung einer Fachpraxis",
+          "icon": "Award",
+          "link": "/case-studies/cosmetic-dental",
+          "tag": "Zahnarztpraxis"
+        },
+        {
+          "title": "Kinderzahnarztgruppe",
+          "description": "Praxismanagement mit mehreren Standorten",
+          "icon": "Star",
+          "link": "/case-studies/pediatric-dental",
+          "tag": "Zahnarztpraxis"
+        }
+      ]
+    }
+  ],
+  "featuredGuides": [
+    {
+      "title": "Praxis-Einrichtungsanleitung",
+      "description": "Vollständige Anleitung zur Einrichtung Ihrer Praxis mit Dentagia",
+      "image": "/images/resources/practice-setup.jpg",
+      "category": "Einrichtungsanleitung",
+      "readTime": "15 Min. Lesezeit",
+      "link": "/guides/practice-setup"
+    },
+    {
+      "title": "KI-Terminplanung Best Practices",
+      "description": "Erfahren Sie, wie Sie KI-gestützte Terminplanung effektiv in Ihrer Praxis nutzen",
+      "image": "/images/resources/ai-scheduling.jpg",
+      "category": "Best Practices",
+      "readTime": "10 Min. Lesezeit",
+      "link": "/guides/ai-scheduling"
+    },
+    {
+      "title": "HIPAA-Compliance-Anleitung",
+      "description": "Verständnis von HIPAA-Compliance und Sicherheitsfunktionen",
+      "image": "/images/resources/hipaa-compliance.jpg",
+      "category": "Sicherheit",
+      "readTime": "12 Min. Lesezeit",
+      "link": "/guides/hipaa-compliance"
+    }
+  ],
+  "latestArticles": [
+    {
+      "title": "Die Zukunft des Praxismanagements",
+      "description": "Erkundung kommender Trends und Innovationen im Praxismanagement",
+      "image": "/images/blog/dental-future.jpg",
+      "date": "15. März 2024",
+      "readTime": "8 Min. Lesezeit",
+      "category": "Brancheneinblicke",
+      "link": "/blog/dental-future"
+    },
+    {
+      "title": "Praxis-Effizienz mit KI optimieren",
+      "description": "Tipps zur Maximierung der Praxiseffizienz mit KI-gestützten Tools",
+      "image": "/images/blog/ai-efficiency.jpg",
+      "date": "10. März 2024",
+      "readTime": "6 Min. Lesezeit",
+      "category": "Praxismanagement",
+      "link": "/blog/ai-efficiency"
+    },
+    {
+      "title": "HIPAA-Sicherheit Best Practices",
+      "description": "Ihre Praxisdaten sicher und konform halten",
+      "image": "/images/blog/hipaa-security.jpg",
+      "date": "5. März 2024",
+      "readTime": "7 Min. Lesezeit",
+      "category": "Sicherheit",
+      "link": "/blog/hipaa-security"
+    }
+  ],
+  "downloads": [
+    {
+      "title": "Praxismanagement-Übersicht",
+      "description": "Umfassender PDF-Leitfaden zu Dentagia-Funktionen",
+      "icon": "Download",
+      "format": "PDF",
+      "size": "2.5 MB",
+      "link": "/downloads/practice-overview.pdf"
+    },
+    {
+      "title": "HIPAA-Compliance-Anleitung",
+      "description": "Detaillierte Anleitung zu HIPAA-Compliance und Sicherheit",
+      "icon": "FileText",
+      "format": "PDF",
+      "size": "3.8 MB",
+      "link": "/downloads/hipaa-guide.pdf"
+    },
+    {
+      "title": "Implementierungsanleitung",
+      "description": "Schritt-für-Schritt-Praxis-Einrichtungsanleitung",
+      "icon": "Book",
+      "format": "PDF",
+      "size": "1.8 MB",
+      "link": "/downloads/implementation-guide.pdf"
+    }
+  ],
+  "cta": {
+    "title": "Brauchen Sie Hilfe?",
+    "description": "Unser Support-Team ist hier, um Ihrer Praxis zum Erfolg mit Dentagia zu verhelfen.",
+    "buttons": [
+      {
+        "text": "Support Kontaktieren",
+        "href": "/contact",
+        "variant": "primary"
+      },
+      {
+        "text": "Community Beitreten",
+        "href": "/community",
+        "variant": "secondary"
+      }
+    ]
+  }
+}

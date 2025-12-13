@@ -13,18 +13,30 @@ const PROJECT_TYPE = import.meta.env.PROJECT_TYPE || 'default';
 
 function getProductCategory(title: string): string {
   // First priority: Check PROJECT_TYPE for rep products
-  if (PROJECT_TYPE === 'repbag') {
+  const PROJECT_TYPE_LOWER = PROJECT_TYPE.toLowerCase();
+  const title_lower = title.toLowerCase();
+  
+  if (PROJECT_TYPE_LOWER === 'repbag') {
     return 'bag';
   }
-  if (PROJECT_TYPE === 'repshoes') {
+  if (PROJECT_TYPE_LOWER === 'repshoes') {
     return 'shoes';
   }
-  if (PROJECT_TYPE === 'repwatch') {
+  if (PROJECT_TYPE_LOWER === 'repwatch') {
     return 'watch';
   }
   
-  const title_lower = title.toLowerCase();
+  // IPTV-specific detection
+  if (PROJECT_TYPE_LOWER === 'iptv') {
+    if (title_lower.includes('iptv') || 
+        title_lower.includes('subscription') || 
+        title_lower.includes('smart tv') || 
+        title_lower.includes('streaming')) {
+      return 'iptv';
+    }
+  }
   
+  // Existing category detection logic with case-insensitive checks
   // Second priority: Check if it's a watch
   if (title_lower.includes('watch') ||
       title_lower.includes('timepiece') ||
@@ -36,7 +48,7 @@ function getProductCategory(title: string): string {
   }
 
   // Third priority: Check if it's a digital product
-  if (PROJECT_TYPE === 'degital') {
+  if (PROJECT_TYPE_LOWER === 'degital') {
     if (title_lower.includes('template') || title_lower.includes('theme')) {
       return 'template';
     }
@@ -49,6 +61,7 @@ function getProductCategory(title: string): string {
     return 'digital'; // default digital fallback
   }
   
+  // Remaining category checks with case-insensitive comparisons
   // Fourth priority: Check for shoe-related terms
   if (title_lower.includes('shoe') ||
       title_lower.includes('sneaker') ||
@@ -96,7 +109,7 @@ function getProductCategory(title: string): string {
   }
   
   // Default fallback based on PROJECT_TYPE
-  return PROJECT_TYPE === 'shoes' ? 'shoes' : 'jacket';
+  return PROJECT_TYPE_LOWER === 'shoes' ? 'shoes' : 'jacket';
 }
 
 // Get content for current language or fallback to English
@@ -119,14 +132,53 @@ try {
 }
 ---
 
-<div class={styles.wrapper}>
-  <h3 class={styles.title}>{content.title}</h3>
-  <dl class={styles.grid}>
-    {specs.map((spec) => (
-      <div class={styles.item}>
-        <dt class={styles.label}>{spec.label}:</dt>
-        <dd class={styles.value}>{spec.value}</dd>
+<div class="bg-gradient-to-br from-gray-50 to-slate-50 rounded-2xl p-8 shadow-lg border border-gray-200">
+  <!-- Header Section -->
+  <div class="text-center mb-8">
+    <h3 class="text-3xl font-bold text-gray-900 mb-3 flex items-center justify-center gap-3">
+      <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+        </svg>
+      </div>
+      {content.title}
+    </h3>
+    <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 mx-auto rounded-full"></div>
+  </div>
+  
+  <!-- Specifications Grid -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    {specs.map((spec, index) => (
+      <div class="group relative bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md hover:border-blue-200 transition-all duration-300 hover:-translate-y-1">
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <div class="flex-1 min-w-0">
+            <dt class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-1 group-hover:text-gray-600 transition-colors duration-300">
+              {spec.label}
+            </dt>
+            <dd class="text-lg font-medium text-gray-900 group-hover:text-gray-800 transition-colors duration-300">
+              {spec.value}
+            </dd>
+          </div>
+        </div>
+        
+        <!-- Decorative element -->
+        <div class="absolute top-4 right-4 w-2 h-2 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
       </div>
     ))}
-  </dl>
+  </div>
+  
+  <!-- Bottom accent -->
+  <div class="mt-8 text-center">
+    <div class="inline-flex items-center gap-2 text-sm text-gray-600 bg-white/60 px-4 py-2 rounded-full border border-gray-200">
+      <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+      </svg>
+      <span>Detailed specifications</span>
+    </div>
+  </div>
 </div> 

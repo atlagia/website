@@ -1,0 +1,222 @@
+---
+import Layoutc from '@layouts/Layoutc.astro';
+import { ArrowRight, Zap, Car, Trophy, Star, Crown } from 'lucide-react';
+
+// Generate static paths for allowed languages from environment
+export async function getStaticPaths() {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  const languages = allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+  
+  return languages.map(lang => ({ params: { lang } }));
+}
+
+const { lang = 'en' } = Astro.params;
+const baseUrl = import.meta.env.DOMAINE || 'https://drivon.store';
+const storeName = import.meta.env.PUBLIC_SITE_NAME || 'Drivon';
+
+// Load multilingual data
+let data;
+try {
+  data = await import(`../data/drift-hoodies/drift-hoodies_${lang}.json`);
+} catch (error) {
+  // Fallback to English if language file doesn't exist
+  data = await import(`../data/drift-hoodies/drift-hoodies_en.json`);
+}
+
+const pageData = data.default;
+
+// SEO
+const seoTitle = `${pageData.title} | ${storeName}`;
+const seoDescription = pageData.description;
+---
+
+<Layoutc title={seoTitle} description={seoDescription} lang={lang}>
+  <div class="min-h-screen bg-gray-50">
+    <!-- Hero Section -->
+    <section class="relative h-[60vh] bg-gradient-to-br from-orange-900 via-red-800 to-pink-900">
+      <div class="absolute inset-0 bg-black/50"></div>
+      <div class="relative z-10 h-full flex items-center justify-center text-center px-4">
+        <div class="max-w-4xl mx-auto">
+          <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">
+            Drift Hoodies
+          </h1>
+          <p class="text-xl md:text-2xl text-gray-200 mb-8">
+            Premium hoodies celebrating the art of drifting
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href={`/${lang}/collections`} class="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+              Shop Drift Hoodies
+            </a>
+            <a href={`/${lang}/drift-racing`} class="bg-white/20 hover:bg-white/30 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+              Drift Racing
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Drift Hoodies Features -->
+    <section class="py-20 px-4">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">Premium Drift Hoodies</h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            From JDM legends to drift champions, our drift hoodies celebrate the art of controlled chaos with authentic designs and premium quality.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6">
+              <Zap class="w-8 h-8 text-orange-600" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Drift Champions</h3>
+            <p class="text-gray-600">
+              Celebrate the legendary drift drivers who have mastered the art of controlled chaos and earned their place in drift racing history.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
+              <Car class="w-8 h-8 text-red-600" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">JDM Legends</h3>
+            <p class="text-gray-600">
+              Honor the legendary JDM cars and drivers who have shaped the drift scene and continue to inspire generations of drift enthusiasts.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mb-6">
+              <Trophy class="w-8 h-8 text-pink-600" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Premium Quality</h3>
+            <p class="text-gray-600">
+              Every hoodie is crafted with premium materials and attention to detail, ensuring comfort and durability for the drift racing enthusiast.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Drift Hoodies Categories -->
+    <section class="py-20 bg-gray-100">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">Drift Hoodies Collection</h2>
+          <p class="text-xl text-gray-600">Celebrate the art of drifting</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <a href={`/${lang}/collections`} class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+            <div class="h-48 bg-gradient-to-br from-orange-500 to-orange-700 flex items-center justify-center">
+              <Zap class="w-16 h-16 text-white" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Drift Champions Hoodies</h3>
+              <p class="text-gray-600 mb-4">Premium hoodies celebrating drift champions</p>
+              <div class="flex items-center text-orange-600 font-semibold group-hover:text-orange-700">
+                Shop Champions Hoodies <ArrowRight class="w-4 h-4 ml-2" />
+              </div>
+            </div>
+          </a>
+
+          <a href={`/${lang}/collections`} class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+            <div class="h-48 bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center">
+              <Car class="w-16 h-16 text-white" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">JDM Legends Hoodies</h3>
+              <p class="text-gray-600 mb-4">Classic hoodies honoring JDM drift legends</p>
+              <div class="flex items-center text-red-600 font-semibold group-hover:text-red-700">
+                Shop JDM Legends Hoodies <ArrowRight class="w-4 h-4 ml-2" />
+              </div>
+            </div>
+          </a>
+
+          <a href={`/${lang}/collections`} class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+            <div class="h-48 bg-gradient-to-br from-pink-500 to-pink-700 flex items-center justify-center">
+              <Star class="w-16 h-16 text-white" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Drift Heritage Hoodies</h3>
+              <p class="text-gray-600 mb-4">Hoodies celebrating drift racing heritage</p>
+              <div class="flex items-center text-pink-600 font-semibold group-hover:text-pink-700">
+                Shop Heritage Hoodies <ArrowRight class="w-4 h-4 ml-2" />
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Drift Hoodies Spotlight -->
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">Drift Hoodies Features</h2>
+          <p class="text-xl text-gray-600">Premium quality and authentic designs</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <div class="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+              <Crown class="w-10 h-10 text-orange-600" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">Premium Materials</h3>
+            <p class="text-gray-600 text-center mb-6">
+              Crafted with premium cotton and attention to detail, ensuring comfort and durability for the drift racing enthusiast.
+            </p>
+            <a href={`/${lang}/collections`} class="flex items-center justify-center text-orange-600 font-semibold hover:text-orange-700">
+              Shop Premium Hoodies <ArrowRight class="w-4 h-4 ml-2" />
+            </a>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <div class="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+              <Trophy class="w-10 h-10 text-red-600" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">Authentic Designs</h3>
+            <p class="text-gray-600 text-center mb-6">
+              Featuring authentic drift designs that celebrate the heritage and culture of drift racing and JDM culture.
+            </p>
+            <a href={`/${lang}/collections`} class="flex items-center justify-center text-red-600 font-semibold hover:text-red-700">
+              Shop Authentic Designs <ArrowRight class="w-4 h-4 ml-2" />
+            </a>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <div class="w-20 h-20 bg-pink-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+              <Star class="w-10 h-10 text-pink-600" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">Drift Heritage</h3>
+            <p class="text-gray-600 text-center mb-6">
+              Each hoodie tells a story of drift heritage, from JDM legends to drift champions and iconic moments in drift racing history.
+            </p>
+            <a href={`/${lang}/drift-racing`} class="flex items-center justify-center text-pink-600 font-semibold hover:text-pink-700">
+              Explore Drift Heritage <ArrowRight class="w-4 h-4 ml-2" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-gray-900 text-white">
+      <div class="max-w-4xl mx-auto text-center px-4">
+        <h2 class="text-4xl font-bold mb-6">Wear Drift Heritage</h2>
+        <p class="text-xl text-gray-300 mb-8">
+          Join the global drift racing community and celebrate the art of controlled chaos with our premium drift hoodies collection.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href={`/${lang}/collections`} class="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+            Shop Drift Hoodies Collection
+          </a>
+          <a href={`/${lang}/drift-racing`} class="bg-white/20 hover:bg-white/30 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+            Explore Drift Racing
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layoutc>

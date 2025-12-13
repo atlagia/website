@@ -1,0 +1,105 @@
+---
+import { getLangFromUrl, useTranslations, isValidLanguage } from '@utils/i18n';
+
+// Get the language parameter from the URL
+const { lang = 'en' } = Astro.params;
+
+// Validate language and redirect to /en if invalid
+if (!isValidLanguage(lang)) {
+  return Astro.redirect('/en');
+}
+
+const translations = await useTranslations(lang);
+const jsonData = translations.default;
+
+// Properly handle dynamic imports with default exports
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+
+// Generate static paths for all supported languages
+export async function getStaticPaths() {
+  // Get allowed languages from environment variable
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  const languages = allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+  
+  return languages.map(lang => ({
+    params: { lang }
+  }));
+}
+
+const SITE_TITLE = jsonData.siteTitle || 'FastIPTV';
+const SITE_DESCRIPTION = '404 - Page Not Found';
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <BaseHead 
+      title={`404 - ${SITE_TITLE}`} 
+      description={SITE_DESCRIPTION} 
+      isHomePage={false}
+    />
+    <style>
+      .error-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        text-align: center;
+        padding: 2rem;
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        color: white;
+      }
+      .error-code {
+        font-size: 6rem;
+        font-weight: bold;
+        color: #ff6b6b;
+        margin-bottom: 1rem;
+        text-shadow: 0 0 20px rgba(255, 107, 107, 0.5);
+      }
+      .error-message {
+        font-size: 1.5rem;
+        color: #e0e0e0;
+        margin-bottom: 2rem;
+        max-width: 600px;
+      }
+      .back-home {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      }
+      .back-home:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      }
+      .stream-icon {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+        opacity: 0.7;
+      }
+    </style>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <div class="error-container">
+        <div class="stream-icon">📺</div>
+        <div class="error-code">404</div>
+        <div class="error-message">
+          {jsonData.notFoundMessage || 'Oops! The channel you are looking for is not available.'}
+        </div>
+        <a href={`/${lang}`} class="back-home">
+          {jsonData.backToHomeText || 'Back to Home'}
+        </a>
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>

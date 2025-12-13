@@ -1,0 +1,198 @@
+{
+  "hero": {
+    "subtitle": "Pianificazione intelligente",
+    "title": "Pianificazione appuntamenti alimentata da IA",
+    "description": "Ottimizza il calendario del tuo studio con pianificazione intelligente che riduce le assenze, riempie automaticamente le cancellazioni e massimizza l'efficienza dello studio.",
+    "icon": "calendar",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "70%",
+        "label": "Riduzione assenze"
+      },
+      {
+        "value": "10hrs",
+        "label": "Tempo risparmiato/settimana"
+      },
+      {
+        "value": "95%",
+        "label": "Efficienza"
+      }
+    ]
+  },
+  "features": {
+    "title": "Funzionalità di pianificazione",
+    "subtitle": "Gestione calendario intelligente",
+    "description": "Strumenti di pianificazione avanzati progettati per massimizzare l'efficienza del tuo studio e ridurre i costi amministrativi.",
+    "items": [
+      {
+        "icon": "calendar",
+        "title": "Pianificazione multi-professionale",
+        "description": "Gestisci gli orari di più dentisti, igienisti e specialisti in un sistema di calendario unificato.",
+        "highlights": [
+          "Calendario unificato per tutti i professionisti",
+          "Assegnazione risorse e sale",
+          "Rilevamento e risoluzione conflitti",
+          "Supporto multi-sede",
+          "Modelli appuntamenti ricorrenti"
+        ],
+        "stats": {
+          "value": "95%",
+          "label": "Efficienza"
+        }
+      },
+      {
+        "icon": "bell",
+        "title": "Promemoria automatizzati",
+        "description": "Riduci le assenze con promemoria automatizzati via SMS e email inviati nei momenti ottimali prima degli appuntamenti.",
+        "highlights": [
+          "Promemoria SMS e email",
+          "Timing promemoria personalizzabile",
+          "Richieste di conferma",
+          "Gestione liste d'attesa",
+          "Notifiche cancellazione"
+        ],
+        "stats": {
+          "value": "70%",
+          "label": "Riduzione assenze"
+        }
+      },
+      {
+        "icon": "users",
+        "title": "Prenotazione online",
+        "description": "Consenti ai pazienti di prenotare appuntamenti online 24/7 con disponibilità in tempo reale e conferme automatiche.",
+        "highlights": [
+          "Prenotazione online 24/7",
+          "Disponibilità in tempo reale",
+          "Conferme automatiche",
+          "Self-service paziente",
+          "Interfaccia mobile-friendly"
+        ],
+        "stats": {
+          "value": "40%",
+          "label": "Aumento prenotazioni"
+        }
+      },
+      {
+        "icon": "trending-up",
+        "title": "Ottimizzazione calendario",
+        "description": "Ottimizzazione calendario alimentata da IA che impara dai pattern del tuo studio per massimizzare l'efficienza.",
+        "highlights": [
+          "Ottimizzazione alimentata da IA",
+          "Riconoscimento pattern",
+          "Riempimento automatico slot",
+          "Analisi efficienza",
+          "Ottimizzazione entrate"
+        ],
+        "stats": {
+          "value": "10hrs",
+          "label": "Tempo risparmiato/settimana"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Storie di successo pianificazione",
+    "description": "Vedi come gli studi trasformano le loro operazioni di pianificazione",
+    "stats": [
+      {
+        "icon": "calendar",
+        "value": "70%",
+        "label": "Riduzione assenze"
+      },
+      {
+        "icon": "clock",
+        "value": "10hrs",
+        "label": "Tempo risparmiato"
+      },
+      {
+        "icon": "trending-up",
+        "value": "40%",
+        "label": "Aumento prenotazioni"
+      },
+      {
+        "icon": "users",
+        "value": "95%",
+        "label": "Efficienza"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Dr. Michael Chen",
+        "role": "Dentista principale, Family Dental Care",
+        "quote": "La pianificazione alimentata da IA ha completamente eliminato il nostro problema di assenze. Risparmiamo 10 ore a settimana solo sulla pianificazione."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Vantaggi della pianificazione",
+    "subtitle": "Trasforma il tuo calendario",
+    "description": "Sperimenta i vantaggi della pianificazione intelligente degli appuntamenti.",
+    "items": [
+      {
+        "title": "Ridurre assenze",
+        "description": "Promemoria e conferme automatizzati riducono significativamente gli appuntamenti persi.",
+        "icon": "bell",
+        "color": "teal",
+        "stats": {
+          "value": "70%",
+          "label": "Riduzione"
+        },
+        "highlights": [
+          "Promemoria tempestivi",
+          "Canali multipli",
+          "Richieste di conferma",
+          "Gestione risposte"
+        ]
+      },
+      {
+        "title": "Risparmiare tempo",
+        "description": "Pianificazione e ottimizzazione automatizzate risparmiano ore di lavoro amministrativo ogni settimana.",
+        "icon": "clock",
+        "color": "cyan",
+        "stats": {
+          "value": "10hrs",
+          "label": "A settimana"
+        },
+        "highlights": [
+          "Pianificazione automatizzata",
+          "Ottimizzazione calendario",
+          "Chiamate telefoniche ridotte",
+          "Flussi di lavoro semplificati"
+        ]
+      },
+      {
+        "title": "Aumentare prenotazioni",
+        "description": "Prenotazione online 24/7 e pianificazione ottimizzata aumentano il volume di appuntamenti.",
+        "icon": "trending-up",
+        "color": "blue",
+        "stats": {
+          "value": "40%",
+          "label": "Aumento"
+        },
+        "highlights": [
+          "Prenotazione online",
+          "Pianificazione ottimizzata",
+          "Riempimento slot",
+          "Crescita entrate"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Pronto a ottimizzare la tua pianificazione?",
+    "description": "Vedi come la pianificazione intelligente di Dentagia può trasformare le operazioni del tuo studio.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Prenota una demo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Scopri di più",
+      "link": "/features"
+    }
+  }
+}
+

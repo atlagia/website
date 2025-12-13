@@ -1,5 +1,5 @@
 ---
-import { getLangFromUrl, useTranslations, isValidLanguage } from '../../utils/i18n';
+import { getLangFromUrl, useTranslations, isValidLanguage } from '@utils/i18n';
 
 const theme = import.meta.env.THEME || 'default';
 const siteName = import.meta.env.PUBLIC_SITE_NAME || 'default';
@@ -24,41 +24,69 @@ try {
     const pageType = slugParts[0];
     name = slugParts.slice(1).join('/');
     
-    // Using the siteName variable instead of direct env access
-    const module = await import(
-      `../../websites/${siteName}/themes/${theme}/page/${pageType}/[...${pageType}].astro`
-    );
-    ThemePage = module.default;
+    // Try to import from website-specific theme first
+    try {
+      const module = await import(`@websites/${siteName}/themes/${theme}/page/${pageType}/[...${pageType}].astro`);
+      ThemePage = module.default;
+    } catch (error) {
+      // Fallback to default theme
+      const module = await import(`@themes/${theme}/page/${pageType}/[...${pageType}].astro`);
+      ThemePage = module.default;
+    }
   } else {
-    // Using the siteName variable instead of direct env access
-    const module = await import(`../../websites/${siteName}/themes/${theme}/page/${slug}.astro`);
-    ThemePage = module.default;
+    // Try to import from website-specific theme first
+    try {
+      const module = await import(`@websites/${siteName}/themes/${theme}/page/${slug}.astro`);
+      ThemePage = module.default;
+    } catch (error) {
+      // Fallback to default theme
+      const module = await import(`@themes/${theme}/page/${slug}.astro`);
+      ThemePage = module.default;
+    }
   }
 } catch (error) {
   console.error('Error loading page:', error);
-  // Load 404 page component
-  const module = await import(`../../websites/${siteName}/themes/${theme}/page/404.astro`);
-  ThemePage = module.default;
+  // Try to load 404 page component from website-specific theme first
+  try {
+    const module = await import(`@websites/${siteName}/themes/${theme}/page/404.astro`);
+    ThemePage = module.default;
+  } catch (error404) {
+    // Fallback to default theme 404
+    try {
+      const module = await import(`@themes/${theme}/page/404.astro`);
+      ThemePage = module.default;
+    } catch (errorDefault) {
+      // Final fallback to root 404
+      const module = await import('../../pages/404.astro');
+      ThemePage = module.default;
+    }
+  }
   is404 = true;
 }
 
 const translations = await useTranslations(lang);
 const jsonData = translations.default;
 
-let posts = [];
+let posts: any[] = [];
 try {
-  posts = await fetchBlogPosts();
+  const { fetchBlogPosts } = await import('@libs/db');
+  posts = await fetchBlogPosts(lang) || [];
 } catch (error) {
   console.error('Error fetching blog posts:', error);
+  posts = [];
 }
 
-// Generate static paths for all supported languages and known pages
+// Generate static paths for all supported languages and any page
 export async function getStaticPaths() {
-  const languages = ['en', 'fr', 'es', 'it', 'de', 'nl', 'pt', 'ar'];
-  const pages = ['index', 'about', 'contact', 'services', 'pricing', 'support', 'documentation', 'ai-content-generator']; // Add your page slugs here
+  // Get allowed languages from environment variable
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  const languages = allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+  
+  // Generate paths for common pages and let dynamic imports handle the rest
+  const commonPages = ['index', 'about', 'contact', 'services', 'pricing', 'support', 'documentation', 'blog', 'story', 'press', 'sports', 'news', 'status', 'careers', 'shop', 'login', 'signup'];
   
   return languages.flatMap(lang => 
-    pages.map(page => ({
+    commonPages.map(page => ({
       params: { 
         lang,
         slug: page === 'index' ? undefined : page
@@ -73,6 +101,4 @@ if (is404) {
 }
 ---
 
-<html lang={lang} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
-  <ThemePage {lang} {jsonData} {posts} {name} />
-</html> 
+<ThemePage {lang} {jsonData} {posts} {name} /> 

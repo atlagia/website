@@ -1,0 +1,237 @@
+{
+  "pageTitle": "Dental Practice Management Services",
+  "pageDescription": "Explore our comprehensive range of services designed to help your dental practice thrive with AI-powered solutions.",
+  "hero": {
+    "badge": "Our Services",
+    "title": "Complete Practice Management Services",
+    "description": "Discover our comprehensive range of services designed to help your dental practice thrive with modern, AI-powered practice management solutions.",
+    "cta": {
+      "primary": {
+        "text": "Explore Services",
+        "href": "#services"
+      },
+      "secondary": {
+        "text": "Get Started",
+        "href": "/contact"
+      }
+    }
+  },
+  "stats": [
+    {
+      "value": "500+",
+      "label": "Dental Practices"
+    },
+    {
+      "value": "99.9%",
+      "label": "Uptime"
+    },
+    {
+      "value": "50%",
+      "label": "Time Saved"
+    },
+    {
+      "value": "24/7",
+      "label": "Support"
+    }
+  ],
+  "services": [
+    {
+      "category": "Practice Management",
+      "description": "Complete practice management solutions for your dental practice",
+      "items": [
+        {
+          "icon": "users",
+          "name": "Patient Management",
+          "description": "Comprehensive patient records, medical history, and treatment planning",
+          "features": ["Digital Patient Records", "Medical History Tracking", "Treatment Planning", "Patient Portal"],
+          "color": "blue"
+        },
+        {
+          "icon": "calendar",
+          "name": "AI-Powered Scheduling",
+          "description": "Intelligent appointment scheduling that optimizes your calendar",
+          "features": ["Smart Scheduling", "Automated Reminders", "Waitlist Management", "No-Show Reduction"],
+          "color": "purple"
+        },
+        {
+          "icon": "credit-card",
+          "name": "Billing & Payments",
+          "description": "Streamlined billing, invoicing, and payment processing",
+          "features": ["Automated Invoicing", "Payment Processing", "Insurance Claims", "Financial Reporting"],
+          "color": "indigo"
+        },
+        {
+          "icon": "bar-chart",
+          "name": "Practice Analytics",
+          "description": "Data-driven insights to help you understand and grow your practice",
+          "features": ["Performance Metrics", "Patient Analytics", "Revenue Tracking", "Growth Insights"],
+          "color": "cyan"
+        }
+      ]
+    },
+    {
+      "category": "Clinical Tools",
+      "description": "Advanced clinical tools for modern dental practices",
+      "items": [
+        {
+          "icon": "file-text",
+          "name": "Digital Records",
+          "description": "Complete digital patient records and documentation",
+          "features": ["Medical Records", "Treatment Plans", "X-Ray Management", "Clinical Notes"],
+          "color": "rose"
+        },
+        {
+          "icon": "clipboard",
+          "name": "Treatment Planning",
+          "description": "Advanced treatment planning and documentation tools",
+          "features": ["Treatment Plans", "Case Presentation", "Progress Tracking", "Outcome Analysis"],
+          "color": "amber"
+        },
+        {
+          "icon": "shield",
+          "name": "HIPAA Compliance",
+          "description": "Enterprise-grade security and HIPAA compliance",
+          "features": ["Data Encryption", "Access Control", "Audit Logs", "Compliance Management"],
+          "color": "lime"
+        },
+        {
+          "icon": "cloud",
+          "name": "Cloud Storage",
+          "description": "Secure cloud-based data storage and backup",
+          "features": ["Automatic Backups", "Data Recovery", "Multi-Device Access", "Real-Time Sync"],
+          "color": "green"
+        }
+      ]
+    },
+    {
+      "category": "Support Services",
+      "description": "Comprehensive support and training for your practice",
+      "items": [
+        {
+          "icon": "headphones",
+          "name": "24/7 Support",
+          "description": "Round-the-clock technical support and assistance",
+          "features": ["Help Desk", "System Monitoring", "Issue Resolution", "Performance Optimization"],
+          "color": "sky"
+        },
+        {
+          "icon": "graduation-cap",
+          "name": "Training & Onboarding",
+          "description": "Comprehensive training for your team",
+          "features": ["Team Training", "Video Tutorials", "Documentation", "Best Practices"],
+          "color": "cyan"
+        },
+        {
+          "icon": "settings",
+          "name": "Customization",
+          "description": "Tailored solutions for your specific practice needs",
+          "features": ["Workflow Customization", "Report Customization", "Integration Setup", "Practice Configuration"],
+          "color": "blue"
+        },
+        {
+          "icon": "zap",
+          "name": "System Updates",
+          "description": "Regular updates and new feature releases",
+          "features": ["Automatic Updates", "New Features", "Security Patches", "Performance Improvements"],
+          "color": "indigo"
+        }
+      ]
+    }
+  ],
+  "features": {
+    "title": "What We Offer",
+    "description": "Our services come with comprehensive features and support",
+    "items": [
+      {
+        "icon": "cloud",
+        "title": "Cloud-Based Platform",
+        "description": "Access your practice data securely from anywhere, anytime"
+      },
+      {
+        "icon": "shield",
+        "title": "HIPAA Compliant",
+        "description": "Enterprise-grade security with encrypted data storage"
+      },
+      {
+        "icon": "zap",
+        "title": "AI-Powered",
+        "description": "Intelligent automation for scheduling and practice insights"
+      },
+      {
+        "icon": "trending-up",
+        "title": "Practice Growth",
+        "description": "Tools designed to help you grow your practice"
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Service Benefits",
+    "description": "Experience the advantages of using Dentagia for your practice.",
+    "items": [
+      {
+        "icon": "rocket",
+        "title": "Efficiency",
+        "description": "Streamlined operations that save time and reduce administrative burden",
+        "stats": "50%",
+        "label": "Time Saved"
+      },
+      {
+        "icon": "target",
+        "title": "Reliability",
+        "description": "Secure, reliable platform with 99.9% uptime guarantee",
+        "stats": "99.9%",
+        "label": "Uptime"
+      },
+      {
+        "icon": "lightbulb",
+        "title": "Innovation",
+        "description": "Cutting-edge AI technology designed for modern dental practices",
+        "stats": "500+",
+        "label": "Practices"
+      },
+      {
+        "icon": "users",
+        "title": "Support",
+        "description": "Dedicated support team available 24/7 for your practice",
+        "stats": "24/7",
+        "label": "Support"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "description": "Hear from dental practices that have benefited from Dentagia",
+    "items": [
+      {
+        "quote": "Dentagia has transformed how we run our practice. The AI-powered scheduling alone saves us 10 hours per week, and our patient satisfaction scores have never been higher.",
+        "author": "Dr. Sarah Martinez",
+        "role": "Practice Owner",
+        "company": "Downtown Dental Clinic",
+        "image": "/images/testimonials/sarah.jpg"
+      },
+      {
+        "quote": "Switching to Dentagia was the best decision we made. The patient management system is intuitive, billing is automated, and the analytics help us understand our practice better.",
+        "author": "Dr. Michael Chen",
+        "role": "Lead Dentist",
+        "company": "Family Dental Care",
+        "image": "/images/testimonials/michael.jpg"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Get Started?",
+    "description": "Join hundreds of dental practices that have transformed their operations with Dentagia.",
+    "buttons": [
+      {
+        "text": "Contact Us",
+        "href": "/contact",
+        "variant": "primary"
+      },
+      {
+        "text": "Schedule a Demo",
+        "href": "/demo",
+        "variant": "secondary"
+      }
+    ]
+  }
+}

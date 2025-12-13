@@ -1,0 +1,159 @@
+---
+import Layoutc from '@layouts/Layoutc.astro';
+import { ArrowRight, Star, Trophy, Crown, Award, Zap } from 'lucide-react';
+
+// Generate static paths for allowed languages from environment
+export async function getStaticPaths() {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  const languages = allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+  
+  return languages.map(lang => ({ params: { lang } }));
+}
+
+const { lang = 'en' } = Astro.params;
+const baseUrl = import.meta.env.DOMAINE || 'https://drivon.store';
+const storeName = import.meta.env.PUBLIC_SITE_NAME || 'Drivon';
+
+// SEO
+const seoTitle = `Racing Legends Tees | ${storeName}`;
+const seoDescription = "Premium tees celebrating racing legends. From F1 champions to Le Mans heroes, wear the passion of motorsport legends.";
+---
+<Layoutc title={seoTitle} description={seoDescription} lang={lang}>
+  <div class="min-h-screen bg-gray-50">
+    <!-- Hero Section -->
+    <section class="relative h-[60vh] bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900">
+      <div class="absolute inset-0 bg-black/50"></div>
+      <div class="relative z-10 h-full flex items-center justify-center text-center px-4">
+        <div class="max-w-4xl mx-auto">
+          <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">
+            Racing Legends Tees
+          </h1>
+          <p class="text-xl md:text-2xl text-gray-200 mb-8">
+            Premium tees celebrating motorsport legends
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href={`/${lang}/collections`} class="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+              Shop Racing Legends
+            </a>
+            <a href={`/${lang}/f1-legends`} class="bg-white/20 hover:bg-white/30 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+              F1 Legends
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Racing Legends Features -->
+    <section class="py-20 px-4">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">Premium Racing Legends Tees</h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            From F1 champions to Le Mans heroes, our racing legends tees celebrate the greatest drivers who have shaped motorsport history.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+              <Crown class="w-8 h-8 text-purple-600" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">F1 Champions</h3>
+            <p class="text-gray-600">
+              Celebrate the greatest Formula 1 champions who have conquered the pinnacle of motorsport and earned their place in racing history.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+              <Star class="w-8 h-8 text-indigo-600" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Le Mans Heroes</h3>
+            <p class="text-gray-600">
+              Honor the legendary Le Mans heroes who have conquered the world's most grueling endurance race and inspired generations of racing fans.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mb-6">
+              <Trophy class="w-8 h-8 text-pink-600" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Rally Champions</h3>
+            <p class="text-gray-600">
+              Every tee is crafted with premium materials and attention to detail, ensuring comfort and durability for the racing enthusiast.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Racing Legends Categories -->
+    <section class="py-20 bg-gray-100">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">Racing Legends Collection</h2>
+          <p class="text-xl text-gray-600">Celebrate the greatest motorsport legends</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <a href={`/${lang}/f1-legends`} class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+            <div class="h-48 bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center">
+              <Crown class="w-16 h-16 text-white" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">F1 Legends Tees</h3>
+              <p class="text-gray-600 mb-4">Premium tees celebrating Formula 1 champions</p>
+              <div class="flex items-center text-red-600 font-semibold group-hover:text-red-700">
+                Shop F1 Legends <ArrowRight class="w-4 h-4 ml-2" />
+              </div>
+            </div>
+          </a>
+
+          <a href={`/${lang}/le-mans-heroes`} class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+            <div class="h-48 bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center">
+              <Star class="w-16 h-16 text-white" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Le Mans Heroes Tees</h3>
+              <p class="text-gray-600 mb-4">Classic tees honoring Le Mans endurance heroes</p>
+              <div class="flex items-center text-blue-600 font-semibold group-hover:text-blue-700">
+                Shop Le Mans Heroes <ArrowRight class="w-4 h-4 ml-2" />
+              </div>
+            </div>
+          </a>
+
+          <a href={`/${lang}/rally-champions`} class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+            <div class="h-48 bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center">
+              <Trophy class="w-16 h-16 text-white" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Rally Champions Tees</h3>
+              <p class="text-gray-600 mb-4">Tees celebrating rally racing champions</p>
+              <div class="flex items-center text-green-600 font-semibold group-hover:text-green-700">
+                Shop Rally Champions <ArrowRight class="w-4 h-4 ml-2" />
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-gray-900 text-white">
+      <div class="max-w-4xl mx-auto text-center px-4">
+        <h2 class="text-4xl font-bold mb-6">Wear Racing Legends</h2>
+        <p class="text-xl text-gray-300 mb-8">
+          Join the global motorsport community and celebrate the greatest racing legends with our premium racing legends tees collection.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href={`/${lang}/collections`} class="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+            Shop Racing Legends Collection
+          </a>
+          <a href={`/${lang}/f1-legends`} class="bg-white/20 hover:bg-white/30 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+            Explore F1 Legends
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layoutc>

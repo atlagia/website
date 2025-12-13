@@ -1,0 +1,166 @@
+{
+  "pageTitle": "Planifier une Démo",
+  "pageDescription": "Découvrez la puissance du logiciel de gestion de cabinet dentaire propulsé par l'IA de Dentagia avec notre démo interactive",
+  "hero": {
+    "badge": "Démo Interactive",
+    "title": "Voir Dentagia en Action",
+    "description": "Essayez notre plateforme de gestion de cabinet dentaire propulsée par l'IA en direct. Aucune carte de crédit requise, aucune installation nécessaire. Commencez en quelques secondes et voyez comment Dentagia peut transformer votre cabinet.",
+    "cta": {
+      "primary": {
+        "text": "Planifier une Démo",
+        "href": "#demo-form"
+      },
+      "secondary": {
+        "text": "Regarder la Vidéo",
+        "href": "#video"
+      }
+    }
+  },
+  "features": [
+    {
+      "icon": "zap",
+      "title": "Accès Instantané",
+      "description": "Commencez à explorer immédiatement avec des données d'exemple de cabinet dentaire préchargées"
+    },
+    {
+      "icon": "shield",
+      "title": "Sécurisé et Privé",
+      "description": "Vos données de démo sont isolées et automatiquement supprimées après 24 heures. Sécurité conforme HIPAA."
+    },
+    {
+      "icon": "users",
+      "title": "Visite Guidée",
+      "description": "Parcours étape par étape des fonctionnalités clés incluant la gestion des patients, la planification et la facturation"
+    },
+    {
+      "icon": "rocket",
+      "title": "Toutes les Fonctionnalités",
+      "description": "Découvrez toutes les fonctionnalités premium incluant la planification propulsée par l'IA et l'analytique du cabinet"
+    }
+  ],
+  "demoForm": {
+    "title": "Demandez Votre Démo Personnalisée",
+    "subtitle": "Remplissez le formulaire ci-dessous et nous configurerons un environnement de démo personnalisé pour votre cabinet",
+    "fields": {
+      "fullName": {
+        "label": "Nom Complet",
+        "placeholder": "Dr. Jean Dupont",
+        "required": true
+      },
+      "email": {
+        "label": "Email Professionnel",
+        "placeholder": "jean@cabinetdentaire.com",
+        "required": true
+      },
+      "company": {
+        "label": "Nom du Cabinet",
+        "placeholder": "Votre Cabinet Dentaire",
+        "required": true
+      },
+      "industry": {
+        "label": "Type de Cabinet",
+        "placeholder": "Sélectionnez le type de votre cabinet",
+        "options": [
+          "Dentisterie Générale",
+          "Dentisterie Esthétique",
+          "Dentisterie Pédiatrique",
+          "Orthodontie",
+          "Chirurgie Orale",
+          "Parodontologie",
+          "Endodontie",
+          "Multi-Spécialités",
+          "Autre"
+        ],
+        "required": true
+      },
+      "useCase": {
+        "label": "Que souhaitez-vous explorer ?",
+        "placeholder": "Parlez-nous de vos besoins en gestion de cabinet...",
+        "required": false
+      }
+    },
+    "submitButton": "Planifier Ma Démo",
+    "consent": "En soumettant ce formulaire, vous acceptez notre Politique de Confidentialité et nos Conditions d'Utilisation"
+  },
+  "benefits": [
+    {
+      "icon": "check-circle",
+      "title": "Scénarios de Cabinet Réels",
+      "description": "Explorez des cas d'usage spécifiques aux cabinets dentaires avec des données patients et des scénarios de rendez-vous réalistes"
+    },
+    {
+      "icon": "trending-up",
+      "title": "Voir le Potentiel ROI",
+      "description": "Comprenez comment Dentagia peut améliorer l'efficacité de votre cabinet, réduire les absences et augmenter les revenus"
+    },
+    {
+      "icon": "settings",
+      "title": "Options de Personnalisation",
+      "description": "Découvrez comment adapter la plateforme à vos besoins et flux de travail spécifiques"
+    },
+    {
+      "icon": "award",
+      "title": "Support Expert",
+      "description": "Obtenez des réponses de nos spécialistes en gestion de cabinet dentaire pendant votre démo"
+    }
+  ],
+  "testimonials": {
+    "title": "Ce Que Disent Nos Utilisateurs de Démo",
+    "items": [
+      {
+        "quote": "La démo était incroyablement intuitive. En 10 minutes, je pouvais voir exactement comment Dentagia transformerait les opérations de notre cabinet et nous ferait économiser des heures chaque semaine.",
+        "author": "Dr. Sarah Martinez",
+        "role": "Propriétaire du Cabinet",
+        "company": "Clinique Dentaire du Centre",
+        "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah"
+      },
+      {
+        "quote": "J'ai essayé de nombreuses démos de gestion de cabinet, mais Dentagia se démarque. Les fonctionnalités de planification propulsée par l'IA et de gestion des patients sont exactement ce dont nous avions besoin.",
+        "author": "Dr. Michael Chen",
+        "role": "Dentiste Principal",
+        "company": "Family Dental Care",
+        "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=Michael"
+      }
+    ]
+  },
+  "video": {
+    "title": "Regardez un Aperçu Rapide",
+    "description": "Découvrez comment Dentagia fonctionne en seulement 2 minutes",
+    "thumbnail": "https://via.placeholder.com/800x450/6366f1/ffffff?text=Dentagia+Demo+Video",
+    "duration": "2:30",
+    "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+  },
+  "faq": {
+    "title": "Questions Fréquemment Posées",
+    "items": [
+      {
+        "question": "Combien de temps dure la démo ?",
+        "answer": "Votre environnement de démo personnalisé reste actif pendant 24 heures, vous donnant amplement le temps d'explorer à votre rythme et de voir comment Dentagia s'adapte à votre cabinet."
+      },
+      {
+        "question": "Une installation est-elle requise ?",
+        "answer": "Aucune installation nécessaire ! Notre démo fonctionne entièrement dans votre navigateur web. Cliquez simplement sur le lien que nous vous envoyons et commencez à explorer."
+      },
+      {
+        "question": "Aurai-je accès à toutes les fonctionnalités ?",
+        "answer": "Oui, vous aurez accès à toutes les fonctionnalités premium pendant votre période de démo, incluant la planification propulsée par l'IA, la gestion des patients, la facturation et l'analytique du cabinet."
+      },
+      {
+        "question": "Puis-je importer mes propres données de cabinet ?",
+        "answer": "La démo vient avec des données d'exemple de cabinet dentaire, mais vous pouvez également télécharger vos propres données pour voir comment la plateforme fonctionne avec vos vraies informations de cabinet."
+      },
+      {
+        "question": "Que se passe-t-il après l'expiration de la démo ?",
+        "answer": "Toutes les données de démo sont automatiquement supprimées après 24 heures. Si vous souhaitez continuer, nous pouvons vous aider à configurer un compte d'essai ou planifier une consultation personnalisée."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prêt à Transformer Votre Cabinet ?",
+    "description": "Rejoignez des centaines de cabinets dentaires utilisant déjà Dentagia pour rationaliser leurs opérations et développer leur cabinet.",
+    "button": {
+      "text": "Planifiez Votre Démo Maintenant",
+      "href": "#demo-form"
+    }
+  }
+}

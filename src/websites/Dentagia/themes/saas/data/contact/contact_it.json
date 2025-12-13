@@ -1,0 +1,67 @@
+{
+  "hero": {
+    "subtitle": "CONTATTACI",
+    "title": "Parliamo del Tuo Studio Dentistico",
+    "description": "Hai domande sul software di gestione dello studio alimentato da IA di Dentagia? Siamo qui per aiutarti a ottimizzare le operazioni del tuo studio e far crescere il tuo studio dentistico."
+  },
+  "contactInfo": [
+    {
+      "icon": "Mail",
+      "title": "Inviaci un'Email",
+      "content": "contact@dentagia.com",
+      "description": "Il nostro team amichevole è qui per aiutarti con le tue esigenze di gestione dello studio.",
+      "link": "mailto:contact@dentagia.com"
+    },
+    {
+      "icon": "Phone",
+      "title": "Chiamaci",
+      "content": "+33756756240",
+      "description": "Lun-Ven dalle 9:00 alle 18:00 (CET).",
+      "link": "tel:+33756756240"
+    },
+    {
+      "icon": "MapPin",
+      "title": "Ufficio",
+      "content": "VIZILLE, FRANCIA",
+      "description": "98 AV ARISTIDE BRIAND, 38220",
+      "link": "https://maps.google.com/maps?q=98 AV ARISTIDE BRIAND, VIZILLE, 38220, FRANCE"
+    }
+  ],
+  "form": {
+    "title": "Inviaci un Messaggio",
+    "fields": {
+      "firstName": {
+        "label": "Nome",
+        "placeholder": "Inserisci il tuo nome"
+      },
+      "lastName": {
+        "label": "Cognome",
+        "placeholder": "Inserisci il tuo cognome"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Inserisci la tua email"
+      },
+      "subject": {
+        "label": "Oggetto",
+        "placeholder": "Inserisci l'oggetto"
+      },
+      "message": {
+        "label": "Messaggio",
+        "placeholder": "Raccontaci le esigenze o le domande del tuo studio"
+      }
+    },
+    "submitButton": "Invia Messaggio"
+  },
+  "support": {
+    "hours": {
+      "title": "Orari di Supporto",
+      "content": "Lunedì - Venerdì, 9:00 - 18:00 (CET)"
+    },
+    "additional": {
+      "title": "Informazioni Aziendali",
+      "description": "EASY-WAY INFORMATICIENS A TEMPS PARTAG SARL",
+      "email": "support@dentagia.com"
+    }
+  }
+}

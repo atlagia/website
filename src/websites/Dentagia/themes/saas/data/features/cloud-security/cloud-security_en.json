@@ -1,0 +1,182 @@
+{
+  "hero": {
+    "subtitle": "Cloud Security",
+    "title": "Secure Cloud Infrastructure",
+    "description": "Enterprise-grade cloud security with automatic backups, disaster recovery, and 99.9% uptime guarantee for your dental practice data.",
+    "icon": "cloud",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "99.9%",
+        "label": "Uptime"
+      },
+      {
+        "value": "256-bit",
+        "label": "Encryption"
+      },
+      {
+        "value": "24/7",
+        "label": "Monitoring"
+      }
+    ]
+  },
+  "features": {
+    "title": "Cloud Security Features",
+    "subtitle": "Enterprise Infrastructure",
+    "description": "Secure, scalable cloud infrastructure designed for dental practice data protection.",
+    "items": [
+      {
+        "icon": "cloud",
+        "title": "Secure Cloud Storage",
+        "description": "Enterprise-grade cloud storage with redundant backups and disaster recovery capabilities.",
+        "highlights": [
+          "Redundant storage",
+          "Automatic backups",
+          "Disaster recovery",
+          "Data redundancy",
+          "Geographic distribution"
+        ],
+        "stats": {
+          "value": "99.9%",
+          "label": "Uptime"
+        }
+      },
+      {
+        "icon": "shield",
+        "title": "Security Monitoring",
+        "description": "24/7 security monitoring and threat detection to protect your practice data.",
+        "highlights": [
+          "24/7 monitoring",
+          "Threat detection",
+          "Intrusion prevention",
+          "Security alerts",
+          "Incident response"
+        ],
+        "stats": {
+          "value": "24/7",
+          "label": "Monitoring"
+        }
+      },
+      {
+        "icon": "database",
+        "title": "Automatic Backups",
+        "description": "Daily automatic backups with point-in-time recovery and data retention policies.",
+        "highlights": [
+          "Daily backups",
+          "Point-in-time recovery",
+          "Data retention",
+          "Backup verification",
+          "Recovery testing"
+        ],
+        "stats": {
+          "value": "100%",
+          "label": "Protected"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Cloud Security Assurance",
+    "description": "Enterprise-grade security for your practice",
+    "stats": [
+      {
+        "icon": "cloud",
+        "value": "99.9%",
+        "label": "Uptime"
+      },
+      {
+        "icon": "shield",
+        "value": "24/7",
+        "label": "Monitoring"
+      },
+      {
+        "icon": "database",
+        "value": "100%",
+        "label": "Protected"
+      },
+      {
+        "icon": "award",
+        "value": "256-bit",
+        "label": "Encryption"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Dr. Michael Chen",
+        "role": "Lead Dentist",
+        "quote": "The cloud security gives us complete confidence. Our data is always protected and accessible, with 99.9% uptime."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Cloud Security Benefits",
+    "subtitle": "Reliable Protection",
+    "description": "Experience the peace of mind that comes with enterprise cloud security.",
+    "items": [
+      {
+        "title": "High Uptime",
+        "description": "99.9% uptime guarantee ensures your practice data is always accessible.",
+        "icon": "cloud",
+        "color": "teal",
+        "stats": {
+          "value": "99.9%",
+          "label": "Uptime"
+        },
+        "highlights": [
+          "Reliable infrastructure",
+          "Redundant systems",
+          "Disaster recovery",
+          "High availability"
+        ]
+      },
+      {
+        "title": "24/7 Monitoring",
+        "description": "Continuous security monitoring protects your data around the clock.",
+        "icon": "shield",
+        "color": "cyan",
+        "stats": {
+          "value": "24/7",
+          "label": "Monitoring"
+        },
+        "highlights": [
+          "Continuous monitoring",
+          "Threat detection",
+          "Security alerts",
+          "Incident response"
+        ]
+      },
+      {
+        "title": "Data Protection",
+        "description": "Comprehensive backup and recovery ensures your data is always protected.",
+        "icon": "database",
+        "color": "blue",
+        "stats": {
+          "value": "100%",
+          "label": "Protected"
+        },
+        "highlights": [
+          "Automatic backups",
+          "Point-in-time recovery",
+          "Data redundancy",
+          "Recovery testing"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready for Secure Cloud Infrastructure?",
+    "description": "See how Dentagia's cloud security protects your practice data.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Schedule a Demo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Learn More",
+      "link": "/features"
+    }
+  }
+}
+

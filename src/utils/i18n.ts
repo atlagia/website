@@ -33,13 +33,21 @@ export async function useTranslations(lang: string) {
   } catch (e) {
     console.warn(`Translation file for ${lang} not found, falling back to English`);
     // Fallback to English using the correct path
-    translations = await import(`../websites/${siteName}/themes/${theme}/data/index_en.json`);
-    return translations;
+    try {
+      translations = await import(`../websites/${siteName}/themes/${theme}/data/index_en.json`);
+      return translations;
+    } catch (fallbackError) {
+      console.error(`English translation file also not found:`, fallbackError);
+      // Return empty translations as last resort
+      return { default: {} };
+    }
   }
 }
 
 export function isValidLanguage(lang: string): boolean {
-  const validLanguages = ['en', 'fr', 'es', 'it', 'de', 'nl', 'pt', 'ar'];
+  // Get allowed languages from environment variable
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  const validLanguages = allowedLanguages.split(',').map(l => l.trim()).filter(l => l.length > 0);
   return validLanguages.includes(lang);
 }
 

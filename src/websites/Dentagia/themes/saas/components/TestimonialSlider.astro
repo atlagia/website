@@ -1,0 +1,51 @@
+---
+import { FaUser } from 'react-icons/fa';
+
+interface Testimonial {
+  id: string;
+  author: string;
+  role: string;
+  content: string;
+  avatar: string;
+}
+
+interface Props {
+  title: string;
+  testimonials: Testimonial[];
+}
+
+const { title, testimonials } = Astro.props;
+
+// Function to get initials from name
+const getInitials = (name: string) => {
+  return name.charAt(0).toUpperCase();
+};
+---
+
+<section class="py-20 px-4 bg-gradient-to-b from-white via-[#F6FFFD] to-white">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-slate-900" id="content-title">{title}</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {testimonials.map((testimonial, index) => (
+        <div class="bg-white border border-[#0EA5E91A] shadow-sm p-6 rounded-xl hover:shadow-lg transition-shadow duration-200">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-[#0EA5E91A] to-[#14B8A61A] flex items-center justify-center">
+              <div class="relative">
+                <FaUser class="w-6 h-6 text-[#0EA5E9]" />
+                <span class="absolute inset-0 flex items-center justify-center text-sm font-semibold text-slate-800">
+                  {getInitials(testimonial.author)}
+                </span>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-semibold" id={`content-testimonial-${index}-author`}>{testimonial.author}</h3>
+              <p class="text-sm text-slate-600" id={`content-testimonial-${index}-role`}>{testimonial.role}</p>
+            </div>
+          </div>
+          <p class="text-slate-700 leading-relaxed" id={`content-testimonial-${index}-content`}>{testimonial.content}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

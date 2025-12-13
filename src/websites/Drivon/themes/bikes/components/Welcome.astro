@@ -1,0 +1,170 @@
+---
+import { ArrowRight } from 'lucide-react';
+
+interface BackgroundVideo {
+  type: 'youtube';
+  videoId: string;
+  fallbackImage: string;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  blogLink: string;
+  blogLinkText: string;
+  backgroundVideo: BackgroundVideo;
+}
+
+const { 
+  title, 
+  description, 
+  blogLink, 
+  blogLinkText, 
+  backgroundVideo
+} = Astro.props;
+---
+
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden font-sans" 
+  itemScope itemType="https://schema.org/WebPageElement"
+  style={`background-image: url(${backgroundVideo.fallbackImage}); background-size: cover; background-position: center; filter: grayscale(30%);`}
+>
+  <!-- YouTube Background Video -->
+  <div class="absolute inset-0 w-full h-full pointer-events-none">
+    <div id="youtube-player" class="absolute inset-0 w-full h-full">
+      <div id="player" class="w-full h-full"></div>
+    </div>
+    <div class="absolute inset-0 bg-black/60 z-10"></div>
+  </div>
+  
+  <div class="relative z-20 max-w-5xl mx-auto text-center px-4">
+    <div class="inline-block bg-red-600/80 px-4 py-2 rounded-full text-sm tracking-wide uppercase border border-red-700 mb-6 text-white">
+      Professional Driver Performance
+    </div>
+
+    <h1 class="text-6xl md:text-8xl font-black text-white mb-6 uppercase tracking-tighter leading-none text-shadow-lg" itemProp="headline" role="heading" aria-level="1">
+      {title}
+    </h1>
+    
+    <p class="text-2xl md:text-3xl text-gray-100 mb-10 max-w-3xl mx-auto font-medium leading-tight tracking-wide text-shadow">
+      {description}
+    </p>
+    
+    <div class="flex justify-center items-center space-x-6">
+      <a 
+        href={blogLink}
+        class="group inline-flex items-center gap-3 bg-white/20 backdrop-blur-sm text-white border-2 border-white/40 px-10 py-4 rounded-lg uppercase tracking-wider hover:bg-white/30 transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl"
+      >
+        <span>{blogLinkText}</span>
+        <ArrowRight className="w-6 h-6 transform group-hover:translate-x-1 transition-transform" />
+      </a>
+      
+      <a 
+        href="/shop" 
+        class="group inline-flex items-center gap-3 bg-red-600 text-white px-10 py-4 rounded-lg uppercase tracking-wider hover:bg-red-700 transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl"
+      >
+        <span>Shop Professional Series</span>
+        <ArrowRight className="w-6 h-6 transform group-hover:translate-x-1 transition-transform" />
+      </a>
+    </div>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-20">
+    <div class="w-[2px] h-16 bg-white/50"></div>
+  </div>
+</section>
+
+<script define:vars={{ backgroundVideo }}>
+  // Load YouTube IFrame API
+  const tag = document.createElement('script');
+  tag.src = 'https://www.youtube.com/iframe_api';
+  const firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  // YouTube player setup
+  let player;
+  window.onYouTubeIframeAPIReady = function() {
+    player = new YT.Player('player', {
+      videoId: backgroundVideo.videoId,
+      playerVars: {
+        autoplay: 1,
+        loop: 1,
+        controls: 0,
+        showinfo: 0,
+        rel: 0,
+        enablejsapi: 1,
+        modestbranding: 1,
+        mute: 1,
+        playsinline: 1,
+        playlist: backgroundVideo.videoId // Required for looping
+      },
+      events: {
+        onReady: (event) => {
+          event.target.playVideo();
+        },
+        onStateChange: (event) => {
+          if (event.data === YT.PlayerState.ENDED) {
+            player.playVideo();
+          }
+        },
+        onError: (event) => {
+          // On error, show fallback image
+          document.getElementById('youtube-player').style.backgroundImage = 
+            `url(${backgroundVideo.fallbackImage})`;
+          document.getElementById('youtube-player').style.backgroundSize = 'cover';
+          document.getElementById('youtube-player').style.backgroundPosition = 'center';
+        }
+      }
+    });
+  };
+
+  // Resize handler for responsive video
+  function onResize() {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    const player = document.querySelector('#youtube-player');
+    
+    if (width / height > 16 / 9) {
+      player.style.width = '100vw';
+      player.style.height = 'calc(100vw * 9 / 16)';
+    } else {
+      player.style.width = 'calc(100vh * 16 / 9)';
+      player.style.height = '100vh';
+    }
+  }
+
+  window.addEventListener('resize', onResize);
+  onResize();
+</script>
+
+<style>
+  #youtube-player {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+
+  #player {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+
+  /* Hide YouTube iframe border */
+  iframe {
+    border: none;
+  }
+
+  /* Custom text shadow for better readability */
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  }
+
+  .text-shadow-lg {
+    text-shadow: 0 4px 6px rgba(0,0,0,0.7);
+  }
+</style>

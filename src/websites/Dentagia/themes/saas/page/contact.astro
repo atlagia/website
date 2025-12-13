@@ -1,0 +1,285 @@
+---
+import { SITE_TITLE } from '../consts';
+import { Mail, Phone, MapPin } from 'lucide-react';
+
+const theme = import.meta.env.THEME || 'default';
+const lang = Astro.params.lang || 'en';
+
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+
+// Import language-specific contact data
+const contactData = await import(`../data/contact/contact_${lang}.json`);
+
+// Import form configuration
+const { config, form } = await import('../forms/contact/config.json');
+
+// Get language-specific form configuration
+const formConfig = form[lang] || form['en']; // Fallback to English if language not found
+
+// Get business information from environment variables
+const businessInfo = {
+  name: import.meta.env.PUBLIC_BUSINESS_NAME || 'Atalsia',
+  email: import.meta.env.PUBLIC_BUSINESS_EMAIL || 'contact@atalsia.com',
+  phone: import.meta.env.PUBLIC_BUSINESS_PHONE || '+1 2035 472 248',
+  address: {
+    street: import.meta.env.PUBLIC_BUSINESS_ADDRESS || '124 City Road',
+    city: import.meta.env.PUBLIC_BUSINESS_CITY || 'London',
+    country: import.meta.env.PUBLIC_BUSINESS_COUNTRY || 'United Kingdom'
+  }
+};
+
+// Map icon strings to actual components
+const iconMap = {
+  Mail,
+  Phone,
+  MapPin
+};
+
+// Map contact info with actual icon components
+const contactInfo = contactData.contactInfo.map(item => ({
+  ...item,
+  icon: iconMap[item.icon]
+}));
+
+// Get API base URL from environment (server-side)
+const apiBaseUrl = import.meta.env.PUBLIC_FORM_API_BASE_URL || import.meta.env.FormApiBaseUrl || 'https://api.atlagia.com/atlagia/api/datavault';
+// Get Atlagia access token from environment (simplified API - works for all schemas)
+const atlagiaAccessToken = import.meta.env.PUBLIC_ATLAGIA_ACCESS_TOKEN || import.meta.env.ATLAGIA_ACCESS_TOKEN;
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <BaseHead 
+      title={`Contact Us | ${businessInfo.name}`}
+      description={contactData.hero.description}
+    />
+  </head>
+  <body>
+    <Header />
+    <main class="pt-10">
+      <!-- Hero Section -->
+      <section class="relative py-20 px-4 bg-gradient-to-br from-emerald-950 via-slate-950 to-emerald-900 overflow-hidden">
+        <div class="absolute inset-0">
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-bl from-teal-500/20 to-cyan-500/20 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-tr from-emerald-500/20 to-teal-500/20 rounded-full blur-3xl animate-blob"></div>
+          <div class="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-10"></div>
+        </div>
+        <div class="relative max-w-7xl mx-auto text-center">
+          <span class="inline-block px-4 py-1.5 mb-6 text-sm font-semibold bg-emerald-500/20 text-emerald-300 rounded-full border border-emerald-500/30">{contactData.hero.subtitle}</span>
+          <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white">{contactData.hero.title}</h1>
+          <p class="text-xl text-slate-300 max-w-2xl mx-auto">
+            {contactData.hero.description}
+          </p>
+        </div>
+      </section>
+
+      <!-- Contact Options -->
+      <section class="relative py-16 px-4 bg-slate-50">
+        <div class="max-w-7xl mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {contactInfo.map(item => (
+              <a
+                href={item.link}
+                class="group p-8 bg-white rounded-2xl hover:bg-gradient-to-br hover:from-emerald-900 hover:via-slate-900 hover:to-emerald-950 transition-all duration-300 border border-slate-200 hover:border-emerald-500/30 shadow-sm hover:shadow-xl"
+              >
+                <div class="flex flex-col items-center text-center">
+                  <div class="w-14 h-14 mb-6 rounded-xl bg-emerald-50 group-hover:bg-emerald-500/20 flex items-center justify-center transition-colors border border-emerald-200 group-hover:border-emerald-500/50">
+                    <item.icon className="w-7 h-7 text-emerald-600 group-hover:text-emerald-300" />
+                  </div>
+                  <h3 class="text-xl font-semibold mb-2 text-gray-900 group-hover:text-white">{item.title}</h3>
+                  <p class="text-gray-600 group-hover:text-slate-300 mb-2">{item.description}</p>
+                  <p class="font-medium text-emerald-600 group-hover:text-emerald-300">{item.content}</p>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Form Section -->
+      <section class="relative py-16 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <!-- Left: Form -->
+            <div class="bg-slate-50 p-8 rounded-2xl shadow-sm border border-slate-200">
+              <h2 class="text-2xl font-bold mb-6 text-gray-900">{formConfig.title}</h2>
+              <form id="contact-form" method="POST" action="#" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {Object.entries(formConfig.fields).map(([key, field]) => (
+                    <div class={field.type === 'textarea' ? 'md:col-span-2' : ''}>
+                      <label for={field.id} class="block text-sm font-medium text-gray-700 mb-1">
+                        {field.label}
+                      </label>
+                      {field.type === 'textarea' ? (
+                        <textarea
+                          id={field.id}
+                          name={field.id}
+                          rows={field.rows}
+                          placeholder={field.placeholder}
+                          required={field.required}
+                          class="w-full px-4 py-2.5 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-colors"
+                        ></textarea>
+                      ) : (
+                        <input
+                          type={field.type}
+                          id={field.id}
+                          name={field.id}
+                          placeholder={field.placeholder}
+                          required={field.required}
+                          class="w-full px-4 py-2.5 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-colors"
+                        />
+                      )}
+                    </div>
+                  ))}
+                </div>
+                <button
+                  type="submit"
+                  class="w-full bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white py-3 px-6 rounded-lg font-semibold hover:opacity-90 transition-all shadow-lg shadow-emerald-500/30 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+                >
+                  {formConfig.submitButton}
+                </button>
+              </form>
+            </div>
+
+            <!-- Right: Map & Info -->
+            <div class="space-y-8">
+              <div class="aspect-video w-full rounded-2xl overflow-hidden shadow-sm border border-slate-200">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.4246767037074!2d-0.08744748422970276!3d51.52459667963792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761ca671a6cfb7%3A0x9319acf4647dd5c4!2s124%20City%20Rd%2C%20London%20EC1V%202NX%2C%20UK!5e0!3m2!1sen!2sus!4v1647433829401!5m2!1sen!2sus"
+                  width="100%"
+                  height="100%"
+                  style="border:0;"
+                  allowfullscreen=""
+                  loading="lazy"
+                ></iframe>
+              </div>
+              <div class="bg-gradient-to-br from-emerald-950 via-slate-950 to-emerald-900 p-8 rounded-2xl shadow-sm border border-emerald-500/20">
+                <h3 class="text-xl font-bold mb-4 text-white">{contactData.support.hours.title}</h3>
+                <p class="text-slate-300 mb-6">{contactData.support.hours.content}</p>
+                <h3 class="text-xl font-bold mb-4 text-white">{contactData.support.additional.title}</h3>
+                <p class="text-slate-300">
+                  {contactData.support.additional.description} <a href={`mailto:${contactData.support.additional.email}`} class="text-emerald-400 hover:text-emerald-300">{contactData.support.additional.email}</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <Footer />
+
+    <div id="success-message" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
+      <div class="bg-gradient-to-br from-emerald-950 via-slate-950 to-emerald-900 p-8 rounded-2xl max-w-md mx-4 border border-emerald-500/30 shadow-2xl">
+        <h3 class="text-2xl font-bold text-white mb-4">{formConfig.successMessage.title}</h3>
+        <p class="text-slate-300 mb-6">{formConfig.successMessage.description}</p>
+        <button onclick="this.parentElement.parentElement.classList.add('hidden')" class="w-full bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white py-3 px-6 rounded-lg font-semibold hover:opacity-90 transition-all shadow-lg shadow-emerald-500/30">
+          {formConfig.successMessage.buttonText}
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script define:vars={{ config, businessInfo, formConfig, apiBaseUrl, atlagiaAccessToken }}>
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('contact-form');
+  const successMessage = document.getElementById('success-message');
+  const submitButton = form.querySelector('button[type="submit"]');
+  let isSubmitting = false;
+  
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    
+    // Prevent multiple submissions
+    if (isSubmitting) {
+      return;
+    }
+    
+    isSubmitting = true;
+    const originalButtonText = submitButton.textContent;
+    submitButton.disabled = true;
+    submitButton.textContent = 'Sending...';
+    
+    const formData = new FormData(form);
+    const timestamp = new Date().toISOString();
+    
+    // Prepare the data according to the schema
+    const submissionData = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      phone: formData.get('phone') || null,
+      subject: formData.get('subject'),
+      message: formData.get('message'),
+      submissionTimestamp: timestamp,
+      status: 'Pending'
+    };
+
+    try {
+      const response = await fetch(
+        `${apiBaseUrl}/forms/${config.schemaId}/submit/`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-Atlagia-Access-Token': atlagiaAccessToken
+          },
+          body: JSON.stringify({
+            form_data: submissionData,
+            entity_name: config.entityName || 'ContactFormSubmission'
+          })
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const result = await response.json();
+      
+      if (result.success && result.entry_id) {
+        // Success
+        form.reset();
+        successMessage.classList.remove('hidden');
+      } else {
+        throw new Error(result.error || 'Failed to submit form');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      alert(formConfig.errorMessage || 'Sorry, there was an error submitting your form. Please try again.');
+    } finally {
+      isSubmitting = false;
+      submitButton.disabled = false;
+      submitButton.textContent = originalButtonText;
+    }
+  });
+});
+</script>
+
+<style>
+  @keyframes blob {
+    0% {
+      transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    }
+    33% {
+      transform: translate(-50%, -50%) scale(1.1) rotate(120deg);
+    }
+    66% {
+      transform: translate(-50%, -50%) scale(0.9) rotate(240deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1) rotate(360deg);
+    }
+  }
+
+  .animate-blob {
+    animation: blob 20s infinite linear;
+  }
+
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+</style>

@@ -1,0 +1,404 @@
+---
+import { SITE_TITLE } from '../consts';
+import { Code, Lightbulb, Clock, Users, Shield, TrendingUp, ChevronRight } from 'lucide-react';
+
+const theme = import.meta.env.THEME || 'default';
+const lang = Astro.params.lang || 'en';
+
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+
+// Import language-specific project data
+const projectData = await import(`../data/project/project_${lang}.json`);
+
+// Import form configuration
+const { config, form } = await import('../forms/project/config.json');
+
+// Get language-specific form configuration
+const formConfig = form[lang] || form['en']; // Fallback to English if language not found
+
+// Get business information from environment variables
+const businessInfo = {
+  name: import.meta.env.PUBLIC_BUSINESS_NAME || 'Atalsia'
+};
+
+// Map icon strings to actual components
+const iconMap = {
+  Code,
+  Lightbulb,
+  Clock,
+  Users,
+  Shield,
+  TrendingUp
+};
+
+// Map features with actual icon components
+const features = projectData.features.items.map(item => ({
+  ...item,
+  icon: iconMap[item.icon]
+}));
+
+// Generate schema markup for project discussion page
+const projectSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: `Discuss Your Project | ${businessInfo.name}`,
+  description: projectData.hero.description,
+  publisher: {
+    "@type": "Organization",
+    name: businessInfo.name,
+    logo: {
+      "@type": "ImageObject",
+      url: new URL("/logo.png", Astro.url)
+    }
+  }
+};
+
+// Generate schema for FAQ section
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: projectData.faq.items.map(item => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer
+    }
+  }))
+};
+
+// Combine all schemas
+const schemaMarkup = [projectSchema, faqSchema];
+
+// DataVault configuration - use apiBaseUrl from .env, other values from config.json
+const DATAVAULT_CONFIG = {
+  apiBaseUrl: import.meta.env.PUBLIC_FORM_API_BASE_URL || import.meta.env.FormApiBaseUrl || 'https://api.atlagia.com/atlagia/api/datavault',
+  schemaId: config.schemaId,
+  entityName: config.entityName,
+  keyToken: config.keyToken
+};
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <BaseHead 
+      title={`Discuss Your Project | ${businessInfo.name}`}
+      description={projectData.hero.description}
+      schemaMarkup={schemaMarkup}
+    />
+    <script is:inline src="/panel/src/utils/DataVaultFormEmbed.js"></script>
+    
+    <!-- Make form configuration available to client-side scripts -->
+    <script is:inline define:vars={{ config, formConfig }}>
+      window.dataVaultConfig = config;
+      window.formConfig = formConfig;
+    </script>
+  </head>
+  <body>
+    <Header />
+    <main class="pt-10">
+      <!-- Hero Section -->
+      <section class="relative py-20 px-4 bg-gradient-to-b from-white to-gray-50 overflow-hidden">
+        <div class="absolute inset-0">
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-bl from-purple-500/10 to-blue-500/10 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-tr from-pink-500/10 to-cyan-500/10 rounded-full blur-3xl animate-blob"></div>
+        </div>
+        <div class="relative max-w-7xl mx-auto text-center">
+          <span class="inline-block px-4 py-1.5 mb-6 text-sm font-semibold bg-purple-50 text-purple-600 rounded-full">{projectData.hero.subtitle}</span>
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">{projectData.hero.title}</h1>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            {projectData.hero.description}
+          </p>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section class="py-16 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4">{projectData.features.title}</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">{projectData.features.description}</p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map(feature => (
+              <div class="p-6 bg-gray-50 rounded-xl hover:shadow-md transition-shadow">
+                <div class="w-12 h-12 rounded-xl bg-purple-50 flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-purple-600" />
+                </div>
+                <h3 class="text-xl font-semibold mb-2">{feature.title}</h3>
+                <p class="text-gray-600">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- Process Section -->
+      <section class="py-16 px-4 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4">{projectData.process.title}</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">{projectData.process.description}</p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+            {projectData.process.steps.map(step => (
+              <div class="relative">
+                <div class="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-purple-600 text-white flex items-center justify-center font-bold">
+                  {step.number}
+                </div>
+                <div class="p-6 bg-white rounded-xl shadow-sm h-full">
+                  <h3 class="text-xl font-semibold mb-2">{step.title}</h3>
+                  <p class="text-gray-600">{step.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- Project Form Section -->
+      <section class="py-16 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <!-- Left: Form -->
+            <div class="bg-gray-50 p-8 rounded-2xl shadow-sm">
+              <h2 class="text-2xl font-bold mb-6">{formConfig.title}</h2>
+              <form id="project-form" method="POST" action="#" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {Object.entries(formConfig.fields).map(([key, field]) => (
+                    <div class={field.type === 'textarea' ? 'md:col-span-2' : ''}>
+                      <label for={field.id} class="block text-sm font-medium text-gray-700 mb-1">
+                        {field.label} {field.required && '*'}
+                      </label>
+                      {field.type === 'select' ? (
+                        <select
+                          id={field.id}
+                          name={field.id}
+                          required={field.required}
+                          class="w-full px-4 py-2.5 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-purple-500/20 focus:border-purple-500 transition-colors"
+                        >
+                          <option value="" disabled selected>{field.placeholder}</option>
+                          {field.options.map(option => (
+                            <option value={option.value}>{option.label}</option>
+                          ))}
+                        </select>
+                      ) : field.type === 'textarea' ? (
+                        <textarea
+                          id={field.id}
+                          name={field.id}
+                          rows={field.rows}
+                          placeholder={field.placeholder}
+                          required={field.required}
+                          class="w-full px-4 py-2.5 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-purple-500/20 focus:border-purple-500 transition-colors"
+                        ></textarea>
+                      ) : (
+                        <input
+                          type={field.type}
+                          id={field.id}
+                          name={field.id}
+                          placeholder={field.placeholder}
+                          required={field.required}
+                          class="w-full px-4 py-2.5 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-purple-500/20 focus:border-purple-500 transition-colors"
+                        />
+                      )}
+                    </div>
+                  ))}
+                </div>
+                <button
+                  type="submit"
+                  class="w-full bg-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-purple-700 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500/20"
+                >
+                  {formConfig.submitButton}
+                </button>
+              </form>
+            </div>
+
+            <!-- Right: FAQ -->
+            <div class="space-y-8">
+              <div class="bg-gray-50 p-8 rounded-2xl shadow-sm">
+                <h3 class="text-2xl font-bold mb-4">{projectData.faq.title}</h3>
+                <p class="text-gray-600 mb-6">{projectData.faq.description}</p>
+                <div class="space-y-4">
+                  {projectData.faq.items.map(item => (
+                    <div class="border-b border-gray-200 pb-4">
+                      <h4 class="font-semibold mb-2">{item.question}</h4>
+                      <p class="text-gray-600">{item.answer}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div class="bg-purple-50 p-8 rounded-2xl">
+                <h3 class="text-xl font-bold mb-4">{projectData.readyToStart.title}</h3>
+                <p class="text-gray-700 mb-6">
+                  {projectData.readyToStart.description}
+                </p>
+                <a href="#project-form" class="inline-flex items-center text-purple-600 font-semibold hover:text-purple-700">
+                  {projectData.readyToStart.buttonText} <ChevronRight className="w-4 h-4 ml-1" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <Footer />
+
+    <div id="success-message" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
+      <div class="bg-white p-8 rounded-2xl max-w-md mx-4">
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">{formConfig.successMessage.title}</h3>
+        <p class="text-gray-600 mb-6">{formConfig.successMessage.description}</p>
+        <button onclick="this.parentElement.parentElement.classList.add('hidden')" class="w-full bg-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
+          {formConfig.successMessage.buttonText}
+        </button>
+      </div>
+    </div>
+
+    <script is:inline src="http://localhost:8000/api/datavault/embed/datavault-form.js"></script>
+    <div id="datavault-project-form"></div>
+
+    <script define:vars={{ DATAVAULT_CONFIG }}>
+      // Function to initialize the project form
+      function initProjectForm() {
+        const form = document.getElementById('project-form');
+        const successMessage = document.getElementById('success-message');
+        
+        if (!form) {
+          console.error('Project form not found');
+          return;
+        }
+
+        // Initialize DataVault form
+        if (window.DataVaultForm) {
+          new DataVaultForm({
+            apiBaseUrl: DATAVAULT_CONFIG.apiBaseUrl,
+            schemaId: DATAVAULT_CONFIG.schemaId,
+            targetElement: 'datavault-project-form',
+            styleMode: 'tailwind',
+            onSuccess: function(result) {
+              form.reset();
+              successMessage.classList.remove('hidden');
+            },
+            onError: function(error) {
+              console.error('Form submission error:', error);
+              alert(window.formConfig.errorMessage);
+            }
+          });
+        }
+
+        const submitButton = form.querySelector('button[type="submit"]');
+        let isSubmitting = false;
+        
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          
+          // Prevent multiple submissions
+          if (isSubmitting) {
+            return;
+          }
+          
+          isSubmitting = true;
+          const originalButtonText = submitButton?.textContent;
+          if (submitButton) {
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
+          }
+          
+          const formData = new FormData(form);
+          const timestamp = new Date().toISOString();
+          
+          // Prepare the data according to the schema
+          const submissionData = {
+            name: formData.get('name'),
+            company: formData.get('company'),
+            email: formData.get('email'),
+            phone: formData.get('phone'),
+            projectType: formData.get('projectType'),
+            projectDescription: formData.get('projectDescription'),
+            features: formData.get('features'),
+            timeline: formData.get('timeline'),
+            budget: formData.get('budget'),
+            additionalInfo: formData.get('additionalInfo') || null,
+            submissionTimestamp: timestamp,
+            status: 'Pending'
+          };
+
+          try {
+            const response = await fetch(
+              `${DATAVAULT_CONFIG.apiBaseUrl}/builder/entities/${DATAVAULT_CONFIG.schemaId}/entries/create/`,
+              {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                  'X-Atlagia-Access-Token': DATAVAULT_CONFIG.atlagiaAccessToken
+                },
+                body: JSON.stringify({
+                  data: submissionData
+                })
+              }
+            );
+
+            if (!response.ok) {
+              throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const result = await response.json();
+            
+            if (result.id) {
+              // Success
+              form.reset();
+              successMessage.classList.remove('hidden');
+            } else {
+              throw new Error(result.error || 'Failed to submit form');
+            }
+          } catch (error) {
+            console.error('Form submission error:', error);
+            alert(window.formConfig.errorMessage || 'Sorry, there was an error submitting your form. Please try again.');
+          } finally {
+            isSubmitting = false;
+            if (submitButton) {
+              submitButton.disabled = false;
+              submitButton.textContent = originalButtonText;
+            }
+          }
+        });
+      }
+
+      // Run initialization on page load
+      document.addEventListener('DOMContentLoaded', initProjectForm);
+
+      // Also run initialization when the page is loaded via client-side navigation
+      if (document.readyState === 'complete' || document.readyState === 'interactive') {
+        setTimeout(initProjectForm, 100);
+      }
+    </script>
+  </body>
+</html>
+
+<style>
+  @keyframes blob {
+    0% {
+      transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    }
+    33% {
+      transform: translate(-50%, -50%) scale(1.1) rotate(120deg);
+    }
+    66% {
+      transform: translate(-50%, -50%) scale(0.9) rotate(240deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1) rotate(360deg);
+    }
+  }
+
+  .animate-blob {
+    animation: blob 20s infinite linear;
+  }
+
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+</style> 

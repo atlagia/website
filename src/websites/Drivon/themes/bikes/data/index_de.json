@@ -1,0 +1,197 @@
+{
+  "siteTitle": "Drivon - Premium Fahrer Merchandise",
+  "siteDescription": "Premium Fahrer Merchandise für Auto-Enthusiasten weltweit. Von Rennlegenden bis zur Straßenkultur, wir bringen Ihnen authentisches Auto-Fan Gear.",
+  "sections": [
+    {
+      "type": "welcomeSection",
+      "title": "Entwickelt für Auto-Enthusiasten",
+      "description": "Authentisches Automobilkultur Merchandise für echte Auto-Enthusiasten und Rennfans. Von Rennlegenden bis zu Straßenkultur-Ikonen, wir schaffen Premium-Ausrüstung speziell für Auto-Enthusiasten, die authentisches Automobilheritage schätzen.",
+      "blogLinkText": "Entdecken Sie Auto-Kultur",
+      "blogLink": "/car-culture",
+      "backgroundVideo": {
+        "type": "youtube",
+        "videoId": "liT2Z3wFW1Y",
+        "fallbackImage": "/images/driver-culture-fallback.jpg"
+      }
+    },
+    {
+      "type": "bannerSection",
+      "headline": "Auto-Kultur trifft auf Rennheritage",
+      "description": "Erleben Sie authentische Automobilkultur. Von Rennlegenden bis zu Straßenikonen, wir feiern den wahren Geist der Fahrleidenschaft.",
+      "backgroundImage": "/images/racing-heritage-banner.jpg",
+      "button1Text": "Fahrer Kollektion Einkaufen",
+      "button1Link": "/driver-collection",
+      "button2Text": "Rennkultur Ansehen",
+      "button2Link": "/racing-culture"
+    },
+    {
+      "type": "categoryGrid",
+      "title": "Fahrer Kultur Essentials",
+      "description": "Authentisches Automobilkultur Merchandise für echte Auto-Enthusiasten und Rennfans weltweit.",
+      "categories": [
+        {
+          "id": "hoodie",
+          "name": "Renn Hoodies",
+          "description": "Renninspirierte Hoodies mit authentischen Automobildesigns und Premium-Komfort.",
+          "image": "https://ih1.redbubble.net/image.4762044220.4515/ssrco,mhoodie,mens,fafafa:ca443f4786,front,tall_three_quarter,x1000-bg,f8f8f8.1.webp",
+          "link": "/racing-hoodies"
+        },
+        {
+          "id": "tee",
+          "name": "Auto-Kultur Shirts",
+          "description": "Klassische Automobilkultur Shirts mit ikonischen Automarken und Rennlegenden.",
+          "image": "https://ih1.redbubble.net/image.4762044220.4515/ssrco,classic_tee,mens_02,fafafa:ca443f4786,front,close_portrait,x1000.webp",
+          "link": "/car-culture-tees"
+        },
+        {
+          "id": "accessories",
+          "name": "Fahrer Accessoires",
+          "description": "Essentielle Accessoires um Ihren Automobilkultur Look und Stil zu vervollständigen.",
+          "image": "https://ih1.redbubble.net/image.4762043914.4515/ssrco,dad_hat,product,FFFDF5:8c3db69414,front_three_quarter,wide_portrait,750x1000-bg,f8f8f8.webp",
+          "link": "/driver-accessories"
+        }
+      ]
+    },
+    {
+      "type": "bestSellers",
+      "title": "Best Sellers",
+      "description": "Our most popular collections loved by professional drivers worldwide",
+      "viewAllLink": "/best-sellers",
+      "collectionHandle": "best-seller"
+    },
+    {
+      "type": "productShowcase",
+      "title": "Professional Series Highlights",
+      "description": "Elite gear engineered for peak performance and uncompromising protection.",
+      "viewAllLink": "/professional-series",
+      "collections": [
+        {
+          "id": "pro-racing-suit",
+          "name": "Aerospace Pro Racing Suit",
+          "description": "Multi-layer carbon fiber reinforced protective suit with integrated cooling system.",
+          "price": "1,299.99",
+          "image": "/images/products/pro-racing-suit.jpg",
+          "category": "Racing Suits"
+        },
+        {
+          "id": "precision-gloves",
+          "name": "Precision Control Gloves",
+          "description": "Nano-engineered grip technology with advanced impact absorption.",
+          "price": "349.99",
+          "image": "/images/products/precision-gloves.jpg",
+          "category": "Performance Gloves"
+        }
+      ]
+    },
+    {
+      "type": "specialOffers",
+      "title": "Limited Time Offers",
+      "offers": [
+        {
+          "id": "winter-sale",
+          "title": "Winter Collection Sale",
+          "description": "Get premium winter gear at unbeatable prices",
+          "discount": "30%",
+          "code": "WINTER30",
+          "backgroundImage": "/images/winter-sale-bg.jpg",
+          "buttonText": "Shop Winter Sale",
+          "buttonLink": "/winter-collection",
+          "expiryText": "Ends December 31st"
+        },
+        {
+          "id": "new-customer",
+          "title": "New Customer Special",
+          "description": "Welcome bonus for first-time buyers",
+          "discount": "15%",
+          "code": "WELCOME15",
+          "backgroundImage": "/images/new-customer-bg.jpg",
+          "buttonText": "Claim Discount",
+          "buttonLink": "/welcome-offer",
+          "expiryText": "Valid for 30 days"
+        }
+      ]
+    },
+    {
+      "type": "testimonialSlider",
+      "title": "Professional Endorsements",
+      "testimonials": [
+        {
+          "id": "1",
+          "author": "Marcus Rodriguez",
+          "role": "Professional Race Car Driver",
+          "content": "ProDriver Gear isn't just equipment—it's a performance enhancement. The level of engineering is unparalleled.",
+          "avatar": "MR",
+          "initials": "MR"
+        },
+        {
+          "id": "2",
+          "author": "Sarah Chen",
+          "role": "Formula 1 Engineer",
+          "content": "The attention to detail in every piece is remarkable. This gear has become essential for our team's success on the track.",
+          "avatar": "SC",
+          "initials": "SC"
+        },
+        {
+          "id": "3",
+          "author": "David Thompson",
+          "role": "Motorsport Team Manager",
+          "content": "DriverApparel delivers exactly what professional drivers need. Quality, comfort, and performance in every product.",
+          "avatar": "DT",
+          "initials": "DT"
+        }
+      ]
+    },
+    {
+      "type": "faqSection",
+      "title": "Professional Performance FAQs",
+      "description": "Insights into advanced driver protection and performance technology.",
+      "faqs": [
+        {
+          "question": "What makes ProDriver Gear different?",
+          "answer": "We use aerospace-grade materials, advanced ergonomic design, and cutting-edge protection technologies developed with professional drivers."
+        },
+        {
+          "question": "How do your materials enhance driver performance?",
+          "answer": "Our gear uses multi-layer composite materials that provide superior impact protection while maintaining maximum flexibility and thermal regulation."
+        },
+        {
+          "question": "Are your collections certified for professional use?",
+          "answer": "Yes. All ProDriver Gear collections exceed international safety standards and are used by professional racing teams worldwide."
+        }
+      ]
+    },{
+      "type": "featuresSection",
+      "title": "Why Choose DriverApparel?",
+      "features": [
+        {
+          "id": "free-shipping",
+          "title": "Free Shipping",
+          "description": "Free delivery on orders over $75 worldwide"
+        },
+        {
+          "id": "quality-guarantee",
+          "title": "Quality Guarantee",
+          "description": "30-day money back guarantee on all collections"
+        },
+        {
+          "id": "secure-payment",
+          "title": "Secure Payment",
+          "description": "SSL encrypted checkout for your security"
+        },
+        {
+          "id": "24-7-support",
+          "title": "24/7 Support",
+          "description": "Expert customer service whenever you need it"
+        }
+      ]
+    },
+    {
+      "type": "emailSignupSection",
+      "title": "Stay at the Cutting Edge",
+      "description": "Receive exclusive insights, technology updates, and professional performance tips.",
+      "backgroundImage": "/images/professional-driver-newsletter.jpg",
+      "formAction": "/api/professional-signup",
+      "submitText": "Join Professional Network"
+    }
+  ]
+}

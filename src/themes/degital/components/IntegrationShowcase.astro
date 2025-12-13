@@ -1,5 +1,4 @@
 ---
-import { Icon } from '@iconify/astro';
 import { cn } from '../../../utils/cn';
 
 interface Integration {
@@ -42,21 +41,6 @@ const categoryConfig = {
   }
 };
 
-// Map integration names to icons
-const integrationIcons = {
-  Salesforce: 'simple-icons:salesforce',
-  HubSpot: 'simple-icons:hubspot',
-  Zoho: 'simple-icons:zoho',
-  Mailchimp: 'simple-icons:mailchimp',
-  Klaviyo: 'simple-icons:klaviyo',
-  SendGrid: 'simple-icons:sendgrid',
-  Slack: 'simple-icons:slack',
-  Asana: 'simple-icons:asana',
-  Trello: 'simple-icons:trello',
-  Stripe: 'simple-icons:stripe',
-  PayPal: 'simple-icons:paypal',
-  QuickBooks: 'simple-icons:quickbooks'
-};
 ---
 
 <section class="py-20 px-4 bg-gradient-to-b from-gray-50 to-white">
@@ -75,16 +59,17 @@ const integrationIcons = {
               "w-12 h-12 rounded-lg flex items-center justify-center mb-6",
               `bg-${config.color}-100 text-${config.color}-600`
             )}>
-              <Icon name={config.icon} class="w-6 h-6" />
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
             </div>
             <h3 class="text-xl font-semibold mb-4">{category.name}</h3>
             <ul class="space-y-3">
               {category.integrations.map((integration) => (
                 <li class="flex items-center text-gray-600 group">
-                  <Icon 
-                    name={integrationIcons[integration] || 'lucide:check-circle'} 
-                    class="w-5 h-5 mr-2 text-gray-400 group-hover:text-gray-600 transition-colors" 
-                  />
+                  <svg class="w-5 h-5 mr-2 text-gray-400 group-hover:text-gray-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
                   <span class="group-hover:text-gray-900 transition-colors">
                     {integration}
                   </span>
@@ -100,7 +85,9 @@ const integrationIcons = {
       {benefits.map((benefit) => (
         <div class="text-center p-6 rounded-xl bg-white border border-gray-100 hover:shadow-lg transition-all duration-300">
           <div class="inline-flex p-3 rounded-lg bg-blue-50 text-blue-600 mb-4">
-            <Icon name="lucide:check-circle" class="w-6 h-6" />
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
           </div>
           <h3 class="text-xl font-semibold mb-2">{benefit.title}</h3>
           <p class="text-gray-600">{benefit.description}</p>

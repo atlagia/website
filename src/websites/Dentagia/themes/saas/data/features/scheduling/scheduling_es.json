@@ -1,0 +1,198 @@
+{
+  "hero": {
+    "subtitle": "Programación inteligente",
+    "title": "Programación de citas impulsada por IA",
+    "description": "Optimice el calendario de su consultorio con programación inteligente que reduce las ausencias, llena automáticamente las cancelaciones y maximiza la eficiencia del consultorio.",
+    "icon": "calendar",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "70%",
+        "label": "Reducción de ausencias"
+      },
+      {
+        "value": "10hrs",
+        "label": "Tiempo ahorrado/semana"
+      },
+      {
+        "value": "95%",
+        "label": "Eficiencia"
+      }
+    ]
+  },
+  "features": {
+    "title": "Características de programación",
+    "subtitle": "Gestión inteligente de calendario",
+    "description": "Herramientas de programación avanzadas diseñadas para maximizar la eficiencia de su consultorio y reducir los gastos administrativos.",
+    "items": [
+      {
+        "icon": "calendar",
+        "title": "Programación multi-proveedor",
+        "description": "Gestione horarios para múltiples dentistas, higienistas y especialistas en un sistema de calendario unificado.",
+        "highlights": [
+          "Calendario unificado para todos los proveedores",
+          "Asignación de recursos y salas",
+          "Detección y resolución de conflictos",
+          "Soporte multi-ubicación",
+          "Plantillas de citas recurrentes"
+        ],
+        "stats": {
+          "value": "95%",
+          "label": "Eficiencia"
+        }
+      },
+      {
+        "icon": "bell",
+        "title": "Recordatorios automatizados",
+        "description": "Reduzca las ausencias con recordatorios automatizados por SMS y correo electrónico enviados en momentos óptimos antes de las citas.",
+        "highlights": [
+          "Recordatorios SMS y correo electrónico",
+          "Tiempo de recordatorio personalizable",
+          "Solicitudes de confirmación",
+          "Gestión de listas de espera",
+          "Notificaciones de cancelación"
+        ],
+        "stats": {
+          "value": "70%",
+          "label": "Reducción de ausencias"
+        }
+      },
+      {
+        "icon": "users",
+        "title": "Reserva en línea",
+        "description": "Permita que los pacientes reserven citas en línea 24/7 con disponibilidad en tiempo real y confirmaciones automáticas.",
+        "highlights": [
+          "Reserva en línea 24/7",
+          "Disponibilidad en tiempo real",
+          "Confirmaciones automáticas",
+          "Autoservicio del paciente",
+          "Interfaz compatible con móviles"
+        ],
+        "stats": {
+          "value": "40%",
+          "label": "Aumento de reservas"
+        }
+      },
+      {
+        "icon": "trending-up",
+        "title": "Optimización de calendario",
+        "description": "Optimización de calendario impulsada por IA que aprende de los patrones de su consultorio para maximizar la eficiencia.",
+        "highlights": [
+          "Optimización impulsada por IA",
+          "Reconocimiento de patrones",
+          "Llenado automático de espacios",
+          "Análisis de eficiencia",
+          "Optimización de ingresos"
+        ],
+        "stats": {
+          "value": "10hrs",
+          "label": "Tiempo ahorrado/semana"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Historias de éxito de programación",
+    "description": "Vea cómo los consultorios transforman sus operaciones de programación",
+    "stats": [
+      {
+        "icon": "calendar",
+        "value": "70%",
+        "label": "Reducción de ausencias"
+      },
+      {
+        "icon": "clock",
+        "value": "10hrs",
+        "label": "Tiempo ahorrado"
+      },
+      {
+        "icon": "trending-up",
+        "value": "40%",
+        "label": "Aumento de reservas"
+      },
+      {
+        "icon": "users",
+        "value": "95%",
+        "label": "Eficiencia"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Dr. Michael Chen",
+        "role": "Dentista principal, Family Dental Care",
+        "quote": "La programación impulsada por IA ha eliminado completamente nuestro problema de ausencias. Ahorramos 10 horas por semana solo en programación."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Beneficios de la programación",
+    "subtitle": "Transforme su calendario",
+    "description": "Experimente las ventajas de la programación inteligente de citas.",
+    "items": [
+      {
+        "title": "Reducir ausencias",
+        "description": "Los recordatorios y confirmaciones automatizados reducen significativamente las citas perdidas.",
+        "icon": "bell",
+        "color": "teal",
+        "stats": {
+          "value": "70%",
+          "label": "Reducción"
+        },
+        "highlights": [
+          "Recordatorios oportunos",
+          "Múltiples canales",
+          "Solicitudes de confirmación",
+          "Manejo de respuestas"
+        ]
+      },
+      {
+        "title": "Ahorrar tiempo",
+        "description": "La programación y optimización automatizadas ahorran horas de trabajo administrativo cada semana.",
+        "icon": "clock",
+        "color": "cyan",
+        "stats": {
+          "value": "10hrs",
+          "label": "Por semana"
+        },
+        "highlights": [
+          "Programación automatizada",
+          "Optimización de calendario",
+          "Llamadas telefónicas reducidas",
+          "Flujos de trabajo optimizados"
+        ]
+      },
+      {
+        "title": "Aumentar reservas",
+        "description": "La reserva en línea 24/7 y la programación optimizada aumentan el volumen de citas.",
+        "icon": "trending-up",
+        "color": "blue",
+        "stats": {
+          "value": "40%",
+          "label": "Aumento"
+        },
+        "highlights": [
+          "Reserva en línea",
+          "Programación optimizada",
+          "Llenado de espacios",
+          "Crecimiento de ingresos"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "¿Listo para optimizar su programación?",
+    "description": "Vea cómo la programación inteligente de Dentagia puede transformar las operaciones de su consultorio.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Programar una demostración",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Aprender más",
+      "link": "/features"
+    }
+  }
+}
+

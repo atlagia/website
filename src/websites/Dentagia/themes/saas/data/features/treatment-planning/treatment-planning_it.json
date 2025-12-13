@@ -1,0 +1,182 @@
+{
+  "hero": {
+    "subtitle": "Pianificazione trattamento digitale",
+    "title": "Pianificazione trattamento avanzata e gestione casi",
+    "description": "Crea piani di trattamento digitali completi, monitora il progresso dei pazienti e gestisci casi complessi con strumenti avanzati progettati per studi dentistici moderni.",
+    "icon": "clipboard",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "80%",
+        "label": "Pianificazione più veloce"
+      },
+      {
+        "value": "95%",
+        "label": "Precisione"
+      },
+      {
+        "value": "90%",
+        "label": "Tasso accettazione"
+      }
+    ]
+  },
+  "features": {
+    "title": "Funzionalità pianificazione trattamento",
+    "subtitle": "Gestione casi completa",
+    "description": "Strumenti avanzati per creare, gestire e monitorare piani di trattamento e casi pazienti.",
+    "items": [
+      {
+        "icon": "clipboard",
+        "title": "Piani trattamento digitali",
+        "description": "Crea piani di trattamento completi con procedure, tempistiche e stime costi in formato digitale.",
+        "highlights": [
+          "Pianificazione trattamento multi-fase",
+          "Programmazione procedure",
+          "Stima costi",
+          "Gestione tempistiche",
+          "Strumenti presentazione casi"
+        ],
+        "stats": {
+          "value": "80%",
+          "label": "Pianificazione più veloce"
+        }
+      },
+      {
+        "icon": "trending-up",
+        "title": "Gestione casi",
+        "description": "Monitora casi pazienti dalla consultazione iniziale fino al completamento trattamento con strumenti gestione casi completi.",
+        "highlights": [
+          "Monitoraggio casi",
+          "Monitoraggio progresso",
+          "Storico trattamenti",
+          "Monitoraggio risultati",
+          "Analisi casi"
+        ],
+        "stats": {
+          "value": "95%",
+          "label": "Precisione"
+        }
+      },
+      {
+        "icon": "users",
+        "title": "Comunicazione pazienti",
+        "description": "Condividi piani di trattamento con i pazienti, ottieni approvazioni e comunica sul progresso del trattamento.",
+        "highlights": [
+          "Condivisione piani",
+          "Approvazione paziente",
+          "Aggiornamenti progresso",
+          "Messaggistica sicura",
+          "Condivisione documenti"
+        ],
+        "stats": {
+          "value": "90%",
+          "label": "Tasso accettazione"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Successo pianificazione trattamento",
+    "description": "Vedi come gli studi semplificano la pianificazione trattamento",
+    "stats": [
+      {
+        "icon": "clipboard",
+        "value": "80%",
+        "label": "Pianificazione più veloce"
+      },
+      {
+        "icon": "trending-up",
+        "value": "95%",
+        "label": "Precisione"
+      },
+      {
+        "icon": "users",
+        "value": "90%",
+        "label": "Accettazione"
+      },
+      {
+        "icon": "award",
+        "value": "100%",
+        "label": "Digitale"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Dr. Sarah Martinez",
+        "role": "Proprietario studio",
+        "quote": "La pianificazione trattamento è diventata molto più facile. Possiamo creare piani completi in pochi minuti e condividerli con i pazienti istantaneamente."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Vantaggi pianificazione trattamento",
+    "subtitle": "Gestione casi semplificata",
+    "description": "Sperimenta i vantaggi della pianificazione trattamento digitale.",
+    "items": [
+      {
+        "title": "Pianificazione più veloce",
+        "description": "Crea piani di trattamento molto più velocemente con strumenti digitali e modelli.",
+        "icon": "zap",
+        "color": "teal",
+        "stats": {
+          "value": "80%",
+          "label": "Più veloce"
+        },
+        "highlights": [
+          "Modelli digitali",
+          "Creazione rapida piani",
+          "Calcoli automatizzati",
+          "Flussi di lavoro semplificati"
+        ]
+      },
+      {
+        "title": "Migliore precisione",
+        "description": "I piani digitali riducono gli errori e migliorano la precisione del trattamento.",
+        "icon": "check-circle",
+        "color": "cyan",
+        "stats": {
+          "value": "95%",
+          "label": "Precisione"
+        },
+        "highlights": [
+          "Riduzione errori",
+          "Formattazione coerente",
+          "Calcoli precisi",
+          "Migliore documentazione"
+        ]
+      },
+      {
+        "title": "Accettazione più alta",
+        "description": "Migliore presentazione e comunicazione migliorano i tassi di accettazione trattamenti.",
+        "icon": "trending-up",
+        "color": "blue",
+        "stats": {
+          "value": "90%",
+          "label": "Accettazione"
+        },
+        "highlights": [
+          "Migliore presentazione",
+          "Comunicazione chiara",
+          "Supporti visivi",
+          "Coinvolgimento paziente"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Pronto a semplificare la pianificazione trattamento?",
+    "description": "Vedi come le funzionalità di pianificazione trattamento di Dentagia possono trasformare la tua gestione casi.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Prenota una demo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Scopri di più",
+      "link": "/features"
+    }
+  }
+}
+

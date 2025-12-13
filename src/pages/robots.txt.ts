@@ -1,6 +1,12 @@
 import type { APIRoute } from 'astro';
 
-const languages = ['en', 'fr', 'de', 'es', 'it'];
+// Get allowed languages from environment variable
+const getAllowedLanguages = (): string[] => {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  return allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+};
+
+const languages = getAllowedLanguages();
 
 export const GET: APIRoute = async ({ site }) => {
   if (!site) {
@@ -26,6 +32,7 @@ Disallow: /api/
 Disallow: /admin/
 Disallow: /private/
 Disallow: /*?*
+Disallow: /*/undefined/
 
 # Allow patterns
 ${languages.map(lang => `Allow: /${lang}/products/

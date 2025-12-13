@@ -1,0 +1,182 @@
+{
+  "hero": {
+    "subtitle": "Intelligenza alimentata da IA",
+    "title": "Pianificazione appuntamenti alimentata da IA",
+    "description": "Pianificazione rivoluzionaria alimentata da IA che impara dai pattern del tuo studio, ottimizza automaticamente il tuo calendario e massimizza l'efficienza dello studio.",
+    "icon": "brain",
+    "heroVideo": "https://www.youtube.com/watch?v=yHBcdlaVHEE",
+    "heroVideoThumbnail": "https://cdn.atlagia.com/Dentagia.png",
+    "heroImage": "https://cdn.atlagia.com/Dentagia.png",
+    "stats": [
+      {
+        "value": "70%",
+        "label": "Riduzione assenze"
+      },
+      {
+        "value": "10hrs",
+        "label": "Tempo risparmiato/settimana"
+      },
+      {
+        "value": "95%",
+        "label": "Ottimizzazione"
+      }
+    ]
+  },
+  "features": {
+    "title": "Funzionalità pianificazione IA",
+    "subtitle": "Automatizzazione intelligente",
+    "description": "Pianificazione avanzata alimentata da IA che impara e si adatta alle esigenze del tuo studio.",
+    "items": [
+      {
+        "icon": "brain",
+        "title": "Pianificazione predittiva",
+        "description": "L'IA analizza dati storici per prevedere momenti ottimali appuntamenti e ridurre assenze.",
+        "highlights": [
+          "Riconoscimento pattern",
+          "Previsione assenze",
+          "Suggerimenti momenti ottimali",
+          "Analisi comportamento paziente",
+          "Ottimizzazione calendario"
+        ],
+        "stats": {
+          "value": "70%",
+          "label": "Riduzione assenze"
+        }
+      },
+      {
+        "icon": "zap",
+        "title": "Riempimento automatico slot",
+        "description": "L'IA riempie automaticamente cancellazioni e slot nel tuo calendario con pazienti in lista d'attesa o riprogrammazione ottimizzata.",
+        "highlights": [
+          "Rilevamento automatico slot",
+          "Gestione liste d'attesa",
+          "Riprogrammazione intelligente",
+          "Ottimizzazione entrate",
+          "Massimizzazione efficienza"
+        ],
+        "stats": {
+          "value": "95%",
+          "label": "Efficienza"
+        }
+      },
+      {
+        "icon": "trending-up",
+        "title": "Ottimizzazione entrate",
+        "description": "L'IA ottimizza il tuo calendario per massimizzare le entrate suggerendo slot appuntamenti ad alto valore.",
+        "highlights": [
+          "Massimizzazione entrate",
+          "Analisi valore appuntamenti",
+          "Suggerimenti slot ottimali",
+          "Insights crescita studio",
+          "Monitoraggio performance"
+        ],
+        "stats": {
+          "value": "35%",
+          "label": "Crescita entrate"
+        }
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Successo pianificazione IA",
+    "description": "Vedi come l'IA trasforma la pianificazione degli studi",
+    "stats": [
+      {
+        "icon": "brain",
+        "value": "70%",
+        "label": "Riduzione assenze"
+      },
+      {
+        "icon": "clock",
+        "value": "10hrs",
+        "label": "Tempo risparmiato"
+      },
+      {
+        "icon": "trending-up",
+        "value": "35%",
+        "label": "Crescita entrate"
+      },
+      {
+        "icon": "award",
+        "value": "95%",
+        "label": "Efficienza"
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Dr. Sarah Martinez",
+        "role": "Proprietario studio, Downtown Dental Clinic",
+        "quote": "La pianificazione alimentata da IA da sola ci fa risparmiare 10 ore a settimana. È come avere un assistente intelligente che non dorme mai."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Vantaggi pianificazione IA",
+    "subtitle": "Automatizzazione intelligente",
+    "description": "Sperimenta il potere dell'ottimizzazione pianificazione alimentata da IA.",
+    "items": [
+      {
+        "title": "Ridurre assenze",
+        "description": "L'IA prevede e previene assenze con pianificazione intelligente e promemoria.",
+        "icon": "bell",
+        "color": "teal",
+        "stats": {
+          "value": "70%",
+          "label": "Riduzione"
+        },
+        "highlights": [
+          "Previsione assenze",
+          "Pianificazione ottimale",
+          "Promemoria automatizzati",
+          "Analisi comportamento paziente"
+        ]
+      },
+      {
+        "title": "Massimizzare efficienza",
+        "description": "L'IA ottimizza il tuo calendario per massimizzare efficienza e entrate dello studio.",
+        "icon": "trending-up",
+        "color": "cyan",
+        "stats": {
+          "value": "95%",
+          "label": "Efficienza"
+        },
+        "highlights": [
+          "Ottimizzazione calendario",
+          "Riempimento slot",
+          "Massimizzazione entrate",
+          "Assegnazione risorse"
+        ]
+      },
+      {
+        "title": "Risparmiare tempo",
+        "description": "Pianificazione e ottimizzazione automatizzate risparmiano ore di lavoro amministrativo.",
+        "icon": "clock",
+        "color": "blue",
+        "stats": {
+          "value": "10hrs",
+          "label": "A settimana"
+        },
+        "highlights": [
+          "Pianificazione automatizzata",
+          "Lavoro manuale ridotto",
+          "Flussi di lavoro semplificati",
+          "Ottimizzazione tempo"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Pronto per la pianificazione alimentata da IA?",
+    "description": "Vedi come la pianificazione IA di Dentagia può trasformare le operazioni del tuo studio.",
+    "background": "/images/cta-bg.jpg",
+    "primaryButton": {
+      "text": "Prenota una demo",
+      "link": "/demo"
+    },
+    "secondaryButton": {
+      "text": "Scopri di più",
+      "link": "/features"
+    }
+  }
+}
+

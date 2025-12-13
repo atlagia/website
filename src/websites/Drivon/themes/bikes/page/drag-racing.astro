@@ -1,0 +1,211 @@
+---
+import Layoutc from '@layouts/Layoutc.astro';
+import { ArrowRight, Zap, Car, Trophy, Star, Flag } from 'lucide-react';
+
+// Generate static paths for allowed languages from environment
+export async function getStaticPaths() {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  const languages = allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+  
+  return languages.map(lang => ({ params: { lang } }));
+}
+
+const { lang = 'en' } = Astro.params;
+const baseUrl = import.meta.env.DOMAINE || 'https://drivon.store';
+const storeName = import.meta.env.PUBLIC_SITE_NAME || 'Drivon';
+
+// SEO
+const seoTitle = `Drag Racing | ${storeName}`;
+const seoDescription = "Experience the raw power of drag racing. From quarter-mile legends to drag strip heroes, celebrate the ultimate test of speed and acceleration.";
+---
+
+<Layoutc title={seoTitle} description={seoDescription} lang={lang}>
+  <div class="min-h-screen bg-gray-50">
+    <!-- Hero Section -->
+    <section class="relative h-[60vh] bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900">
+      <div class="absolute inset-0 bg-black/50"></div>
+      <div class="relative z-10 h-full flex items-center justify-center text-center px-4">
+        <div class="max-w-4xl mx-auto">
+          <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">
+            Drag Racing
+          </h1>
+          <p class="text-xl md:text-2xl text-gray-200 mb-8">
+            The ultimate test of speed and acceleration
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href={`/${lang}/collections`} class="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+              Drag Racing Collection
+            </a>
+            <a href={`/${lang}/racing-culture`} class="bg-white/20 hover:bg-white/30 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+              Racing Culture
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Drag Racing Features -->
+    <section class="py-20 px-4">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">Quarter-Mile Legends</h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Drag racing is the ultimate test of speed, power, and acceleration. From quarter-mile legends to drag strip heroes, celebrate the champions who push the limits of speed.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+              <Zap class="w-8 h-8 text-purple-600" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Quarter-Mile Champions</h3>
+            <p class="text-gray-600">
+              Celebrate the legendary drag racers who have conquered the quarter-mile and earned their place in drag racing history.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+              <Car class="w-8 h-8 text-indigo-600" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Drag Strip Heroes</h3>
+            <p class="text-gray-600">
+              Honor the legendary drag cars and drivers who have shaped the sport and continue to inspire generations of drag racing enthusiasts.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mb-6">
+              <Trophy class="w-8 h-8 text-pink-600" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Speed Records</h3>
+            <p class="text-gray-600">
+              Experience the rich history of drag racing through authentic designs that capture the spirit of speed and acceleration.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Drag Racing Categories -->
+    <section class="py-20 bg-gray-100">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">Drag Racing Collection</h2>
+          <p class="text-xl text-gray-600">Celebrate the heroes of drag racing</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <a href={`/${lang}/collections`} class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+            <div class="h-48 bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center">
+              <Zap class="w-16 h-16 text-white" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Drag Racing Hoodies</h3>
+              <p class="text-gray-600 mb-4">Premium hoodies celebrating drag racing legends</p>
+              <div class="flex items-center text-purple-600 font-semibold group-hover:text-purple-700">
+                Shop Drag Hoodies <ArrowRight class="w-4 h-4 ml-2" />
+              </div>
+            </div>
+          </a>
+
+          <a href={`/${lang}/collections`} class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+            <div class="h-48 bg-gradient-to-br from-indigo-500 to-indigo-700 flex items-center justify-center">
+              <Car class="w-16 h-16 text-white" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Drag Racing Tees</h3>
+              <p class="text-gray-600 mb-4">Classic tees celebrating drag racing heritage</p>
+              <div class="flex items-center text-indigo-600 font-semibold group-hover:text-indigo-700">
+                Shop Drag Tees <ArrowRight class="w-4 h-4 ml-2" />
+              </div>
+            </div>
+          </a>
+
+          <a href={`/${lang}/racing-accessories`} class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+            <div class="h-48 bg-gradient-to-br from-pink-500 to-pink-700 flex items-center justify-center">
+              <Trophy class="w-16 h-16 text-white" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Drag Accessories</h3>
+              <p class="text-gray-600 mb-4">Essential accessories for drag racing fans</p>
+              <div class="flex items-center text-pink-600 font-semibold group-hover:text-pink-700">
+                Shop Drag Accessories <ArrowRight class="w-4 h-4 ml-2" />
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Drag Racing Culture -->
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">Drag Racing Culture</h2>
+          <p class="text-xl text-gray-600">Experience the authentic drag racing lifestyle</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <div class="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+              <Zap class="w-10 h-10 text-purple-600" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">Quarter-Mile Scene</h3>
+            <p class="text-gray-600 text-center mb-6">
+              Experience the raw power of quarter-mile drag racing with authentic designs that capture the speed and acceleration of the sport.
+            </p>
+            <a href={`/${lang}/street-culture`} class="flex items-center justify-center text-purple-600 font-semibold hover:text-purple-700">
+              Explore Drag Scene <ArrowRight class="w-4 h-4 ml-2" />
+            </a>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <div class="w-20 h-20 bg-indigo-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+              <Car class="w-10 h-10 text-indigo-600" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">Speed Records</h3>
+            <p class="text-gray-600 text-center mb-6">
+              Celebrate the legendary speed records and achievements that have shaped drag racing history.
+            </p>
+            <a href={`/${lang}/racing-heritage`} class="flex items-center justify-center text-indigo-600 font-semibold hover:text-indigo-700">
+              Explore Speed Records <ArrowRight class="w-4 h-4 ml-2" />
+            </a>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <div class="w-20 h-20 bg-pink-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+              <Star class="w-10 h-10 text-pink-600" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">Drag Community</h3>
+            <p class="text-gray-600 text-center mb-6">
+              Connect with like-minded drag racing enthusiasts who share your passion for speed and acceleration.
+            </p>
+            <a href={`/${lang}/car-communities`} class="flex items-center justify-center text-pink-600 font-semibold hover:text-pink-700">
+              Join Drag Community <ArrowRight class="w-4 h-4 ml-2" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-gray-900 text-white">
+      <div class="max-w-4xl mx-auto text-center px-4">
+        <h2 class="text-4xl font-bold mb-6">Experience Drag Racing Heritage</h2>
+        <p class="text-xl text-gray-300 mb-8">
+          Join the global drag racing community and celebrate the ultimate test of speed and acceleration with our authentic drag racing collection.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href={`/${lang}/collections`} class="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+            Shop Drag Racing Collection
+          </a>
+          <a href={`/${lang}/racing-culture`} class="bg-white/20 hover:bg-white/30 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+            Explore Racing Culture
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layoutc>

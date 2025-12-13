@@ -1,0 +1,90 @@
+---
+import { getAllProducts } from '@libs/shopify';
+
+interface Props {
+  title: string;
+  description: string;
+  viewAllLink: string;
+  lang: string;
+}
+
+const { title, description, viewAllLink, lang } = Astro.props;
+
+// Fetch products from Shopify and limit to 4
+const productsData = await getAllProducts();
+const products = productsData
+  .slice(0, 4)
+  .map(({ node }) => ({
+    id: node.id,
+    name: node.title,
+    handle: node.handle,
+    price: new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: node.priceRange.minVariantPrice.currencyCode
+    }).format(node.priceRange.minVariantPrice.amount),
+    image: node.images.edges[0]?.node.url || '/placeholder-image.jpg',
+    category: 'Dental Solution',
+  }));
+---
+
+<section class="py-20 px-4 bg-gradient-to-b from-[#F6FFFD] via-white to-[#E8F6FF]">
+  <div class="max-w-7xl mx-auto">
+    <!-- Welcome Section -->
+    <div class="text-center mb-16">
+      <span class="text-[#0EA5E9] font-medium mb-4 block" id="content-subtitle">Trusted Dental Technology</span>
+      <h1 class="text-4xl md:text-5xl font-bold mb-6" id="content-title">{title}</h1>
+      <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed" id="content-description">{description}</p>
+    </div>
+
+    <!-- Products Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {products.map((product, index) => (
+        <a 
+          href={`/${lang}/products/${product.handle}`} 
+          class="block group bg-white rounded-xl p-4 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-[#0EA5E91A]"
+          id={`content-product-${index}-link`}
+        >
+          <div class="relative overflow-hidden rounded-lg mb-4">
+            <img
+              src={product.image}
+              alt={product.name}
+              class="w-full aspect-[4/3] object-cover transition-transform duration-300 group-hover:scale-105"
+              id={`content-product-${index}-image`}
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/45 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+            <div class="absolute top-2 right-2 bg-white text-[#0EA5E9] px-3 py-1 rounded-full text-sm font-medium shadow-sm" id={`content-product-${index}-price`}>
+              {product.price}
+            </div>
+          </div>
+          <div class="space-y-3">
+            <div>
+              <h3 class="text-lg font-semibold line-clamp-1 group-hover:text-[#0EA5E9] transition-colors" id={`content-product-${index}-title`}>
+                {product.name}
+              </h3>
+              <p class="text-sm text-slate-500 mt-1" id={`content-product-${index}-subtitle`}>Built for modern dental practices</p>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 bg-[#DDF6F3] text-[#0EA5E9] rounded-full text-sm font-medium" id={`content-product-${index}-category`}>
+                {product.category}
+              </span>
+              <span class="text-sm text-[#0EA5E9] font-medium hover:text-[#0D8EC6] flex items-center gap-1" id={`content-product-${index}-learnMore`}>
+                View solution <span class="text-lg">→</span>
+              </span>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+
+    <!-- View All Button -->
+    <div class="text-center mt-12">
+      <a
+        href={viewAllLink}
+        class="inline-block bg-gradient-to-r from-[#0EA5E9] to-[#14B8A6] text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-[#0EA5E933] transition-all"
+        id="content-viewAllLink"
+      >
+        <span id="content-viewAllText">See all dental solutions</span>
+      </a>
+    </div>
+  </div>
+</section>

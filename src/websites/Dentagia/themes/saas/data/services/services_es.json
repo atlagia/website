@@ -1,0 +1,238 @@
+{
+  "pageTitle": "Servicios de Gestión de Consultorios Dentales",
+  "pageDescription": "Explore nuestra gama completa de servicios diseñados para ayudar a su consultorio dental a prosperar con soluciones impulsadas por IA.",
+  "hero": {
+    "badge": "Nuestros Servicios",
+    "title": "Servicios Completos de Gestión de Consultorios",
+    "description": "Descubra nuestra gama completa de servicios diseñados para ayudar a su consultorio dental a prosperar con soluciones modernas de gestión de consultorios impulsadas por IA.",
+    "cta": {
+      "primary": {
+        "text": "Explorar Servicios",
+        "href": "#services"
+      },
+      "secondary": {
+        "text": "Comenzar",
+        "href": "/contact"
+      }
+    }
+  },
+  "stats": [
+    {
+      "value": "500+",
+      "label": "Consultorios Dentales"
+    },
+    {
+      "value": "99.9%",
+      "label": "Disponibilidad"
+    },
+    {
+      "value": "50%",
+      "label": "Tiempo Ahorrado"
+    },
+    {
+      "value": "24/7",
+      "label": "Soporte"
+    }
+  ],
+  "services": [
+    {
+      "category": "Gestión del Consultorio",
+      "description": "Soluciones completas de gestión de consultorios para su consultorio dental",
+      "items": [
+        {
+          "icon": "users",
+          "name": "Gestión de Pacientes",
+          "description": "Registros completos de pacientes, historiales médicos y planificación de tratamientos",
+          "features": ["Registros Digitales de Pacientes", "Seguimiento del Historial Médico", "Planificación de Tratamientos", "Portal del Paciente"],
+          "color": "blue"
+        },
+        {
+          "icon": "calendar",
+          "name": "Programación Impulsada por IA",
+          "description": "Programación inteligente de citas que optimiza su calendario",
+          "features": ["Programación Inteligente", "Recordatorios Automatizados", "Gestión de Listas de Espera", "Reducción de Ausencias"],
+          "color": "purple"
+        },
+        {
+          "icon": "credit-card",
+          "name": "Facturación y Pagos",
+          "description": "Facturación, facturación y procesamiento de pagos optimizados",
+          "features": ["Facturación Automatizada", "Procesamiento de Pagos", "Reclamaciones de Seguros", "Informes Financieros"],
+          "color": "indigo"
+        },
+        {
+          "icon": "bar-chart",
+          "name": "Análisis del Consultorio",
+          "description": "Insights basados en datos para comprender y hacer crecer su consultorio",
+          "features": ["Métricas de Rendimiento", "Análisis de Pacientes", "Seguimiento de Ingresos", "Insights de Crecimiento"],
+          "color": "cyan"
+        }
+      ]
+    },
+    {
+      "category": "Herramientas Clínicas",
+      "description": "Herramientas clínicas avanzadas para consultorios dentales modernos",
+      "items": [
+        {
+          "icon": "file-text",
+          "name": "Registros Digitales",
+          "description": "Registros digitales completos de pacientes y documentación",
+          "features": ["Registros Médicos", "Planes de Tratamiento", "Gestión de Radiografías", "Notas Clínicas"],
+          "color": "rose"
+        },
+        {
+          "icon": "clipboard",
+          "name": "Planificación de Tratamientos",
+          "description": "Herramientas avanzadas de planificación y documentación de tratamientos",
+          "features": ["Planes de Tratamiento", "Presentación de Casos", "Seguimiento del Progreso", "Análisis de Resultados"],
+          "color": "amber"
+        },
+        {
+          "icon": "shield",
+          "name": "Cumplimiento HIPAA",
+          "description": "Seguridad de nivel empresarial y cumplimiento HIPAA",
+          "features": ["Cifrado de Datos", "Control de Acceso", "Registros de Auditoría", "Gestión de Cumplimiento"],
+          "color": "lime"
+        },
+        {
+          "icon": "cloud",
+          "name": "Almacenamiento Cloud",
+          "description": "Almacenamiento y copia de seguridad de datos seguros basados en la nube",
+          "features": ["Copias de Seguridad Automáticas", "Recuperación de Datos", "Acceso Multi-Dispositivo", "Sincronización en Tiempo Real"],
+          "color": "green"
+        }
+      ]
+    },
+    {
+      "category": "Servicios de Soporte",
+      "description": "Soporte y capacitación completos para su consultorio",
+      "items": [
+        {
+          "icon": "headphones",
+          "name": "Soporte 24/7",
+          "description": "Soporte técnico y asistencia disponibles las 24 horas del día, los 7 días de la semana",
+          "features": ["Mesa de Ayuda", "Monitoreo del Sistema", "Resolución de Problemas", "Optimización del Rendimiento"],
+          "color": "sky"
+        },
+        {
+          "icon": "graduation-cap",
+          "name": "Capacitación e Incorporación",
+          "description": "Capacitación completa para su equipo",
+          "features": ["Capacitación del Equipo", "Tutoriales en Video", "Documentación", "Mejores Prácticas"],
+          "color": "cyan"
+        },
+        {
+          "icon": "settings",
+          "name": "Personalización",
+          "description": "Soluciones adaptadas a las necesidades específicas de su consultorio",
+          "features": ["Personalización de Flujos de Trabajo", "Personalización de Informes", "Configuración de Integración", "Configuración del Consultorio"],
+          "color": "blue"
+        },
+        {
+          "icon": "zap",
+          "name": "Actualizaciones del Sistema",
+          "description": "Actualizaciones regulares y nuevas versiones de funciones",
+          "features": ["Actualizaciones Automáticas", "Nuevas Funciones", "Parches de Seguridad", "Mejoras de Rendimiento"],
+          "color": "indigo"
+        }
+      ]
+    }
+  ],
+  "features": {
+    "title": "Lo Que Ofrecemos",
+    "description": "Nuestros servicios vienen con funciones y soporte completos",
+    "items": [
+      {
+        "icon": "cloud",
+        "title": "Plataforma Basada en la Nube",
+        "description": "Acceda a los datos de su consultorio de forma segura desde cualquier lugar, en cualquier momento"
+      },
+      {
+        "icon": "shield",
+        "title": "Conforme a HIPAA",
+        "description": "Seguridad de nivel empresarial con almacenamiento de datos cifrado"
+      },
+      {
+        "icon": "zap",
+        "title": "Impulsado por IA",
+        "description": "Automatización inteligente para programación e insights del consultorio"
+      },
+      {
+        "icon": "trending-up",
+        "title": "Crecimiento del Consultorio",
+        "description": "Herramientas diseñadas para ayudar a hacer crecer su consultorio"
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Beneficios de los Servicios",
+    "description": "Experimente las ventajas de usar Dentagia para su consultorio.",
+    "items": [
+      {
+        "icon": "rocket",
+        "title": "Eficiencia",
+        "description": "Operaciones optimizadas que ahorran tiempo y reducen la carga administrativa",
+        "stats": "50%",
+        "label": "Tiempo Ahorrado"
+      },
+      {
+        "icon": "target",
+        "title": "Confiabilidad",
+        "description": "Plataforma segura y confiable con garantía de disponibilidad del 99.9%",
+        "stats": "99.9%",
+        "label": "Disponibilidad"
+      },
+      {
+        "icon": "lightbulb",
+        "title": "Innovación",
+        "description": "Tecnología IA de vanguardia diseñada para consultorios dentales modernos",
+        "stats": "500+",
+        "label": "Consultorios"
+      },
+      {
+        "icon": "users",
+        "title": "Soporte",
+        "description": "Equipo de soporte dedicado disponible 24/7 para su consultorio",
+        "stats": "24/7",
+        "label": "Soporte"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Lo Que Dicen Nuestros Clientes",
+    "description": "Escuche a consultorios dentales que se han beneficiado de Dentagia",
+    "items": [
+      {
+        "quote": "Dentagia ha transformado cómo gestionamos nuestro consultorio. La programación impulsada por IA sola nos ahorra 10 horas por semana, y nuestros puntajes de satisfacción del paciente nunca han sido más altos.",
+        "author": "Dr. Sarah Martinez",
+        "role": "Propietario del Consultorio",
+        "company": "Clínica Dental del Centro",
+        "image": "/images/testimonials/sarah.jpg"
+      },
+      {
+        "quote": "Cambiar a Dentagia fue la mejor decisión que tomamos. El sistema de gestión de pacientes es intuitivo, la facturación está automatizada y el análisis nos ayuda a entender mejor nuestro consultorio.",
+        "author": "Dr. Michael Chen",
+        "role": "Dentista Principal",
+        "company": "Family Dental Care",
+        "image": "/images/testimonials/michael.jpg"
+      }
+    ]
+  },
+  "cta": {
+    "title": "¿Listo para Comenzar?",
+    "description": "Únase a cientos de consultorios dentales que han transformado sus operaciones con Dentagia.",
+    "buttons": [
+      {
+        "text": "Contáctenos",
+        "href": "/contact",
+        "variant": "primary"
+      },
+      {
+        "text": "Programar una Demostración",
+        "href": "/demo",
+        "variant": "secondary"
+      }
+    ]
+  }
+}
+

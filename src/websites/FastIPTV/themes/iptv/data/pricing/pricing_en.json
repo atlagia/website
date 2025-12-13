@@ -1,0 +1,97 @@
+{
+  "hero": {
+    "title": "Choose Your Fast Stronger IPTV Plan",
+    "description": "Find the perfect Fast IPTV membership for your premium streaming needs"
+  },
+  "billing": {
+    "monthly": "Monthly billing",
+    "yearly": "Annual billing",
+    "saveText": "Save 20%"
+  },
+  "plans": [
+    {
+      "name": "1 Month Fast IPTV",
+      "price": "16.99",
+      "duration": "month",
+      "checkoutUrl": "https://pays.myatlagia.store/checkout?cart=%7B%22items%22%3A%5B%7B%22title%22%3A%221%20Month%20Fast%20IPTV%22%2C%22price%22%3A1699%2C%22currency%22%3A%22USD%22%2C%22quantity%22%3A1%2C%22image%22%3A%22https%3A%2F%2Fvia.placeholder.com%2F100%22%7D%5D%2C%22total%22%3A1699%7D&store=FastTV&shop_domain=pays.myatlagia.store",
+      "features": [
+        "+32,000 Fast IPTV Channels",
+        "+140,000 Premium IPTV Movies & Series",
+        "8k/ 4K / Ultra HD Stronger IPTV Quality",
+        "Catch Up /EPG For All Fast IPTV Channels",
+        "FREE Premium IPTV Channels & VOD Updates",
+        "99.9% Fast IPTV Server Uptime",
+        "All Devices Supported for Stronger IPTV",
+        "AntiFreeeze Technology for Fast IPTV",
+        "24/7 Premium IPTV Technical Assistance"
+      ],
+      "isPopular": false
+    },
+    {
+      "name": "12 Month Stronger IPTV",
+      "price": "59.99",
+      "duration": "year",
+      "checkoutUrl": "https://pays.myatlagia.store/checkout?cart=%7B%22items%22%3A%5B%7B%22title%22%3A%2212%20Month%20Stronger%20IPTV%22%2C%22price%22%3A5999%2C%22currency%22%3A%22USD%22%2C%22quantity%22%3A1%2C%22image%22%3A%22https%3A%2F%2Fvia.placeholder.com%2F100%22%7D%5D%2C%22total%22%3A5999%7D&store=FastTV&shop_domain=pays.myatlagia.store",
+      "features": [
+        "+32,000 Premium IPTV Channels",
+        "+140,000 Fast IPTV Movies & Series",
+        "8k/ 4K / Ultra HD Stronger IPTV Quality",
+        "Catch Up /EPG For All Fast IPTV Channels",
+        "FREE Premium IPTV Channels & VOD Updates",
+        "99.9% Fast IPTV Server Uptime",
+        "All Devices Supported for Stronger IPTV",
+        "AntiFreeeze Technology for Fast IPTV",
+        "24/7 Premium IPTV Technical Assistance"
+      ],
+      "isPopular": true
+    },
+    {
+      "name": "3 Month Fast IPTV",
+      "price": "29.99",
+      "duration": "quarter",
+      "checkoutUrl": "https://pays.myatlagia.store/checkout?cart=%7B%22items%22%3A%5B%7B%22title%22%3A%223%20Month%20Fast%20IPTV%22%2C%22price%22%3A2999%2C%22currency%22%3A%22USD%22%2C%22quantity%22%3A1%2C%22image%22%3A%22https%3A%2F%2Fvia.placeholder.com%2F100%22%7D%5D%2C%22total%22%3A2999%7D&store=FastTV&shop_domain=pays.myatlagia.store",
+      "features": [
+        "+32,000 Stronger IPTV Channels",
+        "+140,000 Premium IPTV Movies & Series",
+        "8k/ 4K / Ultra HD Fast IPTV Quality",
+        "Catch Up /EPG For All Premium IPTV Channels",
+        "FREE Fast IPTV Channels & VOD Updates",
+        "99.9% Stronger IPTV Server Uptime",
+        "All Devices Supported for Fast IPTV",
+        "AntiFreeeze Technology for Premium IPTV",
+        "24/7 Stronger IPTV Technical Assistance"
+      ],
+      "isPopular": false
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What payment methods do you accept?",
+      "answer": "We accept all major credit cards, PayPal, and bank transfers for annual plans."
+    },
+    {
+      "question": "Can I change plans later?",
+      "answer": "Yes, you can upgrade or downgrade your plan at any time. Changes will be reflected in your next billing cycle."
+    },
+    {
+      "question": "Is there a free trial?",
+      "answer": "Yes, we offer a 14-day free trial on all plans. No credit card required."
+    },
+    {
+      "question": "What happens after my trial ends?",
+      "answer": "After your trial ends, you can choose to subscribe to any of our plans or your account will be automatically downgraded to a limited free version."
+    }
+  ],
+  "cta": {
+    "title": "Ready to get started?",
+    "description": "Join thousands of businesses that trust our platform",
+    "primaryButton": {
+      "text": "Start Free Trial",
+      "link": "/signup"
+    },
+    "secondaryButton": {
+      "text": "Contact Sales",
+      "link": "/contact"
+    }
+  }
+} 
