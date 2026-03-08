@@ -1,0 +1,80 @@
+{
+  "title": "Nous Contacter",
+  "description": "Contactez Drivon pour toute question concernant notre équipement de course, vos commandes ou nos partenariats. Nous sommes là pour vous aider !",
+  "hero": {
+    "title": "Nous Contacter",
+    "subtitle": "Vous avez des questions ? Nous sommes là pour vous aider. Contactez notre équipe pour toute assistance concernant les commandes, les informations produits ou autre."
+  },
+  "sections": {
+    "contactInfo": {
+      "title": "Entrer en Contact"
+    },
+    "contactForm": {
+      "title": "Envoyez-nous un Message"
+    }
+  },
+  "contactInfo": {
+    "email": {
+      "title": "Email"
+    },
+    "phone": {
+      "title": "Téléphone"
+    },
+    "address": {
+      "title": "Adresse"
+    }
+  },
+  "support": {
+    "hours": {
+      "title": "Heures de Support"
+    }
+  },
+  "form": {
+    "name": {
+      "label": "Nom",
+      "placeholder": "Votre nom complet"
+    },
+    "email": {
+      "label": "Email",
+      "placeholder": "votre.email@exemple.com"
+    },
+    "subject": {
+      "label": "Sujet",
+      "placeholder": "En quoi pouvons-nous vous aider ?"
+    },
+    "message": {
+      "label": "Message",
+      "placeholder": "Dites-nous en plus sur votre demande..."
+    },
+    "submitButton": "Envoyer le Message"
+  },
+  "faq": {
+    "title": "Questions Fréquemment Posées",
+    "items": [
+      {
+        "question": "Combien de temps prend la livraison ?",
+        "answer": "Nous expédions généralement les commandes sous 1-2 jours ouvrables. La livraison nationale prend 3-5 jours ouvrables, tandis que la livraison internationale prend 7-14 jours ouvrables."
+      },
+      {
+        "question": "Quelle est votre politique de retour ?",
+        "answer": "Nous offrons une politique de retour de 30 jours pour les articles non utilisés dans leur emballage d'origine. Les retours sont gratuits pour les clients nationaux."
+      },
+      {
+        "question": "Offrez-vous la livraison internationale ?",
+        "answer": "Oui, nous livrons dans le monde entier ! Les tarifs et délais de livraison internationaux varient selon la localisation."
+      },
+      {
+        "question": "Comment puis-je suivre ma commande ?",
+        "answer": "Une fois votre commande expédiée, vous recevrez un numéro de suivi par email. Vous pouvez également suivre votre commande dans votre tableau de bord de compte."
+      },
+      {
+        "question": "Quels modes de paiement acceptez-vous ?",
+        "answer": "Nous acceptons toutes les principales cartes de crédit, PayPal et les virements bancaires pour les commandes internationales."
+      },
+      {
+        "question": "Avez-vous un guide des tailles ?",
+        "answer": "Oui ! Consultez notre page de guide des tailles pour des mesures détaillées et des instructions d'ajustement pour tout notre équipement de course."
+      }
+    ]
+  }
+}

@@ -57,7 +57,7 @@ export default function Header({
   menuConfig, 
   languages, 
   allowedLanguages,
-  projectType, 
+  projectType: projectTypeProp, 
   currentPath,
   currencies,
   styles,
@@ -66,6 +66,23 @@ export default function Header({
   searchConfig,
   paymentConfig
 }: HeaderProps) {
+  // Use projectType from props or from layout (data-project-type on body)
+  const [projectType, setProjectType] = useState((projectTypeProp || 'physical').toLowerCase());
+  
+  // Helper to check if project is physical
+  const isPhysical = !['iptv', 'digital', 'degital', 'streaming', 'directory'].includes(projectType);
+
+  useEffect(() => {
+    if (projectTypeProp) {
+      setProjectType(projectTypeProp.toLowerCase());
+      return;
+    }
+    const fromLayout = typeof document !== 'undefined' && document.body.getAttribute('data-project-type');
+    if (fromLayout && fromLayout !== 'default') {
+      setProjectType(fromLayout.toLowerCase());
+    }
+  }, [projectTypeProp]);
+
   // Filter the languages object based on allowed languages passed from server
   const filteredLanguages = Object.fromEntries(
     Object.entries(languages).filter(([code]) => allowedLanguages.includes(code))
@@ -152,7 +169,7 @@ export default function Header({
             {/* Mobile Menu Button - Only visible on mobile */}
             <div className="flex lg:hidden">
               <button 
-                className="p-2 text-gray-300 hover:text-white"
+                className="p-2 text-neutral-600 hover:text-neutral-900 transition-colors"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 aria-label="Toggle menu"
               >
@@ -172,12 +189,12 @@ export default function Header({
             </div>
 
             {/* Desktop Navigation - Hidden on mobile, visible on desktop */}
-            <nav className="hidden lg:flex lg:items-center lg:space-x-4">
+            <nav className={headerStyles.nav?.menu?.desktop || 'hidden lg:flex lg:items-center lg:space-x-4'}>
               {currentMenuItems.items.map((item, index) => (
                 <a 
                   key={index}
                   href={item.href}
-                  className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                  className={headerStyles.nav?.menu?.item || 'text-neutral-600 hover:text-neutral-900 px-3 py-2 rounded-md text-sm font-medium transition-colors'}
                 >
                   {item.label}
                 </a>
@@ -192,9 +209,9 @@ export default function Header({
                 placeholder={searchConfig.placeholder}
                 searchStyles={{
                   icon: headerStyles.actions.search?.icon,
-                  button: "p-2 hover:bg-gray-100 rounded-full",
-                  form: "absolute top-full right-0 mt-2 w-72 bg-white rounded-lg shadow-lg p-4 z-50",
-                  input: "w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  button: "p-2 hover:bg-neutral-100 rounded-full transition-colors",
+                  form: "absolute top-full right-0 mt-2 w-72 bg-white rounded-lg shadow-lg border border-neutral-200 p-4 z-50",
+                  input: "w-full px-4 py-2 border border-neutral-200 rounded-md focus:outline-none focus:ring-2 focus:ring-neutral-900 focus:border-neutral-400"
                 }}
               />
 
@@ -245,7 +262,7 @@ export default function Header({
                         key={code}
                         onClick={() => changeLanguage(code)}
                         className={`${styles.actions.language.option} ${
-                          language === code ? 'bg-gray-100' : 'hover:bg-gray-50'
+                          language === code ? 'bg-neutral-100' : 'hover:bg-neutral-50'
                         }`}
                         aria-label={`Change language to ${name}`}
                       >
@@ -256,11 +273,11 @@ export default function Header({
                 )}
               </div>
 
-              {/* Cart Button */}
+              {/* Cart Button - label adapts by projectType */}
               <button 
                 onClick={() => setIsOpen(!isOpen)} 
                 className={styles.actions.cart.button}
-                aria-label={`Shopping cart${items.length > 0 ? ` (${items.length} items)` : ''}`}
+                aria-label={isPhysical ? `Shopping cart${items.length > 0 ? ` (${items.length} items)` : ''}` : `Cart${items.length > 0 ? ` (${items.length})` : ''}`}
               >
                 <ShoppingCart size={24} />
                 {items.length > 0 && (
@@ -276,7 +293,7 @@ export default function Header({
 
       {/* Mobile Navigation Menu */}
       <div
-        className={`lg:hidden fixed left-0 right-0 bg-white shadow-lg transition-all duration-300 ease-in-out ${
+        className={`lg:hidden fixed left-0 right-0 bg-white shadow-lg border-b border-neutral-200 transition-all duration-300 ease-in-out ${
           isMobileMenuOpen ? 'top-[64px] opacity-100 visible' : 'top-[64px] opacity-0 invisible'
         }`}
         style={{
@@ -290,7 +307,7 @@ export default function Header({
             <a
               key={index}
               href={item.href}
-              className="block py-3 px-4 text-gray-800 hover:bg-gray-100 border-b border-gray-100 last:border-0"
+              className="block py-3 px-4 text-neutral-800 hover:bg-neutral-50 border-b border-neutral-100 last:border-0 transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {item.label}
@@ -308,36 +325,38 @@ export default function Header({
         />
       )}
 
-      {/* Cart Sidebar - Enhanced */}
+      {/* Cart Sidebar - styles from headerStyles.cart (website/theme) */}
       <div 
-        className={`fixed inset-y-0 right-0 w-full max-w-md bg-gradient-to-b from-white to-gray-50 shadow-2xl z-[100] transform transition-all duration-300 ease-in-out backdrop-blur-sm ${
+        className={`${headerStyles?.cart?.sidebar ?? 'fixed inset-y-0 right-0 w-full max-w-md bg-white shadow-xl border-l border-neutral-200 z-[100] transform transition-all duration-300 ease-in-out'} ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
-        <div className="h-full flex flex-col">
-          {/* Enhanced Header */}
-          <div className="p-6 border-b border-gray-200 bg-gradient-to-r from-gray-50 to-white">
-            <div className="flex justify-between items-center">
+        <div className={headerStyles?.cart?.container ?? 'h-full flex flex-col'}>
+          <div className={headerStyles?.cart?.header ?? 'p-4 border-b border-neutral-200'}>
+            <div className={headerStyles?.cart?.headerContent ?? 'flex justify-between items-center'}>
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className={headerStyles?.cart?.iconWrapper ?? 'w-8 h-8 bg-neutral-900 rounded-lg flex items-center justify-center'}>
+                  <svg className={headerStyles?.cart?.icon ?? 'w-5 h-5 text-white'} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6m8 0V9a2 2 0 00-2-2H9a2 2 0 00-2 2v4.01" />
                   </svg>
                 </div>
-                <h2 className="text-xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">Shopping Cart</h2>
+                <h2 className={headerStyles?.cart?.title ?? 'text-lg font-semibold text-neutral-900'}>
+                  {isPhysical ? 'Shopping Cart' : 'Cart'}
+                </h2>
               </div>
               <button 
                 onClick={() => setIsOpen(false)}
-                className="p-2.5 hover:bg-gray-100 rounded-full transition-all duration-200 hover:scale-110 group"
-                aria-label="Close shopping cart"
+                className={headerStyles?.cart?.closeButton ?? 'p-2 hover:bg-neutral-100 rounded-full'}
+                aria-label="Close cart"
               >
-                <svg className="w-5 h-5 text-gray-500 group-hover:text-gray-700 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-neutral-500 hover:text-neutral-700 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
             </div>
           </div>
-          <Cart 
+          <Cart
+            cartStyles={headerStyles?.cart} 
             onCheckout={() => {
               // Explicitly close the cart
               setIsOpen(false);
@@ -358,10 +377,10 @@ export default function Header({
         </div>
       </div>
       
-      {/* Overlay - Update z-index */}
+      {/* Cart overlay - styles from headerStyles.cart */}
       {isOpen && (
         <div 
-          className="fixed inset-0 bg-black bg-opacity-50 z-[90]"
+          className={headerStyles?.cart?.overlay ?? 'fixed inset-0 bg-black bg-opacity-50 z-[90]'}
           onClick={() => setIsOpen(false)}
         />
       )}

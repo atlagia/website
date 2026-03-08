@@ -31,13 +31,13 @@ let filterData;
 
 try {
   // Try to load from current website theme path
-  contentData = await import(`@websites/Drivon/themes/bikes/data/products/products_${lang}.json`);
-  filterData = await import(`@websites/Drivon/themes/bikes/data/collection-filters.json`);
+  contentData = await import(`@websites/${SITE_NAME}/themes/${THEME}/data/products/products_${lang}.json`);
+  filterData = await import(`@websites/${SITE_NAME}/themes/${THEME}/data/collection-filters.json`);
 } catch (error) {
   try {
     // Fallback to English
-    contentData = await import(`@websites/Drivon/themes/bikes/data/products/products_en.json`);
-    filterData = await import(`@websites/Drivon/themes/bikes/data/collection-filters.json`);
+    contentData = await import(`@websites/${SITE_NAME}/themes/${THEME}/data/products/products_en.json`);
+    filterData = await import(`@websites/${SITE_NAME}/themes/${THEME}/data/collection-filters.json`);
   } catch (fallbackError) {
     // Final fallback to default data
     contentData = await import('@data/collection-content.json');
@@ -53,7 +53,7 @@ const dataType = import.meta.env.DATA_TYPE?.toLowerCase() || 'shopify';
 const content = contentData.default || contentData;
 
 // Parse current filters from URL
-const url = new URL(Astro.request.url);
+const url = Astro.url;
 const currentFilters: Record<string, string[]> = {};
 url.searchParams.forEach((value, key) => {
   if (key === 'color' || key === 'size' || key === 'availability') {

@@ -1,14 +1,24 @@
 ---
-import { getAllCollections } from '../../lib/controller';
+import { getAllCollections } from '@libs/controller';
 import { ArrowRight } from 'lucide-react';
 
 const theme = import.meta.env.THEME || 'default';
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'default';
 export const prerender = true;
 
-// Properly handle dynamic imports with default exports
-const { default: BaseHead } = await import(`../../themes/${theme}/components/BaseHead.astro`);
-const { default: Header } = await import(`../../themes/${theme}/components/Header.astro`);
-const { default: Footer } = await import(`../../themes/${theme}/components/Footer.astro`);
+// Try website-specific theme first, then fallback to shared theme (same as [lang]/[...slug].astro)
+async function loadThemeComponent(component: string) {
+  try {
+    const mod = await import(`@websites/${siteName}/themes/${theme}/components/${component}.astro`);
+    return mod.default;
+  } catch {
+    const mod = await import(`@themes/${theme}/components/${component}.astro`);
+    return mod.default;
+  }
+}
+const BaseHead = await loadThemeComponent('BaseHead');
+const Header = await loadThemeComponent('Header');
+const Footer = await loadThemeComponent('Footer');
 
 const { lang } = Astro.params;
 // Add default language handling

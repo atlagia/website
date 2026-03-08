@@ -1,0 +1,99 @@
+{
+  "title": "F1 Championship Edition",
+  "description": "Celebrate F1 championship victories with our exclusive racing suit collection. Limited edition designs honoring the greatest champions in Formula 1 history.",
+  "hero": {
+    "title": "F1 Championship Edition",
+    "subtitle": "Limited edition racing suits celebrating the greatest F1 championship victories",
+    "cta1": "Shop Championship Suits",
+    "cta2": "View Champions"
+  },
+  "sections": {
+    "champions": {
+      "title": "F1 World Champions",
+      "subtitle": "Honor the legendary drivers who conquered Formula 1"
+    },
+    "collection": {
+      "title": "Championship Collection",
+      "subtitle": "Exclusive racing suits inspired by championship moments"
+    },
+    "legacy": {
+      "title": "Championship Legacy",
+      "subtitle": "Celebrate the greatest moments in F1 championship history"
+    }
+  },
+  "champions": [
+    {
+      "name": "Lewis Hamilton",
+      "championships": 7,
+      "years": "2008, 2014-2015, 2017-2020",
+      "description": "The most successful F1 driver of all time with 7 world championships",
+      "image": "/images/champions/hamilton.jpg",
+      "link": "/collections/hamilton-championship-suit"
+    },
+    {
+      "name": "Michael Schumacher",
+      "championships": 7,
+      "years": "1994-1995, 2000-2004",
+      "description": "The legendary German champion who dominated F1 in the early 2000s",
+      "image": "/images/champions/schumacher.jpg",
+      "link": "/collections/schumacher-championship-suit"
+    },
+    {
+      "name": "Juan Manuel Fangio",
+      "championships": 5,
+      "years": "1951, 1954-1957",
+      "description": "The Argentine maestro who won 5 championships in the 1950s",
+      "image": "/images/champions/fangio.jpg",
+      "link": "/collections/fangio-championship-suit"
+    }
+  ],
+  "collections": [
+    {
+      "title": "Championship Winner Suit",
+      "description": "Racing suit inspired by legendary F1 champions",
+      "price": "$299.99",
+      "link": "/collections/championship-winner-suit",
+      "linkText": "Shop F1 Championship"
+    },
+    {
+      "title": "Victory Edition Suit",
+      "description": "Limited edition suit celebrating championship victories",
+      "price": "$279.99",
+      "link": "/collections/victory-edition-suit",
+      "linkText": "Shop F1 Championship"
+    },
+    {
+      "title": "Legend Series Suit",
+      "description": "Racing suit honoring F1 racing legends",
+      "price": "$259.99",
+      "link": "/collections/legend-series-suit",
+      "linkText": "Shop F1 Championship"
+    }
+  ],
+  "legacy": [
+    {
+      "title": "Historic Victories",
+      "description": "Celebrate the most memorable championship moments in F1 history",
+      "icon": "Trophy",
+      "link": "/collections/historic-victories"
+    },
+    {
+      "title": "Championship Records",
+      "description": "Honor the drivers who set new standards in Formula 1 racing",
+      "icon": "Award",
+      "link": "/collections/championship-records"
+    },
+    {
+      "title": "Racing Legends",
+      "description": "Pay tribute to the greatest F1 champions of all time",
+      "icon": "Crown",
+      "link": "/collections/racing-legends"
+    }
+  ],
+  "cta": {
+    "title": "Join the Championship Legacy",
+    "subtitle": "Get your exclusive F1 championship edition racing suit and become part of Formula 1 history.",
+    "button1": "Shop Championship Suits",
+    "button2": "View All Champions"
+  }
+}

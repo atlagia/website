@@ -1,0 +1,214 @@
+---
+import Layoutc from '@layouts/Layoutc.astro';
+import { ArrowRight, Trophy, Star, Crown, Award, Medal } from 'lucide-react';
+
+// Generate static paths for allowed languages from environment
+export async function getStaticPaths() {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  const languages = allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+  
+  return languages.map(lang => ({ params: { lang } }));
+}
+
+const { lang = 'en' } = Astro.params;
+const baseUrl = import.meta.env.DOMAINE || 'https://drivon.store';
+const storeName = import.meta.env.PUBLIC_SITE_NAME || 'Drivon';
+
+// SEO
+const seoTitle = `Classic Racing Hoodies | ${storeName}`;
+const seoDescription = "Premium classic racing hoodies celebrating motorsport heritage. From vintage racing legends to classic car culture, wear the heritage of classic racing.";
+---
+
+<Layoutc title={seoTitle} description={seoDescription} lang={lang}>
+  <div class="min-h-screen bg-[var(--drivon-bg)]">
+    <!-- Hero Section -->
+    <section class="relative min-h-[50vh] flex items-center justify-center bg-[var(--drivon-text)] text-[var(--drivon-bg)]">
+      <div class="relative z-10 h-full flex items-center justify-center text-center px-4">
+        <div class="max-w-4xl mx-auto">
+          <h1 class="font-headline text-5xl md:text-7xl uppercase tracking-tight text-[var(--drivon-bg)] mb-6">
+            Classic Racing Hoodies
+          </h1>
+          <p class="text-xl md:text-2xl text-[var(--drivon-bg)]/90 mb-8">
+            Premium hoodies celebrating motorsport heritage
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href={`/${lang}/collections`} class="bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+              Shop Classic Racing Hoodies
+            </a>
+            <a href={`/${lang}/racing-heritage`} class="inline-flex items-center justify-center border-2 border-[var(--drivon-bg)] text-[var(--drivon-bg)] px-8 py-3.5 text-[11px] font-medium tracking-[0.2em] uppercase hover:bg-[var(--drivon-bg)]/10 transition-colors font-body">
+              Racing Heritage
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Classic Racing Hoodies Features -->
+    <section class="py-20 px-4">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="font-headline text-4xl text-[var(--drivon-text)] uppercase tracking-wide mb-4">Premium Classic Racing Hoodies</h2>
+          <p class="text-xl text-[var(--drivon-muted)] max-w-3xl mx-auto">
+            From vintage racing legends to classic car culture, our classic racing hoodies celebrate the golden age of motorsport with authentic designs and premium quality.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+          <div class="bg-[var(--drivon-card)] rounded-2xl p-8 border border-[var(--drivon-border)]">
+            <div class="w-16 h-16 bg-[var(--drivon-surface)] rounded-full flex items-center justify-center mb-6 text-[var(--drivon-text)]">
+              <Trophy class="w-8 h-8" />
+            </div>
+            <h3 class="font-headline text-2xl text-[var(--drivon-text)] uppercase tracking-wide mb-4">Vintage Racing Legends</h3>
+            <p class="text-[var(--drivon-muted)]">
+              Celebrate the legendary drivers who shaped the golden age of motorsport and earned their place in racing history.
+            </p>
+          </div>
+
+          <div class="bg-[var(--drivon-card)] rounded-2xl p-8 border border-[var(--drivon-border)]">
+            <div class="w-16 h-16 bg-[var(--drivon-surface)] rounded-full flex items-center justify-center mb-6 text-[var(--drivon-text)]">
+              <Star class="w-8 h-8" />
+            </div>
+            <h3 class="font-headline text-2xl text-[var(--drivon-text)] uppercase tracking-wide mb-4">Classic Car Culture</h3>
+            <p class="text-[var(--drivon-muted)]">
+              Honor the legendary cars and drivers who have shaped classic racing and continue to inspire generations of racing enthusiasts.
+            </p>
+          </div>
+
+          <div class="bg-[var(--drivon-card)] rounded-2xl p-8 border border-[var(--drivon-border)]">
+            <div class="w-16 h-16 bg-[var(--drivon-surface)] rounded-full flex items-center justify-center mb-6 text-[var(--drivon-text)]">
+              <Crown class="w-8 h-8" />
+            </div>
+            <h3 class="font-headline text-2xl text-[var(--drivon-text)] uppercase tracking-wide mb-4">Premium Quality</h3>
+            <p class="text-[var(--drivon-muted)]">
+              Every hoodie is crafted with premium materials and attention to detail, ensuring comfort and durability for the classic racing enthusiast.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Classic Racing Hoodies Categories -->
+    <section class="py-20 bg-[var(--drivon-surface)]">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="font-headline text-4xl text-[var(--drivon-text)] uppercase tracking-wide mb-4">Classic Racing Hoodies Collection</h2>
+          <p class="text-xl text-[var(--drivon-muted)]">Celebrate motorsport heritage</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <a href={`/${lang}/collections`} class="group bg-[var(--drivon-card)] rounded-2xl overflow-hidden border border-[var(--drivon-border)] hover:border-[var(--drivon-text)]/30 transition-colors">
+            <div class="h-48 bg-[var(--drivon-text)] flex items-center justify-center text-[var(--drivon-bg)]">
+              <Trophy class="w-16 h-16" />
+            </div>
+            <div class="p-6">
+              <h3 class="font-headline text-xl text-[var(--drivon-text)] uppercase tracking-wide mb-2">Vintage Racing Hoodies</h3>
+              <p class="text-[var(--drivon-muted)] mb-4">Premium hoodies celebrating vintage racing legends</p>
+              <div class="flex items-center text-[var(--drivon-text)] group-hover:text-[var(--drivon-accent-hover)] font-body text-[11px] font-medium tracking-[0.2em] uppercase">
+                Shop Vintage Hoodies <ArrowRight class="w-4 h-4 ml-2" />
+              </div>
+            </div>
+          </a>
+
+          <a href={`/${lang}/collections`} class="group bg-[var(--drivon-card)] rounded-2xl overflow-hidden border border-[var(--drivon-border)] hover:border-[var(--drivon-text)]/30 transition-colors">
+            <div class="h-48 bg-[var(--drivon-text)] flex items-center justify-center text-[var(--drivon-bg)]">
+              <Star class="w-16 h-16" />
+            </div>
+            <div class="p-6">
+              <h3 class="font-headline text-xl text-[var(--drivon-text)] uppercase tracking-wide mb-2">Classic Car Hoodies</h3>
+              <p class="text-[var(--drivon-muted)] mb-4">Classic hoodies honoring classic car culture</p>
+              <div class="flex items-center text-[var(--drivon-text)] group-hover:text-[var(--drivon-accent-hover)] font-body text-[11px] font-medium tracking-[0.2em] uppercase">
+                Shop Classic Car Hoodies <ArrowRight class="w-4 h-4 ml-2" />
+              </div>
+            </div>
+          </a>
+
+          <a href={`/${lang}/collections`} class="group bg-[var(--drivon-card)] rounded-2xl overflow-hidden border border-[var(--drivon-border)] hover:border-[var(--drivon-text)]/30 transition-colors">
+            <div class="h-48 bg-[var(--drivon-text)] flex items-center justify-center text-[var(--drivon-bg)]">
+              <Crown class="w-16 h-16" />
+            </div>
+            <div class="p-6">
+              <h3 class="font-headline text-xl text-[var(--drivon-text)] uppercase tracking-wide mb-2">Racing Heritage Hoodies</h3>
+              <p class="text-[var(--drivon-muted)] mb-4">Hoodies celebrating racing heritage</p>
+              <div class="flex items-center text-[var(--drivon-text)] group-hover:text-[var(--drivon-accent-hover)] font-body text-[11px] font-medium tracking-[0.2em] uppercase">
+                Shop Heritage Hoodies <ArrowRight class="w-4 h-4 ml-2" />
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Classic Racing Hoodies Spotlight -->
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="font-headline text-4xl text-[var(--drivon-text)] uppercase tracking-wide mb-4">Classic Racing Hoodies Features</h2>
+          <p class="text-xl text-[var(--drivon-muted)]">Premium quality and authentic designs</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-[var(--drivon-card)] rounded-2xl p-8 border border-[var(--drivon-border)]">
+            <div class="w-20 h-20 bg-[var(--drivon-surface)] rounded-full flex items-center justify-center mb-6 mx-auto text-[var(--drivon-text)]">
+              <Award class="w-10 h-10" />
+            </div>
+            <h3 class="font-headline text-2xl text-[var(--drivon-text)] uppercase tracking-wide mb-4 text-center">Premium Materials</h3>
+            <p class="text-[var(--drivon-muted)] text-center mb-6">
+              Crafted with premium cotton and attention to detail, ensuring comfort and durability for the classic racing enthusiast.
+            </p>
+            <a href={`/${lang}/collections`} class="flex items-center justify-center text-amber-600 font-semibold hover:text-amber-700">
+              Shop Premium Hoodies <ArrowRight class="w-4 h-4 ml-2" />
+            </a>
+          </div>
+
+          <div class="bg-[var(--drivon-card)] rounded-2xl p-8 border border-[var(--drivon-border)]">
+            <div class="w-20 h-20 bg-[var(--drivon-surface)] rounded-full flex items-center justify-center mb-6 mx-auto text-[var(--drivon-text)]">
+              <Medal class="w-10 h-10" />
+            </div>
+            <h3 class="font-headline text-2xl text-[var(--drivon-text)] uppercase tracking-wide mb-4 text-center">Authentic Designs</h3>
+            <p class="text-[var(--drivon-muted)] text-center mb-6">
+              Featuring authentic classic racing designs that celebrate the heritage and culture of vintage motorsport.
+            </p>
+            <a href={`/${lang}/collections`} class="flex items-center justify-center text-yellow-600 font-semibold hover:text-yellow-700">
+              Shop Authentic Designs <ArrowRight class="w-4 h-4 ml-2" />
+            </a>
+          </div>
+
+          <div class="bg-[var(--drivon-card)] rounded-2xl p-8 border border-[var(--drivon-border)]">
+            <div class="w-20 h-20 bg-[var(--drivon-surface)] rounded-full flex items-center justify-center mb-6 mx-auto text-[var(--drivon-text)]">
+              <Star class="w-10 h-10" />
+            </div>
+            <h3 class="font-headline text-2xl text-[var(--drivon-text)] uppercase tracking-wide mb-4 text-center">Racing Heritage</h3>
+            <p class="text-[var(--drivon-muted)] text-center mb-6">
+              Each hoodie tells a story of classic racing heritage, from vintage legends to classic car culture and iconic moments.
+            </p>
+            <a href={`/${lang}/racing-heritage`} class="flex items-center justify-center text-orange-600 font-semibold hover:text-orange-700">
+              Explore Racing Heritage <ArrowRight class="w-4 h-4 ml-2" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-[var(--drivon-text)] text-[var(--drivon-bg)]">
+      <div class="max-w-4xl mx-auto text-center px-4">
+        <h2 class="font-headline text-4xl uppercase tracking-tight mb-6">Wear Classic Racing Heritage</h2>
+        <p class="text-xl text-[var(--drivon-bg)]/90 mb-8">
+          Join the global classic racing community and celebrate the golden age of motorsport with our premium classic racing hoodies collection.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href={`/${lang}/collections`} class="bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+            Shop Classic Racing Hoodies Collection
+          </a>
+          <a href={`/${lang}/racing-heritage`} class="inline-flex items-center justify-center border-2 border-[var(--drivon-bg)] text-[var(--drivon-bg)] px-8 py-3.5 text-[11px] font-medium tracking-[0.2em] uppercase hover:bg-[var(--drivon-bg)]/10 transition-colors font-body">
+            Explore Racing Heritage
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+<style>
+  .font-headline { font-family: var(--font-headline); }
+  .font-body { font-family: var(--font-body); }
+</style>
+</Layoutc>

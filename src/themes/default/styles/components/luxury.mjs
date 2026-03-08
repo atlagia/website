@@ -1,12 +1,12 @@
 export const luxuryComponentStyle = {
   // Key Features component styles
   keyFeatures: {
-    wrapper: "bg-white border border-gray-100 rounded-xl p-6 shadow-sm",
-    title: "font-['Montserrat'] text-xl font-light tracking-wide text-gray-900 mb-4",
+    wrapper: "bg-white border border-neutral-200 rounded-xl p-6 shadow-sm",
+    title: "font-['Montserrat'] text-xl font-light tracking-wide text-neutral-900 mb-4",
     list: "grid grid-cols-1 md:grid-cols-2 gap-4",
     item: "flex items-center gap-2",
-    icon: "w-5 h-5 text-green-500 flex-shrink-0",
-    text: "font-['Montserrat'] text-base font-light text-gray-700"
+    icon: "w-5 h-5 text-neutral-500 flex-shrink-0",
+    text: "font-['Montserrat'] text-base font-light text-neutral-700"
   },
 
   // Product FAQ styles
@@ -48,26 +48,26 @@ export const luxuryComponentStyle = {
 
   // Reviews styles
   reviews: {
-    wrapper: "border-t pt-8",
-    title: "font-['Montserrat'] text-2xl font-light tracking-wide mb-6 flex items-center gap-2",
+    wrapper: "border-t border-neutral-200 pt-8",
+    title: "text-sm font-medium uppercase tracking-widest text-neutral-500 mb-6 flex items-center gap-2",
     list: "space-y-6",
     review: {
-      wrapper: "bg-gray-50 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow mb-4",
+      wrapper: "bg-neutral-50 rounded-xl p-5 border border-neutral-200 hover:border-neutral-300 transition-colors mb-4",
       header: "flex items-center justify-between mb-4",
       authorBlock: "flex items-center gap-4",
-      avatar: "w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center",
-      avatarText: "text-blue-600 font-semibold",
+      avatar: "w-10 h-10 bg-neutral-200 rounded-full flex items-center justify-center",
+      avatarText: "text-neutral-700 font-semibold text-sm",
       authorInfo: {
-        name: "font-['Montserrat'] font-medium text-gray-900",
-        meta: "text-sm text-gray-500 flex items-center gap-2",
-        verified: "inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-green-100 text-green-800"
+        name: "font-medium text-neutral-900",
+        meta: "text-sm text-neutral-500 flex items-center gap-2",
+        verified: "inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-neutral-200 text-neutral-700 border border-neutral-300"
       },
-      rating: "flex text-yellow-400",
-      content: "font-['Montserrat'] text-base font-light text-gray-700"
+      rating: "flex text-neutral-400 text-sm",
+      content: "text-neutral-600 text-sm leading-relaxed"
     },
     showMore: {
       wrapper: "text-center pt-6",
-      button: "font-['Montserrat'] inline-flex items-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-light text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200"
+      button: "inline-flex items-center px-4 py-2 border border-neutral-200 rounded text-sm font-medium text-neutral-600 bg-white hover:bg-neutral-50 hover:border-neutral-300 focus:outline-none focus:ring-2 focus:ring-neutral-900 focus:ring-offset-2 transition-colors"
     }
   },
 
@@ -84,9 +84,9 @@ export const luxuryComponentStyle = {
       cell: "font-['Montserrat'] px-6 py-4 whitespace-nowrap text-sm text-gray-500"
     },
     tips: {
-      wrapper: "mt-4 bg-blue-50 rounded-xl p-4",
-      title: "font-['Montserrat'] font-semibold mb-2 text-sm text-blue-700",
-      list: "list-disc list-inside space-y-1 font-['Montserrat'] text-sm text-blue-700"
+      wrapper: "mt-4 bg-neutral-50 rounded-xl p-4 border border-neutral-200",
+      title: "font-semibold mb-2 text-sm text-neutral-900",
+      list: "list-disc list-inside space-y-1 text-sm text-neutral-600"
     }
   }
 }; 

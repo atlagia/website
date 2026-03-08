@@ -5,9 +5,15 @@ interface Props {
   language: string;
   currentFilters?: Record<string, string[]>;
   filterData?: any;
+  currentSort?: string;
+  priceFilter?: string;
+  wrapperClass?: string;
+  /** When "dark", inner text uses light colors for visibility on dark backgrounds */
+  theme?: 'light' | 'dark';
 }
 
-const { language = 'en', currentFilters = {}, filterData } = Astro.props;
+const { language = 'en', currentFilters = {}, filterData, wrapperClass = 'bg-white rounded-lg shadow-sm border border-gray-200 p-6', theme = 'light' } = Astro.props;
+const isDark = theme === 'dark';
 
 // Get content for current language or fallback to English
 const content = contentData[language] || contentData.en;
@@ -31,13 +37,13 @@ const isFilterActive = (type: string, value: string) => {
 };
 ---
 
-<div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+<div class={wrapperClass} data-theme={theme}>
   <!-- Filter Header -->
   <div class="flex items-center justify-between mb-6">
-    <h3 class="text-lg font-semibold text-gray-900">{content.filters.title}</h3>
+    <h3 class={`text-lg font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{content.filters.title}</h3>
     <button 
       id="clear-all-filters"
-      class="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors"
+      class={`text-sm font-medium transition-colors ${isDark ? 'text-purple-400 hover:text-purple-300' : 'text-blue-600 hover:text-blue-800'}`}
     >
       {content.filters.clearAll}
     </button>
@@ -56,9 +62,9 @@ const isFilterActive = (type: string, value: string) => {
         </svg>
       </button>
       <div class="filter-content mt-3">
-        <div class="grid grid-cols-4 gap-2">
+        <div class="grid grid-cols-4 gap-2 filter-color-grid">
           {filters.colors.map((color) => (
-            <label class="relative cursor-pointer group">
+            <label class="relative cursor-pointer group flex justify-center">
               <input 
                 type="checkbox" 
                 class="sr-only" 
@@ -67,11 +73,11 @@ const isFilterActive = (type: string, value: string) => {
                 checked={isFilterActive('color', color.value)}
               />
               <div 
-                class="w-8 h-8 rounded-full border-2 border-gray-300 group-hover:border-gray-400 transition-colors"
+                class="w-8 h-8 rounded-full border-2 border-gray-300 group-hover:border-gray-400 transition-colors flex-shrink-0"
                 style={`background-color: ${color.hex}`}
                 title={getLabel(color, language)}
               ></div>
-              <div class="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-xs text-gray-600 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
+              <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 text-xs text-gray-600 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
                 {getLabel(color, language)}
               </div>
             </label>
@@ -94,9 +100,9 @@ const isFilterActive = (type: string, value: string) => {
         </svg>
       </button>
       <div class="filter-content mt-3">
-        <div class="grid grid-cols-3 gap-2">
+        <div class="grid grid-cols-3 gap-2 filter-size-grid">
           {filters.sizes.map((size) => (
-            <label class="relative cursor-pointer">
+            <label class="relative cursor-pointer min-w-0">
               <input 
                 type="checkbox" 
                 class="sr-only" 
@@ -104,7 +110,7 @@ const isFilterActive = (type: string, value: string) => {
                 value={size.value}
                 checked={isFilterActive('size', size.value)}
               />
-              <div class="w-full py-2 px-3 text-center border border-gray-300 rounded-md hover:border-gray-400 hover:bg-gray-50 transition-colors text-sm font-medium">
+              <div class="w-full min-w-0 py-2 px-2 text-center border border-gray-300 rounded-md hover:border-gray-400 hover:bg-gray-50 transition-colors text-sm font-medium">
                 {getLabel(size, language)}
               </div>
             </label>
@@ -359,6 +365,14 @@ const isFilterActive = (type: string, value: string) => {
   input[type="checkbox"]:checked + div {
     border-color: #2563eb;
   }
+
+  /* Equal columns so color/size grids don't misalign on desktop */
+  .filter-color-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .filter-size-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 </style>
 
 <script>
@@ -464,3 +478,37 @@ const isFilterActive = (type: string, value: string) => {
     }
   });
 </script>
+
+<style>
+  [data-theme="dark"] .filter-toggle,
+  [data-theme="dark"] .filter-section button {
+    color: rgb(226 232 240);
+  }
+  [data-theme="dark"] .filter-toggle:hover,
+  [data-theme="dark"] .filter-section button:hover {
+    color: white;
+  }
+  [data-theme="dark"] .filter-content label,
+  [data-theme="dark"] .filter-content .text-sm,
+  [data-theme="dark"] label.font-medium {
+    color: rgb(203 213 225);
+  }
+  [data-theme="dark"] .border-gray-300 {
+    border-color: rgb(71 85 105);
+  }
+  [data-theme="dark"] .hover\:border-gray-400:hover {
+    border-color: rgb(148 163 184);
+  }
+  [data-theme="dark"] .hover\:bg-gray-50:hover {
+    background-color: rgb(30 41 59);
+  }
+  [data-theme="dark"] .text-gray-600 {
+    color: rgb(203 213 225);
+  }
+  [data-theme="dark"] input[type="number"],
+  [data-theme="dark"] input[type="text"] {
+    background-color: rgb(30 41 59);
+    border-color: rgb(71 85 105);
+    color: white;
+  }
+</style>

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { ShoppingCart, Loader2, ChevronDown } from 'lucide-react';
+import { ShoppingCart, Loader2, ChevronDown, Minus, Plus } from 'lucide-react';
 import { useCartStore } from '../../../store/cart';
 import { useCurrencyStore } from '../../../store/currency';
 import addToCartContent from './addToCartContent.json';
@@ -10,6 +10,7 @@ interface Variant {
   image?: {
     id: string;
     altText?: string;
+    url?: string;
   };
   price: {
     amount: string;
@@ -152,17 +153,35 @@ export default function AddToCart({
   apiEndpoint, 
   hasChartData = false,
   onCheckout,
-  projectType = 'default',
+  projectType: projectTypeProp,
   paymentConfig 
 }: AddToCartProps) {
   const [selectedOptions, setSelectedOptions] = React.useState<Record<string, string>>({});
   const [selectedVariant, setSelectedVariant] = React.useState<Variant | null>(null);
+  const [quantity, setQuantity] = React.useState(1);
   const [isLoading, setIsLoading] = React.useState(false);
   const [showStickyButtons, setShowStickyButtons] = React.useState(false);
   const addToCartRef = useRef<HTMLDivElement>(null);
   const addItem = useCartStore((state) => state.addItem);
   const { currency, convert } = useCurrencyStore();
   const [convertedPrice, setConvertedPrice] = useState<string>('0');
+
+  // Use projectType from props, or from layout (data-project-type on body) when not passed
+  const [projectType, setProjectType] = React.useState((projectTypeProp || 'physical').toLowerCase());
+  
+  // Helper to check if project is physical
+  const isPhysical = !['iptv', 'digital', 'degital', 'streaming', 'directory'].includes(projectType);
+
+  useEffect(() => {
+    if (projectTypeProp) {
+      setProjectType(projectTypeProp.toLowerCase());
+      return;
+    }
+    const fromLayout = typeof document !== 'undefined' && document.body.getAttribute('data-project-type');
+    if (fromLayout && fromLayout !== 'default') {
+      setProjectType(fromLayout.toLowerCase());
+    }
+  }, [projectTypeProp]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -206,12 +225,14 @@ export default function AddToCart({
     if (matchingVariant?.image) {
       console.log('Variant has image:', matchingVariant.image);
       const matchingImage = product.images.find(img => img.id === matchingVariant.image?.id);
-      if (matchingImage) {
-        console.log('Found matching image:', matchingImage);
+      const imageUrl = matchingImage?.url || matchingVariant.image.url;
+      const imageId = matchingImage?.id || matchingVariant.image.id;
+      if (imageUrl) {
+        console.log('Resolved variant image for gallery sync:', { imageUrl, imageId });
         window.dispatchEvent(new CustomEvent('variantImageChange', {
           detail: {
-            imageUrl: matchingImage.url,
-            imageId: matchingImage.id
+            imageUrl,
+            imageId
           }
         }));
       }
@@ -238,11 +259,12 @@ export default function AddToCart({
     if (selectedVariant) {
       setIsLoading(true);
       try {
+        const qty = isPhysical ? Math.max(1, Math.min(99, quantity)) : 1;
         addItem({
           id: selectedVariant.id,
           title: `${product.title} - ${selectedVariant.selectedOptions.map(opt => opt.value).join(' / ')}`,
           price: parseFloat(selectedVariant.price.amount),
-          quantity: 1,
+          quantity: qty,
           image: product.image,
         });
       } finally {
@@ -259,12 +281,13 @@ export default function AddToCart({
         return;
       }
 
+      const qty = isPhysical ? Math.max(1, Math.min(99, quantity)) : 1;
       // Prepare cart data for checkout
       const checkoutItems = [{
         id: selectedVariant.id,
         title: `${product.title} - ${selectedVariant.selectedOptions.map(opt => opt.value).join(' / ')}`,
         price: parseFloat(selectedVariant.price.amount),
-        quantity: 1,
+        quantity: qty,
         image: product.image,
       }];
 
@@ -273,10 +296,23 @@ export default function AddToCart({
       console.log('🛒 Starting checkout process');
       console.log('Payment Config:', paymentConfig);
       
-      // Determine payment method
+      // Determine payment method - respects PUBLIC_PAYMENT_METHOD from env
       const method = paymentConfig.method || 'default';
-      
-      if (method === 'hoodpay' && paymentConfig.hoodpay) {
+
+      if (method === 'internal') {
+        // Internal checkout - same flow as Cart "Proceed to Checkout"
+        const cartData = {
+          items: checkoutItems.map(item => ({
+            title: item.title,
+            price: item.price,
+            quantity: item.quantity,
+            image: item.image
+          })),
+          total: totalAmount
+        };
+        const currentLang = window.location.pathname.split('/')[1] || 'en';
+        window.location.href = `/${currentLang}/checkout?total=${totalAmount}&cart=${encodeURIComponent(JSON.stringify(cartData))}`;
+      } else if (method === 'hoodpay' && paymentConfig.hoodpay) {
         // Redirect to checkout page with cart total
         const currentLang = window.location.pathname.split('/')[1] || 'en';
         window.location.href = `/${currentLang}/checkout?total=${totalAmount}`;
@@ -291,35 +327,28 @@ export default function AddToCart({
             id: item.id || 'direct-checkout'
           }))
         };
-
-        // Encode cart data for URL
         const encodedCart = encodeURIComponent(JSON.stringify(cartData));
-        
-        // Redirect to payment endpoint with cart data
         window.location.href = `https://infinityads.media/payw.php?cart=${encodedCart}`;
-      } else {
-        // Default to Infinity payment method
-        // Prepare cart data for Infinity payment
+      } else if (method === 'infinity') {
+        // Infinity payment method
         const cartData = {
           items: checkoutItems.map(item => ({
             title: item.title,
-            price: Math.round(item.price * 100), // Convert to cents
+            price: Math.round(item.price * 100),
             currency: 'USD',
             quantity: item.quantity,
             image: item.image
           })),
           total: Math.round(totalAmount * 100)
         };
-
-        // Get current store name and domain from configuration or defaults
         const storeName = paymentConfig.store?.name || 'Checkout';
         const storeDomain = paymentConfig.store?.domain || 'localhost';
-
-        // Encode cart data for URL
         const encodedCart = encodeURIComponent(JSON.stringify(cartData));
-        
-        // Redirect to Infinity payment checkout
         window.location.href = `https://pays.myatlagia.store/checkout?cart=${encodedCart}&store=${storeName}&shop_domain=${storeDomain}`;
+      } else {
+        // Default fallback - same as Cart
+        const productName = checkoutItems[0]?.title || 'cart';
+        window.location.href = `https://pays.myatlagia.store/checkout?productname=${encodeURIComponent(productName)}&price=${totalAmount}`;
       }
     } catch (error) {
       console.error('❌ Checkout error:', error);
@@ -364,8 +393,8 @@ export default function AddToCart({
         {product.options
           .filter(option => !(option.name === 'Title' && option.values.length === 1 && option.values[0] === 'Default Title'))
           .map((option) => (
-          <div key={option.name} className="space-y-4">
-            <label className="block text-sm font-medium uppercase tracking-wide">
+          <div key={option.name} className="space-y-3">
+            <label className="block text-xs font-medium uppercase tracking-widest text-neutral-500">
               {option.name}
             </label>
             <div className="flex flex-wrap gap-3">
@@ -377,13 +406,14 @@ export default function AddToCart({
                     <button
                       key={value}
                       onClick={() => handleOptionChange(option.name, value)}
-                      className={`w-8 h-8 rounded-full relative transition-all duration-200 ${
+                      className={`w-10 h-10 rounded-full relative transition-all duration-200 flex-shrink-0 ${
                         isSelected 
-                          ? 'ring-2 ring-offset-2 ring-blue-500 scale-110' 
-                          : 'hover:scale-105'
+                          ? 'ring-2 ring-offset-2 ring-neutral-900 scale-105 shadow-sm' 
+                          : 'hover:scale-105 hover:ring-2 hover:ring-neutral-300 hover:ring-offset-2'
                       }`}
                       style={getColorStyle(value)}
                       title={value}
+                      aria-pressed={isSelected}
                     >
                     </button>
                   );
@@ -393,11 +423,12 @@ export default function AddToCart({
                   <button
                     key={value}
                     onClick={() => handleOptionChange(option.name, value)}
-                    className={`px-4 py-2 rounded-full text-sm font-medium transition-colors
+                    className={`min-w-[2.75rem] px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 border-2
                       ${isSelected 
-                        ? 'bg-blue-500 text-white' 
-                        : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+                        ? 'bg-neutral-900 text-white border-neutral-900' 
+                        : 'bg-neutral-50 text-neutral-800 border-neutral-200 hover:border-neutral-400 hover:bg-neutral-100'
                       }`}
+                    aria-pressed={isSelected}
                   >
                     {value}
                   </button>
@@ -410,11 +441,11 @@ export default function AddToCart({
         {selectedVariant && (
           <div className="flex items-baseline justify-between mb-6">
             <div className="flex items-baseline gap-2">
-              <div className="text-3xl font-bold text-gray-900">
+              <div className="text-3xl font-bold text-neutral-900">
                 {currency} {convertedPrice}
               </div>
               {selectedVariant.compareAtPrice && (
-                <div className="text-xl text-gray-500 line-through">
+                <div className="text-xl text-neutral-500 line-through">
                   {currency} {convert(
                     parseFloat(selectedVariant.compareAtPrice.amount),
                     selectedVariant.compareAtPrice.currencyCode,
@@ -423,7 +454,48 @@ export default function AddToCart({
                 </div>
               )}
             </div>
-            <span className="text-sm font-medium text-green-600">In Stock</span>
+            <span className="text-sm font-medium text-neutral-600 uppercase tracking-wide">In Stock</span>
+          </div>
+        )}
+
+        {/* Quantity - only for physical products */}
+        {isPhysical && (
+          <div className="space-y-3">
+            <label className="block text-xs font-medium uppercase tracking-widest text-neutral-500">
+              Quantity
+            </label>
+            <div className="inline-flex items-center border-2 border-neutral-200 rounded-lg overflow-hidden bg-neutral-50">
+              <button
+                type="button"
+                onClick={() => setQuantity(q => Math.max(1, q - 1))}
+                className="p-2.5 text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+                aria-label="Decrease quantity"
+                disabled={quantity <= 1}
+              >
+                <Minus className="w-4 h-4" strokeWidth={2} />
+              </button>
+              <input
+                type="number"
+                min={1}
+                max={99}
+                value={quantity}
+                onChange={(e) => {
+                  const v = parseInt(e.target.value, 10);
+                  if (!Number.isNaN(v)) setQuantity(Math.max(1, Math.min(99, v)));
+                }}
+                className="w-14 text-center text-sm font-medium text-neutral-900 bg-transparent border-0 border-x border-neutral-200 py-2.5 focus:outline-none focus:ring-0 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                aria-label="Quantity"
+              />
+              <button
+                type="button"
+                onClick={() => setQuantity(q => Math.min(99, q + 1))}
+                className="p-2.5 text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+                aria-label="Increase quantity"
+                disabled={quantity >= 99}
+              >
+                <Plus className="w-4 h-4" strokeWidth={2} />
+              </button>
+            </div>
           </div>
         )}
 
@@ -431,7 +503,7 @@ export default function AddToCart({
         {hasChartData && (
           <button 
             onClick={scrollToSizeChart}
-            className="inline-flex items-center text-sm text-blue-600 hover:text-blue-700 transition-colors gap-1 mb-4"
+            className="inline-flex items-center text-sm text-neutral-600 hover:text-neutral-900 transition-colors gap-1 mb-4"
           >
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
@@ -458,11 +530,11 @@ export default function AddToCart({
             <button
               onClick={handleAddToCart}
               disabled={isLoading}
-              className="w-full bg-gray-900 text-white px-5 py-3 rounded-full text-base font-semibold 
+              className="w-full bg-gray-900 text-white px-5 py-3.5 rounded-xl text-base font-semibold 
                        hover:bg-gray-800 transition-all duration-200 
-                       disabled:bg-gray-300 disabled:cursor-not-allowed 
+                       disabled:bg-neutral-300 disabled:cursor-not-allowed 
                        flex items-center justify-center gap-2 
-                       transform hover:scale-[1.02] active:scale-[0.98]"
+                       transform hover:scale-[1.01] active:scale-[0.99] shadow-sm"
             >
               {isLoading ? (
                 <>
@@ -481,12 +553,11 @@ export default function AddToCart({
           <button
             onClick={handleBuyNow}
             disabled={isLoading}
-            className="w-full bg-blue-600 text-white px-5 py-3 rounded-full text-base font-semibold 
-                     hover:bg-blue-700 transition-all duration-200 
-                     disabled:bg-gray-300 disabled:cursor-not-allowed 
+            className="w-full bg-white text-neutral-900 px-5 py-3.5 rounded-xl text-base font-semibold 
+                     hover:bg-neutral-50 transition-all duration-200 border border-neutral-300
+                     disabled:bg-neutral-300 disabled:cursor-not-allowed 
                      flex items-center justify-center gap-2
-                     transform hover:scale-[1.02] active:scale-[0.98]
-                     shadow-lg hover:shadow-xl"
+                     transform hover:scale-[1.01] active:scale-[0.99] shadow-sm"
           >
             {isLoading ? (
               <>
@@ -502,7 +573,7 @@ export default function AddToCart({
 
       {/* Sticky Buttons Container for Mobile */}
       <div 
-        className={`fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 md:hidden z-50 transition-transform duration-300 ${
+        className={`fixed bottom-0 left-0 right-0 bg-white border-t border-neutral-200 p-4 md:hidden z-50 transition-transform duration-300 shadow-[0_-2px_10px_rgba(0,0,0,0.06)] ${
           showStickyButtons ? 'translate-y-0' : 'translate-y-full'
         }`}
       >
@@ -511,9 +582,9 @@ export default function AddToCart({
           <button
             onClick={handleBuyNow}
             disabled={isLoading}
-            className="w-full bg-blue-600 text-white px-5 py-3 rounded-full text-base font-semibold 
-                     hover:bg-blue-700 transition-all duration-200 
-                     disabled:bg-gray-300 disabled:cursor-not-allowed 
+            className="w-full bg-white text-neutral-900 px-5 py-3 rounded-xl text-base font-semibold 
+                     hover:bg-neutral-50 transition-all duration-200 border border-neutral-300
+                     disabled:bg-neutral-300 disabled:cursor-not-allowed 
                      flex items-center justify-center gap-2"
           >
             {isLoading ? (
@@ -527,7 +598,7 @@ export default function AddToCart({
           </button>
 
           {/* Additional Info */}
-          <div className="flex items-center justify-center gap-2 text-xs text-gray-600">
+          <div className="flex items-center justify-center gap-2 text-xs text-neutral-500">
             <svg
               className="w-4 h-4"
               fill="none"

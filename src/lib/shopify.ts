@@ -65,38 +65,24 @@ function shouldRefreshCache(lastUpdated: Date): boolean {
   return lastUpdateDay !== currentDay && now.getUTCHours() >= 0;
 }
 
-// Update the Redis helper function to include store prefix
+/** Fetch from Shopify; use Redis if available. On Redis failure, still returns from Shopify (direct source). */
 async function fetchFromShopifyWithRedis(redisKey: string, fetchFunction: () => Promise<any>, cacheDuration = 3600) {
-  try {
-    const prefixedKey = `${getStorePrefix()}${redisKey}`;
-    
-    // Try Redis first with prefixed key
-    const redisCache = await getRedisData(prefixedKey);
-    if (redisCache) {
-      console.log('🚀 [REDIS CACHE HIT] Data retrieved');
-      return redisCache;
-    }
-    
-    // Fetch from Shopify
-    console.log('🔄 [SHOPIFY API] Direct fetch');
-    const data = await fetchFunction();
-    
-    // Cache in Redis with prefixed key
-    console.log('💾 [REDIS] Caching Shopify response');
-    await setRedisData(prefixedKey, data, cacheDuration);
-    
-    return data;
-  } catch (error) {
-    console.error('❌ [ERROR] Error in Shopify/Redis operation:', error);
-    throw error;
+  const prefixedKey = `${getStorePrefix()}${redisKey}`;
+  const redisCache = await getRedisData(prefixedKey);
+  if (redisCache) {
+    console.log('🚀 [REDIS CACHE HIT] Data retrieved');
+    return redisCache;
   }
+  console.log('🔄 [SHOPIFY API] Direct fetch (cache miss or Redis unavailable)');
+  const data = await fetchFunction();
+  await setRedisData(prefixedKey, data, cacheDuration);
+  return data;
 }
 
-// Update getAllProducts to handle batched products
+// Update getAllProducts: Redis -> MongoDB -> Shopify (direct source). Never throw; fallback to Shopify if Redis/Mongo fail.
 export async function getAllProducts() {
   const redisKey = `${getStorePrefix()}shopify_all_products`;
   const redisCache = await getRedisData(redisKey);
-  
   if (redisCache) {
     console.log('🚀 [REDIS CACHE HIT] Retrieved products from Redis');
     return redisCache;
@@ -189,13 +175,8 @@ export async function getAllProducts() {
       throw error;
     }
   } catch (mongoError) {
-    console.error('❌ [MONGODB ERROR] Falling back to Shopify:', mongoError);
-    
-    // Fallback to Shopify with Redis caching
-    return fetchFromShopifyWithRedis('shopify_all_products', async () => {
-      const products = await fetchAndSaveAllProducts(null); // Pass null to skip MongoDB save
-      return products;
-    });
+    console.error('❌ [MONGODB ERROR] Falling back to Shopify (direct source):', (mongoError as Error)?.message || mongoError);
+    return fetchFromShopifyWithRedis('shopify_all_products', () => fetchAndSaveAllProducts(null));
   }
 }
 
@@ -868,25 +849,25 @@ async function saveTranslatedProductsToMongo(collection: any, products: any[], l
   }
 }
 
-// Update getPaginatedTranslatedProducts to handle batched products
+// Update getPaginatedTranslatedProducts to handle batched products; fallback to Shopify when MongoDB unavailable
 export async function getPaginatedTranslatedProducts(page: number = 1, limit: number = 20, language: string = 'EN') {
-  try {
-    const redisKey = `${getStorePrefix()}translated_products_${language.toLowerCase()}_page_${page}_limit_${limit}`;
-    console.log(`🔄 Starting product fetch for language: ${language}, page: ${page}`);
-    
-    // Try Redis first
-    const redisCache = await getRedisData(redisKey);
-    if (redisCache) {
-      console.log(`🚀 [REDIS CACHE HIT] Retrieved ${language} products page ${page}`);
-      return redisCache;
-    }
+  const redisKey = `${getStorePrefix()}translated_products_${language.toLowerCase()}_page_${page}_limit_${limit}`;
+  console.log(`🔄 Starting product fetch for language: ${language}, page: ${page}`);
 
-    // Try MongoDB
+  // Try Redis first
+  const redisCache = await getRedisData(redisKey);
+  if (redisCache) {
+    console.log(`🚀 [REDIS CACHE HIT] Retrieved ${language} products page ${page}`);
+    return redisCache;
+  }
+
+  // Try MongoDB (optional); on failure fall through to Shopify
+  let mongoResult: { products: any[]; pagination: any } | null = null;
+  try {
     const client = await connectToDatabase();
     const dbName = getStoreName();
     const collection = client.db(dbName).collection('products_language');
 
-    // Get metadata from the main language document
     const metadata = await collection.findOne(
       { language: language.toUpperCase() },
       { projection: { totalProducts: 1, totalBatches: 1 } }
@@ -898,9 +879,8 @@ export async function getPaginatedTranslatedProducts(page: number = 1, limit: nu
       const batchIndex = Math.floor(start / BATCH_SIZE);
       const batchOffset = start % BATCH_SIZE;
 
-      // Determine which document to query
-      const documentKey = batchIndex === 0 ? 
-        { language: language.toUpperCase() } : 
+      const documentKey = batchIndex === 0 ?
+        { language: language.toUpperCase() } :
         { language: `${language.toUpperCase()}_${batchIndex}` };
 
       const cachedData = await collection.findOne(documentKey);
@@ -909,7 +889,7 @@ export async function getPaginatedTranslatedProducts(page: number = 1, limit: nu
         const paginatedProducts = cachedData.products
           .slice(batchOffset, batchOffset + limit);
 
-        const result = {
+        mongoResult = {
           products: paginatedProducts,
           pagination: {
             currentPage: page,
@@ -919,15 +899,18 @@ export async function getPaginatedTranslatedProducts(page: number = 1, limit: nu
             hasPreviousPage: page > 1
           }
         };
-
-        // Cache in Redis
-        await setRedisData(redisKey, result, 3600);
-        return result;
+        await setRedisData(redisKey, mongoResult, 3600);
       }
     }
+  } catch (mongoErr) {
+    console.warn('❌ [MONGODB] Unavailable, using Shopify (direct source):', (mongoErr as Error)?.message || mongoErr);
+  }
 
-    // If no cache exists, fetch ALL products
-    console.log(`📛 [MONGODB] No cache found for ${language}, fetching ALL from Shopify`);
+  if (mongoResult) return mongoResult;
+
+  // No cache or MongoDB failed: fetch ALL products from Shopify
+  try {
+    console.log(`🔄 [SHOPIFY API] Fetching translated products for ${language} (no Mongo cache)`);
 
     let allProducts = [];
     let hasNextPage = true;
@@ -1074,12 +1057,14 @@ export async function getPaginatedTranslatedProducts(page: number = 1, limit: nu
       console.log(`📦 Fetched batch ${pageCount - 1} (Total products: ${allProducts.length})`);
     }
 
-    // Save ALL products to MongoDB using the updated helper function
+    // Optionally save to MongoDB (skip if Mongo unavailable)
     try {
+      const client = await connectToDatabase();
+      const dbName = getStoreName();
+      const collection = client.db(dbName).collection('products_language');
       await saveTranslatedProductsToMongo(collection, allProducts, language);
     } catch (mongoError) {
-      console.error('❌ [MONGODB] Failed to save products:', mongoError);
-      // Continue execution even if MongoDB save fails
+      console.warn('❌ [MONGODB] Failed to save products (continuing):', (mongoError as Error)?.message || mongoError);
     }
 
     // Calculate pagination for requested page
@@ -1231,43 +1216,41 @@ const TRANSLATED_PRODUCT_QUERY = `
   }
 `;
 
-// Update getTranslatedProductByHandle to use store prefix
+// Update getTranslatedProductByHandle to use store prefix; fallback to Shopify when Redis/Mongo fail
 export async function getTranslatedProductByHandle(handle: string, language: string = 'EN') {
+  const redisKey = `${getStorePrefix()}product_${language.toLowerCase()}_${handle}`;
+  console.log(`🔍 [REDIS] Checking cache for ${redisKey}`);
+
+  // Try Redis first
+  const cachedProduct = await getRedisData(redisKey);
+  if (cachedProduct) {
+    console.log(`✅ [REDIS] Cache hit for ${language} product: ${handle}`);
+    return cachedProduct;
+  }
+  console.log(`📛 [REDIS] Cache miss for ${language} product: ${handle}`);
+
+  // Try MongoDB (optional); on failure fall through to Shopify
+  let mongoResult: { product: any; relatedProducts: any[] } | null = null;
   try {
-    const redisKey = `${getStorePrefix()}product_${language.toLowerCase()}_${handle}`;
-    console.log(`🔍 [REDIS] Checking cache for ${redisKey}`);
-
-    // Try Redis first
-    const cachedProduct = await getRedisData(redisKey);
-    if (cachedProduct) {
-      console.log(`✅ [REDIS] Cache hit for ${language} product: ${handle}`);
-      return cachedProduct;
-    }
-    console.log(`📛 [REDIS] Cache miss for ${language} product: ${handle}`);
-
-    // Try MongoDB
     console.log(`🔍 [MONGODB] Looking for product ${handle} in ${language}`);
     const client = await connectToDatabase();
     const dbName = getStoreName();
     const collection = client.db(dbName).collection('products_language');
 
-    // Get metadata first to know how many batches to check
     const metadata = await collection.findOne(
       { language: language.toUpperCase() },
       { projection: { totalBatches: 1, lastUpdated: 1 } }
     );
 
     if (metadata?.totalBatches) {
-      // Check each batch for the product
       for (let i = 0; i < metadata.totalBatches; i++) {
-        const batchKey = i === 0 ? 
-          { language: language.toUpperCase() } : 
+        const batchKey = i === 0 ?
+          { language: language.toUpperCase() } :
           { language: `${language.toUpperCase()}_${i}` };
 
-        // Use projection to only fetch the specific product
         const cachedData = await collection.findOne(
           batchKey,
-          { 
+          {
             projection: {
               products: {
                 $elemMatch: { 'node.handle': handle }
@@ -1278,42 +1261,52 @@ export async function getTranslatedProductByHandle(handle: string, language: str
 
         if (cachedData?.products?.[0]?.node) {
           console.log(`✅ [MONGODB] Found product in batch ${i + 1}`);
-          
-          const result = {
+          let related: any[] = [];
+          try {
+            related = await getRelatedTranslatedProducts(language);
+          } catch (e) {
+            console.warn('Related products fetch failed, using empty:', (e as Error)?.message);
+          }
+          mongoResult = {
             product: cachedData.products[0].node,
-            relatedProducts: await getRelatedTranslatedProducts(language)
+            relatedProducts: related
           };
-
-          // Cache in Redis
-          console.log(`💾 [REDIS] Caching ${language} product: ${handle}`);
-          await setRedisData(redisKey, result, 3600); // Cache for 1 hour
-
-          return result;
+          await setRedisData(redisKey, mongoResult, 3600);
+          break;
         }
       }
     }
+  } catch (mongoErr) {
+    console.warn('❌ [MONGODB] Unavailable, using Shopify (direct source):', (mongoErr as Error)?.message || mongoErr);
+  }
 
-    console.log(`⚠️ [MONGODB] No ${language} version found for ${handle}`);
-    
-    // If not English, try English version
-    if (language.toUpperCase() !== 'EN') {
+  if (mongoResult) return mongoResult;
+
+  console.log(`⚠️ [MONGODB] No ${language} version found for ${handle}`);
+
+  // If not English, try English version (from cache or Shopify)
+  if (language.toUpperCase() !== 'EN') {
+    try {
       console.log('↩️ Falling back to English version');
       const englishVersion = await getProductByHandle(handle);
-      
-      // Cache the English fallback
-      await setRedisData(redisKey, englishVersion, 3600);
-      
-      return englishVersion;
+      if (englishVersion?.product) {
+        await setRedisData(redisKey, englishVersion, 3600);
+        return englishVersion;
+      }
+    } catch (e) {
+      console.warn('English fallback failed, fetching from Shopify:', (e as Error)?.message);
     }
+  }
 
-    // If still not found, fetch from Shopify
-    console.log('🔄 [SHOPIFY] Fetching product directly');
-    const response = await shopifyFetch({ 
-      query: TRANSLATED_PRODUCT_QUERY, 
-      variables: { 
+  // Fetch directly from Shopify (source)
+  try {
+    console.log('🔄 [SHOPIFY API] Fetching product directly');
+    const response = await shopifyFetch({
+      query: TRANSLATED_PRODUCT_QUERY,
+      variables: {
         handle,
         language: language.toUpperCase()
-      } 
+      }
     });
 
     const product = response?.body?.data?.product;
@@ -1324,23 +1317,23 @@ export async function getTranslatedProductByHandle(handle: string, language: str
     }
 
     const result = { product, relatedProducts };
-
-    // Cache the result
     await setRedisData(redisKey, result, 3600);
-
     return result;
-
   } catch (error) {
     console.error(`❌ [ERROR] Failed to fetch ${language} product:`, {
       handle,
-      error: error.message,
-      stack: error.stack
+      error: (error as Error)?.message,
+      stack: (error as Error)?.stack
     });
 
-    // If not English and error occurs, try English version
+    // Last resort: try English from Shopify
     if (language.toUpperCase() !== 'EN') {
-      console.log('↩️ Error occurred, falling back to English version');
-      return getProductByHandle(handle);
+      try {
+        console.log('↩️ Last resort: English version from source');
+        return await getProductByHandle(handle);
+      } catch (e2) {
+        console.error('English source fallback failed:', (e2 as Error)?.message);
+      }
     }
 
     throw error;

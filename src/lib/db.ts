@@ -1,5 +1,5 @@
 import { createClient } from '@supabase/supabase-js';
-import { getCachedData, setCachedData } from './redis';
+import { getCachedData, setCachedData, getRedisClient } from './redis';
 
 // Initialize Supabase client
 export const supabase = createClient(
@@ -76,12 +76,14 @@ export async function getReviews(language: string, storeName: string) {
   }
 }
 
-// Function to invalidate cache when new reviews are added
+// Function to invalidate cache when new reviews are added (no-op if Redis unavailable)
 export async function invalidateReviewsCache(storeName: string, language: string) {
   const cacheKey = `reviews:${storeName.toLowerCase()}:${language}`;
   const redis = await getRedisClient();
-  await redis.del(cacheKey);
-  console.log('🔄 Invalidated cache for:', { storeName, language });
+  if (redis) {
+    await redis.del(cacheKey);
+    console.log('🔄 Invalidated cache for:', { storeName, language });
+  }
 }
 
 // Function to add a new review

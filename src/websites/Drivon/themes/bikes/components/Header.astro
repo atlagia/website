@@ -1,184 +1,120 @@
 ---
-// Header.astro
 import { Menu, Globe } from 'lucide-react';
 import { getLangFromUrl, getLocalizedPath } from '@utils/i18n';
 
 const navigation = [
   { name: 'Home', href: '/' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'Reviews', href: '/reviews' },
+  { name: 'Collections', href: '/collections' },
   { name: 'About', href: '/about' },
   { name: 'Contact', href: '/contact' },
 ];
 
-// Get allowed languages from environment
 const getAllowedLanguages = (): string[] => {
   const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
   return allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
 };
 
-const allowedLanguages = getAllowedLanguages();
-
-const languageNames = {
-  en: "English",
-  fr: "Français", 
-  de: "Deutsch",
-  es: "Español",
-  it: "Italiano",
-  pt: "Português",
-  nl: "Nederlands",
-  ru: "Русский",
-  ar: "العربية",
-  zh: "中文",
-  tr: "Türkçe",
-  ja: "日本語",
-  ko: "한국어",
-  sv: "Svenska",
-  no: "Norsk",
-  da: "Dansk",
-  fi: "Suomi",
-  pl: "Polski",
-  cs: "Čeština",
-  hu: "Magyar",
-  ro: "Română",
-  bg: "Български",
-  hr: "Hrvatski",
-  sk: "Slovenčina",
-  sl: "Slovenščina",
-  et: "Eesti",
-  lv: "Latviešu",
-  lt: "Lietuvių",
-  el: "Ελληνικά",
-  he: "עברית",
-  th: "ไทย",
-  vi: "Tiếng Việt",
-  id: "Bahasa Indonesia",
-  ms: "Bahasa Melayu",
-  tl: "Filipino"
+const languageNames: Record<string, string> = {
+  en: "English", fr: "Français", de: "Deutsch", es: "Español", it: "Italiano",
+  pt: "Português", nl: "Nederlands", ar: "العربية", zh: "中文", ja: "日本語", ko: "한국어",
 };
 
-const languages = allowedLanguages.map(lang => ({
-  code: lang,
-  name: languageNames[lang] || lang
-}));
+const allowedLanguages = getAllowedLanguages();
+const languages = allowedLanguages.map(lang => ({ code: lang, name: languageNames[lang] || lang }));
 
 const currentPath = Astro.url.pathname;
 const currentLang = getLangFromUrl(Astro.url);
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'Drivon';
 
-const siteName = import.meta.env.PUBLIC_SITE_NAME || 'ProDriver Gear';
-
-// Localize navigation links
 const localizedNavigation = navigation.map(item => ({
   ...item,
   href: `/${currentLang}${item.href === '/' ? '' : item.href}`
 }));
 ---
 
-<header class="fixed w-full top-0 z-50 bg-black/80 backdrop-blur-md border-b border-gray-800">
-  <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Top">
-    <div class="flex h-16 items-center justify-between">
-      <div class="flex items-center">
-        <a href={`/${currentLang}`} class="flex items-center">
-          <span class="text-2xl font-black text-white uppercase tracking-tight">
-            {siteName}
-          </span>
-        </a>
-      </div>
-      
-      <div class="hidden md:flex items-center space-x-8">
+<header class="drivon-header fixed w-full top-0 z-50 bg-[var(--drivon-bg)]/90 backdrop-blur-xl border-b border-[var(--drivon-border)] transition-colors duration-300">
+  <nav class="mx-auto max-w-[1600px] px-6 sm:px-8 lg:px-12" aria-label="Main">
+    <div class="flex h-20 items-center justify-between">
+      <a href={`/${currentLang}`} class="font-display text-xl font-bold tracking-tight text-[var(--drivon-text)] uppercase">
+        {siteName}
+      </a>
+
+      <div class="hidden md:flex items-center gap-10">
         {localizedNavigation.map((item) => (
           <a
             href={item.href}
-            class="text-base font-semibold text-gray-300 hover:text-white transition-colors uppercase tracking-wider"
+            class="text-[13px] font-medium tracking-[0.2em] uppercase text-[var(--drivon-muted)] hover:text-[var(--drivon-text)] transition-colors duration-200"
           >
             {item.name}
           </a>
         ))}
       </div>
 
-      <div class="flex items-center gap-4">
-        <!-- Language Switcher -->
+      <div class="flex items-center gap-6">
         <div class="relative group">
-          <button
-            type="button"
-            class="inline-flex items-center gap-2 text-gray-300 hover:text-white"
-          >
-            <Globe className="h-5 w-5" />
-            <span class="hidden md:inline-block text-sm uppercase tracking-wider">
-              {languages.find(lang => lang.code === currentLang)?.name}
+          <button type="button" class="flex items-center gap-2 text-[var(--drivon-muted)] hover:text-[var(--drivon-text)] transition-colors">
+            <Globe className="h-4 w-4" />
+            <span class="hidden sm:inline text-[11px] uppercase tracking-[0.2em]">
+              {languages.find(l => l.code === currentLang)?.name}
             </span>
           </button>
-          
-          <div class="absolute right-0 mt-2 w-48 rounded-md shadow-2xl bg-gray-900 ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-            <div class="py-1" role="menu" aria-orientation="vertical">
-              {languages.map((lang) => (
-                <a
-                  href={getLocalizedPath(currentPath, lang.code)}
-                  class={`block px-4 py-2 text-sm uppercase tracking-wider ${currentLang === lang.code ? 'bg-gray-800 text-white' : 'text-gray-300 hover:bg-gray-800 hover:text-white'}`}
-                  role="menuitem"
-                >
-                  {lang.name}
-                </a>
-              ))}
-            </div>
+          <div class="absolute right-0 mt-2 w-40 py-2 bg-[var(--drivon-surface)] border border-[var(--drivon-border)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 shadow-2xl">
+            {languages.map((lang) => (
+              <a
+                href={getLocalizedPath(currentPath, lang.code)}
+                class={`block px-4 py-2 text-[11px] uppercase tracking-widest ${currentLang === lang.code ? 'text-[var(--drivon-accent)]' : 'text-[var(--drivon-muted)] hover:text-[var(--drivon-text)]'}`}
+              >
+                {lang.name}
+              </a>
+            ))}
           </div>
         </div>
 
         <a
+          href={`/${currentLang}/checkout`}
+          class="hidden md:inline text-[11px] font-medium tracking-[0.2em] uppercase text-[var(--drivon-muted)] hover:text-[var(--drivon-text)]"
+        >
+          Bag
+        </a>
+
+        <a
           href={`/${currentLang}/account`}
-          class="hidden md:inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-semibold rounded-md text-white bg-red-600 hover:bg-red-700 transition-colors uppercase tracking-wider"
+          class="hidden md:inline-flex items-center justify-center px-5 py-2.5 border border-[var(--drivon-accent)] text-[11px] font-medium tracking-[0.2em] uppercase text-[var(--drivon-accent)] hover:bg-[var(--drivon-accent)] hover:text-[var(--drivon-bg)] transition-all duration-200"
         >
           Sign In
         </a>
-        
-        <div class="relative md:hidden">
-          <button
-            type="button"
-            id="mobile-menu-button"
-            class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800"
-            aria-expanded="false"
-          >
-            <span class="sr-only">Open menu</span>
-            <Menu className="h-6 w-6" aria-hidden="true" />
-          </button>
-          <div 
-            id="mobile-menu-dropdown"
-            class="absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-gray-900 ring-1 ring-black ring-opacity-5 hidden"
-          >
-              <div class="py-1" role="menu" aria-orientation="vertical">
-                {localizedNavigation.map((item) => (
-                  <a
-                    href={item.href}
-                    class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white uppercase tracking-wider"
-                    role="menuitem"
-                  >
-                    {item.name}
-                  </a>
-                ))}
-              </div>
-          </div>
-        </div>
+
+        <button type="button" id="mobile-menu-button" class="md:hidden p-2 text-[var(--drivon-muted)] hover:text-[var(--drivon-text)]" aria-expanded="false">
+          <span class="sr-only">Menu</span>
+          <Menu className="h-5 w-5" />
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu-dropdown" class="md:hidden hidden py-6 border-t border-[var(--drivon-border)]">
+      <div class="flex flex-col gap-4">
+        {localizedNavigation.map((item) => (
+          <a href={item.href} class="text-sm tracking-[0.15em] uppercase text-[var(--drivon-muted)] hover:text-[var(--drivon-text)]">
+            {item.name}
+          </a>
+        ))}
+        <a href={`/${currentLang}/checkout`} class="text-sm tracking-[0.15em] uppercase text-[var(--drivon-muted)]">Bag</a>
+        <a href={`/${currentLang}/account`} class="text-sm tracking-[0.15em] uppercase text-[var(--drivon-accent)]">Sign In</a>
       </div>
     </div>
   </nav>
 </header>
 
 <script>
-  const mobileMenuButton = document.getElementById('mobile-menu-button');
-  const mobileMenuDropdown = document.getElementById('mobile-menu-dropdown');
-
-  mobileMenuButton?.addEventListener('click', () => {
-    const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
-    mobileMenuButton.setAttribute('aria-expanded', (!isExpanded).toString());
-    mobileMenuDropdown?.classList.toggle('hidden');
-  });
-
-  // Close menu when clicking outside
-  document.addEventListener('click', (event) => {
-    if (!mobileMenuButton?.contains(event.target as Node) && 
-        !mobileMenuDropdown?.contains(event.target as Node)) {
-      mobileMenuButton?.setAttribute('aria-expanded', 'false');
-      mobileMenuDropdown?.classList.add('hidden');
-    }
+  document.getElementById('mobile-menu-button')?.addEventListener('click', () => {
+    const btn = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu-dropdown');
+    const expanded = btn?.getAttribute('aria-expanded') === 'true';
+    btn?.setAttribute('aria-expanded', (!expanded).toString());
+    menu?.classList.toggle('hidden');
   });
 </script>
+
+<style>
+  .font-display { font-family: var(--font-display); }
+</style>

@@ -1,2 +1,2 @@
-export const SITE_TITLE = 'Digivast - Digital Products Marketplace';
-export const SITE_DESCRIPTION = 'Your go-to marketplace for premium digital products. Discover software, templates, digital assets, and more from trusted creators.';
+export const SITE_TITLE = 'Drivon — Premium Automotive Lifestyle';
+export const SITE_DESCRIPTION = 'Premium automotive lifestyle and driver merchandise. Bold, minimal, cinematic.';

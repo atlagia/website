@@ -11,19 +11,14 @@ interface Props {
 
 const { title, description, viewAllLink, lang, collectionHandle } = Astro.props;
 
-// Fetch products with fallback logic
 let productsData;
 try {
   if (collectionHandle && collectionHandle !== 'all') {
-    // Try to fetch from specific collection first
     productsData = await getCollectionProducts(collectionHandle);
   } else {
-    // Fetch all products if no collection or 'all' specified
     productsData = await getAllProducts();
   }
-} catch (error) {
-  console.warn(`Failed to fetch products from collection "${collectionHandle}", falling back to all products:`, error.message);
-  // Fallback to all products if collection fetch fails
+} catch {
   productsData = await getAllProducts();
 }
 
@@ -38,65 +33,46 @@ const products = productsData
       currency: node.priceRange.minVariantPrice.currencyCode
     }).format(node.priceRange.minVariantPrice.amount),
     image: node.images.edges[0]?.node.url || '/placeholder-image.jpg',
-    badge: Math.random() > 0.5 ? 'BEST SELLER' : undefined, // Random badge assignment
   }));
 ---
 
-<section class="py-20 px-4 bg-white">
-  <div class="max-w-7xl mx-auto">
-    <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">{title}</h2>
-      <p class="text-xl text-gray-600 max-w-3xl mx-auto">{description}</p>
-    </div>
-    
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-      {products.map((product) => (
-        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300 group">
-          <div class="relative">
-            <a href={`/${lang}/products/${product.handle}`}>
-              <img 
-                src={product.image} 
-                alt={product.name}
-                class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-            </a>
-            {product.badge && (
-              <div class="absolute top-3 left-3 bg-red-600 text-white px-2 py-1 rounded-md text-xs font-bold">
-                {product.badge}
-              </div>
-            )}
-          </div>
-          
-          <div class="p-6">
-            <a href={`/${lang}/products/${product.handle}`}>
-              <h3 class="font-bold text-lg mb-2 text-gray-900 hover:text-gray-700">{product.name}</h3>
-            </a>
-            <p class="text-gray-600 text-sm mb-4">Professional Performance Gear</p>
-            
-            <div class="flex items-center justify-between mb-4">
-              <div class="flex items-center gap-2">
-                <span class="text-2xl font-bold text-gray-900">{product.price}</span>
-              </div>
-            </div>
-            
-            <a 
-              href={`/${lang}/products/${product.handle}`}
-              class="block w-full bg-black text-white py-3 px-6 rounded-lg font-semibold hover:bg-gray-800 transition-colors duration-300 text-center"
-            >
-              View {product.name}
-            </a>
-          </div>
-        </div>
-      ))}
-    </div>
-    
-    <div class="text-center">
-      <a 
+<section class="drivon-bestsellers bg-[var(--drivon-bg)] py-24 lg:py-32">
+  <div class="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-16">
+      <div>
+        <p class="font-display text-[11px] tracking-[0.35em] uppercase text-[var(--drivon-accent)] mb-3">Shop</p>
+        <h2 class="font-display text-3xl md:text-4xl font-bold text-[var(--drivon-text)] uppercase tracking-tight mb-4">{title}</h2>
+        <p class="text-lg text-[var(--drivon-text)]/70 max-w-xl font-body">{description}</p>
+      </div>
+      <a
         href={viewAllLink}
-        class="inline-block bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-black transition-colors duration-300"
+        class="text-[11px] font-medium tracking-[0.25em] uppercase text-[var(--drivon-text)]/70 hover:text-[var(--drivon-accent)] transition-colors w-fit"
       >
-        View All Products
+        View all
       </a>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+      {products.map((product) => (
+        <a href={`/${lang}/products/${product.handle}`} class="group block">
+          <div class="relative aspect-[3/4] overflow-hidden bg-[var(--drivon-card)] mb-5">
+            <img
+              src={product.image}
+              alt={product.name}
+              class="w-full h-full object-cover transition-transform duration-600 ease-out group-hover:scale-105"
+            />
+          </div>
+          <h3 class="font-display text-sm font-semibold text-[var(--drivon-text)] uppercase tracking-wide group-hover:text-[var(--drivon-accent)] transition-colors">
+            {product.name}
+          </h3>
+          <span class="text-sm text-[var(--drivon-muted)] mt-1 font-body">{product.price}</span>
+        </a>
+      ))}
     </div>
   </div>
 </section>
+
+<style>
+  .font-display { font-family: var(--font-display); }
+  .font-body { font-family: var(--font-body); }
+</style>

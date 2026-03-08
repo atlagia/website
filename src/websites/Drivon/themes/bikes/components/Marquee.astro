@@ -1,0 +1,32 @@
+---
+interface Props {
+  items: string[];
+  speed?: number;
+}
+
+const { items = ['RACING', 'HERITAGE', 'CULTURE', 'PREMIUM', 'DRIVEN', 'LEGEND'], speed = 25 } = Astro.props;
+const repeated = [...items, ...items, ...items];
+---
+
+<section class="drivon-marquee overflow-hidden border-y border-[var(--drivon-border)] bg-[var(--drivon-surface)] py-4" aria-hidden="true">
+  <div class="marquee-track flex gap-12 whitespace-nowrap" style={`--marquee-speed: ${speed}s`}>
+    {repeated.map((item) => (
+      <span class="font-display text-[11px] md:text-xs tracking-[0.4em] uppercase text-[var(--drivon-text)]/60">
+        {item}
+      </span>
+    ))}
+  </div>
+</section>
+
+<style>
+  .font-display { font-family: var(--font-display); }
+  .marquee-track {
+    animation: marquee-scroll var(--marquee-speed, 25s) linear infinite;
+    display: flex;
+    gap: 3rem;
+  }
+  @keyframes marquee-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-33.333%); }
+  }
+</style>

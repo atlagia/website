@@ -14,89 +14,121 @@ const isPhysical = !['iptv', 'digital', 'streaming'].includes(PROJECT_TYPE.toLow
 if (!isPhysical) {
   return null;
 }
+
+const theme = import.meta.env.THEME || 'default';
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'default';
+const defaultStyles = {
+  wrapper: 'bg-neutral-50 rounded-2xl p-8 border border-neutral-200',
+  headerWrap: 'mb-6',
+  title: 'text-sm font-medium uppercase tracking-widest text-neutral-500 flex items-center gap-2',
+  titleIconWrap: 'w-8 h-8 bg-neutral-200 flex items-center justify-center',
+  titleIcon: 'w-4 h-4 text-neutral-600',
+  titleDivider: 'w-12 h-px bg-neutral-300 mt-2',
+  columns: 'grid grid-cols-1 lg:grid-cols-2 gap-6',
+  card: 'bg-white rounded-xl p-5 border border-neutral-200',
+  cardTitle: 'font-semibold text-neutral-900 text-base mb-3',
+  list: 'space-y-2',
+  listItem: 'flex items-start gap-3',
+  listIconWrap: 'flex-shrink-0 w-5 h-5 bg-neutral-200 rounded-full flex items-center justify-center mt-0.5',
+  listIcon: 'w-3 h-3 text-neutral-600',
+  listText: 'text-neutral-600 text-sm leading-relaxed',
+  noteWrap: 'mt-6 p-4 bg-neutral-100 rounded-xl border border-neutral-200',
+  noteText: 'text-sm text-neutral-600 text-center',
+  noteStrong: 'font-medium text-neutral-900'
+};
+
+let styles = defaultStyles;
+try {
+  const { luxuryComponentStyle } = await import(`@websites/${siteName}/themes/${theme}/styles/components/luxury.mjs`);
+  if (luxuryComponentStyle?.warranty) styles = { ...defaultStyles, ...luxuryComponentStyle.warranty };
+} catch {
+  try {
+    const { luxuryComponentStyle } = await import(`@themes/${theme}/styles/components/luxury.mjs`);
+    if (luxuryComponentStyle?.warranty) styles = { ...defaultStyles, ...luxuryComponentStyle.warranty };
+  } catch (err) {
+    console.error('Failed to load component styles:', err);
+  }
+}
 ---
 
-<div class={`bg-gradient-to-br from-blue-50 via-white to-indigo-50 rounded-2xl p-8 shadow-lg border border-blue-100/50 ${className}`}>
-  <div class="flex items-center gap-3 mb-6">
-    <div class="p-3 bg-blue-100 rounded-xl">
-      <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<div class={`${styles.wrapper} ${className}`}>
+  <div class={styles.headerWrap}>
+    <h2 class={styles.title}>
+      <span class={styles.titleIconWrap}>
+        <svg class={styles.titleIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.031 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
       </svg>
-    </div>
-    <h2 class="text-2xl font-bold text-gray-900">Warranty & Returns</h2>
+      </span>
+      Warranty & Returns
+    </h2>
+    <div class={styles.titleDivider}></div>
   </div>
 
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-    <div class="bg-white/70 backdrop-blur-sm rounded-xl p-6 border border-blue-100/50 shadow-sm">
-      <div class="flex items-center gap-2 mb-4">
-        <div class="w-2 h-2 bg-green-500 rounded-full"></div>
-        <h3 class="font-semibold text-gray-900 text-lg">Quality Guarantee</h3>
-      </div>
-      <ul class="space-y-3">
-        <li class="flex items-start group">
-          <div class="flex-shrink-0 w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mt-0.5 mr-3 group-hover:bg-green-200 transition-colors">
-            <svg class="w-3 h-3 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+  <div class={styles.columns}>
+    <div class={styles.card}>
+      <h3 class={styles.cardTitle}>Quality Guarantee</h3>
+      <ul class={styles.list}>
+        <li class={styles.listItem}>
+          <div class={styles.listIconWrap}>
+            <svg class={styles.listIcon} fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
             </svg>
           </div>
-          <span class="text-gray-700 leading-relaxed">Lifetime warranty against manufacturing defects</span>
+          <span class={styles.listText}>Lifetime warranty against manufacturing defects</span>
         </li>
-        <li class="flex items-start group">
-          <div class="flex-shrink-0 w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mt-0.5 mr-3 group-hover:bg-green-200 transition-colors">
-            <svg class="w-3 h-3 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+        <li class={styles.listItem}>
+          <div class={styles.listIconWrap}>
+            <svg class={styles.listIcon} fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
             </svg>
           </div>
-          <span class="text-gray-700 leading-relaxed">Coverage includes stitching, zippers, and materials</span>
+          <span class={styles.listText}>Coverage includes stitching, zippers, and materials</span>
         </li>
-        <li class="flex items-start group">
-          <div class="flex-shrink-0 w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mt-0.5 mr-3 group-hover:bg-green-200 transition-colors">
-            <svg class="w-3 h-3 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+        <li class={styles.listItem}>
+          <div class={styles.listIconWrap}>
+            <svg class={styles.listIcon} fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
             </svg>
           </div>
-          <span class="text-gray-700 leading-relaxed">Simple claim process with proof of purchase</span>
+          <span class={styles.listText}>Simple claim process with proof of purchase</span>
         </li>
       </ul>
     </div>
     
-    <div class="bg-white/70 backdrop-blur-sm rounded-xl p-6 border border-blue-100/50 shadow-sm">
-      <div class="flex items-center gap-2 mb-4">
-        <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
-        <h3 class="font-semibold text-gray-900 text-lg">Return Policy</h3>
-      </div>
-      <ul class="space-y-3">
-        <li class="flex items-start group">
-          <div class="flex-shrink-0 w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mt-0.5 mr-3 group-hover:bg-blue-200 transition-colors">
-            <svg class="w-3 h-3 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+    <div class={styles.card}>
+      <h3 class={styles.cardTitle}>Return Policy</h3>
+      <ul class={styles.list}>
+        <li class={styles.listItem}>
+          <div class={styles.listIconWrap}>
+            <svg class={styles.listIcon} fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
             </svg>
           </div>
-          <span class="text-gray-700 leading-relaxed">30-day hassle-free returns</span>
+          <span class={styles.listText}>30-day hassle-free returns</span>
         </li>
-        <li class="flex items-start group">
-          <div class="flex-shrink-0 w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mt-0.5 mr-3 group-hover:bg-blue-200 transition-colors">
-            <svg class="w-3 h-3 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+        <li class={styles.listItem}>
+          <div class={styles.listIconWrap}>
+            <svg class={styles.listIcon} fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
             </svg>
           </div>
-          <span class="text-gray-700 leading-relaxed">Free return shipping on all orders</span>
+          <span class={styles.listText}>Free return shipping on all orders</span>
         </li>
-        <li class="flex items-start group">
-          <div class="flex-shrink-0 w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mt-0.5 mr-3 group-hover:bg-blue-200 transition-colors">
-            <svg class="w-3 h-3 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+        <li class={styles.listItem}>
+          <div class={styles.listIconWrap}>
+            <svg class={styles.listIcon} fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
             </svg>
           </div>
-          <span class="text-gray-700 leading-relaxed">Items must be unworn with original tags</span>
+          <span class={styles.listText}>Items must be unworn with original tags</span>
         </li>
       </ul>
     </div>
   </div>
   
-  <div class="mt-6 p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl border border-blue-100/50">
-    <p class="text-sm text-gray-600 text-center">
-      <span class="font-medium text-gray-900">Need help?</span> Contact our customer service team for any warranty or return questions.
+  <div class={styles.noteWrap}>
+    <p class={styles.noteText}>
+      <span class={styles.noteStrong}>Need help?</span> Contact our customer service team for any warranty or return questions.
     </p>
   </div>
 </div>

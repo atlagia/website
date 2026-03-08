@@ -16,30 +16,39 @@ interface Props {
 const { title, description, categories } = Astro.props;
 ---
 
-<section class="py-20 px-4 bg-gray-900">
-  <div class="max-w-7xl mx-auto">
-    <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">{title}</h2>
-      <p class="text-lg text-gray-300 max-w-2xl mx-auto">{description}</p>
+<section class="drivon-categories bg-[var(--drivon-bg)] py-24 lg:py-32">
+  <div class="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12">
+    <div class="mb-16 lg:mb-20">
+      <p class="font-display text-[11px] tracking-[0.35em] uppercase text-[var(--drivon-accent)] mb-3">Categories</p>
+      <h2 class="font-display text-3xl md:text-4xl font-bold text-[var(--drivon-text)] uppercase tracking-tight mb-4">{title}</h2>
+      <p class="text-lg text-[var(--drivon-text)]/70 max-w-2xl font-body">{description}</p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-px bg-[var(--drivon-border)] md:bg-transparent">
       {categories.map((category) => (
         <a
           href={category.link}
-          class="group relative overflow-hidden rounded-xl aspect-[4/3] shadow-lg hover:shadow-xl transition-shadow duration-300"
+          class="group relative block aspect-[3/4] overflow-hidden bg-[var(--drivon-surface)] md:border border-[var(--drivon-border)]"
         >
           <img
             src={category.image}
             alt={category.name}
-            class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 filter brightness-75"
+            class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
           />
-          <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-black/20 flex flex-col justify-end p-6 text-white">
-            <h3 class="text-2xl font-bold mb-2 uppercase tracking-tight">{category.name}</h3>
-            <p class="text-sm text-gray-200 font-medium">{category.description}</p>
+          <div class="absolute inset-0 bg-gradient-to-t from-[var(--drivon-bg)] via-transparent to-transparent opacity-80"></div>
+          <div class="absolute inset-0 flex flex-col justify-end p-8 lg:p-10">
+            <h3 class="font-display text-2xl lg:text-3xl font-bold text-[var(--drivon-text)] uppercase tracking-tight mb-2">
+              {category.name}
+            </h3>
+            <p class="text-sm text-[var(--drivon-text)]/70 font-body">{category.description}</p>
           </div>
         </a>
       ))}
     </div>
   </div>
 </section>
+
+<style>
+  .font-display { font-family: var(--font-display); }
+  .font-body { font-family: var(--font-body); }
+</style>

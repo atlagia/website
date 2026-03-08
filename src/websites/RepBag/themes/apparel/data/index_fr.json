@@ -1,0 +1,78 @@
+{
+  "siteTitle": "RepBag - Sacs & Accessoires Premium",
+  "siteDescription": "Sacs premium, sacs à main, sacs à dos et accessoires. Qualité et style pour toutes les occasions.",
+  "sections": [
+    {
+      "type": "welcomeSection",
+      "title": "RepBag",
+      "description": "Sacs à main et accessoires de qualité. Artisanat et style pour chaque occasion.",
+      "luxury": true,
+      "heroImage": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=1200",
+      "headlineLine1": "Mode",
+      "headlineLine2": "Sacs à main",
+      "blogLink": "/collections",
+      "blogLinkText": "Voir les collections",
+      "backgroundVideo": { "type": "youtube", "videoId": "", "fallbackImage": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=1200" }
+    },
+    {
+      "type": "editorialSection",
+      "title": "Neutral Chic",
+      "layout": "1-2",
+      "images": [
+        { "src": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=800", "alt": "Sac hobo" },
+        { "src": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=800", "alt": "Sac structuré" },
+        { "src": "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?w=800", "alt": "Sac classique" }
+      ]
+    },
+    {
+      "type": "editorialSection",
+      "title": "Couleurs vives",
+      "layout": "3-2",
+      "images": [
+        { "src": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600", "alt": "Clutch jaune" },
+        { "src": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600", "alt": "Sac tissé" },
+        { "src": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600", "alt": "Sac pastel" },
+        { "src": "https://images.unsplash.com/photo-1627123424574-724758594e93?w=600", "alt": "Sac accent" },
+        { "src": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600", "alt": "Sac cuir" }
+      ]
+    },
+    {
+      "type": "editorialSection",
+      "title": "Douceur moderne",
+      "layout": "3-1",
+      "images": [
+        { "src": "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?w=600", "alt": "Sac souple" },
+        { "src": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600", "alt": "Sac à rabat" },
+        { "src": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600", "alt": "Sac bordeaux" },
+        { "src": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600", "alt": "Détail" }
+      ]
+    },
+    { "type": "productShowcase", "title": "Sacs en vedette", "description": "", "viewAllLink": "/collections", "products": [] },
+    { "type": "viewAllCta", "href": "/collections", "label": "VOIR TOUS LES SACS" },
+    {
+      "type": "categoryGrid",
+      "title": "Catégories",
+      "description": "",
+      "categories": [
+        { "id": "handbags", "name": "Sacs à main", "description": "", "image": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600", "link": "/collections/handbags" },
+        { "id": "backpacks", "name": "Sacs à dos", "description": "", "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600", "link": "/collections/backpacks" },
+        { "id": "accessories", "name": "Petite maroquinerie", "description": "", "image": "https://images.unsplash.com/photo-1627123424574-724758594e93?w=600", "link": "/collections/accessories" }
+      ]
+    },
+    {
+      "type": "discoverMore",
+      "title": "Découvrez RepBag",
+      "description": "Des nouveautés aux dernières collections, explorez l'univers RepBag.",
+      "buttonText": "Visiter RepBag.shop",
+      "buttonHref": "/"
+    },
+    {
+      "type": "emailSignupSection",
+      "title": "Newsletter",
+      "description": "Nouveautés et offres exclusives.",
+      "backgroundImage": "",
+      "formAction": "/api/newsletter",
+      "submitText": "S'INSCRIRE À LA NEWSLETTER"
+    }
+  ]
+}

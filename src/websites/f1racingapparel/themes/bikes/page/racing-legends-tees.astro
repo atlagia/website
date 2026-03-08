@@ -1,0 +1,162 @@
+---
+import Layoutc from '@layouts/Layoutc.astro';
+import { ArrowRight, Star, Trophy, Crown, Award, Zap } from 'lucide-react';
+
+// Generate static paths for allowed languages from environment
+export async function getStaticPaths() {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  const languages = allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+  
+  return languages.map(lang => ({ params: { lang } }));
+}
+
+const { lang = 'en' } = Astro.params;
+const baseUrl = import.meta.env.DOMAINE || 'https://drivon.store';
+const storeName = import.meta.env.PUBLIC_SITE_NAME || 'Drivon';
+
+// SEO
+const seoTitle = `Racing Legends Tees | ${storeName}`;
+const seoDescription = "Premium tees celebrating racing legends. From F1 champions to Le Mans heroes, wear the passion of motorsport legends.";
+---
+<Layoutc title={seoTitle} description={seoDescription} lang={lang}>
+  <div class="min-h-screen bg-[var(--drivon-bg)]">
+    <!-- Hero Section -->
+    <section class="relative min-h-[50vh] flex items-center justify-center bg-[var(--drivon-text)] text-[var(--drivon-bg)]">
+      <div class="relative z-10 h-full flex items-center justify-center text-center px-4">
+        <div class="max-w-4xl mx-auto">
+          <h1 class="font-headline text-5xl md:text-7xl uppercase tracking-tight text-[var(--drivon-bg)] mb-6">
+            Racing Legends Tees
+          </h1>
+          <p class="text-xl md:text-2xl text-[var(--drivon-bg)]/90 mb-8">
+            Premium tees celebrating motorsport legends
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href={`/${lang}/collections`} class="inline-flex items-center justify-center bg-[var(--drivon-bg)] text-[var(--drivon-text)] px-8 py-3.5 text-[11px] font-medium tracking-[0.2em] uppercase hover:opacity-90 transition-opacity font-body">
+              Shop Racing Legends
+            </a>
+            <a href={`/${lang}/f1-legends`} class="inline-flex items-center justify-center border-2 border-[var(--drivon-bg)] text-[var(--drivon-bg)] px-8 py-3.5 text-[11px] font-medium tracking-[0.2em] uppercase hover:bg-[var(--drivon-bg)]/10 transition-colors font-body">
+              F1 Legends
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Racing Legends Features -->
+    <section class="py-20 px-4">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="font-headline text-4xl text-[var(--drivon-text)] uppercase tracking-wide mb-4">Premium Racing Legends Tees</h2>
+          <p class="text-xl text-[var(--drivon-muted)] max-w-3xl mx-auto">
+            From F1 champions to Le Mans heroes, our racing legends tees celebrate the greatest drivers who have shaped motorsport history.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+          <div class="bg-[var(--drivon-card)] rounded-2xl p-8 border border-[var(--drivon-border)]">
+            <div class="w-16 h-16 bg-[var(--drivon-surface)] rounded-full flex items-center justify-center mb-6 text-[var(--drivon-text)]">
+              <Crown class="w-8 h-8" />
+            </div>
+            <h3 class="font-headline text-2xl text-[var(--drivon-text)] uppercase tracking-wide mb-4">F1 Champions</h3>
+            <p class="text-[var(--drivon-muted)]">
+              Celebrate the greatest Formula 1 champions who have conquered the pinnacle of motorsport and earned their place in racing history.
+            </p>
+          </div>
+
+          <div class="bg-[var(--drivon-card)] rounded-2xl p-8 border border-[var(--drivon-border)]">
+            <div class="w-16 h-16 bg-[var(--drivon-surface)] rounded-full flex items-center justify-center mb-6 text-[var(--drivon-text)]">
+              <Star class="w-8 h-8" />
+            </div>
+            <h3 class="font-headline text-2xl text-[var(--drivon-text)] uppercase tracking-wide mb-4">Le Mans Heroes</h3>
+            <p class="text-[var(--drivon-muted)]">
+              Honor the legendary Le Mans heroes who have conquered the world's most grueling endurance race and inspired generations of racing fans.
+            </p>
+          </div>
+
+          <div class="bg-[var(--drivon-card)] rounded-2xl p-8 border border-[var(--drivon-border)]">
+            <div class="w-16 h-16 bg-[var(--drivon-surface)] rounded-full flex items-center justify-center mb-6 text-[var(--drivon-text)]">
+              <Trophy class="w-8 h-8" />
+            </div>
+            <h3 class="font-headline text-2xl text-[var(--drivon-text)] uppercase tracking-wide mb-4">Rally Champions</h3>
+            <p class="text-[var(--drivon-muted)]">
+              Every tee is crafted with premium materials and attention to detail, ensuring comfort and durability for the racing enthusiast.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Racing Legends Categories -->
+    <section class="py-20 bg-[var(--drivon-surface)]">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="font-headline text-4xl text-[var(--drivon-text)] uppercase tracking-wide mb-4">Racing Legends Collection</h2>
+          <p class="text-xl text-[var(--drivon-muted)]">Celebrate the greatest motorsport legends</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <a href={`/${lang}/f1-legends`} class="group bg-[var(--drivon-card)] rounded-2xl overflow-hidden border border-[var(--drivon-border)] hover:border-[var(--drivon-text)]/30 transition-colors">
+            <div class="h-48 bg-[var(--drivon-text)] flex items-center justify-center text-[var(--drivon-bg)]">
+              <Crown class="w-16 h-16" />
+            </div>
+            <div class="p-6">
+              <h3 class="font-headline text-xl text-[var(--drivon-text)] uppercase tracking-wide mb-2">F1 Legends Tees</h3>
+              <p class="text-[var(--drivon-muted)] mb-4">Premium tees celebrating Formula 1 champions</p>
+              <div class="flex items-center text-[var(--drivon-text)] group-hover:text-[var(--drivon-accent-hover)] font-body text-[11px] font-medium tracking-[0.2em] uppercase">
+                Shop F1 Legends <ArrowRight class="w-4 h-4 ml-2" />
+              </div>
+            </div>
+          </a>
+
+          <a href={`/${lang}/le-mans-heroes`} class="group bg-[var(--drivon-card)] rounded-2xl overflow-hidden border border-[var(--drivon-border)] hover:border-[var(--drivon-text)]/30 transition-colors">
+            <div class="h-48 bg-[var(--drivon-text)] flex items-center justify-center text-[var(--drivon-bg)]">
+              <Star class="w-16 h-16" />
+            </div>
+            <div class="p-6">
+              <h3 class="font-headline text-xl text-[var(--drivon-text)] uppercase tracking-wide mb-2">Le Mans Heroes Tees</h3>
+              <p class="text-[var(--drivon-muted)] mb-4">Classic tees honoring Le Mans endurance heroes</p>
+              <div class="flex items-center text-[var(--drivon-text)] group-hover:text-[var(--drivon-accent-hover)] font-body text-[11px] font-medium tracking-[0.2em] uppercase">
+                Shop Le Mans Heroes <ArrowRight class="w-4 h-4 ml-2" />
+              </div>
+            </div>
+          </a>
+
+          <a href={`/${lang}/rally-champions`} class="group bg-[var(--drivon-card)] rounded-2xl overflow-hidden border border-[var(--drivon-border)] hover:border-[var(--drivon-text)]/30 transition-colors">
+            <div class="h-48 bg-[var(--drivon-text)] flex items-center justify-center text-[var(--drivon-bg)]">
+              <Trophy class="w-16 h-16" />
+            </div>
+            <div class="p-6">
+              <h3 class="font-headline text-xl text-[var(--drivon-text)] uppercase tracking-wide mb-2">Rally Champions Tees</h3>
+              <p class="text-[var(--drivon-muted)] mb-4">Tees celebrating rally racing champions</p>
+              <div class="flex items-center text-[var(--drivon-text)] group-hover:text-[var(--drivon-accent-hover)] font-body text-[11px] font-medium tracking-[0.2em] uppercase">
+                Shop Rally Champions <ArrowRight class="w-4 h-4 ml-2" />
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-[var(--drivon-text)] text-[var(--drivon-bg)]">
+      <div class="max-w-4xl mx-auto text-center px-4">
+        <h2 class="font-headline text-4xl uppercase tracking-tight mb-6">Wear Racing Legends</h2>
+        <p class="text-xl text-[var(--drivon-bg)]/90 mb-8">
+          Join the global motorsport community and celebrate the greatest racing legends with our premium racing legends tees collection.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href={`/${lang}/collections`} class="inline-flex items-center justify-center bg-[var(--drivon-bg)] text-[var(--drivon-text)] px-8 py-3.5 text-[11px] font-medium tracking-[0.2em] uppercase hover:opacity-90 transition-opacity font-body">
+            Shop Racing Legends Collection
+          </a>
+          <a href={`/${lang}/f1-legends`} class="inline-flex items-center justify-center border-2 border-[var(--drivon-bg)] text-[var(--drivon-bg)] px-8 py-3.5 text-[11px] font-medium tracking-[0.2em] uppercase hover:bg-[var(--drivon-bg)]/10 transition-colors font-body">
+            Explore F1 Legends
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+<style>
+  .font-headline { font-family: var(--font-headline); }
+  .font-body { font-family: var(--font-body); }
+</style>
+</Layoutc>

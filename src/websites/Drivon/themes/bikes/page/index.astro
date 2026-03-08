@@ -20,6 +20,8 @@ const { default: Video } = await import(`../components/Video.astro`);
 const { default: FeaturesSection } = await import(`../components/FeaturesSection.astro`);
 const { default: BestSellers } = await import(`../components/BestSellers.astro`);
 const { default: SpecialOffers } = await import(`../components/SpecialOffers.astro`);
+const { default: Marquee } = await import(`../components/Marquee.astro`);
+const { default: StatsBar } = await import(`../components/StatsBar.astro`);
 const { default: TrustBadges } = await import(`../components/TrustBadges.astro`);
 const { default: SocialProof } = await import(`../components/SocialProof.astro`);
 
@@ -57,7 +59,7 @@ export async function getStaticPaths() {
 ---
 
 <!doctype html>
-<html lang={lang}>
+<html lang={lang} class="drivon">
   <head>
     <BaseHead 
       title={SITE_TITLE} 
@@ -66,12 +68,15 @@ export async function getStaticPaths() {
       currentLang={lang}
     />
   </head>
-  <body>
+  <body class="bg-[var(--drivon-bg)] text-[var(--drivon-text)] antialiased">
     <Header />
     <main>
       {jsonData.sections?.map((section) => {
         return (
           <>
+            {section.type === 'marqueeSection' && (
+              <Marquee items={section.items} />
+            )}
             {section.type === 'welcomeSection' && (
               <Welcome
                 title={section.title}
@@ -82,6 +87,9 @@ export async function getStaticPaths() {
               />
             )}
             
+            {section.type === 'statsSection' && (
+              <StatsBar stats={section.stats} />
+            )}
             {section.type === 'bannerSection' && (
               <Banner
                 headline={section.headline}

@@ -12,159 +12,210 @@ interface Props {
   description: string;
   blogLink: string;
   blogLinkText: string;
-  backgroundVideo: BackgroundVideo;
+  backgroundVideo?: BackgroundVideo;
 }
 
-const { 
-  title, 
-  description, 
-  blogLink, 
-  blogLinkText, 
-  backgroundVideo
-} = Astro.props;
+const { title, description, blogLink, blogLinkText } = Astro.props;
 ---
 
-<section class="relative min-h-screen flex items-center justify-center overflow-hidden font-sans" 
-  itemScope itemType="https://schema.org/WebPageElement"
-  style={`background-image: url(${backgroundVideo.fallbackImage}); background-size: cover; background-position: center; filter: grayscale(30%);`}
+<section
+  class="drivon-hero relative min-h-screen flex items-end justify-start overflow-hidden bg-[var(--drivon-bg)]"
+  itemScope
+  itemType="https://schema.org/WebPageElement"
 >
-  <!-- YouTube Background Video -->
-  <div class="absolute inset-0 w-full h-full pointer-events-none">
-    <div id="youtube-player" class="absolute inset-0 w-full h-full">
-      <div id="player" class="w-full h-full"></div>
-    </div>
-    <div class="absolute inset-0 bg-black/60 z-10"></div>
+  <!-- Vector animation layer: speed, energy, automotive -->
+  <div class="hero-vectors absolute inset-0 w-full h-full" aria-hidden="true">
+    <svg class="hero-svg absolute inset-0 w-full h-full" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="speed-line-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#c9a962" stop-opacity="0" />
+          <stop offset="20%" stop-color="#c9a962" stop-opacity="0.35" />
+          <stop offset="50%" stop-color="#c9a962" stop-opacity="0.25" />
+          <stop offset="80%" stop-color="#c9a962" stop-opacity="0.35" />
+          <stop offset="100%" stop-color="#c9a962" stop-opacity="0" />
+        </linearGradient>
+        <linearGradient id="streak-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#fff" stop-opacity="0" />
+          <stop offset="30%" stop-color="#fff" stop-opacity="0.08" />
+          <stop offset="100%" stop-color="#fff" stop-opacity="0" />
+        </linearGradient>
+      </defs>
+      <!-- Speed lines: streaming motion (dash animation = motion blur feel) -->
+      <g class="speed-lines">
+        <line x1="-100" y1="160" x2="2020" y2="180" stroke="url(#speed-line-grad)" stroke-width="2" class="speed-line stream-1" />
+        <line x1="-100" y1="300" x2="2020" y2="320" stroke="url(#speed-line-grad)" stroke-width="1.5" class="speed-line stream-2" />
+        <line x1="-100" y1="440" x2="2020" y2="460" stroke="url(#speed-line-grad)" stroke-width="2" class="speed-line stream-3" />
+        <line x1="-100" y1="580" x2="2020" y2="600" stroke="url(#speed-line-grad)" stroke-width="1.2" class="speed-line stream-4" />
+        <line x1="-100" y1="720" x2="2020" y2="740" stroke="url(#speed-line-grad)" stroke-width="1.5" class="speed-line stream-5" />
+        <line x1="-100" y1="860" x2="2020" y2="880" stroke="url(#speed-line-grad)" stroke-width="2" class="speed-line stream-6" />
+      </g>
+      <!-- Diagonal velocity streaks -->
+      <g class="diagonal-streaks">
+        <path d="M-200 0 L800 1080" stroke="url(#streak-grad)" stroke-width="140" class="streak streak-1" />
+        <path d="M0 150 L1200 1080" stroke="url(#streak-grad)" stroke-width="110" class="streak streak-2" />
+        <path d="M350 0 L1650 1080" stroke="url(#streak-grad)" stroke-width="90" class="streak streak-3" />
+        <path d="M750 0 L1920 750" stroke="url(#streak-grad)" stroke-width="100" class="streak streak-4" />
+      </g>
+      <!-- Motion arcs: tire-track / speed curve (right side) -->
+      <path d="M1400 400 Q1700 540 1600 800" fill="none" stroke="#c9a962" stroke-width="1.5" stroke-opacity="0.15" class="motion-arc" />
+      <path d="M1200 300 Q1550 500 1500 750" fill="none" stroke="#c9a962" stroke-width="1" stroke-opacity="0.1" class="motion-arc arc-2" />
+      <!-- Road horizon + accent -->
+      <path d="M0 900 Q960 840 1920 900 L1920 1080 L0 1080 Z" fill="#c9a962" fill-opacity="0.06" class="road-curve" />
+      <line x1="0" y1="920" x2="1920" y2="920" stroke="#c9a962" stroke-width="1" stroke-opacity="0.35" class="accent-line" />
+    </svg>
   </div>
-  
-  <div class="relative z-20 max-w-5xl mx-auto text-center px-4">
-    <div class="inline-block bg-red-600/80 px-4 py-2 rounded-full text-sm tracking-wide uppercase border border-red-700 mb-6 text-white">
-      Professional Driver Performance
-    </div>
+  <!-- Gradient: dark at bottom for text -->
+  <div class="hero-gradient" aria-hidden="true"></div>
 
-    <h1 class="text-6xl md:text-8xl font-black text-white mb-6 uppercase tracking-tighter leading-none text-shadow-lg" itemProp="headline" role="heading" aria-level="1">
+  <div class="relative z-20 w-full max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 pb-28 pt-32 lg:pb-36 lg:pt-40 drivon-hero-content">
+    <p class="font-display text-[11px] tracking-[0.35em] uppercase text-[var(--drivon-accent)] mb-6 opacity-90 animate-fade-in" style="animation-delay: 0.1s; animation-fill-mode: both;">
+      Automotive lifestyle
+    </p>
+    <h1
+      class="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[8rem] font-bold text-[var(--drivon-text)] uppercase tracking-tighter leading-[0.95] max-w-4xl mb-8 animate-fade-in"
+      style="animation-delay: 0.2s; animation-fill-mode: both;"
+      itemProp="headline"
+      role="heading"
+      aria-level="1"
+    >
       {title}
     </h1>
-    
-    <p class="text-2xl md:text-3xl text-gray-100 mb-10 max-w-3xl mx-auto font-medium leading-tight tracking-wide text-shadow">
+    <p class="text-lg md:text-xl text-[var(--drivon-text)]/80 max-w-xl mb-12 font-body font-normal leading-relaxed animate-fade-in" style="animation-delay: 0.35s; animation-fill-mode: both;">
       {description}
     </p>
-    
-    <div class="flex justify-center items-center space-x-6">
-      <a 
+    <div class="flex flex-wrap gap-4 animate-fade-in" style="animation-delay: 0.5s; animation-fill-mode: both;">
+      <a
         href={blogLink}
-        class="group inline-flex items-center gap-3 bg-white/20 backdrop-blur-sm text-white border-2 border-white/40 px-10 py-4 rounded-lg uppercase tracking-wider hover:bg-white/30 transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl"
+        class="group inline-flex items-center gap-3 border border-[var(--drivon-text)] text-[var(--drivon-text)] px-8 py-4 text-[11px] font-medium tracking-[0.25em] uppercase hover:bg-[var(--drivon-text)] hover:text-[var(--drivon-bg)] transition-all duration-300"
       >
         <span>{blogLinkText}</span>
-        <ArrowRight className="w-6 h-6 transform group-hover:translate-x-1 transition-transform" />
+        <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" />
       </a>
-      
-      <a 
-        href="/shop" 
-        class="group inline-flex items-center gap-3 bg-red-600 text-white px-10 py-4 rounded-lg uppercase tracking-wider hover:bg-red-700 transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl"
+      <a
+        href={`/${Astro.url.pathname.split('/')[1] || 'en'}/collections`}
+        class="group inline-flex items-center gap-3 bg-[var(--drivon-accent)] text-[var(--drivon-bg)] px-8 py-4 text-[11px] font-medium tracking-[0.25em] uppercase hover:bg-[var(--drivon-accent-hover)] transition-all duration-300"
       >
-        <span>Shop Professional Series</span>
-        <ArrowRight className="w-6 h-6 transform group-hover:translate-x-1 transition-transform" />
+        <span>Shop</span>
+        <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" />
       </a>
     </div>
   </div>
 
-  <!-- Scroll Indicator -->
-  <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-20">
-    <div class="w-[2px] h-16 bg-white/50"></div>
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2">
+    <span class="text-[10px] tracking-[0.3em] uppercase text-[var(--drivon-text)]/50">Scroll</span>
+    <div class="w-px h-12 bg-[var(--drivon-text)]/30 scroll-line"></div>
   </div>
 </section>
 
-<script define:vars={{ backgroundVideo }}>
-  // Load YouTube IFrame API
-  const tag = document.createElement('script');
-  tag.src = 'https://www.youtube.com/iframe_api';
-  const firstScriptTag = document.getElementsByTagName('script')[0];
-  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-  // YouTube player setup
-  let player;
-  window.onYouTubeIframeAPIReady = function() {
-    player = new YT.Player('player', {
-      videoId: backgroundVideo.videoId,
-      playerVars: {
-        autoplay: 1,
-        loop: 1,
-        controls: 0,
-        showinfo: 0,
-        rel: 0,
-        enablejsapi: 1,
-        modestbranding: 1,
-        mute: 1,
-        playsinline: 1,
-        playlist: backgroundVideo.videoId // Required for looping
-      },
-      events: {
-        onReady: (event) => {
-          event.target.playVideo();
-        },
-        onStateChange: (event) => {
-          if (event.data === YT.PlayerState.ENDED) {
-            player.playVideo();
-          }
-        },
-        onError: (event) => {
-          // On error, show fallback image
-          document.getElementById('youtube-player').style.backgroundImage = 
-            `url(${backgroundVideo.fallbackImage})`;
-          document.getElementById('youtube-player').style.backgroundSize = 'cover';
-          document.getElementById('youtube-player').style.backgroundPosition = 'center';
-        }
-      }
-    });
-  };
-
-  // Resize handler for responsive video
-  function onResize() {
-    const width = window.innerWidth;
-    const height = window.innerHeight;
-    const player = document.querySelector('#youtube-player');
-    
-    if (width / height > 16 / 9) {
-      player.style.width = '100vw';
-      player.style.height = 'calc(100vw * 9 / 16)';
-    } else {
-      player.style.width = 'calc(100vh * 16 / 9)';
-      player.style.height = '100vh';
-    }
-  }
-
-  window.addEventListener('resize', onResize);
-  onResize();
-</script>
-
 <style>
-  #youtube-player {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  .font-display { font-family: var(--font-display); }
+  .font-body { font-family: var(--font-body); }
+
+  .hero-vectors {
+    z-index: 1;
     pointer-events: none;
   }
 
-  #player {
+  .hero-svg {
+    display: block;
+    object-fit: cover;
+  }
+
+  /* Speed lines: streaming motion (dash offset = motion blur / speed) */
+  .speed-lines line {
+    vector-effect: non-scaling-stroke;
+    stroke-dasharray: 120 280;
+    animation: speed-stream 3s linear infinite;
+  }
+
+  .speed-line.stream-1 { animation-delay: 0s; }
+  .speed-line.stream-2 { animation-delay: 0.35s; }
+  .speed-line.stream-3 { animation-delay: 0.7s; }
+  .speed-line.stream-4 { animation-delay: 1.05s; }
+  .speed-line.stream-5 { animation-delay: 1.4s; }
+  .speed-line.stream-6 { animation-delay: 1.75s; }
+
+  @keyframes speed-stream {
+    0% { stroke-dashoffset: 0; opacity: 0.9; }
+    100% { stroke-dashoffset: -400; opacity: 0.9; }
+  }
+
+  /* Diagonal streaks: slow drift for depth and energy */
+  .streak {
+    animation: streak-drift 14s ease-in-out infinite;
+  }
+
+  .streak-1 { animation-delay: 0s; }
+  .streak-2 { animation-delay: 1.5s; }
+  .streak-3 { animation-delay: 3s; }
+  .streak-4 { animation-delay: 4.5s; }
+
+  @keyframes streak-drift {
+    0%, 100% { opacity: 0.5; transform: translateX(0) scale(1); }
+    50% { opacity: 0.9; transform: translateX(3%) scale(1.03); }
+  }
+
+  /* Motion arcs: subtle pulse */
+  .motion-arc {
+    animation: arc-pulse 5s ease-in-out infinite;
+  }
+
+  .motion-arc.arc-2 { animation-delay: 1.2s; }
+
+  @keyframes arc-pulse {
+    0%, 100% { opacity: 0.1; }
+    50% { opacity: 0.2; }
+  }
+
+  /* Road curve: subtle pulse */
+  .road-curve {
+    animation: road-pulse 6s ease-in-out infinite;
+  }
+
+  @keyframes road-pulse {
+    0%, 100% { opacity: 0.04; }
+    50% { opacity: 0.07; }
+  }
+
+  .accent-line {
+    animation: accent-pulse 3s ease-in-out infinite;
+  }
+
+  @keyframes accent-pulse {
+    0%, 100% { opacity: 0.15; }
+    50% { opacity: 0.35; }
+  }
+
+  /* Gradient: dark at bottom for text */
+  .hero-gradient {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    inset: 0;
+    z-index: 2;
+    background: linear-gradient(
+      to top,
+      rgba(8, 8, 8, 0.96) 0%,
+      rgba(8, 8, 8, 0.5) 40%,
+      rgba(8, 8, 8, 0.12) 75%,
+      transparent 100%
+    );
     pointer-events: none;
   }
 
-  /* Hide YouTube iframe border */
-  iframe {
-    border: none;
+  .scroll-line {
+    animation: scroll-pulse 2s ease-in-out infinite;
   }
 
-  /* Custom text shadow for better readability */
-  .text-shadow {
-    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  @keyframes scroll-pulse {
+    0%, 100% { opacity: 0.3; transform: scaleY(1); }
+    50% { opacity: 0.7; transform: scaleY(0.85); }
   }
 
-  .text-shadow-lg {
-    text-shadow: 0 4px 6px rgba(0,0,0,0.7);
+  @keyframes fade-in-up {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-fade-in {
+    animation: fade-in-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   }
 </style>

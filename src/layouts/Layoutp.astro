@@ -4,11 +4,26 @@ import { useCurrencyStore } from '../store/currency';
 
 const theme = import.meta.env.THEME || 'default';
 const siteName = import.meta.env.PUBLIC_SITE_NAME || 'Drivi';
-const PROJECT_TYPE = import.meta.env.PROJECT_TYPE || 'default';
 
 // Add store name and domain
 const storeName = import.meta.env.PUBLIC_STORE_NAME || 'DefaultStore';
 const storeDomain = import.meta.env.PUBLIC_STORE_DOMAIN || 'localhost';
+
+// Import layout styles with fallback (bodyClass, themeColor) - website first, default fallback
+let layoutStyles: { bodyClass?: string; bodyClassProduct?: string; themeColor?: string } = {};
+try {
+  const themeLayout = await import(`../websites/${siteName}/themes/${theme}/styles/layout.json`);
+  layoutStyles = themeLayout.default;
+} catch {
+  try {
+    const defaultLayout = await import('../styles/default/layout.json');
+    layoutStyles = defaultLayout.default;
+  } catch {
+    layoutStyles = { bodyClassProduct: 'min-h-screen flex flex-col', themeColor: '#ffffff' };
+  }
+}
+const bodyClass = layoutStyles.bodyClassProduct ?? layoutStyles.bodyClass ?? 'min-h-screen flex flex-col';
+const themeColor = layoutStyles.themeColor ?? '#ffffff';
 
 // Import header styles with fallback logic
 let headerStyles = {};
@@ -40,8 +55,15 @@ try {
   }
 }
 
-// Import default BaseHead only
-const { default: BaseHead } = await import(`../themes/default/components/BaseHead.astro`);
+// Theme-specific BaseHead (so product pages get site CSS variables e.g. --drivon-*)
+let BaseHead;
+try {
+  const baseHeadModule = await import(`../websites/${siteName}/themes/${theme}/components/BaseHead.astro`);
+  BaseHead = baseHeadModule.default;
+} catch {
+  const defaultBaseHead = await import(`../themes/default/components/BaseHead.astro`);
+  BaseHead = defaultBaseHead.default;
+}
 
 // Import website-specific footer with fallback to theme footer
 let Footer;
@@ -183,6 +205,7 @@ interface Props {
   alternateUrls?: Array<{lang: string, url: string}>;
   productSchema?: any;
   breadcrumbSchema?: any;
+  projectType?: string;
 }
 
 // Get current path and language first
@@ -199,8 +222,12 @@ const {
   availability, 
   alternateUrls = [], 
   productSchema, 
-  breadcrumbSchema 
+  breadcrumbSchema,
+  projectType: projectTypeProp
 } = Astro.props;
+
+// Project type: from page prop, then env, then default (physical so quantity/cart behave for stores)
+const PROJECT_TYPE = (projectTypeProp ?? import.meta.env.PROJECT_TYPE ?? 'physical').toString().toLowerCase();
 
 // Add currency configuration
 const currencies = {
@@ -286,6 +313,7 @@ const paymentConfig = {
       alternateUrls={alternateUrls}
       productSchema={productSchema}
       breadcrumbSchema={breadcrumbSchema}
+      projectType={PROJECT_TYPE}
     />
     
     <!-- Resource Hints -->
@@ -325,7 +353,7 @@ const paymentConfig = {
     <meta name="apple-mobile-web-app-capable" content="yes" />
     
     <!-- PWA Tags -->
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content={themeColor} />
     <link rel="manifest" href="/manifest.json" />
     
     <script define:vars={{ exchangeRates }}>
@@ -334,7 +362,7 @@ const paymentConfig = {
       console.log('Initialized exchange rates:', window.exchangeRates);
     </script>
   </head>
-  <body class="min-h-screen flex flex-col">
+  <body class={bodyClass} data-project-type={PROJECT_TYPE}>
     <Header 
       client:load 
       siteName={siteName}

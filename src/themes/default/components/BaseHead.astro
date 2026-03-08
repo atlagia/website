@@ -16,6 +16,7 @@ interface Props extends SEOProps {
   alternateUrls?: Array<{lang: string, url: string}>;
   productSchema?: any;
   breadcrumbSchema?: any;
+  projectType?: string;
 }
 
 const { 
@@ -30,7 +31,8 @@ const {
   availability,
   alternateUrls = [],
   productSchema,
-  breadcrumbSchema
+  breadcrumbSchema,
+  projectType
 } = Astro.props;
 
 // Get current language from URL

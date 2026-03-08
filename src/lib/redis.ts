@@ -15,20 +15,37 @@ const client = createClient({
 
 client.on('error', err => console.error('Redis Client Error', err));
 
-export async function getRedisClient() {
-  if (!client.isOpen) {
-    await client.connect();
+/** Returns Redis client or null if connection unavailable. Prefer getCachedData/setCachedData (they never throw). */
+export async function getRedisClient(): Promise<ReturnType<typeof createClient> | null> {
+  try {
+    if (!client.isOpen) await client.connect();
+    return client;
+  } catch (err) {
+    console.warn('Redis getRedisClient failed:', (err as Error)?.message || err);
+    return null;
   }
-  return client;
 }
 
+/** Returns cached value or null if key missing / Redis unavailable. Never throws. */
 export async function getCachedData(key: string) {
-  const redis = await getRedisClient();
-  const data = await redis.get(key);
-  return data ? JSON.parse(data) : null;
+  try {
+    const redis = await getRedisClient();
+    if (!redis) return null;
+    const data = await redis.get(key);
+    return data ? JSON.parse(data) : null;
+  } catch (err) {
+    console.warn('Redis getCachedData failed (using source fallback):', (err as Error)?.message || err);
+    return null;
+  }
 }
 
+/** Caches value; no-op if Redis unavailable. Never throws. */
 export async function setCachedData(key: string, data: any, ttl: number = 3600) {
-  const redis = await getRedisClient();
-  await redis.setEx(key, ttl, JSON.stringify(data));
+  try {
+    const redis = await getRedisClient();
+    if (!redis) return;
+    await redis.setEx(key, ttl, JSON.stringify(data));
+  } catch (err) {
+    console.warn('Redis setCachedData failed (data still returned):', (err as Error)?.message || err);
+  }
 } 

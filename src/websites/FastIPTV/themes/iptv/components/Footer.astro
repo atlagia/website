@@ -9,7 +9,7 @@ const footerData = await import(`../data/footer/footer_${currentLang}.json`).cat
 const data = footerData.default;
 ---
 
-<footer class="bg-black/95">
+<footer class="bg-[#0a0a0a] border-t border-white/5">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
       <!-- Logo and Description -->
@@ -19,7 +19,7 @@ const data = footerData.default;
             FastIPTV
           </span>
         </a>
-        <p class="mt-4 text-gray-400 text-sm">
+        <p class="mt-4 text-gray-200 text-sm">
           Your ultimate destination for premium IPTV streaming. Access thousands of channels and endless entertainment.
         </p>
       </div>
@@ -32,7 +32,7 @@ const data = footerData.default;
             <li>
               <a
                 href={`/${currentLang}${link.href}`}
-                class="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
+                class="text-gray-300 hover:text-white transition-colors duration-200 text-sm"
               >
                 {link.name}
               </a>
@@ -49,7 +49,7 @@ const data = footerData.default;
             <li>
               <a
                 href={`/${currentLang}${link.href}`}
-                class="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
+                class="text-gray-300 hover:text-white transition-colors duration-200 text-sm"
               >
                 {link.name}
               </a>
@@ -66,7 +66,7 @@ const data = footerData.default;
             <li>
               <a
                 href={`/${currentLang}${link.href}`}
-                class="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
+                class="text-gray-300 hover:text-white transition-colors duration-200 text-sm"
               >
                 {link.name}
               </a>
@@ -80,7 +80,7 @@ const data = footerData.default;
     <div class="mt-12 pt-8 border-t border-gray-800">
       <div class="max-w-md mx-auto text-center">
         <h3 class="text-white font-semibold mb-2">{data.newsletter.title}</h3>
-        <p class="text-gray-400 text-sm mb-4">{data.newsletter.description}</p>
+        <p class="text-gray-300 text-sm mb-4">{data.newsletter.description}</p>
         <div class="flex">
           <input
             type="email"
@@ -97,7 +97,7 @@ const data = footerData.default;
     <div class="mt-8 pt-8 border-t border-gray-800">
       <div class="flex flex-col md:flex-row justify-between items-center">
         <!-- Copyright -->
-        <p class="text-gray-400 text-sm">
+        <p class="text-gray-300 text-sm">
           {data.copyright.text}
         </p>
 
@@ -106,7 +106,7 @@ const data = footerData.default;
           {data.copyright.links.map(link => (
             <a
               href={`/${lang}${link.href}`}
-              class="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
+              class="text-gray-300 hover:text-white transition-colors duration-200 text-sm"
             >
               {link.name}
             </a>

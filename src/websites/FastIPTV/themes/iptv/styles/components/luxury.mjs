@@ -1,22 +1,43 @@
 export const luxuryComponentStyle = {
   // Key Features component styles
   keyFeatures: {
-    wrapper: "bg-white border border-gray-100 rounded-xl p-6 shadow-sm",
-    title: "font-['Inter'] text-xl font-light tracking-wide text-gray-900 mb-4",
-    list: "grid grid-cols-1 md:grid-cols-2 gap-4",
-    item: "flex items-center gap-2",
-    icon: "w-5 h-5 text-green-500 flex-shrink-0",
-    text: "font-['SF Pro Display'] text-base font-light text-gray-700"
+    wrapper: "rounded-2xl p-8 border border-white/10 bg-white/5 backdrop-blur-xl",
+    headerWrap: "mb-8",
+    title: "text-sm font-semibold uppercase tracking-[0.2em] text-gray-400 mb-2 flex items-center gap-2",
+    titleIconWrap: "w-8 h-8 bg-white/10 flex items-center justify-center rounded-lg",
+    titleIcon: "w-4 h-4 text-gray-300",
+    titleDivider: "w-12 h-px bg-white/20",
+    list: "grid grid-cols-1 md:grid-cols-2 gap-5",
+    item: "group relative rounded-xl p-5 border border-white/10 bg-white/5 hover:border-white/20 transition-all duration-200",
+    itemContent: "flex items-start gap-4",
+    itemIconWrap: "flex-shrink-0 w-8 h-8 bg-white/10 rounded-full flex items-center justify-center",
+    itemIcon: "w-4 h-4 text-emerald-400",
+    textWrap: "flex-1",
+    text: "text-gray-200 font-medium leading-relaxed text-sm",
+    footerWrap: "mt-6 text-center",
+    footerInner: "inline-flex items-center gap-2 text-sm text-gray-300 bg-white/10 px-4 py-2 border border-white/20 rounded-lg",
+    footerIcon: "w-4 h-4 text-gray-400"
   },
 
-  // Product FAQ styles
+  // Product FAQ styles (dark theme)
   faq: {
-    wrapper: "bg-white border border-gray-100 rounded-xl p-6 shadow-sm",
-    title: "font-['Inter'] text-xl font-light tracking-wide text-gray-900 mb-4",
+    wrapper: "rounded-2xl p-8 border border-white/10 bg-white/5 backdrop-blur-xl",
+    headerWrap: "mb-8",
+    title: "text-sm font-semibold uppercase tracking-[0.2em] text-gray-400 mb-2 flex items-center gap-2",
+    titleIconWrap: "w-8 h-8 bg-white/10 flex items-center justify-center rounded-lg",
+    titleIcon: "w-4 h-4 text-gray-300",
+    titleDivider: "w-12 h-px bg-white/20",
     list: "space-y-4",
-    item: "border-b border-gray-100 last:border-0 pb-4 last:pb-0",
-    question: "font-['Inter'] text-base font-medium text-gray-900 mb-2",
-    answer: "font-['SF Pro Display'] text-base font-light text-gray-600"
+    item: "group rounded-xl border border-white/10 bg-white/5 hover:border-white/20 transition-all duration-200 overflow-hidden",
+    questionIconWrap: "flex-shrink-0 w-8 h-8 bg-white/10 rounded-full flex items-center justify-center",
+    questionIconText: "text-gray-300 font-semibold text-sm",
+    question: "text-base font-semibold text-gray-100 mb-2",
+    answerIconWrap: "flex-shrink-0 w-6 h-6 bg-white/10 rounded-full flex items-center justify-center mt-0.5",
+    answerIconText: "text-gray-400 font-semibold text-xs",
+    answer: "text-gray-300 text-sm leading-relaxed",
+    footerWrap: "mt-6 text-center",
+    footerInner: "inline-flex items-center gap-2 text-sm text-gray-300 bg-white/10 px-4 py-2 border border-white/20 rounded-lg",
+    footerIcon: "w-4 h-4 text-gray-400"
   },
 
   // Product Loading styles
@@ -36,14 +57,48 @@ export const luxuryComponentStyle = {
     }
   },
 
-  // Product Specs styles
+  // Product Specs styles (dark theme)
   specs: {
-    wrapper: "bg-white border border-gray-100 rounded-xl p-6 shadow-sm",
-    title: "font-['Inter'] text-xl font-light tracking-wide text-gray-900 mb-4",
-    grid: "grid grid-cols-1 md:grid-cols-2 gap-4",
-    item: "flex items-center gap-2",
-    label: "font-['Inter'] text-sm font-medium text-gray-700",
-    value: "font-['Inter'] text-sm font-light text-gray-600"
+    wrapper: "rounded-2xl p-8 border border-white/10 bg-white/5 backdrop-blur-xl",
+    headerWrap: "mb-8",
+    title: "text-sm font-semibold uppercase tracking-[0.2em] text-gray-400 mb-2 flex items-center gap-2",
+    titleIconWrap: "w-8 h-8 bg-white/10 flex items-center justify-center rounded-lg",
+    titleIcon: "w-4 h-4 text-gray-300",
+    titleDivider: "w-12 h-px bg-white/20",
+    grid: "grid grid-cols-1 md:grid-cols-2 gap-5",
+    item: "group relative rounded-xl p-5 border border-white/10 bg-white/5 hover:border-white/20 transition-all duration-200",
+    itemContent: "flex items-start gap-4",
+    itemIconWrap: "flex-shrink-0 w-8 h-8 bg-white/10 rounded-full flex items-center justify-center",
+    itemIcon: "w-4 h-4 text-gray-300",
+    itemBody: "flex-1 min-w-0",
+    label: "text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1",
+    value: "text-base font-medium text-gray-100",
+    footerWrap: "mt-6 text-center",
+    footerInner: "inline-flex items-center gap-2 text-sm text-gray-300 bg-white/10 px-4 py-2 border border-white/20 rounded-lg",
+    footerIcon: "w-4 h-4 text-gray-400"
+  },
+
+  // Recently Viewed (dark theme)
+  recentlyViewed: {
+    wrapper: "rounded-2xl p-8 border border-white/10 bg-white/5 backdrop-blur-xl",
+    header: "flex items-center justify-between mb-4",
+    title: "text-sm font-semibold uppercase tracking-[0.2em] text-gray-400 flex items-center gap-2",
+    titleIconWrap: "w-8 h-8 bg-white/10 flex items-center justify-center rounded-lg",
+    titleIcon: "w-4 h-4 text-gray-300",
+    clearButton: "text-sm text-gray-400 hover:text-white underline transition-colors",
+    grid: "grid grid-cols-2 md:grid-cols-4 gap-4",
+    emptyWrap: "text-center py-8",
+    emptyIcon: "text-gray-500 mb-3",
+    emptyText: "text-gray-400 text-sm",
+    card: "rounded-lg border border-white/10 bg-white/5 hover:border-white/20 transition-colors",
+    cardLink: "block",
+    cardImageWrap: "aspect-square overflow-hidden bg-white/5",
+    cardImage: "w-full h-full object-cover",
+    cardBody: "p-3",
+    cardTitle: "font-medium text-gray-200 text-sm line-clamp-2 mb-1",
+    cardBottom: "flex items-center justify-between",
+    cardPrice: "text-sm text-gray-300",
+    cardRemove: "text-xs text-gray-400 hover:text-gray-200"
   },
 
   // Reviews styles

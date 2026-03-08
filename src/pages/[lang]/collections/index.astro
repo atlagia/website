@@ -16,11 +16,9 @@ let contentData;
 let filterData;
 
 try {
-  // Try to load from current website theme path
   contentData = await import(`@websites/${SITE_NAME}/themes/${THEME}/data/collection-content.json`);
   filterData = await import(`@websites/${SITE_NAME}/themes/${THEME}/data/collection-filters.json`);
 } catch (error) {
-  // Fallback to default data
   contentData = await import('@data/collection-content.json');
   filterData = await import('@data/collection-filters.json');
 }
@@ -29,20 +27,70 @@ const theme = import.meta.env.THEME || 'default';
 const siteName = import.meta.env.PUBLIC_SITE_NAME;
 const dataType = import.meta.env.DATA_TYPE?.toLowerCase() || 'shopify';
 
+// Load collection page styles (website theme first, then default)
+function deepMerge<T extends Record<string, unknown>>(target: T, source: Record<string, unknown> | null | undefined): T {
+  if (!source || typeof source !== 'object') return target;
+  const out = { ...target };
+  for (const key of Object.keys(source)) {
+    const src = source[key];
+    const cur = (out as Record<string, unknown>)[key];
+    if (src != null && typeof src === 'object' && !Array.isArray(src) && typeof (src as object).constructor === 'function' && (src as object).constructor?.name === 'Object') {
+      (out as Record<string, unknown>)[key] = deepMerge((cur != null && typeof cur === 'object' && !Array.isArray(cur)) ? (cur as Record<string, unknown>) : {}, src as Record<string, unknown>);
+    } else if (src !== undefined) {
+      (out as Record<string, unknown>)[key] = src;
+    }
+  }
+  return out;
+}
+
+let styleData: { default?: { page?: Record<string, string>; card?: Record<string, unknown> } } = {};
+try {
+  styleData = await import(`@websites/${SITE_NAME}/themes/${THEME}/styles/collections/collections.json`);
+} catch {
+  styleData = { default: {} };
+}
+const defaultStyleData = await import('../../../styles/default/collections.json');
+const defaultPage = (defaultStyleData.default?.page || {}) as Record<string, string>;
+const websitePage = (styleData.default?.page || {}) as Record<string, string>;
+const pageStyle = deepMerge({ ...defaultPage }, websitePage);
+
+// Build cardStyles for ReactiveProductCard
+const cardData = deepMerge(
+  (defaultStyleData.default?.card || {}) as Record<string, unknown>,
+  (styleData.default?.card || {}) as Record<string, unknown>
+) as Record<string, unknown>;
+const pc = (cardData.productCard || {}) as Record<string, string>;
+const imgCont = (cardData.imageContainer || {}) as Record<string, string>;
+const titleObj = (cardData.title || {}) as Record<string, string>;
+const priceObj = (cardData.price || {}) as Record<string, string>;
+const isDark = pageStyle.wrapper?.includes('bg-[#0a0a0a]') ?? false;
+const cardStyles = {
+  root: [pc.background, pc.border, pc.shadow, pc.transition].filter(Boolean).join(' ') + ' group product-card flex flex-col h-full overflow-hidden',
+  media: [imgCont.aspectRatio, imgCont.background, imgCont.overflow, 'relative min-h-[200px] flex items-center justify-center'].filter(Boolean).join(' ') || 'relative aspect-[3/4] min-h-[200px] overflow-hidden flex items-center justify-center bg-white/5',
+  noImageWrap: (cardData.noImagePlaceholder as string) || 'w-full h-full flex items-center justify-center bg-white/5',
+  noImageText: 'text-gray-500 text-sm',
+  saleBadge: 'absolute top-2 left-2 bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded-sm',
+  content: (cardData.content as string) || 'flex flex-col flex-grow p-4',
+  title: [titleObj.fontSize, titleObj.fontWeight, titleObj.color, titleObj.truncate || 'line-clamp-3 leading-snug mb-2'].filter(Boolean).join(' ') || (isDark ? 'text-lg font-medium text-gray-100 line-clamp-3 leading-snug mb-2' : 'text-sm font-medium text-neutral-900 line-clamp-3 leading-snug mb-2'),
+  price: [priceObj.fontSize, priceObj.fontWeight, priceObj.color].filter(Boolean).join(' ') || (isDark ? 'text-sm font-semibold text-gray-200' : 'text-base font-semibold text-neutral-900'),
+  comparePrice: isDark ? 'text-sm text-gray-500 line-through' : 'text-sm text-neutral-400 line-through',
+  arrow: isDark ? 'text-gray-500 group-hover:text-purple-400 transition-all duration-200 flex-shrink-0' : 'text-neutral-400 group-hover:text-neutral-900 group-hover:translate-x-0.5 transition-all duration-200 flex-shrink-0'
+};
+
 // Get page and locale
 const page = Number(Astro.url.searchParams.get('page')) || 1;
 const PRODUCTS_PER_PAGE = 20;
 const { lang } = Astro.params;
 
-// Get content for current language
-const content = contentData[lang] || contentData.en;
+// Get content for current language (handle dynamic import: contentData.default or contentData)
+const data = contentData.default ?? contentData;
+const content = data[lang] ?? data.en;
 
 // Parse current filters from URL
-const url = new URL(Astro.request.url);
+const url = Astro.url;
 const currentFilters: Record<string, string[]> = {};
 const filters: any = {};
 
-// Parse filter parameters
 url.searchParams.forEach((value, key) => {
   if (key === 'color' || key === 'size' || key === 'availability') {
     if (!currentFilters[key]) currentFilters[key] = [];
@@ -52,74 +100,42 @@ url.searchParams.forEach((value, key) => {
   }
 });
 
-// Parse price filter
 const priceFilter = url.searchParams.get('price');
-if (priceFilter) {
-  filters.price = priceFilter;
-}
+if (priceFilter) filters.price = priceFilter;
 
-// Get current sort parameter
 const currentSort = url.searchParams.get('sort') || '';
-
-// Check if any filters are applied
 const hasFilters = Object.keys(filters).length > 0;
 
-// Add this helper function that doesn't use document
 function stripHtml(html: string) {
   if (!html) return '';
-  
-  // First, remove script and style tags and their contents
   let text = html.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
   text = text.replace(/<style\b[^<]*(?:(?!<\/style>)<[^<]*)*<\/style>/gi, '');
-  
-  // Then remove all remaining HTML tags
   text = text.replace(/<[^>]+>/g, ' ');
-  
-  // Replace multiple spaces, newlines, and tabs with a single space
   text = text.replace(/\s+/g, ' ');
-  
-  // Decode HTML entities
   text = text.replace(/&nbsp;/g, ' ')
-             .replace(/&amp;/g, '&')
-             .replace(/&lt;/g, '<')
-             .replace(/&gt;/g, '>')
-             .replace(/&quot;/g, '"')
-             .replace(/&#039;/g, "'");
-  
-  // Trim whitespace
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#039;/g, "'");
   return text.trim();
 }
 
-// Generate cache key for this page
-const cacheKey = generateCacheKey(`/collections?page=${page}`, lang);
+const cacheKey = generateCacheKey(`/${lang}/collections?page=${page}`, lang);
 const cachedContent = await getCachedPage(cacheKey);
 
 if (cachedContent) {
-  console.log('✅ Serving cached collections page:', cacheKey);
   return new Response(cachedContent, {
-    headers: {
-      'Content-Type': 'text/html;charset=UTF-8',
-      'X-Cache': 'HIT',
-    },
+    headers: { 'Content-Type': 'text/html;charset=UTF-8', 'X-Cache': 'HIT' },
   });
 }
 
-// Fetch products based on data source
 let products = [];
-let pagination = {
-  currentPage: page,
-  totalPages: 0,
-  totalProducts: 0,
-  hasNextPage: false,
-  hasPreviousPage: false
-};
+let pagination = { currentPage: page, totalPages: 0, totalProducts: 0, hasNextPage: false, hasPreviousPage: false };
 
 try {
   if (dataType === 'shopify') {
-    console.log('🛍️ Fetching from Shopify');
-    
     if (hasFilters) {
-      console.log('🔍 Applying filters:', filters);
       const filteredData = await filterProducts(filters, lang, page, PRODUCTS_PER_PAGE);
       products = filteredData.products;
       pagination = filteredData.pagination;
@@ -129,270 +145,220 @@ try {
       pagination = shopifyData.pagination;
     }
   } else if (dataType === 'woocommerce') {
-    console.log('🛍️ Fetching from WooCommerce');
     const wooData = await getPaginatedProducts(page, PRODUCTS_PER_PAGE);
-    
-    // Transform WooCommerce data to match Shopify structure
     products = wooData.products.map(product => ({
       node: {
         id: product.id.toString(),
         title: product.name,
         handle: product.slug,
         description: stripHtml(product.description || ''),
-        variants: {
-          edges: [{
-            node: {
-              price: {
-                amount: product.price,
-                currencyCode: 'USD'
-              },
-              compareAtPrice: product.regular_price ? {
-                amount: product.regular_price,
-                currencyCode: 'USD'
-              } : null
-            }
-          }]
-        },
-        images: {
-          edges: product.images.map(image => ({
-            node: {
-              url: image.src,
-              altText: image.alt || product.name
-            }
-          }))
-        }
+        variants: { edges: [{ node: { price: { amount: product.price, currencyCode: 'USD' }, compareAtPrice: product.regular_price ? { amount: product.regular_price, currencyCode: 'USD' } : null } }] },
+        images: { edges: (product.images || []).map((image: { src: string; alt?: string }) => ({ node: { url: image.src, altText: image.alt || product.name } })) }
       }
     }));
-    
     pagination = wooData.pagination;
   } else {
     throw new Error(`Unsupported data type: ${dataType}`);
   }
 } catch (error) {
-  console.error(`❌ Error fetching products:`, error);
+  console.error('Error fetching products:', error);
   return new Response('Error fetching products', { status: 500 });
 }
 ---
 
 <Layout title={`Collections | ${siteName}`} lang={lang}>
-  <main class="max-w-7xl mx-auto px-4 pb-8 pt-[100px]">
-    {/* Breadcrumbs */}
-    <nav class="mb-8">
-      <ol class="flex items-center space-x-2 text-sm">
-        <li>
-          <a href={`/${lang}`} class="text-gray-500 hover:text-gray-700">{content.breadcrumbs.home}</a>
-        </li>
-        <li class="text-gray-400">/</li>
-        <li class="text-gray-900 font-medium">{content.breadcrumbs.collections}</li>
-      </ol>
-    </nav>
+  <div class={pageStyle.wrapper}>
+    <main class={pageStyle.main}>
+      <nav class={pageStyle.breadcrumbNav} aria-label="Breadcrumb">
+        <ol class={pageStyle.breadcrumbList}>
+          <li><a href={`/${lang}`} class={pageStyle.breadcrumbLink}>{content.breadcrumbs.home}</a></li>
+          <li aria-hidden="true">/</li>
+          <li class={pageStyle.breadcrumbCurrent}>{content.breadcrumbs.collections}</li>
+        </ol>
+      </nav>
 
-    {/* Page Header */}
-    <header class="text-center mb-16">
-      <h1 class="text-4xl font-bold text-gray-900 mb-4">{content.breadcrumbs.collections}</h1>
-      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-        Discover our complete collection of products
-      </p>
-    </header>
+      <header class={pageStyle.header}>
+        <h1 class={pageStyle.headerTitleNoImage}>{content.breadcrumbs.collections}</h1>
+        <p class={pageStyle.headerDescription}>Discover our complete collection of products</p>
+      </header>
 
-    {/* Mobile Filter Toggle */}
-    <div class="lg:hidden mb-6">
-      <button 
-        id="mobile-filter-toggle"
-        class="w-full flex items-center justify-center gap-2 px-4 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-      >
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
-        </svg>
-        Filters & Sort
-      </button>
-    </div>
+      <div class={pageStyle.mobileFilterWrap}>
+        <button id="mobile-filter-toggle" class={pageStyle.mobileFilterBtn}>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+          </svg>
+          Filters & Sort
+        </button>
+      </div>
 
-    {/* Main Content with Sidebar */}
-    <div class="flex flex-col lg:flex-row gap-8">
-      {/* Mobile Filter Overlay */}
-      <div 
-        id="mobile-filter-overlay"
-        class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden lg:hidden"
-      ></div>
+      <div class={`collection-layout ${pageStyle.contentWrap}`}>
+        <div id="mobile-filter-overlay" class={pageStyle.overlay}></div>
 
-      {/* Sidebar Filters */}
-      <aside 
-        id="filter-sidebar"
-        class="w-full lg:w-80 flex-shrink-0 fixed lg:relative top-0 left-0 h-full lg:h-auto bg-white z-40 lg:z-auto transform -translate-x-full lg:translate-x-0 lg:top-auto lg:left-auto lg:transform-none transition-transform duration-300 ease-in-out lg:block"
-      >
-        <div class="p-4 lg:p-0">
-          <div class="flex items-center justify-between mb-4 lg:hidden">
-            <h3 class="text-lg font-semibold">Filters</h3>
-            <button 
-              id="close-mobile-filters"
-              class="p-2 hover:bg-gray-100 rounded-full"
-            >
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
+        <aside id="filter-sidebar" class={pageStyle.sidebar}>
+          <div class={pageStyle.sidebarInner}>
+            <div class={pageStyle.sidebarTitleRow}>
+              <h3 class={pageStyle.sidebarTitle}>Filters</h3>
+              <button id="close-mobile-filters" class={pageStyle.closeBtn} aria-label="Close filters">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <FilterSidebar
+              language={lang}
+              currentFilters={currentFilters}
+              filterData={filterData.default}
+              wrapperClass={pageStyle.filterSidebarRoot}
+              theme={isDark ? 'dark' : 'light'}
+            />
           </div>
-          <FilterSidebar language={lang} currentFilters={currentFilters} filterData={filterData.default} />
-        </div>
-      </aside>
+        </aside>
 
-      {/* Main Content Area */}
-      <div class="flex-1 w-full">
-        {/* Top Controls */}
-        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 gap-4">
-          <!-- View Toggle -->
-          <div class="flex items-center space-x-2">
-            <button class="p-2 rounded-md bg-white border border-gray-300 hover:bg-gray-50 transition-colors">
-              <Grid className="w-5 h-5 text-gray-600" />
-            </button>
-            <button class="p-2 rounded-md bg-gray-50 border border-gray-300 hover:bg-gray-100 transition-colors">
-              <List className="w-5 h-5 text-gray-600" />
-            </button>
-          </div>
-
-          <!-- Sort Dropdown and Product Count -->
-          <div class="flex items-center gap-4">
-            <SortDropdown language={lang} currentSort={currentSort} />
-            <div class="text-sm text-gray-600 hidden sm:block">
-              {pagination.totalProducts} {content.collections?.count || content.products?.count || 'products'}
+        <div class={`collection-main ${pageStyle.mainContent}`}>
+          <div class={pageStyle.topBar}>
+            <div class={pageStyle.countText}>
+              {pagination.totalProducts} {content?.collections?.count ?? content?.products?.count ?? 'products'}
+            </div>
+            <div class={pageStyle.viewToggleWrap}>
+              <div class={pageStyle.viewToggleGroup}>
+                <button class={pageStyle.gridBtnActive} aria-label="Grid view">
+                  <Grid className="w-4 h-4" />
+                </button>
+                <button class={pageStyle.listBtn} aria-label="List view">
+                  <List className="w-4 h-4" />
+                </button>
+              </div>
+              <SortDropdown
+                language={lang}
+                currentSort={currentSort}
+                selectClass={pageStyle.sortDropdownSelect}
+                labelClass={pageStyle.sortDropdownLabel}
+              />
             </div>
           </div>
-        </div>
 
-        {/* Mobile Product Count */}
-        <div class="text-sm text-gray-600 mb-4 sm:hidden">
-          {pagination.totalProducts} {content.collections?.count || content.products?.count || 'products'}
-        </div>
+          <div class={pageStyle.mobileCount}>
+            {pagination.totalProducts} {content?.collections?.count ?? content?.products?.count ?? 'products'}
+          </div>
 
-        {/* Products Grid */}
-        <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
-          {products.map((product) => {
-            // Handle both Shopify and WooCommerce data structures
-            const node = product.node;
-            const price = dataType === 'shopify' 
-              ? (node.variants?.edges?.[0]?.node?.price?.amount || 
-                 node.priceRange?.minVariantPrice?.amount || 
-                 '0')
-              : node.variants.edges[0].node.price.amount;
-              
-            const compareAtPrice = dataType === 'shopify'
-              ? node.variants?.edges?.[0]?.node?.compareAtPrice?.amount
-              : node.variants.edges[0].node.compareAtPrice?.amount;
-              
-            const imageUrl = dataType === 'shopify'
-              ? node.images?.edges?.[0]?.node?.url
-              : node.images.edges[0].node.url;
+          <div class={`${pageStyle.productGrid} collection-product-grid-fix`}>
+            {products.map((product) => {
+              const node = product.node;
+              const price = dataType === 'shopify'
+                ? (node.variants?.edges?.[0]?.node?.price?.amount || node.priceRange?.minVariantPrice?.amount || '0')
+                : node.variants.edges[0].node.price.amount;
+              const compareAtPrice = dataType === 'shopify'
+                ? node.variants?.edges?.[0]?.node?.compareAtPrice?.amount
+                : node.variants.edges[0].node.compareAtPrice?.amount;
+              const imageUrl = dataType === 'shopify'
+                ? node.images?.edges?.[0]?.node?.url
+                : node.images.edges[0].node.url;
+              const currencyCode = dataType === 'shopify'
+                ? (node.variants?.edges?.[0]?.node?.price?.currencyCode || 'USD')
+                : 'USD';
+              return (
+                <ReactiveProductCard
+                  client:load
+                  product={{
+                    id: node.id,
+                    title: node.title,
+                    handle: node.handle,
+                    price: { amount: price, currencyCode },
+                    compareAtPrice: compareAtPrice ? { amount: compareAtPrice, currencyCode } : undefined,
+                    image: imageUrl ? { url: imageUrl, altText: node.title } : undefined
+                  }}
+                  lang={lang}
+                  content={content}
+                  containImage={true}
+                  cardStyles={cardStyles}
+                />
+              );
+            })}
+          </div>
 
-            const currencyCode = dataType === 'shopify'
-              ? (node.variants?.edges?.[0]?.node?.price?.currencyCode || 'USD')
-              : 'USD';
-            
-            return (
-              <ReactiveProductCard 
-                client:load
-                product={{
-                  id: node.id,
-                  title: node.title,
-                  handle: node.handle,
-                  price: { amount: price, currencyCode: currencyCode },
-                  compareAtPrice: compareAtPrice ? { amount: compareAtPrice, currencyCode: currencyCode } : undefined,
-                  image: imageUrl ? { url: imageUrl, altText: node.title } : undefined
-                }}
-                lang={lang}
-                content={content}
-              />
-            );
-          })}
-        </div>
-
-        <!-- Pagination -->
-        <div class="flex justify-center items-center gap-4 mt-12">
-          {pagination.hasPreviousPage && (
-            <a
-              href={`/${lang}/collections?page=${page - 1}`}
-              class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
-            >
-              Previous
-            </a>
+          {pagination.totalPages > 1 && (
+            <div class="flex justify-center items-center gap-4 mt-12">
+              {pagination.hasPreviousPage && (
+                <a href={`/${lang}/collections?page=${page - 1}`} class="px-4 py-2 rounded-lg transition-colors bg-white/10 border border-white/20 text-gray-300 hover:text-white hover:bg-white/15">Previous</a>
+              )}
+              <span class="text-sm font-medium text-gray-400">Page {pagination.currentPage} of {pagination.totalPages}</span>
+              {pagination.hasNextPage && (
+                <a href={`/${lang}/collections?page=${page + 1}`} class="px-4 py-2 rounded-lg transition-colors bg-white/10 border border-white/20 text-gray-300 hover:text-white hover:bg-white/15">Next</a>
+              )}
+            </div>
           )}
-          
-          <span class="text-gray-600">
-            Page {pagination.currentPage} of {pagination.totalPages}
-          </span>
-          
-          {pagination.hasNextPage && (
-            <a
-              href={`/${lang}/collections?page=${page + 1}`}
-              class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
-            >
-              Next
-            </a>
-          )}
-        </div>
 
-        <div class="text-center text-sm text-gray-500 mt-4">
-          Showing {(page - 1) * PRODUCTS_PER_PAGE + 1} - {Math.min(page * PRODUCTS_PER_PAGE, pagination.totalProducts)} 
-          of {pagination.totalProducts} products
+          <div class="text-center text-sm text-gray-400 mt-4">
+            Showing {(page - 1) * PRODUCTS_PER_PAGE + 1} - {Math.min(page * PRODUCTS_PER_PAGE, pagination.totalProducts)} of {pagination.totalProducts} products
+          </div>
         </div>
       </div>
-    </div>
-  </main>
+    </main>
+  </div>
 </Layout>
 
 <script>
-  // Handle dynamic loading states
   document.addEventListener('astro:page-load', () => {
-    const grid = document.querySelector('.grid');
-    if (grid) {
-      grid.classList.add('fade-in');
-    }
-    
-    // Initialize mobile filter functionality
+    const grid = document.querySelector('.collection-product-grid, .grid');
+    if (grid) grid.classList.add('fade-in');
     initializeMobileFilters();
   });
-
   function initializeMobileFilters() {
     const mobileFilterToggle = document.getElementById('mobile-filter-toggle');
     const mobileFilterOverlay = document.getElementById('mobile-filter-overlay');
     const filterSidebar = document.getElementById('filter-sidebar');
     const closeMobileFilters = document.getElementById('close-mobile-filters');
-
     if (!mobileFilterToggle || !filterSidebar) return;
-
-    // Open mobile filters
     mobileFilterToggle.addEventListener('click', () => {
       filterSidebar.classList.remove('-translate-x-full');
-      mobileFilterOverlay.classList.remove('hidden');
+      mobileFilterOverlay?.classList.remove('hidden');
       document.body.style.overflow = 'hidden';
     });
-
-    // Close mobile filters
     const closeFilters = () => {
       filterSidebar.classList.add('-translate-x-full');
-      mobileFilterOverlay.classList.add('hidden');
+      mobileFilterOverlay?.classList.add('hidden');
       document.body.style.overflow = '';
     };
-
     closeMobileFilters?.addEventListener('click', closeFilters);
     mobileFilterOverlay?.addEventListener('click', closeFilters);
-
-    // Close on escape key
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        closeFilters();
-      }
-    });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeFilters(); });
   }
 </script>
 
 <style>
-  .fade-in {
-    animation: fadeIn 0.5s ease-out;
+  .fade-in { animation: fadeIn 0.5s ease forwards; }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  /* Collection layout: desktop = sidebar + main with product grid visible */
+  .collection-layout {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
   }
-
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+  @media (min-width: 1024px) {
+    .collection-layout {
+      display: grid !important;
+      grid-template-columns: 18rem minmax(0, 1fr);
+      grid-template-areas: "sidebar main";
+      align-items: start;
+      gap: 2rem;
+    }
+    .collection-layout #mobile-filter-overlay {
+      display: none !important;
+    }
+    .collection-layout #filter-sidebar {
+      grid-area: sidebar;
+      width: 18rem;
+      max-width: 18rem;
+    }
+    .collection-main {
+      grid-area: main;
+      min-width: 0;
+      overflow: visible;
+    }
+    .collection-product-grid-fix {
+      display: grid !important;
+      align-items: start;
+      width: 100%;
+    }
   }
 </style>

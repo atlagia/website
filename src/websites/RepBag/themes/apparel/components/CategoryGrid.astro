@@ -1,0 +1,60 @@
+---
+interface Category {
+  id: string;
+  name: string;
+  description: string;
+  image: string;
+  link: string;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  categories: Category[];
+}
+
+const { title, description, categories } = Astro.props;
+---
+
+<section class="bg-white py-14 md:py-20 px-4 sm:px-6 lg:px-8" aria-labelledby="category-heading">
+  <div class="max-w-6xl mx-auto">
+    <header class="text-center mb-10 md:mb-14">
+      <p class="text-[10px] sm:text-xs font-medium uppercase tracking-[0.25em] text-neutral-400 mb-3">Shop by</p>
+      <h2 id="category-heading" class="text-2xl sm:text-3xl md:text-4xl font-semibold text-neutral-900 tracking-tight mb-3">
+        {title}
+      </h2>
+      {description && (
+        <p class="text-neutral-600 text-sm md:text-base max-w-lg mx-auto leading-relaxed">{description}</p>
+      )}
+    </header>
+
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
+      {categories.map((category) => (
+        <a
+          href={category.link}
+          class="group group/card block"
+        >
+          <div class="relative aspect-[3/4] max-h-[280px] overflow-hidden bg-neutral-100 rounded-sm mb-4">
+            <img
+              src={category.image}
+              alt={category.name}
+              class="absolute inset-0 w-full h-full object-cover object-center transition-all duration-500 group-hover/card:scale-[1.04]"
+              loading="lazy"
+              width="400"
+              height="533"
+            />
+            <div class="absolute inset-0 bg-neutral-900/0 group-hover/card:bg-neutral-900/10 transition-colors duration-300" aria-hidden="true" />
+          </div>
+          <div class="text-center">
+            <h3 class="text-sm font-medium uppercase tracking-[0.15em] text-neutral-900 group-hover/card:text-neutral-600 transition-colors">
+              {category.name}
+            </h3>
+            {category.description && (
+              <p class="text-neutral-500 text-xs mt-1 max-w-[200px] mx-auto">{category.description}</p>
+            )}
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

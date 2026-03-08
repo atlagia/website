@@ -1,0 +1,102 @@
+---
+interface BackgroundVideo {
+  type: 'youtube';
+  videoId: string;
+  fallbackImage: string;
+}
+
+interface Props {
+  title?: string;
+  description?: string;
+  blogLink?: string;
+  blogLinkText?: string;
+  backgroundVideo?: BackgroundVideo;
+  heroImage?: string;
+  headlineLine1?: string;
+  headlineLine2?: string;
+  luxury?: boolean;
+}
+
+const { 
+  title = 'RepBag',
+  description = '',
+  blogLink = '#', 
+  blogLinkText = 'Shop now', 
+  backgroundVideo = { type: 'youtube', videoId: '', fallbackImage: '/images/hero-bags.jpg' },
+  heroImage,
+  headlineLine1 = 'Fashion',
+  headlineLine2 = 'Handbags',
+  luxury = true
+} = Astro.props;
+
+const bgImage = heroImage || backgroundVideo.fallbackImage;
+---
+
+<style>
+  .repbag-welcome .hero-copy,
+  .repbag-welcome .hero-copy p,
+  .repbag-welcome .hero-copy h1 {
+    text-shadow: 0 1px 2px rgba(0,0,0,0.45), 0 2px 8px rgba(0,0,0,0.35);
+  }
+</style>
+
+<section 
+  class="repbag-welcome relative w-full overflow-hidden bg-neutral-900"
+  style="display: block; visibility: visible; min-height: 340px;"
+  itemScope 
+  itemType="https://schema.org/WebPageElement"
+>
+  <!-- Hero: taller, with overlay content; img layer for better control of crop -->
+  <div 
+    class="relative w-full min-h-[340px] md:min-h-[440px] lg:min-h-[520px] max-h-[65vh] flex items-center justify-center bg-[#f5f3f0] overflow-hidden"
+  >
+    <!-- Background image: show more of the subject, avoid tight crop -->
+    {bgImage ? (
+      <img 
+        src={bgImage} 
+        alt="" 
+        class="absolute inset-0 w-full h-full object-cover object-[center_35%]"
+        fetchpriority="high"
+        aria-hidden="true"
+      />
+    ) : null}
+    <!-- Overlay for readability and contrast -->
+    <div 
+      class="absolute inset-0 bg-black/45 z-[1]" 
+      aria-hidden="true"
+    ></div>
+    
+    <!-- Title, headline, description, button -->
+    <div class="hero-copy relative z-10 text-center px-4 py-12 max-w-2xl mx-auto">
+      {title && (
+        <p class="text-white text-xs md:text-sm tracking-[0.35em] uppercase mb-2" itemProp="name">
+          {title}
+        </p>
+      )}
+      <p class="text-white text-sm md:text-base tracking-[0.2em] uppercase mb-1">
+        {headlineLine1}
+      </p>
+      <h1 
+        class="text-white text-3xl md:text-5xl lg:text-6xl font-bold uppercase tracking-tight mb-4" 
+        itemProp="headline" 
+        role="heading" 
+        aria-level="1"
+      >
+        {headlineLine2}
+      </h1>
+      {description && (
+        <p class="text-white text-base md:text-lg leading-relaxed max-w-lg mx-auto mb-7 font-medium tracking-wide">
+          {description}
+        </p>
+      )}
+      {blogLinkText && (
+        <a 
+          href={blogLink}
+          class="inline-block bg-white text-black uppercase tracking-[0.2em] text-xs font-semibold px-8 py-3.5 hover:bg-neutral-100 transition-colors"
+        >
+          {blogLinkText}
+        </a>
+      )}
+    </div>
+  </div>
+</section>

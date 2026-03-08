@@ -1,0 +1,45 @@
+{
+  "siteTitle": "RepBag - Borse e Accessori Premium",
+  "siteDescription": "Borse premium, borsette, zaini e accessori. Qualità e stile per ogni occasione.",
+  "sections": [
+    {
+      "type": "welcomeSection",
+      "title": "RepBag",
+      "description": "Scopri la nostra collezione di borse—borsette, zaini e shopper. Materiali di qualità e design senza tempo.",
+      "luxury": true,
+      "heroImage": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=1200",
+      "headlineLine1": "Moda",
+      "headlineLine2": "Borse",
+      "blogLinkText": "Vedi le collezioni",
+      "blogLink": "/collections",
+      "backgroundVideo": {"type": "youtube", "videoId": "liT2Z3wFW1Y", "fallbackImage": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=1200"}
+    },
+    {
+      "type": "bannerSection",
+      "headline": "Stile e funzione",
+      "description": "Borse e accessori selezionati per qualità e uso quotidiano.",
+      "backgroundImage": "/images/bags-banner.jpg",
+      "button1Text": "Acquista borse",
+      "button1Link": "/collections",
+      "button2Text": "Novità",
+      "button2Link": "/new-arrivals"
+    },
+    {
+      "type": "categoryGrid",
+      "title": "Per categoria",
+      "description": "Borsette, zaini, crossbody e altro.",
+      "categories": [
+        {"id": "handbags", "name": "Borsette", "description": "Borsette eleganti per ogni occasione.", "image": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600", "link": "/collections/handbags"},
+        {"id": "backpacks", "name": "Zaini", "description": "Zaini pratici e di stile.", "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600", "link": "/collections/backpacks"},
+        {"id": "accessories", "name": "Accessori", "description": "Portafogli, pochette e altro.", "image": "https://images.unsplash.com/photo-1627123424574-724758594e93?w=600", "link": "/collections/accessories"}
+      ]
+    },
+    {"type": "bestSellers", "title": "I più venduti", "description": "Le nostre borse preferite", "viewAllLink": "/best-sellers", "collectionHandle": "best-sellers"},
+    {"type": "productShowcase", "title": "Borse in evidenza", "description": "Selezione dalla nostra collezione.", "viewAllLink": "/collections", "products": []},
+    {"type": "specialOffers", "title": "Offerte", "offers": [{"id": "welcome-offer", "title": "Offerta di benvenuto", "description": "Risparmia sul primo ordine", "discount": "15%", "code": "REPBAG15", "backgroundImage": "/images/offer-bg.jpg", "buttonText": "Acquista", "buttonLink": "/collections", "expiryText": "Limitato"}]},
+    {"type": "testimonialSlider", "title": "Cosa dicono i clienti", "testimonials": [{"id": "1", "author": "Sarah M.", "role": "Cliente", "content": "Borsa perfetta. Qualità e spedizione veloce.", "avatar": "SM", "initials": "SM"}]},
+    {"type": "faqSection", "title": "FAQ", "description": "Domande frequenti su borse e ordini.", "faqs": [{"question": "Quali materiali usate?", "answer": "Utilizziamo materiali di qualità: pelle, tela e sintetici resistenti."}]},
+    {"type": "featuresSection", "title": "Perché RepBag?", "features": [{"id": "free-shipping", "title": "Spedizione gratuita", "description": "Per ordini oltre 75€"}, {"id": "quality", "title": "Garanzia qualità", "description": "Reso entro 30 giorni"}, {"id": "secure", "title": "Pagamento sicuro", "description": "Checkout crittografato"}, {"id": "support", "title": "Assistenza", "description": "Siamo qui per aiutarti"}]},
+    {"type": "emailSignupSection", "title": "Resta aggiornato", "description": "Novità, offerte e consigli di stile.", "backgroundImage": "/images/newsletter-bg.jpg", "formAction": "/api/newsletter", "submitText": "Iscriviti"}
+  ]
+}

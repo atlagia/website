@@ -1,0 +1,196 @@
+{
+  "page": {
+    "wrapper": "min-h-screen bg-[var(--drivon-bg)]",
+    "main": "max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pt-28 pb-20",
+    "breadcrumbNav": "mt-6 mb-8 font-body text-[11px] tracking-[0.2em] uppercase text-[var(--drivon-muted)]",
+    "breadcrumbList": "flex items-center gap-2",
+    "breadcrumbLink": "hover:text-[var(--drivon-text)] transition-colors",
+    "breadcrumbCurrent": "font-medium text-[var(--drivon-text)]",
+    "header": "text-center mb-12 sm:mb-14",
+    "headerImageWrap": "relative h-[240px] sm:h-[280px] mb-6 overflow-hidden rounded-2xl",
+    "headerImage": "w-full h-full object-cover object-center",
+    "headerOverlay": "absolute inset-0 bg-gradient-to-t from-[var(--drivon-text)]/70 via-transparent to-transparent",
+    "headerTitleOnImage": "absolute bottom-5 left-0 right-0 font-headline text-2xl sm:text-3xl font-semibold text-white px-4 uppercase tracking-tight",
+    "headerTitleNoImage": "font-headline text-2xl sm:text-3xl font-semibold text-[var(--drivon-text)] mb-2 uppercase tracking-tight",
+    "headerDescription": "font-body text-base text-[var(--drivon-muted)] max-w-xl mx-auto leading-relaxed",
+    "mobileFilterWrap": "lg:hidden mb-5",
+    "mobileFilterBtn": "w-full flex items-center justify-center gap-2 px-4 py-3.5 bg-[var(--drivon-text)] text-[var(--drivon-bg)] font-body text-[11px] font-medium tracking-[0.2em] uppercase rounded-sm hover:opacity-90 transition-opacity",
+    "contentWrap": "flex flex-col lg:flex-row gap-8",
+    "overlay": "fixed inset-0 bg-[var(--drivon-text)]/50 z-40 hidden lg:hidden",
+    "sidebar": "w-full lg:w-72 flex-shrink-0 fixed lg:relative top-0 left-0 h-full lg:h-auto bg-[var(--drivon-card)] border-r border-[var(--drivon-border)] z-40 lg:z-auto transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out lg:block",
+    "sidebarInner": "p-4 lg:py-0 lg:pr-6",
+    "sidebarTitleRow": "flex items-center justify-between mb-4 lg:hidden",
+    "sidebarTitle": "font-headline text-sm font-semibold uppercase tracking-wide text-[var(--drivon-text)]",
+    "closeBtn": "p-2 hover:bg-[var(--drivon-surface)] rounded-lg transition-colors",
+    "mainContent": "flex-1 min-w-0",
+    "topBar": "flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-6",
+    "countText": "font-body text-[11px] tracking-[0.2em] uppercase text-[var(--drivon-muted)]",
+    "viewToggleWrap": "flex items-center gap-2 w-full sm:w-auto",
+    "viewToggleGroup": "flex items-center gap-0.5 rounded-lg border border-[var(--drivon-border)] p-0.5 bg-[var(--drivon-surface)]",
+    "gridBtnActive": "p-2 rounded-md bg-[var(--drivon-card)] text-[var(--drivon-text)] shadow-sm",
+    "listBtn": "p-2 rounded-md text-[var(--drivon-muted)] hover:text-[var(--drivon-text)]",
+    "mobileCount": "font-body text-[11px] tracking-[0.2em] uppercase text-[var(--drivon-muted)] mb-4 sm:hidden",
+    "productGrid": "grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 lg:gap-6 collection-product-grid",
+    "loadMoreWrap": "text-center mt-12",
+    "loadMoreText": "mb-4 font-body text-sm text-[var(--drivon-muted)]",
+    "loadMoreBtn": "font-body inline-flex items-center justify-center bg-[var(--drivon-card)] border-2 border-[var(--drivon-text)] text-[var(--drivon-text)] px-8 py-3.5 text-[11px] font-medium tracking-[0.2em] uppercase rounded-sm hover:bg-[var(--drivon-text)]/10 transition-colors",
+    "emptyWrap": "text-center py-16 bg-[var(--drivon-card)] rounded-2xl shadow-sm border border-[var(--drivon-border)]",
+    "emptyContent": "max-w-md mx-auto",
+    "emptyTitle": "font-headline text-2xl font-semibold text-[var(--drivon-text)] mb-2 uppercase tracking-tight",
+    "emptyDescription": "font-body text-[var(--drivon-muted)]"
+  },
+  "container": {
+    "maxWidth": "max-w-7xl",
+    "margin": "mx-auto",
+    "padding": "px-4 pb-8 pt-[100px]",
+    "background": "bg-white",
+    "textColor": "text-gray-900"
+  },
+  "colors": {
+    "navy": {
+      "default": "#0A2342",
+      "hover": "#123456",
+      "text": "text-white"
+    }
+  },
+  "header": {
+    "background": "bg-gray-50",
+    "padding": "py-16",
+    "textAlign": "text-center"
+  },
+  "title": {
+    "fontSize": "text-5xl md:text-6xl",
+    "fontWeight": "font-black",
+    "margin": "mb-8",
+    "color": "text-red-600 uppercase tracking-tight",
+    "textShadow": "drop-shadow-sm"
+  },
+  "subtitle": {
+    "fontSize": "text-xl",
+    "color": "text-gray-600",
+    "maxWidth": "max-w-3xl",
+    "margin": "mx-auto"
+  },
+  "grid": {
+    "columns": "grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4",
+    "gap": "gap-8",
+    "background": "bg-white",
+    "padding": "p-4"
+  },
+  "card": {
+    "background": "bg-white",
+    "border": "border border-gray-200 rounded-xl",
+    "shadow": "shadow-sm hover:shadow-lg transition-shadow duration-300",
+    "padding": "p-4",
+    "hover": {
+      "transform": "hover:scale-105",
+      "transition": "transition-transform duration-300"
+    }
+  },
+  "cardImage": {
+    "aspectRatio": "aspect-[3/4]",
+    "background": "bg-gray-100",
+    "objectFit": "object-cover",
+    "borderRadius": "rounded-lg overflow-hidden"
+  },
+  "cardTitle": {
+    "fontSize": "text-lg",
+    "fontWeight": "font-semibold",
+    "color": "text-gray-900",
+    "hover": "hover:text-red-600 transition-colors"
+  },
+  "cardPrice": {
+    "fontSize": "text-base",
+    "fontWeight": "font-bold",
+    "color": "text-gray-900"
+  },
+  "button": {
+    "default": "w-full mt-4 px-4 py-2 bg-blue-950 text-white rounded-md hover:bg-blue-900 transition-colors"
+  },
+  "pagination": {
+    "container": "flex justify-center items-center gap-6 mt-12 bg-gray-50 py-4 rounded-lg",
+    "button": "px-6 py-3 bg-blue-950 text-white rounded-md hover:bg-blue-900 transition-colors uppercase font-bold tracking-wider",
+    "text": "text-gray-700 font-semibold"
+  },
+  "footer": {
+    "textAlign": "text-center",
+    "textSize": "text-sm",
+    "textColor": "text-gray-500",
+    "margin": "mt-8 pt-8 border-t border-gray-200"
+  },
+  "emptyState": {
+    "background": "bg-gray-50",
+    "padding": "py-16",
+    "textAlign": "text-center",
+    "borderRadius": "rounded-xl"
+  },
+  "dynamicClasses": {
+    "container": {
+      "base": "min-h-screen bg-gray-50",
+      "maxWidth": "max-w-7xl mx-auto",
+      "padding": "px-4 pt-24 pb-16"
+    },
+    "breadcrumb": {
+      "container": "flex mb-8 text-sm",
+      "list": "flex items-center space-x-2",
+      "homeLink": "text-gray-500 hover:text-gray-700",
+      "separator": "text-gray-400",
+      "currentPage": "text-gray-900 font-medium"
+    },
+    "header": {
+      "container": "text-center mb-16 relative overflow-hidden rounded-2xl",
+      "imageOverlay": "absolute inset-0 z-0",
+      "image": "w-full h-full object-cover opacity-30 filter brightness-50",
+      "contentContainer": "relative z-10 py-16 px-4"
+    },
+    "productGrid": {
+      "container": "grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-12 rounded-xl shadow-sm",
+      "productCard": {
+        "base": "block group",
+        "card": "bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300",
+        "imageContainer": "aspect-[3/4] overflow-hidden bg-gray-50 relative",
+        "image": "w-full h-full object-contain p-4 transition-transform duration-300 group-hover:scale-105",
+        "noImagePlaceholder": "w-full h-full flex items-center justify-center text-gray-400",
+        "content": "p-4",
+        "title": "text-lg font-medium text-gray-900 truncate mb-1 group-hover:text-blue-600 transition-colors",
+        "priceContainer": "flex justify-between items-center",
+        "price": "text-sm font-semibold text-gray-900"
+      }
+    },
+    "quickAddButton": {
+      "base": "absolute bottom-2 left-2 right-2 bg-blue-950 text-white py-2 rounded-md text-sm font-medium",
+      "hover": "hover:bg-blue-900",
+      "visibility": "opacity-0 group-hover:opacity-100",
+      "transition": "transition-opacity duration-300",
+      "focus": "focus:outline-none focus:ring-2 focus:ring-blue-700 focus:ring-opacity-50"
+    },
+    "pagination": {
+      "container": "flex justify-between items-center bg-white rounded-lg shadow-sm p-4",
+      "button": "flex items-center space-x-2 px-4 py-2 rounded-md transition-colors group",
+      "text": "text-sm font-medium text-gray-600",
+      "icon": "w-5 h-5 group-hover:translate-x-1 transition-transform"
+    },
+    "emptyState": {
+      "container": "text-center py-16 bg-white rounded-2xl shadow-sm",
+      "content": "max-w-md mx-auto",
+      "title": "text-2xl font-semibold text-gray-900 mb-2",
+      "description": "text-gray-600"
+    },
+    "footer": {
+      "container": "mt-8 pt-4 text-center text-sm text-gray-500"
+    }
+  },
+  "fadeIn": {
+    "animation": "fadeIn 0.7s ease-out",
+    "keyframes": {
+      "from": { 
+        "opacity": 0, 
+        "transform": "translateY(20px)" 
+      },
+      "to": { 
+        "opacity": 1, 
+        "transform": "translateY(0)" 
+      }
+    }
+  }
+}

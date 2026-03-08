@@ -1,0 +1,68 @@
+---
+interface Offer {
+  id: string;
+  title: string;
+  description: string;
+  discount: string;
+  code?: string;
+  backgroundImage: string;
+  buttonText: string;
+  buttonLink: string;
+  expiryText?: string;
+}
+
+interface Props {
+  title: string;
+  offers: Offer[];
+}
+
+const { title, offers } = Astro.props;
+---
+
+<section class="py-20 px-4 bg-gray-50">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">{title}</h2>
+    
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      {offers.map((offer) => (
+        <div 
+          class="relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300"
+          style={`background-image: url(${offer.backgroundImage}); background-size: cover; background-position: center;`}
+        >
+          <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+          <div class="relative p-8 md:p-12 text-white">
+            <div class="mb-6">
+              <div class="inline-block bg-red-600 text-white px-4 py-2 rounded-full text-sm font-bold mb-4">
+                {offer.discount} OFF
+              </div>
+              <h3 class="text-3xl md:text-4xl font-bold mb-4">{offer.title}</h3>
+              <p class="text-xl mb-6 text-gray-200">{offer.description}</p>
+            </div>
+            
+            {offer.code && (
+              <div class="mb-6">
+                <p class="text-sm text-gray-300 mb-2">Use code:</p>
+                <div class="inline-block bg-white text-black px-4 py-2 rounded-lg font-mono font-bold text-lg">
+                  {offer.code}
+                </div>
+              </div>
+            )}
+            
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <a 
+                href={offer.buttonLink}
+                class="bg-white text-black px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors duration-300"
+              >
+                {offer.buttonText}
+              </a>
+              
+              {offer.expiryText && (
+                <p class="text-sm text-gray-300">{offer.expiryText}</p>
+              )}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

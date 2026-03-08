@@ -1,0 +1,29 @@
+---
+interface Props {
+  headline: string;
+  ctaText: string;
+  ctaLink: string;
+}
+
+const { headline, ctaText, ctaLink } = Astro.props;
+---
+
+<section class="f1-follow border-y border-[var(--drivon-border)] bg-[var(--drivon-bg)] py-10 lg:py-12" aria-labelledby="follow-heading">
+  <div class="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-6">
+    <h2 id="follow-heading" class="font-headline text-2xl sm:text-3xl text-[var(--drivon-text)] uppercase tracking-wide">
+      {headline}
+    </h2>
+    <a
+      href={ctaLink}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex items-center gap-2 text-[11px] font-medium tracking-[0.25em] uppercase text-[var(--drivon-text)] hover:text-[var(--drivon-accent-hover)] transition-colors border-b border-[var(--drivon-text)] hover:border-[var(--drivon-accent-hover)]"
+    >
+      {ctaText}
+    </a>
+  </div>
+</section>
+
+<style>
+  .font-headline { font-family: var(--font-headline); }
+</style>

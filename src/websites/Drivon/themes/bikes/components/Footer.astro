@@ -3,115 +3,110 @@ import { getLangFromUrl } from '@utils/i18n';
 
 const currentYear = new Date().getFullYear();
 const siteName = import.meta.env.PUBLIC_SITE_NAME || 'Drivon';
-
-// Get current language
 const currentLang = getLangFromUrl(Astro.url);
 
-// Load footer data dynamically based on language
 let footerData;
 try {
   footerData = await import(`../data/footer/footer_${currentLang}.json`);
-} catch (error) {
-  // Fallback to English if language file doesn't exist
+} catch {
   footerData = await import(`../data/footer/footer_en.json`);
 }
 
 const { description, navigation, social } = footerData.default;
 ---
 
-<footer class="bg-gray-900" aria-labelledby="footer-heading">
+<footer class="drivon-footer bg-[var(--drivon-bg)] border-t border-[var(--drivon-border)]" aria-labelledby="footer-heading">
   <h2 id="footer-heading" class="sr-only">Footer</h2>
-  <div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
-    <div class="xl:grid xl:grid-cols-3 xl:gap-8">
-      <div class="space-y-8">
-        <span class="text-2xl font-bold text-white">{siteName}</span>
-        <p class="text-sm leading-6 text-gray-300">
+
+  <div class="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 py-16 lg:py-24">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-16">
+      <div class="lg:col-span-1">
+        <span class="font-display text-lg font-bold text-[var(--drivon-text)] uppercase tracking-tight">{siteName}</span>
+        <p class="text-sm text-[var(--drivon-muted)] mt-4 max-w-xs font-body leading-relaxed">
           {description}
         </p>
-        <div class="flex space-x-6">
+        <div class="flex gap-6 mt-8">
           {social.map((item) => (
-            <a href={item.href} class="text-gray-500 hover:text-gray-400">
-              <span class="sr-only">{item.name}</span>
-              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <a href={item.href} class="text-[var(--drivon-muted)] hover:text-[var(--drivon-accent)] transition-colors" aria-label={item.name}>
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path d={item.icon} />
               </svg>
             </a>
           ))}
         </div>
       </div>
-      <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
-        <div class="md:grid md:grid-cols-2 md:gap-8">
-          <div>
-            <h3 class="text-sm font-semibold leading-6 text-white">Shop</h3>
-            <ul role="list" class="mt-6 space-y-4">
-              {navigation.shop.map((item) => (
-                <li>
-                  <a href={`/${currentLang}${item.href}`} class="text-sm leading-6 text-gray-300 hover:text-white">
-                    {item.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div class="mt-10 md:mt-0">
-            <h3 class="text-sm font-semibold leading-6 text-white">Collections</h3>
-            <ul role="list" class="mt-6 space-y-4">
-              {navigation.collections.map((item) => (
-                <li>
-                  <a href={`/${currentLang}${item.href}`} class="text-sm leading-6 text-gray-300 hover:text-white">
-                    {item.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+
+      <div>
+        <h3 class="font-display text-[11px] font-semibold tracking-[0.25em] uppercase text-[var(--drivon-muted)] mb-6">Shop</h3>
+        <ul class="space-y-3">
+          {navigation.shop.map((item) => (
+            <li>
+              <a href={`/${currentLang}${item.href}`} class="text-sm text-[var(--drivon-text)]/80 hover:text-[var(--drivon-accent)] transition-colors font-body">
+                {item.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {navigation.collections && (
+        <div>
+          <h3 class="font-display text-[11px] font-semibold tracking-[0.25em] uppercase text-[var(--drivon-muted)] mb-6">Collections</h3>
+          <ul class="space-y-3">
+            {navigation.collections.map((item) => (
+              <li>
+                <a href={`/${currentLang}${item.href}`} class="text-sm text-[var(--drivon-text)]/80 hover:text-[var(--drivon-accent)] transition-colors font-body">
+                  {item.name}
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
-        <div class="md:grid md:grid-cols-2 md:gap-8">
-          <div>
-            <h3 class="text-sm font-semibold leading-6 text-white">Company</h3>
-            <ul role="list" class="mt-6 space-y-4">
-              {navigation.company.map((item) => (
-                <li>
-                  <a href={`/${currentLang}${item.href}`} class="text-sm leading-6 text-gray-300 hover:text-white">
-                    {item.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div class="mt-10 md:mt-0">
-            <h3 class="text-sm font-semibold leading-6 text-white">Support</h3>
-            <ul role="list" class="mt-6 space-y-4">
-              {navigation.support.map((item) => (
-                <li>
-                  <a href={`/${currentLang}${item.href}`} class="text-sm leading-6 text-gray-300 hover:text-white">
-                    {item.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-        <div class="md:grid md:grid-cols-1 md:gap-8">
-          <div>
-            <h3 class="text-sm font-semibold leading-6 text-white">Legal</h3>
-            <ul role="list" class="mt-6 space-y-4">
-              {navigation.legal.map((item) => (
-                <li>
-                  <a href={`/${currentLang}${item.href}`} class="text-sm leading-6 text-gray-300 hover:text-white">
-                    {item.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+      )}
+
+      <div>
+        <h3 class="font-display text-[11px] font-semibold tracking-[0.25em] uppercase text-[var(--drivon-muted)] mb-6">Company</h3>
+        <ul class="space-y-3">
+          {navigation.company.map((item) => (
+            <li>
+              <a href={`/${currentLang}${item.href}`} class="text-sm text-[var(--drivon-text)]/80 hover:text-[var(--drivon-accent)] transition-colors font-body">
+                {item.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-display text-[11px] font-semibold tracking-[0.25em] uppercase text-[var(--drivon-muted)] mb-6">Support</h3>
+        <ul class="space-y-3">
+          {navigation.support.map((item) => (
+            <li>
+              <a href={`/${currentLang}${item.href}`} class="text-sm text-[var(--drivon-text)]/80 hover:text-[var(--drivon-accent)] transition-colors font-body">
+                {item.name}
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
-    <div class="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
-      <p class="text-xs leading-5 text-gray-400">
-        &copy; {currentYear} {siteName}. All rights reserved.
+
+    <div class="mt-16 pt-8 border-t border-[var(--drivon-border)] flex flex-col sm:flex-row justify-between items-center gap-4">
+      <p class="text-[11px] text-[var(--drivon-muted)] tracking-widest uppercase font-body">
+        © {currentYear} {siteName}
       </p>
+      <div class="flex gap-8">
+        {navigation.legal?.map((item) => (
+          <a href={`/${currentLang}${item.href}`} class="text-[11px] text-[var(--drivon-muted)] hover:text-[var(--drivon-text)] transition-colors tracking-wider uppercase">
+            {item.name}
+          </a>
+        ))}
+      </div>
     </div>
   </div>
 </footer>
+
+<style>
+  .font-display { font-family: var(--font-display); }
+  .font-body { font-family: var(--font-body); }
+</style>

@@ -30,7 +30,7 @@ const supportedLanguages = getAllowedLanguages();
 const siteName = import.meta.env.PUBLIC_SITE_NAME;
 const apiEndpoint = import.meta.env.VITE_API_ENDPOINT|| '/api/checkout';
 const hasChartData = import.meta.env.PUBLIC_HAS_CHART_DATA === true;
-const PROJECT_TYPE = import.meta.env.PROJECT_TYPE || 'default';
+const PROJECT_TYPE = (import.meta.env.PROJECT_TYPE || 'physical').toLowerCase();
 const whatsappEnabled = import.meta.env.PUBLIC_WHATSAPP_ENABLED === 'true';
 let product;
 let relatedProducts;
@@ -408,6 +408,7 @@ const { luxuryProductStyle = {} } = styles;
   alternateUrls={alternateUrls}
   productSchema={productSchema}
   breadcrumbSchema={breadcrumbSchema}
+  projectType={PROJECT_TYPE}
 >
       <div id="product-wrapper" class="relative">
         <div 

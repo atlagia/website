@@ -1,196 +1,69 @@
 ---
-// Import translations and header data
-import { useTranslations } from '@utils/i18n';
-
 interface Props {
   transparent?: boolean;
+  lang?: string;
 }
+const { transparent = true, lang = 'en' } = Astro.props;
 
-const { transparent = true } = Astro.props;
-
-// Get current URL parameters
-const { lang = 'en' } = Astro.params;
-
-// Get allowed languages from environment
-const getAllowedLanguages = (): string[] => {
-  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
-  return allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
-};
-
-const translations = await useTranslations(lang);
-
-// Dynamically import header JSON for the current language with fallback
 let headerData;
 try {
-  const headerModule = await import(`../data/header/header_${lang}.json`);
-  headerData = headerModule.default;
-} catch (error) {
-  // Fallback to English if the language-specific header doesn't exist
-  console.log(`Header file for ${lang} not found, falling back to English`);
-  const fallbackModule = await import(`../data/header/header_en.json`);
-  headerData = fallbackModule.default;
+  headerData = (await import(`../data/header/header_${lang}.json`)).default;
+} catch {
+  headerData = (await import(`../data/header/header_en.json`)).default;
 }
 
-// Navigation items from JSON
-const navItems = headerData.navigation.map(item => ({
-  text: item.text, 
+const navItems = headerData.navigation.map((item: { text: string; href: string }) => ({
+  text: item.text,
   href: `/${lang}${item.href}`
 }));
 
-// Authentication items from JSON
 const loginItem = headerData.auth.login;
 const signupItem = headerData.auth.signup;
-
-// Language selector items - filter to only allowed languages
-const allowedLanguages = getAllowedLanguages();
-const languages = headerData.languages.filter(lang => allowedLanguages.includes(lang.code));
-
-// Determine if the current language is RTL
 const isRTL = ['ar'].includes(lang);
-
-// Site name handling
-const siteName = lang === 'ar' 
-  ? import.meta.env.PUBLIC_SITE_NAME_ARABIC || 'ستريم فيستا' 
-  : 'FastIPTV';
+const siteName = lang === 'ar' ? (import.meta.env.PUBLIC_SITE_NAME_ARABIC || 'FastIPTV') : 'FastIPTV';
 ---
 
-<header 
+<header
   id="main-header"
   class:list={[
-    'fixed w-full z-50 transition-all duration-300',
-    transparent ? 'bg-transparent' : 'bg-black/95 shadow-lg',
+    'fixed w-full z-50 transition-all duration-300 backdrop-blur-xl',
+    transparent ? 'bg-transparent' : 'bg-[#0a0a0a]/90 border-b border-white/5',
     isRTL ? 'rtl' : 'ltr'
   ]}
-  dir={isRTL ? 'rtl' : 'ltr'}
 >
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center py-4">
-      <!-- Logo -->
-      <a href={`/${lang}`} class="flex items-center space-x-2">
-        <span 
-          class:list={[
-            'text-2xl font-bold bg-gradient-to-r from-purple-600 to-emerald-500 bg-clip-text text-transparent',
-            isRTL ? 'text-right' : ''
-          ]}
-        >
-          {siteName}
-        </span>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+    <div class="flex justify-between items-center h-16 md:h-20 gap-2 min-w-0">
+      <a href={`/${lang}`} class="flex-shrink-0 text-xl sm:text-2xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+        {siteName}
       </a>
-
-      <!-- Navigation -->
-      <nav class:list={[
-        'hidden md:flex items-center',
-        isRTL ? 'space-x-reverse space-x-8' : 'space-x-8'
-      ]}>
-        {navItems.map(item => (
-          <a
-            href={item.href}
-            class="text-gray-300 hover:text-white transition-colors duration-200"
-          >
+      <nav class="hidden md:flex items-center gap-6 lg:gap-8">
+        {navItems.map((item) => (
+          <a href={item.href} class="text-gray-300 hover:text-white transition-colors text-sm font-medium whitespace-nowrap">
             {item.text}
           </a>
         ))}
       </nav>
-
-      <!-- Language Selector -->
-      <div class="relative group">
-        <button 
-          id="language-selector" 
-          class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center"
-        >
-          {languages.find(l => l.code === lang)?.name || 'Language'}
-          <svg 
-            xmlns="http://www.w3.org/2000/svg" 
-            class:list={[
-              'h-4 w-4', 
-              isRTL ? 'ml-0 mr-1' : 'ml-1'
-            ]} 
-            fill="none" 
-            viewBox="0 0 24 24" 
-            stroke="currentColor"
-          >
-            <path 
-              stroke-linecap="round" 
-              stroke-linejoin="round" 
-              stroke-width="2" 
-              d="M19 9l-7 7-7-7" 
-            />
-          </svg>
-        </button>
-        
-        <div 
-          id="language-dropdown" 
-          class:list={[
-            'absolute hidden group-hover:block bg-black/95 rounded-lg shadow-lg py-2 mt-2 min-w-[150px] z-50',
-            isRTL ? 'left-0' : 'right-0'
-          ]}
-        >
-          {languages.filter(l => l.code !== lang).map(language => (
-            <a
-              href={`/${language.code}${Astro.url.pathname.replace(/^\/[a-z]{2}/, '')}`}
-              class="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-800"
-            >
-              {language.name}
-            </a>
-          ))}
-        </div>
-      </div>
-
-      <!-- Auth Buttons -->
-      <div class:list={[
-        'flex items-center',
-        isRTL ? 'space-x-reverse space-x-4' : 'space-x-4'
-      ]}>
-        <a
-          href={`/${lang}${loginItem.href}`}
-          class="text-gray-300 hover:text-white transition-colors duration-200"
-        >
+      <div class="flex items-center gap-2 sm:gap-4 flex-shrink-0 min-w-0">
+        <a href={`/${lang}${loginItem.href}`} class="hidden sm:inline text-gray-300 hover:text-white transition-colors text-sm whitespace-nowrap">
           {loginItem.text}
         </a>
         <a
           href={`/${lang}${signupItem.href}`}
-          class="bg-gradient-to-r from-purple-600 to-emerald-500 text-white px-4 py-2 rounded-lg hover:opacity-90 transition-opacity duration-200"
+          class="px-3 py-2 sm:px-4 rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 text-white text-sm font-semibold hover:opacity-90 transition-opacity whitespace-nowrap"
         >
           {signupItem.text}
         </a>
+        <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-300 hover:text-white flex-shrink-0" aria-label="Menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
       </div>
-
-      <!-- Mobile Menu Button -->
-      <button
-        class="md:hidden text-gray-300 hover:text-white"
-        id="mobile-menu-button"
-        aria-label="Menu"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-6 w-6"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16"
-          />
-        </svg>
-      </button>
     </div>
-
-    <!-- Mobile Menu -->
-    <div
-      class="md:hidden hidden"
-      id="mobile-menu"
-    >
-      <div class="px-2 pt-2 pb-3 space-y-1">
-        {navItems.map(item => (
-          <a
-            href={item.href}
-            class="block px-3 py-2 text-gray-300 hover:text-white transition-colors duration-200"
-          >
-            {item.text}
-          </a>
+    <div id="mobile-menu" class="md:hidden hidden py-4 border-t border-white/10">
+      <div class="flex flex-col gap-2">
+        {navItems.map((item) => (
+          <a href={item.href} class="py-2 text-gray-300 hover:text-white">{item.text}</a>
         ))}
       </div>
     </div>
@@ -198,46 +71,18 @@ const siteName = lang === 'ar'
 </header>
 
 <script>
-  // Mobile menu toggle
-  const mobileMenuButton = document.getElementById('mobile-menu-button');
-  const mobileMenu = document.getElementById('mobile-menu');
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn?.addEventListener('click', () => menu?.classList.toggle('hidden'));
 
-  mobileMenuButton?.addEventListener('click', () => {
-    mobileMenu?.classList.toggle('hidden');
-  });
-
-  // Language selector toggle (for mobile/accessibility)
-  const languageSelector = document.getElementById('language-selector');
-  const languageDropdown = document.getElementById('language-dropdown');
-
-  languageSelector?.addEventListener('click', () => {
-    languageDropdown?.classList.toggle('hidden');
-  });
-
-  // Header scroll transparency
   const header = document.getElementById('main-header');
-  let lastScrollTop = 0;
-
   window.addEventListener('scroll', () => {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    
-    if (scrollTop > 50) {
-      // Add background when scrolled down
-      header.classList.remove('bg-transparent');
-      header.classList.add('bg-black/95', 'shadow-lg');
+    if (window.scrollY > 50) {
+      header?.classList.remove('bg-transparent');
+      header?.classList.add('bg-[#0a0a0a]/90', 'border-b', 'border-white/5');
     } else {
-      // Remove background when at top
-      header.classList.add('bg-transparent');
-      header.classList.remove('bg-black/95', 'shadow-lg');
+      header?.classList.add('bg-transparent');
+      header?.classList.remove('bg-[#0a0a0a]/90', 'border-b', 'border-white/5');
     }
-
-    lastScrollTop = scrollTop;
   });
 </script>
-
-<style is:global>
-  /* RTL Specific Styles */
-  .rtl {
-    direction: rtl;
-  }
-</style> 

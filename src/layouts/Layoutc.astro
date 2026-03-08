@@ -1,6 +1,17 @@
 ---
-import BaseHead from '@themes/default/components/BaseHead.astro';
 import Header from '@themes/default/components/Header';
+
+// Theme-specific BaseHead (so collection/catalog pages get site CSS variables e.g. --drivon-*)
+let BaseHead;
+try {
+  const siteName = import.meta.env.PUBLIC_SITE_NAME || 'DriverApparel';
+  const theme = import.meta.env.THEME || 'default';
+  const baseHeadModule = await import(`../websites/${siteName}/themes/${theme}/components/BaseHead.astro`);
+  BaseHead = baseHeadModule.default;
+} catch {
+  const defaultBaseHead = await import('@themes/default/components/BaseHead.astro');
+  BaseHead = defaultBaseHead.default;
+}
 
 // Dynamic Footer import with fallback
 let Footer;
@@ -40,6 +51,22 @@ const baseUrl = import.meta.env.DOMAINE || 'https://driverapparel.com';
 const theme = import.meta.env.THEME || 'default';
 const siteName = import.meta.env.PUBLIC_SITE_NAME || 'DriverApparel';
 const projectType = import.meta.env.PROJECT_TYPE || 'default';
+
+// Import layout styles with fallback (bodyClass, themeColor) - website first, default fallback
+let layoutStyles: { bodyClass?: string; bodyClassCollection?: string; themeColor?: string } = {};
+try {
+  const themeLayout = await import(`../websites/${siteName}/themes/${theme}/styles/layout.json`);
+  layoutStyles = themeLayout.default;
+} catch {
+  try {
+    const defaultLayout = await import('../styles/default/layout.json');
+    layoutStyles = defaultLayout.default;
+  } catch {
+    layoutStyles = { bodyClass: 'bg-gray-50', bodyClassCollection: 'bg-gray-50', themeColor: '#ffffff' };
+  }
+}
+const bodyClass = layoutStyles.bodyClassCollection ?? layoutStyles.bodyClass ?? 'bg-gray-50';
+const themeColor = layoutStyles.themeColor ?? '#ffffff';
 
 // Import header styles with fallback logic (same as Layoutp.astro)
 let headerStyles = {};
@@ -256,10 +283,10 @@ const paymentConfig = {
     ))}
     
     <!-- PWA Tags -->
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content={themeColor} />
     <link rel="manifest" href="/manifest.json" />
   </head>
-  <body class="bg-gray-50">
+  <body class={bodyClass}>
     <!-- Header -->
     <Header
       client:load

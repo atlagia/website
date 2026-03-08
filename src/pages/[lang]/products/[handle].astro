@@ -7,6 +7,7 @@ import Reviews from '@components/Reviews.astro';
 import ProductFAQ from '@components/ProductFAQ.astro';
 import { ChevronLeft, ChevronRight, Info } from 'lucide-react';
 import ProductCard from '@themes/default/components/ProductCard';
+import ReactiveProductCard from '@components/ReactiveProductCard.tsx';
 import ProductSpecs from '@components/ProductSpecs.astro';
 import KeyFeatures from '@components/KeyFeatures.astro';
 import ProductLoading from '@components/ProductLoading.astro';
@@ -30,7 +31,7 @@ const supportedLanguages = getAllowedLanguages();
 const siteName = import.meta.env.PUBLIC_SITE_NAME;
 const apiEndpoint = import.meta.env.VITE_API_ENDPOINT|| '/api/checkout';
 const hasChartData = import.meta.env.PUBLIC_HAS_CHART_DATA === true;
-const PROJECT_TYPE = import.meta.env.PROJECT_TYPE || 'default';
+const PROJECT_TYPE = (import.meta.env.PROJECT_TYPE || 'physical').toLowerCase();
 const whatsappEnabled = import.meta.env.PUBLIC_WHATSAPP_ENABLED === 'true';
 let product;
 let relatedProducts;
@@ -383,18 +384,83 @@ console.log('Processed product data:', {
 // Get initial currency data
 const initialCurrency = 'USD'; // Or get from store/session
 
-// Add only this new import
-const theme = import.meta.env.THEME || 'default';
-const productTheme = import.meta.env.PRODUCTTHEME || 'default';
-let styles = {};
+// Product page styles: website theme first, then fallback to default (multi-tenant dynamic styling)
+const SITE_NAME = import.meta.env.PUBLIC_SITE_NAME || '';
+const THEME = import.meta.env.THEME || 'default';
 
-try {
-  styles = await import(`../../../themes/${theme}/styles/products/${productTheme}.mjs`);
-} catch (error) {
-  console.error('Failed to load product styles:', error);
+function deepMergeProductStyle(target, source) {
+  if (!source || typeof source !== 'object') return target;
+  const out = { ...target };
+  for (const key of Object.keys(source)) {
+    const src = source[key];
+    const cur = out[key];
+    if (src != null && typeof src === 'object' && !Array.isArray(src) && (src.constructor?.name === 'Object' || typeof src === 'object')) {
+      out[key] = deepMergeProductStyle((cur != null && typeof cur === 'object' && !Array.isArray(cur)) ? cur : {}, src);
+    } else if (src !== undefined) {
+      out[key] = src;
+    }
+  }
+  return out;
 }
 
-const { luxuryProductStyle = {} } = styles;
+let productStyleData = { default: {} };
+if (SITE_NAME) {
+  try {
+    productStyleData = await import(`@websites/${SITE_NAME}/themes/${THEME}/styles/products/products.json`);
+  } catch (_) {}
+}
+const defaultProductStyle = await import('../../../styles/default/products.json');
+const defaultPage = (defaultProductStyle.default?.page || {}) as Record<string, string>;
+const websitePage = (productStyleData.default?.page || {}) as Record<string, string>;
+const pageStyle = deepMergeProductStyle({ ...defaultPage }, websitePage);
+const defaultLuxury = (defaultProductStyle.default?.luxuryProductStyle || {}) as Record<string, unknown>;
+const websiteLuxury = (productStyleData.default?.luxuryProductStyle || {}) as Record<string, unknown>;
+const luxuryProductStyle = deepMergeProductStyle(defaultLuxury, websiteLuxury);
+
+// Layout: gallery position, image-switch options, section order (dynamic per website)
+const defaultLayout = (defaultProductStyle.default?.layout || {}) as Record<string, unknown>;
+const websiteLayout = (productStyleData.default?.layout || {}) as Record<string, unknown>;
+const productLayout = deepMergeProductStyle(defaultLayout, websiteLayout) as {
+  galleryLayout?: 'carousel' | 'grid';
+  galleryLayoutMobile?: 'carousel';
+  galleryPosition?: 'left' | 'right';
+  gallery?: { showThumbnails?: boolean; showArrows?: boolean; showCounter?: boolean };
+  sectionsOrder?: string[];
+  rightColumnSections?: string[];
+  additionalSections?: string[];
+};
+const galleryLayout = productLayout.galleryLayout || 'carousel';
+const galleryLayoutMobile = productLayout.galleryLayoutMobile === 'carousel';
+const showCarouselOnMobile = galleryLayout === 'grid' && galleryLayoutMobile;
+const galleryPosition = productLayout.galleryPosition || 'left';
+const galleryOpts = productLayout.gallery || {};
+const showThumbnails = galleryOpts.showThumbnails !== false;
+const showArrows = galleryOpts.showArrows !== false;
+const showCounter = galleryOpts.showCounter !== false;
+const RIGHT_COLUMN_IDS = productLayout.rightColumnSections || ['description', 'key_features', 'product_specs', 'size_chart', 'reviews', 'product_faq'];
+const ADDITIONAL_IDS = productLayout.additionalSections || ['shipping_info', 'product_warranty', 'care_instructions', 'recently_viewed'];
+const DEFAULT_SECTIONS_ORDER = [...RIGHT_COLUMN_IDS, ...ADDITIONAL_IDS, 'related_products'];
+const sectionsOrder = productLayout.sectionsOrder || DEFAULT_SECTIONS_ORDER;
+const rightColumnOrder = sectionsOrder.filter((id: string) => RIGHT_COLUMN_IDS.includes(id));
+const additionalOrder = sectionsOrder.filter((id: string) => ADDITIONAL_IDS.includes(id));
+const showRelated = sectionsOrder.includes('related_products');
+const isDarkProduct = pageStyle.wrapper?.includes('bg-[#0a0a0a]') ?? false;
+const descriptionProseClass = isDarkProduct
+  ? 'text-gray-200 [&>p]:mb-6 [&>p]:leading-relaxed [&>p]:text-base [&>p]:text-gray-200 [&>hr]:my-8 [&>hr]:border-t [&>hr]:border-white/20 [&>h2]:text-xl [&>h2]:font-bold [&>h2]:text-white [&>h2]:mt-10 [&>h2]:mb-6 [&>h2]:pb-2 [&>h2]:border-b [&>h2]:border-white/20 [&>h3]:text-xl [&>h3]:font-semibold [&>h3]:text-gray-100 [&>h3]:mt-8 [&>h3]:mb-4 [&>h4]:text-lg [&>h4]:font-semibold [&>h4]:text-gray-100 [&>h4]:mt-6 [&>h4]:mb-3 [&>ul]:list-disc [&>ul]:ml-6 [&>ul]:mb-6 [&>ul>li]:mb-2 [&>ul>li]:text-gray-300 [&>ol]:list-decimal [&>ol]:ml-6 [&>ol]:mb-6 [&>ol>li]:mb-2 [&>ol>li]:text-gray-300 [&>strong]:font-bold [&>strong]:text-gray-100 [&>em]:italic [&>a]:text-purple-400 [&>a]:underline [&>a:hover]:text-purple-300 [&>blockquote]:pl-4 [&>blockquote]:border-l-4 [&>blockquote]:border-white/30 [&>blockquote]:italic [&>blockquote]:text-gray-400 [&>blockquote]:my-6 [&>*:first-child]:mt-0 [&>*:last-child]:mb-0'
+  : 'text-gray-700 [&>p]:mb-6 [&>p]:leading-relaxed [&>p]:text-base [&>hr]:my-8 [&>hr]:border-t [&>hr]:border-gray-200 [&>h2]:text-xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mt-10 [&>h2]:mb-6 [&>h2]:pb-2 [&>h2]:border-b [&>h2]:border-gray-200 [&>h3]:text-xl [&>h3]:font-semibold [&>h3]:text-gray-800 [&>h3]:mt-8 [&>h3]:mb-4 [&>h3]:flex [&>h3]:items-center [&>h3]:gap-2 [&>h4]:text-lg [&>h4]:font-semibold [&>h4]:text-gray-800 [&>h4]:mt-6 [&>h4]:mb-3 [&>ul]:list-disc [&>ul]:ml-6 [&>ul]:mb-6 [&>ul>li]:mb-2 [&>ul>li]:text-gray-700 [&>ol]:list-decimal [&>ol]:ml-6 [&>ol]:mb-6 [&>ol>li]:mb-2 [&>ol>li]:text-gray-700 [&>strong]:font-bold [&>strong]:text-gray-900 [&>em]:italic [&>a]:text-neutral-700 [&>a]:underline [&>a:hover]:text-neutral-900 [&>blockquote]:pl-4 [&>blockquote]:border-l-4 [&>blockquote]:border-gray-200 [&>blockquote]:italic [&>blockquote]:text-gray-600 [&>blockquote]:my-6 [&>img]:rounded-lg [&>img]:shadow-md [&>img]:my-4 [&>table]:w-full [&>table]:border-collapse [&>table]:mb-6 [&>table]:bg-white [&>table]:shadow-sm [&>table]:rounded-lg [&>table]:overflow-hidden [&>table]:border [&>table]:border-gray-200 [&>table>thead]:bg-gray-50 [&>table>thead>tr]:border-b [&>table>thead>tr]:border-gray-200 [&>table>thead>tr>th]:px-6 [&>table>thead>tr>th]:py-3 [&>table>thead>tr>th]:text-left [&>table>thead>tr>th]:font-semibold [&>table>thead>tr>th]:text-gray-900 [&>table>thead>tr>th]:text-sm [&>table>thead>tr>th]:uppercase [&>table>thead>tr>th]:tracking-wider [&>table>tbody>tr]:border-b [&>table>tbody>tr]:border-gray-200 [&>table>tbody>tr]:last:border-b-0 [&>table>tbody>tr:hover]:bg-gray-50 [&>table>tbody>tr>td]:px-6 [&>table>tbody>tr>td]:py-4 [&>table>tbody>tr>td]:text-sm [&>table>tbody>tr>td]:text-gray-700 [&>table>tbody>tr>td]:whitespace-normal [&>table>tbody>tr>td:first-child]:font-medium [&>table>tbody>tr>td:first-child]:text-gray-900 [&>table>tfoot]:bg-gray-50 [&>table>tfoot>tr]:border-t [&>table>tfoot>tr]:border-gray-200 [&>table>tfoot>tr>td]:px-6 [&>table>tfoot>tr>td]:py-3 [&>table>tfoot>tr>td]:text-sm [&>table>tfoot>tr>td]:font-semibold [&>*:first-child]:mt-0 [&>*:last-child]:mb-0';
+
+const relatedCardStyles = {
+  root: pageStyle.relatedCardRoot,
+  media: pageStyle.relatedCardMedia,
+  noImageWrap: pageStyle.relatedCardNoImageWrap,
+  noImageText: pageStyle.relatedCardNoImageText,
+  saleBadge: pageStyle.relatedCardSaleBadge,
+  content: pageStyle.relatedCardContent,
+  title: pageStyle.relatedCardTitle,
+  price: pageStyle.relatedCardPrice,
+  comparePrice: pageStyle.relatedCardComparePrice,
+  arrow: pageStyle.relatedCardArrow
+};
 ---
 
 <Layout 
@@ -408,158 +474,339 @@ const { luxuryProductStyle = {} } = styles;
   alternateUrls={alternateUrls}
   productSchema={productSchema}
   breadcrumbSchema={breadcrumbSchema}
+  projectType={PROJECT_TYPE}
 >
-      <div id="product-wrapper" class="relative">
-        <div 
-          id="product-content" 
-          class="opacity-100 transition-opacity duration-300"
+      <div id="product-wrapper" class={pageStyle.wrapper} data-theme={isDarkProduct ? 'dark' : 'light'}>
+        <div
+          id="product-content"
+          class={pageStyle.content}
           data-handle={handle}
         >
           <!-- Breadcrumb Navigation -->
-          <nav aria-label="Breadcrumb" class="max-w-7xl mx-auto px-4 py-4 overflow-x-auto">
-            <ol class="flex flex-nowrap items-center text-sm text-gray-600 whitespace-nowrap min-w-0">
-              <li class="flex items-center">
-                <a href={`/${lang}`} class={luxuryProductStyle.breadcrumb?.link}>
-                  Home
-                </a>
+          <nav aria-label="Breadcrumb" class={pageStyle.breadcrumbNav}>
+            <ol class={pageStyle.breadcrumbList}>
+              <li class={pageStyle.breadcrumbItem}>
+                <a href={`/${lang}`} class={pageStyle.breadcrumbLink}>Home</a>
               </li>
-              <li class="flex items-center">
-                <svg class="h-5 w-5 text-gray-400 mx-1" viewBox="0 0 20 20" fill="currentColor">
+              <li class={pageStyle.breadcrumbItem}>
+                <svg class={pageStyle.breadcrumbSep} viewBox="0 0 20 20" fill="currentColor">
                   <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
                 </svg>
-                <a href={`/${lang}/products`} class={luxuryProductStyle.breadcrumb?.link}>
-                  Products
-                </a>
+                <a href={`/${lang}/products`} class={pageStyle.breadcrumbLink}>Products</a>
               </li>
-              <li class="flex items-center">
-                <svg class="h-5 w-5 text-gray-400 mx-1" viewBox="0 0 20 20" fill="currentColor">
+              <li class={pageStyle.breadcrumbItem}>
+                <svg class={pageStyle.breadcrumbSep} viewBox="0 0 20 20" fill="currentColor">
                   <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
                 </svg>
-                <span class={luxuryProductStyle.breadcrumb?.current} title={product.title}>{product.title}</span>
+                <span class={luxuryProductStyle.breadcrumb?.current || pageStyle.breadcrumbCurrent} title={product.title}>{product.title}</span>
               </li>
             </ol>
           </nav>
 
-          <main class="max-w-7xl mx-auto px-4 py-12">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <!-- Image Gallery -->
-              <div class="space-y-4 lg:sticky lg:top-24 lg:self-start">
-                <div class="relative bg-gray-50 rounded-2xl overflow-hidden group">
-                  <div class="aspect-square relative">
-                    {import.meta.env.DATA_TYPE?.toLowerCase() === 'shopify' ? (
-                      <img
-                        id="mainImage"
-                        src={`${product.processedImages[0].url}&width=800`}
-                        alt={product.title}
-                        class="w-full h-full object-contain absolute inset-0"
-                        loading="eager"
-                        fetchpriority="high"
-                        width="800"
-                        height="800"
-                        decoding="async"
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 800px"
-                        srcset={`
-                          ${product.processedImages[0].url}&width=400 400w,
-                          ${product.processedImages[0].url}&width=800 800w,
-                          ${product.processedImages[0].url}&width=1200 1200w
-                        `}
-                      />
-                    ) : (
-                      <img
-                        id="mainImage"
-                        src={product.processedImages[0].url}
-                        alt={product.title}
-                        class="w-full h-full object-contain absolute inset-0"
-                        loading="eager"
-                        width="800"
-                        height="800"
-                      />
-                    )}
+          <main class={pageStyle.main}>
+            <div class={pageStyle.grid}>
+              <!-- Image Gallery: grid on desktop; when galleryLayoutMobile=carousel, carousel on mobile -->
+              <div
+                class={showCarouselOnMobile ? (pageStyle.galleryColumnWrap ?? pageStyle.imageGridWrap ?? pageStyle.galleryWrap) : (galleryLayout === 'grid' ? (pageStyle.imageGridWrap ?? pageStyle.galleryWrap) : pageStyle.galleryWrap)}
+                class:list={[galleryPosition === 'right' && 'lg:order-2']}
+                aria-label={galleryLayout === 'grid' ? 'Product images' : undefined}
+              >
+                {showCarouselOnMobile ? (
+                  <>
+                    {/* Mobile: carousel (prev/next); script binds to #mainImage, #prevImage, #nextImage */}
+                    <div class="lg:hidden w-full">
+                      <div class={pageStyle.galleryBox}>
+                        <div class="aspect-square relative">
+                          <div id="mainImageWrap" class={pageStyle.galleryImageWrap}>
+                            {import.meta.env.DATA_TYPE?.toLowerCase() === 'shopify' ? (
+                              <img
+                                id="mainImage"
+                                src={`${product.processedImages[0].url}&width=800`}
+                                alt={product.title}
+                                class={pageStyle.mainImage}
+                                loading="eager"
+                                fetchpriority="high"
+                                width="800"
+                                height="800"
+                                decoding="async"
+                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 800px"
+                                srcset={`
+                                  ${product.processedImages[0].url}&width=400 400w,
+                                  ${product.processedImages[0].url}&width=800 800w,
+                                  ${product.processedImages[0].url}&width=1200 1200w
+                                `}
+                              />
+                            ) : (
+                              <img
+                                id="mainImage"
+                                src={product.processedImages[0].url}
+                                alt={product.title}
+                                class={pageStyle.mainImage}
+                                loading="eager"
+                                width="800"
+                                height="800"
+                              />
+                            )}
+                          </div>
+                        </div>
+                        {showCounter && product.processedImages.length > 1 && (
+                          <div id="imageCounter" class={pageStyle.imageCounter}>
+                            1 / {product.processedImages.length}
+                          </div>
+                        )}
+                        {showArrows && (
+                          <>
+                            <button id="prevImage" class={pageStyle.navBtn} aria-label="Previous image">
+                              <ChevronLeft className="w-5 h-5" strokeWidth={2} />
+                            </button>
+                            <button id="nextImage" class={pageStyle.navBtnNext} aria-label="Next image">
+                              <ChevronRight className="w-5 h-5" strokeWidth={2} />
+                            </button>
+                          </>
+                        )}
+                      </div>
+                      {showThumbnails && (
+                        <div class={pageStyle.thumbStrip}>
+                          {product.processedImages.map((image, index) => (
+                            <button
+                              key={image.id}
+                              data-image-url={import.meta.env.DATA_TYPE?.toLowerCase() === 'shopify' ? `${image.url}&width=800` : image.url}
+                              data-image-srcset={import.meta.env.DATA_TYPE?.toLowerCase() === 'shopify' ? `${image.url}&width=400 400w, ${image.url}&width=800 800w, ${image.url}&width=1200 1200w` : undefined}
+                              data-image-id={image.id}
+                              data-image-index={index}
+                              class={`${pageStyle.thumbBtn} ${index === 0 ? pageStyle.thumbBtnActive : ''}`}
+                            >
+                              {import.meta.env.DATA_TYPE?.toLowerCase() === 'shopify' ? (
+                                <img src={`${image.url}&width=96`} alt={`${product.title} - View ${index + 1}`} class={pageStyle.thumbImg} loading={index === 0 ? "eager" : "lazy"} width="96" height="96" decoding="async" />
+                              ) : (
+                                <img src={image.url} alt={`${product.title} - View ${index + 1}`} class={pageStyle.thumbImg} loading={index === 0 ? "eager" : "lazy"} width="96" height="96" />
+                              )}
+                            </button>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                    {/* Desktop: grid */}
+                    <div data-grid-gallery class={`hidden lg:grid ${pageStyle.imageGridWrap ?? ''}`.trim()}>
+                      {product.processedImages.slice(0, 6).map((image, index) => (
+                        <div
+                          key={image.id}
+                          data-grid-image-item
+                          data-image-id={image.id}
+                          data-image-base-url={image.url}
+                          data-image-url={import.meta.env.DATA_TYPE?.toLowerCase() === 'shopify' ? `${image.url}&width=800` : image.url}
+                          data-image-srcset={import.meta.env.DATA_TYPE?.toLowerCase() === 'shopify' ? `${image.url}&width=400 400w, ${image.url}&width=800 800w, ${image.url}&width=1200 1200w` : ''}
+                          class={pageStyle.imageGridItem ?? 'relative w-full aspect-square overflow-hidden rounded-2xl border bg-neutral-50'}
+                        >
+                          {import.meta.env.DATA_TYPE?.toLowerCase() === 'shopify' ? (
+                            <img
+                              src={`${image.url}&width=800`}
+                              alt={`${product.title} - ${index + 1}`}
+                              class="w-full h-full object-contain"
+                              loading={index === 0 ? "eager" : "lazy"}
+                              fetchpriority={index === 0 ? "high" : undefined}
+                              width="800"
+                              height="800"
+                              decoding="async"
+                              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 800px"
+                              srcset={`
+                                ${image.url}&width=400 400w,
+                                ${image.url}&width=800 800w,
+                                ${image.url}&width=1200 1200w
+                              `}
+                            />
+                          ) : (
+                            <img
+                              src={image.url}
+                              alt={`${product.title} - ${index + 1}`}
+                              class="w-full h-full object-contain"
+                              loading={index === 0 ? "eager" : "lazy"}
+                              width="800"
+                              height="800"
+                            />
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                    <div class="hidden lg:block mt-3">
+                      <div data-grid-source-strip class={pageStyle.thumbStrip}>
+                        {product.processedImages.map((image, index) => (
+                          <button
+                            key={`grid-source-${image.id}`}
+                            type="button"
+                            data-grid-source
+                            data-image-id={image.id}
+                            data-image-base-url={image.url}
+                            data-image-url={import.meta.env.DATA_TYPE?.toLowerCase() === 'shopify' ? `${image.url}&width=800` : image.url}
+                            data-image-srcset={import.meta.env.DATA_TYPE?.toLowerCase() === 'shopify' ? `${image.url}&width=400 400w, ${image.url}&width=800 800w, ${image.url}&width=1200 1200w` : ''}
+                            class={`${pageStyle.thumbBtn} ${index === 0 ? pageStyle.thumbBtnActive : ''}`}
+                            aria-label={`Show image ${index + 1}`}
+                          >
+                            {import.meta.env.DATA_TYPE?.toLowerCase() === 'shopify' ? (
+                              <img src={`${image.url}&width=96`} alt={`${product.title} - View ${index + 1}`} class={pageStyle.thumbImg} loading={index === 0 ? "eager" : "lazy"} width="96" height="96" decoding="async" />
+                            ) : (
+                              <img src={image.url} alt={`${product.title} - View ${index + 1}`} class={pageStyle.thumbImg} loading={index === 0 ? "eager" : "lazy"} width="96" height="96" />
+                            )}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  </>
+                ) : galleryLayout === 'grid' ? (
+                  <div data-grid-gallery class={pageStyle.imageGridWrap ?? ''}>
+                  {product.processedImages.slice(0, 6).map((image, index) => (
+                      <div
+                        key={image.id}
+                        data-grid-image-item
+                        data-image-id={image.id}
+                        data-image-base-url={image.url}
+                        data-image-url={import.meta.env.DATA_TYPE?.toLowerCase() === 'shopify' ? `${image.url}&width=800` : image.url}
+                        data-image-srcset={import.meta.env.DATA_TYPE?.toLowerCase() === 'shopify' ? `${image.url}&width=400 400w, ${image.url}&width=800 800w, ${image.url}&width=1200 1200w` : ''}
+                        class={pageStyle.imageGridItem ?? 'relative w-full aspect-square overflow-hidden rounded-2xl border bg-neutral-50'}
+                      >
+                        {import.meta.env.DATA_TYPE?.toLowerCase() === 'shopify' ? (
+                          <img
+                            src={`${image.url}&width=800`}
+                            alt={`${product.title} - ${index + 1}`}
+                            class="w-full h-full object-contain"
+                            loading={index === 0 ? "eager" : "lazy"}
+                            fetchpriority={index === 0 ? "high" : undefined}
+                            width="800"
+                            height="800"
+                            decoding="async"
+                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 800px"
+                            srcset={`
+                              ${image.url}&width=400 400w,
+                              ${image.url}&width=800 800w,
+                              ${image.url}&width=1200 1200w
+                            `}
+                          />
+                        ) : (
+                          <img
+                            src={image.url}
+                            alt={`${product.title} - ${index + 1}`}
+                            class="w-full h-full object-contain"
+                            loading={index === 0 ? "eager" : "lazy"}
+                            width="800"
+                            height="800"
+                          />
+                        )}
+                      </div>
+                    ))}
                   </div>
-                  
-                  <!-- Navigation Arrows -->
-                  <button 
-                    id="prevImage" 
-                    class="absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/80 backdrop-blur-sm 
-                           shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200
-                           hover:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500
-                           disabled:opacity-30 disabled:cursor-not-allowed"
-                    aria-label="Previous image"
-                  >
-                    <ChevronLeft className="w-6 h-6 text-gray-700" />
-                  </button>
-                  
-                  <button 
-                    id="nextImage" 
-                    class="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/80 backdrop-blur-sm 
-                           shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200
-                           hover:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500
-                           disabled:opacity-30 disabled:cursor-not-allowed"
-                    aria-label="Next image"
-                  >
-                    <ChevronRight className="w-6 h-6 text-gray-700" />
-                  </button>
-                </div>
-
-                <!-- Thumbnails -->
-                <div class="flex gap-2 overflow-x-auto pb-2 snap-x scrollbar-hide">
-                  {product.processedImages.map((image, index) => (
-                    <button
-                      key={image.id}
-                      data-image-url={import.meta.env.DATA_TYPE?.toLowerCase() === 'shopify' 
-                        ? `${image.url}&width=800`
-                        : image.url
-                      }
-                      data-image-srcset={import.meta.env.DATA_TYPE?.toLowerCase() === 'shopify' 
-                        ? `
-                          ${image.url}&width=400 400w,
-                          ${image.url}&width=800 800w,
-                          ${image.url}&width=1200 1200w
-                        `
-                        : undefined
-                      }
-                      data-image-id={image.id}
-                      data-image-index={index}
-                      class={`relative flex-none aspect-square w-20 rounded-lg overflow-hidden snap-start
-                              ${index === 0 ? 'ring-2 ring-blue-500' : 'hover:ring-2 hover:ring-gray-300'}
-                              transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500`}
-                    >
+                  <div class="mt-3">
+                    <div data-grid-source-strip class={pageStyle.thumbStrip}>
+                      {product.processedImages.map((image, index) => (
+                        <button
+                          key={`grid-source-${image.id}`}
+                          type="button"
+                          data-grid-source
+                          data-image-id={image.id}
+                          data-image-base-url={image.url}
+                          data-image-url={import.meta.env.DATA_TYPE?.toLowerCase() === 'shopify' ? `${image.url}&width=800` : image.url}
+                          data-image-srcset={import.meta.env.DATA_TYPE?.toLowerCase() === 'shopify' ? `${image.url}&width=400 400w, ${image.url}&width=800 800w, ${image.url}&width=1200 1200w` : ''}
+                          class={`${pageStyle.thumbBtn} ${index === 0 ? pageStyle.thumbBtnActive : ''}`}
+                          aria-label={`Show image ${index + 1}`}
+                        >
+                          {import.meta.env.DATA_TYPE?.toLowerCase() === 'shopify' ? (
+                            <img src={`${image.url}&width=96`} alt={`${product.title} - View ${index + 1}`} class={pageStyle.thumbImg} loading={index === 0 ? "eager" : "lazy"} width="96" height="96" decoding="async" />
+                          ) : (
+                            <img src={image.url} alt={`${product.title} - View ${index + 1}`} class={pageStyle.thumbImg} loading={index === 0 ? "eager" : "lazy"} width="96" height="96" />
+                          )}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                ) : (
+                  <>
+                <div class={pageStyle.galleryBox}>
+                  <div class="aspect-square relative">
+                    <div id="mainImageWrap" class={pageStyle.galleryImageWrap}>
                       {import.meta.env.DATA_TYPE?.toLowerCase() === 'shopify' ? (
                         <img
-                          src={`${image.url}&width=80`}
-                          alt={`${product.title} - View ${index + 1}`}
-                          class="absolute inset-0 w-full h-full object-cover"
-                          loading={index === 0 ? "eager" : "lazy"}
-                          width="80"
-                          height="80"
+                          id="mainImage"
+                          src={`${product.processedImages[0].url}&width=800`}
+                          alt={product.title}
+                          class={pageStyle.mainImage}
+                          loading="eager"
+                          fetchpriority="high"
+                          width="800"
+                          height="800"
                           decoding="async"
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 800px"
+                          srcset={`
+                            ${product.processedImages[0].url}&width=400 400w,
+                            ${product.processedImages[0].url}&width=800 800w,
+                            ${product.processedImages[0].url}&width=1200 1200w
+                          `}
                         />
                       ) : (
                         <img
-                          src={image.url}
-                          alt={`${product.title} - View ${index + 1}`}
-                          class="absolute inset-0 w-full h-full object-cover"
-                          loading={index === 0 ? "eager" : "lazy"}
-                          width="80"
-                          height="80"
+                          id="mainImage"
+                          src={product.processedImages[0].url}
+                          alt={product.title}
+                          class={pageStyle.mainImage}
+                          loading="eager"
+                          width="800"
+                          height="800"
                         />
+                      )}
+                    </div>
+                  </div>
+                  {showCounter && product.processedImages.length > 1 && (
+                    <div id="imageCounter" class={pageStyle.imageCounter}>
+                      1 / {product.processedImages.length}
+                    </div>
+                  )}
+                  {showArrows && (
+                    <>
+                      <button id="prevImage" class={pageStyle.navBtn} aria-label="Previous image">
+                        <ChevronLeft className="w-5 h-5" strokeWidth={2} />
+                      </button>
+                      <button id="nextImage" class={pageStyle.navBtnNext} aria-label="Next image">
+                        <ChevronRight className="w-5 h-5" strokeWidth={2} />
+                      </button>
+                    </>
+                  )}
+                </div>
+                {showThumbnails && (
+                <div class={pageStyle.thumbStrip}>
+                  {product.processedImages.map((image, index) => (
+                    <button
+                      key={image.id}
+                      data-image-url={import.meta.env.DATA_TYPE?.toLowerCase() === 'shopify' ? `${image.url}&width=800` : image.url}
+                      data-image-srcset={import.meta.env.DATA_TYPE?.toLowerCase() === 'shopify' ? `${image.url}&width=400 400w, ${image.url}&width=800 800w, ${image.url}&width=1200 1200w` : undefined}
+                      data-image-id={image.id}
+                      data-image-index={index}
+                      class={`${pageStyle.thumbBtn} ${index === 0 ? pageStyle.thumbBtnActive : ''}`}
+                    >
+                      {import.meta.env.DATA_TYPE?.toLowerCase() === 'shopify' ? (
+                        <img src={`${image.url}&width=96`} alt={`${product.title} - View ${index + 1}`} class={pageStyle.thumbImg} loading={index === 0 ? "eager" : "lazy"} width="96" height="96" decoding="async" />
+                      ) : (
+                        <img src={image.url} alt={`${product.title} - View ${index + 1}`} class={pageStyle.thumbImg} loading={index === 0 ? "eager" : "lazy"} width="96" height="96" />
                       )}
                     </button>
                   ))}
                 </div>
+                )}
+                  </>
+                )}
               </div>
 
-              <!-- Product Info -->
-              <div class="space-y-8 relative" style="z-index: 50;">
+              <!-- Product Info (order swapped via layout.galleryPosition) -->
+              <div
+                class={pageStyle.productInfo}
+                class:list={[galleryPosition === 'right' && 'lg:order-1']}
+              >
                 <div>
-                  <h1 class={luxuryProductStyle.title}>
+                  <h1 class={luxuryProductStyle.title || pageStyle.productTitle}>
                     {product.title}
                   </h1>
                   {reviewStats && (
-                    <div class="flex items-center gap-2 text-sm text-gray-600">
+                    <div class={pageStyle.reviewRow}>
                       <div class="flex items-center">
-                        <div 
-                          class="flex text-yellow-400" 
+                        <div
+                          class={pageStyle.reviewStars} 
                           aria-label={`Rated ${reviewStats.averageRating.toFixed(1)} out of 5 stars`}
                         >
                           {Array.from({ length: 5 }).map((_, i) => {
@@ -570,21 +817,21 @@ const { luxuryProductStyle = {} } = styles;
                               <span 
                                 class={`transition-colors duration-200 ${
                                   ratingDiff >= 1 
-                                    ? 'text-yellow-400' 
+                                    ? 'text-neutral-600' 
                                     : ratingDiff > 0 
                                     ? 'relative inline-block'
-                                    : 'text-gray-300'
+                                    : 'text-neutral-300'
                                 }`}
                               >
                                 {ratingDiff > 0 && ratingDiff < 1 ? (
                                   <>
                                     <span 
-                                      class="absolute text-yellow-400" 
+                                      class="absolute text-neutral-600" 
                                       style={`clip-path: inset(0 ${100 - (ratingDiff * 100)}% 0 0);`}
                                     >
                                       ★
                                     </span>
-                                    <span class="text-gray-300">☆</span>
+                                    <span class="text-neutral-300">☆</span>
                                   </>
                                 ) : ratingDiff >= 1 ? '★' : '☆'}
                               </span>
@@ -593,10 +840,10 @@ const { luxuryProductStyle = {} } = styles;
                         </div>
                         <span class="ml-1">{reviewStats.averageRating.toFixed(1)}</span>
                       </div>
-                      <span>•</span>
-                      <a 
-                        href="#reviews" 
-                        class="hover:text-blue-500 transition-colors duration-200 group"
+                      <span>·</span>
+                      <a
+                        href="#reviews"
+                        class={pageStyle.reviewLink}
                       >
                         <span>{reviewStats.totalReviews}</span>
                         <span class="ml-1">
@@ -637,218 +884,80 @@ const { luxuryProductStyle = {} } = styles;
                   </script>
                 )}
 
-                <!-- Product Description - Enhanced with Modern Styling -->
-                <div class="bg-gradient-to-br from-gray-50 to-slate-50 rounded-2xl p-8 shadow-lg border border-gray-200">
-                  <div class="text-center mb-8">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-3 flex items-center justify-center gap-3">
-                      <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center">
-                        <Info className="w-6 h-6 text-white" />
-                      </div>
-                      Product Details
-                    </h2>
-                    <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 mx-auto rounded-full"></div>
-                  </div>
-                  
-                  <!-- Description Content -->
-                  <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                    <div class="relative">
-                      <div 
-                        id="description-content" 
-                        class="prose prose-sm max-w-none overflow-hidden transition-all duration-300"
-                        style="max-height: 200px;"
-                      >
-                        <div 
-                          set:html={product.descriptionHtml} 
-                          class="
-                            text-gray-700 
-                            [&>p]:mb-6 
-                            [&>p]:leading-relaxed 
-                            [&>p]:text-base
-
-                            [&>hr]:my-8
-                            [&>hr]:border-t
-                            [&>hr]:border-gray-200
-
-                            [&>h2]:text-xl 
-                            [&>h2]:font-bold 
-                            [&>h2]:text-gray-900 
-                            [&>h2]:mt-10 
-                            [&>h2]:mb-6
-                            [&>h2]:pb-2
-                            [&>h2]:border-b
-                            [&>h2]:border-gray-200
-
-                            [&>h3]:text-xl 
-                            [&>h3]:font-semibold 
-                            [&>h3]:text-gray-800 
-                            [&>h3]:mt-8 
-                            [&>h3]:mb-4
-                            [&>h3]:flex
-                            [&>h3]:items-center
-                            [&>h3]:gap-2
-
-                            [&>h4]:text-lg 
-                            [&>h4]:font-semibold 
-                            [&>h4]:text-gray-800 
-                            [&>h4]:mt-6 
-                            [&>h4]:mb-3
-
-                            [&>ul]:list-disc 
-                            [&>ul]:ml-6 
-                            [&>ul]:mb-6 
-                            [&>ul>li]:mb-2
-                            [&>ul>li]:text-gray-700
-
-                            [&>ol]:list-decimal 
-                            [&>ol]:ml-6 
-                            [&>ol]:mb-6 
-                            [&>ol>li]:mb-2
-                            [&>ol>li]:text-gray-700
-
-                            [&>strong]:font-bold
-                            [&>strong]:text-gray-900
-
-                            [&>em]:italic
-                            
-                            [&>a]:text-blue-600 
-                            [&>a]:underline 
-                            [&>a:hover]:text-blue-800
-
-                            [&>blockquote]:pl-4 
-                            [&>blockquote]:border-l-4 
-                            [&>blockquote]:border-gray-200 
-                            [&>blockquote]:italic
-                            [&>blockquote]:text-gray-600
-                            [&>blockquote]:my-6
-
-                            [&>img]:rounded-lg
-                            [&>img]:shadow-md
-                            [&>img]:my-4
-
-                            [&>table]:w-full
-                            [&>table]:border-collapse
-                            [&>table]:mb-6
-                            [&>table]:bg-white
-                            [&>table]:shadow-sm
-                            [&>table]:rounded-lg
-                            [&>table]:overflow-hidden
-                            [&>table]:border
-                            [&>table]:border-gray-200
-
-                            [&>table>thead]:bg-gray-50
-                            [&>table>thead>tr]:border-b
-                            [&>table>thead>tr]:border-gray-200
-
-                            [&>table>thead>tr>th]:px-6
-                            [&>table>thead>tr>th]:py-3
-                            [&>table>thead>tr>th]:text-left
-                            [&>table>thead>tr>th]:font-semibold
-                            [&>table>thead>tr>th]:text-gray-900
-                            [&>table>thead>tr>th]:text-sm
-                            [&>table>thead>tr>th]:uppercase
-                            [&>table>thead>tr>th]:tracking-wider
-
-                            [&>table>tbody>tr]:border-b
-                            [&>table>tbody>tr]:border-gray-200
-                            [&>table>tbody>tr]:last:border-b-0
-                            [&>table>tbody>tr:hover]:bg-gray-50
-
-                            [&>table>tbody>tr>td]:px-6
-                            [&>table>tbody>tr>td]:py-4
-                            [&>table>tbody>tr>td]:text-sm
-                            [&>table>tbody>tr>td]:text-gray-700
-                            [&>table>tbody>tr>td]:whitespace-normal
-
-                            [&>table>tbody>tr>td:first-child]:font-medium
-                            [&>table>tbody>tr>td:first-child]:text-gray-900
-
-                            [&>table>tfoot]:bg-gray-50
-                            [&>table>tfoot>tr]:border-t
-                            [&>table>tfoot>tr]:border-gray-200
-                            [&>table>tfoot>tr>td]:px-6
-                            [&>table>tfoot>tr>td]:py-3
-                            [&>table>tfoot>tr>td]:text-sm
-                            [&>table>tfoot>tr>td]:font-semibold
-
-                            [&>*:first-child]:mt-0
-                            [&>*:last-child]:mb-0
-                          "
-                        />
-                        <!-- Gradient Overlay -->
-                        <div 
-                          id="description-overlay"
-                          class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent"
-                        ></div>
-                      </div>
-                      
-                      <!-- Show More Button with Enhanced Styling -->
-                      <div class="mt-6 text-center">
-                        <button
-                          id="show-more-btn"
-                          class="inline-flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-gray-900 
-                                 bg-white/60 px-6 py-3 rounded-full border border-gray-200 hover:border-blue-200 
-                                 hover:bg-blue-50 transition-all duration-200 shadow-sm hover:shadow-md"
-                        >
-                          <span id="show-more-text">Show More</span>
-                          <svg id="show-more-icon" class="w-4 h-4 transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <!-- Bottom accent -->
-                  <div class="mt-6 text-center">
-                    <div class="inline-flex items-center gap-2 text-sm text-gray-600 bg-white/60 px-4 py-2 rounded-full border border-gray-200">
-                      <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                      </svg>
-                      <span>Detailed product information</span>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Key Features List -->
-                <KeyFeatures productTitle={product.title} language={lang} />
-
-                <!-- Product Specifications -->
-                <ProductSpecs productTitle={product.title} language={lang} />
-
-                <!-- Size Chart Component -->
-                <SizeChart 
-                  productTitle={product.title} 
-                  language={lang} 
-                  handle={handle}
-                  let:hasChartData
-                />
-
-                <!-- Reviews Component -->
-                <Reviews language={lang} />
-
-                <!-- Product FAQ Component -->
-                <ProductFAQ productTitle={product.title} language={lang} />
+                <!-- Dynamic sections (layout.sectionsOrder) -->
+                {rightColumnOrder.map((sectionId) => {
+                  if (sectionId === 'description') {
+                    return (
+                      <section class={pageStyle.descriptionSection}>
+                        <div class={pageStyle.descriptionHeader}>
+                          <h2 class={pageStyle.descriptionHeaderTitle}>
+                            <span class={pageStyle.descriptionHeaderIcon} aria-hidden="true">
+                              <Info className="w-4 h-4 text-neutral-700" strokeWidth={2} />
+                            </span>
+                            Product Details
+                          </h2>
+                        </div>
+                        <div class={pageStyle.descriptionContentWrap}>
+                          <div class={pageStyle.descriptionContentInner}>
+                            <div class="relative p-6">
+                              <div id="description-content" class={pageStyle.descriptionContent} style="max-height: 200px;">
+                                <div set:html={product.descriptionHtml} class={descriptionProseClass} />
+                                <div id="description-overlay" class={pageStyle.descriptionOverlay}></div>
+                              </div>
+                              <div class={pageStyle.showMoreWrap}>
+                                <button id="show-more-btn" type="button" class={pageStyle.showMoreBtn} aria-expanded="false">
+                                  <span id="show-more-text">Show More</span>
+                                  <svg id="show-more-icon" class="w-4 h-4 transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                  </svg>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class={pageStyle.detailInfoWrap}>
+                          <div class={pageStyle.detailInfoBox}>
+                            <span class={pageStyle.detailInfoIcon} aria-hidden="true">
+                              <svg class="w-5 h-5 text-neutral-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                              </svg>
+                            </span>
+                            <span class={pageStyle.detailInfoText}>Detailed product information</span>
+                          </div>
+                        </div>
+                      </section>
+                    );
+                  }
+                  if (sectionId === 'key_features') return <KeyFeatures productTitle={product.title} language={lang} />;
+                  if (sectionId === 'product_specs') return <ProductSpecs productTitle={product.title} language={lang} />;
+                  if (sectionId === 'size_chart') return <SizeChart productTitle={product.title} language={lang} handle={handle} let:hasChartData />;
+                  if (sectionId === 'reviews') return <Reviews language={lang} />;
+                  if (sectionId === 'product_faq') return <ProductFAQ productTitle={product.title} language={lang} />;
+                  return null;
+                })}
               </div>
             </div>
 
-            <!-- Additional Product Information Sections -->
-            <div class="mt-16 space-y-8">
-              <!-- Shipping Information (only for physical products) -->
-              <ShippingInfo />
-              
-              <!-- Product Warranty (only for physical products) -->
-              <ProductWarranty />
-              
-              <!-- Care Instructions (only for physical products) -->
-              <CareInstructions />
-              
-              <!-- Recently Viewed Products -->
-              <RecentlyViewed />
+            <!-- Additional sections (layout.sectionsOrder) -->
+            <div class={pageStyle.additionalWrap}>
+              {additionalOrder.map((sectionId) => {
+                if (sectionId === 'key_features') return <KeyFeatures productTitle={product.title} language={lang} />;
+                if (sectionId === 'product_specs') return <ProductSpecs productTitle={product.title} language={lang} />;
+                if (sectionId === 'size_chart') return <SizeChart productTitle={product.title} language={lang} handle={handle} let:hasChartData />;
+                if (sectionId === 'reviews') return <Reviews language={lang} />;
+                if (sectionId === 'product_faq') return <ProductFAQ productTitle={product.title} language={lang} />;
+                if (sectionId === 'shipping_info') return <ShippingInfo />;
+                if (sectionId === 'product_warranty') return <ProductWarranty />;
+                if (sectionId === 'care_instructions') return <CareInstructions />;
+                if (sectionId === 'recently_viewed') return <RecentlyViewed />;
+                return null;
+              })}
             </div>
 
-            <!-- Related Products -->
-            <div class="mt-16 border-t pt-16">
-              <h2 class={luxuryProductStyle.related?.title}>
+            <!-- Related Products (layout.sectionsOrder) -->
+            {showRelated && (
+            <div class={pageStyle.relatedSection}>
+              <h2 class={luxuryProductStyle.related?.title || pageStyle.relatedTitle}>
                 Related Products
               </h2>
               
@@ -864,44 +973,53 @@ const { luxuryProductStyle = {} } = styles;
                 </script>
               )}
 
-              <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+              <div class={pageStyle.relatedGrid}>
                 {import.meta.env.DATA_TYPE?.toLowerCase() === 'shopify' ? (
                   relatedProducts.map((product) => {
-                    console.log('Shopify Product:', product);
+                    const firstVariant = product.node.variants?.edges?.[0]?.node;
+                    const price = product.node.priceRange?.minVariantPrice || firstVariant?.price;
+                    const compareAtPrice = firstVariant?.compareAtPrice;
                     return (
-                      <ProductCard
+                      <ReactiveProductCard
                         client:load
-                        id={product.node.id}
-                        title={product.node.title}
-                        price={parseFloat(product.node.priceRange.minVariantPrice.amount)}
-                        image={product.node.images.edges[0]?.node.url}
-                        imageAlt={product.node.title}
-                        description={product.node.description}
-                        handle={product.node.handle}
+                        product={{
+                          id: product.node.id,
+                          title: product.node.title,
+                          handle: product.node.handle,
+                          price: price ? { amount: price.amount, currencyCode: price.currencyCode || 'USD' } : { amount: '0', currencyCode: 'USD' },
+                          compareAtPrice: compareAtPrice ? { amount: compareAtPrice.amount, currencyCode: compareAtPrice.currencyCode || 'USD' } : undefined,
+                          image: product.node.images?.edges?.[0]?.node ? { url: product.node.images.edges[0].node.url, altText: product.node.title } : undefined
+                        }}
                         lang={lang}
+                        cardStyles={relatedCardStyles}
                       />
                     );
                   })
                 ) : (
                   relatedProducts.map((product) => {
-                    console.log('WooCommerce Product:', product);
+                    const firstVariant = product.node.variants?.edges?.[0]?.node;
+                    const price = product.node.priceRange?.minVariantPrice || firstVariant?.price;
+                    const compareAtPrice = firstVariant?.compareAtPrice;
                     return (
-                      <ProductCard
+                      <ReactiveProductCard
                         client:load
-                        id={product.node.id}
-                        title={product.node.title}
-                        price={parseFloat(product.node.priceRange.minVariantPrice.amount)}
-                        image={product.node.images.edges[0]?.node.url}
-                        imageAlt={product.node.title}
-                        description={stripHtml(product.node.description)}
-                        handle={product.node.handle}
+                        product={{
+                          id: product.node.id,
+                          title: product.node.title,
+                          handle: product.node.handle,
+                          price: price ? { amount: price.amount, currencyCode: price.currencyCode || 'USD' } : { amount: '0', currencyCode: 'USD' },
+                          compareAtPrice: compareAtPrice ? { amount: compareAtPrice.amount, currencyCode: compareAtPrice.currencyCode || 'USD' } : undefined,
+                          image: product.node.images?.edges?.[0]?.node ? { url: product.node.images.edges[0].node.url, altText: product.node.title } : undefined
+                        }}
                         lang={lang}
+                        cardStyles={relatedCardStyles}
                       />
                     );
                   })
                 )}
               </div>
             </div>
+            )}
           </main>
         </div>
         
@@ -1030,18 +1148,21 @@ const { luxuryProductStyle = {} } = styles;
     }
 
     init() {
-      if (!this.mainImage || !this.prevButton || !this.nextButton) return;
+      if (!this.mainImage) return;
 
-      // Add click handlers for navigation buttons
-      this.prevButton.addEventListener('click', (e) => {
-        e.preventDefault();
-        this.navigate('prev');
-      });
-      
-      this.nextButton.addEventListener('click', (e) => {
-        e.preventDefault();
-        this.navigate('next');
-      });
+      // Add click handlers for navigation buttons (optional per layout.gallery.showArrows)
+      if (this.prevButton) {
+        this.prevButton.addEventListener('click', (e) => {
+          e.preventDefault();
+          this.navigate('prev');
+        });
+      }
+      if (this.nextButton) {
+        this.nextButton.addEventListener('click', (e) => {
+          e.preventDefault();
+          this.navigate('next');
+        });
+      }
 
       // Add keyboard navigation
       document.addEventListener('keydown', (e) => {
@@ -1110,16 +1231,37 @@ const { luxuryProductStyle = {} } = styles;
       const thumb = this.thumbnails[index];
       if (!thumb) return;
 
-      // Update main image with responsive attributes
-      this.mainImage.src = thumb.dataset.imageUrl || '';
-      this.mainImage.srcset = thumb.dataset.imageSrcset || '';
-      this.mainImage.alt = thumb.querySelector('img')?.alt || '';
+      const wrap = document.getElementById('mainImageWrap');
+      if (wrap) {
+        wrap.style.opacity = '0';
+        setTimeout(() => {
+          this.mainImage!.src = thumb.dataset.imageUrl || '';
+          this.mainImage!.srcset = thumb.dataset.imageSrcset || '';
+          this.mainImage!.alt = thumb.querySelector('img')?.alt || '';
+          wrap.style.opacity = '1';
+        }, 150);
+      } else {
+        this.mainImage.src = thumb.dataset.imageUrl || '';
+        this.mainImage.srcset = thumb.dataset.imageSrcset || '';
+        this.mainImage.alt = thumb.querySelector('img')?.alt || '';
+      }
 
-      // Update thumbnail states
+      // Update thumbnail states (minimal: neutral ring)
       this.thumbnails.forEach((t, i) => {
         t.classList.toggle('ring-2', i === index);
-        t.classList.toggle('ring-blue-500', i === index);
+        t.classList.toggle('ring-neutral-900', i === index);
+        t.classList.toggle('ring-offset-2', i === index);
+        t.classList.toggle('border-neutral-900', i === index);
+        if (i === index) {
+          t.classList.remove('border-neutral-200');
+        } else {
+          t.classList.add('border-neutral-200');
+        }
       });
+
+      // Update image counter
+      const counter = document.getElementById('imageCounter');
+      if (counter) counter.textContent = `${index + 1} / ${this.thumbnails.length}`;
 
       this.currentIndex = index;
       this.updateNavigationButtons();
@@ -1136,6 +1278,98 @@ const { luxuryProductStyle = {} } = styles;
   // Initialize gallery
   new ImageGallery();
 
+  const normalizeUrl = (url: string) => {
+    try {
+      const u = new URL(url, window.location.origin);
+      return `${u.origin}${u.pathname}`;
+    } catch {
+      return url.split('?')[0];
+    }
+  };
+
+  const updateGridSourceActiveState = (activeId?: string, activeBaseUrl?: string) => {
+    const sourceButtons = document.querySelectorAll('[data-grid-source]') as NodeListOf<HTMLButtonElement>;
+    sourceButtons.forEach((btn) => {
+      const isActive = (activeId && btn.dataset.imageId === activeId) || (!activeId && activeBaseUrl && normalizeUrl(btn.dataset.imageBaseUrl || '') === normalizeUrl(activeBaseUrl));
+      btn.classList.toggle('ring-2', !!isActive);
+      btn.classList.toggle('ring-neutral-900', !!isActive);
+      btn.classList.toggle('ring-offset-2', !!isActive);
+      btn.classList.toggle('border-neutral-900', !!isActive);
+      if (isActive) {
+        btn.classList.remove('border-neutral-200');
+      } else {
+        btn.classList.add('border-neutral-200');
+      }
+    });
+  };
+
+  const promoteGridImage = (imageId?: string, imageBaseUrl?: string) => {
+    const gridGalleries = document.querySelectorAll('[data-grid-gallery]');
+    gridGalleries.forEach((gallery) => {
+      const items = Array.from(gallery.querySelectorAll('[data-grid-image-item]')) as HTMLElement[];
+      const match = items.find((item) => {
+        if (imageId && item.dataset.imageId === imageId) return true;
+        if (!imageBaseUrl) return false;
+        return normalizeUrl(item.dataset.imageBaseUrl || '') === normalizeUrl(imageBaseUrl);
+      });
+
+      if (match) {
+        gallery.insertBefore(match, gallery.firstElementChild);
+      } else if (imageId || imageBaseUrl) {
+        // Selected image may be outside top-6 grid: inject selected image into first slot.
+        const sourceButton = Array.from(document.querySelectorAll('[data-grid-source]')).find((btn) => {
+          const b = btn as HTMLButtonElement;
+          if (imageId && b.dataset.imageId === imageId) return true;
+          if (!imageBaseUrl) return false;
+          return normalizeUrl(b.dataset.imageBaseUrl || '') === normalizeUrl(imageBaseUrl);
+        }) as HTMLButtonElement | undefined;
+
+        const firstItem = gallery.querySelector('[data-grid-image-item]') as HTMLElement | null;
+        const img = firstItem?.querySelector('img') as HTMLImageElement | null;
+        if (sourceButton && firstItem && img) {
+          firstItem.dataset.imageId = sourceButton.dataset.imageId || firstItem.dataset.imageId;
+          firstItem.dataset.imageBaseUrl = sourceButton.dataset.imageBaseUrl || firstItem.dataset.imageBaseUrl;
+          firstItem.dataset.imageUrl = sourceButton.dataset.imageUrl || firstItem.dataset.imageUrl;
+          firstItem.dataset.imageSrcset = sourceButton.dataset.imageSrcset || firstItem.dataset.imageSrcset;
+          img.src = sourceButton.dataset.imageUrl || img.src;
+          if (sourceButton.dataset.imageSrcset) img.srcset = sourceButton.dataset.imageSrcset;
+          const srcThumb = sourceButton.querySelector('img');
+          if (srcThumb?.alt) img.alt = srcThumb.alt;
+        }
+      }
+
+      // Keep loading priority aligned with the new first image.
+      const orderedItems = Array.from(gallery.querySelectorAll('[data-grid-image-item]')) as HTMLElement[];
+      orderedItems.forEach((item, index) => {
+        const img = item.querySelector('img');
+        if (!img) return;
+        if (index === 0) {
+          img.setAttribute('loading', 'eager');
+          img.setAttribute('fetchpriority', 'high');
+        } else {
+          img.setAttribute('loading', 'lazy');
+          img.removeAttribute('fetchpriority');
+        }
+      });
+    });
+
+    updateGridSourceActiveState(imageId, imageBaseUrl);
+  };
+
+  const initGridSourceCarousel = () => {
+    const sourceButtons = document.querySelectorAll('[data-grid-source]') as NodeListOf<HTMLButtonElement>;
+    sourceButtons.forEach((button) => {
+      button.addEventListener('click', (e) => {
+        e.preventDefault();
+        const id = button.dataset.imageId;
+        const base = button.dataset.imageBaseUrl;
+        promoteGridImage(id, base);
+      });
+    });
+  };
+
+  initGridSourceCarousel();
+
   // Listen for variant changes
   window.addEventListener('variantImageChange', (event: CustomEvent) => {
     const { imageUrl, imageId } = event.detail;
@@ -1149,6 +1383,10 @@ const { luxuryProductStyle = {} } = styles;
         ${imageUrl}&width=1200 1200w
       `;
     }
+
+    // In grid gallery mode, move selected variant image tile to first position.
+    if (!imageId && !imageUrl) return;
+    promoteGridImage(imageId, imageUrl);
   });
 </script>
 
@@ -1160,6 +1398,10 @@ const { luxuryProductStyle = {} } = styles;
   }
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
+  }
+  /* Gallery main image fade */
+  #mainImageWrap {
+    transition: opacity 0.25s ease-out;
   }
 </style>
 
@@ -1205,23 +1447,31 @@ const { luxuryProductStyle = {} } = styles;
     to { clip-path: inset(0 0 0 0); }
   }
   
-  .text-yellow-400 {
+  .text-neutral-600 {
     animation: starFill 0.3s ease-out forwards;
   }
 </style>
 
 <style>
+  .product-details-section .prose {
+    --tw-prose-body: theme('colors.neutral.700');
+    --tw-prose-headings: theme('colors.neutral.900');
+  }
+
   #description-content {
     opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateY(12px);
+    transition: opacity 0.4s ease, transform 0.4s ease, max-height 0.35s ease-out;
   }
 
   #show-more-btn:hover #show-more-icon {
     transform: translateY(2px);
   }
 
-  /* Add specific transition for max-height */
+  #show-more-btn[aria-expanded="true"] #show-more-icon {
+    transform: rotate(180deg);
+  }
+
   .expanded {
     max-height: none !important;
   }
@@ -1296,3 +1546,54 @@ const { luxuryProductStyle = {} } = styles;
   // Re-initialize on view transitions
   document.addEventListener('astro:page-load', initializeShowMore);
 </script>
+
+<style is:global>
+  /* Inspired by minimalist chic: yellow/gold Add to Cart, dark grey Buy Now */
+  .product-page-minimal button.bg-gray-900 {
+    background-color: #E5B318 !important;
+    color: #0a0a0a !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+  .product-page-minimal button.bg-gray-900:hover:not(:disabled) {
+    background-color: #d4a015 !important;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+  }
+  .product-page-minimal button.bg-blue-600,
+  .product-page-minimal button.bg-blue-500,
+  .product-page-minimal a.bg-blue-600 {
+    background-color: #262626 !important;
+    color: #fff !important;
+  }
+  .product-page-minimal button.bg-blue-600:hover:not(:disabled),
+  .product-page-minimal button.bg-blue-500:hover:not(:disabled) {
+    background-color: #171717 !important;
+  }
+  .product-page-minimal .ring-blue-500 { --tw-ring-color: #262626 !important; }
+  .product-page-minimal .text-blue-600 { color: #262626 !important; }
+  .product-page-minimal .text-green-600 { color: #525252 !important; }
+  .product-page-minimal .bg-green-100 { background-color: #f5f5f5 !important; }
+  .product-page-minimal .text-green-800 { color: #404040 !important; }
+  /* Size/option pills: selected = dark grey, unselected = light grey */
+  .product-page-minimal button.bg-blue-500.rounded-full { background-color: #262626 !important; color: #fff !important; }
+
+  /* Dark theme: price, compare price, and labels in AddToCart - all light for readability */
+  #product-wrapper[data-theme="dark"] .text-neutral-900 { color: rgb(255 255 255) !important; }
+  #product-wrapper[data-theme="dark"] .text-neutral-500 { color: rgb(229 229 229) !important; }
+  #product-wrapper[data-theme="dark"] .text-neutral-600 { color: rgb(245 245 245) !important; }
+  #product-wrapper[data-theme="dark"] .text-neutral-800 { color: rgb(255 255 255) !important; }
+
+  /* Dark theme: Show More button - force visible */
+  #product-wrapper[data-theme="dark"] #show-more-btn {
+    color: rgb(255 255 255) !important;
+    background-color: rgba(255 255 255 0.2) !important;
+    border-color: rgba(255 255 255 0.35) !important;
+  }
+  #product-wrapper[data-theme="dark"] #show-more-btn:hover {
+    color: rgb(255 255 255) !important;
+    background-color: rgba(255 255 255 0.28) !important;
+    border-color: rgba(255 255 255 0.45) !important;
+  }
+  #product-wrapper[data-theme="dark"] #show-more-btn svg {
+    color: inherit;
+  }
+</style>

@@ -1,0 +1,150 @@
+{
+  "page": {
+    "wrapper": "min-h-screen bg-[#0a0a0a]",
+    "main": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20",
+    "breadcrumbNav": "mt-6 mb-8 text-xs sm:text-sm text-gray-400 uppercase tracking-wide",
+    "breadcrumbList": "flex items-center gap-2",
+    "breadcrumbLink": "hover:text-white text-gray-400 transition-colors",
+    "breadcrumbCurrent": "text-white font-medium",
+    "header": "text-center mb-12 sm:mb-14",
+    "headerImageWrap": "relative h-[240px] sm:h-[280px] mb-6 overflow-hidden rounded-xl border border-white/10",
+    "headerImage": "w-full h-full object-cover object-center",
+    "headerOverlay": "absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent",
+    "headerTitleOnImage": "absolute bottom-5 left-0 right-0 text-2xl sm:text-3xl font-semibold text-white px-4 drop-shadow-lg",
+    "headerTitleNoImage": "text-2xl sm:text-3xl font-semibold text-white mb-2",
+    "headerDescription": "text-base text-gray-300 max-w-xl mx-auto leading-relaxed",
+    "mobileFilterWrap": "lg:hidden mb-5",
+    "mobileFilterBtn": "w-full flex items-center justify-center gap-2 px-4 py-3 bg-white/10 border border-white/20 text-white text-sm font-medium rounded-lg hover:bg-white/15 transition-colors backdrop-blur-xl",
+    "contentWrap": "flex flex-col lg:flex-row gap-8",
+    "overlay": "fixed inset-0 bg-black/70 backdrop-blur-sm z-40 hidden lg:hidden",
+    "sidebar": "w-full lg:w-72 flex-shrink-0 fixed lg:relative top-0 left-0 h-full lg:h-auto bg-[#0f0f0f]/95 backdrop-blur-xl border-r border-white/10 z-40 lg:z-auto transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out lg:block",
+    "sidebarInner": "p-4 lg:py-0 lg:pr-6",
+    "sidebarTitleRow": "flex items-center justify-between mb-4 lg:hidden",
+    "sidebarTitle": "text-sm font-semibold uppercase tracking-wide text-white",
+    "closeBtn": "p-2 hover:bg-white/10 rounded-lg transition-colors text-gray-300 hover:text-white",
+    "filterSidebarRoot": "bg-white/5 rounded-lg border border-white/10 p-6 backdrop-blur-xl",
+    "sortDropdownSelect": "appearance-none bg-white/10 border border-white/20 rounded-lg px-4 py-2 pr-8 text-sm font-medium text-gray-200 hover:border-white/30 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors cursor-pointer backdrop-blur-xl",
+    "sortDropdownLabel": "text-sm font-medium text-gray-300",
+    "mainContent": "flex-1 min-w-0",
+    "topBar": "flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-6",
+    "countText": "text-xs sm:text-sm text-gray-400 uppercase tracking-wide",
+    "viewToggleWrap": "flex items-center gap-2 w-full sm:w-auto",
+    "viewToggleGroup": "flex items-center gap-0.5 rounded-lg border border-white/20 p-0.5 bg-white/5",
+    "gridBtnActive": "p-2 rounded-md bg-white/10 text-white",
+    "listBtn": "p-2 rounded-md text-gray-500 hover:text-gray-300",
+    "mobileCount": "text-xs text-gray-400 uppercase tracking-wide mb-4 sm:hidden",
+    "productGrid": "grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 lg:gap-6 items-start collection-product-grid",
+    "loadMoreWrap": "text-center mt-12",
+    "loadMoreText": "mb-4 text-sm text-gray-400",
+    "loadMoreBtn": "bg-white/10 border border-white/20 text-white px-6 py-3 rounded-lg hover:bg-white/15 transition-colors font-medium backdrop-blur-xl",
+    "emptyWrap": "text-center py-16 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-xl",
+    "emptyContent": "max-w-md mx-auto",
+    "emptyTitle": "text-2xl font-semibold text-white mb-2",
+    "emptyDescription": "text-gray-400"
+  },
+  "container": {
+    "maxWidth": "min-h-screen bg-[#0a0a0a]",
+    "margin": "max-w-7xl mx-auto",
+    "padding": "px-4 pt-24 pb-16",
+    "background": "bg-[#0a0a0a]",
+    "textColor": "text-gray-100"
+  },
+  "breadcrumb": {
+    "container": "flex mb-8 text-sm",
+    "list": "flex items-center space-x-2",
+    "homeLink": "text-gray-400 hover:text-white",
+    "separator": "text-gray-500",
+    "currentPage": "text-white font-medium"
+  },
+  "header": {
+    "background": "bg-[#0a0a0a]",
+    "padding": "py-16",
+    "textAlign": "text-center",
+    "container": "text-center mb-16 relative overflow-hidden rounded-2xl border border-white/10",
+    "imageOverlay": "absolute inset-0 z-0 bg-black/50",
+    "image": "w-full h-full object-cover opacity-60",
+    "contentContainer": "relative z-10 py-16 px-4"
+  },
+  "title": {
+    "fontSize": "text-4xl",
+    "fontWeight": "font-bold",
+    "color": "text-white",
+    "textShadow": "drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)]",
+    "margin": "mb-4"
+  },
+  "subtitle": {
+    "fontSize": "text-lg",
+    "color": "text-gray-300",
+    "maxWidth": "max-w-2xl",
+    "margin": "mx-auto"
+  },
+  "grid": {
+    "columns": "grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4",
+    "gap": "gap-6",
+    "background": "bg-white/5",
+    "padding": "p-4",
+    "container": "mb-12 rounded-xl border border-white/10 backdrop-blur-xl"
+  },
+  "card": {
+    "container": "block",
+    "productCard": {
+      "background": "bg-white/5 backdrop-blur-xl",
+      "border": "rounded-xl border border-white/10",
+      "shadow": "hover:shadow-[0_0_30px_rgba(139,92,246,0.15)]",
+      "transition": "transition-all duration-300"
+    },
+    "imageContainer": {
+      "aspectRatio": "aspect-[3/4]",
+      "background": "bg-white/5",
+      "overflow": "overflow-hidden",
+      "position": "relative"
+    },
+    "image": {
+      "sizing": "w-full h-full object-contain p-4",
+      "hover": "group-hover:scale-105",
+      "transition": "transition-transform duration-300"
+    },
+    "noImagePlaceholder": "w-full h-full flex items-center justify-center text-gray-500",
+    "content": "p-4",
+    "title": {
+      "fontSize": "text-lg",
+      "fontWeight": "font-medium",
+      "color": "text-gray-100",
+      "hover": "group-hover:text-purple-400",
+      "truncate": "truncate mb-1"
+    },
+    "price": {
+      "fontSize": "text-sm",
+      "fontWeight": "font-semibold",
+      "color": "text-gray-200"
+    }
+  },
+  "quickAddButton": {
+    "base": "absolute bottom-2 left-2 right-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white py-2 rounded-lg text-sm font-medium",
+    "hover": "hover:from-purple-500 hover:to-cyan-500",
+    "visibility": "opacity-0 group-hover:opacity-100",
+    "transition": "transition-opacity duration-300",
+    "focus": "focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50"
+  },
+  "pagination": {
+    "container": "flex justify-between items-center bg-white/5 rounded-lg border border-white/10 p-4 backdrop-blur-xl",
+    "button": "flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors group text-gray-300 hover:text-white",
+    "text": "text-sm font-medium text-gray-400"
+  },
+  "emptyState": {
+    "background": "bg-white/5",
+    "padding": "py-16",
+    "textAlign": "text-center",
+    "borderRadius": "rounded-2xl",
+    "shadow": "border border-white/10",
+    "container": "max-w-md mx-auto",
+    "title": "text-2xl font-semibold text-white mb-2",
+    "description": "text-gray-400"
+  },
+  "footer": {
+    "textAlign": "text-center",
+    "textSize": "text-sm",
+    "textColor": "text-gray-500",
+    "margin": "mt-8 pt-4"
+  }
+}

@@ -94,51 +94,106 @@ const hasChartData = shouldShowSizeChart(handle || '', productType);
 // Only proceed if we have content for this product type
 const chartContent = productType && content.charts[productType];
 
+const theme = import.meta.env.THEME || 'default';
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'default';
+const defaultStyles = {
+  wrapper: 'bg-neutral-50 rounded-2xl p-8 border border-neutral-200',
+  headerWrap: 'mb-8',
+  title: 'text-sm font-medium uppercase tracking-widest text-neutral-500 mb-2 flex items-center gap-2',
+  titleIconWrap: 'w-8 h-8 bg-neutral-200 flex items-center justify-center',
+  titleIcon: 'h-4 w-4 text-neutral-600',
+  titleDivider: 'w-12 h-px bg-neutral-300',
+  tableCard: 'bg-white rounded-xl border border-neutral-200 overflow-hidden',
+  tableScroll: 'overflow-x-auto',
+  table: {
+    table: 'min-w-full text-sm',
+    header: 'bg-neutral-100 border-b border-neutral-200',
+    headerCell: 'px-5 py-3.5 text-left font-medium text-neutral-600 uppercase tracking-wider',
+    body: 'divide-y divide-neutral-200',
+    row: 'hover:bg-neutral-50/50 transition-colors',
+    cell: 'px-5 py-4 whitespace-nowrap text-neutral-600',
+    firstCell: 'font-medium text-neutral-900'
+  },
+  tips: {
+    wrapper: 'mt-6 bg-neutral-50 rounded-xl p-6 border border-neutral-200',
+    inner: 'flex items-start gap-4',
+    iconWrap: 'flex-shrink-0 w-8 h-8 bg-neutral-200 rounded-full flex items-center justify-center',
+    icon: 'w-4 h-4 text-neutral-600',
+    contentWrap: 'flex-1',
+    title: 'text-sm font-medium text-neutral-900 mb-3',
+    listWrap: 'space-y-2',
+    listRow: 'flex items-start gap-3',
+    listIconWrap: 'flex-shrink-0 w-5 h-5 bg-neutral-200 rounded-full flex items-center justify-center mt-0.5',
+    listIcon: 'w-3 h-3 text-neutral-600',
+    listText: 'text-sm text-neutral-600 leading-relaxed'
+  },
+  footerWrap: 'mt-6 text-center',
+  footerInner: 'inline-flex items-center gap-2 text-sm text-neutral-500 bg-white px-4 py-2 border border-neutral-200',
+  footerIcon: 'w-4 h-4 text-neutral-400'
+};
+
+let styles = defaultStyles;
+try {
+  const { luxuryComponentStyle } = await import(`@websites/${siteName}/themes/${theme}/styles/components/luxury.mjs`);
+  if (luxuryComponentStyle?.sizeChart) {
+    styles = {
+      ...defaultStyles,
+      ...luxuryComponentStyle.sizeChart,
+      table: { ...defaultStyles.table, ...(luxuryComponentStyle.sizeChart.table || {}) },
+      tips: { ...defaultStyles.tips, ...(luxuryComponentStyle.sizeChart.tips || {}) }
+    };
+  }
+} catch {
+  try {
+    const { luxuryComponentStyle } = await import(`@themes/${theme}/styles/components/luxury.mjs`);
+    if (luxuryComponentStyle?.sizeChart) {
+      styles = {
+        ...defaultStyles,
+        ...luxuryComponentStyle.sizeChart,
+        table: { ...defaultStyles.table, ...(luxuryComponentStyle.sizeChart.table || {}) },
+        tips: { ...defaultStyles.tips, ...(luxuryComponentStyle.sizeChart.tips || {}) }
+      };
+    }
+  } catch (err) {
+    console.error('Failed to load component styles:', err);
+  }
+}
+
 // Export hasChartData for use in parent components
 Astro.props.hasChartData = hasChartData;
 ---
 
 {chartContent && hasChartData && (
-  <div id="size-chart" class="bg-gradient-to-br from-slate-50 to-gray-50 rounded-2xl p-8 shadow-lg border border-gray-200">
-    <!-- Header Section -->
-    <div class="text-center mb-8">
-      <h2 class="text-3xl font-bold text-gray-900 mb-3 flex items-center justify-center gap-3">
-        <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <div id="size-chart" class={styles.wrapper}>
+    <div class={styles.headerWrap}>
+      <h2 class={styles.title}>
+        <span class={styles.titleIconWrap}>
+          <svg xmlns="http://www.w3.org/2000/svg" class={styles.titleIcon} fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
           </svg>
-        </div>
+        </span>
         {content.title} {productType.charAt(0).toUpperCase() + productType.slice(1)}
       </h2>
-      <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 mx-auto rounded-full"></div>
+      <div class={styles.titleDivider}></div>
     </div>
     
-    <!-- Size Chart Table -->
-    <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
-      <div class="overflow-x-auto">
-        <table class="min-w-full">
-          <thead class="bg-gradient-to-r from-gray-50 to-slate-50">
+    <div class={styles.tableCard}>
+      <div class={styles.tableScroll}>
+        <table class={styles.table.table}>
+          <thead class={styles.table.header}>
             <tr>
-              {chartContent.headers.map((header, index) => (
-                <th scope="col" class={`px-6 py-4 text-left text-sm font-semibold text-gray-700 uppercase tracking-wider ${
-                  index === 0 ? 'bg-gradient-to-r from-blue-50 to-indigo-50' : ''
-                }`}>
+              {chartContent.headers.map((header) => (
+                <th scope="col" class={styles.table.headerCell}>
                   {header}
                 </th>
               ))}
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-100">
+          <tbody class={styles.table.body}>
             {commonSizes[productType].map((sizeRow, rowIndex) => (
-              <tr class={`group hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 transition-all duration-300 ${
-                rowIndex % 2 === 0 ? 'bg-white' : 'bg-gray-50/30'
-              }`}>
+              <tr class={styles.table.row}>
                 {sizeRow.map((cell, cellIndex) => (
-                  <td class={`px-6 py-4 whitespace-nowrap text-sm transition-colors duration-300 ${
-                    cellIndex === 0 
-                      ? 'font-semibold text-gray-900 bg-gradient-to-r from-blue-50 to-indigo-50 group-hover:from-blue-100 group-hover:to-indigo-100' 
-                      : 'text-gray-600 group-hover:text-gray-800'
-                  }`}>
+                  <td class={`${styles.table.cell} ${cellIndex === 0 ? styles.table.firstCell : ''}`}>
                     {cell}
                   </td>
                 ))}
@@ -149,25 +204,24 @@ Astro.props.hasChartData = hasChartData;
       </div>
     </div>
     
-    <!-- Measurement Tips Section -->
-    <div class="mt-8 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-100 shadow-sm">
-      <div class="flex items-start gap-4">
-        <div class="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full flex items-center justify-center">
-          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <div class={styles.tips.wrapper}>
+      <div class={styles.tips.inner}>
+        <div class={styles.tips.iconWrap}>
+          <svg class={styles.tips.icon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
           </svg>
         </div>
-        <div class="flex-1">
-          <h3 class="text-lg font-semibold text-gray-900 mb-3">{content.measurementTips}</h3>
-          <div class="space-y-3">
+        <div class={styles.tips.contentWrap}>
+          <h3 class={styles.tips.title}>{content.measurementTips}</h3>
+          <div class={styles.tips.listWrap}>
             {chartContent.tips.map((tip, index) => (
-              <div class="flex items-start gap-3">
-                <div class="flex-shrink-0 w-5 h-5 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full flex items-center justify-center mt-0.5">
-                  <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div class={styles.tips.listRow}>
+                <div class={styles.tips.listIconWrap}>
+                  <svg class={styles.tips.listIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                   </svg>
                 </div>
-                <p class="text-sm text-gray-700 leading-relaxed">{tip}</p>
+                <p class={styles.tips.listText}>{tip}</p>
               </div>
             ))}
           </div>
@@ -175,10 +229,9 @@ Astro.props.hasChartData = hasChartData;
       </div>
     </div>
     
-    <!-- Bottom accent -->
-    <div class="mt-6 text-center">
-      <div class="inline-flex items-center gap-2 text-sm text-gray-600 bg-white/60 px-4 py-2 rounded-full border border-gray-200">
-        <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <div class={styles.footerWrap}>
+      <div class={styles.footerInner}>
+        <svg class={styles.footerIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
         </svg>
         <span>Find your perfect fit</span>

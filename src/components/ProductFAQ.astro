@@ -8,74 +8,62 @@ interface Props {
 
 const { productTitle, language = 'en' } = Astro.props;
 
-// Get PROJECT_TYPE from environment variables
+// Get PROJECT_TYPE and site name from environment variables
 const PROJECT_TYPE = import.meta.env.PROJECT_TYPE || 'default';
+const SITE_NAME = (import.meta.env.PUBLIC_SITE_NAME || '').toLowerCase();
 
 function getProductCategory(title: string): string {
-  // First priority: Check PROJECT_TYPE for rep products
   const PROJECT_TYPE_LOWER = PROJECT_TYPE.toLowerCase();
   const title_lower = title.toLowerCase();
-  
-  if (PROJECT_TYPE_LOWER === 'repbag') {
+
+  // 1) MAP VIA TITLE FIRST — so backpack/handbag shows bag content, jacket shows jacket content
+  if (title_lower.includes('watch') || title_lower.includes('timepiece') || title_lower.includes('chronograph') ||
+      title_lower.includes('wristwatch') || title_lower.includes('smartwatch') || title_lower.includes('clock')) {
+    return 'watch';
+  }
+  if (title_lower.includes('backpack') || title_lower.includes('handbag') || title_lower.includes(' shoulder bag') ||
+      title_lower.includes('clutch') || title_lower.includes('wallet') || title_lower.includes('pouch') ||
+      title_lower.includes('tote') || title_lower.includes('satchel') || title_lower.includes('crossbody') ||
+      title_lower.includes('hobo') || title_lower.includes('pochette') || title_lower.includes('messenger') ||
+      (title_lower.includes('bag') && !title_lower.includes('sleeping bag')) || title_lower.includes('purse')) {
     return 'bag';
   }
-  if (PROJECT_TYPE_LOWER === 'repshoes') {
-    return 'shoes';
-  }
-  if (PROJECT_TYPE_LOWER === 'repwatch') {
-    return 'watch';
-  }
-  
-  // IPTV-specific detection
-  if (PROJECT_TYPE_LOWER === 'iptv') {
-    if (title_lower.includes('iptv') || 
-        title_lower.includes('subscription') || 
-        title_lower.includes('smart tv') || 
-        title_lower.includes('streaming')) {
-      return 'iptv';
-    }
-  }
-  
-  // Existing category detection logic with case-insensitive checks
-  // Second priority: Check if it's a watch
-  if (title_lower.includes('watch') ||
-      title_lower.includes('timepiece') ||
-      title_lower.includes('chronograph') ||
-      title_lower.includes('wristwatch') ||
-      title_lower.includes('smartwatch') ||
-      title_lower.includes('clock')) {
-    return 'watch';
-  }
-
-  // Third priority: Check if it's a digital product
-  if (PROJECT_TYPE_LOWER === 'degital') {
-    if (title_lower.includes('template') || title_lower.includes('theme')) {
-      return 'template';
-    }
-    if (title_lower.includes('plugin') || title_lower.includes('extension')) {
-      return 'plugin';
-    }
-    if (title_lower.includes('script') || title_lower.includes('code')) {
-      return 'script';
-    }
-    return 'digital'; // default digital fallback
-  }
-  
-  // Fourth priority: Check other categories
-  // Original physical product categories
-  if (title_lower.includes('jacket') || title_lower.includes('coat')) {
+  if (title_lower.includes('jacket') || title_lower.includes('coat') || title_lower.includes('blazer') ||
+      title_lower.includes('parka') || title_lower.includes('windbreaker') || title_lower.includes('bomber') ||
+      title_lower.includes('cardigan') || title_lower.includes('hoodie') || title_lower.includes('sweater') ||
+      title_lower.includes('pullover') || title_lower.includes('vest') || title_lower.includes('gilet') ||
+      title_lower.includes('anorak') || title_lower.includes('raincoat') || title_lower.includes('overcoat') ||
+      title_lower.includes('peacoat') || title_lower.includes('trench') || title_lower.includes('duster') ||
+      title_lower.includes('puffer') || title_lower.includes('down jacket')) {
     return 'jacket';
   }
-  if (title_lower.includes('shoe') || title_lower.includes('boot')) {
+  if (title_lower.includes('shoe') || title_lower.includes('boot') || title_lower.includes('sneaker') ||
+      title_lower.includes('trainer') || title_lower.includes('footwear') || title_lower.includes('sandal') ||
+      title_lower.includes('slipper') || title_lower.includes('loafer') || title_lower.includes('heel') ||
+      title_lower.includes('oxford') || title_lower.includes('moccasin') || title_lower.includes('espadrille') ||
+      title_lower.includes('pump') || title_lower.includes('flat') || title_lower.includes('derby') ||
+      title_lower.includes('brogue') || title_lower.includes('mule') || title_lower.includes('clog')) {
     return 'shoes';
   }
-  if (title_lower.includes('helmet')) {
-    return 'helmet';
+  if (title_lower.includes('helmet')) return 'helmet';
+
+  // 2) PROJECT_TYPE / site-level override
+  if (PROJECT_TYPE_LOWER === 'repbag' || SITE_NAME === 'repbag') return 'bag';
+  if (PROJECT_TYPE_LOWER === 'repshoes') return 'shoes';
+  if (PROJECT_TYPE_LOWER === 'repwatch') return 'watch';
+  if (PROJECT_TYPE_LOWER === 'iptv' && (title_lower.includes('iptv') || title_lower.includes('subscription') || title_lower.includes('streaming'))) return 'iptv';
+  if (PROJECT_TYPE_LOWER === 'degital') {
+    if (title_lower.includes('template') || title_lower.includes('theme')) return 'template';
+    if (title_lower.includes('plugin') || title_lower.includes('extension')) return 'plugin';
+    if (title_lower.includes('script') || title_lower.includes('code')) return 'script';
+    return 'digital';
   }
-  
-  return PROJECT_TYPE_LOWER === 'degital' ? 'digital' : 
-         PROJECT_TYPE_LOWER === 'iptv' ? 'iptv' : 
-         'jacket'; // default fallback
+
+  // 3) Default: RepBag site → bag; otherwise jacket for physical
+  if (PROJECT_TYPE_LOWER === 'shoes') return 'shoes';
+  if (PROJECT_TYPE_LOWER === 'iptv') return 'iptv';
+  if (SITE_NAME === 'repbag' || PROJECT_TYPE_LOWER === 'repbag') return 'bag';
+  return 'jacket';
 }
 
 // Get content for current language or fallback to English
@@ -83,70 +71,91 @@ const content = faqContent[language] || faqContent.en;
 const category = getProductCategory(productTitle);
 
 // Get FAQs for the category, fallback to English if not available in current language
+const PROJECT_TYPE_LOWER = (import.meta.env.PROJECT_TYPE || 'default').toLowerCase();
+const fallbackCategory = PROJECT_TYPE_LOWER === 'degital' ? 'digital' : PROJECT_TYPE_LOWER === 'iptv' ? 'iptv' : (SITE_NAME === 'repbag' ? 'bag' : 'jacket');
 const faqs = content.categories[category]?.questions || 
             faqContent.en.categories[category]?.questions || 
-            faqContent.en.categories[PROJECT_TYPE === 'degital' ? 'digital' : 
-                                      PROJECT_TYPE === 'iptv' ? 'iptv' : 
-                                      'jacket'].questions; // ultimate fallback
+            faqContent.en.categories[fallbackCategory]?.questions || 
+            faqContent.en.categories.bag?.questions;
 
 const theme = import.meta.env.THEME || 'default';
-let styles = {};
-
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'default';
+const defaultFaq = {
+  wrapper: 'bg-neutral-50 rounded-2xl p-8 border border-neutral-200',
+  headerWrap: 'mb-8',
+  title: 'text-sm font-medium uppercase tracking-widest text-neutral-500 mb-2 flex items-center gap-2',
+  titleIconWrap: 'w-8 h-8 bg-neutral-200 flex items-center justify-center',
+  titleIcon: 'w-4 h-4 text-neutral-600',
+  titleDivider: 'w-12 h-px bg-neutral-300',
+  list: 'space-y-4',
+  item: 'group bg-white rounded-xl border border-neutral-200 hover:border-neutral-300 transition-all duration-200 overflow-hidden',
+  questionIconWrap: 'flex-shrink-0 w-8 h-8 bg-neutral-200 rounded-full flex items-center justify-center',
+  questionIconText: 'text-neutral-600 font-semibold text-sm',
+  question: 'text-base font-semibold text-neutral-900 mb-2',
+  answerIconWrap: 'flex-shrink-0 w-6 h-6 bg-neutral-200 rounded-full flex items-center justify-center mt-0.5',
+  answerIconText: 'text-neutral-600 font-semibold text-xs',
+  answer: 'text-neutral-600 text-sm leading-relaxed',
+  footerWrap: 'mt-6 text-center',
+  footerInner: 'inline-flex items-center gap-2 text-sm text-neutral-500 bg-white px-4 py-2 border border-neutral-200',
+  footerIcon: 'w-4 h-4 text-neutral-400'
+};
+let styles = { ...defaultFaq };
 try {
-  const { luxuryComponentStyle } = await import(`../themes/${theme}/styles/components/luxury.mjs`);
-  styles = luxuryComponentStyle.faq;
-} catch (error) {
-  console.error('Failed to load component styles:', error);
+  const { luxuryComponentStyle } = await import(`@websites/${siteName}/themes/${theme}/styles/components/luxury.mjs`);
+  if (luxuryComponentStyle?.faq) styles = { ...defaultFaq, ...luxuryComponentStyle.faq };
+} catch {
+  try {
+    const { luxuryComponentStyle } = await import(`@themes/${theme}/styles/components/luxury.mjs`);
+    if (luxuryComponentStyle?.faq) styles = { ...defaultFaq, ...luxuryComponentStyle.faq };
+  } catch (err) {
+    console.error('Failed to load component styles:', err);
+  }
 }
 ---
 
-<div class="bg-gradient-to-br from-gray-50 to-slate-50 rounded-2xl p-8 shadow-lg border border-gray-200">
-  <div class="text-center mb-8">
-    <h3 class="text-3xl font-bold text-gray-900 mb-3 flex items-center justify-center gap-3">
-      <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center">
-        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<div class={styles.wrapper}>
+  <div class={styles.headerWrap}>
+    <h3 class={styles.title}>
+      <span class={styles.titleIconWrap}>
+        <svg class={styles.titleIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
         </svg>
-      </div>
+      </span>
       {content.title}
     </h3>
-    <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 mx-auto rounded-full"></div>
+    <div class={styles.titleDivider}></div>
   </div>
   
-  <div class="space-y-4">
+  <div class={styles.list}>
     {faqs.map((faq, index) => (
-      <div class="group bg-white rounded-xl border border-gray-200 hover:border-blue-200 hover:shadow-md transition-all duration-300 overflow-hidden">
-        <div class="p-6">
+      <div class={styles.item}>
+        <div class="p-5">
           <div class="flex items-start gap-4">
-            <div class="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-              <span class="text-white font-bold text-sm">Q</span>
+            <div class={styles.questionIconWrap}>
+              <span class={styles.questionIconText}>Q</span>
             </div>
             <div class="flex-1">
-              <h4 class="text-lg font-semibold text-gray-900 mb-3 group-hover:text-blue-900 transition-colors duration-300">
+              <h4 class={styles.question}>
                 {faq.q}
               </h4>
               <div class="flex items-start gap-3">
-                <div class="flex-shrink-0 w-6 h-6 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full flex items-center justify-center mt-0.5">
-                  <span class="text-white font-bold text-xs">A</span>
+                <div class={styles.answerIconWrap}>
+                  <span class={styles.answerIconText}>A</span>
                 </div>
-                <p class="text-gray-700 leading-relaxed group-hover:text-gray-800 transition-colors duration-300">
+                <p class={styles.answer}>
                   {faq.a}
                 </p>
               </div>
             </div>
           </div>
         </div>
-        
-        <!-- Decorative border -->
-        <div class="h-1 bg-gradient-to-r from-blue-400 via-indigo-400 to-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
       </div>
     ))}
   </div>
   
-  <!-- Bottom accent -->
-  <div class="mt-8 text-center">
-    <div class="inline-flex items-center gap-2 text-sm text-gray-600 bg-white/60 px-4 py-2 rounded-full border border-gray-200">
-      <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <div class={styles.footerWrap}>
+    <div class={styles.footerInner}>
+      <svg class={styles.footerIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.25a9.75 9.75 0 100 19.5 9.75 9.75 0 000-19.5z"></path>
       </svg>
       <span>Still have questions? Contact us!</span>

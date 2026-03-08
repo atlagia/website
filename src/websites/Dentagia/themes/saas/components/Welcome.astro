@@ -197,22 +197,26 @@ const processedDescription = description.replace(
           {videoId ? (
             <div 
               id="video-container" 
-              class="relative w-full rounded-3xl shadow-2xl border border-white/50 overflow-hidden animate-float-subtle cursor-pointer" 
+              class="hero-video-container relative w-full rounded-3xl shadow-2xl border border-white/50 overflow-hidden animate-float-subtle cursor-pointer" 
               style="filter: drop-shadow(0 25px 25px rgba(20, 184, 166, 0.15)); aspect-ratio: 16/10; position: relative;"
+              role="button"
+              tabindex="0"
+              aria-label="Play video"
+              data-hero-video="true"
             >
               <!-- Video Thumbnail (shown initially) -->
-              <div id="video-thumbnail" class="relative w-full h-full">
+              <div class="hero-video-thumbnail relative w-full h-full">
                 <img 
                   src={heroVideoThumbnail || heroImage || `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
                   alt="Dental Practice Management Software"
-                  class="w-full h-full object-cover"
+                  class="w-full h-full object-cover pointer-events-none"
                 />
-                <!-- Play Button Overlay -->
+                <!-- Play Button Overlay (no pointer-events-none so click is captured) -->
                 <div class="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/30 transition-all duration-300">
                   <div class="relative">
                     <div class="absolute inset-0 bg-white/20 rounded-full blur-xl"></div>
                     <div class="relative w-20 h-20 md:w-24 md:h-24 bg-red-600 rounded-full flex items-center justify-center shadow-2xl hover:bg-red-700 transition-all duration-300 hover:scale-110">
-                      <svg class="w-8 h-8 md:w-10 md:h-10 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                      <svg class="w-8 h-8 md:w-10 md:h-10 text-white ml-1" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M8 5v14l11-7z"/>
                       </svg>
                     </div>
@@ -222,12 +226,11 @@ const processedDescription = description.replace(
               
               <!-- Video Iframe (hidden initially) -->
               <iframe
-                id="video-iframe"
+                class="hero-video-iframe absolute inset-0 w-full h-full border-0"
+                style="display: none; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 30;"
                 src=""
                 data-src={`https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1&autoplay=1&enablejsapi=1`}
                 title="Dental Practice Management Software"
-                class="absolute inset-0 w-full h-full z-30"
-                style="display: none; width: 100%; height: 100%; border: none; position: absolute; top: 0; left: 0;"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen
               ></iframe>
@@ -349,66 +352,50 @@ const processedDescription = description.replace(
     initAnimations();
   }
 
-  // Video thumbnail click handler
-  function initVideoPlayer() {
-    const videoContainer = document.getElementById('video-container');
-    const videoThumbnail = document.getElementById('video-thumbnail');
-    const videoIframe = document.getElementById('video-iframe');
-    
-    if (!videoContainer || !videoThumbnail || !videoIframe) {
-      console.log('Video elements not found', { videoContainer: !!videoContainer, videoThumbnail: !!videoThumbnail, videoIframe: !!videoIframe });
-      return;
-    }
-    
-    // Check if already initialized
-    if (videoContainer.dataset.initialized === 'true') {
-      return;
-    }
-    
-    videoContainer.dataset.initialized = 'true';
-    
-    videoContainer.addEventListener('click', function(e) {
+  // Re-attach video play handler on View Transitions page load (inline script handles first load)
+  function handleHeroVideoPlay(e) {
+    const container = e.target && e.target.closest && (e.target.closest('.hero-video-container') || e.target.closest('[data-hero-video="true"]'));
+    if (!container) return;
+    if (e.type === 'keydown' && e.key !== 'Enter' && e.key !== ' ') return;
+    e.preventDefault();
+    e.stopPropagation();
+    const thumbnail = container.querySelector('.hero-video-thumbnail');
+    const iframe = container.querySelector('.hero-video-iframe');
+    if (!thumbnail || !iframe) return;
+    const src = iframe.getAttribute('data-src');
+    if (!src) return;
+    thumbnail.style.display = 'none';
+    iframe.src = src;
+    iframe.style.display = 'block';
+    iframe.style.cssText += ';width:100%;height:100%;position:absolute;top:0;left:0;z-index:30';
+  }
+  document.addEventListener('astro:page-load', function() {
+    document.addEventListener('click', handleHeroVideoPlay, true);
+    document.addEventListener('keydown', handleHeroVideoPlay, true);
+  });
+</script>
+<!-- Inline script so play button works on first load -->
+<script is:inline>
+  (function() {
+    function playHeroVideo(e) {
+      var container = e.target && e.target.closest && (e.target.closest('.hero-video-container') || e.target.closest('[data-hero-video="true"]'));
+      if (!container) return;
+      if (e.type === 'keydown' && e.key !== 'Enter' && e.key !== ' ') return;
       e.preventDefault();
       e.stopPropagation();
-      
-      console.log('Video clicked, loading...');
-      
-      // Hide thumbnail
-      videoThumbnail.style.display = 'none';
-      
-      // Show and load iframe
-      const dataSrc = videoIframe.getAttribute('data-src');
-      console.log('Video src:', dataSrc);
-      
-      if (dataSrc) {
-        videoIframe.src = dataSrc;
-        videoIframe.style.display = 'block';
-        videoIframe.style.width = '100%';
-        videoIframe.style.height = '100%';
-        videoIframe.style.position = 'absolute';
-        videoIframe.style.top = '0';
-        videoIframe.style.left = '0';
-        videoIframe.style.zIndex = '30';
-      } else {
-        console.error('No data-src found for video iframe');
-      }
-    }, { once: false });
-  }
-
-  // Initialize video player on load
-  function setupVideoPlayer() {
-    setTimeout(() => {
-      initVideoPlayer();
-    }, 100);
-  }
-
-  document.addEventListener('DOMContentLoaded', setupVideoPlayer);
-  document.addEventListener('astro:page-load', setupVideoPlayer);
-  
-  // Run immediately if DOM is ready
-  if (document.readyState !== 'loading') {
-    setupVideoPlayer();
-  }
+      var thumbnail = container.querySelector('.hero-video-thumbnail');
+      var iframe = container.querySelector('.hero-video-iframe');
+      if (!thumbnail || !iframe) return;
+      var src = iframe.getAttribute('data-src');
+      if (!src) return;
+      thumbnail.style.display = 'none';
+      iframe.src = src;
+      iframe.style.display = 'block';
+      iframe.style.cssText += ';width:100%;height:100%;position:absolute;top:0;left:0;z-index:30';
+    }
+    document.addEventListener('click', playHeroVideo, true);
+    document.addEventListener('keydown', playHeroVideo, true);
+  })();
 </script>
 
 <style>

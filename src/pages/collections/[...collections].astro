@@ -23,6 +23,56 @@ try {
   filterData = await import('@data/collection-filters.json');
 }
 
+// Load collection page styles: website theme first, then fallback to default (multi-tenant dynamic styling)
+function deepMerge<T extends Record<string, unknown>>(target: T, source: Record<string, unknown> | null | undefined): T {
+  if (!source || typeof source !== 'object') return target;
+  const out = { ...target };
+  for (const key of Object.keys(source)) {
+    const src = source[key];
+    const cur = (out as Record<string, unknown>)[key];
+    if (src != null && typeof src === 'object' && !Array.isArray(src) && typeof (src as object).constructor === 'function' && (src as object).constructor?.name === 'Object') {
+      (out as Record<string, unknown>)[key] = deepMerge((cur != null && typeof cur === 'object' && !Array.isArray(cur)) ? (cur as Record<string, unknown>) : {}, src as Record<string, unknown>);
+    } else if (src !== undefined) {
+      (out as Record<string, unknown>)[key] = src;
+    }
+  }
+  return out;
+}
+
+let styleData: { default?: { page?: Record<string, string>; card?: Record<string, unknown> } };
+try {
+  styleData = await import(`@websites/${SITE_NAME}/themes/${THEME}/styles/collections/collections.json`);
+} catch {
+  styleData = { default: {} };
+}
+const defaultStyleData = await import('../../styles/default/collections.json');
+const defaultPage = (defaultStyleData.default?.page || {}) as Record<string, string>;
+const websitePage = (styleData.default?.page || {}) as Record<string, string>;
+const pageStyle = deepMerge({ ...defaultPage }, websitePage);
+
+// Build cardStyles for ReactiveProductCard from style JSON
+const cardData = deepMerge(
+  (defaultStyleData.default?.card || {}) as Record<string, unknown>,
+  (styleData.default?.card || {}) as Record<string, unknown>
+) as Record<string, unknown>;
+const pc = (cardData.productCard || {}) as Record<string, string>;
+const imgCont = (cardData.imageContainer || {}) as Record<string, string>;
+const titleObj = (cardData.title || {}) as Record<string, string>;
+const priceObj = (cardData.price || {}) as Record<string, string>;
+const isDark = pageStyle.wrapper?.includes('bg-[#0a0a0a]') ?? false;
+const cardStyles = {
+  root: [pc.background, pc.border, pc.shadow, pc.transition].filter(Boolean).join(' ') + ' group product-card flex flex-col h-full overflow-hidden',
+  media: [imgCont.aspectRatio, imgCont.background, imgCont.overflow, 'relative min-h-[200px] flex items-center justify-center'].filter(Boolean).join(' ') || 'relative aspect-[3/4] min-h-[200px] overflow-hidden flex items-center justify-center bg-white/5',
+  noImageWrap: (cardData.noImagePlaceholder as string) || 'w-full h-full flex items-center justify-center bg-white/5',
+  noImageText: 'text-gray-500 text-sm',
+  saleBadge: 'absolute top-2 left-2 bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded-sm',
+  content: (cardData.content as string) || 'flex flex-col flex-grow p-4',
+  title: [titleObj.fontSize, titleObj.fontWeight, titleObj.color, titleObj.truncate || 'line-clamp-3 leading-snug mb-2'].filter(Boolean).join(' ') || (isDark ? 'text-lg font-medium text-gray-100 line-clamp-3 leading-snug mb-2' : 'text-sm font-medium text-neutral-900 line-clamp-3 leading-snug mb-2'),
+  price: [priceObj.fontSize, priceObj.fontWeight, priceObj.color].filter(Boolean).join(' ') || (isDark ? 'text-sm font-semibold text-gray-200' : 'text-base font-semibold text-neutral-900'),
+  comparePrice: isDark ? 'text-sm text-gray-500 line-through' : 'text-sm text-neutral-400 line-through',
+  arrow: isDark ? 'text-gray-500 group-hover:text-purple-400 transition-all duration-200 flex-shrink-0' : 'text-neutral-400 group-hover:text-neutral-900 group-hover:translate-x-0.5 transition-all duration-200 flex-shrink-0'
+};
+
 const { lang = 'en', collections: handle } = Astro.params;
 const baseUrl = import.meta.env.DOMAINE || 'https://ridwear.com';
 const storeName = import.meta.env.PUBLIC_SITE_NAME || 'RidWear';
@@ -33,8 +83,8 @@ const languages = allowedLanguages.split(',').map(lang => lang.trim()).filter(la
 // Get content for current language
 const content = contentData.default[lang] || contentData.default.en;
 
-// Parse current filters from URL
-const url = new URL(Astro.request.url);
+// Parse current filters from URL (use Astro.url - Astro.request.url can be undefined in some SSR contexts)
+const url = Astro.url;
 const currentFilters: Record<string, string[]> = {};
 const filters: any = {};
 
@@ -237,133 +287,129 @@ const formatPrice = (amount: string, currencyCode: string) => {
     }))}
   lang={lang}
 >
-  <div class="min-h-screen bg-gray-50">
-    <main class="max-w-7xl mx-auto px-4 pt-24 pb-16">
-      {/* Breadcrumbs with language prefix */}
-      <nav class="flex mb-8 text-sm" aria-label="Breadcrumb">
-        <ol class="flex items-center space-x-2">
-          <li>
-            <a href={`/${lang}`} class="text-gray-500 hover:text-gray-700">{content.breadcrumbs.home}</a>
-          </li>
-          <li class="text-gray-400">/</li>
-          <li>
-            <a href={`/${lang}/collections`} class="text-gray-500 hover:text-gray-700">{content.breadcrumbs.collections}</a>
-          </li>
-          <li class="text-gray-400">/</li>
-          <li class="text-gray-900 font-medium">{collection.title}</li>
+  <div class={pageStyle.wrapper}>
+    <main class={pageStyle.main}>
+      {/* Breadcrumbs */}
+      <nav class={pageStyle.breadcrumbNav} aria-label="Breadcrumb">
+        <ol class={pageStyle.breadcrumbList}>
+          <li><a href={`/${lang}`} class={pageStyle.breadcrumbLink}>{content.breadcrumbs.home}</a></li>
+          <li aria-hidden="true">/</li>
+          <li><a href={`/${lang}/collections`} class={pageStyle.breadcrumbLink}>{content.breadcrumbs.collections}</a></li>
+          <li aria-hidden="true">/</li>
+          <li class={pageStyle.breadcrumbCurrent}>{collection.title}</li>
         </ol>
       </nav>
 
-      {/* Collection Header */}
-      <header class="text-center mb-16">
+      {/* Collection Header / Top banner — styles from F1 collections.json page.header* */}
+      <header class={`collection-banner-header ${pageStyle.header}`}>
         {collection.image && (
-          <div class="relative h-[300px] mb-8 rounded-2xl overflow-hidden">
+          <div class={`collection-banner-image-wrap ${pageStyle.headerImageWrap}`}>
             <img
               src={collection.image.url}
               alt={collection.image.altText || collection.title}
-              class="w-full h-full object-cover"
+              class={pageStyle.headerImage}
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-            <h1 class="absolute bottom-8 left-0 right-0 text-4xl font-bold text-white px-4">
+            <div class={pageStyle.headerOverlay} />
+            <h1 class={pageStyle.headerTitleOnImage}>
               {collection.title}
             </h1>
           </div>
         )}
         {!collection.image && (
-          <h1 class="text-4xl font-bold text-gray-900 mb-4">{collection.title}</h1>
+          <h1 class={pageStyle.headerTitleNoImage}>{collection.title}</h1>
         )}
         {collection.description && (
-          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p class={pageStyle.headerDescription}>
             {collection.description}
           </p>
         )}
       </header>
 
       {/* Mobile Filter Toggle */}
-      <div class="lg:hidden mb-6">
-        <button 
+      <div class={pageStyle.mobileFilterWrap}>
+        <button
           id="mobile-filter-toggle"
-          class="w-full flex items-center justify-center gap-2 px-4 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+          class={pageStyle.mobileFilterBtn}
         >
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
           </svg>
           Filters & Sort
         </button>
       </div>
 
-      {/* Main Content with Sidebar */}
-      <div class="flex flex-col lg:flex-row gap-8">
+      {/* Main Content with Sidebar — desktop: side-by-side; mobile: overlay sidebar */}
+      <div class={`collection-layout ${pageStyle.contentWrap}`}>
         {/* Mobile Filter Overlay */}
-        <div 
+        <div
           id="mobile-filter-overlay"
-          class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden lg:hidden"
+          class={pageStyle.overlay}
         ></div>
 
         {/* Sidebar Filters */}
-        <aside 
+        <aside
           id="filter-sidebar"
-          class="w-full lg:w-80 flex-shrink-0 fixed lg:relative top-0 left-0 h-full lg:h-auto bg-white z-40 lg:z-auto transform -translate-x-full lg:translate-x-0 lg:top-auto lg:left-auto lg:transform-none transition-transform duration-300 ease-in-out lg:block"
+          class={pageStyle.sidebar}
         >
-          <div class="p-4 lg:p-0">
-            <div class="flex items-center justify-between mb-4 lg:hidden">
-              <h3 class="text-lg font-semibold">Filters</h3>
-              <button 
-                id="close-mobile-filters"
-                class="p-2 hover:bg-gray-100 rounded-full"
-              >
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div class={pageStyle.sidebarInner}>
+            <div class={pageStyle.sidebarTitleRow}>
+              <h3 class={pageStyle.sidebarTitle}>Filters</h3>
+              <button id="close-mobile-filters" class={pageStyle.closeBtn} aria-label="Close filters">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
             </div>
-            <FilterSidebar 
-              language={lang} 
-              currentFilters={currentFilters} 
-              filterData={filterData.default} 
+            <FilterSidebar
+              language={lang}
+              currentFilters={currentFilters}
+              filterData={filterData.default}
               currentSort={currentSort}
               priceFilter={priceFilter}
+              wrapperClass={pageStyle.filterSidebarRoot}
+              theme={isDark ? 'dark' : 'light'}
             />
           </div>
         </aside>
 
-        {/* Main Content Area */}
-        <div class="flex-1 w-full">
-          {/* Top Controls */}
-          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 gap-4">
-            <!-- View Toggle -->
-            <div class="flex items-center space-x-2">
-              <button class="p-2 rounded-md bg-white border border-gray-300 hover:bg-gray-50 transition-colors">
-                <Grid className="w-5 h-5 text-gray-600" />
-              </button>
-              <button class="p-2 rounded-md bg-gray-50 border border-gray-300 hover:bg-gray-100 transition-colors">
-                <List className="w-5 h-5 text-gray-600" />
-              </button>
+        {/* Main Content Area — flex-1 min-w-0 so grid doesn't overflow on desktop */}
+        <div class={`collection-main ${pageStyle.mainContent}`}>
+          {/* Top bar: count + sort */}
+          <div class={pageStyle.topBar}>
+            <div class={pageStyle.countText}>
+              {collection.products.edges.length} {content.collections?.count || content.products?.count || 'products'}
             </div>
-
-            <!-- Sort Dropdown and Product Count -->
-            <div class="flex items-center gap-4">
-              <SortDropdown language={lang} currentSort={currentSort} />
-              <div class="text-sm text-gray-600 hidden sm:block">
-                {collection.products.edges.length} {content.collections.count}
+            <div class={pageStyle.viewToggleWrap}>
+              <div class={pageStyle.viewToggleGroup}>
+                <button class={pageStyle.gridBtnActive} aria-label="Grid view">
+                  <Grid className="w-4 h-4" />
+                </button>
+                <button class={pageStyle.listBtn} aria-label="List view">
+                  <List className="w-4 h-4" />
+                </button>
               </div>
+              <SortDropdown 
+                language={lang} 
+                currentSort={currentSort} 
+                selectClass={pageStyle.sortDropdownSelect}
+                labelClass={pageStyle.sortDropdownLabel}
+              />
             </div>
           </div>
 
           {/* Mobile Product Count */}
-          <div class="text-sm text-gray-600 mb-4 sm:hidden">
-            {collection.products.edges.length} {content.collections.count}
+          <div class={pageStyle.mobileCount}>
+            {collection.products.edges.length} {content.collections?.count || content.products?.count || 'products'}
           </div>
 
-          {/* Products Grid */}
-          <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
+          {/* Products Grid — items-start so cards align at top on desktop (no stepped layout) */}
+          <div class={`${pageStyle.productGrid} collection-product-grid-fix`}>
             {collection.products.edges.map(({ node: product }) => {
               const firstVariant = product.variants.edges[0]?.node;
               const price = firstVariant?.price;
               const compareAtPrice = firstVariant?.compareAtPrice;
-              
               return (
-                <ReactiveProductCard 
+                <ReactiveProductCard
                   client:load
                   product={{
                     id: product.id,
@@ -375,6 +421,8 @@ const formatPrice = (amount: string, currencyCode: string) => {
                   }}
                   lang={lang}
                   content={content}
+                  containImage={true}
+                  cardStyles={cardStyles}
                 />
               );
             })}
@@ -382,23 +430,23 @@ const formatPrice = (amount: string, currencyCode: string) => {
 
           {/* Load More Section */}
           {collection.products.edges.length > 0 && (
-            <div class="text-center mt-12">
-              <div class="mb-4 text-sm text-gray-600">
-                {content.collections.viewed} {Math.min(12, collection.products.edges.length)} {content.collections.of} {collection.products.edges.length} {content.collections.products}
+            <div class={pageStyle.loadMoreWrap}>
+              <div class={pageStyle.loadMoreText}>
+                {content.collections?.viewed || content.products?.viewed || 'You have viewed'} {Math.min(12, collection.products.edges.length)} {content.collections?.of || content.products?.of || 'of'} {collection.products.edges.length} {content.collections?.products || content.products?.products || 'products'}
               </div>
-              <button class="bg-white border border-gray-300 text-gray-700 px-6 py-3 rounded-md hover:bg-gray-50 transition-colors font-medium">
-                {content.collections.loadMore}
+              <button class={pageStyle.loadMoreBtn}>
+                {content.collections?.loadMore || content.products?.loadMore || 'Load More'}
               </button>
             </div>
           )}
 
           {/* Empty State */}
           {collection.products.edges.length === 0 && (
-            <div class="text-center py-16 bg-white rounded-2xl shadow-sm">
-              <div class="max-w-md mx-auto">
-                <h2 class="text-2xl font-semibold text-gray-900 mb-2">{content.collections.noProducts}</h2>
-                <p class="text-gray-600">
-                  {content.collections.noProductsDescription}
+            <div class={pageStyle.emptyWrap}>
+              <div class={pageStyle.emptyContent}>
+                <h2 class={pageStyle.emptyTitle}>{content.collections?.noProducts || content.products?.noProducts || 'No products found'}</h2>
+                <p class={pageStyle.emptyDescription}>
+                  {content.collections?.noProductsDescription || content.products?.noProductsDescription || 'Try adjusting your filters or search terms'}
                 </p>
               </div>
             </div>
@@ -455,7 +503,7 @@ const formatPrice = (amount: string, currencyCode: string) => {
   }
 </script>
 
-<style>
+<style is:global>
   .fade-in {
     animation: fadeIn 0.5s ease-out;
   }
@@ -470,5 +518,56 @@ const formatPrice = (amount: string, currencyCode: string) => {
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+  }
+
+  /* Top banner: cap height so grid + filters visible above fold; F1 styles from collections.json apply via pageStyle */
+  .collection-banner-header {
+    margin-bottom: 1rem;
+  }
+  .collection-banner-header .collection-banner-image-wrap {
+    height: 180px !important;
+    max-height: 200px !important;
+    min-height: 180px !important;
+  }
+  @media (min-width: 640px) {
+    .collection-banner-header .collection-banner-image-wrap {
+      height: 200px !important;
+      max-height: 220px !important;
+      min-height: 200px !important;
+    }
+  }
+
+  /* Collection layout: mobile = stack, desktop = sidebar + main with product grid visible */
+  .collection-layout {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  @media (min-width: 1024px) {
+    .collection-layout {
+      display: grid !important;
+      grid-template-columns: 18rem minmax(0, 1fr);
+      grid-template-areas: "sidebar main";
+      align-items: start;
+      gap: 2rem;
+    }
+    .collection-layout #mobile-filter-overlay {
+      display: none !important;
+    }
+    .collection-layout #filter-sidebar {
+      grid-area: sidebar;
+      width: 18rem;
+      max-width: 18rem;
+    }
+    .collection-main {
+      grid-area: main;
+      min-width: 0;
+      overflow: visible;
+    }
+    .collection-product-grid-fix {
+      display: grid !important;
+      align-items: start;
+      width: 100%;
+    }
   }
 </style> 

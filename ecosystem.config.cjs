@@ -77,6 +77,58 @@ module.exports = {
         namespace: "atlagia",
         instances: 1,
         exec_mode: "fork"
+      },
+      {
+        name: "dentagia",
+        script: "node",
+        args: "-r dotenv/config ./dist/server/entry.mjs",
+        env: {
+          NODE_ENV: "production",
+          PORT: 7004,
+          ENV_FILE: ".env",
+          TEMP: "./tmp",
+          TMPDIR: "./tmp",
+          SESSION_SECRET: "dentagia-secret-789",
+          STORE_ID: "dentagia",
+          THEME: "saas",
+          PROJECT_TYPE: "default",
+          PUBLIC_SITE_NAME: "Dentagia",
+          PUBLIC_STORE_NAME: "Dentagia",
+          PUBLIC_STORE_DOMAIN: "dentagia.com",
+          DOMAINE: "https://dentagia.com",
+          PUBLIC_BUSINESS_PHONE: "+1234567890",
+          PUBLIC_ENABLE_WHATSAPP: "true"
+        },
+        cwd: "./stores/dentagia",
+        namespace: "dentagia",
+        instances: 1,
+        exec_mode: "fork"
+      },
+      {
+        name: "repbag",
+        script: "node",
+        args: "-r dotenv/config ./dist/server/entry.mjs",
+        env: {
+          NODE_ENV: "production",
+          PORT: 7005,
+          ENV_FILE: ".env",
+          TEMP: "./tmp",
+          TMPDIR: "./tmp",
+          SESSION_SECRET: "repbag-secret-789",
+          STORE_ID: "repbag",
+          THEME: "apparel",
+          PROJECT_TYPE: "physical",
+          PUBLIC_SITE_NAME: "RepBag",
+          PUBLIC_STORE_NAME: "RepBag",
+          PUBLIC_STORE_DOMAIN: "repbag.shop",
+          DOMAINE: "https://repbag.shop",
+          PUBLIC_BUSINESS_PHONE: "+12035472248",
+          PUBLIC_ENABLE_WHATSAPP: "true"
+        },
+        cwd: "./stores/repbag",
+        namespace: "repbag",
+        instances: 1,
+        exec_mode: "fork"
       }
     ]
 };

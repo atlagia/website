@@ -1,0 +1,42 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  backgroundImage: string;
+  formAction: string;
+  buttonText: string;
+}
+
+const { title, description, formAction, buttonText } = Astro.props;
+---
+
+<section class="f1-paddock relative py-28 lg:py-36 bg-[var(--drivon-bg)] border-t border-[var(--drivon-border)]">
+  <div class="max-w-[560px] mx-auto px-6 sm:px-8 text-center">
+    <h2 class="font-headline text-4xl sm:text-5xl md:text-6xl text-[var(--drivon-text)] uppercase tracking-wide mb-4">
+      {title}
+    </h2>
+    <p class="text-[var(--drivon-text)]/60 font-body text-sm mb-10 tracking-wide">
+      {description}
+    </p>
+    <form action={formAction} method="POST" class="flex flex-col sm:flex-row gap-3 max-w-sm mx-auto">
+      <input
+        type="email"
+        name="email"
+        placeholder="Email"
+        required
+        class="flex-1 min-w-0 px-5 py-3.5 bg-transparent border-b border-[var(--drivon-border)] text-[var(--drivon-text)] placeholder:text-[var(--drivon-muted)] focus:outline-none focus:border-[var(--drivon-text)]/50 transition-colors text-sm font-body"
+      />
+      <button
+        type="submit"
+        class="px-6 py-3.5 border border-[var(--drivon-text)]/40 text-[var(--drivon-text)] text-[11px] font-medium tracking-[0.2em] uppercase hover:bg-[var(--drivon-text)] hover:text-[var(--drivon-bg)] transition-colors shrink-0"
+      >
+        {buttonText}
+      </button>
+    </form>
+  </div>
+</section>
+
+<style>
+  .font-headline { font-family: var(--font-headline); }
+  .font-body { font-family: var(--font-body); }
+</style>

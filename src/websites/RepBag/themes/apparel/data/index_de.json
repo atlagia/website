@@ -1,0 +1,78 @@
+{
+  "siteTitle": "RepBag - Premium Taschen & Accessoires",
+  "siteDescription": "Premium Taschen, Handtaschen, Rucksäcke und Accessoires. Qualität und Stil für jeden Anlass.",
+  "sections": [
+    {
+      "type": "welcomeSection",
+      "title": "RepBag",
+      "description": "Premium-Handtaschen und Accessoires. Qualitätshandwerk und Stil für jeden Anlass.",
+      "luxury": true,
+      "heroImage": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=1200",
+      "headlineLine1": "Mode",
+      "headlineLine2": "Handtaschen",
+      "blogLink": "/collections",
+      "blogLinkText": "Kollektionen ansehen",
+      "backgroundVideo": { "type": "youtube", "videoId": "", "fallbackImage": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=1200" }
+    },
+    {
+      "type": "editorialSection",
+      "title": "Neutral Chic",
+      "layout": "1-2",
+      "images": [
+        { "src": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=800", "alt": "Hobo-Tasche" },
+        { "src": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=800", "alt": "Strukturierte Handtasche" },
+        { "src": "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?w=800", "alt": "Klassische Handtasche" }
+      ]
+    },
+    {
+      "type": "editorialSection",
+      "title": "Leuchtende Farben",
+      "layout": "3-2",
+      "images": [
+        { "src": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600", "alt": "Gelbe Clutch" },
+        { "src": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600", "alt": "Geflochtene Tasche" },
+        { "src": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600", "alt": "Pastelltasche" },
+        { "src": "https://images.unsplash.com/photo-1627123424574-724758594e93?w=600", "alt": "Akzenttasche" },
+        { "src": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600", "alt": "Ledertasche" }
+      ]
+    },
+    {
+      "type": "editorialSection",
+      "title": "Moderne Weichheit",
+      "layout": "3-1",
+      "images": [
+        { "src": "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?w=600", "alt": "Slouch-Tasche" },
+        { "src": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600", "alt": "Klappentasche" },
+        { "src": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600", "alt": "Bordeaux Schultertasche" },
+        { "src": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600", "alt": "Detail" }
+      ]
+    },
+    { "type": "productShowcase", "title": "Ausgewählte Taschen", "description": "", "viewAllLink": "/collections", "products": [] },
+    { "type": "viewAllCta", "href": "/collections", "label": "ALLE TASCHEN ANSEHEN" },
+    {
+      "type": "categoryGrid",
+      "title": "Nach Kategorie",
+      "description": "",
+      "categories": [
+        { "id": "handbags", "name": "Handtaschen", "description": "", "image": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600", "link": "/collections/handbags" },
+        { "id": "backpacks", "name": "Rucksäcke", "description": "", "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600", "link": "/collections/backpacks" },
+        { "id": "accessories", "name": "Lederwaren", "description": "", "image": "https://images.unsplash.com/photo-1627123424574-724758594e93?w=600", "link": "/collections/accessories" }
+      ]
+    },
+    {
+      "type": "discoverMore",
+      "title": "Mehr von RepBag entdecken",
+      "description": "Von Neuheiten bis zu den neuesten Kollektionen – entdecken Sie die Welt von RepBag.",
+      "buttonText": "RepBag.shop besuchen",
+      "buttonHref": "/"
+    },
+    {
+      "type": "emailSignupSection",
+      "title": "Newsletter",
+      "description": "Neuheiten und exklusive Angebote.",
+      "backgroundImage": "",
+      "formAction": "/api/newsletter",
+      "submitText": "NEWSLETTER ABONNIEREN"
+    }
+  ]
+}

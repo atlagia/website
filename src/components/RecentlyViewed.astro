@@ -4,20 +4,59 @@ interface Props {
 }
 
 const { className = "" } = Astro.props;
+
+const theme = import.meta.env.THEME || 'default';
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'default';
+const defaultStyles = {
+  wrapper: 'bg-neutral-50 rounded-2xl p-8 border border-neutral-200',
+  header: 'flex items-center justify-between mb-4',
+  title: 'text-sm font-medium uppercase tracking-widest text-neutral-500 flex items-center gap-2',
+  titleIconWrap: 'w-8 h-8 bg-neutral-200 flex items-center justify-center',
+  titleIcon: 'w-4 h-4 text-neutral-600',
+  clearButton: 'text-sm text-neutral-500 hover:text-neutral-900 underline transition-colors',
+  grid: 'grid grid-cols-2 md:grid-cols-4 gap-4',
+  emptyWrap: 'text-center py-8',
+  emptyIcon: 'text-neutral-400 mb-3',
+  emptyText: 'text-neutral-500 text-sm',
+  card: 'bg-white rounded-lg border border-gray-200 hover:border-gray-300 transition-colors',
+  cardLink: 'block',
+  cardImageWrap: 'aspect-square overflow-hidden bg-gray-50',
+  cardImage: 'w-full h-full object-cover',
+  cardBody: 'p-3',
+  cardTitle: 'font-medium text-gray-900 text-sm line-clamp-2 mb-1',
+  cardBottom: 'flex items-center justify-between',
+  cardPrice: 'text-sm text-gray-900',
+  cardRemove: 'text-xs text-gray-400 hover:text-gray-600'
+};
+
+let styles = defaultStyles;
+try {
+  const { luxuryComponentStyle } = await import(`@websites/${siteName}/themes/${theme}/styles/components/luxury.mjs`);
+  if (luxuryComponentStyle?.recentlyViewed) styles = { ...defaultStyles, ...luxuryComponentStyle.recentlyViewed };
+} catch {
+  try {
+    const { luxuryComponentStyle } = await import(`@themes/${theme}/styles/components/luxury.mjs`);
+    if (luxuryComponentStyle?.recentlyViewed) styles = { ...defaultStyles, ...luxuryComponentStyle.recentlyViewed };
+  } catch (err) {
+    console.error('Failed to load component styles:', err);
+  }
+}
 ---
 
-<div class={`bg-gradient-to-br from-gray-50 to-white rounded-xl p-6 shadow-sm ${className}`}>
-  <div class="flex items-center justify-between mb-4">
-    <h2 class="text-2xl font-bold text-gray-900 flex items-center gap-2">
-      <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<div class={`${styles.wrapper} ${className}`}>
+  <div class={styles.header}>
+    <h2 class={styles.title}>
+      <span class={styles.titleIconWrap}>
+        <svg class={styles.titleIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
       </svg>
+      </span>
       Recently Viewed
     </h2>
     <button 
       id="clearHistory" 
-      class="text-sm text-gray-500 hover:text-gray-700 underline transition-colors"
+      class={styles.clearButton}
     >
       Clear History
     </button>
@@ -25,24 +64,25 @@ const { className = "" } = Astro.props;
 
   <!-- Recently Viewed Products Container -->
   <div id="recentlyViewedContainer" class="hidden">
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4" id="recentlyViewedGrid">
+    <div class={styles.grid} id="recentlyViewedGrid">
       <!-- Products will be inserted here by JavaScript -->
     </div>
   </div>
 
   <!-- Empty State -->
-  <div id="emptyState" class="text-center py-8">
-    <div class="text-gray-400 mb-3">
+  <div id="emptyState" class={styles.emptyWrap}>
+    <div class={styles.emptyIcon}>
       <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
       </svg>
     </div>
-    <p class="text-gray-600 text-sm">No recently viewed items</p>
+    <p class={styles.emptyText}>No recently viewed items</p>
   </div>
 </div>
 
-<script>
+<script define:vars={{ rvStyles: styles }}>
+
   class RecentlyViewed {
     constructor() {
       this.storageKey = 'recentlyViewed';
@@ -157,25 +197,25 @@ const { className = "" } = Astro.props;
       if (!this.grid) return;
 
       this.grid.innerHTML = products.map(product => `
-        <div class="bg-white rounded-lg border border-gray-200 hover:border-gray-300 transition-colors">
-          <a href="${product.url}" class="block">
-            <div class="aspect-square overflow-hidden bg-gray-50">
+        <div class="${rvStyles.card}">
+          <a href="${product.url}" class="${rvStyles.cardLink}">
+            <div class="${rvStyles.cardImageWrap}">
               <img 
                 src="${product.image}" 
                 alt="${product.title}"
-                class="w-full h-full object-cover"
+                class="${rvStyles.cardImage}"
                 loading="lazy"
               />
             </div>
-            <div class="p-3">
-              <h3 class="font-medium text-gray-900 text-sm line-clamp-2 mb-1">
+            <div class="${rvStyles.cardBody}">
+              <h3 class="${rvStyles.cardTitle}">
                 ${product.title}
               </h3>
-              <div class="flex items-center justify-between">
-                <span class="text-sm text-gray-900">${product.price}</span>
+              <div class="${rvStyles.cardBottom}">
+                <span class="${rvStyles.cardPrice}">${product.price}</span>
                 <button 
                   onclick="recentlyViewedInstance.removeProduct('${product.id}')"
-                  class="text-xs text-gray-400 hover:text-gray-600"
+                  class="${rvStyles.cardRemove}"
                 >
                   ×
                 </button>

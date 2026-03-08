@@ -4,8 +4,8 @@
   "sections": [
     {
       "type": "welcome",
-      "title": "Your Ultimate Fast IPTV Entertainment",
-      "description": "Experience the fastest and strongest IPTV streaming service. Access thousands of live TV channels, movies, and shows from around the world with premium IPTV technology.",
+      "title": "Unlimited Entertainment. One Powerful IPTV Platform.",
+      "description": "Stream 32,000+ live channels, 140,000+ movies, and premium sports in Ultra HD & 4K. Lightning-fast servers. Zero buffering. Every device. Every screen.",
       "backgroundImages": [
         "https://cdn.atlagia.com/fastiptv/cropped-UEFA-Champions-League-Stadium-Wallpaper%20(1).jpg",
         "https://cdn.atlagia.com/fastiptv/djdmztf-8f51d37a-6840-4a0c-ab4d-86333ca27817.jpg",
@@ -27,7 +27,21 @@
           "link": "/en/channels"
         }
       }
-    },{
+    },
+    {
+      "type": "features",
+      "title": "IPTV Features",
+      "description": "Everything you need for the ultimate streaming experience",
+      "features": [
+        {"icon": "channels", "title": "32,000+ Live Channels", "description": "Sports, news, entertainment from every corner of the world"},
+        {"icon": "quality", "title": "Ultra HD & 4K Streaming", "description": "Crystal-clear picture quality with adaptive bitrate"},
+        {"icon": "device", "title": "Multi-Device Support", "description": "Stream on Smart TV, phone, tablet, laptop, or gaming console"},
+        {"icon": "speed", "title": "Instant Activation", "description": "Start watching within minutes of signing up"},
+        {"icon": "record", "title": "Catch Up & EPG", "description": "Never miss a show with built-in catch-up TV and guides"},
+        {"icon": "support", "title": "24/7 Premium Support", "description": "Expert help whenever you need it"}
+      ]
+    },
+    {
       "type": "channels",
       "title": "Best Fast Stronger IPTV Platforms of 2025",
       "description": "We are proud to offer the fastest and most premium IPTV service available",
@@ -194,6 +208,17 @@
           ],
           "isPopular": false
         }
+      ]
+    },
+    {
+      "type": "features",
+      "title": "Why Choose Us",
+      "description": "Built for performance, designed for you",
+      "features": [
+        {"icon": "speed", "title": "Instant Setup", "description": "Start streaming within minutes of signup"},
+        {"icon": "quality", "title": "99.9% Uptime", "description": "Enterprise-grade reliability you can count on"},
+        {"icon": "channels", "title": "Global Channels", "description": "Content from 50+ countries, all in one place"},
+        {"icon": "support", "title": "Premium Servers", "description": "Low-latency, high-performance infrastructure"}
       ]
     },
     {

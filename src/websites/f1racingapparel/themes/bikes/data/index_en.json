@@ -1,0 +1,288 @@
+{
+  "siteTitle": "F1 Racing Apparel — Premium Motorsport Lifestyle",
+  "siteDescription": "Bold, minimal, cinematic. Premium F1 and motorsport apparel for those who live the culture.",
+  "sections": [
+    {
+      "type": "welcomeSection",
+      "title": "RACE HERITAGE\nREDEFINED.",
+      "description": "Motorsport culture curated. Vintage racing jackets, premium hoodies, racing caps. Born from pit lanes. Built for streets.",
+      "blogLinkText": "Explore Collection",
+      "blogLink": "/collections",
+      "seasonLabel": "SS26 — Racing Season",
+      "heroImage": "https://cdn.shopify.com/s/files/1/0343/2762/5773/files/herrof1apparel.jpg?v=1772745648&width=2880",
+      "backgroundVideo": {
+        "type": "youtube",
+        "videoId": "liT2Z3wFW1Y",
+        "fallbackImage": "/images/driver-culture-fallback.jpg"
+      }
+    },
+    {
+      "type": "marqueeSection",
+      "items": ["WEAR THE GRID", "LEGENDS NEVER PARK", "RACE HERITAGE", "PIT LANE TO STREET", "VINTAGE RACING", "MOTORSPORT"]
+    },
+    {
+      "type": "pressStripSection",
+      "title": "As seen in",
+      "items": ["MONACO", "SILVERSTONE", "MONZA", "SPA", "LE MANS"]
+    },
+    {
+      "type": "editorialQuoteSection",
+      "quote": "Speed is not just how fast you go. It's how you carry the legacy.",
+      "attribution": "F1 Racing Apparel",
+      "role": "Est. 2024"
+    },
+    {
+      "type": "carBrandsSection",
+      "title": "Collections by brand",
+      "items": ["AUDI", "BMW", "FERRARI", "PORSCHE", "FORD", "LAMBORGHINI", "RED BULL", "LEXUS", "MARLBORO", "MCLAREN", "MERCEDES", "BUDWEISER"]
+    },
+    {
+      "type": "manifestoSection",
+      "headline": "BORN FROM PIT LANES. BUILT FOR STREETS.",
+      "body": "This is not just racing apparel. This is motorsport culture curated. Heritage reimagined. Vintage racing jackets, motorsport hoodies, racing caps—for those who live the grid.",
+      "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
+      "imageAlt": "Racing heritage"
+    },
+    {
+      "type": "statsSection",
+      "stats": [
+        { "value": "50K+", "label": "Enthusiasts" },
+        { "value": "Free", "label": "Shipping over $75" },
+        { "value": "30 Days", "label": "Returns" },
+        { "value": "24/7", "label": "Support" }
+      ]
+    },
+    {
+      "type": "categoryGrid",
+      "title": "Driver Culture Essentials",
+      "description": "Authentic automotive culture merchandise for true car enthusiasts and racing fans worldwide. Every piece is crafted with car enthusiasts in mind, celebrating the passion and dedication that defines the automotive community.",
+      "categories": [
+        {
+          "id": "hoodie",
+          "name": "Racing Hoodies",
+          "description": "Racing inspired hoodies with authentic automotive designs and premium comfort.",
+          "image": "https://ih1.redbubble.net/image.4762044220.4515/ssrco,mhoodie,mens,fafafa:ca443f4786,front,tall_three_quarter,x1000-bg,f8f8f8.1.webp",
+          "link": "/racing-hoodies"
+        },
+        {
+          "id": "tee",
+          "name": "Car Culture Tees",
+          "description": "Classic automotive culture tees featuring iconic car brands and racing legends.",
+          "image": "https://ih1.redbubble.net/image.4762044220.4515/ssrco,classic_tee,mens_02,fafafa:ca443f4786,front,close_portrait,x1000.webp",
+          "link": "/car-culture-tees"
+        },
+        {
+          "id": "accessories",
+          "name": "Driver Accessories",
+          "description": "Essential accessories to complete your automotive culture look and style.",
+          "image": "https://ih1.redbubble.net/image.4762043914.4515/ssrco,dad_hat,product,FFFDF5:8c3db69414,front_three_quarter,wide_portrait,750x1000-bg,f8f8f8.webp",
+          "link": "/driver-accessories"
+        }
+      ]
+    },
+    {
+      "type": "bestSellers",
+      "title": "Driver Fan Favorites",
+      "description": "Our most popular automotive merchandise loved by car culture enthusiasts worldwide",
+      "viewAllLink": "/driver-favorites",
+      "collectionHandle": "driver-favorites"
+    },
+    {
+      "type": "bannerSection",
+      "headline": "Car Culture Meets Racing Heritage",
+      "description": "Experience authentic automotive culture designed for car enthusiasts worldwide. From racing legends to street icons, we celebrate the true spirit of driving passion that connects car enthusiasts across the globe.",
+      "backgroundImage": "/images/racing-heritage-banner.jpg",
+      "button1Text": "Shop Driver Collection",
+      "button1Link": "/driver-collection",
+      "button2Text": "View Racing Culture",
+      "button2Link": "/racing-culture"
+    },
+    {
+      "type": "productShowcase",
+      "title": "Racing Legend Collection",
+      "description": "Iconic automotive culture merchandise featuring legendary brands and racing heroes.",
+      "viewAllLink": "/racing-legends",
+      "collections": [
+        {
+          "id": "ferrari-racing-hoodie",
+          "name": "Ferrari Racing Hoodie",
+          "description": "Premium hoodie featuring the legendary Ferrari racing heritage with authentic racing styling.",
+          "price": "89.99",
+          "image": "/images/products/ferrari-racing-hoodie.jpg",
+          "category": "Racing Hoodies"
+        },
+        {
+          "id": "porsche-911-tee",
+          "name": "Porsche 911 Classic Tee",
+          "description": "Classic tee celebrating the iconic Porsche 911 with timeless sports car design.",
+          "price": "29.99",
+          "image": "/images/products/porsche-911-tee.jpg",
+          "category": "Car Culture Tees"
+        }
+      ]
+    },
+    {
+      "type": "racingArchiveSection",
+      "headline": "LEGENDS NEVER PARK.",
+      "body": "From vintage tracks to modern streets. Our archive draws on decades of motorsport design—reworked for today. Every piece carries the weight of the grid.",
+      "image": "https://images.unsplash.com/photo-1541443131876-44b03de101c5?w=1200&q=80",
+      "imageAlt": "Racing archive"
+    },
+    {
+      "type": "categoryHighlightSection",
+      "categories": [
+        { "id": "jackets", "name": "JACKETS", "link": "/collections/jackets", "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=1200&q=80" },
+        { "id": "caps", "name": "CAPS", "link": "/collections/caps", "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=1200&q=80" },
+        { "id": "hoodies", "name": "HOODIES", "link": "/collections/hoodies", "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=1200&q=80" }
+      ]
+    },
+    {
+      "type": "lifestyleSection",
+      "image": "https://images.unsplash.com/photo-1541443131876-44b03de101c5?w=1600&q=80",
+      "imageAlt": "On track",
+      "caption": "On track. In street."
+    },
+    {
+      "type": "seasonDropSection",
+      "headline": "THE NEW DROP.",
+      "description": "Vintage-inspired racing jackets and premium caps. Limited run for SS26. Built for the grid.",
+      "ctaText": "Shop the collection",
+      "ctaLink": "/collections",
+      "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=1200&q=85",
+      "imageAlt": "Racing jacket"
+    },
+    {
+      "type": "specialOffers",
+      "title": "Driver Special Offers",
+      "offers": [
+        {
+          "id": "racing-season-sale",
+          "title": "Racing Season Sale",
+          "description": "Get authentic automotive racing gear at unbeatable prices",
+          "discount": "25%",
+          "code": "RACE25",
+          "backgroundImage": "/images/racing-season-bg.jpg",
+          "buttonText": "Shop Racing Collection",
+          "buttonLink": "/racing-collection",
+          "expiryText": "Ends March 31st"
+        },
+        {
+          "id": "driver-fan-welcome",
+          "title": "Driver Fan Welcome",
+          "description": "Welcome bonus for new automotive culture enthusiasts",
+          "discount": "20%",
+          "code": "DRIVER20",
+          "backgroundImage": "/images/driver-welcome-bg.jpg",
+          "buttonText": "Join Driver Community",
+          "buttonLink": "/driver-community",
+          "expiryText": "Valid for 30 days"
+        }
+      ]
+    },
+    {
+      "type": "testimonialSlider",
+      "title": "Driver Community Love",
+      "testimonials": [
+        {
+          "id": "1",
+          "author": "Alex Rossi",
+          "role": "Racing Enthusiast",
+          "content": "Drivon captures the true spirit of racing culture. Every piece feels authentic to the automotive scene I love.",
+          "avatar": "AR",
+          "initials": "AR"
+        },
+        {
+          "id": "2",
+          "author": "Emma Thompson",
+          "role": "Car Collector",
+          "content": "Finally, merchandise that truly represents automotive culture. The quality and attention to detail is incredible.",
+          "avatar": "ET",
+          "initials": "ET"
+        },
+        {
+          "id": "3",
+          "author": "Marcus Johnson",
+          "role": "Motorsport Fan",
+          "content": "Drivon delivers exactly what car fans need. Authentic designs that celebrate automotive culture worldwide.",
+          "avatar": "MJ",
+          "initials": "MJ"
+        }
+      ]
+    },
+    {
+      "type": "faqSection",
+      "title": "Driver Culture FAQs",
+      "description": "Everything you need to know about authentic automotive culture merchandise.",
+      "faqs": [
+        {
+          "question": "What makes Drivon different from other car merchandise?",
+          "answer": "We focus exclusively on authentic automotive culture, from racing legends to street icons. Every design celebrates the true spirit of driving passion and car culture worldwide."
+        },
+        {
+          "question": "Do you feature real car brands and models?",
+          "answer": "Yes! We celebrate iconic cars like Ferrari, Porsche, Lamborghini, BMW, and many others with authentic designs that respect the heritage and culture of each brand."
+        },
+        {
+          "question": "Are your collections officially licensed?",
+          "answer": "We create original designs inspired by automotive culture while respecting trademark guidelines. All our merchandise celebrates the community and culture authentically."
+        }
+      ]
+    },
+    {
+      "type": "featuresSection",
+      "title": "Why Choose Drivon?",
+      "features": [
+        {
+          "id": "free-shipping",
+          "title": "Free Shipping",
+          "description": "Free delivery on orders over $75 worldwide"
+        },
+        {
+          "id": "quality-guarantee",
+          "title": "Quality Guarantee",
+          "description": "30-day money back guarantee on all collections"
+        },
+        {
+          "id": "secure-payment",
+          "title": "Secure Payment",
+          "description": "SSL encrypted checkout for your security"
+        },
+        {
+          "id": "driver-community",
+          "title": "Driver Community",
+          "description": "Join the authentic automotive culture community"
+        }
+      ]
+    },
+    {
+      "type": "emailSignupSection",
+      "title": "JOIN THE PADDOCK.",
+      "description": "Exclusive drops. Racing news. No clutter.",
+      "backgroundImage": "/images/driver-community-newsletter.jpg",
+      "formAction": "/api/signup",
+      "submitText": "Enter"
+    },
+    {
+      "type": "followStripSection",
+      "headline": "Follow the grid.",
+      "ctaText": "Instagram",
+      "ctaLink": "https://instagram.com"
+    },
+    {
+      "type": "trustBadges",
+      "title": "Secure checkout",
+      "badges": [
+        { "id": "ship", "icon": "🚚", "title": "Free shipping", "description": "On orders over $75" },
+        { "id": "returns", "icon": "↩", "title": "30-day returns", "description": "Hassle-free" },
+        { "id": "secure", "icon": "🔒", "title": "Secure payment", "description": "SSL encrypted" }
+      ],
+      "paymentMethods": [
+        { "id": "visa", "name": "Visa", "icon": "Visa" },
+        { "id": "mc", "name": "Mastercard", "icon": "MC" },
+        { "id": "amex", "name": "Amex", "icon": "Amex" },
+        { "id": "paypal", "name": "PayPal", "icon": "PayPal" }
+      ],
+      "guaranteeText": "30-day money-back guarantee on all orders"
+    }
+  ]
+}

@@ -1,15 +1,29 @@
-import { getTranslatedProductByHandle as getShopifyProduct } from './shopify';
+import { getTranslatedProductByHandle as getShopifyProduct, getProductByHandle as getShopifyProductByHandle } from './shopify';
 import { getProductByHandle as getWooProduct } from './woocommerce';
 import { getCollectionByHandle as getShopifyCollection, getAllCollections as getShopifyCollections } from './shopify';
 import { getCollectionByHandle as getWooCollection, getAllCollections as getWooCollections } from './woocommerce';
 
+/** Fallback: try direct product fetch from source when translated fetch fails */
+async function shopifyProductFallback(handle: string) {
+  try {
+    const out = await getShopifyProductByHandle(handle);
+    if (out?.product) return out;
+  } catch (e) {
+    console.warn('Controller fallback getProductByHandle failed:', (e as Error)?.message);
+  }
+  return null;
+}
 
 export async function getTranslatedProductByHandle(handle: string, lang: string = 'EN') {
   const dataType = import.meta.env.DATA_TYPE?.toLowerCase() || 'shopify';
 
   try {
     if (dataType === 'shopify') {
-      return await getShopifyProduct(handle, lang);
+      const result = await getShopifyProduct(handle, lang);
+      if (result?.product) return result;
+      const fallback = await shopifyProductFallback(handle);
+      if (fallback) return fallback;
+      return { product: null, relatedProducts: [] };
     } else if (dataType === 'woocommerce') {
       const data = await getWooProduct(handle);
       
@@ -103,6 +117,10 @@ export async function getTranslatedProductByHandle(handle: string, lang: string 
     };
   } catch (error) {
     console.error('Error in getTranslatedProductByHandle:', error);
+    if (import.meta.env.DATA_TYPE?.toLowerCase() === 'shopify') {
+      const fallback = await shopifyProductFallback(handle);
+      if (fallback) return fallback;
+    }
     return {
       product: null,
       relatedProducts: []

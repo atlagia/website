@@ -1,6 +1,6 @@
 {
-  "siteTitle": "Drivon - Premium Driver Merchandise",
-  "siteDescription": "Premium driver merchandise for car enthusiasts worldwide. From racing legends to street culture, we bring you authentic automotive fan gear.",
+  "siteTitle": "Drivon — Premium Automotive Lifestyle",
+  "siteDescription": "Bold, minimal, cinematic. Premium automotive lifestyle and driver merchandise for those who live the culture.",
   "sections": [
     {
       "type": "welcomeSection",
@@ -15,6 +15,10 @@
       }
     },
     {
+      "type": "marqueeSection",
+      "items": ["RACING", "HERITAGE", "CULTURE", "PREMIUM", "DRIVEN", "LEGEND", "AUTOMOTIVE", "COLLECTION"]
+    },
+    {
       "type": "bannerSection",
       "headline": "Car Culture Meets Racing Heritage",
       "description": "Experience authentic automotive culture designed for car enthusiasts worldwide. From racing legends to street icons, we celebrate the true spirit of driving passion that connects car enthusiasts across the globe.",
@@ -23,6 +27,15 @@
       "button1Link": "/driver-collection",
       "button2Text": "View Racing Culture",
       "button2Link": "/racing-culture"
+    },
+    {
+      "type": "statsSection",
+      "stats": [
+        { "value": "50K+", "label": "Enthusiasts" },
+        { "value": "Free", "label": "Shipping over $75" },
+        { "value": "30 Days", "label": "Returns" },
+        { "value": "24/7", "label": "Support" }
+      ]
     },
     {
       "type": "categoryGrid",
@@ -159,7 +172,8 @@
           "answer": "We create original designs inspired by automotive culture while respecting trademark guidelines. All our merchandise celebrates the community and culture authentically."
         }
       ]
-    },{
+    },
+    {
       "type": "featuresSection",
       "title": "Why Choose Drivon?",
       "features": [

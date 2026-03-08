@@ -31,22 +31,37 @@ const { default: Footer } = await import(`../components/Footer.astro`);
 
 // Get current language and load appropriate content
 const currentLang = getLangFromUrl(Astro.url);
-const demoData = await import(`../data/demo/demo_${currentLang}.json`).catch(() => 
-  import(`../data/demo/demo_en.json`)
-);
+let demoData;
+try {
+  const mod = await import(`../data/demo/demo_${currentLang}.json`);
+  demoData = mod.default ?? mod;
+} catch {
+  const mod = await import(`../data/demo/demo_en.json`);
+  demoData = mod.default ?? mod;
+}
+if (!demoData || typeof demoData !== 'object') {
+  demoData = {};
+}
 
 const {
-  pageTitle,
-  pageDescription,
-  hero,
-  features,
-  demoForm,
-  benefits,
-  testimonials,
-  video,
-  faq,
-  cta
+  pageTitle = 'Demo',
+  pageDescription = '',
+  hero: rawHero,
+  features = [],
+  demoForm: rawDemoForm,
+  benefits = { items: [] },
+  testimonials = { items: [] },
+  video: rawVideo,
+  faq = { items: [] },
+  cta = {}
 } = demoData;
+
+const hero = rawHero ?? { badge: '', title: '', description: '', cta: { primary: { text: '', href: '#' }, secondary: { text: '', href: '#' } } };
+const video = rawVideo ?? { title: '', description: '', videoUrl: '' };
+const demoForm = rawDemoForm ?? {};
+const demoFormFields = demoForm.fields ?? {};
+const industryField = demoFormFields.industry ?? { options: [], placeholder: '', required: false, label: '' };
+const useCaseField = demoFormFields.useCase ?? { label: '', placeholder: '' };
 
 const iconMap = {
   'zap': Zap,
@@ -125,7 +140,7 @@ const getIcon = (iconName: string) => {
     <section class="py-24 bg-white relative">
       <div class="container mx-auto px-4">
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-          {features.map((feature) => {
+          {(Array.isArray(features) ? features : []).map((feature) => {
             const Icon = getIcon(feature.icon);
             return (
               <div class="text-center">
@@ -155,15 +170,15 @@ const getIcon = (iconName: string) => {
               <!-- Full Name -->
               <div>
                 <label class="block text-sm font-semibold text-gray-700 mb-2">
-                  {demoForm.fields.fullName.label} {demoForm.fields.fullName.required && <span class="text-red-500">*</span>}
+                  {demoFormFields.fullName?.label} {demoFormFields.fullName?.required && <span class="text-red-500">*</span>}
                 </label>
                 <div class="relative">
                   <User class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
                   <input
                     type="text"
                     name="fullName"
-                    placeholder={demoForm.fields.fullName.placeholder}
-                    required={demoForm.fields.fullName.required}
+                    placeholder={demoFormFields.fullName?.placeholder}
+                    required={demoFormFields.fullName?.required}
                     class="w-full pl-12 pr-4 py-3 rounded-xl border-2 border-gray-200 focus:border-purple-600 focus:outline-none transition-colors"
                   />
                 </div>
@@ -172,15 +187,15 @@ const getIcon = (iconName: string) => {
               <!-- Email -->
               <div>
                 <label class="block text-sm font-semibold text-gray-700 mb-2">
-                  {demoForm.fields.email.label} {demoForm.fields.email.required && <span class="text-red-500">*</span>}
+                  {demoFormFields.email?.label} {demoFormFields.email?.required && <span class="text-red-500">*</span>}
                 </label>
                 <div class="relative">
                   <Mail class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
                   <input
                     type="email"
                     name="email"
-                    placeholder={demoForm.fields.email.placeholder}
-                    required={demoForm.fields.email.required}
+                    placeholder={demoFormFields.email?.placeholder}
+                    required={demoFormFields.email?.required}
                     class="w-full pl-12 pr-4 py-3 rounded-xl border-2 border-gray-200 focus:border-purple-600 focus:outline-none transition-colors"
                   />
                 </div>
@@ -189,15 +204,15 @@ const getIcon = (iconName: string) => {
               <!-- Company -->
               <div>
                 <label class="block text-sm font-semibold text-gray-700 mb-2">
-                  {demoForm.fields.company.label} {demoForm.fields.company.required && <span class="text-red-500">*</span>}
+                  {demoFormFields.company?.label} {demoFormFields.company?.required && <span class="text-red-500">*</span>}
                 </label>
                 <div class="relative">
                   <Building class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
                   <input
                     type="text"
                     name="company"
-                    placeholder={demoForm.fields.company.placeholder}
-                    required={demoForm.fields.company.required}
+                    placeholder={demoFormFields.company?.placeholder}
+                    required={demoFormFields.company?.required}
                     class="w-full pl-12 pr-4 py-3 rounded-xl border-2 border-gray-200 focus:border-purple-600 focus:outline-none transition-colors"
                   />
                 </div>
@@ -206,17 +221,17 @@ const getIcon = (iconName: string) => {
               <!-- Industry -->
               <div>
                 <label class="block text-sm font-semibold text-gray-700 mb-2">
-                  {demoForm.fields.industry.label} {demoForm.fields.industry.required && <span class="text-red-500">*</span>}
+                  {industryField.label} {industryField.required && <span class="text-red-500">*</span>}
                 </label>
                 <div class="relative">
                   <Briefcase class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
                   <select
                     name="industry"
-                    required={demoForm.fields.industry.required}
+                    required={industryField.required}
                     class="w-full pl-12 pr-4 py-3 rounded-xl border-2 border-gray-200 focus:border-purple-600 focus:outline-none transition-colors appearance-none"
                   >
-                    <option value="">{demoForm.fields.industry.placeholder}</option>
-                    {demoForm.fields.industry.options.map((option) => (
+                    <option value="">{industryField.placeholder}</option>
+                    {(Array.isArray(industryField.options) ? industryField.options : []).map((option) => (
                       <option value={option}>{option}</option>
                     ))}
                   </select>
@@ -227,13 +242,13 @@ const getIcon = (iconName: string) => {
               <!-- Use Case -->
               <div>
                 <label class="block text-sm font-semibold text-gray-700 mb-2">
-                  {demoForm.fields.useCase.label}
+                  {useCaseField.label}
                 </label>
                 <div class="relative">
                   <MessageSquare class="absolute left-4 top-4 w-5 h-5 text-gray-400" />
                   <textarea
                     name="useCase"
-                    placeholder={demoForm.fields.useCase.placeholder}
+                    placeholder={useCaseField.placeholder}
                     rows="4"
                     class="w-full pl-12 pr-4 py-3 rounded-xl border-2 border-gray-200 focus:border-purple-600 focus:outline-none transition-colors resize-none"
                   ></textarea>
@@ -266,7 +281,7 @@ const getIcon = (iconName: string) => {
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-          {benefits.items.map((benefit) => {
+          {(Array.isArray(benefits?.items) ? benefits.items : []).map((benefit) => {
             const Icon = getIcon(benefit.icon);
             return (
               <div class="bg-gradient-to-br from-gray-50 to-purple-50 rounded-2xl p-8 hover:shadow-xl transition-shadow duration-300">
@@ -315,7 +330,7 @@ const getIcon = (iconName: string) => {
         </div>
 
         <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {testimonials.items.map((testimonial) => (
+          {(Array.isArray(testimonials?.items) ? testimonials.items : []).map((testimonial) => (
             <div class="bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl p-8 shadow-lg">
               <p class="text-lg text-gray-700 mb-6 italic">"{testimonial.quote}"</p>
               <div class="flex items-center gap-4">
@@ -345,7 +360,7 @@ const getIcon = (iconName: string) => {
           </div>
 
           <div class="space-y-4">
-            {faq.items.map((item, index) => (
+            {(Array.isArray(faq?.items) ? faq.items : []).map((item, index) => (
               <details class="group bg-white rounded-2xl p-6 shadow-lg">
                 <summary class="flex items-center justify-between cursor-pointer list-none">
                   <h3 class="text-lg font-semibold text-gray-900">{item.question}</h3>

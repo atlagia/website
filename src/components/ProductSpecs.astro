@@ -8,108 +8,62 @@ interface Props {
 
 const { productTitle, language = 'en' } = Astro.props;
 
-// Get PROJECT_TYPE from environment variables
+// Get PROJECT_TYPE and site name from environment variables
 const PROJECT_TYPE = import.meta.env.PROJECT_TYPE || 'default';
+const SITE_NAME = (import.meta.env.PUBLIC_SITE_NAME || '').toLowerCase();
 
 function getProductCategory(title: string): string {
-  // First priority: Check PROJECT_TYPE for rep products
   const PROJECT_TYPE_LOWER = PROJECT_TYPE.toLowerCase();
   const title_lower = title.toLowerCase();
-  
-  if (PROJECT_TYPE_LOWER === 'repbag') {
+
+  // 1) MAP VIA TITLE FIRST — so backpack/handbag shows bag content, jacket shows jacket content
+  if (title_lower.includes('watch') || title_lower.includes('timepiece') || title_lower.includes('chronograph') ||
+      title_lower.includes('wristwatch') || title_lower.includes('smartwatch') || title_lower.includes('clock')) {
+    return 'watch';
+  }
+  if (title_lower.includes('backpack') || title_lower.includes('handbag') || title_lower.includes(' shoulder bag') ||
+      title_lower.includes('clutch') || title_lower.includes('wallet') || title_lower.includes('pouch') ||
+      title_lower.includes('tote') || title_lower.includes('satchel') || title_lower.includes('crossbody') ||
+      title_lower.includes('hobo') || title_lower.includes('pochette') || title_lower.includes('messenger') ||
+      (title_lower.includes('bag') && !title_lower.includes('sleeping bag')) || title_lower.includes('purse')) {
     return 'bag';
   }
-  if (PROJECT_TYPE_LOWER === 'repshoes') {
-    return 'shoes';
-  }
-  if (PROJECT_TYPE_LOWER === 'repwatch') {
-    return 'watch';
-  }
-  
-  // IPTV-specific detection
-  if (PROJECT_TYPE_LOWER === 'iptv') {
-    if (title_lower.includes('iptv') || 
-        title_lower.includes('subscription') || 
-        title_lower.includes('smart tv') || 
-        title_lower.includes('streaming')) {
-      return 'iptv';
-    }
-  }
-  
-  // Existing category detection logic with case-insensitive checks
-  // Second priority: Check if it's a watch
-  if (title_lower.includes('watch') ||
-      title_lower.includes('timepiece') ||
-      title_lower.includes('chronograph') ||
-      title_lower.includes('wristwatch') ||
-      title_lower.includes('smartwatch') ||
-      title_lower.includes('clock')) {
-    return 'watch';
-  }
-
-  // Third priority: Check if it's a digital product
-  if (PROJECT_TYPE_LOWER === 'degital') {
-    if (title_lower.includes('template') || title_lower.includes('theme')) {
-      return 'template';
-    }
-    if (title_lower.includes('plugin') || title_lower.includes('extension')) {
-      return 'plugin';
-    }
-    if (title_lower.includes('script') || title_lower.includes('code')) {
-      return 'script';
-    }
-    return 'digital'; // default digital fallback
-  }
-  
-  // Remaining category checks with case-insensitive comparisons
-  // Fourth priority: Check for shoe-related terms
-  if (title_lower.includes('shoe') ||
-      title_lower.includes('sneaker') ||
-      title_lower.includes('trainer') ||
-      title_lower.includes('footwear') ||
-      title_lower.includes('boot') ||
-      title_lower.includes('sandal') ||
-      title_lower.includes('slipper') ||
-      title_lower.includes('loafer') ||
-      title_lower.includes('heel') ||
-      title_lower.includes('oxford') ||
-      title_lower.includes('moccasin') ||
-      title_lower.includes('espadrille') ||
-      title_lower.includes('pump') ||
-      title_lower.includes('flat') ||
-      title_lower.includes('derby') ||
-      title_lower.includes('brogue') ||
-      title_lower.includes('mule') ||
-      title_lower.includes('clog')) {
-    return 'shoes';
-  }
-  
-  // Fourth priority: Check for jacket/coat terms
-  if (title_lower.includes('jacket') || 
-      title_lower.includes('coat') ||
-      title_lower.includes('blazer') ||
-      title_lower.includes('parka') ||
-      title_lower.includes('windbreaker') ||
-      title_lower.includes('bomber') ||
-      title_lower.includes('cardigan') ||
-      title_lower.includes('hoodie') ||
-      title_lower.includes('sweater') ||
-      title_lower.includes('pullover') ||
-      title_lower.includes('vest') ||
-      title_lower.includes('gilet') ||
-      title_lower.includes('anorak') ||
-      title_lower.includes('raincoat') ||
-      title_lower.includes('overcoat') ||
-      title_lower.includes('peacoat') ||
-      title_lower.includes('trench') ||
-      title_lower.includes('duster') ||
-      title_lower.includes('puffer') ||
-      title_lower.includes('down jacket')) {
+  if (title_lower.includes('jacket') || title_lower.includes('coat') || title_lower.includes('blazer') ||
+      title_lower.includes('parka') || title_lower.includes('windbreaker') || title_lower.includes('bomber') ||
+      title_lower.includes('cardigan') || title_lower.includes('hoodie') || title_lower.includes('sweater') ||
+      title_lower.includes('pullover') || title_lower.includes('vest') || title_lower.includes('gilet') ||
+      title_lower.includes('anorak') || title_lower.includes('raincoat') || title_lower.includes('overcoat') ||
+      title_lower.includes('peacoat') || title_lower.includes('trench') || title_lower.includes('duster') ||
+      title_lower.includes('puffer') || title_lower.includes('down jacket')) {
     return 'jacket';
   }
-  
-  // Default fallback based on PROJECT_TYPE
-  return PROJECT_TYPE_LOWER === 'shoes' ? 'shoes' : 'jacket';
+  if (title_lower.includes('shoe') || title_lower.includes('boot') || title_lower.includes('sneaker') ||
+      title_lower.includes('trainer') || title_lower.includes('footwear') || title_lower.includes('sandal') ||
+      title_lower.includes('slipper') || title_lower.includes('loafer') || title_lower.includes('heel') ||
+      title_lower.includes('oxford') || title_lower.includes('moccasin') || title_lower.includes('espadrille') ||
+      title_lower.includes('pump') || title_lower.includes('flat') || title_lower.includes('derby') ||
+      title_lower.includes('brogue') || title_lower.includes('mule') || title_lower.includes('clog')) {
+    return 'shoes';
+  }
+  if (title_lower.includes('helmet')) return 'helmet';
+
+  // 2) PROJECT_TYPE / site-level override
+  if (PROJECT_TYPE_LOWER === 'repbag' || SITE_NAME === 'repbag') return 'bag';
+  if (PROJECT_TYPE_LOWER === 'repshoes') return 'shoes';
+  if (PROJECT_TYPE_LOWER === 'repwatch') return 'watch';
+  if (PROJECT_TYPE_LOWER === 'iptv' && (title_lower.includes('iptv') || title_lower.includes('subscription') || title_lower.includes('streaming'))) return 'iptv';
+  if (PROJECT_TYPE_LOWER === 'degital') {
+    if (title_lower.includes('template') || title_lower.includes('theme')) return 'template';
+    if (title_lower.includes('plugin') || title_lower.includes('extension')) return 'plugin';
+    if (title_lower.includes('script') || title_lower.includes('code')) return 'script';
+    return 'digital';
+  }
+
+  // 3) Default: RepBag site → bag; otherwise jacket for physical
+  if (PROJECT_TYPE_LOWER === 'shoes') return 'shoes';
+  if (PROJECT_TYPE_LOWER === 'iptv') return 'iptv';
+  if (SITE_NAME === 'repbag' || PROJECT_TYPE_LOWER === 'repbag') return 'bag';
+  return 'jacket';
 }
 
 // Get content for current language or fallback to English
@@ -117,65 +71,86 @@ const content = specsContent[language] || specsContent.en;
 const category = getProductCategory(productTitle);
 
 // Get specs for the category, fallback to English if not available in current language
+const PROJECT_TYPE_LOWER = (import.meta.env.PROJECT_TYPE || 'default').toLowerCase();
+const fallbackCategory = PROJECT_TYPE_LOWER === 'degital' ? 'digital' : (SITE_NAME === 'repbag' ? 'bag' : 'jacket');
 const specs = content.categories[category]?.specs || 
              specsContent.en.categories[category]?.specs || 
-             specsContent.en.categories[PROJECT_TYPE === 'degital' ? 'digital' : 'jacket'].specs; // ultimate fallback
+             specsContent.en.categories[fallbackCategory]?.specs || 
+             specsContent.en.categories.bag?.specs;
 
 const theme = import.meta.env.THEME || 'default';
-let styles = {};
-
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'default';
+const defaultSpecs = {
+  wrapper: 'bg-neutral-50 rounded-2xl p-8 border border-neutral-200',
+  headerWrap: 'mb-8',
+  title: 'text-sm font-medium uppercase tracking-widest text-neutral-500 mb-2 flex items-center gap-2',
+  titleIconWrap: 'w-8 h-8 bg-neutral-200 flex items-center justify-center',
+  titleIcon: 'w-4 h-4 text-neutral-600',
+  titleDivider: 'w-12 h-px bg-neutral-300',
+  grid: 'grid grid-cols-1 md:grid-cols-2 gap-5',
+  item: 'group relative bg-white rounded-xl p-5 border border-neutral-200 hover:border-neutral-300 transition-all duration-200',
+  itemContent: 'flex items-start gap-4',
+  itemIconWrap: 'flex-shrink-0 w-8 h-8 bg-neutral-200 rounded-full flex items-center justify-center',
+  itemIcon: 'w-4 h-4 text-neutral-600',
+  itemBody: 'flex-1 min-w-0',
+  label: 'text-xs font-semibold text-neutral-500 uppercase tracking-wider mb-1',
+  value: 'text-base font-medium text-neutral-900',
+  footerWrap: 'mt-6 text-center',
+  footerInner: 'inline-flex items-center gap-2 text-sm text-neutral-500 bg-white px-4 py-2 border border-neutral-200',
+  footerIcon: 'w-4 h-4 text-neutral-400'
+};
+let styles = defaultSpecs;
 try {
-  const { luxuryComponentStyle } = await import(`../themes/${theme}/styles/components/luxury.mjs`);
-  styles = luxuryComponentStyle.specs;
-} catch (error) {
-  console.error('Failed to load component styles:', error);
+  const { luxuryComponentStyle } = await import(`@websites/${siteName}/themes/${theme}/styles/components/luxury.mjs`);
+  if (luxuryComponentStyle?.specs) styles = { ...defaultSpecs, ...luxuryComponentStyle.specs };
+} catch {
+  try {
+    const { luxuryComponentStyle } = await import(`@themes/${theme}/styles/components/luxury.mjs`);
+    if (luxuryComponentStyle?.specs) styles = { ...defaultSpecs, ...luxuryComponentStyle.specs };
+  } catch (err) {
+    console.error('Failed to load component styles:', err);
+  }
 }
 ---
 
-<div class="bg-gradient-to-br from-gray-50 to-slate-50 rounded-2xl p-8 shadow-lg border border-gray-200">
-  <!-- Header Section -->
-  <div class="text-center mb-8">
-    <h3 class="text-3xl font-bold text-gray-900 mb-3 flex items-center justify-center gap-3">
-      <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center">
-        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<div class={styles.wrapper}>
+  <div class={styles.headerWrap}>
+    <h3 class={styles.title}>
+      <span class={styles.titleIconWrap}>
+        <svg class={styles.titleIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
         </svg>
-      </div>
+      </span>
       {content.title}
     </h3>
-    <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 mx-auto rounded-full"></div>
+    <div class={styles.titleDivider}></div>
   </div>
   
-  <!-- Specifications Grid -->
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+  <div class={styles.grid}>
     {specs.map((spec, index) => (
-      <div class="group relative bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md hover:border-blue-200 transition-all duration-300 hover:-translate-y-1">
-        <div class="flex items-start gap-4">
-          <div class="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div class={styles.item}>
+        <div class={styles.itemContent}>
+          <div class={styles.itemIconWrap}>
+            <svg class={styles.itemIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
           </div>
-          <div class="flex-1 min-w-0">
-            <dt class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-1 group-hover:text-gray-600 transition-colors duration-300">
+          <div class={styles.itemBody}>
+            <dt class={styles.label}>
               {spec.label}
             </dt>
-            <dd class="text-lg font-medium text-gray-900 group-hover:text-gray-800 transition-colors duration-300">
+            <dd class={styles.value}>
               {spec.value}
             </dd>
           </div>
         </div>
-        
-        <!-- Decorative element -->
-        <div class="absolute top-4 right-4 w-2 h-2 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
       </div>
     ))}
   </div>
   
-  <!-- Bottom accent -->
-  <div class="mt-8 text-center">
-    <div class="inline-flex items-center gap-2 text-sm text-gray-600 bg-white/60 px-4 py-2 rounded-full border border-gray-200">
-      <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <div class={styles.footerWrap}>
+    <div class={styles.footerInner}>
+      <svg class={styles.footerIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
       </svg>
       <span>Detailed specifications</span>

@@ -4,9 +4,16 @@ import contentData from '../data/collection-content.json';
 interface Props {
   language: string;
   currentSort?: string;
+  selectClass?: string;
+  labelClass?: string;
 }
 
-const { language = 'en', currentSort = '' } = Astro.props;
+const { 
+  language = 'en', 
+  currentSort = '', 
+  selectClass = 'appearance-none bg-white border border-gray-300 rounded-md px-4 py-2 pr-8 text-sm font-medium text-gray-700 hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors cursor-pointer',
+  labelClass = 'text-sm font-medium text-gray-700'
+} = Astro.props;
 
 // Get content for current language or fallback to English
 const content = contentData[language] || contentData.en;
@@ -14,13 +21,13 @@ const content = contentData[language] || contentData.en;
 
 <div class="flex items-center space-x-4">
   <!-- Sort Label -->
-  <span class="text-sm font-medium text-gray-700">{content.sorting.title}</span>
+  <span class={labelClass}>{content.sorting.title}</span>
   
   <!-- Sort Dropdown -->
   <div class="relative">
     <select 
       id="sort-select"
-      class="appearance-none bg-white border border-gray-300 rounded-md px-4 py-2 pr-8 text-sm font-medium text-gray-700 hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors cursor-pointer"
+      class={selectClass}
       value={currentSort}
     >
       <option value="">{content.sorting.options.best_selling}</option>

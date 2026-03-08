@@ -1,0 +1,194 @@
+---
+import { getLangFromUrl } from '@utils/i18n';
+
+const theme = import.meta.env.THEME || 'bikes';
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'Drivon';
+
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+
+// Get current language and load appropriate content
+const currentLang = getLangFromUrl(Astro.url);
+
+// Try to load demo data, fallback to contact data if demo doesn't exist
+let pageData;
+try {
+  const demoData = await import(`../data/demo/demo_${currentLang}.json`);
+  pageData = demoData.default;
+} catch {
+  // If demo data doesn't exist, use contact data as fallback
+  try {
+    const contactData = await import(`../data/contact/contact_${currentLang}.json`);
+    pageData = contactData.default;
+  } catch {
+    // Final fallback - create minimal data
+    pageData = {
+      pageTitle: 'Demo Request',
+      pageDescription: 'Request a demo of our products',
+      hero: {
+        title: 'Request a Demo',
+        description: 'Experience our products firsthand',
+        badge: 'Get Started'
+      }
+    };
+  }
+}
+---
+
+<!doctype html>
+<html lang={currentLang} class="scroll-smooth">
+  <head>
+    <BaseHead 
+      title={`${pageData.pageTitle || 'Demo'} | ${siteName}`}
+      description={pageData.pageDescription || 'Request a demo of our products'}
+    />
+  </head>
+  <body class="bg-gray-50">
+    <Header />
+    
+    <!-- Hero Section -->
+    <section class="relative min-h-[60vh] flex items-center py-20 overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800">
+      <div class="relative container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center text-white">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 mb-8">
+            <span class="text-sm font-medium">{pageData.hero?.badge || 'Get Started'}</span>
+          </div>
+
+          <h1 class="text-4xl lg:text-5xl font-bold leading-tight mb-8">
+            {pageData.hero?.title || 'Request a Demo'}
+          </h1>
+
+          <p class="text-xl mb-12 max-w-3xl mx-auto text-white/90">
+            {pageData.hero?.description || 'Experience our products firsthand and see how they can benefit you.'}
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Demo Form Section -->
+    <section id="demo-form" class="py-24 bg-white relative">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4 text-gray-900">Get in Touch</h2>
+            <p class="text-xl text-gray-600">Fill out the form below and we'll get back to you soon.</p>
+          </div>
+
+          <div class="bg-gray-50 rounded-2xl shadow-lg p-8 md:p-12">
+            <form id="demo-form" method="POST" action="#" class="space-y-6">
+              <!-- Full Name -->
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2">
+                  Full Name <span class="text-red-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  name="fullName"
+                  placeholder="Enter your full name"
+                  required
+                  class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-gray-900 focus:outline-none transition-colors"
+                />
+              </div>
+
+              <!-- Email -->
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2">
+                  Email <span class="text-red-500">*</span>
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Enter your email"
+                  required
+                  class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-gray-900 focus:outline-none transition-colors"
+                />
+              </div>
+
+              <!-- Message -->
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2">
+                  Message
+                </label>
+                <textarea
+                  name="message"
+                  placeholder="Tell us about your needs..."
+                  rows="4"
+                  class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-gray-900 focus:outline-none transition-colors resize-none"
+                ></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <button
+                type="submit"
+                class="w-full py-4 rounded-lg bg-gray-900 text-white font-bold text-lg hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                Submit Request
+              </button>
+
+              <!-- Consent -->
+              <p class="text-sm text-gray-500 text-center">
+                By submitting this form, you agree to our privacy policy and terms of service.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Footer />
+
+    <script>
+      // Form submission handling
+      const form = document.getElementById('demo-form');
+      const submitButton = form?.querySelector('button[type="submit"]');
+      let isSubmitting = false;
+      
+      form?.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        if (isSubmitting) {
+          return;
+        }
+        
+        isSubmitting = true;
+        const originalButtonText = submitButton?.textContent;
+        if (submitButton) {
+          submitButton.disabled = true;
+          submitButton.textContent = 'Submitting...';
+        }
+        
+        const formData = new FormData(form);
+        const submissionData = {
+          fullName: formData.get('fullName') || '',
+          email: formData.get('email') || '',
+          message: formData.get('message') || '',
+          submissionTimestamp: new Date().toISOString()
+        };
+        
+        try {
+          await new Promise(resolve => setTimeout(resolve, 500));
+          form.reset();
+          alert('Demo request submitted! We\'ll get back to you shortly.');
+        } catch (error) {
+          console.error('Form submission error:', error);
+          alert('Sorry, there was an error processing your request. Please try again.');
+        } finally {
+          isSubmitting = false;
+          if (submitButton) {
+            submitButton.disabled = false;
+            submitButton.textContent = originalButtonText;
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
+
+<style>
+  * {
+    scroll-behavior: smooth;
+  }
+</style>
+

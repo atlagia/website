@@ -1,0 +1,78 @@
+{
+  "title": "Endurance Professional Serie",
+  "description": "Professionelle Ausdauer-Rennausrüstung für Le Mans, WEC und Langstreckenrennen. Premium Ausdauer-Rennausrüstung.",
+  "hero": {
+    "title": "Endurance Professional Serie",
+    "subtitle": "Professionelle Ausdauer-Rennausrüstung für Le Mans, WEC und Langstrecken-Rennherausforderungen"
+  },
+  "sections": {
+    "collection": {
+      "title": "Professionelle Ausdauer Kollektion",
+      "subtitle": "Premium Rennausrüstung für Ausdauer-Profis"
+    },
+    "features": {
+      "title": "Für Ausdauer Gebaut",
+      "subtitle": "Entwickelt für die längsten Rennen"
+    },
+    "series": {
+      "title": "Unterstützte Rennserien",
+      "subtitle": "Professionelle Ausdauer-Rennmeisterschaften"
+    }
+  },
+  "collections": [
+    {
+      "title": "Ausdauer-Anzüge",
+      "description": "Entwickelt für Komfort während langer Rennsitzungen",
+      "link": "/collections/endurance-suits",
+      "linkText": "Endurance Professional Kaufen"
+    },
+    {
+      "title": "Kühlsysteme",
+      "description": "Fortschrittliche Kühltechnologie für Ausdauerrennen",
+      "link": "/collections/cooling-systems",
+      "linkText": "Endurance Professional Kaufen"
+    },
+    {
+      "title": "Hydratations-Ausrüstung",
+      "description": "Professionelle Hydratationssysteme für lange Rennen",
+      "link": "/collections/hydration-gear",
+      "linkText": "Endurance Professional Kaufen"
+    }
+  ],
+  "features": [
+    {
+      "icon": "24",
+      "title": "24-Stunden Bereit",
+      "description": "Entwickelt für Performance durch die längsten Ausdauerrennen"
+    },
+    {
+      "icon": "🌡️",
+      "title": "Temperaturkontrolle",
+      "description": "Fortschrittliche Kühlsysteme für optimale Performance"
+    },
+    {
+      "icon": "💧",
+      "title": "Hydratations-Fokus",
+      "description": "Integrierte Hydratationssysteme für nachhaltige Performance"
+    }
+  ],
+  "series": [
+    {
+      "name": "Le Mans 24h",
+      "description": "Das berühmteste Ausdauerrennen der Welt"
+    },
+    {
+      "name": "WEC",
+      "description": "Weltmeisterschaft für Ausdauerrennen"
+    },
+    {
+      "name": "IMSA",
+      "description": "Internationale Motorsport-Vereinigung"
+    },
+    {
+      "name": "ELMS",
+      "description": "European Le Mans Series"
+    }
+  ]
+}
+

@@ -117,6 +117,8 @@ if (!product || images.length === 0 || variants.length === 0) {
     statusText: 'Not found'
   });
 }
+
+const PROJECT_TYPE = import.meta.env.PROJECT_TYPE || 'physical';
 ---
 
 <Layout title={`${product.title} | RidWear`}>
@@ -188,6 +190,7 @@ if (!product || images.length === 0 || variants.length === 0) {
 
         <AddToCart
           client:load
+          projectType={PROJECT_TYPE}
           product={{
             id: product.id,
             title: product.title,

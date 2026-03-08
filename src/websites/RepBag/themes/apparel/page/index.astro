@@ -1,0 +1,237 @@
+---
+import { fetchBlogPosts } from '@utils/shopifyAPI';
+import { getLangFromUrl, useTranslations, isValidLanguage } from '@utils/i18n';
+
+const theme = import.meta.env.THEME || 'default';
+
+// Properly handle dynamic imports with default exports
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+const { default: Welcome } = await import(`../components/Welcome.astro`);
+const { default: Banner } = await import(`../components/Banner.astro`);
+const { default: EditorialSection } = await import(`../components/EditorialSection.astro`);
+const { default: ViewAllCta } = await import(`../components/ViewAllCta.astro`);
+const { default: DiscoverMore } = await import(`../components/DiscoverMore.astro`);
+const { default: FeaturedPosts } = await import(`../components/FeaturedPosts.astro`);
+const { default: EmailSignup } = await import(`../components/EmailSignup.astro`);
+const { default: CategoryGrid } = await import(`../components/CategoryGrid.astro`);
+const { default: ProductShowcase } = await import(`../components/ProductShowcase.astro`);
+const { default: TestimonialSlider } = await import(`../components/TestimonialSlider.astro`);
+const { default: FAQ } = await import(`../components/FaqSection.astro`);
+const { default: Video } = await import(`../components/Video.astro`);
+const { default: FeaturesSection } = await import(`../components/FeaturesSection.astro`);
+const { default: BestSellers } = await import(`../components/BestSellers.astro`);
+const { default: SpecialOffers } = await import(`../components/SpecialOffers.astro`);
+const { default: TrustBadges } = await import(`../components/TrustBadges.astro`);
+const { default: SocialProof } = await import(`../components/SocialProof.astro`);
+
+// Get the language parameter from the URL
+const { lang } = Astro.params;
+
+// Validate language and redirect to /en if invalid
+if (!isValidLanguage(lang)) {
+  return Astro.redirect('/en');
+}
+
+const translations = await useTranslations(lang);
+const jsonData = translations.default;
+
+// Get site title and description from language-specific data
+const SITE_TITLE = jsonData.siteTitle || 'RepBag - Premium Bags & Accessories';
+const SITE_DESCRIPTION = jsonData.siteDescription || 'Shop premium bags, handbags, backpacks and accessories. Quality and style for every occasion.';
+
+const blogId = '82152357935';
+let posts = [];
+
+try {
+  posts = await fetchBlogPosts();
+} catch (error) {
+  console.error('Error fetching blog posts:', error);
+}
+
+// Generate static paths for all supported languages
+export async function getStaticPaths() {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  const languages = allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+  
+  return languages.map(lang => ({ params: { lang } }));
+}
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <BaseHead 
+      title={SITE_TITLE} 
+      description={SITE_DESCRIPTION} 
+      isHomePage={true}
+      currentLang={lang}
+    />
+  </head>
+  <body>
+    <Header />
+    <main>
+      {jsonData.sections?.map((section) => {
+        return (
+          <>
+            {section.type === 'welcomeSection' && (
+              <Welcome
+                title={section.title}
+                description={section.description}
+                blogLink={`/${lang}${section.blogLink || '/collections'}`}
+                blogLinkText={section.blogLinkText}
+                backgroundVideo={section.backgroundVideo}
+                heroImage={section.heroImage}
+                headlineLine1={section.headlineLine1}
+                headlineLine2={section.headlineLine2}
+                luxury={section.luxury !== false}
+              />
+            )}
+            
+            {section.type === 'bannerSection' && (
+              <Banner
+                headline={section.headline}
+                description={section.description}
+                backgroundImage={section.backgroundImage}
+                button1Text={section.button1Text}
+                button1Link={`/${lang}${section.button1Link}`}
+                button2Text={section.button2Text}
+                button2Link={`/${lang}${section.button2Link}`}
+              />
+            )}
+            
+            {section.type === 'categoryGrid' && (
+              <CategoryGrid
+                title={section.title}
+                description={section.description}
+                categories={section.categories}
+              />
+            )}
+            
+            {section.type === 'productShowcase' && (
+              <ProductShowcase
+                title={section.title}
+                description={section.description}
+                products={section.products}
+                viewAllLink={`/${lang}${section.viewAllLink}`}
+                lang={lang}
+              />
+            )}
+            
+            {section.type === 'testimonialSlider' && (
+              <TestimonialSlider
+                title={section.title}
+                testimonials={section.testimonials}
+              />
+            )}
+            
+            {section.type === 'featuredPostsSection' && (
+              <FeaturedPosts
+                title={section.title}
+                posts={posts}
+                exploreMoreLink={`/${lang}${section.exploreMoreLink}`}
+                exploreMoreText={section.exploreMoreText}
+              />
+            )}
+            
+            {section.type === 'emailSignupSection' && (
+              <EmailSignup
+                title={section.title}
+                description={section.description}
+                backgroundImage={section.backgroundImage}
+                formAction={section.formAction}
+                buttonText={section.submitText}
+              />
+            )}
+
+            {section.type === 'faqSection' && (
+              <FAQ
+                title={section.title}
+                description={section.description}
+                faqs={section.faqs}
+              />
+            )}
+
+            {section.type === 'videoSection' && (
+              <Video
+                headline={section.headline}
+                description={section.description}
+                videoUrl={section.videoUrl}
+                buttonText={section.buttonText}
+                buttonLink={`/${lang}${section.buttonLink}`}
+                headlinePosition={section.headlinePosition}
+                textPosition={section.textPosition}
+              />
+            )}
+            
+            {section.type === 'featuresSection' && (
+              <FeaturesSection
+                title={section.title}
+                features={section.features}
+              />
+            )}
+            
+            {section.type === 'bestSellers' && (
+              <BestSellers
+                title={section.title}
+                description={section.description}
+                viewAllLink={`/${lang}${section.viewAllLink}`}
+                lang={lang}
+                collectionHandle={section.collectionHandle}
+              />
+            )}
+            
+            {section.type === 'specialOffers' && (
+              <SpecialOffers
+                title={section.title}
+                offers={section.offers}
+              />
+            )}
+            
+            {section.type === 'trustBadges' && (
+              <TrustBadges
+                title={section.title}
+                badges={section.badges}
+                paymentMethods={section.paymentMethods}
+                guaranteeText={section.guaranteeText}
+              />
+            )}
+            
+            {section.type === 'socialProof' && (
+              <SocialProof
+                title={section.title}
+                stats={section.stats}
+                recentActivities={section.recentActivities}
+                overallRating={section.overallRating}
+                totalReviews={section.totalReviews}
+              />
+            )}
+
+            {section.type === 'editorialSection' && (
+              <EditorialSection
+                title={section.title}
+                images={section.images}
+                layout={section.layout}
+                viewAllHref={section.viewAllLink ? `/${lang}${section.viewAllLink}` : undefined}
+                viewAllLabel={section.viewAllLabel}
+              />
+            )}
+            {section.type === 'viewAllCta' && (
+              <ViewAllCta href={`/${lang}${section.href}`} label={section.label} />
+            )}
+            {section.type === 'discoverMore' && (
+              <DiscoverMore
+                title={section.title}
+                description={section.description}
+                buttonText={section.buttonText}
+                buttonHref={section.buttonHref && section.buttonHref !== '/' ? `/${lang}${section.buttonHref.startsWith('/') ? section.buttonHref : '/' + section.buttonHref}` : `/${lang}`}
+              />
+            )}
+          </>
+        );
+      })}
+    </main>
+    <Footer />
+  </body>
+</html>

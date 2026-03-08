@@ -1,0 +1,45 @@
+---
+description: Strict rule - all tasks must use MCP (cursor-ide-browser) to verify results before completing
+alwaysApply: true
+---
+
+# Mandatory MCP Verification
+
+**This rule is strict and non-negotiable.** Do not wait for the user to ask—apply it automatically on every task.
+
+## When to Use MCP
+
+Use **cursor-ide-browser** MCP to verify results whenever you:
+
+- Change UI, layouts, components, or styles (Astro, React, CSS, Tailwind)
+- Fix bugs that affect page rendering or visibility
+- Add or modify pages, routes, or navigation
+- Work on collections, products, shop, or any user-facing page
+- Make changes that produce a visible outcome in the browser
+
+## Required Workflow
+
+1. **After making edits** → Use `browser_navigate` to open the relevant URL (e.g. `http://localhost:7005/collections`)
+2. **Capture state** → Use `browser_take_screenshot` or `browser_snapshot` to record the result
+3. **Confirm** → If the result is wrong or broken, fix it and repeat verification
+
+## MCP Tools to Use
+
+- `browser_navigate` — Open the page under test
+- `browser_take_screenshot` — Capture visual result
+- `browser_snapshot` — Get accessibility tree / DOM snapshot (if available)
+
+## Example
+
+```
+Task: Fix product cards on /collections
+1. Make code changes
+2. browser_navigate to http://localhost:7005/collections
+3. browser_take_screenshot
+4. If products not visible → fix and re-verify
+5. Report: "Verified via MCP — products display correctly"
+```
+
+## Exception
+
+Skip MCP only if the task has no visible output (e.g. pure backend logic, config-only changes, docs). When in doubt, use MCP.

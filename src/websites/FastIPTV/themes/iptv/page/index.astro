@@ -53,8 +53,8 @@ export async function getStaticPaths() {
       isHomePage={true}
     />
   </head>
-  <body class={`${lang === 'ar' ? 'rtl' : 'ltr'} bg-black text-white`}>
-    <Header transparent={true} />
+  <body class={`${lang === 'ar' ? 'rtl' : 'ltr'} bg-[#0a0a0a] text-white`}>
+    <Header transparent={true} lang={lang} />
     <main>
       {/* Dynamic Sections from JSON */}
       {jsonData.sections?.map((section) => {
