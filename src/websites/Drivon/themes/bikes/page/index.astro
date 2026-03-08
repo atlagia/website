@@ -25,8 +25,8 @@ const { default: StatsBar } = await import(`../components/StatsBar.astro`);
 const { default: TrustBadges } = await import(`../components/TrustBadges.astro`);
 const { default: SocialProof } = await import(`../components/SocialProof.astro`);
 
-// Get the language parameter from the URL
-const { lang } = Astro.params;
+// Language: from props when rendered from root (/), else from URL params (e.g. /en)
+const lang = Astro.props.lang ?? Astro.params?.lang ?? 'en';
 
 // Validate language and redirect to /en if invalid
 if (!isValidLanguage(lang)) {
