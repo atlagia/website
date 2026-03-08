@@ -19,7 +19,7 @@ Use **cursor-ide-browser** MCP to verify results whenever you:
 
 ## Required Workflow
 
-1. **After making edits** → Use `browser_navigate` to open the relevant URL (e.g. `http://localhost:7005/collections`)
+1. **After making edits** → Use `browser_navigate` to open the relevant URL (e.g. `http://localhost:7005/collections`, or `http://localhost:7002/en` for Drivon / Welcome hero)
 2. **Capture state** → Use `browser_take_screenshot` or `browser_snapshot` to record the result
 3. **Confirm** → If the result is wrong or broken, fix it and repeat verification
 

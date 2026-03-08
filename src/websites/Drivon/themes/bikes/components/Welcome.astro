@@ -19,56 +19,61 @@ const { title, description, blogLink, blogLinkText } = Astro.props;
 ---
 
 <section
-  class="drivon-hero drivon-grain relative min-h-[100vh] min-h-[100dvh] flex items-end justify-start overflow-hidden bg-[var(--drivon-bg)]"
+  class="drivon-hero drivon-hero-dark drivon-grain relative min-h-[100vh] min-h-[100dvh] flex items-end justify-start overflow-hidden bg-[#050505]"
   itemScope
   itemType="https://schema.org/WebPageElement"
 >
-  <!-- Vector animation layer: speed, energy, automotive -->
+  <!-- Dark base -->
+  <div class="absolute inset-0 bg-[#050505]" aria-hidden="true"></div>
+  <!-- Vector animation layer: subtle dark-style accents only -->
   <div class="hero-vectors absolute inset-0 w-full h-full" aria-hidden="true">
     <svg class="hero-svg absolute inset-0 w-full h-full" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
       <defs>
-        <linearGradient id="speed-line-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <linearGradient id="speed-line-grad-dark" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#1a1a1a" stop-opacity="0" />
+          <stop offset="50%" stop-color="#2a2a2a" stop-opacity="0.4" />
+          <stop offset="100%" stop-color="#1a1a1a" stop-opacity="0" />
+        </linearGradient>
+        <linearGradient id="streak-grad-dark" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#0a0a0a" stop-opacity="0" />
+          <stop offset="50%" stop-color="#151515" stop-opacity="0.5" />
+          <stop offset="100%" stop-color="#0a0a0a" stop-opacity="0" />
+        </linearGradient>
+        <linearGradient id="accent-grad-dark" x1="0%" y1="0%" x2="100%" y2="0%">
           <stop offset="0%" stop-color="#c9a962" stop-opacity="0" />
-          <stop offset="20%" stop-color="#c9a962" stop-opacity="0.35" />
-          <stop offset="50%" stop-color="#c9a962" stop-opacity="0.25" />
-          <stop offset="80%" stop-color="#c9a962" stop-opacity="0.35" />
+          <stop offset="30%" stop-color="#c9a962" stop-opacity="0.08" />
+          <stop offset="70%" stop-color="#c9a962" stop-opacity="0.08" />
           <stop offset="100%" stop-color="#c9a962" stop-opacity="0" />
         </linearGradient>
-        <linearGradient id="streak-grad" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stop-color="#fff" stop-opacity="0" />
-          <stop offset="30%" stop-color="#fff" stop-opacity="0.08" />
-          <stop offset="100%" stop-color="#fff" stop-opacity="0" />
-        </linearGradient>
       </defs>
-      <!-- Speed lines: streaming motion (dash animation = motion blur feel) -->
+      <!-- Speed lines: dark grey, very subtle -->
       <g class="speed-lines">
-        <line x1="-100" y1="160" x2="2020" y2="180" stroke="url(#speed-line-grad)" stroke-width="2" class="speed-line stream-1" />
-        <line x1="-100" y1="300" x2="2020" y2="320" stroke="url(#speed-line-grad)" stroke-width="1.5" class="speed-line stream-2" />
-        <line x1="-100" y1="440" x2="2020" y2="460" stroke="url(#speed-line-grad)" stroke-width="2" class="speed-line stream-3" />
-        <line x1="-100" y1="580" x2="2020" y2="600" stroke="url(#speed-line-grad)" stroke-width="1.2" class="speed-line stream-4" />
-        <line x1="-100" y1="720" x2="2020" y2="740" stroke="url(#speed-line-grad)" stroke-width="1.5" class="speed-line stream-5" />
-        <line x1="-100" y1="860" x2="2020" y2="880" stroke="url(#speed-line-grad)" stroke-width="2" class="speed-line stream-6" />
+        <line x1="-100" y1="160" x2="2020" y2="180" stroke="url(#speed-line-grad-dark)" stroke-width="1.5" class="speed-line stream-1" />
+        <line x1="-100" y1="300" x2="2020" y2="320" stroke="url(#speed-line-grad-dark)" stroke-width="1" class="speed-line stream-2" />
+        <line x1="-100" y1="440" x2="2020" y2="460" stroke="url(#speed-line-grad-dark)" stroke-width="1.5" class="speed-line stream-3" />
+        <line x1="-100" y1="580" x2="2020" y2="600" stroke="url(#speed-line-grad-dark)" stroke-width="1" class="speed-line stream-4" />
+        <line x1="-100" y1="720" x2="2020" y2="740" stroke="url(#speed-line-grad-dark)" stroke-width="1.5" class="speed-line stream-5" />
+        <line x1="-100" y1="860" x2="2020" y2="880" stroke="url(#speed-line-grad-dark)" stroke-width="1" class="speed-line stream-6" />
       </g>
-      <!-- Diagonal velocity streaks -->
+      <!-- Diagonal streaks: dark only -->
       <g class="diagonal-streaks">
-        <path d="M-200 0 L800 1080" stroke="url(#streak-grad)" stroke-width="140" class="streak streak-1" />
-        <path d="M0 150 L1200 1080" stroke="url(#streak-grad)" stroke-width="110" class="streak streak-2" />
-        <path d="M350 0 L1650 1080" stroke="url(#streak-grad)" stroke-width="90" class="streak streak-3" />
-        <path d="M750 0 L1920 750" stroke="url(#streak-grad)" stroke-width="100" class="streak streak-4" />
+        <path d="M-200 0 L800 1080" stroke="url(#streak-grad-dark)" stroke-width="140" class="streak streak-1" />
+        <path d="M0 150 L1200 1080" stroke="url(#streak-grad-dark)" stroke-width="110" class="streak streak-2" />
+        <path d="M350 0 L1650 1080" stroke="url(#streak-grad-dark)" stroke-width="90" class="streak streak-3" />
+        <path d="M750 0 L1920 750" stroke="url(#streak-grad-dark)" stroke-width="100" class="streak streak-4" />
       </g>
-      <!-- Motion arcs: tire-track / speed curve (right side) -->
-      <path d="M1400 400 Q1700 540 1600 800" fill="none" stroke="#c9a962" stroke-width="1.5" stroke-opacity="0.15" class="motion-arc" />
-      <path d="M1200 300 Q1550 500 1500 750" fill="none" stroke="#c9a962" stroke-width="1" stroke-opacity="0.1" class="motion-arc arc-2" />
-      <!-- Road horizon + accent -->
-      <path d="M0 900 Q960 840 1920 900 L1920 1080 L0 1080 Z" fill="#c9a962" fill-opacity="0.06" class="road-curve" />
-      <line x1="0" y1="920" x2="1920" y2="920" stroke="#c9a962" stroke-width="1" stroke-opacity="0.35" class="accent-line" />
+      <!-- Single subtle gold accent line (dark style, no dash animation) -->
+      <line x1="-100" y1="520" x2="2020" y2="520" stroke="url(#accent-grad-dark)" stroke-width="1" class="accent-line-gold" />
+      <!-- Road horizon: dark fill -->
+      <path d="M0 900 Q960 840 1920 900 L1920 1080 L0 1080 Z" fill="#0c0c0c" class="road-curve" />
+      <line x1="0" y1="920" x2="1920" y2="920" stroke="#1a1a1a" stroke-width="1" class="accent-line" />
     </svg>
   </div>
-  <!-- Gradient: dark at bottom for text -->
-  <div class="hero-gradient" aria-hidden="true"></div>
+  <!-- Full dark overlay: no light at top -->
+  <div class="hero-gradient hero-gradient-dark" aria-hidden="true"></div>
 
   <div class="relative z-20 w-full max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 pb-32 pt-32 lg:pb-48 lg:pt-40 drivon-hero-content">
-    <p class="font-display text-[10px] tracking-[0.5em] uppercase text-[var(--drivon-accent)] mb-8 opacity-90 animate-fade-in" style="animation-delay: 0.1s; animation-fill-mode: both;">
+    <p class="font-display text-[10px] tracking-[0.5em] uppercase text-white/90 mb-8 animate-fade-in" style="animation-delay: 0.1s; animation-fill-mode: both;">
       Automotive lifestyle
     </p>
     <h1
@@ -80,7 +85,7 @@ const { title, description, blogLink, blogLinkText } = Astro.props;
     >
       {title}
     </h1>
-    <p class="text-sm md:text-base text-[var(--drivon-text)]/60 max-w-sm mb-16 font-body font-normal tracking-wide animate-fade-in" style="animation-delay: 0.35s; animation-fill-mode: both;">
+    <p class="text-sm md:text-base text-white/80 max-w-sm mb-16 font-body font-normal tracking-wide animate-fade-in" style="animation-delay: 0.35s; animation-fill-mode: both;">
       {description}
     </p>
     <div class="flex flex-wrap gap-6 animate-fade-in" style="animation-delay: 0.5s; animation-fill-mode: both;">
@@ -93,7 +98,7 @@ const { title, description, blogLink, blogLinkText } = Astro.props;
       </a>
       <a
         href={blogLink}
-        class="group inline-flex items-center gap-3 border border-[var(--drivon-text)]/50 text-[var(--drivon-text)] px-12 py-4 text-[10px] font-medium tracking-[0.35em] uppercase hover:border-[var(--drivon-text)] hover:bg-[var(--drivon-text)]/5 transition-all duration-300"
+        class="group inline-flex items-center gap-3 border border-white/60 text-white px-12 py-4 text-[10px] font-medium tracking-[0.35em] uppercase hover:border-white hover:bg-white/10 transition-all duration-300"
       >
         <span>Explore Collection</span>
         <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" />
@@ -102,8 +107,8 @@ const { title, description, blogLink, blogLinkText } = Astro.props;
   </div>
 
   <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2">
-    <span class="text-[10px] tracking-[0.3em] uppercase text-[var(--drivon-text)]/50">Scroll</span>
-    <div class="w-px h-12 bg-[var(--drivon-text)]/30 scroll-line"></div>
+    <span class="text-[10px] tracking-[0.3em] uppercase text-white/70">Scroll</span>
+    <div class="w-px h-12 bg-white/50 scroll-line"></div>
   </div>
 </section>
 
@@ -126,6 +131,11 @@ const { title, description, blogLink, blogLinkText } = Astro.props;
     vector-effect: non-scaling-stroke;
     stroke-dasharray: 120 280;
     animation: speed-stream 3s linear infinite;
+  }
+
+  .accent-line-gold {
+    vector-effect: non-scaling-stroke;
+    opacity: 0.9;
   }
 
   .speed-line.stream-1 { animation-delay: 0s; }
@@ -155,26 +165,14 @@ const { title, description, blogLink, blogLinkText } = Astro.props;
     50% { opacity: 0.9; transform: translateX(3%) scale(1.03); }
   }
 
-  /* Motion arcs: subtle pulse */
-  .motion-arc {
-    animation: arc-pulse 5s ease-in-out infinite;
-  }
-
-  .motion-arc.arc-2 { animation-delay: 1.2s; }
-
-  @keyframes arc-pulse {
-    0%, 100% { opacity: 0.1; }
-    50% { opacity: 0.2; }
-  }
-
-  /* Road curve: subtle pulse */
+  /* Road curve: very subtle dark pulse */
   .road-curve {
     animation: road-pulse 6s ease-in-out infinite;
   }
 
   @keyframes road-pulse {
-    0%, 100% { opacity: 0.04; }
-    50% { opacity: 0.07; }
+    0%, 100% { opacity: 0.95; }
+    50% { opacity: 1; }
   }
 
   .accent-line {
@@ -182,23 +180,25 @@ const { title, description, blogLink, blogLinkText } = Astro.props;
   }
 
   @keyframes accent-pulse {
-    0%, 100% { opacity: 0.15; }
-    50% { opacity: 0.35; }
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; }
   }
 
-  /* Gradient: dark base for high-contrast text */
+  /* Dark style: solid dark overlay, no light at top */
   .hero-gradient {
     position: absolute;
     inset: 0;
     z-index: 2;
+    pointer-events: none;
+  }
+
+  .hero-gradient-dark {
     background: linear-gradient(
       to top,
-      rgba(8, 8, 8, 0.98) 0%,
-      rgba(8, 8, 8, 0.7) 35%,
-      rgba(8, 8, 8, 0.25) 70%,
-      transparent 100%
+      rgba(5, 5, 5, 0.99) 0%,
+      rgba(5, 5, 5, 0.95) 40%,
+      rgba(5, 5, 5, 0.92) 100%
     );
-    pointer-events: none;
   }
 
   .scroll-line {
@@ -211,11 +211,20 @@ const { title, description, blogLink, blogLinkText } = Astro.props;
   }
 
   @keyframes fade-in-up {
-    from { opacity: 0; transform: translateY(24px); }
+    from { opacity: 0; transform: translateY(32px); }
     to { opacity: 1; transform: translateY(0); }
   }
 
   .animate-fade-in {
     animation: fade-in-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    opacity: 0;
+  }
+
+  /* CTA hover animation */
+  .drivon-hero-content a.group {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .drivon-hero-content a.group:hover {
+    transform: translateY(-2px);
   }
 </style>

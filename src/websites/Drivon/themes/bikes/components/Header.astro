@@ -1,6 +1,7 @@
 ---
-import { Menu, Globe } from 'lucide-react';
+import { Menu, Globe, Search } from 'lucide-react';
 import { getLangFromUrl, getLocalizedPath } from '@utils/i18n';
+import CartSidebarWithTrigger from '@themes/default/components/CartSidebarWithTrigger';
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -30,80 +31,125 @@ const localizedNavigation = navigation.map(item => ({
   ...item,
   href: `/${currentLang}${item.href === '/' ? '' : item.href}`
 }));
+
+const announcement = 'Free shipping on orders over $75 — Join the paddock for exclusive drops';
+
+// Header styles for cart sidebar (Drivon dark theme)
+let headerStyles = {};
+try {
+  const themeHeaderStyles = await import('../styles/Header.json');
+  headerStyles = themeHeaderStyles.default || {};
+} catch (_) {}
+
+const paymentConfig = {
+  method: import.meta.env.PUBLIC_PAYMENT_METHOD || 'default',
+  hoodpay: {
+    apiUrl: import.meta.env.HOODPAY_API_URL,
+    businessId: import.meta.env.HOODPAY_BUSINESS_ID,
+    authToken: import.meta.env.HOODPAY_AUTH_TOKEN,
+    redirectUrl: `${import.meta.env.DOMAINE || ''}${import.meta.env.HOODPAY_REDIRECT_URL || ''}`
+  },
+  store: {
+    name: import.meta.env.PUBLIC_SITE_NAME || siteName,
+    domain: import.meta.env.DOMAINE || 'localhost'
+  }
+};
+const apiEndpoint = import.meta.env.VITE_API_ENDPOINT || '/api/checkout';
 ---
 
-<header class="drivon-header fixed w-full top-0 z-50 bg-transparent hover:bg-[var(--drivon-bg)]/95 backdrop-blur-md border-b border-transparent hover:border-[var(--drivon-border)] transition-all duration-500">
-  <nav class="mx-auto max-w-[1600px] px-6 sm:px-8 lg:px-12" aria-label="Main">
-    <div class="flex h-20 items-center justify-between">
-      <a href={`/${currentLang}`} class="font-display text-xl font-bold tracking-tight text-[var(--drivon-text)] uppercase">
-        {siteName}
-      </a>
+<!-- Ecommerce header: solid dark theme, same structure as f1racingapparel -->
+<div class="drivon-header-wrapper fixed w-full top-0 z-50">
+  <!-- Announcement: dark bar, light text -->
+  <div class="drivon-announcement h-8 flex items-center justify-center bg-[var(--drivon-surface)] border-b border-[var(--drivon-border)]">
+    <p class="text-[10px] sm:text-[11px] tracking-[0.2em] uppercase font-body text-[var(--drivon-text)]/90 px-4 truncate max-w-full text-center">
+      {announcement}
+    </p>
+  </div>
+  <header class="drivon-header bg-[var(--drivon-card)] border-b border-[var(--drivon-border)]">
+    <nav class="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-10" aria-label="Main">
+      <div class="flex h-14 sm:h-16 items-center justify-between gap-6">
+        <!-- Logo -->
+        <a href={`/${currentLang}`} class="drivon-logo font-display text-[1.05rem] sm:text-[1.15rem] font-bold tracking-tight text-[var(--drivon-text)] uppercase hover:text-[var(--drivon-accent)] transition-colors shrink-0">
+          {siteName}
+        </a>
 
-      <div class="hidden md:flex items-center gap-10">
-        {localizedNavigation.map((item) => (
-          <a
-            href={item.href}
-            class="text-[13px] font-medium tracking-[0.2em] uppercase text-[var(--drivon-text)]/90 hover:text-[var(--drivon-text)] transition-colors duration-200"
-          >
-            {item.name}
-          </a>
-        ))}
-      </div>
-
-      <div class="flex items-center gap-6">
-        <div class="relative group">
-          <button type="button" class="flex items-center gap-2 text-[var(--drivon-text)]/80 hover:text-[var(--drivon-text)] transition-colors">
-            <Globe className="h-4 w-4" />
-            <span class="hidden sm:inline text-[11px] uppercase tracking-[0.2em]">
-              {languages.find(l => l.code === currentLang)?.name}
-            </span>
-          </button>
-          <div class="absolute right-0 mt-2 w-40 py-2 bg-[var(--drivon-surface)] border border-[var(--drivon-border)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 shadow-2xl">
-            {languages.map((lang) => (
+        <!-- Center nav (desktop) -->
+        <div class="hidden lg:flex items-center justify-center gap-10 xl:gap-14 absolute left-1/2 -translate-x-1/2">
+          {localizedNavigation.map((item) => {
+            const isActive = currentPath === item.href || (item.href !== `/${currentLang}` && currentPath.startsWith(item.href));
+            return (
               <a
-                href={getLocalizedPath(currentPath, lang.code)}
-                class={`block px-4 py-2 text-[11px] uppercase tracking-widest ${currentLang === lang.code ? 'text-[var(--drivon-accent)]' : 'text-[var(--drivon-muted)] hover:text-[var(--drivon-text)]'}`}
+                href={item.href}
+                class={`text-[11px] font-medium tracking-[0.2em] uppercase transition-colors duration-200 font-body ${isActive ? 'text-[var(--drivon-text)]' : 'text-[var(--drivon-muted)] hover:text-[var(--drivon-text)]'}`}
               >
-                {lang.name}
+                {item.name}
               </a>
-            ))}
-          </div>
+            );
+          })}
         </div>
 
-        <a
-          href={`/${currentLang}/checkout`}
-          class="hidden md:inline text-[11px] font-medium tracking-[0.2em] uppercase text-[var(--drivon-text)]/80 hover:text-[var(--drivon-text)]"
-        >
-          Bag
-        </a>
-
-        <a
-          href={`/${currentLang}/account`}
-          class="hidden md:inline-flex items-center justify-center px-5 py-2.5 border border-[var(--drivon-accent)] text-[11px] font-medium tracking-[0.2em] uppercase text-[var(--drivon-accent)] hover:bg-[var(--drivon-accent)] hover:text-[var(--drivon-bg)] transition-all duration-200"
-        >
-          Sign In
-        </a>
-
-        <button type="button" id="mobile-menu-button" class="md:hidden p-2 text-[var(--drivon-muted)] hover:text-[var(--drivon-text)]" aria-expanded="false">
-          <span class="sr-only">Menu</span>
-          <Menu className="h-5 w-5" />
-        </button>
-      </div>
-    </div>
-
-    <div id="mobile-menu-dropdown" class="md:hidden hidden py-6 border-t border-[var(--drivon-border)]">
-      <div class="flex flex-col gap-4">
-        {localizedNavigation.map((item) => (
-          <a href={item.href} class="text-sm tracking-[0.15em] uppercase text-[var(--drivon-muted)] hover:text-[var(--drivon-text)]">
-            {item.name}
+        <!-- Right: search, lang, bag (slide cart), account -->
+        <div class="flex items-center gap-4 sm:gap-6 shrink-0">
+          <a href={`/${currentLang}/search`} class="p-2 text-[var(--drivon-muted)] hover:text-[var(--drivon-text)] transition-colors" aria-label="Search">
+            <Search className="h-4 w-4 sm:h-[18px] sm:w-[18px]" />
           </a>
-        ))}
-        <a href={`/${currentLang}/checkout`} class="text-sm tracking-[0.15em] uppercase text-[var(--drivon-muted)]">Bag</a>
-        <a href={`/${currentLang}/account`} class="text-sm tracking-[0.15em] uppercase text-[var(--drivon-accent)]">Sign In</a>
+          <div class="relative group">
+            <button type="button" class="flex items-center gap-1.5 text-[var(--drivon-muted)] hover:text-[var(--drivon-text)] transition-colors py-2" aria-haspopup="true" aria-expanded="false">
+              <Globe className="h-4 w-4 sm:h-[18px] sm:w-[18px]" />
+              <span class="hidden sm:inline text-[10px] uppercase tracking-[0.18em] font-body">
+                {languages.find(l => l.code === currentLang)?.name}
+              </span>
+            </button>
+            <div class="absolute right-0 top-full mt-1 w-36 py-2 bg-[var(--drivon-card)] border border-[var(--drivon-border)] rounded-sm shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              {languages.map((lang) => (
+                <a
+                  href={getLocalizedPath(currentPath, lang.code)}
+                  class={`block px-4 py-2 text-[10px] uppercase tracking-wider font-body ${currentLang === lang.code ? 'text-[var(--drivon-text)] font-medium' : 'text-[var(--drivon-muted)] hover:text-[var(--drivon-text)]'}`}
+                >
+                  {lang.name}
+                </a>
+              ))}
+            </div>
+          </div>
+          <CartSidebarWithTrigger
+            client:load
+            triggerClassName="flex items-center gap-1.5 text-[var(--drivon-muted)] hover:text-[var(--drivon-text)] transition-colors py-2"
+            label="Bag"
+            showLabel={true}
+            paymentConfig={paymentConfig}
+            apiEndpoint={apiEndpoint}
+            headerStyles={headerStyles}
+            projectType={import.meta.env.PROJECT_TYPE || 'physical'}
+          />
+          <a
+            href={`/${currentLang}/account`}
+            class="hidden sm:inline-flex items-center justify-center h-8 px-4 bg-[var(--drivon-text)] text-[var(--drivon-bg)] text-[10px] font-medium tracking-[0.2em] uppercase hover:opacity-90 transition-colors font-body"
+          >
+            Sign In
+          </a>
+
+          <button type="button" id="mobile-menu-button" class="lg:hidden p-2 text-[var(--drivon-muted)] hover:text-[var(--drivon-text)]" aria-expanded="false" aria-controls="mobile-menu-dropdown">
+            <span class="sr-only">Menu</span>
+            <Menu className="h-5 w-5" />
+          </button>
+        </div>
       </div>
-    </div>
-  </nav>
-</header>
+
+      <div id="mobile-menu-dropdown" class="lg:hidden hidden py-5 px-4 border-t border-[var(--drivon-border)] bg-[var(--drivon-card)]" role="region" aria-label="Mobile menu">
+        <div class="flex flex-col gap-1">
+          {localizedNavigation.map((item) => (
+            <a href={item.href} class="py-3 text-[11px] tracking-[0.18em] uppercase text-[var(--drivon-muted)] hover:text-[var(--drivon-text)] font-body">
+              {item.name}
+            </a>
+          ))}
+          <a href={`/${currentLang}/search`} class="py-3 text-[11px] tracking-[0.18em] uppercase text-[var(--drivon-muted)] font-body">Search</a>
+          <button type="button" id="mobile-bag-trigger" class="w-full text-left py-3 text-[11px] tracking-[0.18em] uppercase text-[var(--drivon-muted)] font-body hover:text-[var(--drivon-text)]">Bag</button>
+          <a href={`/${currentLang}/account`} class="py-3 text-[11px] tracking-[0.18em] uppercase text-[var(--drivon-text)] font-medium font-body">Sign In</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+</div>
 
 <script>
   document.getElementById('mobile-menu-button')?.addEventListener('click', () => {
@@ -117,4 +163,5 @@ const localizedNavigation = navigation.map(item => ({
 
 <style>
   .font-display { font-family: var(--font-display); }
+  .font-body { font-family: var(--font-body); }
 </style>

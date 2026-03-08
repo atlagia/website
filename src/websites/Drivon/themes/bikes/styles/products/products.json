@@ -1,0 +1,106 @@
+{
+  "page": {
+    "wrapper": "relative min-h-screen bg-neutral-50",
+    "content": "flex flex-col min-h-screen opacity-100 transition-opacity duration-300",
+    "breadcrumbNav": "max-w-7xl mx-auto px-4 sm:px-[5%] pt-4 pb-2 overflow-x-auto",
+    "breadcrumbList": "flex flex-nowrap items-center font-body text-[11px] tracking-[0.2em] text-neutral-500 whitespace-nowrap min-w-0",
+    "breadcrumbItem": "flex items-center",
+    "breadcrumbLink": "hover:text-neutral-900 transition-colors",
+    "breadcrumbSep": "h-4 w-4 text-neutral-400 mx-1",
+    "breadcrumbCurrent": "font-medium text-neutral-900",
+    "main": "product-page-minimal max-w-7xl mx-auto px-4 sm:px-[5%] py-4 md:py-6",
+    "grid": "grid grid-cols-1 lg:grid-cols-3 lg:gap-6 gap-4",
+    "galleryBox": "relative bg-white overflow-hidden border border-neutral-200 rounded-2xl shadow-sm group",
+    "galleryImageWrap": "absolute inset-0 transition-opacity duration-300 ease-out",
+    "mainImage": "w-full h-full object-contain absolute inset-0",
+    "imageCounter": "absolute bottom-3 right-3 px-2.5 py-1 rounded-sm bg-neutral-900/80 text-white text-[11px] font-medium tracking-wide",
+    "navBtn": "absolute left-3 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/95 border border-neutral-200 opacity-80 group-hover:opacity-100 transition-all duration-200 shadow-sm hover:bg-white text-neutral-600 hover:text-neutral-900 focus:outline-none focus:ring-2 focus:ring-neutral-900 focus:ring-offset-2 disabled:opacity-30 disabled:cursor-not-allowed",
+    "navBtnNext": "absolute right-3 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/95 border border-neutral-200 opacity-80 group-hover:opacity-100 transition-all duration-200 shadow-sm hover:bg-white text-neutral-600 hover:text-neutral-900 focus:outline-none focus:ring-2 focus:ring-neutral-900 focus:ring-offset-2 disabled:opacity-30 disabled:cursor-not-allowed",
+    "thumbStrip": "flex gap-3 overflow-x-auto pb-1 pt-1 snap-x scrollbar-hide",
+    "thumbBtn": "relative flex-none aspect-square w-24 overflow-hidden snap-start border-2 rounded-lg border-neutral-200 hover:border-neutral-400 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-neutral-900 focus:ring-offset-2 bg-neutral-50",
+    "thumbBtnActive": "ring-2 ring-neutral-900 ring-offset-2 border-neutral-900",
+    "productInfo": "space-y-3 relative lg:col-span-1 min-w-0",
+    "productTitle": "font-headline text-3xl font-semibold tracking-tight text-neutral-900 mb-1 uppercase",
+    "reviewRow": "flex items-center gap-2 font-body text-sm text-neutral-500",
+    "reviewStars": "flex text-neutral-400",
+    "reviewLink": "hover:text-neutral-900 transition-colors duration-200 group",
+    "descriptionSection": "rounded-2xl bg-white border border-neutral-200 overflow-hidden shadow-sm",
+    "descriptionHeader": "px-4 pt-4 pb-3 border-b border-neutral-200",
+    "descriptionHeaderTitle": "font-headline text-[11px] font-semibold uppercase tracking-[0.2em] text-neutral-600 flex items-center gap-3",
+    "descriptionHeaderIcon": "w-9 h-9 rounded-lg bg-neutral-100 flex items-center justify-center flex-shrink-0",
+    "descriptionContentWrap": "p-4",
+    "descriptionContentInner": "rounded-lg bg-neutral-50 border border-neutral-200 shadow-sm overflow-hidden",
+    "descriptionContent": "prose prose-sm max-w-none overflow-hidden transition-all duration-300 text-neutral-700",
+    "descriptionOverlay": "absolute bottom-0 left-0 right-0 h-24 pointer-events-none bg-gradient-to-t from-white via-white/90 to-transparent",
+    "showMoreBtn": "font-body inline-flex items-center gap-2 text-[11px] font-medium tracking-[0.2em] uppercase text-neutral-700 hover:text-neutral-900 bg-neutral-50 hover:bg-neutral-100 px-5 py-2.5 rounded-sm border border-neutral-200 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-neutral-900 focus:ring-offset-2",
+    "detailInfoBox": "flex items-center gap-3 px-4 py-3 rounded-lg bg-white border border-neutral-200 shadow-sm border-l-4 border-l-neutral-400",
+    "detailInfoIcon": "flex items-center justify-center w-10 h-10 rounded-lg bg-neutral-100 flex-shrink-0",
+    "detailInfoText": "font-body text-sm font-medium text-neutral-700 tracking-wide",
+    "showMoreWrap": "px-4 pb-4 pt-1 flex justify-center",
+    "detailInfoWrap": "px-4 pb-4 pt-1",
+    "additionalWrap": "mt-8 space-y-4",
+    "relatedSection": "mt-10 pt-8 border-t border-neutral-200",
+    "relatedTitle": "font-headline text-2xl font-semibold tracking-tight text-neutral-900 mb-4 uppercase",
+    "relatedGrid": "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4",
+    "relatedCardRoot": "group product-card flex flex-col h-full bg-white rounded-md overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 border border-neutral-200 hover:border-neutral-300",
+    "relatedCardMedia": "relative aspect-[3/4] min-h-[200px] overflow-hidden bg-neutral-50 flex items-center justify-center",
+    "relatedCardNoImageWrap": "w-full h-full flex items-center justify-center bg-neutral-50",
+    "relatedCardNoImageText": "text-neutral-500 text-sm",
+    "relatedCardSaleBadge": "absolute top-2 left-2 bg-neutral-900 text-white text-[10px] font-semibold uppercase tracking-[0.12em] px-2 py-1 rounded-sm",
+    "relatedCardContent": "flex flex-col flex-grow p-4",
+    "relatedCardTitle": "text-sm font-medium uppercase tracking-[0.08em] text-neutral-900 group-hover:text-neutral-700 transition-colors line-clamp-2 leading-snug mb-2",
+    "relatedCardPrice": "text-base font-semibold text-neutral-900",
+    "relatedCardComparePrice": "text-sm text-neutral-500 line-through",
+    "relatedCardArrow": "text-neutral-500 group-hover:text-neutral-900 group-hover:translate-x-0.5 transition-all duration-200 flex-shrink-0",
+    "galleryColumnWrap": "w-full min-w-0 lg:col-span-2 lg:sticky lg:top-24 lg:self-start",
+    "imageGridWrap": "grid grid-cols-1 sm:grid-cols-2 gap-2 w-full min-w-0 lg:col-span-2 lg:sticky lg:top-24 lg:self-start",
+    "imageGridItem": "relative w-full min-w-0 aspect-square overflow-hidden rounded border border-neutral-200 bg-neutral-50"
+  },
+  "layout": {
+    "galleryLayout": "grid",
+    "galleryLayoutMobile": "carousel",
+    "galleryPosition": "left",
+    "rightColumnSections": [
+      "description",
+      "key_features",
+      "product_specs"
+    ],
+    "additionalSections": [
+      "size_chart",
+      "reviews",
+      "product_faq",
+      "shipping_info",
+      "product_warranty",
+      "care_instructions",
+      "recently_viewed"
+    ],
+    "gallery": {
+      "showThumbnails": true,
+      "showArrows": true,
+      "showCounter": true
+    },
+    "sectionsOrder": [
+      "description",
+      "key_features",
+      "product_specs",
+      "size_chart",
+      "reviews",
+      "product_faq",
+      "shipping_info",
+      "product_warranty",
+      "care_instructions",
+      "recently_viewed",
+      "related_products"
+    ]
+  },
+  "luxuryProductStyle": {
+    "title": "font-headline text-3xl font-semibold tracking-tight text-neutral-900 mb-2 uppercase",
+    "breadcrumb": {
+      "link": "font-body text-[11px] tracking-[0.2em] text-neutral-500 hover:text-neutral-900",
+      "current": "font-body text-[11px] font-medium tracking-[0.2em] text-neutral-900"
+    },
+    "related": {
+      "title": "font-headline text-2xl font-semibold tracking-tight text-neutral-900 mb-6 uppercase"
+    }
+  }
+}

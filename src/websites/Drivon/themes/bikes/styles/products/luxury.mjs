@@ -1,174 +1,75 @@
 export const luxuryProductStyle = {
-  // Main product title and price
-  title: "font-sans text-3xl font-light tracking-wide mb-2",
-  price: "font-sans text-2xl font-light tracking-wide text-gray-900",
-  
-  // Breadcrumb typography
+  title: "font-display text-3xl font-semibold tracking-tight text-neutral-900 mb-2 uppercase",
+  price: "font-body text-2xl font-medium tracking-wide text-neutral-900",
+
   breadcrumb: {
-    link: "font-body text-sm font-light tracking-wide text-gray-600 hover:text-gray-900",
-    current: "font-body text-sm font-light tracking-wide text-gray-900"
+    link: "font-body text-[11px] tracking-[0.2em] text-neutral-500 hover:text-neutral-900",
+    current: "font-body text-[11px] font-medium tracking-[0.2em] text-neutral-900"
   },
 
-  // Product description
   description: {
-    title: "font-['Montserrat'] text-xl font-light tracking-wide text-gray-900 mb-4",
+    title: "font-display text-xl font-semibold tracking-wide text-neutral-900 mb-4 uppercase",
     content: `
-      font-['Montserrat'] text-gray-700 
-
-      [&>p]:mb-6 
-      [&>p]:leading-relaxed 
-      [&>p]:text-base
-
-      [&>h2]:text-xl 
-      [&>h2]:font-bold 
-      [&>h2]:text-gray-900 
-      [&>h2]:mt-10 
-      [&>h2]:mb-6
-      [&>h2]:pb-2
-      [&>h2]:border-b
-      [&>h2]:border-gray-200
-
-      [&>h3]:text-xl 
-      [&>h3]:font-semibold 
-      [&>h3]:text-gray-800 
-      [&>h3]:mt-8 
-      [&>h3]:mb-4
-      [&>h3]:flex
-      [&>h3]:items-center
-      [&>h3]:gap-2
-
-      [&>h4]:text-lg 
-      [&>h4]:font-semibold 
-      [&>h4]:text-gray-800 
-      [&>h4]:mt-6 
-      [&>h4]:mb-3
-
-      [&>ul]:list-disc 
-      [&>ul]:ml-6 
-      [&>ul]:mb-6 
-      [&>ul>li]:mb-2
-      [&>ul>li]:text-gray-700
-
-      [&>ol]:list-decimal 
-      [&>ol]:ml-6 
-      [&>ol]:mb-6 
-      [&>ol>li]:mb-2
-      [&>ol>li]:text-gray-700
-
-      [&>strong]:font-bold
-      [&>strong]:text-gray-900
-
+      font-body text-neutral-700
+      [&>p]:mb-6 [&>p]:leading-relaxed [&>p]:text-base
+      [&>h2]:text-xl [&>h2]:font-display [&>h2]:font-semibold [&>h2]:text-neutral-900 [&>h2]:mt-10 [&>h2]:mb-6 [&>h2]:pb-2 [&>h2]:border-b [&>h2]:border-neutral-200
+      [&>h3]:text-xl [&>h3]:font-display [&>h3]:font-semibold [&>h3]:text-neutral-900 [&>h3]:mt-8 [&>h3]:mb-4 [&>h3]:flex [&>h3]:items-center [&>h3]:gap-2
+      [&>h4]:text-lg [&>h4]:font-display [&>h4]:font-semibold [&>h4]:text-neutral-900 [&>h4]:mt-6 [&>h4]:mb-3
+      [&>ul]:list-disc [&>ul]:ml-6 [&>ul]:mb-6 [&>ul>li]:mb-2 [&>ul>li]:text-neutral-600
+      [&>ol]:list-decimal [&>ol]:ml-6 [&>ol]:mb-6 [&>ol>li]:mb-2 [&>ol>li]:text-neutral-600
+      [&>strong]:font-bold [&>strong]:text-neutral-900
       [&>em]:italic
-      
-      [&>a]:text-blue-600 
-      [&>a]:underline 
-      [&>a:hover]:text-blue-800
-
-      [&>blockquote]:pl-4 
-      [&>blockquote]:border-l-4 
-      [&>blockquote]:border-gray-200 
-      [&>blockquote]:italic
-      [&>blockquote]:text-gray-600
-      [&>blockquote]:my-6
-
-      [&>img]:rounded-lg
-      [&>img]:shadow-md
-      [&>img]:my-4
-
-      [&>table]:w-full
-      [&>table]:border-collapse
-      [&>table]:mb-6
-      [&>table]:bg-white
-      [&>table]:shadow-sm
-      [&>table]:rounded-lg
-      [&>table]:overflow-hidden
-      [&>table]:border
-      [&>table]:border-gray-200
-
-      [&>table>thead]:bg-gray-50
-      [&>table>thead>tr]:border-b
-      [&>table>thead>tr]:border-gray-200
-
-      [&>table>thead>tr>th]:px-6
-      [&>table>thead>tr>th]:py-3
-      [&>table>thead>tr>th]:text-left
-      [&>table>thead>tr>th]:font-semibold
-      [&>table>thead>tr>th]:text-gray-900
-      [&>table>thead>tr>th]:text-sm
-      [&>table>thead>tr>th]:uppercase
-      [&>table>thead>tr>th]:tracking-wider
-
-      [&>table>tbody>tr]:border-b
-      [&>table>tbody>tr]:border-gray-200
-      [&>table>tbody>tr]:last:border-b-0
-      [&>table>tbody>tr:hover]:bg-gray-50
-
-      [&>table>tbody>tr>td]:px-6
-      [&>table>tbody>tr>td]:py-4
-      [&>table>tbody>tr>td]:text-sm
-      [&>table>tbody>tr>td]:text-gray-700
-      [&>table>tbody>tr>td]:whitespace-normal
-
-      [&>table>tbody>tr>td:first-child]:font-medium
-      [&>table>tbody>tr>td:first-child]:text-gray-900
-
-      [&>table>tfoot]:bg-gray-50
-      [&>table>tfoot>tr]:border-t
-      [&>table>tfoot>tr]:border-gray-200
-      [&>table>tfoot>tr>td]:px-6
-      [&>table>tfoot>tr>td]:py-3
-      [&>table>tfoot>tr>td]:text-sm
-      [&>table>tfoot>tr>td]:font-semibold
-
-      [&>*:first-child]:mt-0
-      [&>*:last-child]:mb-0
+      [&>a]:text-neutral-900 [&>a]:underline [&>a:hover]:text-neutral-700
+      [&>blockquote]:pl-4 [&>blockquote]:border-l-4 [&>blockquote]:border-neutral-200 [&>blockquote]:italic [&>blockquote]:text-neutral-600 [&>blockquote]:my-6
+      [&>img]:rounded-lg [&>img]:my-4
+      [&>table]:w-full [&>table]:border-collapse [&>table]:mb-6 [&>table]:bg-white [&>table]:border [&>table]:border-neutral-200 [&>table]:rounded-lg [&>table]:overflow-hidden
+      [&>table>thead]:bg-neutral-50 [&>table>thead>tr]:border-b [&>table>thead>tr]:border-neutral-200
+      [&>table>thead>tr>th]:px-6 [&>table>thead>tr>th]:py-3 [&>table>thead>tr>th]:text-left [&>table>thead>tr>th]:font-display [&>table>thead>tr>th]:text-neutral-900 [&>table>thead>tr>th]:text-xs [&>table>thead>tr>th]:uppercase [&>table>thead>tr>th]:tracking-wider
+      [&>table>tbody>tr]:border-b [&>table>tbody>tr]:border-neutral-200 [&>table>tbody>tr]:last:border-b-0 [&>table>tbody>tr:hover]:bg-neutral-50
+      [&>table>tbody>tr>td]:px-6 [&>table>tbody>tr>td]:py-4 [&>table>tbody>tr>td]:text-sm [&>table>tbody>tr>td]:text-neutral-600 [&>table>tbody>tr>td]:whitespace-normal
+      [&>table>tbody>tr>td:first-child]:font-medium [&>table>tbody>tr>td:first-child]:text-neutral-900
+      [&>table>tfoot]:bg-neutral-50 [&>table>tfoot>tr]:border-t [&>table>tfoot>tr]:border-neutral-200 [&>table>tfoot>tr>td]:px-6 [&>table>tfoot>tr>td]:py-3 [&>table>tfoot>tr>td]:text-sm [&>table>tfoot>tr>td]:font-semibold [&>table>tfoot>tr>td]:text-neutral-900
+      [&>*:first-child]:mt-0 [&>*:last-child]:mb-0
     `
   },
 
-  // Specifications and features
   specs: {
-    title: "font-['Montserrat'] text-xl font-light tracking-wide text-gray-900 mb-4",
-    label: "font-['Montserrat'] text-sm font-light tracking-wide text-gray-600",
-    value: "font-['Montserrat'] text-sm font-light tracking-wide text-gray-900"
+    title: "font-display text-xl font-semibold tracking-wide text-neutral-900 mb-4 uppercase",
+    label: "font-body text-sm font-medium text-neutral-600",
+    value: "font-body text-sm text-neutral-900"
   },
 
-  // Reviews section
   reviews: {
-    title: "font-['Montserrat'] text-xl font-light tracking-wide text-gray-900 mb-4",
-    author: "font-['Montserrat'] text-sm font-medium tracking-wide text-gray-900",
-    date: "font-['Montserrat'] text-sm font-light tracking-wide text-gray-600",
-    content: "font-['Montserrat'] text-base font-light tracking-wide text-gray-700"
+    title: "font-display text-xl font-semibold tracking-wide text-neutral-900 mb-4 uppercase",
+    author: "font-display text-sm font-semibold text-neutral-900",
+    date: "font-body text-sm text-neutral-500",
+    content: "font-body text-base text-neutral-600"
   },
 
-  // Related products
   related: {
-    title: "font-['Montserrat'] text-2xl font-light tracking-wide text-gray-900 mb-6",
-    productTitle: "font-['Montserrat'] text-base font-light tracking-wide text-gray-900",
-    productPrice: "font-['Montserrat'] text-sm font-light tracking-wide text-gray-700"
+    title: "font-display text-2xl font-semibold tracking-tight text-neutral-900 mb-6 uppercase",
+    productTitle: "font-display text-base font-semibold tracking-wide text-neutral-900",
+    productPrice: "font-body text-sm text-neutral-600"
   },
 
-  // Variant selectors
   variants: {
-    label: "font-['Montserrat'] text-sm font-light tracking-wide text-gray-700 mb-2",
-    option: "font-['Montserrat'] text-sm font-light tracking-wide"
+    label: "font-body text-sm font-medium text-neutral-600 mb-2 uppercase tracking-[0.08em]",
+    option: "font-body text-sm text-neutral-900"
   },
 
-  // Buttons
   button: {
-    primary: "font-['Montserrat'] text-sm font-light tracking-wider uppercase",
-    secondary: "font-['Montserrat'] text-sm font-light tracking-wider uppercase"
+    primary: "font-display text-sm font-semibold tracking-[0.2em] uppercase",
+    secondary: "font-display text-sm font-semibold tracking-[0.2em] uppercase"
   },
 
-  // Size chart
   sizeChart: {
-    title: "font-['Montserrat'] text-xl font-light tracking-wide text-gray-900 mb-4",
-    tableHeader: "font-['Montserrat'] text-sm font-medium tracking-wide text-gray-700",
-    tableCell: "font-['Montserrat'] text-sm font-light tracking-wide text-gray-600"
+    title: "font-display text-xl font-semibold tracking-wide text-neutral-900 mb-4 uppercase",
+    tableHeader: "font-body text-xs font-medium uppercase tracking-wider text-neutral-600",
+    tableCell: "font-body text-sm text-neutral-600"
   },
 
-  // FAQ section
   faq: {
-    question: "font-['Montserrat'] text-base font-medium tracking-wide text-gray-900",
-    answer: "font-['Montserrat'] text-base font-light tracking-wide text-gray-700"
+    question: "font-display text-base font-semibold tracking-wide text-neutral-900",
+    answer: "font-body text-base text-neutral-600"
   }
-}; 
+};
