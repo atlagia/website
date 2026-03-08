@@ -47,13 +47,18 @@ const hasVideoSlider = !useYoutube && slides.length > 0;
 >
   <!-- Dark base -->
   <div class="absolute inset-0 bg-[#050505]" aria-hidden="true"></div>
-  <!-- YouTube video background (from data videoId): autoplay, mute, loop -->
+  <!-- YouTube video background (from data videoId): autoplay, mute, loop. Inline styles ensure full-bleed when root (/) injects this content and scoped CSS may not apply. -->
   {useYoutube && youtubeEmbedUrl && (
-    <div class="hero-bg-video hero-youtube-wrap absolute inset-0 z-0" aria-hidden="true">
+    <div
+      class="hero-bg-video hero-youtube-wrap absolute inset-0 z-0"
+      style="position:absolute;inset:0;overflow:hidden;z-index:0;"
+      aria-hidden="true"
+    >
       <iframe
         src={youtubeEmbedUrl}
         title=""
         class="hero-youtube-iframe"
+        style="position:absolute;top:50%;left:50%;width:100vw;height:56.25vw;min-height:100vh;min-width:177.78vh;transform:translate(-50%,-50%);border:none;pointer-events:none;"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
       />

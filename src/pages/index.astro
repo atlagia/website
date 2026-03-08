@@ -95,10 +95,12 @@ export async function getStaticPaths() {
           const parser = new DOMParser();
           const doc = parser.parseFromString(html, 'text/html');
           
-          // Copy ALL style tags from head (including Astro scoped styles)
+          // Copy ALL style tags from head and body (Astro can emit scoped styles in either; required for hero video and injected content to match /en)
           const styles = doc.querySelectorAll('style');
           styles.forEach(style => {
-            if (!document.querySelector(`style[data-astro-cid="${style.getAttribute('data-astro-cid')}"]`)) {
+            const cid = style.getAttribute('data-astro-cid');
+            const existing = cid ? document.querySelector(`style[data-astro-cid="${cid}"]`) : null;
+            if (!existing) {
               const newStyle = document.createElement('style');
               Array.from(style.attributes).forEach(attr => {
                 newStyle.setAttribute(attr.name, attr.value);
