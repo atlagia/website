@@ -29,18 +29,19 @@ const alignmentClasses = {
 };
 ---
 
-<section class="py-20 px-4 md:px-8 bg-gray-900">
+<section class="py-20 px-4 md:px-8 bg-[var(--drivon-surface)] border-t border-[var(--drivon-border)]">
   <div class="max-w-6xl mx-auto">
     <div class={`max-w-3xl mx-auto mb-12 ${alignmentClasses[headlinePosition]}`}>
-      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+      <p class="font-display text-[10px] tracking-[0.4em] uppercase text-[var(--drivon-accent)] mb-3">Video</p>
+      <h2 class="font-display text-3xl md:text-4xl font-semibold text-[var(--drivon-text)] mb-4 uppercase tracking-tight">
         {headline}
       </h2>
-      <p class={`text-lg text-gray-300 ${alignmentClasses[textPosition]}`}>
+      <p class={`text-lg text-[var(--drivon-muted)] font-body ${alignmentClasses[textPosition]}`}>
         {description}
       </p>
     </div>
 
-    <div class="relative aspect-video rounded-xl overflow-hidden">
+    <div class="relative aspect-video rounded-xl overflow-hidden border border-[var(--drivon-border)] shadow-lg">
       <iframe
         src={videoUrl}
         class="absolute inset-0 w-full h-full"
@@ -53,9 +54,9 @@ const alignmentClasses = {
       <div class="mt-8 text-center">
         <a 
           href={buttonLink}
-          class="inline-flex items-center gap-2 bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+          class="inline-flex items-center gap-2 bg-[var(--drivon-text)] text-[var(--drivon-bg)] px-8 py-3 rounded-sm font-display text-[11px] font-semibold tracking-[0.2em] uppercase hover:bg-[var(--drivon-accent)] transition-colors"
         >
-          <Play className="w-5 h-5" />
+          <Play className="w-4 h-4" />
           {buttonText}
         </a>
       </div>

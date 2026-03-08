@@ -15,30 +15,31 @@ const { title, posts = [], exploreMoreLink, exploreMoreText } = Astro.props;
 const hasContent = posts && posts.length > 0;
 ---
 
-<section class="py-16 px-4 md:px-8">
+<section class="py-16 px-4 md:px-8 bg-[var(--drivon-surface)] border-t border-[var(--drivon-border)]">
   <div class="max-w-7xl mx-auto">
-    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">{title}</h2>
+    <p class="font-display text-[10px] tracking-[0.4em] uppercase text-[var(--drivon-accent)] text-center mb-2">Blog</p>
+    <h2 class="font-display text-3xl md:text-4xl font-semibold mb-12 text-center text-[var(--drivon-text)] uppercase tracking-tight">{title}</h2>
     
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {hasContent ? (
         posts.slice(0, 3).map((post) => (
           <article class="group">
-            <a href={`/blog/${post.handle}`} class="block">
-              <div class="relative overflow-hidden rounded-lg mb-4">
+            <a href={`${exploreMoreLink.replace(/\/$/, '')}/${post.handle}`} class="block">
+              <div class="relative overflow-hidden rounded-xl mb-4 border border-[var(--drivon-border)]">
                 <img
                   src={post.image?.src || '/images/placeholder.jpg'}
                   alt={post.title}
                   class="w-full aspect-[16/9] object-cover transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
-              <h3 class="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
+              <h3 class="font-display text-lg font-semibold mb-2 text-[var(--drivon-text)] group-hover:text-[var(--drivon-accent)] transition-colors uppercase tracking-wide">
                 {post.title}
               </h3>
               <div class="flex items-center justify-between">
-                <time class="text-sm text-gray-500">
+                <time class="text-sm text-[var(--drivon-muted)] font-body">
                   {new Date(post.published_at).toLocaleDateString()}
                 </time>
-                <span class="text-primary group-hover:translate-x-1 transition-transform">
+                <span class="text-[var(--drivon-accent)] group-hover:translate-x-1 transition-transform">
                   <ArrowRight className="w-5 h-5" />
                 </span>
               </div>
@@ -47,7 +48,7 @@ const hasContent = posts && posts.length > 0;
         ))
       ) : (
         <div class="col-span-full text-center py-8">
-          <p class="text-gray-500">No posts available at the moment. Check back soon!</p>
+          <p class="text-[var(--drivon-muted)] font-body">No posts available at the moment. Check back soon!</p>
         </div>
       )}
     </div>
@@ -56,10 +57,10 @@ const hasContent = posts && posts.length > 0;
       <div class="text-center mt-12">
         <a
           href={exploreMoreLink}
-          class="inline-flex items-center gap-2 text-lg font-medium text-primary hover:text-primary/80 transition-colors"
+          class="inline-flex items-center gap-2 font-display text-[11px] font-semibold tracking-[0.2em] uppercase text-[var(--drivon-text)] hover:text-[var(--drivon-accent)] transition-colors"
         >
           {exploreMoreText}
-          <ArrowRight className="w-5 h-5" />
+          <ArrowRight className="w-4 h-4" />
         </a>
       </div>
     )}

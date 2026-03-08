@@ -7,26 +7,17 @@
       "title": "Built for Car Enthusiasts",
       "description": "Premium automotive culture. Racing heritage, street icons, driver essentials.",
       "blogLinkText": "Explore Car Culture",
-      "blogLink": "/car-culture",
+      "blogLink": "/blog",
       "backgroundVideo": {
         "type": "youtube",
         "videoId": "liT2Z3wFW1Y",
-        "fallbackImage": "/images/driver-culture-fallback.jpg"
+        "fallbackImage": "/images/driver-culture-fallback.jpg",
+        "videoUrl": "https://cdn.pixabay.com/video/2020/07/28/31670-475348943_large.mp4"
       }
     },
     {
       "type": "marqueeSection",
       "items": ["RACING", "HERITAGE", "CULTURE", "PREMIUM", "DRIVEN", "LEGEND", "AUTOMOTIVE", "COLLECTION"]
-    },
-    {
-      "type": "bannerSection",
-      "headline": "Car Culture Meets Racing Heritage",
-      "description": "The spirit of the road. The culture of the track.",
-      "backgroundImage": "/images/racing-heritage-banner.jpg",
-      "button1Text": "Shop Driver Collection",
-      "button1Link": "/driver-collection",
-      "button2Text": "View Racing Culture",
-      "button2Link": "/racing-culture"
     },
     {
       "type": "statsSection",
@@ -38,9 +29,19 @@
       ]
     },
     {
+      "type": "bannerSection",
+      "headline": "Car Culture Meets Racing Heritage",
+      "description": "The spirit of the road. The culture of the track.",
+      "backgroundImage": "/images/racing-heritage-banner.jpg",
+      "button1Text": "Shop Driver Collection",
+      "button1Link": "/shop",
+      "button2Text": "View Racing Culture",
+      "button2Link": "/collections/racing-hoodies"
+    },
+    {
       "type": "categoryGrid",
       "title": "Driver Culture Essentials",
-      "description": "Authentic automotive culture merchandise for true car enthusiasts and racing fans worldwide. Every piece is crafted with car enthusiasts in mind, celebrating the passion and dedication that defines the automotive community.",
+      "description": "Authentic automotive culture merchandise for true car enthusiasts and racing fans worldwide. Every piece is crafted with car enthusiasts in mind.",
       "categories": [
         {
           "id": "hoodie",
@@ -62,39 +63,29 @@
           "description": "Essential accessories to complete your automotive culture look and style.",
           "image": "https://ih1.redbubble.net/image.4762043914.4515/ssrco,dad_hat,product,FFFDF5:8c3db69414,front_three_quarter,wide_portrait,750x1000-bg,f8f8f8.webp",
           "link": "/driver-accessories"
+        },
+        {
+          "id": "racing-legends",
+          "name": "Racing Legends",
+          "description": "Premium pieces inspired by motorsport heritage and legendary brands.",
+          "image": "https://ih1.redbubble.net/image.4762044220.4515/ssrco,classic_tee,mens_02,fafafa:ca443f4786,front,close_portrait,x1000.webp",
+          "link": "/racing-legends"
         }
       ]
     },
     {
       "type": "bestSellers",
       "title": "Driver Fan Favorites",
-      "description": "Our most popular automotive merchandise loved by car culture enthusiasts worldwide",
-      "viewAllLink": "/driver-favorites",
+      "description": "Our most popular automotive merchandise loved by car culture enthusiasts worldwide.",
+      "viewAllLink": "/shop",
       "collectionHandle": "driver-favorites"
     },
     {
       "type": "productShowcase",
       "title": "Racing Legend Collection",
       "description": "Iconic automotive culture merchandise featuring legendary brands and racing heroes.",
-      "viewAllLink": "/racing-legends",
-      "collections": [
-        {
-          "id": "ferrari-racing-hoodie",
-          "name": "Ferrari Racing Hoodie",
-          "description": "Premium hoodie featuring the legendary Ferrari racing heritage with authentic racing styling.",
-          "price": "89.99",
-          "image": "/images/products/ferrari-racing-hoodie.jpg",
-          "category": "Racing Hoodies"
-        },
-        {
-          "id": "porsche-911-tee",
-          "name": "Porsche 911 Classic Tee",
-          "description": "Classic tee celebrating the iconic Porsche 911 with timeless sports car design.",
-          "price": "29.99",
-          "image": "/images/products/porsche-911-tee.jpg",
-          "category": "Car Culture Tees"
-        }
-      ]
+      "viewAllLink": "/shop",
+      "collections": []
     },
     {
       "type": "specialOffers",
@@ -103,23 +94,23 @@
         {
           "id": "racing-season-sale",
           "title": "Racing Season Sale",
-          "description": "Get authentic automotive racing gear at unbeatable prices",
+          "description": "Get authentic automotive racing gear at unbeatable prices.",
           "discount": "25%",
           "code": "RACE25",
           "backgroundImage": "/images/racing-season-bg.jpg",
           "buttonText": "Shop Racing Collection",
-          "buttonLink": "/racing-collection",
+          "buttonLink": "/shop",
           "expiryText": "Ends March 31st"
         },
         {
           "id": "driver-fan-welcome",
           "title": "Driver Fan Welcome",
-          "description": "Welcome bonus for new automotive culture enthusiasts",
+          "description": "Welcome bonus for new automotive culture enthusiasts.",
           "discount": "20%",
           "code": "DRIVER20",
           "backgroundImage": "/images/driver-welcome-bg.jpg",
           "buttonText": "Join Driver Community",
-          "buttonLink": "/driver-community",
+          "buttonLink": "/shop",
           "expiryText": "Valid for 30 days"
         }
       ]
@@ -155,25 +146,6 @@
       ]
     },
     {
-      "type": "faqSection",
-      "title": "Driver Culture FAQs",
-      "description": "Everything you need to know about authentic automotive culture merchandise.",
-      "faqs": [
-        {
-          "question": "What makes Drivon different from other car merchandise?",
-          "answer": "We focus exclusively on authentic automotive culture, from racing legends to street icons. Every design celebrates the true spirit of driving passion and car culture worldwide."
-        },
-        {
-          "question": "Do you feature real car brands and models?",
-          "answer": "Yes! We celebrate iconic cars like Ferrari, Porsche, Lamborghini, BMW, and many others with authentic designs that respect the heritage and culture of each brand."
-        },
-        {
-          "question": "Are your collections officially licensed?",
-          "answer": "We create original designs inspired by automotive culture while respecting trademark guidelines. All our merchandise celebrates the community and culture authentically."
-        }
-      ]
-    },
-    {
       "type": "featuresSection",
       "title": "Why Choose Drivon?",
       "features": [
@@ -198,6 +170,89 @@
           "description": "Join the authentic automotive culture community"
         }
       ]
+    },
+    {
+      "type": "bannerSection",
+      "headline": "Discover the Collection",
+      "description": "Shop the full range of automotive lifestyle gear. From the track to the street.",
+      "backgroundImage": "/images/racing-heritage-banner.jpg",
+      "button1Text": "Shop All",
+      "button1Link": "/shop",
+      "button2Text": "View Collections",
+      "button2Link": "/collections"
+    },
+    {
+      "type": "faqSection",
+      "title": "Driver Culture FAQs",
+      "description": "Everything you need to know about authentic automotive culture merchandise.",
+      "faqs": [
+        {
+          "question": "What makes Drivon different from other car merchandise?",
+          "answer": "We focus exclusively on authentic automotive culture, from racing legends to street icons. Every design celebrates the true spirit of driving passion and car culture worldwide."
+        },
+        {
+          "question": "Do you feature real car brands and models?",
+          "answer": "Yes! We celebrate iconic cars with authentic designs that respect the heritage and culture of each brand."
+        },
+        {
+          "question": "Are your collections officially licensed?",
+          "answer": "We create original designs inspired by automotive culture while respecting trademark guidelines. All our merchandise celebrates the community and culture authentically."
+        }
+      ]
+    },
+    {
+      "type": "featuredPostsSection",
+      "title": "Car Culture & Racing Stories",
+      "exploreMoreLink": "/blog",
+      "exploreMoreText": "Read more on the blog"
+    },
+    {
+      "type": "trustBadges",
+      "title": "Shop With Confidence",
+      "badges": [
+        {
+          "id": "secure",
+          "icon": "🔒",
+          "title": "Secure Checkout",
+          "description": "SSL encrypted payments for your peace of mind"
+        },
+        {
+          "id": "shipping",
+          "icon": "📦",
+          "title": "Fast Shipping",
+          "description": "Free delivery on orders over $75"
+        },
+        {
+          "id": "returns",
+          "icon": "↩️",
+          "title": "Easy Returns",
+          "description": "30-day hassle-free returns"
+        }
+      ],
+      "paymentMethods": [
+        { "id": "visa", "name": "Visa" },
+        { "id": "mc", "name": "Mastercard" },
+        { "id": "amex", "name": "American Express" },
+        { "id": "paypal", "name": "PayPal" }
+      ],
+      "guaranteeText": "30-day money-back guarantee on all orders. We stand behind every piece."
+    },
+    {
+      "type": "socialProof",
+      "title": "Trusted by Drivers Worldwide",
+      "stats": [
+        { "id": "1", "number": "50K+", "label": "Happy customers", "icon": "👥" },
+        { "id": "2", "number": "4.9", "label": "Average rating", "icon": "⭐" },
+        { "id": "3", "number": "98%", "label": "Would recommend", "icon": "👍" },
+        { "id": "4", "number": "24/7", "label": "Support", "icon": "💬" }
+      ],
+      "recentActivities": [
+        { "id": "1", "customerName": "Alex R.", "location": "California", "product": "Racing Hoodie", "timeAgo": "2 min ago" },
+        { "id": "2", "customerName": "Emma T.", "location": "London", "product": "Car Culture Tee", "timeAgo": "5 min ago" },
+        { "id": "3", "customerName": "Marcus J.", "location": "Berlin", "product": "Driver Cap", "timeAgo": "12 min ago" }
+      ],
+      "overallRating": 5,
+      "totalReviews": "2,400+"
     },
     {
       "type": "emailSignupSection",

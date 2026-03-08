@@ -1,4 +1,6 @@
 ---
+import PaymentIcon from './PaymentIcon.astro';
+
 interface Badge {
   id: string;
   icon: string;
@@ -9,7 +11,7 @@ interface Badge {
 interface PaymentMethod {
   id: string;
   name: string;
-  icon: string;
+  icon?: string;
 }
 
 interface Props {
@@ -22,43 +24,39 @@ interface Props {
 const { title, badges, paymentMethods, guaranteeText } = Astro.props;
 ---
 
-<section class="py-16 px-4 bg-white border-t border-gray-200">
+<section class="py-16 px-4 md:px-8 bg-[var(--drivon-card)] border-t border-[var(--drivon-border)]">
   <div class="max-w-6xl mx-auto">
-    <h2 class="text-2xl md:text-3xl font-bold text-center mb-12 text-gray-900">{title}</h2>
+    <p class="font-display text-[10px] tracking-[0.4em] uppercase text-[var(--drivon-accent)] text-center mb-2">Trust</p>
+    <h2 class="font-display text-2xl md:text-3xl font-semibold text-center mb-12 text-[var(--drivon-text)] uppercase tracking-tight">{title}</h2>
     
-    <!-- Trust Badges -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
       {badges.map((badge) => (
-        <div class="text-center p-6">
-          <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <div class="text-green-600 text-2xl" set:html={badge.icon}></div>
+        <div class="text-center p-6 rounded-xl bg-[var(--drivon-surface)] border border-[var(--drivon-border)]">
+          <div class="w-16 h-16 bg-[var(--drivon-bg)] rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
+            <span set:html={badge.icon}></span>
           </div>
-          <h3 class="font-bold text-lg mb-2 text-gray-900">{badge.title}</h3>
-          <p class="text-gray-600 text-sm">{badge.description}</p>
+          <h3 class="font-display font-semibold text-lg mb-2 text-[var(--drivon-text)] uppercase tracking-wide">{badge.title}</h3>
+          <p class="text-[var(--drivon-muted)] text-sm font-body">{badge.description}</p>
         </div>
       ))}
     </div>
     
-    <!-- Payment Methods -->
     <div class="text-center">
-      <h3 class="font-semibold text-lg mb-6 text-gray-900">Secure Payment Methods</h3>
-      <div class="flex flex-wrap justify-center items-center gap-6 mb-8">
+      <h3 class="font-display text-[11px] font-semibold tracking-[0.2em] uppercase text-[var(--drivon-muted)] mb-6">Secure Payment Methods</h3>
+      <div class="flex flex-wrap justify-center items-center gap-4 mb-8">
         {paymentMethods.map((method) => (
-          <div class="bg-gray-50 border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow duration-300">
-            <div class="text-2xl" set:html={method.icon}></div>
-          </div>
+          <PaymentIcon id={method.id} name={method.name} class="h-10" />
         ))}
       </div>
       
-      <!-- Guarantee -->
-      <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 max-w-2xl mx-auto">
+      <div class="bg-[var(--drivon-surface)] border border-[var(--drivon-border)] rounded-xl p-6 max-w-2xl mx-auto">
         <div class="flex items-center justify-center gap-3">
-          <div class="text-green-600">
+          <div class="text-[var(--drivon-accent)]">
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
             </svg>
           </div>
-          <p class="font-semibold text-gray-900">{guaranteeText}</p>
+          <p class="font-body font-medium text-[var(--drivon-text)]">{guaranteeText}</p>
         </div>
       </div>
     </div>
