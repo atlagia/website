@@ -15,24 +15,24 @@ const { headline, description, backgroundImage, button1Text, button1Link, button
 ---
 
 <section
-  class="drivon-banner relative min-h-[80vh] flex items-center justify-center overflow-hidden"
+  class="drivon-banner relative min-h-[70vh] flex items-center justify-center overflow-hidden"
   style={backgroundImage ? `background-image: url(${backgroundImage}); background-size: cover; background-position: center;` : undefined}
 >
   {backgroundImage ? (
-    <div class="absolute inset-0 bg-[var(--drivon-bg)]/80 z-10" aria-hidden="true"></div>
+    <div class="absolute inset-0 bg-[var(--drivon-bg)]/85 z-10" aria-hidden="true"></div>
   ) : (
     <div class="absolute inset-0 drivon-banner-bg z-0" aria-hidden="true"></div>
   )}
 
-  <div class="relative z-20 max-w-[920px] mx-auto px-6 sm:px-8 text-center py-28">
-    <p class="font-display text-[11px] tracking-[0.35em] uppercase text-[var(--drivon-accent)] mb-6">Racing heritage</p>
-    <h2 class="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[var(--drivon-text)] uppercase tracking-tighter leading-[1.05] mb-8">
+  <div class="relative z-20 max-w-[840px] mx-auto px-6 sm:px-8 text-center py-24 lg:py-32">
+    <p class="font-display text-[10px] tracking-[0.4em] uppercase text-[var(--drivon-accent)] mb-8">Racing heritage</p>
+    <h2 class="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[var(--drivon-text)] uppercase tracking-tighter leading-[1.02] mb-6">
       {headline}
     </h2>
-    <p class="text-lg md:text-xl text-[var(--drivon-text)]/80 max-w-2xl mx-auto mb-14 font-body leading-relaxed">
+    <p class="text-base md:text-lg text-[var(--drivon-text)]/70 max-w-xl mx-auto mb-12 font-body tracking-wide">
       {description}
     </p>
-    <div class="flex flex-wrap justify-center gap-4">
+    <div class="flex flex-wrap justify-center gap-5">
       <a
         href={button1Link}
         class="group inline-flex items-center gap-3 bg-[var(--drivon-accent)] text-[var(--drivon-bg)] px-8 py-4 text-[11px] font-medium tracking-[0.25em] uppercase hover:bg-[var(--drivon-accent-hover)] transition-all duration-300"

@@ -12,12 +12,12 @@ const { stats } = Astro.props;
 ---
 
 <section class="drivon-stats bg-[var(--drivon-bg)] border-b border-[var(--drivon-border)]">
-  <div class="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 py-8 lg:py-10">
-    <div class="flex flex-wrap justify-center gap-x-12 gap-y-6 lg:gap-x-20">
+  <div class="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 py-6 lg:py-8">
+    <div class="flex flex-wrap justify-center gap-x-16 gap-y-4 lg:gap-x-24">
       {stats.map((stat) => (
         <div class="text-center">
-          <p class="font-display text-2xl md:text-3xl font-bold text-[var(--drivon-accent)] tracking-tight">{stat.value}</p>
-          <p class="text-[10px] md:text-[11px] tracking-[0.25em] uppercase text-[var(--drivon-muted)] mt-1 font-body">{stat.label}</p>
+          <p class="font-display text-xl md:text-2xl text-[var(--drivon-text)] tracking-tight">{stat.value}</p>
+          <p class="text-[9px] md:text-[10px] tracking-[0.3em] uppercase text-[var(--drivon-muted)] mt-0.5 font-body">{stat.label}</p>
         </div>
       ))}
     </div>

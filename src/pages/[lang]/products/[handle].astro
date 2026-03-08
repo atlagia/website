@@ -1581,6 +1581,9 @@ const relatedCardStyles = {
   #product-wrapper[data-theme="dark"] .text-neutral-500 { color: rgb(229 229 229) !important; }
   #product-wrapper[data-theme="dark"] .text-neutral-600 { color: rgb(245 245 245) !important; }
   #product-wrapper[data-theme="dark"] .text-neutral-800 { color: rgb(255 255 255) !important; }
+  /* Keep Subscribe Now / Buy Now button text dark on its white background */
+  #product-wrapper[data-theme="dark"] button.bg-white { color: #0a0a0a !important; }
+  #product-wrapper[data-theme="dark"] button.bg-white span { color: inherit !important; }
 
   /* Dark theme: Show More button - force visible */
   #product-wrapper[data-theme="dark"] #show-more-btn {

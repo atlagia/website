@@ -261,27 +261,27 @@ const fullSchema = [schemaMarkup, breadcrumbSchema];
   <script type="application/ld+json" set:html={JSON.stringify(reviewSchema)} />
 )}
 
-<!-- Fonts: Syne (display) + DM Sans (body) - premium automotive editorial -->
+<!-- Fonts: Bebas Neue (headlines) + DM Sans (body) - motorsport editorial luxury -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Noto+Kufi+Arabic:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Noto+Kufi+Arabic:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
 <ViewTransitions />
 
 <style is:global>
   :root {
     --font-fallback: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-    --font-display: 'Syne', var(--font-fallback);
+    --font-display: 'Bebas Neue', var(--font-fallback);
     --font-body: 'DM Sans', var(--font-fallback);
     --font-arabic-primary: 'Noto Kufi Arabic', var(--font-fallback);
     --font-arabic-secondary: 'IBM Plex Sans Arabic', var(--font-fallback);
-    /* Drivon premium palette */
-    --drivon-bg: #0a0a0a;
-    --drivon-surface: #111111;
-    --drivon-card: #141414;
-    --drivon-text: #fafafa;
-    --drivon-muted: #737373;
-    --drivon-border: #262626;
+    /* Drivon: dark luxury editorial */
+    --drivon-bg: #080808;
+    --drivon-surface: #0c0c0c;
+    --drivon-card: #111111;
+    --drivon-text: #f5f5f5;
+    --drivon-muted: #a3a3a3;
+    --drivon-border: #1a1a1a;
     --drivon-accent: #c9a962;
     --drivon-accent-hover: #d4b872;
     --theme-bg: var(--drivon-bg);
@@ -290,9 +290,20 @@ const fullSchema = [schemaMarkup, breadcrumbSchema];
     --theme-accent: var(--drivon-accent);
   }
 
+  /* Subtle grain overlay for cinematic feel */
+  .drivon-grain::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1;
+  }
+
   html {
     font-family: var(--font-body);
     scroll-behavior: smooth;
+    background-color: var(--drivon-bg);
   }
 
   body {
@@ -307,9 +318,10 @@ const fullSchema = [schemaMarkup, breadcrumbSchema];
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    line-height: 1.1;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    line-height: 0.95;
+    text-transform: uppercase;
   }
 
   html[lang="ar"] {
@@ -349,7 +361,6 @@ const fullSchema = [schemaMarkup, breadcrumbSchema];
 <Hotjar />
 
 <!-- Preload Critical Assets -->
-<link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 

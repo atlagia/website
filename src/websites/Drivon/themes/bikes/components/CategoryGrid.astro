@@ -16,31 +16,31 @@ interface Props {
 const { title, description, categories } = Astro.props;
 ---
 
-<section class="drivon-categories bg-[var(--drivon-bg)] py-24 lg:py-32">
+<section class="drivon-categories bg-[var(--drivon-bg)] py-32 lg:py-44">
   <div class="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12">
-    <div class="mb-16 lg:mb-20">
-      <p class="font-display text-[11px] tracking-[0.35em] uppercase text-[var(--drivon-accent)] mb-3">Categories</p>
-      <h2 class="font-display text-3xl md:text-4xl font-bold text-[var(--drivon-text)] uppercase tracking-tight mb-4">{title}</h2>
-      <p class="text-lg text-[var(--drivon-text)]/70 max-w-2xl font-body">{description}</p>
+    <div class="mb-20 lg:mb-28">
+      <p class="font-display text-[10px] tracking-[0.4em] uppercase text-[var(--drivon-accent)] mb-4">Categories</p>
+      <h2 class="font-display text-3xl md:text-4xl lg:text-5xl text-[var(--drivon-text)] uppercase tracking-tight mb-5">{title}</h2>
+      <p class="text-base text-[var(--drivon-text)]/60 max-w-xl font-body tracking-wide">{description}</p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-px bg-[var(--drivon-border)] md:bg-transparent">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
       {categories.map((category) => (
         <a
           href={category.link}
-          class="group relative block aspect-[3/4] overflow-hidden bg-[var(--drivon-surface)] md:border border-[var(--drivon-border)]"
+          class="group relative block aspect-[4/5] lg:aspect-[3/4] overflow-hidden bg-[var(--drivon-surface)]"
         >
           <img
             src={category.image}
             alt={category.name}
             class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
           />
-          <div class="absolute inset-0 bg-gradient-to-t from-[var(--drivon-bg)] via-transparent to-transparent opacity-80"></div>
-          <div class="absolute inset-0 flex flex-col justify-end p-8 lg:p-10">
-            <h3 class="font-display text-2xl lg:text-3xl font-bold text-[var(--drivon-text)] uppercase tracking-tight mb-2">
+          <div class="absolute inset-0 bg-gradient-to-t from-[var(--drivon-bg)]/95 via-[var(--drivon-bg)]/20 to-transparent"></div>
+          <div class="absolute inset-0 flex flex-col justify-end p-8 lg:p-12">
+            <h3 class="font-display text-3xl lg:text-4xl text-[var(--drivon-text)] uppercase tracking-wide mb-2 group-hover:opacity-90 transition-opacity">
               {category.name}
             </h3>
-            <p class="text-sm text-[var(--drivon-text)]/70 font-body">{category.description}</p>
+            <p class="text-sm text-[var(--drivon-text)]/60 font-body max-w-sm">{category.description}</p>
           </div>
         </a>
       ))}

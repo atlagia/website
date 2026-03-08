@@ -10,34 +10,28 @@ interface Props {
 const { title, description, formAction, buttonText } = Astro.props;
 ---
 
-<section class="drivon-newsletter relative py-24 lg:py-32 bg-[var(--drivon-surface)] border-t border-[var(--drivon-border)]">
-  <div class="max-w-[720px] mx-auto px-6 sm:px-8 lg:px-12 text-center">
-    <p class="font-display text-[11px] tracking-[0.35em] uppercase text-[var(--drivon-accent)] mb-3">Newsletter</p>
-    <h2 class="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-[var(--drivon-text)] uppercase tracking-tight mb-4">
+<section class="drivon-newsletter relative py-32 lg:py-44 bg-[var(--drivon-bg)] border-t border-[var(--drivon-border)]">
+  <div class="max-w-[520px] mx-auto px-6 sm:px-8 lg:px-12 text-center">
+    <h2 class="font-display text-3xl md:text-4xl lg:text-5xl text-[var(--drivon-text)] uppercase tracking-wide mb-12">
       {title}
     </h2>
-    <p class="text-[var(--drivon-text)]/70 font-body mb-12 max-w-lg mx-auto">
-      {description}
-    </p>
-
-    <form action={formAction} method="POST" class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+    <form action={formAction} method="POST" class="flex flex-col sm:flex-row gap-3 max-w-sm mx-auto">
       <input
         type="email"
         name="email"
         placeholder="Your email"
         required
-        class="flex-1 min-w-0 px-6 py-4 bg-[var(--drivon-bg)] border border-[var(--drivon-border)] text-[var(--drivon-text)] placeholder:text-[var(--drivon-muted)] focus:outline-none focus:border-[var(--drivon-accent)] transition-colors text-sm"
+        class="flex-1 min-w-0 px-5 py-3.5 bg-transparent border-b border-[var(--drivon-border)] text-[var(--drivon-text)] placeholder:text-[var(--drivon-muted)] focus:outline-none focus:border-[var(--drivon-text)]/50 transition-colors text-sm font-body"
       />
       <button
         type="submit"
-        class="px-8 py-4 bg-[var(--drivon-accent)] text-[var(--drivon-bg)] text-[11px] font-medium tracking-[0.25em] uppercase hover:bg-[var(--drivon-accent-hover)] transition-colors shrink-0"
+        class="px-6 py-3.5 border border-[var(--drivon-text)] text-[var(--drivon-text)] text-[11px] font-medium tracking-[0.2em] uppercase hover:bg-[var(--drivon-text)] hover:text-[var(--drivon-bg)] transition-all duration-300 shrink-0"
       >
         {buttonText}
       </button>
     </form>
-
     <p class="text-[10px] text-[var(--drivon-muted)] mt-6 tracking-wider">
-      We respect your privacy. Unsubscribe at any time.
+      Unsubscribe at any time.
     </p>
   </div>
 </section>

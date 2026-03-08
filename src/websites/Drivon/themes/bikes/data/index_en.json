@@ -5,7 +5,7 @@
     {
       "type": "welcomeSection",
       "title": "Built for Car Enthusiasts",
-      "description": "Authentic automotive culture merchandise designed for true car enthusiasts and racing fans. From racing legends to street culture icons, we create premium gear specifically for car enthusiasts who appreciate authentic automotive heritage.",
+      "description": "Premium automotive culture. Racing heritage, street icons, driver essentials.",
       "blogLinkText": "Explore Car Culture",
       "blogLink": "/car-culture",
       "backgroundVideo": {
@@ -21,7 +21,7 @@
     {
       "type": "bannerSection",
       "headline": "Car Culture Meets Racing Heritage",
-      "description": "Experience authentic automotive culture designed for car enthusiasts worldwide. From racing legends to street icons, we celebrate the true spirit of driving passion that connects car enthusiasts across the globe.",
+      "description": "The spirit of the road. The culture of the track.",
       "backgroundImage": "/images/racing-heritage-banner.jpg",
       "button1Text": "Shop Driver Collection",
       "button1Link": "/driver-collection",
@@ -201,11 +201,11 @@
     },
     {
       "type": "emailSignupSection",
-      "title": "Join the Driver Community",
-      "description": "Get exclusive automotive culture updates, racing event news, and authentic car community insights from around the world.",
+      "title": "Join The Paddock.",
+      "description": "Exclusive drops, racing culture, and early access.",
       "backgroundImage": "/images/driver-community-newsletter.jpg",
       "formAction": "/api/driver-signup",
-      "submitText": "Join Driver Community"
+      "submitText": "Join"
     }
   ]
 }

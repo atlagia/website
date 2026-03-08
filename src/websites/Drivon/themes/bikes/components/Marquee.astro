@@ -8,10 +8,10 @@ const { items = ['RACING', 'HERITAGE', 'CULTURE', 'PREMIUM', 'DRIVEN', 'LEGEND']
 const repeated = [...items, ...items, ...items];
 ---
 
-<section class="drivon-marquee overflow-hidden border-y border-[var(--drivon-border)] bg-[var(--drivon-surface)] py-4" aria-hidden="true">
-  <div class="marquee-track flex gap-12 whitespace-nowrap" style={`--marquee-speed: ${speed}s`}>
+<section class="drivon-marquee overflow-hidden border-y border-[var(--drivon-border)] bg-[var(--drivon-surface)] py-5" aria-hidden="true">
+  <div class="marquee-track flex gap-16 whitespace-nowrap" style={`--marquee-speed: ${speed}s`}>
     {repeated.map((item) => (
-      <span class="font-display text-[11px] md:text-xs tracking-[0.4em] uppercase text-[var(--drivon-text)]/60">
+      <span class="font-display text-[10px] tracking-[0.5em] uppercase text-[var(--drivon-text)]/50">
         {item}
       </span>
     ))}
