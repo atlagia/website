@@ -1,0 +1,128 @@
+---
+import { Menu, Globe, Search } from 'lucide-react';
+import { getLangFromUrl, getLocalizedPath } from '@utils/i18n';
+import CartSidebarWithTrigger from '@themes/default/components/CartSidebarWithTrigger';
+
+const navigation = [
+  { name: 'Home', href: '/' },
+  { name: 'Collections', href: '/collections' },
+  { name: 'Best Sellers', href: '/best-sellers' },
+  { name: 'About', href: '/about' },
+  { name: 'Contact', href: '/contact' },
+];
+
+const getAllowedLanguages = (): string[] => {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  return allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+};
+
+const languageNames: Record<string, string> = {
+  en: "English", fr: "Français", de: "Deutsch", es: "Español", it: "Italiano",
+  pt: "Português", nl: "Nederlands", ar: "العربية",
+};
+
+const languages = getAllowedLanguages().map(lang => ({ code: lang, name: languageNames[lang] || lang }));
+const currentPath = Astro.url.pathname;
+const currentLang = getLangFromUrl(Astro.url);
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'Designer Shoes';
+
+const localizedNavigation = navigation.map(item => ({
+  ...item,
+  href: `/${currentLang}${item.href === '/' ? '' : item.href}`
+}));
+
+let headerStyles: { cart?: Record<string, string> } = {};
+try {
+  const themeHeaderStyles = await import('../styles/Header.json');
+  headerStyles = themeHeaderStyles.default || {};
+} catch (_) {}
+
+const paymentConfig = {
+  method: import.meta.env.PUBLIC_PAYMENT_METHOD || 'default',
+  hoodpay: {
+    apiUrl: import.meta.env.HOODPAY_API_URL,
+    businessId: import.meta.env.HOODPAY_BUSINESS_ID,
+    authToken: import.meta.env.HOODPAY_AUTH_TOKEN,
+    redirectUrl: `${import.meta.env.DOMAINE || ''}${import.meta.env.HOODPAY_REDIRECT_URL || ''}`
+  },
+  store: { name: import.meta.env.PUBLIC_SITE_NAME || siteName, domain: import.meta.env.DOMAINE || 'localhost' }
+};
+const apiEndpoint = import.meta.env.VITE_API_ENDPOINT || '/api/checkout';
+---
+
+<header class="fixed w-full top-0 z-[60] bg-[var(--ds-bg)]/95 backdrop-blur-md border-b border-[var(--ds-border)]">
+  <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Top">
+    <div class="flex h-20 items-center justify-between gap-4 min-w-0">
+      <a href={`/${currentLang}`} class="font-display text-xl font-medium text-[var(--ds-text)] tracking-[0.2em] uppercase shrink-0">
+        {siteName}
+      </a>
+
+      <div class="hidden md:flex items-center gap-5 lg:gap-8 shrink-0">
+        {localizedNavigation.map((item) => (
+          <a href={item.href} class="text-[11px] font-medium text-[var(--ds-text)] hover:text-[var(--ds-accent)] transition-colors uppercase tracking-[0.25em]">
+            {item.name}
+          </a>
+        ))}
+      </div>
+
+      <div class="flex items-center gap-2 sm:gap-4 shrink-0">
+        <a href={`/${currentLang}/search`} class="p-2 text-[var(--ds-text)] hover:text-[var(--ds-accent)]" aria-label="Search">
+          <Search className="h-4 w-4" />
+        </a>
+        <div class="relative group" role="group" aria-label="Language">
+          <button type="button" class="inline-flex items-center gap-2 text-[var(--ds-text)] hover:text-[var(--ds-accent)] text-[11px] uppercase tracking-[0.2em]" aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu">
+            <Globe className="h-4 w-4" aria-hidden="true" />
+            <span class="hidden md:inline">{languages.find(l => l.code === currentLang)?.name}</span>
+          </button>
+          <div id="lang-menu" role="menu" class="absolute right-0 mt-2 w-48 py-2 bg-[var(--ds-surface)] border border-[var(--ds-border)] shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+            {languages.map((lang) => (
+              <a href={getLocalizedPath(currentPath, lang.code)} class={`block px-4 py-2 text-[11px] uppercase tracking-[0.2em] ${currentLang === lang.code ? 'text-[var(--ds-accent)]' : 'text-[var(--ds-muted)] hover:text-[var(--ds-accent)]'}`} role="menuitem">{lang.name}</a>
+            ))}
+          </div>
+        </div>
+
+        <CartSidebarWithTrigger
+          client:load
+          triggerClassName="flex items-center gap-1.5 text-[var(--ds-text)] hover:text-[var(--ds-accent)] py-2 text-[11px] uppercase tracking-[0.2em]"
+          label="Bag"
+          showLabel={true}
+          paymentConfig={paymentConfig}
+          apiEndpoint={apiEndpoint}
+          headerStyles={headerStyles}
+          projectType={import.meta.env.PROJECT_TYPE || 'physical'}
+        />
+
+        <a href={`/${currentLang}/account`} class="hidden md:inline-flex px-6 py-2.5 border border-[var(--ds-text)] text-[11px] font-medium text-[var(--ds-text)] hover:bg-[var(--ds-text)] hover:text-[var(--ds-bg)] transition-all uppercase tracking-[0.2em]">Sign In</a>
+
+        <button type="button" id="mobile-menu-button" class="md:hidden p-2 text-[var(--ds-text)] hover:text-[var(--ds-accent)]" aria-expanded="false">
+          <span class="sr-only">Open menu</span>
+          <Menu className="h-6 w-6" aria-hidden="true" />
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu-dropdown" class="md:hidden hidden absolute left-0 right-0 top-full bg-[var(--ds-surface)] border-b border-[var(--ds-border)] py-4" role="menu" aria-label="Main menu">
+      {localizedNavigation.map((item) => (
+        <a href={item.href} class="block px-6 py-3 text-[11px] text-[var(--ds-text)] hover:text-[var(--ds-accent)] uppercase tracking-[0.2em]" role="menuitem">{item.name}</a>
+      ))}
+      <a href={`/${currentLang}/search`} class="block px-6 py-3 text-[11px] text-[var(--ds-text)] hover:text-[var(--ds-accent)] uppercase tracking-[0.2em]" role="menuitem">Search</a>
+      <a href={`/${currentLang}/account`} class="block px-6 py-3 text-[11px] text-[var(--ds-text)] font-medium uppercase tracking-[0.2em]" role="menuitem">Sign In</a>
+    </div>
+  </nav>
+</header>
+
+<script>
+  const btn = document.getElementById('mobile-menu-button');
+  const menu = document.getElementById('mobile-menu-dropdown');
+  btn?.addEventListener('click', () => {
+    const open = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', (!open).toString());
+    menu?.classList.toggle('hidden');
+  });
+  document.addEventListener('click', (e) => {
+    if (!btn?.contains(e.target) && !menu?.contains(e.target)) {
+      btn?.setAttribute('aria-expanded', 'false');
+      menu?.classList.add('hidden');
+    }
+  });
+</script>

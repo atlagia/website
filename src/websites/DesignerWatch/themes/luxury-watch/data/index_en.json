@@ -1,0 +1,30 @@
+{
+  "siteTitle": "Abstract — Your Site Name",
+  "siteDescription": "Your site description. Customize in data/index_en.json.",
+  "sections": [
+    {
+      "type": "welcomeSection",
+      "title": "Abstract",
+      "description": "A template for new websites. Customize sections in data/index_en.json.",
+      "luxury": false,
+      "heroImage": "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1920&q=80",
+      "headlineLine1": "Welcome.",
+      "headlineLine2": "Your Site.",
+      "blogLink": "/collections",
+      "blogLinkText": "Get Started",
+      "backgroundVideo": {
+        "type": "youtube",
+        "videoId": "",
+        "fallbackImage": "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1920&q=80"
+      }
+    },
+    {
+      "type": "emailSignupSection",
+      "title": "Newsletter",
+      "description": "Subscribe for updates.",
+      "backgroundImage": "",
+      "formAction": "/api/newsletter",
+      "submitText": "Subscribe"
+    }
+  ]
+}

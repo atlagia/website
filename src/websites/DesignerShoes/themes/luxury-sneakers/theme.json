@@ -1,0 +1,17 @@
+{
+  "pages": [
+    {"path": "/", "name": "Home", "description": "Designer Shoes — luxury sneaker boutique", "priority": 1},
+    {"path": "/collections", "name": "Collections", "description": "Browse designer sneaker collections", "priority": 0.9},
+    {"path": "/products", "name": "Products", "description": "View all sneakers", "priority": 0.9},
+    {"path": "/about", "name": "About", "description": "About Designer Shoes", "priority": 0.7},
+    {"path": "/contact", "name": "Contact", "description": "Contact us", "priority": 0.7},
+    {"path": "/best-sellers", "name": "Best Sellers", "description": "Top-selling sneakers", "priority": 0.85}
+  ],
+  "metadata": {
+    "name": "Designer Shoes Luxury Sneakers",
+    "version": "1.0.0",
+    "description": "Luxury sneaker and fashion footwear theme",
+    "author": "ATLAGIACMS",
+    "license": "MIT"
+  }
+}

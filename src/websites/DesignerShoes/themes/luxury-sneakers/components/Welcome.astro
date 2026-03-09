@@ -1,0 +1,64 @@
+---
+interface BackgroundVideo {
+  type: 'youtube';
+  videoId: string;
+  fallbackImage: string;
+}
+
+interface Props {
+  title?: string;
+  description?: string;
+  blogLink?: string;
+  blogLinkText?: string;
+  backgroundVideo?: BackgroundVideo;
+  heroImage?: string;
+  headlineLine1?: string;
+  headlineLine2?: string;
+  luxury?: boolean;
+}
+
+const { 
+  title = 'Designer Shoes',
+  description = '',
+  blogLink = '#', 
+  blogLinkText = 'Shop Collection', 
+  backgroundVideo = { type: 'youtube', videoId: '', fallbackImage: '' },
+  heroImage,
+  headlineLine1 = 'Step Into Iconic Style',
+  headlineLine2 = '',
+  luxury = true
+} = Astro.props;
+
+const bgImage = heroImage || backgroundVideo?.fallbackImage || 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1920&q=90';
+---
+
+<section class="relative w-full min-h-[100vh] min-h-[100dvh] flex items-center justify-center overflow-hidden bg-[var(--ds-bg)]" itemScope itemType="https://schema.org/WebPageElement">
+  <div class="absolute inset-0 z-0">
+    <img src={bgImage} alt="" class="absolute inset-0 w-full h-full object-cover object-center" fetchpriority="high" aria-hidden="true" />
+    <div class="absolute inset-0 z-[1] bg-gradient-to-t from-black/80 via-black/40 to-black/20" aria-hidden="true" />
+  </div>
+
+  <div class="welcome-hero-content relative z-10 text-center px-6 sm:px-8 max-w-4xl mx-auto">
+    {title && <p class="welcome-hero-item text-[10px] sm:text-xs tracking-[0.4em] uppercase text-white/90 mb-4 font-body" itemProp="name" style="animation: welcomeFadeIn 0.8s ease-out 0.1s both;">{title}</p>}
+    <p class="welcome-hero-item text-white text-sm sm:text-base tracking-[0.35em] uppercase mb-2 font-body" style="animation: welcomeFadeIn 0.8s ease-out 0.2s both;">{headlineLine1}</p>
+    <h1 class="welcome-hero-item font-display text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-medium tracking-tight mb-8" itemProp="headline" role="heading" aria-level="1" style="animation: welcomeFadeIn 0.8s ease-out 0.3s both;">
+      {headlineLine2 || headlineLine1}
+    </h1>
+    {description && <p class="welcome-hero-item text-white/95 text-base sm:text-lg max-w-md mx-auto mb-12 leading-relaxed font-body" style="animation: welcomeFadeIn 0.8s ease-out 0.4s both;">{description}</p>}
+    <a href={blogLink} class="welcome-hero-item inline-block border-2 border-white text-white uppercase tracking-[0.25em] text-[11px] font-medium px-12 py-4 hover:bg-white hover:text-[var(--ds-bg)] transition-all duration-300" style="animation: welcomeFadeIn 0.8s ease-out 0.5s both;">
+      {blogLinkText}
+    </a>
+  </div>
+
+  <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2" style="animation: welcomeFadeIn 0.8s ease-out 0.6s both;">
+    <span class="text-[9px] tracking-[0.3em] uppercase text-white/60">Scroll</span>
+    <div class="w-px h-10 bg-gradient-to-b from-white/50 to-transparent" />
+  </div>
+</section>
+
+<style>
+  @keyframes welcomeFadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>

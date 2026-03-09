@@ -1,0 +1,33 @@
+---
+interface Props {
+  quote: string;
+  image: string;
+  imageAlt: string;
+}
+
+const { quote, image, imageAlt } = Astro.props;
+---
+
+<section class="repbag-brand-story bg-[var(--luxury-ivory)]" aria-label="Brand story">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-0 min-h-[480px]">
+      <div class="relative aspect-[4/5] lg:aspect-auto lg:min-h-[480px] overflow-hidden order-2 lg:order-1">
+        <img
+          src={image}
+          alt={imageAlt}
+          class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 ease-out hover:scale-[1.02]"
+          loading="lazy"
+          width="800"
+          height="1000"
+        />
+      </div>
+      <div class="flex items-center justify-center px-8 py-16 lg:py-24 order-1 lg:order-2 bg-[var(--luxury-ivory)]">
+        <blockquote class="max-w-md text-center lg:text-left">
+          <p class="text-2xl sm:text-3xl md:text-4xl font-medium text-[var(--luxury-black)] leading-tight tracking-tight" style="font-family: var(--font-display);">
+            {quote}
+          </p>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</section>

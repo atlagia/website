@@ -10,20 +10,20 @@ interface Props {
 const { title, description, backgroundImage, formAction, buttonText } = Astro.props;
 ---
 
-<section class="bg-white border-t border-neutral-200 py-8 md:py-10 px-4 md:px-8">
-  <div class="max-w-5xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+<section class="repbag-newsletter bg-[var(--luxury-black)] text-[var(--luxury-ivory)] py-16 md:py-20 px-4 md:px-8">
+  <div class="max-w-5xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-8">
     <div class="md:max-w-sm">
-      <h2 class="text-sm font-semibold text-black uppercase tracking-[0.2em] mb-1">{title}</h2>
-      {description && <p class="text-neutral-500 text-xs">{description}</p>}
+      <h2 class="text-[11px] font-medium uppercase tracking-[0.3em] mb-2" style="font-family: var(--font-display);">{title}</h2>
+      {description && <p class="text-[var(--luxury-ivory)]/70 text-sm">{description}</p>}
     </div>
     <form action={formAction} method="POST" class="flex flex-col sm:flex-row gap-3 flex-1 md:justify-end">
       <input
         type="email"
         placeholder="Email address"
         required
-        class="px-4 py-2.5 border border-neutral-300 text-black text-sm placeholder:text-neutral-400 focus:outline-none focus:border-black min-w-[200px]"
+        class="px-5 py-3 border border-[var(--luxury-ivory)]/30 bg-transparent text-[var(--luxury-ivory)] text-sm placeholder:text-[var(--luxury-ivory)]/50 focus:outline-none focus:border-[var(--luxury-gold)] min-w-[240px] transition-colors"
       />
-      <button type="submit" class="bg-black text-white uppercase tracking-[0.2em] text-xs font-medium px-6 py-2.5 hover:bg-neutral-800 transition-colors whitespace-nowrap">
+      <button type="submit" class="border border-[var(--luxury-ivory)] text-[var(--luxury-ivory)] uppercase tracking-[0.2em] text-[11px] font-medium px-8 py-3 hover:bg-[var(--luxury-ivory)] hover:text-[var(--luxury-black)] transition-all duration-300 whitespace-nowrap">
         {buttonText}
       </button>
     </form>

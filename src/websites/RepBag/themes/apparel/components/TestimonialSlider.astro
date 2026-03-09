@@ -15,27 +15,26 @@ interface Props {
 const { title, testimonials } = Astro.props;
 ---
 
-<section class="py-20 px-4 bg-white">
+<section class="repbag-testimonials bg-[var(--luxury-ivory)] py-24 md:py-32 px-4 sm:px-6 lg:px-8" aria-labelledby="testimonials-heading">
   <div class="max-w-6xl mx-auto">
-    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">{title}</h2>
-    
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <h2 id="testimonials-heading" class="text-2xl sm:text-3xl md:text-4xl font-medium text-[var(--luxury-black)] text-center tracking-tight mb-16" style="font-family: var(--font-display);">{title}</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
       {testimonials.map((testimonial) => (
-        <div class="bg-white border border-gray-200 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
-          <div class="flex items-center gap-4 mb-4">
-            <div class="w-14 h-14 rounded-full bg-gray-900 text-white flex items-center justify-center font-bold text-lg border-2 border-gray-200">
+        <div class="bg-[var(--luxury-ivory)] border border-[var(--luxury-beige)] p-8 rounded-sm hover:shadow-md transition-shadow duration-300">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-12 h-12 rounded-full bg-[var(--luxury-gold)]/20 text-[var(--luxury-gold)] flex items-center justify-center font-medium text-sm" style="font-family: var(--font-display);">
               {testimonial.avatar}
             </div>
             <div>
-              <h3 class="font-bold text-gray-900">{testimonial.author}</h3>
-              <p class="text-sm text-gray-600">{testimonial.role}</p>
+              <h3 class="font-medium text-[var(--luxury-black)] text-sm" style="font-family: var(--font-body-luxury);">{testimonial.author}</h3>
+              <p class="text-[11px] text-[var(--luxury-text)]/60 uppercase tracking-[0.15em]">{testimonial.role}</p>
             </div>
           </div>
-          <p class="text-gray-800 italic">{testimonial.content}</p>
-          <div class="mt-4 flex justify-end">
-            <svg class="w-6 h-6 text-gray-300" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M10.802 20 9 17.5a12.527 12.527 0 0 1-1.5-6.5c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8a7.963 7.963 0 0 1-4.576-1.456L10.802 20zm0 0-1.601-2.5C7.85 16.325 6 14.434 6 11c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8a7.963 7.963 0 0 1-4.576-1.456L10.802 20z"/>
-            </svg>
+          <p class="text-[var(--luxury-text)] text-sm leading-relaxed">{testimonial.content}</p>
+          <div class="mt-6 flex gap-1 text-[var(--luxury-gold)]">
+            {[1,2,3,4,5].map(() => (
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            ))}
           </div>
         </div>
       ))}

@@ -1,0 +1,44 @@
+---
+import Layoutc from '@layouts/Layoutc.astro';
+
+export async function getStaticPaths() {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  const languages = allowedLanguages.split(',').map((l: string) => l.trim()).filter((l: string) => l.length > 0);
+  return languages.map((l: string) => ({ params: { lang: l } }));
+}
+
+const { lang = 'en' } = Astro.params;
+const storeName = import.meta.env.PUBLIC_SITE_NAME || 'Designer Shoes';
+const seoTitle = `Contact | ${storeName}`;
+const seoDescription = 'Get in touch with Designer Shoes — we\'re here to help with orders, sizing, and any questions about our luxury sneakers.';
+const email = import.meta.env.PUBLIC_SUPPORT_EMAIL || import.meta.env.PUBLIC_BUSINESS_EMAIL || 'contact@designershoes.example';
+const phone = import.meta.env.PUBLIC_BUSINESS_PHONE || '';
+const hours = import.meta.env.PUBLIC_SUPPORT_HOURS || 'Monday – Friday, 9 AM – 6 PM';
+---
+
+<Layoutc title={seoTitle} description={seoDescription} lang={lang}>
+  <div class="min-h-screen bg-[var(--ds-bg)] text-[var(--ds-text)]">
+    <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20">
+      <h1 class="font-display text-4xl md:text-5xl font-medium tracking-tight text-[var(--ds-text)] mb-8">Contact Us</h1>
+      <p class="text-[var(--ds-muted)] text-lg leading-relaxed mb-12">
+        Have a question about your order, sizing, or our collection? We'd love to hear from you.
+      </p>
+      <div class="space-y-8">
+        <div>
+          <h2 class="font-display text-sm font-medium uppercase tracking-[0.2em] text-[var(--ds-accent)] mb-2">Email</h2>
+          <a href={`mailto:${email}`} class="text-[var(--ds-text)] hover:text-[var(--ds-accent)] transition-colors">{email}</a>
+        </div>
+        {phone && (
+          <div>
+            <h2 class="font-display text-sm font-medium uppercase tracking-[0.2em] text-[var(--ds-accent)] mb-2">Phone</h2>
+            <a href={`tel:${phone}`} class="text-[var(--ds-text)] hover:text-[var(--ds-accent)] transition-colors">{phone}</a>
+          </div>
+        )}
+        <div>
+          <h2 class="font-display text-sm font-medium uppercase tracking-[0.2em] text-[var(--ds-accent)] mb-2">Support Hours</h2>
+          <p class="text-[var(--ds-muted)]">{hours}</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layoutc>

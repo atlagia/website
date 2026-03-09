@@ -1,0 +1,41 @@
+{
+  "pages": [
+    {
+      "path": "/",
+      "name": "Home",
+      "description": "Home page",
+      "priority": 1
+    },
+    {
+      "path": "/collections",
+      "name": "Collections",
+      "description": "Browse watch collections",
+      "priority": 0.9
+    },
+    {
+      "path": "/products",
+      "name": "Watches",
+      "description": "View all timepieces",
+      "priority": 0.9
+    },
+    {
+      "path": "/about",
+      "name": "Our Heritage",
+      "description": "Discover our craftsmanship",
+      "priority": 0.7
+    },
+    {
+      "path": "/contact",
+      "name": "Boutique Support",
+      "description": "Contact our specialists",
+      "priority": 0.7
+    }
+  ],
+  "metadata": {
+    "name": "DesignerWatch Luxury Theme",
+    "version": "1.0.0",
+    "description": "High-end luxury watch e-commerce theme",
+    "author": "DesignerWatch",
+    "license": "MIT"
+  }
+}

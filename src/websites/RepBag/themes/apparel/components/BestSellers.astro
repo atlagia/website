@@ -42,60 +42,37 @@ const products = productsData
   }));
 ---
 
-<section class="py-20 px-4 bg-white">
+<section class="repbag-best-sellers bg-[var(--luxury-ivory)] py-24 md:py-32 px-4 sm:px-6 lg:px-8" aria-labelledby="best-sellers-heading">
   <div class="max-w-7xl mx-auto">
-    <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">{title}</h2>
-      <p class="text-xl text-gray-600 max-w-3xl mx-auto">{description}</p>
-    </div>
-    
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    <header class="text-center mb-16">
+      <h2 id="best-sellers-heading" class="text-2xl sm:text-3xl md:text-4xl font-medium text-[var(--luxury-black)] tracking-tight mb-3" style="font-family: var(--font-display);">{title}</h2>
+      {description && <p class="text-[var(--luxury-text)]/70 text-sm max-w-lg mx-auto">{description}</p>}
+    </header>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 mb-14">
       {products.map((product) => (
-        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300 group">
-          <div class="relative">
-            <a href={`/${lang}/products/${product.handle}`}>
-              <img 
-                src={product.image} 
-                alt={product.name}
-                class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-            </a>
+        <a href={`/${lang}/products/${product.handle}`} class="group group/card block">
+          <div class="relative aspect-[3/4] overflow-hidden bg-[var(--luxury-beige)]/30 mb-5">
+            <img
+              src={product.image}
+              alt={product.name}
+              class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover/card:scale-105"
+              loading="lazy"
+            />
             {product.badge && (
-              <div class="absolute top-3 left-3 bg-red-600 text-white px-2 py-1 rounded-md text-xs font-bold">
+              <span class="absolute top-4 left-4 text-[10px] font-medium uppercase tracking-[0.2em] text-[var(--luxury-ivory)] bg-[var(--luxury-black)]/80 px-3 py-1.5">
                 {product.badge}
-              </div>
+              </span>
             )}
           </div>
-          
-          <div class="p-6">
-            <a href={`/${lang}/products/${product.handle}`}>
-              <h3 class="font-bold text-lg mb-2 text-gray-900 hover:text-gray-700">{product.name}</h3>
-            </a>
-            <p class="text-gray-600 text-sm mb-4">Professional Performance Gear</p>
-            
-            <div class="flex items-center justify-between mb-4">
-              <div class="flex items-center gap-2">
-                <span class="text-2xl font-bold text-gray-900">{product.price}</span>
-              </div>
-            </div>
-            
-            <a 
-              href={`/${lang}/products/${product.handle}`}
-              class="block w-full bg-black text-white py-3 px-6 rounded-lg font-semibold hover:bg-gray-800 transition-colors duration-300 text-center"
-            >
-              View {product.name}
-            </a>
-          </div>
-        </div>
+          <p class="text-[10px] text-[var(--luxury-text)]/60 tracking-[0.25em] uppercase mb-2">RepBags</p>
+          <h3 class="text-[var(--luxury-black)] font-medium text-sm uppercase tracking-[0.08em] mb-2 group-hover/card:text-[var(--luxury-gold)] transition-colors" style="font-family: var(--font-body-luxury);">{product.name}</h3>
+          <p class="text-[var(--luxury-text)] text-sm">{product.price}</p>
+        </a>
       ))}
     </div>
-    
     <div class="text-center">
-      <a 
-        href={viewAllLink}
-        class="inline-block bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-black transition-colors duration-300"
-      >
-        View All Products
+      <a href={viewAllLink} class="inline-block border border-[var(--luxury-black)] text-[var(--luxury-black)] text-[11px] font-medium uppercase tracking-[0.25em] px-10 py-3.5 hover:bg-[var(--luxury-black)] hover:text-[var(--luxury-ivory)] transition-all duration-300">
+        View all
       </a>
     </div>
   </div>

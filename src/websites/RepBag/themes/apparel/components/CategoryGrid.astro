@@ -16,41 +16,41 @@ interface Props {
 const { title, description, categories } = Astro.props;
 ---
 
-<section class="bg-white py-14 md:py-20 px-4 sm:px-6 lg:px-8" aria-labelledby="category-heading">
-  <div class="max-w-6xl mx-auto">
-    <header class="text-center mb-10 md:mb-14">
-      <p class="text-[10px] sm:text-xs font-medium uppercase tracking-[0.25em] text-neutral-400 mb-3">Shop by</p>
-      <h2 id="category-heading" class="text-2xl sm:text-3xl md:text-4xl font-semibold text-neutral-900 tracking-tight mb-3">
+<section class="repbag-category-grid bg-[var(--luxury-ivory)] py-20 md:py-28 px-4 sm:px-6 lg:px-8" aria-labelledby="category-heading">
+  <div class="max-w-7xl mx-auto">
+    <header class="text-center mb-14 md:mb-20">
+      <p class="text-[10px] sm:text-xs font-medium uppercase tracking-[0.4em] text-[var(--luxury-text)]/60 mb-3">Collections</p>
+      <h2 id="category-heading" class="text-3xl sm:text-4xl md:text-5xl font-medium text-[var(--luxury-black)] tracking-tight mb-4" style="font-family: var(--font-display);">
         {title}
       </h2>
       {description && (
-        <p class="text-neutral-600 text-sm md:text-base max-w-lg mx-auto leading-relaxed">{description}</p>
+        <p class="text-[var(--luxury-text)]/70 text-sm md:text-base max-w-lg mx-auto leading-relaxed">{description}</p>
       )}
     </header>
 
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 md:gap-10">
       {categories.map((category) => (
         <a
           href={category.link}
-          class="group group/card block"
+          class="group block"
         >
-          <div class="relative aspect-[3/4] max-h-[280px] overflow-hidden bg-neutral-100 rounded-sm mb-4">
+          <div class="relative aspect-[3/4] overflow-hidden bg-[var(--luxury-beige)] mb-5">
             <img
               src={category.image}
               alt={category.name}
-              class="absolute inset-0 w-full h-full object-cover object-center transition-all duration-500 group-hover/card:scale-[1.04]"
+              class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
               loading="lazy"
               width="400"
               height="533"
             />
-            <div class="absolute inset-0 bg-neutral-900/0 group-hover/card:bg-neutral-900/10 transition-colors duration-300" aria-hidden="true" />
+            <div class="absolute inset-0 bg-[var(--luxury-black)]/0 group-hover:bg-[var(--luxury-black)]/20 transition-colors duration-300" aria-hidden="true" />
           </div>
           <div class="text-center">
-            <h3 class="text-sm font-medium uppercase tracking-[0.15em] text-neutral-900 group-hover/card:text-neutral-600 transition-colors">
+            <h3 class="text-xs font-medium uppercase tracking-[0.25em] text-[var(--luxury-black)] group-hover:text-[var(--luxury-gold)] transition-colors duration-200" style="font-family: var(--font-body-luxury);">
               {category.name}
             </h3>
             {category.description && (
-              <p class="text-neutral-500 text-xs mt-1 max-w-[200px] mx-auto">{category.description}</p>
+              <p class="text-[var(--luxury-text)]/60 text-xs mt-1.5 max-w-[220px] mx-auto leading-relaxed">{category.description}</p>
             )}
           </div>
         </a>

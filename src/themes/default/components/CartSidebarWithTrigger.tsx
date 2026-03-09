@@ -77,11 +77,25 @@ export default function CartSidebarWithTrigger({
         {showLabel && <span className="hidden sm:inline text-[10px] uppercase tracking-[0.18em] font-body">{label}</span>}
       </button>
 
-      {/* Cart Sidebar - same structure as default Header */}
+      {/* Cart Sidebar - solid background and explicit positioning when theme used so no transparent strip at viewport edge. */}
       <div
         className={`${c.sidebar ?? 'fixed inset-y-0 right-0 w-full max-w-md bg-white shadow-xl border-l border-neutral-200 z-[100] transform transition-transform duration-300 ease-in-out'} ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
-        }`}
+        } ${!isOpen ? 'pointer-events-none' : ''}`}
+        style={
+          c.sidebar
+            ? {
+                position: 'fixed',
+                top: 0,
+                right: 0,
+                bottom: 0,
+                width: '100%',
+                maxWidth: '28rem',
+                minHeight: '100vh',
+                boxSizing: 'border-box',
+              }
+            : undefined
+        }
       >
         <div className={c.container ?? 'h-full flex flex-col'}>
           <div className={c.header ?? 'p-4 border-b border-neutral-200'}>
@@ -101,7 +115,7 @@ export default function CartSidebarWithTrigger({
                 className={c.closeButton ?? 'p-2 hover:bg-neutral-100 rounded-full'}
                 aria-label="Close cart"
               >
-                <svg className="w-5 h-5 text-neutral-500 hover:text-neutral-700 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className={c.closeIcon ?? 'w-5 h-5 text-neutral-500 hover:text-neutral-700 transition-colors'} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
@@ -129,7 +143,18 @@ export default function CartSidebarWithTrigger({
 
       {isOpen && (
         <div
-          className={c.overlay ?? 'fixed inset-0 bg-black bg-opacity-50 z-[90]'}
+          className={c.overlay ?? 'fixed inset-0 z-[90]'}
+          style={{
+            position: 'fixed',
+            left: 0,
+            top: 0,
+            right: 0,
+            bottom: 0,
+            width: '100vw',
+            height: '100vh',
+            zIndex: 90,
+            backgroundColor: 'rgba(0,0,0,0.5)',
+          }}
           onClick={() => setIsOpen(false)}
           aria-hidden="true"
         />

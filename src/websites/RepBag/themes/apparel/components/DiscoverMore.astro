@@ -9,25 +9,25 @@ interface Props {
 const { title, description, buttonText, buttonHref } = Astro.props;
 ---
 
-<section class="bg-white py-10 md:py-12 px-4 md:px-8 border-t border-neutral-100">
-  <div class="max-w-5xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+<section class="repbag-discover bg-[var(--luxury-beige)]/40 py-16 md:py-20 px-4 md:px-8 border-t border-[var(--luxury-beige)]">
+  <div class="max-w-5xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-8">
     <div class="md:max-w-md">
-      <h2 class="text-lg md:text-xl font-semibold text-black uppercase tracking-[0.15em] mb-2">
+      <h2 class="text-2xl md:text-3xl font-medium text-[var(--luxury-black)] tracking-tight mb-3" style="font-family: var(--font-display);">
         {title}
       </h2>
-      <p class="text-neutral-600 text-xs leading-relaxed mb-4">
+      <p class="text-[var(--luxury-text)]/70 text-sm leading-relaxed mb-6">
         {description}
       </p>
       <a 
         href={buttonHref}
-        class="inline-block bg-black text-white uppercase tracking-[0.2em] text-xs font-medium px-8 py-3 hover:bg-neutral-800 transition-colors"
+        class="inline-block border border-[var(--luxury-black)] text-[var(--luxury-black)] uppercase tracking-[0.25em] text-[11px] font-medium px-10 py-3.5 hover:bg-[var(--luxury-black)] hover:text-[var(--luxury-ivory)] transition-all duration-300"
       >
         {buttonText}
       </a>
     </div>
-    <div class="flex-shrink-0 text-gray-300" aria-hidden="true">
-      <svg class="w-32 h-32 md:w-48 md:h-48 opacity-40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+    <div class="flex-shrink-0 text-[var(--luxury-gold)]/20" aria-hidden="true">
+      <svg class="w-28 h-28 md:w-40 md:h-40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
       </svg>
     </div>
   </div>

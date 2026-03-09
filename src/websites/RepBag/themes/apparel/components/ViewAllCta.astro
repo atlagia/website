@@ -7,11 +7,11 @@ interface Props {
 const { href, label = 'VIEW ALL BAGS' } = Astro.props;
 ---
 
-<section class="bg-white py-8 md:py-10 px-4 border-t border-neutral-200">
+<section class="repbag-viewall bg-[var(--luxury-ivory)] py-12 md:py-14 px-4 border-t border-[var(--luxury-beige)]">
   <div class="max-w-5xl mx-auto text-center">
     <a 
       href={href}
-      class="inline-block bg-black text-white uppercase tracking-[0.25em] text-xs font-medium px-10 py-3.5 hover:bg-neutral-800 transition-colors"
+      class="inline-block border border-[var(--luxury-black)] text-[var(--luxury-black)] uppercase tracking-[0.25em] text-[11px] font-medium px-12 py-4 hover:bg-[var(--luxury-black)] hover:text-[var(--luxury-ivory)] transition-all duration-300"
     >
       {label}
     </a>

@@ -1,0 +1,82 @@
+---
+import { getCollectionProducts, getAllProducts } from '@libs/shopify';
+
+interface Props {
+  title: string;
+  description: string;
+  viewAllLink: string;
+  lang: string;
+  collectionHandle?: string;
+}
+
+const { title, description, viewAllLink, lang, collectionHandle } = Astro.props;
+
+// Fetch products with fallback logic
+let productsData;
+try {
+  if (collectionHandle && collectionHandle !== 'all') {
+    // Try to fetch from specific collection first
+    productsData = await getCollectionProducts(collectionHandle);
+  } else {
+    // Fetch all products if no collection or 'all' specified
+    productsData = await getAllProducts();
+  }
+} catch (error) {
+  console.warn(`Failed to fetch products:`, error);
+  try {
+    productsData = await getAllProducts();
+  } catch {
+    productsData = { edges: [] };
+  }
+}
+
+const products = (productsData?.edges || [])
+  .slice(0, 4)
+  .map(({ node }) => ({
+    id: node.id,
+    name: node.title,
+    handle: node.handle,
+    price: new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: node.priceRange.minVariantPrice.currencyCode
+    }).format(node.priceRange.minVariantPrice.amount),
+    image: node.images.edges[0]?.node.url || '/placeholder-image.jpg',
+    badge: Math.random() > 0.5 ? 'BEST SELLER' : undefined, // Random badge assignment
+  }));
+---
+
+<section class="bg-[var(--ds-surface)] border-t border-[var(--ds-border)] py-24 md:py-32 px-4 sm:px-6 lg:px-8" aria-labelledby="best-sellers-heading">
+  <div class="max-w-7xl mx-auto">
+    <header class="text-center mb-16">
+      <h2 id="best-sellers-heading" class="text-2xl sm:text-3xl md:text-4xl font-medium text-[var(--ds-text)] tracking-tight mb-3" style="font-family: var(--font-display);">{title}</h2>
+      {description && <p class="text-[var(--ds-muted)]/70 text-sm max-w-lg mx-auto">{description}</p>}
+    </header>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 mb-14">
+      {products.map((product) => (
+        <a href={`/${lang}/products/${product.handle}`} class="group group/card block">
+          <div class="relative aspect-[3/4] overflow-hidden bg-[var(--ds-border)]/30 mb-5">
+            <img
+              src={product.image}
+              alt={product.name}
+              class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover/card:scale-105"
+              loading="lazy"
+            />
+            {product.badge && (
+              <span class="absolute top-4 left-4 text-[10px] font-medium uppercase tracking-[0.2em] text-[var(--ds-text)] bg-[var(--ds-black)]/80 px-3 py-1.5">
+                {product.badge}
+              </span>
+            )}
+          </div>
+          <p class="text-[10px] text-[var(--ds-muted)]/60 tracking-[0.25em] uppercase mb-2">Designer Shoes</p>
+          <h3 class="text-[var(--ds-text)] font-medium text-sm uppercase tracking-[0.08em] mb-2 group-hover/card:text-[var(--ds-accent)] transition-colors" style="font-family: var(--font-body-luxury);">{product.name}</h3>
+          <p class="text-[var(--ds-muted)] text-sm">{product.price}</p>
+        </a>
+      ))}
+    </div>
+    <div class="text-center">
+      <a href={viewAllLink} class="inline-block border border-[var(--ds-black)] text-[var(--ds-text)] text-[11px] font-medium uppercase tracking-[0.25em] px-10 py-3.5 hover:bg-[var(--ds-black)] hover:text-[var(--ds-text)] transition-all duration-300">
+        View all
+      </a>
+    </div>
+  </div>
+</section>

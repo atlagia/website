@@ -1,0 +1,103 @@
+{
+  "siteTitle": "Designer Shoes — Step Into Iconic Style",
+  "siteDescription": "Premium designer sneakers and luxury footwear inspired by the world's most legendary brands.",
+  "sections": [
+    {
+      "type": "welcomeSection",
+      "title": "Designer Shoes",
+      "description": "Discover premium designer sneakers inspired by the world's most legendary brands.",
+      "luxury": true,
+      "heroImage": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1920&q=90",
+      "headlineLine1": "Step Into Iconic Style",
+      "headlineLine2": "",
+      "blogLink": "/collections",
+      "blogLinkText": "Shop Collection"
+    },
+    {
+      "type": "categoryGrid",
+      "title": "Featured Brand Collections",
+      "description": "",
+      "categories": [
+        { "id": "nike", "name": "Nike Style Sneakers", "description": "Street-ready luxury kicks.", "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&q=85", "link": "/collections/nike-style" },
+        { "id": "adidas", "name": "Adidas Street Collection", "description": "Urban athletic style.", "image": "https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=800&q=85", "link": "/collections/adidas-street" },
+        { "id": "dior", "name": "Dior Luxury Sneakers", "description": "Haute couture meets street.", "image": "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=800&q=85", "link": "/collections/dior" },
+        { "id": "lv", "name": "LV Premium Trainers", "description": "Iconic monogram footwear.", "image": "https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?w=800&q=85", "link": "/collections/lv-trainers" },
+        { "id": "chanel", "name": "Chanel Fashion Sneakers", "description": "Timeless elegance.", "image": "https://images.unsplash.com/photo-1597045566677-8cf032ed6634?w=800&q=85", "link": "/collections/chanel" },
+        { "id": "running", "name": "Designer Running Shoes", "description": "Performance meets luxury.", "image": "https://images.unsplash.com/photo-1556906781-9a412961c28c?w=800&q=85", "link": "/collections/running" }
+      ]
+    },
+    {
+      "type": "bestSellers",
+      "title": "Trending Sneakers",
+      "description": "The shoes everyone wants.",
+      "viewAllLink": "/collections",
+      "collectionHandle": "all"
+    },
+    {
+      "type": "brandStory",
+      "quote": "Where Street Culture Meets Luxury Design.",
+      "image": "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=1200&q=85",
+      "imageAlt": "Sneaker lifestyle photography"
+    },
+    {
+      "type": "productShowcase",
+      "title": "New Arrivals",
+      "description": "",
+      "viewAllLink": "/collections"
+    },
+    {
+      "type": "bestSellers",
+      "title": "Best Sellers",
+      "description": "Our most loved designs.",
+      "viewAllLink": "/collections",
+      "collectionHandle": "all"
+    },
+    {
+      "type": "lifestyleBanner",
+      "headline": "Elevate Your Footwear Game",
+      "buttonText": "Explore Sneakers",
+      "buttonLink": "/collections",
+      "backgroundImage": "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=1920&q=85"
+    },
+    {
+      "type": "whyChoose",
+      "title": "Why Choose Designer Shoes",
+      "features": [
+        { "id": "quality", "title": "Premium Quality Materials", "icon": "shield" },
+        { "id": "design", "title": "Luxury Inspired Designs", "icon": "star" },
+        { "id": "comfort", "title": "Comfort & Performance", "icon": "check" },
+        { "id": "shipping", "title": "Fast Worldwide Shipping", "icon": "truck" },
+        { "id": "secure", "title": "Secure Payments", "icon": "lock" }
+      ]
+    },
+    {
+      "type": "socialGallery",
+      "title": "@DesignerShoes",
+      "images": [
+        { "src": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&q=85", "alt": "Sneaker", "link": "/collections" },
+        { "src": "https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=400&q=85", "alt": "Street style", "link": "/collections" },
+        { "src": "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&q=85", "alt": "Luxury sneaker", "link": "/collections" },
+        { "src": "https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?w=400&q=85", "alt": "Trainers", "link": "/collections" },
+        { "src": "https://images.unsplash.com/photo-1556906781-9a412961c28c?w=400&q=85", "alt": "Running", "link": "/collections" },
+        { "src": "https://images.unsplash.com/photo-1597045566677-8cf032ed6634?w=400&q=85", "alt": "Fashion", "link": "/collections" }
+      ]
+    },
+    {
+      "type": "testimonialSlider",
+      "title": "What Our Customers Say",
+      "testimonials": [
+        { "id": "1", "author": "Alex M.", "role": "NYC", "content": "Perfect mix of luxury style and street sneaker energy.", "avatar": "A" },
+        { "id": "2", "author": "Jordan K.", "role": "LA", "content": "Best sneakers I've owned. Quality and style in one.", "avatar": "J" },
+        { "id": "3", "author": "Taylor R.", "role": "Miami", "content": "Feels like I'm wearing a luxury boutique piece. Worth every penny.", "avatar": "T" }
+      ]
+    },
+    {
+      "type": "emailSignupSection",
+      "title": "Join the Designer Shoes Club",
+      "description": "Get early access to exclusive releases and new arrivals.",
+      "backgroundImage": "",
+      "formAction": "/api/newsletter",
+      "submitText": "Subscribe"
+    }
+  ]
+}

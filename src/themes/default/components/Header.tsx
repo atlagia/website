@@ -52,6 +52,75 @@ interface HeaderProps {
   };
 }
 
+// Default header structure so website themes can provide minimal Header.json (e.g. only wrapper, nav, cart)
+const DEFAULT_HEADER_STYLES = {
+  wrapper: 'bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50',
+  container: 'max-w-7xl mx-auto px-4 sm:px-6 lg:px-8',
+  nav: {
+    wrapper: 'flex items-center justify-between h-16',
+    brand: 'text-xl font-bold text-gray-900 hover:text-gray-700 transition-colors',
+    menu: { desktop: 'hidden lg:flex lg:items-center lg:space-x-4', item: 'text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors' }
+  },
+  logo: { wrapper: 'flex-1 lg:flex-none text-center lg:text-left' },
+  mobileButton: { wrapper: 'flex lg:hidden', button: 'p-2', iconClose: 'text-2xl', iconOpen: 'w-6 h-6' },
+  actions: {
+    wrapper: 'flex items-center space-x-4',
+    search: { icon: 'text-gray-700' },
+    currency: {
+      wrapper: 'relative',
+      button: 'flex items-center space-x-1 px-3 py-2 text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors',
+      text: 'font-medium',
+      dropdown: 'absolute right-0 mt-2 w-32 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50',
+      option: 'block w-full text-left px-4 py-2 text-sm text-gray-700 transition-colors',
+      optionActive: 'bg-gray-100',
+      optionHover: 'hover:bg-gray-50'
+    },
+    language: {
+      wrapper: 'relative',
+      button: 'flex items-center space-x-1 px-3 py-2 text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors',
+      text: 'hidden sm:block',
+      dropdown: 'absolute right-0 mt-2 w-40 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50',
+      option: 'block w-full text-left px-4 py-2 text-sm text-gray-700 transition-colors',
+      optionActive: 'bg-gray-100',
+      optionHover: 'hover:bg-gray-50'
+    },
+    cart: { button: 'relative p-2 text-gray-700 hover:text-gray-900 transition-colors', count: 'absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center' }
+  },
+  mobile: {
+    menu: { wrapper: 'lg:hidden fixed left-0 right-0 bg-white shadow-lg transition-all duration-300 ease-in-out', nav: 'px-4 py-2', item: 'block py-3 px-4 text-gray-800 hover:bg-gray-100 border-b border-gray-100 last:border-0' },
+    backdrop: 'lg:hidden fixed inset-0 bg-black bg-opacity-50 z-[98]'
+  },
+  cart: {
+    sidebar: 'fixed inset-y-0 right-0 w-full max-w-md bg-white shadow-xl border-l border-gray-200 z-[100] transform transition-transform duration-300 ease-in-out',
+    container: 'h-full flex flex-col',
+    header: 'p-4 border-b border-gray-200',
+    headerContent: 'flex justify-between items-center',
+    iconWrapper: 'w-8 h-8 bg-neutral-900 rounded-lg flex items-center justify-center',
+    icon: 'w-5 h-5 text-white',
+    title: 'text-lg font-semibold text-neutral-900',
+    closeButton: 'p-2 hover:bg-gray-100 rounded-full',
+    overlay: 'fixed inset-0 bg-black bg-opacity-50 z-[90]'
+  }
+};
+
+function mergeHeaderStyles(theme: Record<string, unknown> | undefined): typeof DEFAULT_HEADER_STYLES {
+  if (!theme || typeof theme !== 'object') return DEFAULT_HEADER_STYLES as typeof DEFAULT_HEADER_STYLES;
+  const deepMerge = (target: Record<string, unknown>, source: Record<string, unknown>): Record<string, unknown> => {
+    const out = { ...target };
+    for (const key of Object.keys(source)) {
+      const s = source[key];
+      const t = out[key];
+      if (s != null && typeof s === 'object' && !Array.isArray(s) && t != null && typeof t === 'object' && !Array.isArray(t)) {
+        out[key] = deepMerge(t as Record<string, unknown>, s as Record<string, unknown>);
+      } else if (s !== undefined) {
+        out[key] = s;
+      }
+    }
+    return out;
+  };
+  return deepMerge(DEFAULT_HEADER_STYLES as unknown as Record<string, unknown>, theme as Record<string, unknown>) as typeof DEFAULT_HEADER_STYLES;
+}
+
 export default function Header({ 
   siteName, 
   menuConfig, 
@@ -60,12 +129,14 @@ export default function Header({
   projectType: projectTypeProp, 
   currentPath,
   currencies,
-  styles,
-  headerStyles,
+  styles: stylesProp,
+  headerStyles: headerStylesProp,
   apiEndpoint,
   searchConfig,
   paymentConfig
 }: HeaderProps) {
+  const headerStyles = mergeHeaderStyles(headerStylesProp);
+  const styles = mergeHeaderStyles(stylesProp ?? headerStylesProp);
   // Use projectType from props or from layout (data-project-type on body)
   const [projectType, setProjectType] = useState((projectTypeProp || 'physical').toLowerCase());
   
@@ -167,16 +238,16 @@ export default function Header({
         <div className={headerStyles.container}>
           <div className={headerStyles.nav.wrapper}>
             {/* Mobile Menu Button - Only visible on mobile */}
-            <div className="flex lg:hidden">
+            <div className={headerStyles.mobileButton?.wrapper ?? 'flex lg:hidden'}>
               <button 
-                className="p-2 text-neutral-600 hover:text-neutral-900 transition-colors"
+                className={headerStyles.mobileButton?.button ?? 'p-2 text-neutral-600 hover:text-neutral-900 transition-colors'}
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 aria-label="Toggle menu"
               >
                 {isMobileMenuOpen ? (
-                  <span className="text-2xl">✕</span>
+                  <span className={headerStyles.mobileButton?.iconClose ?? 'text-2xl'}>✕</span>
                 ) : (
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className={headerStyles.mobileButton?.iconOpen ?? 'w-6 h-6'} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                   </svg>
                 )}
@@ -209,9 +280,9 @@ export default function Header({
                 placeholder={searchConfig.placeholder}
                 searchStyles={{
                   icon: headerStyles.actions.search?.icon,
-                  button: "p-2 hover:bg-neutral-100 rounded-full transition-colors",
-                  form: "absolute top-full right-0 mt-2 w-72 bg-white rounded-lg shadow-lg border border-neutral-200 p-4 z-50",
-                  input: "w-full px-4 py-2 border border-neutral-200 rounded-md focus:outline-none focus:ring-2 focus:ring-neutral-900 focus:border-neutral-400"
+                  button: headerStyles.actions.search?.button ?? "p-2 hover:bg-neutral-100 rounded-full transition-colors",
+                  form: headerStyles.actions.search?.form ?? "absolute top-full right-0 mt-2 w-72 bg-white rounded-lg shadow-lg border border-neutral-200 p-4 z-50",
+                  input: headerStyles.actions.search?.input ?? "w-full px-4 py-2 border border-neutral-200 rounded-md focus:outline-none focus:ring-2 focus:ring-neutral-900 focus:border-neutral-400"
                 }}
               />
 
@@ -262,7 +333,7 @@ export default function Header({
                         key={code}
                         onClick={() => changeLanguage(code)}
                         className={`${styles.actions.language.option} ${
-                          language === code ? 'bg-neutral-100' : 'hover:bg-neutral-50'
+                          language === code ? (styles.actions.language.optionActive ?? 'bg-neutral-100') : (styles.actions.language.optionHover ?? 'hover:bg-neutral-50')
                         }`}
                         aria-label={`Change language to ${name}`}
                       >

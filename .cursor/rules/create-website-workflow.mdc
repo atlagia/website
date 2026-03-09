@@ -1,0 +1,14 @@
+---
+description: Triggers the create-website skill when user asks to create a new website, store, or site
+globs: src/websites/**/*
+alwaysApply: false
+---
+
+When the user asks to create a new website, new store, or new site:
+
+1. Read and follow `.cursor/skills/create-website/SKILL.md`
+2. Also follow `.cursor/skills/atlagia-ecommerce-frontend/SKILL.md` for design and style rules
+3. Never modify core files — all work goes in `src/websites/<StoreName>/`
+4. `PUBLIC_SITE_NAME` in `.env` must match the folder name exactly (case-sensitive)
+5. Every website needs its own `components/` folder with real `.astro` files
+6. Use MCP browser verification after each visual milestone

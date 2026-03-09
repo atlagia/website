@@ -1,0 +1,49 @@
+---
+const currentYear = new Date().getFullYear();
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'Designer Shoes';
+
+const footerNav = {
+  company: [
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Blog', href: '/blog' },
+  ],
+  legal: [
+    { name: 'Privacy', href: '/privacy' },
+    { name: 'Terms', href: '/terms' },
+  ],
+};
+---
+
+<footer class="bg-[var(--ds-bg)] border-t border-[var(--ds-border)]" aria-labelledby="footer-heading">
+  <h2 id="footer-heading" class="sr-only">Footer</h2>
+  <div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8">
+    <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+      <div class="space-y-4">
+        <span class="text-2xl font-bold text-[var(--ds-text)]">{siteName}</span>
+        <p class="text-sm leading-6 text-[var(--ds-muted)]">Premium designer sneakers and luxury footwear inspired by the world's most legendary brands.</p>
+      </div>
+      <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+        <div>
+          <h3 class="text-sm font-semibold text-[var(--ds-text)]">Company</h3>
+          <ul role="list" class="mt-6 space-y-4">
+            {footerNav.company.map((item) => (
+              <li><a href={item.href} class="text-sm text-[var(--ds-muted)] hover:text-[var(--ds-text)]">{item.name}</a></li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-sm font-semibold text-[var(--ds-text)]">Legal</h3>
+          <ul role="list" class="mt-6 space-y-4">
+            {footerNav.legal.map((item) => (
+              <li><a href={item.href} class="text-sm text-[var(--ds-muted)] hover:text-[var(--ds-text)]">{item.name}</a></li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="mt-16 border-t border-[var(--ds-border)] pt-8">
+      <p class="text-xs text-[var(--ds-muted)]">&copy; {currentYear} {siteName}. All rights reserved.</p>
+    </div>
+  </div>
+</footer>

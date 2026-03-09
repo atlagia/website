@@ -1,0 +1,36 @@
+---
+import Layoutc from '@layouts/Layoutc.astro';
+
+export async function getStaticPaths() {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  const languages = allowedLanguages.split(',').map((l: string) => l.trim()).filter((l: string) => l.length > 0);
+  return languages.map((l: string) => ({ params: { lang: l } }));
+}
+
+const { lang = 'en' } = Astro.params;
+const storeName = import.meta.env.PUBLIC_SITE_NAME || 'Designer Shoes';
+const seoTitle = `About | ${storeName}`;
+const seoDescription = 'Premium designer sneakers and luxury footwear.';
+---
+
+<Layoutc title={seoTitle} description={seoDescription} lang={lang}>
+  <div class="min-h-screen bg-[var(--ds-bg)] text-[var(--ds-text)]">
+    <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20">
+      <h1 class="font-display text-4xl md:text-5xl font-medium tracking-tight text-[var(--ds-text)] mb-8">About Designer Shoes</h1>
+      <p class="text-[var(--ds-muted)] text-lg leading-relaxed mb-8">
+        Designer Shoes is your destination for premium designer sneakers and luxury footwear inspired by the world's most legendary brands.
+      </p>
+      <h2 class="font-display text-2xl font-medium text-[var(--ds-text)] mb-4 mt-12">Our Story</h2>
+      <p class="text-[var(--ds-muted)] leading-relaxed mb-6">
+        We curate styles that bring together street culture and high-fashion design. Every step should feel extraordinary.
+      </p>
+      <h2 class="font-display text-2xl font-medium text-[var(--ds-text)] mb-4 mt-12">Why Choose Us</h2>
+      <ul class="text-[var(--ds-muted)] space-y-2 list-disc list-inside">
+        <li>Premium quality materials</li>
+        <li>Luxury-inspired designs</li>
+        <li>Fast worldwide shipping</li>
+        <li>Secure checkout</li>
+      </ul>
+    </section>
+  </div>
+</Layoutc>

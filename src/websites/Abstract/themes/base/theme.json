@@ -1,0 +1,16 @@
+{
+  "pages": [
+    {"path": "/", "name": "Home", "description": "Home page", "priority": 1},
+    {"path": "/collections", "name": "Collections", "description": "Browse collections", "priority": 0.9},
+    {"path": "/products", "name": "Products", "description": "View all products", "priority": 0.9},
+    {"path": "/about", "name": "About", "description": "About us", "priority": 0.7},
+    {"path": "/contact", "name": "Contact", "description": "Contact", "priority": 0.7}
+  ],
+  "metadata": {
+    "name": "Abstract Base Theme",
+    "version": "1.0.0",
+    "description": "Template theme for new websites",
+    "author": "ATLAGIACMS",
+    "license": "MIT"
+  }
+}

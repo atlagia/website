@@ -1,0 +1,43 @@
+---
+interface Props {
+  headline: string;
+  buttonText: string;
+  buttonLink: string;
+  backgroundImage: string;
+}
+
+const { headline, buttonText, buttonLink, backgroundImage } = Astro.props;
+---
+
+<section 
+  class="repbag-lifestyle-banner relative min-h-[70vh] flex items-center justify-center overflow-hidden"
+  aria-label="Lifestyle"
+>
+  <div class="absolute inset-0 z-0">
+    <img
+      src={backgroundImage}
+      alt=""
+      class="absolute inset-0 w-full h-full object-cover object-center"
+      loading="lazy"
+      aria-hidden="true"
+    />
+    <div 
+      class="absolute inset-0 bg-[var(--ds-black)]/50 z-[1]" 
+      aria-hidden="true"
+    />
+  </div>
+  <div class="relative z-10 text-center px-6 py-20">
+    <h2 
+      class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium text-[var(--ds-ivory)] tracking-tight mb-10" 
+      style="font-family: var(--font-display);"
+    >
+      {headline}
+    </h2>
+    <a
+      href={buttonLink}
+      class="inline-block border border-[var(--ds-ivory)] text-[var(--ds-ivory)] uppercase tracking-[0.25em] text-[11px] font-medium px-12 py-4 hover:bg-[var(--ds-ivory)] hover:text-[var(--ds-black)] transition-all duration-300"
+    >
+      {buttonText}
+    </a>
+  </div>
+</section>

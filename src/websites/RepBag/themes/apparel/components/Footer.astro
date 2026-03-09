@@ -19,34 +19,34 @@ try {
 const { description, navigation, social } = footerData.default;
 ---
 
-<footer class="bg-gray-900" aria-labelledby="footer-heading">
+<footer class="repbag-footer bg-[var(--luxury-black)] text-[var(--luxury-ivory)]" aria-labelledby="footer-heading">
   <h2 id="footer-heading" class="sr-only">Footer</h2>
-  <div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
-    <div class="xl:grid xl:grid-cols-3 xl:gap-8">
-      <div class="space-y-8">
-        <span class="text-2xl font-bold text-white">{siteName}</span>
-        <p class="text-sm leading-6 text-gray-300">
+  <div class="mx-auto max-w-7xl px-6 pb-12 pt-20 sm:pt-24 lg:px-10 lg:pt-28">
+    <div class="xl:grid xl:grid-cols-3 xl:gap-12">
+      <div class="space-y-6">
+        <span class="text-lg font-medium tracking-[0.25em] uppercase" style="font-family: var(--font-display);">{siteName}</span>
+        <p class="text-sm leading-relaxed text-[var(--luxury-ivory)]/75 max-w-xs">
           {description}
         </p>
-        <div class="flex space-x-6">
+        <div class="flex gap-6">
           {social.map((item) => (
-            <a href={item.href} class="text-gray-500 hover:text-gray-400">
+            <a href={item.href} class="text-[var(--luxury-ivory)]/60 hover:text-[var(--luxury-gold)] transition-colors duration-200">
               <span class="sr-only">{item.name}</span>
-              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path d={item.icon} />
               </svg>
             </a>
           ))}
         </div>
       </div>
-      <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
-        <div class="md:grid md:grid-cols-2 md:gap-8">
+      <div class="mt-16 grid grid-cols-2 gap-10 xl:col-span-2 xl:mt-0">
+        <div class="md:grid md:grid-cols-2 md:gap-10">
           <div>
-            <h3 class="text-sm font-semibold leading-6 text-white">Shop</h3>
-            <ul role="list" class="mt-6 space-y-4">
+            <h3 class="text-[10px] font-medium uppercase tracking-[0.3em] text-[var(--luxury-ivory)]/80 mb-6">Shop</h3>
+            <ul role="list" class="space-y-4">
               {navigation.shop.map((item) => (
                 <li>
-                  <a href={`/${currentLang}${item.href}`} class="text-sm leading-6 text-gray-300 hover:text-white">
+                  <a href={`/${currentLang}${item.href}`} class="text-sm text-[var(--luxury-ivory)]/75 hover:text-[var(--luxury-gold)] transition-colors duration-200">
                     {item.name}
                   </a>
                 </li>
@@ -54,11 +54,11 @@ const { description, navigation, social } = footerData.default;
             </ul>
           </div>
           <div class="mt-10 md:mt-0">
-            <h3 class="text-sm font-semibold leading-6 text-white">Collections</h3>
-            <ul role="list" class="mt-6 space-y-4">
+            <h3 class="text-[10px] font-medium uppercase tracking-[0.3em] text-[var(--luxury-ivory)]/80 mb-6">Collections</h3>
+            <ul role="list" class="space-y-4">
               {navigation.collections.map((item) => (
                 <li>
-                  <a href={`/${currentLang}${item.href}`} class="text-sm leading-6 text-gray-300 hover:text-white">
+                  <a href={`/${currentLang}${item.href}`} class="text-sm text-[var(--luxury-ivory)]/75 hover:text-[var(--luxury-gold)] transition-colors duration-200">
                     {item.name}
                   </a>
                 </li>
@@ -66,13 +66,13 @@ const { description, navigation, social } = footerData.default;
             </ul>
           </div>
         </div>
-        <div class="md:grid md:grid-cols-2 md:gap-8">
+        <div class="md:grid md:grid-cols-2 md:gap-10">
           <div>
-            <h3 class="text-sm font-semibold leading-6 text-white">Company</h3>
-            <ul role="list" class="mt-6 space-y-4">
+            <h3 class="text-[10px] font-medium uppercase tracking-[0.3em] text-[var(--luxury-ivory)]/80 mb-6">Company</h3>
+            <ul role="list" class="space-y-4">
               {navigation.company.map((item) => (
                 <li>
-                  <a href={`/${currentLang}${item.href}`} class="text-sm leading-6 text-gray-300 hover:text-white">
+                  <a href={`/${currentLang}${item.href}`} class="text-sm text-[var(--luxury-ivory)]/75 hover:text-[var(--luxury-gold)] transition-colors duration-200">
                     {item.name}
                   </a>
                 </li>
@@ -80,11 +80,11 @@ const { description, navigation, social } = footerData.default;
             </ul>
           </div>
           <div class="mt-10 md:mt-0">
-            <h3 class="text-sm font-semibold leading-6 text-white">Support</h3>
-            <ul role="list" class="mt-6 space-y-4">
+            <h3 class="text-[10px] font-medium uppercase tracking-[0.3em] text-[var(--luxury-ivory)]/80 mb-6">Support</h3>
+            <ul role="list" class="space-y-4">
               {navigation.support.map((item) => (
                 <li>
-                  <a href={`/${currentLang}${item.href}`} class="text-sm leading-6 text-gray-300 hover:text-white">
+                  <a href={`/${currentLang}${item.href}`} class="text-sm text-[var(--luxury-ivory)]/75 hover:text-[var(--luxury-gold)] transition-colors duration-200">
                     {item.name}
                   </a>
                 </li>
@@ -94,11 +94,11 @@ const { description, navigation, social } = footerData.default;
         </div>
         <div class="md:grid md:grid-cols-1 md:gap-8">
           <div>
-            <h3 class="text-sm font-semibold leading-6 text-white">Legal</h3>
-            <ul role="list" class="mt-6 space-y-4">
+            <h3 class="text-[10px] font-medium uppercase tracking-[0.3em] text-[var(--luxury-ivory)]/80 mb-6">Legal</h3>
+            <ul role="list" class="space-y-4">
               {navigation.legal.map((item) => (
                 <li>
-                  <a href={`/${currentLang}${item.href}`} class="text-sm leading-6 text-gray-300 hover:text-white">
+                  <a href={`/${currentLang}${item.href}`} class="text-sm text-[var(--luxury-ivory)]/75 hover:text-[var(--luxury-gold)] transition-colors duration-200">
                     {item.name}
                   </a>
                 </li>
@@ -108,8 +108,8 @@ const { description, navigation, social } = footerData.default;
         </div>
       </div>
     </div>
-    <div class="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
-      <p class="text-xs leading-5 text-gray-400">
+    <div class="mt-20 border-t border-[var(--luxury-ivory)]/10 pt-8">
+      <p class="text-[11px] tracking-[0.15em] text-[var(--luxury-ivory)]/50">
         &copy; {currentYear} {siteName}. All rights reserved.
       </p>
     </div>

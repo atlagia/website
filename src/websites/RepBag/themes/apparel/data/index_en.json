@@ -1,153 +1,138 @@
 {
-  "siteTitle": "RepBag - Premium Bags & Accessories",
-  "siteDescription": "Shop premium bags, handbags, backpacks and accessories. Quality craftsmanship and style for every occasion.",
+  "siteTitle": "RepBags — Timeless Luxury. Iconic Style.",
+  "siteDescription": "Designer-inspired luxury handbags. Craftsmanship, elegance, and iconic style for the modern woman.",
   "sections": [
     {
       "type": "welcomeSection",
-      "title": "RepBag",
-      "description": "Quality craftsmanship. Timeless style. For every occasion.",
+      "title": "RepBags",
+      "description": "Discover curated designer-inspired handbags crafted for modern elegance.",
       "luxury": true,
-      "heroImage": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=1400",
-      "headlineLine1": "Fashion",
-      "headlineLine2": "Handbags",
+      "heroImage": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=1920&q=90",
+      "headlineLine1": "Timeless Luxury.",
+      "headlineLine2": "Iconic Style.",
       "blogLink": "/collections",
-      "blogLinkText": "View Collections",
+      "blogLinkText": "Shop Collection",
       "backgroundVideo": {
         "type": "youtube",
         "videoId": "",
-        "fallbackImage": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=1400"
+        "fallbackImage": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=1920&q=90"
       }
     },
     {
-      "type": "editorialSection",
-      "title": "Handbags",
-      "layout": "1-2",
-      "images": [
+      "type": "categoryGrid",
+      "title": "Featured Collections",
+      "description": "",
+      "categories": [
         {
-          "src": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=800",
-          "alt": "Handbag"
+          "id": "dior-inspired",
+          "name": "Dior Inspired Bags",
+          "description": "Structured silhouettes and refined elegance.",
+          "image": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=800&q=85",
+          "link": "/collections/dior-inspired"
         },
         {
-          "src": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=800",
-          "alt": "Structured handbag"
+          "id": "lv-style",
+          "name": "LV Style Bags",
+          "description": "Iconic monogram and timeless travel.",
+          "image": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=800&q=85",
+          "link": "/collections/lv-style"
         },
         {
-          "src": "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?w=800",
-          "alt": "Classic handbag"
+          "id": "gucci-collection",
+          "name": "Gucci Collection",
+          "description": "Bold design and Italian craftsmanship.",
+          "image": "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?w=800&q=85",
+          "link": "/collections/gucci"
+        },
+        {
+          "id": "quilted",
+          "name": "Classic Quilted Bags",
+          "description": "Timeless quilted leather and chain straps.",
+          "image": "https://images.unsplash.com/photo-1594221708779-94832f4320d1?w=800&q=85",
+          "link": "/collections/quilted"
+        },
+        {
+          "id": "totes",
+          "name": "Luxury Totes",
+          "description": "Spacious, elegant everyday carry.",
+          "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&q=85",
+          "link": "/collections/totes"
+        },
+        {
+          "id": "evening",
+          "name": "Evening Bags",
+          "description": "Statement pieces for the night.",
+          "image": "https://images.unsplash.com/photo-1627123424574-724758594e93?w=800&q=85",
+          "link": "/collections/evening"
         }
-      ],
-      "viewAllLink": "/collections/handbags",
-      "viewAllLabel": "Shop Handbags"
+      ]
+    },
+    {
+      "type": "bestSellers",
+      "title": "Best Sellers",
+      "description": "Our most loved designs.",
+      "viewAllLink": "/collections",
+      "collectionHandle": "all"
+    },
+    {
+      "type": "brandStory",
+      "quote": "Luxury is more than fashion. It is confidence, identity, and timeless elegance.",
+      "image": "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?w=1200&q=85",
+      "imageAlt": "Lifestyle photography"
+    },
+    {
+      "type": "lifestyleBanner",
+      "headline": "Elevate Your Style",
+      "buttonText": "Explore Bags",
+      "buttonLink": "/collections",
+      "backgroundImage": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1920&q=85"
     },
     {
       "type": "productShowcase",
-      "title": "Featured",
+      "title": "New Arrivals",
       "description": "",
       "viewAllLink": "/collections",
       "products": []
     },
     {
-      "type": "viewAllCta",
-      "href": "/collections",
-      "label": "VIEW ALL BAGS"
+      "type": "whyChoose",
+      "title": "Why Choose RepBags",
+      "features": [
+        { "id": "craftsmanship", "title": "Premium Craftsmanship", "icon": "quality" },
+        { "id": "materials", "title": "High Quality Materials", "icon": "materials" },
+        { "id": "design", "title": "Luxury Style Designs", "icon": "design" },
+        { "id": "shipping", "title": "Fast Worldwide Shipping", "icon": "shipping" },
+        { "id": "secure", "title": "Secure Checkout", "icon": "secure" }
+      ]
     },
     {
-      "type": "editorialSection",
-      "title": "Features",
-      "layout": "3-2",
+      "type": "socialGallery",
+      "title": "@RepBags",
       "images": [
-        {
-          "src": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600",
-          "alt": "Leather bag"
-        },
-        {
-          "src": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600",
-          "alt": "Handbag"
-        },
-        {
-          "src": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600",
-          "alt": "Backpack"
-        },
-        {
-          "src": "https://images.unsplash.com/photo-1627123424574-724758594e93?w=600",
-          "alt": "Wallet"
-        },
-        {
-          "src": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600",
-          "alt": "Handbag"
-        }
+        { "src": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=400&q=85", "alt": "Handbag", "link": "/collections" },
+        { "src": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=400&q=85", "alt": "Tote", "link": "/collections" },
+        { "src": "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?w=400&q=85", "alt": "Flap bag", "link": "/collections" },
+        { "src": "https://images.unsplash.com/photo-1594221708779-94832f4320d1?w=400&q=85", "alt": "Quilted", "link": "/collections" },
+        { "src": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&q=85", "alt": "Backpack", "link": "/collections" },
+        { "src": "https://images.unsplash.com/photo-1627123424574-724758594e93?w=400&q=85", "alt": "Wallet", "link": "/collections" }
       ]
     },
     {
-      "type": "categoryGrid",
-      "title": "Categories",
-      "description": "Handbags, backpacks and small leather goods.",
-      "categories": [
-        {
-          "id": "handbags",
-          "name": "Handbags",
-          "description": "",
-          "image": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600",
-          "link": "/collections/handbags"
-        },
-        {
-          "id": "backpacks",
-          "name": "Backpacks",
-          "description": "",
-          "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600",
-          "link": "/collections/backpacks"
-        },
-        {
-          "id": "accessories",
-          "name": "Small Leather Goods",
-          "description": "",
-          "image": "https://images.unsplash.com/photo-1627123424574-724758594e93?w=600",
-          "link": "/collections/accessories"
-        }
+      "type": "testimonialSlider",
+      "title": "What Our Clients Say",
+      "testimonials": [
+        { "id": "1", "author": "Sophie L.", "role": "Paris", "content": "Absolutely stunning quality. Looks and feels like a luxury boutique piece.", "avatar": "S" },
+        { "id": "2", "author": "Emma R.", "role": "London", "content": "The craftsmanship is exceptional. I receive compliments every time I carry it.", "avatar": "E" },
+        { "id": "3", "author": "Isabella M.", "role": "Milan", "content": "Elegant, timeless, and worth every penny. My go-to for special occasions.", "avatar": "I" }
       ]
-    },
-    {
-      "type": "editorialSection",
-      "title": "Modern Softness",
-      "layout": "2-2",
-      "images": [
-        {
-          "src": "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?w=600",
-          "alt": "Slouch bag"
-        },
-        {
-          "src": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600",
-          "alt": "Flap bag"
-        },
-        {
-          "src": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600",
-          "alt": "Shoulder bag"
-        },
-        {
-          "src": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600",
-          "alt": "Handbag"
-        }
-      ]
-    },
-    {
-      "type": "viewAllCta",
-      "href": "/collections",
-      "label": "SHOP"
-    },
-    {
-      "type": "discoverMore",
-      "title": "Discover more from RepBag",
-      "description": "From new arrivals to the latest collections, explore the world of RepBag.",
-      "buttonText": "Visit RepBag.shop",
-      "buttonHref": "/"
     },
     {
       "type": "emailSignupSection",
-      "title": "Subscribe to the newsletter",
-      "description": "New arrivals and exclusive offers.",
+      "title": "Join the RepBags Club",
+      "description": "Be the first to discover new arrivals and exclusive collections.",
       "backgroundImage": "",
       "formAction": "/api/newsletter",
-      "submitText": "Subscribe to the newsletter"
+      "submitText": "Subscribe"
     }
   ]
 }

@@ -182,15 +182,15 @@ export default function Cart({
                     className={c.qtyBtn ?? 'w-7 h-7 flex items-center justify-center hover:bg-gray-200 rounded-md disabled:opacity-50 transition-colors'}
                     disabled={isProcessing}
                   >
-                    <Minus size={14} className="text-gray-600" />
+                    <Minus size={14} className={c.qtyIcon ?? 'text-gray-600'} />
                   </button>
-                  <span className="w-8 text-center text-sm font-medium text-gray-700">{item.quantity}</span>
+                  <span className={c.qtyText ?? 'w-8 text-center text-sm font-medium text-gray-700'}>{item.quantity}</span>
                   <button
                     onClick={() => updateQuantity(item.id, item.quantity + 1)}
                     className={c.qtyBtn ?? 'w-7 h-7 flex items-center justify-center hover:bg-gray-200 rounded-md disabled:opacity-50 transition-colors'}
                     disabled={isProcessing}
                   >
-                    <Plus size={14} className="text-gray-600" />
+                    <Plus size={14} className={c.qtyIcon ?? 'text-gray-600'} />
                   </button>
                 </div>
                 <button

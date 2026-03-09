@@ -1,0 +1,60 @@
+---
+interface Category {
+  id: string;
+  name: string;
+  description: string;
+  image: string;
+  link: string;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  categories: Category[];
+}
+
+const { title, description, categories } = Astro.props;
+---
+
+<section class="bg-[var(--ds-surface)] border-t border-[var(--ds-border)] py-20 md:py-28 px-4 sm:px-6 lg:px-8" aria-labelledby="category-heading">
+  <div class="max-w-7xl mx-auto">
+    <header class="text-center mb-14 md:mb-20">
+      <p class="text-[10px] sm:text-xs font-medium uppercase tracking-[0.4em] text-[var(--ds-muted)] mb-3">Collections</p>
+      <h2 id="category-heading" class="text-3xl sm:text-4xl md:text-5xl font-medium text-[var(--ds-text)] tracking-tight mb-4" style="font-family: var(--font-display);">
+        {title}
+      </h2>
+      {description && (
+        <p class="text-[var(--luxury-text)]/70 text-sm md:text-base max-w-lg mx-auto leading-relaxed">{description}</p>
+      )}
+    </header>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 md:gap-10">
+      {categories.map((category) => (
+        <a
+          href={category.link}
+          class="group block"
+        >
+          <div class="relative aspect-[3/4] overflow-hidden bg-[var(--ds-border)] mb-5">
+            <img
+              src={category.image}
+              alt={category.name}
+              class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+              loading="lazy"
+              width="400"
+              height="533"
+            />
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" aria-hidden="true" />
+          </div>
+          <div class="text-center">
+            <h3 class="text-xs font-medium uppercase tracking-[0.25em] text-[var(--ds-text)] group-hover:text-[var(--ds-accent)] transition-colors duration-200" style="font-family: var(--font-body);">
+              {category.name}
+            </h3>
+            {category.description && (
+              <p class="text-[var(--ds-muted)] text-xs mt-1.5 max-w-[220px] mx-auto leading-relaxed">{category.description}</p>
+            )}
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

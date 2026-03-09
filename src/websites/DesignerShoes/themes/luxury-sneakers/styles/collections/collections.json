@@ -1,0 +1,15 @@
+{
+  "page": {
+    "wrapper": "min-h-screen",
+    "main": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20",
+    "breadcrumbNav": "mt-6 mb-8 text-xs sm:text-sm text-[var(--ds-muted)] uppercase tracking-wide",
+    "breadcrumbList": "flex items-center gap-2",
+    "breadcrumbLink": "hover:text-[var(--ds-text)] transition-colors",
+    "breadcrumbCurrent": "text-[var(--ds-text)] font-medium",
+    "header": "text-center mb-12 sm:mb-14",
+    "headerTitleOnImage": "absolute bottom-5 left-0 right-0 text-2xl sm:text-3xl font-semibold text-white px-4",
+    "headerTitleNoImage": "text-2xl sm:text-3xl font-semibold text-[var(--ds-text)] mb-2",
+    "headerDescription": "text-base text-[var(--ds-muted)] max-w-xl mx-auto leading-relaxed",
+    "productGrid": "grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 lg:gap-6 items-start collection-product-grid"
+  }
+}

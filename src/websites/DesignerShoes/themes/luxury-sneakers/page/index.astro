@@ -1,0 +1,118 @@
+---
+import { useTranslations, isValidLanguage } from '@utils/i18n';
+
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+const { default: Welcome } = await import(`../components/Welcome.astro`);
+const { default: CategoryGrid } = await import(`../components/CategoryGrid.astro`);
+const { default: BestSellers } = await import(`../components/BestSellers.astro`);
+const { default: BrandStory } = await import(`../components/BrandStory.astro`);
+const { default: ProductShowcase } = await import(`../components/ProductShowcase.astro`);
+const { default: LifestyleBanner } = await import(`../components/LifestyleBanner.astro`);
+const { default: WhyChooseDesignerShoes } = await import(`../components/WhyChooseDesignerShoes.astro`);
+const { default: SocialGallery } = await import(`../components/SocialGallery.astro`);
+const { default: TestimonialSlider } = await import(`../components/TestimonialSlider.astro`);
+const { default: EmailSignup } = await import(`../components/EmailSignup.astro`);
+
+const lang = Astro.props.lang ?? Astro.params?.lang ?? 'en';
+
+if (!isValidLanguage(lang)) {
+  return Astro.redirect('/en');
+}
+
+const translations = await useTranslations(lang);
+const jsonData = translations.default;
+
+const SITE_TITLE = jsonData.siteTitle || 'Designer Shoes — Step Into Iconic Style';
+const SITE_DESCRIPTION = jsonData.siteDescription || 'Premium designer sneakers and luxury footwear inspired by the world\'s most legendary brands.';
+
+export async function getStaticPaths() {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  const languages = allowedLanguages.split(',').map((l: string) => l.trim()).filter((l: string) => l.length > 0);
+  return languages.map((l: string) => ({ params: { lang: l } }));
+}
+---
+
+<!doctype html>
+<html lang={lang} class="designershoes-luxury" data-site="designershoes">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body class="bg-[var(--ds-bg)] text-[var(--ds-text)]">
+    <Header />
+    <main>
+      {jsonData.sections?.map((section) => (
+        <>
+          {section.type === 'welcomeSection' && (
+            <Welcome
+              title={section.title}
+              description={section.description}
+              blogLink={`/${lang}${section.blogLink || '/collections'}`}
+              blogLinkText={section.blogLinkText}
+              backgroundVideo={section.backgroundVideo}
+              heroImage={section.heroImage}
+              headlineLine1={section.headlineLine1}
+              headlineLine2={section.headlineLine2}
+              luxury={section.luxury !== false}
+            />
+          )}
+          {section.type === 'categoryGrid' && (
+            <CategoryGrid
+              title={section.title}
+              description={section.description}
+              categories={section.categories?.map((c) => ({ ...c, link: `/${lang}${c.link}` })) ?? []}
+            />
+          )}
+          {section.type === 'bestSellers' && (
+            <BestSellers
+              title={section.title}
+              description={section.description}
+              viewAllLink={`/${lang}${section.viewAllLink || '/collections'}`}
+              lang={lang}
+              collectionHandle={section.collectionHandle}
+            />
+          )}
+          {section.type === 'brandStory' && (
+            <BrandStory quote={section.quote} image={section.image} imageAlt={section.imageAlt} />
+          )}
+          {section.type === 'productShowcase' && (
+            <ProductShowcase
+              title={section.title}
+              description={section.description}
+              viewAllLink={`/${lang}${section.viewAllLink || '/collections'}`}
+              lang={lang}
+            />
+          )}
+          {section.type === 'lifestyleBanner' && (
+            <LifestyleBanner
+              headline={section.headline}
+              buttonText={section.buttonText}
+              buttonLink={`/${lang}${section.buttonLink || '/collections'}`}
+              backgroundImage={section.backgroundImage}
+            />
+          )}
+          {section.type === 'whyChoose' && (
+            <WhyChooseDesignerShoes title={section.title} features={section.features} />
+          )}
+          {section.type === 'socialGallery' && (
+            <SocialGallery title={section.title} images={section.images} />
+          )}
+          {section.type === 'testimonialSlider' && (
+            <TestimonialSlider title={section.title} testimonials={section.testimonials} />
+          )}
+          {section.type === 'emailSignupSection' && (
+            <EmailSignup
+              title={section.title}
+              description={section.description}
+              backgroundImage={section.backgroundImage || ''}
+              formAction={section.formAction || '/api/newsletter'}
+              buttonText={section.submitText || 'Subscribe'}
+            />
+          )}
+        </>
+      ))}
+    </main>
+    <Footer />
+  </body>
+</html>

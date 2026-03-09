@@ -40,7 +40,17 @@
     "emptyWrap": "text-center py-16 bg-white rounded-2xl shadow-sm",
     "emptyContent": "max-w-md mx-auto",
     "emptyTitle": "text-2xl font-semibold text-gray-900 mb-2",
-    "emptyDescription": "text-gray-600"
+    "emptyDescription": "text-gray-600",
+    "breadcrumbSepIcon": "w-4 h-4",
+    "mobileFilterBtnIcon": "w-4 h-4",
+    "closeBtnIcon": "w-5 h-5",
+    "filterIcon": "w-5 h-5",
+    "viewToggleIcon": "w-4 h-4",
+    "paginationWrap": "flex justify-center items-center gap-4 mt-12",
+    "paginationPrev": "px-4 py-2 rounded-lg transition-colors bg-white/10 border border-white/20 text-gray-300 hover:text-white hover:bg-white/15",
+    "paginationInfo": "text-sm font-medium text-gray-400",
+    "paginationNext": "px-4 py-2 rounded-lg transition-colors bg-white/10 border border-white/20 text-gray-300 hover:text-white hover:bg-white/15",
+    "paginationFooter": "text-center text-sm text-gray-400 mt-4"
   },
   "container": {
     "maxWidth": "min-h-screen bg-gray-50",

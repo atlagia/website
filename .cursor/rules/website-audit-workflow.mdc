@@ -1,0 +1,13 @@
+---
+description: Triggers the website-audit skill when user asks to audit, verify, QA, or check a website after creation
+globs: src/websites/**/*
+alwaysApply: false
+---
+
+When the user asks to audit, verify, QA, or check a website:
+
+1. Read and follow `.cursor/skills/website-audit/SKILL.md`
+2. Also follow `.cursor/skills/atlagia-ecommerce-frontend/SKILL.md` for design and style rules
+3. Use MCP browser verification at every step — do NOT skip screenshots
+4. Fix every problem before advancing to the next step
+5. Never modify core files — fixes go in `src/websites/<StoreName>/` only

@@ -1,92 +1,86 @@
 export const luxuryComponentStyle = {
-  // Key Features component styles
   keyFeatures: {
-    wrapper: "bg-white border border-gray-100 rounded-xl p-6 shadow-sm",
-    title: "font-sans text-xl font-light tracking-wide text-gray-900 mb-4",
+    wrapper: "bg-[var(--luxury-ivory)] border border-[var(--luxury-beige)] rounded-xl p-6 shadow-sm",
+    title: "font-display text-xl font-medium text-[var(--luxury-black)] mb-4",
     list: "grid grid-cols-1 md:grid-cols-2 gap-4",
     item: "flex items-center gap-2",
-    icon: "w-5 h-5 text-green-500 flex-shrink-0",
-    text: "font-body text-base font-light text-gray-700"
+    icon: "w-5 h-5 text-[var(--luxury-gold)] flex-shrink-0",
+    text: "font-body text-base text-[var(--luxury-text)]"
   },
 
-  // Product FAQ styles
   faq: {
-    wrapper: "bg-white border border-gray-100 rounded-xl p-6 shadow-sm",
-    title: "font-sans text-xl font-light tracking-wide text-gray-900 mb-4",
+    wrapper: "bg-[var(--luxury-ivory)] border border-[var(--luxury-beige)] rounded-xl p-6 shadow-sm",
+    title: "font-display text-xl font-medium text-[var(--luxury-black)] mb-4",
     list: "space-y-4",
-    item: "border-b border-gray-100 last:border-0 pb-4 last:pb-0",
-    question: "font-sans text-base font-medium text-gray-900 mb-2",
-    answer: "font-body text-base font-light text-gray-600"
+    item: "border-b border-[var(--luxury-beige)] last:border-0 pb-4 last:pb-0",
+    question: "font-display text-base font-medium text-[var(--luxury-black)] mb-2",
+    answer: "font-body text-base text-[var(--luxury-text)]"
   },
 
-  // Product Loading styles
   loading: {
-    wrapper: "product-loading fixed inset-0 bg-white z-50",
+    wrapper: "product-loading fixed inset-0 bg-[var(--luxury-ivory)] z-50",
     container: "max-w-7xl mx-auto px-4 py-12",
     grid: "grid grid-cols-1 lg:grid-cols-2 gap-12",
-    imageSkeleton: "aspect-square bg-gray-200 rounded-2xl",
+    imageSkeleton: "aspect-square bg-[var(--luxury-beige)] rounded-2xl",
     contentSkeleton: {
       wrapper: "space-y-6",
       titleBlock: "space-y-4",
-      titleLine: "h-8 bg-gray-200 rounded w-3/4",
-      subtitleLine: "h-4 bg-gray-200 rounded w-1/4",
-      priceLine: "h-12 bg-gray-200 rounded w-1/3",
+      titleLine: "h-8 bg-[var(--luxury-beige)] rounded w-3/4",
+      subtitleLine: "h-4 bg-[var(--luxury-beige)] rounded w-1/4",
+      priceLine: "h-12 bg-[var(--luxury-beige)] rounded w-1/3",
       optionsBlock: "space-y-4",
-      optionLine: "h-12 bg-gray-200 rounded"
+      optionLine: "h-12 bg-[var(--luxury-beige)] rounded"
     }
   },
 
-  // Product Specs styles
   specs: {
-    wrapper: "bg-white border border-gray-100 rounded-xl p-6 shadow-sm",
-    title: "font-['Montserrat'] text-xl font-light tracking-wide text-gray-900 mb-4",
+    wrapper: "bg-[var(--luxury-ivory)] border border-[var(--luxury-beige)] rounded-xl p-6 shadow-sm",
+    title: "font-display text-xl font-medium text-[var(--luxury-black)] mb-4",
     grid: "grid grid-cols-1 md:grid-cols-2 gap-4",
     item: "flex items-center gap-2",
-    label: "font-['Montserrat'] text-sm font-medium text-gray-700",
-    value: "font-['Montserrat'] text-sm font-light text-gray-600"
+    label: "font-body text-sm font-medium text-[var(--luxury-text)]/70",
+    value: "font-body text-sm text-[var(--luxury-black)]"
   },
 
-  // Reviews styles
   reviews: {
-    wrapper: "border-t pt-8",
-    title: "font-['Montserrat'] text-2xl font-light tracking-wide mb-6 flex items-center gap-2",
+    wrapper: "border-t border-[var(--luxury-beige)] pt-8",
+    title: "font-display text-2xl font-medium text-[var(--luxury-black)] mb-6 flex items-center gap-2",
     list: "space-y-6",
     review: {
-      wrapper: "bg-gray-50 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow mb-4",
+      wrapper: "bg-[var(--luxury-beige)]/20 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow mb-4",
       header: "flex items-center justify-between mb-4",
       authorBlock: "flex items-center gap-4",
-      avatar: "w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center",
-      avatarText: "text-blue-600 font-semibold",
+      avatar: "w-10 h-10 bg-[var(--luxury-gold)]/20 rounded-full flex items-center justify-center",
+      avatarText: "text-[var(--luxury-gold)] font-semibold",
       authorInfo: {
-        name: "font-['Montserrat'] font-medium text-gray-900",
-        meta: "text-sm text-gray-500 flex items-center gap-2",
-        verified: "inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-green-100 text-green-800"
+        name: "font-display font-medium text-[var(--luxury-black)]",
+        meta: "text-sm text-[var(--luxury-text)]/60 flex items-center gap-2",
+        verified: "inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-[var(--luxury-gold)]/20 text-[var(--luxury-gold)]"
       },
-      rating: "flex text-yellow-400",
-      content: "font-['Montserrat'] text-base font-light text-gray-700"
+      rating: "flex text-[var(--luxury-gold)]",
+      content: "font-body text-base text-[var(--luxury-text)]"
     },
     showMore: {
       wrapper: "text-center pt-6",
-      button: "font-['Montserrat'] inline-flex items-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-light text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200"
+      button: "font-body inline-flex items-center px-4 py-2 border border-[var(--luxury-beige)] rounded-md text-sm text-[var(--luxury-text)] bg-[var(--luxury-ivory)] hover:bg-[var(--luxury-beige)]/30 transition-colors duration-200"
     }
   },
 
-  // Size Chart styles
   sizeChart: {
-    wrapper: "border-t pt-8",
-    title: "font-['Montserrat'] text-2xl font-light tracking-wide mb-6 flex items-center gap-2",
+    wrapper: "border-t border-[var(--luxury-beige)] pt-8",
+    title: "font-display text-2xl font-medium text-[var(--luxury-black)] mb-6 flex items-center gap-2",
     table: {
-      wrapper: "overflow-x-auto bg-white rounded-xl shadow-sm",
-      table: "min-w-full divide-y divide-gray-200",
-      header: "bg-gray-50",
-      headerCell: "font-['Montserrat'] px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider",
-      row: "hover:bg-gray-50 transition-colors",
-      cell: "font-['Montserrat'] px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+      wrapper: "overflow-x-auto bg-[var(--luxury-ivory)] rounded-xl shadow-sm border border-[var(--luxury-beige)]",
+      table: "min-w-full divide-y divide-[var(--luxury-beige)]",
+      header: "bg-[var(--luxury-beige)]/20",
+      headerCell: "font-body px-6 py-3 text-left text-xs font-medium text-[var(--luxury-text)] uppercase tracking-wider",
+      row: "hover:bg-[var(--luxury-beige)]/10 transition-colors",
+      cell: "font-body px-6 py-4 whitespace-nowrap text-sm text-[var(--luxury-text)]"
     },
     tips: {
-      wrapper: "mt-4 bg-blue-50 rounded-xl p-4",
-      title: "font-['Montserrat'] font-semibold mb-2 text-sm text-blue-700",
-      list: "list-disc list-inside space-y-1 font-['Montserrat'] text-sm text-blue-700"
+      wrapper: "mt-4 bg-[var(--luxury-gold)]/10 rounded-xl p-4 border border-[var(--luxury-gold)]/20",
+      title: "font-display font-semibold mb-2 text-sm text-[var(--luxury-gold)]",
+      list: "list-disc list-inside space-y-1 font-body text-sm text-[var(--luxury-text)]"
     }
   }
 }; 

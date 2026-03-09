@@ -1,0 +1,15 @@
+---
+description: Ensures product page dark themes use light text everywhere (breadcrumb, price, description, buttons, components)
+globs: src/websites/**/styles/products/*.json, src/websites/**/styles/products/*.mjs, src/websites/**/styles/components/luxury.mjs
+alwaysApply: false
+---
+
+# Product page dark theme
+
+When editing product page styles for a **dark-themed** site (e.g. dark background in BaseHead or body):
+
+1. **All text must be light** for contrast: breadcrumb, product title, price, description body, component titles (Product Details, Key Features, FAQ, etc.), specs labels/values, and button labels (Add to Cart, Buy Now, Show More).
+2. **products.json**: Include a dark background on the product **wrapper** (e.g. `bg-[#0a0a0a]` or `bg-[var(--ds-bg)]`) so the core page sets `data-theme="dark"` and applies dark overrides. Use dark surfaces for description/content blocks: `bg-[var(--ds-surface)]`, `border-[var(--ds-border)]` — not light ivory/white.
+3. **products/luxury.mjs**: Every text key in `luxuryProductStyle` must use the theme text variable: `text-[var(--ds-text)]` or `text-[var(--ds-muted)]`. Description content: light text and `[&>a]:text-[var(--ds-accent)]`. Buttons: include `text-[var(--ds-text)]` so CTA text is light.
+4. **components/luxury.mjs**: KeyFeatures, FAQ, specs, reviews — use theme variables so all text is light on dark (e.g. `text: "font-body text-base text-[var(--ds-text)]"`).
+5. After changes, verify with MCP: screenshot the product page and confirm no dark-on-dark or low-contrast text.

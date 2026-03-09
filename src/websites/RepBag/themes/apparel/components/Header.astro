@@ -1,12 +1,13 @@
 ---
-// Header.astro
-import { Menu, Globe } from 'lucide-react';
+// Header.astro – e-commerce: Bag + slide cart (CartSidebarWithTrigger), Search, Lang, Sign In
+import { Menu, Globe, Search } from 'lucide-react';
 import { getLangFromUrl, getLocalizedPath } from '@utils/i18n';
+import CartSidebarWithTrigger from '@themes/default/components/CartSidebarWithTrigger';
 
 const navigation = [
   { name: 'Home', href: '/' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'Reviews', href: '/reviews' },
+  { name: 'Collections', href: '/collections' },
+  { name: 'Best Sellers', href: '/best-sellers' },
   { name: 'About', href: '/about' },
   { name: 'Contact', href: '/contact' },
 ];
@@ -65,56 +66,81 @@ const languages = allowedLanguages.map(lang => ({
 const currentPath = Astro.url.pathname;
 const currentLang = getLangFromUrl(Astro.url);
 
-const siteName = import.meta.env.PUBLIC_SITE_NAME || 'ProDriver Gear';
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'RepBag';
 
 // Localize navigation links
 const localizedNavigation = navigation.map(item => ({
   ...item,
   href: `/${currentLang}${item.href === '/' ? '' : item.href}`
 }));
+
+// Header/cart styles from theme (for slide cart)
+let headerStyles: { cart?: Record<string, string> } = {};
+try {
+  const themeHeaderStyles = await import('../styles/Header.json');
+  headerStyles = themeHeaderStyles.default || {};
+} catch (_) {}
+
+const paymentConfig = {
+  method: import.meta.env.PUBLIC_PAYMENT_METHOD || 'default',
+  hoodpay: {
+    apiUrl: import.meta.env.HOODPAY_API_URL,
+    businessId: import.meta.env.HOODPAY_BUSINESS_ID,
+    authToken: import.meta.env.HOODPAY_AUTH_TOKEN,
+    redirectUrl: `${import.meta.env.DOMAINE || ''}${import.meta.env.HOODPAY_REDIRECT_URL || ''}`
+  },
+  store: {
+    name: import.meta.env.PUBLIC_SITE_NAME || siteName,
+    domain: import.meta.env.DOMAINE || 'localhost'
+  }
+};
+const apiEndpoint = import.meta.env.VITE_API_ENDPOINT || '/api/checkout';
 ---
 
-<header class="fixed w-full top-0 z-50 bg-black/80 backdrop-blur-md border-b border-gray-800">
-  <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Top">
-    <div class="flex h-16 items-center justify-between">
+<header class="repbag-header fixed w-full top-0 z-[60] bg-[var(--luxury-ivory)]/95 backdrop-blur-sm border-b border-[var(--luxury-beige)]">
+  <nav class="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10" aria-label="Top">
+    <div class="flex h-20 items-center justify-between">
       <div class="flex items-center">
         <a href={`/${currentLang}`} class="flex items-center">
-          <span class="text-2xl font-black text-white uppercase tracking-tight">
+          <span class="repbag-logo text-xl font-medium text-[var(--luxury-black)] tracking-[0.2em] uppercase" style="font-family: var(--font-display);">
             {siteName}
           </span>
         </a>
       </div>
       
-      <div class="hidden md:flex items-center space-x-8">
+      <div class="hidden md:flex items-center gap-10">
         {localizedNavigation.map((item) => (
           <a
             href={item.href}
-            class="text-base font-semibold text-gray-300 hover:text-white transition-colors uppercase tracking-wider"
+            class="text-[11px] font-medium text-[var(--luxury-text)] hover:text-[var(--luxury-gold)] transition-colors duration-200 uppercase tracking-[0.25em]"
           >
             {item.name}
           </a>
         ))}
       </div>
 
-      <div class="flex items-center gap-4">
+      <div class="flex items-center gap-4 sm:gap-6">
+        <a href={`/${currentLang}/search`} class="p-2 text-[var(--luxury-text)]/80 hover:text-[var(--luxury-text)] transition-colors" aria-label="Search">
+          <Search className="h-4 w-4 sm:h-[18px] sm:w-[18px]" />
+        </a>
         <!-- Language Switcher -->
         <div class="relative group">
           <button
             type="button"
-            class="inline-flex items-center gap-2 text-gray-300 hover:text-white"
+            class="inline-flex items-center gap-2 text-[var(--luxury-text)]/80 hover:text-[var(--luxury-text)] text-[11px] uppercase tracking-[0.2em]"
           >
-            <Globe className="h-5 w-5" />
-            <span class="hidden md:inline-block text-sm uppercase tracking-wider">
+            <Globe className="h-4 w-4" />
+            <span class="hidden md:inline-block">
               {languages.find(lang => lang.code === currentLang)?.name}
             </span>
           </button>
           
-          <div class="absolute right-0 mt-2 w-48 rounded-md shadow-2xl bg-gray-900 ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+          <div class="absolute right-0 mt-2 w-48 py-2 bg-[var(--luxury-ivory)] border border-[var(--luxury-beige)] shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
             <div class="py-1" role="menu" aria-orientation="vertical">
               {languages.map((lang) => (
                 <a
                   href={getLocalizedPath(currentPath, lang.code)}
-                  class={`block px-4 py-2 text-sm uppercase tracking-wider ${currentLang === lang.code ? 'bg-gray-800 text-white' : 'text-gray-300 hover:bg-gray-800 hover:text-white'}`}
+                  class={`block px-4 py-2 text-[11px] uppercase tracking-[0.2em] ${currentLang === lang.code ? 'text-[var(--luxury-gold)]' : 'text-[var(--luxury-text)] hover:text-[var(--luxury-gold)]'}`}
                   role="menuitem"
                 >
                   {lang.name}
@@ -124,9 +150,20 @@ const localizedNavigation = navigation.map(item => ({
           </div>
         </div>
 
+        <CartSidebarWithTrigger
+          client:load
+          triggerClassName="flex items-center gap-1.5 text-[var(--luxury-text)]/80 hover:text-[var(--luxury-text)] transition-colors py-2 text-[11px] uppercase tracking-[0.2em]"
+          label="Bag"
+          showLabel={true}
+          paymentConfig={paymentConfig}
+          apiEndpoint={apiEndpoint}
+          headerStyles={headerStyles}
+          projectType={import.meta.env.PROJECT_TYPE || 'physical'}
+        />
+
         <a
           href={`/${currentLang}/account`}
-          class="hidden md:inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-semibold rounded-md text-white bg-red-600 hover:bg-red-700 transition-colors uppercase tracking-wider"
+          class="hidden md:inline-flex items-center justify-center px-6 py-2.5 border border-[var(--luxury-black)] text-[11px] font-medium text-[var(--luxury-black)] hover:bg-[var(--luxury-black)] hover:text-[var(--luxury-ivory)] transition-all duration-200 uppercase tracking-[0.2em]"
         >
           Sign In
         </a>
@@ -135,7 +172,7 @@ const localizedNavigation = navigation.map(item => ({
           <button
             type="button"
             id="mobile-menu-button"
-            class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800"
+            class="inline-flex items-center justify-center p-2 text-[var(--luxury-text)] hover:text-[var(--luxury-gold)]"
             aria-expanded="false"
           >
             <span class="sr-only">Open menu</span>
@@ -143,18 +180,21 @@ const localizedNavigation = navigation.map(item => ({
           </button>
           <div 
             id="mobile-menu-dropdown"
-            class="absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-gray-900 ring-1 ring-black ring-opacity-5 hidden"
+            class="absolute right-0 mt-2 w-48 py-2 bg-[var(--luxury-ivory)] border border-[var(--luxury-beige)] shadow-lg hidden z-50"
           >
               <div class="py-1" role="menu" aria-orientation="vertical">
                 {localizedNavigation.map((item) => (
                   <a
                     href={item.href}
-                    class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white uppercase tracking-wider"
+                    class="block px-4 py-2 text-[11px] text-[var(--luxury-text)] hover:text-[var(--luxury-gold)] uppercase tracking-[0.2em]"
                     role="menuitem"
                   >
                     {item.name}
                   </a>
                 ))}
+                <a href={`/${currentLang}/search`} class="block px-4 py-2 text-[11px] text-[var(--luxury-text)] hover:text-[var(--luxury-gold)] uppercase tracking-[0.2em]">Search</a>
+                <button type="button" id="mobile-bag-trigger" class="w-full text-left px-4 py-2 text-[11px] text-[var(--luxury-text)] hover:text-[var(--luxury-gold)] uppercase tracking-[0.2em]">Bag</button>
+                <a href={`/${currentLang}/account`} class="block px-4 py-2 text-[11px] text-[var(--luxury-text)] font-medium uppercase tracking-[0.2em]">Sign In</a>
               </div>
           </div>
         </div>
