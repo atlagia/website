@@ -5,6 +5,7 @@
     "wrapper": "flex items-center justify-between h-16",
     "brand": "text-xl font-bold text-white hover:text-blue-400 transition-colors",
     "menu": {
+      "desktop": "hidden lg:flex lg:items-center lg:space-x-4",
       "item": "text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
     }
   },
@@ -20,7 +21,10 @@
   "actions": {
     "wrapper": "flex items-center space-x-4",
     "search": {
-      "icon": "text-white"
+      "icon": "text-white",
+      "button": "p-2 rounded-full transition-colors text-gray-300 hover:text-white hover:bg-white/10",
+      "form": "absolute top-full right-0 mt-2 w-72 bg-black/95 backdrop-blur-md rounded-lg shadow-xl border border-gray-700 p-4 z-50",
+      "input": "w-full px-4 py-2 border border-gray-600 rounded-md bg-white/5 text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
     },
     "currency": {
       "wrapper": "relative",
@@ -54,13 +58,40 @@
     "backdrop": "lg:hidden fixed inset-0 bg-black bg-opacity-50 z-[98]"
   },
   "cart": {
-    "sidebar": "fixed inset-y-0 right-0 w-full max-w-md bg-black/95 backdrop-blur-md shadow-xl z-[100] transform transition-transform duration-300 ease-in-out",
+    "sidebar": "fixed inset-y-0 right-0 w-full max-w-md bg-black/95 backdrop-blur-md shadow-xl border-l border-gray-700/50 z-[100] transform transition-transform duration-300 ease-in-out",
     "container": "h-full flex flex-col",
     "header": "p-4 border-b border-gray-700",
     "headerContent": "flex justify-between items-center",
+    "iconWrapper": "w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center",
+    "icon": "w-5 h-5 text-white",
     "title": "text-lg font-medium text-white",
     "closeButton": "p-2 hover:bg-gray-800 rounded-full text-gray-300 hover:text-white",
-    "overlay": "fixed inset-0 bg-black bg-opacity-50 z-[90]"
+    "closeIcon": "w-5 h-5 text-gray-300 hover:text-white transition-colors",
+    "overlay": "fixed inset-0 bg-black bg-opacity-50 z-[90]",
+    "emptyWrap": "flex-1 flex flex-col items-center justify-center p-8 text-center",
+    "emptyIconWrap": "w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mb-4",
+    "emptyIcon": "w-10 h-10 text-gray-500",
+    "emptyTitle": "text-lg font-semibold text-white mb-2",
+    "emptyText": "text-gray-400 text-sm",
+    "itemsWrap": "flex-1 overflow-y-auto p-6 space-y-4",
+    "itemCard": "group bg-white/5 rounded-xl border border-gray-700/50 p-4 hover:border-gray-600 transition-all duration-200",
+    "itemImage": "w-16 h-16 object-cover rounded-lg border border-gray-700/50",
+    "qtyBadge": "absolute -top-1 -right-1 w-5 h-5 bg-blue-600 rounded-full flex items-center justify-center",
+    "itemTitle": "font-semibold text-white text-sm leading-tight mb-1 line-clamp-2",
+    "itemPrice": "text-lg font-bold text-white",
+    "itemTotal": "text-xs text-gray-400",
+    "qtyWrap": "flex items-center gap-1 bg-white/10 rounded-lg p-1",
+    "qtyBtn": "w-7 h-7 flex items-center justify-center hover:bg-white/20 rounded-md disabled:opacity-50 transition-colors text-white",
+    "qtyText": "w-8 text-center text-sm font-medium text-gray-200",
+    "qtyIcon": "text-gray-300",
+    "removeBtn": "p-1.5 text-red-400 hover:text-red-300 hover:bg-red-500/10 rounded-md disabled:opacity-50 transition-all duration-200",
+    "footerWrap": "border-t border-gray-700 p-6 bg-black/50",
+    "totalLabel": "text-lg font-semibold text-white",
+    "totalCount": "text-xs text-gray-400",
+    "totalAmount": "text-2xl font-bold text-white",
+    "checkoutBtn": "w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-4 rounded-xl hover:from-purple-500 hover:to-blue-500 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3 font-semibold text-lg",
+    "trustWrap": "flex items-center justify-center gap-4 mt-4 pt-4 border-t border-gray-700",
+    "trustItem": "flex items-center gap-1 text-xs text-gray-400"
   },
   "svg": {
     "hamburger": "w-6 h-6",

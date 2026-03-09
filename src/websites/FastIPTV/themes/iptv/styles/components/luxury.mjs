@@ -101,6 +101,40 @@ export const luxuryComponentStyle = {
     cardRemove: "text-xs text-gray-400 hover:text-gray-200"
   },
 
+  shipping: {
+    wrapper: "rounded-2xl p-8 border border-white/10 bg-white/5 backdrop-blur-xl",
+    title: "text-sm font-semibold uppercase tracking-[0.2em] text-gray-400 mb-4 flex items-center gap-2",
+    titleIconWrap: "w-8 h-8 bg-white/10 flex items-center justify-center rounded-lg",
+    titleIcon: "w-4 h-4 text-gray-300",
+    titleDivider: "w-12 h-px bg-white/20 mb-6",
+    methodsGrid: "grid grid-cols-1 md:grid-cols-3 gap-4 mb-6",
+    methodCard: "text-center p-4 rounded-xl border border-white/10 bg-white/5",
+    methodTitle: "text-sm font-medium text-gray-100 mb-1",
+    methodPrice: "text-xs text-gray-400",
+    methodEta: "text-xs text-gray-500 mt-1",
+    footnoteWrap: "text-center text-sm text-gray-400"
+  },
+
+  warranty: {
+    wrapper: "rounded-2xl p-8 border border-white/10 bg-white/5 backdrop-blur-xl",
+    headerWrap: "mb-6",
+    title: "text-sm font-semibold uppercase tracking-[0.2em] text-gray-400 flex items-center gap-2",
+    titleIconWrap: "w-8 h-8 bg-white/10 flex items-center justify-center rounded-lg",
+    titleIcon: "w-4 h-4 text-gray-300",
+    titleDivider: "w-12 h-px bg-white/20 mt-2",
+    columns: "grid grid-cols-1 lg:grid-cols-2 gap-6",
+    card: "rounded-xl p-5 border border-white/10 bg-white/5",
+    cardTitle: "font-semibold text-gray-100 text-base mb-3",
+    list: "space-y-2",
+    listItem: "flex items-start gap-3",
+    listIconWrap: "flex-shrink-0 w-5 h-5 bg-white/10 rounded-full flex items-center justify-center mt-0.5",
+    listIcon: "w-3 h-3 text-gray-400",
+    listText: "text-gray-300 text-sm leading-relaxed",
+    noteWrap: "mt-6 p-4 rounded-xl border border-white/10 bg-white/5",
+    noteText: "text-sm text-gray-400 text-center",
+    noteStrong: "font-medium text-gray-100"
+  },
+
   // Reviews styles
   reviews: {
     wrapper: "border-t pt-8",
@@ -126,22 +160,40 @@ export const luxuryComponentStyle = {
     }
   },
 
-  // Size Chart styles
+  // Size Chart styles (full structure, dark theme)
   sizeChart: {
-    wrapper: "border-t pt-8",
-    title: "font-['Inter'] text-2xl font-light tracking-wide mb-6 flex items-center gap-2",
+    wrapper: "rounded-2xl p-8 border border-white/10 bg-white/5 backdrop-blur-xl",
+    headerWrap: "mb-8",
+    title: "text-sm font-semibold uppercase tracking-[0.2em] text-gray-400 mb-2 flex items-center gap-2",
+    titleIconWrap: "w-8 h-8 bg-white/10 flex items-center justify-center rounded-lg",
+    titleIcon: "h-4 w-4 text-gray-300",
+    titleDivider: "w-12 h-px bg-white/20",
+    tableCard: "rounded-xl border border-white/10 bg-white/5 overflow-hidden",
+    tableScroll: "overflow-x-auto",
     table: {
-      wrapper: "overflow-x-auto bg-white rounded-xl shadow-sm",
-      table: "min-w-full divide-y divide-gray-200",
-      header: "bg-gray-50",
-      headerCell: "font-['Inter'] px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider",
-      row: "hover:bg-gray-50 transition-colors",
-      cell: "font-['Inter'] px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+      table: "min-w-full text-sm",
+      header: "bg-white/10 border-b border-white/10",
+      headerCell: "px-5 py-3.5 text-left font-medium text-gray-400 uppercase tracking-wider",
+      body: "divide-y divide-white/10",
+      row: "hover:bg-white/5 transition-colors",
+      cell: "px-5 py-4 whitespace-nowrap text-gray-300",
+      firstCell: "font-medium text-gray-100"
     },
     tips: {
-      wrapper: "mt-4 bg-blue-50 rounded-xl p-4",
-      title: "font-['Inter'] font-semibold mb-2 text-sm text-blue-700",
-      list: "list-disc list-inside space-y-1 font-['Inter'] text-sm text-blue-700"
-    }
+      wrapper: "mt-6 rounded-xl p-6 border border-white/10 bg-white/5",
+      inner: "flex items-start gap-4",
+      iconWrap: "flex-shrink-0 w-8 h-8 bg-white/10 rounded-full flex items-center justify-center",
+      icon: "w-4 h-4 text-gray-400",
+      contentWrap: "flex-1",
+      title: "text-sm font-medium text-gray-100 mb-3",
+      listWrap: "space-y-2",
+      listRow: "flex items-start gap-3",
+      listIconWrap: "flex-shrink-0 w-5 h-5 bg-white/10 rounded-full flex items-center justify-center mt-0.5",
+      listIcon: "w-3 h-3 text-gray-400",
+      listText: "text-sm text-gray-300 leading-relaxed"
+    },
+    footerWrap: "mt-6 text-center",
+    footerInner: "inline-flex items-center gap-2 text-sm text-gray-400 bg-white/10 px-4 py-2 border border-white/20 rounded-lg",
+    footerIcon: "w-4 h-4 text-gray-400"
   }
 }; 
