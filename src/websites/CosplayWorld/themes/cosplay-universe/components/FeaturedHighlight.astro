@@ -1,0 +1,55 @@
+---
+import { ArrowRight } from 'lucide-react';
+
+interface Props {
+  title: string;
+  description?: string;
+  ctaText: string;
+  ctaLink: string;
+  backgroundImage?: string;
+  imageAlt?: string;
+  lang?: string;
+}
+
+const { title, description = '', ctaText, ctaLink, backgroundImage, imageAlt = '', lang = 'en' } = Astro.props;
+const base = lang ? `/${lang}` : '';
+const resolvedLink = ctaLink.startsWith('/') ? base + ctaLink : ctaLink;
+---
+
+<section class="cw-featured-highlight relative min-h-[50vh] flex items-center justify-center overflow-hidden bg-[var(--cw-bg)]">
+  {backgroundImage ? (
+    <div class="absolute inset-0">
+      <img
+        src={backgroundImage}
+        alt={imageAlt || title}
+        class="w-full h-full object-cover"
+        loading="lazy"
+        decoding="async"
+      />
+      <div class="absolute inset-0 bg-[var(--cw-bg)]/75" />
+    </div>
+  ) : (
+    <div class="absolute inset-0 bg-gradient-to-br from-[var(--cw-surface)] via-[var(--cw-bg)] to-[var(--cw-surface)]" />
+  )}
+  <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center py-24 lg:py-32">
+    <p class="font-body text-xs tracking-[0.4em] uppercase text-[var(--cw-accent)] mb-4">Featured</p>
+    <h2 class="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-[var(--cw-text)] tracking-tight mb-6">
+      {title}
+    </h2>
+    {description && (
+      <p class="font-body text-lg md:text-xl text-[var(--cw-muted)] mb-10 max-w-2xl mx-auto">{description}</p>
+    )}
+    <a
+      href={resolvedLink}
+      class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[var(--cw-accent)] text-[var(--cw-bg)] font-body text-sm font-medium tracking-[0.2em] uppercase hover:opacity-95 transition-opacity focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--cw-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--cw-bg)]"
+    >
+      {ctaText}
+      <ArrowRight className="w-4 h-4" aria-hidden="true" />
+    </a>
+  </div>
+</section>
+
+<style>
+  .font-display { font-family: var(--font-display); }
+  .font-body { font-family: var(--font-body); }
+</style>

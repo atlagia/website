@@ -1,0 +1,113 @@
+{
+  "pages": [
+    {
+      "path": "/",
+      "name": "Home",
+      "description": "CosplayWorld - Premium cosplay costumes and accessories",
+      "priority": 1.0
+    },
+    {
+      "path": "/collections",
+      "name": "Collections",
+      "description": "Browse cosplay collections by character and series",
+      "priority": 0.9
+    },
+    {
+      "path": "/products",
+      "name": "Products",
+      "description": "Shop cosplay costumes, wigs, and accessories",
+      "priority": 0.9
+    },
+    {
+      "path": "/about",
+      "name": "About",
+      "description": "Learn about CosplayWorld and our community",
+      "priority": 0.7
+    },
+    {
+      "path": "/contact",
+      "name": "Contact",
+      "description": "Get in touch with our team",
+      "priority": 0.7
+    },
+    {
+      "path": "/blog",
+      "name": "Blog",
+      "description": "Cosplay tips, character guides, and community stories",
+      "priority": 0.8
+    },
+    {
+      "path": "/cart",
+      "name": "Cart",
+      "description": "Your cosplay cart",
+      "priority": 0.9
+    },
+    {
+      "path": "/checkout",
+      "name": "Checkout",
+      "description": "Complete your order",
+      "priority": 0.9
+    },
+    {
+      "path": "/account",
+      "name": "Account",
+      "description": "Manage your account, orders, and preferences",
+      "priority": 0.8
+    },
+    {
+      "path": "/reviews",
+      "name": "Reviews",
+      "description": "Customer reviews and testimonials",
+      "priority": 0.8
+    },
+    {
+      "path": "/privacy",
+      "name": "Privacy",
+      "description": "Privacy policy and data protection",
+      "priority": 0.7
+    },
+    {
+      "path": "/size-chart",
+      "name": "Size Chart",
+      "description": "Size guide for cosplay costumes",
+      "priority": 0.8
+    },
+    {
+      "path": "/shipping",
+      "name": "Shipping",
+      "description": "Shipping information and delivery times",
+      "priority": 0.7
+    },
+    {
+      "path": "/returns",
+      "name": "Returns",
+      "description": "Return and exchange policies",
+      "priority": 0.7
+    },
+    {
+      "path": "/terms",
+      "name": "Terms",
+      "description": "Terms of service and conditions",
+      "priority": 0.6
+    },
+    {
+      "path": "/cookies",
+      "name": "Cookies",
+      "description": "Cookie policy and tracking information",
+      "priority": 0.6
+    },
+    {
+      "path": "/guides",
+      "name": "Guides",
+      "description": "Cosplay buying guides and care tips",
+      "priority": 0.8
+    }
+  ],
+  "metadata": {
+    "name": "CosplayWorld Theme",
+    "version": "1.0.0",
+    "description": "Cosplay costumes and accessories - anime, movies, gaming",
+    "author": "CosplayWorld",
+    "license": "MIT"
+  }
+}

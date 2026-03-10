@@ -1,0 +1,72 @@
+---
+import { getAllProducts } from '@libs/shopify';
+
+interface Props {
+  title: string;
+  description: string;
+  viewAllLink: string;
+  lang: string;
+}
+
+const { title, description, viewAllLink, lang } = Astro.props;
+
+const productsData = await getAllProducts();
+const products = productsData
+  .slice(0, 6)
+  .map(({ node }) => ({
+    id: node.id,
+    name: node.title,
+    handle: node.handle,
+    price: new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: node.priceRange.minVariantPrice.currencyCode
+    }).format(node.priceRange.minVariantPrice.amount),
+    image: node.images.edges[0]?.node.url || '/placeholder-image.jpg',
+  }));
+---
+
+<section class="cw-showcase bg-[var(--cw-surface)] py-24 lg:py-32">
+  <div class="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-16">
+      <div>
+        <p class="font-display text-[11px] tracking-[0.35em] uppercase text-[var(--cw-accent)] mb-3">Collection</p>
+        <h2 class="font-display text-3xl md:text-4xl font-bold text-[var(--cw-text)] uppercase tracking-tight mb-4">{title}</h2>
+        <p class="text-lg text-[var(--cw-text)]/70 max-w-xl font-body">{description}</p>
+      </div>
+      <a
+        href={viewAllLink}
+        class="text-[11px] font-medium tracking-[0.25em] uppercase text-[var(--cw-text)]/70 hover:text-[var(--cw-accent)] transition-colors border-b border-transparent hover:border-[var(--cw-accent)] w-fit"
+      >
+        View all
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+      {products.map((product) => (
+        <a
+          href={`/${lang}/products/${product.handle}`}
+          class="group block"
+        >
+          <div class="relative aspect-[3/4] overflow-hidden bg-[var(--cw-surface)] mb-5">
+            <img
+              src={product.image}
+              alt={product.name}
+              class="w-full h-full object-cover transition-transform duration-600 ease-out group-hover:scale-105"
+            />
+          </div>
+          <div class="flex flex-col">
+            <h3 class="font-display text-sm font-semibold text-[var(--cw-text)] uppercase tracking-wide group-hover:text-[var(--cw-accent)] transition-colors">
+              {product.name}
+            </h3>
+            <span class="text-sm text-[var(--cw-muted)] mt-1 font-body">{product.price}</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .font-display { font-family: var(--font-display); }
+  .font-body { font-family: var(--font-body); }
+</style>

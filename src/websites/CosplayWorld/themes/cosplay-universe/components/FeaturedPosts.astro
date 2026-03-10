@@ -1,0 +1,72 @@
+---
+import type { ShopifyBlogPost } from '@utils/shopifyAPI';
+import { ArrowRight } from 'lucide-react';
+
+interface Props {
+  title: string;
+  posts: ShopifyBlogPost[];
+  exploreMoreLink: string;
+  exploreMoreText: string;
+}
+
+const { title, posts = [], exploreMoreLink, exploreMoreText } = Astro.props;
+
+// Ensure we always have content to display
+const hasContent = posts && posts.length > 0;
+---
+
+<section class="cw-featured-posts py-16 px-4 md:px-8 bg-[var(--cw-bg)]">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="font-display text-3xl md:text-4xl font-bold mb-12 text-center text-[var(--cw-text)]">{title}</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {hasContent ? (
+        posts.slice(0, 3).map((post) => (
+          <article class="group">
+            <a href={`/blog/${post.handle}`} class="block">
+              <div class="relative overflow-hidden rounded-lg mb-4 bg-[var(--cw-surface)]">
+                <img
+                  src={post.image?.src || '/images/placeholder.jpg'}
+                  alt={post.title}
+                  class="w-full aspect-[16/9] object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+              <h3 class="text-xl font-semibold mb-2 text-[var(--cw-text)] group-hover:text-[var(--cw-accent)] transition-colors font-body">
+                {post.title}
+              </h3>
+              <div class="flex items-center justify-between">
+                <time class="text-sm text-[var(--cw-muted)] font-body">
+                  {new Date(post.published_at).toLocaleDateString()}
+                </time>
+                <span class="text-[var(--cw-accent)] group-hover:translate-x-1 transition-transform">
+                  <ArrowRight className="w-5 h-5" />
+                </span>
+              </div>
+            </a>
+          </article>
+        ))
+      ) : (
+        <div class="col-span-full text-center py-8">
+          <p class="text-[var(--cw-muted)] font-body">No posts available at the moment. Check back soon!</p>
+        </div>
+      )}
+    </div>
+    
+    {hasContent && (
+      <div class="text-center mt-12">
+        <a
+          href={exploreMoreLink}
+          class="inline-flex items-center gap-2 text-lg font-medium text-[var(--cw-accent)] hover:opacity-90 transition-colors font-body"
+        >
+          {exploreMoreText}
+          <ArrowRight className="w-5 h-5" />
+        </a>
+      </div>
+    )}
+  </div>
+</section>
+
+<style>
+  .font-display { font-family: var(--font-display); }
+  .font-body { font-family: var(--font-body); }
+</style>

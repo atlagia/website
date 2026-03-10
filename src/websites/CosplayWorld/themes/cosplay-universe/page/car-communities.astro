@@ -1,0 +1,215 @@
+---
+import Layoutc from '@layouts/Layoutc.astro';
+import { ArrowRight, Users, MessageCircle, Calendar, Globe, Heart } from 'lucide-react';
+
+// Generate static paths for allowed languages from environment
+export async function getStaticPaths() {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  const languages = allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+  
+  return languages.map(lang => ({ params: { lang } }));
+}
+
+const { lang = 'en' } = Astro.params;
+const baseUrl = import.meta.env.DOMAINE || 'https://drivon.store';
+const storeName = import.meta.env.PUBLIC_SITE_NAME || 'Drivon';
+
+// SEO
+const seoTitle = `Car Communities | ${storeName}`;
+const seoDescription = "Connect with automotive enthusiasts worldwide. Join car communities, share your passion, and discover like-minded drivers.";
+---
+
+<Layoutc title={seoTitle} description={seoDescription} lang={lang}>
+  <div class="min-h-screen bg-[var(--drivon-bg)]">
+    <!-- Hero Section -->
+    <section class="relative min-h-[50vh] flex items-center justify-center bg-[var(--drivon-text)] text-[var(--drivon-bg)]">
+      <div class="relative z-10 h-full flex items-center justify-center text-center px-4">
+        <div class="max-w-4xl mx-auto">
+          <h1 class="font-headline text-5xl md:text-7xl uppercase tracking-tight text-[var(--drivon-bg)] mb-6">
+            Car Communities
+          </h1>
+          <p class="text-xl md:text-2xl text-[var(--drivon-bg)]/90 mb-8">
+            Connect with automotive enthusiasts worldwide
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href={`/${lang}/about`} class="inline-flex items-center justify-center bg-[var(--drivon-bg)] text-[var(--drivon-text)] px-8 py-3.5 text-[11px] font-medium tracking-[0.2em] uppercase hover:opacity-90 transition-opacity font-body">
+              Join Community
+            </a>
+            <a href={`/${lang}/collections`} class="inline-flex items-center justify-center border-2 border-[var(--drivon-bg)] text-[var(--drivon-bg)] px-8 py-3.5 text-[11px] font-medium tracking-[0.2em] uppercase hover:bg-[var(--drivon-bg)]/10 transition-colors font-body">
+              Shop Community Gear
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community Features -->
+    <section class="py-20 px-4">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="font-headline text-4xl text-[var(--drivon-text)] uppercase tracking-wide mb-4">Global Automotive Community</h2>
+          <p class="text-xl text-[var(--drivon-muted)] max-w-3xl mx-auto">
+            From local car meets to international racing events, connect with passionate automotive enthusiasts from around the world.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+          <div class="bg-[var(--drivon-card)] rounded-2xl p-8 border border-[var(--drivon-border)]">
+            <div class="w-16 h-16 bg-[var(--drivon-surface)] rounded-full flex items-center justify-center mb-6 text-[var(--drivon-text)]">
+              <Users class="w-8 h-8" />
+            </div>
+            <h3 class="font-headline text-2xl text-[var(--drivon-text)] uppercase tracking-wide mb-4">Local Communities</h3>
+            <p class="text-[var(--drivon-muted)]">
+              Connect with car enthusiasts in your area. Join local car meets, track days, and automotive events.
+            </p>
+          </div>
+
+          <div class="bg-[var(--drivon-card)] rounded-2xl p-8 border border-[var(--drivon-border)]">
+            <div class="w-16 h-16 bg-[var(--drivon-surface)] rounded-full flex items-center justify-center mb-6 text-[var(--drivon-text)]">
+              <MessageCircle class="w-8 h-8" />
+            </div>
+            <h3 class="font-headline text-2xl text-[var(--drivon-text)] uppercase tracking-wide mb-4">Online Forums</h3>
+            <p class="text-[var(--drivon-muted)]">
+              Share your passion, get advice, and connect with fellow enthusiasts in our vibrant online community.
+            </p>
+          </div>
+
+          <div class="bg-[var(--drivon-card)] rounded-2xl p-8 border border-[var(--drivon-border)]">
+            <div class="w-16 h-16 bg-[var(--drivon-surface)] rounded-full flex items-center justify-center mb-6 text-[var(--drivon-text)]">
+              <Calendar class="w-8 h-8" />
+            </div>
+            <h3 class="font-headline text-2xl text-[var(--drivon-text)] uppercase tracking-wide mb-4">Events & Meetups</h3>
+            <p class="text-[var(--drivon-muted)]">
+              Discover automotive events, car shows, and racing events happening in your area and around the world.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community Categories -->
+    <section class="py-20 bg-[var(--drivon-surface)] border-y border-[var(--drivon-border)]">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="font-headline text-4xl text-[var(--drivon-text)] uppercase tracking-wide mb-4">Community Categories</h2>
+          <p class="text-xl text-[var(--drivon-muted)]">Find your automotive community</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <a href={`/${lang}/formula1-collection`} class="group bg-[var(--drivon-card)] rounded-2xl overflow-hidden border border-[var(--drivon-border)] hover:border-[var(--drivon-text)]/30 transition-colors">
+            <div class="h-48 bg-[var(--drivon-text)] flex items-center justify-center text-[var(--drivon-bg)]">
+              <Globe class="w-16 h-16" />
+            </div>
+            <div class="p-6">
+              <h3 class="font-headline text-xl text-[var(--drivon-text)] uppercase tracking-wide mb-2">Formula 1 Fans</h3>
+              <p class="text-[var(--drivon-muted)] mb-4">Connect with F1 enthusiasts worldwide</p>
+              <div class="flex items-center text-[var(--drivon-text)] group-hover:text-[var(--drivon-accent-hover)] font-body text-[11px] font-medium tracking-[0.2em] uppercase">
+                Join F1 Community <ArrowRight class="w-4 h-4 ml-2" />
+              </div>
+            </div>
+          </a>
+
+          <a href={`/${lang}/rally-racing`} class="group bg-[var(--drivon-card)] rounded-2xl overflow-hidden border border-[var(--drivon-border)] hover:border-[var(--drivon-text)]/30 transition-colors">
+            <div class="h-48 bg-[var(--drivon-text)] flex items-center justify-center text-[var(--drivon-bg)]">
+              <Heart class="w-16 h-16" />
+            </div>
+            <div class="p-6">
+              <h3 class="font-headline text-xl text-[var(--drivon-text)] uppercase tracking-wide mb-2">Rally Enthusiasts</h3>
+              <p class="text-[var(--drivon-muted)] mb-4">Join the rally racing community</p>
+              <div class="flex items-center text-[var(--drivon-text)] group-hover:text-[var(--drivon-accent-hover)] font-body text-[11px] font-medium tracking-[0.2em] uppercase">
+                Join Rally Community <ArrowRight class="w-4 h-4 ml-2" />
+              </div>
+            </div>
+          </a>
+
+          <a href={`/${lang}/street-culture`} class="group bg-[var(--drivon-card)] rounded-2xl overflow-hidden border border-[var(--drivon-border)] hover:border-[var(--drivon-text)]/30 transition-colors">
+            <div class="h-48 bg-[var(--drivon-text)] flex items-center justify-center text-[var(--drivon-bg)]">
+              <Users class="w-16 h-16" />
+            </div>
+            <div class="p-6">
+              <h3 class="font-headline text-xl text-[var(--drivon-text)] uppercase tracking-wide mb-2">Street Culture</h3>
+              <p class="text-[var(--drivon-muted)] mb-4">Connect with street racing enthusiasts</p>
+              <div class="flex items-center text-[var(--drivon-muted)] font-semibold group-hover:text-gray-700">
+                Join Street Community <ArrowRight class="w-4 h-4 ml-2" />
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community Benefits -->
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="font-headline text-4xl text-[var(--drivon-text)] uppercase tracking-wide mb-4">Why Join Our Community?</h2>
+          <p class="text-xl text-[var(--drivon-muted)]">Be part of something bigger than just a brand</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="text-center">
+            <div class="w-20 h-20 bg-[var(--drivon-surface)] rounded-full flex items-center justify-center mb-6 mx-auto text-[var(--drivon-text)]">
+              <Users class="w-10 h-10" />
+            </div>
+            <h3 class="font-headline text-xl text-[var(--drivon-text)] uppercase tracking-wide mb-4">Global Network</h3>
+            <p class="text-[var(--drivon-muted)]">
+              Connect with automotive enthusiasts from every corner of the world.
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-20 h-20 bg-[var(--drivon-surface)] rounded-full flex items-center justify-center mb-6 mx-auto text-[var(--drivon-text)]">
+              <MessageCircle class="w-10 h-10" />
+            </div>
+            <h3 class="font-headline text-xl text-[var(--drivon-text)] uppercase tracking-wide mb-4">Expert Knowledge</h3>
+            <p class="text-[var(--drivon-muted)]">
+              Learn from experienced enthusiasts and share your own automotive knowledge.
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-20 h-20 bg-[var(--drivon-surface)] rounded-full flex items-center justify-center mb-6 mx-auto text-[var(--drivon-text)]">
+              <Calendar class="w-10 h-10" />
+            </div>
+            <h3 class="font-headline text-xl text-[var(--drivon-text)] uppercase tracking-wide mb-4">Exclusive Events</h3>
+            <p class="text-[var(--drivon-muted)]">
+              Get access to exclusive automotive events and community meetups.
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-20 h-20 bg-[var(--drivon-surface)] rounded-full flex items-center justify-center mb-6 mx-auto text-[var(--drivon-text)]">
+              <Heart class="w-10 h-10" />
+            </div>
+            <h3 class="font-headline text-xl text-[var(--drivon-text)] uppercase tracking-wide mb-4">Shared Passion</h3>
+            <p class="text-[var(--drivon-muted)]">
+              Connect with people who share your passion for automotive culture.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-[var(--drivon-text)] text-[var(--drivon-bg)]">
+      <div class="max-w-4xl mx-auto text-center px-4">
+        <h2 class="font-headline text-4xl uppercase tracking-tight mb-6">Join the Global Automotive Community</h2>
+        <p class="text-xl text-[var(--drivon-bg)]/90 mb-8">
+          Connect with passionate automotive enthusiasts worldwide. Share your love for cars, racing, and automotive culture.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href={`/${lang}/about`} class="inline-flex items-center justify-center bg-[var(--drivon-bg)] text-[var(--drivon-text)] px-8 py-3.5 text-[11px] font-medium tracking-[0.2em] uppercase hover:opacity-90 transition-opacity font-body">
+            Join Our Community
+          </a>
+          <a href={`/${lang}/contact`} class="inline-flex items-center justify-center border-2 border-[var(--drivon-bg)] text-[var(--drivon-bg)] px-8 py-3.5 text-[11px] font-medium tracking-[0.2em] uppercase hover:bg-[var(--drivon-bg)]/10 transition-colors font-body">
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+<style>
+  .font-headline { font-family: var(--font-headline); }
+  .font-body { font-family: var(--font-body); }
+</style>
+</Layoutc>

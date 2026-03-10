@@ -1,0 +1,102 @@
+---
+import Layoutc from '@layouts/Layoutc.astro';
+
+// Generate static paths for allowed languages from environment
+export async function getStaticPaths() {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  const languages = allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+  
+  return languages.map(lang => ({ params: { lang } }));
+}
+
+const { lang = 'en' } = Astro.params;
+const baseUrl = import.meta.env.DOMAINE || 'https://drivon.store';
+const storeName = import.meta.env.PUBLIC_SITE_NAME || 'Drivon';
+
+// Load multilingual data
+let data;
+try {
+  data = await import(`../data/reviews/reviews_${lang}.json`);
+} catch (error) {
+  // Fallback to English if language file doesn't exist
+  data = await import(`../data/reviews/reviews_en.json`);
+}
+
+const pageData = data.default;
+
+function formatRating(rating: number): string {
+  return rating.toFixed(1);
+}
+
+// SEO
+const seoTitle = `${pageData.title} | ${storeName}`;
+const seoDescription = pageData.description;
+---
+
+<Layoutc title={seoTitle} description={seoDescription} lang={lang}>
+  <div class="min-h-screen bg-[var(--drivon-bg)]">
+    <!-- Hero Section -->
+    <section class="relative py-20 px-4 bg-[var(--drivon-text)] text-[var(--drivon-bg)]">
+      <div class="max-w-7xl mx-auto">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">{pageData.hero.title}</h1>
+        <p class="text-xl text-[var(--drivon-bg)]/90 max-w-2xl">
+          {pageData.hero.subtitle}
+        </p>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="py-16 px-4">
+      <div class="max-w-7xl mx-auto">
+        {pageData.reviews.map(category => (
+          <div class="mb-16 last:mb-0">
+            <h2 class="text-2xl font-bold mb-8">{category.category}</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {category.items.map(item => (
+                <div class="bg-[var(--drivon-card)] rounded-lg border border-[var(--drivon-border)] shadow-md overflow-hidden">
+                  <div class="aspect-video relative">
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      class="absolute inset-0 w-full h-full object-cover"
+                    />
+                  </div>
+                  <div class="p-6">
+                    <div class="flex items-center justify-between mb-4">
+                      <h3 class="text-xl font-semibold">{item.name}</h3>
+                      <div class="flex items-center">
+                        <span class="text-2xl font-bold mr-2">{formatRating(item.rating)}</span>
+                        <span class="text-sm text-[var(--drivon-muted)]">({item.reviewCount} {pageData.reviewText})</span>
+                      </div>
+                    </div>
+                    <p class="text-[var(--drivon-muted)] mb-4">{item.summary}</p>
+                    <div class="mb-4">
+                      <h4 class="font-semibold mb-2">{pageData.prosLabel}:</h4>
+                      <ul class="list-disc list-inside text-[var(--drivon-muted)]">
+                        {item.pros.map(pro => (
+                          <li>{pro}</li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div class="mb-4">
+                      <h4 class="font-semibold mb-2">{pageData.consLabel}:</h4>
+                      <ul class="list-disc list-inside text-[var(--drivon-muted)]">
+                        {item.cons.map(con => (
+                          <li>{con}</li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div class="border-t pt-4 mt-4">
+                      <h4 class="font-semibold mb-2">{pageData.verdictLabel}:</h4>
+                      <p class="text-[var(--drivon-muted)]">{item.verdict}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  </div>
+</Layoutc>

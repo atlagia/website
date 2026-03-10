@@ -1,0 +1,283 @@
+---
+import { getLangFromUrl, useTranslations, isValidLanguage } from '@utils/i18n';
+
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+
+// Get the language parameter from the URL
+const { lang } = Astro.params;
+
+// Validate language and redirect to /en if invalid
+if (!isValidLanguage(lang)) {
+  return Astro.redirect('/en');
+}
+
+const translations = await useTranslations(lang);
+const jsonData = translations.default;
+
+const SITE_TITLE = `Racing Hoodies - ${jsonData.siteTitle}`;
+const SITE_DESCRIPTION = 'Premium racing hoodies featuring authentic automotive culture designs. From Formula 1 legends to street racing icons, celebrate racing heritage with our collection.';
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <BaseHead 
+      title={SITE_TITLE} 
+      description={SITE_DESCRIPTION}
+    />
+  </head>
+  <body>
+    <Header />
+    <main class="min-h-screen bg-[var(--drivon-bg)]">
+      <!-- Hero Section -->
+      <section class="relative py-20 bg-[var(--drivon-text)] text-[var(--drivon-bg)]">
+<div class="relative max-w-6xl mx-auto px-4 text-center">
+          <h1 class="text-5xl md:text-7xl font-black mb-6 uppercase tracking-tighter">
+            Racing Hoodies
+          </h1>
+          <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto font-medium">
+            Authentic racing-inspired hoodies featuring legendary brands, iconic car models, 
+            and the true spirit of motorsport culture. Premium comfort meets racing heritage.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4 mt-8">
+            <a href="#collections" class="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+              Shop Collections
+            </a>
+            <a href={`/${lang}/racing-culture`} class="bg-white/20 hover:bg-white/30 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+              Explore Racing Culture
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Collections -->
+      <section id="collections" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+          <h2 class="text-4xl font-bold text-center mb-12">Racing Hoodie Collections</h2>
+          
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Formula 1 Collection -->
+            <a href={`/${lang}/f1-hoodies`} class="group">
+              <div class="bg-[var(--drivon-card)] rounded-lg border border-[var(--drivon-border)] overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div class="h-64 bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center relative overflow-hidden">
+                  <div class="absolute inset-0 bg-black/20"></div>
+                  <div class="relative z-10 text-center">
+                    <h3 class="text-3xl font-bold text-white mb-2">Formula 1</h3>
+                    <p class="text-red-100">F1 Legends & Teams</p>
+                  </div>
+                </div>
+                <div class="p-6">
+                  <p class="text-[var(--drivon-muted)] mb-4">
+                    Celebrate Formula 1 legends and iconic teams with authentic F1-inspired hoodies 
+                    featuring championship moments and legendary drivers.
+                  </p>
+                  <div class="flex items-center text-[var(--drivon-text)] group-hover:text-[var(--drivon-accent-hover)] font-body text-[11px] font-medium tracking-[0.2em] uppercase">
+                    Shop F1 Hoodies
+                    <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <!-- Le Mans Collection -->
+            <a href={`/${lang}/le-mans-hoodies`} class="group">
+              <div class="bg-[var(--drivon-card)] rounded-lg border border-[var(--drivon-border)] overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div class="h-64 bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center relative overflow-hidden">
+                  <div class="absolute inset-0 bg-black/20"></div>
+                  <div class="relative z-10 text-center">
+                    <h3 class="text-3xl font-bold text-white mb-2">Le Mans</h3>
+                    <p class="text-[var(--drivon-bg)]/90">24 Hours of Le Mans</p>
+                  </div>
+                </div>
+                <div class="p-6">
+                  <p class="text-[var(--drivon-muted)] mb-4">
+                    Honor the ultimate test of endurance with Le Mans-inspired hoodies 
+                    featuring iconic cars, legendary victories, and racing heritage.
+                  </p>
+                  <div class="flex items-center text-[var(--drivon-text)] group-hover:text-[var(--drivon-accent-hover)] font-body text-[11px] font-medium tracking-[0.2em] uppercase">
+                    Shop Le Mans Hoodies
+                    <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <!-- Rally Collection -->
+            <a href={`/${lang}/rally-hoodies`} class="group">
+              <div class="bg-[var(--drivon-card)] rounded-lg border border-[var(--drivon-border)] overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div class="h-64 bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center relative overflow-hidden">
+                  <div class="absolute inset-0 bg-black/20"></div>
+                  <div class="relative z-10 text-center">
+                    <h3 class="text-3xl font-bold text-white mb-2">Rally</h3>
+                    <p class="text-green-100">WRC & Rally Legends</p>
+                  </div>
+                </div>
+                <div class="p-6">
+                  <p class="text-[var(--drivon-muted)] mb-4">
+                    Embrace the spirit of rally racing with hoodies celebrating WRC champions, 
+                    iconic rally cars, and the ultimate test of driver skill.
+                  </p>
+                  <div class="flex items-center text-[var(--drivon-text)] group-hover:text-[var(--drivon-accent-hover)] font-body text-[11px] font-medium tracking-[0.2em] uppercase">
+                    Shop Rally Hoodies
+                    <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <!-- Street Racing Collection -->
+            <a href={`/${lang}/street-racing-hoodies`} class="group">
+              <div class="bg-[var(--drivon-card)] rounded-lg border border-[var(--drivon-border)] overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div class="h-64 bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center relative overflow-hidden">
+                  <div class="absolute inset-0 bg-black/20"></div>
+                  <div class="relative z-10 text-center">
+                    <h3 class="text-3xl font-bold text-white mb-2">Street Racing</h3>
+                    <p class="text-purple-100">Underground Culture</p>
+                  </div>
+                </div>
+                <div class="p-6">
+                  <p class="text-[var(--drivon-muted)] mb-4">
+                    Represent the underground racing culture with hoodies featuring 
+                    street racing icons, underground legends, and authentic street culture.
+                  </p>
+                  <div class="flex items-center text-[var(--drivon-text)] group-hover:text-[var(--drivon-accent-hover)] font-body text-[11px] font-medium tracking-[0.2em] uppercase">
+                    Shop Street Racing Hoodies
+                    <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <!-- Drift Collection -->
+            <a href={`/${lang}/drift-hoodies`} class="group">
+              <div class="bg-[var(--drivon-card)] rounded-lg border border-[var(--drivon-border)] overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div class="h-64 bg-gradient-to-br from-yellow-500 to-orange-600 flex items-center justify-center relative overflow-hidden">
+                  <div class="absolute inset-0 bg-black/20"></div>
+                  <div class="relative z-10 text-center">
+                    <h3 class="text-3xl font-bold text-white mb-2">Drift</h3>
+                    <p class="text-orange-100">Drift Racing Culture</p>
+                  </div>
+                </div>
+                <div class="p-6">
+                  <p class="text-[var(--drivon-muted)] mb-4">
+                    Celebrate the art of controlled chaos with drift-inspired hoodies 
+                    featuring drift legends, iconic cars, and the style of drifting.
+                  </p>
+                  <div class="flex items-center text-[var(--drivon-text)] group-hover:text-[var(--drivon-accent-hover)] font-body text-[11px] font-medium tracking-[0.2em] uppercase">
+                    Shop Drift Hoodies
+                    <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <!-- Classic Racing Collection -->
+            <a href={`/${lang}/classic-racing-hoodies`} class="group">
+              <div class="bg-[var(--drivon-card)] rounded-lg border border-[var(--drivon-border)] overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div class="h-64 bg-gradient-to-br from-gray-600 to-gray-800 flex items-center justify-center relative overflow-hidden">
+                  <div class="absolute inset-0 bg-black/20"></div>
+                  <div class="relative z-10 text-center">
+                    <h3 class="text-3xl font-bold text-white mb-2">Classic Racing</h3>
+                    <p class="text-[var(--drivon-bg)]/90">Vintage Racing Heritage</p>
+                  </div>
+                </div>
+                <div class="p-6">
+                  <p class="text-[var(--drivon-muted)] mb-4">
+                    Honor the golden age of racing with classic racing hoodies 
+                    featuring vintage cars, historic moments, and racing heritage.
+                  </p>
+                  <div class="flex items-center text-[var(--drivon-text)] group-hover:text-[var(--drivon-accent-hover)] font-body text-[11px] font-medium tracking-[0.2em] uppercase">
+                    Shop Classic Racing Hoodies
+                    <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section class="py-16 bg-[var(--drivon-surface)]">
+        <div class="max-w-6xl mx-auto px-4">
+          <h2 class="text-4xl font-bold text-center mb-12">Why Choose Our Racing Hoodies?</h2>
+          
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="text-center">
+              <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold mb-4">Authentic Racing Designs</h3>
+              <p class="text-[var(--drivon-muted)]">
+                Every hoodie features authentic racing-inspired designs that celebrate 
+                the heritage, legends, and moments that define motorsport culture.
+              </p>
+            </div>
+
+            <div class="text-center">
+              <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold mb-4">Premium Quality</h3>
+              <p class="text-[var(--drivon-muted)]">
+                High-quality materials and construction ensure your racing hoodie 
+                provides comfort and durability for every adventure and race day.
+              </p>
+            </div>
+
+            <div class="text-center">
+              <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold mb-4">Racing Community</h3>
+              <p class="text-[var(--drivon-muted)]">
+                Join the global community of racing enthusiasts who share your passion 
+                for authentic motorsport culture and racing heritage.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action -->
+      <section class="py-16 bg-red-600 text-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+          <h2 class="font-headline text-4xl uppercase tracking-tight mb-6">Start Your Racing Hoodie Collection</h2>
+          <p class="text-xl mb-8">
+            Celebrate the rich heritage of racing culture with authentic hoodies 
+            that honor the legends, moments, and passion that define motorsport.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href={`/${lang}/f1-hoodies`} class="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-[var(--drivon-surface)] transition-colors">
+              Shop F1 Hoodies
+            </a>
+            <a href={`/${lang}/le-mans-hoodies`} class="bg-red-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-800 transition-colors">
+              Shop Le Mans Hoodies
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>

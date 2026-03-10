@@ -1,0 +1,208 @@
+---
+import { ArrowRight } from 'lucide-react';
+
+interface BackgroundVideo {
+  type: 'youtube';
+  videoId: string;
+  fallbackImage: string;
+}
+
+interface Props {
+  title?: string;
+  headlineLine1?: string;
+  headlineLine2?: string;
+  description?: string;
+  primaryCtaText?: string;
+  primaryCtaLink?: string;
+  secondaryCtaText?: string;
+  secondaryCtaLink?: string;
+  blogLink?: string;
+  blogLinkText?: string;
+  backgroundVideo?: BackgroundVideo;
+  seasonLabel?: string;
+  heroImage?: string;
+}
+
+const {
+  title = '',
+  headlineLine1,
+  headlineLine2,
+  description = '',
+  primaryCtaText = 'Shop Cosplay',
+  primaryCtaLink = '/collections',
+  secondaryCtaText = 'Explore Characters',
+  secondaryCtaLink = '/collections/characters',
+  blogLink = '/collections',
+  blogLinkText = 'Explore Collection',
+  seasonLabel,
+  heroImage,
+} = Astro.props;
+
+const line1 = headlineLine1 ?? title.split('\n')[0] ?? 'Become Your Favorite Character.';
+const line2 = headlineLine2 ?? title.split('\n')[1] ?? 'Explore cosplay costumes from anime, movies, and gaming universes.';
+const primaryText = primaryCtaText || blogLinkText;
+const primaryLink = primaryCtaLink || blogLink;
+const secondaryText = secondaryCtaText;
+const secondaryLink = secondaryCtaLink;
+
+// High-resolution hero: Shopify CDN supports &width=; request 2880px for quality
+const isShopify = heroImage?.includes('cdn.shopify.com');
+const baseUrl = (heroImage?.replace(/[?&]width=\d+/, '') ?? '').replace(/\?$/, '');
+const sep = baseUrl?.includes('?') ? '&' : '?';
+const heroImageSrc = heroImage
+  ? isShopify
+    ? `${baseUrl}${sep}width=2880`
+    : heroImage
+  : '';
+const heroImageSrcSet =
+  isShopify && heroImage
+    ? [
+        `${baseUrl}${sep}width=960 960w`,
+        `${baseUrl}${sep}width=1440 1440w`,
+        `${baseUrl}${sep}width=1920 1920w`,
+        `${baseUrl}${sep}width=2880 2880w`,
+      ].join(', ')
+    : undefined;
+---
+
+<section
+  class="cw-hero relative min-h-[100vh] min-h-[100dvh] flex items-end justify-start overflow-hidden bg-[var(--cw-bg)] grain-overlay"
+  itemScope
+  itemType="https://schema.org/WebPageElement"
+>
+  {heroImage && (
+    <div class="hero-bg-image absolute inset-0 z-0" aria-hidden="true">
+      <img
+        src={heroImageSrc || heroImage}
+        srcset={heroImageSrcSet}
+        sizes="100vw"
+        alt=""
+        class="hero-img w-full h-full object-cover"
+        fetchpriority="high"
+        loading="eager"
+        decoding="async"
+      />
+      <div class="hero-overlay absolute inset-0" aria-hidden="true" />
+    </div>
+  )}
+  {heroImage && <div class="hero-gradient" aria-hidden="true"></div>}
+  {heroImage && <div class="hero-text-backing" aria-hidden="true" />}
+
+  <div class={`relative z-20 w-full max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 pb-32 pt-36 sm:pt-40 lg:pb-44 lg:pt-48 cw-hero-content ${heroImage ? 'hero-has-bg' : ''}`}>
+    {seasonLabel && (
+      <p class="font-body text-[10px] tracking-[0.4em] uppercase text-[var(--cw-text)] mb-6 hero-label inline-block px-3 py-1.5 rounded-sm bg-[var(--cw-surface)]/95 backdrop-blur-sm border border-[var(--cw-border)]/60">
+        {seasonLabel}
+      </p>
+    )}
+    <h1
+      class="font-display text-5xl sm:text-6xl md:text-7xl lg:text-[7rem] xl:text-[8rem] 2xl:text-[9rem] uppercase leading-[0.9] tracking-tight max-w-full md:max-w-[50vw] mb-8 hero-title"
+      itemProp="headline"
+      role="heading"
+      aria-level="1"
+    >
+      <span class="block">{line1}</span>
+      {line2 && <span class="block mt-2 text-[var(--cw-accent)]">{line2}</span>}
+    </h1>
+    <p class="text-base md:text-lg lg:text-xl text-[var(--cw-muted)] max-w-xl mb-12 font-body tracking-wide leading-relaxed hero-desc">
+      {description}
+    </p>
+    <div class="flex flex-wrap gap-4 sm:gap-5 hero-ctas">
+      <a
+        href={primaryLink.startsWith('/') ? `/${Astro.url.pathname.split('/')[1] || 'en'}${primaryLink}` : primaryLink}
+        class="group inline-flex items-center gap-3 bg-[var(--cw-text)] text-[var(--cw-bg)] px-8 sm:px-10 py-3.5 sm:py-4 text-[11px] font-medium tracking-[0.3em] uppercase hover:bg-[var(--cw-accent)] hover:text-white transition-all duration-300 hover:shadow-xl"
+      >
+        <span>{primaryText}</span>
+        <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+      </a>
+      {secondaryText && secondaryLink && (
+        <a
+          href={secondaryLink.startsWith('/') ? `/${Astro.url.pathname.split('/')[1] || 'en'}${secondaryLink}` : secondaryLink}
+          class="group inline-flex items-center gap-3 border-2 border-[var(--cw-text)] text-[var(--cw-text)] bg-[var(--cw-surface)]/90 backdrop-blur-sm px-8 sm:px-10 py-3.5 sm:py-4 text-[11px] font-medium tracking-[0.3em] uppercase hover:bg-[var(--cw-text)] hover:text-[var(--cw-bg)] transition-all duration-300"
+        >
+          <span>{secondaryText}</span>
+          <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+        </a>
+      )}
+    </div>
+  </div>
+
+  <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-3 scroll-indicator">
+    <span class="text-[10px] tracking-[0.35em] uppercase text-[var(--cw-text)]/70 font-body">Scroll</span>
+    <div class="w-px h-14 bg-[var(--cw-text)]/40 rounded-full"></div>
+  </div>
+</section>
+
+<style>
+  .font-display { font-family: var(--font-display); }
+  .font-headline { font-family: var(--font-headline); }
+  .font-body { font-family: var(--font-body); }
+
+  /* Overlay: light on left, fade out by middle, right clear for model */
+  .hero-overlay {
+    background: linear-gradient(
+      to right,
+      rgba(252, 252, 252, 0.92) 0%,
+      rgba(250, 250, 250, 0.75) 35%,
+      rgba(250, 250, 250, 0.35) 52%,
+      transparent 65%
+    );
+    pointer-events: none;
+  }
+
+  /* Extra lighting: left only, ends by center */
+  .hero-gradient {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.25) 0%,
+      rgba(255, 255, 255, 0.08) 40%,
+      transparent 55%
+    );
+    pointer-events: none;
+  }
+
+  /* Text backing: left to center only so content is readable, model on right visible */
+  .hero-text-backing {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 3;
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.88) 0%,
+      rgba(250, 250, 250, 0.6) 38%,
+      rgba(250, 250, 250, 0.2) 50%,
+      transparent 58%
+    );
+    pointer-events: none;
+  }
+
+  .hero-title {
+    letter-spacing: -0.03em;
+    color: var(--cw-text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .hero-has-bg .hero-title {
+    color: var(--cw-text);
+    text-shadow: 0 1px 0 rgb(255 255 255 / 0.9), 0 2px 8px rgb(0 0 0 / 0.06);
+  }
+  .hero-has-bg .hero-desc {
+    color: var(--cw-muted);
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
+    font-weight: 450;
+  }
+  .hero-has-bg .hero-label {
+    color: var(--cw-text);
+    text-shadow: none;
+  }
+
+  .hero-bg-image .hero-img {
+    transform: scale(1.02);
+    backface-visibility: hidden;
+  }
+</style>

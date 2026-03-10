@@ -1,0 +1,106 @@
+{
+  "siteTitle": "CosplayWorld — Become Your Favorite Character",
+  "siteDescription": "Premium cosplay costumes and accessories from anime, movies, and gaming.",
+  "sections": [
+    {
+      "type": "welcomeSection",
+      "headlineLine1": "Become Your Favorite Character.",
+      "headlineLine2": "Explore cosplay costumes from anime, movies, and gaming universes.",
+      "description": "Premium costumes and accessories for every character. Shop collections, explore characters, and join the community.",
+      "primaryCtaText": "Shop Cosplay",
+      "primaryCtaLink": "/collections",
+      "secondaryCtaText": "Explore Characters",
+      "secondaryCtaLink": "/collections/characters"
+    },
+    {
+      "type": "statsBar",
+      "stats": [
+        { "value": "Anime", "label": "Cosplay" },
+        { "value": "Movies", "label": "Costumes" },
+        { "value": "Gaming", "label": "Characters" },
+        { "value": "Fantasy", "label": "Universe" }
+      ]
+    },
+    {
+      "type": "categoryGrid",
+      "title": "Popular Cosplay Categories",
+      "description": "Find your next costume across anime, movies, superheroes, fantasy, gaming, and couple cosplay.",
+      "categories": [
+        { "id": "anime", "name": "Anime Cosplay", "description": "Iconic anime character costumes and accessories.", "image": "https://images.unsplash.com/photo-1531259683007-906a3792e424?w=800&q=80", "link": "/collections/anime-cosplay" },
+        { "id": "movie", "name": "Movie Cosplay", "description": "Blockbuster and classic film character outfits.", "image": "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800&q=80", "link": "/collections/movie-cosplay" },
+        { "id": "superhero", "name": "Superhero Costumes", "description": "Comic and screen superhero looks.", "image": "https://images.unsplash.com/photo-1535016120720-40c646be5580?w=800&q=80", "link": "/collections/superhero-costumes" },
+        { "id": "fantasy", "name": "Fantasy Characters", "description": "Dragons, elves, and fantasy realm cosplay.", "image": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&q=80", "link": "/collections/fantasy-characters" },
+        { "id": "gaming", "name": "Gaming Cosplay", "description": "Video game character costumes and gear.", "image": "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&q=80", "link": "/collections/gaming-cosplay" },
+        { "id": "couple", "name": "Couple Cosplay", "description": "Matching and duo cosplay sets.", "image": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?w=800&q=80", "link": "/collections/couple-cosplay" }
+      ]
+    },
+    {
+      "type": "bestSellers",
+      "title": "Trending Cosplays",
+      "description": "Our most popular cosplay costumes and accessories.",
+      "viewAllLink": "/collections",
+      "collectionHandle": "all"
+    },
+    {
+      "type": "featuredHighlight",
+      "title": "Featured Characters",
+      "description": "Iconic characters from anime, movies, and games.",
+      "ctaText": "View All",
+      "ctaLink": "/collections/characters"
+    },
+    {
+      "type": "productShowcase",
+      "title": "New Arrivals",
+      "description": "Latest cosplay costumes and accessories.",
+      "viewAllLink": "/collections"
+    },
+    {
+      "type": "bannerSection",
+      "headline": "Cosplay is more than a costume — it's a community.",
+      "description": "Join the CosplayWorld universe.",
+      "ctaText": "Join Community",
+      "ctaLink": "/blog"
+    },
+    {
+      "type": "trustBadges",
+      "title": "Why Choose CosplayWorld",
+      "badges": [
+        { "id": "quality", "icon": "✨", "title": "High Quality Costumes", "description": "Premium materials and craftsmanship" },
+        { "id": "accurate", "icon": "🎭", "title": "Accurate Character Designs", "description": "Screen and comic-accurate details" },
+        { "id": "comfort", "icon": "👕", "title": "Comfortable Materials", "description": "Wearable for long convention days" },
+        { "id": "shipping", "icon": "🌍", "title": "Worldwide Shipping", "description": "We ship to most countries" },
+        { "id": "secure", "icon": "🔒", "title": "Secure Payments", "description": "SSL encrypted checkout" }
+      ],
+      "paymentMethods": [
+        { "id": "visa", "name": "Visa", "icon": "Visa" },
+        { "id": "mc", "name": "Mastercard", "icon": "MC" },
+        { "id": "amex", "name": "Amex", "icon": "Amex" },
+        { "id": "paypal", "name": "PayPal", "icon": "PayPal" }
+      ],
+      "guaranteeText": "30-day money-back guarantee on all orders"
+    },
+    {
+      "type": "featuredPosts",
+      "title": "Cosplay Inspiration Blog",
+      "description": "Guides, tutorials, and convention tips.",
+      "exploreMoreLink": "/blog",
+      "exploreMoreText": "Read more"
+    },
+    {
+      "type": "testimonialSlider",
+      "title": "Cosplay Community Says",
+      "testimonials": [
+        { "id": "1", "author": "Alex K.", "role": "Anime Con Regular", "content": "The quality is incredible. Felt like the character from the first try-on.", "avatar": "AK", "initials": "AK" },
+        { "id": "2", "author": "Sam T.", "role": "Gaming Cosplayer", "content": "Best gaming cosplay gear I've found. Accurate and comfortable for long events.", "avatar": "ST", "initials": "ST" },
+        { "id": "3", "author": "Jordan M.", "role": "Convention Goer", "content": "CosplayWorld made my group cosplay dreams come true. Fast shipping and great support.", "avatar": "JM", "initials": "JM" }
+      ]
+    },
+    {
+      "type": "emailSignup",
+      "title": "Join the CosplayWorld Community",
+      "subtext": "Get exclusive cosplay drops and convention updates.",
+      "formAction": "/api/signup",
+      "submitText": "Join"
+    }
+  ]
+}

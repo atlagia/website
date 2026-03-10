@@ -1,0 +1,74 @@
+{
+  "title": "Cookie Policy - How We Use Cookies & Your Privacy",
+  "description": "Learn about our cookie policy and how we use cookies to enhance your experience on our website. Understand your privacy rights and how to manage cookie preferences.",
+  "hero": {
+    "title": "Cookie Policy",
+    "subtitle": "Understanding how we use cookies to enhance your experience and protect your privacy",
+    "cta1": "Manage Cookies",
+    "cta2": "Privacy Policy"
+  },
+  "sections": {
+    "introduction": {
+      "title": "What Are Cookies",
+      "subtitle": "Understanding cookies and their role in enhancing your browsing experience",
+      "description": "Cookies are small text files that are stored on your device when you visit our website. They help us provide you with a better browsing experience by remembering your preferences, analyzing how you use our site, and personalizing content. We use cookies responsibly and in accordance with privacy regulations to ensure your data is protected while providing you with the best possible experience on our racing gear and automotive culture website."
+    },
+    "types": {
+      "title": "Types of Cookies We Use",
+      "subtitle": "Different categories of cookies and their specific purposes"
+    },
+    "management": {
+      "title": "Managing Your Cookie Preferences",
+      "subtitle": "How to control and manage cookies on our website"
+    },
+    "privacy": {
+      "title": "Your Privacy Rights",
+      "subtitle": "Understanding your rights regarding cookies and data protection"
+    }
+  },
+  "features": [
+    {
+      "title": "Essential Cookies",
+      "description": "These cookies are necessary for the website to function properly. They enable basic functions like page navigation, access to secure areas, and remembering your shopping cart. The website cannot function properly without these cookies."
+    },
+    {
+      "title": "Analytics Cookies",
+      "description": "These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously. This helps us improve our website performance and user experience for racing enthusiasts."
+    },
+    {
+      "title": "Marketing Cookies",
+      "description": "These cookies are used to track visitors across websites to display relevant and engaging advertisements for racing gear and automotive culture products. They help us show you content that matches your interests."
+    }
+  ],
+  "cookieTypes": [
+    {
+      "name": "Essential Cookies",
+      "description": "These cookies are necessary for the website to function properly. They enable basic functions like page navigation, access to secure areas, and remembering your shopping cart. The website cannot function properly without these cookies.",
+      "duration": "Session or up to 1 year",
+      "required": true
+    },
+    {
+      "name": "Analytics Cookies",
+      "description": "These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously. This helps us improve our website performance and user experience for racing enthusiasts.",
+      "duration": "Up to 2 years",
+      "required": false
+    },
+    {
+      "name": "Marketing Cookies",
+      "description": "These cookies are used to track visitors across websites to display relevant and engaging advertisements for racing gear and automotive culture products. They help us show you content that matches your interests.",
+      "duration": "Up to 1 year",
+      "required": false
+    }
+  ],
+  "cta": {
+    "title": "Control Your Cookie Preferences",
+    "subtitle": "You have the right to control which cookies are used on our website. Use our cookie management tool to customize your preferences and ensure your privacy is protected while still enjoying the best possible experience.",
+    "button1": "Manage Cookies",
+    "button2": "Accept All"
+  },
+  "additionalContent": {
+    "paragraph1": "Cookies are small text files that are stored on your device when you visit our website. They help us provide you with a better browsing experience by remembering your preferences, analyzing how you use our site, and personalizing content. We use cookies responsibly and in accordance with privacy regulations to ensure your data is protected while providing you with the best possible experience on our racing gear and automotive culture website.",
+    "paragraph2": "We use different types of cookies for various purposes, including essential functionality, analytics, and marketing. Each type serves a specific purpose in enhancing your experience while respecting your privacy. You have full control over which cookies you accept and can change your preferences at any time.",
+    "paragraph3": "Your privacy is important to us, and we are committed to being transparent about how we use cookies and protect your data. We comply with all applicable privacy regulations and provide you with clear information about your rights and options regarding cookie management."
+  }
+}

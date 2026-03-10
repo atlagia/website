@@ -1,0 +1,17 @@
+---
+description: When the user wants website creation run by subagents, use the orchestrator skill and delegate each phase to specialist subagents
+globs: src/websites/**/*
+alwaysApply: false
+---
+
+When the user asks to **create a website with subagents**, or to run the create-website process **orchestrated** / **with specialist subagents**:
+
+1. Read and follow `.cursor/skills/create-website-orchestrator/SKILL.md`
+2. Run Phase 0 (parse brief, AIDA/rhythm, niche reference, build context payload) in this agent
+3. Delegate Phases 1–8 to subagents in order using the Task tool:
+   - `create-website-scaffold` → `create-website-theme` → `create-website-components` → `create-website-audit` → `create-website-styles` → `create-website-verify`
+4. Pass the context payload (and previous subagent summary) in each task prompt
+5. Wait for each subagent to finish before starting the next
+6. After create-website-verify passes, suggest running the full website-audit skill
+
+Do not run Phases 1–8 yourself; the specialist subagents handle them.

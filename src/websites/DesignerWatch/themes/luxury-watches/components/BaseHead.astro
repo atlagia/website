@@ -186,6 +186,27 @@ const schema = generateSchema(Astro.props, Astro.url.pathname);
     -webkit-overflow-scrolling: touch;
   }
   #product-wrapper .overflow-x-auto.scrollbar-hide::-webkit-scrollbar { display: none; }
+
+  /* Product page AddToCart dark theme (light text, visible quantity + Buy Now) */
+  .add-to-cart-theme-dark label { color: var(--dw-muted); }
+  .add-to-cart-theme-dark .text-neutral-500 { color: var(--dw-muted) !important; }
+  .add-to-cart-theme-dark .text-neutral-600 { color: var(--dw-muted) !important; }
+  .add-to-cart-theme-dark .text-neutral-900 { color: var(--dw-text) !important; }
+  .add-to-cart-theme-dark .text-neutral-800 { color: var(--dw-text) !important; }
+  .add-to-cart-theme-dark .bg-neutral-50 { background-color: var(--dw-surface) !important; border-color: rgba(255,255,255,0.18) !important; }
+  .add-to-cart-theme-dark .border-neutral-200 { border-color: var(--dw-border) !important; }
+  .add-to-cart-theme-dark .border-neutral-300 { border-color: var(--dw-border) !important; }
+  .add-to-cart-theme-dark .hover\:bg-neutral-100:hover { background-color: var(--dw-card) !important; }
+  .add-to-cart-theme-dark .hover\:text-neutral-900:hover { color: var(--dw-text) !important; }
+  .add-to-cart-theme-dark .ring-neutral-900 { --tw-ring-color: var(--dw-text) !important; }
+  .add-to-cart-theme-dark .ring-neutral-300 { --tw-ring-color: var(--dw-border) !important; }
+  .add-to-cart-theme-dark .bg-gray-900 { background-color: var(--dw-accent) !important; color: var(--dw-bg) !important; }
+  .add-to-cart-theme-dark .hover\:bg-gray-800:hover { background-color: var(--dw-accent) !important; filter: brightness(1.1); }
+  .add-to-cart-theme-dark .bg-white { background-color: var(--dw-surface) !important; color: var(--dw-text) !important; border: 2px solid rgba(255,255,255,0.25) !important; }
+  .add-to-cart-theme-dark .hover\:bg-neutral-50:hover { background-color: var(--dw-card) !important; }
+  .add-to-cart-theme-dark .fixed.bottom-0 { background-color: var(--dw-surface) !important; border-color: var(--dw-border) !important; }
+  .add-to-cart-theme-dark .fixed.bottom-0 button { color: var(--dw-text); border-color: var(--dw-border); }
+  .add-to-cart-theme-dark .disabled\:bg-neutral-300:disabled { background-color: var(--dw-muted) !important; }
 </style>
 
 {import.meta.env.PUBLIC_GA_MEASUREMENT_ID && <GoogleAnalytics />}

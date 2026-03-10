@@ -1,0 +1,63 @@
+{
+  "title": "Racing Culture",
+  "description": "Discover our collection of racing culture products and gear.",
+  "hero": {
+    "title": "Racing Culture",
+    "subtitle": "Explore our premium collection of racing culture products designed for racing enthusiasts.",
+    "cta1": "Shop Collection",
+    "cta2": "Learn More"
+  },
+  "sections": {
+    "features": {
+      "title": "Why Choose Us",
+      "subtitle": "Premium quality and professional service"
+    },
+    "collection": {
+      "title": "Our Collection",
+      "subtitle": "Carefully curated products for racing enthusiasts"
+    }
+  },
+  "features": [
+    {
+      "title": "Premium Quality",
+      "description": "Only the highest quality materials and construction"
+    },
+    {
+      "title": "Professional Design",
+      "description": "Designed by racing professionals for racing professionals"
+    },
+    {
+      "title": "Fast Shipping",
+      "description": "Quick delivery to get you racing faster"
+    }
+  ],
+  "collections": [
+    {
+      "title": "Featured Product",
+      "description": "Our most popular racing culture product",
+      "price": "$99.99",
+      "link": "/collections/featured",
+      "linkText": "Shop Racing Culture"
+    },
+    {
+      "title": "New Arrivals",
+      "description": "Latest additions to our racing culture collection",
+      "price": "$79.99",
+      "link": "/collections/new",
+      "linkText": "View All Racing Culture"
+    },
+    {
+      "title": "Best Sellers",
+      "description": "Customer favorites in racing culture",
+      "price": "$89.99",
+      "link": "/collections/bestsellers",
+      "linkText": "Shop Racing Culture"
+    }
+  ],
+  "cta": {
+    "title": "Ready to Race?",
+    "subtitle": "Get your racing culture gear today and join the racing community.",
+    "button1": "Shop Collection",
+    "button2": "Contact Us"
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "wrapper": "sticky top-0 z-50 bg-[var(--cw-bg)] border-b border-[var(--cw-border)] shadow-sm",
+  "container": "max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-10",
+  "nav": {
+    "wrapper": "flex items-center justify-between h-14 sm:h-16",
+    "brand": "font-headline text-[1.05rem] sm:text-[1.15rem] font-bold tracking-tight uppercase text-[var(--cw-text)] hover:text-[var(--cw-muted)] transition-colors",
+    "menu": {
+      "desktop": "hidden lg:flex lg:items-center lg:space-x-6 xl:space-x-8",
+      "item": "px-2 py-2 text-[11px] font-body font-medium uppercase tracking-[0.2em] text-[var(--cw-muted)] hover:text-[var(--cw-text)] transition-colors"
+    }
+  },
+  "logo": {
+    "wrapper": "flex-1 lg:flex-none text-center lg:text-left"
+  },
+  "mobileButton": {
+    "wrapper": "flex lg:hidden",
+    "button": "p-2 text-[var(--cw-muted)] hover:text-[var(--cw-text)] transition-colors",
+    "iconClose": "text-2xl text-[var(--cw-text)]",
+    "iconOpen": "w-6 h-6"
+  },
+  "actions": {
+    "wrapper": "flex items-center space-x-3 sm:space-x-4",
+    "search": {
+      "icon": "text-[var(--cw-muted)] hover:text-[var(--cw-text)]",
+      "button": "p-2 hover:bg-[var(--cw-surface)] rounded-full transition-colors text-[var(--cw-text)]",
+      "form": "absolute top-full right-0 mt-2 w-72 bg-[var(--cw-surface)] rounded-lg shadow-lg border border-[var(--cw-border)] p-4 z-50",
+      "input": "w-full px-4 py-2 bg-[var(--cw-bg)] border border-[var(--cw-border)] rounded-md text-[var(--cw-text)] placeholder-[var(--cw-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--cw-accent)]"
+    },
+    "currency": {
+      "wrapper": "relative",
+      "button": "flex items-center space-x-1 px-2 py-2 text-[11px] font-body font-medium tracking-[0.16em] uppercase text-[var(--cw-muted)] hover:text-[var(--cw-text)] transition-colors",
+      "text": "font-body font-medium",
+      "dropdown": "absolute right-0 mt-2 w-36 bg-[var(--cw-surface)] border border-[var(--cw-border)] rounded-sm shadow-lg z-50",
+      "option": "block w-full text-left px-3 py-2 text-[11px] font-body uppercase tracking-[0.12em] text-[var(--cw-muted)] transition-colors",
+      "optionActive": "bg-[var(--cw-surface)] text-[var(--cw-text)]",
+      "optionHover": "hover:bg-[var(--cw-surface)] hover:text-[var(--cw-text)]"
+    },
+    "language": {
+      "wrapper": "relative",
+      "button": "flex items-center space-x-1 px-2 py-2 text-[11px] font-body font-medium tracking-[0.16em] uppercase text-[var(--cw-muted)] hover:text-[var(--cw-text)] transition-colors",
+      "text": "hidden sm:block text-[var(--cw-text)]",
+      "dropdown": "absolute right-0 mt-2 w-44 bg-[var(--cw-surface)] border border-[var(--cw-border)] rounded-sm shadow-lg z-50",
+      "option": "block w-full text-left px-3 py-2 text-[11px] font-body uppercase tracking-[0.12em] text-[var(--cw-muted)] transition-colors",
+      "optionActive": "bg-[var(--cw-surface)] text-[var(--cw-text)]",
+      "optionHover": "hover:bg-[var(--cw-surface)] hover:text-[var(--cw-text)]"
+    },
+    "cart": {
+      "button": "relative p-2 text-[var(--cw-muted)] hover:text-[var(--cw-text)] transition-colors",
+      "count": "absolute -top-1 -right-1 bg-[var(--cw-text)] text-[var(--cw-bg)] text-[10px] rounded-full h-5 w-5 flex items-center justify-center font-body font-medium"
+    }
+  },
+  "mobile": {
+    "menu": {
+      "wrapper": "lg:hidden fixed left-0 right-0 bg-[var(--cw-surface)] border-b border-[var(--cw-border)] shadow-lg transition-all duration-300 ease-in-out",
+      "nav": "px-4 py-2",
+      "item": "block py-3 px-4 text-[11px] font-body uppercase tracking-[0.16em] text-[var(--cw-muted)] hover:bg-[var(--cw-surface)] hover:text-[var(--cw-text)] border-b border-[var(--cw-border)] last:border-0 transition-colors"
+    },
+    "backdrop": "lg:hidden fixed inset-0 bg-black bg-opacity-50 z-[98]"
+  },
+  "cart": {
+    "sidebar": "fixed inset-y-0 right-0 w-full max-w-md bg-[var(--cw-surface)] border-l border-[var(--cw-border)] shadow-xl z-[100] transform transition-transform duration-300 ease-in-out",
+    "container": "h-full flex flex-col",
+    "header": "p-4 border-b border-[var(--cw-border)]",
+    "headerContent": "flex justify-between items-center",
+    "iconWrapper": "w-8 h-8 bg-[var(--cw-text)] rounded-lg flex items-center justify-center",
+    "icon": "w-5 h-5 text-[var(--cw-bg)]",
+    "title": "text-lg font-headline font-semibold uppercase tracking-wide text-[var(--cw-text)]",
+    "closeButton": "p-2 hover:bg-[var(--cw-surface)] rounded-full text-[var(--cw-muted)] hover:text-[var(--cw-text)]",
+    "closeIcon": "w-5 h-5 text-[var(--cw-muted)] hover:text-[var(--cw-text)] transition-colors",
+    "overlay": "fixed inset-0 bg-black bg-opacity-50 z-[90]",
+    "emptyWrap": "flex-1 flex flex-col items-center justify-center p-8 text-center",
+    "emptyIconWrap": "w-20 h-20 bg-[var(--cw-surface)] rounded-full flex items-center justify-center mb-4 border border-[var(--cw-border)]",
+    "emptyIcon": "w-10 h-10 text-[var(--cw-muted)]",
+    "emptyTitle": "font-headline text-lg font-semibold text-[var(--cw-text)] mb-2 uppercase tracking-wide",
+    "emptyText": "font-body text-sm text-[var(--cw-muted)]",
+    "itemsWrap": "flex-1 overflow-y-auto p-6 space-y-4",
+    "itemCard": "group bg-[var(--cw-bg)] rounded-xl border border-[var(--cw-border)] p-4 hover:border-[var(--cw-text)]/30 transition-all duration-200",
+    "itemImage": "w-16 h-16 object-cover rounded-lg border border-[var(--cw-border)]",
+    "qtyBadge": "absolute -top-1 -right-1 w-5 h-5 bg-[var(--cw-text)] text-[var(--cw-bg)] rounded-full flex items-center justify-center text-[10px] font-body font-bold",
+    "itemTitle": "font-body font-semibold text-[var(--cw-text)] text-sm leading-tight mb-1 line-clamp-2",
+    "itemPrice": "font-body text-lg font-bold text-[var(--cw-text)]",
+    "itemTotal": "font-body text-xs text-[var(--cw-muted)]",
+    "qtyWrap": "flex items-center gap-1 bg-[var(--cw-surface)] rounded-lg p-1 border border-[var(--cw-border)]",
+    "qtyBtn": "w-7 h-7 flex items-center justify-center hover:bg-[var(--cw-accent-hover)] rounded-md disabled:opacity-50 transition-colors text-[var(--cw-text)]",
+    "qtyText": "w-8 text-center text-sm font-medium text-[var(--cw-text)]",
+    "qtyIcon": "text-[var(--cw-muted)]",
+    "removeBtn": "p-1.5 text-red-400 hover:text-red-600 hover:bg-red-50/50 rounded-md disabled:opacity-50 transition-all duration-200",
+    "footerWrap": "border-t border-[var(--cw-border)] p-6 bg-[var(--cw-bg)]",
+    "totalLabel": "font-headline text-lg font-semibold text-[var(--cw-text)] uppercase tracking-wide",
+    "totalCount": "font-body text-xs text-[var(--cw-muted)]",
+    "totalAmount": "font-headline text-2xl font-bold text-[var(--cw-text)]",
+    "checkoutBtn": "w-full bg-[var(--cw-text)] text-[var(--cw-bg)] px-6 py-4 rounded-xl hover:opacity-90 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3 font-headline font-semibold text-sm uppercase tracking-wide",
+    "trustWrap": "flex items-center justify-center gap-4 mt-4 pt-4 border-t border-[var(--cw-border)]",
+    "trustItem": "flex items-center gap-1 font-body text-[11px] uppercase tracking-[0.12em] text-[var(--cw-muted)]"
+  },
+  "svg": {
+    "hamburger": "w-6 h-6",
+    "hamburgerPath": "M4 6h16M4 12h16M4 18h16"
+  }
+}

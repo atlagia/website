@@ -1,0 +1,38 @@
+---
+interface Feature {
+  id: string;
+  title: string;
+  description: string;
+}
+
+interface Props {
+  title: string;
+  features: Feature[];
+}
+
+const { title, features } = Astro.props;
+---
+
+<section class="drivon-features bg-[var(--drivon-surface)] py-24 lg:py-32">
+  <div class="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12">
+    <p class="font-display text-[11px] tracking-[0.35em] uppercase text-[var(--drivon-accent)] mb-4">Benefits</p>
+    <h2 class="font-display text-3xl md:text-4xl font-bold text-[var(--drivon-text)] uppercase tracking-tight mb-16">{title}</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
+      {features.map((feature, i) => (
+        <div class="border-t-2 border-[var(--drivon-accent)]/30 pt-8 group hover:border-[var(--drivon-accent)]/60 transition-colors">
+          <span class="font-display text-4xl font-bold text-[var(--drivon-accent)]/30 mb-4 block">{String(i + 1).padStart(2, '0')}</span>
+          <h3 class="font-display text-sm font-semibold text-[var(--drivon-text)] uppercase tracking-wider mb-3">
+            {feature.title}
+          </h3>
+          <p class="text-sm text-[var(--drivon-text)]/70 font-body leading-relaxed">{feature.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .font-display { font-family: var(--font-display); }
+  .font-body { font-family: var(--font-body); }
+</style>

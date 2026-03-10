@@ -1,0 +1,35 @@
+---
+interface Props {
+  title: string;
+  items: string[];
+  lang?: string;
+}
+
+const { title, items, lang = 'en' } = Astro.props;
+---
+
+<section class="f1-car-brands border-y border-[var(--drivon-border)] bg-[var(--drivon-bg)] py-12 lg:py-14" aria-label={title}>
+  <div class="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12">
+    <p class="text-center text-[10px] tracking-[0.4em] uppercase text-[var(--drivon-muted)] mb-10 font-body">
+      {title}
+    </p>
+    <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-6 sm:gap-x-12 lg:gap-x-16">
+      {items.map((name) => {
+        const slug = name.toLowerCase().replace(/\s+/g, '-');
+        return (
+          <a
+            href={`/${lang}/collections/${slug}`}
+            class="font-headline text-lg sm:text-xl text-[var(--drivon-text)]/60 hover:text-[var(--drivon-text)] transition-colors tracking-wide"
+          >
+            {name}
+          </a>
+        );
+      })}
+    </div>
+  </div>
+</section>
+
+<style>
+  .font-headline { font-family: var(--font-headline); }
+  .font-body { font-family: var(--font-body); }
+</style>

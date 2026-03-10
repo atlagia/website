@@ -1,0 +1,40 @@
+---
+interface Props {
+  headline: string;
+  body: string;
+  image: string;
+  imageAlt?: string;
+}
+
+const { headline, body, image, imageAlt = 'Editorial' } = Astro.props;
+---
+
+<section class="f1-manifesto relative py-24 lg:py-36 bg-[var(--drivon-bg)] overflow-hidden">
+  <div class="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+      <div class="lg:col-span-6">
+        <h2 class="font-headline text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-[var(--drivon-text)] uppercase leading-[0.92] tracking-wide mb-8">
+          {headline}
+        </h2>
+        <p class="text-[var(--drivon-text)]/75 font-body text-lg md:text-xl leading-relaxed max-w-lg tracking-wide">
+          {body}
+        </p>
+      </div>
+      <div class="lg:col-span-6 relative">
+        <div class="aspect-[4/5] relative overflow-hidden">
+          <img
+            src={image}
+            alt={imageAlt}
+            class="w-full h-full object-cover grayscale contrast-110"
+          />
+          <div class="absolute inset-0 bg-[var(--drivon-bg)]/20 pointer-events-none"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .font-headline { font-family: var(--font-headline); }
+  .font-body { font-family: var(--font-body); }
+</style>

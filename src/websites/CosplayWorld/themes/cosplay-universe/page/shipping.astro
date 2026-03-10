@@ -1,0 +1,267 @@
+---
+import { getLangFromUrl, useTranslations, isValidLanguage } from '@utils/i18n';
+
+// Get the language parameter from the URL
+const { lang } = Astro.params;
+
+// Validate language and redirect to /en if invalid
+if (!isValidLanguage(lang)) {
+  return Astro.redirect('/en');
+}
+
+const translations = await useTranslations(lang);
+const jsonData = translations.default;
+
+// Get site title and description from language-specific data
+const SITE_TITLE = `Shipping Information - ${jsonData.siteTitle || 'Drivon'}`;
+const SITE_DESCRIPTION = 'Shipping information, delivery times, and tracking for Drivon driver merchandise. Fast and secure worldwide delivery.';
+
+// Dynamic imports based on environment
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+
+// Generate static paths for all supported languages
+export async function getStaticPaths() {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  const languages = allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+  
+  return languages.map(lang => ({ params: { lang } }));
+}
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <BaseHead 
+      title={SITE_TITLE} 
+      description={SITE_DESCRIPTION} 
+      isHomePage={false}
+    />
+  </head>
+  <body>
+    <Header />
+    <main class="min-h-screen bg-[var(--drivon-bg)]">
+      <div class="max-w-6xl mx-auto px-4 py-16">
+        <!-- Header Section -->
+        <div class="text-center mb-16">
+          <h1 class="text-4xl md:text-5xl font-bold text-[var(--drivon-text)] mb-6">Shipping Information</h1>
+          <p class="text-xl text-[var(--drivon-muted)] max-w-3xl mx-auto">
+            Fast, secure, and reliable shipping for all your driver merchandise needs
+          </p>
+        </div>
+
+        <!-- Shipping Options -->
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+          <div class="bg-white rounded-2xl shadow-sm p-8 text-center">
+            <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+            </div>
+            <h3 class="font-headline text-2xl text-[var(--drivon-text)] uppercase tracking-wide mb-4">Express Shipping</h3>
+            <p class="text-[var(--drivon-muted)] mb-6">1-2 business days</p>
+            <div class="text-3xl font-bold text-red-600 mb-2">$15.99</div>
+            <p class="text-sm text-gray-500">Orders over $75 ship FREE</p>
+          </div>
+
+          <div class="bg-white rounded-2xl shadow-sm p-8 text-center border-2 border-red-200">
+            <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+              </svg>
+            </div>
+            <h3 class="font-headline text-2xl text-[var(--drivon-text)] uppercase tracking-wide mb-4">Standard Shipping</h3>
+            <p class="text-[var(--drivon-muted)] mb-6">3-5 business days</p>
+            <div class="text-3xl font-bold text-red-600 mb-2">$9.99</div>
+            <p class="text-sm text-gray-500">Most popular option</p>
+            <div class="bg-red-100 text-red-800 text-xs font-semibold px-3 py-1 rounded-full mt-4 inline-block">
+              RECOMMENDED
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl shadow-sm p-8 text-center">
+            <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h3 class="font-headline text-2xl text-[var(--drivon-text)] uppercase tracking-wide mb-4">Economy Shipping</h3>
+            <p class="text-[var(--drivon-muted)] mb-6">7-10 business days</p>
+            <div class="text-3xl font-bold text-red-600 mb-2">$4.99</div>
+            <p class="text-sm text-gray-500">Budget-friendly option</p>
+          </div>
+        </div>
+
+        <!-- Free Shipping Banner -->
+        <div class="bg-gradient-to-r from-red-600 to-red-700 rounded-2xl p-8 mb-16 text-white text-center">
+          <h2 class="text-3xl font-bold mb-4">Free Shipping on Orders Over $75</h2>
+          <p class="text-xl mb-6">No minimum order size for our premium driver merchandise</p>
+          <a href="/collections" class="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-[var(--drivon-surface)] transition-colors">
+            Shop Now
+          </a>
+        </div>
+
+        <!-- Shipping Details -->
+        <div class="grid lg:grid-cols-2 gap-12 mb-16">
+          <!-- Domestic Shipping -->
+          <div class="bg-white rounded-2xl shadow-sm p-8">
+            <h3 class="font-headline text-2xl text-[var(--drivon-text)] uppercase tracking-wide mb-6">Domestic Shipping (US)</h3>
+            <div class="space-y-6">
+              <div class="border-l-4 border-red-500 pl-4">
+                <h4 class="font-semibold text-[var(--drivon-text)] mb-2">Processing Time</h4>
+                <p class="text-[var(--drivon-muted)]">1-2 business days for order processing and packaging</p>
+              </div>
+              <div class="border-l-4 border-red-500 pl-4">
+                <h4 class="font-semibold text-[var(--drivon-text)] mb-2">Delivery Methods</h4>
+                <ul class="text-[var(--drivon-muted)] space-y-1">
+                  <li>• USPS Priority Mail</li>
+                  <li>• FedEx Ground</li>
+                  <li>• UPS Ground</li>
+                </ul>
+              </div>
+              <div class="border-l-4 border-red-500 pl-4">
+                <h4 class="font-semibold text-[var(--drivon-text)] mb-2">Tracking</h4>
+                <p class="text-[var(--drivon-muted)]">All orders include tracking information sent via email</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- International Shipping -->
+          <div class="bg-white rounded-2xl shadow-sm p-8">
+            <h3 class="font-headline text-2xl text-[var(--drivon-text)] uppercase tracking-wide mb-6">International Shipping</h3>
+            <div class="space-y-6">
+              <div class="border-l-4 border-red-500 pl-4">
+                <h4 class="font-semibold text-[var(--drivon-text)] mb-2">Processing Time</h4>
+                <p class="text-[var(--drivon-muted)]">2-3 business days for international order processing</p>
+              </div>
+              <div class="border-l-4 border-red-500 pl-4">
+                <h4 class="font-semibold text-[var(--drivon-text)] mb-2">Delivery Times</h4>
+                <ul class="text-[var(--drivon-muted)] space-y-1">
+                  <li>• Canada: 5-7 business days</li>
+                  <li>• Europe: 7-14 business days</li>
+                  <li>• Asia: 10-21 business days</li>
+                  <li>• Other regions: 14-28 business days</li>
+                </ul>
+              </div>
+              <div class="border-l-4 border-red-500 pl-4">
+                <h4 class="font-semibold text-[var(--drivon-text)] mb-2">Customs & Duties</h4>
+                <p class="text-[var(--drivon-muted)]">Customer responsible for any customs fees or duties</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Shipping Zones -->
+        <div class="bg-white rounded-2xl shadow-sm p-8 mb-16">
+          <h2 class="text-3xl font-bold text-[var(--drivon-text)] mb-8 text-center">Shipping Zones & Rates</h2>
+          <div class="overflow-x-auto">
+            <table class="w-full border-collapse">
+              <thead>
+                <tr class="bg-[var(--drivon-bg)]">
+                  <th class="border border-gray-200 px-6 py-4 text-left font-semibold text-[var(--drivon-text)]">Zone</th>
+                  <th class="border border-gray-200 px-6 py-4 text-center font-semibold text-[var(--drivon-text)]">Countries</th>
+                  <th class="border border-gray-200 px-6 py-4 text-center font-semibold text-[var(--drivon-text)]">Standard</th>
+                  <th class="border border-gray-200 px-6 py-4 text-center font-semibold text-[var(--drivon-text)]">Express</th>
+                  <th class="border border-gray-200 px-6 py-4 text-center font-semibold text-[var(--drivon-text)]">Economy</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="hover:bg-[var(--drivon-bg)]">
+                  <td class="border border-gray-200 px-6 py-4 font-medium text-[var(--drivon-text)]">Zone 1</td>
+                  <td class="border border-gray-200 px-6 py-4 text-center text-gray-700">US, Canada</td>
+                  <td class="border border-gray-200 px-6 py-4 text-center text-gray-700">$9.99</td>
+                  <td class="border border-gray-200 px-6 py-4 text-center text-gray-700">$15.99</td>
+                  <td class="border border-gray-200 px-6 py-4 text-center text-gray-700">$4.99</td>
+                </tr>
+                <tr class="hover:bg-[var(--drivon-bg)]">
+                  <td class="border border-gray-200 px-6 py-4 font-medium text-[var(--drivon-text)]">Zone 2</td>
+                  <td class="border border-gray-200 px-6 py-4 text-center text-gray-700">UK, Germany, France</td>
+                  <td class="border border-gray-200 px-6 py-4 text-center text-gray-700">$19.99</td>
+                  <td class="border border-gray-200 px-6 py-4 text-center text-gray-700">$29.99</td>
+                  <td class="border border-gray-200 px-6 py-4 text-center text-gray-700">$12.99</td>
+                </tr>
+                <tr class="hover:bg-[var(--drivon-bg)]">
+                  <td class="border border-gray-200 px-6 py-4 font-medium text-[var(--drivon-text)]">Zone 3</td>
+                  <td class="border border-gray-200 px-6 py-4 text-center text-gray-700">Australia, Japan</td>
+                  <td class="border border-gray-200 px-6 py-4 text-center text-gray-700">$24.99</td>
+                  <td class="border border-gray-200 px-6 py-4 text-center text-gray-700">$39.99</td>
+                  <td class="border border-gray-200 px-6 py-4 text-center text-gray-700">$16.99</td>
+                </tr>
+                <tr class="hover:bg-[var(--drivon-bg)]">
+                  <td class="border border-gray-200 px-6 py-4 font-medium text-[var(--drivon-text)]">Zone 4</td>
+                  <td class="border border-gray-200 px-6 py-4 text-center text-gray-700">Rest of World</td>
+                  <td class="border border-gray-200 px-6 py-4 text-center text-gray-700">$29.99</td>
+                  <td class="border border-gray-200 px-6 py-4 text-center text-gray-700">$49.99</td>
+                  <td class="border border-gray-200 px-6 py-4 text-center text-gray-700">$19.99</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Important Information -->
+        <div class="grid md:grid-cols-2 gap-8 mb-16">
+          <div class="bg-yellow-50 border border-yellow-200 rounded-2xl p-8">
+            <h3 class="text-xl font-bold text-yellow-800 mb-4">⚠️ Important Notes</h3>
+            <ul class="space-y-3 text-yellow-700">
+              <li class="flex items-start">
+                <span class="w-2 h-2 bg-yellow-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                Delivery times are estimates and may vary due to weather or carrier delays
+              </li>
+              <li class="flex items-start">
+                <span class="w-2 h-2 bg-yellow-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                Someone must be available to receive the package
+              </li>
+              <li class="flex items-start">
+                <span class="w-2 h-2 bg-yellow-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                We are not responsible for packages delivered to incorrect addresses
+              </li>
+              <li class="flex items-start">
+                <span class="w-2 h-2 bg-yellow-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                International customers are responsible for customs fees
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-blue-50 border border-blue-200 rounded-2xl p-8">
+            <h3 class="text-xl font-bold text-blue-800 mb-4">📦 Packaging</h3>
+            <ul class="space-y-3 text-blue-700">
+              <li class="flex items-start">
+                <span class="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                All items are carefully packaged in protective materials
+              </li>
+              <li class="flex items-start">
+                <span class="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                Eco-friendly packaging materials used when possible
+              </li>
+              <li class="flex items-start">
+                <span class="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                Fragile items are double-boxed for protection
+              </li>
+              <li class="flex items-start">
+                <span class="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                Each package includes order confirmation and return policy
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl p-8 text-center">
+          <h2 class="text-3xl font-bold text-[var(--drivon-text)] mb-4">Need Help with Shipping?</h2>
+          <p class="text-[var(--drivon-muted)] mb-6">Our customer service team is here to help with any shipping questions</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/contact" class="bg-red-600 text-white px-8 py-3 rounded-lg hover:bg-red-700 transition-colors font-medium">
+              Contact Support
+            </a>
+            <a href="/size-chart" class="bg-gray-200 text-gray-800 px-8 py-3 rounded-lg hover:bg-gray-300 transition-colors font-medium">
+              Size Chart
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>

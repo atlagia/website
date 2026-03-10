@@ -1,0 +1,78 @@
+{
+  "title": "Série Professionnelle d'Endurance",
+  "description": "Équipement de course d'endurance professionnel pour Le Mans, WEC et course longue distance. Équipement de course d'endurance de qualité premium.",
+  "hero": {
+    "title": "Série Professionnelle d'Endurance",
+    "subtitle": "Équipement de course d'endurance professionnel conçu pour Le Mans, WEC et les défis de course longue distance"
+  },
+  "sections": {
+    "collection": {
+      "title": "Collection d'Endurance Professionnelle",
+      "subtitle": "Équipement de course premium pour les professionnels d'endurance"
+    },
+    "features": {
+      "title": "Conçu pour l'Endurance",
+      "subtitle": "Conçu pour les courses les plus longues"
+    },
+    "series": {
+      "title": "Séries de Course Supportées",
+      "subtitle": "Championnats de course d'endurance professionnelle"
+    }
+  },
+  "collections": [
+    {
+      "title": "Combinaisons d'Endurance",
+      "description": "Conçues pour le confort pendant les longues sessions de course",
+      "link": "/collections/endurance-suits",
+      "linkText": "Acheter Endurance Professional"
+    },
+    {
+      "title": "Systèmes de Refroidissement",
+      "description": "Technologie de refroidissement avancée pour la course d'endurance",
+      "link": "/collections/cooling-systems",
+      "linkText": "Acheter Endurance Professional"
+    },
+    {
+      "title": "Équipement d'Hydratation",
+      "description": "Systèmes d'hydratation professionnels pour les longues courses",
+      "link": "/collections/hydration-gear",
+      "linkText": "Acheter Endurance Professional"
+    }
+  ],
+  "features": [
+    {
+      "icon": "24",
+      "title": "Prêt 24 Heures",
+      "description": "Conçu pour performer dans les courses d'endurance les plus longues"
+    },
+    {
+      "icon": "🌡️",
+      "title": "Contrôle de Température",
+      "description": "Systèmes de refroidissement avancés pour une performance optimale"
+    },
+    {
+      "icon": "💧",
+      "title": "Focus Hydratation",
+      "description": "Systèmes d'hydratation intégrés pour une performance soutenue"
+    }
+  ],
+  "series": [
+    {
+      "name": "Le Mans 24h",
+      "description": "La course d'endurance la plus célèbre au monde"
+    },
+    {
+      "name": "WEC",
+      "description": "Championnat du Monde d'Endurance"
+    },
+    {
+      "name": "IMSA",
+      "description": "Association Internationale des Sports Moteurs"
+    },
+    {
+      "name": "ELMS",
+      "description": "European Le Mans Series"
+    }
+  ]
+}
+

@@ -1,0 +1,99 @@
+{
+  "title": "Édition Championnat F1",
+  "description": "Célébrez les victoires du championnat F1 avec notre collection exclusive de combinaisons de course. Designs d'édition limitée honorant les plus grands champions de l'histoire de la Formule 1.",
+  "hero": {
+    "title": "Édition Championnat F1",
+    "subtitle": "Combinaisons de course d'édition limitée célébrant les plus grandes victoires du championnat F1",
+    "cta1": "Acheter Combinaisons Championnat",
+    "cta2": "Voir Champions"
+  },
+  "sections": {
+    "champions": {
+      "title": "Champions du Monde F1",
+      "subtitle": "Honorez les pilotes légendaires qui ont conquis la Formule 1"
+    },
+    "collection": {
+      "title": "Collection Championnat",
+      "subtitle": "Combinaisons de course exclusives inspirées des moments de championnat"
+    },
+    "legacy": {
+      "title": "Héritage du Championnat",
+      "subtitle": "Célébrez les plus grands moments de l'histoire du championnat F1"
+    }
+  },
+  "champions": [
+    {
+      "name": "Lewis Hamilton",
+      "championships": 7,
+      "years": "2008, 2014-2015, 2017-2020",
+      "description": "Le pilote F1 le plus titré de tous les temps avec 7 championnats du monde",
+      "image": "/images/champions/hamilton.jpg",
+      "link": "/collections/hamilton-championship-suit"
+    },
+    {
+      "name": "Michael Schumacher",
+      "championships": 7,
+      "years": "1994-1995, 2000-2004",
+      "description": "Le légendaire champion allemand qui a dominé la F1 au début des années 2000",
+      "image": "/images/champions/schumacher.jpg",
+      "link": "/collections/schumacher-championship-suit"
+    },
+    {
+      "name": "Juan Manuel Fangio",
+      "championships": 5,
+      "years": "1951, 1954-1957",
+      "description": "Le maestro argentin qui a remporté 5 championnats dans les années 1950",
+      "image": "/images/champions/fangio.jpg",
+      "link": "/collections/fangio-championship-suit"
+    }
+  ],
+  "collections": [
+    {
+      "title": "Combinaison Vainqueur Championnat",
+      "description": "Combinaison de course inspirée des légendaires champions F1",
+      "price": "299,99 €",
+      "link": "/collections/championship-winner-suit",
+      "linkText": "Acheter F1 Championship"
+    },
+    {
+      "title": "Combinaison Édition Victoire",
+      "description": "Combinaison d'édition limitée célébrant les victoires de championnat",
+      "price": "279,99 €",
+      "link": "/collections/victory-edition-suit",
+      "linkText": "Acheter F1 Championship"
+    },
+    {
+      "title": "Combinaison Série Légende",
+      "description": "Combinaison de course honorant les légendes de la course F1",
+      "price": "259,99 €",
+      "link": "/collections/legend-series-suit",
+      "linkText": "Acheter F1 Championship"
+    }
+  ],
+  "legacy": [
+    {
+      "title": "Victoires Historiques",
+      "description": "Célébrez les moments de championnat les plus mémorables de l'histoire F1",
+      "icon": "Trophy",
+      "link": "/collections/historic-victories"
+    },
+    {
+      "title": "Records de Championnat",
+      "description": "Honorez les pilotes qui ont établi de nouveaux standards en course F1",
+      "icon": "Award",
+      "link": "/collections/championship-records"
+    },
+    {
+      "title": "Légendes de Course",
+      "description": "Rendez hommage aux plus grands champions F1 de tous les temps",
+      "icon": "Crown",
+      "link": "/collections/racing-legends"
+    }
+  ],
+  "cta": {
+    "title": "Rejoignez l'Héritage du Championnat",
+    "subtitle": "Obtenez votre combinaison de course d'édition championnat F1 exclusive et devenez partie de l'histoire de la Formule 1.",
+    "button1": "Acheter Combinaisons Championnat",
+    "button2": "Voir Tous les Champions"
+  }
+}

@@ -173,7 +173,7 @@ try {
     <nav class="mb-8">
       <ol class="flex items-center space-x-2 text-sm">
         <li>
-          <a href={`/${lang}`} class="text-gray-500 hover:text-gray-700">{content.breadcrumbs.home}</a>
+          <a href={`/${lang}`} class="text-gray-500 hover:text-gray-700">{content.breadcrumbs?.home ?? 'Home'}</a>
         </li>
         <li class="text-gray-400">/</li>
         <li class="text-gray-900 font-medium">{content.breadcrumbs?.products || 'Products'}</li>
@@ -248,14 +248,14 @@ try {
           <div class="flex items-center gap-4">
             <SortDropdown language={lang} currentSort={currentSort} />
             <div class="text-sm text-gray-600 hidden sm:block">
-              {pagination.totalProducts} {content.collections.count}
+              {pagination.totalProducts} {content.collections?.count ?? 'products'}
             </div>
           </div>
         </div>
 
         {/* Mobile Product Count */}
         <div class="text-sm text-gray-600 mb-4 sm:hidden">
-          {pagination.totalProducts} {content.collections.count}
+          {pagination.totalProducts} {content.collections?.count ?? 'products'}
         </div>
 
         {/* Products Grid */}

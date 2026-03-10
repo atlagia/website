@@ -1,0 +1,197 @@
+{
+  "siteTitle": "Drivon - Merchandise Premium pour Pilotes",
+  "siteDescription": "Merchandise premium pour pilotes et passionnés d'automobile dans le monde entier. Des légendes de course à la culture de rue, nous vous apportons du gear authentique pour fans d'automobile.",
+  "sections": [
+    {
+      "type": "welcomeSection",
+      "title": "Créé pour les Passionnés d'Automobile",
+      "description": "Merchandise authentique de la culture automobile conçu pour les vrais passionnés d'automobile et fans de course. Des légendes de course aux icônes de la culture de rue, nous créons du gear premium spécifiquement pour les passionnés d'automobile qui apprécient l'héritage automobile authentique.",
+      "blogLinkText": "Explorer la Culture Automobile",
+      "blogLink": "/car-culture",
+      "backgroundVideo": {
+        "type": "youtube",
+        "videoId": "liT2Z3wFW1Y",
+        "fallbackImage": "/images/driver-culture-fallback.jpg"
+      }
+    },
+    {
+      "type": "bannerSection",
+      "headline": "Culture Automobile Rencontre Héritage de Course",
+      "description": "Découvrez l'authentique culture automobile. Des légendes de course aux icônes de rue, nous célébrons le vrai esprit de la passion automobile.",
+      "backgroundImage": "/images/racing-heritage-banner.jpg",
+      "button1Text": "Acheter Collection Pilote",
+      "button1Link": "/driver-collection",
+      "button2Text": "Voir Culture de Course",
+      "button2Link": "/racing-culture"
+    },
+    {
+      "type": "categoryGrid",
+      "title": "Essentiels Culture Pilote",
+      "description": "Merchandise authentique de la culture automobile pour vrais passionnés d'automobile et fans de course dans le monde entier.",
+      "categories": [
+        {
+          "id": "hoodie",
+          "name": "Sweats à Capuche de Course",
+          "description": "Sweats inspirés de la course avec designs automobiles authentiques et confort premium.",
+          "image": "https://ih1.redbubble.net/image.4762044220.4515/ssrco,mhoodie,mens,fafafa:ca443f4786,front,tall_three_quarter,x1000-bg,f8f8f8.1.webp",
+          "link": "/racing-hoodies"
+        },
+        {
+          "id": "tee",
+          "name": "T-shirts Culture Auto",
+          "description": "T-shirts classiques de la culture automobile avec marques iconiques de voitures et légendes de course.",
+          "image": "https://ih1.redbubble.net/image.4762044220.4515/ssrco,classic_tee,mens_02,fafafa:ca443f4786,front,close_portrait,x1000.webp",
+          "link": "/car-culture-tees"
+        },
+        {
+          "id": "accessories",
+          "name": "Accessoires Pilote",
+          "description": "Accessoires essentiels pour compléter votre look et style de culture automobile.",
+          "image": "https://ih1.redbubble.net/image.4762043914.4515/ssrco,dad_hat,product,FFFDF5:8c3db69414,front_three_quarter,wide_portrait,750x1000-bg,f8f8f8.webp",
+          "link": "/driver-accessories"
+        }
+      ]
+    },
+    {
+      "type": "bestSellers",
+      "title": "Préférés des Fans Pilotes",
+      "description": "Nos merchandise automobiles les plus populaires aimés par les passionnés de culture automobile dans le monde entier",
+      "viewAllLink": "/driver-favorites",
+      "collectionHandle": "driver-favorites"
+    },
+    {
+      "type": "productShowcase",
+      "title": "Collection Légendes de Course",
+      "description": "Merchandise iconique de la culture automobile avec marques légendaires et héros de course.",
+      "viewAllLink": "/racing-legends",
+      "collections": [
+        {
+          "id": "ferrari-racing-hoodie",
+          "name": "Sweat Ferrari de Course",
+          "description": "Sweat premium avec l'héritage légendaire de course Ferrari et style de course authentique.",
+          "price": "89.99",
+          "image": "/images/products/ferrari-racing-hoodie.jpg",
+          "category": "Sweats de Course"
+        },
+        {
+          "id": "porsche-911-tee",
+          "name": "T-shirt Porsche 911 Classique",
+          "description": "T-shirt classique célébrant l'iconique Porsche 911 avec design de voiture de sport intemporel.",
+          "price": "29.99",
+          "image": "/images/products/porsche-911-tee.jpg",
+          "category": "T-shirts Culture Auto"
+        }
+      ]
+    },
+    {
+      "type": "specialOffers",
+      "title": "Limited Time Offers",
+      "offers": [
+        {
+          "id": "winter-sale",
+          "title": "Winter Collection Sale",
+          "description": "Get premium winter gear at unbeatable prices",
+          "discount": "30%",
+          "code": "WINTER30",
+          "backgroundImage": "/images/winter-sale-bg.jpg",
+          "buttonText": "Shop Winter Sale",
+          "buttonLink": "/winter-collection",
+          "expiryText": "Ends December 31st"
+        },
+        {
+          "id": "new-customer",
+          "title": "New Customer Special",
+          "description": "Welcome bonus for first-time buyers",
+          "discount": "15%",
+          "code": "WELCOME15",
+          "backgroundImage": "/images/new-customer-bg.jpg",
+          "buttonText": "Claim Discount",
+          "buttonLink": "/welcome-offer",
+          "expiryText": "Valid for 30 days"
+        }
+      ]
+    },
+    {
+      "type": "testimonialSlider",
+      "title": "Professional Endorsements",
+      "testimonials": [
+        {
+          "id": "1",
+          "author": "Marcus Rodriguez",
+          "role": "Professional Race Car Driver",
+          "content": "ProDriver Gear isn't just equipment—it's a performance enhancement. The level of engineering is unparalleled.",
+          "avatar": "MR",
+          "initials": "MR"
+        },
+        {
+          "id": "2",
+          "author": "Sarah Chen",
+          "role": "Formula 1 Engineer",
+          "content": "The attention to detail in every piece is remarkable. This gear has become essential for our team's success on the track.",
+          "avatar": "SC",
+          "initials": "SC"
+        },
+        {
+          "id": "3",
+          "author": "David Thompson",
+          "role": "Motorsport Team Manager",
+          "content": "DriverApparel delivers exactly what professional drivers need. Quality, comfort, and performance in every product.",
+          "avatar": "DT",
+          "initials": "DT"
+        }
+      ]
+    },
+    {
+      "type": "faqSection",
+      "title": "Professional Performance FAQs",
+      "description": "Insights into advanced driver protection and performance technology.",
+      "faqs": [
+        {
+          "question": "What makes ProDriver Gear different?",
+          "answer": "We use aerospace-grade materials, advanced ergonomic design, and cutting-edge protection technologies developed with professional drivers."
+        },
+        {
+          "question": "How do your materials enhance driver performance?",
+          "answer": "Our gear uses multi-layer composite materials that provide superior impact protection while maintaining maximum flexibility and thermal regulation."
+        },
+        {
+          "question": "Are your collections certified for professional use?",
+          "answer": "Yes. All ProDriver Gear collections exceed international safety standards and are used by professional racing teams worldwide."
+        }
+      ]
+    },{
+      "type": "featuresSection",
+      "title": "Why Choose DriverApparel?",
+      "features": [
+        {
+          "id": "free-shipping",
+          "title": "Free Shipping",
+          "description": "Free delivery on orders over $75 worldwide"
+        },
+        {
+          "id": "quality-guarantee",
+          "title": "Quality Guarantee",
+          "description": "30-day money back guarantee on all collections"
+        },
+        {
+          "id": "secure-payment",
+          "title": "Secure Payment",
+          "description": "SSL encrypted checkout for your security"
+        },
+        {
+          "id": "24-7-support",
+          "title": "24/7 Support",
+          "description": "Expert customer service whenever you need it"
+        }
+      ]
+    },
+    {
+      "type": "emailSignupSection",
+      "title": "Stay at the Cutting Edge",
+      "description": "Receive exclusive insights, technology updates, and professional performance tips.",
+      "backgroundImage": "/images/professional-driver-newsletter.jpg",
+      "formAction": "/api/professional-signup",
+      "submitText": "Join Professional Network"
+    }
+  ]
+}
