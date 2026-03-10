@@ -1,0 +1,193 @@
+---
+import { getLangFromUrl, useTranslations, isValidLanguage } from '@utils/i18n';
+
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+
+// Get the language parameter from the URL
+const { lang } = Astro.params;
+
+// Validate language and redirect to /en if invalid
+if (!isValidLanguage(lang)) {
+  return Astro.redirect('/en');
+}
+
+const translations = await useTranslations(lang);
+const jsonData = translations.default;
+
+const SITE_TITLE = `Car Culture - ${jsonData.siteTitle}`;
+const SITE_DESCRIPTION = 'Explore authentic automotive culture, racing heritage, and driver merchandise. From street culture to racing legends, discover the true spirit of car culture.';
+---
+
+<!doctype html>
+<html lang={lang} class="mra">
+  <head>
+    <BaseHead 
+      title={SITE_TITLE} 
+      description={SITE_DESCRIPTION}
+    />
+  </head>
+  <body class="bg-[var(--mra-bg)] text-[var(--mra-text)] antialiased">
+    <Header />
+    <main class="min-h-screen bg-[var(--mra-bg)]">
+      <!-- Hero Section -->
+      <section class="relative py-20 bg-[var(--mra-text)] text-[var(--mra-bg)]">
+        <div class="relative max-w-6xl mx-auto px-4 text-center">
+          <h1 class="font-headline text-5xl md:text-7xl uppercase tracking-tight mb-6">
+            Car Culture
+          </h1>
+          <p class="font-body text-xl md:text-2xl text-[var(--mra-bg)]/90 mb-8 max-w-3xl mx-auto">
+            Authentic automotive culture from street racing to professional motorsport. Discover the heritage, legends, and community that defines car culture worldwide.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4 mt-8">
+            <a href={`/${lang}/racing-culture`} class="inline-flex items-center justify-center bg-[var(--mra-bg)] text-[var(--mra-text)] px-8 py-3.5 text-[11px] font-medium tracking-[0.2em] uppercase hover:opacity-90 transition-opacity font-body">Racing Culture</a>
+            <a href={`/${lang}/driver-collection`} class="inline-flex items-center justify-center border-2 border-[var(--mra-bg)] text-[var(--mra-bg)] px-8 py-3.5 text-[11px] font-medium tracking-[0.2em] uppercase hover:bg-[var(--mra-bg)]/10 transition-colors font-body">Driver Collection</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Culture Sections -->
+      <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+          <h2 class="text-4xl font-bold text-center mb-12">Automotive Culture Pillars</h2>
+          
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Street Culture -->
+            <div class="bg-[var(--mra-bg)] rounded-lg p-8 hover:shadow-lg transition-shadow">
+              <div class="w-16 h-16 bg-[var(--mra-surface)] rounded-full flex items-center justify-center mb-6 text-[var(--mra-text)]">
+                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M8 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM15 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/>
+                  <path d="M3 4a1 1 0 00-1 1v10a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0H10a1 1 0 001-1V5a1 1 0 00-1-1H3zM14 7a1 1 0 00-1 1v6.05A2.5 2.5 0 0115.95 16H17a1 1 0 001-1V8a1 1 0 00-1-1h-3z"/>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold mb-4">Street Culture</h3>
+              <p class="text-[var(--mra-muted)] mb-6">
+                From underground racing to car meets, street culture represents the raw, 
+                authentic side of automotive passion that drives communities worldwide.
+              </p>
+              <a href={`/${lang}/street-culture`} class="text-red-600 font-semibold hover:text-red-700">
+                Explore Street Culture →
+              </a>
+            </div>
+
+            <!-- Racing Heritage -->
+            <div class="bg-[var(--mra-bg)] rounded-lg p-8 hover:shadow-lg transition-shadow">
+              <div class="w-16 h-16 bg-[var(--mra-surface)] rounded-full flex items-center justify-center mb-6 text-[var(--mra-text)]">
+                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold mb-4">Racing Heritage</h3>
+              <p class="text-[var(--mra-muted)] mb-6">
+                Professional motorsport, Formula 1, Le Mans, and the legends who 
+                shaped racing history with their skill, courage, and innovation.
+              </p>
+              <a href={`/${lang}/racing-heritage`} class="text-red-600 font-semibold hover:text-red-700">
+                Discover Racing Heritage →
+              </a>
+            </div>
+
+            <!-- Car Communities -->
+            <div class="bg-[var(--mra-bg)] rounded-lg p-8 hover:shadow-lg transition-shadow">
+              <div class="w-16 h-16 bg-[var(--mra-surface)] rounded-full flex items-center justify-center mb-6 text-[var(--mra-text)]">
+                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold mb-4">Car Communities</h3>
+              <p class="text-[var(--mra-muted)] mb-6">
+                Global communities of car enthusiasts, from JDM culture to European 
+                classics, united by their passion for automotive excellence.
+              </p>
+              <a href={`/${lang}/car-communities`} class="text-red-600 font-semibold hover:text-red-700">
+                Join Communities →
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Collections -->
+      <section class="py-16 bg-[var(--mra-surface)]">
+        <div class="max-w-6xl mx-auto px-4">
+          <h2 class="text-4xl font-bold text-center mb-12">Car Culture Collections</h2>
+          
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <a href={`/${lang}/racing-hoodies`} class="group">
+              <div class="bg-[var(--mra-card)] rounded-lg border border-[var(--mra-border)] overflow-hidden shadow-md hover:border-[var(--mra-text)]/30 transition-colors">
+                <div class="h-48 bg-[var(--mra-text)] flex items-center justify-center text-[var(--mra-bg)]">
+                  <span class="text-white text-2xl font-bold">Racing Hoodies</span>
+                </div>
+                <div class="p-6">
+                  <h3 class="font-bold text-lg mb-2">Racing Hoodies</h3>
+                  <p class="text-[var(--mra-muted)] text-sm">Authentic racing-inspired hoodies</p>
+                </div>
+              </div>
+            </a>
+
+            <a href={`/${lang}/car-culture-tees`} class="group">
+              <div class="bg-[var(--mra-card)] rounded-lg border border-[var(--mra-border)] overflow-hidden shadow-md hover:border-[var(--mra-text)]/30 transition-colors">
+                <div class="h-48 bg-[var(--mra-text)] flex items-center justify-center text-[var(--mra-bg)]">
+                  <span class="text-white text-2xl font-bold">Car Culture Tees</span>
+                </div>
+                <div class="p-6">
+                  <h3 class="font-bold text-lg mb-2">Car Culture Tees</h3>
+                  <p class="text-[var(--mra-muted)] text-sm">Classic automotive culture shirts</p>
+                </div>
+              </div>
+            </a>
+
+            <a href={`/${lang}/driver-accessories`} class="group">
+              <div class="bg-[var(--mra-card)] rounded-lg border border-[var(--mra-border)] overflow-hidden shadow-md hover:border-[var(--mra-text)]/30 transition-colors">
+                <div class="h-48 bg-[var(--mra-text)] flex items-center justify-center text-[var(--mra-bg)]">
+                  <span class="text-white text-2xl font-bold">Driver Accessories</span>
+                </div>
+                <div class="p-6">
+                  <h3 class="font-bold text-lg mb-2">Driver Accessories</h3>
+                  <p class="text-[var(--mra-muted)] text-sm">Essential driver accessories</p>
+                </div>
+              </div>
+            </a>
+
+            <a href={`/${lang}/racing-legends`} class="group">
+              <div class="bg-[var(--mra-card)] rounded-lg border border-[var(--mra-border)] overflow-hidden shadow-md hover:border-[var(--mra-text)]/30 transition-colors">
+                <div class="h-48 bg-[var(--mra-text)] flex items-center justify-center text-[var(--mra-bg)]">
+                  <span class="text-white text-2xl font-bold">Racing Legends</span>
+                </div>
+                <div class="p-6">
+                  <h3 class="font-bold text-lg mb-2">Racing Legends</h3>
+                  <p class="text-[var(--mra-muted)] text-sm">Legendary racing icons</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action -->
+      <section class="py-16 bg-red-600 text-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+          <h2 class="font-headline text-4xl uppercase tracking-tight mb-6">Join the Car Culture Community</h2>
+          <p class="text-xl mb-8">
+            Connect with fellow automotive enthusiasts and discover authentic car culture merchandise 
+            that celebrates the true spirit of driving passion.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href={`/${lang}/driver-collection`} class="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-[var(--mra-surface)] transition-colors">
+              Shop Driver Collection
+            </a>
+            <a href={`/${lang}/racing-culture`} class="bg-red-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-800 transition-colors">
+              Explore Racing Culture
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <Footer />
+    <style>
+      .font-headline { font-family: var(--font-headline); }
+      .font-body { font-family: var(--font-body); }
+    </style>
+  </body>
+</html>

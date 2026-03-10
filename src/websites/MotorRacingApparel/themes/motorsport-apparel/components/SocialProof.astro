@@ -1,0 +1,84 @@
+---
+interface Stat {
+  id: string;
+  number: string;
+  label: string;
+  icon: string;
+}
+
+interface RecentActivity {
+  id: string;
+  customerName: string;
+  location: string;
+  product: string;
+  timeAgo: string;
+}
+
+interface Props {
+  title: string;
+  stats: Stat[];
+  recentActivities: RecentActivity[];
+  overallRating: number;
+  totalReviews: string;
+}
+
+const { title, stats, recentActivities, overallRating: rawRating, totalReviews } = Astro.props;
+const overallRating = typeof rawRating === 'string' ? parseFloat(rawRating) || 5 : rawRating;
+---
+
+<section class="py-24 lg:py-32 px-4 bg-[var(--mra-surface)] text-[var(--mra-text)]">
+  <div class="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12">
+    <h2 class="font-headline text-3xl md:text-4xl font-bold text-center text-[var(--mra-text)] uppercase tracking-tight mb-4">{title}</h2>
+    
+    <!-- Overall Rating -->
+    <div class="text-center mb-12">
+      <div class="flex items-center justify-center gap-2 mb-2">
+        <div class="flex items-center">
+          {Array.from({length: 5}, (_, i) => (
+            <svg class={`w-6 h-6 ${i < overallRating ? 'text-[var(--mra-yellow)]' : 'text-[var(--mra-muted)]'}`} fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+            </svg>
+          ))}
+        </div>
+        <span class="text-2xl font-bold text-[var(--mra-text)]">{overallRating}.0</span>
+      </div>
+      <p class="text-[var(--mra-muted)]">Based on {totalReviews} reviews</p>
+    </div>
+    
+    <!-- Stats Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+      {stats.map((stat) => (
+        <div class="text-center">
+          <div class="w-14 h-14 bg-[var(--mra-card)] border border-[var(--mra-border)] rounded-full flex items-center justify-center mx-auto mb-3">
+            <span class="font-headline text-lg font-bold text-[var(--mra-accent)]">{stat.value || stat.number}</span>
+          </div>
+          <div class="text-2xl font-bold text-[var(--mra-text)] mb-1">{stat.value || stat.number}</div>
+          <div class="text-[var(--mra-muted)] text-sm">{stat.label}</div>
+        </div>
+      ))}
+    </div>
+    
+    <!-- Recent Activity -->
+    <div class="bg-[var(--mra-card)] border border-[var(--mra-border)] rounded-2xl p-8">
+      <h3 class="font-headline text-xl font-bold mb-6 text-center text-[var(--mra-text)] uppercase tracking-wide">Recent Customer Activity</h3>
+      <div class="space-y-4">
+        {recentActivities.map((activity) => (
+          <div class="flex items-center justify-between bg-[var(--mra-surface)] rounded-lg p-4 border border-[var(--mra-border)]/50">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 bg-[var(--mra-accent)]/20 rounded-full flex items-center justify-center">
+                <span class="text-[var(--mra-accent)] font-bold text-sm">
+                  {activity.customerName.split(' ').map(n => n[0]).join('')}
+                </span>
+              </div>
+              <div>
+                <p class="font-semibold text-[var(--mra-text)]">{activity.customerName} from {activity.location}</p>
+                <p class="text-[var(--mra-muted)] text-sm">purchased {activity.product}</p>
+              </div>
+            </div>
+            <span class="text-[var(--mra-muted)] text-sm">{activity.timeAgo}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

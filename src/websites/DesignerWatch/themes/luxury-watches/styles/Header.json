@@ -1,0 +1,100 @@
+{
+  "wrapper": "bg-[var(--dw-bg)] border-b border-[var(--dw-border)] sticky top-0 z-50",
+  "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+  "nav": {
+    "wrapper": "flex items-center justify-between h-16",
+    "brand": "text-xl font-semibold text-[var(--dw-text)] hover:text-[var(--dw-accent)] transition-colors font-display",
+    "menu": {
+      "desktop": "hidden lg:flex lg:items-center lg:space-x-4",
+      "item": "text-[var(--dw-text)] hover:text-[var(--dw-accent)] px-3 py-2 rounded-md text-sm font-medium transition-colors"
+    }
+  },
+  "logo": {
+    "wrapper": "flex-1 lg:flex-none text-center lg:text-left"
+  },
+  "mobileButton": {
+    "wrapper": "flex lg:hidden",
+    "button": "p-2 text-[var(--dw-text)] hover:text-[var(--dw-accent)] transition-colors",
+    "iconClose": "text-2xl",
+    "iconOpen": "w-6 h-6"
+  },
+  "actions": {
+    "wrapper": "flex items-center space-x-4",
+    "search": {
+      "icon": "text-[var(--dw-text)]",
+      "button": "p-2 hover:bg-[var(--dw-surface)] rounded-full transition-colors",
+      "form": "absolute top-full right-0 mt-2 w-72 bg-[var(--dw-surface)] rounded-lg shadow-lg border border-[var(--dw-border)] p-4 z-50",
+      "input": "w-full px-4 py-2 border border-[var(--dw-border)] rounded-md bg-[var(--dw-bg)] text-[var(--dw-text)] focus:outline-none focus:ring-2 focus:ring-[var(--dw-accent)]"
+    },
+    "currency": {
+      "wrapper": "relative",
+      "button": "flex items-center space-x-1 px-3 py-2 text-sm font-medium text-[var(--dw-text)] hover:text-[var(--dw-accent)] transition-colors",
+      "text": "font-medium",
+      "dropdown": "absolute right-0 mt-2 w-32 bg-[var(--dw-surface)] rounded-md shadow-lg border border-[var(--dw-border)] z-50",
+      "option": "block w-full text-left px-4 py-2 text-sm text-[var(--dw-text)] transition-colors",
+      "optionActive": "bg-[var(--dw-bg)]",
+      "optionHover": "hover:bg-[var(--dw-bg)]"
+    },
+    "language": {
+      "wrapper": "relative",
+      "button": "flex items-center space-x-1 px-3 py-2 text-sm font-medium text-[var(--dw-text)] hover:text-[var(--dw-accent)] transition-colors",
+      "text": "hidden sm:block",
+      "dropdown": "absolute right-0 mt-2 w-40 bg-[var(--dw-surface)] rounded-md shadow-lg border border-[var(--dw-border)] z-50",
+      "option": "block w-full text-left px-4 py-2 text-sm text-[var(--dw-text)] transition-colors",
+      "optionActive": "bg-[var(--dw-bg)]",
+      "optionHover": "hover:bg-[var(--dw-bg)]"
+    },
+    "cart": {
+      "button": "relative p-2 text-[var(--dw-text)] hover:text-[var(--dw-accent)] transition-colors",
+      "count": "absolute -top-1 -right-1 bg-[var(--dw-accent)] text-[var(--dw-bg)] text-xs rounded-full h-5 w-5 flex items-center justify-center font-medium"
+    }
+  },
+  "mobile": {
+    "menu": {
+      "wrapper": "lg:hidden fixed left-0 right-0 bg-[var(--dw-surface)] shadow-lg border-b border-[var(--dw-border)] transition-all duration-300 ease-in-out",
+      "nav": "px-4 py-2",
+      "item": "block py-3 px-4 text-[var(--dw-text)] hover:bg-[var(--dw-bg)] border-b border-[var(--dw-border)] last:border-0"
+    },
+    "backdrop": "lg:hidden fixed inset-0 bg-black bg-opacity-50 z-[98]"
+  },
+  "cart": {
+    "sidebar": "fixed inset-y-0 right-0 w-full max-w-md bg-[var(--dw-bg)] shadow-xl border-l border-[var(--dw-border)] z-[100] transform transition-transform duration-300 ease-in-out",
+    "container": "h-full flex flex-col",
+    "header": "p-4 border-b border-[var(--dw-border)]",
+    "headerContent": "flex justify-between items-center",
+    "iconWrapper": "w-8 h-8 bg-[var(--dw-accent)] rounded-lg flex items-center justify-center",
+    "icon": "w-5 h-5 text-[var(--dw-bg)]",
+    "title": "text-lg font-semibold text-[var(--dw-text)] font-display",
+    "closeButton": "p-2 hover:bg-[var(--dw-surface)] rounded-full",
+    "closeIcon": "w-5 h-5 text-[var(--dw-muted)] hover:text-[var(--dw-text)] transition-colors",
+    "overlay": "fixed inset-0 bg-black bg-opacity-50 z-[90]",
+    "emptyWrap": "flex-1 flex flex-col items-center justify-center p-8 text-center",
+    "emptyIconWrap": "w-20 h-20 bg-[var(--dw-surface)] border border-[var(--dw-border)] rounded-full flex items-center justify-center mb-4",
+    "emptyIcon": "w-10 h-10 text-[var(--dw-muted)]",
+    "emptyTitle": "text-lg font-semibold text-[var(--dw-text)] mb-2",
+    "emptyText": "text-[var(--dw-muted)] text-sm",
+    "itemsWrap": "flex-1 overflow-y-auto p-6 space-y-4",
+    "itemCard": "group bg-[var(--dw-surface)] rounded-xl border border-[var(--dw-border)] p-4 hover:border-[var(--dw-accent)]/30 transition-all duration-200",
+    "itemImage": "w-16 h-16 object-cover rounded-lg border border-[var(--dw-border)]",
+    "qtyBadge": "absolute -top-1 -right-1 w-5 h-5 bg-[var(--dw-accent)] text-[var(--dw-bg)] rounded-full flex items-center justify-center text-xs font-medium",
+    "itemTitle": "font-semibold text-[var(--dw-text)] text-sm leading-tight mb-1 line-clamp-2",
+    "itemPrice": "text-lg font-bold text-[var(--dw-text)]",
+    "itemTotal": "text-xs text-[var(--dw-muted)]",
+    "qtyWrap": "flex items-center gap-1 bg-[var(--dw-bg)] rounded-lg p-1 border border-[var(--dw-border)]",
+    "qtyBtn": "w-7 h-7 flex items-center justify-center hover:bg-[var(--dw-accent)]/20 rounded-md disabled:opacity-50 transition-colors text-[var(--dw-text)]",
+    "qtyText": "w-8 text-center text-sm font-medium text-[var(--dw-text)]",
+    "qtyIcon": "text-[var(--dw-muted)]",
+    "removeBtn": "p-1.5 text-red-400 hover:text-red-300 hover:bg-red-500/10 rounded-md disabled:opacity-50 transition-all duration-200",
+    "footerWrap": "border-t border-[var(--dw-border)] p-6 bg-[var(--dw-bg)]",
+    "totalLabel": "text-lg font-semibold text-[var(--dw-text)]",
+    "totalCount": "text-xs text-[var(--dw-muted)]",
+    "totalAmount": "text-2xl font-bold text-[var(--dw-text)]",
+    "checkoutBtn": "w-full bg-[var(--dw-accent)] text-[var(--dw-bg)] px-6 py-4 rounded-xl hover:opacity-95 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3 font-semibold uppercase tracking-wide",
+    "trustWrap": "flex items-center justify-center gap-4 mt-4 pt-4 border-t border-[var(--dw-border)]",
+    "trustItem": "flex items-center gap-1 text-xs text-[var(--dw-muted)]"
+  },
+  "svg": {
+    "hamburger": "w-6 h-6",
+    "hamburgerPath": "M4 6h16M4 12h16M4 18h16"
+  }
+}

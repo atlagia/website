@@ -1,0 +1,59 @@
+---
+import { getCollectionProducts, getAllProducts } from '@libs/shopify';
+
+interface Props {
+  title: string;
+  description?: string;
+  viewAllLink: string;
+  lang: string;
+  collectionHandle?: string;
+}
+
+const { title, description = '', viewAllLink, lang, collectionHandle } = Astro.props;
+
+let products: Array<{ id: string; name: string; handle: string; price: string; image: string }> = [];
+try {
+  const data = collectionHandle && collectionHandle !== 'all' ? await getCollectionProducts(collectionHandle) : await getAllProducts();
+  products = (data || []).slice(0, 4).map(({ node }: { node: { id: string; title: string; handle: string; priceRange?: { minVariantPrice: { amount: string; currencyCode: string } }; images?: { edges: Array<{ node: { url: string } }> } } }) => ({
+    id: node.id,
+    name: node.title,
+    handle: node.handle,
+    price: new Intl.NumberFormat('en-US', { style: 'currency', currency: node.priceRange?.minVariantPrice?.currencyCode || 'USD' }).format(parseFloat(node.priceRange?.minVariantPrice?.amount || '0')),
+    image: node.images?.edges?.[0]?.node?.url || 'https://images.unsplash.com/photo-1524592094714?w=600',
+  }));
+} catch {
+  products = [];
+}
+---
+
+<section class="bg-[var(--dw-bg)] py-24 lg:py-32 border-t border-[var(--dw-border)]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-16">
+      <div>
+        <p class="font-body text-xs tracking-[0.4em] uppercase text-[var(--dw-accent)] mb-3">New Arrivals</p>
+        <h2 class="font-display text-3xl md:text-4xl font-semibold text-[var(--dw-text)] tracking-tight mb-4">{title}</h2>
+        {description && <p class="font-body text-[var(--dw-muted)] max-w-xl">{description}</p>}
+      </div>
+      <a href={`/${lang}${viewAllLink}`} class="font-body text-xs tracking-[0.3em] uppercase text-[var(--dw-muted)] hover:text-[var(--dw-accent)] transition-colors w-fit">View all</a>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      {products.length > 0 ? products.map((product) => (
+        <a href={`/${lang}/products/${product.handle}`} class="product-card group block focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dw-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--dw-bg)]" data-product-id={product.id}>
+          <div class="relative aspect-square overflow-hidden bg-[var(--dw-surface)] border border-[var(--dw-border)] mb-4 transition-all duration-[var(--duration-medium)] ease-[var(--ease-out-luxury)] group-hover:shadow-[0_0_50px_rgba(201,169,98,0.12)] group-hover:border-[var(--dw-accent)]/30">
+            <img src={product.image} alt={product.name} class="w-full h-full object-cover transition-transform duration-[var(--duration-slow)] ease-[var(--ease-out-luxury)] group-hover:scale-105" loading="lazy" decoding="async" />
+          </div>
+          <h3 class="font-display text-lg text-[var(--dw-text)] tracking-wide mb-1 group-hover:text-[var(--dw-accent)] transition-colors duration-[var(--duration-medium)]">{product.name}</h3>
+          <p class="font-body text-sm text-[var(--dw-accent)]">{product.price}</p>
+        </a>
+      )) : (
+        <p class="col-span-full font-body text-[var(--dw-muted)] text-center py-12">New arrivals coming soon.</p>
+      )}
+    </div>
+  </div>
+</section>
+
+<style>
+  .font-display { font-family: var(--font-display); }
+  .font-body { font-family: var(--font-body); }
+</style>

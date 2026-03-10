@@ -1,0 +1,38 @@
+---
+import Layoutc from '@layouts/Layoutc.astro';
+
+export async function getStaticPaths() {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  const languages = allowedLanguages.split(',').map((l: string) => l.trim()).filter((l: string) => l.length > 0);
+  return languages.map((l: string) => ({ params: { lang: l } }));
+}
+
+const { lang = 'en' } = Astro.props;
+const storeName = import.meta.env.PUBLIC_SITE_NAME || 'DesignerWatch';
+const seoTitle = `Find a Boutique | ${storeName}`;
+const seoDescription = 'Discover DesignerWatch boutiques and authorized retailers worldwide.';
+const email = import.meta.env.PUBLIC_BUSINESS_EMAIL || 'boutiques@designerwatch.com';
+---
+
+<Layoutc title={seoTitle} description={seoDescription} lang={lang}>
+  <div class="min-h-screen bg-[var(--dw-bg)]">
+    <section class="max-w-4xl mx-auto px-4 sm:px-6 py-20">
+      <p class="font-body text-xs tracking-[0.4em] uppercase text-[var(--dw-accent)] mb-4">Store locator</p>
+      <h1 class="text-4xl md:text-5xl font-light tracking-wide text-[var(--dw-text)] font-display mb-6">Find a Boutique</h1>
+      <p class="text-xl text-[var(--dw-muted)] max-w-2xl mb-12">
+        Visit an official DesignerWatch boutique or authorized retailer to experience our timepieces in person.
+      </p>
+      <div class="grid gap-6 sm:grid-cols-2">
+        <div class="p-6 rounded-xl bg-[var(--dw-surface)] border border-[var(--dw-border)]">
+          <h2 class="font-display text-xl text-[var(--dw-text)] mb-2">Boutique inquiries</h2>
+          <p class="text-sm text-[var(--dw-muted)] mb-4">For availability and appointments at our boutiques.</p>
+          <a href={`mailto:${email}`} class="font-body text-sm text-[var(--dw-accent)] hover:underline">{email}</a>
+        </div>
+        <div class="p-6 rounded-xl bg-[var(--dw-surface)] border border-[var(--dw-border)]">
+          <h2 class="font-display text-xl text-[var(--dw-text)] mb-2">Authorized retailers</h2>
+          <p class="text-sm text-[var(--dw-muted)]">Our timepieces are available through select partners worldwide. <a href={`/${lang}/contact`} class="text-[var(--dw-accent)] hover:underline">Contact us</a> for a list in your region.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layoutc>

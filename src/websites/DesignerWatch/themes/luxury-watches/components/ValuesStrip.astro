@@ -1,0 +1,51 @@
+---
+interface Item {
+  title: string;
+  description: string;
+  icon?: string;
+}
+
+interface Props {
+  title?: string;
+  items: Item[];
+}
+
+const { title = 'Why choose us', items = [] } = Astro.props;
+---
+
+<section class="bg-[var(--dw-surface)] border-y border-[var(--dw-border)] py-16 lg:py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    {title && (
+      <h2 class="font-display text-2xl md:text-3xl font-semibold text-[var(--dw-text)] text-center mb-12 lg:mb-16">
+        {title}
+      </h2>
+    )}
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-16">
+      {items.map((item) => (
+        <div class="text-center">
+          <div class="w-14 h-14 mx-auto mb-6 rounded-full bg-[var(--dw-bg)] border border-[var(--dw-border)] flex items-center justify-center">
+            {item.icon === 'shield' && (
+              <svg class="w-6 h-6 text-[var(--dw-accent)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+            )}
+            {item.icon === 'globe' && (
+              <svg class="w-6 h-6 text-[var(--dw-accent)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0h.5a2.5 2.5 0 002.5-2.5V3.935M12 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+            )}
+            {item.icon === 'heart' && (
+              <svg class="w-6 h-6 text-[var(--dw-accent)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+            )}
+            {(!item.icon || item.icon === 'star') && (
+              <svg class="w-6 h-6 text-[var(--dw-accent)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>
+            )}
+          </div>
+          <h3 class="font-display text-xl font-semibold text-[var(--dw-text)] mb-3">{item.title}</h3>
+          <p class="font-body text-sm text-[var(--dw-muted)] leading-relaxed max-w-sm mx-auto">{item.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .font-display { font-family: var(--font-display); }
+  .font-body { font-family: var(--font-body); }
+</style>

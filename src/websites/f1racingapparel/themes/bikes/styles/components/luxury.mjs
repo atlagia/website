@@ -183,5 +183,20 @@ export const luxuryComponentStyle = {
     noteWrap: "mt-6 p-4 bg-[var(--drivon-bg)] rounded-xl border border-[var(--drivon-border)]",
     noteText: "text-sm text-[var(--drivon-muted)] text-center",
     noteStrong: "font-medium text-[var(--drivon-text)]"
+  },
+
+  careInstructions: {
+    wrapper: "bg-white border border-neutral-200 rounded-xl p-6 shadow-sm",
+    headerWrap: "mb-6",
+    title: "font-headline text-sm font-semibold uppercase tracking-wide text-neutral-700 flex items-center gap-2",
+    titleIconWrap: "w-8 h-8 bg-neutral-100 flex items-center justify-center rounded-lg",
+    titleIcon: "w-4 h-4 text-neutral-600",
+    titleDivider: "w-12 h-px bg-neutral-200 mt-2",
+    grid: "grid grid-cols-1 md:grid-cols-2 gap-6",
+    column: "space-y-3",
+    heading: "font-semibold text-neutral-900 text-sm",
+    list: "space-y-2 text-sm text-neutral-600",
+    listItem: "flex items-start",
+    bullet: "w-1.5 h-1.5 bg-neutral-400 rounded-full mt-2 mr-3 flex-shrink-0"
   }
 }; 

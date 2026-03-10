@@ -1,0 +1,31 @@
+---
+import Layoutc from '@layouts/Layoutc.astro';
+
+export async function getStaticPaths() {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  const languages = allowedLanguages.split(',').map((l: string) => l.trim()).filter((l: string) => l.length > 0);
+  return languages.map((l: string) => ({ params: { lang: l } }));
+}
+
+const { lang = 'en' } = Astro.props;
+const storeName = import.meta.env.PUBLIC_SITE_NAME || 'DesignerWatch';
+const seoTitle = `Brand Story | ${storeName}`;
+const seoDescription = 'Craftsmanship and heritage behind DesignerWatch timepieces.';
+---
+
+<Layoutc title={seoTitle} description={seoDescription} lang={lang}>
+  <div class="min-h-screen bg-[var(--dw-bg)]">
+    <section class="max-w-4xl mx-auto px-4 sm:px-6 py-20">
+      <h1 class="text-4xl md:text-5xl font-light tracking-wide text-[var(--dw-text)] font-display mb-6">Brand Story</h1>
+      <p class="text-xl text-[var(--dw-muted)] max-w-2xl mb-12">
+        Precision engineering meets timeless elegance. Discover the heritage behind every DesignerWatch timepiece.
+      </p>
+      <div class="prose prose-invert max-w-none text-[var(--dw-muted)]">
+        <h2 class="text-2xl font-display text-[var(--dw-text)] mt-12 mb-4">Our Heritage</h2>
+        <p class="mb-6">Every timepiece is crafted with dedication to excellence. From macro watch details to mechanical components and luxury materials, we bring Swiss-inspired design to collectors.</p>
+        <h2 class="text-2xl font-display text-[var(--dw-text)] mt-12 mb-4">Why DesignerWatch</h2>
+        <p class="mb-6">We combine premium materials, precision craftsmanship, and design that stands the test of time.</p>
+      </div>
+    </section>
+  </div>
+</Layoutc>

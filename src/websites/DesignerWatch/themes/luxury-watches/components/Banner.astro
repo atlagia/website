@@ -1,0 +1,39 @@
+---
+interface Props {
+  headline: string;
+  subtext?: string;
+  ctaText?: string;
+  ctaLink?: string;
+  backgroundImage?: string;
+  lang?: string;
+}
+
+const { headline = 'Time Defines Style.', subtext = '', ctaText = 'Explore Watches', ctaLink = '/collections', backgroundImage, lang = 'en' } = Astro.props;
+---
+
+<section class="relative py-32 lg:py-40 flex items-center justify-center overflow-hidden bg-[var(--dw-bg)]">
+  {backgroundImage && (
+    <div class="absolute inset-0">
+      <img src={backgroundImage} alt="" class="w-full h-full object-cover opacity-40" loading="lazy" decoding="async" />
+      <div class="absolute inset-0 bg-black/60" />
+    </div>
+  )}
+  {!backgroundImage && <div class="absolute inset-0 bg-[var(--dw-surface)]" />}
+  <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+    <h2 class="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-[var(--dw-text)] tracking-tight mb-6">
+      {headline}
+    </h2>
+    {subtext && <p class="font-body text-xl text-[var(--dw-muted)] mb-10">{subtext}</p>}
+    <a
+      href={`/${lang}${ctaLink}`}
+      class="inline-flex items-center justify-center px-8 py-4 bg-[var(--dw-accent)] text-[var(--dw-bg)] font-body text-sm font-medium tracking-[0.2em] uppercase hover:opacity-95 transition-opacity duration-[var(--duration-medium)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dw-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--dw-bg)]"
+    >
+      {ctaText}
+    </a>
+  </div>
+</section>
+
+<style>
+  .font-display { font-family: var(--font-display); }
+  .font-body { font-family: var(--font-body); }
+</style>

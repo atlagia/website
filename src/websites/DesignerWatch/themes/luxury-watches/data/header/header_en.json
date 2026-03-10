@@ -1,0 +1,20 @@
+{
+  "navigation": [
+    { "text": "Home", "href": "/" },
+    { "text": "Collections", "href": "/collections" },
+    { "text": "Brand Story", "href": "/about" },
+    { "text": "Journal", "href": "/blog" },
+    { "text": "Find a Boutique", "href": "/boutiques" },
+    { "text": "Service & Care", "href": "/service" },
+    { "text": "Contact", "href": "/contact" }
+  ],
+  "auth": {
+    "login": { "text": "Sign In", "href": "/account" },
+    "signup": { "text": "Account", "href": "/account" }
+  },
+  "languages": [
+    { "code": "en", "name": "English" },
+    { "code": "fr", "name": "Français" },
+    { "code": "de", "name": "Deutsch" }
+  ]
+}

@@ -1,0 +1,208 @@
+---
+import Layoutc from '@layouts/Layoutc.astro';
+import { ArrowRight, Clock, Trophy, Flag, Zap, Star } from 'lucide-react';
+
+// Generate static paths for allowed languages from environment
+export async function getStaticPaths() {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  const languages = allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+  
+  return languages.map(lang => ({ params: { lang } }));
+}
+
+const { lang = 'en' } = Astro.params;
+const baseUrl = import.meta.env.DOMAINE || 'https://www.motorracingapparel.com';
+const storeName = import.meta.env.PUBLIC_SITE_NAME || 'Drivon';
+
+// SEO
+const seoTitle = `Endurance Racing | ${storeName}`;
+const seoDescription = "Celebrate the ultimate test of speed and endurance. From Le Mans to 24-hour races, honor the heroes of endurance racing.";
+---
+
+<Layoutc title={seoTitle} description={seoDescription} lang={lang}>
+  <div class="min-h-screen bg-[var(--mra-bg)]">
+    <!-- Hero Section -->
+    <section class="relative min-h-[50vh] flex items-center justify-center bg-[var(--mra-text)] text-[var(--mra-bg)]">
+      <div class="relative z-10 h-full flex items-center justify-center text-center px-4">
+        <div class="max-w-4xl mx-auto">
+          <h1 class="font-headline text-5xl md:text-7xl uppercase tracking-tight text-[var(--mra-bg)] mb-6">
+            Endurance Racing
+          </h1>
+          <p class="text-xl md:text-2xl text-[var(--mra-bg)]/90 mb-8">
+            The ultimate test of speed and endurance
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href={`/${lang}/le-mans-hoodies`} class="inline-flex items-center justify-center bg-[var(--mra-bg)] text-[var(--mra-text)] px-8 py-3.5 text-[11px] font-medium tracking-[0.2em] uppercase hover:opacity-90 transition-opacity font-body">
+              Le Mans Collection
+            </a>
+            <a href={`/${lang}/le-mans-heroes`} class="inline-flex items-center justify-center border-2 border-[var(--mra-bg)] text-[var(--mra-bg)] px-8 py-3.5 text-[11px] font-medium tracking-[0.2em] uppercase hover:bg-[var(--mra-bg)]/10 transition-colors font-body">
+              Le Mans Heroes
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Endurance Racing Features -->
+    <section class="py-20 px-4">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="font-headline text-4xl text-[var(--mra-text)] uppercase tracking-wide mb-4">The Ultimate Racing Challenge</h2>
+          <p class="text-xl text-[var(--mra-muted)] max-w-3xl mx-auto">
+            Endurance racing is the ultimate test of speed, strategy, and stamina. From the legendary 24 Hours of Le Mans to grueling endurance challenges, celebrate the heroes who push the limits.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+          <div class="bg-[var(--mra-card)] rounded-2xl p-8 border border-[var(--mra-border)]">
+            <div class="w-16 h-16 bg-[var(--mra-surface)] rounded-full flex items-center justify-center mb-6 text-[var(--mra-text)]">
+              <Clock class="w-8 h-8" />
+            </div>
+            <h3 class="font-headline text-2xl text-[var(--mra-text)] uppercase tracking-wide mb-4">24 Hours of Le Mans</h3>
+            <p class="text-[var(--mra-muted)]">
+              The most prestigious endurance race in the world, where drivers and teams push themselves to the absolute limit for 24 grueling hours.
+            </p>
+          </div>
+
+          <div class="bg-[var(--mra-card)] rounded-2xl p-8 border border-[var(--mra-border)]">
+            <div class="w-16 h-16 bg-[var(--mra-surface)] rounded-full flex items-center justify-center mb-6 text-[var(--mra-text)]">
+              <Trophy class="w-8 h-8" />
+            </div>
+            <h3 class="font-headline text-2xl text-[var(--mra-text)] uppercase tracking-wide mb-4">Endurance Champions</h3>
+            <p class="text-[var(--mra-muted)]">
+              Honor the legendary drivers and teams who have conquered the world's toughest endurance challenges and earned their place in racing history.
+            </p>
+          </div>
+
+          <div class="bg-[var(--mra-card)] rounded-2xl p-8 border border-[var(--mra-border)]">
+            <div class="w-16 h-16 bg-[var(--mra-surface)] rounded-full flex items-center justify-center mb-6 text-[var(--mra-text)]">
+              <Zap class="w-8 h-8" />
+            </div>
+            <h3 class="font-headline text-2xl text-[var(--mra-text)] uppercase tracking-wide mb-4">Racing Heritage</h3>
+            <p class="text-[var(--mra-muted)]">
+              Experience the rich history of endurance racing through authentic designs that capture the spirit of determination and excellence.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Endurance Categories -->
+    <section class="py-20 bg-[var(--mra-surface)] border-y border-[var(--mra-border)]">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="font-headline text-4xl text-[var(--mra-text)] uppercase tracking-wide mb-4">Endurance Racing Collection</h2>
+          <p class="text-xl text-[var(--mra-muted)]">Celebrate the heroes of endurance racing</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <a href={`/${lang}/le-mans-hoodies`} class="group bg-[var(--mra-card)] rounded-2xl overflow-hidden border border-[var(--mra-border)] hover:border-[var(--mra-text)]/30 transition-colors">
+            <div class="h-48 bg-[var(--mra-text)] flex items-center justify-center text-[var(--mra-bg)]">
+              <Clock class="w-16 h-16" />
+            </div>
+            <div class="p-6">
+              <h3 class="font-headline text-xl text-[var(--mra-text)] uppercase tracking-wide mb-2">Le Mans Hoodies</h3>
+              <p class="text-[var(--mra-muted)] mb-4">Premium hoodies celebrating Le Mans legends</p>
+              <span class="inline-flex items-center text-[11px] font-medium tracking-[0.2em] uppercase text-[var(--mra-text)] group-hover:text-[var(--mra-accent-hover)] transition-colors font-body">Shop Le Mans Hoodies <ArrowRight class="w-4 h-4 ml-2" /></span>
+            </div>
+          </a>
+
+          <a href={`/${lang}/le-mans-heroes`} class="group bg-[var(--mra-card)] rounded-2xl overflow-hidden border border-[var(--mra-border)] hover:border-[var(--mra-text)]/30 transition-colors">
+            <div class="h-48 bg-[var(--mra-text)] flex items-center justify-center text-[var(--mra-bg)]">
+              <Trophy class="w-16 h-16" />
+            </div>
+            <div class="p-6">
+              <h3 class="font-headline text-xl text-[var(--mra-text)] uppercase tracking-wide mb-2">Le Mans Heroes</h3>
+              <p class="text-[var(--mra-muted)] mb-4">Celebrate the legendary Le Mans champions</p>
+              <span class="inline-flex items-center text-[11px] font-medium tracking-[0.2em] uppercase text-[var(--mra-text)] group-hover:text-[var(--mra-accent-hover)] transition-colors font-body">Explore Le Mans Heroes <ArrowRight class="w-4 h-4 ml-2" /></span>
+            </div>
+          </a>
+
+          <a href={`/${lang}/racing-accessories`} class="group bg-[var(--mra-card)] rounded-2xl overflow-hidden border border-[var(--mra-border)] hover:border-[var(--mra-text)]/30 transition-colors">
+            <div class="h-48 bg-[var(--mra-text)] flex items-center justify-center text-[var(--mra-bg)]">
+              <Flag class="w-16 h-16" />
+            </div>
+            <div class="p-6">
+              <h3 class="font-headline text-xl text-[var(--mra-text)] uppercase tracking-wide mb-2">Endurance Accessories</h3>
+              <p class="text-[var(--mra-muted)] mb-4">Essential accessories for endurance racing fans</p>
+              <span class="inline-flex items-center text-[11px] font-medium tracking-[0.2em] uppercase text-[var(--mra-text)] group-hover:text-[var(--mra-accent-hover)] transition-colors font-body">Shop Endurance Accessories <ArrowRight class="w-4 h-4 ml-2" /></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Le Mans Spotlight -->
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="font-headline text-4xl text-[var(--mra-text)] uppercase tracking-wide mb-4">Le Mans Legends</h2>
+          <p class="text-xl text-[var(--mra-muted)]">Honor the greatest endurance racing champions</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-[var(--mra-card)] rounded-2xl p-8 border border-[var(--mra-border)]">
+            <div class="w-20 h-20 bg-[var(--mra-surface)] rounded-full flex items-center justify-center mb-6 mx-auto text-[var(--mra-text)]">
+              <Clock class="w-10 h-10" />
+            </div>
+            <h3 class="font-headline text-2xl text-[var(--mra-text)] uppercase tracking-wide mb-4 text-center">24-Hour Champions</h3>
+            <p class="text-[var(--mra-muted)] text-center mb-6">
+              Celebrate the drivers who have conquered the grueling 24 Hours of Le Mans and earned their place in endurance racing history.
+            </p>
+            <a href={`/${lang}/le-mans-heroes`} class="inline-flex items-center text-[11px] font-medium tracking-[0.2em] uppercase text-[var(--mra-text)] hover:text-[var(--mra-accent-hover)] transition-colors font-body">
+              Explore Champions <ArrowRight class="w-4 h-4 ml-2" />
+            </a>
+          </div>
+
+          <div class="bg-[var(--mra-card)] rounded-2xl p-8 border border-[var(--mra-border)]">
+            <div class="w-20 h-20 bg-[var(--mra-surface)] rounded-full flex items-center justify-center mb-6 mx-auto text-[var(--mra-text)]">
+              <Trophy class="w-10 h-10" />
+            </div>
+            <h3 class="font-headline text-2xl text-[var(--mra-text)] uppercase tracking-wide mb-4 text-center">Endurance Icons</h3>
+            <p class="text-[var(--mra-muted)] text-center mb-6">
+              Honor the legendary drivers who have shaped endurance racing and inspired generations of racing fans.
+            </p>
+            <a href={`/${lang}/le-mans-heroes`} class="inline-flex items-center text-[11px] font-medium tracking-[0.2em] uppercase text-[var(--mra-text)] hover:text-[var(--mra-accent-hover)] transition-colors font-body">
+              Explore Icons <ArrowRight class="w-4 h-4 ml-2" />
+            </a>
+          </div>
+
+          <div class="bg-[var(--mra-card)] rounded-2xl p-8 border border-[var(--mra-border)]">
+            <div class="w-20 h-20 bg-[var(--mra-surface)] rounded-full flex items-center justify-center mb-6 mx-auto text-[var(--mra-text)]">
+              <Star class="w-10 h-10" />
+            </div>
+            <h3 class="font-headline text-2xl text-[var(--mra-text)] uppercase tracking-wide mb-4 text-center">Modern Heroes</h3>
+            <p class="text-[var(--mra-muted)] text-center mb-6">
+              Celebrate today's endurance racing heroes who continue to push the boundaries of speed and endurance.
+            </p>
+            <a href={`/${lang}/le-mans-heroes`} class="inline-flex items-center text-[11px] font-medium tracking-[0.2em] uppercase text-[var(--mra-text)] hover:text-[var(--mra-accent-hover)] transition-colors font-body">
+              Explore Modern Heroes <ArrowRight class="w-4 h-4 ml-2" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-[var(--mra-text)] text-[var(--mra-bg)]">
+      <div class="max-w-4xl mx-auto text-center px-4">
+        <h2 class="font-headline text-4xl uppercase tracking-tight mb-6">Experience Endurance Racing Heritage</h2>
+        <p class="text-xl text-[var(--mra-bg)]/90 mb-8">
+          Join the global endurance racing community and celebrate the ultimate test of speed and endurance with our authentic collection.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href={`/${lang}/le-mans-hoodies`} class="inline-flex items-center justify-center bg-[var(--mra-bg)] text-[var(--mra-text)] px-8 py-3.5 text-[11px] font-medium tracking-[0.2em] uppercase hover:opacity-90 transition-opacity font-body">
+            Shop Endurance Collection
+          </a>
+          <a href={`/${lang}/le-mans-heroes`} class="inline-flex items-center justify-center border-2 border-[var(--mra-bg)] text-[var(--mra-bg)] px-8 py-3.5 text-[11px] font-medium tracking-[0.2em] uppercase hover:bg-[var(--mra-bg)]/10 transition-colors font-body">
+            Explore Le Mans Heroes
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+<style>
+  .font-headline { font-family: var(--font-headline); }
+  .font-body { font-family: var(--font-body); }
+</style>
+</Layoutc>

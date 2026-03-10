@@ -26,6 +26,63 @@ Extract from the user's instructions before writing any code:
 | **Navigation items** | Home, Collections, About, Contact … |
 | **Business name / tagline** | RepBags — "Timeless Luxury. Iconic Style." |
 
+### 0.1 Apply the AIDA Homepage Framework
+
+Before finalising sections, map them to the **AIDA funnel** and verify **visual rhythm**. Read the [world-class-homepage-builder](../world-class-homepage-builder/SKILL.md) skill for the full framework, then apply these rules:
+
+**AIDA stages — every homepage must cover all four:**
+
+| Stage | Required sections | Visual weight |
+|-------|------------------|---------------|
+| **ATTENTION** | Hero (full-bleed) + Credentials bar (strip) | Full-bleed + strip |
+| **INTEREST** | Category grid (contained) + Product grid (contained) | Contained |
+| **DESIRE** | Lifestyle banner (full-bleed) + Brand story (contained 2-col) + Trust badges (contained) | Mixed |
+| **ACTION** | Testimonials (contained) + Newsletter (contained) | Contained |
+
+**Visual rhythm rule:** Never place two full-bleed sections adjacent. Pattern: `FULL → contained(1-3) → FULL → contained(1+) → FULL → contained(2+)`.
+
+**Ideal 11-section template:**
+
+```
+1. Hero                    [FULL-BLEED]     ATTENTION
+2. Credentials bar         [STRIP]          ATTENTION
+3. Category grid           [CONTAINED]      INTEREST
+4. Product grid            [CONTAINED]      INTEREST
+5. Lifestyle banner        [FULL-BLEED]     DESIRE
+6. Brand story / Heritage  [CONTAINED 2COL] DESIRE
+7. Featured collection     [FULL-BLEED]     DESIRE
+8. Trust badges            [CONTAINED]      DESIRE
+9. Editorial / Journal     [CONTAINED]      ACTION
+10. Testimonials           [CONTAINED]      ACTION
+11. Newsletter signup      [CONTAINED]      ACTION
+```
+
+If the brief has fewer sections, use the 8-section minimum. If more content, use the 14-section rich variant. See [world-class-homepage-builder examples](../world-class-homepage-builder/examples.md).
+
+**Anti-patterns to avoid:**
+- Two full-bleed sections back-to-back
+- Two product grids without a visual break between them
+- Trust badges after testimonials (facts before emotions)
+- No brand story section (page feels like a catalog)
+
+Validate the brief's section list against this framework and reorder/add if needed before proceeding.
+
+### 0.2 Find the Closest Niche Reference
+
+Before scaffolding, find the closest existing store to use as inspiration. See [examples.md](examples.md) for the full niche lookup table, component lists, section order patterns, and design direction for each reference store.
+
+| If the new store is about… | Use as inspiration |
+|---|---|
+| F1, motorsport, racing apparel, automotive clothing | **f1racingapparel** |
+| Automotive lifestyle, driver gear, motorcycle | **f1racingapparel** |
+| Luxury handbags, designer bags, accessories | **RepBag** |
+| Luxury sneakers, designer shoes, footwear | **DesignerShoes** |
+| Luxury watches, jewelry, timepieces | **DesignerWatch** |
+| IPTV, streaming, digital subscriptions | **FastIPTV** |
+| SaaS, dental, clinic, agency | **Atlagia / Dentagia** |
+
+Clone the **closest match** theme folder instead of Abstract when a close niche exists. This gives you niche-specific components, section order, and design tokens as a head start.
+
 Create a todo list from this extraction before proceeding.
 
 ---
@@ -34,8 +91,14 @@ Create a todo list from this extraction before proceeding.
 
 ### 1.1 Copy the folder
 
+If Phase 0.2 found a close niche match, clone that store instead of Abstract:
+
 ```
+# Default (no close match):
 src/websites/Abstract/themes/base/  →  src/websites/<StoreName>/themes/<theme-name>/
+
+# With niche match (preferred — gives you niche-specific components):
+src/websites/<ReferenceStore>/themes/<ref-theme>/  →  src/websites/<StoreName>/themes/<theme-name>/
 ```
 
 Copy **everything**, including the full `styles/` folder:
@@ -175,19 +238,29 @@ Create each component file in `components/`. Build them **one at a time** in sec
 
 ### Section components (from brief):
 
-For every section in the homepage brief, create a matching component. Common examples:
+For every section in the homepage brief, create a matching component. Check [examples.md](examples.md) for niche-specific components from reference stores.
+
+**Universal components (every store):**
 
 | Section | Component file |
 |---------|---------------|
 | Featured Collections | `CategoryGrid.astro` |
 | Best Sellers | `BestSellers.astro` |
-| Brand Story | `BrandStory.astro` |
+| Credentials bar | `StatsBar.astro` |
 | Lifestyle Banner | `Banner.astro` |
-| New Arrivals | `ProductShowcase.astro` |
-| Why Choose Us | `TrustBadges.astro` or `FeaturesSection.astro` |
-| Social Gallery | `SocialGallery.astro` |
+| Trust Badges | `TrustBadges.astro` |
 | Testimonials | `TestimonialSlider.astro` |
 | Newsletter | `EmailSignup.astro` |
+
+**Niche-specific (clone from reference store — see [examples.md](examples.md)):**
+
+| Niche | Components to include |
+|-------|----------------------|
+| Automotive / F1 | `CarBrandsStrip`, `ManifestoSection`, `SeasonDrop`, `RacingArchive`, `Marquee` |
+| Luxury (watches/jewelry) | `HeritageBlock`, `CraftsmanshipVideo`, `FeaturedHighlight`, `DividerBlock` |
+| Luxury (shoes/bags/fashion) | `BrandStory`, `SocialGallery`, `LifestyleBanner`, `WhyChoose[StoreName]` |
+| IPTV / streaming | `Features`, `Channels`, `VideoDemo`, `Pricing`, `Devices`, `CTA` |
+| SaaS / digital | `Pricing`, `Process`, `Technologies`, `IndustryFeatures` |
 
 ### Header pattern
 
@@ -266,6 +339,25 @@ MCP: `browser_navigate` + `browser_take_screenshot` — full homepage should ren
 
 ---
 
+## Phase 6.5 — Homepage Quality Gate (AIDA + Rhythm Audit)
+
+After all sections render, run the [world-class-homepage-builder](../world-class-homepage-builder/SKILL.md) audit:
+
+1. **Map every section** to its AIDA stage (Attention / Interest / Desire / Action).
+2. **Check funnel coverage** — every stage must have at least one section.
+3. **Check visual rhythm** — label each section as full-bleed or contained, then verify no two full-bleed are adjacent.
+4. **Check for anti-patterns:**
+   - Duplicate intent (two product grids without a break)
+   - Trust badges placed after testimonials
+   - Missing brand story (page feels like a catalog)
+   - 4+ contained sections in a row without visual variety
+5. **Fix order** in `data/index_en.json` if any violations found.
+6. **MCP verify** — scroll through the entire page, screenshot each section transition, confirm rhythm.
+
+Only proceed to Phase 7 when this gate passes.
+
+---
+
 ## Phase 7 — Style Files
 
 Style files are **already present** from the Abstract clone (Phase 1.1). Use them as the base.
@@ -337,6 +429,15 @@ Phase 6: data/index_en.json
   - [ ] All section data with correct type fields
   - [ ] MCP verify full homepage
 
+Phase 6.5: Homepage Quality Gate (AIDA + Rhythm)
+  - [ ] Map sections to AIDA stages
+  - [ ] Verify all 4 funnel stages covered
+  - [ ] Label section weights (full-bleed vs contained)
+  - [ ] No two full-bleed adjacent
+  - [ ] No anti-patterns (duplicate intent, trust after testimonials, no story, 4+ contained run)
+  - [ ] Reorder in index_en.json if needed
+  - [ ] MCP scroll-through verification of every transition
+
 Phase 7: Style files
   - [ ] Styles present from Abstract clone (layout, Header, products, components, collections)
   - [ ] Override values with site CSS vars; do not remove keys
@@ -402,3 +503,4 @@ When the site or product page uses a **dark background** (e.g. `bodyClass` or pr
 8. Follow [atlagia-ecommerce-frontend](../atlagia-ecommerce-frontend/SKILL.md) for design direction, header pattern, and style file requirements.
 9. **After Phase 8**, run the full [website-audit](../website-audit/SKILL.md) to verify homepage sections, collections, product pages, slide cart, and pillar pages. Fix every issue before reporting done.
 10. **Style completeness:** Use Abstract theme styles as the template for all JSON/mjs keys. Respect the rules above (dark theme, header actions, Related Products, slide cart) so the new store does not regress.
+11. **Homepage quality:** Every homepage must pass the AIDA + visual rhythm audit from [world-class-homepage-builder](../world-class-homepage-builder/SKILL.md). No two full-bleed sections adjacent, all four funnel stages covered, testimonials enriched (3+ quotes with names/cities), brand story present.

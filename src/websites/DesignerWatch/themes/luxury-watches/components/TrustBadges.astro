@@ -1,0 +1,52 @@
+---
+import { Plus, Gem, Gauge, Truck, ShieldCheck, BadgeCheck } from 'lucide-react';
+
+interface Props {
+  title?: string;
+  items: Array<{ label: string; icon?: string }>;
+}
+
+const { title = 'Why DesignerWatch', items = [] } = Astro.props;
+
+const iconMap: Record<string, typeof Plus> = {
+  cross: Plus,
+  gem: Gem,
+  gauge: Gauge,
+  truck: Truck,
+  shield: ShieldCheck,
+  badge: BadgeCheck,
+};
+---
+
+<section class="bg-[var(--dw-bg)] py-20 lg:py-24 border-t border-[var(--dw-border)]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    {title && (
+      <h2 class="sr-only">{title}</h2>
+    )}
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-10" role="list">
+      {items.map((item) => {
+        const IconComponent = item.icon ? iconMap[item.icon] : null;
+        return (
+          <div class="trust-item text-center" role="listitem">
+            <div class="trust-icon-wrap w-14 h-14 mx-auto mb-4 rounded-full border border-[var(--dw-accent)]/40 flex items-center justify-center text-[var(--dw-accent)]" aria-hidden="true">
+              {IconComponent ? <IconComponent className="w-6 h-6" strokeWidth={1.5} /> : <span class="font-display text-xl font-semibold">◆</span>}
+            </div>
+            <p class="font-body text-xs sm:text-sm text-[var(--dw-muted)] tracking-wide uppercase">{item.label}</p>
+          </div>
+        );
+      })}
+    </div>
+  </div>
+</section>
+
+<style>
+  .font-display { font-family: var(--font-display); }
+  .font-body { font-family: var(--font-body); }
+  .trust-icon-wrap {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .trust-item:hover .trust-icon-wrap {
+    border-color: var(--dw-accent);
+    box-shadow: 0 0 24px rgba(201, 169, 98, 0.2);
+  }
+</style>

@@ -1,0 +1,57 @@
+---
+interface Category {
+  id: string;
+  name: string;
+  description?: string;
+  image: string;
+  link: string;
+}
+
+interface Props {
+  title: string;
+  description?: string;
+  categories: Category[];
+  lang?: string;
+}
+
+const { title, description = '', categories, lang = 'en' } = Astro.props;
+---
+
+<section class="bg-[var(--dw-bg)] py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="mb-16">
+      <p class="font-body text-xs tracking-[0.4em] uppercase text-[var(--dw-accent)] mb-3">Collections</p>
+      <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-semibold text-[var(--dw-text)] tracking-tight mb-4">{title}</h2>
+      {description && <p class="font-body text-[var(--dw-muted)] max-w-xl">{description}</p>}
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+      {categories.map((category) => (
+        <a
+          href={`/${lang}${category.link}`}
+          class="category-card group relative block aspect-[4/5] overflow-hidden bg-[var(--dw-surface)] border border-[var(--dw-border)] transition-all duration-[var(--duration-slow)] ease-[var(--ease-out-luxury)] hover:shadow-[0_0_60px_rgba(201,169,98,0.18)] hover:border-[var(--dw-accent)]/20"
+        >
+          <img
+            src={category.image}
+            alt={category.name}
+            class="absolute inset-0 w-full h-full object-cover transition-transform duration-[var(--duration-slow)] ease-[var(--ease-out-luxury)] group-hover:scale-105"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-[var(--dw-bg)]/95 via-transparent to-transparent" />
+          <div class="absolute inset-0 flex flex-col justify-end p-8">
+            <h3 class="font-display text-2xl lg:text-3xl text-[var(--dw-text)] tracking-wide mb-2 group-hover:text-[var(--dw-accent)] transition-colors">
+              {category.name}
+            </h3>
+            {category.description && <p class="font-body text-sm text-[var(--dw-muted)]">{category.description}</p>}
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .font-display { font-family: var(--font-display); }
+  .font-body { font-family: var(--font-body); }
+</style>

@@ -1,0 +1,30 @@
+---
+interface Props {
+  title?: string;
+  items: string[];
+}
+
+const { title = 'As seen in', items } = Astro.props;
+---
+
+<section class="f1-press-strip border-y border-[var(--mra-border)] bg-[var(--mra-surface)] py-12 lg:py-16" aria-label="Press and recognition">
+  <div class="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12">
+    {title && (
+      <p class="text-center text-[10px] tracking-[0.4em] uppercase text-[var(--mra-muted)] mb-10 font-body">
+        {title}
+      </p>
+    )}
+    <div class="flex flex-wrap items-center justify-center gap-x-16 gap-y-8 lg:gap-x-24">
+      {items.map((item) => (
+        <span class="font-headline text-xl sm:text-2xl text-[var(--mra-text)]/70 hover:text-[var(--mra-text)] transition-colors tracking-wide" aria-hidden="true">
+          {item}
+        </span>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .font-headline { font-family: var(--font-headline); }
+  .font-body { font-family: var(--font-body); }
+</style>

@@ -1,0 +1,28 @@
+---
+/**
+ * Compact divider between full-bleed sections. No image — solid background, centered quote/tagline.
+ * Breaks visual monotony when two hero-style blocks sit back-to-back.
+ */
+interface Props {
+  quote: string;
+  optionalSubtext?: string;
+}
+
+const { quote, optionalSubtext = '' } = Astro.props;
+---
+
+<section class="bg-[var(--dw-surface)] border-y border-[var(--dw-border)] py-12 lg:py-16" aria-label="Quote">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+    <p class="font-display text-2xl md:text-3xl lg:text-4xl font-medium text-[var(--dw-text)] tracking-tight leading-snug">
+      {quote}
+    </p>
+    {optionalSubtext && (
+      <p class="font-body text-sm md:text-base text-[var(--dw-muted)] mt-4 tracking-wide">{optionalSubtext}</p>
+    )}
+  </div>
+</section>
+
+<style>
+  .font-display { font-family: var(--font-display); }
+  .font-body { font-family: var(--font-body); }
+</style>

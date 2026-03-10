@@ -1,8 +1,14 @@
 ---
 import { fetchBlogPosts } from '@utils/shopifyAPI';
-import { getLangFromUrl, useTranslations, isValidLanguage } from '@utils/i18n';
+import { useTranslations, isValidLanguage } from '@utils/i18n';
 
 const theme = import.meta.env.THEME || 'default';
+
+const lang = Astro.props?.lang ?? Astro.params?.lang ?? 'en';
+
+if (!isValidLanguage(lang)) {
+  return Astro.redirect('/en');
+}
 
 // Properly handle dynamic imports with default exports
 const { default: BaseHead } = await import(`../components/BaseHead.astro`);
@@ -33,14 +39,6 @@ const { default: PressStrip } = await import(`../components/PressStrip.astro`);
 const { default: CarBrandsStrip } = await import(`../components/CarBrandsStrip.astro`);
 const { default: SeasonDrop } = await import(`../components/SeasonDrop.astro`);
 const { default: FollowStrip } = await import(`../components/FollowStrip.astro`);
-
-// Get the language parameter from the URL
-const { lang } = Astro.params;
-
-// Validate language and redirect to /en if invalid
-if (!isValidLanguage(lang)) {
-  return Astro.redirect('/en');
-}
 
 const translations = await useTranslations(lang);
 const jsonData = translations.default;

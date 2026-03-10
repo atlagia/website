@@ -1,0 +1,61 @@
+---
+import { ArrowRight } from 'lucide-react';
+
+interface Props {
+  headline: string;
+  description: string;
+  backgroundImage?: string;
+  button1Text: string;
+  button1Link: string;
+  button2Text?: string;
+  button2Link?: string;
+}
+
+const { headline, description, backgroundImage, button1Text, button1Link, button2Text, button2Link } = Astro.props;
+---
+
+<section
+  class="mra-banner relative min-h-[80vh] flex items-center justify-center overflow-hidden"
+  style={backgroundImage ? `background-image: url(${backgroundImage}); background-size: cover; background-position: center;` : undefined}
+>
+  {backgroundImage ? (
+    <div class="absolute inset-0 bg-[var(--mra-bg)]/92 z-10 backdrop-blur-[2px]" aria-hidden="true"></div>
+  ) : (
+    <div class="absolute inset-0 mra-banner-bg z-0" aria-hidden="true"></div>
+  )}
+
+  <div class="relative z-20 max-w-[920px] mx-auto px-6 sm:px-8 text-center py-28">
+    <h2 class="font-headline text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-[var(--mra-text)] uppercase tracking-wide leading-[1.05] mb-8">
+      {headline}
+    </h2>
+    <p class="text-lg md:text-xl text-[var(--mra-text)]/80 max-w-2xl mx-auto mb-14 font-body leading-relaxed">
+      {description}
+    </p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a
+        href={button1Link}
+        class="group inline-flex items-center gap-3 bg-[var(--mra-accent)] text-[var(--mra-bg)] px-8 py-4 text-[11px] font-medium tracking-[0.25em] uppercase hover:bg-[var(--mra-accent-hover)] transition-all duration-300"
+      >
+        <span>{button1Text}</span>
+        <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+      </a>
+      {button2Text && button2Link && (
+        <a
+          href={button2Link}
+          class="group inline-flex items-center gap-3 bg-[var(--mra-card)]/95 border border-[var(--mra-border)] text-[var(--mra-text)] px-8 py-4 text-[11px] font-medium tracking-[0.25em] uppercase hover:bg-[var(--mra-surface)] hover:border-[var(--mra-accent)] hover:text-[var(--mra-accent)] transition-all duration-300"
+        >
+          <span>{button2Text}</span>
+          <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+        </a>
+      )}
+    </div>
+  </div>
+</section>
+
+<style>
+  .font-headline { font-family: var(--font-headline); }
+  .font-body { font-family: var(--font-body); }
+  .mra-banner-bg {
+    background: linear-gradient(180deg, var(--mra-bg) 0%, var(--mra-surface) 50%, var(--mra-bg) 100%);
+  }
+</style>

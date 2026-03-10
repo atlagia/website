@@ -1,0 +1,47 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  ctaText: string;
+  ctaLink: string;
+  backgroundImage: string;
+  imageAlt?: string;
+  lang?: string;
+}
+
+const { title, description = '', ctaText, ctaLink, backgroundImage, imageAlt = '', lang = 'en' } = Astro.props;
+const base = lang ? `/${lang}` : '';
+---
+
+<section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-[var(--dw-bg)]">
+  <div class="absolute inset-0">
+    <img
+      src={backgroundImage}
+      alt={imageAlt || title}
+      class="w-full h-full object-cover"
+      loading="lazy"
+      decoding="async"
+    />
+    <div class="absolute inset-0 bg-black/55" />
+  </div>
+  <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center py-24 lg:py-32">
+    <p class="font-body text-xs tracking-[0.4em] uppercase text-[var(--dw-accent)] mb-4">Iconic Collection</p>
+    <h2 class="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-white tracking-tight mb-6">
+      {title}
+    </h2>
+    {description && (
+      <p class="font-body text-lg md:text-xl text-white/90 mb-10 max-w-2xl mx-auto">{description}</p>
+    )}
+    <a
+      href={base + ctaLink}
+      class="inline-flex items-center justify-center px-8 py-4 bg-[var(--dw-accent)] text-[var(--dw-bg)] font-body text-sm font-medium tracking-[0.2em] uppercase hover:opacity-95 transition-opacity duration-[var(--duration-medium)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dw-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+    >
+      {ctaText}
+    </a>
+  </div>
+</section>
+
+<style>
+  .font-display { font-family: var(--font-display); }
+  .font-body { font-family: var(--font-body); }
+</style>

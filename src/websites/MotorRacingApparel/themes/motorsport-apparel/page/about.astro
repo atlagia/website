@@ -1,0 +1,118 @@
+---
+import Layoutc from '@layouts/Layoutc.astro';
+
+// Generate static paths for allowed languages from environment
+export async function getStaticPaths() {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  const languages = allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+  
+  return languages.map(lang => ({ params: { lang } }));
+}
+
+const { lang = 'en' } = Astro.params;
+const baseUrl = import.meta.env.DOMAINE || 'https://www.motorracingapparel.com';
+const storeName = import.meta.env.PUBLIC_SITE_NAME || 'Drivon';
+
+// Load multilingual data
+let data;
+try {
+  data = await import(`../data/about/about_${lang}.json`);
+} catch (error) {
+  // Fallback to English if language file doesn't exist
+  data = await import(`../data/about/about_en.json`);
+}
+
+const pageData = data.default;
+
+// Get business information from environment variables
+const businessInfo = {
+  name: import.meta.env.PUBLIC_BUSINESS_NAME || 'Drivon',
+  email: import.meta.env.PUBLIC_BUSINESS_EMAIL || 'contact@motorracingapparel.com',
+  phone: import.meta.env.PUBLIC_BUSINESS_PHONE || '+1234567890',
+  address: {
+    street: import.meta.env.PUBLIC_BUSINESS_ADDRESS || '123 Racing Street',
+    city: import.meta.env.PUBLIC_BUSINESS_CITY || 'Speed City',
+    region: import.meta.env.PUBLIC_BUSINESS_REGION || 'Racing State',
+    country: import.meta.env.PUBLIC_BUSINESS_COUNTRY || 'USA',
+    postalCode: import.meta.env.PUBLIC_BUSINESS_POSTAL_CODE || '12345'
+  }
+};
+
+// SEO
+const seoTitle = `${pageData.title} | ${storeName}`;
+const seoDescription = pageData.description;
+---
+
+<Layoutc title={seoTitle} description={seoDescription} lang={lang}>
+  <div class="min-h-screen bg-[var(--mra-bg)]">
+    <!-- Hero Section -->
+    <section class="relative py-20 px-4 bg-[var(--mra-text)] text-[var(--mra-bg)]">
+      <div class="max-w-7xl mx-auto">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">{pageData.hero.title}</h1>
+        <p class="text-xl text-[var(--mra-bg)]/90 max-w-2xl">
+          {pageData.hero.subtitle}
+        </p>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="py-16 px-4 bg-white">
+      <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+        {pageData.stats.map(stat => (
+          <div class="text-center">
+            <div class="text-3xl md:text-4xl font-bold text-[var(--mra-text)] mb-2">{stat.value}</div>
+            <div class="text-[var(--mra-muted)]">{stat.label}</div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Mission -->
+    <section class="py-20 px-4 bg-[var(--mra-bg)]">
+      <div class="max-w-7xl mx-auto">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="text-3xl font-bold mb-6">{pageData.mission.title}</h2>
+          <p class="text-lg text-[var(--mra-muted)] mb-8">
+            {pageData.mission.description}
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values -->
+    <section class="py-20 px-4 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-12">{pageData.values.title}</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {pageData.values.items.map(value => (
+            <div class="text-center">
+              <h3 class="text-xl font-semibold mb-4">{value.title}</h3>
+              <p class="text-[var(--mra-muted)]">{value.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section class="py-20 px-4 bg-[var(--mra-bg)]">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-12">{pageData.team.title}</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {pageData.team.members.map(member => (
+            <div class="text-center">
+              <img
+                src={member.image}
+                alt={member.name}
+                class="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
+              />
+              <h3 class="text-xl font-semibold mb-1">{member.name}</h3>
+              <p class="text-[var(--mra-muted)] mb-3">{member.role}</p>
+              <p class="text-[var(--mra-muted)]">{member.bio}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  </div>
+</Layoutc>

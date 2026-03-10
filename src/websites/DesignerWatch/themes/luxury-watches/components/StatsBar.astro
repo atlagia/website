@@ -1,0 +1,30 @@
+---
+interface Stat {
+  value: string;
+  label: string;
+}
+
+interface Props {
+  stats: { value: string; label: string }[];
+}
+
+const { stats = [] } = Astro.props;
+---
+
+<section class="border-y border-[var(--dw-border)] bg-[var(--dw-surface)]/50" aria-label="Key credentials">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-8">
+    <div class="flex flex-wrap justify-center items-center gap-x-12 gap-y-4 lg:gap-x-20">
+      {stats.map((stat) => (
+        <div class="text-center">
+          <p class="font-display text-xl md:text-2xl text-[var(--dw-text)] tracking-tight">{stat.value}</p>
+          <p class="text-[10px] md:text-xs tracking-[0.25em] uppercase text-[var(--dw-muted)] mt-1 font-body">{stat.label}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .font-display { font-family: var(--font-display); }
+  .font-body { font-family: var(--font-body); }
+</style>

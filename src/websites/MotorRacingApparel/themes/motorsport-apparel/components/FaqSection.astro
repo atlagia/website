@@ -1,0 +1,38 @@
+---
+interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  faqs: FaqItem[];
+}
+
+const { title, description, faqs } = Astro.props;
+---
+
+<section class="mra-faq bg-[var(--mra-bg)] py-24 lg:py-32">
+  <div class="max-w-[800px] mx-auto px-6 sm:px-8 lg:px-12">
+    <p class="font-display text-[11px] tracking-[0.35em] uppercase text-[var(--mra-accent)] mb-3">Support</p>
+    <h2 class="font-display text-3xl md:text-4xl font-bold text-[var(--mra-text)] uppercase tracking-tight mb-4">{title}</h2>
+    <p class="text-lg text-[var(--mra-text)]/70 font-body mb-16">{description}</p>
+
+    <ul class="space-y-0 divide-y divide-[var(--mra-border)]">
+      {faqs.map((faq) => (
+        <li class="py-8 first:pt-0">
+          <h3 class="font-display text-lg font-semibold text-[var(--mra-text)] uppercase tracking-tight mb-3">
+            {faq.question}
+          </h3>
+          <p class="text-[var(--mra-text)]/75 font-body leading-relaxed">{faq.answer}</p>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<style>
+  .font-display { font-family: var(--font-display); }
+  .font-body { font-family: var(--font-body); }
+</style>

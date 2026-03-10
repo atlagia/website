@@ -1,0 +1,72 @@
+---
+/**
+ * Full-bleed craftsmanship / "Art of Watchmaking" section.
+ * Shows a large background image (or video poster) with overlay copy
+ * emphasising the tactile, process-driven side of watchmaking.
+ */
+interface Feature {
+  title: string;
+  description: string;
+}
+
+interface Props {
+  eyebrow?: string;
+  headline: string;
+  description?: string;
+  backgroundImage: string;
+  imageAlt?: string;
+  features?: Feature[];
+  lang?: string;
+}
+
+const {
+  eyebrow = 'The Art of Watchmaking',
+  headline,
+  description = '',
+  backgroundImage,
+  imageAlt = 'Watchmaking craftsmanship',
+  features = [],
+  lang = 'en'
+} = Astro.props;
+---
+
+<section class="relative min-h-[70vh] flex items-end overflow-hidden bg-[var(--dw-bg)]" aria-label={eyebrow}>
+  <div class="absolute inset-0">
+    <img
+      src={backgroundImage}
+      alt={imageAlt}
+      class="w-full h-full object-cover"
+      loading="lazy"
+      decoding="async"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+  </div>
+
+  <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+    {eyebrow && (
+      <p class="font-body text-xs tracking-[0.4em] uppercase text-[var(--dw-accent)] mb-4">{eyebrow}</p>
+    )}
+    <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-semibold text-white tracking-tight mb-6 max-w-2xl">
+      {headline}
+    </h2>
+    {description && (
+      <p class="font-body text-lg text-white/80 max-w-xl mb-10">{description}</p>
+    )}
+
+    {features.length > 0 && (
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl">
+        {features.map((f) => (
+          <div class="border-l border-[var(--dw-accent)]/40 pl-4">
+            <p class="font-display text-lg text-white font-medium mb-1">{f.title}</p>
+            <p class="font-body text-sm text-white/70 leading-relaxed">{f.description}</p>
+          </div>
+        ))}
+      </div>
+    )}
+  </div>
+</section>
+
+<style>
+  .font-display { font-family: var(--font-display); }
+  .font-body { font-family: var(--font-body); }
+</style>

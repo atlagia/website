@@ -1,0 +1,33 @@
+---
+import Layoutc from '@layouts/Layoutc.astro';
+
+export async function getStaticPaths() {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  const languages = allowedLanguages.split(',').map((l: string) => l.trim()).filter((l: string) => l.length > 0);
+  return languages.map((l: string) => ({ params: { lang: l } }));
+}
+
+const { lang = 'en' } = Astro.props;
+const storeName = import.meta.env.PUBLIC_SITE_NAME || 'DesignerWatch';
+const seoTitle = `Terms of Service | ${storeName}`;
+const seoDescription = 'Terms of service for DesignerWatch purchases and use of our website.';
+---
+
+<Layoutc title={seoTitle} description={seoDescription} lang={lang}>
+  <div class="min-h-screen bg-[var(--dw-bg)]">
+    <section class="max-w-4xl mx-auto px-4 sm:px-6 py-20">
+      <h1 class="text-4xl md:text-5xl font-light tracking-wide text-[var(--dw-text)] font-display mb-6">Terms of Service</h1>
+      <p class="text-sm text-[var(--dw-muted)] mb-12">Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+      <div class="prose prose-invert max-w-none text-[var(--dw-muted)] [&>h2]:text-[var(--dw-text)] [&>h2]:font-display [&>h2]:text-2xl [&>h2]:mt-12 [&>h2]:mb-4 [&>p]:mb-6 [&>ul]:list-disc [&>ul]:pl-6">
+        <h2>Agreement</h2>
+        <p>By using our website and placing orders, you agree to these terms. Please read them carefully.</p>
+        <h2>Orders and Payment</h2>
+        <p>All orders are subject to availability. We reserve the right to refuse or cancel orders. Payment is due at the time of purchase.</p>
+        <h2>Shipping and Returns</h2>
+        <p>Shipping times and costs are shown at checkout. Our return policy is available on the product and checkout pages.</p>
+        <h2>Contact</h2>
+        <p>For questions about these terms, please contact us via the Contact page.</p>
+      </div>
+    </section>
+  </div>
+</Layoutc>

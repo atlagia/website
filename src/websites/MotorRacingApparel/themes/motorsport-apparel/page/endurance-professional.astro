@@ -1,0 +1,88 @@
+---
+import Layoutc from '@layouts/Layoutc.astro';
+
+const { lang = 'en' } = Astro.params;
+const storeName = import.meta.env.PUBLIC_SITE_NAME || 'Drivon';
+
+let pageData;
+try {
+  pageData = await import(`../data/endurance-professional/endurance-professional_${lang}.json`);
+} catch (error) {
+  pageData = await import(`../data/endurance-professional/endurance-professional_en.json`);
+}
+
+const data = pageData.default;
+
+const seoTitle = `${data.title} | ${storeName}`;
+const seoDescription = data.description;
+---
+
+<Layoutc title={seoTitle} description={seoDescription} lang={lang}>
+  <main class="pt-20 min-h-screen bg-[var(--mra-bg)]">
+    <!-- Hero Section -->
+    <section class="relative py-20 px-4 bg-[var(--mra-text)] text-[var(--mra-bg)]">
+      <div class="max-w-7xl mx-auto text-center">
+        <h1 class="font-headline text-4xl md:text-6xl uppercase tracking-tight mb-6">{data.hero.title}</h1>
+        <p class="font-body text-xl md:text-2xl text-[var(--mra-bg)]/90 max-w-3xl mx-auto">
+          {data.hero.subtitle}
+        </p>
+      </div>
+    </section>
+
+    <!-- Product Categories -->
+    <section class="py-16 px-4">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="font-headline text-3xl text-center text-[var(--mra-text)] uppercase tracking-wide mb-12">{data.sections.collection.title}</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {data.collections.map(product => (
+            <div class="bg-[var(--mra-card)] rounded-lg p-6 text-center border border-[var(--mra-border)]">
+              <h3 class="font-headline text-xl text-[var(--mra-text)] uppercase tracking-wide mb-4">{product.title}</h3>
+              <p class="font-body text-[var(--mra-muted)] mb-4">{product.description}</p>
+              <a href={`/${lang}${product.link}`} class="inline-flex items-center justify-center bg-[var(--mra-text)] text-[var(--mra-bg)] px-6 py-2.5 text-[11px] font-medium tracking-[0.2em] uppercase hover:opacity-90 transition-opacity font-body">
+                {product.linkText}
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="py-16 px-4 bg-[var(--mra-surface)] border-y border-[var(--mra-border)]">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="font-headline text-3xl text-center text-[var(--mra-text)] uppercase tracking-wide mb-12">{data.sections.features.title}</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {data.features.map(feature => (
+            <div class="text-center">
+              <div class="w-16 h-16 bg-[var(--mra-text)] rounded-full flex items-center justify-center mx-auto mb-4 text-[var(--mra-bg)]">
+                <span class="font-headline text-2xl">{feature.icon}</span>
+              </div>
+              <h3 class="font-headline text-xl text-[var(--mra-text)] uppercase tracking-wide mb-2">{feature.title}</h3>
+              <p class="font-body text-[var(--mra-muted)]">{feature.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Racing Series -->
+    <section class="py-16 px-4">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="font-headline text-3xl text-center text-[var(--mra-text)] uppercase tracking-wide mb-12">{data.sections.series.title}</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          {data.series.map(series => (
+            <div class="p-4 bg-[var(--mra-card)] rounded-lg border border-[var(--mra-border)]">
+              <h3 class="font-headline text-lg text-[var(--mra-text)] uppercase tracking-wide mb-2">{series.name}</h3>
+              <p class="font-body text-[var(--mra-muted)] text-sm">{series.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+</Layoutc>
+
+<style>
+  .font-headline { font-family: var(--font-headline); }
+  .font-body { font-family: var(--font-body); }
+</style>

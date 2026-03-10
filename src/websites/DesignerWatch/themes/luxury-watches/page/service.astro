@@ -1,0 +1,42 @@
+---
+import Layoutc from '@layouts/Layoutc.astro';
+
+export async function getStaticPaths() {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  const languages = allowedLanguages.split(',').map((l: string) => l.trim()).filter((l: string) => l.length > 0);
+  return languages.map((l: string) => ({ params: { lang: l } }));
+}
+
+const { lang = 'en' } = Astro.props;
+const storeName = import.meta.env.PUBLIC_SITE_NAME || 'DesignerWatch';
+const seoTitle = `Service & Care | ${storeName}`;
+const seoDescription = 'After-sales service, maintenance, and repairs for your DesignerWatch timepiece.';
+const email = import.meta.env.PUBLIC_BUSINESS_EMAIL || 'service@designerwatch.com';
+---
+
+<Layoutc title={seoTitle} description={seoDescription} lang={lang}>
+  <div class="min-h-screen bg-[var(--dw-bg)]">
+    <section class="max-w-4xl mx-auto px-4 sm:px-6 py-20">
+      <p class="font-body text-xs tracking-[0.4em] uppercase text-[var(--dw-accent)] mb-4">After-sales</p>
+      <h1 class="text-4xl md:text-5xl font-light tracking-wide text-[var(--dw-text)] font-display mb-6">Service & Care</h1>
+      <p class="text-xl text-[var(--dw-muted)] max-w-2xl mb-12">
+        Every DesignerWatch timepiece is built to last. Our service centers provide expert maintenance, repairs, and authentication.
+      </p>
+      <div class="space-y-8">
+        <div class="p-6 rounded-xl bg-[var(--dw-surface)] border border-[var(--dw-border)]">
+          <h2 class="font-display text-xl text-[var(--dw-text)] mb-2">Servicing and repairs</h2>
+          <p class="text-[var(--dw-muted)] mb-4">Professional inspection, cleaning, and repair by trained watchmakers. Contact our service team to arrange sending your timepiece.</p>
+          <a href={`mailto:${email}`} class="font-body text-sm text-[var(--dw-accent)] hover:underline">{email}</a>
+        </div>
+        <div class="p-6 rounded-xl bg-[var(--dw-surface)] border border-[var(--dw-border)]">
+          <h2 class="font-display text-xl text-[var(--dw-text)] mb-2">Warranty</h2>
+          <p class="text-[var(--dw-muted)]">Your DesignerWatch is covered by our international warranty. Keep your certificate and proof of purchase for all after-sales requests.</p>
+        </div>
+        <div class="p-6 rounded-xl bg-[var(--dw-surface)] border border-[var(--dw-border)]">
+          <h2 class="font-display text-xl text-[var(--dw-text)] mb-2">Authentication</h2>
+          <p class="text-[var(--dw-muted)]">We offer authenticity verification for pre-owned or gifted timepieces. Get in touch to schedule an assessment.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layoutc>

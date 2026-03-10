@@ -1,0 +1,46 @@
+---
+interface Testimonial {
+  id: string;
+  author: string;
+  role: string;
+  content: string;
+  avatar: string;
+}
+
+interface Props {
+  title: string;
+  testimonials: Testimonial[];
+}
+
+const { title, testimonials } = Astro.props;
+---
+
+<section class="mra-testimonials bg-[var(--mra-surface)] py-24 lg:py-32">
+  <div class="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12">
+    <p class="font-display text-[11px] tracking-[0.35em] uppercase text-[var(--mra-accent)] mb-4">Community</p>
+    <h2 class="font-display text-3xl md:text-4xl font-bold text-[var(--mra-text)] uppercase tracking-tight mb-16">{title}</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
+      {testimonials.map((t) => (
+        <blockquote class="relative bg-[var(--mra-bg)] border border-[var(--mra-border)] p-8 lg:p-10 transition-colors hover:border-[var(--mra-accent)]/30">
+          <span class="absolute top-6 left-6 text-[var(--mra-accent)]/20 font-display text-5xl leading-none">"</span>
+          <p class="text-[var(--mra-text)]/90 font-body text-base lg:text-lg leading-relaxed mb-8 pt-4">"{t.content}"</p>
+          <footer class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-[var(--mra-accent)]/10 flex items-center justify-center text-[var(--mra-accent)] font-display font-bold text-sm">
+              {t.avatar}
+            </div>
+            <div>
+              <cite class="font-display font-semibold text-[var(--mra-text)] not-italic">{t.author}</cite>
+              <p class="text-[11px] tracking-widest uppercase text-[var(--mra-muted)]">{t.role}</p>
+            </div>
+          </footer>
+        </blockquote>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .font-display { font-family: var(--font-display); }
+  .font-body { font-family: var(--font-body); }
+</style>

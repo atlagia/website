@@ -1,0 +1,162 @@
+---
+import Layoutc from '@layouts/Layoutc.astro';
+import { ArrowRight, Star, Trophy, Crown, Award, Zap } from 'lucide-react';
+
+// Generate static paths for allowed languages from environment
+export async function getStaticPaths() {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  const languages = allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+  
+  return languages.map(lang => ({ params: { lang } }));
+}
+
+const { lang = 'en' } = Astro.params;
+const baseUrl = import.meta.env.DOMAINE || 'https://www.motorracingapparel.com';
+const storeName = import.meta.env.PUBLIC_SITE_NAME || 'Drivon';
+
+// SEO
+const seoTitle = `Street Racing Tees | ${storeName}`;
+const seoDescription = "Premium tees celebrating street racing culture. From underground racing to street legends, wear the passion of street racing.";
+---
+<Layoutc title={seoTitle} description={seoDescription} lang={lang}>
+  <div class="min-h-screen bg-[var(--mra-bg)]">
+    <!-- Hero Section -->
+    <section class="relative min-h-[50vh] flex items-center justify-center bg-[var(--mra-text)] text-[var(--mra-bg)]">
+      <div class="relative z-10 h-full flex items-center justify-center text-center px-4">
+        <div class="max-w-4xl mx-auto">
+          <h1 class="font-headline text-5xl md:text-7xl uppercase tracking-tight text-[var(--mra-bg)] mb-6">
+            Street Racing Tees
+          </h1>
+          <p class="text-xl md:text-2xl text-[var(--mra-bg)]/90 mb-8">
+            Premium tees celebrating street racing culture
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href={`/${lang}/collections`} class="bg-gray-600 hover:bg-gray-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+              Shop Street Racing
+            </a>
+            <a href={`/${lang}/street-racing`} class="inline-flex items-center justify-center border-2 border-[var(--mra-bg)] text-[var(--mra-bg)] px-8 py-3.5 text-[11px] font-medium tracking-[0.2em] uppercase hover:bg-[var(--mra-bg)]/10 transition-colors font-body">
+              Street Culture
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Street Racing Features -->
+    <section class="py-20 px-4">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="font-headline text-4xl text-[var(--mra-text)] uppercase tracking-wide mb-4">Premium Street Racing Tees</h2>
+          <p class="text-xl text-[var(--mra-muted)] max-w-3xl mx-auto">
+            From underground racing to street legends, our street racing tees celebrate the raw energy and culture of street racing.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+          <div class="bg-[var(--mra-card)] rounded-2xl p-8 border border-[var(--mra-border)]">
+            <div class="w-16 h-16 bg-[var(--mra-surface)] rounded-full flex items-center justify-center mb-6">
+              <Crown class="w-8 h-8 text-[var(--mra-muted)]" />
+            </div>
+            <h3 class="font-headline text-2xl text-[var(--mra-text)] uppercase tracking-wide mb-4">Underground Racing</h3>
+            <p class="text-[var(--mra-muted)]">
+              Celebrate the underground racing culture that has defined street racing and continues to inspire enthusiasts worldwide.
+            </p>
+          </div>
+
+          <div class="bg-[var(--mra-card)] rounded-2xl p-8 border border-[var(--mra-border)]">
+            <div class="w-16 h-16 bg-[var(--mra-surface)] rounded-full flex items-center justify-center mb-6 text-[var(--mra-text)]">
+              <Star class="w-8 h-8" />
+            </div>
+            <h3 class="font-headline text-2xl text-[var(--mra-text)] uppercase tracking-wide mb-4">Street Legends</h3>
+            <p class="text-[var(--mra-muted)]">
+              Honor the legendary street racers and the culture that has shaped underground racing and inspired generations of enthusiasts.
+            </p>
+          </div>
+
+          <div class="bg-[var(--mra-card)] rounded-2xl p-8 border border-[var(--mra-border)]">
+            <div class="w-16 h-16 bg-[var(--mra-surface)] rounded-full flex items-center justify-center mb-6 text-[var(--mra-text)]">
+              <Trophy class="w-8 h-8" />
+            </div>
+            <h3 class="font-headline text-2xl text-[var(--mra-text)] uppercase tracking-wide mb-4">Premium Quality</h3>
+            <p class="text-[var(--mra-muted)]">
+              Every tee is crafted with premium materials and attention to detail, ensuring comfort and durability for the street racing enthusiast.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Street Racing Categories -->
+    <section class="py-20 bg-[var(--mra-surface)]">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="font-headline text-4xl text-[var(--mra-text)] uppercase tracking-wide mb-4">Street Racing Collection</h2>
+          <p class="text-xl text-[var(--mra-muted)]">Celebrate the raw energy of street racing</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <a href={`/${lang}/street-racing`} class="group bg-[var(--mra-card)] rounded-2xl overflow-hidden border border-[var(--mra-border)] hover:border-[var(--mra-text)]/30 transition-colors">
+            <div class="h-48 bg-[var(--mra-text)] flex items-center justify-center text-[var(--mra-bg)]">
+              <Crown class="w-16 h-16" />
+            </div>
+            <div class="p-6">
+              <h3 class="font-headline text-xl text-[var(--mra-text)] uppercase tracking-wide mb-2">Underground Racing Tees</h3>
+              <p class="text-[var(--mra-muted)] mb-4">Premium tees celebrating underground racing culture</p>
+              <div class="flex items-center text-[var(--mra-muted)] font-semibold group-hover:text-gray-700">
+                Shop Underground Racing <ArrowRight class="w-4 h-4 ml-2" />
+              </div>
+            </div>
+          </a>
+
+          <a href={`/${lang}/street-icons`} class="group bg-[var(--mra-card)] rounded-2xl overflow-hidden border border-[var(--mra-border)] hover:border-[var(--mra-text)]/30 transition-colors">
+            <div class="h-48 bg-[var(--mra-text)] flex items-center justify-center text-[var(--mra-bg)]">
+              <Star class="w-16 h-16" />
+            </div>
+            <div class="p-6">
+              <h3 class="font-headline text-xl text-[var(--mra-text)] uppercase tracking-wide mb-2">Street Icons Tees</h3>
+              <p class="text-[var(--mra-muted)] mb-4">Classic tees honoring street racing legends</p>
+              <div class="flex items-center text-[var(--mra-text)] group-hover:text-[var(--mra-accent-hover)] font-body text-[11px] font-medium tracking-[0.2em] uppercase">
+                Shop Street Icons <ArrowRight class="w-4 h-4 ml-2" />
+              </div>
+            </div>
+          </a>
+
+          <a href={`/${lang}/collections`} class="group bg-[var(--mra-card)] rounded-2xl overflow-hidden border border-[var(--mra-border)] hover:border-[var(--mra-text)]/30 transition-colors">
+            <div class="h-48 bg-[var(--mra-text)] flex items-center justify-center text-[var(--mra-bg)]">
+              <Trophy class="w-16 h-16" />
+            </div>
+            <div class="p-6">
+              <h3 class="font-headline text-xl text-[var(--mra-text)] uppercase tracking-wide mb-2">Street Racing Legends</h3>
+              <p class="text-[var(--mra-muted)] mb-4">Tees celebrating street racing champions</p>
+              <div class="flex items-center text-[var(--mra-text)] group-hover:text-[var(--mra-accent-hover)] font-body text-[11px] font-medium tracking-[0.2em] uppercase">
+                Shop Street Legends <ArrowRight class="w-4 h-4 ml-2" />
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-[var(--mra-text)] text-[var(--mra-bg)]">
+      <div class="max-w-4xl mx-auto text-center px-4">
+        <h2 class="font-headline text-4xl uppercase tracking-tight mb-6">Wear Street Racing</h2>
+        <p class="text-xl text-[var(--mra-bg)]/90 mb-8">
+          Join the global street racing community and celebrate the raw energy of street racing with our premium street racing tees collection.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href={`/${lang}/collections`} class="bg-gray-600 hover:bg-gray-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+            Shop Street Racing Collection
+          </a>
+          <a href={`/${lang}/street-racing`} class="inline-flex items-center justify-center border-2 border-[var(--mra-bg)] text-[var(--mra-bg)] px-8 py-3.5 text-[11px] font-medium tracking-[0.2em] uppercase hover:bg-[var(--mra-bg)]/10 transition-colors font-body">
+            Explore Street Culture
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+<style>
+  .font-headline { font-family: var(--font-headline); }
+  .font-body { font-family: var(--font-body); }
+</style>
+</Layoutc>

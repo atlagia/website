@@ -1,0 +1,129 @@
+---
+import { ArrowRight } from 'lucide-react';
+
+interface Props {
+  title?: string;
+  headlineLine1?: string;
+  headlineLine2?: string;
+  description?: string;
+  primaryCtaText?: string;
+  primaryCtaLink?: string;
+  secondaryCtaText?: string;
+  secondaryCtaLink?: string;
+  heroImage?: string;
+  backgroundVideo?: { type?: string; videoId?: string; fallbackImage?: string };
+}
+
+const {
+  headlineLine1 = 'Mastery of Time',
+  headlineLine2 = 'Discover timepieces inspired by the world\'s most iconic watchmakers.',
+  description = 'Precision engineering meets timeless elegance.',
+  primaryCtaText = 'Explore Collection',
+  primaryCtaLink = '/collections',
+  secondaryCtaText = 'Discover Craftsmanship',
+  secondaryCtaLink = '/about',
+  heroImage = 'https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=1920&q=85',
+  backgroundVideo,
+} = Astro.props;
+
+const videoId = backgroundVideo?.videoId;
+const embedParams = 'autoplay=1&mute=1&loop=1&playlist=' + (videoId || '') + '&controls=0&showinfo=0&rel=0&playsinline=1';
+const embedSrc = videoId ? `https://www.youtube.com/embed/${videoId}?${embedParams}` : '';
+---
+
+<section class="designerwatch-hero relative min-h-screen flex items-center justify-center overflow-hidden bg-[var(--dw-bg)]" aria-label="Hero">
+  <div class="absolute inset-0 hero-bg-layer">
+    {embedSrc ? (
+      <>
+        <iframe
+          title="Background video"
+          src={embedSrc}
+          class="hero-bg-video absolute inset-0 w-full h-full pointer-events-none"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        />
+        <div class="absolute inset-0 hero-video-cover" aria-hidden="true" />
+      </>
+    ) : (
+      <img
+        src={heroImage}
+        alt=""
+        class="hero-bg-img w-full h-full object-cover"
+        fetchpriority="high"
+        decoding="async"
+      />
+    )}
+    <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-[var(--dw-bg)]" />
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_20%,rgba(201,169,98,0.08),transparent_50%)]" />
+  </div>
+
+  <div class="hero-content relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <p class="hero-line font-body text-xs sm:text-sm tracking-[0.4em] uppercase text-[var(--dw-accent)] mb-6 opacity-90">
+      Swiss Inspired Design
+    </p>
+    <h1 class="hero-title font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-[var(--dw-text)] tracking-tight leading-[1.1] mb-6">
+      <span class="block">{headlineLine1}</span>
+      <span class="block mt-2 text-[var(--dw-accent)]">{headlineLine2}</span>
+    </h1>
+    <p class="hero-desc font-body text-lg sm:text-xl text-[var(--dw-muted)] max-w-2xl mx-auto mb-12 leading-relaxed">
+      {description}
+    </p>
+    <div class="hero-ctas flex flex-col sm:flex-row justify-center gap-4">
+      <a
+        href={primaryCtaLink}
+        class="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-[var(--dw-accent)] text-[var(--dw-bg)] font-body text-sm font-medium tracking-[0.2em] uppercase hover:opacity-95 transition-opacity duration-[var(--duration-medium)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dw-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--dw-bg)]"
+      >
+        {primaryCtaText}
+        <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform duration-[var(--duration-medium)]" aria-hidden="true" />
+      </a>
+      <a
+        href={secondaryCtaLink}
+        class="inline-flex items-center justify-center px-8 py-4 border border-[var(--dw-border)] text-[var(--dw-text)] font-body text-sm font-medium tracking-[0.2em] uppercase hover:bg-white/5 transition-colors duration-[var(--duration-medium)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dw-text)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--dw-bg)]"
+      >
+        {secondaryCtaText}
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-bg-layer { isolation: isolate; overflow: hidden; }
+  .hero-bg-video {
+    border: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 56.25vw;
+    min-height: 100vh;
+    min-width: 177.78vh;
+  }
+  .hero-video-cover {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.5) 40%, rgba(10,10,10,0.9) 100%);
+    pointer-events: none;
+  }
+  .hero-bg-img {
+    transform: scale(1.05);
+    animation: hero-scale 30s var(--ease-luxury) infinite;
+  }
+  .hero-content {
+    animation: hero-fade-in 1.2s var(--ease-out-luxury) both;
+  }
+  .hero-line { animation: hero-fade-in 0.8s var(--ease-out-luxury) 0.2s both; }
+  .hero-title { animation: hero-fade-in 0.8s var(--ease-out-luxury) 0.3s both; }
+  .hero-desc { animation: hero-fade-in 0.8s var(--ease-out-luxury) 0.5s both; }
+  .hero-ctas { animation: hero-fade-in 0.8s var(--ease-out-luxury) 0.7s both; }
+  @keyframes hero-scale {
+    0%, 100% { transform: scale(1.05); }
+    50% { transform: scale(1.08); }
+  }
+  @keyframes hero-fade-in {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero-bg-img { animation: none; }
+    .hero-content, .hero-line, .hero-title, .hero-desc, .hero-ctas { animation: none; }
+  }
+</style>

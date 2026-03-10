@@ -1,0 +1,214 @@
+---
+import Layoutc from '@layouts/Layoutc.astro';
+import { ArrowRight, Star, Trophy, Crown, Award, Zap } from 'lucide-react';
+
+// Generate static paths for allowed languages from environment
+export async function getStaticPaths() {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  const languages = allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+  
+  return languages.map(lang => ({ params: { lang } }));
+}
+
+const { lang = 'en' } = Astro.params;
+const baseUrl = import.meta.env.DOMAINE || 'https://www.motorracingapparel.com';
+const storeName = import.meta.env.PUBLIC_SITE_NAME || 'Drivon';
+
+// SEO
+const seoTitle = `Porsche Tees | ${storeName}`;
+const seoDescription = "Premium Porsche tees celebrating the legendary German racing brand. From Le Mans champions to racing heritage, wear the passion of Porsche.";
+---
+
+<Layoutc title={seoTitle} description={seoDescription} lang={lang}>
+  <div class="min-h-screen bg-[var(--mra-bg)]">
+    <!-- Hero Section -->
+    <section class="relative min-h-[50vh] flex items-center justify-center bg-[var(--mra-text)] text-[var(--mra-bg)]">
+      <div class="relative z-10 h-full flex items-center justify-center text-center px-4">
+        <div class="max-w-4xl mx-auto">
+          <h1 class="font-headline text-5xl md:text-7xl uppercase tracking-tight text-[var(--mra-bg)] mb-6">
+            Porsche Tees
+          </h1>
+          <p class="text-xl md:text-2xl text-[var(--mra-bg)]/90 mb-8">
+            Premium tees celebrating the legendary German racing brand
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href={`/${lang}/collections`} class="bg-gray-600 hover:bg-gray-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+              Shop Porsche Tees
+            </a>
+            <a href={`/${lang}/le-mans-heroes`} class="inline-flex items-center justify-center border-2 border-[var(--mra-bg)] text-[var(--mra-bg)] px-8 py-3.5 text-[11px] font-medium tracking-[0.2em] uppercase hover:bg-[var(--mra-bg)]/10 transition-colors font-body">
+              Le Mans Heroes
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Porsche Tees Features -->
+    <section class="py-20 px-4">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="font-headline text-4xl text-[var(--mra-text)] uppercase tracking-wide mb-4">Premium Porsche Tees</h2>
+          <p class="text-xl text-[var(--mra-muted)] max-w-3xl mx-auto">
+            From Le Mans champions to racing heritage, our Porsche tees celebrate the legendary German racing brand with authentic designs and premium quality.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+          <div class="bg-[var(--mra-card)] rounded-2xl p-8 border border-[var(--mra-border)]">
+            <div class="w-16 h-16 bg-[var(--mra-surface)] rounded-full flex items-center justify-center mb-6">
+              <Crown class="w-8 h-8 text-[var(--mra-muted)]" />
+            </div>
+            <h3 class="font-headline text-2xl text-[var(--mra-text)] uppercase tracking-wide mb-4">Le Mans Champions</h3>
+            <p class="text-[var(--mra-muted)]">
+              Celebrate the legendary Porsche drivers who have conquered Le Mans and earned their place in endurance racing history.
+            </p>
+          </div>
+
+          <div class="bg-[var(--mra-card)] rounded-2xl p-8 border border-[var(--mra-border)]">
+            <div class="w-16 h-16 bg-[var(--mra-surface)] rounded-full flex items-center justify-center mb-6 text-[var(--mra-text)]">
+              <Star class="w-8 h-8" />
+            </div>
+            <h3 class="font-headline text-2xl text-[var(--mra-text)] uppercase tracking-wide mb-4">Racing Heritage</h3>
+            <p class="text-[var(--mra-muted)]">
+              Honor the legendary Porsche cars and drivers who have shaped motorsport and continue to inspire generations of racing fans.
+            </p>
+          </div>
+
+          <div class="bg-[var(--mra-card)] rounded-2xl p-8 border border-[var(--mra-border)]">
+            <div class="w-16 h-16 bg-[var(--mra-surface)] rounded-full flex items-center justify-center mb-6 text-[var(--mra-text)]">
+              <Trophy class="w-8 h-8" />
+            </div>
+            <h3 class="font-headline text-2xl text-[var(--mra-text)] uppercase tracking-wide mb-4">Premium Quality</h3>
+            <p class="text-[var(--mra-muted)]">
+              Every tee is crafted with premium materials and attention to detail, ensuring comfort and durability for the Porsche enthusiast.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Porsche Tees Categories -->
+    <section class="py-20 bg-[var(--mra-surface)]">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="font-headline text-4xl text-[var(--mra-text)] uppercase tracking-wide mb-4">Porsche Tees Collection</h2>
+          <p class="text-xl text-[var(--mra-muted)]">Celebrate the legendary German racing brand</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <a href={`/${lang}/collections`} class="group bg-[var(--mra-card)] rounded-2xl overflow-hidden border border-[var(--mra-border)] hover:border-[var(--mra-text)]/30 transition-colors">
+            <div class="h-48 bg-[var(--mra-text)] flex items-center justify-center text-[var(--mra-bg)]">
+              <Crown class="w-16 h-16" />
+            </div>
+            <div class="p-6">
+              <h3 class="font-headline text-xl text-[var(--mra-text)] uppercase tracking-wide mb-2">Porsche Le Mans Tees</h3>
+              <p class="text-[var(--mra-muted)] mb-4">Premium tees celebrating Porsche Le Mans champions</p>
+              <div class="flex items-center text-[var(--mra-muted)] font-semibold group-hover:text-gray-700">
+                Shop Le Mans Tees <ArrowRight class="w-4 h-4 ml-2" />
+              </div>
+            </div>
+          </a>
+
+          <a href={`/${lang}/collections`} class="group bg-[var(--mra-card)] rounded-2xl overflow-hidden border border-[var(--mra-border)] hover:border-[var(--mra-text)]/30 transition-colors">
+            <div class="h-48 bg-[var(--mra-text)] flex items-center justify-center text-[var(--mra-bg)]">
+              <Star class="w-16 h-16" />
+            </div>
+            <div class="p-6">
+              <h3 class="font-headline text-xl text-[var(--mra-text)] uppercase tracking-wide mb-2">Porsche Heritage Tees</h3>
+              <p class="text-[var(--mra-muted)] mb-4">Classic tees honoring Porsche racing heritage</p>
+              <div class="flex items-center text-[var(--mra-text)] group-hover:text-[var(--mra-accent-hover)] font-body text-[11px] font-medium tracking-[0.2em] uppercase">
+                Shop Heritage Tees <ArrowRight class="w-4 h-4 ml-2" />
+              </div>
+            </div>
+          </a>
+
+          <a href={`/${lang}/collections`} class="group bg-[var(--mra-card)] rounded-2xl overflow-hidden border border-[var(--mra-border)] hover:border-[var(--mra-text)]/30 transition-colors">
+            <div class="h-48 bg-[var(--mra-text)] flex items-center justify-center text-[var(--mra-bg)]">
+              <Trophy class="w-16 h-16" />
+            </div>
+            <div class="p-6">
+              <h3 class="font-headline text-xl text-[var(--mra-text)] uppercase tracking-wide mb-2">Porsche Legends Tees</h3>
+              <p class="text-[var(--mra-muted)] mb-4">Tees celebrating Porsche racing legends</p>
+              <div class="flex items-center text-[var(--mra-text)] group-hover:text-[var(--mra-accent-hover)] font-body text-[11px] font-medium tracking-[0.2em] uppercase">
+                Shop Legends Tees <ArrowRight class="w-4 h-4 ml-2" />
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Porsche Tees Spotlight -->
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="font-headline text-4xl text-[var(--mra-text)] uppercase tracking-wide mb-4">Porsche Tees Features</h2>
+          <p class="text-xl text-[var(--mra-muted)]">Premium quality and authentic designs</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-[var(--mra-card)] rounded-2xl p-8 border border-[var(--mra-border)]">
+            <div class="w-20 h-20 bg-[var(--mra-surface)] rounded-full flex items-center justify-center mb-6 mx-auto">
+              <Award class="w-10 h-10 text-[var(--mra-muted)]" />
+            </div>
+            <h3 class="font-headline text-2xl text-[var(--mra-text)] uppercase tracking-wide mb-4 text-center">Premium Materials</h3>
+            <p class="text-[var(--mra-muted)] text-center mb-6">
+              Crafted with premium cotton and attention to detail, ensuring comfort and durability for the Porsche enthusiast.
+            </p>
+            <a href={`/${lang}/collections`} class="flex items-center justify-center text-[var(--mra-muted)] font-semibold hover:text-gray-700">
+              Shop Premium Tees <ArrowRight class="w-4 h-4 ml-2" />
+            </a>
+          </div>
+
+          <div class="bg-[var(--mra-card)] rounded-2xl p-8 border border-[var(--mra-border)]">
+            <div class="w-20 h-20 bg-[var(--mra-surface)] rounded-full flex items-center justify-center mb-6 mx-auto text-[var(--mra-text)]">
+              <Zap class="w-10 h-10" />
+            </div>
+            <h3 class="font-headline text-2xl text-[var(--mra-text)] uppercase tracking-wide mb-4 text-center">Authentic Designs</h3>
+            <p class="text-[var(--mra-muted)] text-center mb-6">
+              Featuring authentic Porsche designs that celebrate the heritage and culture of the legendary German racing brand.
+            </p>
+            <a href={`/${lang}/collections`} class="flex items-center justify-center text-blue-600 font-semibold hover:text-blue-700">
+              Shop Authentic Designs <ArrowRight class="w-4 h-4 ml-2" />
+            </a>
+          </div>
+
+          <div class="bg-[var(--mra-card)] rounded-2xl p-8 border border-[var(--mra-border)]">
+            <div class="w-20 h-20 bg-[var(--mra-surface)] rounded-full flex items-center justify-center mb-6 mx-auto text-[var(--mra-text)]">
+              <Star class="w-10 h-10" />
+            </div>
+            <h3 class="font-headline text-2xl text-[var(--mra-text)] uppercase tracking-wide mb-4 text-center">Porsche Heritage</h3>
+            <p class="text-[var(--mra-muted)] text-center mb-6">
+              Each tee tells a story of Porsche heritage, from Le Mans champions to racing legends and iconic moments in motorsport history.
+            </p>
+            <a href={`/${lang}/le-mans-heroes`} class="flex items-center justify-center text-yellow-600 font-semibold hover:text-yellow-700">
+              Explore Porsche Heritage <ArrowRight class="w-4 h-4 ml-2" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-[var(--mra-text)] text-[var(--mra-bg)]">
+      <div class="max-w-4xl mx-auto text-center px-4">
+        <h2 class="font-headline text-4xl uppercase tracking-tight mb-6">Wear Porsche Heritage</h2>
+        <p class="text-xl text-[var(--mra-bg)]/90 mb-8">
+          Join the global Porsche community and celebrate the legendary German racing brand with our premium Porsche tees collection.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href={`/${lang}/collections`} class="bg-gray-600 hover:bg-gray-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+            Shop Porsche Tees Collection
+          </a>
+          <a href={`/${lang}/le-mans-heroes`} class="inline-flex items-center justify-center border-2 border-[var(--mra-bg)] text-[var(--mra-bg)] px-8 py-3.5 text-[11px] font-medium tracking-[0.2em] uppercase hover:bg-[var(--mra-bg)]/10 transition-colors font-body">
+            Explore Le Mans Heroes
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+<style>
+  .font-headline { font-family: var(--font-headline); }
+  .font-body { font-family: var(--font-body); }
+</style>
+</Layoutc>

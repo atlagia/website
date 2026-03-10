@@ -1,0 +1,29 @@
+---
+interface Props {
+  image: string;
+  imageAlt?: string;
+  caption?: string;
+}
+
+const { image, imageAlt = 'Lifestyle', caption } = Astro.props;
+---
+
+<section class="f1-lifestyle relative overflow-hidden bg-[var(--mra-bg)]">
+  <div class="relative aspect-[21/9] min-h-[400px] overflow-hidden">
+    <img
+      src={image}
+      alt={imageAlt}
+      class="w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-[var(--mra-bg)] via-transparent to-transparent"></div>
+    {caption && (
+      <p class="absolute bottom-8 left-6 sm:left-12 font-body text-[11px] tracking-[0.3em] uppercase text-[var(--mra-text)]/80">
+        {caption}
+      </p>
+    )}
+  </div>
+</section>
+
+<style>
+  .font-body { font-family: var(--font-body); }
+</style>

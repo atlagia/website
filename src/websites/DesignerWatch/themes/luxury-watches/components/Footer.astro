@@ -1,0 +1,79 @@
+---
+const currentYear = new Date().getFullYear();
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'DesignerWatch';
+const lang = Astro.params?.lang ?? 'en';
+
+const footerNav = {
+  collections: [
+    { name: 'Collections', href: '/collections' },
+    { name: 'Timepieces', href: '/products' },
+  ],
+  company: [
+    { name: 'Brand Story', href: '/about' },
+    { name: 'Journal', href: '/blog' },
+    { name: 'Find a Boutique', href: '/boutiques' },
+    { name: 'Contact', href: '/contact' },
+  ],
+  support: [
+    { name: 'Shipping & Returns', href: '/shipping' },
+    { name: 'Service & Care', href: '/service' },
+    { name: 'Account', href: '/account' },
+  ],
+  legal: [
+    { name: 'Privacy', href: '/privacy' },
+    { name: 'Terms', href: '/terms' },
+  ],
+};
+---
+
+<footer class="bg-[var(--dw-bg)] border-t border-[var(--dw-border)]" aria-labelledby="footer-heading">
+  <h2 id="footer-heading" class="sr-only">Footer</h2>
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-12 pt-20">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-12 lg:gap-16">
+      <div class="col-span-2 md:col-span-1">
+        <span class="font-display text-2xl font-semibold text-[var(--dw-text)] tracking-wide">{siteName}</span>
+        <p class="mt-4 font-body text-sm text-[var(--dw-muted)] leading-relaxed">Precision. Craftsmanship. Heritage.</p>
+      </div>
+      <div>
+        <h3 class="font-body text-xs font-medium tracking-[0.2em] uppercase text-[var(--dw-muted)] mb-6">Collections</h3>
+        <ul role="list" class="space-y-3">
+          {footerNav.collections.map((item) => (
+            <li><a href={`/${lang}${item.href}`} class="font-body text-sm text-[var(--dw-text)] hover:text-[var(--dw-accent)] transition-colors duration-[var(--duration-medium)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dw-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--dw-bg)] rounded-sm">{item.name}</a></li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-body text-xs font-medium tracking-[0.2em] uppercase text-[var(--dw-muted)] mb-6">Company</h3>
+        <ul role="list" class="space-y-3">
+          {footerNav.company.map((item) => (
+            <li><a href={`/${lang}${item.href}`} class="font-body text-sm text-[var(--dw-text)] hover:text-[var(--dw-accent)] transition-colors duration-[var(--duration-medium)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dw-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--dw-bg)] rounded-sm">{item.name}</a></li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-body text-xs font-medium tracking-[0.2em] uppercase text-[var(--dw-muted)] mb-6">Support</h3>
+        <ul role="list" class="space-y-3">
+          {footerNav.support.map((item) => (
+            <li><a href={`/${lang}${item.href}`} class="font-body text-sm text-[var(--dw-text)] hover:text-[var(--dw-accent)] transition-colors duration-[var(--duration-medium)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dw-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--dw-bg)] rounded-sm">{item.name}</a></li>
+          ))}
+        </ul>
+      </div>
+    </div>
+    <div class="mt-12 pt-8 border-t border-[var(--dw-border)]">
+      <p class="font-body text-xs text-[var(--dw-muted)] mb-4">Authenticity guaranteed · Secure checkout · Global shipping</p>
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <p class="font-body text-xs text-[var(--dw-muted)]">&copy; {currentYear} {siteName}. All rights reserved.</p>
+        <nav class="flex gap-6" aria-label="Legal">
+          {footerNav.legal.map((item) => (
+            <a href={`/${lang}${item.href}`} class="font-body text-xs text-[var(--dw-muted)] hover:text-[var(--dw-text)] transition-colors duration-[var(--duration-medium)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dw-accent)] rounded-sm">{item.name}</a>
+          ))}
+        </nav>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .font-display { font-family: var(--font-display); }
+  .font-body { font-family: var(--font-body); }
+</style>

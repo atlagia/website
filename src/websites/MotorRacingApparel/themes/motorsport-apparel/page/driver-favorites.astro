@@ -1,0 +1,77 @@
+---
+import { getLangFromUrl, useTranslations, isValidLanguage } from '@utils/i18n';
+
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+
+const { lang } = Astro.params;
+if (!isValidLanguage(lang)) {
+  return Astro.redirect('/en');
+}
+
+const translations = await useTranslations(lang);
+const jsonData = translations.default;
+
+const SITE_TITLE = `Driver Favorites - ${jsonData.siteTitle}`;
+const SITE_DESCRIPTION = 'Our most popular driver merchandise loved by automotive enthusiasts worldwide. Best-selling items that define car culture.';
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <main class="min-h-screen bg-[var(--mra-bg)]">
+      <section class="relative py-20 bg-[var(--mra-text)] text-[var(--mra-bg)]">
+<div class="relative max-w-6xl mx-auto px-4 text-center">
+          <h1 class="text-5xl md:text-7xl font-black mb-6 uppercase tracking-tighter">
+            Driver Favorites
+          </h1>
+          <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto font-medium">
+            Our most popular driver merchandise loved by automotive enthusiasts worldwide. 
+            Best-selling items that define car culture and racing heritage.
+          </p>
+        </div>
+      </section>
+
+      <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+          <h2 class="text-4xl font-bold text-center mb-12">Most Popular Driver Merchandise</h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-[var(--mra-card)] rounded-lg border border-[var(--mra-border)] overflow-hidden shadow-lg">
+              <div class="h-48 bg-[var(--mra-text)] flex items-center justify-center text-[var(--mra-bg)]">
+                <span class="text-white text-2xl font-bold">Best Sellers</span>
+              </div>
+              <div class="p-6">
+                <h3 class="font-bold text-lg mb-2">Top Rated Items</h3>
+                <p class="text-[var(--mra-muted)] text-sm">Highest rated driver merchandise</p>
+              </div>
+            </div>
+            <div class="bg-[var(--mra-card)] rounded-lg border border-[var(--mra-border)] overflow-hidden shadow-lg">
+              <div class="h-48 bg-[var(--mra-text)] flex items-center justify-center text-[var(--mra-bg)]">
+                <span class="text-white text-2xl font-bold">New Arrivals</span>
+              </div>
+              <div class="p-6">
+                <h3 class="font-bold text-lg mb-2">Latest Releases</h3>
+                <p class="text-[var(--mra-muted)] text-sm">Fresh designs and new releases</p>
+              </div>
+            </div>
+            <div class="bg-[var(--mra-card)] rounded-lg border border-[var(--mra-border)] overflow-hidden shadow-lg">
+              <div class="h-48 bg-[var(--mra-text)] flex items-center justify-center text-[var(--mra-bg)]">
+                <span class="text-white text-2xl font-bold">Trending Now</span>
+              </div>
+              <div class="p-6">
+                <h3 class="font-bold text-lg mb-2">Trending Items</h3>
+                <p class="text-[var(--mra-muted)] text-sm">Currently popular with car enthusiasts</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>

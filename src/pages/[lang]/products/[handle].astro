@@ -444,21 +444,11 @@ const sectionsOrder = productLayout.sectionsOrder || DEFAULT_SECTIONS_ORDER;
 const rightColumnOrder = sectionsOrder.filter((id: string) => RIGHT_COLUMN_IDS.includes(id));
 const additionalOrder = sectionsOrder.filter((id: string) => ADDITIONAL_IDS.includes(id));
 const showRelated = sectionsOrder.includes('related_products');
-const isDarkProduct = pageStyle.wrapper?.includes('bg-[#0a0a0a]') ?? false;
-const descriptionProseClass = isDarkProduct ? (pageStyle.descriptionProseDark ?? '') : (pageStyle.descriptionProseLight ?? '');
 
-const relatedCardStyles = {
-  root: pageStyle.relatedCardRoot,
-  media: pageStyle.relatedCardMedia,
-  noImageWrap: pageStyle.relatedCardNoImageWrap,
-  noImageText: pageStyle.relatedCardNoImageText,
-  saleBadge: pageStyle.relatedCardSaleBadge,
-  content: pageStyle.relatedCardContent,
-  title: pageStyle.relatedCardTitle,
-  price: pageStyle.relatedCardPrice,
-  comparePrice: pageStyle.relatedCardComparePrice,
-  arrow: pageStyle.relatedCardArrow
-};
+// Add-to-cart form theme: from theme products.json (addToCartTheme: 'light' | 'dark'), default 'light'
+const addToCartTheme = (productStyleData.default?.addToCartTheme ?? defaultProductStyle.default?.addToCartTheme ?? 'light') as 'light' | 'dark';
+// Add-to-cart form styles: from theme products.json page.addToCart (optionButton, optionButtonSelected, price, etc.)
+const addToCartStyles = (pageStyle as Record<string, unknown>).addToCart as Record<string, string> | undefined;
 ---
 
 <Layout 
@@ -474,7 +464,7 @@ const relatedCardStyles = {
   breadcrumbSchema={breadcrumbSchema}
   projectType={PROJECT_TYPE}
 >
-      <div id="product-wrapper" class={pageStyle.wrapper} data-theme={isDarkProduct ? 'dark' : 'light'}>
+      <div id="product-wrapper" class={pageStyle.wrapper}>
         <div
           id="product-content"
           class={pageStyle.content}
@@ -802,7 +792,7 @@ const relatedCardStyles = {
                   </h1>
                   {reviewStats && (
                     <div class={pageStyle.reviewRow}>
-                      <div class={pageStyle.reviewRowInner}>
+                      <div class="flex items-center">
                         <div
                           class={pageStyle.reviewStars} 
                           aria-label={`Rated ${reviewStats.averageRating.toFixed(1)} out of 5 stars`}
@@ -813,30 +803,30 @@ const relatedCardStyles = {
                             
                             return (
                               <span 
-                                class={
+                                class={`transition-colors duration-200 ${
                                   ratingDiff >= 1 
-                                    ? pageStyle.reviewStarFilled 
+                                    ? 'text-neutral-600' 
                                     : ratingDiff > 0 
-                                    ? pageStyle.reviewStarPartialWrap 
-                                    : pageStyle.reviewStarEmpty
-                                }
+                                    ? 'relative inline-block'
+                                    : 'text-neutral-300'
+                                }`}
                               >
                                 {ratingDiff > 0 && ratingDiff < 1 ? (
                                   <>
                                     <span 
-                                      class={pageStyle.reviewStarPartialFill} 
+                                      class="absolute text-neutral-600" 
                                       style={`clip-path: inset(0 ${100 - (ratingDiff * 100)}% 0 0);`}
                                     >
                                       ★
                                     </span>
-                                    <span class={pageStyle.reviewStarEmpty}>☆</span>
+                                    <span class="text-neutral-300">☆</span>
                                   </>
                                 ) : ratingDiff >= 1 ? '★' : '☆'}
                               </span>
                             );
                           })}
                         </div>
-                        <span class={pageStyle.reviewRatingText}>{reviewStats.averageRating.toFixed(1)}</span>
+                        <span class="ml-1">{reviewStats.averageRating.toFixed(1)}</span>
                       </div>
                       <span>·</span>
                       <a
@@ -844,10 +834,10 @@ const relatedCardStyles = {
                         class={pageStyle.reviewLink}
                       >
                         <span>{reviewStats.totalReviews}</span>
-                        <span class={pageStyle.reviewRatingText}>
+                        <span class="ml-1">
                           {reviewStats.totalReviews === 1 ? 'Review' : 'Reviews'}
                         </span>
-                        <span class={pageStyle.reviewLinkArrow}>→</span>
+                        <span class="inline-block transition-transform group-hover:translate-x-0.5">→</span>
                       </a>
                     </div>
                   )}
@@ -860,6 +850,8 @@ const relatedCardStyles = {
                   apiEndpoint={apiEndpoint}
                   hasChartData={hasChartData}
                   projectType={PROJECT_TYPE}
+                  themeVariant={addToCartTheme}
+                  addToCartStyles={addToCartStyles}
                   paymentConfig={{
                     method: import.meta.env.PUBLIC_PAYMENT_METHOD || 'infinity',
                     hoodpay: {
@@ -890,22 +882,22 @@ const relatedCardStyles = {
                         <div class={pageStyle.descriptionHeader}>
                           <h2 class={pageStyle.descriptionHeaderTitle}>
                             <span class={pageStyle.descriptionHeaderIcon} aria-hidden="true">
-                              <Info className={pageStyle.descriptionHeaderIconSvg ?? pageStyle.showMoreIcon} strokeWidth={2} />
+                              <Info className="w-4 h-4 text-neutral-700" strokeWidth={2} />
                             </span>
                             Product Details
                           </h2>
                         </div>
                         <div class={pageStyle.descriptionContentWrap}>
                           <div class={pageStyle.descriptionContentInner}>
-                            <div class={pageStyle.descriptionContentInnerWrap}>
+                            <div class="relative p-6">
                               <div id="description-content" class={pageStyle.descriptionContent} style="max-height: 200px;">
-                                <div set:html={product.descriptionHtml} class={descriptionProseClass} />
+                                <div set:html={product.descriptionHtml} class={addToCartTheme === 'dark' ? (pageStyle.descriptionProseDark ?? pageStyle.descriptionProseLight) : pageStyle.descriptionProseLight} />
                                 <div id="description-overlay" class={pageStyle.descriptionOverlay}></div>
                               </div>
                               <div class={pageStyle.showMoreWrap}>
                                 <button id="show-more-btn" type="button" class={pageStyle.showMoreBtn} aria-expanded="false">
                                   <span id="show-more-text">Show More</span>
-                                  <svg id="show-more-icon" class={pageStyle.showMoreIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                  <svg id="show-more-icon" class="w-4 h-4 transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
                                   </svg>
                                 </button>
@@ -916,7 +908,7 @@ const relatedCardStyles = {
                         <div class={pageStyle.detailInfoWrap}>
                           <div class={pageStyle.detailInfoBox}>
                             <span class={pageStyle.detailInfoIcon} aria-hidden="true">
-                              <svg class={pageStyle.detailInfoIconSvg ?? pageStyle.showMoreIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                              <svg class="w-5 h-5 text-neutral-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                               </svg>
                             </span>
@@ -939,11 +931,6 @@ const relatedCardStyles = {
             <!-- Additional sections (layout.sectionsOrder) -->
             <div class={pageStyle.additionalWrap}>
               {additionalOrder.map((sectionId) => {
-                if (sectionId === 'key_features') return <KeyFeatures productTitle={product.title} language={lang} />;
-                if (sectionId === 'product_specs') return <ProductSpecs productTitle={product.title} language={lang} />;
-                if (sectionId === 'size_chart') return <SizeChart productTitle={product.title} language={lang} handle={handle} let:hasChartData />;
-                if (sectionId === 'reviews') return <Reviews language={lang} />;
-                if (sectionId === 'product_faq') return <ProductFAQ productTitle={product.title} language={lang} />;
                 if (sectionId === 'shipping_info') return <ShippingInfo />;
                 if (sectionId === 'product_warranty') return <ProductWarranty />;
                 if (sectionId === 'care_instructions') return <CareInstructions />;
@@ -989,7 +976,6 @@ const relatedCardStyles = {
                           image: product.node.images?.edges?.[0]?.node ? { url: product.node.images.edges[0].node.url, altText: product.node.title } : undefined
                         }}
                         lang={lang}
-                        cardStyles={relatedCardStyles}
                       />
                     );
                   })
@@ -1010,7 +996,6 @@ const relatedCardStyles = {
                           image: product.node.images?.edges?.[0]?.node ? { url: product.node.images.edges[0].node.url, altText: product.node.title } : undefined
                         }}
                         lang={lang}
-                        cardStyles={relatedCardStyles}
                       />
                     );
                   })
@@ -1023,7 +1008,7 @@ const relatedCardStyles = {
         
         <div 
           id="loading-skeleton" 
-          class={pageStyle.loadingSkeletonWrap}
+          class="hidden"
           aria-hidden="true"
         >
           <ProductLoading />
@@ -1273,8 +1258,8 @@ const relatedCardStyles = {
     }
   }
 
-  // Initialize gallery
-  new ImageGallery();
+  // Initialize gallery (carousel only - when mainImage exists)
+  const gallery = new ImageGallery();
 
   const normalizeUrl = (url: string) => {
     try {
@@ -1314,7 +1299,6 @@ const relatedCardStyles = {
       if (match) {
         gallery.insertBefore(match, gallery.firstElementChild);
       } else if (imageId || imageBaseUrl) {
-        // Selected image may be outside top-6 grid: inject selected image into first slot.
         const sourceButton = Array.from(document.querySelectorAll('[data-grid-source]')).find((btn) => {
           const b = btn as HTMLButtonElement;
           if (imageId && b.dataset.imageId === imageId) return true;
@@ -1336,7 +1320,6 @@ const relatedCardStyles = {
         }
       }
 
-      // Keep loading priority aligned with the new first image.
       const orderedItems = Array.from(gallery.querySelectorAll('[data-grid-image-item]')) as HTMLElement[];
       orderedItems.forEach((item, index) => {
         const img = item.querySelector('img');
@@ -1368,12 +1351,11 @@ const relatedCardStyles = {
 
   initGridSourceCarousel();
 
-  // Listen for variant changes
+  // Listen for variant changes: update mainImage (carousel) and/or grid via promoteGridImage
   window.addEventListener('variantImageChange', (event: CustomEvent) => {
     const { imageUrl, imageId } = event.detail;
     const mainImage = document.getElementById('mainImage') as HTMLImageElement;
     if (mainImage && imageUrl) {
-      // Update main image with responsive attributes
       mainImage.src = `${imageUrl}&width=800`;
       mainImage.srcset = `
         ${imageUrl}&width=400 400w,
@@ -1382,7 +1364,6 @@ const relatedCardStyles = {
       `;
     }
 
-    // In grid gallery mode, move selected variant image tile to first position.
     if (!imageId && !imageUrl) return;
     promoteGridImage(imageId, imageUrl);
   });
@@ -1454,18 +1435,6 @@ const relatedCardStyles = {
   .product-details-section .prose {
     --tw-prose-body: theme('colors.neutral.700');
     --tw-prose-headings: theme('colors.neutral.900');
-  }
-  /* Dark theme: description and all prose must be light text */
-  #product-wrapper[data-theme="dark"] .product-details-section .prose {
-    --tw-prose-body: var(--ds-text, rgb(245 245 245));
-    --tw-prose-headings: var(--ds-text, rgb(255 255 255));
-    --tw-prose-links: var(--ds-accent, rgb(201 169 98));
-    color: var(--ds-text, rgb(255 255 255));
-  }
-  #product-wrapper[data-theme="dark"] .product-details-section .prose p,
-  #product-wrapper[data-theme="dark"] .product-details-section .prose li,
-  #product-wrapper[data-theme="dark"] .product-details-section .prose span {
-    color: inherit;
   }
 
   #description-content {
@@ -1585,40 +1554,4 @@ const relatedCardStyles = {
   .product-page-minimal .text-green-800 { color: #404040 !important; }
   /* Size/option pills: selected = dark grey, unselected = light grey */
   .product-page-minimal button.bg-blue-500.rounded-full { background-color: #262626 !important; color: #fff !important; }
-
-  /* Dark theme: breadcrumb, product title, price - all light */
-  #product-wrapper[data-theme="dark"] [aria-label="Breadcrumb"] a,
-  #product-wrapper[data-theme="dark"] [aria-label="Breadcrumb"] span,
-  #product-wrapper[data-theme="dark"] [aria-label="Breadcrumb"] svg { color: var(--ds-text, rgb(255 255 255)) !important; }
-  #product-wrapper[data-theme="dark"] [aria-label="Breadcrumb"] a { opacity: 0.85; }
-  #product-wrapper[data-theme="dark"] [aria-label="Breadcrumb"] a:hover { opacity: 1; }
-  #product-wrapper[data-theme="dark"] [aria-label="Breadcrumb"] span[title] { opacity: 1; }
-
-  /* Dark theme: price, compare price, and labels in AddToCart - all light for readability */
-  #product-wrapper[data-theme="dark"] .text-neutral-900 { color: rgb(255 255 255) !important; }
-  #product-wrapper[data-theme="dark"] .text-neutral-500 { color: rgb(229 229 229) !important; }
-  #product-wrapper[data-theme="dark"] .text-neutral-600 { color: rgb(245 245 245) !important; }
-  #product-wrapper[data-theme="dark"] .text-neutral-800 { color: rgb(255 255 255) !important; }
-  /* Dark theme: Add to Cart (gold) and Buy Now - light text for consistency */
-  #product-wrapper[data-theme="dark"] .product-page-minimal button.bg-gray-900 { color: rgb(255 255 255) !important; }
-  #product-wrapper[data-theme="dark"] .product-page-minimal button.bg-gray-900 span { color: inherit !important; }
-  #product-wrapper[data-theme="dark"] .product-page-minimal button.bg-gray-900 svg { color: inherit !important; }
-  #product-wrapper[data-theme="dark"] button.bg-white { background-color: var(--ds-surface, #171717) !important; color: rgb(255 255 255) !important; border: 1px solid var(--ds-border, #262626) !important; }
-  #product-wrapper[data-theme="dark"] button.bg-white span { color: inherit !important; }
-  #product-wrapper[data-theme="dark"] button.bg-white:hover:not(:disabled) { background-color: var(--ds-border, #262626) !important; }
-
-  /* Dark theme: Show More button - force visible */
-  #product-wrapper[data-theme="dark"] #show-more-btn {
-    color: rgb(255 255 255) !important;
-    background-color: rgba(255 255 255 0.2) !important;
-    border-color: rgba(255 255 255 0.35) !important;
-  }
-  #product-wrapper[data-theme="dark"] #show-more-btn:hover {
-    color: rgb(255 255 255) !important;
-    background-color: rgba(255 255 255 0.28) !important;
-    border-color: rgba(255 255 255 0.45) !important;
-  }
-  #product-wrapper[data-theme="dark"] #show-more-btn svg {
-    color: inherit;
-  }
 </style>

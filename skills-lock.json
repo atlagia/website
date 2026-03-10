@@ -1,6 +1,21 @@
 {
   "version": 1,
   "skills": {
+    "seo-audit": {
+      "source": "seo-skills/seo-audit-skill",
+      "sourceType": "github",
+      "computedHash": "5a536bf498719e1b8b80bfe43f2dccef4b08e6b81a08b8ae3f69f962b789e468"
+    },
+    "superdesign": {
+      "source": "superdesigndev/superdesign-skill",
+      "sourceType": "github",
+      "computedHash": "7208b5e2e1145d76abcd698b2a9085952d986022ec2d5d8b9f972106b1b2447b"
+    },
+    "upgrade-react-native": {
+      "source": "react-native-community/skills",
+      "sourceType": "github",
+      "computedHash": "f120c3e4c5e696b147c24a953c18b0fabbf1fe46d0c8ab68db4fdb146e54075a"
+    },
     "vercel-react-best-practices": {
       "source": "vercel-labs/agent-skills",
       "sourceType": "github",

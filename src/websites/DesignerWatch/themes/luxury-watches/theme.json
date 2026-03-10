@@ -1,0 +1,22 @@
+{
+  "pages": [
+    {"path": "/", "name": "Home", "description": "Luxury watch boutique", "priority": 1},
+    {"path": "/collections", "name": "Collections", "description": "Watch collections", "priority": 0.95},
+    {"path": "/products", "name": "Timepieces", "description": "All timepieces", "priority": 0.95},
+    {"path": "/about", "name": "Brand Story", "description": "Craftsmanship and heritage", "priority": 0.8},
+    {"path": "/blog", "name": "Journal", "description": "Editorial and guides", "priority": 0.8},
+    {"path": "/contact", "name": "Contact", "description": "Support and contact", "priority": 0.7},
+    {"path": "/boutiques", "name": "Find a Boutique", "description": "Store locator and boutiques", "priority": 0.65},
+    {"path": "/service", "name": "Service & Care", "description": "After-sales service and repairs", "priority": 0.65},
+    {"path": "/account", "name": "Account", "description": "Customer account", "priority": 0.6},
+    {"path": "/privacy", "name": "Privacy", "description": "Privacy policy", "priority": 0.5},
+    {"path": "/terms", "name": "Terms", "description": "Terms of service", "priority": 0.5}
+  ],
+  "metadata": {
+    "name": "DesignerWatch Luxury Theme",
+    "version": "1.0.0",
+    "description": "Ultra-premium luxury watch boutique",
+    "author": "DesignerWatch",
+    "license": "MIT"
+  }
+}

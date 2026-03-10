@@ -9,6 +9,8 @@ Run this audit **after** a website has been created or updated. Each step uses M
 
 **Gate rule:** Do NOT proceed to the next step until the current step passes. If a problem is found, fix it immediately, re-screenshot, and confirm the fix before moving on.
 
+**Scroll-and-screenshot rule:** For the homepage, collections page, and product page, you **must** scroll through the **entire** page and take a screenshot at **each frame** (each viewport height). Do not advance until every visible portion of the page has been captured and verified. Same process for all three: scroll → screenshot → verify content in frame → scroll again → repeat until the bottom of the page (no more scroll). This ensures nothing is missed (e.g. footer, related products, specs, reviews).
+
 ---
 
 ## Step 0 — Prepare
@@ -21,23 +23,30 @@ Run this audit **after** a website has been created or updated. Each step uses M
 
 ## Step 1 — Homepage (all sections)
 
-### 1.1 Navigate and screenshot
+### 1.1 Navigate and first screenshot
 
 ```
 browser_navigate → http://localhost:<PORT>/en
 browser_take_screenshot
 ```
 
-### 1.2 Verify top of page
+### 1.2 Verify top of page (first frame)
 
 - **Header**: logo visible, nav links readable, Bag/Cart trigger present, language switcher works, Sign In visible. No overflow or clipping.
 - **Hero / Welcome**: background image loads, headline text is large and legible, CTA button visible and clickable, no text overlap.
 
-### 1.3 Scroll and verify each section
+### 1.3 Scroll and screenshot every frame (mandatory)
 
-Use `browser_scroll` (down) + `browser_take_screenshot` repeatedly to capture every section:
+**You must scroll through the entire homepage and take a screenshot at each viewport.** Repeat until the page cannot scroll further (bottom reached).
 
-| Section | Check |
+1. **Scroll down** by one viewport (e.g. `browser_scroll` direction="down" amount=500–700).
+2. **Take screenshot** (`browser_take_screenshot`).
+3. **Verify** the content visible in this frame (see section table below).
+4. **Repeat** from step 1 until scroll no longer moves the page (end of page).
+
+Do not advance to Step 2 until the **full page** has been captured in multiple screenshots and every section has been verified in at least one frame.
+
+| Section (verify when in frame) | Check |
 |---------|-------|
 | Hero | Image loads, headline readable, CTA present |
 | Featured Collections / Category Grid | Cards display, images load, titles visible, hover effect works |
@@ -68,14 +77,14 @@ For **every** problem found: fix the component, wait for HMR, re-screenshot, con
 
 ## Step 2 — Collections Page
 
-### 2.1 Navigate
+### 2.1 Navigate and first screenshot
 
 ```
 browser_navigate → http://localhost:<PORT>/en/collections
 browser_take_screenshot
 ```
 
-### 2.2 Verify
+### 2.2 Verify first frame
 
 - [ ] Page title ("Collections") visible
 - [ ] Breadcrumb works (Home > Collections)
@@ -85,9 +94,23 @@ browser_take_screenshot
 - [ ] **Sort dropdown**: "Best Selling", "Price: Low to High", etc.
 - [ ] Product count shown
 - [ ] Cards are **styled to match theme** (dark bg, correct fonts, proper spacing)
+
+### 2.3 Scroll and screenshot every frame (mandatory)
+
+**Same process as homepage:** scroll through the **entire** collections page and take a screenshot at each viewport until the bottom.
+
+1. **Scroll down** (e.g. `browser_scroll` direction="down" amount=500–700).
+2. **Take screenshot** (`browser_take_screenshot`).
+3. **Verify** content in frame (more product cards, pagination, footer if present).
+4. **Repeat** until no more scroll (end of page).
+
+Do not proceed to Step 3 until the full collections page has been captured in multiple screenshots and verified (including footer/pagination if present).
+
+### 2.4 Functional check
+
 - [ ] Clicking a product card navigates to the product page
 
-### 2.3 Fix and re-verify
+### 2.5 Fix and re-verify
 
 Fix any display, style, or functional issues. Re-screenshot after each fix. Do NOT proceed to Step 3 until collections look professional.
 
@@ -95,7 +118,7 @@ Fix any display, style, or functional issues. Re-screenshot after each fix. Do N
 
 ## Step 3 — Product Page
 
-### 3.1 Navigate to a product
+### 3.1 Navigate to a product and first screenshot
 
 ```
 browser_navigate → http://localhost:<PORT>/en/products/<any-handle>
@@ -104,32 +127,34 @@ browser_take_screenshot
 
 Pick any available product (from the collections page or a known handle).
 
-### 3.2 Verify
+### 3.2 Verify first frame (above the fold)
 
 - [ ] **Product title** displays (correct font, size, color)
 - [ ] **Price** visible and formatted correctly
 - [ ] **Product images** / gallery: main image loads, thumbnails work, navigation arrows function
-- [ ] **Description section**: expandable, formatted HTML renders correctly
 - [ ] **Variant selectors** (size, color): visible and clickable
 - [ ] **Add to Cart button**: visible, styled, clickable
 - [ ] **Buy Now button** (if present): styled consistently
 - [ ] **Breadcrumb**: Home > Products > Product Name; if dark theme, breadcrumb text is **light** (readable on dark background)
-- [ ] **Price and title**: visible; if dark theme, **light** text
-- [ ] **Product specs / details**: if present, styled and readable; if dark theme, cards and text use **dark backgrounds + light text**
-- [ ] **Description block**: if dark theme, background is dark (e.g. surface/border vars), body text is **light**
+- [ ] **Price and title**: if dark theme, **light** text
 - [ ] **Add to Cart / Buy Now**: if dark theme, button text is **light** (no dark text on dark buttons)
+
+### 3.3 Scroll and screenshot every frame (mandatory)
+
+**Same process as homepage and collections:** scroll through the **entire** product page and take a screenshot at each viewport until the bottom.
+
+1. **Scroll down** (e.g. `browser_scroll` direction="down" amount=500–700).
+2. **Take screenshot** (`browser_take_screenshot`).
+3. **Verify** content in frame: description, specs, key features, size chart, FAQ, reviews, related products, etc.
+4. **Repeat** until no more scroll (end of page).
+
+Do not proceed to Step 4 until the full product page has been captured in multiple screenshots. Verify in at least one frame:
+
+- [ ] **Description section**: expandable, formatted HTML renders correctly; if dark theme, background and text use theme vars
+- [ ] **Product specs / details**: if present, styled and readable; if dark theme, dark backgrounds + light text
 - [ ] **Reviews section**: renders (even if empty)
-- [ ] **Related products**: grid at bottom if available
-- [ ] Overall style matches theme (uses site CSS variables, fonts, dark/light scheme); **no dark-on-dark or low-contrast text**
-
-### 3.3 Scroll full page
-
-```
-browser_scroll direction="down" amount=500
-browser_take_screenshot
-```
-
-Repeat to capture description, specs, reviews, related products.
+- [ ] **Related products**: grid at bottom if available; cards styled to match theme
+- [ ] Overall style matches theme; **no dark-on-dark or low-contrast text** anywhere on the page
 
 ### 3.4 Fix and re-verify
 
@@ -211,9 +236,9 @@ After all 5 steps pass, summarize:
 ```
 Audit complete for <SiteName> at http://localhost:<PORT>/
 
-Step 1 — Homepage: ✅ All <N> sections verified
-Step 2 — Collections: ✅ Product grid, filters, cards
-Step 3 — Product page: ✅ Gallery, info, description, related
+Step 1 — Homepage: ✅ Full page scroll + screenshots; all sections verified
+Step 2 — Collections: ✅ Full page scroll + screenshots; grid, filters, cards, footer
+Step 3 — Product page: ✅ Full page scroll + screenshots; gallery, description, specs, reviews, related
 Step 4 — Slide cart: ✅ Add/remove, totals, checkout button
 Step 5 — Pillar pages: ✅ <list of pages checked>
 
@@ -230,7 +255,9 @@ Remaining known issues: <count or "none">
 | Open page | `browser_navigate` url |
 | Screenshot | `browser_take_screenshot` |
 | DOM snapshot | `browser_snapshot` |
-| Scroll down | `browser_scroll` direction="down" amount=500 |
+| Scroll down | `browser_scroll` direction="down" amount=500 (or 600–700 per viewport) |
 | Click element | `browser_click` ref |
 | Type text | `browser_type` ref text |
 | Wait | `browser_wait` seconds |
+
+**Full-page verification (homepage, collections, product):** For each of these pages, repeat until end of page: `browser_scroll` (down) → `browser_take_screenshot` → verify content in frame. Do not skip frames; capture every viewport so the entire page is verified.

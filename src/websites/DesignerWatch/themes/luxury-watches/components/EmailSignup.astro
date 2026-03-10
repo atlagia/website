@@ -1,0 +1,48 @@
+---
+import { Mail } from 'lucide-react';
+
+interface Props {
+  title: string;
+  description: string;
+  backgroundImage?: string;
+  formAction: string;
+  buttonText: string;
+}
+
+const { title, description, backgroundImage, formAction, buttonText } = Astro.props;
+---
+
+<section
+  class="relative py-24 px-4 md:px-8 bg-[var(--dw-surface)] border-t border-[var(--dw-border)]"
+  style={backgroundImage ? `background-image: url(${backgroundImage}); background-size: cover; background-position: center;` : ''}
+>
+  {backgroundImage && <div class="absolute inset-0 bg-black/70" />}
+  <div class="relative max-w-3xl mx-auto text-center">
+    <h2 class="font-display text-3xl md:text-4xl font-semibold text-[var(--dw-text)] tracking-tight mb-4">{title}</h2>
+    <p class="font-body text-lg text-[var(--dw-muted)] mb-10">{description}</p>
+    <form action={formAction} method="POST" class="flex flex-col md:flex-row gap-4 justify-center items-center">
+      <div class="relative w-full md:w-auto flex-1 max-w-sm">
+        <div class="absolute left-4 top-1/2 -translate-y-1/2 text-[var(--dw-muted)]">
+          <Mail className="w-5 h-5" aria-hidden="true" />
+        </div>
+        <input
+          type="email"
+          name="email"
+          placeholder="Enter your email"
+          required
+          aria-label="Email address for newsletter"
+          autocomplete="email"
+          class="w-full pl-12 pr-4 py-4 bg-[var(--dw-bg)] border border-[var(--dw-border)] text-[var(--dw-text)] placeholder:text-[var(--dw-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--dw-accent)]/30 focus-visible:ring-2 focus-visible:ring-[var(--dw-accent)] font-body text-sm"
+        />
+      </div>
+      <button type="submit" class="px-8 py-4 bg-[var(--dw-accent)] text-[var(--dw-bg)] font-body text-sm font-medium tracking-[0.2em] uppercase hover:opacity-95 transition-opacity duration-[var(--duration-medium)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dw-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--dw-surface)]" aria-label="Subscribe to newsletter">
+        {buttonText}
+      </button>
+    </form>
+  </div>
+</section>
+
+<style>
+  .font-display { font-family: var(--font-display); }
+  .font-body { font-family: var(--font-body); }
+</style>

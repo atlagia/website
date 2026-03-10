@@ -1,0 +1,176 @@
+---
+import Layoutc from '@layouts/Layoutc.astro';
+import { ArrowRight, Wind, Zap, Thermometer, Star, Crown } from 'lucide-react';
+
+// Generate static paths for allowed languages from environment
+export async function getStaticPaths() {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  const languages = allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+  
+  return languages.map(lang => ({ params: { lang } }));
+}
+
+const { lang = 'en' } = Astro.params;
+const baseUrl = import.meta.env.DOMAINE || 'https://www.motorracingapparel.com';
+const storeName = import.meta.env.PUBLIC_SITE_NAME || 'Drivon';
+
+// Load multilingual data
+let data;
+try {
+  data = await import(`../data/cooling-systems/cooling-systems_${lang}.json`);
+} catch (error) {
+  // Fallback to English if language file doesn't exist
+  data = await import(`../data/cooling-systems/cooling-systems_en.json`);
+}
+
+const pageData = data.default;
+
+// SEO
+const seoTitle = `${pageData.title} | ${storeName}`;
+const seoDescription = pageData.description;
+---
+
+<Layoutc title={seoTitle} description={seoDescription} lang={lang}>
+  <div class="min-h-screen bg-[var(--mra-bg)]">
+    <!-- Hero Section -->
+    <section class="relative min-h-[50vh] flex items-center justify-center bg-[var(--mra-text)] text-[var(--mra-bg)]">
+      <div class="relative z-10 h-full flex items-center justify-center text-center px-4">
+        <div class="max-w-4xl mx-auto">
+          <h1 class="font-headline text-5xl md:text-7xl uppercase tracking-tight text-[var(--mra-bg)] mb-6">
+            {pageData.hero.title}
+          </h1>
+          <p class="text-xl md:text-2xl text-[var(--mra-bg)]/90 mb-8">
+            {pageData.hero.subtitle}
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href={`/${lang}/collections`} class="inline-flex items-center justify-center bg-[var(--mra-bg)] text-[var(--mra-text)] px-8 py-3.5 text-[11px] font-medium tracking-[0.2em] uppercase hover:opacity-90 transition-opacity font-body">
+              {pageData.hero.cta1}
+            </a>
+            <a href={`/${lang}/professional-series`} class="inline-flex items-center justify-center border-2 border-[var(--mra-bg)] text-[var(--mra-bg)] px-8 py-3.5 text-[11px] font-medium tracking-[0.2em] uppercase hover:bg-[var(--mra-bg)]/10 transition-colors font-body">
+              {pageData.hero.cta2}
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cooling Systems Features -->
+    <section class="py-20 px-4">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="font-headline text-4xl text-[var(--mra-text)] uppercase tracking-wide mb-4">{pageData.sections.features.title}</h2>
+          <p class="text-xl text-[var(--mra-muted)] max-w-3xl mx-auto">
+            {pageData.sections.features.subtitle}
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+          {pageData.features.map((feature, index) => {
+            const icons = [Wind, Zap, Thermometer];
+            const colors = ['blue', 'cyan', 'indigo'];
+            const Icon = icons[index];
+            const color = colors[index];
+            return (
+              <div class="bg-[var(--mra-card)] rounded-2xl p-8 border border-[var(--mra-border)]">
+                <div class={`w-16 h-16 bg-${color}-100 rounded-full flex items-center justify-center mb-6`}>
+                  <Icon class={`w-8 h-8 text-${color}-600`} />
+                </div>
+                <h3 class="font-headline text-2xl text-[var(--mra-text)] uppercase tracking-wide mb-4">{feature.title}</h3>
+                <p class="text-[var(--mra-muted)]">
+                  {feature.description}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    <!-- Cooling Systems Collection -->
+    <section class="py-20 bg-[var(--mra-surface)]">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="font-headline text-4xl text-[var(--mra-text)] uppercase tracking-wide mb-4">{pageData.sections.collection.title}</h2>
+          <p class="text-xl text-[var(--mra-muted)]">{pageData.sections.collection.subtitle}</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {pageData.collections.map((product, index) => {
+            const icons = [Wind, Zap, Crown];
+            const colors = ['blue', 'cyan', 'indigo'];
+            const Icon = icons[index];
+            const color = colors[index];
+            return (
+              <a href={`/${lang}${product.link}`} class="group bg-[var(--mra-card)] rounded-2xl overflow-hidden border border-[var(--mra-border)] hover:border-[var(--mra-text)]/30 transition-colors">
+                <div class={`h-48 bg-[var(--mra-text)] flex items-center justify-center text-[var(--mra-bg)]`}> <Icon class="w-16 h-16" />
+                </div>
+                <div class="p-6">
+                  <h3 class="font-headline text-xl text-[var(--mra-text)] uppercase tracking-wide mb-2">{product.title}</h3>
+                  <p class="text-[var(--mra-muted)] mb-4">{product.description}</p>
+                  <div class={`flex items-center text-${color}-600 font-semibold group-hover:text-${color}-700`}>
+                    {product.linkText} <ArrowRight class="w-4 h-4 ml-2" />
+                  </div>
+                </div>
+              </a>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    <!-- Professional Cooling Systems -->
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="font-headline text-4xl text-[var(--mra-text)] uppercase tracking-wide mb-4">{pageData.sections.professional.title}</h2>
+          <p class="text-xl text-[var(--mra-muted)]">{pageData.sections.professional.subtitle}</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          {pageData.professional.map((prof, index) => {
+            const icons = [Wind, Zap, Star];
+            const colors = ['blue', 'cyan', 'indigo'];
+            const Icon = icons[index];
+            const color = colors[index];
+            return (
+              <div class="bg-[var(--mra-card)] rounded-2xl p-8 border border-[var(--mra-border)]">
+                <div class={`w-20 h-20 bg-${color}-100 rounded-full flex items-center justify-center mb-6 mx-auto`}>
+                  <Icon class={`w-10 h-10 text-${color}-600`} />
+                </div>
+                <h3 class="font-headline text-2xl text-[var(--mra-text)] uppercase tracking-wide mb-4 text-center">{prof.title}</h3>
+                <p class="text-[var(--mra-muted)] text-center mb-6">
+                  {prof.description}
+                </p>
+                <a href={`/${lang}${prof.link}`} class={`flex items-center justify-center text-${color}-600 font-semibold hover:text-${color}-700`}>
+                  {prof.linkText} <ArrowRight class="w-4 h-4 ml-2" />
+                </a>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-[var(--mra-text)] text-[var(--mra-bg)]">
+      <div class="max-w-4xl mx-auto text-center px-4">
+        <h2 class="font-headline text-4xl uppercase tracking-tight mb-6">{pageData.cta.title}</h2>
+        <p class="text-xl text-[var(--mra-bg)]/90 mb-8">
+          {pageData.cta.subtitle}
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href={`/${lang}/collections`} class="inline-flex items-center justify-center bg-[var(--mra-bg)] text-[var(--mra-text)] px-8 py-3.5 text-[11px] font-medium tracking-[0.2em] uppercase hover:opacity-90 transition-opacity font-body">
+            {pageData.cta.button1}
+          </a>
+          <a href={`/${lang}/professional-series`} class="inline-flex items-center justify-center border-2 border-[var(--mra-bg)] text-[var(--mra-bg)] px-8 py-3.5 text-[11px] font-medium tracking-[0.2em] uppercase hover:bg-[var(--mra-bg)]/10 transition-colors font-body">
+            {pageData.cta.button2}
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+<style>
+  .font-headline { font-family: var(--font-headline); }
+  .font-body { font-family: var(--font-body); }
+</style>
+</Layoutc>

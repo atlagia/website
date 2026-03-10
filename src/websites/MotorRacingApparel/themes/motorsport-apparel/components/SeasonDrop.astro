@@ -1,0 +1,48 @@
+---
+interface Props {
+  headline: string;
+  description: string;
+  ctaText: string;
+  ctaLink: string;
+  image: string;
+  imageAlt?: string;
+}
+
+const { headline, description, ctaText, ctaLink, image, imageAlt = 'Season drop' } = Astro.props;
+---
+
+<section class="f1-season-drop bg-[var(--mra-bg)]" aria-labelledby="season-drop-heading" aria-label="Season drop">
+  <div class="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 py-20 lg:py-28">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div class="order-2 lg:order-1">
+        <h2 id="season-drop-heading" class="font-headline text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-[var(--mra-text)] uppercase leading-[0.92] tracking-tight mb-6">
+          {headline}
+        </h2>
+        <p class="text-[var(--mra-text)]/75 font-body text-lg md:text-xl leading-relaxed max-w-lg mb-10">
+          {description}
+        </p>
+        <a
+          href={ctaLink}
+          class="inline-flex items-center gap-2 bg-[var(--mra-text)] text-white px-8 py-3.5 text-[11px] font-medium tracking-[0.25em] uppercase hover:bg-[var(--mra-accent-hover)] transition-colors"
+        >
+          {ctaText}
+        </a>
+      </div>
+      <div class="order-1 lg:order-2 relative overflow-hidden">
+        <div class="aspect-[4/5] lg:aspect-[3/4] relative">
+          <img
+            src={image}
+            alt={imageAlt}
+            class="w-full h-full object-cover"
+          />
+          <div class="absolute inset-0 bg-[var(--mra-bg)]/10 pointer-events-none" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .font-headline { font-family: var(--font-headline); }
+  .font-body { font-family: var(--font-body); }
+</style>

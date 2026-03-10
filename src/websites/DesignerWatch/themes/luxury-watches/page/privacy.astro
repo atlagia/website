@@ -1,0 +1,33 @@
+---
+import Layoutc from '@layouts/Layoutc.astro';
+
+export async function getStaticPaths() {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  const languages = allowedLanguages.split(',').map((l: string) => l.trim()).filter((l: string) => l.length > 0);
+  return languages.map((l: string) => ({ params: { lang: l } }));
+}
+
+const { lang = 'en' } = Astro.props;
+const storeName = import.meta.env.PUBLIC_SITE_NAME || 'DesignerWatch';
+const seoTitle = `Privacy Policy | ${storeName}`;
+const seoDescription = 'Privacy policy and data protection for DesignerWatch.';
+---
+
+<Layoutc title={seoTitle} description={seoDescription} lang={lang}>
+  <div class="min-h-screen bg-[var(--dw-bg)]">
+    <section class="max-w-4xl mx-auto px-4 sm:px-6 py-20">
+      <h1 class="text-4xl md:text-5xl font-light tracking-wide text-[var(--dw-text)] font-display mb-6">Privacy Policy</h1>
+      <p class="text-sm text-[var(--dw-muted)] mb-12">Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+      <div class="prose prose-invert max-w-none text-[var(--dw-muted)] [&>h2]:text-[var(--dw-text)] [&>h2]:font-display [&>h2]:text-2xl [&>h2]:mt-12 [&>h2]:mb-4 [&>p]:mb-6 [&>ul]:list-disc [&>ul]:pl-6">
+        <h2>Information We Collect</h2>
+        <p>We collect information you provide when you create an account, make a purchase, or contact us. This may include your name, email, shipping address, and payment details.</p>
+        <h2>How We Use Your Information</h2>
+        <p>We use your information to process orders, communicate with you, and improve our services. We do not sell your personal data to third parties.</p>
+        <h2>Data Security</h2>
+        <p>We implement appropriate technical and organizational measures to protect your personal data against unauthorized access or disclosure.</p>
+        <h2>Contact</h2>
+        <p>For privacy-related questions, contact us at the email or phone number provided on our Contact page.</p>
+      </div>
+    </section>
+  </div>
+</Layoutc>

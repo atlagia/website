@@ -1,0 +1,336 @@
+---
+import { getLangFromUrl, useTranslations, isValidLanguage } from '@utils/i18n';
+
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+
+// Get the language parameter from the URL
+const { lang } = Astro.params;
+
+// Validate language and redirect to /en if invalid
+if (!isValidLanguage(lang)) {
+  return Astro.redirect('/en');
+}
+
+const translations = await useTranslations(lang);
+const jsonData = translations.default;
+
+const SITE_TITLE = `Car Culture Tees - ${jsonData.siteTitle}`;
+const SITE_DESCRIPTION = 'Classic car culture tees featuring iconic car brands, racing legends, and authentic automotive culture designs. Celebrate the true spirit of car culture.';
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <BaseHead 
+      title={SITE_TITLE} 
+      description={SITE_DESCRIPTION}
+    />
+  </head>
+  <body>
+    <Header />
+    <main class="min-h-screen bg-[var(--mra-bg)]">
+      <!-- Hero Section -->
+      <section class="relative py-20 bg-[var(--mra-text)] text-[var(--mra-bg)]">
+<div class="relative max-w-6xl mx-auto px-4 text-center">
+          <h1 class="text-5xl md:text-7xl font-black mb-6 uppercase tracking-tighter">
+            Car Culture Tees
+          </h1>
+          <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto font-medium">
+            Classic tees celebrating iconic car brands, racing legends, and the authentic 
+            automotive culture that defines car enthusiasts worldwide.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4 mt-8">
+            <a href="#collections" class="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+              Shop Collections
+            </a>
+            <a href={`/${lang}/car-culture`} class="bg-white/20 hover:bg-white/30 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+              Explore Car Culture
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Collections -->
+      <section id="collections" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+          <h2 class="text-4xl font-bold text-center mb-12">Car Culture Tee Collections</h2>
+          
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Iconic Car Brands -->
+            <a href={`/${lang}/iconic-brands-tees`} class="group">
+              <div class="bg-[var(--mra-card)] rounded-lg border border-[var(--mra-border)] overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div class="h-64 bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center relative overflow-hidden">
+                  <div class="absolute inset-0 bg-black/20"></div>
+                  <div class="relative z-10 text-center">
+                    <h3 class="text-3xl font-bold text-white mb-2">Iconic Brands</h3>
+                    <p class="text-red-100">Ferrari, Porsche, BMW & More</p>
+                  </div>
+                </div>
+                <div class="p-6">
+                  <p class="text-[var(--mra-muted)] mb-4">
+                    Celebrate the most iconic car brands in history with tees featuring 
+                    Ferrari, Porsche, BMW, Lamborghini, and other legendary manufacturers.
+                  </p>
+                  <div class="flex items-center text-[var(--mra-text)] group-hover:text-[var(--mra-accent-hover)] font-body text-[11px] font-medium tracking-[0.2em] uppercase">
+                    Shop Iconic Brands
+                    <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <!-- Racing Legends -->
+            <a href={`/${lang}/racing-legends-tees`} class="group">
+              <div class="bg-[var(--mra-card)] rounded-lg border border-[var(--mra-border)] overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div class="h-64 bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center relative overflow-hidden">
+                  <div class="absolute inset-0 bg-black/20"></div>
+                  <div class="relative z-10 text-center">
+                    <h3 class="text-3xl font-bold text-white mb-2">Racing Legends</h3>
+                    <p class="text-[var(--mra-bg)]/90">F1 Champions & Icons</p>
+                  </div>
+                </div>
+                <div class="p-6">
+                  <p class="text-[var(--mra-muted)] mb-4">
+                    Honor the greatest drivers in racing history with tees featuring 
+                    F1 champions, Le Mans heroes, and legendary racing moments.
+                  </p>
+                  <div class="flex items-center text-[var(--mra-text)] group-hover:text-[var(--mra-accent-hover)] font-body text-[11px] font-medium tracking-[0.2em] uppercase">
+                    Shop Racing Legends
+                    <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <!-- Classic Cars -->
+            <a href={`/${lang}/classic-cars-tees`} class="group">
+              <div class="bg-[var(--mra-card)] rounded-lg border border-[var(--mra-border)] overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div class="h-64 bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center relative overflow-hidden">
+                  <div class="absolute inset-0 bg-black/20"></div>
+                  <div class="relative z-10 text-center">
+                    <h3 class="text-3xl font-bold text-white mb-2">Classic Cars</h3>
+                    <p class="text-green-100">Timeless Automotive Icons</p>
+                  </div>
+                </div>
+                <div class="p-6">
+                  <p class="text-[var(--mra-muted)] mb-4">
+                    Celebrate the most iconic cars in automotive history with tees 
+                    featuring classic models that defined generations of car culture.
+                  </p>
+                  <div class="flex items-center text-[var(--mra-text)] group-hover:text-[var(--mra-accent-hover)] font-body text-[11px] font-medium tracking-[0.2em] uppercase">
+                    Shop Classic Cars
+                    <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <!-- JDM Culture -->
+            <a href={`/${lang}/jdm-culture-tees`} class="group">
+              <div class="bg-[var(--mra-card)] rounded-lg border border-[var(--mra-border)] overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div class="h-64 bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center relative overflow-hidden">
+                  <div class="absolute inset-0 bg-black/20"></div>
+                  <div class="relative z-10 text-center">
+                    <h3 class="text-3xl font-bold text-white mb-2">JDM Culture</h3>
+                    <p class="text-purple-100">Japanese Domestic Market</p>
+                  </div>
+                </div>
+                <div class="p-6">
+                  <p class="text-[var(--mra-muted)] mb-4">
+                    Represent the authentic JDM culture with tees featuring 
+                    Japanese legends like Supra, Skyline, and drift culture icons.
+                  </p>
+                  <div class="flex items-center text-[var(--mra-text)] group-hover:text-[var(--mra-accent-hover)] font-body text-[11px] font-medium tracking-[0.2em] uppercase">
+                    Shop JDM Culture
+                    <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <!-- Street Racing -->
+            <a href={`/${lang}/street-racing-tees`} class="group">
+              <div class="bg-[var(--mra-card)] rounded-lg border border-[var(--mra-border)] overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div class="h-64 bg-gradient-to-br from-yellow-500 to-orange-600 flex items-center justify-center relative overflow-hidden">
+                  <div class="absolute inset-0 bg-black/20"></div>
+                  <div class="relative z-10 text-center">
+                    <h3 class="text-3xl font-bold text-white mb-2">Street Racing</h3>
+                    <p class="text-orange-100">Underground Culture</p>
+                  </div>
+                </div>
+                <div class="p-6">
+                  <p class="text-[var(--mra-muted)] mb-4">
+                    Embrace the underground street racing culture with tees featuring 
+                    street racing icons, underground legends, and authentic street culture.
+                  </p>
+                  <div class="flex items-center text-[var(--mra-text)] group-hover:text-[var(--mra-accent-hover)] font-body text-[11px] font-medium tracking-[0.2em] uppercase">
+                    Shop Street Racing
+                    <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <!-- Motorsport Events -->
+            <a href={`/${lang}/motorsport-events-tees`} class="group">
+              <div class="bg-[var(--mra-card)] rounded-lg border border-[var(--mra-border)] overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div class="h-64 bg-gradient-to-br from-gray-600 to-gray-800 flex items-center justify-center relative overflow-hidden">
+                  <div class="absolute inset-0 bg-black/20"></div>
+                  <div class="relative z-10 text-center">
+                    <h3 class="text-3xl font-bold text-white mb-2">Motorsport Events</h3>
+                    <p class="text-[var(--mra-bg)]/90">Iconic Racing Events</p>
+                  </div>
+                </div>
+                <div class="p-6">
+                  <p class="text-[var(--mra-muted)] mb-4">
+                    Celebrate the greatest motorsport events with tees featuring 
+                    iconic races, legendary circuits, and historic racing moments.
+                  </p>
+                  <div class="flex items-center text-[var(--mra-text)] group-hover:text-[var(--mra-accent-hover)] font-body text-[11px] font-medium tracking-[0.2em] uppercase">
+                    Shop Motorsport Events
+                    <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Popular Designs -->
+      <section class="py-16 bg-[var(--mra-surface)]">
+        <div class="max-w-6xl mx-auto px-4">
+          <h2 class="text-4xl font-bold text-center mb-12">Popular Car Culture Designs</h2>
+          
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-[var(--mra-card)] rounded-lg border border-[var(--mra-border)] p-6 shadow-md hover:shadow-lg transition-shadow">
+              <div class="h-32 bg-gradient-to-br from-red-500 to-red-700 rounded-lg mb-4 flex items-center justify-center">
+                <span class="text-white text-lg font-bold">Ferrari</span>
+              </div>
+              <h3 class="font-bold text-lg mb-2">Ferrari Collection</h3>
+              <p class="text-[var(--mra-muted)] text-sm mb-4">Celebrate the prancing horse</p>
+              <a href={`/${lang}/ferrari-tees`} class="text-red-600 font-semibold text-sm hover:text-red-700">
+                Shop Ferrari Tees →
+              </a>
+            </div>
+
+            <div class="bg-[var(--mra-card)] rounded-lg border border-[var(--mra-border)] p-6 shadow-md hover:shadow-lg transition-shadow">
+              <div class="h-32 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg mb-4 flex items-center justify-center">
+                <span class="text-white text-lg font-bold">Porsche</span>
+              </div>
+              <h3 class="font-bold text-lg mb-2">Porsche Collection</h3>
+              <p class="text-[var(--mra-muted)] text-sm mb-4">German engineering excellence</p>
+              <a href={`/${lang}/porsche-tees`} class="text-red-600 font-semibold text-sm hover:text-red-700">
+                Shop Porsche Tees →
+              </a>
+            </div>
+
+            <div class="bg-[var(--mra-card)] rounded-lg border border-[var(--mra-border)] p-6 shadow-md hover:shadow-lg transition-shadow">
+              <div class="h-32 bg-gradient-to-br from-green-500 to-green-700 rounded-lg mb-4 flex items-center justify-center">
+                <span class="text-white text-lg font-bold">BMW</span>
+              </div>
+              <h3 class="font-bold text-lg mb-2">BMW Collection</h3>
+              <p class="text-[var(--mra-muted)] text-sm mb-4">Ultimate driving machine</p>
+              <a href={`/${lang}/bmw-tees`} class="text-red-600 font-semibold text-sm hover:text-red-700">
+                Shop BMW Tees →
+              </a>
+            </div>
+
+            <div class="bg-[var(--mra-card)] rounded-lg border border-[var(--mra-border)] p-6 shadow-md hover:shadow-lg transition-shadow">
+              <div class="h-32 bg-gradient-to-br from-purple-500 to-purple-700 rounded-lg mb-4 flex items-center justify-center">
+                <span class="text-white text-lg font-bold">Supra</span>
+              </div>
+              <h3 class="font-bold text-lg mb-2">Supra Collection</h3>
+              <p class="text-[var(--mra-muted)] text-sm mb-4">JDM legend and icon</p>
+              <a href={`/${lang}/supra-tees`} class="text-red-600 font-semibold text-sm hover:text-red-700">
+                Shop Supra Tees →
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+          <h2 class="text-4xl font-bold text-center mb-12">Why Choose Our Car Culture Tees?</h2>
+          
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="text-center">
+              <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold mb-4">Authentic Car Culture</h3>
+              <p class="text-[var(--mra-muted)]">
+                Every tee celebrates authentic automotive culture with designs that 
+                respect the heritage and community of car enthusiasts worldwide.
+              </p>
+            </div>
+
+            <div class="text-center">
+              <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold mb-4">Premium Comfort</h3>
+              <p class="text-[var(--mra-muted)]">
+                High-quality cotton and construction ensure your car culture tee 
+                provides comfort and durability for every adventure and car meet.
+              </p>
+            </div>
+
+            <div class="text-center">
+              <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold mb-4">Global Community</h3>
+              <p class="text-[var(--mra-muted)]">
+                Join automotive enthusiasts worldwide who share your passion 
+                for authentic car culture and racing heritage.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action -->
+      <section class="py-16 bg-red-600 text-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+          <h2 class="font-headline text-4xl uppercase tracking-tight mb-6">Start Your Car Culture Collection</h2>
+          <p class="text-xl mb-8">
+            Celebrate the rich heritage of automotive culture with authentic tees 
+            that honor the brands, legends, and moments that define car culture.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href={`/${lang}/iconic-brands-tees`} class="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-[var(--mra-surface)] transition-colors">
+              Shop Iconic Brands
+            </a>
+            <a href={`/${lang}/racing-legends-tees`} class="bg-red-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-800 transition-colors">
+              Shop Racing Legends
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>

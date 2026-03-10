@@ -1,0 +1,133 @@
+---
+import Layoutc from '@layouts/Layoutc.astro';
+import { ArrowRight, Zap, Car, Trophy, Star, Flag } from 'lucide-react';
+
+export async function getStaticPaths() {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  const languages = allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+  return languages.map(lang => ({ params: { lang } }));
+}
+
+const { lang = 'en' } = Astro.params;
+const storeName = import.meta.env.PUBLIC_SITE_NAME || 'Drivon';
+
+let data;
+try {
+  data = await import(`../data/street-racing/street-racing_${lang}.json`);
+} catch (error) {
+  data = await import(`../data/street-racing/street-racing_en.json`);
+}
+
+const pageData = data.default;
+const seoTitle = `${pageData.title} | ${storeName}`;
+const seoDescription = pageData.description;
+---
+
+<Layoutc title={seoTitle} description={seoDescription} lang={lang}>
+  <div class="min-h-screen bg-[var(--mra-bg)]">
+    <section class="relative min-h-[50vh] flex items-center justify-center bg-[var(--mra-text)] text-[var(--mra-bg)]">
+      <div class="relative z-10 text-center px-4 py-20">
+        <div class="max-w-4xl mx-auto">
+          <h1 class="font-headline text-5xl md:text-7xl uppercase tracking-tight mb-6">{pageData.hero.title}</h1>
+          <p class="font-body text-xl md:text-2xl text-[var(--mra-bg)]/90 mb-8">{pageData.hero.subtitle}</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href={`/${lang}/street-racing-hoodies`} class="inline-flex items-center justify-center bg-[var(--mra-bg)] text-[var(--mra-text)] px-8 py-3.5 text-[11px] font-medium tracking-[0.2em] uppercase hover:opacity-90 transition-opacity font-body">{pageData.hero.cta1}</a>
+            <a href={`/${lang}/street-racing-tees`} class="inline-flex items-center justify-center border-2 border-[var(--mra-bg)] text-[var(--mra-bg)] px-8 py-3.5 text-[11px] font-medium tracking-[0.2em] uppercase hover:bg-[var(--mra-bg)]/10 transition-colors font-body">{pageData.hero.cta2}</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 px-4">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="font-headline text-4xl text-[var(--mra-text)] uppercase tracking-wide mb-4">{pageData.sections.features.title}</h2>
+          <p class="font-body text-xl text-[var(--mra-muted)] max-w-3xl mx-auto">{pageData.sections.features.subtitle}</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+          {pageData.features.map((feature, index) => {
+            const icons = [Zap, Car, Trophy];
+            const Icon = icons[index];
+            return (
+              <div class="bg-[var(--mra-card)] rounded-2xl p-8 border border-[var(--mra-border)]">
+                <div class="w-16 h-16 bg-[var(--mra-surface)] rounded-full flex items-center justify-center mb-6 text-[var(--mra-text)]">
+                  <Icon class="w-8 h-8" />
+                </div>
+                <h3 class="font-headline text-2xl text-[var(--mra-text)] uppercase tracking-wide mb-4">{feature.title}</h3>
+                <p class="font-body text-[var(--mra-muted)]">{feature.description}</p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-[var(--mra-surface)] border-y border-[var(--mra-border)]">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="font-headline text-4xl text-[var(--mra-text)] uppercase tracking-wide mb-4">{pageData.sections.collection.title}</h2>
+          <p class="font-body text-xl text-[var(--mra-muted)]">{pageData.sections.collection.subtitle}</p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {pageData.collections.map((product, index) => {
+            const icons = [Zap, Car, Flag];
+            const Icon = icons[index];
+            return (
+              <a href={`/${lang}${product.link}`} class="group bg-[var(--mra-card)] rounded-2xl overflow-hidden border border-[var(--mra-border)] hover:border-[var(--mra-text)]/30 transition-colors">
+                <div class="h-48 bg-[var(--mra-text)] flex items-center justify-center text-[var(--mra-bg)]">
+                  <Icon class="w-16 h-16" />
+                </div>
+                <div class="p-6">
+                  <h3 class="font-headline text-xl text-[var(--mra-text)] uppercase tracking-wide mb-2">{product.title}</h3>
+                  <p class="font-body text-[var(--mra-muted)] mb-4">{product.description}</p>
+                  <span class="inline-flex items-center text-[11px] font-medium tracking-[0.2em] uppercase text-[var(--mra-text)] group-hover:text-[var(--mra-accent-hover)] transition-colors font-body">{product.linkText} <ArrowRight class="w-4 h-4 ml-2" /></span>
+                </div>
+              </a>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="font-headline text-4xl text-[var(--mra-text)] uppercase tracking-wide mb-4">{pageData.sections.culture.title}</h2>
+          <p class="font-body text-xl text-[var(--mra-muted)]">{pageData.sections.culture.subtitle}</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          {pageData.culture.map((culture, index) => {
+            const icons = [Zap, Car, Star];
+            const Icon = icons[index];
+            return (
+              <div class="bg-[var(--mra-card)] rounded-2xl p-8 border border-[var(--mra-border)] text-center">
+                <div class="w-20 h-20 bg-[var(--mra-surface)] rounded-full flex items-center justify-center mb-6 mx-auto text-[var(--mra-text)]">
+                  <Icon class="w-10 h-10" />
+                </div>
+                <h3 class="font-headline text-2xl text-[var(--mra-text)] uppercase tracking-wide mb-4">{culture.title}</h3>
+                <p class="font-body text-[var(--mra-muted)] mb-6">{culture.description}</p>
+                <a href={`/${lang}${culture.link}`} class="inline-flex items-center text-[11px] font-medium tracking-[0.2em] uppercase text-[var(--mra-text)] hover:text-[var(--mra-accent-hover)] transition-colors font-body">{culture.linkText} <ArrowRight class="w-4 h-4 ml-2" /></a>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-[var(--mra-text)] text-[var(--mra-bg)]">
+      <div class="max-w-4xl mx-auto text-center px-4">
+        <h2 class="font-headline text-4xl uppercase tracking-tight mb-6">{pageData.cta.title}</h2>
+        <p class="font-body text-xl text-[var(--mra-bg)]/90 mb-8">{pageData.cta.subtitle}</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href={`/${lang}/street-racing-hoodies`} class="inline-flex items-center justify-center bg-[var(--mra-bg)] text-[var(--mra-text)] px-8 py-3.5 text-[11px] font-medium tracking-[0.2em] uppercase hover:opacity-90 transition-opacity font-body">{pageData.cta.button1}</a>
+          <a href={`/${lang}/street-culture`} class="inline-flex items-center justify-center border-2 border-[var(--mra-bg)] text-[var(--mra-bg)] px-8 py-3.5 text-[11px] font-medium tracking-[0.2em] uppercase hover:bg-[var(--mra-bg)]/10 transition-colors font-body">{pageData.cta.button2}</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layoutc>
+
+<style>
+  .font-headline { font-family: var(--font-headline); }
+  .font-body { font-family: var(--font-body); }
+</style>

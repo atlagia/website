@@ -1,0 +1,199 @@
+---
+import { ArrowRight } from 'lucide-react';
+
+interface BackgroundVideo {
+  type: 'youtube';
+  videoId: string;
+  fallbackImage: string;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  blogLink: string;
+  blogLinkText: string;
+  backgroundVideo?: BackgroundVideo;
+  seasonLabel?: string;
+  heroImage?: string;
+}
+
+const { title, description, blogLink, blogLinkText, seasonLabel = 'Racing Season 2026', heroImage } = Astro.props;
+
+// High-resolution hero: Shopify CDN supports &width=; request 2880px for quality
+const isShopify = heroImage?.includes('cdn.shopify.com');
+const baseUrl = (heroImage?.replace(/[?&]width=\d+/, '') ?? '').replace(/\?$/, '');
+const sep = baseUrl?.includes('?') ? '&' : '?';
+const heroImageSrc = heroImage
+  ? isShopify
+    ? `${baseUrl}${sep}width=2880`
+    : heroImage
+  : '';
+const heroImageSrcSet =
+  isShopify && heroImage
+    ? [
+        `${baseUrl}${sep}width=960 960w`,
+        `${baseUrl}${sep}width=1440 1440w`,
+        `${baseUrl}${sep}width=1920 1920w`,
+        `${baseUrl}${sep}width=2880 2880w`,
+      ].join(', ')
+    : undefined;
+---
+
+<section
+  class="mra-hero relative min-h-[100vh] min-h-[100dvh] flex items-end justify-start overflow-hidden bg-[var(--mra-bg)] grain-overlay"
+  itemScope
+  itemType="https://schema.org/WebPageElement"
+>
+  <!-- Optional full-bleed hero image -->
+  {heroImage && (
+    <div class="hero-bg-image absolute inset-0 z-0" aria-hidden="true">
+      <img
+        src={heroImageSrc || heroImage}
+        srcset={heroImageSrcSet}
+        sizes="100vw"
+        alt=""
+        class="hero-img w-full h-full object-cover"
+        fetchpriority="high"
+        loading="eager"
+        decoding="async"
+      />
+      <!-- Light from left, fading by middle so right (model) stays visible -->
+      <div class="hero-overlay absolute inset-0" aria-hidden="true" />
+    </div>
+  )}
+  <!-- Lighting: left to center only; right side stays clear for model -->
+  {heroImage && <div class="hero-gradient" aria-hidden="true"></div>}
+  {heroImage && <div class="hero-text-backing" aria-hidden="true" />}
+
+  <div class={`relative z-20 w-full max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 pb-32 pt-36 sm:pt-40 lg:pb-44 lg:pt-48 mra-hero-content ${heroImage ? 'hero-has-bg' : ''}`}>
+    {seasonLabel && (
+      <p class="font-body text-[10px] tracking-[0.4em] uppercase text-[var(--mra-text)] mb-6 hero-label inline-block px-3 py-1.5 rounded-sm bg-[var(--mra-card)]/95 backdrop-blur-sm border border-[var(--mra-border)]/60">
+        {seasonLabel}
+      </p>
+    )}
+    <h1
+      class="font-headline text-5xl sm:text-6xl md:text-7xl lg:text-[7rem] xl:text-[8rem] 2xl:text-[9rem] uppercase leading-[0.9] tracking-tight max-w-full md:max-w-[50vw] mb-8 hero-title"
+      itemProp="headline"
+      role="heading"
+      aria-level="1"
+      set:html={title.replace(/\n/g, '<br>')}
+    />
+    <p class="text-base md:text-lg lg:text-xl text-[var(--mra-muted)] max-w-xl mb-12 font-body tracking-wide leading-relaxed hero-desc">
+      {description}
+    </p>
+    <div class="flex flex-wrap gap-4 sm:gap-5 hero-ctas">
+      <a
+        href={`/${Astro.url.pathname.split('/')[1] || 'en'}/collections`}
+        class="group inline-flex items-center gap-3 bg-[var(--mra-text)] text-[var(--mra-bg)] px-8 sm:px-10 py-3.5 sm:py-4 text-[11px] font-medium tracking-[0.3em] uppercase hover:bg-[var(--mra-accent-hover)] hover:text-white transition-all duration-300 hover:shadow-xl"
+      >
+        <span>Shop The Drop</span>
+        <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+      </a>
+      <a
+        href={blogLink}
+        class="group inline-flex items-center gap-3 border-2 border-[var(--mra-text)] text-[var(--mra-text)] bg-[var(--mra-card)]/90 backdrop-blur-sm px-8 sm:px-10 py-3.5 sm:py-4 text-[11px] font-medium tracking-[0.3em] uppercase hover:bg-[var(--mra-text)] hover:text-[var(--mra-bg)] transition-all duration-300"
+      >
+        <span>Explore Collection</span>
+        <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+      </a>
+    </div>
+  </div>
+
+  <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-3 scroll-indicator">
+    <span class="text-[10px] tracking-[0.35em] uppercase text-[var(--mra-text)]/70 font-body">Scroll</span>
+    <div class="w-px h-14 bg-[var(--mra-text)]/40 rounded-full"></div>
+  </div>
+</section>
+
+<style>
+  .font-display { font-family: var(--font-display); }
+  .font-headline { font-family: var(--font-headline); }
+  .font-body { font-family: var(--font-body); }
+
+  /* Overlay: light on left, fade out by middle, right clear for model */
+  .hero-overlay {
+    background: linear-gradient(
+      to right,
+      rgba(252, 252, 252, 0.92) 0%,
+      rgba(250, 250, 250, 0.75) 35%,
+      rgba(250, 250, 250, 0.35) 52%,
+      transparent 65%
+    );
+    pointer-events: none;
+  }
+
+  /* Extra lighting: left only, ends by center */
+  .hero-gradient {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.25) 0%,
+      rgba(255, 255, 255, 0.08) 40%,
+      transparent 55%
+    );
+    pointer-events: none;
+  }
+
+  /* Text backing: left to center only so content is readable, model on right visible */
+  .hero-text-backing {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 3;
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.88) 0%,
+      rgba(250, 250, 250, 0.6) 38%,
+      rgba(250, 250, 250, 0.2) 50%,
+      transparent 58%
+    );
+    pointer-events: none;
+  }
+
+  /* Title: on light overlay use dark text for readability */
+  .hero-title {
+    letter-spacing: -0.03em;
+    color: var(--mra-text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .hero-has-bg .hero-title {
+    color: var(--mra-bg);
+    text-shadow: none;
+  }
+  .hero-has-bg .hero-desc {
+    color: hsl(0, 0%, 25%);
+    text-shadow: none;
+    font-weight: 450;
+  }
+  .hero-has-bg .hero-label {
+    color: var(--mra-bg);
+    background: rgba(255, 255, 255, 0.95);
+    border-color: rgba(0, 0, 0, 0.1);
+    text-shadow: none;
+  }
+  .hero-has-bg .hero-ctas a:first-of-type {
+    background: var(--mra-accent) !important;
+    color: white !important;
+    border-color: transparent !important;
+  }
+  .hero-has-bg .hero-ctas a:last-of-type {
+    background: var(--mra-bg) !important;
+    color: white !important;
+    border-color: var(--mra-bg) !important;
+  }
+  .hero-has-bg .scroll-indicator span,
+  .hero-has-bg .scroll-indicator > div {
+    color: var(--mra-bg) !important;
+    background-color: var(--mra-bg) !important;
+  }
+
+  .hero-bg-image .hero-img {
+    transform: scale(1.02);
+    backface-visibility: hidden;
+  }
+</style>

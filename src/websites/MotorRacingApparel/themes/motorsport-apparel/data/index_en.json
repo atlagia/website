@@ -1,0 +1,213 @@
+{
+  "siteTitle": "MotorRacingApparel — Built for Speed. Designed for Riders.",
+  "siteDescription": "Premium motorcycle clothing, racing apparel, and biker lifestyle fashion. Speed, adrenaline, freedom, performance.",
+  "sections": [
+    {
+      "type": "welcomeSection",
+      "title": "BUILT FOR SPEED.\nDESIGNED FOR RIDERS.",
+      "description": "Premium motorcycle and racing apparel for those who live the ride. From track to street—performance gear and biker lifestyle fashion that moves with you.",
+      "blogLinkText": "Explore Collections",
+      "blogLink": "/collections",
+      "seasonLabel": "SS26 — Racing Season",
+      "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=2880&q=85",
+      "backgroundVideo": {
+        "type": "youtube",
+        "videoId": "liT2Z3wFW1Y",
+        "fallbackImage": "/images/motorracing-hero-fallback.jpg"
+      }
+    },
+    {
+      "type": "statsSection",
+      "stats": [
+        { "value": "50K+", "label": "Riders" },
+        { "value": "Free", "label": "Shipping over $75" },
+        { "value": "30 Days", "label": "Returns" },
+        { "value": "24/7", "label": "Support" }
+      ]
+    },
+    {
+      "type": "marqueeSection",
+      "items": ["BUILT FOR SPEED", "RIDE WITH PASSION", "MOTORCYCLE CULTURE", "RACING LIFESTYLE", "TRACK TO STREET", "MOTORRACINGAPPAREL"]
+    },
+    {
+      "type": "carBrandsSection",
+      "title": "Brand Inspired Collections",
+      "items": ["YAMAHA", "DUCATI", "HARLEY", "KAWASAKI", "BMW MOTORRAD", "HONDA"]
+    },
+    {
+      "type": "categoryGrid",
+      "title": "Rider Essentials",
+      "description": "Premium motorcycle clothing and racing apparel for every ride. Jackets, hoodies, tees, and gear inspired by legendary brands and motorsport culture.",
+      "categories": [
+        {
+          "id": "hoodie",
+          "name": "Racing Hoodies",
+          "description": "Performance hoodies with motorsport-inspired designs and premium comfort.",
+          "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=800&q=80",
+          "link": "/collections/hoodies"
+        },
+        {
+          "id": "tee",
+          "name": "Racing Tees",
+          "description": "Bold racing and motorcycle culture tees for riders and fans.",
+          "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=800&q=80",
+          "link": "/collections/tees"
+        },
+        {
+          "id": "accessories",
+          "name": "Rider Accessories",
+          "description": "Caps, gloves, and gear to complete your riding look.",
+          "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=800&q=80",
+          "link": "/collections/accessories"
+        }
+      ]
+    },
+    {
+      "type": "bestSellers",
+      "title": "Best Selling Apparel",
+      "description": "Our most popular motorcycle and racing apparel loved by riders worldwide.",
+      "viewAllLink": "/products",
+      "collectionHandle": "best-sellers"
+    },
+    {
+      "type": "manifestoSection",
+      "headline": "RACING LIFESTYLE. RIDER CULTURE.",
+      "body": "MotorRacingApparel is not just clothing—it's the intersection of speed, adrenaline, and freedom. From the track to the open road, we craft premium motorcycle and racing apparel for those who live the biker lifestyle. Every piece is built for performance and designed for riders.",
+      "image": "https://images.unsplash.com/photo-1541443131876-44b03de101c5?w=1200&q=80",
+      "imageAlt": "Racing lifestyle"
+    },
+    {
+      "type": "bannerSection",
+      "headline": "Ride With Passion.",
+      "description": "Premium motorcycle clothing and racing apparel for every rider. Join the community built on speed, freedom, and performance.",
+      "backgroundImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=85",
+      "button1Text": "Shop Collections",
+      "button1Link": "/collections",
+      "button2Text": "New Arrivals",
+      "button2Link": "/products"
+    },
+    {
+      "type": "productShowcase",
+      "title": "New Arrivals",
+      "description": "Latest motorcycle and racing apparel drops. Fresh styles for the season.",
+      "viewAllLink": "/products",
+      "collections": [],
+      "products": [
+        {
+          "id": "racing-hoodie-1",
+          "name": "Premium Racing Hoodie",
+          "description": "Performance hoodie with motorsport-inspired design.",
+          "price": "89.99",
+          "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600&q=80",
+          "category": "Racing Hoodies"
+        },
+        {
+          "id": "racing-tee-1",
+          "name": "Racing Heritage Tee",
+          "description": "Classic tee celebrating motorcycle and racing culture.",
+          "price": "34.99",
+          "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=600&q=80",
+          "category": "Racing Tees"
+        }
+      ]
+    },
+    {
+      "type": "featuresSection",
+      "title": "Why Choose MotorRacingApparel",
+      "features": [
+        {
+          "id": "free-shipping",
+          "title": "Free Shipping",
+          "description": "Free delivery on orders over $75 worldwide"
+        },
+        {
+          "id": "quality-guarantee",
+          "title": "Quality Guarantee",
+          "description": "30-day money back guarantee on all orders"
+        },
+        {
+          "id": "secure-payment",
+          "title": "Secure Payment",
+          "description": "SSL encrypted checkout for your security"
+        },
+        {
+          "id": "rider-community",
+          "title": "Rider Community",
+          "description": "Join the MotorRacingApparel community"
+        }
+      ]
+    },
+    {
+      "type": "featuredPostsSection",
+      "title": "Racing Lifestyle Blog",
+      "exploreMoreLink": "/blog",
+      "exploreMoreText": "Read more"
+    },
+    {
+      "type": "socialProof",
+      "title": "Join the Ride",
+      "stats": [
+        { "value": "50K+", "label": "Riders" },
+        { "value": "4.9", "label": "Rating" },
+        { "value": "12K+", "label": "Reviews" }
+      ],
+      "recentActivities": [],
+      "overallRating": "4.9",
+      "totalReviews": "12,000+"
+    },
+    {
+      "type": "testimonialSlider",
+      "title": "Rider Reviews",
+      "testimonials": [
+        {
+          "id": "1",
+          "author": "Jake M.",
+          "role": "Track Rider",
+          "content": "MotorRacingApparel gear holds up on and off the track. Quality and style in one.",
+          "avatar": "JM",
+          "initials": "JM"
+        },
+        {
+          "id": "2",
+          "author": "Sarah L.",
+          "role": "Motorcycle Enthusiast",
+          "content": "Finally, apparel that speaks to the riding lifestyle. Fast shipping and great fit.",
+          "avatar": "SL",
+          "initials": "SL"
+        },
+        {
+          "id": "3",
+          "author": "Marcus T.",
+          "role": "Racing Fan",
+          "content": "Premium feel and bold designs. This is what motorcycle fashion should be.",
+          "avatar": "MT",
+          "initials": "MT"
+        }
+      ]
+    },
+    {
+      "type": "emailSignupSection",
+      "title": "Join the MotorRacingApparel Community.",
+      "description": "Exclusive drops, racing news, and rider culture. No clutter.",
+      "backgroundImage": "/images/newsletter-bg.jpg",
+      "formAction": "/api/signup",
+      "submitText": "Subscribe"
+    },
+    {
+      "type": "trustBadges",
+      "title": "Secure checkout",
+      "badges": [
+        { "id": "ship", "icon": "🚚", "title": "Free shipping", "description": "On orders over $75" },
+        { "id": "returns", "icon": "↩", "title": "30-day returns", "description": "Hassle-free" },
+        { "id": "secure", "icon": "🔒", "title": "Secure payment", "description": "SSL encrypted" }
+      ],
+      "paymentMethods": [
+        { "id": "visa", "name": "Visa", "icon": "Visa" },
+        { "id": "mc", "name": "Mastercard", "icon": "MC" },
+        { "id": "amex", "name": "Amex", "icon": "Amex" },
+        { "id": "paypal", "name": "PayPal", "icon": "PayPal" }
+      ],
+      "guaranteeText": "30-day money-back guarantee on all orders"
+    }
+  ]
+}

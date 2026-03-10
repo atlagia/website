@@ -1,0 +1,35 @@
+---
+interface Testimonial {
+  quote: string;
+  author?: string;
+  role?: string;
+}
+
+interface Props {
+  title?: string;
+  testimonials: Testimonial[];
+}
+
+const { title = 'What Our Clients Say', testimonials = [] } = Astro.props;
+---
+
+<section class="bg-[var(--dw-bg)] py-24 lg:py-32 border-t border-[var(--dw-border)]">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <p class="font-body text-xs tracking-[0.4em] uppercase text-[var(--dw-accent)] mb-6">{title}</p>
+    {testimonials.length > 0 ? (
+      <blockquote class="font-display text-2xl md:text-3xl lg:text-4xl font-medium text-[var(--dw-text)] leading-snug tracking-tight">
+        "{testimonials[0].quote}"
+      </blockquote>
+    ) : (
+      <blockquote class="font-display text-2xl md:text-3xl lg:text-4xl font-medium text-[var(--dw-text)] leading-snug tracking-tight">
+        "Exceptional quality and timeless design."
+      </blockquote>
+    )}
+    {testimonials[0]?.author && <p class="mt-8 font-body text-sm text-[var(--dw-muted)] uppercase tracking-wider">{testimonials[0].author}</p>}
+  </div>
+</section>
+
+<style>
+  .font-display { font-family: var(--font-display); }
+  .font-body { font-family: var(--font-body); }
+</style>

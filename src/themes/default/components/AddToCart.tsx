@@ -43,12 +43,25 @@ interface Product {
   }[];
 }
 
+interface AddToCartStyles {
+  optionLabel?: string;
+  optionButton?: string;
+  optionButtonSelected?: string;
+  price?: string;
+  priceCompare?: string;
+  quantityLabel?: string;
+  quantityWrap?: string;
+  quantityInput?: string;
+}
+
 interface AddToCartProps {
   product: Product;
   language: string;
   apiEndpoint: string;
   hasChartData?: boolean;
   projectType?: string;
+  themeVariant?: 'light' | 'dark';
+  addToCartStyles?: AddToCartStyles;
   onCheckout?: () => void;
   paymentConfig: {
     method?: string;
@@ -147,6 +160,16 @@ if (typeof document !== 'undefined') {
   document.head.appendChild(style);
 }
 
+const defaultAddToCartStyles: AddToCartStyles = {
+  optionLabel: 'block text-xs font-medium uppercase tracking-widest text-neutral-500',
+  optionButton: 'min-w-[2.75rem] px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 border-2 bg-neutral-50 text-neutral-800 border-neutral-200 hover:border-neutral-400 hover:bg-neutral-100',
+  optionButtonSelected: 'min-w-[2.75rem] px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 border-2 bg-neutral-900 !text-white border-neutral-900',
+  price: 'text-3xl font-bold text-neutral-900',
+  priceCompare: 'text-xl text-neutral-500 line-through',
+  quantityLabel: 'block text-xs font-medium uppercase tracking-widest text-neutral-500',
+  quantityInput: 'w-14 text-center text-sm font-medium text-neutral-900 bg-transparent border-0 border-x border-neutral-200 py-2.5 focus:outline-none focus:ring-0 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none',
+};
+
 export default function AddToCart({ 
   product, 
   language, 
@@ -154,8 +177,16 @@ export default function AddToCart({
   hasChartData = false,
   onCheckout,
   projectType: projectTypeProp,
+  themeVariant,
+  addToCartStyles: addToCartStylesProp,
   paymentConfig 
 }: AddToCartProps) {
+  const variant = themeVariant ?? 'light';
+  const s = { ...defaultAddToCartStyles, ...(addToCartStylesProp ?? {}) };
+  // Selected variant style from theme: dark theme → light bg + dark text; light theme → dark bg + light text
+  const optionButtonSelectedClass = variant === 'dark'
+    ? 'min-w-[2.75rem] px-4 py-2.5 rounded-lg text-sm font-medium border-2 !bg-white !text-neutral-900 border-neutral-200 shadow-sm'
+    : 'min-w-[2.75rem] px-4 py-2.5 rounded-lg text-sm font-medium border-2 !bg-neutral-900 !text-white border-neutral-900';
   const [selectedOptions, setSelectedOptions] = React.useState<Record<string, string>>({});
   const [selectedVariant, setSelectedVariant] = React.useState<Variant | null>(null);
   const [quantity, setQuantity] = React.useState(1);
@@ -385,8 +416,10 @@ export default function AddToCart({
     }
   }, [language]);
 
+  const themeClass = variant === 'dark' ? 'add-to-cart-theme-dark' : '';
+  const lightThemeStyle = variant === 'light' ? { color: 'rgb(23 23 23)', WebkitTextFillColor: 'rgb(23 23 23)' } as React.CSSProperties : undefined;
   return (
-    <div className="space-y-8 pt-4">
+    <div className={`space-y-8 pt-4 ${themeClass}`.trim()} data-theme-variant={variant} style={lightThemeStyle}>
       {/* Options Selection Area */}
       <div className="space-y-8 pb-24 md:pb-0" ref={addToCartRef}>
         {/* Only show options if they're not the default title */}
@@ -394,7 +427,7 @@ export default function AddToCart({
           .filter(option => !(option.name === 'Title' && option.values.length === 1 && option.values[0] === 'Default Title'))
           .map((option) => (
           <div key={option.name} className="space-y-3">
-            <label className="block text-xs font-medium uppercase tracking-widest text-neutral-500">
+            <label className={s.optionLabel}>
               {option.name}
             </label>
             <div className="flex flex-wrap gap-3">
@@ -423,12 +456,9 @@ export default function AddToCart({
                   <button
                     key={value}
                     onClick={() => handleOptionChange(option.name, value)}
-                    className={`min-w-[2.75rem] px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 border-2
-                      ${isSelected 
-                        ? 'bg-neutral-900 text-white border-neutral-900' 
-                        : 'bg-neutral-50 text-neutral-800 border-neutral-200 hover:border-neutral-400 hover:bg-neutral-100'
-                      }`}
+                    className={isSelected ? optionButtonSelectedClass : s.optionButton}
                     aria-pressed={isSelected}
+                    style={isSelected && variant === 'light' ? { color: '#fff', WebkitTextFillColor: '#fff' } : undefined}
                   >
                     {value}
                   </button>
@@ -441,11 +471,11 @@ export default function AddToCart({
         {selectedVariant && (
           <div className="flex items-baseline justify-between mb-6">
             <div className="flex items-baseline gap-2">
-              <div className="text-3xl font-bold text-neutral-900">
+              <div className={s.price}>
                 {currency} {convertedPrice}
               </div>
               {selectedVariant.compareAtPrice && (
-                <div className="text-xl text-neutral-500 line-through">
+                <div className={s.priceCompare}>
                   {currency} {convert(
                     parseFloat(selectedVariant.compareAtPrice.amount),
                     selectedVariant.compareAtPrice.currencyCode,
@@ -458,13 +488,13 @@ export default function AddToCart({
           </div>
         )}
 
-        {/* Quantity - only for physical products */}
+        {/* Quantity - only for physical products (label above input) */}
         {isPhysical && (
-          <div className="space-y-3">
-            <label className="block text-xs font-medium uppercase tracking-widest text-neutral-500">
+          <div className={s.quantityWrap ?? 'flex flex-col gap-3'}>
+            <label className={s.quantityLabel ?? 'block text-xs font-medium uppercase tracking-widest text-neutral-500'}>
               Quantity
             </label>
-            <div className="inline-flex items-center border-2 border-neutral-200 rounded-lg overflow-hidden bg-neutral-50">
+            <div className="inline-flex items-center border-2 border-neutral-200 rounded-lg overflow-hidden bg-neutral-50 self-start">
               <button
                 type="button"
                 onClick={() => setQuantity(q => Math.max(1, q - 1))}
@@ -483,8 +513,9 @@ export default function AddToCart({
                   const v = parseInt(e.target.value, 10);
                   if (!Number.isNaN(v)) setQuantity(Math.max(1, Math.min(99, v)));
                 }}
-                className="w-14 text-center text-sm font-medium text-neutral-900 bg-transparent border-0 border-x border-neutral-200 py-2.5 focus:outline-none focus:ring-0 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                className={s.quantityInput}
                 aria-label="Quantity"
+                style={lightThemeStyle}
               />
               <button
                 type="button"
@@ -553,11 +584,12 @@ export default function AddToCart({
           <button
             onClick={handleBuyNow}
             disabled={isLoading}
-            className="w-full bg-white text-neutral-900 px-5 py-3.5 rounded-xl text-base font-semibold 
+            className="w-full bg-white px-5 py-3.5 rounded-xl text-base font-semibold 
                      hover:bg-neutral-50 transition-all duration-200 border border-neutral-300
                      disabled:bg-neutral-300 disabled:cursor-not-allowed 
                      flex items-center justify-center gap-2
                      transform hover:scale-[1.01] active:scale-[0.99] shadow-sm"
+            style={lightThemeStyle}
           >
             {isLoading ? (
               <>
@@ -582,10 +614,11 @@ export default function AddToCart({
           <button
             onClick={handleBuyNow}
             disabled={isLoading}
-            className="w-full bg-white text-neutral-900 px-5 py-3 rounded-xl text-base font-semibold 
+            className="w-full bg-white px-5 py-3 rounded-xl text-base font-semibold 
                      hover:bg-neutral-50 transition-all duration-200 border border-neutral-300
                      disabled:bg-neutral-300 disabled:cursor-not-allowed 
                      flex items-center justify-center gap-2"
+            style={lightThemeStyle}
           >
             {isLoading ? (
               <>

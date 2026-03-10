@@ -1,0 +1,192 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+import { generateCanonicalURL, generateSchema, type SEOProps } from '@utils/seo';
+import GoogleAnalytics from '@components/GoogleAnalytics.astro';
+import Hotjar from '@components/Hotjar.astro';
+
+interface Props extends SEOProps {
+  isProduct?: boolean;
+  price?: { amount: string; currency: string };
+  availability?: boolean;
+  alternateUrls?: Array<{lang: string, url: string}>;
+  productSchema?: any;
+  breadcrumbSchema?: any;
+  projectType?: string;
+}
+
+const {
+  title,
+  description,
+  image = '/images/social-card.jpg',
+  article = false,
+  publishedTime,
+  modifiedTime,
+  isProduct = false,
+  price,
+  availability,
+  alternateUrls = [],
+  productSchema,
+  breadcrumbSchema,
+  projectType
+} = Astro.props;
+
+const currentPath = Astro.url.pathname;
+const currentLang = currentPath.split('/')[1];
+
+const getAllowedLanguages = () => {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  return allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+};
+
+const supportedLanguages = getAllowedLanguages();
+
+const hrefLangURLs = alternateUrls.length > 0 ? [...alternateUrls] : [];
+
+if (alternateUrls.length === 0) {
+  let basePath = currentPath;
+  if (currentLang && supportedLanguages.includes(currentLang)) {
+    basePath = currentPath.substring(currentLang.length + 1) || '/';
+  }
+  const uniqueLangs = new Set();
+  supportedLanguages.forEach(lang => {
+    const url = basePath === '/' ? `${Astro.url.origin}/${lang}` : `${Astro.url.origin}/${lang}${basePath}`;
+    if (!uniqueLangs.has(lang)) {
+      uniqueLangs.add(lang);
+      hrefLangURLs.push({ lang, url });
+    }
+  });
+  const xDefaultUrl = basePath === '/' ? `${Astro.url.origin}/en` : `${Astro.url.origin}/en${basePath}`;
+  hrefLangURLs.push({ lang: 'x-default', url: xDefaultUrl });
+}
+
+if (currentLang && supportedLanguages.includes(currentLang)) {
+  const selfUrl = Astro.url.href;
+  const existingSelf = hrefLangURLs.find(h => h.lang === currentLang && h.url === selfUrl);
+  if (!existingSelf) hrefLangURLs.push({ lang: currentLang, url: selfUrl });
+}
+
+let canonicalURL;
+if (currentPath === '/') {
+  canonicalURL = `${Astro.url.origin}/en`;
+} else if (currentLang && supportedLanguages.includes(currentLang)) {
+  canonicalURL = Astro.url.href;
+} else {
+  canonicalURL = `${Astro.url.origin}/en${currentPath}`;
+}
+
+const schema = generateSchema(Astro.props, Astro.url.pathname);
+---
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="icon" type="image/svg+xml" href={`/${import.meta.env.THEME || 'favicon'}.svg`} />
+<meta name="generator" content={Astro.generator} />
+
+<link rel="canonical" href={canonicalURL} />
+{hrefLangURLs.map(({ lang, url }) => (
+  <link rel="alternate" hreflang={lang} href={url} />
+))}
+
+<meta name="robots" content="index, follow" />
+
+<title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+
+<meta property="og:type" content={article ? 'article' : isProduct ? 'product' : 'website'} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={new URL(image, canonicalURL)} />
+
+{isProduct && price && (
+  <>
+    <meta property="og:price:amount" content={price.amount} />
+    <meta property="og:price:currency" content={price.currency} />
+    <meta property="product:availability" content={availability ? 'in stock' : 'out of stock'} />
+  </>
+)}
+
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={canonicalURL} />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={new URL(image, canonicalURL)} />
+
+<script type="application/ld+json" set:html={schema} />
+{productSchema && <script type="application/ld+json" set:html={JSON.stringify(productSchema)} />}
+{breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<ViewTransitions />
+
+<style is:global>
+  :root {
+    --dw-bg: #0a0a0a;
+    --dw-surface: #141414;
+    --dw-card: #0f0f0f;
+    --dw-text: #f5f0e8;
+    --dw-muted: #9ca3af;
+    --dw-accent: #c9a962;
+    --dw-border: rgba(255,255,255,0.08);
+    --dw-midnight: #0f172a;
+    --dw-rose: #b76e79;
+    --dw-silver: #c0c0c0;
+    --ease-luxury: cubic-bezier(0.25, 0.1, 0.25, 1);
+    --ease-out-luxury: cubic-bezier(0.16, 1, 0.3, 1);
+    --duration-slow: 700ms;
+    --duration-medium: 400ms;
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'DM Sans', system-ui, sans-serif;
+    --theme-bg: var(--dw-bg);
+    --theme-text: var(--dw-text);
+    --theme-link: var(--dw-accent);
+    --theme-accent: var(--dw-accent);
+  }
+  html { font-family: var(--font-body); scroll-behavior: smooth; }
+  body { margin: 0; padding: 0; background-color: var(--dw-bg); color: var(--dw-text); -webkit-font-smoothing: antialiased; }
+  h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
+  @media (prefers-reduced-motion: reduce) {
+    :root { --duration-slow: 0ms; --duration-medium: 0ms; }
+  }
+
+  /* Product page: contrast and section overrides (AddToCart + CareInstructions from core) */
+  #product-wrapper .space-y-8 .text-neutral-900,
+  #product-wrapper .space-y-8 .text-neutral-800 { color: var(--dw-text) !important; }
+  #product-wrapper .space-y-8 .text-neutral-600,
+  #product-wrapper .space-y-8 .text-neutral-500 { color: var(--dw-muted) !important; }
+  #product-wrapper .space-y-8 .line-through { color: var(--dw-muted) !important; }
+
+  /* Care Instructions (core component): force dark theme */
+  #product-wrapper div.bg-neutral-50.rounded-2xl.p-8 {
+    background: var(--dw-surface) !important;
+    border-color: var(--dw-border) !important;
+  }
+  #product-wrapper div.bg-neutral-50.rounded-2xl.p-8 h2,
+  #product-wrapper div.bg-neutral-50.rounded-2xl.p-8 h3 { color: var(--dw-text) !important; }
+  #product-wrapper div.bg-neutral-50.rounded-2xl.p-8 .text-neutral-500,
+  #product-wrapper div.bg-neutral-50.rounded-2xl.p-8 .text-neutral-600,
+  #product-wrapper div.bg-neutral-50.rounded-2xl.p-8 .text-neutral-900,
+  #product-wrapper div.bg-neutral-50.rounded-2xl.p-8 span { color: var(--dw-muted) !important; }
+  #product-wrapper div.bg-neutral-50.rounded-2xl.p-8 h2,
+  #product-wrapper div.bg-neutral-50.rounded-2xl.p-8 h3 { color: var(--dw-text) !important; }
+  #product-wrapper div.bg-neutral-50.rounded-2xl.p-8 .bg-neutral-200,
+  #product-wrapper div.bg-neutral-50.rounded-2xl.p-8 .bg-neutral-300,
+  #product-wrapper div.bg-neutral-50.rounded-2xl.p-8 .bg-neutral-400 { background: var(--dw-muted) !important; }
+  #product-wrapper div.bg-neutral-50.rounded-2xl.p-8 .text-neutral-600 svg { color: var(--dw-accent) !important; }
+
+  /* Thumbnail strip: hide scrollbar and contain overflow (no blue bar) */
+  #product-wrapper .overflow-x-auto.scrollbar-hide {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  #product-wrapper .overflow-x-auto.scrollbar-hide::-webkit-scrollbar { display: none; }
+</style>
+
+{import.meta.env.PUBLIC_GA_MEASUREMENT_ID && <GoogleAnalytics />}
+<Hotjar />

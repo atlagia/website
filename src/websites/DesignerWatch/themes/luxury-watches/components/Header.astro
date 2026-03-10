@@ -1,0 +1,142 @@
+---
+import { Menu, Globe, Search } from 'lucide-react';
+import { getLangFromUrl, getLocalizedPath } from '@utils/i18n';
+import CartSidebarWithTrigger from '@themes/default/components/CartSidebarWithTrigger';
+
+let headerData: { navigation: Array<{ text: string; href: string }>; auth: { login: { text: string; href: string }; signup: { text: string; href: string } }; languages: Array<{ code: string; name: string }> };
+const currentLang = getLangFromUrl(Astro.url) || 'en';
+try {
+  headerData = (await import(`../data/header/header_${currentLang}.json`)).default;
+} catch {
+  headerData = (await import('../data/header/header_en.json')).default;
+}
+
+const getAllowedLanguages = (): string[] => {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  return allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+};
+const allowedLanguages = getAllowedLanguages();
+const languages = headerData.languages.filter(l => allowedLanguages.includes(l.code));
+
+const currentPath = Astro.url.pathname;
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'DesignerWatch';
+
+const navItems = headerData.navigation.map((item: { text: string; href: string }) => ({
+  text: item.text,
+  href: `/${currentLang}${item.href === '/' ? '' : item.href}`
+}));
+const loginItem = headerData.auth.login;
+
+let headerStyles = {};
+try {
+  const themeHeaderStyles = await import('../styles/Header.json');
+  headerStyles = themeHeaderStyles.default || {};
+} catch (_) {}
+
+const paymentConfig = {
+  method: import.meta.env.PUBLIC_PAYMENT_METHOD || 'default',
+  hoodpay: {
+    apiUrl: import.meta.env.HOODPAY_API_URL,
+    businessId: import.meta.env.HOODPAY_BUSINESS_ID,
+    authToken: import.meta.env.HOODPAY_AUTH_TOKEN,
+    redirectUrl: `${import.meta.env.DOMAINE || ''}${import.meta.env.HOODPAY_REDIRECT_URL || ''}`
+  },
+  store: {
+    name: import.meta.env.PUBLIC_SITE_NAME || siteName,
+    domain: import.meta.env.DOMAINE || 'localhost'
+  }
+};
+const apiEndpoint = import.meta.env.VITE_API_ENDPOINT || '/api/checkout';
+---
+
+<div class="designerwatch-header fixed w-full top-0 z-50 bg-[var(--dw-bg)] border-b border-[var(--dw-border)]">
+  <header class="border-b border-[var(--dw-border)]">
+    <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Main">
+      <div class="header-row grid h-16 lg:h-20 items-center gap-4 lg:gap-6">
+        <a href={`/${currentLang}`} class="font-display text-xl lg:text-2xl font-semibold tracking-wide text-[var(--dw-text)] hover:text-[var(--dw-accent)] transition-colors justify-self-start">
+          {siteName}
+        </a>
+
+        <div class="hidden lg:flex items-center justify-center gap-4 xl:gap-6 min-w-0 px-2 overflow-hidden">
+          {navItems.map((item) => {
+            const isActive = currentPath === item.href || (item.href !== `/${currentLang}` && currentPath.startsWith(item.href));
+            return (
+              <a
+                href={item.href}
+                class={`font-body text-xs font-medium tracking-[0.2em] uppercase transition-colors whitespace-nowrap shrink-0 ${isActive ? 'text-[var(--dw-accent)]' : 'text-[var(--dw-muted)] hover:text-[var(--dw-text)]'}`}
+              >
+                {item.text}
+              </a>
+            );
+          })}
+        </div>
+
+        <div class="header-actions flex items-center justify-end gap-3 sm:gap-4 shrink-0" role="group" aria-label="Header actions">
+          <a href={`/${currentLang}/search`} class="p-2 text-[var(--dw-muted)] hover:text-[var(--dw-text)] transition-colors rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dw-accent)]" aria-label="Search">
+            <Search className="h-4 w-4" />
+          </a>
+          <div class="relative group">
+            <button type="button" class="flex items-center gap-1.5 text-[var(--dw-muted)] hover:text-[var(--dw-text)] transition-colors py-2 px-1 whitespace-nowrap" aria-haspopup="true" aria-expanded="false" aria-label="Select language">
+              <Globe className="h-4 w-4 shrink-0" />
+              <span class="hidden sm:inline text-xs uppercase tracking-wider font-body">{languages.find(l => l.code === currentLang)?.code ?? currentLang.toUpperCase()}</span>
+            </button>
+            <div class="absolute right-0 top-full mt-1 w-36 py-2 bg-[var(--dw-surface)] border border-[var(--dw-border)] rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              {languages.map((lang) => (
+                <a href={getLocalizedPath(currentPath, lang.code)} class={`block px-4 py-2 text-xs uppercase tracking-wider font-body ${currentLang === lang.code ? 'text-[var(--dw-text)] font-medium' : 'text-[var(--dw-muted)] hover:text-[var(--dw-text)]'}`}>
+                  {lang.name}
+                </a>
+              ))}
+            </div>
+          </div>
+          <CartSidebarWithTrigger
+            client:load
+            triggerClassName="flex items-center gap-1.5 text-[var(--dw-muted)] hover:text-[var(--dw-text)] transition-colors py-2 font-body text-xs uppercase tracking-wider"
+            label="Bag"
+            showLabel={true}
+            paymentConfig={paymentConfig}
+            apiEndpoint={apiEndpoint}
+            headerStyles={headerStyles}
+            projectType={import.meta.env.PROJECT_TYPE || 'physical'}
+          />
+          <a href={`/${currentLang}${loginItem.href}`} class="hidden sm:inline-flex items-center h-9 px-4 bg-[var(--dw-text)] text-[var(--dw-bg)] text-xs font-medium tracking-[0.2em] uppercase hover:opacity-90 transition-opacity font-body shrink-0">
+            {loginItem.text}
+          </a>
+
+          <button type="button" id="mobile-menu-button" class="lg:hidden p-2 text-[var(--dw-muted)] hover:text-[var(--dw-text)]" aria-expanded="false" aria-controls="mobile-menu-dropdown">
+            <span class="sr-only">Menu</span>
+            <Menu className="h-5 w-5" />
+          </button>
+        </div>
+      </div>
+
+      <div id="mobile-menu-dropdown" class="lg:hidden hidden py-5 px-4 border-t border-[var(--dw-border)] bg-[var(--dw-bg)]" role="region" aria-label="Mobile menu">
+        <div class="flex flex-col gap-1">
+          {navItems.map((item) => (
+            <a href={item.href} class="py-3 text-xs tracking-[0.18em] uppercase text-[var(--dw-muted)] hover:text-[var(--dw-text)] font-body">{item.text}</a>
+          ))}
+          <a href={`/${currentLang}/search`} class="py-3 text-xs tracking-[0.18em] uppercase text-[var(--dw-muted)] font-body">Search</a>
+          <button type="button" id="mobile-bag-trigger" class="w-full text-left py-3 text-xs tracking-[0.18em] uppercase text-[var(--dw-muted)] font-body hover:text-[var(--dw-text)]">Bag</button>
+          <a href={`/${currentLang}${loginItem.href}`} class="py-3 text-xs tracking-[0.18em] uppercase text-[var(--dw-text)] font-medium font-body">{loginItem.text}</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+</div>
+
+<script>
+  document.getElementById('mobile-menu-button')?.addEventListener('click', () => {
+    const btn = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu-dropdown');
+    const expanded = btn?.getAttribute('aria-expanded') === 'true';
+    btn?.setAttribute('aria-expanded', (!expanded).toString());
+    menu?.classList.toggle('hidden');
+  });
+</script>
+
+<style>
+  .font-display { font-family: var(--font-display); }
+  .font-body { font-family: var(--font-body); }
+  .header-row {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+  }
+</style>

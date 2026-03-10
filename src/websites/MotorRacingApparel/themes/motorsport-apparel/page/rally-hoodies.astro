@@ -1,0 +1,225 @@
+---
+import Layoutc from '@layouts/Layoutc.astro';
+import { ArrowRight, Flag, Trophy, Star, Crown, Award } from 'lucide-react';
+
+// Generate static paths for allowed languages from environment
+export async function getStaticPaths() {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  const languages = allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+  
+  return languages.map(lang => ({ params: { lang } }));
+}
+
+const { lang = 'en' } = Astro.params;
+const baseUrl = import.meta.env.DOMAINE || 'https://www.motorracingapparel.com';
+const storeName = import.meta.env.PUBLIC_SITE_NAME || 'Drivon';
+
+// Load multilingual data
+let data;
+try {
+  data = await import(`../data/rally-hoodies/rally-hoodies_${lang}.json`);
+} catch (error) {
+  // Fallback to English if language file doesn't exist
+  data = await import(`../data/rally-hoodies/rally-hoodies_en.json`);
+}
+
+const pageData = data.default;
+
+// SEO
+const seoTitle = `${pageData.title} | ${storeName}`;
+const seoDescription = pageData.description;
+---
+
+<Layoutc title={seoTitle} description={seoDescription} lang={lang}>
+  <div class="min-h-screen bg-[var(--mra-bg)]">
+    <!-- Hero Section -->
+    <section class="relative min-h-[50vh] flex items-center justify-center bg-[var(--mra-text)] text-[var(--mra-bg)]">
+      <div class="relative z-10 h-full flex items-center justify-center text-center px-4">
+        <div class="max-w-4xl mx-auto">
+          <h1 class="font-headline text-5xl md:text-7xl uppercase tracking-tight text-[var(--mra-bg)] mb-6">
+            Rally Hoodies
+          </h1>
+          <p class="text-xl md:text-2xl text-[var(--mra-bg)]/90 mb-8">
+            Premium hoodies celebrating rally racing champions
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href={`/${lang}/collections`} class="inline-flex items-center justify-center bg-[var(--mra-bg)] text-[var(--mra-text)] px-8 py-3.5 text-[11px] font-medium tracking-[0.2em] uppercase hover:opacity-90 transition-opacity font-body">
+              Shop Rally Hoodies
+            </a>
+            <a href={`/${lang}/rally-champions`} class="inline-flex items-center justify-center border-2 border-[var(--mra-bg)] text-[var(--mra-bg)] px-8 py-3.5 text-[11px] font-medium tracking-[0.2em] uppercase hover:bg-[var(--mra-bg)]/10 transition-colors font-body">
+              Rally Champions
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rally Hoodies Features -->
+    <section class="py-20 px-4">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="font-headline text-4xl text-[var(--mra-text)] uppercase tracking-wide mb-4">Premium Rally Hoodies</h2>
+          <p class="text-xl text-[var(--mra-muted)] max-w-3xl mx-auto">
+            From WRC champions to rally legends, our rally hoodies celebrate the greatest drivers in rally racing history with authentic designs and premium quality.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+          <div class="bg-[var(--mra-card)] rounded-2xl p-8 border border-[var(--mra-border)]">
+            <div class="w-16 h-16 bg-[var(--mra-surface)] rounded-full flex items-center justify-center mb-6 text-[var(--mra-text)]">
+              <Flag class="w-8 h-8" />
+            </div>
+            <h3 class="font-headline text-2xl text-[var(--mra-text)] uppercase tracking-wide mb-4">WRC Champions</h3>
+            <p class="text-[var(--mra-muted)]">
+              Celebrate the legendary rally drivers who have conquered the World Rally Championship and earned their place in rally racing history.
+            </p>
+          </div>
+
+          <div class="bg-[var(--mra-card)] rounded-2xl p-8 border border-[var(--mra-border)]">
+            <div class="w-16 h-16 bg-[var(--mra-surface)] rounded-full flex items-center justify-center mb-6 text-[var(--mra-text)]">
+              <Trophy class="w-8 h-8" />
+            </div>
+            <h3 class="font-headline text-2xl text-[var(--mra-text)] uppercase tracking-wide mb-4">Rally Legends</h3>
+            <p class="text-[var(--mra-muted)]">
+              Honor the legendary drivers who have shaped rally racing and inspired generations of rally enthusiasts worldwide.
+            </p>
+          </div>
+
+          <div class="bg-[var(--mra-card)] rounded-2xl p-8 border border-[var(--mra-border)]">
+            <div class="w-16 h-16 bg-[var(--mra-surface)] rounded-full flex items-center justify-center mb-6 text-[var(--mra-text)]">
+              <Star class="w-8 h-8" />
+            </div>
+            <h3 class="font-headline text-2xl text-[var(--mra-text)] uppercase tracking-wide mb-4">Premium Quality</h3>
+            <p class="text-[var(--mra-muted)]">
+              Every hoodie is crafted with premium materials and attention to detail, ensuring comfort and durability for the rally racing enthusiast.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rally Hoodies Categories -->
+    <section class="py-20 bg-[var(--mra-surface)]">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="font-headline text-4xl text-[var(--mra-text)] uppercase tracking-wide mb-4">Rally Hoodies Collection</h2>
+          <p class="text-xl text-[var(--mra-muted)]">Celebrate rally racing champions</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <a href={`/${lang}/collections`} class="group bg-[var(--mra-card)] rounded-2xl overflow-hidden border border-[var(--mra-border)] hover:border-[var(--mra-text)]/30 transition-colors">
+            <div class="h-48 bg-[var(--mra-text)] flex items-center justify-center text-[var(--mra-bg)]">
+              <Flag class="w-16 h-16" />
+            </div>
+            <div class="p-6">
+              <h3 class="font-headline text-xl text-[var(--mra-text)] uppercase tracking-wide mb-2">Rally Champions Hoodies</h3>
+              <p class="text-[var(--mra-muted)] mb-4">Premium hoodies celebrating rally champions</p>
+              <div class="flex items-center text-[var(--mra-text)] group-hover:text-[var(--mra-accent-hover)] font-body text-[11px] font-medium tracking-[0.2em] uppercase">
+                Shop Champions Hoodies <ArrowRight class="w-4 h-4 ml-2" />
+              </div>
+            </div>
+          </a>
+
+          <a href={`/${lang}/collections`} class="group bg-[var(--mra-card)] rounded-2xl overflow-hidden border border-[var(--mra-border)] hover:border-[var(--mra-text)]/30 transition-colors">
+            <div class="h-48 bg-[var(--mra-text)] flex items-center justify-center text-[var(--mra-bg)]">
+              <Trophy class="w-16 h-16" />
+            </div>
+            <div class="p-6">
+              <h3 class="font-headline text-xl text-[var(--mra-text)] uppercase tracking-wide mb-2">Rally Legends Hoodies</h3>
+              <p class="text-[var(--mra-muted)] mb-4">Classic hoodies honoring rally racing legends</p>
+              <div class="flex items-center text-[var(--mra-text)] group-hover:text-[var(--mra-accent-hover)] font-body text-[11px] font-medium tracking-[0.2em] uppercase">
+                Shop Legends Hoodies <ArrowRight class="w-4 h-4 ml-2" />
+              </div>
+            </div>
+          </a>
+
+          <a href={`/${lang}/collections`} class="group bg-[var(--mra-card)] rounded-2xl overflow-hidden border border-[var(--mra-border)] hover:border-[var(--mra-text)]/30 transition-colors">
+            <div class="h-48 bg-[var(--mra-text)] flex items-center justify-center text-[var(--mra-bg)]">
+              <Star class="w-16 h-16" />
+            </div>
+            <div class="p-6">
+              <h3 class="font-headline text-xl text-[var(--mra-text)] uppercase tracking-wide mb-2">Rally Heritage Hoodies</h3>
+              <p class="text-[var(--mra-muted)] mb-4">Hoodies celebrating rally racing heritage</p>
+              <div class="flex items-center text-[var(--mra-text)] group-hover:text-[var(--mra-accent-hover)] font-body text-[11px] font-medium tracking-[0.2em] uppercase">
+                Shop Heritage Hoodies <ArrowRight class="w-4 h-4 ml-2" />
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rally Hoodies Spotlight -->
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="font-headline text-4xl text-[var(--mra-text)] uppercase tracking-wide mb-4">Rally Hoodies Features</h2>
+          <p class="text-xl text-[var(--mra-muted)]">Premium quality and authentic designs</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-[var(--mra-card)] rounded-2xl p-8 border border-[var(--mra-border)]">
+            <div class="w-20 h-20 bg-[var(--mra-surface)] rounded-full flex items-center justify-center mb-6 mx-auto text-[var(--mra-text)]">
+              <Crown class="w-10 h-10" />
+            </div>
+            <h3 class="font-headline text-2xl text-[var(--mra-text)] uppercase tracking-wide mb-4 text-center">Premium Materials</h3>
+            <p class="text-[var(--mra-muted)] text-center mb-6">
+              Crafted with premium cotton and attention to detail, ensuring comfort and durability for the rally racing enthusiast.
+            </p>
+            <a href={`/${lang}/collections`} class="flex items-center justify-center text-yellow-600 font-semibold hover:text-yellow-700">
+              Shop Premium Hoodies <ArrowRight class="w-4 h-4 ml-2" />
+            </a>
+          </div>
+
+          <div class="bg-[var(--mra-card)] rounded-2xl p-8 border border-[var(--mra-border)]">
+            <div class="w-20 h-20 bg-[var(--mra-surface)] rounded-full flex items-center justify-center mb-6 mx-auto text-[var(--mra-text)]">
+              <Award class="w-10 h-10" />
+            </div>
+            <h3 class="font-headline text-2xl text-[var(--mra-text)] uppercase tracking-wide mb-4 text-center">Authentic Designs</h3>
+            <p class="text-[var(--mra-muted)] text-center mb-6">
+              Featuring authentic rally designs that celebrate the heritage and culture of rally racing.
+            </p>
+            <a href={`/${lang}/collections`} class="flex items-center justify-center text-orange-600 font-semibold hover:text-orange-700">
+              Shop Authentic Designs <ArrowRight class="w-4 h-4 ml-2" />
+            </a>
+          </div>
+
+          <div class="bg-[var(--mra-card)] rounded-2xl p-8 border border-[var(--mra-border)]">
+            <div class="w-20 h-20 bg-[var(--mra-surface)] rounded-full flex items-center justify-center mb-6 mx-auto text-[var(--mra-text)]">
+              <Star class="w-10 h-10" />
+            </div>
+            <h3 class="font-headline text-2xl text-[var(--mra-text)] uppercase tracking-wide mb-4 text-center">Rally Heritage</h3>
+            <p class="text-[var(--mra-muted)] text-center mb-6">
+              Each hoodie tells a story of rally heritage, from WRC champions to rally legends and iconic moments.
+            </p>
+            <a href={`/${lang}/rally-champions`} class="flex items-center justify-center text-red-600 font-semibold hover:text-red-700">
+              Explore Rally Heritage <ArrowRight class="w-4 h-4 ml-2" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-[var(--mra-text)] text-[var(--mra-bg)]">
+      <div class="max-w-4xl mx-auto text-center px-4">
+        <h2 class="font-headline text-4xl uppercase tracking-tight mb-6">Wear Rally Heritage</h2>
+        <p class="text-xl text-[var(--mra-bg)]/90 mb-8">
+          Join the global rally racing community and celebrate the greatest drivers in rally history with our premium rally hoodies collection.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href={`/${lang}/collections`} class="inline-flex items-center justify-center bg-[var(--mra-bg)] text-[var(--mra-text)] px-8 py-3.5 text-[11px] font-medium tracking-[0.2em] uppercase hover:opacity-90 transition-opacity font-body">
+            Shop Rally Hoodies Collection
+          </a>
+          <a href={`/${lang}/rally-champions`} class="inline-flex items-center justify-center border-2 border-[var(--mra-bg)] text-[var(--mra-bg)] px-8 py-3.5 text-[11px] font-medium tracking-[0.2em] uppercase hover:bg-[var(--mra-bg)]/10 transition-colors font-body">
+            Explore Rally Champions
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+<style>
+  .font-headline { font-family: var(--font-headline); }
+  .font-body { font-family: var(--font-body); }
+</style>
+</Layoutc>

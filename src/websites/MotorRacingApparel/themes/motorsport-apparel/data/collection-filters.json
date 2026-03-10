@@ -1,0 +1,264 @@
+{
+  "colors": [
+    {
+      "value": "black",
+      "label": {
+        "en": "Black",
+        "fr": "Noir",
+        "de": "Schwarz",
+        "es": "Negro",
+        "it": "Nero",
+        "pt": "Preto"
+      },
+      "hex": "#000000"
+    },
+    {
+      "value": "white",
+      "label": {
+        "en": "White",
+        "fr": "Blanc",
+        "de": "Weiß",
+        "es": "Blanco",
+        "it": "Bianco",
+        "pt": "Branco"
+      },
+      "hex": "#FFFFFF"
+    },
+    {
+      "value": "gray",
+      "label": {
+        "en": "Gray",
+        "fr": "Gris",
+        "de": "Grau",
+        "es": "Gris",
+        "it": "Grigio",
+        "pt": "Cinza"
+      },
+      "hex": "#6B7280"
+    },
+    {
+      "value": "navy",
+      "label": {
+        "en": "Navy",
+        "fr": "Marine",
+        "de": "Marineblau",
+        "es": "Azul marino",
+        "it": "Blu marino",
+        "pt": "Azul marinho"
+      },
+      "hex": "#1E3A8A"
+    },
+    {
+      "value": "red",
+      "label": {
+        "en": "Red",
+        "fr": "Rouge",
+        "de": "Rot",
+        "es": "Rojo",
+        "it": "Rosso",
+        "pt": "Vermelho"
+      },
+      "hex": "#DC2626"
+    },
+    {
+      "value": "blue",
+      "label": {
+        "en": "Blue",
+        "fr": "Bleu",
+        "de": "Blau",
+        "es": "Azul",
+        "it": "Blu",
+        "pt": "Azul"
+      },
+      "hex": "#2563EB"
+    },
+    {
+      "value": "green",
+      "label": {
+        "en": "Green",
+        "fr": "Vert",
+        "de": "Grün",
+        "es": "Verde",
+        "it": "Verde",
+        "pt": "Verde"
+      },
+      "hex": "#16A34A"
+    },
+    {
+      "value": "brown",
+      "label": {
+        "en": "Brown",
+        "fr": "Marron",
+        "de": "Braun",
+        "es": "Marrón",
+        "it": "Marrone",
+        "pt": "Marrom"
+      },
+      "hex": "#92400E"
+    },
+    {
+      "value": "beige",
+      "label": {
+        "en": "Beige",
+        "fr": "Beige",
+        "de": "Beige",
+        "es": "Beige",
+        "it": "Beige",
+        "pt": "Bege"
+      },
+      "hex": "#F5F5DC"
+    },
+    {
+      "value": "orange",
+      "label": {
+        "en": "Orange",
+        "fr": "Orange",
+        "de": "Orange",
+        "es": "Naranja",
+        "it": "Arancione",
+        "pt": "Laranja"
+      },
+      "hex": "#EA580C"
+    },
+    {
+      "value": "yellow",
+      "label": {
+        "en": "Yellow",
+        "fr": "Jaune",
+        "de": "Gelb",
+        "es": "Amarillo",
+        "it": "Giallo",
+        "pt": "Amarelo"
+      },
+      "hex": "#EAB308"
+    },
+    {
+      "value": "pink",
+      "label": {
+        "en": "Pink",
+        "fr": "Rose",
+        "de": "Rosa",
+        "es": "Rosa",
+        "it": "Rosa",
+        "pt": "Rosa"
+      },
+      "hex": "#EC4899"
+    }
+  ],
+  "sizes": [
+    {
+      "value": "xs",
+      "label": {
+        "en": "XS",
+        "fr": "XS",
+        "de": "XS",
+        "es": "XS",
+        "it": "XS",
+        "pt": "XS"
+      }
+    },
+    {
+      "value": "s",
+      "label": {
+        "en": "S",
+        "fr": "S",
+        "de": "S",
+        "es": "S",
+        "it": "S",
+        "pt": "S"
+      }
+    },
+    {
+      "value": "m",
+      "label": {
+        "en": "M",
+        "fr": "M",
+        "de": "M",
+        "es": "M",
+        "it": "M",
+        "pt": "M"
+      }
+    },
+    {
+      "value": "l",
+      "label": {
+        "en": "L",
+        "fr": "L",
+        "de": "L",
+        "es": "L",
+        "it": "L",
+        "pt": "L"
+      }
+    },
+    {
+      "value": "xl",
+      "label": {
+        "en": "XL",
+        "fr": "XL",
+        "de": "XL",
+        "es": "XL",
+        "it": "XL",
+        "pt": "XL"
+      }
+    },
+    {
+      "value": "xxl",
+      "label": {
+        "en": "XXL",
+        "fr": "XXL",
+        "de": "XXL",
+        "es": "XXL",
+        "it": "XXL",
+        "pt": "XXL"
+      }
+    },
+    {
+      "value": "xxxl",
+      "label": {
+        "en": "XXXL",
+        "fr": "XXXL",
+        "de": "XXXL",
+        "es": "XXXL",
+        "it": "XXXL",
+        "pt": "XXXL"
+      }
+    }
+  ],
+  "availability": [
+    {
+      "value": "in_stock",
+      "label": {
+        "en": "In Stock",
+        "fr": "En Stock",
+        "de": "Auf Lager",
+        "es": "En Stock",
+        "it": "Disponibile",
+        "pt": "Em Estoque"
+      }
+    },
+    {
+      "value": "out_of_stock",
+      "label": {
+        "en": "Out of Stock",
+        "fr": "Rupture de Stock",
+        "de": "Nicht auf Lager",
+        "es": "Agotado",
+        "it": "Esaurito",
+        "pt": "Fora de Estoque"
+      }
+    }
+  ],
+  "priceRanges": {
+    "min": 0,
+    "max": 1000,
+    "step": 10,
+    "currency": {
+      "en": "$",
+      "fr": "€",
+      "de": "€",
+      "es": "€",
+      "it": "€",
+      "pt": "€"
+    }
+  }
+}

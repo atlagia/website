@@ -1,0 +1,59 @@
+---
+interface Badge {
+  id: string;
+  icon: string;
+  title: string;
+  description: string;
+}
+
+interface PaymentMethod {
+  id: string;
+  name: string;
+  icon: string;
+}
+
+interface Props {
+  title: string;
+  badges: Badge[];
+  paymentMethods: PaymentMethod[];
+  guaranteeText: string;
+}
+
+const { title, badges, paymentMethods, guaranteeText } = Astro.props;
+---
+
+<section class="f1-trust py-16 lg:py-20 bg-[var(--mra-surface)] border-t border-[var(--mra-border)]" aria-labelledby="trust-heading">
+  <div class="max-w-[1200px] mx-auto px-6 sm:px-8 lg:px-12">
+    <h2 id="trust-heading" class="font-headline text-2xl md:text-3xl text-center text-[var(--mra-text)] uppercase tracking-wide mb-12">{title}</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 lg:gap-12 mb-12">
+      {badges.map((badge) => (
+        <div class="text-center">
+          <div class="w-12 h-12 rounded-full bg-[var(--mra-card)] border border-[var(--mra-border)] flex items-center justify-center mx-auto mb-4 text-xl" aria-hidden="true">
+            {badge.icon}
+          </div>
+          <h3 class="font-body font-semibold text-sm uppercase tracking-wider text-[var(--mra-text)] mb-1">{badge.title}</h3>
+          <p class="text-[var(--mra-muted)] text-xs font-body">{badge.description}</p>
+        </div>
+      ))}
+    </div>
+    <div class="text-center pt-8 border-t border-[var(--mra-border)]">
+      <p class="text-[10px] uppercase tracking-[0.25em] text-[var(--mra-muted)] mb-4 font-body">Secure payment</p>
+      <div class="flex flex-wrap justify-center items-center gap-6 mb-8">
+        {paymentMethods.map((method) => (
+          <span class="text-xs font-body text-[var(--mra-muted)] uppercase tracking-wider">{method.name}</span>
+        ))}
+      </div>
+      <div class="flex items-center justify-center gap-3 text-[var(--mra-text)]">
+        <svg class="w-5 h-5 shrink-0 text-[var(--mra-accent)]" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+        </svg>
+        <p class="font-body text-sm">{guaranteeText}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .font-headline { font-family: var(--font-headline); }
+  .font-body { font-family: var(--font-body); }
+</style>

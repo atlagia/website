@@ -1,0 +1,63 @@
+{
+  "title": "Rally Champions",
+  "description": "Discover our collection of rally champions products and gear.",
+  "hero": {
+    "title": "Rally Champions",
+    "subtitle": "Explore our premium collection of rally champions products designed for racing enthusiasts.",
+    "cta1": "Shop Collection",
+    "cta2": "Learn More"
+  },
+  "sections": {
+    "features": {
+      "title": "Why Choose Us",
+      "subtitle": "Premium quality and professional service"
+    },
+    "collection": {
+      "title": "Our Collection",
+      "subtitle": "Carefully curated products for racing enthusiasts"
+    }
+  },
+  "features": [
+    {
+      "title": "Premium Quality",
+      "description": "Only the highest quality materials and construction"
+    },
+    {
+      "title": "Professional Design",
+      "description": "Designed by racing professionals for racing professionals"
+    },
+    {
+      "title": "Fast Shipping",
+      "description": "Quick delivery to get you racing faster"
+    }
+  ],
+  "collections": [
+    {
+      "title": "Featured Product",
+      "description": "Our most popular rally champions product",
+      "price": "$99.99",
+      "link": "/collections/featured",
+      "linkText": "Shop Rally Champions"
+    },
+    {
+      "title": "New Arrivals",
+      "description": "Latest additions to our rally champions collection",
+      "price": "$79.99",
+      "link": "/collections/new",
+      "linkText": "View All Rally Champions"
+    },
+    {
+      "title": "Best Sellers",
+      "description": "Customer favorites in rally champions",
+      "price": "$89.99",
+      "link": "/collections/bestsellers",
+      "linkText": "Shop Rally Champions"
+    }
+  ],
+  "cta": {
+    "title": "Ready to Race?",
+    "subtitle": "Get your rally champions gear today and join the racing community.",
+    "button1": "Shop Collection",
+    "button2": "Contact Us"
+  }
+}
