@@ -1,0 +1,108 @@
+{
+  "siteTitle": "JacketVerse — Every Jacket. Every Style.",
+  "siteDescription": "Premium jackets for every season, lifestyle, and look.",
+  "sections": [
+    {
+      "type": "welcomeSection",
+      "headlineLine1": "Every Jacket. Every Style.",
+      "headlineLine2": "Discover jackets designed for every season, lifestyle, and look.",
+      "primaryCtaText": "Shop Jackets",
+      "primaryCtaLink": "/collections",
+      "secondaryCtaText": "Explore Styles",
+      "secondaryCtaLink": "/collections/styles"
+    },
+    {
+      "type": "statsBar",
+      "stats": [
+        { "value": "Leather", "label": "Jackets" },
+        { "value": "Denim", "label": "Styles" },
+        { "value": "Outerwear", "label": "Seasons" },
+        { "value": "Premium", "label": "Quality" }
+      ]
+    },
+    {
+      "type": "categoryGrid",
+      "title": "Jacket Categories",
+      "categories": [
+        { "id": "leather", "name": "Leather", "link": "/collections/leather", "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=800&q=80" },
+        { "id": "bomber", "name": "Bomber", "link": "/collections/bomber", "image": "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800&q=80" },
+        { "id": "denim", "name": "Denim", "link": "/collections/denim", "image": "https://images.unsplash.com/photo-1576995853123-5a10305d93c0?w=800&q=80" },
+        { "id": "puffer", "name": "Puffer", "link": "/collections/puffer", "image": "https://images.unsplash.com/photo-1539533018447-63fcce2678e3?w=800&q=80" },
+        { "id": "winter-coats", "name": "Winter Coats", "link": "/collections/winter-coats", "image": "https://images.unsplash.com/photo-1544022613-e87ca75a784a?w=800&q=80" },
+        { "id": "parka", "name": "Parka", "link": "/collections/parka", "image": "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800&q=80" },
+        { "id": "windbreakers", "name": "Windbreakers", "link": "/collections/windbreakers", "image": "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800&q=80" },
+        { "id": "trench", "name": "Trench", "link": "/collections/trench", "image": "https://images.unsplash.com/photo-1539533018447-63fcce2678e3?w=800&q=80" },
+        { "id": "biker", "name": "Biker", "link": "/collections/biker", "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=800&q=80" },
+        { "id": "streetwear", "name": "Streetwear", "link": "/collections/streetwear", "image": "https://images.unsplash.com/photo-1576995853123-5a10305d93c0?w=800&q=80" },
+        { "id": "outdoor", "name": "Outdoor", "link": "/collections/outdoor", "image": "https://images.unsplash.com/photo-1544022613-e87ca75a784a?w=800&q=80" },
+        { "id": "casual", "name": "Casual Jackets", "link": "/collections/casual", "image": "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800&q=80" }
+      ]
+    },
+    {
+      "type": "bestSellers",
+      "title": "Best Selling Jackets",
+      "viewAllLink": "/collections",
+      "collectionHandle": "all"
+    },
+    {
+      "type": "featuredHighlight",
+      "title": "Shop by Style",
+      "description": "Streetwear, minimalist, classic, biker, urban, luxury.",
+      "ctaText": "Explore Styles",
+      "ctaLink": "/collections/styles"
+    },
+    {
+      "type": "productShowcase",
+      "title": "Seasonal Collections",
+      "description": "Curated jackets for every season.",
+      "viewAllLink": "/collections"
+    },
+    {
+      "type": "trustBadges",
+      "title": "Why Choose JacketVerse",
+      "badges": [
+        { "id": "variety", "title": "Wide Variety of Styles", "icon": "✨" },
+        { "id": "materials", "title": "Premium Materials", "icon": "🧵" },
+        { "id": "comfort", "title": "Comfort and Durability", "icon": "✓" },
+        { "id": "shipping", "title": "Worldwide Shipping", "icon": "📦" },
+        { "id": "payments", "title": "Secure Payments", "icon": "🔒" }
+      ]
+    },
+    {
+      "type": "bannerSection",
+      "headline": "Your jacket defines your style.",
+      "description": "Urban, outdoor, biker, winter fashion.",
+      "ctaText": "Get Inspired",
+      "ctaLink": "/blog"
+    },
+    {
+      "type": "productShowcase",
+      "title": "New Arrivals",
+      "description": "Latest jacket drops.",
+      "viewAllLink": "/collections"
+    },
+    {
+      "type": "featuredPosts",
+      "title": "Fashion Inspiration Blog",
+      "description": "How to style jackets, seasonal trends, guides.",
+      "exploreMoreLink": "/blog",
+      "exploreMoreText": "Read more"
+    },
+    {
+      "type": "testimonialSlider",
+      "title": "What Our Customers Say",
+      "testimonials": [
+        { "id": "1", "author": "Jordan M.", "role": "Streetwear enthusiast", "content": "JacketVerse has the best selection. Found my perfect leather jacket here.", "avatar": "JM", "initials": "JM" },
+        { "id": "2", "author": "Sam K.", "role": "Outdoor lover", "content": "Quality and style in one. My go-to for seasonal outerwear.", "avatar": "SK", "initials": "SK" },
+        { "id": "3", "author": "Alex R.", "role": "Fashion blogger", "content": "Every jacket feels premium. Customer service is outstanding.", "avatar": "AR", "initials": "AR" }
+      ]
+    },
+    {
+      "type": "emailSignup",
+      "title": "Join the JacketVerse Community",
+      "subtext": "Discover new jacket styles and seasonal collections first.",
+      "formAction": "/api/signup",
+      "buttonText": "Subscribe"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+---
+import { getLangFromUrl } from '@utils/i18n';
+
+const currentYear = new Date().getFullYear();
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'JacketVerse';
+const currentLang = getLangFromUrl(Astro.url);
+
+let footerData;
+try {
+  footerData = await import(`../data/footer/footer_${currentLang}.json`);
+} catch {
+  footerData = await import(`../data/footer/footer_en.json`);
+}
+
+const { description, navigation, social } = footerData.default;
+---
+
+<footer class="jv-footer bg-[var(--jv-surface)] border-t border-[var(--jv-border)]" aria-labelledby="footer-heading">
+  <h2 id="footer-heading" class="sr-only">Footer</h2>
+  <div class="max-w-[1200px] mx-auto px-6 sm:px-8 lg:px-12 py-14 lg:py-16">
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-10">
+      <span class="font-display text-xl text-[var(--jv-text)] uppercase tracking-wide">{siteName}</span>
+      <nav class="flex flex-wrap gap-8" aria-label="Footer">
+        {navigation?.shop?.slice(0, 5).map((item) => (
+          <a href={`/${currentLang}${item.href}`} class="text-[11px] text-[var(--jv-muted)] hover:text-[var(--jv-text)] transition-colors tracking-[0.2em] uppercase font-body">
+            {item.name}
+          </a>
+        ))}
+        <a href={`/${currentLang}/contact`} class="text-[11px] text-[var(--jv-muted)] hover:text-[var(--jv-text)] transition-colors tracking-[0.2em] uppercase font-body">Contact</a>
+      </nav>
+      <div class="flex gap-8">
+        {social?.map((item) => (
+          <a href={item.href} class="text-[var(--jv-muted)] hover:text-[var(--jv-text)] transition-colors" aria-label={item.name}>
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d={item.icon} />
+            </svg>
+          </a>
+        ))}
+      </div>
+    </div>
+    <div class="mt-12 pt-6 border-t border-[var(--jv-border)] flex flex-col sm:flex-row justify-between items-center gap-4">
+      <p class="text-[10px] text-[var(--jv-muted)] tracking-[0.2em] uppercase font-body">
+        © {currentYear} {siteName}
+      </p>
+      <div class="flex gap-6">
+        {navigation?.legal?.map((item) => (
+          <a href={`/${currentLang}${item.href}`} class="text-[10px] text-[var(--jv-muted)] hover:text-[var(--jv-text)] transition-colors tracking-wider uppercase">
+            {item.name}
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .font-display { font-family: var(--font-display); }
+  .font-body { font-family: var(--font-body); }
+</style>

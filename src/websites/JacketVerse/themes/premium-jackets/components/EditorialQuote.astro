@@ -1,0 +1,27 @@
+---
+interface Props {
+  quote: string;
+  attribution?: string;
+  role?: string;
+}
+
+const { quote, attribution, role } = Astro.props;
+---
+
+<section class="f1-editorial-quote py-24 lg:py-32 bg-[var(--drivon-bg)]" aria-label="Editorial quote">
+  <div class="max-w-[880px] mx-auto px-6 sm:px-8 lg:px-12 text-center">
+    <blockquote class="font-headline text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] xl:text-6xl text-[var(--drivon-text)] uppercase leading-[1.08] tracking-tight">
+      "{quote}"
+    </blockquote>
+    {(attribution || role) && (
+      <footer class="mt-10 font-body text-[11px] tracking-[0.3em] uppercase text-[var(--drivon-muted)]">
+        {attribution}{role ? ` — ${role}` : ''}
+      </footer>
+    )}
+  </div>
+</section>
+
+<style>
+  .font-headline { font-family: var(--font-headline); }
+  .font-body { font-family: var(--font-body); }
+</style>

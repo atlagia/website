@@ -1,0 +1,362 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+import { generateCanonicalURL, generateSchema, type SEOProps } from '@utils/seo';
+import { getReviewStats, getReviews } from '@libs/db';
+import GoogleAnalytics from '@components/GoogleAnalytics.astro';
+import Hotjar from '@components/Hotjar.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  type?: string;
+  canonicalURL?: string;
+  publishDate?: string;
+  schemaMarkup?: object;
+  currentLang?: string;
+}
+
+const {
+  title = SITE_TITLE,
+  description = SITE_DESCRIPTION,
+  image = "/og-image.jpg",
+  type = "website",
+  canonicalURL = Astro.url.href,
+  publishDate = new Date().toISOString(),
+  currentLang: propCurrentLang,
+  schemaMarkup = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: title,
+    description: description,
+    url: canonicalURL,
+    publisher: {
+      "@type": "Organization",
+      name: import.meta.env.PUBLIC_BUSINESS_NAME || 'Atalsia',
+      logo: {
+        "@type": "ImageObject",
+        url: new URL("/logo.png", Astro.url)
+      }
+    }
+  }
+} = Astro.props;
+
+// Get current language from URL or prop
+const currentPath = Astro.url.pathname;
+const currentLang = propCurrentLang || currentPath.split('/')[1];
+const isRTL = currentLang === 'ar';
+
+// Get allowed languages from environment
+const getAllowedLanguages = () => {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  return allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+};
+
+const supportedLanguages = getAllowedLanguages();
+
+// Generate hreflang URLs - Fixed implementation
+const hrefLangURLs = [];
+
+// Determine the base path (without language prefix)
+let basePath = currentPath;
+if (currentLang && supportedLanguages.includes(currentLang)) {
+  // Remove language prefix from path
+  basePath = currentPath.substring(currentLang.length + 1) || '/';
+}
+
+// Generate hreflang URLs for each supported language
+const uniqueLangs = new Set();
+const hreflangDomain = import.meta.env.DOMAINE || 'https://www.drivon.store';
+supportedLanguages.forEach(lang => {
+  let url;
+  
+  if (basePath === '/') {
+    // For home pages, each language gets its own home page
+    url = `${hreflangDomain}/${lang}`;
+  } else {
+    // For other pages, add language prefix to the base path
+    url = `${hreflangDomain}/${lang}${basePath}`;
+  }
+  
+  // Normalize URL to match current URL format
+  if (url.endsWith('/') && !Astro.url.href.endsWith('/')) {
+    url = url.slice(0, -1);
+  } else if (!url.endsWith('/') && Astro.url.href.endsWith('/')) {
+    url = url + '/';
+  }
+  
+  // Add all language variants
+  if (!uniqueLangs.has(lang)) {
+    uniqueLangs.add(lang);
+    hrefLangURLs.push({ lang, url });
+  }
+});
+
+// Add self-referential hreflang tag (required by Google) - ensure it's not duplicated
+const selfUrl = Astro.url.href;
+if (currentLang) {
+  // Always ensure self-referential hreflang exists
+  const existingSelf = hrefLangURLs.find(h => h.lang === currentLang);
+  if (existingSelf) {
+    // Update existing entry to use the actual current URL
+    existingSelf.url = selfUrl;
+  } else {
+    // Add self-referential hreflang if it doesn't exist
+    hrefLangURLs.push({ lang: currentLang, url: selfUrl });
+  }
+} else {
+  // Fallback: if no currentLang detected, use 'en' as default
+  const existingSelf = hrefLangURLs.find(h => h.lang === 'en');
+  if (existingSelf) {
+    existingSelf.url = selfUrl;
+  } else {
+    hrefLangURLs.push({ lang: 'en', url: selfUrl });
+  }
+}
+
+// Add x-default pointing to English version (always)
+let xDefaultUrl = basePath === '/' 
+  ? `${hreflangDomain}/en` 
+  : `${hreflangDomain}/en${basePath}`;
+
+// Normalize x-default URL to match current URL format
+if (xDefaultUrl.endsWith('/') && !Astro.url.href.endsWith('/')) {
+  xDefaultUrl = xDefaultUrl.slice(0, -1);
+} else if (!xDefaultUrl.endsWith('/') && Astro.url.href.endsWith('/')) {
+  xDefaultUrl = xDefaultUrl + '/';
+}
+
+hrefLangURLs.push({ lang: 'x-default', url: xDefaultUrl });
+
+// Set canonical URL - each language should have its own canonical URL
+let computedCanonicalURL;
+// Get canonical domain from environment variable
+const canonicalDomain = import.meta.env.DOMAINE || 'https://www.drivon.store';
+
+if (currentPath === '/') {
+  // Root path should redirect to English version
+  computedCanonicalURL = `${canonicalDomain}/en`;
+} else if (currentLang && supportedLanguages.includes(currentLang)) {
+  // Language-specific pages have their own canonical URL
+  computedCanonicalURL = Astro.url.href;
+} else {
+  // Non-language pages should point to English version
+  computedCanonicalURL = `${canonicalDomain}/en${currentPath}`;
+}
+
+// Fetch review data if it's the homepage
+let reviewSchema = null;
+if (Astro.url.pathname === '/') {
+  const { stats: reviewStats, error: reviewError } = await getReviewStats(import.meta.env.PUBLIC_SITE_NAME?.toLowerCase());
+  const { reviews, error: reviewsError } = await getReviews(currentLang, import.meta.env.PUBLIC_SITE_NAME?.toLowerCase());
+
+  if (reviewStats?.averageRating && reviewStats?.totalReviews && !reviewError && reviews && !reviewsError) {
+    reviewSchema = {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": import.meta.env.PUBLIC_SITE_NAME,
+      "url": Astro.url.origin,
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": reviewStats.averageRating.toFixed(1),
+        "reviewCount": reviewStats.totalReviews.toString(),
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "review": reviews.slice(0, 9).map(review => ({
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": review.name || "Anonymous"
+        },
+        "datePublished": new Date(Date.now() - parseInt(review.date) * 30 * 24 * 60 * 60 * 1000)
+          .toISOString()
+          .split('T')[0],
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": review.rating.toString(),
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "reviewBody": review.comment
+      }))
+    };
+  }
+}
+
+// Generate breadcrumb schema
+const pathSegments = Astro.url.pathname.split('/').filter(Boolean);
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: pathSegments.map((segment, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    item: {
+      "@id": new URL('/' + pathSegments.slice(0, index + 1).join('/'), Astro.url),
+      name: segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ')
+    }
+  }))
+};
+
+// Combine schemas
+const fullSchema = [schemaMarkup, breadcrumbSchema];
+---
+
+<!-- Global Metadata -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="icon" type="image/svg+xml" href="/atlagia.ico" />
+<meta name="generator" content={Astro.generator} />
+
+<!-- Canonical URL -->
+<link rel="canonical" href={computedCanonicalURL} />
+
+<!-- Language Alternates (hreflang) -->
+{hrefLangURLs.map(({ lang, url }) => (
+  <link rel="alternate" hreflang={lang} href={url} />
+))}
+
+<!-- Debug: Current URL and Language -->
+<!-- Current URL: {selfUrl} -->
+<!-- Current Language: {currentLang || 'en'} -->
+<!-- Generated hreflang URLs: {JSON.stringify(hrefLangURLs)} -->
+
+<!-- Robots Meta Tag - Allow indexing of all language versions -->
+<meta name="robots" content="index, follow" />
+
+<!-- Primary Meta Tags -->
+<title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+<meta name="author" content={import.meta.env.PUBLIC_BUSINESS_NAME || 'Atalsia'} />
+<meta name="publish_date" property="og:publish_date" content={publishDate} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content={type} />
+<meta property="og:url" content={Astro.url} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={new URL(image, Astro.url)} />
+<meta property="og:site_name" content={SITE_TITLE} />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={Astro.url} />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+<!-- Favicons -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<!-- Schema.org Markup -->
+<script type="application/ld+json" set:html={JSON.stringify(fullSchema)} />
+{reviewSchema && (
+  <script type="application/ld+json" set:html={JSON.stringify(reviewSchema)} />
+)}
+
+<!-- Fonts: Cormorant Garamond (display) + Source Sans 3 (body) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:ital,wght@0,300..900;1,300..900&family=Noto+Kufi+Arabic:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<ViewTransitions />
+
+<style is:global>
+  :root {
+    --font-fallback: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'Source Sans 3', var(--font-fallback);
+    --font-arabic-primary: 'Noto Kufi Arabic', var(--font-fallback);
+    --font-arabic-secondary: 'IBM Plex Sans Arabic', var(--font-fallback);
+    /* JacketVerse premium-jackets: dark theme, leather brown accent */
+    --jv-bg: #0a0a0a;
+    --jv-surface: #1a1a1a;
+    --jv-text: #fafafa;
+    --jv-muted: #a3a3a3;
+    --jv-accent: #8B4513;
+    --jv-border: #2a2a2a;
+    --jv-card: #151515;
+    --theme-bg: var(--jv-bg);
+    --theme-text: var(--jv-text);
+    --theme-link: var(--jv-accent);
+    --theme-accent: var(--jv-accent);
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-premium: 0.5s var(--ease-out-expo);
+  }
+
+  html {
+    font-family: var(--font-body);
+    scroll-behavior: smooth;
+  }
+
+  .grain-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    background-color: var(--theme-bg);
+    color: var(--theme-text);
+    font-weight: 400;
+    letter-spacing: 0.01em;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+
+  html[lang="ar"] {
+    font-family: var(--font-arabic-primary);
+  }
+
+  html[lang="ar"] h1,
+  html[lang="ar"] h2,
+  html[lang="ar"] h3,
+  html[lang="ar"] h4,
+  html[lang="ar"] h5,
+  html[lang="ar"] h6 {
+    font-family: var(--font-arabic-primary);
+    letter-spacing: -0.025em;
+  }
+
+  html[lang="ar"] p,
+  html[lang="ar"] span,
+  html[lang="ar"] a,
+  html[lang="ar"] li {
+    font-family: var(--font-arabic-secondary);
+  }
+
+  html[lang="ar"] body {
+    text-align: right;
+  }
+
+  html[lang="ar"] .font-arabic { font-family: var(--font-arabic-primary); }
+  html[lang="ar"] .font-arabic-body { font-family: var(--font-arabic-secondary); }
+  html[lang="ar"] .rtl-flip { transform: scaleX(-1); }
+  html[lang="ar"] .rtl-rotate-180 { transform: rotate(180deg); }
+  html[lang="ar"] h1 { line-height: 1.3; }
+  html[lang="ar"] p { line-height: 1.8; }
+  html[lang="ar"] button, html[lang="ar"] .button { font-family: var(--font-arabic-primary); font-weight: 600; }
+</style>
+{import.meta.env.PUBLIC_GA_MEASUREMENT_ID && <GoogleAnalytics />}
+<Hotjar />
+
+<!-- RSS Feed -->
+<link rel="alternate" type="application/rss+xml" title={`${SITE_TITLE} RSS Feed`} href="/rss.xml">

@@ -44,7 +44,7 @@
     "descriptionContentWrap": "p-6",
     "descriptionContentInner": "rounded-xl bg-white/5 border border-white/10 overflow-hidden",
     "descriptionContentInnerWrap": "relative p-6",
-    "descriptionContent": "prose prose-sm max-w-none overflow-hidden transition-all duration-300 text-gray-300 prose-headings:text-white prose-strong:text-gray-200 prose-a:text-purple-400",
+      "descriptionContent": "prose prose-sm max-w-none overflow-hidden transition-all duration-300 text-gray-100 prose-headings:text-white prose-strong:text-gray-50 prose-a:text-purple-400",
     "descriptionOverlay": "absolute bottom-0 left-0 right-0 h-24 pointer-events-none bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/90 to-transparent",
     "showMoreBtn": "inline-flex items-center gap-2 text-sm font-medium text-gray-300 hover:text-white bg-white/10 hover:bg-white/15 px-5 py-2.5 rounded-lg border border-white/20 hover:border-white/30 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-[#0a0a0a]",
     "showMoreWrap": "px-6 pb-6 pt-2 flex justify-center",
@@ -76,7 +76,7 @@
     "gridThumbStripDesktop": "hidden lg:block mt-3",
     "loadingSkeletonWrap": "hidden",
     "descriptionProseLight": "text-gray-700 [&>p]:mb-6 [&>p]:leading-relaxed [&>strong]:font-bold [&>*:first-child]:mt-0 [&>*:last-child]:mb-0",
-    "descriptionProseDark": "text-gray-200 [&>p]:mb-6 [&>p]:leading-relaxed [&>p]:text-gray-200 [&>strong]:font-bold [&>strong]:text-gray-100 [&>*:first-child]:mt-0 [&>*:last-child]:mb-0"
+    "descriptionProseDark": "text-gray-100 [&>p]:mb-6 [&>p]:leading-relaxed [&>p]:text-gray-100 [&>strong]:font-bold [&>strong]:text-white [&>*:first-child]:mt-0 [&>*:last-child]:mb-0"
   },
   "layout": {
     "galleryLayout": "carousel",
@@ -100,6 +100,7 @@
       "related_products"
     ]
   },
+  "addToCartTheme": "dark",
   "luxuryProductStyle": {
     "title": "text-3xl font-light tracking-wide mb-2 text-white",
     "breadcrumb": {

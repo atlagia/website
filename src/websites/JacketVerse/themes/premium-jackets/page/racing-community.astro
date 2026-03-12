@@ -1,0 +1,159 @@
+---
+import Layoutc from '@layouts/Layoutc.astro';
+import { ArrowRight, Zap, Car, Trophy, Star, Crown } from 'lucide-react';
+
+// Generate static paths for allowed languages from environment
+export async function getStaticPaths() {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  const languages = allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+  
+  return languages.map(lang => ({ params: { lang } }));
+}
+
+const { lang = 'en' } = Astro.params;
+const baseUrl = import.meta.env.DOMAINE || 'https://drivon.store';
+const storeName = import.meta.env.PUBLIC_SITE_NAME || 'Drivon';
+
+// Load multilingual data
+let pageData;
+try {
+  pageData = await import(`../data/racing-community/racing-community_${lang}.json`);
+} catch (error) {
+  pageData = await import(`../data/racing-community/racing-community_en.json`);
+}
+
+const data = pageData.default;
+
+// SEO
+const seoTitle = `${data.title} | ${storeName}`;
+const seoDescription = data.description;
+---
+
+<Layoutc title={seoTitle} description={seoDescription} lang={lang}>
+  <div class="min-h-screen bg-[var(--drivon-bg)]">
+    <!-- Hero Section -->
+    <section class="relative min-h-[50vh] flex items-center justify-center bg-[var(--drivon-text)] text-[var(--drivon-bg)]">
+      <div class="relative z-10 h-full flex items-center justify-center text-center px-4">
+        <div class="max-w-4xl mx-auto">
+          <h1 class="font-headline text-5xl md:text-7xl uppercase tracking-tight text-[var(--drivon-bg)] mb-6">
+            {data.hero.title}
+          </h1>
+          <p class="text-xl md:text-2xl text-[var(--drivon-bg)]/90 mb-8">
+            {data.hero.subtitle}
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href={`/${lang}/collections`} class="inline-flex items-center justify-center bg-[var(--drivon-bg)] text-[var(--drivon-text)] px-8 py-3.5 text-[11px] font-medium tracking-[0.2em] uppercase hover:opacity-90 transition-opacity font-body">
+              {data.hero.cta1}
+            </a>
+            <a href={`/${lang}/car-communities`} class="inline-flex items-center justify-center border-2 border-[var(--drivon-bg)] text-[var(--drivon-bg)] px-8 py-3.5 text-[11px] font-medium tracking-[0.2em] uppercase hover:bg-[var(--drivon-bg)]/10 transition-colors font-body">
+              {data.hero.cta2}
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Racing Community Features -->
+    <section class="py-20 px-4">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="font-headline text-4xl text-[var(--drivon-text)] uppercase tracking-wide mb-4">{data.sections.features.title}</h2>
+          <p class="text-xl text-[var(--drivon-muted)] max-w-3xl mx-auto">
+            {data.sections.features.subtitle}
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+          {data.features.map(feature => (
+            <div class="bg-[var(--drivon-card)] rounded-2xl p-8 border border-[var(--drivon-border)]">
+              <div class="w-16 h-16 bg-[var(--drivon-surface)] rounded-full flex items-center justify-center mb-6 text-[var(--drivon-text)]">
+              <Zap class="w-8 h-8" />
+              </div>
+              <h3 class="font-headline text-2xl text-[var(--drivon-text)] uppercase tracking-wide mb-4">{feature.title}</h3>
+              <p class="text-[var(--drivon-muted)]">
+                {feature.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Racing Community Collection -->
+    <section class="py-20 bg-[var(--drivon-surface)]">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="font-headline text-4xl text-[var(--drivon-text)] uppercase tracking-wide mb-4">{data.sections.collection.title}</h2>
+          <p class="text-xl text-[var(--drivon-muted)]">{data.sections.collection.subtitle}</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {data.collections.map(product => (
+            <a href={`/${lang}${product.link}`} class="group bg-[var(--drivon-card)] rounded-2xl overflow-hidden border border-[var(--drivon-border)] hover:border-[var(--drivon-text)]/30 transition-colors">
+              <div class="h-48 bg-[var(--drivon-text)] flex items-center justify-center text-[var(--drivon-bg)]">
+              <Zap class="w-16 h-16" />
+              </div>
+              <div class="p-6">
+                <h3 class="font-headline text-xl text-[var(--drivon-text)] uppercase tracking-wide mb-2">{product.title}</h3>
+                <p class="text-[var(--drivon-muted)] mb-4">{product.description}</p>
+                <div class="flex items-center text-[var(--drivon-muted)] font-semibold group-hover:text-gray-700">
+                  {product.linkText} <ArrowRight class="w-4 h-4 ml-2" />
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Racing Community Culture -->
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="font-headline text-4xl text-[var(--drivon-text)] uppercase tracking-wide mb-4">{data.sections.culture.title}</h2>
+          <p class="text-xl text-[var(--drivon-muted)]">{data.sections.culture.subtitle}</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          {data.culture.map(item => (
+            <div class="bg-[var(--drivon-card)] rounded-2xl p-8 border border-[var(--drivon-border)]">
+              <div class="w-20 h-20 bg-[var(--drivon-surface)] rounded-full flex items-center justify-center mb-6 mx-auto text-[var(--drivon-text)]">
+              <Crown class="w-10 h-10" />
+              </div>
+              <h3 class="font-headline text-2xl text-[var(--drivon-text)] uppercase tracking-wide mb-4 text-center">{item.title}</h3>
+              <p class="text-[var(--drivon-muted)] text-center mb-6">
+                {item.description}
+              </p>
+              <a href={`/${lang}${item.link}`} class="flex items-center justify-center text-[var(--drivon-muted)] font-semibold hover:text-gray-700">
+                {item.linkText} <ArrowRight class="w-4 h-4 ml-2" />
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-[var(--drivon-text)] text-[var(--drivon-bg)]">
+      <div class="max-w-4xl mx-auto text-center px-4">
+        <h2 class="font-headline text-4xl uppercase tracking-tight mb-6">{data.cta.title}</h2>
+        <p class="text-xl text-[var(--drivon-bg)]/90 mb-8">
+          {data.cta.subtitle}
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href={`/${lang}/collections`} class="inline-flex items-center justify-center bg-[var(--drivon-bg)] text-[var(--drivon-text)] px-8 py-3.5 text-[11px] font-medium tracking-[0.2em] uppercase hover:opacity-90 transition-opacity font-body">
+            {data.cta.button1}
+          </a>
+          <a href={`/${lang}/car-communities`} class="inline-flex items-center justify-center border-2 border-[var(--drivon-bg)] text-[var(--drivon-bg)] px-8 py-3.5 text-[11px] font-medium tracking-[0.2em] uppercase hover:bg-[var(--drivon-bg)]/10 transition-colors font-body">
+            {data.cta.button2}
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+<style>
+  .font-headline { font-family: var(--font-headline); }
+  .font-body { font-family: var(--font-body); }
+</style>
+</Layoutc>
+

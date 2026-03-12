@@ -1,0 +1,53 @@
+---
+interface Category {
+  id: string;
+  name: string;
+  description?: string;
+  image: string;
+  link: string;
+}
+
+interface Props {
+  title: string;
+  description?: string;
+  categories: Category[];
+}
+
+const { title, description, categories } = Astro.props;
+---
+
+<section class="jv-categories bg-[var(--jv-bg)] py-24 lg:py-32">
+  <div class="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12">
+    <div class="mb-16 lg:mb-20">
+      <h2 class="font-display text-3xl md:text-4xl lg:text-5xl text-[var(--jv-text)] uppercase tracking-wide mb-4">{title}</h2>
+      {description && <p class="text-lg text-[var(--jv-text)]/70 max-w-2xl font-body">{description}</p>}
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-px bg-[var(--jv-border)] md:bg-transparent">
+      {categories.map((category) => (
+        <a
+          href={category.link}
+          class="group relative block aspect-[3/4] overflow-hidden bg-[var(--jv-surface)] md:border border-[var(--jv-border)]"
+        >
+          <img
+            src={category.image}
+            alt={category.name}
+            class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-[var(--jv-bg)] via-transparent to-transparent opacity-80"></div>
+          <div class="absolute inset-0 flex flex-col justify-end p-8 lg:p-10">
+            <h3 class="font-display text-2xl lg:text-3xl text-[var(--jv-text)] uppercase tracking-wide mb-2">
+              {category.name}
+            </h3>
+            {category.description && <p class="text-sm text-[var(--jv-text)]/70 font-body">{category.description}</p>}
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .font-headline { font-family: var(--font-headline); }
+  .font-body { font-family: var(--font-body); }
+</style>

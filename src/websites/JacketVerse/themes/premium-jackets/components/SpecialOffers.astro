@@ -1,0 +1,66 @@
+---
+interface Offer {
+  id: string;
+  title: string;
+  description: string;
+  discount: string;
+  code?: string;
+  backgroundImage?: string;
+  buttonText: string;
+  buttonLink: string;
+  expiryText?: string;
+}
+
+interface Props {
+  title: string;
+  offers: Offer[];
+}
+
+const { title, offers } = Astro.props;
+---
+
+<section class="drivon-offers py-24 lg:py-32 bg-[var(--drivon-bg)]">
+  <div class="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12">
+    <p class="font-display text-[11px] tracking-[0.35em] uppercase text-[var(--drivon-accent)] mb-3">Offers</p>
+    <h2 class="font-display text-3xl md:text-4xl font-bold text-[var(--drivon-text)] uppercase tracking-tight mb-12">{title}</h2>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+      {offers.map((offer) => (
+        <a
+          href={offer.buttonLink}
+          class="group relative block min-h-[320px] overflow-hidden"
+          style={offer.backgroundImage ? `background-image: url(${offer.backgroundImage}); background-size: cover; background-position: center;` : undefined}
+        >
+          {offer.backgroundImage ? (
+            <div class="absolute inset-0 bg-[var(--drivon-bg)]/80 group-hover:bg-[var(--drivon-bg)]/70 transition-colors duration-500" aria-hidden="true"></div>
+          ) : (
+            <div class="absolute inset-0 bg-gradient-to-br from-[var(--drivon-surface)] via-[var(--drivon-bg)] to-[var(--drivon-accent)]/10 group-hover:from-[var(--drivon-accent)]/10 group-hover:to-[var(--drivon-surface)] transition-colors duration-500" aria-hidden="true"></div>
+          )}
+          <div class="relative h-full min-h-[320px] flex flex-col justify-end p-8 lg:p-12">
+            <span class="font-display text-[11px] tracking-[0.3em] uppercase text-[var(--drivon-accent)] mb-3">{offer.discount} off</span>
+            <h3 class="font-display text-2xl lg:text-3xl font-bold text-[var(--drivon-text)] uppercase tracking-tight mb-2">
+              {offer.title}
+            </h3>
+            <p class="text-[var(--drivon-text)]/80 font-body text-sm mb-6 max-w-md">{offer.description}</p>
+            {offer.code && (
+              <p class="text-[10px] tracking-[0.2em] uppercase text-[var(--drivon-muted)] mb-1">Code</p>
+              <p class="font-mono text-lg text-[var(--drivon-accent)] mb-6">{offer.code}</p>
+            )}
+            <span class="inline-flex items-center gap-2 text-[11px] font-medium tracking-[0.25em] uppercase text-[var(--drivon-text)] group-hover:gap-4 transition-all">
+              {offer.buttonText}
+              <span class="text-[var(--drivon-accent)]">→</span>
+            </span>
+            {offer.expiryText && (
+              <p class="text-[10px] text-[var(--drivon-muted)] mt-4">{offer.expiryText}</p>
+            )}
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .font-display { font-family: var(--font-display); }
+  .font-body { font-family: var(--font-body); }
+</style>

@@ -234,8 +234,9 @@ const searchConfig = {
   }
 };
 
+const paymentMethod = import.meta.env.PUBLIC_PAYMENT_METHOD || 'infinity';
 const paymentConfig = {
-  method: import.meta.env.PUBLIC_PAYMENT_METHOD || 'infinity',
+  method: paymentMethod,
   hoodpay: {
     apiUrl: import.meta.env.HOODPAY_API_URL,
     businessId: import.meta.env.HOODPAY_BUSINESS_ID,
@@ -245,7 +246,13 @@ const paymentConfig = {
   store: {
     name: import.meta.env.PUBLIC_SITE_NAME || 'DriverApparel',
     domain: import.meta.env.DOMAINE || 'https://driverapparel.com'
-  }
+  },
+  ...(paymentMethod === 'whatsapp' && {
+    whatsapp: {
+      number: import.meta.env.PUBLIC_WHATSAPP_NUMBER || import.meta.env.PUBLIC_BUSINESS_PHONE || '',
+      defaultMessage: import.meta.env.PUBLIC_WHATSAPP_DEFAULT_MESSAGE || "Hi, I'd like to order:"
+    }
+  })
 };
 ---
 

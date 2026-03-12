@@ -49,6 +49,7 @@ interface AddToCartStyles {
   optionButtonSelected?: string;
   price?: string;
   priceCompare?: string;
+  stockStatus?: string;
   quantityLabel?: string;
   quantityWrap?: string;
   quantityInput?: string;
@@ -74,6 +75,10 @@ interface AddToCartProps {
     store?: {
       name?: string;
       domain?: string;
+    };
+    whatsapp?: {
+      number?: string;
+      defaultMessage?: string;
     };
   };
 }
@@ -183,6 +188,12 @@ export default function AddToCart({
 }: AddToCartProps) {
   const variant = themeVariant ?? 'light';
   const s = { ...defaultAddToCartStyles, ...(addToCartStylesProp ?? {}) };
+  // Ensure strong contrast on dark product themes
+  if (variant === 'dark') {
+    s.price = addToCartStylesProp?.price ?? 'text-3xl font-semibold text-white';
+    s.priceCompare = addToCartStylesProp?.priceCompare ?? 'text-xl text-gray-400 line-through';
+    s.stockStatus = addToCartStylesProp?.stockStatus ?? 'text-sm font-medium text-emerald-400 uppercase tracking-wide';
+  }
   // Selected variant style from theme: dark theme → light bg + dark text; light theme → dark bg + light text
   const optionButtonSelectedClass = variant === 'dark'
     ? 'min-w-[2.75rem] px-4 py-2.5 rounded-lg text-sm font-medium border-2 !bg-white !text-neutral-900 border-neutral-200 shadow-sm'
@@ -376,6 +387,14 @@ export default function AddToCart({
         const storeDomain = paymentConfig.store?.domain || 'localhost';
         const encodedCart = encodeURIComponent(JSON.stringify(cartData));
         window.location.href = `https://pays.myatlagia.store/checkout?cart=${encodedCart}&store=${storeName}&shop_domain=${storeDomain}`;
+      } else if (method === 'whatsapp' && paymentConfig.whatsapp?.number) {
+        // Order via WhatsApp: pre-filled message with clean product title (no variant, no "Default Title")
+        const intro = paymentConfig.whatsapp.defaultMessage || "Hello! I'd like to order:";
+        const baseTitle = product.title.replace(/\s*-\s*Default Title\s*$/i, '');
+        const message = `${intro}\n\n${baseTitle}${totalAmount ? ` - Total: $${totalAmount.toFixed(2)}` : ''}`;
+        const phone = paymentConfig.whatsapp.number.replace(/\D/g, '');
+        const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+        window.location.href = url;
       } else {
         // Default fallback - same as Cart
         const productName = checkoutItems[0]?.title || 'cart';
@@ -484,7 +503,7 @@ export default function AddToCart({
                 </div>
               )}
             </div>
-            <span className="text-sm font-medium text-neutral-600 uppercase tracking-wide">In Stock</span>
+            <span className={s.stockStatus ?? 'text-sm font-medium text-neutral-600 uppercase tracking-wide'}>In Stock</span>
           </div>
         )}
 
@@ -584,11 +603,14 @@ export default function AddToCart({
           <button
             onClick={handleBuyNow}
             disabled={isLoading}
-            className="w-full bg-white px-5 py-3.5 rounded-xl text-base font-semibold 
-                     hover:bg-neutral-50 transition-all duration-200 border border-neutral-300
-                     disabled:bg-neutral-300 disabled:cursor-not-allowed 
+            className={`w-full px-5 py-3.5 rounded-xl text-base font-semibold 
                      flex items-center justify-center gap-2
-                     transform hover:scale-[1.01] active:scale-[0.99] shadow-sm"
+                     transform hover:scale-[1.01] active:scale-[0.99] shadow-sm transition-all duration-200 border
+                     ${
+                       paymentConfig.method === 'whatsapp'
+                         ? 'bg-[#25D366] text-black border-[#25D366] hover:bg-[#1ebe57]'
+                         : 'bg-white text-neutral-900 border-neutral-300 hover:bg-neutral-50 disabled:bg-neutral-300 disabled:cursor-not-allowed'
+                     }`}
             style={lightThemeStyle}
           >
             {isLoading ? (
@@ -597,7 +619,7 @@ export default function AddToCart({
                 <span>{translations.processing}</span>
               </>
             ) : (
-              <span>{projectType === 'iptv' ? 'Subscribe Now' : translations.buyNow}</span>
+              <span>{paymentConfig.method === 'whatsapp' ? 'Subscribe' : projectType === 'iptv' ? 'Subscribe Now' : translations.buyNow}</span>
             )}
           </button>
         </div>
@@ -614,10 +636,13 @@ export default function AddToCart({
           <button
             onClick={handleBuyNow}
             disabled={isLoading}
-            className="w-full bg-white px-5 py-3 rounded-xl text-base font-semibold 
-                     hover:bg-neutral-50 transition-all duration-200 border border-neutral-300
-                     disabled:bg-neutral-300 disabled:cursor-not-allowed 
-                     flex items-center justify-center gap-2"
+            className={`w-full px-5 py-3 rounded-xl text-base font-semibold 
+                     flex items-center justify-center gap-2 transition-all duration-200 border
+                     ${
+                       paymentConfig.method === 'whatsapp'
+                         ? 'bg-[#25D366] text-black border-[#25D366] hover:bg-[#1ebe57]'
+                         : 'bg-white text-neutral-900 border-neutral-300 hover:bg-neutral-50 disabled:bg-neutral-300 disabled:cursor-not-allowed'
+                     }`}
             style={lightThemeStyle}
           >
             {isLoading ? (
@@ -626,7 +651,7 @@ export default function AddToCart({
                 <span>{translations.processing}</span>
               </>
             ) : (
-              <span>{projectType === 'iptv' ? 'Subscribe Now' : translations.buyNow}</span>
+              <span>{paymentConfig.method === 'whatsapp' ? 'Subscribe' : projectType === 'iptv' ? 'Subscribe Now' : translations.buyNow}</span>
             )}
           </button>
 

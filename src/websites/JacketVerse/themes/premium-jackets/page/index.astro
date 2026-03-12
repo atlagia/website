@@ -1,0 +1,156 @@
+---
+import { fetchBlogPosts } from '@utils/shopifyAPI';
+import { useTranslations, isValidLanguage } from '@utils/i18n';
+
+const lang = Astro.props?.lang ?? Astro.params?.lang ?? 'en';
+
+if (!isValidLanguage(lang)) {
+  return Astro.redirect('/en');
+}
+
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+const { default: Welcome } = await import(`../components/Welcome.astro`);
+const { default: StatsBar } = await import(`../components/StatsBar.astro`);
+const { default: CategoryGrid } = await import(`../components/CategoryGrid.astro`);
+const { default: BestSellers } = await import(`../components/BestSellers.astro`);
+const { default: FeaturedHighlight } = await import(`../components/FeaturedHighlight.astro`);
+const { default: ProductShowcase } = await import(`../components/ProductShowcase.astro`);
+const { default: Banner } = await import(`../components/Banner.astro`);
+const { default: TrustBadges } = await import(`../components/TrustBadges.astro`);
+const { default: FeaturedPosts } = await import(`../components/FeaturedPosts.astro`);
+const { default: TestimonialSlider } = await import(`../components/TestimonialSlider.astro`);
+const { default: EmailSignup } = await import(`../components/EmailSignup.astro`);
+
+const translations = await useTranslations(lang);
+const jsonData = translations.default;
+const { SITE_TITLE, SITE_DESCRIPTION } = await import('../consts');
+
+let posts = [];
+try {
+  posts = await fetchBlogPosts();
+} catch (_) {
+  // optional blog
+}
+
+export async function getStaticPaths() {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  const languages = allowedLanguages.split(',').map((l: string) => l.trim()).filter((l: string) => l.length > 0);
+  return languages.map((l: string) => ({ params: { lang: l } }));
+}
+---
+
+<!doctype html>
+<html lang={lang} class="jv">
+  <head>
+    <BaseHead
+      title={SITE_TITLE}
+      description={SITE_DESCRIPTION}
+      isHomePage={true}
+      currentLang={lang}
+    />
+  </head>
+  <body class="bg-[var(--jv-bg)] text-[var(--jv-text)] antialiased">
+    <Header />
+    <main>
+      {jsonData.sections?.map((section) => (
+        <>
+          {section.type === 'welcomeSection' && (
+            <Welcome
+              headlineLine1={section.headlineLine1}
+              headlineLine2={section.headlineLine2}
+              primaryCtaText={section.primaryCtaText}
+              primaryCtaLink={section.primaryCtaLink}
+              secondaryCtaText={section.secondaryCtaText}
+              secondaryCtaLink={section.secondaryCtaLink}
+              heroImage={section.heroImage}
+              seasonLabel={section.seasonLabel}
+            />
+          )}
+          {section.type === 'statsBar' && (
+            <StatsBar stats={section.stats} />
+          )}
+          {section.type === 'categoryGrid' && (
+            <CategoryGrid
+              title={section.title}
+              description={section.description}
+              categories={section.categories}
+            />
+          )}
+          {section.type === 'bestSellers' && (
+            <BestSellers
+              title={section.title}
+              description={section.description}
+              viewAllLink={`/${lang}${section.viewAllLink ?? '/collections'}`}
+              lang={lang}
+              collectionHandle={section.collectionHandle}
+            />
+          )}
+          {section.type === 'featuredHighlight' && (
+            <FeaturedHighlight
+              title={section.title}
+              description={section.description}
+              ctaText={section.ctaText}
+              ctaLink={section.ctaLink}
+              backgroundImage={section.backgroundImage}
+              lang={lang}
+            />
+          )}
+          {section.type === 'productShowcase' && (
+            <ProductShowcase
+              title={section.title}
+              description={section.description ?? ''}
+              viewAllLink={`/${lang}${section.viewAllLink ?? '/collections'}`}
+              lang={lang}
+            />
+          )}
+          {section.type === 'bannerSection' && (
+            <Banner
+              headline={section.headline}
+              description={section.description}
+              backgroundImage={section.backgroundImage}
+              button1Text={section.ctaText ?? section.button1Text}
+              button1Link={`/${lang}${section.ctaLink ?? section.button1Link ?? '/blog'}`}
+              button2Text={section.button2Text}
+              button2Link={section.button2Link ? `/${lang}${section.button2Link}` : undefined}
+            />
+          )}
+          {section.type === 'trustBadges' && (
+            <TrustBadges
+              title={section.title}
+              badges={section.badges ?? section.items?.map((item: string, i: number) => ({ id: `b${i}`, title: item })) ?? []}
+              paymentMethods={section.paymentMethods}
+              guaranteeText={section.guaranteeText}
+            />
+          )}
+          {section.type === 'featuredPosts' && (
+            <FeaturedPosts
+              title={section.title}
+              description={section.description}
+              posts={posts}
+              exploreMoreLink={`/${lang}${section.exploreMoreLink ?? '/blog'}`}
+              exploreMoreText={section.exploreMoreText ?? 'Explore more'}
+            />
+          )}
+          {section.type === 'testimonialSlider' && (
+            <TestimonialSlider
+              title={section.title}
+              testimonials={section.testimonials ?? []}
+            />
+          )}
+          {section.type === 'emailSignup' && (
+            <EmailSignup
+              title={section.title}
+              subtext={section.subtext}
+              description={section.description}
+              formAction={section.formAction}
+              buttonText={section.buttonText ?? 'Subscribe'}
+            />
+          )}
+        </>
+      ))}
+    </main>
+    <Footer />
+  </body>
+</html>

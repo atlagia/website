@@ -1,0 +1,205 @@
+---
+import Layoutc from '@layouts/Layoutc.astro';
+import { ArrowRight, Trophy, Crown, Star, Award, Flag } from 'lucide-react';
+
+// Generate static paths for allowed languages from environment
+export async function getStaticPaths() {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  const languages = allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+  
+  return languages.map(lang => ({ params: { lang } }));
+}
+
+const { lang = 'en' } = Astro.params;
+const baseUrl = import.meta.env.DOMAINE || 'https://drivon.store';
+const storeName = import.meta.env.PUBLIC_SITE_NAME || 'Drivon';
+
+// Load multilingual data
+let data;
+try {
+  data = await import(`../data/f1-championship/f1-championship_${lang}.json`);
+} catch (error) {
+  // Fallback to English if language file doesn't exist
+  data = await import(`../data/f1-championship/f1-championship_en.json`);
+}
+
+const pageData = data.default;
+
+// SEO
+const seoTitle = `${pageData.title} | ${storeName}`;
+const seoDescription = pageData.description;
+---
+
+<Layoutc title={seoTitle} description={seoDescription} lang={lang}>
+  <div class="min-h-screen bg-[var(--drivon-bg)]">
+    <!-- Hero Section -->
+    <section class="relative min-h-[50vh] flex items-center justify-center bg-[var(--drivon-text)] text-[var(--drivon-bg)]">
+      <div class="relative z-10 h-full flex items-center justify-center text-center px-4">
+        <div class="max-w-5xl mx-auto">
+          <h1 class="text-6xl md:text-8xl font-bold text-white mb-6">
+            {pageData.hero.title}
+          </h1>
+          <p class="text-2xl md:text-3xl text-[var(--drivon-bg)]/90 mb-8">
+            {pageData.hero.subtitle}
+          </p>
+          <div class="flex flex-col sm:flex-row gap-6 justify-center">
+            <a href={`/${lang}/collections/championship-winner-suit`} class="bg-red-600 hover:bg-red-700 text-white px-10 py-5 rounded-lg font-bold text-lg transition-colors">
+              {pageData.hero.cta1}
+            </a>
+            <a href="#champions" class="bg-white/20 hover:bg-white/30 text-white px-10 py-5 rounded-lg font-bold text-lg transition-colors">
+              {pageData.hero.cta2}
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- F1 Champions Section -->
+    <section id="champions" class="py-20 px-4">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-5xl font-bold text-[var(--drivon-text)] mb-6">{pageData.sections.champions.title}</h2>
+          <p class="text-2xl text-[var(--drivon-muted)] max-w-4xl mx-auto">
+            {pageData.sections.champions.subtitle}
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+          {pageData.champions.map((champion, index) => {
+            const colors = ['red', 'blue', 'yellow'];
+            const color = colors[index];
+            return (
+              <div class="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <div class={`w-24 h-24 bg-${color}-100 rounded-full flex items-center justify-center mb-6 mx-auto`}>
+                  <Trophy class={`w-12 h-12 text-${color}-600`} />
+                </div>
+                <h3 class="text-3xl font-bold text-[var(--drivon-text)] mb-4 text-center">{champion.name}</h3>
+                <div class="text-center mb-4">
+                  <span class={`inline-block bg-${color}-100 text-${color}-800 px-4 py-2 rounded-full text-lg font-bold`}>
+                    {champion.championships} Championships
+                  </span>
+                </div>
+                <p class="text-[var(--drivon-muted)] text-center mb-4 text-lg">
+                  {champion.years}
+                </p>
+                <p class="text-[var(--drivon-muted)] text-center mb-6">
+                  {champion.description}
+                </p>
+                <a href={`/${lang}${champion.link}`} class={`flex items-center justify-center text-${color}-600 font-bold hover:text-${color}-700 text-lg`}>
+                  Shop {champion.name} Suit <ArrowRight class="w-5 h-5 ml-2" />
+                </a>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    <!-- Championship Collection -->
+    <section class="py-20 bg-[var(--drivon-surface)]">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-5xl font-bold text-[var(--drivon-text)] mb-6">{pageData.sections.collection.title}</h2>
+          <p class="text-2xl text-[var(--drivon-muted)]">{pageData.sections.collection.subtitle}</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          {pageData.collections.map((product, index) => {
+            const icons = [Trophy, Crown, Star];
+            const colors = ['red', 'blue', 'yellow'];
+            const Icon = icons[index];
+            const color = colors[index];
+            return (
+              <a href={`/${lang}${product.link}`} class="group bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <div class={`h-64 bg-[var(--drivon-text)] flex items-center justify-center text-[var(--drivon-bg)]`}>
+                  <Icon class="w-20 h-20 text-white" />
+                </div>
+                <div class="p-8">
+                  <h3 class="font-headline text-2xl text-[var(--drivon-text)] uppercase tracking-wide mb-4">{product.title}</h3>
+                  <p class="text-[var(--drivon-muted)] mb-6 text-lg">{product.description}</p>
+                  <div class="flex items-center justify-between">
+                    <span class="text-3xl font-bold text-[var(--drivon-text)]">{product.price}</span>
+                    <div class={`flex items-center text-${color}-600 font-bold group-hover:text-${color}-700 text-lg`}>
+                      {product.linkText} <ArrowRight class="w-5 h-5 ml-2" />
+                    </div>
+                  </div>
+                </div>
+              </a>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    <!-- Championship Legacy -->
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-5xl font-bold text-[var(--drivon-text)] mb-6">{pageData.sections.legacy.title}</h2>
+          <p class="text-2xl text-[var(--drivon-muted)]">{pageData.sections.legacy.subtitle}</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          {pageData.legacy.map((legacy, index) => {
+            const icons = [Trophy, Award, Crown];
+            const colors = ['red', 'blue', 'yellow'];
+            const Icon = icons[index];
+            const color = colors[index];
+            return (
+              <div class="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <div class={`w-20 h-20 bg-${color}-100 rounded-full flex items-center justify-center mb-6 mx-auto`}>
+                  <Icon class={`w-10 h-10 text-${color}-600`} />
+                </div>
+                <h3 class="font-headline text-2xl text-[var(--drivon-text)] uppercase tracking-wide mb-4 text-center">{legacy.title}</h3>
+                <p class="text-[var(--drivon-muted)] text-center mb-6 text-lg">
+                  {legacy.description}
+                </p>
+                <a href={`/${lang}${legacy.link}`} class={`flex items-center justify-center text-${color}-600 font-bold hover:text-${color}-700 text-lg`}>
+                  Explore {legacy.title} <ArrowRight class="w-5 h-5 ml-2" />
+                </a>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-[var(--drivon-text)] text-[var(--drivon-bg)]">
+      <div class="max-w-5xl mx-auto text-center px-4">
+        <h2 class="text-5xl font-bold mb-8">{pageData.cta.title}</h2>
+        <p class="text-2xl text-[var(--drivon-bg)]/90 mb-10">
+          {pageData.cta.subtitle}
+        </p>
+        <div class="flex flex-col sm:flex-row gap-6 justify-center">
+          <a href={`/${lang}/collections/championship-winner-suit`} class="bg-red-600 hover:bg-red-700 text-white px-10 py-5 rounded-lg font-bold text-lg transition-colors">
+            {pageData.cta.button1}
+          </a>
+          <a href="#champions" class="bg-white/20 hover:bg-white/30 text-white px-10 py-5 rounded-lg font-bold text-lg transition-colors">
+            {pageData.cta.button2}
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+<style>
+  .font-headline { font-family: var(--font-headline); }
+  .font-body { font-family: var(--font-body); }
+</style>
+</Layoutc>
+
+<style>
+  /* Smooth scrolling for anchor links */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Custom animations */
+  .transform {
+    transition: transform 0.3s ease;
+  }
+  
+  .hover\:-translate-y-2:hover {
+    transform: translateY(-8px);
+  }
+</style>

@@ -1,0 +1,162 @@
+---
+import { Menu, Globe, Search } from 'lucide-react';
+import { getLangFromUrl, getLocalizedPath } from '@utils/i18n';
+import CartSidebarWithTrigger from '@themes/default/components/CartSidebarWithTrigger';
+
+const navigation = [
+  { name: 'Home', href: '/' },
+  { name: 'Jacket Collections', href: '/collections' },
+  { name: 'Shop by Style', href: '/collections/styles' },
+  { name: 'Style Inspiration', href: '/blog' },
+  { name: 'Contact', href: '/contact' },
+];
+
+const getAllowedLanguages = (): string[] => {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  return allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+};
+
+const languageNames: Record<string, string> = {
+  en: "English", fr: "Français", de: "Deutsch", es: "Español", it: "Italiano",
+  pt: "Português", nl: "Nederlands", ar: "العربية", zh: "中文", ja: "日本語", ko: "한국어",
+};
+
+const allowedLanguages = getAllowedLanguages();
+const languages = allowedLanguages.map(lang => ({ code: lang, name: languageNames[lang] || lang }));
+
+const currentPath = Astro.url.pathname;
+const currentLang = getLangFromUrl(Astro.url);
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'JacketVerse';
+
+const localizedNavigation = navigation.map(item => ({
+  ...item,
+  href: `/${currentLang}${item.href === '/' ? '' : item.href}`
+}));
+
+const announcement = 'Free shipping on orders over $75 — Discover new jacket styles and seasonal collections.';
+
+let headerStyles = {};
+try {
+  const themeHeaderStyles = await import('../styles/Header.json');
+  headerStyles = themeHeaderStyles.default || {};
+} catch (_) {}
+
+const paymentConfig = {
+  method: import.meta.env.PUBLIC_PAYMENT_METHOD || 'default',
+  hoodpay: {
+    apiUrl: import.meta.env.HOODPAY_API_URL,
+    businessId: import.meta.env.HOODPAY_BUSINESS_ID,
+    authToken: import.meta.env.HOODPAY_AUTH_TOKEN,
+    redirectUrl: `${import.meta.env.DOMAINE || ''}${import.meta.env.HOODPAY_REDIRECT_URL || ''}`
+  },
+  store: {
+    name: import.meta.env.PUBLIC_SITE_NAME || siteName,
+    domain: import.meta.env.DOMAINE || 'localhost'
+  }
+};
+const apiEndpoint = import.meta.env.VITE_API_ENDPOINT || '/api/checkout';
+---
+
+<div class="jv-header-wrapper fixed w-full top-0 z-50">
+  <div class="jv-announcement h-8 flex items-center justify-center bg-[var(--jv-surface)] border-b border-[var(--jv-border)]">
+    <p class="text-[10px] sm:text-[11px] tracking-[0.2em] uppercase font-body text-[var(--jv-text)]/90 px-4 truncate max-w-full text-center">
+      {announcement}
+    </p>
+  </div>
+  <header class="jv-header bg-[var(--jv-surface)] border-b border-[var(--jv-border)]">
+    <nav class="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-10" aria-label="Main">
+      <div class="flex h-14 sm:h-16 items-center justify-between gap-6">
+        <a href={`/${currentLang}`} class="jv-logo font-display text-[1.05rem] sm:text-[1.15rem] font-bold tracking-tight text-[var(--jv-text)] uppercase hover:text-[var(--jv-accent)] transition-colors shrink-0">
+          {siteName}
+        </a>
+
+        <div class="hidden lg:flex items-center justify-center gap-10 xl:gap-14 absolute left-1/2 -translate-x-1/2">
+          {localizedNavigation.map((item) => {
+            const isActive = currentPath === item.href || (item.href !== `/${currentLang}` && currentPath.startsWith(item.href));
+            return (
+              <a
+                href={item.href}
+                class={`text-[11px] font-medium tracking-[0.2em] uppercase transition-colors duration-200 font-body ${isActive ? 'text-[var(--jv-text)]' : 'text-[var(--jv-muted)] hover:text-[var(--jv-text)]'}`}
+              >
+                {item.name}
+              </a>
+            );
+          })}
+        </div>
+
+        <div class="flex items-center gap-4 sm:gap-6 shrink-0">
+          <a href={`/${currentLang}/search`} class="p-2 text-[var(--jv-muted)] hover:text-[var(--jv-text)] transition-colors" aria-label="Search">
+            <Search className="h-4 w-4 sm:h-[18px] sm:w-[18px]" />
+          </a>
+          <div class="relative group">
+            <button type="button" class="flex items-center gap-1.5 text-[var(--jv-muted)] hover:text-[var(--jv-text)] transition-colors py-2" aria-haspopup="true" aria-expanded="false">
+              <Globe className="h-4 w-4 sm:h-[18px] sm:w-[18px]" />
+              <span class="hidden sm:inline text-[10px] uppercase tracking-[0.18em] font-body">
+                {languages.find(l => l.code === currentLang)?.name}
+              </span>
+            </button>
+            <div class="absolute right-0 top-full mt-1 w-36 py-2 bg-[var(--jv-surface)] border border-[var(--jv-border)] rounded-sm shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              {languages.map((lang) => (
+                <a
+                  href={getLocalizedPath(currentPath, lang.code)}
+                  class={`block px-4 py-2 text-[10px] uppercase tracking-wider font-body ${currentLang === lang.code ? 'text-[var(--jv-text)] font-medium' : 'text-[var(--jv-muted)] hover:text-[var(--jv-text)]'}`}
+                >
+                  {lang.name}
+                </a>
+              ))}
+            </div>
+          </div>
+          <CartSidebarWithTrigger
+            client:load
+            triggerClassName="flex items-center gap-1.5 text-[var(--jv-muted)] hover:text-[var(--jv-text)] transition-colors py-2"
+            label="Bag"
+            showLabel={true}
+            paymentConfig={paymentConfig}
+            apiEndpoint={apiEndpoint}
+            headerStyles={headerStyles}
+            projectType={import.meta.env.PROJECT_TYPE || 'physical'}
+          />
+          <a
+            href={`/${currentLang}/account`}
+            class="hidden sm:inline-flex items-center justify-center h-8 px-4 bg-[var(--jv-text)] text-[var(--jv-bg)] text-[10px] font-medium tracking-[0.2em] uppercase hover:opacity-90 transition-colors font-body"
+          >
+            Sign In
+          </a>
+
+          <button type="button" id="mobile-menu-button" class="lg:hidden p-2 text-[var(--jv-muted)] hover:text-[var(--jv-text)]" aria-expanded="false" aria-controls="mobile-menu-dropdown">
+            <span class="sr-only">Menu</span>
+            <Menu className="h-5 w-5" />
+          </button>
+        </div>
+      </div>
+
+      <div id="mobile-menu-dropdown" class="lg:hidden hidden py-5 px-4 border-t border-[var(--jv-border)] bg-[var(--jv-surface)]" role="region" aria-label="Mobile menu">
+        <div class="flex flex-col gap-1">
+          {localizedNavigation.map((item) => (
+            <a href={item.href} class="py-3 text-[11px] tracking-[0.18em] uppercase text-[var(--jv-muted)] hover:text-[var(--jv-text)] font-body">
+              {item.name}
+            </a>
+          ))}
+          <a href={`/${currentLang}/search`} class="py-3 text-[11px] tracking-[0.18em] uppercase text-[var(--jv-muted)] font-body">Search</a>
+          <button type="button" id="mobile-bag-trigger" class="w-full text-left py-3 text-[11px] tracking-[0.18em] uppercase text-[var(--jv-muted)] font-body hover:text-[var(--jv-text)]">Bag</button>
+          <a href={`/${currentLang}/account`} class="py-3 text-[11px] tracking-[0.18em] uppercase text-[var(--jv-text)] font-medium font-body">Sign In</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+</div>
+
+<script>
+  document.getElementById('mobile-menu-button')?.addEventListener('click', () => {
+    const btn = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu-dropdown');
+    const expanded = btn?.getAttribute('aria-expanded') === 'true';
+    btn?.setAttribute('aria-expanded', (!expanded).toString());
+    menu?.classList.toggle('hidden');
+  });
+</script>
+
+<style>
+  .font-display { font-family: var(--font-display); }
+  .font-body { font-family: var(--font-body); }
+</style>

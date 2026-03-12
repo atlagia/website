@@ -1,0 +1,197 @@
+{
+  "siteTitle": "Drivon - Merchandise Premium per Piloti",
+  "siteDescription": "Merchandise premium per piloti e appassionati di auto in tutto il mondo. Dalle leggende delle corse alla cultura di strada, ti portiamo gear autentico per fan delle auto.",
+  "sections": [
+    {
+      "type": "welcomeSection",
+      "title": "Creato per gli Appassionati di Auto",
+      "description": "Merchandise autentico della cultura automobilistica progettato per i veri fan delle auto. Dalle leggende delle corse alle icone della cultura di strada.",
+      "blogLinkText": "Esplora la Cultura Auto",
+      "blogLink": "/car-culture",
+      "backgroundVideo": {
+        "type": "youtube",
+        "videoId": "liT2Z3wFW1Y",
+        "fallbackImage": "/images/driver-culture-fallback.jpg"
+      }
+    },
+    {
+      "type": "bannerSection",
+      "headline": "Cultura Auto Incontra Eredità delle Corse",
+      "description": "Sperimenta l'autentica cultura automobilistica. Dalle leggende delle corse alle icone di strada, celebriamo il vero spirito della passione automobilistica.",
+      "backgroundImage": "/images/racing-heritage-banner.jpg",
+      "button1Text": "Acquista Collezione Pilota",
+      "button1Link": "/driver-collection",
+      "button2Text": "Vedi Cultura delle Corse",
+      "button2Link": "/racing-culture"
+    },
+    {
+      "type": "categoryGrid",
+      "title": "Essenziali Cultura Pilota",
+      "description": "Merchandise autentico della cultura automobilistica per veri appassionati di auto e fan delle corse in tutto il mondo.",
+      "categories": [
+        {
+          "id": "hoodie",
+          "name": "Hoodie da Corsa",
+          "description": "Hoodie ispirati alle corse con design automobilistici autentici e comfort premium.",
+          "image": "https://ih1.redbubble.net/image.4762044220.4515/ssrco,mhoodie,mens,fafafa:ca443f4786,front,tall_three_quarter,x1000-bg,f8f8f8.1.webp",
+          "link": "/racing-hoodies"
+        },
+        {
+          "id": "tee",
+          "name": "Magliette Cultura Auto",
+          "description": "Magliette classiche della cultura automobilistica con marchi iconici di auto e leggende delle corse.",
+          "image": "https://ih1.redbubble.net/image.4762044220.4515/ssrco,classic_tee,mens_02,fafafa:ca443f4786,front,close_portrait,x1000.webp",
+          "link": "/car-culture-tees"
+        },
+        {
+          "id": "accessories",
+          "name": "Accessori Pilota",
+          "description": "Accessori essenziali per completare il tuo look e stile della cultura automobilistica.",
+          "image": "https://ih1.redbubble.net/image.4762043914.4515/ssrco,dad_hat,product,FFFDF5:8c3db69414,front_three_quarter,wide_portrait,750x1000-bg,f8f8f8.webp",
+          "link": "/driver-accessories"
+        }
+      ]
+    },
+    {
+      "type": "bestSellers",
+      "title": "Preferiti dei Fan JDM",
+      "description": "I nostri merchandise JDM più popolari amati dagli appassionati di cultura automobilistica in tutto il mondo",
+      "viewAllLink": "/jdm-favorites",
+      "collectionHandle": "jdm-favorites"
+    },
+    {
+      "type": "productShowcase",
+      "title": "Collezione Leggende JDM",
+      "description": "Merchandise iconico della cultura automobilistica giapponese con marchi leggendari ed eroi del drift.",
+      "viewAllLink": "/jdm-legends",
+      "collections": [
+        {
+          "id": "supra-drift-hoodie",
+          "name": "Hoodie Drift Toyota Supra",
+          "description": "Hoodie premium con la leggendaria Supra alimentata dal 2JZ con styling JDM autentico.",
+          "price": "89.99",
+          "image": "/images/products/supra-drift-hoodie.jpg",
+          "category": "Hoodie JDM"
+        },
+        {
+          "id": "skyline-gtr-tee",
+          "name": "Maglietta Nissan Skyline GT-R",
+          "description": "Maglietta classica che celebra il Godzilla delle auto sportive giapponesi con design iconico GT-R.",
+          "price": "29.99",
+          "image": "/images/products/skyline-gtr-tee.jpg",
+          "category": "Magliette JDM"
+        }
+      ]
+    },
+    {
+      "type": "specialOffers",
+      "title": "Limited Time Offers",
+      "offers": [
+        {
+          "id": "winter-sale",
+          "title": "Winter Collection Sale",
+          "description": "Get premium winter gear at unbeatable prices",
+          "discount": "30%",
+          "code": "WINTER30",
+          "backgroundImage": "/images/winter-sale-bg.jpg",
+          "buttonText": "Shop Winter Sale",
+          "buttonLink": "/winter-collection",
+          "expiryText": "Ends December 31st"
+        },
+        {
+          "id": "new-customer",
+          "title": "New Customer Special",
+          "description": "Welcome bonus for first-time buyers",
+          "discount": "15%",
+          "code": "WELCOME15",
+          "backgroundImage": "/images/new-customer-bg.jpg",
+          "buttonText": "Claim Discount",
+          "buttonLink": "/welcome-offer",
+          "expiryText": "Valid for 30 days"
+        }
+      ]
+    },
+    {
+      "type": "testimonialSlider",
+      "title": "Professional Endorsements",
+      "testimonials": [
+        {
+          "id": "1",
+          "author": "Marcus Rodriguez",
+          "role": "Professional Race Car Driver",
+          "content": "ProDriver Gear isn't just equipment—it's a performance enhancement. The level of engineering is unparalleled.",
+          "avatar": "MR",
+          "initials": "MR"
+        },
+        {
+          "id": "2",
+          "author": "Sarah Chen",
+          "role": "Formula 1 Engineer",
+          "content": "The attention to detail in every piece is remarkable. This gear has become essential for our team's success on the track.",
+          "avatar": "SC",
+          "initials": "SC"
+        },
+        {
+          "id": "3",
+          "author": "David Thompson",
+          "role": "Motorsport Team Manager",
+          "content": "DriverApparel delivers exactly what professional drivers need. Quality, comfort, and performance in every product.",
+          "avatar": "DT",
+          "initials": "DT"
+        }
+      ]
+    },
+    {
+      "type": "faqSection",
+      "title": "Professional Performance FAQs",
+      "description": "Insights into advanced driver protection and performance technology.",
+      "faqs": [
+        {
+          "question": "What makes ProDriver Gear different?",
+          "answer": "We use aerospace-grade materials, advanced ergonomic design, and cutting-edge protection technologies developed with professional drivers."
+        },
+        {
+          "question": "How do your materials enhance driver performance?",
+          "answer": "Our gear uses multi-layer composite materials that provide superior impact protection while maintaining maximum flexibility and thermal regulation."
+        },
+        {
+          "question": "Are your collections certified for professional use?",
+          "answer": "Yes. All ProDriver Gear collections exceed international safety standards and are used by professional racing teams worldwide."
+        }
+      ]
+    },{
+      "type": "featuresSection",
+      "title": "Why Choose DriverApparel?",
+      "features": [
+        {
+          "id": "free-shipping",
+          "title": "Free Shipping",
+          "description": "Free delivery on orders over $75 worldwide"
+        },
+        {
+          "id": "quality-guarantee",
+          "title": "Quality Guarantee",
+          "description": "30-day money back guarantee on all collections"
+        },
+        {
+          "id": "secure-payment",
+          "title": "Secure Payment",
+          "description": "SSL encrypted checkout for your security"
+        },
+        {
+          "id": "24-7-support",
+          "title": "24/7 Support",
+          "description": "Expert customer service whenever you need it"
+        }
+      ]
+    },
+    {
+      "type": "emailSignupSection",
+      "title": "Stay at the Cutting Edge",
+      "description": "Receive exclusive insights, technology updates, and professional performance tips.",
+      "backgroundImage": "/images/professional-driver-newsletter.jpg",
+      "formAction": "/api/professional-signup",
+      "submitText": "Join Professional Network"
+    }
+  ]
+}

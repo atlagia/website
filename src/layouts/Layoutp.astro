@@ -282,19 +282,25 @@ const searchConfig = {
 };
 
 // Payment configuration
+const paymentMethod = import.meta.env.PUBLIC_PAYMENT_METHOD || 'default';
 const paymentConfig = {
-  method: import.meta.env.PUBLIC_PAYMENT_METHOD || 'default',
+  method: paymentMethod,
   hoodpay: {
     apiUrl: import.meta.env.HOODPAY_API_URL,
     businessId: import.meta.env.HOODPAY_BUSINESS_ID,
     authToken: import.meta.env.HOODPAY_AUTH_TOKEN,
     redirectUrl: `${import.meta.env.DOMAINE}${import.meta.env.HOODPAY_REDIRECT_URL}`
   },
-  // Add store configuration to paymentConfig
   store: {
     name: import.meta.env.PUBLIC_STORE_NAME,
     domain: import.meta.env.DOMAINE
-  }
+  },
+  ...(paymentMethod === 'whatsapp' && {
+    whatsapp: {
+      number: import.meta.env.PUBLIC_WHATSAPP_NUMBER || import.meta.env.PUBLIC_BUSINESS_PHONE || '',
+      defaultMessage: import.meta.env.PUBLIC_WHATSAPP_DEFAULT_MESSAGE || "Hi, I'd like to order:"
+    }
+  })
 };
 
 

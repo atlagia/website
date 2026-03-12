@@ -1,4 +1,5 @@
 {
+  "addToCartTheme": "dark",
   "page": {
     "wrapper": "relative min-h-screen bg-[var(--cw-bg)] text-[var(--cw-text)]",
     "content": "flex flex-col min-h-screen opacity-100 transition-opacity duration-300",
@@ -77,12 +78,13 @@
     "descriptionProseLight": "text-[var(--cw-text)] [&>p]:mb-6 [&>p]:leading-relaxed [&>strong]:font-bold [&>*:first-child]:mt-0 [&>*:last-child]:mb-0",
     "descriptionProseDark": "text-[var(--cw-text)] [&>p]:mb-6 [&>p]:leading-relaxed [&>p]:text-[var(--cw-text)] [&>strong]:font-bold [&>strong]:text-[var(--cw-text)] [&>*:first-child]:mt-0 [&>*:last-child]:mb-0",
     "addToCart": {
-      "optionLabel": "text-xs font-medium uppercase tracking-widest !text-[var(--cw-muted)]",
-      "optionButton": "min-w-[2.75rem] px-4 py-2.5 rounded-lg text-sm font-medium border-2 border-[var(--cw-border)] bg-[var(--cw-surface)] hover:border-[var(--cw-muted)] hover:bg-[var(--cw-bg)] !text-[var(--cw-text)]",
-      "optionButtonSelected": "min-w-[2.75rem] px-4 py-2.5 rounded-lg text-sm font-medium !text-[var(--cw-bg)] border-2 border-[var(--cw-accent)] bg-[var(--cw-accent)]",
-      "price": "text-3xl font-bold !text-[var(--cw-text)]",
+      "optionLabel": "block text-xs font-medium uppercase tracking-widest text-[var(--cw-text)]",
+      "optionButton": "min-w-[2.75rem] px-4 py-2.5 rounded-lg text-sm font-medium border-2 border-[var(--cw-text)]/50 bg-[var(--cw-surface)] text-white hover:border-[var(--cw-muted)] hover:bg-[var(--cw-bg)] focus:outline-none focus:ring-2 focus:ring-[var(--cw-accent)]",
+      "optionButtonSelected": "min-w-[2.75rem] px-4 py-2.5 rounded-lg text-sm font-medium border-2 border-[var(--cw-accent)] bg-[var(--cw-accent)] text-[var(--cw-bg)]",
+      "price": "text-3xl font-bold text-[var(--cw-text)]",
       "priceCompare": "text-xl text-[var(--cw-muted)] line-through",
-      "quantityLabel": "text-xs font-medium uppercase tracking-widest !text-[var(--cw-muted)]",
+      "stockStatus": "text-sm font-medium uppercase tracking-wide text-[var(--cw-text)]",
+      "quantityLabel": "block text-xs font-medium uppercase tracking-widest text-[var(--cw-text)]",
       "quantityInput": "w-14 text-center text-sm font-medium text-[var(--cw-text)] bg-transparent border-0 border-x border-[var(--cw-border)] py-2.5 focus:outline-none focus:ring-0 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
     },
     "careInstructionsWrap": "bg-[var(--cw-surface)] rounded-2xl p-8 border border-[var(--cw-border)] shadow-sm text-[var(--cw-text)]"

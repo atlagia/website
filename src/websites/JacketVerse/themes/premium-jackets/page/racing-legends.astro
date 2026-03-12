@@ -1,0 +1,183 @@
+---
+import { getLangFromUrl, useTranslations, isValidLanguage } from '@utils/i18n';
+
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+
+const { lang } = Astro.params;
+if (!isValidLanguage(lang)) {
+  return Astro.redirect('/en');
+}
+
+const translations = await useTranslations(lang);
+const jsonData = translations.default;
+
+const SITE_TITLE = `Racing Legends - ${jsonData.siteTitle}`;
+const SITE_DESCRIPTION = 'Celebrate the greatest drivers and racing moments in history with merchandise honoring racing legends and iconic victories.';
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <main class="min-h-screen bg-[var(--drivon-bg)]">
+      <section class="relative py-20 bg-[var(--drivon-text)] text-[var(--drivon-bg)]">
+<div class="relative max-w-6xl mx-auto px-4 text-center">
+          <h1 class="text-5xl md:text-7xl font-black mb-6 uppercase tracking-tighter">
+            Racing Legends
+          </h1>
+          <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto font-medium">
+            Celebrate the greatest drivers and racing moments in history with merchandise 
+            honoring racing legends and iconic victories that define motorsport.
+          </p>
+        </div>
+      </section>
+
+      <!-- Introduction Section -->
+      <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+          <div class="text-center mb-12">
+            <h2 class="font-headline text-4xl uppercase tracking-tight mb-6">Honoring Racing's Greatest Heroes</h2>
+            <p class="text-xl text-[var(--drivon-muted)] max-w-4xl mx-auto leading-relaxed">
+              Racing legends are more than just drivers; they are the embodiment of passion, skill, and determination that defines motorsport. 
+              Our collection celebrates the greatest names in racing history, from Formula 1 champions to rally heroes, 
+              ensuring their legacy lives on through authentic merchandise and memorabilia.
+            </p>
+          </div>
+          
+          <div class="grid md:grid-cols-2 gap-12 mb-16">
+            <div>
+              <h3 class="text-2xl font-bold mb-4">The Legacy of Racing Legends</h3>
+              <p class="text-[var(--drivon-muted)] mb-4 leading-relaxed">
+                Every racing legend has a story that transcends the sport itself. From Ayrton Senna's fearless driving style to 
+                Michael Schumacher's record-breaking achievements, these drivers have inspired generations of fans and competitors alike. 
+                Their dedication, skill, and passion for racing continue to influence the sport today.
+              </p>
+              <p class="text-[var(--drivon-muted)] leading-relaxed">
+                Our racing legends collection pays tribute to these iconic figures through carefully crafted merchandise that captures 
+                their spirit and achievements. Each piece tells a story of triumph, determination, and the relentless pursuit of excellence 
+                that defines what it means to be a racing legend.
+              </p>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold mb-4">Celebrating Different Racing Disciplines</h3>
+              <p class="text-[var(--drivon-muted)] mb-4 leading-relaxed">
+                Racing legends come from all disciplines of motorsport. Whether it's the precision of Formula 1, the endurance of Le Mans, 
+                or the raw power of rally racing, each discipline has produced its own heroes who have left an indelible mark on the sport.
+              </p>
+              <p class="text-[var(--drivon-muted)] leading-relaxed">
+                From the technical mastery of F1 drivers to the fearless determination of rally champions, our collection celebrates 
+                the diverse talents and achievements that make racing legends truly special. Each discipline brings its own unique challenges 
+                and rewards, creating legends that resonate with fans across the globe.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Collections Section -->
+      <section class="py-16 bg-[var(--drivon-bg)]">
+        <div class="max-w-6xl mx-auto px-4">
+          <h2 class="text-4xl font-bold text-center mb-12">Racing Legend Collections</h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            <div class="bg-[var(--drivon-card)] rounded-lg border border-[var(--drivon-border)] overflow-hidden shadow-lg">
+              <div class="h-48 bg-[var(--drivon-text)] flex items-center justify-center text-[var(--drivon-bg)]">
+                <span class="text-white text-2xl font-bold">F1 Legends</span>
+              </div>
+              <div class="p-6">
+                <h3 class="font-bold text-lg mb-2">Formula 1 Legends</h3>
+                <p class="text-[var(--drivon-muted)] text-sm mb-4">Greatest F1 drivers in history who defined the pinnacle of motorsport.</p>
+                <p class="text-gray-500 text-xs">From Senna to Schumacher, Hamilton to Verstappen, celebrate the drivers who pushed Formula 1 to new heights with their skill, determination, and passion for racing.</p>
+              </div>
+            </div>
+            <div class="bg-[var(--drivon-card)] rounded-lg border border-[var(--drivon-border)] overflow-hidden shadow-lg">
+              <div class="h-48 bg-[var(--drivon-text)] flex items-center justify-center text-[var(--drivon-bg)]">
+                <span class="text-white text-2xl font-bold">Le Mans Heroes</span>
+              </div>
+              <div class="p-6">
+                <h3 class="font-bold text-lg mb-2">Le Mans Heroes</h3>
+                <p class="text-[var(--drivon-muted)] text-sm mb-4">Endurance racing champions who conquered the ultimate test of man and machine.</p>
+                <p class="text-gray-500 text-xs">Honor the drivers who mastered the grueling 24-hour challenge, combining speed, strategy, and endurance to achieve victory at the world's most prestigious endurance race.</p>
+              </div>
+            </div>
+            <div class="bg-[var(--drivon-card)] rounded-lg border border-[var(--drivon-border)] overflow-hidden shadow-lg">
+              <div class="h-48 bg-[var(--drivon-text)] flex items-center justify-center text-[var(--drivon-bg)]">
+                <span class="text-white text-2xl font-bold">Rally Champions</span>
+              </div>
+              <div class="p-6">
+                <h3 class="font-bold text-lg mb-2">Rally Champions</h3>
+                <p class="text-[var(--drivon-muted)] text-sm mb-4">Rally racing legends and their iconic cars that conquered the world's toughest stages.</p>
+                <p class="text-gray-500 text-xs">Celebrate the fearless drivers who mastered gravel, snow, and tarmac to become rally racing legends, from Group B heroes to modern WRC champions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Legend Stories Section -->
+      <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+          <h2 class="text-4xl font-bold text-center mb-12">Stories That Define Racing</h2>
+          <div class="grid md:grid-cols-2 gap-12">
+            <div>
+              <h3 class="text-2xl font-bold mb-6">The Making of a Legend</h3>
+              <p class="text-[var(--drivon-muted)] mb-4 leading-relaxed">
+                Racing legends aren't born overnight. They are forged through countless hours of practice, determination, and an unwavering 
+                commitment to excellence. Each legend has a unique journey that includes both triumphs and setbacks, victories and defeats.
+              </p>
+              <p class="text-[var(--drivon-muted)] mb-4 leading-relaxed">
+                What sets racing legends apart is their ability to learn from every experience, to push beyond their limits, and to inspire 
+                others through their actions both on and off the track. Their legacy extends far beyond their racing career, influencing 
+                the sport for generations to come.
+              </p>
+              <p class="text-[var(--drivon-muted)] leading-relaxed">
+                Our merchandise collection captures these legendary moments and personalities, allowing fans to connect with the heroes 
+                who have shaped the sport they love. Each piece tells a story of dedication, passion, and the relentless pursuit of greatness.
+              </p>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold mb-6">Legends Across Generations</h3>
+              <p class="text-[var(--drivon-muted)] mb-4 leading-relaxed">
+                From the early pioneers of motorsport to today's modern champions, racing legends span generations and continue to inspire 
+                new fans and drivers. Each era brings its own heroes who define what it means to be a racing legend.
+              </p>
+              <p class="text-[var(--drivon-muted)] mb-4 leading-relaxed">
+                The evolution of racing technology and safety has changed the sport dramatically, but the qualities that make a legend 
+                remain constant: courage, skill, determination, and an unshakeable passion for racing. These timeless traits connect 
+                legends across different eras and disciplines.
+              </p>
+              <p class="text-[var(--drivon-muted)] leading-relaxed">
+                Our collection honors both the classic legends of the past and the modern heroes of today, ensuring that their stories 
+                and achievements continue to inspire future generations of racing fans and competitors.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action Section -->
+      <section class="py-16 bg-[var(--drivon-text)] text-[var(--drivon-bg)]">
+        <div class="max-w-4xl mx-auto text-center px-4">
+          <h2 class="font-headline text-4xl uppercase tracking-tight mb-6">Celebrate Your Racing Heroes</h2>
+          <p class="text-xl text-[var(--drivon-bg)]/90 mb-8 leading-relaxed">
+            Join millions of racing fans worldwide in celebrating the legends who have made motorsport what it is today. 
+            From classic heroes to modern champions, our collection helps you honor the drivers who inspire your passion for racing.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/collections" class="inline-flex items-center justify-center bg-[var(--drivon-bg)] text-[var(--drivon-text)] px-8 py-3.5 text-[11px] font-medium tracking-[0.2em] uppercase hover:opacity-90 transition-opacity font-body">
+              Shop Racing Legends
+            </a>
+            <a href="/about" class="inline-flex items-center justify-center border-2 border-[var(--drivon-bg)] text-[var(--drivon-bg)] px-8 py-3.5 text-[11px] font-medium tracking-[0.2em] uppercase hover:bg-[var(--drivon-bg)]/10 transition-colors font-body">
+              Learn More
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>

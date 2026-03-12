@@ -873,7 +873,13 @@ const relatedCardStyles = {
                     store: {
                       name: import.meta.env.PUBLIC_SITE_NAME || 'StreamVista',
                       domain: import.meta.env.DOMAINE || 'pay.drivi.store'
-                    }
+                    },
+                    ...(import.meta.env.PUBLIC_PAYMENT_METHOD === 'whatsapp' && {
+                      whatsapp: {
+                        number: import.meta.env.PUBLIC_WHATSAPP_NUMBER || import.meta.env.PUBLIC_BUSINESS_PHONE || '',
+                        defaultMessage: import.meta.env.PUBLIC_WHATSAPP_DEFAULT_MESSAGE || "Hello! I'd like to order:"
+                      }
+                    })
                   }}
                 />
 

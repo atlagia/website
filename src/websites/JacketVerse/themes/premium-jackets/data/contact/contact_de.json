@@ -1,0 +1,80 @@
+{
+  "title": "Kontakt",
+  "description": "Kontaktieren Sie Drivon für Fragen zu unserer Rennausrüstung, Bestellungen oder Partnerschaften. Wir sind hier, um zu helfen!",
+  "hero": {
+    "title": "Kontakt",
+    "subtitle": "Haben Sie Fragen? Wir sind hier, um zu helfen. Wenden Sie sich an unser Team für Hilfe bei Bestellungen, Produktinformationen oder allem anderen."
+  },
+  "sections": {
+    "contactInfo": {
+      "title": "Kontakt aufnehmen"
+    },
+    "contactForm": {
+      "title": "Senden Sie uns eine Nachricht"
+    }
+  },
+  "contactInfo": {
+    "email": {
+      "title": "E-Mail"
+    },
+    "phone": {
+      "title": "Telefon"
+    },
+    "address": {
+      "title": "Adresse"
+    }
+  },
+  "support": {
+    "hours": {
+      "title": "Support-Zeiten"
+    }
+  },
+  "form": {
+    "name": {
+      "label": "Name",
+      "placeholder": "Ihr vollständiger Name"
+    },
+    "email": {
+      "label": "E-Mail",
+      "placeholder": "ihre.email@beispiel.com"
+    },
+    "subject": {
+      "label": "Betreff",
+      "placeholder": "Womit können wir Ihnen helfen?"
+    },
+    "message": {
+      "label": "Nachricht",
+      "placeholder": "Erzählen Sie uns mehr über Ihre Anfrage..."
+    },
+    "submitButton": "Nachricht Senden"
+  },
+  "faq": {
+    "title": "Häufig Gestellte Fragen",
+    "items": [
+      {
+        "question": "Wie lange dauert der Versand?",
+        "answer": "Wir versenden Bestellungen normalerweise innerhalb von 1-2 Werktagen. Der Inlandsversand dauert 3-5 Werktage, während der internationale Versand 7-14 Werktage dauert."
+      },
+      {
+        "question": "Wie ist Ihre Rückgaberichtlinie?",
+        "answer": "Wir bieten eine 30-tägige Rückgaberichtlinie für unbenutzte Artikel in der Originalverpackung. Rücksendungen sind für inländische Kunden kostenlos."
+      },
+      {
+        "question": "Bieten Sie internationalen Versand an?",
+        "answer": "Ja, wir versenden weltweit! Internationale Versandkosten und Lieferzeiten variieren je nach Standort."
+      },
+      {
+        "question": "Wie kann ich meine Bestellung verfolgen?",
+        "answer": "Sobald Ihre Bestellung versendet wird, erhalten Sie eine Tracking-Nummer per E-Mail. Sie können Ihre Bestellung auch in Ihrem Kontodashboard verfolgen."
+      },
+      {
+        "question": "Welche Zahlungsmethoden akzeptieren Sie?",
+        "answer": "Wir akzeptieren alle gängigen Kreditkarten, PayPal und Banküberweisungen für internationale Bestellungen."
+      },
+      {
+        "question": "Haben Sie eine Größentabelle?",
+        "answer": "Ja! Schauen Sie sich unsere Größentabelle-Seite für detaillierte Maße und Anpassungsanweisungen für all unsere Rennausrüstung an."
+      }
+    ]
+  }
+}

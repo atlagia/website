@@ -1,0 +1,99 @@
+{
+  "title": "F1 Meisterschaft Edition",
+  "description": "Feiern Sie F1-Meisterschaftssiege mit unserer exklusiven Rennanzug-Kollektion. Limitierte Editionen, die die größten Champions in der Formel-1-Geschichte ehren.",
+  "hero": {
+    "title": "F1 Meisterschaft Edition",
+    "subtitle": "Limitierte Rennanzüge, die die größten F1-Meisterschaftssiege feiern",
+    "cta1": "Meisterschaft Anzüge Kaufen",
+    "cta2": "Champions Ansehen"
+  },
+  "sections": {
+    "champions": {
+      "title": "F1 Weltmeister",
+      "subtitle": "Ehren Sie die legendären Fahrer, die die Formel 1 erobert haben"
+    },
+    "collection": {
+      "title": "Meisterschaft Kollektion",
+      "subtitle": "Exklusive Rennanzüge inspiriert von Meisterschaftsmomenten"
+    },
+    "legacy": {
+      "title": "Meisterschaft Vermächtnis",
+      "subtitle": "Feiern Sie die größten Momente in der F1-Meisterschaftsgeschichte"
+    }
+  },
+  "champions": [
+    {
+      "name": "Lewis Hamilton",
+      "championships": 7,
+      "years": "2008, 2014-2015, 2017-2020",
+      "description": "Der erfolgreichste F1-Fahrer aller Zeiten mit 7 Weltmeisterschaften",
+      "image": "/images/champions/hamilton.jpg",
+      "link": "/collections/hamilton-championship-suit"
+    },
+    {
+      "name": "Michael Schumacher",
+      "championships": 7,
+      "years": "1994-1995, 2000-2004",
+      "description": "Der legendäre deutsche Champion, der die F1 in den frühen 2000ern dominierte",
+      "image": "/images/champions/schumacher.jpg",
+      "link": "/collections/schumacher-championship-suit"
+    },
+    {
+      "name": "Juan Manuel Fangio",
+      "championships": 5,
+      "years": "1951, 1954-1957",
+      "description": "Der argentinische Maestro, der 5 Meisterschaften in den 1950ern gewann",
+      "image": "/images/champions/fangio.jpg",
+      "link": "/collections/fangio-championship-suit"
+    }
+  ],
+  "collections": [
+    {
+      "title": "Meisterschaft Sieger Anzug",
+      "description": "Rennanzug inspiriert von legendären F1-Champions",
+      "price": "299,99 €",
+      "link": "/collections/championship-winner-suit",
+      "linkText": "F1 Championship Kaufen"
+    },
+    {
+      "title": "Sieg Edition Anzug",
+      "description": "Limitierter Anzug, der Meisterschaftssiege feiert",
+      "price": "279,99 €",
+      "link": "/collections/victory-edition-suit",
+      "linkText": "F1 Championship Kaufen"
+    },
+    {
+      "title": "Legende Serie Anzug",
+      "description": "Rennanzug, der F1-Rennlegenden ehrt",
+      "price": "259,99 €",
+      "link": "/collections/legend-series-suit",
+      "linkText": "F1 Championship Kaufen"
+    }
+  ],
+  "legacy": [
+    {
+      "title": "Historische Siege",
+      "description": "Feiern Sie die denkwürdigsten Meisterschaftsmomente in der F1-Geschichte",
+      "icon": "Trophy",
+      "link": "/collections/historic-victories"
+    },
+    {
+      "title": "Meisterschaft Rekorde",
+      "description": "Ehren Sie die Fahrer, die neue Standards im Formel-1-Rennsport gesetzt haben",
+      "icon": "Award",
+      "link": "/collections/championship-records"
+    },
+    {
+      "title": "Rennlegenden",
+      "description": "Zollen Sie Tribut an die größten F1-Champions aller Zeiten",
+      "icon": "Crown",
+      "link": "/collections/racing-legends"
+    }
+  ],
+  "cta": {
+    "title": "Werden Sie Teil des Meisterschafts-Vermächtnisses",
+    "subtitle": "Holen Sie sich Ihren exklusiven F1-Meisterschafts-Rennanzug und werden Sie Teil der Formel-1-Geschichte.",
+    "button1": "Meisterschaft Anzüge Kaufen",
+    "button2": "Alle Champions Ansehen"
+  }
+}

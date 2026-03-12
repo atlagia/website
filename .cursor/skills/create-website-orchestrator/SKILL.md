@@ -1,6 +1,6 @@
 ---
 name: create-website-orchestrator
-description: Orchestrates website creation by delegating each phase to specialist subagents. Use when the user provides a website brief and wants the create-website process run with subagents, or says "create website with subagents" / "create site orchestrated". Runs Phase 0 in main agent, then launches create-website-scaffold, create-website-theme, create-website-components, create-website-audit, create-website-styles, create-website-verify in sequence, passing context between them.
+description: Orchestrates website creation by delegating each phase to specialist subagents. Use when the user provides a website brief and wants the create-website process run with subagents, or says "create website with subagents" / "create site orchestrated". Runs Phase 0 in main agent, then launches create-website-scaffold, create-website-theme, create-website-components, create-website-audit, create-website-styles, product-page-visibility, create-website-verify in sequence, passing context between them.
 ---
 
 # Create Website — Orchestrator (Subagent-Based)
@@ -36,7 +36,7 @@ This skill runs the same workflow as [create-website](../create-website/SKILL.md
 }
 ```
 
-3. Create a **todo list** for: Phase 0 (done), Scaffold, Theme, Components, Audit, Styles, Verify.
+3. Create a **todo list** for: Phase 0 (done), Scaffold, Theme, Components, Audit, Styles, Product page visibility, Verify.
 
 ---
 
@@ -51,18 +51,20 @@ Run subagents **one after another** (foreground). Wait for each to finish and ca
 | 3 | **create-website-components** | Phase 4 + 5 + 6 | Context payload + "theme and BaseHead done". Output: all components created, page/index.astro wired, data/index_en.json populated; full homepage renders. |
 | 4 | **create-website-audit** | Phase 6.5 | Context payload + "homepage renders". Output: AIDA + rhythm audit done, index_en.json reordered if needed, gate passed. |
 | 5 | **create-website-styles** | Phase 7 | Context payload + "audit passed". Output: layout, Header, products, components, collections style files overridden with site vars; dark theme + header + cart + related cards complete. |
-| 6 | **create-website-verify** | Phase 8 | Context payload + "styles done". Output: final MCP verification done; / and /en, scroll, product page and slide cart checked. |
+| 6 | **product-page-visibility** | — | Context payload + "styles done". Product page URL: `http://localhost:<port>/en/products` (subagent opens any product from listing). Output: all elements visible (header, title, variants, price, components, related); fixes applied if needed. |
+| 7 | **create-website-verify** | Phase 8 | Context payload + "styles done" + product-page-visibility summary. Output: final MCP verification done; / and /en, scroll, product page and slide cart checked. |
 
 **How to invoke:** Use the Task tool (mcp_task) with `subagent_type` set to the subagent name (e.g. `create-website-scaffold`) and `prompt` containing:
 - The context payload (as JSON or clear key-value).
-- One line: "Full instructions: follow .cursor/skills/create-website/SKILL.md for Phase(s) X."
+- For create-website-* subagents: "Full instructions: follow .cursor/skills/create-website/SKILL.md for Phase(s) X."
+- For **product-page-visibility**: "Follow .cursor/agents/product-page-visibility.md. Product page URL: http://localhost:<port>/en/products — navigate there, open any product, then run the strict flow (Header → Title → Variants → Price → Components → Related); fix any visibility issue; MCP verify each step. Use theme prefix from context (e.g. --<prefix>-*)."
 - "Return a short summary: what you did, paths touched, and any output the next subagent needs."
 
 ---
 
 ## Orchestration Rules
 
-1. **You never do Phases 1–8 yourself.** You only run Phase 0 and delegate 1→2→3→4→5→6.
+1. **You never do Phases 1–8 yourself.** You only run Phase 0 and delegate 1→2→3→4→5→6→7 (including product-page-visibility before verify).
 2. **One subagent at a time.** Wait for the previous subagent’s result before launching the next. If a subagent reports failure or missing info, fix or supply the info and re-run that subagent before continuing.
 3. **Update context between steps.** If a subagent returns e.g. "theme path is …" or "used port 7010", add that to the context you pass to the next subagent.
 4. **After create-website-verify succeeds**, tell the user the site is ready and suggest running the full [website-audit](../website-audit/SKILL.md) for collections, product pages, and pillar pages.
@@ -95,5 +97,6 @@ Instructions:
 - [ ] Launch create-website-components with context + theme summary; wait; capture summary.
 - [ ] Launch create-website-audit with context + components summary; wait; capture summary.
 - [ ] Launch create-website-styles with context + audit summary; wait; capture summary.
-- [ ] Launch create-website-verify with context + styles summary; wait; capture summary.
+- [ ] Launch **product-page-visibility** with context + "styles done" + product page URL `http://localhost:<port>/en/products` (subagent opens any product and runs full visibility flow); wait; capture summary.
+- [ ] Launch create-website-verify with context + styles summary + product-page-visibility summary; wait; capture summary.
 - [ ] If verify passed: tell user site is ready; suggest website-audit. If any subagent failed: report and stop or retry that subagent.
