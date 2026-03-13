@@ -101,7 +101,7 @@ const secondaryHref = secondaryCtaLink.startsWith('/') ? `/${lang}${secondaryCta
       </a>
       <a
         href={secondaryHref}
-        class="group inline-flex items-center gap-3 border-2 border-[var(--jv-text)] text-[var(--jv-text)] bg-[var(--jv-surface)]/90 backdrop-blur-sm px-8 sm:px-10 py-3.5 sm:py-4 text-[11px] font-medium tracking-[0.3em] uppercase hover:bg-[var(--jv-text)] hover:text-[var(--jv-bg)] transition-all duration-300"
+        class="hero-cta-secondary group inline-flex items-center gap-3 border-2 border-[var(--jv-text)] text-[var(--jv-text)] bg-[var(--jv-surface)]/90 backdrop-blur-sm px-8 sm:px-10 py-3.5 sm:py-4 text-[11px] font-medium tracking-[0.3em] uppercase hover:bg-[var(--jv-text)] hover:text-[var(--jv-bg)] transition-all duration-300"
       >
         <span>{secondaryCtaText}</span>
         <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" />
@@ -167,7 +167,7 @@ const secondaryHref = secondaryCtaLink.startsWith('/') ? `/${lang}${secondaryCta
     -moz-osx-font-smoothing: grayscale;
   }
   .hero-has-bg .hero-title {
-    color: var(--jv-text);
+    color: #0a0a0a;
     text-shadow: 0 1px 0 rgb(255 255 255 / 0.9), 0 2px 8px rgb(0 0 0 / 0.06);
   }
   .hero-has-bg .hero-desc {
@@ -178,6 +178,17 @@ const secondaryHref = secondaryCtaLink.startsWith('/') ? `/${lang}${secondaryCta
   .hero-has-bg .hero-label {
     color: var(--jv-text);
     text-shadow: none;
+  }
+
+  .hero-has-bg .hero-cta-secondary {
+    border-color: #0a0a0a;
+    color: #0a0a0a;
+    background: rgba(255, 255, 255, 0.95);
+  }
+  .hero-has-bg .hero-cta-secondary:hover {
+    background: #0a0a0a;
+    color: #fff;
+    border-color: #0a0a0a;
   }
 
   .hero-bg-image .hero-img {

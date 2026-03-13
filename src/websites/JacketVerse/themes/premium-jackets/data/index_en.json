@@ -4,6 +4,7 @@
   "sections": [
     {
       "type": "welcomeSection",
+      "heroImage": "https://cdn.atlagia.com/generated/JacketVerse/premium-jackets/hero-new.png",
       "headlineLine1": "Every Jacket. Every Style.",
       "headlineLine2": "Discover jackets designed for every season, lifestyle, and look.",
       "primaryCtaText": "Shop Jackets",
@@ -24,18 +25,18 @@
       "type": "categoryGrid",
       "title": "Jacket Categories",
       "categories": [
-        { "id": "leather", "name": "Leather", "link": "/collections/leather", "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=800&q=80" },
-        { "id": "bomber", "name": "Bomber", "link": "/collections/bomber", "image": "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800&q=80" },
-        { "id": "denim", "name": "Denim", "link": "/collections/denim", "image": "https://images.unsplash.com/photo-1576995853123-5a10305d93c0?w=800&q=80" },
-        { "id": "puffer", "name": "Puffer", "link": "/collections/puffer", "image": "https://images.unsplash.com/photo-1539533018447-63fcce2678e3?w=800&q=80" },
-        { "id": "winter-coats", "name": "Winter Coats", "link": "/collections/winter-coats", "image": "https://images.unsplash.com/photo-1544022613-e87ca75a784a?w=800&q=80" },
-        { "id": "parka", "name": "Parka", "link": "/collections/parka", "image": "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800&q=80" },
-        { "id": "windbreakers", "name": "Windbreakers", "link": "/collections/windbreakers", "image": "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800&q=80" },
-        { "id": "trench", "name": "Trench", "link": "/collections/trench", "image": "https://images.unsplash.com/photo-1539533018447-63fcce2678e3?w=800&q=80" },
-        { "id": "biker", "name": "Biker", "link": "/collections/biker", "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=800&q=80" },
-        { "id": "streetwear", "name": "Streetwear", "link": "/collections/streetwear", "image": "https://images.unsplash.com/photo-1576995853123-5a10305d93c0?w=800&q=80" },
-        { "id": "outdoor", "name": "Outdoor", "link": "/collections/outdoor", "image": "https://images.unsplash.com/photo-1544022613-e87ca75a784a?w=800&q=80" },
-        { "id": "casual", "name": "Casual Jackets", "link": "/collections/casual", "image": "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800&q=80" }
+        { "id": "leather", "name": "Leather", "link": "/collections/leather", "image": "https://cdn.atlagia.com/generated/JacketVerse/premium-jackets/category-leather-v3.png" },
+        { "id": "bomber", "name": "Bomber", "link": "/collections/bomber", "image": "https://cdn.atlagia.com/generated/JacketVerse/premium-jackets/category-bomber-v3.png" },
+        { "id": "denim", "name": "Denim", "link": "/collections/denim", "image": "https://cdn.atlagia.com/generated/JacketVerse/premium-jackets/category-denim-v3.png" },
+        { "id": "puffer", "name": "Puffer", "link": "/collections/puffer", "image": "https://cdn.atlagia.com/generated/JacketVerse/premium-jackets/category-puffer-v3.png" },
+        { "id": "winter-coats", "name": "Winter Coats", "link": "/collections/winter-coats", "image": "https://cdn.atlagia.com/generated/JacketVerse/premium-jackets/category-winter-v3.png" },
+        { "id": "parka", "name": "Parka", "link": "/collections/parka", "image": "https://cdn.atlagia.com/generated/JacketVerse/premium-jackets/category-parka-v3.png" },
+        { "id": "windbreakers", "name": "Windbreakers", "link": "/collections/windbreakers", "image": "https://cdn.atlagia.com/generated/JacketVerse/premium-jackets/category-windbreaker-v3.png" },
+        { "id": "trench", "name": "Trench", "link": "/collections/trench", "image": "https://cdn.atlagia.com/generated/JacketVerse/premium-jackets/category-trench-v3.png" },
+        { "id": "biker", "name": "Biker", "link": "/collections/biker", "image": "https://cdn.atlagia.com/generated/JacketVerse/premium-jackets/category-biker-v3.png" },
+        { "id": "streetwear", "name": "Streetwear", "link": "/collections/streetwear", "image": "https://cdn.atlagia.com/generated/JacketVerse/premium-jackets/category-streetwear-v3.png" },
+        { "id": "outdoor", "name": "Outdoor", "link": "/collections/outdoor", "image": "https://cdn.atlagia.com/generated/JacketVerse/premium-jackets/category-outdoor-v3.png" },
+        { "id": "casual", "name": "Casual Jackets", "link": "/collections/casual", "image": "https://cdn.atlagia.com/generated/JacketVerse/premium-jackets/category-casual-v3.png" }
       ]
     },
     {
@@ -70,6 +71,7 @@
     },
     {
       "type": "bannerSection",
+      "backgroundImage": "https://cdn.atlagia.com/generated/JacketVerse/premium-jackets/banner.png",
       "headline": "Your jacket defines your style.",
       "description": "Urban, outdoor, biker, winter fashion.",
       "ctaText": "Get Inspired",
@@ -99,6 +101,7 @@
     },
     {
       "type": "emailSignup",
+      "backgroundImage": "https://cdn.atlagia.com/generated/JacketVerse/premium-jackets/email-signup.png",
       "title": "Join the JacketVerse Community",
       "subtext": "Discover new jacket styles and seasonal collections first.",
       "formAction": "/api/signup",

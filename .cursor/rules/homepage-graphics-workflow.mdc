@@ -1,0 +1,17 @@
+---
+description: When the user wants to create or replace homepage images for a website using AI-generated graphics, use the homepage-graphics skill and delegate to specialist subagents
+globs: src/websites/**/data/index_en.json
+alwaysApply: false
+---
+
+When the user asks to **create graphics for website**, **generate homepage images**, **replace homepage images with AI**, or **create images for [store name]**:
+
+1. Read and follow `.cursor/skills/homepage-graphics/SKILL.md`
+2. Run Phase 0 in this agent (get target website, context payload, todo)
+3. Delegate in order to subagents using the Task tool:
+   - **graphics-mapper** → **graphics-prompt-planner** → **graphics-generator** → **graphics-replacer**
+4. Pass the context payload and each subagent’s output into the next task prompt
+5. If the Task tool does not support custom subagent_type (e.g. graphics-mapper), use `subagent_type: generalPurpose` and in the prompt assign the role: "You are the graphics-mapper specialist. Read and follow .cursor/agents/graphics-mapper.md. Context: ..."
+6. After graphics-replacer: report replaced images and paths; suggest a quick homepage audit if needed
+
+**Prerequisites:** Dev server for the target site running; for image generation, Chrome with remote debugging (e.g. `--remote-debugging-port=9222`) so user-cdp-browser can connect.

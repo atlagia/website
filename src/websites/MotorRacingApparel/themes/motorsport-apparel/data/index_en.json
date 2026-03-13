@@ -9,11 +9,11 @@
       "blogLinkText": "Explore Collections",
       "blogLink": "/collections",
       "seasonLabel": "SS26 — Racing Season",
-      "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=2880&q=85",
+      "heroImage": "https://cdn.atlagia.com/generated/MotorRacingApparel/motorsport-apparel/hero.png",
       "backgroundVideo": {
         "type": "youtube",
         "videoId": "liT2Z3wFW1Y",
-        "fallbackImage": "/images/motorracing-hero-fallback.jpg"
+        "fallbackImage": "https://cdn.atlagia.com/generated/MotorRacingApparel/motorsport-apparel/hero-fallback.png"
       }
     },
     {
@@ -43,21 +43,21 @@
           "id": "hoodie",
           "name": "Racing Hoodies",
           "description": "Performance hoodies with motorsport-inspired designs and premium comfort.",
-          "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=800&q=80",
+          "image": "https://cdn.atlagia.com/generated/MotorRacingApparel/motorsport-apparel/category-hoodie.png",
           "link": "/collections/hoodies"
         },
         {
           "id": "tee",
           "name": "Racing Tees",
           "description": "Bold racing and motorcycle culture tees for riders and fans.",
-          "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=800&q=80",
+          "image": "https://cdn.atlagia.com/generated/MotorRacingApparel/motorsport-apparel/category-tee.png",
           "link": "/collections/tees"
         },
         {
           "id": "accessories",
           "name": "Rider Accessories",
           "description": "Caps, gloves, and gear to complete your riding look.",
-          "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=800&q=80",
+          "image": "https://cdn.atlagia.com/generated/MotorRacingApparel/motorsport-apparel/category-accessories.png",
           "link": "/collections/accessories"
         }
       ]
@@ -73,14 +73,14 @@
       "type": "manifestoSection",
       "headline": "RACING LIFESTYLE. RIDER CULTURE.",
       "body": "MotorRacingApparel is not just clothing—it's the intersection of speed, adrenaline, and freedom. From the track to the open road, we craft premium motorcycle and racing apparel for those who live the biker lifestyle. Every piece is built for performance and designed for riders.",
-      "image": "https://images.unsplash.com/photo-1541443131876-44b03de101c5?w=1200&q=80",
+      "image": "https://cdn.atlagia.com/generated/MotorRacingApparel/motorsport-apparel/manifesto.png",
       "imageAlt": "Racing lifestyle"
     },
     {
       "type": "bannerSection",
       "headline": "Ride With Passion.",
       "description": "Premium motorcycle clothing and racing apparel for every rider. Join the community built on speed, freedom, and performance.",
-      "backgroundImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=85",
+      "backgroundImage": "https://cdn.atlagia.com/generated/MotorRacingApparel/motorsport-apparel/banner.png",
       "button1Text": "Shop Collections",
       "button1Link": "/collections",
       "button2Text": "New Arrivals",
@@ -98,7 +98,7 @@
           "name": "Premium Racing Hoodie",
           "description": "Performance hoodie with motorsport-inspired design.",
           "price": "89.99",
-          "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600&q=80",
+          "image": "https://cdn.atlagia.com/generated/MotorRacingApparel/motorsport-apparel/product-hoodie.png",
           "category": "Racing Hoodies"
         },
         {
@@ -106,7 +106,7 @@
           "name": "Racing Heritage Tee",
           "description": "Classic tee celebrating motorcycle and racing culture.",
           "price": "34.99",
-          "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=600&q=80",
+          "image": "https://cdn.atlagia.com/generated/MotorRacingApparel/motorsport-apparel/product-tee.png",
           "category": "Racing Tees"
         }
       ]
@@ -189,7 +189,7 @@
       "type": "emailSignupSection",
       "title": "Join the MotorRacingApparel Community.",
       "description": "Exclusive drops, racing news, and rider culture. No clutter.",
-      "backgroundImage": "/images/newsletter-bg.jpg",
+      "backgroundImage": "https://cdn.atlagia.com/generated/MotorRacingApparel/motorsport-apparel/newsletter-bg.png",
       "formAction": "/api/signup",
       "submitText": "Subscribe"
     },
