@@ -7,7 +7,7 @@ description: Runs a PageSpeed-focused speed enhancement on a target website via 
 
 This skill runs **website speed enhancement** to address **Google PageSpeed Insights** opportunities and diagnostics. You (main agent) run Phase 0 and delegate the fixes to the **pagespeed-enhance** subagent.
 
-**Reference:** Full checklist, WebP vs AVIF, and implementation notes are in [reference.md](reference.md).
+**Reference:** Full checklist, WebP vs AVIF, implementation notes, **2026 best practices**, **Best Practices audit** (HTTPS, third-party cookies, deprecated APIs, image dimensions), and **cases solved** are in [reference.md](reference.md).
 
 ---
 
@@ -70,6 +70,12 @@ Instructions:
 - **AVIF:** Better compression (20–50% smaller than WebP), ~93%+ browser support in 2025. Use when you can generate and serve it.
 - **WebP:** Slightly wider support, fast decode, mature tooling. Safe default.
 - **Recommendation:** Use **both** via `<picture>` (AVIF first, then WebP, then fallback) when the pipeline can produce both; otherwise **keep WebP** for all key images. Do not remove WebP in favor of AVIF-only. See reference.md for details.
+
+---
+
+## Best Practices audit (quick reference)
+
+If the report flags **Bonnes pratiques**: HTTPS (host config), **third-party cookies** (use `youtube-nocookie.com` for embeds), **deprecated APIs** (disable GA/Hotjar via `PUBLIC_ALLOW_GA=false`, `PUBLIC_ALLOW_HOTJAR=false` to avoid Partytown running gtag), **image width/height** (explicit on every `<img>` + aspect-ratio). See reference.md for full table and cases solved.
 
 ---
 

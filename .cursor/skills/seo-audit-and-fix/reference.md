@@ -42,6 +42,16 @@ Google’s official guidance is organized as **Google Search Essentials** (forme
 
 ---
 
+## 2026 updates (SEO & CWV)
+
+- **CWV evaluation:** Google uses the **75th percentile** of real-user (CrUX) data; 75% of page loads must be "Good" for the page to pass. Lab data (Lighthouse/PageSpeed) is indicative; ~68% of sites that pass lab fail in the field — prioritize field data when available.
+- **Ranking weight:** Page experience signals (including CWV) carry substantial ranking weight; "Good" CWV is associated with higher CTR. Only ~42–52% of sites pass all three CWV.
+- **INP** is the official metric replacing FID (March 2024); target ≤200 ms.
+- **Technical benchmarks (2026):** TTFB ≤800 ms; total page weight under ~2 MB where possible; 100% HTTPS sitewide.
+- **People-first & E-E-A-T:** Remain the foundation; avoid thin or purely search-engine content; strengthen Experience/Expertise/Authoritativeness/Trust where relevant (especially YMYL).
+
+---
+
 ## Speed & Performance (SEO Site Checkup–style)
 
 Issues that commonly fail audits (e.g. SEO Site Checkup, Lighthouse) and hurt rankings:
@@ -79,6 +89,8 @@ Issues that commonly fail audits (e.g. SEO Site Checkup, Lighthouse) and hurt ra
 | 12 | Render-blocking | No or minimal render-blocking CSS/JS (defer/inline critical) |
 | 13 | Page load time | &lt; 5s (measure; optimize images, JS, requests) |
 | 14 | Custom 404 | Custom 404 page with helpful links to key pages |
+| 15 | **&lt;html lang&gt;** | **Root `<html>` has valid `lang` attribute (never empty); fallback e.g. `lang="en"`** |
+| 16 | **Heading order** | **Headings sequential (no skip); no heading for non-heading content (e.g. author names → `<p>`)** |
 
 ---
 
@@ -254,6 +266,8 @@ Use this to document the full audit (Phase 1).
 - [ ] Canonical, no wrong noindex, key pages linked
 - [ ] Core Web Vitals in range (LCP ≤2.5s, INP ≤200ms, CLS ≤0.1)
 - [ ] Speed: no critical render-blocking; page load &lt;5s; canonical correct and dynamic; custom 404 with links; images modern format where possible
+- [ ] **Root `<html lang>` present and valid on all pages (never empty; fallback e.g. en)**
+- [ ] **Heading order sequential (h1→h2→h3→h4); no heading for author names/bylines**
 - [ ] Structured data valid and matching content
 - [ ] All fixes verified (re-audit or spot-check)
 ```
@@ -277,6 +291,8 @@ Use this to document the full audit (Phase 1).
 | Technical | Multiple H1s | Keep one H1; use H2 for sections |
 | Technical | Orphan page | Add links from related pages or nav |
 | Technical | Slug missing keyword | Use readable, keyword-rich slug (hyphens, lowercase) |
+| **Accessibility / i18n** | **Missing `<html lang>`** | **Add `lang` to root `<html>` (e.g. `lang={lang ?? 'en'}`); ensure BaseHead/layout never output empty lang** |
+| **Navigation** | **Heading order broken / heading for non-heading** | **Keep headings sequential (h1→h2→h3→h4); use `<p>` or `<span>` for author names, bylines** |
 | CWV | High LCP | Optimize main image (size, format, priority); reduce render-blocking |
 | CWV | High INP | Reduce long tasks; defer non-critical JS |
 | CWV | High CLS | Set dimensions; preload fonts; avoid layout shifts |
@@ -300,6 +316,22 @@ Use this to document the full audit (Phase 1).
 | Meta description | 150–160 characters |
 | Definition paragraph (snippet) | 40–60 words |
 | Keyword density | Do not exceed ~3–4 exact phrase per 1,000 words; use variations naturally |
+
+---
+
+## PageSpeed / Best Practices overlap and cases solved
+
+SEO audits should align with PageSpeed "Best Practices" (Bonnes pratiques) where they affect crawlability, indexing, accessibility, or UX signals:
+
+- **Internationalization — `<html lang>`:** The root `<html>` element **must have a valid `lang` attribute** (e.g. `lang="en"`). PageSpeed and screen readers rely on it; missing or empty `lang` fails accessibility/internationalization. **Audit:** Check every page/layout that outputs the document root (e.g. `index.astro`, `BaseHead.astro`). **Fix:** Use `lang={lang ?? 'en'}` or `lang={currentLang || 'en'}` so the attribute is never empty or undefined; ensure BaseHead/layout derive lang from URL or params and fallback to `'en'`.
+- **Navigation — Heading order:** Headings must be **in sequential descending order** (h1 → h2 → h3 → h4); do not skip levels (e.g. h2 then h4). Do **not** use heading tags for non-heading content (e.g. testimonial author names, bylines, card labels). **Audit:** Flag any `<h4>` without a preceding `<h3>` in the section; flag headings used for names/labels that are not section titles. **Fix:** Use `<p>` or `<span>` with appropriate classes for author names and bylines; reserve headings for section/subsection titles only.
+- **HTTPS:** Required for trust and indexing; host must enforce. See theme `PAGESPEED-DEPLOYMENT.md` or pagespeed-enhance reference.
+- **Third-party cookies (e.g. YouTube):** Use `https://www.youtube-nocookie.com/embed/{videoId}` for embed URLs. **Facaded embed:** Prefer showing a thumbnail + play button and loading the iframe only on user click; this avoids cookie/Chrome DevTools Issues on initial load and improves Best Practices score.
+- **Deprecated APIs (SharedStorage, AttributionReporting):** Often triggered by Partytown running gtag/Hotjar. Optional GA/Hotjar via `PUBLIC_ALLOW_GA`, `PUBLIC_ALLOW_HOTJAR` avoids Partytown when disabled and removes these warnings.
+- **Image width/height and aspect ratio:** Explicit dimensions on every `<img>` support CLS and satisfy "appropriate aspect ratios" in PageSpeed; include in image and data/code audit.
+- **document.write():** Avoid; use async/defer or Partytown for third-party scripts so Best Practices audit passes.
+
+For full Best Practices checklist and 2026 PageSpeed/CWV context, see `.cursor/skills/pagespeed-enhance/reference.md`.
 
 ---
 

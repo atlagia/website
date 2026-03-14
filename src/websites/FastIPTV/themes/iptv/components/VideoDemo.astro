@@ -48,8 +48,9 @@ const getVideoId = (url: string) => {
 };
 
 const videoId = getVideoId(videoUrl || '');
-// Use youtube-nocookie.com to avoid third-party cookies until user clicks play (PageSpeed / privacy)
-const embedUrl = videoId ? `https://www.youtube-nocookie.com/embed/${videoId}` : '';
+// Use youtube-nocookie.com; facaded: iframe loads only after user clicks play (avoids cookie/Issues on initial load)
+const embedUrl = videoId ? `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1` : '';
+const thumbnailUrl = videoId ? `https://img.youtube.com/vi/${videoId}/sddefault.jpg` : '';
 
 // Default features if none provided
 const defaultFeatures = [
@@ -84,20 +85,52 @@ const defaultFeatures = [
     </div>
 
     <div class="grid lg:grid-cols-2 gap-12 items-center">
-      <!-- Video Section -->
+      <!-- Video Section: facaded embed – iframe loads only on play click (PageSpeed Best Practices / cookie) -->
       <div class="relative">
         {embedUrl ? (
-          <div class="aspect-video rounded-2xl overflow-hidden shadow-2xl">
+          <div class="aspect-video rounded-2xl overflow-hidden shadow-2xl bg-black" data-video-facade>
+            <div class="video-facade w-full h-full relative cursor-pointer" data-facade-placeholder>
+              <img
+                src={thumbnailUrl}
+                alt=""
+                class="absolute inset-0 w-full h-full object-cover"
+                width="1280"
+                height="720"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/20 transition-colors" aria-hidden="true">
+                <div class="w-20 h-20 rounded-full bg-red-600 flex items-center justify-center shadow-lg hover:bg-red-500 transition-colors" title="Play video">
+                  <svg class="w-10 h-10 text-white ml-1" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
             <iframe
-              src={embedUrl}
+              data-facade-iframe
+              data-src={embedUrl}
               title="FastIPTV Demo Video"
-              class="w-full h-full"
+              class="w-full h-full absolute inset-0 hidden"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
-              loading="lazy"
             />
           </div>
+          <script>
+            (function() {
+              document.querySelectorAll('[data-video-facade]').forEach(function(wrap) {
+                const placeholder = wrap.querySelector('[data-facade-placeholder]');
+                const iframe = wrap.querySelector('[data-facade-iframe]');
+                if (!placeholder || !iframe) return;
+                placeholder.addEventListener('click', function() {
+                  iframe.src = iframe.dataset.src || '';
+                  iframe.classList.remove('hidden');
+                  placeholder.classList.add('hidden');
+                }, { once: true });
+              });
+            })();
+          </script>
         ) : (
           <div class="aspect-video rounded-2xl overflow-hidden shadow-2xl bg-gray-800 flex items-center justify-center">
             <div class="text-center">

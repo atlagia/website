@@ -140,8 +140,8 @@ if (currentPath === '/') {
 
 const currentYear = new Date().getFullYear();
 
-// Determine if the current language is RTL
-const lang = currentLang || 'en';
+// Determine if the current language is RTL (ensure lang is never empty for PageSpeed / a11y)
+const lang = (currentLang && supportedLanguages.includes(currentLang)) ? currentLang : 'en';
 const isRTL = ['ar'].includes(lang);
 
 // Enhanced structured data for FastIPTV

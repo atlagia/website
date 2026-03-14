@@ -45,7 +45,7 @@ export async function getStaticPaths() {
 ---
 
 <!doctype html>
-<html lang={lang} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
+<html lang={lang ?? 'en'} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
   <head>
     <BaseHead 
       title={SITE_TITLE} 
