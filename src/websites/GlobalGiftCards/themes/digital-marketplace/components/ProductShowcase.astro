@@ -1,0 +1,81 @@
+---
+import { getAllProducts } from '@libs/shopify';
+
+interface Props {
+  title: string;
+  description?: string;
+  viewAllLink: string;
+  lang: string;
+}
+
+const { title, description, viewAllLink, lang } = Astro.props;
+
+let productsData;
+try {
+  productsData = await getAllProducts();
+} catch {
+  productsData = { edges: [] };
+}
+const products = (productsData?.edges || [])
+  .slice(0, 4)
+  .map(({ node }: { node: { id: string; title: string; handle: string; priceRange: { minVariantPrice: { amount: string; currencyCode: string } }; images: { edges: Array<{ node: { url: string } }> } } }) => ({
+    id: node.id,
+    name: node.title,
+    handle: node.handle,
+    price: new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: node.priceRange.minVariantPrice.currencyCode
+    }).format(parseFloat(node.priceRange.minVariantPrice.amount)),
+    image: node.images.edges[0]?.node.url || 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&q=80',
+  }));
+---
+
+<section class="bg-[var(--ggc-surface)] border-t border-[var(--ggc-border)] py-20 md:py-28 px-4 sm:px-6 lg:px-8" aria-labelledby="featured-heading">
+  <div class="max-w-6xl mx-auto">
+    <header class="text-center mb-14 md:mb-16">
+      <p class="font-body text-[10px] sm:text-xs font-medium uppercase tracking-[0.4em] text-[var(--ggc-muted)] mb-3">New</p>
+      <h2 id="featured-heading" class="font-display text-3xl sm:text-4xl md:text-5xl font-medium text-[var(--ggc-text)] tracking-tight">
+        {title}
+      </h2>
+      {description && <p class="font-body text-[var(--ggc-muted)] text-sm mt-2 max-w-lg mx-auto">{description}</p>}
+    </header>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
+      {products.length === 0 ? (
+        <div class="col-span-full py-20 text-center border border-dashed border-[var(--ggc-border)] rounded-xl bg-[var(--ggc-bg)]/50">
+          <p class="font-body text-[var(--ggc-muted)] text-sm">New gift cards will appear here soon.</p>
+          {viewAllLink && (
+            <a href={viewAllLink} class="mt-4 inline-block text-[var(--ggc-accent)] text-xs font-semibold uppercase tracking-wider hover:underline font-body">Browse all</a>
+          )}
+        </div>
+      ) : products.map((product) => (
+        <a href={`/${lang}/products/${product.handle}`} class="group block text-center">
+          <div class="relative w-full aspect-[3/4] flex items-center justify-center bg-[var(--ggc-bg)] rounded-xl overflow-hidden mb-5 border border-[var(--ggc-border)]">
+            <img
+              src={product.image}
+              alt={product.name}
+              class="max-w-full max-h-full w-auto h-auto object-contain transition-transform duration-500 ease-out group-hover:scale-105"
+              loading="lazy"
+              width="400"
+              height="533"
+            />
+          </div>
+          <p class="font-body text-[10px] text-[var(--ggc-muted)] tracking-[0.25em] uppercase mb-2">Gift Card</p>
+          <h3 class="font-body text-[var(--ggc-text)] font-medium text-sm line-clamp-2 leading-tight group-hover:text-[var(--ggc-accent)] transition-colors">
+            {product.name}
+          </h3>
+          <p class="font-body text-[var(--ggc-muted)] text-sm mt-1.5">{product.price}</p>
+        </a>
+      ))}
+    </div>
+    {viewAllLink && products.length > 0 && (
+      <div class="text-center mt-14">
+        <a
+          href={viewAllLink}
+          class="inline-block border-2 border-[var(--ggc-accent)] text-[var(--ggc-accent)] text-[11px] font-medium uppercase tracking-[0.25em] px-10 py-3.5 rounded hover:bg-[var(--ggc-accent)] hover:text-white transition-all duration-300 font-body"
+        >
+          View all
+        </a>
+      </div>
+    )}
+  </div>
+</section>

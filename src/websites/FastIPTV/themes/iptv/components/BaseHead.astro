@@ -19,6 +19,8 @@ interface Props {
   modifiedTime?: string;
   section?: string;
   tags?: string[];
+  /** Breadcrumb items for BreadcrumbList JSON-LD: [{ name, url }] */
+  breadcrumbs?: { name: string; url: string }[];
 }
 
 const { 
@@ -61,7 +63,8 @@ const {
   publishedTime,
   modifiedTime,
   section = 'IPTV Services',
-  tags = ['IPTV', 'Streaming', 'Live TV', 'Movies', 'Sports']
+  tags = ['IPTV', 'Streaming', 'Live TV', 'Movies', 'Sports'],
+  breadcrumbs
 } = Astro.props;
 
 // Get current language from URL
@@ -242,6 +245,19 @@ const websiteSchema = {
   }
 };
 
+const breadcrumbSchema = breadcrumbs?.length
+  ? {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": breadcrumbs.map((item, i) => ({
+        "@type": "ListItem",
+        "position": i + 1,
+        "name": item.name,
+        "item": item.url.startsWith('http') ? item.url : new URL(item.url, Astro.url.origin).href
+      }))
+    }
+  : null;
+
 // No review fetch - avoids Supabase/DB errors (fetch failed, ECONNREFUSED)
 const reviewStats = null;
 const reviews = null;
@@ -271,7 +287,7 @@ const reviews = null;
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content={isHomePage ? 'website' : 'article'} />
-    <meta property="og:url" content={Astro.url} />
+    <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={image} />
@@ -288,7 +304,7 @@ const reviews = null;
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:url" content={canonicalURL} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={image} />
@@ -314,10 +330,7 @@ const reviews = null;
       <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     )}
 
-    <!-- Verification and Ownership -->
-    <meta name="msvalidate.01" content="YOUR_BING_WEBMASTER_TOOLS_VERIFICATION_CODE" />
-    <meta name="google-site-verification" content="YOUR_GOOGLE_SEARCH_CONSOLE_VERIFICATION_CODE" />
-    <meta name="yandex-verification" content="YOUR_YANDEX_VERIFICATION_CODE" />
+    <!-- Verification and Ownership: add real codes when configured in Search Console / Bing / Yandex -->
 
     <!-- Geo Tags -->
     <meta name="geo.region" content="Global" />
@@ -333,6 +346,7 @@ const reviews = null;
     <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)}></script>
     <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)}></script>
     <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)}></script>
+    {breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>}
 
     <!-- Review Schema -->
     {reviews && reviews.length > 0 && (

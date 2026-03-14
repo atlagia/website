@@ -1,0 +1,48 @@
+---
+interface CategoryItem {
+  id: string;
+  name: string;
+  icon?: string;
+  image?: string;
+  link: string;
+}
+
+interface Props {
+  categories: CategoryItem[];
+}
+
+const { categories } = Astro.props;
+---
+
+<section class="bg-[var(--ggc-bg)] border-b border-[var(--ggc-border)] py-3 px-4 overflow-hidden" aria-label="Quick categories">
+  <div class="max-w-7xl mx-auto">
+    <div class="flex items-center gap-6 overflow-x-auto scrollbar-hide pb-1 -mx-1">
+      {categories.map((cat) => (
+        <a
+          href={cat.link}
+          class="flex flex-col items-center gap-2 shrink-0 min-w-[72px] py-2 px-2 rounded-lg hover:bg-[var(--ggc-surface)] transition-colors group"
+        >
+          {cat.image ? (
+            <div class="w-10 h-10 rounded-lg overflow-hidden bg-[var(--ggc-surface)] flex items-center justify-center">
+              <img src={cat.image} alt="" class="w-8 h-8 object-contain" loading="lazy" />
+            </div>
+          ) : (
+            <div class="w-10 h-10 rounded-lg bg-[var(--ggc-accent)]/15 flex items-center justify-center text-[var(--ggc-accent)] group-hover:bg-[var(--ggc-accent)]/25 transition-colors">
+              <span class="text-lg font-display font-bold">{cat.name.charAt(0)}</span>
+            </div>
+          )}
+          <span class="text-[10px] font-medium uppercase tracking-wider text-[var(--ggc-muted)] group-hover:text-[var(--ggc-text)] font-body text-center leading-tight">
+            {cat.name}
+          </span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .font-display { font-family: var(--font-display); }
+  .font-body { font-family: var(--font-body); }
+</style>

@@ -11,6 +11,10 @@ const jsonData = translations.default;
 const SITE_TITLE = jsonData.siteTitle || 'FastIPTV';
 const PAGE_TITLE = 'Pricing Plans | ' + SITE_TITLE;
 const PAGE_DESCRIPTION = 'Choose the perfect Fast IPTV subscription plan for your entertainment needs';
+const breadcrumbs = [
+  { name: 'Home', url: `/${lang}` },
+  { name: 'Pricing', url: `/${lang}/pricing` }
+];
 
 // Get pricing data from pricing_<lang>.json
 const pricingData = await import(`../data/pricing/pricing_${lang}.json`).then(m => m.default);
@@ -20,7 +24,7 @@ const plans = pricingData.plans || [];
 <!doctype html>
 <html lang={lang} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
   <head>
-    <BaseHead title={PAGE_TITLE} description={PAGE_DESCRIPTION} />
+    <BaseHead title={PAGE_TITLE} description={PAGE_DESCRIPTION} breadcrumbs={breadcrumbs} />
   </head>
   <body class="bg-[#0a0a0a] text-white">
     <Header />

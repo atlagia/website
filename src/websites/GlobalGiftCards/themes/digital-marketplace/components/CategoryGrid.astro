@@ -1,0 +1,71 @@
+---
+interface Category {
+  id: string;
+  name: string;
+  description?: string;
+  image: string;
+  link: string;
+  color?: string;
+}
+
+interface Props {
+  title: string;
+  description?: string;
+  categories: Category[];
+}
+
+const { title, description, categories } = Astro.props;
+---
+
+<section class="bg-[var(--ggc-bg)] py-20 md:py-28 px-4 sm:px-6 lg:px-8" aria-labelledby="category-heading">
+  <div class="max-w-7xl mx-auto">
+    <header class="text-center mb-14 md:mb-20">
+      <p class="text-[10px] sm:text-xs font-medium uppercase tracking-[0.4em] text-[var(--ggc-muted)] mb-3 font-body">Categories</p>
+      <h2 id="category-heading" class="font-display text-3xl sm:text-4xl md:text-5xl font-semibold text-[var(--ggc-text)] tracking-tight mb-4">
+        {title}
+      </h2>
+      {description && (
+        <p class="font-body text-[var(--ggc-muted)] text-sm md:text-base max-w-lg mx-auto leading-relaxed">{description}</p>
+      )}
+    </header>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 sm:gap-6">
+      {categories.map((category) => {
+        const accent = category.color || 'var(--ggc-accent)';
+        return (
+          <a href={category.link} class="group block">
+            <div
+              class="relative aspect-square overflow-hidden bg-[var(--ggc-surface)] rounded-2xl mb-3 border border-[var(--ggc-border)] hover:border-[var(--ggc-accent)]/30 hover:shadow-[var(--ggc-shadow-lg)] transition-all duration-300"
+              style={category.color ? `box-shadow: 0 4px 0 0 ${accent};` : ''}
+            >
+              <img
+                src={category.image}
+                alt={category.name}
+                class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-110"
+                loading="lazy"
+                width="400"
+                height="400"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" aria-hidden="true" />
+              <span
+                class="absolute top-3 left-3 flex h-10 w-10 items-center justify-center rounded-xl text-white font-display font-bold text-sm shadow-lg"
+                style={`background: ${accent};`}
+                aria-hidden="true"
+              >
+                {category.name.charAt(0)}
+              </span>
+            </div>
+            <div class="text-center">
+              <h3 class="font-display text-sm font-semibold text-[var(--ggc-text)] group-hover:text-[var(--ggc-accent)] transition-colors line-clamp-1">
+                {category.name}
+              </h3>
+              {category.description && (
+                <p class="font-body text-[var(--ggc-muted)] text-[11px] mt-0.5 line-clamp-2 leading-snug">{category.description}</p>
+              )}
+            </div>
+          </a>
+        );
+      })}
+    </div>
+  </div>
+</section>

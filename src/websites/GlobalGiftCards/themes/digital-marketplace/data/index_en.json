@@ -1,0 +1,507 @@
+{
+  "siteTitle": "GlobalGiftCards — All Your Gift Cards. One Place.",
+  "siteDescription": "Instantly buy digital gift cards for gaming, entertainment, retail, travel, and more.",
+  "sections": [
+    {
+      "type": "welcomeSection",
+      "title": "GlobalGiftCards",
+      "headlineLine1": "All Your Gift Cards. One Place.",
+      "headlineLine2": "",
+      "description": "Instant delivery to your inbox. Buy digital gift cards from top brands worldwide.",
+      "blogLink": "/collections",
+      "blogLinkText": "View Categories",
+      "cta2Text": "Browse Gift Cards",
+      "cta2Link": "/collections",
+      "trustBullets": [
+        {
+          "value": "10+ years of experience",
+          "label": "trusted by millions"
+        },
+        {
+          "value": "200k+ Satisfied Customers",
+          "label": ""
+        },
+        {
+          "value": "5M+ transactions processed",
+          "label": ""
+        },
+        {
+          "value": "24/7 support",
+          "label": ""
+        }
+      ],
+      "featuredCards": [
+        {
+          "name": "Steam",
+          "image": "https://cdn.atlagia.com/GlobalGiftCards/digital-marketplace/featuredCards-0.png",
+          "link": "/collections/gaming"
+        },
+        {
+          "name": "PlayStation",
+          "image": "https://cdn.atlagia.com/GlobalGiftCards/digital-marketplace/featuredCards-1.png",
+          "link": "/collections/gaming"
+        },
+        {
+          "name": "Apple",
+          "image": "https://cdn.atlagia.com/GlobalGiftCards/digital-marketplace/featuredCards-2.png",
+          "link": "/collections/electronics"
+        },
+        {
+          "name": "Netflix",
+          "image": "https://cdn.atlagia.com/GlobalGiftCards/digital-marketplace/featuredCards-3.png",
+          "link": "/collections/entertainment"
+        }
+      ]
+    },
+    {
+      "type": "statsBar",
+      "title": "Why shop with us",
+      "stats": [
+        {
+          "value": "Instant Delivery",
+          "label": "Digital codes in seconds"
+        },
+        {
+          "value": "Secure Payments",
+          "label": "Encrypted checkout"
+        },
+        {
+          "value": "Global Availability",
+          "label": "Gift cards worldwide"
+        },
+        {
+          "value": "24/7 Support",
+          "label": "We're here when you need us"
+        }
+      ]
+    },
+    {
+      "type": "categoryStrip",
+      "categories": [
+        {
+          "id": "gaming",
+          "name": "Gaming",
+          "link": "/collections/gaming"
+        },
+        {
+          "id": "entertainment",
+          "name": "Entertainment",
+          "link": "/collections/entertainment"
+        },
+        {
+          "id": "food",
+          "name": "Food",
+          "link": "/collections/food"
+        },
+        {
+          "id": "travel",
+          "name": "Travel",
+          "link": "/collections/travel"
+        },
+        {
+          "id": "electronics",
+          "name": "Electronics",
+          "link": "/collections/electronics"
+        },
+        {
+          "id": "sports",
+          "name": "Sport",
+          "link": "/collections/sports"
+        },
+        {
+          "id": "retail",
+          "name": "Retail",
+          "link": "/collections/retail"
+        }
+      ]
+    },
+    {
+      "type": "featuredDeals",
+      "headline": "Limited-time deals on top gift cards",
+      "subtext": "Save up to 20% on popular brands. Instant delivery.",
+      "discountLabel": "Up to 20% off",
+      "ctaText": "View deals",
+      "ctaLink": "/collections"
+    },
+    {
+      "type": "popularCategories",
+      "title": "Popular categories",
+      "categories": [
+        {
+          "id": "playstation",
+          "name": "PlayStation",
+          "image": "https://cdn.atlagia.com/GlobalGiftCards/digital-marketplace/popularCategories-0.png",
+          "link": "/collections/gaming",
+          "color": "#003791"
+        },
+        {
+          "id": "valorant",
+          "name": "Valorant",
+          "image": "https://cdn.atlagia.com/GlobalGiftCards/digital-marketplace/popularCategories-1.png",
+          "link": "/collections/gaming",
+          "color": "#fa4454"
+        },
+        {
+          "id": "xbox",
+          "name": "Xbox",
+          "image": "https://cdn.atlagia.com/GlobalGiftCards/digital-marketplace/popularCategories-2.png",
+          "link": "/collections/gaming",
+          "color": "#107c10"
+        },
+        {
+          "id": "riot-access",
+          "name": "Riot Access",
+          "image": "https://cdn.atlagia.com/GlobalGiftCards/digital-marketplace/popularCategories-3.png",
+          "link": "/collections/gaming",
+          "color": "#d32027"
+        },
+        {
+          "id": "uber",
+          "name": "Uber",
+          "image": "https://cdn.atlagia.com/GlobalGiftCards/digital-marketplace/popularCategories-4.png",
+          "link": "/collections/travel",
+          "color": "#000000"
+        },
+        {
+          "id": "razer-gold",
+          "name": "Razer Gold",
+          "image": "https://cdn.atlagia.com/GlobalGiftCards/digital-marketplace/popularCategories-5.png",
+          "link": "/collections/gaming",
+          "color": "#44d62c"
+        },
+        {
+          "id": "spotify",
+          "name": "Spotify",
+          "image": "https://cdn.atlagia.com/GlobalGiftCards/digital-marketplace/popularCategories-6.png",
+          "link": "/collections/entertainment",
+          "color": "#1DB954"
+        },
+        {
+          "id": "netflix",
+          "name": "Netflix",
+          "image": "https://cdn.atlagia.com/GlobalGiftCards/digital-marketplace/popularCategories-7.png",
+          "link": "/collections/entertainment",
+          "color": "#E50914"
+        },
+        {
+          "id": "nintendo",
+          "name": "Nintendo",
+          "image": "https://cdn.atlagia.com/GlobalGiftCards/digital-marketplace/popularCategories-8.png",
+          "link": "/collections/gaming",
+          "color": "#e60012"
+        },
+        {
+          "id": "fortnite",
+          "name": "Fortnite",
+          "image": "https://cdn.atlagia.com/GlobalGiftCards/digital-marketplace/popularCategories-9.png",
+          "link": "/collections/gaming",
+          "color": "#2d2d2d"
+        },
+        {
+          "id": "amazon",
+          "name": "Amazon",
+          "image": "https://cdn.atlagia.com/GlobalGiftCards/digital-marketplace/popularCategories-10.png",
+          "link": "/collections/retail",
+          "color": "#FF9900"
+        },
+        {
+          "id": "google-play",
+          "name": "Google Play",
+          "image": "https://cdn.atlagia.com/GlobalGiftCards/digital-marketplace/popularCategories-11.png",
+          "link": "/collections/electronics",
+          "color": "#00875a"
+        }
+      ]
+    },
+    {
+      "type": "categoryGrid",
+      "title": "Shop by category",
+      "description": "Find the perfect gift card for every occasion.",
+      "categories": [
+        {
+          "id": "gaming",
+          "name": "Gaming",
+          "description": "Steam, PlayStation, Xbox & more",
+          "image": "https://cdn.atlagia.com/GlobalGiftCards/digital-marketplace/categoryGrid-0.png",
+          "link": "/collections/gaming",
+          "color": "#6366f1"
+        },
+        {
+          "id": "entertainment",
+          "name": "Entertainment",
+          "description": "Streaming & digital content",
+          "image": "https://cdn.atlagia.com/GlobalGiftCards/digital-marketplace/categoryGrid-1.png",
+          "link": "/collections/entertainment",
+          "color": "#ec4899"
+        },
+        {
+          "id": "retail",
+          "name": "Retail",
+          "description": "Top brands and stores",
+          "image": "https://cdn.atlagia.com/GlobalGiftCards/digital-marketplace/categoryGrid-2.png",
+          "link": "/collections/retail",
+          "color": "#f59e0b"
+        },
+        {
+          "id": "food",
+          "name": "Food",
+          "description": "Dining and delivery",
+          "image": "https://cdn.atlagia.com/GlobalGiftCards/digital-marketplace/categoryGrid-3.png",
+          "link": "/collections/food",
+          "color": "#10b981"
+        },
+        {
+          "id": "travel",
+          "name": "Travel",
+          "description": "Hotels, flights & more",
+          "image": "https://cdn.atlagia.com/GlobalGiftCards/digital-marketplace/categoryGrid-4.png",
+          "link": "/collections/travel",
+          "color": "#3b82f6"
+        },
+        {
+          "id": "sports",
+          "name": "Sport",
+          "description": "Fitness & sports gear",
+          "image": "https://cdn.atlagia.com/GlobalGiftCards/digital-marketplace/categoryGrid-5.png",
+          "link": "/collections/sports",
+          "color": "#ef4444"
+        },
+        {
+          "id": "electronics",
+          "name": "Electronics",
+          "description": "Tech and gadgets",
+          "image": "https://cdn.atlagia.com/GlobalGiftCards/digital-marketplace/categoryGrid-6.png",
+          "link": "/collections/electronics",
+          "color": "#64748b"
+        },
+        {
+          "id": "home",
+          "name": "Home",
+          "description": "Home & lifestyle",
+          "image": "https://cdn.atlagia.com/GlobalGiftCards/digital-marketplace/categoryGrid-7.png",
+          "link": "/collections/home",
+          "color": "#8b5cf6"
+        },
+        {
+          "id": "beauty",
+          "name": "Beauty",
+          "description": "Beauty & wellness",
+          "image": "https://cdn.atlagia.com/GlobalGiftCards/digital-marketplace/categoryGrid-8.png",
+          "link": "/collections/beauty",
+          "color": "#ec4899"
+        },
+        {
+          "id": "ebooks",
+          "name": "Ebooks",
+          "description": "Digital books & reading",
+          "image": "https://cdn.atlagia.com/GlobalGiftCards/digital-marketplace/categoryGrid-9.png",
+          "link": "/collections/ebooks",
+          "color": "#6366f1"
+        },
+        {
+          "id": "mobile",
+          "name": "Mobile",
+          "description": "Mobile & prepaid",
+          "image": "https://cdn.atlagia.com/GlobalGiftCards/digital-marketplace/categoryGrid-10.png",
+          "link": "/collections/mobile",
+          "color": "#14b8a6"
+        },
+        {
+          "id": "prepaid",
+          "name": "Prepaid",
+          "description": "Prepaid cards",
+          "image": "https://cdn.atlagia.com/GlobalGiftCards/digital-marketplace/categoryGrid-11.png",
+          "link": "/collections/prepaid",
+          "color": "#f59e0b"
+        },
+        {
+          "id": "vcc",
+          "name": "VCC",
+          "description": "Virtual credit cards",
+          "image": "https://cdn.atlagia.com/GlobalGiftCards/digital-marketplace/categoryGrid-12.png",
+          "link": "/collections/vcc",
+          "color": "#3b82f6"
+        },
+        {
+          "id": "software",
+          "name": "Software",
+          "description": "Software & subscriptions",
+          "image": "https://cdn.atlagia.com/GlobalGiftCards/digital-marketplace/categoryGrid-13.png",
+          "link": "/collections/software",
+          "color": "#64748b"
+        },
+        {
+          "id": "downloads",
+          "name": "Downloads",
+          "description": "Digital downloads",
+          "image": "https://cdn.atlagia.com/GlobalGiftCards/digital-marketplace/categoryGrid-14.png",
+          "link": "/collections/downloads",
+          "color": "#8b5cf6"
+        }
+      ]
+    },
+    {
+      "type": "bestSellers",
+      "title": "Popular Gift Cards",
+      "description": "Best-selling gift cards with instant delivery.",
+      "viewAllLink": "/collections",
+      "collectionHandle": "all"
+    },
+    {
+      "type": "brandStory",
+      "quote": "The world's most trusted marketplace for digital gift cards. Instant delivery, secure payments, and a huge selection for gaming, entertainment, retail, and more.",
+      "benefits": [
+        { "label": "Instant Delivery", "icon": "zap" },
+        { "label": "Secure Payments", "icon": "shield" },
+        { "label": "Wide Selection", "icon": "grid" },
+        { "label": "24/7 Support", "icon": "headphones" }
+      ]
+    },
+    {
+      "type": "whyChoose",
+      "title": "Why Choose GlobalGiftCards",
+      "features": [
+        {
+          "id": "instant",
+          "title": "Instant Digital Delivery"
+        },
+        {
+          "id": "secure",
+          "title": "Secure Payments"
+        },
+        {
+          "id": "selection",
+          "title": "Wide Global Selection"
+        },
+        {
+          "id": "trusted",
+          "title": "Trusted Marketplace"
+        },
+        {
+          "id": "support",
+          "title": "24/7 Customer Support"
+        }
+      ]
+    },
+    {
+      "type": "productShowcase",
+      "title": "New Gift Cards",
+      "description": "Recently added to our marketplace.",
+      "viewAllLink": "/collections"
+    },
+    {
+      "type": "banner",
+      "headline": "Instant Digital Delivery — Receive Your Gift Card in Seconds.",
+      "description": "Fast delivery, secure payments, global availability.",
+      "backgroundImage": "https://cdn.atlagia.com/GlobalGiftCards/digital-marketplace/banner-bg.png",
+      "icons": [
+        {
+          "label": "Fast delivery"
+        },
+        {
+          "label": "Secure payments"
+        },
+        {
+          "label": "Global availability"
+        }
+      ]
+    },
+    {
+      "type": "giftIdeas",
+      "title": "Gift ideas",
+      "description": "Curated picks for everyone.",
+      "blocks": [
+        {
+          "id": "gamers",
+          "title": "Gifts for gamers",
+          "description": "Steam, Xbox, PlayStation & more",
+          "link": "/collections/gaming",
+          "image": "https://cdn.atlagia.com/GlobalGiftCards/digital-marketplace/giftIdeas-0.png"
+        },
+        {
+          "id": "travelers",
+          "title": "Gifts for travelers",
+          "description": "Hotels, flights, experiences",
+          "link": "/collections/travel",
+          "image": "https://cdn.atlagia.com/GlobalGiftCards/digital-marketplace/giftIdeas-1.png"
+        },
+        {
+          "id": "shoppers",
+          "title": "Gifts for shoppers",
+          "description": "Retail & brand gift cards",
+          "link": "/collections/retail",
+          "image": "https://cdn.atlagia.com/GlobalGiftCards/digital-marketplace/giftIdeas-2.png"
+        },
+        {
+          "id": "movielovers",
+          "title": "Gifts for movie lovers",
+          "description": "Streaming & entertainment",
+          "link": "/collections/entertainment",
+          "image": "https://cdn.atlagia.com/GlobalGiftCards/digital-marketplace/giftIdeas-3.png"
+        }
+      ]
+    },
+    {
+      "type": "testimonialSlider",
+      "title": "What Our Customers Say",
+      "testimonials": [
+        {
+          "id": "1",
+          "author": "Sarah M.",
+          "role": "Gamer",
+          "content": "Fast delivery and huge selection of gift cards. Got my Steam code in under a minute.",
+          "avatar": "S"
+        },
+        {
+          "id": "2",
+          "author": "James K.",
+          "role": "Frequent buyer",
+          "content": "Best place to buy digital gift cards. Secure and instant. Highly recommend.",
+          "avatar": "J"
+        },
+        {
+          "id": "3",
+          "author": "Emma R.",
+          "role": "Streaming fan",
+          "content": "So easy to find and buy entertainment gift cards. Customer support was great when I had a question.",
+          "avatar": "E"
+        }
+      ]
+    },
+    {
+      "type": "newsSection",
+      "title": "News",
+      "items": [
+        {
+          "id": "1",
+          "date": "Mar 12, 2026",
+          "headline": "What Can You Buy With RocketGift Gift Cards?",
+          "excerpt": "Discover the wide range of products and services you can purchase with RocketGift gift cards.",
+          "link": "/blog/rocketgift-guide"
+        },
+        {
+          "id": "2",
+          "date": "Mar 10, 2026",
+          "headline": "New Gaming Gift Cards Added This Week",
+          "excerpt": "We've added Steam, Xbox, and PlayStation cards to our marketplace. Instant delivery available.",
+          "link": "/blog/gaming-cards-march"
+        },
+        {
+          "id": "3",
+          "date": "Mar 8, 2026",
+          "headline": "How to Redeem Your Digital Gift Card in 3 Steps",
+          "excerpt": "A quick guide to redeeming your gift card code and start shopping in seconds.",
+          "link": "/blog/redeem-guide"
+        }
+      ]
+    },
+    {
+      "type": "emailSignupSection",
+      "title": "Get Exclusive Gift Card Deals",
+      "description": "Be the first to discover new gift cards and special promotions.",
+      "backgroundImage": "https://cdn.atlagia.com/GlobalGiftCards/digital-marketplace/emailSignup-bg-v2.png",
+      "formAction": "/api/newsletter",
+      "submitText": "Subscribe"
+    }
+  ]
+}

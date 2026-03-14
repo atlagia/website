@@ -1,0 +1,175 @@
+---
+import { Menu, Globe, Search } from 'lucide-react';
+import { getLangFromUrl, getLocalizedPath } from '@utils/i18n';
+import CartSidebarWithTrigger from '@themes/default/components/CartSidebarWithTrigger';
+
+const topNav = [
+  { name: 'All gift cards', href: '/collections' },
+  { name: 'Categories', href: '/collections' },
+  { name: 'Gaming', href: '/collections/gaming' },
+  { name: 'Brands', href: '/collections' },
+  { name: 'Offers & Deals', href: '/collections', highlight: true },
+  { name: 'Promotions', href: '/collections', badge: true },
+];
+
+const getAllowedLanguages = (): string[] => {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  return allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+};
+
+const languageNames: Record<string, string> = {
+  en: "English", fr: "Français", de: "Deutsch", es: "Español", ar: "العربية",
+};
+
+const allowedLanguages = getAllowedLanguages();
+const languages = allowedLanguages.map(lang => ({ code: lang, name: languageNames[lang] || lang }));
+
+const currentPath = Astro.url.pathname;
+const currentLang = getLangFromUrl(Astro.url);
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'GlobalGiftCards';
+
+const localizedTopNav = topNav.map(item => ({
+  ...item,
+  href: `/${currentLang}${item.href === '/' ? '' : item.href}`
+}));
+
+let headerStyles = {};
+try {
+  const themeHeaderStyles = await import('../styles/Header.json');
+  headerStyles = themeHeaderStyles.default || {};
+} catch (_) {}
+
+const paymentConfig = {
+  method: import.meta.env.PUBLIC_PAYMENT_METHOD || 'default',
+  hoodpay: {
+    apiUrl: import.meta.env.HOODPAY_API_URL,
+    businessId: import.meta.env.HOODPAY_BUSINESS_ID,
+    authToken: import.meta.env.HOODPAY_AUTH_TOKEN,
+    redirectUrl: `${import.meta.env.DOMAINE || ''}${import.meta.env.HOODPAY_REDIRECT_URL || ''}`
+  },
+  store: {
+    name: import.meta.env.PUBLIC_SITE_NAME || siteName,
+    domain: import.meta.env.DOMAINE || 'localhost'
+  }
+};
+const apiEndpoint = import.meta.env.VITE_API_ENDPOINT || '/api/checkout';
+---
+
+<div class="ggc-header-wrapper fixed w-full top-0 z-50 bg-[var(--ggc-bg)] border-b border-[var(--ggc-border)]">
+  <header class="ggc-header">
+    <!-- Row 1: Logo | Search | Language, Cart, Sign In -->
+    <div class="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-10 py-3">
+      <div class="flex items-center gap-4 lg:gap-8">
+        <a href={`/${currentLang}`} class="ggc-logo font-display text-lg sm:text-xl font-bold tracking-tight text-[var(--ggc-text)] hover:text-[var(--ggc-accent)] transition-colors shrink-0">
+          {siteName}
+        </a>
+
+        <form action={`/${currentLang}/collections`} method="get" class="flex-1 max-w-2xl mx-4 lg:mx-8" role="search">
+          <label for="ggc-search" class="sr-only">Search gift cards</label>
+          <div class="relative">
+            <input
+              id="ggc-search"
+              type="search"
+              name="q"
+              placeholder="What are you looking for? Just type here"
+              class="w-full h-11 pl-4 pr-12 rounded-lg border border-[var(--ggc-border)] bg-[var(--ggc-surface)] text-[var(--ggc-text)] placeholder:text-[var(--ggc-muted)] font-body text-sm focus:outline-none focus:ring-2 focus:ring-[var(--ggc-accent)] focus:border-transparent"
+              aria-label="Search gift cards"
+            />
+            <button type="submit" class="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-md bg-[var(--ggc-accent)] text-white hover:opacity-90 transition-opacity" aria-label="Search">
+              <Search className="h-5 w-5" />
+            </button>
+          </div>
+        </form>
+
+        <div class="flex items-center gap-2 sm:gap-4 shrink-0">
+          <div class="relative group">
+            <button type="button" class="flex items-center gap-1.5 text-[var(--ggc-muted)] hover:text-[var(--ggc-text)] transition-colors py-2" aria-haspopup="true" aria-expanded="false">
+              <Globe className="h-4 w-4 sm:h-[18px] sm:w-[18px]" />
+              <span class="hidden sm:inline text-xs uppercase tracking-wider font-body">
+                {languages.find(l => l.code === currentLang)?.name}
+              </span>
+            </button>
+            <div class="absolute right-0 top-full mt-1 w-36 py-2 bg-[var(--ggc-bg)] border border-[var(--ggc-border)] rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              {languages.map((lang) => (
+                <a
+                  href={getLocalizedPath(currentPath, lang.code)}
+                  class={`block px-4 py-2 text-xs uppercase tracking-wider font-body ${currentLang === lang.code ? 'text-[var(--ggc-text)] font-medium' : 'text-[var(--ggc-muted)] hover:text-[var(--ggc-text)]'}`}
+                >
+                  {lang.name}
+                </a>
+              ))}
+            </div>
+          </div>
+          <CartSidebarWithTrigger
+            client:load
+            triggerClassName="flex items-center gap-1.5 text-[var(--ggc-muted)] hover:text-[var(--ggc-text)] transition-colors py-2"
+            label="Cart"
+            showLabel={true}
+            paymentConfig={paymentConfig}
+            apiEndpoint={apiEndpoint}
+            headerStyles={headerStyles}
+            projectType={import.meta.env.PROJECT_TYPE || 'digital'}
+          />
+          <a href={`/${currentLang}/account`} class="hidden sm:inline text-[var(--ggc-muted)] hover:text-[var(--ggc-text)] text-xs font-body uppercase tracking-wider">
+            Login
+          </a>
+          <a
+            href={`/${currentLang}/account/signup`}
+            class="hidden sm:inline-flex items-center justify-center h-9 px-5 bg-[var(--ggc-accent)] text-white text-xs font-semibold uppercase tracking-wider hover:opacity-90 transition-colors font-body rounded-md"
+          >
+            Sign up
+          </a>
+          <button type="button" id="mobile-menu-button" class="lg:hidden p-2 text-[var(--ggc-muted)] hover:text-[var(--ggc-text)]" aria-expanded="false" aria-controls="mobile-menu-dropdown">
+            <span class="sr-only">Menu</span>
+            <Menu className="h-5 w-5" />
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 2: Nav strip (All gift cards, Categories, Gaming, Brands, Offers & Deals, Promotions) -->
+    <nav class="border-t border-[var(--ggc-border)] bg-[var(--ggc-surface)]/50" aria-label="Gift card categories">
+      <div class="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-10">
+        <div class="hidden md:flex items-center gap-4 lg:gap-6 py-2 overflow-x-auto">
+          {localizedTopNav.map((item) => {
+            const isActive = currentPath === item.href || (item.href !== `/${currentLang}` && currentPath.startsWith(item.href));
+            return (
+              <a
+                href={item.href}
+                class={`shrink-0 py-2 text-xs font-medium uppercase tracking-wider transition-colors font-body ${item.highlight ? 'text-[var(--ggc-accent)]' : isActive ? 'text-[var(--ggc-text)]' : 'text-[var(--ggc-muted)] hover:text-[var(--ggc-text)]'} ${item.badge ? 'relative pl-1' : ''}`}
+              >
+                {item.name}
+                {item.badge && <span class="ml-1 inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold bg-[var(--ggc-purple)]/20 text-[var(--ggc-purple)]">New</span>}
+              </a>
+            );
+          })}
+        </div>
+      </div>
+    </nav>
+
+    <div id="mobile-menu-dropdown" class="lg:hidden hidden py-5 px-4 border-t border-[var(--ggc-border)] bg-[var(--ggc-bg)]" role="region" aria-label="Mobile menu">
+        <div class="flex flex-col gap-1">
+        {localizedTopNav.map((item) => (
+          <a href={item.href} class="py-3 text-xs tracking-wider uppercase text-[var(--ggc-muted)] hover:text-[var(--ggc-text)] font-body">{item.name}</a>
+        ))}
+        <a href={`/${currentLang}/account`} class="py-3 text-xs tracking-wider uppercase font-body text-[var(--ggc-muted)] hover:text-[var(--ggc-text)]">Login</a>
+        <a href={`/${currentLang}/account/signup`} class="py-3 text-xs tracking-wider uppercase text-[var(--ggc-text)] font-medium font-body">Sign up</a>
+      </div>
+    </div>
+  </header>
+</div>
+
+<script>
+  document.getElementById('mobile-menu-button')?.addEventListener('click', () => {
+    const btn = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu-dropdown');
+    const expanded = btn?.getAttribute('aria-expanded') === 'true';
+    btn?.setAttribute('aria-expanded', (!expanded).toString());
+    menu?.classList.toggle('hidden');
+  });
+</script>
+
+<style>
+  .font-display { font-family: var(--font-display); }
+  .font-body { font-family: var(--font-body); }
+</style>

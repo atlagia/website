@@ -11,18 +11,22 @@ const jsonData = translations.default;
 // Import packages data dynamically
 const packagesData = await import(`../data/packages/packages_${lang}.json`);
 
-const SITE_TITLE = jsonData.siteTitle || 'StreamVista';
+const SITE_TITLE = jsonData.siteTitle || 'FastIPTV';
 const PAGE_TITLE = packagesData.pageTitle + ' | ' + SITE_TITLE;
 const PAGE_DESCRIPTION = packagesData.pageDescription;
 
 const packages = packagesData.packages;
 const specialOffers = packagesData.specialOffers;
+const breadcrumbs = [
+  { name: 'Home', url: `/${lang}` },
+  { name: 'Packages', url: `/${lang}/packages` }
+];
 ---
 
 <!doctype html>
 <html lang={lang} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
   <head>
-    <BaseHead title={PAGE_TITLE} description={PAGE_DESCRIPTION} />
+    <BaseHead title={PAGE_TITLE} description={PAGE_DESCRIPTION} breadcrumbs={breadcrumbs} />
   </head>
   <body class="bg-[#0a0a0a] text-white">
     <Header lang={lang} />
@@ -45,9 +49,9 @@ const specialOffers = packagesData.specialOffers;
           </div>
           <div class="grid md:grid-cols-2 gap-8 items-center">
             <div>
-              <h1 class="text-4xl font-bold mb-4 gradient-text">
+              <h2 class="text-4xl font-bold mb-4 gradient-text">
                 {packages.featured.name}
-              </h1>
+              </h2>
               <p class="text-gray-300 mb-6">
                 {packages.featured.description}
               </p>

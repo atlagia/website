@@ -24,8 +24,8 @@ Sitemap: ${new URL(`sitemap_products_${lang}.xml`, site).href}
 Sitemap: ${new URL(`sitemap_collections_${lang}.xml`, site).href}`).join('\n')}
 
 
-# Crawl-delay
-Crawl-delay: 10
+# Crawl-delay: non-standard, ignored by Google; removed to avoid confusion
+# Crawl-delay: 10
 
 # Disallow patterns
 Disallow: /api/

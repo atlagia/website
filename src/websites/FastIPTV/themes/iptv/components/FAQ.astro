@@ -9,9 +9,23 @@ interface Props {
 }
 
 const { title, description, questions } = Astro.props;
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": questions.map((q) => ({
+    "@type": "Question",
+    "name": q.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": q.answer
+    }
+  }))
+};
 ---
 
 <section class="relative py-24 overflow-hidden bg-[#0a0a0a]">
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   <!-- Background Elements -->
   <div class="absolute inset-0">
     <div class="absolute inset-0 bg-gradient-to-b from-purple-900/20 via-black to-black"></div>

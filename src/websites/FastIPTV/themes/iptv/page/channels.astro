@@ -23,12 +23,16 @@ const SITE_TITLE = jsonData.siteTitle || 'FastIPTV';
 const PAGE_TITLE = channelsData.pageTitle + ' | ' + SITE_TITLE;
 const PAGE_DESCRIPTION = channelsData.pageDescription;
 const categories = channelsData.categories;
+const breadcrumbs = [
+  { name: 'Home', url: `/${lang}` },
+  { name: 'Channels', url: `/${lang}/channels` }
+];
 ---
 
 <!doctype html>
 <html lang={lang} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
   <head>
-    <BaseHead title={PAGE_TITLE} description={PAGE_DESCRIPTION} />
+    <BaseHead title={PAGE_TITLE} description={PAGE_DESCRIPTION} breadcrumbs={breadcrumbs} />
   </head>
   <body class="bg-[#0a0a0a] text-white">
     <Header lang={lang} />

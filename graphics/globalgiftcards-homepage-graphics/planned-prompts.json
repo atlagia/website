@@ -1,0 +1,18 @@
+{
+  "plannedPrompts": [
+    {
+      "slotId": "banner.backgroundImage",
+      "fieldPath": "sections.10.backgroundImage",
+      "orientation": "landscape",
+      "currentValue": "https://cdn.atlagia.com/GlobalGiftCards/digital-marketplace/banner-bg.png",
+      "prompt": "Full-bleed landscape background for a premium digital gift card marketplace. Abstract fintech mood: soft gradients and subtle shapes in indigo (#6366f1) and purple (#8b5cf6) on a clean, light base. Designed to sit under a dark overlay; no text, no logos, no people. Modern, trustworthy, 16:9 suitable for full-bleed cover."
+    },
+    {
+      "slotId": "emailSignupSection.backgroundImage",
+      "fieldPath": "sections.14.backgroundImage",
+      "orientation": "landscape",
+      "currentValue": "https://cdn.atlagia.com/GlobalGiftCards/digital-marketplace/emailSignup-bg.png",
+      "prompt": "Soft, light fintech background for a newsletter signup section. Gentle gradients and abstract shapes in --ggc palette: white, light slate (#f8fafc), subtle indigo and purple accents. Calm and cohesive with a premium digital marketplace; designed to sit under an 80% overlay. No text, no logos, no people. Landscape 16:9."
+    }
+  ]
+}

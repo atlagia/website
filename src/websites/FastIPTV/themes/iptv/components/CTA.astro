@@ -7,9 +7,10 @@ interface Props {
     link: string;
   };
   features: string[];
+  lang?: string;
 }
 
-const { title, description, button, features } = Astro.props;
+const { title, description, button, features, lang = 'en' } = Astro.props;
 ---
 
 <section class="relative py-24 overflow-hidden bg-[#0a0a0a]">
@@ -36,6 +37,9 @@ const { title, description, button, features } = Astro.props;
         </h2>
         <p class="text-gray-300 text-lg mb-8 animate-fade-in-delay">
           {description}
+        </p>
+        <p class="text-gray-400 text-sm mb-6">
+          Compare <a href={`/${lang}/pricing`} class="text-purple-400 hover:text-purple-300 underline">pricing plans</a> or read our <a href={`/${lang}/faq`} class="text-purple-400 hover:text-purple-300 underline">FAQ</a> for common questions.
         </p>
 
         <!-- Features Grid -->

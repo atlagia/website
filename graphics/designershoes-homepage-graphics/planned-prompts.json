@@ -1,0 +1,132 @@
+{
+  "plannedPrompts": [
+    {
+      "slotId": "welcomeSection.heroImage",
+      "fieldPath": "sections.0.heroImage",
+      "sectionType": "welcomeSection",
+      "orientation": "landscape",
+      "currentValue": "https://cdn.atlagia.com/generated/DesignerShoes/luxury-sneakers/hero.png",
+      "prompt": "Wide cinematic hero image of premium designer sneakers in a luxury editorial setting: one or two pairs of high-end sneakers on a minimal surface with deep black and charcoal tones, soft professional studio lighting, and subtle gold reflections. Elegant, modern, minimalist luxury; clean composition with ample negative space in the upper area so UI elements can sit over a smooth, uncluttered dark background. Color palette aligned to deep black, warm gold accent, silver and refined beige neutrals; ultra-high resolution, sharp product details, suitable for a full-bleed hero background with dark overlay. Absolutely no visible words, letters, logos, numeric markings, or any typographic elements anywhere in the image, including on the shoes."
+    },
+    {
+      "slotId": "categoryGrid.categories.0.image",
+      "fieldPath": "sections.1.categories.0.image",
+      "sectionType": "categoryGrid",
+      "orientation": "portrait",
+      "currentValue": "https://cdn.atlagia.com/generated/DesignerShoes/luxury-sneakers/category-nike.png",
+      "prompt": "Luxury streetwear-inspired sneakers product shot for a category card: a single pair of premium kicks on a clean, dark neutral surface with professional studio lighting and soft shadows. Elegant, modern, minimalist luxury; 3:4 portrait composition, product-centered with clear negative space around the shoes and a deep-black backdrop with subtle gold reflections to feel like a premium designer brand. Background is simple, smooth, and uncluttered so overlaid UI labels remain readable. Absolutely no text, logos, brand names, numbers, monograms, or any lettering visible anywhere in the image."
+    },
+    {
+      "slotId": "categoryGrid.categories.1.image",
+      "fieldPath": "sections.1.categories.1.image",
+      "sectionType": "categoryGrid",
+      "orientation": "portrait",
+      "currentValue": "https://cdn.atlagia.com/generated/DesignerShoes/luxury-sneakers/category-adidas.png",
+      "prompt": "Urban athletic luxury sneakers category card: one pair of sleek trainers or a tight lifestyle arrangement on a minimal dark background with crisp studio lighting and subtle metallic reflections. Elegant, modern, minimalist; 3:4 portrait, product-focused composition with depth and soft shadows, palette of deep black, graphite grey, silver, and a hint of gold accent to feel high-end and performance-driven. Surrounding area should remain clean and open to preserve negative space around the product. Absolutely no text, logos, brand symbols, numbers, or any form of lettering anywhere in the image."
+    },
+    {
+      "slotId": "categoryGrid.categories.2.image",
+      "fieldPath": "sections.1.categories.2.image",
+      "sectionType": "categoryGrid",
+      "orientation": "portrait",
+      "currentValue": "https://cdn.atlagia.com/generated/DesignerShoes/luxury-sneakers/category-dior.png",
+      "prompt": "High-fashion luxury sneakers category card: sculptural, couture-inspired sneakers displayed on an elevated editorial surface with soft directional lighting and gentle gradients. Elegant, modern, minimalist luxury; 3:4 portrait, product-focused, with ample clean negative space in the upper portion, using a palette of deep black, muted beige, and warm gold highlights to echo a couture runway mood. The scene should feel like a premium fashion campaign while staying visually calm and uncluttered. Absolutely no text, logos, patterns resembling lettering, brand names, or numeric markings anywhere in the image."
+    },
+    {
+      "slotId": "categoryGrid.categories.3.image",
+      "fieldPath": "sections.1.categories.3.image",
+      "sectionType": "categoryGrid",
+      "orientation": "portrait",
+      "currentValue": "https://cdn.atlagia.com/generated/DesignerShoes/luxury-sneakers/category-lv.png",
+      "prompt": "Premium trainers category card: a refined pair of luxury trainers with subtle patterning, photographed on a dark, minimal surface with soft side lighting and a hint of metallic sheen. Elegant, modern, minimalist luxury; 3:4 portrait composition emphasizing clean shapes, depth, and sculptural lines, using a palette of deep black, charcoal, and muted gold or silver accents. Background should remain smooth and simple to keep strong negative space around the product. Absolutely no visible text, logos, recognizable monograms, brand marks, or numbers anywhere in the image."
+    },
+    {
+      "slotId": "categoryGrid.categories.4.image",
+      "fieldPath": "sections.1.categories.4.image",
+      "sectionType": "categoryGrid",
+      "orientation": "portrait",
+      "currentValue": "https://cdn.atlagia.com/generated/DesignerShoes/luxury-sneakers/category-chanel.png",
+      "prompt": "Timeless fashion sneakers category card: elegant low-profile sneakers styled for a luxury boutique, placed on a clean dark neutral surface with soft, flattering studio lighting. Elegant, modern, minimalist luxury; 3:4 portrait, carefully balanced composition with subtle gold and beige undertones against rich black, with gentle shadows creating a sense of depth and calm. Negative space around the shoes should be smooth and uncluttered, ready for UI labels without any visual noise. Absolutely no text, logos, stylized initials, brand names, or numeric markings visible anywhere in the image."
+    },
+    {
+      "slotId": "categoryGrid.categories.5.image",
+      "fieldPath": "sections.1.categories.5.image",
+      "sectionType": "categoryGrid",
+      "orientation": "portrait",
+      "currentValue": "https://cdn.atlagia.com/generated/DesignerShoes/luxury-sneakers/category-running.png",
+      "prompt": "Performance-meets-luxury running sneakers category card: dynamic yet refined running shoes on a minimal dark surface with directional lighting that suggests motion and energy. Elegant, modern, minimalist; 3:4 portrait, product-centric composition with deep black, cool metallic silver, and subtle gold or neon accent, keeping edges clean and the background simple. Surrounding area should be free of clutter to maintain clear negative space around the sneakers. Absolutely no text, sports logos, race numbers, or any kind of lettering in the image."
+    },
+    {
+      "slotId": "brandStory.image",
+      "fieldPath": "sections.3.image",
+      "sectionType": "brandStory",
+      "orientation": "landscape",
+      "currentValue": "https://cdn.atlagia.com/generated/DesignerShoes/luxury-sneakers/brand-story.png",
+      "prompt": "Aspirational brand story image showing a curated arrangement of multiple luxury sneakers and close-up details in a moody editorial setting, such as a dark marble or matte black plinth with soft pools of light. Elegant, modern, minimalist luxury; landscape composition with the primary focus toward one side and generous, softly lit negative space on the opposite side to keep the layout calm and premium. Palette is deep black with warm gold, silver, and refined beige highlights, subtle reflections, and layered depth to feel like a high-end fashion campaign. Absolutely no text, logos, brand names, numbers, or any lettering anywhere in the scene, including on the shoes or background surfaces."
+    },
+    {
+      "slotId": "lifestyleBanner.backgroundImage",
+      "fieldPath": "sections.6.backgroundImage",
+      "sectionType": "lifestyleBanner",
+      "orientation": "landscape",
+      "currentValue": "https://cdn.atlagia.com/generated/DesignerShoes/luxury-sneakers/lifestyle-banner.png",
+      "prompt": "Full-bleed lifestyle banner background showing a stylish person or partial figure in motion, emphasizing premium sneakers against a minimal urban or interior backdrop at night, with soft motion blur and dramatic lighting. Elegant, modern, minimalist luxury; 16:9 landscape composition where the central and right-middle regions provide clean, slightly darker negative space while the shoes remain clearly visible and in focus. Palette centered on deep black and charcoal with subtle gold or warm highlights, avoiding busy textures or visual clutter. Absolutely no text, logos, signage, storefront lettering, graffiti, or numbers anywhere in the image."
+    },
+    {
+      "slotId": "socialGallery.images.0.src",
+      "fieldPath": "sections.8.images.0.src",
+      "sectionType": "socialGallery",
+      "orientation": "square",
+      "currentValue": "https://cdn.atlagia.com/generated/DesignerShoes/luxury-sneakers/gallery-1.png",
+      "prompt": "Square social gallery tile featuring a single premium sneaker or tight pair arrangement on a minimal deep-black background with soft spotlighting and defined shadows. Elegant, modern, minimalist luxury; 1:1 aspect ratio, product framed centrally with a subtle gold- or silver-tinged reflection, maintaining a clean, gallery-like feel that focuses entirely on the footwear. Background should remain uniform and uncluttered to read well in a grid. Absolutely no text, logos, brand names, decorative lettering, or numbers anywhere in the image."
+    },
+    {
+      "slotId": "socialGallery.images.1.src",
+      "fieldPath": "sections.8.images.1.src",
+      "sectionType": "socialGallery",
+      "orientation": "square",
+      "currentValue": "https://cdn.atlagia.com/generated/DesignerShoes/luxury-sneakers/gallery-2.png",
+      "prompt": "Square social gallery tile with a street-style luxury sneaker scene: close-up of shoes on a dark pavement or minimal textured ground, with moody, cinematic lighting and shallow depth of field. Elegant, modern, minimalist; 1:1 aspect ratio, composition focused on the sneakers while background blur creates atmosphere in shades of black, grey, and metallic highlights. The environment must avoid storefronts, posters, or any surfaces that could include letters or signs. Absolutely no text, logos, graffiti, signage, or numbers anywhere in the image."
+    },
+    {
+      "slotId": "socialGallery.images.2.src",
+      "fieldPath": "sections.8.images.2.src",
+      "sectionType": "socialGallery",
+      "orientation": "square",
+      "currentValue": "https://cdn.atlagia.com/generated/DesignerShoes/luxury-sneakers/gallery-3.png",
+      "prompt": "Square social gallery tile showing a detailed close-up of luxury sneaker materials—stitching, laces, and textures—on a minimal dark surface with precise, directional lighting. Elegant, modern, minimalist luxury; 1:1 composition that feels like an editorial macro shot, with black, gold, and beige accents and smooth gradients into shadow, keeping the frame focused on texture and craftsmanship. Background and any props must remain free of symbols or shapes that read like letters. Absolutely no text, logos, monograms, or numbers anywhere in the image."
+    },
+    {
+      "slotId": "socialGallery.images.3.src",
+      "fieldPath": "sections.8.images.3.src",
+      "sectionType": "socialGallery",
+      "orientation": "square",
+      "currentValue": "https://cdn.atlagia.com/generated/DesignerShoes/luxury-sneakers/gallery-4.png",
+      "prompt": "Square social gallery tile featuring a premium trainer photographed from a three-quarter angle on a dark editorial background with soft gradient lighting and a hint of metallic reflection. Elegant, modern, minimalist luxury; 1:1 aspect, centered composition with subtle depth and layered shadows in deep black, charcoal, and muted gold. The scene should feel polished, high-end, and very clean, with no visual distractions. Absolutely no text, logos, repeating initials, brand symbols, or numeric markings anywhere in the frame."
+    },
+    {
+      "slotId": "socialGallery.images.4.src",
+      "fieldPath": "sections.8.images.4.src",
+      "sectionType": "socialGallery",
+      "orientation": "square",
+      "currentValue": "https://cdn.atlagia.com/generated/DesignerShoes/luxury-sneakers/gallery-5.png",
+      "prompt": "Square social gallery tile with a performance or running-style luxury sneaker on a minimal dark surface, lit with a dynamic diagonal light that creates a sleek highlight and long shadow. Elegant, modern, minimalist; 1:1 composition emphasizing the aerodynamic shape and sole details of the shoe, in a palette of deep black, steel grey, and subtle gold or neon accent. Background should be smooth, quiet, and free of visual noise to work in a dense grid. Absolutely no text, logos, numeric labels, or any lettering on the shoe, background, or props."
+    },
+    {
+      "slotId": "socialGallery.images.5.src",
+      "fieldPath": "sections.8.images.5.src",
+      "sectionType": "socialGallery",
+      "orientation": "square",
+      "currentValue": "https://cdn.atlagia.com/generated/DesignerShoes/luxury-sneakers/gallery-6.png",
+      "prompt": "Square social gallery tile featuring a timeless fashion sneaker shot in a boutique-like setting: shoe on a minimal plinth or shelf with dark surroundings and a soft beam of light. Elegant, modern, minimalist luxury; 1:1 aspect ratio, warm gold and beige highlights against deep black, with gentle vignette to focus attention on the sneaker silhouette. Environment should feel upscale yet stripped of signage, wall art, or decorative text-like elements. Absolutely no text, logos, brand marks, or numbers anywhere in the image."
+    },
+    {
+      "slotId": "emailSignupSection.backgroundImage",
+      "fieldPath": "sections.10.backgroundImage",
+      "sectionType": "emailSignupSection",
+      "orientation": "landscape",
+      "currentValue": "https://cdn.atlagia.com/generated/DesignerShoes/luxury-sneakers/email-signup-bg.png",
+      "prompt": "Atmospheric and subtle background for the newsletter signup section: soft-focus view of luxury sneakers or an abstract close-up of sneaker materials and textures, rendered in deep black, charcoal, and faint gold or beige highlights. Elegant, modern, minimalist; landscape composition designed to sit under a dark overlay, so the central area remains smooth, low-contrast, and free of busy detail, with most visual interest pushed toward the edges. Lighting should create gentle gradients and a calm, premium mood rather than a strong single focal point, keeping plenty of negative space behind the form. Absolutely no text, logos, labels, brand marks, numbers, or typographic shapes anywhere in the image."
+    }
+  ]
+}

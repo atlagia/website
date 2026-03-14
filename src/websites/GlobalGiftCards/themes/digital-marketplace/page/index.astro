@@ -1,0 +1,158 @@
+---
+/**
+ * GlobalGiftCards — digital marketplace homepage.
+ */
+import { useTranslations, isValidLanguage } from '@utils/i18n';
+
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+const { default: Welcome } = await import(`../components/Welcome.astro`);
+const { default: StatsBar } = await import(`../components/StatsBar.astro`);
+const { default: CategoryGrid } = await import(`../components/CategoryGrid.astro`);
+const { default: BestSellers } = await import(`../components/BestSellers.astro`);
+const { default: Banner } = await import(`../components/Banner.astro`);
+const { default: WhyChooseGlobalGiftCards } = await import(`../components/WhyChooseGlobalGiftCards.astro`);
+const { default: ProductShowcase } = await import(`../components/ProductShowcase.astro`);
+const { default: TestimonialSlider } = await import(`../components/TestimonialSlider.astro`);
+const { default: EmailSignup } = await import(`../components/EmailSignup.astro`);
+const { default: CategoryStrip } = await import(`../components/CategoryStrip.astro`);
+const { default: NewsSection } = await import(`../components/NewsSection.astro`);
+const { default: BrandStory } = await import(`../components/BrandStory.astro`);
+const { default: FeaturedDeals } = await import(`../components/FeaturedDeals.astro`);
+const { default: GiftIdeas } = await import(`../components/GiftIdeas.astro`);
+const { default: PopularCategories } = await import(`../components/PopularCategories.astro`);
+
+const lang = Astro.props.lang ?? Astro.params?.lang ?? 'en';
+
+if (!isValidLanguage(lang)) {
+  return Astro.redirect('/en');
+}
+
+const translations = await useTranslations(lang);
+const jsonData = translations.default;
+
+const SITE_TITLE = jsonData.siteTitle || 'GlobalGiftCards — All Your Gift Cards. One Place.';
+const SITE_DESCRIPTION = jsonData.siteDescription || 'Instantly buy digital gift cards for gaming, entertainment, retail, travel, and more.';
+
+export async function getStaticPaths() {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  const languages = allowedLanguages.split(',').map((l: string) => l.trim()).filter((l: string) => l.length > 0);
+  return languages.map((l: string) => ({ params: { lang: l } }));
+}
+---
+
+<!doctype html>
+<html lang={lang} class="globalgiftcards-digital" data-site="globalgiftcards">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body class="bg-[var(--ggc-bg)] text-[var(--ggc-text)] pt-16">
+    <Header />
+    <main id="main-content" role="main">
+      {jsonData.sections?.map((section: { type: string }) => (
+        <>
+          {section.type === 'welcomeSection' && (
+            <Welcome
+              title={section.title}
+              description={section.description}
+              blogLink={`/${lang}${section.blogLink || '/collections'}`}
+              blogLinkText={section.blogLinkText}
+              backgroundVideo={section.backgroundVideo}
+              heroImage={section.heroImage}
+              headlineLine1={section.headlineLine1}
+              headlineLine2={section.headlineLine2}
+              luxury={section.luxury !== false}
+              cta2Text={section.cta2Text}
+              cta2Link={section.cta2Link ? `/${lang}${section.cta2Link}` : undefined}
+              trustBullets={section.trustBullets}
+              featuredCards={section.featuredCards?.map((c: { link: string; [k: string]: unknown }) => ({ ...c, link: `/${lang}${c.link}` }))}
+            />
+          )}
+          {section.type === 'categoryStrip' && (
+            <CategoryStrip categories={section.categories?.map((c: { link: string }) => ({ ...c, link: `/${lang}${c.link}` })) ?? []} />
+          )}
+          {section.type === 'popularCategories' && (
+            <PopularCategories
+              title={section.title}
+              categories={section.categories?.map((c: { link: string; [k: string]: unknown }) => ({ ...c, link: `/${lang}${c.link}` })) ?? []}
+            />
+          )}
+          {section.type === 'statsBar' && (
+            <StatsBar title={section.title} stats={section.stats ?? []} />
+          )}
+          {section.type === 'categoryGrid' && (
+            <CategoryGrid
+              title={section.title}
+              description={section.description}
+              categories={section.categories?.map((c: { link: string; [k: string]: unknown }) => ({ ...c, link: `/${lang}${c.link}` })) ?? []}
+            />
+          )}
+          {section.type === 'bestSellers' && (
+            <BestSellers
+              title={section.title}
+              description={section.description}
+              viewAllLink={`/${lang}${section.viewAllLink || '/collections'}`}
+              lang={lang}
+              collectionHandle={section.collectionHandle}
+            />
+          )}
+          {section.type === 'featuredDeals' && (
+            <FeaturedDeals
+              headline={section.headline}
+              subtext={section.subtext}
+              discountLabel={section.discountLabel}
+              ctaText={section.ctaText}
+              ctaLink={`/${lang}${section.ctaLink || '/collections'}`}
+            />
+          )}
+          {section.type === 'banner' && (
+            <Banner
+              headline={section.headline}
+              description={section.description}
+              backgroundImage={section.backgroundImage}
+              icons={section.icons}
+            />
+          )}
+          {section.type === 'brandStory' && (
+            <BrandStory quote={section.quote} benefits={section.benefits} />
+          )}
+          {section.type === 'whyChoose' && (
+            <WhyChooseGlobalGiftCards title={section.title} features={section.features ?? []} />
+          )}
+          {section.type === 'productShowcase' && (
+            <ProductShowcase
+              title={section.title}
+              description={section.description}
+              viewAllLink={`/${lang}${section.viewAllLink || '/collections'}`}
+              lang={lang}
+            />
+          )}
+          {section.type === 'giftIdeas' && (
+            <GiftIdeas
+              title={section.title}
+              description={section.description}
+              blocks={section.blocks?.map((b: { link: string; [k: string]: unknown }) => ({ ...b, link: (b.link || '').startsWith('http') ? b.link : `/${lang}${b.link}` })) ?? []}
+            />
+          )}
+          {section.type === 'testimonialSlider' && (
+            <TestimonialSlider title={section.title} testimonials={section.testimonials ?? []} />
+          )}
+          {section.type === 'newsSection' && (
+            <NewsSection title={section.title} items={section.items?.map((item: { link: string }) => ({ ...item, link: item.link.startsWith('http') ? item.link : `/${lang}${item.link}` })) ?? []} />
+          )}
+          {section.type === 'emailSignupSection' && (
+            <EmailSignup
+              title={section.title}
+              description={section.description}
+              backgroundImage={section.backgroundImage || ''}
+              formAction={section.formAction || '/api/newsletter'}
+              buttonText={section.submitText || 'Subscribe'}
+            />
+          )}
+        </>
+      ))}
+    </main>
+    <Footer />
+  </body>
+</html>

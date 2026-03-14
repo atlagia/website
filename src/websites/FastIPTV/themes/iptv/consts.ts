@@ -1,2 +1,2 @@
-export const SITE_TITLE = 'Digivast - Digital Products Marketplace';
-export const SITE_DESCRIPTION = 'Your ultimate destination for digital products. Discover and purchase high-quality digital assets, software, templates, and more from trusted creators.';
+export const SITE_TITLE = 'FastIPTV - Premium IPTV Streaming';
+export const SITE_DESCRIPTION = 'Premium IPTV streaming with 32,000+ channels and 140,000+ movies. HD & 4K, every device. Start watching in minutes.';

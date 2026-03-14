@@ -1,0 +1,37 @@
+---
+interface NewsItem {
+  id: string;
+  date: string;
+  headline: string;
+  excerpt: string;
+  link: string;
+}
+
+interface Props {
+  title?: string;
+  items: NewsItem[];
+}
+
+const { title = 'News', items } = Astro.props;
+---
+
+<section class="bg-[var(--ggc-bg)] border-t border-[var(--ggc-border)] py-16 px-4 sm:px-6 lg:px-8" aria-labelledby="news-heading">
+  <div class="max-w-7xl mx-auto">
+    <h2 id="news-heading" class="font-display text-2xl font-semibold text-[var(--ggc-text)] tracking-tight mb-8 uppercase">{title}</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {items.map((item) => (
+        <article class="border border-[var(--ggc-border)] rounded-xl p-6 hover:border-[var(--ggc-accent)]/40 transition-colors">
+          <p class="font-body text-xs text-[var(--ggc-muted)] uppercase tracking-wider mb-2">{item.date}</p>
+          <h3 class="font-display text-lg font-semibold text-[var(--ggc-text)] mb-2 line-clamp-2">{item.headline}</h3>
+          <p class="font-body text-sm text-[var(--ggc-muted)] leading-relaxed mb-4 line-clamp-2">{item.excerpt}</p>
+          <a href={item.link} class="font-body text-sm font-medium text-[var(--ggc-accent)] hover:underline">Read more</a>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .font-display { font-family: var(--font-display); }
+  .font-body { font-family: var(--font-body); }
+</style>

@@ -79,6 +79,7 @@ Before scaffolding, find the closest existing store to use as inspiration. See [
 | Luxury sneakers, designer shoes, footwear | **DesignerShoes** |
 | Luxury watches, jewelry, timepieces | **DesignerWatch** |
 | IPTV, streaming, digital subscriptions | **FastIPTV** |
+| Digital gift cards, vouchers, fintech marketplace | **GlobalGiftCards** |
 | SaaS, dental, clinic, agency | **Atlagia / Dentagia** |
 
 Clone the **closest match** theme folder instead of Abstract when a close niche exists. This gives you niche-specific components, section order, and design tokens as a head start.
@@ -260,6 +261,7 @@ For every section in the homepage brief, create a matching component. Check [exa
 | Luxury (watches/jewelry) | `HeritageBlock`, `CraftsmanshipVideo`, `FeaturedHighlight`, `DividerBlock` |
 | Luxury (shoes/bags/fashion) | `BrandStory`, `SocialGallery`, `LifestyleBanner`, `WhyChoose[StoreName]` |
 | IPTV / streaming | `Features`, `Channels`, `VideoDemo`, `Pricing`, `Devices`, `CTA` |
+| Digital gift cards / vouchers / fintech marketplace | `PopularCategories`, `GiftIdeas`, `FeaturedDeals`, `WhyChoose[StoreName]`, `CategoryStrip` — clone from **GlobalGiftCards** |
 | SaaS / digital | `Pricing`, `Process`, `Technologies`, `IndustryFeatures` |
 
 ### Header pattern

@@ -7,7 +7,7 @@
       "title": "Designer Shoes",
       "description": "Discover premium designer sneakers inspired by the world's most legendary brands.",
       "luxury": true,
-      "heroImage": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1920&q=90",
+      "heroImage": "https://cdn.atlagia.com/generated/DesignerShoes/luxury-sneakers/hero-v2.png",
       "headlineLine1": "Step Into Iconic Style",
       "headlineLine2": "",
       "blogLink": "/collections",
@@ -18,12 +18,12 @@
       "title": "Featured Brand Collections",
       "description": "",
       "categories": [
-        { "id": "nike", "name": "Nike Style Sneakers", "description": "Street-ready luxury kicks.", "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&q=85", "link": "/collections/nike-style" },
-        { "id": "adidas", "name": "Adidas Street Collection", "description": "Urban athletic style.", "image": "https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=800&q=85", "link": "/collections/adidas-street" },
-        { "id": "dior", "name": "Dior Luxury Sneakers", "description": "Haute couture meets street.", "image": "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=800&q=85", "link": "/collections/dior" },
-        { "id": "lv", "name": "LV Premium Trainers", "description": "Iconic monogram footwear.", "image": "https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?w=800&q=85", "link": "/collections/lv-trainers" },
-        { "id": "chanel", "name": "Chanel Fashion Sneakers", "description": "Timeless elegance.", "image": "https://images.unsplash.com/photo-1597045566677-8cf032ed6634?w=800&q=85", "link": "/collections/chanel" },
-        { "id": "running", "name": "Designer Running Shoes", "description": "Performance meets luxury.", "image": "https://images.unsplash.com/photo-1556906781-9a412961c28c?w=800&q=85", "link": "/collections/running" }
+        { "id": "nike", "name": "Nike Style Sneakers", "description": "Street-ready luxury kicks.", "image": "https://cdn.atlagia.com/generated/DesignerShoes/luxury-sneakers/category-nike-v2.png", "link": "/collections/nike-style" },
+        { "id": "adidas", "name": "Adidas Street Collection", "description": "Urban athletic style.", "image": "https://cdn.atlagia.com/generated/DesignerShoes/luxury-sneakers/category-adidas-v2.png", "link": "/collections/adidas-street" },
+        { "id": "dior", "name": "Dior Luxury Sneakers", "description": "Haute couture meets street.", "image": "https://cdn.atlagia.com/generated/DesignerShoes/luxury-sneakers/category-dior-v2.png", "link": "/collections/dior" },
+        { "id": "lv", "name": "LV Premium Trainers", "description": "Iconic monogram footwear.", "image": "https://cdn.atlagia.com/generated/DesignerShoes/luxury-sneakers/category-lv-v2.png", "link": "/collections/lv-trainers" },
+        { "id": "chanel", "name": "Chanel Fashion Sneakers", "description": "Timeless elegance.", "image": "https://cdn.atlagia.com/generated/DesignerShoes/luxury-sneakers/category-chanel-v2.png", "link": "/collections/chanel" },
+        { "id": "running", "name": "Designer Running Shoes", "description": "Performance meets luxury.", "image": "https://cdn.atlagia.com/generated/DesignerShoes/luxury-sneakers/category-running-v2.png", "link": "/collections/running" }
       ]
     },
     {
@@ -36,7 +36,7 @@
     {
       "type": "brandStory",
       "quote": "Where Street Culture Meets Luxury Design.",
-      "image": "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=1200&q=85",
+      "image": "https://cdn.atlagia.com/generated/DesignerShoes/luxury-sneakers/brand-story-v2.png",
       "imageAlt": "Sneaker lifestyle photography"
     },
     {
@@ -57,7 +57,7 @@
       "headline": "Elevate Your Footwear Game",
       "buttonText": "Explore Sneakers",
       "buttonLink": "/collections",
-      "backgroundImage": "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=1920&q=85"
+      "backgroundImage": "https://cdn.atlagia.com/generated/DesignerShoes/luxury-sneakers/lifestyle-banner-v2.png"
     },
     {
       "type": "whyChoose",
@@ -74,12 +74,12 @@
       "type": "socialGallery",
       "title": "@DesignerShoes",
       "images": [
-        { "src": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&q=85", "alt": "Sneaker", "link": "/collections" },
-        { "src": "https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=400&q=85", "alt": "Street style", "link": "/collections" },
-        { "src": "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&q=85", "alt": "Luxury sneaker", "link": "/collections" },
-        { "src": "https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?w=400&q=85", "alt": "Trainers", "link": "/collections" },
-        { "src": "https://images.unsplash.com/photo-1556906781-9a412961c28c?w=400&q=85", "alt": "Running", "link": "/collections" },
-        { "src": "https://images.unsplash.com/photo-1597045566677-8cf032ed6634?w=400&q=85", "alt": "Fashion", "link": "/collections" }
+        { "src": "https://cdn.atlagia.com/generated/DesignerShoes/luxury-sneakers/gallery-1-v2.png", "alt": "Sneaker", "link": "/collections" },
+        { "src": "https://cdn.atlagia.com/generated/DesignerShoes/luxury-sneakers/gallery-2-v2.png", "alt": "Street style", "link": "/collections" },
+        { "src": "https://cdn.atlagia.com/generated/DesignerShoes/luxury-sneakers/gallery-3-v2.png", "alt": "Luxury sneaker", "link": "/collections" },
+        { "src": "https://cdn.atlagia.com/generated/DesignerShoes/luxury-sneakers/gallery-4-v2.png", "alt": "Trainers", "link": "/collections" },
+        { "src": "https://cdn.atlagia.com/generated/DesignerShoes/luxury-sneakers/gallery-5-v2.png", "alt": "Running", "link": "/collections" },
+        { "src": "https://cdn.atlagia.com/generated/DesignerShoes/luxury-sneakers/gallery-6-v2.png", "alt": "Fashion", "link": "/collections" }
       ]
     },
     {
@@ -95,7 +95,7 @@
       "type": "emailSignupSection",
       "title": "Join the Designer Shoes Club",
       "description": "Get early access to exclusive releases and new arrivals.",
-      "backgroundImage": "",
+      "backgroundImage": "https://cdn.atlagia.com/generated/DesignerShoes/luxury-sneakers/email-signup-bg-v2.png",
       "formAction": "/api/newsletter",
       "submitText": "Subscribe"
     }

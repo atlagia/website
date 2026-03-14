@@ -1,0 +1,171 @@
+---
+import { ArrowRight, Zap, Shield, Headphones } from 'lucide-react';
+
+interface Props {
+  title: string;
+  description?: string;
+  blogLink: string;
+  blogLinkText: string;
+  heroImage?: string;
+  headlineLine1?: string;
+  headlineLine2?: string;
+  backgroundVideo?: Record<string, unknown>;
+  luxury?: boolean;
+  cta2Text?: string;
+  cta2Link?: string;
+  trustBullets?: Array<{ value: string; label?: string }>;
+  featuredCards?: Array<{ name: string; image: string; link: string }>;
+}
+
+const { title, description, blogLink, blogLinkText, headlineLine1, headlineLine2, cta2Text, cta2Link, trustBullets = [], featuredCards = [] } = Astro.props;
+
+function getTrustIcon(bullet: { value: string }) {
+  if (/years|experience/i.test(bullet.value)) return Zap;
+  if (/customers|satisfied/i.test(bullet.value)) return Zap;
+  if (/transactions|processed/i.test(bullet.value)) return Shield;
+  if (/support/i.test(bullet.value)) return Headphones;
+  return Zap;
+}
+---
+
+<section class="welcome-fintech relative overflow-hidden" aria-label="Welcome">
+  <!-- Background: light gradient + subtle grid -->
+  <div class="welcome-fintech-bg absolute inset-0" aria-hidden="true"></div>
+  <div class="welcome-fintech-grid absolute inset-0 opacity-[0.4]" aria-hidden="true"></div>
+
+  <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-20 lg:pt-24 lg:pb-28">
+    <!-- Centered content block -->
+    <div class="text-center max-w-3xl mx-auto">
+      <p class="welcome-eyebrow font-body text-xs font-semibold uppercase tracking-[0.35em] text-[var(--ggc-accent)] mb-5">
+        Digital gift card marketplace
+      </p>
+      <h1 class="welcome-headline font-display text-4xl sm:text-5xl lg:text-6xl xl:text-[3.5rem] font-bold text-[var(--ggc-text)] leading-[1.08] tracking-tight mb-5">
+        {headlineLine1 || title}
+      </h1>
+      {headlineLine2 && (
+        <p class="font-display text-xl lg:text-2xl text-[var(--ggc-muted)] mb-4">{headlineLine2}</p>
+      )}
+      {description && (
+        <p class="font-body text-lg text-[var(--ggc-muted)] max-w-xl mx-auto leading-relaxed mb-8">
+          {description}
+        </p>
+      )}
+
+      <!-- CTAs -->
+      <div class="flex flex-wrap justify-center gap-4 mb-12">
+        {cta2Text && cta2Link && (
+          <a
+            href={cta2Link}
+            class="welcome-cta-primary inline-flex items-center gap-2 rounded-full px-8 py-4 font-body text-sm font-semibold text-white bg-[var(--ggc-accent)] hover:bg-[var(--ggc-purple)] transition-colors shadow-lg shadow-[var(--ggc-accent)]/25 hover:shadow-xl hover:shadow-[var(--ggc-accent)]/30 focus:outline-none focus:ring-2 focus:ring-[var(--ggc-accent)] focus:ring-offset-2"
+          >
+            {cta2Text}
+            <ArrowRight className="h-4 w-4" strokeWidth="2.5" />
+          </a>
+        )}
+        <a
+          href={blogLink}
+          class="welcome-cta-secondary inline-flex items-center gap-2 rounded-full px-8 py-4 font-body text-sm font-semibold text-[var(--ggc-text)] bg-white border-2 border-[var(--ggc-border)] hover:border-[var(--ggc-accent)] hover:text-[var(--ggc-accent)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--ggc-accent)] focus:ring-offset-2"
+        >
+          {blogLinkText}
+        </a>
+      </div>
+
+      <!-- Trust strip: compact pills -->
+      {trustBullets.length > 0 && (
+        <ul class="flex flex-wrap justify-center gap-3 sm:gap-4 mb-14" role="list">
+          {trustBullets.map((bullet) => {
+            const Icon = getTrustIcon(bullet);
+            return (
+              <li>
+                <span
+                  class="inline-flex items-center gap-2 rounded-full bg-white/80 backdrop-blur-sm border border-[var(--ggc-border)] px-4 py-2.5 font-body text-sm text-[var(--ggc-text)] shadow-sm"
+                  aria-hidden="true"
+                >
+                  <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[var(--ggc-accent)]/10 text-[var(--ggc-accent)]">
+                    <Icon className="h-3.5 w-3.5" strokeWidth="2.5" />
+                  </span>
+                  <strong class="font-semibold">{bullet.value}</strong>
+                  {bullet.label ? <span class="text-[var(--ggc-muted)] font-normal">— {bullet.label}</span> : ''}
+                </span>
+              </li>
+            );
+          })}
+        </ul>
+      )}
+    </div>
+
+    <!-- Featured cards: horizontal strip of brand tiles -->
+    {featuredCards.length > 0 && (
+      <div class="welcome-cards mt-8">
+        <p class="text-center font-body text-xs font-semibold uppercase tracking-wider text-[var(--ggc-muted)] mb-6">
+          Popular brands
+        </p>
+        <div class="flex flex-wrap justify-center gap-4 sm:gap-6">
+          {featuredCards.slice(0, 4).map((card) => (
+            <a
+              href={card.link}
+              class="welcome-card group flex flex-col items-center rounded-2xl border border-[var(--ggc-border)] bg-white p-6 min-w-[140px] sm:min-w-[160px] shadow-sm hover:shadow-lg hover:border-[var(--ggc-accent)]/30 hover:-translate-y-1 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[var(--ggc-accent)] focus:ring-offset-2"
+            >
+              <div class="relative w-16 h-16 sm:w-20 sm:h-20 mb-3 overflow-hidden rounded-xl bg-[var(--ggc-surface)]">
+                <img
+                  src={card.image}
+                  alt={card.name}
+                  class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300"
+                  loading="eager"
+                  width="80"
+                  height="80"
+                />
+              </div>
+              <span class="font-display text-sm font-semibold text-[var(--ggc-text)] group-hover:text-[var(--ggc-accent)] transition-colors">
+                {card.name}
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+  </div>
+</section>
+
+<style>
+  .font-display { font-family: var(--font-display); }
+  .font-body { font-family: var(--font-body); }
+
+  .welcome-fintech {
+    min-height: 520px;
+  }
+
+  .welcome-fintech-bg {
+    background:
+      radial-gradient(ellipse 80% 50% at 50% 0%, rgba(99, 102, 241, 0.06) 0%, transparent 55%),
+      radial-gradient(ellipse 60% 40% at 80% 60%, rgba(139, 92, 246, 0.04) 0%, transparent 50%),
+      linear-gradient(180deg, var(--ggc-bg) 0%, var(--ggc-surface) 100%);
+  }
+
+  .welcome-fintech-grid {
+    background-image:
+      linear-gradient(rgba(99, 102, 241, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(99, 102, 241, 0.06) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .welcome-eyebrow {
+    letter-spacing: 0.35em;
+  }
+
+  .welcome-headline {
+    font-feature-settings: "ss01", "ss02";
+  }
+
+  .welcome-cta-primary {
+    min-width: 180px;
+  }
+
+  .welcome-cta-secondary {
+    min-width: 160px;
+  }
+
+  .welcome-card {
+    will-change: transform;
+  }
+</style>

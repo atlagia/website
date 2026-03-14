@@ -1,10 +1,10 @@
 {
-  "siteTitle": "FastIPTV - Premium IPTV Service | 32,000+ Channels | HD/4K Streaming",
-  "siteDescription": "Premium IPTV Streaming Service - Fast IPTV with Unmatched Performance",
+  "siteTitle": "FastIPTV - Premium IPTV | 32,000+ Channels & 4K",
+  "siteDescription": "Discover Fast IPTV — premium IPTV streaming with 32,000+ channels and 140,000+ movies. HD & 4K, zero buffering, every device. Start watching in minutes.",
   "sections": [
     {
       "type": "welcome",
-      "title": "Unlimited Entertainment. One Powerful IPTV Platform.",
+      "title": "Fast IPTV: Unlimited Entertainment. One Powerful Platform.",
       "description": "Stream 32,000+ live channels, 140,000+ movies, and premium sports in Ultra HD & 4K. Lightning-fast servers. Zero buffering. Every device. Every screen.",
       "backgroundImages": [
         "https://cdn.atlagia.com/fastiptv/cropped-UEFA-Champions-League-Stadium-Wallpaper%20(1).jpg",
@@ -43,7 +43,7 @@
     },
     {
       "type": "channels",
-      "title": "Best Fast Stronger IPTV Platforms of 2025",
+      "title": "Live Sports & Premium Content",
       "description": "We are proud to offer the fastest and most premium IPTV service available",
       "channels": [
         {
@@ -80,6 +80,16 @@
           "title": "Bundesliga",
           "poster": "https://cdn.atlagia.com/fastiptv/bundesliga.webp",
           "category": "Football"
+        },
+        {
+          "title": "SuperMan",
+          "poster": "https://cdn.atlagia.com/fastiptv/Superman_(2025_film)_poster.jpg",
+          "category": "Superhero"
+        },
+        {
+          "title": "Mickey 17",
+          "poster": "https://cdn.atlagia.com/fastiptv/images%20(1).jpeg",
+          "category": "Science Fiction"
         }
       ]
     },
@@ -106,48 +116,6 @@
           "link": "/en/channels"
         }
       }
-    },
-    {
-      "type": "channels",
-      "title": "Best Fast Stronger IPTV Platforms of 2025",
-      "description": "We are proud to offer the fastest and most premium IPTV service available",
-      "channels": [
-        {
-          "title": "SuperMan",
-          "poster": "https://cdn.atlagia.com/fastiptv/Superman_(2025_film)_poster.jpg",
-          "category": "Superhero"
-        },
-        {
-          "title": "Sinners",
-          "poster": "https://cdn.atlagia.com/fastiptv/images.jpeg",
-          "category": "Drama"
-        },
-        {
-          "title": "Mickey 17",
-          "poster": "https://cdn.atlagia.com/fastiptv/images%20(1).jpeg",
-          "category": "Science Fiction"
-        },
-        {
-          "title": "Companion",
-          "poster": "https://cdn.atlagia.com/fastiptv/MV5BYmUxZDI2ZjMtNDI5Mi00NTY4LWFhNGMtZGI5YzljZTg4NGI1XkEyXkFqcGc%40._V1_FMjpg_UX1000_.jpg",
-          "category": "Science Fiction"
-        },
-        {
-          "title": "F1 2025",
-          "poster": "https://cdn.atlagia.com/fastiptv/MV5BZTYwYjJhNzYtY2ZiZS00ZmYxLWJkZjctYjRlNGIxYjI3ZTU0XkEyXkFqcGc%40._V1_.jpg",
-          "category": "Sports Documentary"
-        },
-        {
-          "title": "La jeune Femme à l'aiguille 2025",
-          "poster": "https://cdn.atlagia.com/fastiptv/7b0554c79b550c0863bfc8922e27d49a.webp",
-          "category": "Drama"
-        },
-        {
-          "title": "The Insider 2025",
-          "poster": "https://cdn.atlagia.com/fastiptv/901424b912ee290f826dba3af9b7ce70.jpg",
-          "category": "Thriller"
-        }
-      ]
     },
     {
       "type": "pricing",
@@ -251,7 +219,7 @@
     {
       "type": "testimonials",
       "title": "What Our Customers Say",
-      "description": "Join thousands of satisfied StreamVista users worldwide",
+      "description": "Join thousands of satisfied FastIPTV users worldwide",
       "testimonials": [
         {
           "name": "John D.",
@@ -276,11 +244,11 @@
     {
       "type": "faq",
       "title": "Frequently Asked Questions",
-      "description": "Find answers to common questions about StreamVista",
+      "description": "Find answers to common questions about FastIPTV",
       "questions": [
         {
           "question": "What is IPTV?",
-          "answer": "IPTV (Internet Protocol Television) delivers television content over Internet Protocol networks. It offers a more convenient and flexible way to watch TV compared to traditional cable or satellite services."
+          "answer": "IPTV (Internet Protocol Television) is a system that delivers television content over the internet using Internet Protocol networks. Unlike traditional cable or satellite TV, IPTV streams video and audio in real time or on demand, giving you more control and flexibility. You can watch live channels, catch-up TV, and on-demand movies and series on any compatible device—smart TV, phone, tablet, or computer—often in HD and 4K quality."
         },
         {
           "question": "How many devices can I connect?",

@@ -1,0 +1,64 @@
+---
+import { ChevronRight } from 'lucide-react';
+
+interface Category {
+  id: string;
+  name: string;
+  image: string;
+  link: string;
+  color: string;
+}
+
+interface Props {
+  title: string;
+  categories: Category[];
+}
+
+const { title, categories } = Astro.props;
+---
+
+<section class="popular-categories bg-[var(--ggc-bg)] py-16 md:py-20 px-4 sm:px-6 lg:px-8" aria-labelledby="popular-categories-heading">
+  <div class="max-w-7xl mx-auto">
+    <h2 id="popular-categories-heading" class="font-display text-2xl sm:text-3xl font-bold text-[var(--ggc-text)] tracking-tight mb-8 md:mb-10">
+      {title}
+    </h2>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-5">
+      {categories.map((cat) => (
+        <a
+          href={cat.link}
+          class="popular-category-card group relative flex flex-col rounded-2xl overflow-hidden min-h-[140px] sm:min-h-[160px] focus:outline-none focus:ring-2 focus:ring-[var(--ggc-accent)] focus:ring-offset-2"
+          style={`background: ${cat.color};`}
+        >
+          <div class="flex-1 flex items-center justify-center p-4 sm:p-5">
+            <img
+              src={cat.image}
+              alt={cat.name}
+              class="max-h-16 sm:max-h-20 w-auto object-contain opacity-95 group-hover:scale-105 transition-transform duration-200"
+              loading="lazy"
+              width="120"
+              height="80"
+            />
+          </div>
+          <div class="flex items-center justify-between gap-2 px-4 pb-4 pt-2">
+            <span class="font-display font-semibold text-white text-sm sm:text-base truncate">
+              {cat.name}
+            </span>
+            <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-white/20 text-white group-hover:bg-white/30 transition-colors" aria-hidden="true">
+              <ChevronRight className="h-4 w-4" strokeWidth="2.5" />
+            </span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .font-display { font-family: var(--font-display); }
+  .popular-category-card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+  .popular-category-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  }
+</style>

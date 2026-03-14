@@ -1,0 +1,48 @@
+---
+import { Mail } from 'lucide-react';
+
+interface Props {
+  title: string;
+  description: string;
+  backgroundImage?: string;
+  formAction: string;
+  buttonText: string;
+}
+
+const { title, description, backgroundImage, formAction, buttonText } = Astro.props;
+---
+
+<section
+  class="relative py-24 px-4 md:px-8 border-t border-[var(--ggc-border)] bg-gradient-to-br from-[var(--ggc-accent)]/5 via-[var(--ggc-bg)] to-[var(--ggc-purple)]/5"
+  style={backgroundImage ? `background-image: url(${backgroundImage}); background-size: cover; background-position: center;` : ''}
+>
+  {backgroundImage && <div class="absolute inset-0 bg-[var(--ggc-primary)]/80"></div>}
+  <div class="relative max-w-2xl mx-auto text-center">
+    <div class="ggc-glass-panel rounded-3xl p-10 md:p-12 shadow-[var(--ggc-shadow-lg)]">
+      <h2 class="font-display text-3xl md:text-4xl font-bold mb-3 text-[var(--ggc-text)]">{title}</h2>
+      <p class="font-body text-[var(--ggc-muted)] mb-8">{description}</p>
+      <form action={formAction} method="POST" class="flex flex-col sm:flex-row gap-3 justify-center items-stretch sm:items-center">
+        <div class="relative flex-1 max-w-md mx-auto sm:mx-0">
+          <div class="absolute left-4 top-1/2 -translate-y-1/2 text-[var(--ggc-muted)] pointer-events-none">
+            <Mail className="w-5 h-5" />
+          </div>
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+            class="font-body w-full pl-12 pr-4 py-3.5 rounded-xl bg-[var(--ggc-bg)] border border-[var(--ggc-border)] text-[var(--ggc-text)] placeholder:text-[var(--ggc-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--ggc-accent)] focus:border-transparent shadow-sm"
+          />
+        </div>
+        <button type="submit" class="font-body px-8 py-3.5 rounded-xl bg-[var(--ggc-accent)] text-white font-semibold hover:opacity-90 transition-opacity shadow-md">
+          {buttonText}
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<style>
+  .font-display { font-family: var(--font-display); }
+  .font-body { font-family: var(--font-body); }
+</style>

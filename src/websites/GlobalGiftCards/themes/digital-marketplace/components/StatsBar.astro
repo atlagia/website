@@ -1,0 +1,50 @@
+---
+interface Props {
+  title?: string;
+  stats: { value: string; label: string }[];
+}
+
+const { title, stats = [] } = Astro.props;
+---
+
+<section class="border-y border-[var(--ggc-border)] bg-gradient-to-b from-[var(--ggc-surface)] to-[var(--ggc-bg)]" aria-labelledby={title ? 'trust-heading' : undefined} aria-label={title ? undefined : 'Trust credentials'}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-14">
+    {title && (
+      <h2 id="trust-heading" class="font-display text-2xl sm:text-3xl font-semibold text-[var(--ggc-text)] text-center mb-10 tracking-tight">
+        {title}
+      </h2>
+    )}
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10 items-center justify-items-center lg:justify-items-stretch">
+      {stats.map((stat) => (
+        <div class="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left w-full sm:max-w-xs lg:max-w-none">
+          <span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-white text-[var(--ggc-accent)] border border-[var(--ggc-border)] shadow-[var(--ggc-shadow)]" aria-hidden="true">
+            {stat.value === 'Instant Delivery' && (
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            )}
+            {stat.value === 'Secure Payments' && (
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            )}
+            {stat.value === 'Global Availability' && (
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+            )}
+            {stat.value === '24/7 Support' && (
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+            )}
+            {!['Instant Delivery', 'Secure Payments', 'Global Availability', '24/7 Support'].includes(stat.value) && (
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            )}
+          </span>
+          <div>
+            <p class="font-display text-base md:text-lg font-semibold text-[var(--ggc-text)] tracking-tight">{stat.value}</p>
+            <p class="text-[11px] md:text-xs tracking-[0.18em] uppercase text-[var(--ggc-muted)] mt-1 font-body">{stat.label}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .font-display { font-family: var(--font-display); }
+  .font-body { font-family: var(--font-body); }
+</style>

@@ -14,6 +14,7 @@ Use this file when creating a new store. Find the **closest niche match** below 
 | Luxury sneakers, designer shoes, footwear | **DesignerShoes** | `luxury-sneakers` |
 | Luxury watches, jewelry, timepieces | **DesignerWatch** | `luxury-watches` |
 | IPTV, streaming, digital subscriptions, OTT platforms | **FastIPTV** | `iptv` |
+| Digital gift cards, vouchers, fintech marketplace, gift card store | **GlobalGiftCards** | `digital-marketplace` |
 | SaaS, dental, clinic, agency, digital products | **Atlagia / Dentagia** | `saas` |
 | Generic e-commerce (no close match) | **Abstract** | `base` |
 
@@ -142,6 +143,71 @@ CTA [FULL]              → ACTION (unique: final push)
 - **Devices** builds trust by showing platform compatibility
 - **CTA at bottom** is a full-bleed final conversion push (not newsletter)
 - Fewer sections (9) — digital services need less scrolling than physical goods
+
+---
+
+## 2.5 GlobalGiftCards — Digital Gift Cards / Fintech Marketplace (REFERENCE FOR SIMILAR BUILDS)
+
+**Use when:** Building stores for digital gift cards, vouchers, prepaid codes, fintech marketplaces, or similar digital-product marketplaces. **Clone this theme** when the next website is similar (gift cards, vouchers, digital delivery, fintech SaaS-style).
+
+**Store:** `src/websites/GlobalGiftCards/themes/digital-marketplace/`
+**Env:** `.env.globalgiftcards` — PORT 7011, PROJECT_TYPE digital, THEME digital-marketplace
+
+### Design Direction
+- Light fintech / premium SaaS: white bg, subtle gradients, indigo/purple accents
+- Plus Jakarta Sans (display) + DM Sans (body)
+- CSS prefix: `--ggc-*` (ggc-bg, ggc-accent, ggc-text, ggc-muted, etc.)
+- Rounded cards, glassmorphism, modern iconography
+- Premium digital marketplace aesthetic
+
+### Components (18 total — gift card / marketplace specific)
+
+| Component | Purpose | Unique to this niche? |
+|---|---|---|
+| `Welcome.astro` | Centered hero, trust pills, brand tiles | **Yes** (fintech light hero) |
+| `CategoryStrip.astro` | Horizontal category quick links | — |
+| `PopularCategories.astro` | Brand tiles (PlayStation, Xbox, Netflix, etc.) with colored cards | **Yes** |
+| `CategoryGrid.astro` | Full category grid (Gaming, Entertainment, Retail, etc.) | — |
+| `BestSellers.astro` | Product grid, instant-delivery badge | — |
+| `FeaturedDeals.astro` | Promo banner with glowing card visuals | **Yes** |
+| `Banner.astro` | Full-bleed delivery/trust banner | — |
+| `BrandStory.astro` | Trust / marketplace quote + image | — |
+| `WhyChooseGlobalGiftCards.astro` | USP pillars | **Yes** |
+| `ProductShowcase.astro` | New gift cards grid | — |
+| `GiftIdeas.astro` | Curated blocks (gamers, travelers, shoppers, movie lovers) | **Yes** |
+| `StatsBar.astro` | Trust strip (instant delivery, secure, 24/7) | — |
+| `TestimonialSlider.astro` | Customer quotes | — |
+| `NewsSection.astro` | Blog/news cards | — |
+| `EmailSignup.astro` | Newsletter (glass-style box) | — |
+| `Header.astro` | Search, nav, cart, language | — |
+| `Footer.astro` | Categories, support, payments, social | — |
+
+### Section Order Pattern (AIDA mapped)
+
+```
+Welcome [FULL]                    → ATTENTION (centered, light)
+CategoryStrip [STRIP]             → ATTENTION
+PopularCategories [CONTAINED]     → INTEREST (brand tiles, 6-col grid)
+CategoryGrid [CONTAINED]          → INTEREST
+BestSellers [CONTAINED]           → INTEREST
+FeaturedDeals [FULL]              → DESIRE (glowing promo)
+Banner [FULL]                     → DESIRE
+BrandStory [CONTAINED]            → DESIRE
+WhyChoose [CONTAINED]             → DESIRE
+ProductShowcase [CONTAINED]       → INTEREST
+GiftIdeas [CONTAINED]             → DESIRE
+StatsBar [STRIP]                  → DESIRE (trust)
+TestimonialSlider [CONTAINED]     → ACTION
+NewsSection [CONTAINED]           → ACTION
+EmailSignup [CONTAINED]           → ACTION
+```
+
+### Key Lessons
+- **PopularCategories** — brand-name tiles (PlayStation, Xbox, Netflix, etc.) with solid-color backgrounds; clone for any gift-card/voucher marketplace
+- **Welcome** — light, centered fintech hero with trust pills and brand tiles (not dark split layout)
+- **FeaturedDeals** — gradient + glowing card visuals for promo sections
+- **GiftIdeas** — curated blocks for personas (gamers, travelers, etc.)
+- PROJECT_TYPE digital; CDN images in index_en.json (homepage-graphics workflow)
 
 ---
 

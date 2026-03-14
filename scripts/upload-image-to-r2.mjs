@@ -6,8 +6,9 @@
  * Usage:
  *   node scripts/upload-image-to-r2.mjs <localFilePath> [objectKey]
  *
- * If objectKey is omitted, it is derived from the filename and a prefix "generated/".
- * Output (stdout): https://cdn.atlagia.com/generated/...
+ * If objectKey is omitted, it is derived from the filename only (no prefix).
+ * Object keys are stored without a "generated/" prefix on the CDN.
+ * Output (stdout): https://cdn.atlagia.com/...
  */
 
 import { readFileSync, existsSync } from 'fs';
@@ -23,8 +24,8 @@ const R2_PUBLIC_URL = 'https://cdn.atlagia.com';
 
 function usage() {
   console.error('Usage: node scripts/upload-image-to-r2.mjs <localFilePath> [objectKey]');
-  console.error('  objectKey: optional, e.g. generated/MotorRacingApparel/motorsport-apparel/hero.png');
-  console.error('  If omitted, uses generated/<basename>');
+  console.error('  objectKey: optional, e.g. MotorRacingApparel/motorsport-apparel/hero.png');
+  console.error('  If omitted, uses <basename>. Leading "generated/" in objectKey is stripped.');
   process.exit(1);
 }
 
@@ -52,7 +53,9 @@ async function main() {
     process.exit(2);
   }
 
-  if (!objectKey) objectKey = `generated/${basename(localPath)}`;
+  if (!objectKey) objectKey = basename(localPath);
+  // Strip leading "generated/" so CDN path has no generated prefix
+  if (objectKey.startsWith('generated/')) objectKey = objectKey.slice('generated/'.length);
 
   const body = readFileSync(localPath);
   const contentType = getContentType(localPath);

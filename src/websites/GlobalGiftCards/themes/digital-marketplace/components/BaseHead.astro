@@ -1,0 +1,167 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+import { generateCanonicalURL, generateSchema, type SEOProps } from '@utils/seo';
+import GoogleAnalytics from '@components/GoogleAnalytics.astro';
+import Hotjar from '@components/Hotjar.astro';
+
+interface Props extends SEOProps {
+  isProduct?: boolean;
+  price?: { amount: string; currency: string };
+  availability?: boolean;
+  alternateUrls?: Array<{lang: string, url: string}>;
+  productSchema?: any;
+  breadcrumbSchema?: any;
+  projectType?: string;
+}
+
+const {
+  title,
+  description,
+  image = '/images/social-card.jpg',
+  article = false,
+  publishedTime,
+  modifiedTime,
+  isProduct = false,
+  price,
+  availability,
+  alternateUrls = [],
+  productSchema,
+  breadcrumbSchema,
+  projectType
+} = Astro.props;
+
+const currentPath = Astro.url.pathname;
+const currentLang = currentPath.split('/')[1];
+
+const getAllowedLanguages = () => {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  return allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+};
+
+const supportedLanguages = getAllowedLanguages();
+
+const hrefLangURLs = alternateUrls.length > 0 ? [...alternateUrls] : [];
+
+if (alternateUrls.length === 0) {
+  let basePath = currentPath;
+  if (currentLang && supportedLanguages.includes(currentLang)) {
+    basePath = currentPath.substring(currentLang.length + 1) || '/';
+  }
+  const uniqueLangs = new Set();
+  supportedLanguages.forEach(lang => {
+    const url = basePath === '/' ? `${Astro.url.origin}/${lang}` : `${Astro.url.origin}/${lang}${basePath}`;
+    if (!uniqueLangs.has(lang)) {
+      uniqueLangs.add(lang);
+      hrefLangURLs.push({ lang, url });
+    }
+  });
+  const xDefaultUrl = basePath === '/' ? `${Astro.url.origin}/en` : `${Astro.url.origin}/en${basePath}`;
+  hrefLangURLs.push({ lang: 'x-default', url: xDefaultUrl });
+}
+
+if (currentLang && supportedLanguages.includes(currentLang)) {
+  const selfUrl = Astro.url.href;
+  const existingSelf = hrefLangURLs.find(h => h.lang === currentLang && h.url === selfUrl);
+  if (!existingSelf) hrefLangURLs.push({ lang: currentLang, url: selfUrl });
+}
+
+let canonicalURL;
+if (currentPath === '/') {
+  canonicalURL = `${Astro.url.origin}/en`;
+} else if (currentLang && supportedLanguages.includes(currentLang)) {
+  canonicalURL = Astro.url.href;
+} else {
+  canonicalURL = `${Astro.url.origin}/en${currentPath}`;
+}
+
+const schema = generateSchema(Astro.props, Astro.url.pathname);
+---
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="icon" type="image/svg+xml" href={`/${import.meta.env.THEME || 'favicon'}.svg`} />
+<meta name="generator" content={Astro.generator} />
+
+<link rel="canonical" href={canonicalURL} />
+{hrefLangURLs.map(({ lang, url }) => (
+  <link rel="alternate" hreflang={lang} href={url} />
+))}
+
+<meta name="robots" content="index, follow" />
+
+<title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+
+<meta property="og:type" content={article ? 'article' : isProduct ? 'product' : 'website'} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={new URL(image, canonicalURL)} />
+
+{isProduct && price && (
+  <>
+    <meta property="og:price:amount" content={price.amount} />
+    <meta property="og:price:currency" content={price.currency} />
+    <meta property="product:availability" content={availability ? 'in stock' : 'out of stock'} />
+  </>
+)}
+
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={canonicalURL} />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={new URL(image, canonicalURL)} />
+
+<script type="application/ld+json" set:html={schema} />
+{productSchema && <script type="application/ld+json" set:html={JSON.stringify(productSchema)} />}
+{breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+<ViewTransitions />
+
+<style is:global>
+  :root {
+    --font-fallback: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+    --font-display: 'Plus Jakarta Sans', var(--font-fallback);
+    --font-body: 'DM Sans', var(--font-fallback);
+    /* GlobalGiftCards — premium fintech marketplace */
+    --ggc-bg: #ffffff;
+    --ggc-surface: #f8fafc;
+    --ggc-text: #0f172a;
+    --ggc-muted: #64748b;
+    --ggc-accent: #6366f1;
+    --ggc-accent-blue: #3b82f6;
+    --ggc-neon: #a855f7;
+    --ggc-border: #e2e8f0;
+    --ggc-primary: #0f172a;
+    --ggc-emerald: #10b981;
+    --ggc-purple: #8b5cf6;
+    --ggc-hero-dark: #0f172a;
+    --ggc-hero-gold: #6366f1;
+    --ggc-glass: rgba(255, 255, 255, 0.72);
+    --ggc-glass-border: rgba(255, 255, 255, 0.18);
+    --ggc-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+    --ggc-shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+    --ggc-glow: 0 0 40px -8px rgba(99, 102, 241, 0.35);
+    /* Legacy aliases */
+    --theme-bg: var(--ggc-bg);
+    --theme-text: var(--ggc-text);
+    --theme-link: var(--ggc-accent);
+    --theme-accent: var(--ggc-accent);
+  }
+  html { font-family: var(--font-body); scroll-behavior: smooth; }
+  body { margin: 0; padding: 0; background: var(--ggc-bg); color: var(--ggc-text); }
+  h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
+  .ggc-glass-panel { background: var(--ggc-glass); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid var(--ggc-glass-border); }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+    html { scroll-behavior: auto; }
+  }
+</style>
+
+{import.meta.env.PUBLIC_GA_MEASUREMENT_ID && <GoogleAnalytics />}
+<Hotjar />

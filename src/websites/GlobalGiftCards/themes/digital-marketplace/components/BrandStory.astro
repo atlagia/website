@@ -1,0 +1,85 @@
+---
+import { Zap, Shield, LayoutGrid, Headphones } from 'lucide-react';
+
+interface Props {
+  quote: string;
+  image?: string;
+  imageAlt?: string;
+  benefits?: Array<{ label: string; icon?: string }>;
+}
+
+const { quote, benefits = [] } = Astro.props;
+
+const defaultBenefits = [
+  { label: 'Instant Delivery', icon: 'zap' },
+  { label: 'Secure Payments', icon: 'shield' },
+  { label: 'Wide Selection', icon: 'grid' },
+  { label: '24/7 Support', icon: 'headphones' },
+];
+
+const items = benefits.length > 0 ? benefits : defaultBenefits;
+
+function getIcon(icon?: string) {
+  switch (icon) {
+    case 'zap': return Zap;
+    case 'shield': return Shield;
+    case 'grid': return LayoutGrid;
+    case 'headphones': return Headphones;
+    default: return Zap;
+  }
+}
+---
+
+<section class="brand-story relative overflow-hidden" aria-label="Why choose us">
+  <!-- Soft gradient background matching fintech aesthetic -->
+  <div class="brand-story-bg absolute inset-0" aria-hidden="true"></div>
+  <div class="brand-story-grid absolute inset-0 opacity-[0.35]" aria-hidden="true"></div>
+
+  <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+    <div class="text-center max-w-3xl mx-auto">
+      <blockquote class="mb-12">
+        <p class="font-display text-2xl sm:text-3xl md:text-4xl font-medium text-[var(--ggc-text)] leading-tight tracking-tight">
+          {quote}
+        </p>
+      </blockquote>
+
+      <!-- Benefit pills matching Welcome trust strip -->
+      <ul class="flex flex-wrap justify-center gap-3 sm:gap-4" role="list">
+        {items.map((item) => {
+          const Icon = getIcon(item.icon);
+          return (
+            <li>
+              <span
+                class="inline-flex items-center gap-2 rounded-full bg-white/90 backdrop-blur-sm border border-[var(--ggc-border)] px-5 py-3 font-body text-sm text-[var(--ggc-text)] shadow-sm"
+              >
+                <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[var(--ggc-accent)]/10 text-[var(--ggc-accent)]">
+                  <Icon className="h-4 w-4" strokeWidth="2.5" />
+                </span>
+                <strong class="font-semibold">{item.label}</strong>
+              </span>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style>
+  .font-display { font-family: var(--font-display); }
+  .font-body { font-family: var(--font-body); }
+
+  .brand-story-bg {
+    background:
+      radial-gradient(ellipse 70% 40% at 50% 50%, rgba(99, 102, 241, 0.06) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 30% at 20% 80%, rgba(139, 92, 246, 0.04) 0%, transparent 50%),
+      linear-gradient(180deg, var(--ggc-surface) 0%, var(--ggc-bg) 100%);
+  }
+
+  .brand-story-grid {
+    background-image:
+      linear-gradient(rgba(99, 102, 241, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(99, 102, 241, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+</style>

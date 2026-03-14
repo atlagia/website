@@ -1,0 +1,21 @@
+{
+  "pages": [
+    {"path": "/", "name": "Home", "description": "Home page", "priority": 1},
+    {"path": "/collections", "name": "Gift Card Categories", "description": "Browse gift card categories", "priority": 0.9},
+    {"path": "/products", "name": "Products", "description": "View all gift cards", "priority": 0.9},
+    {"path": "/cart", "name": "Cart", "description": "Shopping cart", "priority": 0.8},
+    {"path": "/support", "name": "Support", "description": "Customer support", "priority": 0.7},
+    {"path": "/faq", "name": "FAQ", "description": "Frequently asked questions", "priority": 0.7},
+    {"path": "/about", "name": "About", "description": "About us", "priority": 0.6},
+    {"path": "/contact", "name": "Contact", "description": "Contact", "priority": 0.6},
+    {"path": "/privacy", "name": "Privacy", "description": "Privacy policy", "priority": 0.5},
+    {"path": "/terms", "name": "Terms", "description": "Terms of service", "priority": 0.5}
+  ],
+  "metadata": {
+    "name": "GlobalGiftCards Digital Marketplace",
+    "version": "1.0.0",
+    "description": "Theme for global gift cards digital marketplace",
+    "author": "ATLAGIACMS",
+    "license": "MIT"
+  }
+}

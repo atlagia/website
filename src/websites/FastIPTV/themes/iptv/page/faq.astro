@@ -8,9 +8,13 @@ const lang = getLangFromUrl(Astro.url);
 const translations = await useTranslations(lang);
 const jsonData = translations.default;
 
-const SITE_TITLE = jsonData.siteTitle || 'StreamVista';
+const SITE_TITLE = jsonData.siteTitle || 'FastIPTV';
 const PAGE_TITLE = 'FAQ | ' + SITE_TITLE;
-const PAGE_DESCRIPTION = 'Find answers to frequently asked questions about StreamVista';
+const PAGE_DESCRIPTION = 'Find answers to frequently asked questions about FastIPTV';
+const breadcrumbs = [
+  { name: 'Home', url: `/${lang}` },
+  { name: 'FAQ', url: `/${lang}/faq` }
+];
 
 const categories = [
   {
@@ -22,12 +26,12 @@ const categories = [
         answer: 'IPTV (Internet Protocol Television) delivers television content over Internet Protocol networks. It offers a more convenient and flexible way to watch TV compared to traditional cable or satellite services.'
       },
       {
-        question: 'How do I start using StreamVista?',
+        question: 'How do I start using FastIPTV?',
         answer: 'Getting started is easy: 1) Sign up for an account, 2) Choose your subscription plan, 3) Download the app on your preferred device, and 4) Start watching your favorite content.'
       },
       {
         question: 'What devices can I use?',
-        answer: 'StreamVista works on Smart TVs (Samsung, LG, Android TV), mobile devices (iOS, Android), computers (Windows, Mac, Linux), and gaming consoles (PlayStation, Xbox).'
+        answer: 'FastIPTV works on Smart TVs (Samsung, LG, Android TV), mobile devices (iOS, Android), computers (Windows, Mac, Linux), and gaming consoles (PlayStation, Xbox).'
       },
       {
         question: 'Is there a free trial?',
@@ -70,8 +74,8 @@ const categories = [
         answer: 'To fix buffering: 1) Check your internet connection, 2) Close other bandwidth-heavy applications, 3) Clear app cache, 4) Try a different server location, or 5) Contact support if issues persist.'
       },
       {
-        question: 'Can I use VPN with StreamVista?',
-        answer: 'Yes, StreamVista works with most VPN services. However, using a VPN might affect your streaming quality and available content due to regional restrictions.'
+        question: 'Can I use VPN with FastIPTV?',
+        answer: 'Yes, FastIPTV works with most VPN services. However, using a VPN might affect your streaming quality and available content due to regional restrictions.'
       },
       {
         question: 'How do I update the app?',
@@ -102,12 +106,24 @@ const categories = [
     ]
   }
 ];
+
+const allFaqItems = categories.flatMap(c => c.questions);
+const faqPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: allFaqItems.map((q) => ({
+    '@type': 'Question',
+    name: q.question,
+    acceptedAnswer: { '@type': 'Answer', text: q.answer }
+  }))
+};
 ---
 
 <!doctype html>
 <html lang={lang} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
   <head>
-    <BaseHead title={PAGE_TITLE} description={PAGE_DESCRIPTION} />
+    <BaseHead title={PAGE_TITLE} description={PAGE_DESCRIPTION} breadcrumbs={breadcrumbs} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqPageSchema)} />
   </head>
   <body class="bg-[#0a0a0a] text-white">
     <Header />
@@ -119,7 +135,7 @@ const categories = [
             Frequently Asked Questions
           </h1>
           <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-            Find answers to common questions about StreamVista's services and features.
+            Find answers to common questions about FastIPTV's services and features.
           </p>
         </div>
 
