@@ -48,7 +48,8 @@ const getVideoId = (url: string) => {
 };
 
 const videoId = getVideoId(videoUrl || '');
-const embedUrl = videoId ? `https://www.youtube.com/embed/${videoId}` : '';
+// Use youtube-nocookie.com to avoid third-party cookies until user clicks play (PageSpeed / privacy)
+const embedUrl = videoId ? `https://www.youtube-nocookie.com/embed/${videoId}` : '';
 
 // Default features if none provided
 const defaultFeatures = [

@@ -405,9 +405,9 @@ const reviews = null;
     <!-- View Transitions -->
     <ViewTransitions />
 
-    <!-- Analytics: GA + Hotjar run in Partytown worker to avoid document.write (Best Practices audit) -->
-    <GoogleAnalytics />
-    {import.meta.env.PUBLIC_HOTJAR_ID && import.meta.env.PUBLIC_HOTJAR_VERSION && (
+    <!-- Analytics: GA + Hotjar only when allowed (Partytown triggers deprecated APIs if enabled) -->
+    {import.meta.env.PUBLIC_ALLOW_GA === 'true' && <GoogleAnalytics />}
+    {import.meta.env.PUBLIC_ALLOW_HOTJAR === 'true' && import.meta.env.PUBLIC_HOTJAR_ID && import.meta.env.PUBLIC_HOTJAR_VERSION && (
       <>
         <script define:vars={{ HJ_ID: import.meta.env.PUBLIC_HOTJAR_ID, HJ_VER: import.meta.env.PUBLIC_HOTJAR_VERSION }}>
           window.hj = window.hj || function() { (window.hj.q = window.hj.q || []).push(arguments); };
