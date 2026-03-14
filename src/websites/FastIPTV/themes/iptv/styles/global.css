@@ -1,5 +1,5 @@
 /* Premium FastIPTV - Cinematic Studio Theme */
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap');
+/* Fonts loaded non-blocking in BaseHead.astro with display=swap */
 
 :root {
   /* Deep cinematic backgrounds */

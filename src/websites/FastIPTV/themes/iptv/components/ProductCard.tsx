@@ -33,7 +33,11 @@ export default function ProductCard({ id, title, price, image, description, hand
       <div className="aspect-square overflow-hidden">
         <img 
           src={image} 
-          alt={title} 
+          alt={title}
+          width={400}
+          height={400}
+          loading="lazy"
+          decoding="async"
           className="w-full h-full object-cover transition-transform group-hover:scale-105"
         />
       </div>

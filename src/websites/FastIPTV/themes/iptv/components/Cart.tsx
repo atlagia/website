@@ -35,7 +35,7 @@ export default function Cart({ onCheckout }: CartProps) {
       <div className="flex-1 overflow-y-auto p-4">
         {items.map((item) => (
           <div key={item.id} className="flex items-center gap-4 border-b py-4">
-            <img src={item.image} alt={item.title} className="w-16 h-16 object-cover rounded" />
+            <img src={item.image} alt={item.title} width={64} height={64} loading="lazy" decoding="async" className="w-16 h-16 object-cover rounded" />
             <div className="flex-1">
               <h3 className="font-semibold">{item.title}</h3>
               <p className="text-gray-600">${item.price.toFixed(2)}</p>

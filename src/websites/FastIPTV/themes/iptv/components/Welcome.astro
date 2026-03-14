@@ -117,16 +117,27 @@ const { title, description, stats, cta, backgroundImages = [], backgroundImagesA
 </style>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const slides = document.querySelectorAll('.background-slider > div');
-    if (slides.length <= 1) return;
-    let i = 0;
-    setInterval(() => {
-      slides[i].style.opacity = '0';
-      slides[i].style.zIndex = '1';
-      i = (i + 1) % slides.length;
-      slides[i].style.opacity = '1';
-      slides[i].style.zIndex = '2';
-    }, 6000);
-  });
+  (function() {
+    function startSlider() {
+      const slides = document.querySelectorAll('.background-slider > div');
+      if (slides.length <= 1) return;
+      let i = 0;
+      setInterval(function() {
+        slides[i].style.opacity = '0';
+        slides[i].style.zIndex = '1';
+        i = (i + 1) % slides.length;
+        slides[i].style.opacity = '1';
+        slides[i].style.zIndex = '2';
+      }, 6000);
+    }
+    if (document.readyState === 'complete') {
+      if (typeof requestIdleCallback !== 'undefined') requestIdleCallback(startSlider, { timeout: 2000 });
+      else setTimeout(startSlider, 1);
+    } else {
+      window.addEventListener('load', function() {
+        if (typeof requestIdleCallback !== 'undefined') requestIdleCallback(startSlider, { timeout: 2000 });
+        else setTimeout(startSlider, 1);
+      });
+    }
+  })();
 </script>

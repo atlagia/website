@@ -2,16 +2,15 @@
 import { ViewTransitions } from 'astro:transitions';
 import { generateCanonicalURL, generateSchema, type SEOProps } from '@utils/seo';
 // Reviews fetch removed to avoid Supabase/DB dependency and fetch failures
-import GoogleAnalytics from '@components/GoogleAnalytics.astro';
-import Hotjar from '@components/Hotjar.astro';
-
-// Import global styles
-import '../styles/global.css';
+// Analytics loaded deferred via inline script (requestIdleCallback) to reduce third-party impact
+// Global styles inlined below to avoid render-blocking CSS; theme global.css kept for reference/override.
 
 interface Props {
   title: string;
   description: string;
   isHomePage?: boolean;
+  /** LCP image URL (e.g. hero) for preload; prefer WebP */
+  lcpImage?: string;
   image?: string;
   keywords?: string[];
   author?: string;
@@ -27,6 +26,7 @@ const {
   title, 
   description, 
   isHomePage = false, 
+  lcpImage,
   image = '/og-image.jpg',
   keywords = [
     'Fast IPTV', 
@@ -313,7 +313,14 @@ const reviews = null;
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="theme-color" content="#0a0a0a" />
 
-    <!-- Barlow – preload then load async to avoid render-blocking (font-display: swap in URL) -->
+    <!-- Preload LCP image (hero) and preconnect to CDN -->
+    {lcpImage && (
+      <>
+        <link rel="preconnect" href="https://cdn.atlagia.com" crossorigin />
+        <link rel="preload" as="image" href={lcpImage} />
+      </>
+    )}
+    <!-- Barlow – preload primary font for LCP text, then load async (font-display: swap in URL) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     {isRTL ? (
@@ -393,9 +400,42 @@ const reviews = null;
     <!-- View Transitions -->
     <ViewTransitions />
 
-    <!-- Analytics -->
-    <GoogleAnalytics />
-    <Hotjar />
+    <!-- Analytics: deferred to reduce main-thread impact (load after first paint) -->
+    <script define:vars={{ GA_ID: import.meta.env.PUBLIC_GA_MEASUREMENT_ID, HJ_ID: import.meta.env.PUBLIC_HOTJAR_ID, HJ_VER: import.meta.env.PUBLIC_HOTJAR_VERSION }}>
+      (function() {
+        function loadAnalytics() {
+          if (GA_ID) {
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', GA_ID, { send_page_view: false });
+            var s = document.createElement('script');
+            s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+            s.async = true;
+            document.head.appendChild(s);
+            document.addEventListener('astro:page-load', function() {
+              gtag('event', 'page_view', { page_title: document.title, page_location: window.location.href, page_path: window.location.pathname });
+            });
+            gtag('event', 'page_view', { page_title: document.title, page_location: window.location.href, page_path: window.location.pathname });
+          }
+          if (HJ_ID && HJ_VER) {
+            (function(h,o,t,j,a,r){
+              h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+              h._hjSettings={hjid:Number(HJ_ID),hjsv:Number(HJ_VER)};
+              a=o.getElementsByTagName('head')[0];
+              r=o.createElement('script');r.async=1;
+              r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+              a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+          }
+        }
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(loadAnalytics, { timeout: 2500 });
+        } else {
+          setTimeout(loadAnalytics, 1);
+        }
+      })();
+    </script>
 
     <!-- Styles -->
     <style is:global>
@@ -422,6 +462,14 @@ const reviews = null;
       }
       h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
       img { max-width: 100%; height: auto; display: block; }
+      html { scroll-behavior: smooth; }
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: var(--bg-secondary); }
+      ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, var(--accent-purple), var(--accent-blue)); border-radius: 4px; }
+      ::-webkit-scrollbar-thumb:hover { background: var(--accent-purple); }
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+      }
     </style>
   </head>
 </html>

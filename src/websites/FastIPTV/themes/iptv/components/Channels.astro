@@ -47,7 +47,11 @@ const {
               ">
                 <img 
                   src={channel.poster} 
-                  alt={channel.alt ?? channel.title} 
+                  alt={channel.alt ?? channel.title}
+                  width={256}
+                  height={384}
+                  loading="lazy"
+                  decoding="async"
                   class="
                     w-full 
                     h-72 
@@ -133,19 +137,20 @@ const {
 </style>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const channelsContainer = document.querySelector('.channels-container');
-    
-    if (channelsContainer) {
-      // Pause animation on hover
-      channelsContainer.addEventListener('mouseenter', () => {
-        channelsContainer.style.animationPlayState = 'paused';
-      });
-
-      // Resume animation when mouse leaves
-      channelsContainer.addEventListener('mouseleave', () => {
-        channelsContainer.style.animationPlayState = 'running';
+  (function() {
+    function init() {
+      var channelsContainer = document.querySelector('.channels-container');
+      if (channelsContainer) {
+        channelsContainer.addEventListener('mouseenter', function() { channelsContainer.style.animationPlayState = 'paused'; });
+        channelsContainer.addEventListener('mouseleave', function() { channelsContainer.style.animationPlayState = 'running'; });
+      }
+    }
+    if (document.readyState !== 'loading') {
+      if (typeof requestIdleCallback !== 'undefined') requestIdleCallback(init, { timeout: 1500 }); else setTimeout(init, 50);
+    } else {
+      document.addEventListener('DOMContentLoaded', function() {
+        if (typeof requestIdleCallback !== 'undefined') requestIdleCallback(init, { timeout: 1500 }); else setTimeout(init, 50);
       });
     }
-  });
+  })();
 </script> 
