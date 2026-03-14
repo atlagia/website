@@ -132,8 +132,12 @@ const qualities = moviesData.default.qualities;
                     <img 
                       src={movie.image} 
                       alt={movie.title}
+                      width={640}
+                      height={360}
+                      style="aspect-ratio: 16/9"
                       class="w-full h-full object-cover"
                       loading="lazy"
+                      decoding="async"
                     />
                     <div class="absolute top-2 right-2 bg-purple-600 text-white px-2 py-1 rounded-lg text-sm">
                       {movie.quality}
@@ -181,8 +185,12 @@ const qualities = moviesData.default.qualities;
                         <img 
                           src={movie.image} 
                           alt={movie.title}
+                          width={400}
+                          height={600}
+                          style="aspect-ratio: 2/3"
                           class="w-full h-full object-cover"
                           loading="lazy"
+                          decoding="async"
                         />
                         <div class="absolute top-2 right-2 bg-purple-600 text-white px-2 py-1 rounded-lg text-sm">
                           {movie.quality}

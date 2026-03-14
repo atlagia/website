@@ -31,11 +31,12 @@ export default function ProductCard({ id, title, price, image, description, hand
       className="group bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:-translate-y-1"
     >
       <div className="aspect-square overflow-hidden">
-        <img 
-          src={image} 
+        <img
+          src={image}
           alt={title}
           width={400}
           height={400}
+          style={{ aspectRatio: '1/1' }}
           loading="lazy"
           decoding="async"
           className="w-full h-full object-cover transition-transform group-hover:scale-105"

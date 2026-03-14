@@ -141,9 +141,9 @@ const faqPageSchema = {
 
         {/* Quick Links */}
         <div class="flex flex-wrap justify-center gap-4">
-          {categories.map(category => (
+          {categories.map((category, i) => (
             <a
-              href={`#${category.name.toLowerCase().replace(/\s+/g, '-')}`}
+              href={`#faq-${i}-${category.name.toLowerCase().replace(/\s+/g, '-')}`}
               class="glass rounded-lg px-6 py-3 flex items-center gap-2 hover-scale hover-glow"
             >
               <span>{category.icon}</span>
@@ -154,8 +154,8 @@ const faqPageSchema = {
 
         {/* FAQ Categories */}
         <div class="space-y-16">
-          {categories.map(category => (
-            <div id={category.name.toLowerCase().replace(/\s+/g, '-')} class="scroll-mt-24">
+          {categories.map((category, i) => (
+            <div id={`faq-${i}-${category.name.toLowerCase().replace(/\s+/g, '-')}`} class="scroll-mt-24">
               <div class="flex items-center gap-4 mb-8">
                 <span class="text-4xl">{category.icon}</span>
                 <h2 class="text-3xl font-bold text-purple-400">{category.name}</h2>
