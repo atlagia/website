@@ -12,6 +12,15 @@ const allowedLanguages = getAllowedLanguages();
 export const onRequest: MiddlewareHandler = (context, next) => {
   const url = new URL(context.request.url);
   const pathname = url.pathname;
+
+  // WWW canonicalization: redirect www to non-www (301) so one canonical version for SEO
+  const hostname = url.hostname;
+  if (hostname.startsWith('www.')) {
+    const canonicalHost = hostname.slice(4);
+    const canonicalUrl = new URL(context.request.url);
+    canonicalUrl.hostname = canonicalHost;
+    return context.redirect(canonicalUrl.toString(), 301);
+  }
   
   // Check if path starts with a language code
   const pathParts = pathname.split('/').filter(part => part.length > 0);
