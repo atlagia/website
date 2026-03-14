@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">RidWear</h3>
+            <h3 className="text-xl font-bold mb-4">JacketVerse</h3>
             <p className="text-gray-400">Premium motorcycle gear for every rider.</p>
           </div>
           
@@ -44,7 +44,7 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; {currentYear} RidWear. All rights reserved.</p>
+          <p>&copy; {currentYear} JacketVerse. All rights reserved.</p>
         </div>
       </div>
     </footer>

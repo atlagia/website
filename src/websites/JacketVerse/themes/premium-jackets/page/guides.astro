@@ -9,7 +9,7 @@ if (!isValidLanguage(lang)) {
 const translations = await useTranslations(lang);
 const jsonData = translations.default;
 
-const SITE_TITLE = `Buying Guides - ${jsonData.siteTitle || 'Drivon'}`;
+const SITE_TITLE = `Buying Guides - ${jsonData.siteTitle || 'JacketVerse'}`;
 const SITE_DESCRIPTION = 'Complete buying guides for driver merchandise. Find the perfect automotive gear with our expert guides.';
 
 const { default: BaseHead } = await import(`../components/BaseHead.astro`);

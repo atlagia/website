@@ -8,7 +8,7 @@ const lang = getLangFromUrl(Astro.url);
 const translations = await useTranslations(lang);
 const jsonData = translations.default;
 
-const SITE_TITLE = jsonData.siteTitle || 'StreamVista';
+const SITE_TITLE = jsonData.siteTitle || 'FastIPTV';
 const PAGE_TITLE = 'TV Shows | ' + SITE_TITLE;
 const PAGE_DESCRIPTION = 'Watch your favorite TV series and shows on demand';
 

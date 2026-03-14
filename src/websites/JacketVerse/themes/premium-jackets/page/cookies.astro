@@ -9,8 +9,8 @@ if (!isValidLanguage(lang)) {
 const translations = await useTranslations(lang);
 const jsonData = translations.default;
 
-const SITE_TITLE = `Cookie Policy - ${jsonData.siteTitle || 'Drivon'}`;
-const SITE_DESCRIPTION = 'Cookie policy and tracking information for Drivon driver merchandise website.';
+const SITE_TITLE = `Cookie Policy - ${jsonData.siteTitle || 'JacketVerse'}`;
+const SITE_DESCRIPTION = 'Cookie policy and tracking information for JacketVerse premium jackets website.';
 
 const { default: BaseHead } = await import(`../components/BaseHead.astro`);
 const { default: Header } = await import(`../components/Header.astro`);

@@ -11,7 +11,7 @@ export async function getStaticPaths() {
 
 const { lang = 'en' } = Astro.params;
 const baseUrl = import.meta.env.DOMAINE || 'https://drivon.store';
-const storeName = import.meta.env.PUBLIC_SITE_NAME || 'Drivon';
+const storeName = import.meta.env.PUBLIC_SITE_NAME || 'JacketVerse';
 
 // Load multilingual data
 let data;
@@ -26,7 +26,7 @@ const pageData = data.default;
 
 // Get business information from environment variables
 const businessInfo = {
-  name: import.meta.env.PUBLIC_BUSINESS_NAME || 'Drivon',
+  name: import.meta.env.PUBLIC_BUSINESS_NAME || 'JacketVerse',
   email: import.meta.env.PUBLIC_BUSINESS_EMAIL || 'info@drivon.store',
   phone: import.meta.env.PUBLIC_BUSINESS_PHONE || '+1234567890',
   address: {

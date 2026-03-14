@@ -33,7 +33,7 @@ const {
     url: canonicalURL,
     publisher: {
       "@type": "Organization",
-      name: import.meta.env.PUBLIC_BUSINESS_NAME || 'Atalsia',
+      name: import.meta.env.PUBLIC_BUSINESS_NAME || 'JacketVerse',
       logo: {
         "@type": "ImageObject",
         url: new URL("/logo.png", Astro.url)
@@ -230,7 +230,7 @@ const fullSchema = [schemaMarkup, breadcrumbSchema];
 <title>{title}</title>
 <meta name="title" content={title} />
 <meta name="description" content={description} />
-<meta name="author" content={import.meta.env.PUBLIC_BUSINESS_NAME || 'Atalsia'} />
+<meta name="author" content={import.meta.env.PUBLIC_BUSINESS_NAME || 'JacketVerse'} />
 <meta name="publish_date" property="og:publish_date" content={publishDate} />
 
 <!-- Open Graph / Facebook -->

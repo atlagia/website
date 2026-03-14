@@ -12,16 +12,21 @@ interface Props {
     secondary: { text: string; link: string };
   };
   backgroundImages?: string[];
+  backgroundImagesAlt?: string[];
 }
 
-const { title, description, stats, cta, backgroundImages = [] } = Astro.props;
+const { title, description, stats, cta, backgroundImages = [], backgroundImagesAlt = [] } = Astro.props;
 ---
 
 <section class="relative min-h-screen flex items-center justify-center overflow-hidden py-20 sm:py-24 lg:py-32 bg-[#0a0a0a]">
   <!-- Cinematic background with strong overlay for text readability -->
   <div class="absolute inset-0">
     {backgroundImages.length > 0 ? (
-      <div class="absolute inset-0 background-slider">
+      <div
+        class="absolute inset-0 background-slider"
+        role="img"
+        aria-label={backgroundImagesAlt?.[0] ?? "Fast IPTV hero streaming backgrounds"}
+      >
         {backgroundImages.map((image, i) => (
           <div
             class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000"

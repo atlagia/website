@@ -1,6 +1,7 @@
 ---
 import Layout from '../../../layouts/LayoutP.astro';
 import { shopifyFetch } from '../../../lib/shopify';
+import { SITE_BRAND } from '../../consts';
 import AddToCart from '../../../themes/default/components/AddToCart';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import ProductCard from '../../../themes/default/components/ProductCard';
@@ -119,9 +120,30 @@ if (!product || images.length === 0 || variants.length === 0) {
 }
 
 const PROJECT_TYPE = import.meta.env.PROJECT_TYPE || 'physical';
+
+const price = variants[0]?.price?.amount ?? '0';
+const currency = variants[0]?.price?.currencyCode ?? 'USD';
+const availability = variants.some((v: { availableForSale?: boolean }) => v.availableForSale) ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock';
+const productJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: product.title,
+  description: product.description || product.title,
+  image: images.map((img: { url: string }) => img.url),
+  brand: { '@type': 'Brand', name: SITE_BRAND },
+  offers: {
+    '@type': 'Offer',
+    url: Astro.url.href,
+    priceCurrency: currency,
+    price: price,
+    availability,
+    itemCondition: 'https://schema.org/NewCondition',
+  },
+};
 ---
 
-<Layout title={`${product.title} | RidWear`}>
+<Layout title={`${product.title} | ${SITE_BRAND}`}>
+  <script type="application/ld+json" set:html={JSON.stringify(productJsonLd)} />
   <main class="max-w-7xl mx-auto px-4 py-12">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
       <!-- Image Gallery -->

@@ -5,6 +5,7 @@ interface Props {
   channels?: {
     title: string;
     poster: string;
+    alt?: string;
     category?: string;
   }[];
 }
@@ -46,7 +47,7 @@ const {
               ">
                 <img 
                   src={channel.poster} 
-                  alt={channel.title} 
+                  alt={channel.alt ?? channel.title} 
                   class="
                     w-full 
                     h-72 

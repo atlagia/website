@@ -10,7 +10,7 @@ You are the **SEO audit specialist** for the seo-audit-and-fix workflow. The par
 **Your job — Phase 1 only. Full checklists in .cursor/skills/seo-audit-and-fix/reference.md.**
 
 1. **Run a full SEO audit** on the target website. Use themePath and baseUrl from context.
-2. **Audit in this order:** Technical (crawlability, indexing, Core Web Vitals, mobile, HTTPS) → On-page (title, meta, H1, headings, keyword placement per key page) → Content and E-E-A-T → Featured snippet readiness → Internal linking → Images → Structured data → Data/code (index_en.json, BaseHead, components that output meta/headings).
+2. **Audit in this order:** Technical and Speed (crawlability, indexing, URL canonicalization, canonical tag correctness, Core Web Vitals, render-blocking, page load time, JS execution time, HTTP request count, image format/size, custom 404, mobile, HTTPS) → On-page (title, meta, H1, headings, keyword placement per key page) → Content and E-E-A-T → Featured snippet readiness → Internal linking → Images → Structured data → Data/code (index_en.json, BaseHead, components that output meta/headings).
 3. **For each area** list every issue with location (file or URL) and severity (high/medium/low).
 4. **Produce an SEO Audit Report** using the template in .cursor/skills/seo-audit-and-fix/reference.md: overall score (e.g. X/30), score per category, list of issues, and Priority Fixes (high / medium / low).
 

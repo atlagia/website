@@ -13,8 +13,8 @@ const translations = await useTranslations(lang);
 const jsonData = translations.default;
 
 // Get site title and description from language-specific data
-const SITE_TITLE = `Privacy Policy - ${jsonData.siteTitle || 'Drivon'}`;
-const SITE_DESCRIPTION = 'Privacy policy and data protection information for Drivon driver merchandise.';
+const SITE_TITLE = `Privacy Policy - ${jsonData.siteTitle || 'JacketVerse'}`;
+const SITE_DESCRIPTION = 'Privacy policy and data protection information for JacketVerse premium jackets.';
 
 // Dynamic imports based on environment
 const { default: BaseHead } = await import(`../components/BaseHead.astro`);
@@ -54,7 +54,7 @@ export async function getStaticPaths() {
             <section class="mb-8">
               <h2 class="text-2xl font-semibold text-[var(--drivon-text)] mb-4">1. Information We Collect</h2>
               <p class="text-gray-700 mb-4">
-                At Drivon, we collect information you provide directly to us, such as when you create an account, 
+                At JacketVerse, we collect information you provide directly to us, such as when you create an account, 
                 make a purchase, or contact us for support. This may include:
               </p>
               <ul class="list-disc pl-6 text-gray-700 mb-4">
@@ -176,7 +176,7 @@ export async function getStaticPaths() {
               </p>
               <div class="bg-[var(--drivon-bg)] p-6 rounded-lg">
                 <p class="text-gray-700 mb-2"><strong>Email:</strong> privacy@drivon.store</p>
-                <p class="text-gray-700 mb-2"><strong>Address:</strong> Drivon Privacy Team</p>
+                <p class="text-gray-700 mb-2"><strong>Address:</strong> JacketVerse Privacy Team</p>
                 <p class="text-gray-700">We will respond to your inquiry within 30 days.</p>
               </div>
             </section>

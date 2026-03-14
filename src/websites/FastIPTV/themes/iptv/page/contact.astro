@@ -8,9 +8,9 @@ const lang = getLangFromUrl(Astro.url);
 const translations = await useTranslations(lang);
 const jsonData = translations.default;
 
-const SITE_TITLE = jsonData.siteTitle || 'StreamVista';
+const SITE_TITLE = jsonData.siteTitle || 'FastIPTV';
 const PAGE_TITLE = 'Contact Us | ' + SITE_TITLE;
-const PAGE_DESCRIPTION = 'Get in touch with StreamVista support team';
+const PAGE_DESCRIPTION = jsonData.contactPageDescription || 'Get in touch with FastIPTV support team';
 ---
 
 <!doctype html>
@@ -25,7 +25,7 @@ const PAGE_DESCRIPTION = 'Get in touch with StreamVista support team';
         {/* Hero Section */}
         <div class="text-center space-y-4">
           <h1 class="text-4xl md:text-6xl font-bold gradient-text">
-            Get in Touch
+            Contact FastIPTV
           </h1>
           <p class="text-xl text-gray-300 max-w-3xl mx-auto">
             Our support team is available 24/7 to help you with any questions or concerns.
@@ -109,8 +109,8 @@ const PAGE_DESCRIPTION = 'Get in touch with StreamVista support team';
               <div class="space-y-4">
                 <div class="flex items-center gap-4">
                   <span class="text-purple-400">📧</span>
-                  <a href="mailto:support@streamvista.com" class="hover:text-purple-400">
-                    support@streamvista.com
+                  <a href="mailto:support@fastiptv.com" class="hover:text-purple-400">
+                    support@fastiptv.com
                   </a>
                 </div>
                 <div class="flex items-center gap-4">
@@ -128,8 +128,8 @@ const PAGE_DESCRIPTION = 'Get in touch with StreamVista support team';
               <div class="space-y-4">
                 <div class="flex items-center gap-4">
                   <span class="text-purple-400">📧</span>
-                  <a href="mailto:business@streamvista.com" class="hover:text-purple-400">
-                    business@streamvista.com
+                  <a href="mailto:business@fastiptv.com" class="hover:text-purple-400">
+                    business@fastiptv.com
                   </a>
                 </div>
               </div>

@@ -1,8 +1,8 @@
 export default {
-  name: 'StreamVista IPTV',
+  name: 'FastIPTV',
   version: '1.0.0',
   description: 'A modern IPTV streaming service theme',
-  author: 'StreamVista',
+  author: 'FastIPTV',
   
   // Theme colors
   colors: {
@@ -102,9 +102,9 @@ export default {
 
   // Social media links
   social: {
-    facebook: 'https://facebook.com/streamvista',
-    twitter: 'https://twitter.com/streamvista',
-    instagram: 'https://instagram.com/streamvista',
-    youtube: 'https://youtube.com/streamvista',
+    facebook: 'https://facebook.com/fastiptv',
+    twitter: 'https://twitter.com/fastiptv',
+    instagram: 'https://instagram.com/fastiptv',
+    youtube: 'https://youtube.com/fastiptv',
   },
 };

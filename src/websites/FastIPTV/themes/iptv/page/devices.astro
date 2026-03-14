@@ -8,9 +8,9 @@ const lang = getLangFromUrl(Astro.url);
 const translations = await useTranslations(lang);
 const jsonData = translations.default;
 
-const SITE_TITLE = jsonData.siteTitle || 'StreamVista';
+const SITE_TITLE = jsonData.siteTitle || 'FastIPTV';
 const PAGE_TITLE = 'Supported Devices | ' + SITE_TITLE;
-const PAGE_DESCRIPTION = 'Watch StreamVista on all your favorite devices';
+const PAGE_DESCRIPTION = 'Watch FastIPTV on all your favorite devices';
 
 const devices = [
   {
@@ -157,14 +157,14 @@ const devices = [
               <div class="text-4xl">1️⃣</div>
               <h3 class="text-xl font-bold">Download</h3>
               <p class="text-gray-300">
-                Get the StreamVista app from your device's app store or visit our website.
+                Get the FastIPTV app from your device's app store or visit our website.
               </p>
             </div>
             <div class="space-y-4 text-center">
               <div class="text-4xl">2️⃣</div>
               <h3 class="text-xl font-bold">Sign In</h3>
               <p class="text-gray-300">
-                Log in with your StreamVista account or start your free trial.
+                Log in with your FastIPTV account or start your free trial.
               </p>
             </div>
             <div class="space-y-4 text-center">
@@ -180,7 +180,7 @@ const devices = [
         {/* Download Links */}
         <div class="text-center space-y-8">
           <h2 class="text-2xl font-bold text-purple-400">
-            Download StreamVista
+            Download FastIPTV
           </h2>
           <div class="flex flex-wrap justify-center gap-4">
             <a
@@ -218,7 +218,7 @@ const devices = [
         <div class="glass rounded-2xl p-8 text-center space-y-6">
           <h2 class="text-3xl font-bold gradient-text">Ready to Start Watching?</h2>
           <p class="text-xl text-gray-300">
-            Try StreamVista free for 7 days on any device.
+            Try FastIPTV free for 7 days on any device.
           </p>
           <div class="flex justify-center gap-4">
             <a

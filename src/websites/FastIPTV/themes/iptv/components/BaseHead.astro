@@ -234,14 +234,6 @@ const websiteSchema = {
   "publisher": {
     "@type": "Organization",
     "name": "FastIPTV"
-  },
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": {
-      "@type": "EntryPoint",
-      "urlTemplate": `${Astro.site}search?q={search_term_string}`
-    },
-    "query-input": "required name=search_term_string"
   }
 };
 
@@ -321,13 +313,15 @@ const reviews = null;
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="theme-color" content="#0a0a0a" />
 
-    <!-- Barlow – closest free alternative to Netflix Sans (geometric, clean, rounded) -->
+    <!-- Barlow – preload then load async to avoid render-blocking (font-display: swap in URL) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     {isRTL ? (
-      <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=Noto+Kufi+Arabic:wght@400;600;700&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=Noto+Kufi+Arabic:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+      <noscript><link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=Noto+Kufi+Arabic:wght@400;600;700&display=swap" rel="stylesheet" /></noscript>
     ) : (
-      <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+      <noscript><link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet" /></noscript>
     )}
 
     <!-- Verification and Ownership: add real codes when configured in Search Console / Bing / Yandex -->

@@ -14,6 +14,9 @@ interface Props {
   secondaryCtaLink?: string;
   seasonLabel?: string;
   heroImage?: string;
+  /** Featured-snippet–ready: question as H2, 40–60 word definition. */
+  snippetQuestion?: string;
+  snippetDefinition?: string;
 }
 
 const props = Astro.props;
@@ -25,6 +28,8 @@ const secondaryCtaText = props.secondaryCtaText ?? 'Explore';
 const secondaryCtaLink = props.secondaryCtaLink ?? '/collections/styles';
 const seasonLabel = props.seasonLabel;
 const heroImage = props.heroImage;
+const snippetQuestion = props.snippetQuestion;
+const snippetDefinition = props.snippetDefinition;
 
 const isShopify = heroImage?.includes('cdn.shopify.com');
 const baseUrl = (heroImage?.replace(/[?&]width=\d+/, '') ?? '').replace(/\?$/, '');
@@ -60,7 +65,7 @@ const secondaryHref = secondaryCtaLink.startsWith('/') ? `/${lang}${secondaryCta
         src={heroImageSrc || heroImage}
         srcset={heroImageSrcSet}
         sizes="100vw"
-        alt=""
+        alt="JacketVerse hero: premium jackets for every style and season"
         class="hero-img w-full h-full object-cover"
         fetchpriority="high"
         loading="eager"
@@ -113,6 +118,15 @@ const secondaryHref = secondaryCtaLink.startsWith('/') ? `/${lang}${secondaryCta
     <span class="text-[10px] tracking-[0.35em] uppercase text-[var(--jv-text)]/70 font-body">Scroll</span>
     <div class="w-px h-14 bg-[var(--jv-text)]/40 rounded-full"></div>
   </div>
+
+  {snippetQuestion && snippetDefinition && (
+    <div class="relative z-20 max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 -mt-8 pb-8">
+      <div class="bg-[var(--jv-surface)]/95 backdrop-blur-sm border border-[var(--jv-border)]/60 rounded-lg p-6 md:p-8">
+        <h2 class="font-display text-xl md:text-2xl text-[var(--jv-text)] mb-3">{snippetQuestion}</h2>
+        <p class="font-body text-[var(--jv-muted)] leading-relaxed max-w-3xl">{snippetDefinition}</p>
+      </div>
+    </div>
+  )}
 </section>
 
 <style>

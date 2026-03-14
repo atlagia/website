@@ -65,6 +65,24 @@ const SITE_DESCRIPTION = '404 - Page Not Found';
         margin-bottom: 2rem;
         max-width: 600px;
       }
+      .helpful-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.75rem 1rem;
+        margin-bottom: 2rem;
+      }
+      .helpful-links a {
+        color: #4ecdc4;
+        text-decoration: none;
+        padding: 0.5rem 0.75rem;
+        border-radius: 6px;
+        transition: background 0.2s, color 0.2s;
+      }
+      .helpful-links a:hover {
+        background: rgba(78, 205, 196, 0.2);
+        color: #fff;
+      }
       .back-home {
         display: inline-block;
         padding: 0.75rem 1.5rem;
@@ -95,6 +113,13 @@ const SITE_DESCRIPTION = '404 - Page Not Found';
         <div class="error-message">
           {jsonData.notFoundMessage || 'Oops! The channel you are looking for is not available.'}
         </div>
+        <nav class="helpful-links" aria-label="Helpful links">
+          <a href={`/${lang}/channels`}>Channels</a>
+          <a href={`/${lang}/pricing`}>Pricing</a>
+          <a href={`/${lang}/faq`}>FAQ</a>
+          <a href={`/${lang}/packages`}>Packages</a>
+          <a href={`/${lang}/contact`}>Contact</a>
+        </nav>
         <a href={`/${lang}`} class="back-home">
           {jsonData.backToHomeText || 'Back to Home'}
         </a>

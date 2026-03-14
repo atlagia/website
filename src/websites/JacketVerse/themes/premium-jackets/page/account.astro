@@ -9,8 +9,8 @@ if (!isValidLanguage(lang)) {
 const translations = await useTranslations(lang);
 const jsonData = translations.default;
 
-const SITE_TITLE = `My Account - ${jsonData.siteTitle || 'Drivon'}`;
-const SITE_DESCRIPTION = 'Manage your Drivon account, orders, and preferences for driver merchandise.';
+const SITE_TITLE = `My Account - ${jsonData.siteTitle || 'JacketVerse'}`;
+const SITE_DESCRIPTION = 'Manage your JacketVerse account, orders, and preferences for premium jackets.';
 
 const { default: BaseHead } = await import(`../components/BaseHead.astro`);
 const { default: Header } = await import(`../components/Header.astro`);
@@ -65,7 +65,7 @@ export async function getStaticPaths() {
               </svg>
             </div>
             <h3 class="font-headline text-xl text-[var(--drivon-text)] uppercase tracking-wide mb-4">Create Account</h3>
-            <p class="text-[var(--drivon-muted)] mb-6">Join the Drivon community for exclusive benefits</p>
+            <p class="text-[var(--jv-muted)] mb-6">Join the JacketVerse community for exclusive benefits</p>
             <button class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium">
               Sign Up
             </button>

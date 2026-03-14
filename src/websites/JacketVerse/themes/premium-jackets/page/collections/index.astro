@@ -2,6 +2,7 @@
 import Layout from '../../../layouts/Layout.astro';
 import ProductCard from '../../../themes/default/components/ProductCard';
 import { getAllProducts } from '../../../lib/shopify';
+import { SITE_BRAND } from '../../consts';
 
 const theme = import.meta.env.THEME || 'default';
 
@@ -12,7 +13,7 @@ const { default: Footer } = await import(`../../themes/${theme}/components/Foote
 
 const products = await getAllProducts();
 ---
-<Layout title="Collections | RidWear">
+<Layout title={`Collections | ${SITE_BRAND}`}>
   <Header />
   <main class="max-w-7xl mx-auto px-4 pb-8 pt-[100px]">
     <h1 class="text-3xl font-bold mb-8">Our Collections</h1>

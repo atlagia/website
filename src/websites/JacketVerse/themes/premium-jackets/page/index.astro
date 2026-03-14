@@ -66,6 +66,8 @@ export async function getStaticPaths() {
               secondaryCtaLink={section.secondaryCtaLink}
               heroImage={section.heroImage}
               seasonLabel={section.seasonLabel}
+              snippetQuestion={section.snippetQuestion}
+              snippetDefinition={section.snippetDefinition}
             />
           )}
           {section.type === 'statsBar' && (
@@ -124,6 +126,7 @@ export async function getStaticPaths() {
               guaranteeText={section.guaranteeText}
             />
           )}
+          {/* Blog/featured: ensure feed is jacket/fashion content when available; hide or filter until aligned. */}
           {section.type === 'featuredPosts' && (
             <FeaturedPosts
               title={section.title}

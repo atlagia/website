@@ -16,15 +16,16 @@
     "start:all": "pm2 start ecosystem.config.cjs",
     "stop:all": "pm2 stop all",
     "restart:all": "pm2 restart all",
-    "upload-image-r2": "node scripts/upload-image-to-r2.mjs"
+    "upload-image-r2": "node scripts/upload-image-to-r2.mjs",
+    "optimize-upload-image-seo": "node scripts/optimize-and-upload-image-seo.mjs"
   },
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.700.0",
     "@astro-community/astro-embed-youtube": "^0.5.6",
     "@astrojs/node": "^9.0.0",
     "@astrojs/partytown": "^2.1.2",
     "@astrojs/react": "^3.6.2",
     "@astrojs/tailwind": "^5.1.0",
+    "@aws-sdk/client-s3": "^3.700.0",
     "@heroicons/react": "^2.2.0",
     "@iconify-json/lucide": "^1.2.57",
     "@iconify-json/simple-icons": "^1.2.43",
@@ -57,6 +58,7 @@
     "react-dom": "^18.2.0",
     "react-icons": "^5.5.0",
     "redis": "^4.7.0",
+    "sharp": "^0.33.5",
     "stripe": "^18.4.0",
     "tailwind-merge": "^2.2.1",
     "tailwindcss": "^3.4.1",

@@ -1,6 +1,8 @@
 {
-  "siteTitle": "FastIPTV - Premium IPTV | 32,000+ Channels & 4K",
-  "siteDescription": "Discover Fast IPTV — premium IPTV streaming with 32,000+ channels and 140,000+ movies. HD & 4K, zero buffering, every device. Start watching in minutes.",
+  "siteTitle": "FastIPTV - Premium IPTV | 32,000+ Channels & 4K Streaming",
+  "notFoundMessage": "This page could not be found. Explore our channels, pricing, or contact support.",
+  "backToHomeText": "Back to Home",
+  "siteDescription": "Discover premium Fast IPTV streaming with 32,000+ live channels and 140,000+ movies in HD & 4K. Zero buffering, every device. Start watching in minutes. Try risk-free today.",
   "sections": [
     {
       "type": "welcome",
@@ -11,6 +13,12 @@
         "https://cdn.atlagia.com/fastiptv/djdmztf-8f51d37a-6840-4a0c-ab4d-86333ca27817.jpg",
         "https://cdn.atlagia.com/fastiptv/most-watched-movies-on-netflix-as-of-2025-v0-6uRwxXV8WG2QdprOwPBFpBvQoAYPwdLlvK4HOYF3WE0.webp",
         "https://cdn.atlagia.com/fastiptv/content_wall_30012023-jpg-2048x1152-1.webp"
+      ],
+      "backgroundImagesAlt": [
+        "UEFA Champions League stadium and premium IPTV streaming",
+        "Premium IPTV entertainment and live TV",
+        "Popular movies and 4K streaming on Fast IPTV",
+        "Fast IPTV content library and on-demand streaming"
       ],
       "stats": {
         "channels": "32,000+ Fast IPTV Channels",
@@ -49,46 +57,55 @@
         {
           "title": "Champions League",
           "poster": "https://cdn.atlagia.com/fastiptv/championsleague.jpg",
+          "alt": "Champions League football live on Fast IPTV",
           "category": "Football"
         },
         {
           "title": "Europa League",
           "poster": "https://cdn.atlagia.com/fastiptv/europaleague.jpg",
+          "alt": "Europa League football streaming",
           "category": "Football"
         },
         {
           "title": "La Liga",
           "poster": "https://cdn.atlagia.com/fastiptv/laliga.jpg",
+          "alt": "La Liga Spanish football on Fast IPTV",
           "category": "Football"
         },
         {
           "title": "Premier League",
           "poster": "https://cdn.atlagia.com/fastiptv/premierleague.jpg",
+          "alt": "Premier League live football streaming",
           "category": "Football"
         },
         {
           "title": "Serie A",
           "poster": "https://cdn.atlagia.com/fastiptv/seriea.jpg",
+          "alt": "Serie A Italian football on Fast IPTV",
           "category": "Football"
         },
         {
           "title": "Ligue 1",
           "poster": "https://cdn.atlagia.com/fastiptv/ligue1.jpg",
+          "alt": "Ligue 1 French football streaming",
           "category": "Football"
         },
         {
           "title": "Bundesliga",
           "poster": "https://cdn.atlagia.com/fastiptv/bundesliga.webp",
+          "alt": "Bundesliga German football live",
           "category": "Football"
         },
         {
           "title": "SuperMan",
           "poster": "https://cdn.atlagia.com/fastiptv/Superman_(2025_film)_poster.jpg",
+          "alt": "Superman 2025 film on Fast IPTV",
           "category": "Superhero"
         },
         {
           "title": "Mickey 17",
           "poster": "https://cdn.atlagia.com/fastiptv/images%20(1).jpeg",
+          "alt": "Mickey 17 science fiction film",
           "category": "Science Fiction"
         }
       ]
@@ -248,7 +265,7 @@
       "questions": [
         {
           "question": "What is IPTV?",
-          "answer": "IPTV (Internet Protocol Television) is a system that delivers television content over the internet using Internet Protocol networks. Unlike traditional cable or satellite TV, IPTV streams video and audio in real time or on demand, giving you more control and flexibility. You can watch live channels, catch-up TV, and on-demand movies and series on any compatible device—smart TV, phone, tablet, or computer—often in HD and 4K quality."
+          "answer": "IPTV (Internet Protocol Television) delivers TV over the internet using IP networks. Unlike cable or satellite, it streams video and audio in real time or on demand. You get live channels, catch-up TV, and on-demand movies and series on any compatible device—smart TV, phone, tablet, or computer—often in HD and 4K."
         },
         {
           "question": "How many devices can I connect?",

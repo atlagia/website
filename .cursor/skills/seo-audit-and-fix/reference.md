@@ -42,6 +42,25 @@ Google’s official guidance is organized as **Google Search Essentials** (forme
 
 ---
 
+## Speed & Performance (SEO Site Checkup–style)
+
+Issues that commonly fail audits (e.g. SEO Site Checkup, Lighthouse) and hurt rankings:
+
+| Issue | Target | Audit / Fix |
+|-------|--------|-------------|
+| **URL canonicalization** | One primary URL per page; no duplicate content from variants | Audit: Check canonical tag matches actual page URL; no conflicting www/non-www or trailing-slash duplicates. Fix: Choose primary URL; set canonical to it; add redirects from other variants (server or meta). |
+| **Canonical tag correctness** | Canonical must be correct and **dynamic** (not hard-coded wrong) | Audit: Ensure `<link rel="canonical" href="...">` reflects current URL (e.g. /en vs /, lang, query). Fix: Generate canonical from current request (e.g. `canonicalURL` / `Astro.url`); never hard-code a single URL for all pages. |
+| **LCP** | ≤ 2.5s | Audit: Measure (Lighthouse/PageSpeed). Fix: Optimize LCP element (hero image: size, format, priority); reduce render-blocking; CDN. |
+| **Render-blocking resources** | Eliminate or defer | Audit: Identify CSS/JS that block first paint. Fix: Inline critical CSS; defer non-critical JS (defer/async); load below-fold CSS/JS lazily. |
+| **Page load time** | &lt; 5s | Pages &gt;5s can lose ~50% of visitors. Audit: Measure load time. Fix: Images (next-gen, compress), JS (reduce, defer), requests (fewer, combined). |
+| **Modern image formats** | WebP / AVIF | Audit: Check if key images use JPEG/PNG only. Fix: Serve WebP or AVIF with fallback (`<picture>` or build step); significantly reduces file size and improves LCP. |
+| **JS execution time** | &lt; 3.5s | Long JS execution slows TTI and main thread. Audit: Note if tools report &gt;3.5s. Fix: Code-split; defer non-critical scripts; remove unused JS; optimize bundles. |
+| **HTTP request count** | Minimize (e.g. &lt;20 for above-fold) | Many requests slow loading. Audit: Count requests (DevTools). Fix: Bundle JS/CSS; combine small assets; lazy-load below-fold; reduce third-party scripts. |
+| **Content size (images)** | Images often 70%+ of page weight | Audit: Report content size by type (image, js, css, html). Fix: Compress images; use WebP/AVIF; responsive `srcset`; lazy-load non-LCP images. |
+| **Custom 404 page** | Helpful links and info so users stay on site | Audit: 404 page exists and has links to homepage, key sections, search. Fix: Custom 404 with nav and suggested links (not bare "Not found"). |
+
+---
+
 ## Technical SEO Checklist (Crawlability, Indexing, Performance)
 
 | # | Check | How to verify |
@@ -55,6 +74,11 @@ Google’s official guidance is organized as **Google Search Essentials** (forme
 | 7 | HTTPS | Valid certificate; no mixed content |
 | 8 | Mobile | Mobile-friendly; primary content not JS-only lazy-load (Google doesn’t scroll) |
 | 9 | Core Web Vitals | LCP, INP, CLS within targets (Lighthouse / PageSpeed) |
+| 10 | URL canonicalization | One primary URL per page; canonical tag correct; redirects from variants |
+| 11 | Canonical tag | Dynamic (not hard-coded); href matches actual page URL |
+| 12 | Render-blocking | No or minimal render-blocking CSS/JS (defer/inline critical) |
+| 13 | Page load time | &lt; 5s (measure; optimize images, JS, requests) |
+| 14 | Custom 404 | Custom 404 page with helpful links to key pages |
 
 ---
 
@@ -149,7 +173,9 @@ Google’s official guidance is organized as **Google Search Essentials** (forme
 - **Alt:** Descriptive, concise; include keyword only when natural.
 - **Responsive:** `srcset` / `picture` where it helps (e.g. different sizes/formats).
 - **Lazy-load:** Do not lazy-load primary above-the-fold content only (Google may not trigger it).
-- **Format/size:** Prefer modern formats (e.g. WebP); optimize for LCP.
+- **Format/size:** Prefer **modern formats (WebP, AVIF)** to reduce file size and improve LCP; compress images; if images dominate page weight (e.g. 70%+), prioritize next-gen formats and compression.
+
+**SEO image optimization (seo-image-optimizer step):** Use `scripts/optimize-and-upload-image-seo.mjs` to convert a local image to WebP, inject title and tags into R2 object metadata, and upload to CDN. Object key = prefix + slug(seoTitle) + ".webp". Ensures every image in theme data has alt text; for local sources, re-upload as WebP and update data with new CDN URL.
 
 ---
 
@@ -179,7 +205,7 @@ Use this to document the full audit (Phase 1).
 | Technical On-Page   | X/3   | ✅/⚠️/❌ |
 | **Total (on-page)** | **X/30** | **STATUS** |
 
-**Technical (site-level):** Crawlability ✅/❌ | Indexing ✅/❌ | Core Web Vitals ✅/❌ | Mobile ✅/❌ | HTTPS ✅/❌ | Structured data ✅/❌
+**Technical (site-level):** Crawlability ✅/❌ | Indexing ✅/❌ | Canonical ✅/❌ | Core Web Vitals ✅/❌ | Speed (LCP, render-blocking, page load, JS, requests, images) ✅/❌ | Mobile ✅/❌ | HTTPS ✅/❌ | Structured data ✅/❌ | Custom 404 ✅/❌
 
 ---
 
@@ -226,7 +252,8 @@ Use this to document the full audit (Phase 1).
 - [ ] Single H1, keyword in first 100 words and one H2
 - [ ] 3–5+ internal links, descriptive anchors
 - [ ] Canonical, no wrong noindex, key pages linked
-- [ ] Core Web Vitals in range
+- [ ] Core Web Vitals in range (LCP ≤2.5s, INP ≤200ms, CLS ≤0.1)
+- [ ] Speed: no critical render-blocking; page load &lt;5s; canonical correct and dynamic; custom 404 with links; images modern format where possible
 - [ ] Structured data valid and matching content
 - [ ] All fixes verified (re-audit or spot-check)
 ```
@@ -253,6 +280,14 @@ Use this to document the full audit (Phase 1).
 | CWV | High LCP | Optimize main image (size, format, priority); reduce render-blocking |
 | CWV | High INP | Reduce long tasks; defer non-critical JS |
 | CWV | High CLS | Set dimensions; preload fonts; avoid layout shifts |
+| Speed | URL canonicalization | Choose primary URL; set canonical; redirect variants |
+| Speed | Canonical hard-coded wrong | Generate canonical from current URL (dynamic); fix BaseHead/layout |
+| Speed | Render-blocking resources | Inline critical CSS; defer non-critical JS (async/defer) |
+| Speed | Page load &gt;5s | Optimize images (WebP/AVIF, compress), reduce JS, minimize requests |
+| Speed | Images not modern format | Serve WebP/AVIF with fallback; compress; responsive srcset |
+| Speed | JS execution &gt;3.5s | Code-split; defer scripts; remove unused JS; optimize bundles |
+| Speed | Too many HTTP requests | Bundle JS/CSS; lazy-load; reduce third-party scripts |
+| Speed | No custom 404 | Add 404 page with helpful links (home, key sections, search) |
 | Schema | Invalid / irrelevant | Validate; match visible content; use correct types |
 
 ---
@@ -270,8 +305,8 @@ Use this to document the full audit (Phase 1).
 
 ## Summary
 
-1. **Audit** in order: technical (crawl, index, CWV, mobile, HTTPS) → on-page (title, meta, H1, keyword, content, snippets, links) → images → structured data → data/code that drives meta and headings.
-2. **Score** key pages (e.g. 30-point scale); note site-level technical pass/fail.
+1. **Audit** in order: technical (crawl, index, **canonical/canonicalization**, CWV, **speed: LCP, render-blocking, page load, JS execution, HTTP requests, image format/size**, custom 404, mobile, HTTPS) → on-page (title, meta, H1, keyword, content, snippets, links) → images → structured data → data/code that drives meta and headings.
+2. **Score** key pages (e.g. 30-point scale); note site-level technical and speed pass/fail.
 3. **List issues** with file/URL and severity (high/medium/low).
-4. **Fix** high first (crawlability, indexing, CWV, critical on-page), then medium/low (content, links, schema).
+4. **Fix** high first (canonicalization/canonical correctness, crawlability, indexing, CWV + speed optimizations, critical on-page), then medium/low (content, links, images, schema, custom 404).
 5. **Verify** with re-audit and MCP browser if UI changed; confirm "perfect website SEO" outcome.

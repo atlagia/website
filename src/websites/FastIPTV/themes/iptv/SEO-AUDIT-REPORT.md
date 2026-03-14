@@ -1,10 +1,10 @@
 # SEO Audit Report: FastIPTV (theme: iptv)
 
-**Scope:** Homepage (/en), key pages (pricing, channels, packages, signup, faq, contact, etc.)  
+**Scope:** Homepage (/en), key pages (channels, pricing, packages, faq, contact, about, etc.)  
 **Date:** 2025-03-14  
 **Theme path:** `src/websites/FastIPTV/themes/iptv/`  
 **Base URL:** http://localhost:4322  
-**Overall Score:** 18/30 (60%) — ⚠️ Good/Fair
+**Overall Score:** 21/30 (70%) — ⚠️ Good/Fair
 
 ---
 
@@ -12,16 +12,16 @@
 
 | Category            | Score | Status |
 |---------------------|-------|--------|
-| Title Tag           | 2/4   | ⚠️ |
-| Meta Description    | 1/4   | ❌ |
-| Keyword Placement   | 3/5   | ⚠️ |
+| Title Tag           | 3/4   | ⚠️ |
+| Meta Description    | 2/4   | ⚠️ |
+| Keyword Placement   | 4/5   | ✅ |
 | Content Structure   | 3/6   | ⚠️ |
-| Featured Snippets   | 2/4   | ⚠️ |
+| Featured Snippets   | 3/4   | ⚠️ |
 | Internal Linking    | 3/4   | ✅ |
-| Technical On-Page   | 1/3   | ❌ |
-| **Total (on-page)** | **18/30** | **⚠️ Good/Fair** |
+| Technical On-Page   | 3/3   | ✅ |
+| **Total (on-page)** | **21/30** | **⚠️ Good/Fair** |
 
-**Technical (site-level):** Crawlability ⚠️ | Indexing ✅ | Core Web Vitals ❓ (not measured – server not run) | Mobile ✅ | HTTPS ❓ (local) | Structured data ✅
+**Technical (site-level):** Crawlability ✅ | Indexing ✅ | Canonical ✅ | Core Web Vitals ❓ (not measured) | Speed (render-blocking, images) ⚠️ | Mobile ✅ | HTTPS ❓ (local) | Structured data ✅ | Custom 404 ⚠️
 
 ---
 
@@ -33,33 +33,31 @@
 
 ---
 
-## Issues (with file or URL and severity)
+## Issues (with file/URL and severity)
 
 ### High
 
-- [ ] **Meta description too short.** Location: `data/index_en.json` (`siteDescription`). Current ~58 chars; target 150–160. Fix: Expand with action word, primary keyword, and specific value (e.g. channel count, guarantee, CTA).
-- [ ] **og:url and twitter:url may render incorrectly.** Location: `components/BaseHead.astro` (lines 274, 291). `content={Astro.url}` may output object; use `content={canonicalURL}` or `content={Astro.url.href}` so meta tags get absolute URL strings.
-- [ ] **Multiple H1s on packages and signup pages.** Location: `page/packages.astro` (hero H1 + featured package H1 at lines 33 and 48); `page/signup.astro` (hero H1 + featured package H1 at lines 42 and 83). Fix: Use single H1 per page; make featured package heading H2.
-- [ ] **Homepage H1 not data-driven and missing primary keyword in first segment.** Location: `components/Welcome.astro` (lines 55–59). H1 is hardcoded “Unlimited Entertainment. One Powerful IPTV Platform.” — does not use `section.title` from JSON and “Fast IPTV” / “Premium IPTV” not in H1. Fix: Use section title from data and ensure primary keyword in H1.
-- [ ] **Placeholder verification codes in head.** Location: `components/BaseHead.astro` (lines 311–313). `YOUR_BING_WEBMASTER_TOOLS_VERIFICATION_CODE`, `YOUR_GOOGLE_SEARCH_CONSOLE_VERIFICATION_CODE`, `YOUR_YANDEX_VERIFICATION_CODE` look unprofessional and should be replaced with real codes or removed until configured.
+- [ ] **Wrong brand (StreamVista) on key pages.** Location: `page/contact.astro` (SITE_TITLE fallback, PAGE_DESCRIPTION "StreamVista support team", H1 "Get in Touch"); `page/about.astro` (SITE_TITLE fallback "StreamVista", PAGE_DESCRIPTION "StreamVista's mission", body copy "StreamVista"); `page/privacy.astro` (SITE_TITLE fallback "StreamVista", PAGE_DESCRIPTION "StreamVista protects", body "At StreamVista"). Fix: Use FastIPTV and data-driven titles/descriptions everywhere.
+- [ ] **Internal links missing language prefix (broken on /en).** Location: `page/pricing.astro` (href="/contact", href="/contact" in CTA); `page/faq.astro` (href="/contact", href="/help"). From `/en/pricing`, "Contact Support" goes to `/contact` instead of `/en/contact`. Fix: Use `/${lang}/contact`, `/${lang}/help` (or equivalent) so links work for all locales.
+- [ ] **Meta description too short.** Location: `data/index_en.json` (`siteDescription`). Current ~128 characters; target 150–160. Fix: Expand with action word, primary keyword, and specific value (e.g. guarantee, CTA).
+- [ ] **Custom 404 has only one helpful link.** Location: `page/404.astro`. Only "Back to Home" link. Fix: Add 3–5 links to key pages (Channels, Pricing, FAQ, Packages, Contact) so users and crawlers can recover.
 
 ### Medium
 
-- [ ] **Title slightly over 60 characters.** Location: `data/index_en.json` (`siteTitle`). “FastIPTV - Premium IPTV Service | 32,000+ Channels | HD/4K Streaming” ≈ 62 chars. Fix: Shorten to 50–60 (e.g. drop “HD/4K Streaming” or abbreviate).
-- [ ] **FAQ “What is IPTV?” definition too short for snippet.** Location: `data/index_en.json` (FAQ section, first Q&A). Definition ~28 words; target 40–60 for “What is” snippet. Fix: Expand to 40–60 words after the “What is IPTV?” H2/equivalent.
-- [ ] **No FAQPage JSON-LD.** Location: `components/FAQ.astro` and/or `components/BaseHead.astro`. FAQ block has no `FAQPage` schema. Fix: Add JSON-LD `FAQPage` with questions/answers matching visible content.
-- [ ] **Testimonials section references wrong brand.** Location: `data/index_en.json` (testimonials section). Description says “StreamVista users”; should say “FastIPTV” for brand consistency.
-- [ ] **Duplicate “channels” section in homepage data.** Location: `data/index_en.json`. Two sections with `"type": "channels"` (lines ~44 and ~106). Can cause duplicate-looking content; consider one channels block or distinct section types.
-- [ ] **Pricing page title/description not length-optimized.** Location: `page/pricing.astro` uses `PAGE_TITLE` and `PAGE_DESCRIPTION` from data; ensure pricing_* lang files provide 50–60 char title and 150–160 char description where used as meta.
-- [ ] **consts.ts has wrong site name.** Location: `consts.ts`. Contains “Digivast - Digital Products Marketplace”; theme is FastIPTV. Fix: Align with FastIPTV or remove if unused.
+- [ ] **Title slightly short.** Location: `data/index_en.json` (`siteTitle`). "FastIPTV - Premium IPTV | 32,000+ Channels & 4K" = 47 chars; target 50–60. Fix: Add a short hook or context (e.g. "…| Premium Streaming").
+- [ ] **Render-blocking CSS (Google Fonts).** Location: `components/BaseHead.astro` (fonts.googleapis.com stylesheet without defer/async). Fix: Preload font URL, use `font-display: swap`, or load fonts asynchronously to avoid blocking first paint.
+- [ ] **StreamVista in data and fallbacks.** Location: `data/index_es.json`, `data/index_de.json`, `data/index_tr.json` (testimonials/CTA "StreamVista"); `data/packages/packages_es.json`, `packages_fr.json`, `packages_ar.json`, `packages_zh.json`, `packages_tr.json` (pageDescription "StreamVista"); `page/shows.astro` (SITE_TITLE fallback "StreamVista"). Fix: Replace with FastIPTV and ensure all locale data is brand-consistent.
+- [ ] **FAQ "What is IPTV?" definition length.** Location: `data/index_en.json` (FAQ section). Definition is ~80 words; 40–60 words is ideal for featured snippet. Fix: Optionally trim to 40–60 words for snippet clarity, or leave as-is and ensure one H2 has a concise 40–60 word paragraph.
+- [ ] **Hero images not in modern format.** Location: `data/index_en.json` (`backgroundImages`). Some URLs are .jpg; CDN may serve WebP. Audit: Prefer WebP/AVIF for above-the-fold images to improve LCP.
+- [ ] **Channels page title generic.** Location: `data/channels/channels_en.json` (`pageTitle`: "Channel Guide"). Fix: Include primary keyword (e.g. "Fast IPTV Channels Guide" or "IPTV Channel Guide").
 
 ### Low
 
-- [ ] **Homepage in-body internal links.** Homepage has Welcome CTA and VideoDemo CTA to /en/channels; add 1–2 more in-body links (e.g. to /en/pricing, /en/faq) for stronger internal linking.
-- [ ] **Channels section images:** `Channels.astro` uses `alt={channel.title}` — OK; ensure poster URLs are stable and responsive where needed (e.g. srcset for LCP).
-- [ ] **BreadcrumbList missing on inner pages.** No BreadcrumbList JSON-LD on pricing, channels, packages, etc. Add for inner pages.
-- [ ] **Footer legal/social sections:** Footer data has `legal` and `social` in JSON; confirm Footer.astro renders them so key pages (privacy, terms) are linked site-wide.
-- [ ] **Crawl-delay in robots.txt.** Location: `src/pages/robots.txt.ts`. “Crawl-delay: 10” is non-standard (ignored by Google); can be removed to avoid confusion.
+- [ ] **theme.mjs has wrong name.** Location: `theme.mjs` (name: "StreamVista IPTV"). Fix: Set name to "FastIPTV" or "iptv" for consistency.
+- [ ] **Unused Footer.tsx has wrong branding.** Location: `components/Footer.tsx`. Contains "RidWear", "Premium motorcycle gear", /collections, /helmets, etc. Pages use `Footer.astro` (data-driven). Fix: Remove `Footer.tsx` or replace with FastIPTV-appropriate content to avoid confusion.
+- [ ] **Website schema SearchAction.** Location: `components/BaseHead.astro` (websiteSchema). `urlTemplate` points to `${Astro.site}search?q={search_term_string}`. If no /search page exists, remove or fix.
+- [ ] **Pricing page Contact/Support links.** Location: `page/pricing.astro`. "Contact Support" href should use lang (see High above). Same pattern on other pages with hardcoded paths.
+- [ ] **index_en.json notFoundMessage/backToHomeText.** Location: 404 uses `jsonData.notFoundMessage` and `jsonData.backToHomeText` but these are not in `data/index_en.json`. Fallback text is used. Fix: Add to index_en.json (and other locales) for consistent 404 copy.
 
 ---
 
@@ -67,36 +65,25 @@
 
 ### High (do first)
 
-1. **Meta description length** — Current: ~58 chars. → Recommended: 150–160 chars with action word (e.g. “Discover”, “Get”), primary keyword “Fast IPTV” / “Premium IPTV”, and specific value (channel count, guarantee). Impact: CTR and snippet quality in SERPs.
-2. **og:url / twitter:url** — Current: `content={Astro.url}`. → Recommended: `content={canonicalURL}` or `Astro.url.href`. Impact: Correct sharing and indexing signals.
-3. **Single H1 per page** — Current: Two H1s on packages.astro and signup.astro. → Recommended: One H1 (hero); change featured package heading to H2. Impact: Clear document outline and SEO best practice.
-4. **Homepage H1 and keyword** — Current: Hardcoded H1 without primary keyword in first segment. → Recommended: Use `section.title` (or tailored title) and include “Fast IPTV” or “Premium IPTV” in H1. Impact: Relevance and snippet clarity.
-5. **Verification meta tags** — Current: Placeholder strings. → Recommended: Replace with real verification codes or remove until configured. Impact: Professionalism and correct Search Console setup.
+1. **Wrong brand on contact, about, privacy** — Replace every StreamVista reference with FastIPTV; use `jsonData.siteTitle` (or equivalent) for SITE_TITLE and data-driven meta/descriptions. Impact: Brand consistency and trust; correct indexing of site name.
+2. **Internal links missing lang** — Change hardcoded `/contact`, `/help` (and similar) to `/${lang}/contact`, `/${lang}/help` in pricing.astro, faq.astro, and any other page. Impact: Prevents broken navigation and wrong/404 URLs for localized routes.
+3. **Meta description length** — Expand `siteDescription` in index_en.json to 150–160 characters with action word, primary keyword, and value. Impact: Better CTR and snippet quality in SERPs.
+4. **Custom 404 helpful links** — Add links to Channels, Pricing, FAQ, Packages, Contact (with lang prefix) on the 404 page. Impact: UX and crawl recovery; aligns with speed/technical checklist.
 
 ### Medium
 
-1. **Title tag 50–60 chars** — Shorten `siteTitle` in index_en.json (and other lang files) to ≤60 chars.
-2. **FAQ definition 40–60 words** — Expand “What is IPTV?” answer in index_en.json (and FAQ source) to 40–60 words for featured snippet.
-3. **FAQPage schema** — Add FAQPage JSON-LD in BaseHead (when on FAQ page) or in FAQ.astro, matching visible Q&A.
-4. **Brand consistency** — Change “StreamVista users” to “FastIPTV” in testimonials description in index_en.json.
-5. **Duplicate channels sections** — Consolidate or differentiate the two channels sections in index_en.json.
-6. **consts.ts** — Update or remove Digivast text in consts.ts for FastIPTV theme.
+1. **Title length** — Extend siteTitle to 50–60 chars with a short hook.
+2. **Render-blocking fonts** — Preload or load Google Fonts asynchronously in BaseHead.
+3. **StreamVista in locale data** — Replace StreamVista with FastIPTV in index_es, index_de, index_tr, packages_*.json (all locales).
+4. **Hero/background images** — Prefer WebP/AVIF for backgroundImages where possible; ensure CDN or build serves modern formats.
+5. **Channels page title** — Add "IPTV" or "Fast IPTV" to channels pageTitle in channels_en.json (and other locales).
 
 ### Low
 
-1. Add 1–2 more in-body internal links on homepage (e.g. to pricing, FAQ).
-2. Add BreadcrumbList JSON-LD on key inner pages.
-3. Ensure footer renders legal/social links; add responsive/srcset for key images if needed.
-4. Remove or comment Crawl-delay from robots.txt.
-
----
-
-## Technical Notes (no live run)
-
-- **Core Web Vitals:** Not measured (dev server at baseUrl was not running). Run Lighthouse/PageSpeed on http://localhost:4322/en after starting the FastIPTV dev server.
-- **Crawlability:** robots.txt (project-level) allows `/`; references sitemaps. For site-specific build, confirm sitemap URLs match actual routes (e.g. `[lang]` pages).
-- **Canonical:** BaseHead sets canonical per language; logic is correct. Only og:url/twitter:url need the fix above.
-- **Structured data:** Organization, WebSite, and service-style schema present in BaseHead; add FAQPage and BreadcrumbList as above.
+1. **theme.mjs name** — Set to FastIPTV.
+2. **Footer.tsx** — Remove or rewrite for FastIPTV; avoid RidWear/off-brand content.
+3. **SearchAction schema** — Remove or point to real search URL.
+4. **404 copy in data** — Add notFoundMessage and backToHomeText to index_*.json for all locales.
 
 ---
 
@@ -104,10 +91,21 @@
 
 - [ ] Title 50–60 chars, keyword, hook
 - [ ] Description 150–160 chars, action word, value
-- [ ] Single H1 per page; keyword in first 100 words and one H2
-- [ ] 3–5+ internal links, descriptive anchors
-- [ ] Canonical and og:url/twitter:url as absolute URL
-- [ ] No placeholder verification codes (or real codes)
-- [ ] FAQ definition 40–60 words; FAQPage schema
-- [ ] Core Web Vitals checked when server running
+- [ ] Single H1, keyword in first 100 words and one H2
+- [ ] 3–5+ internal links, descriptive anchors; all with correct lang prefix
+- [ ] Canonical correct and dynamic; no wrong noindex; key pages linked
+- [ ] Core Web Vitals in range (LCP ≤2.5s, INP ≤200ms, CLS ≤0.1) — verify with Lighthouse
+- [ ] Speed: no critical render-blocking; page load <5s; custom 404 with links; images modern format where possible
+- [ ] Structured data valid and matching content
+- [ ] All brand references FastIPTV (no StreamVista/RidWear in theme)
 - [ ] All fixes verified (re-audit or spot-check)
+
+---
+
+## Technical & Speed Notes
+
+- **Canonical:** BaseHead generates canonical from `Astro.url`; root path canonical points to `/en`. Correct and dynamic.
+- **Crawlability / Indexing:** robots.txt and sitemaps are at project level (`src/pages/`); theme does not block crawlers. No accidental noindex on key pages.
+- **Core Web Vitals / Page load:** Not measured in this audit. Recommend running Lighthouse (or PageSpeed) on `/en` and key pages and addressing LCP, INP, CLS, and total load time.
+- **Images:** Channels use `alt={channel.title}`. Welcome hero uses background images (no img alt). Consider adding aria-label or off-screen text for hero if needed for accessibility/SEO. Prefer WebP/AVIF for above-the-fold assets.
+- **Structured data:** Organization, WebSite, BreadcrumbList (when breadcrumbs passed), and FAQPage (in FAQ.astro) are present. Valid and aligned with content. Review schema SearchAction if no search page exists.

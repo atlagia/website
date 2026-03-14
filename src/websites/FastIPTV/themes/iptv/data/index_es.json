@@ -1,6 +1,8 @@
 {
   "siteTitle": "FastIPTV - Servicio IPTV Premium | 32.000+ Canales | Streaming HD/4K",
   "siteDescription": "Servicio de Streaming IPTV Premium - Fast IPTV con Rendimiento Inigualable",
+  "notFoundMessage": "Esta página no se encontró. Explora canales, precios o contacta soporte.",
+  "backToHomeText": "Volver al inicio",
   "sections": [
     {
       "type": "welcome",
@@ -11,6 +13,12 @@
         "https://cdn.atlagia.com/fastiptv/djdmztf-8f51d37a-6840-4a0c-ab4d-86333ca27817.jpg",
         "https://cdn.atlagia.com/fastiptv/most-watched-movies-on-netflix-as-of-2025-v0-6uRwxXV8WG2QdprOwPBFpBvQoAYPwdLlvK4HOYF3WE0.webp",
         "https://cdn.atlagia.com/fastiptv/content_wall_30012023-jpg-2048x1152-1.webp"
+      ],
+      "backgroundImagesAlt": [
+        "UEFA Champions League stadium and premium IPTV streaming",
+        "Premium IPTV entertainment and live TV",
+        "Popular movies and 4K streaming on Fast IPTV",
+        "Fast IPTV content library and on-demand streaming"
       ],
       "stats": {
         "channels": "32.000+ Canales Fast IPTV",
@@ -36,36 +44,43 @@
         {
           "title": "Champions League",
           "poster": "https://cdn.atlagia.com/fastiptv/championsleague.jpg",
+          "alt": "Champions League football live on Fast IPTV",
           "category": "Fútbol"
         },
         {
           "title": "Europa League",
           "poster": "https://cdn.atlagia.com/fastiptv/europaleague.jpg",
+          "alt": "Europa League football streaming",
           "category": "Fútbol"
         },
         {
           "title": "La Liga",
           "poster": "https://cdn.atlagia.com/fastiptv/laliga.jpg",
+          "alt": "La Liga Spanish football on Fast IPTV",
           "category": "Fútbol"
         },
         {
           "title": "Premier League",
           "poster": "https://cdn.atlagia.com/fastiptv/premierleague.jpg",
+          "alt": "Premier League live football streaming",
           "category": "Fútbol"
         },
         {
           "title": "Serie A",
           "poster": "https://cdn.atlagia.com/fastiptv/seriea.jpg",
+          "alt": "Serie A Italian football on Fast IPTV",
           "category": "Fútbol"
         },
         {
           "title": "Ligue 1",
           "poster": "https://cdn.atlagia.com/fastiptv/ligue1.jpg",
+          "alt": "Ligue 1 French football streaming",
           "category": "Fútbol"
         },
         {
           "title": "Bundesliga",
           "poster": "https://cdn.atlagia.com/fastiptv/bundesliga.webp",
+          "alt": "Bundesliga German football live",
           "category": "Fútbol"
         }
       ]
@@ -115,36 +130,43 @@
         {
           "title": "SuperMan",
           "poster": "https://cdn.atlagia.com/fastiptv/Superman_(2025_film)_poster.jpg",
+          "alt": "Superman 2025 film on Fast IPTV",
           "category": "Superhéroe"
         },
         {
           "title": "Pecadores",
           "poster": "https://cdn.atlagia.com/fastiptv/images.jpeg",
+          "alt": "Pecadores drama on Fast IPTV",
           "category": "Drama"
         },
         {
           "title": "Mickey 17",
           "poster": "https://cdn.atlagia.com/fastiptv/images%20(1).jpeg",
+          "alt": "Mickey 17 science fiction film",
           "category": "Ciencia Ficción"
         },
         {
           "title": "Compañero",
           "poster": "https://cdn.atlagia.com/fastiptv/MV5BYmUxZDI2ZjMtNDI5Mi00NTY4LWFhNGMtZGI5YzljZTg4NGI1XkEyXkFqcGc%40._V1_FMjpg_UX1000_.jpg",
+          "alt": "Companion science fiction on Fast IPTV",
           "category": "Ciencia Ficción"
         },
         {
           "title": "F1 2025",
           "poster": "https://cdn.atlagia.com/fastiptv/MV5BZTYwYjJhNzYtY2ZiZS00ZmYxLWJkZjctYjRlNGIxYjI3ZTU0XkEyXkFqcGc%40._V1_.jpg",
+          "alt": "F1 2025 sports documentary",
           "category": "Documental Deportivo"
         },
         {
           "title": "La Joven Mujer con la Aguja 2025",
           "poster": "https://cdn.atlagia.com/fastiptv/7b0554c79b550c0863bfc8922e27d49a.webp",
+          "alt": "La Joven Mujer con la Aguja 2025 drama",
           "category": "Drama"
         },
         {
           "title": "El Insider 2025",
           "poster": "https://cdn.atlagia.com/fastiptv/901424b912ee290f826dba3af9b7ce70.jpg",
+          "alt": "El Insider 2025 thriller",
           "category": "Suspenso"
         }
       ]
@@ -264,7 +286,7 @@
     {
       "type": "testimonials",
       "title": "Lo Que Dicen Nuestros Clientes",
-      "description": "Únete a miles de usuarios StreamVista satisfechos en todo el mundo",
+      "description": "Únete a miles de usuarios FastIPTV satisfechos en todo el mundo",
       "testimonials": [
         {
           "name": "Juan D.",
@@ -289,7 +311,7 @@
     {
       "type": "faq",
       "title": "Preguntas Frecuentes",
-      "description": "Encuentra respuestas a preguntas comunes sobre StreamVista",
+      "description": "Encuentra respuestas a preguntas comunes sobre FastIPTV",
       "questions": [
         {
           "question": "¿Qué es IPTV?",
