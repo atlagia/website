@@ -3,10 +3,45 @@ import Layout from '../../layouts/Layoutc.astro';
 import { ArrowRight } from 'lucide-react';
 
 const siteName = import.meta.env.PUBLIC_SITE_NAME || 'RidWear';
+const THEME = import.meta.env.THEME || 'default';
+
+// Pull SEO text from website/theme data (avoid hardcoded/static SEO copy in core)
+let blogDescription = '';
+let blogTitle = '';
+let primaryKeyword = '';
+try {
+  const themeIndexModule = await import(`../../websites/${siteName}/themes/${THEME}/data/index_en.json`);
+  const themeIndex = themeIndexModule?.default ?? themeIndexModule;
+  blogDescription = themeIndex?.blogPageDescription || '';
+  blogTitle = themeIndex?.blogPageTitle || '';
+  primaryKeyword = themeIndex?.primaryKeyword || '';
+} catch {
+  try {
+    // Last resort: use siteDescription from the same theme data
+    const themeIndexModule = await import(`../../websites/${siteName}/themes/${THEME}/data/index_en.json`);
+    const themeIndex = themeIndexModule?.default ?? themeIndexModule;
+    blogDescription = themeIndex?.siteDescription || '';
+    blogTitle = themeIndex?.blogPageTitle || '';
+    primaryKeyword = themeIndex?.primaryKeyword || '';
+  } catch {
+    blogDescription = '';
+    blogTitle = '';
+    primaryKeyword = '';
+  }
+}
 
 // Try to fetch blog posts, but handle failures gracefully
 let posts = [];
 let blogError = null;
+
+// Final fallback: derive the primary keyword from the configured site name.
+// (Avoids empty SEO copy if theme JSON keys are missing or not loaded.)
+const derivedPrimaryKeyword = (siteName || '')
+  .toString()
+  .replace(/FastIPTV/gi, 'Fast IPTV');
+const finalPrimaryKeyword = (primaryKeyword || derivedPrimaryKeyword || siteName || '').toString().trim();
+const finalBlogTitle = (blogTitle || `${finalPrimaryKeyword} Blog`).trim();
+const finalBlogDescription = (blogDescription || siteName || finalPrimaryKeyword || '').toString().trim();
 
 try {
   const { fetchBlogPosts } = await import('../../utils/shopifyAPI');
@@ -14,43 +49,8 @@ try {
 } catch (error) {
   console.warn('Failed to fetch blog posts:', error);
   blogError = error.message;
-  
-  // Fallback blog posts for when API fails
-  posts = [
-    {
-      id: '1',
-      handle: 'welcome-to-our-blog',
-      title: 'Welcome to Our Blog',
-      published_at: new Date().toISOString(),
-      image: {
-        src: '/images/blog-placeholder.jpg',
-        alt: 'Welcome to our blog'
-      },
-      excerpt: 'Discover the latest news, tips, and insights from our team.'
-    },
-    {
-      id: '2', 
-      handle: 'getting-started-guide',
-      title: 'Getting Started Guide',
-      published_at: new Date(Date.now() - 86400000).toISOString(),
-      image: {
-        src: '/images/blog-placeholder.jpg',
-        alt: 'Getting started guide'
-      },
-      excerpt: 'Everything you need to know to get started with our products.'
-    },
-    {
-      id: '3',
-      handle: 'tips-and-tricks',
-      title: 'Tips and Tricks',
-      published_at: new Date(Date.now() - 172800000).toISOString(),
-      image: {
-        src: '/images/blog-placeholder.jpg',
-        alt: 'Tips and tricks'
-      },
-      excerpt: 'Expert tips to help you get the most out of your experience.'
-    }
-  ];
+  // Do not inject sample/static blog posts into core when Shopify data fails.
+  posts = [];
 }
 
 const formatDate = (date: string) => {
@@ -62,7 +62,7 @@ const formatDate = (date: string) => {
 };
 ---
 
-<Layout title={`Blog | ${siteName}`}>
+<Layout title={`${finalBlogTitle} | ${siteName}`} description={finalBlogDescription}>
   <main class="max-w-7xl mx-auto px-4 pb-8 pt-[100px]">
     {/* Error Notice */}
     {blogError && (
@@ -75,7 +75,7 @@ const formatDate = (date: string) => {
           </div>
           <div class="ml-3">
             <p class="text-sm text-yellow-800">
-              Blog posts are currently unavailable. Showing sample content.
+              Blog posts are currently unavailable.
             </p>
           </div>
         </div>
@@ -84,9 +84,9 @@ const formatDate = (date: string) => {
 
     {/* Page Header */}
     <header class="text-center mb-16">
-      <h1 class="text-4xl font-bold text-gray-900 mb-4">Latest Posts</h1>
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">{finalBlogTitle}</h1>
       <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-        Read our latest articles, tips, and industry news
+        {finalBlogDescription}
       </p>
     </header>
     

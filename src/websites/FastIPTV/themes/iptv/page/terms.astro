@@ -9,8 +9,9 @@ const translations = await useTranslations(lang);
 const jsonData = translations.default;
 
 const SITE_TITLE = jsonData.siteTitle || 'FastIPTV';
-const PAGE_TITLE = 'Terms of Service | ' + SITE_TITLE;
-const PAGE_DESCRIPTION = 'FastIPTV terms of service and user agreement';
+const PRIMARY_KEYWORD = jsonData.primaryKeyword || 'Fast IPTV';
+const PAGE_TITLE = `${PRIMARY_KEYWORD} - Terms of Service | ${SITE_TITLE}`;
+const PAGE_DESCRIPTION = ` ${PRIMARY_KEYWORD} terms of service and user agreement`;
 ---
 
 <!doctype html>
@@ -25,7 +26,7 @@ const PAGE_DESCRIPTION = 'FastIPTV terms of service and user agreement';
         {/* Hero Section */}
         <div class="text-center space-y-4">
           <h1 class="text-4xl md:text-6xl font-bold gradient-text">
-            Terms of Service
+            {PRIMARY_KEYWORD} - Terms of Service
           </h1>
           <p class="text-xl text-gray-300">
             Last updated: {new Date().toLocaleDateString()}

@@ -11,8 +11,12 @@ const jsonData = translations.default;
 // Import setup data
 const setupData = await import(`../data/setup/setup_en.json`);
 
-const SITE_TITLE = jsonData.siteTitle || 'FastIPTV';
-const PAGE_TITLE = setupData.pageTitle + ' | ' + SITE_TITLE;
+const SITE_TITLE = jsonData.siteTitle || import.meta.env.PUBLIC_SITE_NAME || '';
+const PRIMARY_KEYWORD =
+  jsonData.primaryKeyword ||
+  (String(SITE_TITLE).split('-')[0] || '').trim() ||
+  String(import.meta.env.PUBLIC_SITE_NAME || '').trim();
+const PAGE_TITLE = `${PRIMARY_KEYWORD} ${setupData.pageTitle} | ${SITE_TITLE}`;
 const PAGE_DESCRIPTION = setupData.pageDescription;
 ---
 
@@ -28,10 +32,10 @@ const PAGE_DESCRIPTION = setupData.pageDescription;
         {/* Hero Section */}
         <div class="text-center space-y-4 mb-12">
           <h1 class="text-4xl md:text-6xl font-bold gradient-text">
-            {setupData.heroSection.title}
+            {PRIMARY_KEYWORD}: {setupData.heroSection.title}
           </h1>
           <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-            {setupData.heroSection.subtitle}
+            {PRIMARY_KEYWORD} {setupData.heroSection.subtitle}
           </p>
         </div>
 

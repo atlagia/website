@@ -8,9 +8,14 @@ const lang = getLangFromUrl(Astro.url);
 const translations = await useTranslations(lang);
 const jsonData = translations.default;
 
-const SITE_TITLE = jsonData.siteTitle || 'FastIPTV';
-const PAGE_TITLE = 'About Us | ' + SITE_TITLE;
-const PAGE_DESCRIPTION = jsonData.aboutPageDescription || 'Learn about FastIPTV\'s mission to deliver premium IPTV streaming worldwide';
+const SITE_TITLE = jsonData.siteTitle || import.meta.env.PUBLIC_SITE_NAME || '';
+const PRIMARY_KEYWORD =
+  jsonData.primaryKeyword ||
+  (String(SITE_TITLE).split('-')[0] || '').trim() ||
+  String(import.meta.env.PUBLIC_SITE_NAME || '').trim();
+const PAGE_TITLE = `${PRIMARY_KEYWORD} - About Us | ${SITE_TITLE}`;
+const PAGE_DESCRIPTION =
+  jsonData.aboutPageDescription || `${PRIMARY_KEYWORD}'s mission to deliver premium IPTV streaming worldwide`;
 ---
 
 <!doctype html>
@@ -25,10 +30,10 @@ const PAGE_DESCRIPTION = jsonData.aboutPageDescription || 'Learn about FastIPTV\
         {/* Hero Section */}
         <div class="text-center space-y-4">
           <h1 class="text-4xl md:text-6xl font-bold gradient-text">
-            Revolutionizing Entertainment
+            {PRIMARY_KEYWORD}: Revolutionizing Entertainment
           </h1>
           <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-            FastIPTV is on a mission to make premium entertainment accessible to everyone, everywhere.
+            {PRIMARY_KEYWORD} is on a mission to make premium entertainment accessible to everyone, everywhere.
           </p>
         </div>
 

@@ -19,9 +19,13 @@ try {
   signupData = signupModule.default;
 }
 
-const SITE_TITLE = jsonData.siteTitle || 'FastIPTV';
-const PAGE_TITLE = signupData.pageTitle + ' | ' + SITE_TITLE;
-const PAGE_DESCRIPTION = signupData.pageDescription;
+const SITE_TITLE = jsonData.siteTitle || import.meta.env.PUBLIC_SITE_NAME || '';
+const PRIMARY_KEYWORD =
+  jsonData.primaryKeyword ||
+  (String(SITE_TITLE).split('-')[0] || '').trim() ||
+  String(import.meta.env.PUBLIC_SITE_NAME || '').trim();
+const PAGE_TITLE = `${PRIMARY_KEYWORD} ${signupData.pageTitle || 'Sign Up'} | ${SITE_TITLE}`;
+const PAGE_DESCRIPTION = signupData.pageDescription ? `${PRIMARY_KEYWORD} ${signupData.pageDescription}` : `${PRIMARY_KEYWORD} sign up`;
 const breadcrumbs = [
   { name: 'Home', url: `/${lang}` },
   { name: 'Sign Up', url: `/${lang}/signup` }
@@ -44,10 +48,10 @@ const breadcrumbs = [
             {signupData.urgencyBadge}
           </div>
           <h1 class="text-4xl md:text-6xl font-bold gradient-text">
-            {signupData.heroTitle}
+            {PRIMARY_KEYWORD}: {signupData.heroTitle}
           </h1>
           <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-            {signupData.heroDescription}
+            {PRIMARY_KEYWORD} {signupData.heroDescription}
           </p>
           <div class="flex justify-center items-center gap-4 text-sm text-gray-400">
             <span>✓ {signupData.trustIndicators.instant}</span>

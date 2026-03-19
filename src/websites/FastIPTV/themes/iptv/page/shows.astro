@@ -8,9 +8,13 @@ const lang = getLangFromUrl(Astro.url);
 const translations = await useTranslations(lang);
 const jsonData = translations.default;
 
-const SITE_TITLE = jsonData.siteTitle || 'FastIPTV';
-const PAGE_TITLE = 'TV Shows | ' + SITE_TITLE;
-const PAGE_DESCRIPTION = 'Watch your favorite TV series and shows on demand';
+const SITE_TITLE = jsonData.siteTitle || import.meta.env.PUBLIC_SITE_NAME || '';
+const PRIMARY_KEYWORD =
+  jsonData.primaryKeyword ||
+  (String(SITE_TITLE).split('-')[0] || '').trim() ||
+  String(import.meta.env.PUBLIC_SITE_NAME || '').trim();
+const PAGE_TITLE = `${PRIMARY_KEYWORD} - TV Shows | ${SITE_TITLE}`;
+const PAGE_DESCRIPTION = `Watch your favorite TV series on demand with ${PRIMARY_KEYWORD}`;
 
 // Sample TV shows data
 const shows = {
@@ -128,10 +132,10 @@ const genres = [
         {/* Hero Section */}
         <div class="text-center space-y-4">
           <h1 class="text-4xl md:text-6xl font-bold gradient-text">
-            TV Shows
+            {PRIMARY_KEYWORD}: TV Shows
           </h1>
           <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-            Binge-watch your favorite series with new episodes added daily.
+            Binge-watch your favorite series with new episodes added daily on {PRIMARY_KEYWORD}.
           </p>
         </div>
 

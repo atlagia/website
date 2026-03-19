@@ -201,7 +201,7 @@ try {
 }
 ---
 
-<Layout title={`Shop | ${siteName}`} lang={lang}>
+<Layout title={content.pageTitle || siteName} description={content.pageDescription || content.pageTitle || ''} lang={lang}>
   <main class="max-w-7xl mx-auto px-4 pb-8 pt-[100px]">
     {/* Breadcrumbs */}
     <nav class="mb-8">
@@ -218,7 +218,7 @@ try {
     <header class="text-center mb-16">
       <h1 class="text-4xl font-bold text-gray-900 mb-4">{content.pageTitle || 'Shop'}</h1>
       <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-        {content.pageDescription || 'Discover our complete collection of products'}
+        {content.pageDescription || content.pageTitle || ''}
       </p>
     </header>
 

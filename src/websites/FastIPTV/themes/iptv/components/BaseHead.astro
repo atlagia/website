@@ -17,7 +17,6 @@ interface Props {
   /** LCP image URL (e.g. hero) for preload; prefer WebP */
   lcpImage?: string;
   image?: string;
-  keywords?: string[];
   author?: string;
   publishedTime?: string;
   modifiedTime?: string;
@@ -33,37 +32,6 @@ const {
   isHomePage = false, 
   lcpImage,
   image = '/og-image.jpg',
-  keywords = [
-    'Fast IPTV', 
-    'Stronger IPTV', 
-    'Premium IPTV', 
-    'IPTV streaming', 
-    'live TV channels', 
-    '32,000+ channels', 
-    '140,000+ movies', 
-    'HD streaming', 
-    '4K streaming', 
-    '8K streaming', 
-    'sports channels', 
-    'movie streaming', 
-    'TV shows online', 
-    'international channels',
-    'Champions League',
-    'Premier League',
-    'La Liga',
-    'Serie A',
-    'Bundesliga',
-    'Ligue 1',
-    'Europa League',
-    'live sports',
-    'catch up TV',
-    'EPG guide',
-    'cloud DVR',
-    'multi-device streaming',
-    'anti-freeze technology',
-    '24/7 support',
-    'money back guarantee'
-  ],
   author = 'FastIPTV Team',
   publishedTime,
   modifiedTime,
@@ -272,7 +240,6 @@ const reviews = null;
     <title>{title}</title>
     <meta name="title" content={title} />
     <meta name="description" content={description} />
-    <meta name="keywords" content={keywords.join(', ')} />
     <meta name="author" content={author} />
     <!-- Robots Meta Tag - Allow indexing of all language versions -->
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />

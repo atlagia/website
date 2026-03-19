@@ -8,9 +8,14 @@ const lang = getLangFromUrl(Astro.url);
 const translations = await useTranslations(lang);
 const jsonData = translations.default;
 
-const SITE_TITLE = jsonData.siteTitle || 'FastIPTV';
-const PAGE_TITLE = 'FAQ | ' + SITE_TITLE;
-const PAGE_DESCRIPTION = 'Find answers to frequently asked questions about FastIPTV';
+const SITE_TITLE = jsonData.siteTitle || import.meta.env.PUBLIC_SITE_NAME || '';
+const PRIMARY_KEYWORD =
+  jsonData.primaryKeyword ||
+  (String(SITE_TITLE).split('-')[0] || '').trim() ||
+  String(import.meta.env.PUBLIC_SITE_NAME || '').trim();
+const PAGE_TITLE = `${PRIMARY_KEYWORD} - FAQ | ${SITE_TITLE}`;
+const PAGE_DESCRIPTION =
+  `Find answers to frequently asked questions about ${PRIMARY_KEYWORD}`;
 const breadcrumbs = [
   { name: 'Home', url: `/${lang}` },
   { name: 'FAQ', url: `/${lang}/faq` }
@@ -132,10 +137,10 @@ const faqPageSchema = {
         {/* Hero Section */}
         <div class="text-center space-y-4">
           <h1 class="text-4xl md:text-6xl font-bold gradient-text">
-            Frequently Asked Questions
+            {PRIMARY_KEYWORD} - Frequently Asked Questions
           </h1>
           <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-            Find answers to common questions about FastIPTV's services and features.
+            Find answers to common questions about {PRIMARY_KEYWORD}'s services and features.
           </p>
         </div>
 

@@ -11,9 +11,16 @@ const jsonData = translations.default;
 // Import packages data dynamically
 const packagesData = await import(`../data/packages/packages_${lang}.json`);
 
-const SITE_TITLE = jsonData.siteTitle || 'FastIPTV';
-const PAGE_TITLE = packagesData.pageTitle + ' | ' + SITE_TITLE;
-const PAGE_DESCRIPTION = packagesData.pageDescription;
+const SITE_TITLE = jsonData.siteTitle || import.meta.env.PUBLIC_SITE_NAME || '';
+const PRIMARY_KEYWORD =
+  jsonData.primaryKeyword ||
+  (String(SITE_TITLE).split('-')[0] || '').trim() ||
+  String(import.meta.env.PUBLIC_SITE_NAME || '').trim();
+const PAGE_TITLE = `${PRIMARY_KEYWORD} ${packagesData.pageTitle || 'Packages & Bundles'} | ${SITE_TITLE}`;
+const PAGE_DESCRIPTION =
+  packagesData.pageDescription
+    ? `${PRIMARY_KEYWORD} ${packagesData.pageDescription}`
+    : `Choose the perfect ${PRIMARY_KEYWORD} package for your entertainment needs`;
 
 const packages = packagesData.packages;
 const specialOffers = packagesData.specialOffers;
@@ -35,10 +42,10 @@ const breadcrumbs = [
         {/* Hero Section */}
         <div class="text-center space-y-4 mb-12">
           <h1 class="text-4xl md:text-6xl font-bold gradient-text">
-            {packagesData.heroTitle}
+            {PRIMARY_KEYWORD}: {packagesData.heroTitle}
           </h1>
           <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-            {packagesData.heroDescription}
+            {PRIMARY_KEYWORD} {packagesData.heroDescription}
           </p>
         </div>
 

@@ -11,9 +11,16 @@ const jsonData = translations.default;
 // Load movies data dynamically based on language
 const moviesData = await import(`../data/movies/movies_${lang}.json`);
 
-const SITE_TITLE = jsonData.siteTitle || 'FastIPTV';
-const PAGE_TITLE = moviesData.default.pageTitle || 'Movies | ' + SITE_TITLE;
-const PAGE_DESCRIPTION = moviesData.default.pageDescription || 'Watch the latest movies in HD and 4K quality';
+const SITE_TITLE = jsonData.siteTitle || import.meta.env.PUBLIC_SITE_NAME || '';
+const PRIMARY_KEYWORD =
+  jsonData.primaryKeyword ||
+  (String(SITE_TITLE).split('-')[0] || '').trim() ||
+  String(import.meta.env.PUBLIC_SITE_NAME || '').trim();
+const PAGE_TITLE = `${PRIMARY_KEYWORD} ${moviesData.default.pageTitle || 'Movies'} | ${SITE_TITLE}`;
+const PAGE_DESCRIPTION =
+  moviesData.default.pageDescription
+    ? `${PRIMARY_KEYWORD} ${moviesData.default.pageDescription}`
+    : `Watch the latest ${PRIMARY_KEYWORD} movies in HD and 4K quality`;
 
 // Movie data from language-specific movies file
 const movies = moviesData.default.movies;
@@ -35,10 +42,10 @@ const qualities = moviesData.default.qualities;
           {/* Hero Section */}
           <div class="text-center space-y-4">
             <h1 class="text-4xl md:text-6xl font-bold gradient-text">
-              {moviesData.default.heroTitle}
+              {PRIMARY_KEYWORD}: {moviesData.default.heroTitle}
             </h1>
             <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-              {moviesData.default.heroDescription}
+              {PRIMARY_KEYWORD} {moviesData.default.heroDescription}
             </p>
           </div>
 
