@@ -1,0 +1,252 @@
+{
+  "categories": [
+    {
+      "value": "sports",
+      "label": {
+        "en": "Sports",
+        "fr": "Sport",
+        "de": "Sport",
+        "es": "Deportes",
+        "it": "Sport",
+        "pt": "Esportes",
+        "tr": "Spor"
+      }
+    },
+    {
+      "value": "entertainment",
+      "label": {
+        "en": "Entertainment",
+        "fr": "Divertissement",
+        "de": "Unterhaltung",
+        "es": "Entretenimiento",
+        "it": "Intrattenimento",
+        "pt": "Entretenimento",
+        "tr": "Eğlence"
+      }
+    },
+    {
+      "value": "news",
+      "label": {
+        "en": "News",
+        "fr": "Actualités",
+        "de": "Nachrichten",
+        "es": "Noticias",
+        "it": "Notizie",
+        "pt": "Notícias",
+        "tr": "Haberler"
+      }
+    },
+    {
+      "value": "movies",
+      "label": {
+        "en": "Movies",
+        "fr": "Films",
+        "de": "Filme",
+        "es": "Películas",
+        "it": "Film",
+        "pt": "Filmes",
+        "tr": "Filmler"
+      }
+    },
+    {
+      "value": "series",
+      "label": {
+        "en": "TV Series",
+        "fr": "Séries TV",
+        "de": "TV-Serien",
+        "es": "Series de TV",
+        "it": "Serie TV",
+        "pt": "Séries de TV",
+        "tr": "TV Dizileri"
+      }
+    },
+    {
+      "value": "kids",
+      "label": {
+        "en": "Kids",
+        "fr": "Enfants",
+        "de": "Kinder",
+        "es": "Niños",
+        "it": "Bambini",
+        "pt": "Crianças",
+        "tr": "Çocuk"
+      }
+    }
+  ],
+  "languages": [
+    {
+      "value": "english",
+      "label": {
+        "en": "English",
+        "fr": "Anglais",
+        "de": "Englisch",
+        "es": "Inglés",
+        "it": "Inglese",
+        "pt": "Inglês",
+        "tr": "İngilizce"
+      }
+    },
+    {
+      "value": "french",
+      "label": {
+        "en": "French",
+        "fr": "Français",
+        "de": "Französisch",
+        "es": "Francés",
+        "it": "Francese",
+        "pt": "Francês",
+        "tr": "Fransızca"
+      }
+    },
+    {
+      "value": "spanish",
+      "label": {
+        "en": "Spanish",
+        "fr": "Espagnol",
+        "de": "Spanisch",
+        "es": "Español",
+        "it": "Spagnolo",
+        "pt": "Espanhol",
+        "tr": "İspanyolca"
+      }
+    },
+    {
+      "value": "arabic",
+      "label": {
+        "en": "Arabic",
+        "fr": "Arabe",
+        "de": "Arabisch",
+        "es": "Árabe",
+        "it": "Arabo",
+        "pt": "Árabe",
+        "tr": "Arapça"
+      }
+    },
+    {
+      "value": "turkish",
+      "label": {
+        "en": "Turkish",
+        "fr": "Turc",
+        "de": "Türkisch",
+        "es": "Turco",
+        "it": "Turco",
+        "pt": "Turco",
+        "tr": "Türkçe"
+      }
+    }
+  ],
+  "quality": [
+    {
+      "value": "hd",
+      "label": {
+        "en": "HD",
+        "fr": "HD",
+        "de": "HD",
+        "es": "HD",
+        "it": "HD",
+        "pt": "HD",
+        "tr": "HD"
+      }
+    },
+    {
+      "value": "fhd",
+      "label": {
+        "en": "Full HD",
+        "fr": "Full HD",
+        "de": "Full HD",
+        "es": "Full HD",
+        "it": "Full HD",
+        "pt": "Full HD",
+        "tr": "Full HD"
+      }
+    },
+    {
+      "value": "4k",
+      "label": {
+        "en": "4K",
+        "fr": "4K",
+        "de": "4K",
+        "es": "4K",
+        "it": "4K",
+        "pt": "4K",
+        "tr": "4K"
+      }
+    }
+  ],
+  "availability": [
+    {
+      "value": "available",
+      "label": {
+        "en": "Available",
+        "fr": "Disponible",
+        "de": "Verfügbar",
+        "es": "Disponible",
+        "it": "Disponibile",
+        "pt": "Disponível",
+        "tr": "Mevcut"
+      }
+    },
+    {
+      "value": "premium",
+      "label": {
+        "en": "Premium",
+        "fr": "Premium",
+        "de": "Premium",
+        "es": "Premium",
+        "it": "Premium",
+        "pt": "Premium",
+        "tr": "Premium"
+      }
+    }
+  ],
+  "priceRanges": [
+    {
+      "value": "0-10",
+      "label": {
+        "en": "Under $10",
+        "fr": "Moins de 10€",
+        "de": "Unter 10€",
+        "es": "Menos de 10€",
+        "it": "Sotto 10€",
+        "pt": "Abaixo de 10€",
+        "tr": "10$ altında"
+      }
+    },
+    {
+      "value": "10-20",
+      "label": {
+        "en": "$10 - $20",
+        "fr": "10€ - 20€",
+        "de": "10€ - 20€",
+        "es": "10€ - 20€",
+        "it": "10€ - 20€",
+        "pt": "10€ - 20€",
+        "tr": "10$ - 20$"
+      }
+    },
+    {
+      "value": "20-50",
+      "label": {
+        "en": "$20 - $50",
+        "fr": "20€ - 50€",
+        "de": "20€ - 50€",
+        "es": "20€ - 50€",
+        "it": "20€ - 50€",
+        "pt": "20€ - 50€",
+        "tr": "20$ - 50$"
+      }
+    },
+    {
+      "value": "50+",
+      "label": {
+        "en": "Over $50",
+        "fr": "Plus de 50€",
+        "de": "Über 50€",
+        "es": "Más de 50€",
+        "it": "Oltre 50€",
+        "pt": "Acima de 50€",
+        "tr": "50$ üzeri"
+      }
+    }
+  ]
+}

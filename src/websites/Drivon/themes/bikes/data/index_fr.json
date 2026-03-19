@@ -12,6 +12,7 @@
         "type": "youtube",
         "videoId": "liT2Z3wFW1Y",
         "fallbackImage": "/images/driver-culture-fallback.jpg",
+        "fallbackImageAlt": "Drivon automotive lifestyle hero — car culture and racing heritage",
         "videoUrl": "https://cdn.pixabay.com/video/2020/07/28/31670-475348943_large.mp4"
       }
     },
@@ -35,6 +36,7 @@
           "name": "Sweats à Capuche de Course",
           "description": "Sweats inspirés de la course avec designs automobiles authentiques et confort premium.",
           "image": "https://ih1.redbubble.net/image.4762044220.4515/ssrco,mhoodie,mens,fafafa:ca443f4786,front,tall_three_quarter,x1000-bg,f8f8f8.1.webp",
+          "alt": "Racing hoodies — automotive culture merchandise",
           "link": "/racing-hoodies"
         },
         {
@@ -42,6 +44,7 @@
           "name": "T-shirts Culture Auto",
           "description": "T-shirts classiques de la culture automobile avec marques iconiques de voitures et légendes de course.",
           "image": "https://ih1.redbubble.net/image.4762044220.4515/ssrco,classic_tee,mens_02,fafafa:ca443f4786,front,close_portrait,x1000.webp",
+          "alt": "Car culture tees — iconic car brands and racing legends",
           "link": "/car-culture-tees"
         },
         {
@@ -49,6 +52,7 @@
           "name": "Accessoires Pilote",
           "description": "Accessoires essentiels pour compléter votre look et style de culture automobile.",
           "image": "https://ih1.redbubble.net/image.4762043914.4515/ssrco,dad_hat,product,FFFDF5:8c3db69414,front_three_quarter,wide_portrait,750x1000-bg,f8f8f8.webp",
+          "alt": "Driver accessories — automotive culture caps and gear",
           "link": "/driver-accessories"
         }
       ]
@@ -72,6 +76,7 @@
           "description": "Sweat premium avec l'héritage légendaire de course Ferrari et style de course authentique.",
           "price": "89.99",
           "image": "/images/products/ferrari-racing-hoodie.jpg",
+          "alt": "Ferrari racing hoodie — premium motorsport heritage",
           "category": "Sweats de Course"
         },
         {
@@ -80,6 +85,7 @@
           "description": "T-shirt classique célébrant l'iconique Porsche 911 avec design de voiture de sport intemporel.",
           "price": "29.99",
           "image": "/images/products/porsche-911-tee.jpg",
+          "alt": "Porsche 911 classic tee — iconic sports car design",
           "category": "T-shirts Culture Auto"
         }
       ]

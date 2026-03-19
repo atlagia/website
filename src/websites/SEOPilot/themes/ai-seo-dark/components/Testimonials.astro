@@ -1,0 +1,23 @@
+---
+import TestimonialsIsland from './TestimonialsIsland';
+
+interface Props {
+  title: string;
+  description: string;
+  testimonials: {
+    name: string;
+    location: string;
+    rating: number;
+    comment: string;
+  }[];
+}
+
+const { title, description, testimonials } = Astro.props;
+---
+
+<TestimonialsIsland
+  client:visible
+  title={title}
+  description={description}
+  testimonials={testimonials}
+/>

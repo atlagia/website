@@ -1,0 +1,12 @@
+{
+  "navigation": [
+    { "text": "Features", "href": "#features" },
+    { "text": "How It Works", "href": "#how-it-works" },
+    { "text": "Pricing", "href": "#pricing" },
+    { "text": "Integrations", "href": "#integrations" }
+  ],
+  "auth": {
+    "login": { "text": "Login", "href": "/login" },
+    "signup": { "text": "Get Started", "href": "/signup" }
+  }
+}

@@ -1,0 +1,29 @@
+---
+import HeroIsland from './HeroIsland';
+
+interface Props {
+  title: string;
+  description: string;
+  stats: {
+    channels: string;
+    movies: string;
+    shows: string;
+  };
+  cta: {
+    primary: { text: string; link: string };
+    secondary: { text: string; link: string };
+  };
+  backgroundImages?: string[];
+  backgroundImagesAlt?: string[];
+}
+
+const { title, description, stats, cta } = Astro.props;
+---
+
+<HeroIsland
+  client:load
+  title={title}
+  description={description}
+  stats={stats}
+  cta={cta}
+/>

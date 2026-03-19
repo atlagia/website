@@ -1,0 +1,388 @@
+---
+import { getLangFromUrl, useTranslations } from '@utils/i18n';
+
+const { lang } = Astro.params;
+
+// Import components
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+
+// Get translations
+const translations = await useTranslations(lang);
+const jsonData = translations.default;
+
+// Get site title and description from language-specific data
+const SITE_TITLE = jsonData.siteTitle || 'FastIPTV';
+const SITE_DESCRIPTION = jsonData.siteDescription || 'Premium IPTV Streaming Service';
+
+// Generate static paths for all supported languages
+export async function getStaticPaths() {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  const languages = allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+  
+  return languages.map(lang => ({
+    params: { lang }
+  }));
+}
+---
+
+<!doctype html>
+<html lang={lang} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
+  <BaseHead 
+    title={`Press | ${SITE_TITLE}`}
+    description="Latest news, press releases, and media resources from FastIPTV."
+    lang={lang}
+  />
+  <body class="bg-gray-50">
+    <Header lang={lang} />
+    
+    <main class="pt-20">
+      <!-- Hero Section -->
+      <section class="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4">
+          <div class="text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">
+              {lang === 'en' && 'Press'}
+              {lang === 'fr' && 'Presse'}
+              {lang === 'de' && 'Presse'}
+              {lang === 'es' && 'Prensa'}
+              {lang === 'it' && 'Stampa'}
+              {lang === 'pt' && 'Imprensa'}
+              {lang === 'nl' && 'Pers'}
+              {lang === 'zh' && '新闻'}
+              {lang === 'ar' && 'الصحافة'}
+              {lang === 'tr' && 'Basın'}
+            </h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto opacity-90">
+              {lang === 'en' && 'Latest news, press releases, and media resources'}
+              {lang === 'fr' && 'Dernières nouvelles, communiqués de presse et ressources médiatiques'}
+              {lang === 'de' && 'Neueste Nachrichten, Pressemitteilungen und Medienressourcen'}
+              {lang === 'es' && 'Últimas noticias, comunicados de prensa y recursos mediáticos'}
+              {lang === 'it' && 'Ultime notizie, comunicati stampa e risorse mediatiche'}
+              {lang === 'pt' && 'Últimas notícias, comunicados de imprensa e recursos de mídia'}
+              {lang === 'nl' && 'Laatste nieuws, persberichten en mediabronnen'}
+              {lang === 'zh' && '最新消息、新闻稿和媒体资源'}
+              {lang === 'ar' && 'أحدث الأخبار والبيانات الصحفية والموارد الإعلامية'}
+              {lang === 'tr' && 'Son haberler, basın açıklamaları ve medya kaynakları'}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Press Releases Section -->
+      <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
+            {lang === 'en' && 'Press Releases'}
+            {lang === 'fr' && 'Communiqués de Presse'}
+            {lang === 'de' && 'Pressemitteilungen'}
+            {lang === 'es' && 'Comunicados de Prensa'}
+            {lang === 'it' && 'Comunicati Stampa'}
+            {lang === 'pt' && 'Comunicados de Imprensa'}
+            {lang === 'nl' && 'Persberichten'}
+            {lang === 'zh' && '新闻稿'}
+            {lang === 'ar' && 'البيانات الصحفية'}
+            {lang === 'tr' && 'Basın Açıklamaları'}
+          </h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+              <div class="p-6">
+                <div class="text-sm text-gray-500 mb-2">January 15, 2025</div>
+                <h3 class="text-xl font-semibold mb-3">
+                  {lang === 'en' && 'FastIPTV Reaches 2 Million Subscribers Milestone'}
+                  {lang === 'fr' && 'FastIPTV Atteint le Cap des 2 Millions d\'Abonnés'}
+                  {lang === 'de' && 'FastIPTV Erreicht 2 Millionen Abonnenten Meilenstein'}
+                  {lang === 'es' && 'FastIPTV Alcanza el Hito de 2 Millones de Suscriptores'}
+                  {lang === 'it' && 'FastIPTV Raggiunge il Traguardo di 2 Milioni di Abbonati'}
+                  {lang === 'pt' && 'FastIPTV Atinge Marco de 2 Milhões de Assinantes'}
+                  {lang === 'nl' && 'FastIPTV Bereikt 2 Miljoen Abonnees Mijlpaal'}
+                  {lang === 'zh' && 'FastIPTV达到200万订阅者里程碑'}
+                  {lang === 'ar' && 'FastIPTV تصل إلى معلم مليوني مشترك'}
+                  {lang === 'tr' && 'FastIPTV 2 Milyon Abone Dönüm Noktasına Ulaştı'}
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  {lang === 'en' && 'FastIPTV celebrates a major milestone as it reaches 2 million active subscribers worldwide, solidifying its position as a leading IPTV streaming platform.'}
+                  {lang === 'fr' && 'FastIPTV célèbre une étape majeure en atteignant 2 millions d\'abonnés actifs dans le monde, consolidant sa position de plateforme de streaming IPTV leader.'}
+                  {lang === 'de' && 'FastIPTV feiert einen wichtigen Meilenstein mit 2 Millionen aktiven Abonnenten weltweit und festigt seine Position als führende IPTV-Streaming-Plattform.'}
+                  {lang === 'es' && 'FastIPTV celebra un hito importante al alcanzar 2 millones de suscriptores activos en todo el mundo, consolidando su posición como plataforma de streaming IPTV líder.'}
+                  {lang === 'it' && 'FastIPTV celebra una pietra miliare importante raggiungendo 2 milioni di abbonati attivi in tutto il mondo, consolidando la sua posizione come piattaforma di streaming IPTV leader.'}
+                  {lang === 'pt' && 'FastIPTV celebra um marco importante ao atingir 2 milhões de assinantes ativos em todo o mundo, solidificando sua posição como plataforma de streaming IPTV líder.'}
+                  {lang === 'nl' && 'FastIPTV viert een belangrijke mijlpaal door 2 miljoen actieve abonnees wereldwijd te bereiken, wat zijn positie als leidend IPTV streaming platform versterkt.'}
+                  {lang === 'zh' && 'FastIPTV庆祝了一个重要里程碑，在全球达到200万活跃订阅者，巩固了其作为领先IPTV流媒体平台的地位。'}
+                  {lang === 'ar' && 'تحتفل FastIPTV بمعلم مهم بوصولها إلى مليوني مشترك نشط في جميع أنحاء العالم، مما يعزز موقعها كمنصة بث IPTV رائدة.'}
+                  {lang === 'tr' && 'FastIPTV dünya çapında 2 milyon aktif aboneye ulaşarak önemli bir dönüm noktasını kutluyor ve önde gelen IPTV yayın platformu konumunu güçlendiriyor.'}
+                </p>
+                <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">
+                  {lang === 'en' && 'Read More →'}
+                  {lang === 'fr' && 'Lire Plus →'}
+                  {lang === 'de' && 'Mehr Lesen →'}
+                  {lang === 'es' && 'Leer Más →'}
+                  {lang === 'it' && 'Leggi di Più →'}
+                  {lang === 'pt' && 'Leia Mais →'}
+                  {lang === 'nl' && 'Lees Meer →'}
+                  {lang === 'zh' && '阅读更多 →'}
+                  {lang === 'ar' && 'اقرأ المزيد →'}
+                  {lang === 'tr' && 'Devamını Oku →'}
+                </a>
+              </div>
+            </article>
+
+            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+              <div class="p-6">
+                <div class="text-sm text-gray-500 mb-2">December 20, 2024</div>
+                <h3 class="text-xl font-semibold mb-3">
+                  {lang === 'en' && 'FastIPTV Launches 4K Streaming for All Channels'}
+                  {lang === 'fr' && 'FastIPTV Lance le Streaming 4K pour Tous les Canaux'}
+                  {lang === 'de' && 'FastIPTV Startet 4K-Streaming für Alle Kanäle'}
+                  {lang === 'es' && 'FastIPTV Lanza Streaming 4K para Todos los Canales'}
+                  {lang === 'it' && 'FastIPTV Lancia lo Streaming 4K per Tutti i Canali'}
+                  {lang === 'pt' && 'FastIPTV Lança Streaming 4K para Todos os Canais'}
+                  {lang === 'nl' && 'FastIPTV Lanceert 4K Streaming voor Alle Kanalen'}
+                  {lang === 'zh' && 'FastIPTV为所有频道推出4K流媒体'}
+                  {lang === 'ar' && 'FastIPTV تطلق البث 4K لجميع القنوات'}
+                  {lang === 'tr' && 'FastIPTV Tüm Kanallar için 4K Yayını Başlattı'}
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  {lang === 'en' && 'The company announces the rollout of 4K streaming capabilities across its entire channel lineup, providing subscribers with the highest quality viewing experience.'}
+                  {lang === 'fr' && 'L\'entreprise annonce le déploiement des capacités de streaming 4K sur toute sa gamme de chaînes, offrant aux abonnés l\'expérience de visionnement de la plus haute qualité.'}
+                  {lang === 'de' && 'Das Unternehmen kündigt die Einführung von 4K-Streaming-Funktionen für sein gesamtes Kanalangebot an und bietet Abonnenten das höchste Qualitätserlebnis.'}
+                  {lang === 'es' && 'La empresa anuncia el despliegue de capacidades de streaming 4K en toda su línea de canales, proporcionando a los suscriptores la experiencia de visualización de mayor calidad.'}
+                  {lang === 'it' && 'L\'azienda annuncia il lancio delle capacità di streaming 4K su tutta la sua gamma di canali, offrendo agli abbonati l\'esperienza di visione di massima qualità.'}
+                  {lang === 'pt' && 'A empresa anuncia o lançamento de capacidades de streaming 4K em toda sua linha de canais, proporcionando aos assinantes a experiência de visualização de maior qualidade.'}
+                  {lang === 'nl' && 'Het bedrijf kondigt de uitrol van 4K streaming mogelijkheden aan voor zijn volledige kanaallijn, wat abonnees de hoogste kwaliteit kijkervaring biedt.'}
+                  {lang === 'zh' && '公司宣布在其整个频道阵容中推出4K流媒体功能，为订阅者提供最高质量的观看体验。'}
+                  {lang === 'ar' && 'تعلن الشركة عن طرح قدرات البث 4K عبر كامل خط قنواتها، مما يوفر للمشتركين تجربة مشاهدة عالية الجودة.'}
+                  {lang === 'tr' && 'Şirket, tüm kanal hattında 4K yayın yeteneklerinin devreye alınmasını duyuruyor ve abonelere en yüksek kalitede izleme deneyimi sunuyor.'}
+                </p>
+                <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">
+                  {lang === 'en' && 'Read More →'}
+                  {lang === 'fr' && 'Lire Plus →'}
+                  {lang === 'de' && 'Mehr Lesen →'}
+                  {lang === 'es' && 'Leer Más →'}
+                  {lang === 'it' && 'Leggi di Più →'}
+                  {lang === 'pt' && 'Leia Mais →'}
+                  {lang === 'nl' && 'Lees Meer →'}
+                  {lang === 'zh' && '阅读更多 →'}
+                  {lang === 'ar' && 'اقرأ المزيد →'}
+                  {lang === 'tr' && 'Devamını Oku →'}
+                </a>
+              </div>
+            </article>
+
+            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+              <div class="p-6">
+                <div class="text-sm text-gray-500 mb-2">November 10, 2024</div>
+                <h3 class="text-xl font-semibold mb-3">
+                  {lang === 'en' && 'FastIPTV Expands to 50+ Countries'}
+                  {lang === 'fr' && 'FastIPTV S\'étend à Plus de 50 Pays'}
+                  {lang === 'de' && 'FastIPTV Erweitert auf Über 50 Länder'}
+                  {lang === 'es' && 'FastIPTV Se Expande a Más de 50 Países'}
+                  {lang === 'it' && 'FastIPTV Si Espande a Oltre 50 Paesi'}
+                  {lang === 'pt' && 'FastIPTV Se Expande para Mais de 50 Países'}
+                  {lang === 'nl' && 'FastIPTV Breidt Uit naar 50+ Landen'}
+                  {lang === 'zh' && 'FastIPTV扩展到50多个国家'}
+                  {lang === 'ar' && 'FastIPTV تتوسع إلى أكثر من 50 دولة'}
+                  {lang === 'tr' && 'FastIPTV 50+ Ülkeye Genişliyor'}
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  {lang === 'en' && 'The streaming service announces its expansion into new markets across Europe, Asia, and Latin America, bringing premium IPTV content to millions more users.'}
+                  {lang === 'fr' && 'Le service de streaming annonce son expansion dans de nouveaux marchés en Europe, en Asie et en Amérique latine, apportant du contenu IPTV premium à des millions d\'utilisateurs supplémentaires.'}
+                  {lang === 'de' && 'Der Streaming-Service kündigt seine Expansion in neue Märkte in Europa, Asien und Lateinamerika an und bringt Premium-IPTV-Inhalte zu Millionen weiterer Nutzer.'}
+                  {lang === 'es' && 'El servicio de streaming anuncia su expansión a nuevos mercados en Europa, Asia y América Latina, llevando contenido IPTV premium a millones de usuarios más.'}
+                  {lang === 'it' && 'Il servizio di streaming annuncia la sua espansione in nuovi mercati in Europa, Asia e America Latina, portando contenuti IPTV premium a milioni di utenti in più.'}
+                  {lang === 'pt' && 'O serviço de streaming anuncia sua expansão para novos mercados na Europa, Ásia e América Latina, levando conteúdo IPTV premium para milhões de usuários a mais.'}
+                  {lang === 'nl' && 'De streamingdienst kondigt zijn uitbreiding naar nieuwe markten in Europa, Azië en Latijns-Amerika aan, waardoor premium IPTV-inhoud naar miljoenen meer gebruikers wordt gebracht.'}
+                  {lang === 'zh' && '流媒体服务宣布扩展到欧洲、亚洲和拉丁美洲的新市场，为数百万用户带来优质IPTV内容。'}
+                  {lang === 'ar' && 'تعلن خدمة البث عن توسعها في أسواق جديدة عبر أوروبا وآسيا وأمريكا اللاتينية، مما يجلب محتوى IPTV المتميز لملايين المستخدمين الإضافيين.'}
+                  {lang === 'tr' && 'Yayın hizmeti, Avrupa, Asya ve Latin Amerika\'daki yeni pazarlara genişlemesini duyuruyor ve milyonlarca kullanıcıya premium IPTV içeriği getiriyor.'}
+                </p>
+                <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">
+                  {lang === 'en' && 'Read More →'}
+                  {lang === 'fr' && 'Lire Plus →'}
+                  {lang === 'de' && 'Mehr Lesen →'}
+                  {lang === 'es' && 'Leer Más →'}
+                  {lang === 'it' && 'Leggi di Più →'}
+                  {lang === 'pt' && 'Leia Mais →'}
+                  {lang === 'nl' && 'Lees Meer →'}
+                  {lang === 'zh' && '阅读更多 →'}
+                  {lang === 'ar' && 'اقرأ المزيد →'}
+                  {lang === 'tr' && 'Devamını Oku →'}
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Media Kit Section -->
+      <section class="bg-white py-20">
+        <div class="max-w-7xl mx-auto px-4">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              {lang === 'en' && 'Media Kit'}
+              {lang === 'fr' && 'Kit Média'}
+              {lang === 'de' && 'Medien-Kit'}
+              {lang === 'es' && 'Kit de Medios'}
+              {lang === 'it' && 'Kit Media'}
+              {lang === 'pt' && 'Kit de Mídia'}
+              {lang === 'nl' && 'Media Kit'}
+              {lang === 'zh' && '媒体包'}
+              {lang === 'ar' && 'حقيبة الإعلام'}
+              {lang === 'tr' && 'Medya Kiti'}
+            </h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+              {lang === 'en' && 'Download our brand assets, logos, and press materials for media use.'}
+              {lang === 'fr' && 'Téléchargez nos ressources de marque, logos et matériel de presse pour usage médiatique.'}
+              {lang === 'de' && 'Laden Sie unsere Markenressourcen, Logos und Pressematerialien für die Mediennutzung herunter.'}
+              {lang === 'es' && 'Descarga nuestros recursos de marca, logotipos y materiales de prensa para uso mediático.'}
+              {lang === 'it' && 'Scarica le nostre risorse di marca, loghi e materiali stampa per uso mediatico.'}
+              {lang === 'pt' && 'Baixe nossos recursos de marca, logotipos e materiais de imprensa para uso na mídia.'}
+              {lang === 'nl' && 'Download onze merkassets, logo\'s en persmateriaal voor mediagebruik.'}
+              {lang === 'zh' && '下载我们的品牌资产、徽标和新闻材料供媒体使用。'}
+              {lang === 'ar' && 'قم بتنزيل أصول علامتنا التجارية وشعاراتنا ومواد الصحافة للاستخدام الإعلامي.'}
+              {lang === 'tr' && 'Medya kullanımı için marka varlıklarımızı, logolarımızı ve basın materyallerimizi indirin.'}
+            </p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="text-center p-6 bg-gray-50 rounded-lg">
+              <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold mb-2">
+                {lang === 'en' && 'Logos & Branding'}
+                {lang === 'fr' && 'Logos et Image de Marque'}
+                {lang === 'de' && 'Logos & Branding'}
+                {lang === 'es' && 'Logotipos y Marca'}
+                {lang === 'it' && 'Loghi e Branding'}
+                {lang === 'pt' && 'Logotipos e Marca'}
+                {lang === 'nl' && 'Logo\'s & Branding'}
+                {lang === 'zh' && '徽标和品牌'}
+                {lang === 'ar' && 'الشعارات والعلامة التجارية'}
+                {lang === 'tr' && 'Logolar ve Marka'}
+              </h3>
+              <p class="text-gray-600 mb-4">
+                {lang === 'en' && 'High-resolution logos and brand guidelines'}
+                {lang === 'fr' && 'Logos haute résolution et directives de marque'}
+                {lang === 'de' && 'Hochauflösende Logos und Markenrichtlinien'}
+                {lang === 'es' && 'Logotipos de alta resolución y pautas de marca'}
+                {lang === 'it' && 'Loghi ad alta risoluzione e linee guida del brand'}
+                {lang === 'pt' && 'Logotipos de alta resolução e diretrizes de marca'}
+                {lang === 'nl' && 'Hoge resolutie logo\'s en merkrichtlijnen'}
+                {lang === 'zh' && '高分辨率徽标和品牌指南'}
+                {lang === 'ar' && 'شعارات عالية الدقة وإرشادات العلامة التجارية'}
+                {lang === 'tr' && 'Yüksek çözünürlüklü logolar ve marka yönergeleri'}
+              </p>
+              <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">
+                {lang === 'en' && 'Download →'}
+                {lang === 'fr' && 'Télécharger →'}
+                {lang === 'de' && 'Herunterladen →'}
+                {lang === 'es' && 'Descargar →'}
+                {lang === 'it' && 'Scarica →'}
+                {lang === 'pt' && 'Baixar →'}
+                {lang === 'nl' && 'Downloaden →'}
+                {lang === 'zh' && '下载 →'}
+                {lang === 'ar' && 'تحميل →'}
+                {lang === 'tr' && 'İndir →'}
+              </a>
+            </div>
+
+            <div class="text-center p-6 bg-gray-50 rounded-lg">
+              <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold mb-2">
+                {lang === 'en' && 'Press Kit'}
+                {lang === 'fr' && 'Kit de Presse'}
+                {lang === 'de' && 'Pressemappe'}
+                {lang === 'es' && 'Kit de Prensa'}
+                {lang === 'it' && 'Kit Stampa'}
+                {lang === 'pt' && 'Kit de Imprensa'}
+                {lang === 'nl' && 'Perskit'}
+                {lang === 'zh' && '新闻包'}
+                {lang === 'ar' && 'حقيبة الصحافة'}
+                {lang === 'tr' && 'Basın Kiti'}
+              </h3>
+              <p class="text-gray-600 mb-4">
+                {lang === 'en' && 'Company information and press releases'}
+                {lang === 'fr' && 'Informations sur l\'entreprise et communiqués de presse'}
+                {lang === 'de' && 'Unternehmensinformationen und Pressemitteilungen'}
+                {lang === 'es' && 'Información de la empresa y comunicados de prensa'}
+                {lang === 'it' && 'Informazioni aziendali e comunicati stampa'}
+                {lang === 'pt' && 'Informações da empresa e comunicados de imprensa'}
+                {lang === 'nl' && 'Bedrijfsinformatie en persberichten'}
+                {lang === 'zh' && '公司信息和新闻稿'}
+                {lang === 'ar' && 'معلومات الشركة والبيانات الصحفية'}
+                {lang === 'tr' && 'Şirket bilgileri ve basın açıklamaları'}
+              </p>
+              <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">
+                {lang === 'en' && 'Download →'}
+                {lang === 'fr' && 'Télécharger →'}
+                {lang === 'de' && 'Herunterladen →'}
+                {lang === 'es' && 'Descargar →'}
+                {lang === 'it' && 'Scarica →'}
+                {lang === 'pt' && 'Baixar →'}
+                {lang === 'nl' && 'Downloaden →'}
+                {lang === 'zh' && '下载 →'}
+                {lang === 'ar' && 'تحميل →'}
+                {lang === 'tr' && 'İndir →'}
+              </a>
+            </div>
+
+            <div class="text-center p-6 bg-gray-50 rounded-lg">
+              <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold mb-2">
+                {lang === 'en' && 'Contact Information'}
+                {lang === 'fr' && 'Informations de Contact'}
+                {lang === 'de' && 'Kontaktinformationen'}
+                {lang === 'es' && 'Información de Contacto'}
+                {lang === 'it' && 'Informazioni di Contatto'}
+                {lang === 'pt' && 'Informações de Contato'}
+                {lang === 'nl' && 'Contactinformatie'}
+                {lang === 'zh' && '联系信息'}
+                {lang === 'ar' && 'معلومات الاتصال'}
+                {lang === 'tr' && 'İletişim Bilgileri'}
+              </h3>
+              <p class="text-gray-600 mb-4">
+                {lang === 'en' && 'Media contacts and spokesperson information'}
+                {lang === 'fr' && 'Contacts médias et informations sur les porte-parole'}
+                {lang === 'de' && 'Medienkontakte und Sprecherinformationen'}
+                {lang === 'es' && 'Contactos de medios e información de portavoces'}
+                {lang === 'it' && 'Contatti media e informazioni sui portavoce'}
+                {lang === 'pt' && 'Contatos de mídia e informações de porta-vozes'}
+                {lang === 'nl' && 'Mediacontacten en woordvoerderinformatie'}
+                {lang === 'zh' && '媒体联系人和发言人信息'}
+                {lang === 'ar' && 'جهات الاتصال الإعلامية ومعلومات المتحدثين'}
+                {lang === 'tr' && 'Medya iletişim bilgileri ve sözcü bilgileri'}
+              </p>
+              <a href={`/${lang}/contact`} class="text-blue-600 hover:text-blue-800 font-medium">
+                {lang === 'en' && 'Contact →'}
+                {lang === 'fr' && 'Contacter →'}
+                {lang === 'de' && 'Kontakt →'}
+                {lang === 'es' && 'Contactar →'}
+                {lang === 'it' && 'Contatta →'}
+                {lang === 'pt' && 'Contatar →'}
+                {lang === 'nl' && 'Contact →'}
+                {lang === 'zh' && '联系 →'}
+                {lang === 'ar' && 'اتصل →'}
+                {lang === 'tr' && 'İletişim →'}
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <Footer lang={lang} />
+  </body>
+</html>

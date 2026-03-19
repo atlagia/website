@@ -1,0 +1,18 @@
+---
+import IntegrationsIsland from './IntegrationsIsland';
+
+interface Props {
+  title: string;
+  description: string;
+  platforms: { name: string; icon: string }[];
+}
+
+const { title, description, platforms } = Astro.props;
+---
+
+<IntegrationsIsland
+  client:visible
+  title={title}
+  description={description}
+  platforms={platforms}
+/>

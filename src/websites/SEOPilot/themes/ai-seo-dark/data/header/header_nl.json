@@ -1,0 +1,72 @@
+{
+  "navigation": [
+    {
+      "text": "Kanalen",
+      "href": "/channels"
+    },
+    {
+      "text": "Films", 
+      "href": "/movies"
+    },
+    {
+      "text": "TV-Series",
+      "href": "/shows"
+    },
+    {
+      "text": "Pakketten",
+      "href": "/packages"
+    }
+  ],
+  "auth": {
+    "login": {
+      "text": "Inloggen",
+      "href": "/packages"
+    },
+    "signup": {
+      "text": "Aan de slag",
+      "href": "/packages"
+    }
+  },
+  "languages": [
+    {
+      "code": "en",
+      "name": "English"
+    },
+    {
+      "code": "fr",
+      "name": "Français"
+    },
+    {
+      "code": "de",
+      "name": "Deutsch"
+    },
+    {
+      "code": "it",
+      "name": "Italiano"
+    },
+    {
+      "code": "nl",
+      "name": "Nederlands"
+    },
+    {
+      "code": "pt",
+      "name": "Português"
+    },
+    {
+      "code": "ar",
+      "name": "العربية"
+    },
+    {
+      "code": "es",
+      "name": "Español"
+    },
+    {
+      "code": "ru",
+      "name": "Русский"
+    },
+    {
+      "code": "zh",
+      "name": "中文"
+    }
+  ]
+} 

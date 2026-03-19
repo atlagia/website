@@ -1,0 +1,135 @@
+{
+  "pageTitle": "Pacotes e Bundles",
+  "pageDescription": "Escolha o pacote FastIPTV perfeito para suas necessidades de entretenimento",
+  "heroTitle": "Pacotes e Bundles",
+  "heroDescription": "Escolha entre nossos pacotes curados ou crie seu próprio bundle personalizado.",
+  "packages": {
+    "featured": {
+      "name": "12 Meses Stronger IPTV",
+      "price": "59.99",
+      "duration": "ano",
+      "description": "Melhor valor com cobrança anual - economize muito no serviço IPTV premium",
+      "features": [
+        "+32,000 Canais IPTV Premium",
+        "+140,000 Filmes e Séries Fast IPTV",
+        "Qualidade Stronger IPTV 8K/4K/Ultra HD",
+        "Catch Up/EPG Para Todos os Canais Fast IPTV",
+        "ATUALIZAÇÕES GRATUITAS de Canais IPTV Premium e VOD",
+        "99.9% Tempo de Atividade do Servidor Fast IPTV",
+        "Todos os Dispositivos Suportados para Stronger IPTV",
+        "Tecnologia AntiFreeze para Fast IPTV",
+        "Assistência Técnica IPTV Premium 24/7"
+      ],
+      "savings": "Melhor Valor",
+      "checkoutUrl": "https://wa.me/16058466377?text=Ol%C3%A1%21%20Quero%20assinar%20o%20plano%20IPTV%20de%2012%20meses"
+    },
+    "bundles": [
+      {
+        "name": "1 Mês Fast IPTV",
+        "price": "16.99",
+        "duration": "mês",
+        "description": "Perfeito para experimentar nosso serviço IPTV premium",
+        "features": [
+          "+32,000 Canais Fast IPTV",
+          "+140,000 Filmes e Séries IPTV Premium",
+          "Qualidade Stronger IPTV 8K/4K/Ultra HD",
+          "Catch Up/EPG Para Todos os Canais Fast IPTV",
+          "ATUALIZAÇÕES GRATUITAS de Canais IPTV Premium e VOD",
+          "99.9% Tempo de Atividade do Servidor Fast IPTV",
+          "Todos os Dispositivos Suportados para Stronger IPTV",
+          "Tecnologia AntiFreeze para Fast IPTV",
+          "Assistência Técnica IPTV Premium 24/7"
+        ],
+        "highlight": "Mais Popular",
+        "checkoutUrl": "https://wa.me/16058466377?text=Ol%C3%A1%21%20Quero%20assinar%20o%20plano%20IPTV%20de%201%20m%C3%AAs"
+      },
+      {
+        "name": "3 Meses Fast IPTV",
+        "price": "29.99",
+        "duration": "trimestre",
+        "description": "Excelente valor para assinatura IPTV premium trimestral",
+        "features": [
+          "+32,000 Canais Stronger IPTV",
+          "+140,000 Filmes e Séries IPTV Premium",
+          "Qualidade Fast IPTV 8K/4K/Ultra HD",
+          "Catch Up/EPG Para Todos os Canais IPTV Premium",
+          "ATUALIZAÇÕES GRATUITAS de Canais Fast IPTV e VOD",
+          "99.9% Tempo de Atividade do Servidor Stronger IPTV",
+          "Todos os Dispositivos Suportados para Fast IPTV",
+          "Tecnologia AntiFreeze para IPTV Premium",
+          "Assistência Técnica Stronger IPTV 24/7"
+        ],
+        "highlight": "Melhor para Esportes",
+        "checkoutUrl": "https://wa.me/16058466377?text=Ol%C3%A1%21%20Quero%20assinar%20o%20plano%20IPTV%20de%203%20meses"
+      }
+    ],
+    "addons": [
+      {
+        "name": "Dispositivo Extra",
+        "price": "4.99",
+        "description": "Adicione mais um dispositivo a qualquer pacote"
+      },
+      {
+        "name": "Esportes Premium",
+        "price": "9.99",
+        "description": "Adicione canais esportivos premium a qualquer pacote"
+      },
+      {
+        "name": "Upgrade 4K",
+        "price": "5.99",
+        "description": "Atualize para qualidade 4K onde disponível"
+      },
+      {
+        "name": "Internacional",
+        "price": "7.99",
+        "description": "Adicione canais internacionais de regiões selecionadas"
+      }
+    ]
+  },
+  "specialOffers": [
+    {
+      "name": "Assinatura Anual",
+      "description": "Economize 20% com cobrança anual",
+      "badge": "Melhor Valor"
+    },
+    {
+      "name": "Desconto Estudante",
+      "description": "50% de desconto para estudantes verificados",
+      "badge": "Tempo Limitado"
+    },
+    {
+      "name": "Compartilhamento Familiar",
+      "description": "Adicione até 5 membros da família com 50% de desconto",
+      "badge": "Popular"
+    }
+  ],
+  "faq": {
+    "title": "Perguntas Frequentes",
+    "questions": [
+      {
+        "question": "Posso alterar meu pacote depois?",
+        "answer": "Sim, você pode fazer upgrade, downgrade ou personalizar seu pacote a qualquer momento. As alterações entrarão em vigor no seu próximo ciclo de cobrança."
+      },
+      {
+        "question": "Como funcionam os complementos?",
+        "answer": "Os complementos podem ser adicionados a qualquer pacote e são cobrados mensalmente. Você pode adicioná-los ou removê-los a qualquer momento."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Pronto para Começar?",
+    "description": "Experimente qualquer pacote gratuitamente por 7 dias. Cancele a qualquer momento.",
+    "buttons": [
+      {
+        "text": "Iniciar Teste Gratuito",
+        "link": "/signup",
+        "style": "primary"
+      },
+      {
+        "text": "Contatar Vendas",
+        "link": "/contact",
+        "style": "secondary"
+      }
+    ]
+  }
+}

@@ -1,0 +1,201 @@
+---
+import { getLangFromUrl, useTranslations } from '@utils/i18n';
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+
+const lang = getLangFromUrl(Astro.url);
+const translations = await useTranslations(lang);
+const jsonData = translations.default;
+
+const SITE_TITLE = jsonData.siteTitle || 'FastIPTV';
+const PAGE_TITLE = 'FAQ | ' + SITE_TITLE;
+const PAGE_DESCRIPTION = 'Find answers to frequently asked questions about FastIPTV';
+const breadcrumbs = [
+  { name: 'Home', url: `/${lang}` },
+  { name: 'FAQ', url: `/${lang}/faq` }
+];
+
+const categories = [
+  {
+    name: 'Getting Started',
+    icon: '🚀',
+    questions: [
+      {
+        question: 'What is IPTV?',
+        answer: 'IPTV (Internet Protocol Television) delivers television content over Internet Protocol networks. It offers a more convenient and flexible way to watch TV compared to traditional cable or satellite services.'
+      },
+      {
+        question: 'How do I start using FastIPTV?',
+        answer: 'Getting started is easy: 1) Sign up for an account, 2) Choose your subscription plan, 3) Download the app on your preferred device, and 4) Start watching your favorite content.'
+      },
+      {
+        question: 'What devices can I use?',
+        answer: 'FastIPTV works on Smart TVs (Samsung, LG, Android TV), mobile devices (iOS, Android), computers (Windows, Mac, Linux), and gaming consoles (PlayStation, Xbox).'
+      },
+      {
+        question: 'Is there a free trial?',
+        answer: 'Yes! We offer a 7-day free trial for all new subscribers. You can cancel anytime during the trial period with no charges.'
+      }
+    ]
+  },
+  {
+    name: 'Subscription & Billing',
+    icon: '💳',
+    questions: [
+      {
+        question: 'What payment methods do you accept?',
+        answer: 'We accept all major credit cards (Visa, MasterCard, American Express), PayPal, and various cryptocurrency payments.'
+      },
+      {
+        question: 'Can I cancel my subscription?',
+        answer: 'Yes, you can cancel your subscription at any time. Your service will continue until the end of your current billing period.'
+      },
+      {
+        question: 'How do I change my plan?',
+        answer: 'You can upgrade or downgrade your plan at any time through your account settings. Changes will take effect on your next billing cycle.'
+      },
+      {
+        question: 'Do you offer refunds?',
+        answer: 'We offer a 30-day money-back guarantee if you\'re not satisfied with our service. Contact our support team to process your refund.'
+      }
+    ]
+  },
+  {
+    name: 'Technical Support',
+    icon: '🔧',
+    questions: [
+      {
+        question: 'What internet speed do I need?',
+        answer: 'We recommend a minimum internet speed of 10 Mbps for HD streaming and 25 Mbps for 4K content. For optimal performance, use a stable connection.'
+      },
+      {
+        question: 'How do I fix buffering issues?',
+        answer: 'To fix buffering: 1) Check your internet connection, 2) Close other bandwidth-heavy applications, 3) Clear app cache, 4) Try a different server location, or 5) Contact support if issues persist.'
+      },
+      {
+        question: 'Can I use VPN with FastIPTV?',
+        answer: 'Yes, FastIPTV works with most VPN services. However, using a VPN might affect your streaming quality and available content due to regional restrictions.'
+      },
+      {
+        question: 'How do I update the app?',
+        answer: 'The app updates automatically on most devices. For manual updates, visit your device\'s app store or download the latest version from our website.'
+      }
+    ]
+  },
+  {
+    name: 'Content & Features',
+    icon: '📺',
+    questions: [
+      {
+        question: 'How many channels do you offer?',
+        answer: 'We offer 1000+ live channels across different categories including sports, entertainment, news, movies, and more. The exact number varies by subscription plan.'
+      },
+      {
+        question: 'Do you offer local channels?',
+        answer: 'Yes, we provide local channels in many regions. Available channels depend on your location and local broadcasting rights.'
+      },
+      {
+        question: 'Can I record shows?',
+        answer: 'Yes, our Cloud DVR feature allows you to record shows and movies. Storage capacity varies by subscription plan.'
+      },
+      {
+        question: 'Is 4K content available?',
+        answer: 'Yes, we offer 4K content on Premium and Ultimate plans. Your device must support 4K playback and have a sufficient internet connection.'
+      }
+    ]
+  }
+];
+
+const allFaqItems = categories.flatMap(c => c.questions);
+const faqPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: allFaqItems.map((q) => ({
+    '@type': 'Question',
+    name: q.question,
+    acceptedAnswer: { '@type': 'Answer', text: q.answer }
+  }))
+};
+---
+
+<!doctype html>
+<html lang={lang} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
+  <head>
+    <BaseHead title={PAGE_TITLE} description={PAGE_DESCRIPTION} breadcrumbs={breadcrumbs} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqPageSchema)} />
+  </head>
+  <body class="bg-[#0a0a0a] text-white">
+    <Header />
+    <main class="container mx-auto px-4 py-16 max-w-7xl">
+      <section class="space-y-12">
+        {/* Hero Section */}
+        <div class="text-center space-y-4">
+          <h1 class="text-4xl md:text-6xl font-bold gradient-text">
+            Frequently Asked Questions
+          </h1>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            Find answers to common questions about FastIPTV's services and features.
+          </p>
+        </div>
+
+        {/* Quick Links */}
+        <div class="flex flex-wrap justify-center gap-4">
+          {categories.map((category, i) => (
+            <a
+              href={`#faq-${i}-${category.name.toLowerCase().replace(/\s+/g, '-')}`}
+              class="glass rounded-lg px-6 py-3 flex items-center gap-2 hover-scale hover-glow"
+            >
+              <span>{category.icon}</span>
+              {category.name}
+            </a>
+          ))}
+        </div>
+
+        {/* FAQ Categories */}
+        <div class="space-y-16">
+          {categories.map((category, i) => (
+            <div id={`faq-${i}-${category.name.toLowerCase().replace(/\s+/g, '-')}`} class="scroll-mt-24">
+              <div class="flex items-center gap-4 mb-8">
+                <span class="text-4xl">{category.icon}</span>
+                <h2 class="text-3xl font-bold text-purple-400">{category.name}</h2>
+              </div>
+
+              <div class="space-y-6">
+                {category.questions.map(item => (
+                  <div class="glass rounded-xl p-6 space-y-4">
+                    <h3 class="text-xl font-bold">{item.question}</h3>
+                    <p class="text-gray-300">{item.answer}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Still Need Help */}
+        <div class="glass rounded-2xl p-8 text-center space-y-6">
+          <h2 class="text-3xl font-bold gradient-text">Still Need Help?</h2>
+          <p class="text-xl text-gray-300">
+            Our support team is available 24/7 to assist you with any questions.
+          </p>
+          <div class="flex justify-center gap-4">
+            <a
+              href={`/${lang}/contact`}
+              class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg transition duration-200"
+            >
+              Contact Support
+            </a>
+            <a
+              href={`/${lang}/help`}
+              class="bg-white/10 hover:bg-white/20 text-white font-bold py-3 px-8 rounded-lg transition duration-200"
+            >
+              Visit Help Center
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html> 

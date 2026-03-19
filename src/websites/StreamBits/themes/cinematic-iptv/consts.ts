@@ -1,0 +1,2 @@
+export const SITE_TITLE = 'StreamBits — Unlimited IPTV Entertainment';
+export const SITE_DESCRIPTION = 'Premium IPTV streaming. 10,000+ live channels, 4K/HD, no cable. Watch on Smart TV, Fire Stick, mobile, and more.';

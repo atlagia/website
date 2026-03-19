@@ -1,0 +1,97 @@
+{
+  "hero": {
+    "title": "Scegli il Tuo Piano Fast Stronger IPTV",
+    "description": "Trova l'abbonamento Fast IPTV perfetto per le tue esigenze di streaming premium"
+  },
+  "billing": {
+    "monthly": "Fatturazione mensile",
+    "yearly": "Fatturazione annuale",
+    "saveText": "Risparmia 20%"
+  },
+  "plans": [
+    {
+      "name": "1 Mese Fast IPTV",
+      "price": "16.99",
+      "duration": "mese",
+      "checkoutUrl": "https://wa.me/16058466377",
+      "features": [
+        "+32,000 Canali Fast IPTV",
+        "+140,000 Film e Serie IPTV Premium",
+        "Qualità Stronger IPTV 8K/4K/Ultra HD",
+        "Catch Up/EPG Per Tutti i Canali Fast IPTV",
+        "AGGIORNAMENTI GRATUITI Canali IPTV Premium e VOD",
+        "99.9% Tempo di Attività del Server Fast IPTV",
+        "Tutti i Dispositivi Supportati per Stronger IPTV",
+        "Tecnologia AntiFreeze per Fast IPTV",
+        "Assistenza Tecnica IPTV Premium 24/7"
+      ],
+      "isPopular": false
+    },
+    {
+      "name": "12 Mesi Stronger IPTV",
+      "price": "59.99",
+      "duration": "anno",
+      "checkoutUrl": "https://wa.me/16058466377",
+      "features": [
+        "+32,000 Canali IPTV Premium",
+        "+140,000 Film e Serie Fast IPTV",
+        "Qualità Stronger IPTV 8K/4K/Ultra HD",
+        "Catch Up/EPG Per Tutti i Canali Fast IPTV",
+        "AGGIORNAMENTI GRATUITI Canali IPTV Premium e VOD",
+        "99.9% Tempo di Attività del Server Fast IPTV",
+        "Tutti i Dispositivi Supportati per Stronger IPTV",
+        "Tecnologia AntiFreeze per Fast IPTV",
+        "Assistenza Tecnica IPTV Premium 24/7"
+      ],
+      "isPopular": true
+    },
+    {
+      "name": "3 Mesi Fast IPTV",
+      "price": "29.99",
+      "duration": "trimestre",
+      "checkoutUrl": "https://wa.me/16058466377",
+      "features": [
+        "+32,000 Canali Stronger IPTV",
+        "+140,000 Film e Serie IPTV Premium",
+        "Qualità Fast IPTV 8K/4K/Ultra HD",
+        "Catch Up/EPG Per Tutti i Canali IPTV Premium",
+        "AGGIORNAMENTI GRATUITI Canali Fast IPTV e VOD",
+        "99.9% Tempo di Attività del Server Stronger IPTV",
+        "Tutti i Dispositivi Supportati per Fast IPTV",
+        "Tecnologia AntiFreeze per IPTV Premium",
+        "Assistenza Tecnica Stronger IPTV 24/7"
+      ],
+      "isPopular": false
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Quali metodi di pagamento accettate?",
+      "answer": "Accettiamo tutte le principali carte di credito, PayPal e bonifici bancari per i piani annuali."
+    },
+    {
+      "question": "Posso cambiare i piani più tardi?",
+      "answer": "Sì, puoi aggiornare o declassare il tuo piano in qualsiasi momento. Le modifiche saranno riflesse nel tuo prossimo ciclo di fatturazione."
+    },
+    {
+      "question": "C'è una prova gratuita?",
+      "answer": "Sì, offriamo una prova gratuita di 14 giorni su tutti i piani. Nessuna carta di credito richiesta."
+    },
+    {
+      "question": "Cosa succede dopo la fine della mia prova?",
+      "answer": "Dopo la fine della tua prova, puoi scegliere di abbonarti a uno dei nostri piani o il tuo account verrà automaticamente declassato a una versione gratuita limitata."
+    }
+  ],
+  "cta": {
+    "title": "Pronto a iniziare?",
+    "description": "Unisciti a migliaia di aziende che si fidano della nostra piattaforma",
+    "primaryButton": {
+      "text": "Inizia Prova Gratuita",
+      "link": "/signup"
+    },
+    "secondaryButton": {
+      "text": "Contatta Vendite",
+      "link": "/contact"
+    }
+  }
+}

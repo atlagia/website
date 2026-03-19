@@ -1,6 +1,6 @@
 {
   "bodyClass": "min-h-screen flex flex-col bg-[var(--ggc-bg)] text-[var(--ggc-text)] font-body antialiased",
   "bodyClassCollection": "min-h-screen flex flex-col bg-[var(--ggc-bg)] text-[var(--ggc-text)] font-body antialiased",
-  "bodyClassProduct": "min-h-screen flex flex-col bg-[var(--ggc-bg)] text-[var(--ggc-text)] font-body antialiased",
+  "bodyClassProduct": "min-h-screen flex flex-col bg-[var(--ggc-bg)] text-[var(--ggc-text)] font-body antialiased dark:bg-gray-950 dark:text-gray-50",
   "themeColor": "#0f172a"
 }

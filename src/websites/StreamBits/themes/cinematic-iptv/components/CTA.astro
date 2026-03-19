@@ -1,0 +1,25 @@
+---
+import CTAIsland from './CTAIsland';
+
+interface Props {
+  title: string;
+  description: string;
+  button: {
+    text: string;
+    link: string;
+  };
+  features: string[];
+  lang?: string;
+}
+
+const { title, description, button, features, lang = 'en' } = Astro.props;
+---
+
+<CTAIsland
+  client:visible
+  title={title}
+  description={description}
+  button={button}
+  features={features}
+  lang={lang}
+/>

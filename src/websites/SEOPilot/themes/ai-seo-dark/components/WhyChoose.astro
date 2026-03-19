@@ -1,0 +1,18 @@
+---
+import WhyChooseIsland from './WhyChooseIsland';
+
+interface Props {
+  title: string;
+  description: string;
+  reasons: { icon: string; title: string; description: string }[];
+}
+
+const { title, description, reasons } = Astro.props;
+---
+
+<WhyChooseIsland
+  client:visible
+  title={title}
+  description={description}
+  reasons={reasons}
+/>

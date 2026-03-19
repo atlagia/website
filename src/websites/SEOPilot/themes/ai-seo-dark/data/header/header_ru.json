@@ -1,0 +1,77 @@
+{
+  "navigation": [
+    {
+      "text": "Настройка",
+      "href": "/setup"
+    },
+    {
+      "text": "Каналы",
+      "href": "/channels"
+    },
+    {
+      "text": "Фильмы", 
+      "href": "/movies"
+    },
+    {
+      "text": "ТВ Шоу",
+      "href": "/shows"
+    },
+    {
+      "text": "Пакеты",
+      "href": "/packages"
+    }
+  ],
+  "auth": {
+    "login": {
+      "text": "Войти",
+      "href": "/packages"
+    },
+    "signup": {
+      "text": "Начать",
+      "href": "/packages"
+    }
+  },
+  "languages": [
+    {
+      "code": "en",
+      "name": "English"
+    },
+    {
+      "code": "fr",
+      "name": "Français"
+    },
+    {
+      "code": "de",
+      "name": "Deutsch"
+    },
+    {
+      "code": "it",
+      "name": "Italiano"
+    },
+    {
+      "code": "nl",
+      "name": "Nederlands"
+    },
+    {
+      "code": "pt",
+      "name": "Português"
+    },
+    {
+      "code": "ar",
+      "name": "العربية"
+    },
+    {
+      "code": "es",
+      "name": "Español"
+    },
+    {
+      "code": "ru",
+      "name": "Русский"
+    },
+    {
+      "code": "zh",
+      "name": "中文"
+    }
+  ]
+}
+

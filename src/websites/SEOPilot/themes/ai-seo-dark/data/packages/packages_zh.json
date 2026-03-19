@@ -1,0 +1,135 @@
+{
+  "pageTitle": "套餐和捆绑包",
+  "pageDescription": "为您的娱乐需求选择完美的FastIPTV套餐",
+  "heroTitle": "套餐和捆绑包",
+  "heroDescription": "从我们精心策划的套餐中选择或创建您自己的自定义捆绑包。",
+  "packages": {
+    "featured": {
+      "name": "12个月 Stronger IPTV",
+      "price": "59.99",
+      "duration": "年",
+      "description": "年度计费的最佳价值 - 在高级IPTV服务上节省大量费用",
+      "features": [
+        "+32,000 高级IPTV频道",
+        "+140,000 Fast IPTV电影和剧集",
+        "Stronger IPTV 8K/4K/Ultra HD质量",
+        "所有Fast IPTV频道的回看/EPG",
+        "免费高级IPTV频道和VOD更新",
+        "99.9% Fast IPTV服务器正常运行时间",
+        "所有设备支持Stronger IPTV",
+        "Fast IPTV防冻结技术",
+        "24/7高级IPTV技术支持"
+      ],
+      "savings": "最佳价值",
+      "checkoutUrl": "https://wa.me/16058466377?text=%E4%BD%A0%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E8%AE%A2%E8%B4%AD12%E4%B8%AA%E6%9C%88%E7%9A%84%20Stronger%20IPTV%20%E5%A5%97%E9%A4%90"
+    },
+    "bundles": [
+      {
+        "name": "1个月 Fast IPTV",
+        "price": "16.99",
+        "duration": "月",
+        "description": "完美试用我们的高级IPTV服务",
+        "features": [
+          "+32,000 Fast IPTV频道",
+          "+140,000 高级IPTV电影和剧集",
+          "Stronger IPTV 8K/4K/Ultra HD质量",
+          "所有Fast IPTV频道的回看/EPG",
+          "免费高级IPTV频道和VOD更新",
+          "99.9% Fast IPTV服务器正常运行时间",
+          "所有设备支持Stronger IPTV",
+          "Fast IPTV防冻结技术",
+          "24/7高级IPTV技术支持"
+        ],
+        "highlight": "最受欢迎",
+        "checkoutUrl": "https://wa.me/16058466377?text=%E4%BD%A0%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E8%AE%A2%E8%B4%AD1%E4%B8%AA%E6%9C%88%E7%9A%84%20Fast%20IPTV%20%E5%A5%97%E9%A4%90"
+      },
+      {
+        "name": "3个月 Fast IPTV",
+        "price": "29.99",
+        "duration": "季度",
+        "description": "季度高级IPTV订阅的绝佳价值",
+        "features": [
+          "+32,000 Stronger IPTV频道",
+          "+140,000 高级IPTV电影和剧集",
+          "Fast IPTV 8K/4K/Ultra HD质量",
+          "所有高级IPTV频道的回看/EPG",
+          "免费Fast IPTV频道和VOD更新",
+          "99.9% Stronger IPTV服务器正常运行时间",
+          "所有设备支持Fast IPTV",
+          "高级IPTV防冻结技术",
+          "24/7 Stronger IPTV技术支持"
+        ],
+        "highlight": "最适合体育",
+        "checkoutUrl": "https://wa.me/16058466377?text=%E4%BD%A0%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E8%AE%A2%E8%B4%AD3%E4%B8%AA%E6%9C%88%E7%9A%84%20Fast%20IPTV%20%E5%A5%97%E9%A4%90"
+      }
+    ],
+    "addons": [
+      {
+        "name": "额外设备",
+        "price": "4.99",
+        "description": "向任何套餐添加一个额外设备"
+      },
+      {
+        "name": "高级体育",
+        "price": "9.99",
+        "description": "向任何套餐添加高级体育频道"
+      },
+      {
+        "name": "4K升级",
+        "price": "5.99",
+        "description": "在可用时升级到4K质量"
+      },
+      {
+        "name": "国际频道",
+        "price": "7.99",
+        "description": "从选定地区添加国际频道"
+      }
+    ]
+  },
+  "specialOffers": [
+    {
+      "name": "年度订阅",
+      "description": "年度计费节省20%",
+      "badge": "最佳价值"
+    },
+    {
+      "name": "学生折扣",
+      "description": "验证学生享受50%折扣",
+      "badge": "限时优惠"
+    },
+    {
+      "name": "家庭共享",
+      "description": "添加最多5个家庭成员，享受50%折扣",
+      "badge": "热门"
+    }
+  ],
+  "faq": {
+    "title": "常见问题",
+    "questions": [
+      {
+        "question": "我可以稍后更改我的套餐吗？",
+        "answer": "是的，您可以随时升级、降级或自定义您的套餐。更改将在您的下一个计费周期生效。"
+      },
+      {
+        "question": "附加服务如何运作？",
+        "answer": "附加服务可以添加到任何套餐，按月计费。您可以随时添加或删除它们。"
+      }
+    ]
+  },
+  "cta": {
+    "title": "准备开始了吗？",
+    "description": "免费试用任何套餐7天。随时取消。",
+    "buttons": [
+      {
+        "text": "开始免费试用",
+        "link": "/signup",
+        "style": "primary"
+      },
+      {
+        "text": "联系销售",
+        "link": "/contact",
+        "style": "secondary"
+      }
+    ]
+  }
+}

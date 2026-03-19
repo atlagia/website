@@ -1,0 +1,258 @@
+---
+import { getLangFromUrl, useTranslations } from '@utils/i18n';
+import { SITE_TITLE as CONST_SITE_TITLE, SITE_DESCRIPTION as CONST_SITE_DESCRIPTION } from '../consts';
+
+const theme = import.meta.env.THEME || 'default';
+const { lang } = Astro.params;
+
+// Import components (Astro wrappers that embed React Bits islands)
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+const { default: VideoDemo } = await import(`../components/VideoDemo.astro`);
+const { default: Welcome } = await import(`../components/Welcome.astro`);
+const { default: Features } = await import(`../components/Features.astro`);
+const { default: Channels } = await import(`../components/Channels.astro`);
+const { default: Pricing } = await import(`../components/Pricing.astro`);
+const { default: Devices } = await import(`../components/Devices.astro`);
+const { default: Testimonials } = await import(`../components/Testimonials.astro`);
+const { default: FAQ } = await import(`../components/FAQ.astro`);
+const { default: CTA } = await import(`../components/CTA.astro`);
+
+// Get translations
+const translations = await useTranslations(lang);
+const jsonData = translations.default;
+
+// Get site title and description from language-specific data (fallback to theme consts)
+const SITE_TITLE = jsonData.siteTitle || CONST_SITE_TITLE;
+const SITE_DESCRIPTION = jsonData.siteDescription || CONST_SITE_DESCRIPTION;
+
+// Extract background images from sections
+const welcomeSection = jsonData.sections?.find(section => section.type === 'welcome');
+const backgroundImages = welcomeSection?.backgroundImages || [];
+
+// FAQ structured data for SEO
+const faqSection = jsonData.sections?.find(section => section.type === 'faq');
+const faqSchema = faqSection?.questions ? JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqSection.questions.map((q: any) => ({
+    "@type": "Question",
+    "name": q.question,
+    "acceptedAnswer": { "@type": "Answer", "text": q.answer }
+  }))
+}) : null;
+
+// Generate static paths for all supported languages
+export async function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'fr' } },
+    { params: { lang: 'es' } },
+    { params: { lang: 'it' } },
+    { params: { lang: 'de' } },
+    { params: { lang: 'nl' } },
+    { params: { lang: 'pt' } },
+  ];
+}
+---
+
+<!doctype html>
+<html lang={lang ?? 'en'} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
+  <head>
+    <BaseHead 
+      title={SITE_TITLE} 
+      description={SITE_DESCRIPTION} 
+      isHomePage={true}
+      lcpImage={backgroundImages?.[0]}
+    />
+    {faqSchema && <script type="application/ld+json" set:html={faqSchema} />}
+  </head>
+  <body class={`${lang === 'ar' ? 'rtl' : 'ltr'} bg-[#0a0a0a] text-white`}>
+    <Header transparent={true} lang={lang} />
+    <main>
+      {/* Dynamic Sections from JSON */}
+      {jsonData.sections?.map((section) => {
+        switch (section.type) {
+          case 'welcome':
+            return (
+              <Welcome
+                title={section.title}
+                description={section.description}
+                stats={section.stats}
+                cta={section.cta}
+                backgroundImages={section.backgroundImages || []}
+                backgroundImagesAlt={section.backgroundImagesAlt}
+              />
+            );
+          
+          case 'features':
+            return (
+              <Features
+                title={section.title}
+                description={section.description}
+                features={section.features}
+              />
+            );
+
+          case 'channels':
+            return (
+              <Channels
+                title={section.title}
+                description={section.description}
+                channels={section.channels}
+              />
+            );
+
+          case 'pricing':
+            return (
+              <Pricing
+                title={section.title}
+                description={section.description}
+                plans={section.plans}
+              />
+            );
+
+          case 'videoDemo':
+            return (
+              <VideoDemo
+                title={section.title}
+                description={section.description}
+                videoUrl={section.videoUrl}
+                features={section.features}
+                sectionTitle={section.sectionTitle}
+                sectionDescription={section.sectionDescription}
+                ctaButtons={section.ctaButtons}
+              />
+            );
+
+          case 'devices':
+            return (
+              <Devices
+                title={section.title}
+                description={section.description}
+                devices={section.devices}
+              />
+            );
+
+          case 'testimonials':
+            return (
+              <Testimonials
+                title={section.title}
+                description={section.description}
+                testimonials={section.testimonials}
+              />
+            );
+
+          case 'faq':
+            return (
+              <FAQ
+                title={section.title}
+                description={section.description}
+                questions={section.questions}
+              />
+            );
+
+          case 'cta':
+            return (
+              <CTA
+                title={section.title}
+                description={section.description}
+                button={section.button}
+                features={section.features}
+                lang={lang}
+              />
+            );
+          
+          default:
+            return null;
+        }
+      })}
+    </main>
+    <Footer />
+
+    <script>
+      // Defer animation observer to avoid blocking main thread
+      (function() {
+        function runObserver() {
+          var observerOptions = { root: null, rootMargin: '0px', threshold: 0.1 };
+          var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('animate-in');
+                observer.unobserve(entry.target);
+              }
+            });
+          }, observerOptions);
+          document.querySelectorAll('section, .feature-card, .pricing-card, .device-card, .testimonial-card, .faq-item, .feature-item').forEach(function(el) { observer.observe(el); });
+        }
+        if (typeof requestIdleCallback !== 'undefined') requestIdleCallback(runObserver, { timeout: 3000 });
+        else setTimeout(runObserver, 100);
+      })();
+    </script>
+
+    <style is:global>
+      /* Base Styles */
+      body {
+        @apply antialiased;
+      }
+
+      /* Animation Classes */
+      .animate-in {
+        animation: fadeInUp 0.5s ease-out forwards;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Smooth Scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        @apply bg-black;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        @apply bg-purple-600 rounded-full;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        @apply bg-purple-500;
+      }
+
+      /* Gradient Text */
+      .gradient-text {
+        @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-emerald-400;
+      }
+
+      /* Glassmorphism */
+      .glass {
+        @apply bg-white/5 backdrop-blur-sm;
+      }
+
+      /* Animations */
+      .hover-scale {
+        @apply transform transition-transform duration-200 hover:scale-105;
+      }
+
+      .hover-glow {
+        @apply transition-shadow duration-200 hover:shadow-lg hover:shadow-purple-500/25;
+      }
+    </style>
+  </body>
+</html>

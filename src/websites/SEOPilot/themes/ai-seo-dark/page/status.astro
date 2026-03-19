@@ -1,0 +1,556 @@
+---
+import { getLangFromUrl, useTranslations } from '@utils/i18n';
+
+const { lang } = Astro.params;
+
+// Import components
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+
+// Get translations
+const translations = await useTranslations(lang);
+const jsonData = translations.default;
+
+// Get site title and description from language-specific data
+const SITE_TITLE = jsonData.siteTitle || 'FastIPTV';
+const SITE_DESCRIPTION = jsonData.siteDescription || 'Premium IPTV Streaming Service';
+
+// Generate static paths for all supported languages
+export async function getStaticPaths() {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  const languages = allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+  
+  return languages.map(lang => ({
+    params: { lang }
+  }));
+}
+---
+
+<!doctype html>
+<html lang={lang} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
+  <BaseHead 
+    title={`Status | ${SITE_TITLE}`}
+    description="Check the current status of FastIPTV services and get real-time updates on system performance."
+    lang={lang}
+  />
+  <body class="bg-gray-50">
+    <Header lang={lang} />
+    
+    <main class="pt-20">
+      <!-- Hero Section -->
+      <section class="bg-gradient-to-r from-green-600 to-blue-700 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4">
+          <div class="text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">
+              {lang === 'en' && 'Service Status'}
+              {lang === 'fr' && 'Statut du Service'}
+              {lang === 'de' && 'Service-Status'}
+              {lang === 'es' && 'Estado del Servicio'}
+              {lang === 'it' && 'Stato del Servizio'}
+              {lang === 'pt' && 'Status do Serviço'}
+              {lang === 'nl' && 'Service Status'}
+              {lang === 'zh' && '服务状态'}
+              {lang === 'ar' && 'حالة الخدمة'}
+              {lang === 'tr' && 'Hizmet Durumu'}
+            </h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto opacity-90">
+              {lang === 'en' && 'Real-time monitoring of all FastIPTV services and systems'}
+              {lang === 'fr' && 'Surveillance en temps réel de tous les services et systèmes FastIPTV'}
+              {lang === 'de' && 'Echtzeitüberwachung aller FastIPTV-Services und -Systeme'}
+              {lang === 'es' && 'Monitoreo en tiempo real de todos los servicios y sistemas FastIPTV'}
+              {lang === 'it' && 'Monitoraggio in tempo reale di tutti i servizi e sistemi FastIPTV'}
+              {lang === 'pt' && 'Monitoramento em tempo real de todos os serviços e sistemas FastIPTV'}
+              {lang === 'nl' && 'Realtime monitoring van alle FastIPTV services en systemen'}
+              {lang === 'zh' && '所有FastIPTV服务和系统的实时监控'}
+              {lang === 'ar' && 'مراقبة في الوقت الفعلي لجميع خدمات وأنظمة FastIPTV'}
+              {lang === 'tr' && 'Tüm FastIPTV hizmetlerinin ve sistemlerinin gerçek zamanlı izlenmesi'}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Overall Status Section -->
+      <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4">
+          <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+            <div class="flex items-center justify-between mb-6">
+              <h2 class="text-2xl font-bold text-gray-900">
+                {lang === 'en' && 'Overall System Status'}
+                {lang === 'fr' && 'Statut Global du Système'}
+                {lang === 'de' && 'Gesamtsystem-Status'}
+                {lang === 'es' && 'Estado General del Sistema'}
+                {lang === 'it' && 'Stato Generale del Sistema'}
+                {lang === 'pt' && 'Status Geral do Sistema'}
+                {lang === 'nl' && 'Algemene Systeem Status'}
+                {lang === 'zh' && '整体系统状态'}
+                {lang === 'ar' && 'حالة النظام العامة'}
+                {lang === 'tr' && 'Genel Sistem Durumu'}
+              </h2>
+              <div class="flex items-center">
+                <div class="w-4 h-4 bg-green-500 rounded-full mr-3"></div>
+                <span class="text-green-600 font-semibold">
+                  {lang === 'en' && 'All Systems Operational'}
+                  {lang === 'fr' && 'Tous les Systèmes Opérationnels'}
+                  {lang === 'de' && 'Alle Systeme Betriebsbereit'}
+                  {lang === 'es' && 'Todos los Sistemas Operativos'}
+                  {lang === 'it' && 'Tutti i Sistemi Operativi'}
+                  {lang === 'pt' && 'Todos os Sistemas Operacionais'}
+                  {lang === 'nl' && 'Alle Systemen Operationeel'}
+                  {lang === 'zh' && '所有系统正常运行'}
+                  {lang === 'ar' && 'جميع الأنظمة تعمل'}
+                  {lang === 'tr' && 'Tüm Sistemler Çalışıyor'}
+                </span>
+              </div>
+            </div>
+            <p class="text-gray-600">
+              {lang === 'en' && 'All services are running normally. No incidents reported.'}
+              {lang === 'fr' && 'Tous les services fonctionnent normalement. Aucun incident signalé.'}
+              {lang === 'de' && 'Alle Dienste laufen normal. Keine Vorfälle gemeldet.'}
+              {lang === 'es' && 'Todos los servicios funcionan normalmente. No se reportaron incidentes.'}
+              {lang === 'it' && 'Tutti i servizi funzionano normalmente. Nessun incidente segnalato.'}
+              {lang === 'pt' && 'Todos os serviços funcionam normalmente. Nenhum incidente relatado.'}
+              {lang === 'nl' && 'Alle services draaien normaal. Geen incidenten gemeld.'}
+              {lang === 'zh' && '所有服务正常运行。没有报告事件。'}
+              {lang === 'ar' && 'جميع الخدمات تعمل بشكل طبيعي. لم يتم الإبلاغ عن أي حوادث.'}
+              {lang === 'tr' && 'Tüm hizmetler normal çalışıyor. Olay bildirilmedi.'}
+            </p>
+          </div>
+
+          <!-- Services Status Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Streaming Service -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="text-lg font-semibold text-gray-900">
+                  {lang === 'en' && 'Streaming Service'}
+                  {lang === 'fr' && 'Service de Streaming'}
+                  {lang === 'de' && 'Streaming-Service'}
+                  {lang === 'es' && 'Servicio de Streaming'}
+                  {lang === 'it' && 'Servizio di Streaming'}
+                  {lang === 'pt' && 'Serviço de Streaming'}
+                  {lang === 'nl' && 'Streaming Service'}
+                  {lang === 'zh' && '流媒体服务'}
+                  {lang === 'ar' && 'خدمة البث'}
+                  {lang === 'tr' && 'Yayın Hizmeti'}
+                </h3>
+                <div class="flex items-center">
+                  <div class="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
+                  <span class="text-green-600 text-sm font-medium">
+                    {lang === 'en' && 'Operational'}
+                    {lang === 'fr' && 'Opérationnel'}
+                    {lang === 'de' && 'Betriebsbereit'}
+                    {lang === 'es' && 'Operativo'}
+                    {lang === 'it' && 'Operativo'}
+                    {lang === 'pt' && 'Operacional'}
+                    {lang === 'nl' && 'Operationeel'}
+                    {lang === 'zh' && '运行中'}
+                    {lang === 'ar' && 'تعمل'}
+                    {lang === 'tr' && 'Çalışıyor'}
+                  </span>
+                </div>
+              </div>
+              <div class="text-sm text-gray-600">
+                <div class="flex justify-between mb-1">
+                  <span>{lang === 'en' ? 'Uptime' : lang === 'fr' ? 'Disponibilité' : lang === 'de' ? 'Verfügbarkeit' : lang === 'es' ? 'Tiempo de Actividad' : lang === 'it' ? 'Tempo di Attività' : lang === 'pt' ? 'Tempo de Atividade' : lang === 'nl' ? 'Uptime' : lang === 'zh' ? '正常运行时间' : lang === 'ar' ? 'وقت التشغيل' : 'Çalışma Süresi'}</span>
+                  <span class="font-medium">99.9%</span>
+                </div>
+                <div class="flex justify-between mb-1">
+                  <span>{lang === 'en' ? 'Response Time' : lang === 'fr' ? 'Temps de Réponse' : lang === 'de' ? 'Antwortzeit' : lang === 'es' ? 'Tiempo de Respuesta' : lang === 'it' ? 'Tempo di Risposta' : lang === 'pt' ? 'Tempo de Resposta' : lang === 'nl' ? 'Responstijd' : lang === 'zh' ? '响应时间' : lang === 'ar' ? 'وقت الاستجابة' : 'Yanıt Süresi'}</span>
+                  <span class="font-medium">45ms</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- API Service -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="text-lg font-semibold text-gray-900">
+                  {lang === 'en' && 'API Service'}
+                  {lang === 'fr' && 'Service API'}
+                  {lang === 'de' && 'API-Service'}
+                  {lang === 'es' && 'Servicio API'}
+                  {lang === 'it' && 'Servizio API'}
+                  {lang === 'pt' && 'Serviço API'}
+                  {lang === 'nl' && 'API Service'}
+                  {lang === 'zh' && 'API服务'}
+                  {lang === 'ar' && 'خدمة API'}
+                  {lang === 'tr' && 'API Hizmeti'}
+                </h3>
+                <div class="flex items-center">
+                  <div class="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
+                  <span class="text-green-600 text-sm font-medium">
+                    {lang === 'en' && 'Operational'}
+                    {lang === 'fr' && 'Opérationnel'}
+                    {lang === 'de' && 'Betriebsbereit'}
+                    {lang === 'es' && 'Operativo'}
+                    {lang === 'it' && 'Operativo'}
+                    {lang === 'pt' && 'Operacional'}
+                    {lang === 'nl' && 'Operationeel'}
+                    {lang === 'zh' && '运行中'}
+                    {lang === 'ar' && 'تعمل'}
+                    {lang === 'tr' && 'Çalışıyor'}
+                  </span>
+                </div>
+              </div>
+              <div class="text-sm text-gray-600">
+                <div class="flex justify-between mb-1">
+                  <span>{lang === 'en' ? 'Uptime' : lang === 'fr' ? 'Disponibilité' : lang === 'de' ? 'Verfügbarkeit' : lang === 'es' ? 'Tiempo de Actividad' : lang === 'it' ? 'Tempo di Attività' : lang === 'pt' ? 'Tempo de Atividade' : lang === 'nl' ? 'Uptime' : lang === 'zh' ? '正常运行时间' : lang === 'ar' ? 'وقت التشغيل' : 'Çalışma Süresi'}</span>
+                  <span class="font-medium">99.8%</span>
+                </div>
+                <div class="flex justify-between mb-1">
+                  <span>{lang === 'en' ? 'Response Time' : lang === 'fr' ? 'Temps de Réponse' : lang === 'de' ? 'Antwortzeit' : lang === 'es' ? 'Tiempo de Respuesta' : lang === 'it' ? 'Tempo di Risposta' : lang === 'pt' ? 'Tempo de Resposta' : lang === 'nl' ? 'Responstijd' : lang === 'zh' ? '响应时间' : lang === 'ar' ? 'وقت الاستجابة' : 'Yanıt Süresi'}</span>
+                  <span class="font-medium">12ms</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Database -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="text-lg font-semibold text-gray-900">
+                  {lang === 'en' && 'Database'}
+                  {lang === 'fr' && 'Base de Données'}
+                  {lang === 'de' && 'Datenbank'}
+                  {lang === 'es' && 'Base de Datos'}
+                  {lang === 'it' && 'Database'}
+                  {lang === 'pt' && 'Banco de Dados'}
+                  {lang === 'nl' && 'Database'}
+                  {lang === 'zh' && '数据库'}
+                  {lang === 'ar' && 'قاعدة البيانات'}
+                  {lang === 'tr' && 'Veritabanı'}
+                </h3>
+                <div class="flex items-center">
+                  <div class="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
+                  <span class="text-green-600 text-sm font-medium">
+                    {lang === 'en' && 'Operational'}
+                    {lang === 'fr' && 'Opérationnel'}
+                    {lang === 'de' && 'Betriebsbereit'}
+                    {lang === 'es' && 'Operativo'}
+                    {lang === 'it' && 'Operativo'}
+                    {lang === 'pt' && 'Operacional'}
+                    {lang === 'nl' && 'Operationeel'}
+                    {lang === 'zh' && '运行中'}
+                    {lang === 'ar' && 'تعمل'}
+                    {lang === 'tr' && 'Çalışıyor'}
+                  </span>
+                </div>
+              </div>
+              <div class="text-sm text-gray-600">
+                <div class="flex justify-between mb-1">
+                  <span>{lang === 'en' ? 'Uptime' : lang === 'fr' ? 'Disponibilité' : lang === 'de' ? 'Verfügbarkeit' : lang === 'es' ? 'Tiempo de Actividad' : lang === 'it' ? 'Tempo di Attività' : lang === 'pt' ? 'Tempo de Atividade' : lang === 'nl' ? 'Uptime' : lang === 'zh' ? '正常运行时间' : lang === 'ar' ? 'وقت التشغيل' : 'Çalışma Süresi'}</span>
+                  <span class="font-medium">99.9%</span>
+                </div>
+                <div class="flex justify-between mb-1">
+                  <span>{lang === 'en' ? 'Response Time' : lang === 'fr' ? 'Temps de Réponse' : lang === 'de' ? 'Antwortzeit' : lang === 'es' ? 'Tiempo de Respuesta' : lang === 'it' ? 'Tempo di Risposta' : lang === 'pt' ? 'Tempo de Resposta' : lang === 'nl' ? 'Responstijd' : lang === 'zh' ? '响应时间' : lang === 'ar' ? 'وقت الاستجابة' : 'Yanıt Süresi'}</span>
+                  <span class="font-medium">8ms</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- CDN -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="text-lg font-semibold text-gray-900">
+                  {lang === 'en' && 'CDN'}
+                  {lang === 'fr' && 'CDN'}
+                  {lang === 'de' && 'CDN'}
+                  {lang === 'es' && 'CDN'}
+                  {lang === 'it' && 'CDN'}
+                  {lang === 'pt' && 'CDN'}
+                  {lang === 'nl' && 'CDN'}
+                  {lang === 'zh' && 'CDN'}
+                  {lang === 'ar' && 'CDN'}
+                  {lang === 'tr' && 'CDN'}
+                </h3>
+                <div class="flex items-center">
+                  <div class="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
+                  <span class="text-green-600 text-sm font-medium">
+                    {lang === 'en' && 'Operational'}
+                    {lang === 'fr' && 'Opérationnel'}
+                    {lang === 'de' && 'Betriebsbereit'}
+                    {lang === 'es' && 'Operativo'}
+                    {lang === 'it' && 'Operativo'}
+                    {lang === 'pt' && 'Operacional'}
+                    {lang === 'nl' && 'Operationeel'}
+                    {lang === 'zh' && '运行中'}
+                    {lang === 'ar' && 'تعمل'}
+                    {lang === 'tr' && 'Çalışıyor'}
+                  </span>
+                </div>
+              </div>
+              <div class="text-sm text-gray-600">
+                <div class="flex justify-between mb-1">
+                  <span>{lang === 'en' ? 'Uptime' : lang === 'fr' ? 'Disponibilité' : lang === 'de' ? 'Verfügbarkeit' : lang === 'es' ? 'Tiempo de Actividad' : lang === 'it' ? 'Tempo di Attività' : lang === 'pt' ? 'Tempo de Atividade' : lang === 'nl' ? 'Uptime' : lang === 'zh' ? '正常运行时间' : lang === 'ar' ? 'وقت التشغيل' : 'Çalışma Süresi'}</span>
+                  <span class="font-medium">99.9%</span>
+                </div>
+                <div class="flex justify-between mb-1">
+                  <span>{lang === 'en' ? 'Response Time' : lang === 'fr' ? 'Temps de Réponse' : lang === 'de' ? 'Antwortzeit' : lang === 'es' ? 'Tiempo de Respuesta' : lang === 'it' ? 'Tempo di Risposta' : lang === 'pt' ? 'Tempo de Resposta' : lang === 'nl' ? 'Responstijd' : lang === 'zh' ? '响应时间' : lang === 'ar' ? 'وقت الاستجابة' : 'Yanıt Süresi'}</span>
+                  <span class="font-medium">25ms</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Authentication -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="text-lg font-semibold text-gray-900">
+                  {lang === 'en' && 'Authentication'}
+                  {lang === 'fr' && 'Authentification'}
+                  {lang === 'de' && 'Authentifizierung'}
+                  {lang === 'es' && 'Autenticación'}
+                  {lang === 'it' && 'Autenticazione'}
+                  {lang === 'pt' && 'Autenticação'}
+                  {lang === 'nl' && 'Authenticatie'}
+                  {lang === 'zh' && '身份验证'}
+                  {lang === 'ar' && 'المصادقة'}
+                  {lang === 'tr' && 'Kimlik Doğrulama'}
+                </h3>
+                <div class="flex items-center">
+                  <div class="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
+                  <span class="text-green-600 text-sm font-medium">
+                    {lang === 'en' && 'Operational'}
+                    {lang === 'fr' && 'Opérationnel'}
+                    {lang === 'de' && 'Betriebsbereit'}
+                    {lang === 'es' && 'Operativo'}
+                    {lang === 'it' && 'Operativo'}
+                    {lang === 'pt' && 'Operacional'}
+                    {lang === 'nl' && 'Operationeel'}
+                    {lang === 'zh' && '运行中'}
+                    {lang === 'ar' && 'تعمل'}
+                    {lang === 'tr' && 'Çalışıyor'}
+                  </span>
+                </div>
+              </div>
+              <div class="text-sm text-gray-600">
+                <div class="flex justify-between mb-1">
+                  <span>{lang === 'en' ? 'Uptime' : lang === 'fr' ? 'Disponibilité' : lang === 'de' ? 'Verfügbarkeit' : lang === 'es' ? 'Tiempo de Actividad' : lang === 'it' ? 'Tempo di Attività' : lang === 'pt' ? 'Tempo de Atividade' : lang === 'nl' ? 'Uptime' : lang === 'zh' ? '正常运行时间' : lang === 'ar' ? 'وقت التشغيل' : 'Çalışma Süresi'}</span>
+                  <span class="font-medium">99.9%</span>
+                </div>
+                <div class="flex justify-between mb-1">
+                  <span>{lang === 'en' ? 'Response Time' : lang === 'fr' ? 'Temps de Réponse' : lang === 'de' ? 'Antwortzeit' : lang === 'es' ? 'Tiempo de Respuesta' : lang === 'it' ? 'Tempo di Risposta' : lang === 'pt' ? 'Tempo de Resposta' : lang === 'nl' ? 'Responstijd' : lang === 'zh' ? '响应时间' : lang === 'ar' ? 'وقت الاستجابة' : 'Yanıt Süresi'}</span>
+                  <span class="font-medium">15ms</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Payment Processing -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="text-lg font-semibold text-gray-900">
+                  {lang === 'en' && 'Payment Processing'}
+                  {lang === 'fr' && 'Traitement des Paiements'}
+                  {lang === 'de' && 'Zahlungsabwicklung'}
+                  {lang === 'es' && 'Procesamiento de Pagos'}
+                  {lang === 'it' && 'Elaborazione Pagamenti'}
+                  {lang === 'pt' && 'Processamento de Pagamentos'}
+                  {lang === 'nl' && 'Betalingsverwerking'}
+                  {lang === 'zh' && '支付处理'}
+                  {lang === 'ar' && 'معالجة المدفوعات'}
+                  {lang === 'tr' && 'Ödeme İşleme'}
+                </h3>
+                <div class="flex items-center">
+                  <div class="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
+                  <span class="text-green-600 text-sm font-medium">
+                    {lang === 'en' && 'Operational'}
+                    {lang === 'fr' && 'Opérationnel'}
+                    {lang === 'de' && 'Betriebsbereit'}
+                    {lang === 'es' && 'Operativo'}
+                    {lang === 'it' && 'Operativo'}
+                    {lang === 'pt' && 'Operacional'}
+                    {lang === 'nl' && 'Operationeel'}
+                    {lang === 'zh' && '运行中'}
+                    {lang === 'ar' && 'تعمل'}
+                    {lang === 'tr' && 'Çalışıyor'}
+                  </span>
+                </div>
+              </div>
+              <div class="text-sm text-gray-600">
+                <div class="flex justify-between mb-1">
+                  <span>{lang === 'en' ? 'Uptime' : lang === 'fr' ? 'Disponibilité' : lang === 'de' ? 'Verfügbarkeit' : lang === 'es' ? 'Tiempo de Actividad' : lang === 'it' ? 'Tempo di Attività' : lang === 'pt' ? 'Tempo de Atividade' : lang === 'nl' ? 'Uptime' : lang === 'zh' ? '正常运行时间' : lang === 'ar' ? 'وقت التشغيل' : 'Çalışma Süresi'}</span>
+                  <span class="font-medium">99.8%</span>
+                </div>
+                <div class="flex justify-between mb-1">
+                  <span>{lang === 'en' ? 'Response Time' : lang === 'fr' ? 'Temps de Réponse' : lang === 'de' ? 'Antwortzeit' : lang === 'es' ? 'Tiempo de Respuesta' : lang === 'it' ? 'Tempo di Risposta' : lang === 'pt' ? 'Tempo de Resposta' : lang === 'nl' ? 'Responstijd' : lang === 'zh' ? '响应时间' : lang === 'ar' ? 'وقت الاستجابة' : 'Yanıt Süresi'}</span>
+                  <span class="font-medium">120ms</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recent Incidents Section -->
+      <section class="bg-white py-20">
+        <div class="max-w-7xl mx-auto px-4">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
+            {lang === 'en' && 'Recent Incidents'}
+            {lang === 'fr' && 'Incidents Récents'}
+            {lang === 'de' && 'Aktuelle Vorfälle'}
+            {lang === 'es' && 'Incidentes Recientes'}
+            {lang === 'it' && 'Incidenti Recenti'}
+            {lang === 'pt' && 'Incidentes Recentes'}
+            {lang === 'nl' && 'Recente Incidenten'}
+            {lang === 'zh' && '最近事件'}
+            {lang === 'ar' && 'الحوادث الأخيرة'}
+            {lang === 'tr' && 'Son Olaylar'}
+          </h2>
+          
+          <div class="bg-gray-50 rounded-lg p-8 text-center">
+            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">
+              {lang === 'en' && 'No Recent Incidents'}
+              {lang === 'fr' && 'Aucun Incident Récent'}
+              {lang === 'de' && 'Keine Aktuellen Vorfälle'}
+              {lang === 'es' && 'Sin Incidentes Recientes'}
+              {lang === 'it' && 'Nessun Incidente Recente'}
+              {lang === 'pt' && 'Nenhum Incidente Recente'}
+              {lang === 'nl' && 'Geen Recente Incidenten'}
+              {lang === 'zh' && '没有最近事件'}
+              {lang === 'ar' && 'لا توجد حوادث حديثة'}
+              {lang === 'tr' && 'Son Olay Yok'}
+            </h3>
+            <p class="text-gray-600">
+              {lang === 'en' && 'All systems have been running smoothly with no reported issues in the past 30 days.'}
+              {lang === 'fr' && 'Tous les systèmes fonctionnent parfaitement sans problème signalé au cours des 30 derniers jours.'}
+              {lang === 'de' && 'Alle Systeme laufen reibungslos ohne gemeldete Probleme in den letzten 30 Tagen.'}
+              {lang === 'es' && 'Todos los sistemas han estado funcionando sin problemas sin incidentes reportados en los últimos 30 días.'}
+              {lang === 'it' && 'Tutti i sistemi stanno funzionando senza problemi senza incidenti segnalati negli ultimi 30 giorni.'}
+              {lang === 'pt' && 'Todos os sistemas têm funcionado perfeitamente sem incidentes relatados nos últimos 30 dias.'}
+              {lang === 'nl' && 'Alle systemen draaien soepel zonder gerapporteerde problemen in de afgelopen 30 dagen.'}
+              {lang === 'zh' && '所有系统在过去30天内运行顺利，没有报告问题。'}
+              {lang === 'ar' && 'جميع الأنظمة تعمل بسلاسة دون مشاكل مبلغ عنها في آخر 30 يوماً.'}
+              {lang === 'tr' && 'Son 30 günde bildirilen sorun olmadan tüm sistemler sorunsuz çalışıyor.'}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Performance Metrics Section -->
+      <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
+            {lang === 'en' && 'Performance Metrics'}
+            {lang === 'fr' && 'Métriques de Performance'}
+            {lang === 'de' && 'Leistungsmetriken'}
+            {lang === 'es' && 'Métricas de Rendimiento'}
+            {lang === 'it' && 'Metriche di Prestazione'}
+            {lang === 'pt' && 'Métricas de Desempenho'}
+            {lang === 'nl' && 'Prestatie Metrieken'}
+            {lang === 'zh' && '性能指标'}
+            {lang === 'ar' && 'مقاييس الأداء'}
+            {lang === 'tr' && 'Performans Metrikleri'}
+          </h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="bg-white rounded-lg shadow-md p-6 text-center">
+              <div class="text-3xl font-bold text-blue-600 mb-2">99.9%</div>
+              <div class="text-sm text-gray-600">
+                {lang === 'en' && 'Average Uptime'}
+                {lang === 'fr' && 'Disponibilité Moyenne'}
+                {lang === 'de' && 'Durchschnittliche Verfügbarkeit'}
+                {lang === 'es' && 'Tiempo de Actividad Promedio'}
+                {lang === 'it' && 'Tempo di Attività Medio'}
+                {lang === 'pt' && 'Tempo de Atividade Médio'}
+                {lang === 'nl' && 'Gemiddelde Uptime'}
+                {lang === 'zh' && '平均正常运行时间'}
+                {lang === 'ar' && 'متوسط وقت التشغيل'}
+                {lang === 'tr' && 'Ortalama Çalışma Süresi'}
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-6 text-center">
+              <div class="text-3xl font-bold text-green-600 mb-2">45ms</div>
+              <div class="text-sm text-gray-600">
+                {lang === 'en' && 'Average Response Time'}
+                {lang === 'fr' && 'Temps de Réponse Moyen'}
+                {lang === 'de' && 'Durchschnittliche Antwortzeit'}
+                {lang === 'es' && 'Tiempo de Respuesta Promedio'}
+                {lang === 'it' && 'Tempo di Risposta Medio'}
+                {lang === 'pt' && 'Tempo de Resposta Médio'}
+                {lang === 'nl' && 'Gemiddelde Responstijd'}
+                {lang === 'zh' && '平均响应时间'}
+                {lang === 'ar' && 'متوسط وقت الاستجابة'}
+                {lang === 'tr' && 'Ortalama Yanıt Süresi'}
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-6 text-center">
+              <div class="text-3xl font-bold text-purple-600 mb-2">2M+</div>
+              <div class="text-sm text-gray-600">
+                {lang === 'en' && 'Active Users'}
+                {lang === 'fr' && 'Utilisateurs Actifs'}
+                {lang === 'de' && 'Aktive Benutzer'}
+                {lang === 'es' && 'Usuarios Activos'}
+                {lang === 'it' && 'Utenti Attivi'}
+                {lang === 'pt' && 'Usuários Ativos'}
+                {lang === 'nl' && 'Actieve Gebruikers'}
+                {lang === 'zh' && '活跃用户'}
+                {lang === 'ar' && 'المستخدمون النشطون'}
+                {lang === 'tr' && 'Aktif Kullanıcılar'}
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-6 text-center">
+              <div class="text-3xl font-bold text-orange-600 mb-2">32K+</div>
+              <div class="text-sm text-gray-600">
+                {lang === 'en' && 'Channels Available'}
+                {lang === 'fr' && 'Chaînes Disponibles'}
+                {lang === 'de' && 'Verfügbare Kanäle'}
+                {lang === 'es' && 'Canales Disponibles'}
+                {lang === 'it' && 'Canali Disponibili'}
+                {lang === 'pt' && 'Canais Disponíveis'}
+                {lang === 'nl' && 'Beschikbare Kanalen'}
+                {lang === 'zh' && '可用频道'}
+                {lang === 'ar' && 'القنوات المتاحة'}
+                {lang === 'tr' && 'Mevcut Kanallar'}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Subscribe to Updates Section -->
+      <section class="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            {lang === 'en' && 'Stay Updated'}
+            {lang === 'fr' && 'Restez Informé'}
+            {lang === 'de' && 'Bleiben Sie Informiert'}
+            {lang === 'es' && 'Mantente Actualizado'}
+            {lang === 'it' && 'Rimani Aggiornato'}
+            {lang === 'pt' && 'Mantenha-se Atualizado'}
+            {lang === 'nl' && 'Blijf Op de Hoogte'}
+            {lang === 'zh' && '保持更新'}
+            {lang === 'ar' && 'ابق على اطلاع'}
+            {lang === 'tr' && 'Güncel Kalın'}
+          </h2>
+          <p class="text-xl mb-8 opacity-90">
+            {lang === 'en' && 'Subscribe to status updates and get notified about any service incidents.'}
+            {lang === 'fr' && 'Abonnez-vous aux mises à jour de statut et soyez informé de tout incident de service.'}
+            {lang === 'de' && 'Abonnieren Sie Status-Updates und werden Sie über Service-Vorfälle benachrichtigt.'}
+            {lang === 'es' && 'Suscríbete a las actualizaciones de estado y recibe notificaciones sobre incidentes de servicio.'}
+            {lang === 'it' && 'Iscriviti agli aggiornamenti di stato e ricevi notifiche su eventuali incidenti di servizio.'}
+            {lang === 'pt' && 'Inscreva-se nas atualizações de status e seja notificado sobre incidentes de serviço.'}
+            {lang === 'nl' && 'Abonneer je op status updates en krijg meldingen over service incidenten.'}
+            {lang === 'zh' && '订阅状态更新并接收有关服务事件的通知。'}
+            {lang === 'ar' && 'اشترك في تحديثات الحالة واحصل على إشعارات حول أي حوادث خدمة.'}
+            {lang === 'tr' && 'Durum güncellemelerine abone olun ve hizmet olayları hakkında bildirim alın.'}
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+            <input type="email" placeholder={lang === 'en' ? 'Your email' : lang === 'fr' ? 'Votre email' : lang === 'de' ? 'Ihre E-Mail' : lang === 'es' ? 'Tu email' : lang === 'it' ? 'La tua email' : lang === 'pt' ? 'Seu email' : lang === 'nl' ? 'Uw email' : lang === 'zh' ? '您的邮箱' : lang === 'ar' ? 'بريدك الإلكتروني' : 'E-postanız'} class="flex-1 px-4 py-3 rounded-lg text-gray-900">
+            <button class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+              {lang === 'en' ? 'Subscribe' : lang === 'fr' ? 'S\'abonner' : lang === 'de' ? 'Abonnieren' : lang === 'es' ? 'Suscribirse' : lang === 'it' ? 'Iscriviti' : lang === 'pt' ? 'Inscrever-se' : lang === 'nl' ? 'Abonneren' : lang === 'zh' ? '订阅' : lang === 'ar' ? 'اشتراك' : 'Abone Ol'}
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <Footer lang={lang} />
+  </body>
+</html>

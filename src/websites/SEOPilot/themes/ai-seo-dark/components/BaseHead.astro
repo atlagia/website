@@ -1,0 +1,308 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+import { generateCanonicalURL, generateSchema, type SEOProps } from '@utils/seo';
+import GoogleAnalytics from '@components/GoogleAnalytics.astro';
+
+const hotjarUrl = import.meta.env.PUBLIC_HOTJAR_ID && import.meta.env.PUBLIC_HOTJAR_VERSION
+  ? `https://static.hotjar.com/c/hotjar-${import.meta.env.PUBLIC_HOTJAR_ID}.js?sv=${import.meta.env.PUBLIC_HOTJAR_VERSION}`
+  : '';
+
+interface Props {
+  title: string;
+  description: string;
+  isHomePage?: boolean;
+  lcpImage?: string;
+  image?: string;
+  keywords?: string[];
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
+  breadcrumbs?: { name: string; url: string }[];
+}
+
+const { 
+  title, 
+  description, 
+  isHomePage = false, 
+  lcpImage,
+  image = '/og-image.jpg',
+  keywords = [
+    'SEOPilot',
+    'AI SEO',
+    'SEO automation',
+    'website audit',
+    'technical SEO',
+    'AI agents',
+    'auto fix SEO',
+    'SEO platform',
+    'content optimization',
+    'Core Web Vitals',
+    'meta tag generator',
+    'schema markup',
+    'SEO monitoring',
+    'Shopify SEO',
+    'WordPress SEO'
+  ],
+  author = 'SEOPilot',
+  publishedTime,
+  modifiedTime,
+  section = 'SEO Automation',
+  tags = ['SEO', 'AI', 'Automation', 'Website Audit', 'SaaS'],
+  breadcrumbs
+} = Astro.props;
+
+const currentPath = Astro.url.pathname;
+const currentLang = currentPath.split('/')[1];
+
+const getAllowedLanguages = () => {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  return allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+};
+
+const supportedLanguages = getAllowedLanguages();
+
+const hrefLangURLs = [];
+
+let basePath = currentPath;
+if (currentLang && supportedLanguages.includes(currentLang)) {
+  basePath = currentPath.substring(currentLang.length + 1) || '/';
+}
+
+const uniqueLangs = new Set();
+supportedLanguages.forEach(lang => {
+  let url;
+  if (basePath === '/') {
+    url = `${Astro.url.origin}/${lang}`;
+  } else {
+    url = `${Astro.url.origin}/${lang}${basePath}`;
+  }
+  if (!uniqueLangs.has(lang)) {
+    uniqueLangs.add(lang);
+    hrefLangURLs.push({ lang, url });
+  }
+});
+
+if (currentLang && supportedLanguages.includes(currentLang)) {
+  hrefLangURLs.push({ lang: currentLang, url: Astro.url.href });
+}
+
+const xDefaultUrl = basePath === '/' 
+  ? `${Astro.url.origin}/en` 
+  : `${Astro.url.origin}/en${basePath}`;
+hrefLangURLs.push({ lang: 'x-default', url: xDefaultUrl });
+
+let canonicalURL;
+if (currentPath === '/') {
+  canonicalURL = `${Astro.url.origin}/en`;
+} else if (currentLang && supportedLanguages.includes(currentLang)) {
+  canonicalURL = Astro.url.href;
+} else {
+  canonicalURL = `${Astro.url.origin}/en${currentPath}`;
+}
+
+const currentYear = new Date().getFullYear();
+
+const lang = (currentLang && supportedLanguages.includes(currentLang)) ? currentLang : 'en';
+const isRTL = ['ar'].includes(lang);
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "SEOPilot",
+  "alternateName": ["SEOPilot AI", "AI SEO Automation Platform"],
+  "url": Astro.site,
+  "logo": `${Astro.site}logo.png`,
+  "description": "AI-powered SEO automation platform that audits, detects, and fixes SEO issues automatically.",
+  "foundingDate": "2024",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "email": "support@seopilot.ai",
+    "availableLanguage": ["English"]
+  },
+  "sameAs": [
+    "https://twitter.com/seopilot",
+    "https://github.com/seopilot",
+    "https://linkedin.com/company/seopilot"
+  ],
+  "address": { "@type": "PostalAddress", "addressCountry": "Global" }
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "SEOPilot — AI-Powered SEO Automation",
+  "alternateName": "SEOPilot",
+  "url": Astro.site,
+  "description": description,
+  "provider": { "@type": "Organization", "name": "SEOPilot" },
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web"
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "SEOPilot",
+  "url": Astro.site,
+  "description": "AI-powered SEO that audits, detects issues, and auto-fixes them.",
+  "publisher": { "@type": "Organization", "name": "SEOPilot" }
+};
+
+const breadcrumbSchema = breadcrumbs?.length
+  ? {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": breadcrumbs.map((item, i) => ({
+        "@type": "ListItem",
+        "position": i + 1,
+        "name": item.name,
+        "item": item.url.startsWith('http') ? item.url : new URL(item.url, Astro.url.origin).href
+      }))
+    }
+  : null;
+
+const reviewStats = null;
+const reviews = null;
+---
+
+<!-- Charset and Viewport -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+<meta name="generator" content={Astro.generator} />
+
+<!-- Language and Direction -->
+<html lang={lang} dir={isRTL ? 'rtl' : 'ltr'}>
+  <head>
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords.join(', ')} />
+    <meta name="author" content={author} />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="bingbot" content="index, follow" />
+
+    <link rel="canonical" href={canonicalURL} />
+
+    <meta property="og:type" content={isHomePage ? 'website' : 'article'} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="SEOPilot — AI-Powered SEO Automation" />
+    <meta property="og:site_name" content="SEOPilot" />
+    <meta property="og:locale" content="en_US" />
+    {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+    {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+    {author && <meta property="article:author" content={author} />}
+    {section && <meta property="article:section" content={section} />}
+    {tags.map(tag => <meta property="article:tag" content={tag} />)}
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={image} />
+    <meta property="twitter:image:alt" content="SEOPilot — AI-Powered SEO Automation" />
+    <meta name="twitter:site" content="@seopilot" />
+    <meta name="twitter:creator" content="@seopilot" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <meta name="color-scheme" content="dark" />
+
+    {lcpImage && (
+      <>
+        <link rel="preconnect" href="https://cdn.atlagia.com" crossorigin />
+        <link rel="preload" as="image" href={lcpImage} />
+      </>
+    )}
+    <!-- Sora (display) + DM Sans (body) — tech/AI aesthetic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" /></noscript>
+
+    <meta name="geo.region" content="Global" />
+    <meta name="geo.position" content="0;0" />
+    <meta name="ICBM" content="0, 0" />
+
+    {hrefLangURLs.map(({ lang, url }) => (
+      <link rel="alternate" hreflang={lang} href={url} />
+    ))}
+
+    <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)}></script>
+    {breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>}
+
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="//cdn.atlagia.com" />
+
+    <ViewTransitions />
+
+    {import.meta.env.PUBLIC_ALLOW_GA === 'true' && <GoogleAnalytics />}
+    {import.meta.env.PUBLIC_ALLOW_HOTJAR === 'true' && import.meta.env.PUBLIC_HOTJAR_ID && import.meta.env.PUBLIC_HOTJAR_VERSION && (
+      <>
+        <script define:vars={{ HJ_ID: import.meta.env.PUBLIC_HOTJAR_ID, HJ_VER: import.meta.env.PUBLIC_HOTJAR_VERSION }}>
+          window.hj = window.hj || function() { (window.hj.q = window.hj.q || []).push(arguments); };
+          window._hjSettings = { hjid: Number(HJ_ID), hjsv: Number(HJ_VER) };
+        </script>
+        <script type="text/partytown" src={hotjarUrl}></script>
+      </>
+    )}
+
+    <!-- Styles: --seo-* prefix, dark AI tech, electric green accents -->
+    <style is:global>
+      :root {
+        --seo-bg: #0a0a0a;
+        --seo-surface: #111111;
+        --seo-text: #f0f0f0;
+        --seo-muted: #737373;
+        --seo-accent: #00E599;
+        --seo-secondary: #06b6d4;
+        --seo-border: #1a1a1a;
+        --font-display: 'Sora', system-ui, sans-serif;
+        --font-body: 'DM Sans', system-ui, sans-serif;
+        --seo-glass-bg: rgba(255, 255, 255, 0.04);
+        --seo-glass-border: rgba(255, 255, 255, 0.08);
+        --seo-gradient-accent: linear-gradient(135deg, var(--seo-accent), var(--seo-secondary));
+      }
+      * { box-sizing: border-box; }
+      body {
+        font-family: var(--font-body);
+        background: var(--seo-bg);
+        color: var(--seo-text);
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+      h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
+      img { max-width: 100%; height: auto; display: block; }
+      html { scroll-behavior: smooth; color-scheme: dark; }
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: var(--seo-surface); }
+      ::-webkit-scrollbar-thumb { background: var(--seo-gradient-accent); border-radius: 4px; }
+      ::-webkit-scrollbar-thumb:hover { background: var(--seo-accent); }
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+      }
+    </style>
+  </head>
+</html>

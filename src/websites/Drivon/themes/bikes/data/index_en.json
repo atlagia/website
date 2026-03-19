@@ -1,6 +1,6 @@
 {
   "siteTitle": "Drivon — Premium Automotive Lifestyle",
-  "siteDescription": "Bold, minimal, cinematic. Premium automotive lifestyle and driver merchandise for those who live the culture.",
+  "siteDescription": "Discover premium automotive lifestyle and driver merchandise. Shop racing hoodies, car culture tees, and driver essentials—free shipping over $75. Bold, minimal, cinematic. Drivon.",
   "sections": [
     {
       "type": "welcomeSection",
@@ -12,6 +12,7 @@
         "type": "youtube",
         "videoId": "liT2Z3wFW1Y",
         "fallbackImage": "/images/driver-culture-fallback.jpg",
+        "fallbackImageAlt": "Drivon automotive lifestyle hero — car culture and racing heritage",
         "videoUrl": "https://cdn.pixabay.com/video/2020/07/28/31670-475348943_large.mp4"
       }
     },
@@ -48,6 +49,7 @@
           "name": "Racing Hoodies",
           "description": "Racing inspired hoodies with authentic automotive designs and premium comfort.",
           "image": "https://ih1.redbubble.net/image.4762044220.4515/ssrco,mhoodie,mens,fafafa:ca443f4786,front,tall_three_quarter,x1000-bg,f8f8f8.1.webp",
+          "alt": "Racing hoodies — automotive culture merchandise",
           "link": "/racing-hoodies"
         },
         {
@@ -55,6 +57,7 @@
           "name": "Car Culture Tees",
           "description": "Classic automotive culture tees featuring iconic car brands and racing legends.",
           "image": "https://ih1.redbubble.net/image.4762044220.4515/ssrco,classic_tee,mens_02,fafafa:ca443f4786,front,close_portrait,x1000.webp",
+          "alt": "Car culture tees — iconic car brands and racing legends",
           "link": "/car-culture-tees"
         },
         {
@@ -62,6 +65,7 @@
           "name": "Driver Accessories",
           "description": "Essential accessories to complete your automotive culture look and style.",
           "image": "https://ih1.redbubble.net/image.4762043914.4515/ssrco,dad_hat,product,FFFDF5:8c3db69414,front_three_quarter,wide_portrait,750x1000-bg,f8f8f8.webp",
+          "alt": "Driver accessories — automotive culture caps and gear",
           "link": "/driver-accessories"
         },
         {
@@ -69,6 +73,7 @@
           "name": "Racing Legends",
           "description": "Premium pieces inspired by motorsport heritage and legendary brands.",
           "image": "https://ih1.redbubble.net/image.4762044220.4515/ssrco,classic_tee,mens_02,fafafa:ca443f4786,front,close_portrait,x1000.webp",
+          "alt": "Racing legends collection — motorsport heritage merchandise",
           "link": "/racing-legends"
         }
       ]

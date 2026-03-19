@@ -1,0 +1,135 @@
+{
+  "pageTitle": "Forfaits et Bundles",
+  "pageDescription": "Choisissez le forfait FastIPTV parfait pour vos besoins de divertissement",
+  "heroTitle": "Forfaits et Bundles",
+  "heroDescription": "Choisissez parmi nos forfaits sélectionnés ou créez votre propre bundle personnalisé.",
+  "packages": {
+    "featured": {
+      "name": "12 Mois Stronger IPTV",
+      "price": "59.99",
+      "duration": "année",
+      "description": "Meilleure valeur avec facturation annuelle - économisez gros sur le service IPTV premium",
+      "features": [
+        "+32,000 Chaînes IPTV Premium",
+        "+140,000 Films et Séries Fast IPTV",
+        "Qualité Stronger IPTV 8K/4K/Ultra HD",
+        "Rattrapage/EPG Pour Toutes les Chaînes Fast IPTV",
+        "Mises à Jour Gratuites des Chaînes IPTV Premium et VOD",
+        "99.9% Temps de Fonctionnement du Serveur Fast IPTV",
+        "Tous les Appareils Supportés pour Stronger IPTV",
+        "Technologie AntiFreeze pour Fast IPTV",
+        "Assistance Technique IPTV Premium 24/7"
+      ],
+      "savings": "Meilleure Valeur",
+      "checkoutUrl": "https://wa.me/16058466377?text=Bonjour%21%20Je%20souhaite%20m%27abonner%20au%20forfait%2012%20Mois%20Stronger%20IPTV"
+    },
+    "bundles": [
+      {
+        "name": "1 Mois Fast IPTV",
+        "price": "16.99",
+        "duration": "mois",
+        "description": "Parfait pour essayer notre service IPTV premium",
+        "features": [
+          "+32,000 Chaînes Fast IPTV",
+          "+140,000 Films et Séries IPTV Premium",
+          "Qualité Stronger IPTV 8K/4K/Ultra HD",
+          "Rattrapage/EPG Pour Toutes les Chaînes Fast IPTV",
+          "Mises à Jour Gratuites des Chaînes IPTV Premium et VOD",
+          "99.9% Temps de Fonctionnement du Serveur Fast IPTV",
+          "Tous les Appareils Supportés pour Stronger IPTV",
+          "Technologie AntiFreeze pour Fast IPTV",
+          "Assistance Technique IPTV Premium 24/7"
+        ],
+        "highlight": "Le Plus Populaire",
+        "checkoutUrl": "https://wa.me/16058466377?text=Bonjour%21%20Je%20souhaite%20m%27abonner%20au%20forfait%201%20Mois%20Fast%20IPTV"
+      },
+      {
+        "name": "3 Mois Fast IPTV",
+        "price": "29.99",
+        "duration": "trimestre",
+        "description": "Excellente valeur pour un abonnement IPTV premium trimestriel",
+        "features": [
+          "+32,000 Chaînes Stronger IPTV",
+          "+140,000 Films et Séries IPTV Premium",
+          "Qualité Fast IPTV 8K/4K/Ultra HD",
+          "Rattrapage/EPG Pour Toutes les Chaînes IPTV Premium",
+          "Mises à Jour Gratuites des Chaînes Fast IPTV et VOD",
+          "99.9% Temps de Fonctionnement du Serveur Stronger IPTV",
+          "Tous les Appareils Supportés pour Fast IPTV",
+          "Technologie AntiFreeze pour IPTV Premium",
+          "Assistance Technique Stronger IPTV 24/7"
+        ],
+        "highlight": "Meilleur pour le Sport",
+        "checkoutUrl": "https://wa.me/16058466377?text=Bonjour%21%20Je%20souhaite%20m%27abonner%20au%20forfait%203%20Mois%20Fast%20IPTV"
+      }
+    ],
+    "addons": [
+      {
+        "name": "Appareil Supplémentaire",
+        "price": "4.99",
+        "description": "Ajoutez un appareil supplémentaire à n'importe quel forfait"
+      },
+      {
+        "name": "Sport Premium",
+        "price": "9.99",
+        "description": "Ajoutez des chaînes sportives premium à n'importe quel forfait"
+      },
+      {
+        "name": "Mise à Niveau 4K",
+        "price": "5.99",
+        "description": "Passez à la qualité 4K là où c'est disponible"
+      },
+      {
+        "name": "International",
+        "price": "7.99",
+        "description": "Ajoutez des chaînes internationales de régions sélectionnées"
+      }
+    ]
+  },
+  "specialOffers": [
+    {
+      "name": "Abonnement Annuel",
+      "description": "Économisez 20% avec la facturation annuelle",
+      "badge": "Meilleure Valeur"
+    },
+    {
+      "name": "Réduction Étudiant",
+      "description": "50% de réduction pour les étudiants vérifiés",
+      "badge": "Temps Limité"
+    },
+    {
+      "name": "Partage Familial",
+      "description": "Ajoutez jusqu'à 5 membres de famille à 50% de réduction",
+      "badge": "Populaire"
+    }
+  ],
+  "faq": {
+    "title": "Questions Fréquemment Posées",
+    "questions": [
+      {
+        "question": "Puis-je changer mon forfait plus tard ?",
+        "answer": "Oui, vous pouvez améliorer, réduire ou personnaliser votre forfait à tout moment. Les changements prendront effet lors de votre prochain cycle de facturation."
+      },
+      {
+        "question": "Comment fonctionnent les suppléments ?",
+        "answer": "Les suppléments peuvent être ajoutés à n'importe quel forfait et sont facturés mensuellement. Vous pouvez les ajouter ou les supprimer à tout moment."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prêt à Commencer ?",
+    "description": "Essayez n'importe quel forfait gratuitement pendant 7 jours. Annulez à tout moment.",
+    "buttons": [
+      {
+        "text": "Commencer l'Essai Gratuit",
+        "link": "/signup",
+        "style": "primary"
+      },
+      {
+        "text": "Contacter les Ventes",
+        "link": "/contact",
+        "style": "secondary"
+      }
+    ]
+  }
+}

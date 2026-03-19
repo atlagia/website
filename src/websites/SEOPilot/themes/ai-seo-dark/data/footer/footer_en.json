@@ -1,0 +1,57 @@
+{
+  "company": {
+    "title": "Company",
+    "links": [
+      { "name": "About Us", "href": "/about" },
+      { "name": "Blog", "href": "/blog" },
+      { "name": "Careers", "href": "/careers" },
+      { "name": "Contact", "href": "/contact" }
+    ]
+  },
+  "services": {
+    "title": "Product",
+    "links": [
+      { "name": "SEO Audit", "href": "/features" },
+      { "name": "AI Auto-Fix", "href": "/features" },
+      { "name": "Monitoring", "href": "/features" },
+      { "name": "Integrations", "href": "/integrations" },
+      { "name": "API", "href": "/docs" }
+    ]
+  },
+  "support": {
+    "title": "Support",
+    "links": [
+      { "name": "Documentation", "href": "/docs" },
+      { "name": "Help Center", "href": "/help" },
+      { "name": "API Reference", "href": "/api" },
+      { "name": "Status", "href": "/status" }
+    ]
+  },
+  "legal": {
+    "title": "Legal",
+    "links": [
+      { "name": "Privacy Policy", "href": "/privacy" },
+      { "name": "Terms of Service", "href": "/terms" },
+      { "name": "Security", "href": "/security" }
+    ]
+  },
+  "newsletter": {
+    "title": "Stay Updated",
+    "description": "Get SEO tips, product updates, and AI insights delivered weekly.",
+    "placeholderText": "Enter your email",
+    "buttonText": "Subscribe"
+  },
+  "copyright": {
+    "text": "© 2025 SEOPilot. All rights reserved.",
+    "links": [
+      { "name": "Privacy Policy", "href": "/privacy" },
+      { "name": "Terms of Service", "href": "/terms" }
+    ]
+  },
+  "social": {
+    "links": [
+      { "name": "Twitter", "href": "https://twitter.com/seopilot", "icon": "twitter" },
+      { "name": "GitHub", "href": "https://github.com/seopilot", "icon": "github" }
+    ]
+  }
+}

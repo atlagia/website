@@ -1,0 +1,156 @@
+{
+  "company": {
+    "title": "Bedrijf",
+    "links": [
+      {
+        "name": "Over Ons",
+        "href": "/about"
+      },
+      {
+        "name": "Ons Verhaal",
+        "href": "/story"
+      },
+      {
+        "name": "Pers",
+        "href": "/press"
+      },
+      {
+        "name": "Blog",
+        "href": "/blog"
+      },
+      {
+        "name": "Contact",
+        "href": "/contact"
+      }
+    ]
+  },
+  "services": {
+    "title": "Diensten",
+    "links": [
+      {
+        "name": "Live TV",
+        "href": "/channels"
+      },
+      {
+        "name": "Films",
+        "href": "/movies"
+      },
+      {
+        "name": "TV Shows",
+        "href": "/shows"
+      },
+      {
+        "name": "Sport",
+        "href": "/sports"
+      },
+      {
+        "name": "Nieuws",
+        "href": "/news"
+      }
+    ]
+  },
+  "support": {
+    "title": "Ondersteuning",
+    "links": [
+      {
+        "name": "Helpcentrum",
+        "href": "/help"
+      },
+      {
+        "name": "Installatiegids",
+        "href": "/setup"
+      },
+      {
+        "name": "FAQ",
+        "href": "/faq"
+      },
+      {
+        "name": "Contact Ondersteuning",
+        "href": "/support"
+      },
+      {
+        "name": "Status",
+        "href": "/status"
+      }
+    ]
+  },
+  "legal": {
+    "title": "Juridisch",
+    "links": [
+      {
+        "name": "Privacybeleid",
+        "href": "/privacy"
+      },
+      {
+        "name": "Servicevoorwaarden",
+        "href": "/terms"
+      },
+      {
+        "name": "Cookiebeleid",
+        "href": "/cookie-policy"
+      },
+      {
+        "name": "DMCA",
+        "href": "/dmca"
+      },
+      {
+        "name": "Terugbetalingsbeleid",
+        "href": "/refund"
+      }
+    ]
+  },
+  "social": {
+    "title": "Volg Ons",
+    "links": [
+      {
+        "name": "Facebook",
+        "href": "https://facebook.com/fastiptv",
+        "icon": "facebook"
+      },
+      {
+        "name": "Twitter",
+        "href": "https://twitter.com/fastiptv",
+        "icon": "twitter"
+      },
+      {
+        "name": "Instagram",
+        "href": "https://instagram.com/fastiptv",
+        "icon": "instagram"
+      },
+      {
+        "name": "YouTube",
+        "href": "https://youtube.com/fastiptv",
+        "icon": "youtube"
+      },
+      {
+        "name": "Telegram",
+        "href": "https://t.me/fastiptv",
+        "icon": "telegram"
+      },
+      {
+        "name": "GitHub",
+        "href": "https://github.com/fastiptv",
+        "icon": "github"
+      }
+    ]
+  },
+  "newsletter": {
+    "title": "Blijf Op de Hoogte",
+    "description": "Ontvang de laatste updates over nieuwe kanalen, functies en exclusieve aanbiedingen.",
+    "buttonText": "Abonneren",
+    "placeholderText": "Voer je e-mail in"
+  },
+  "copyright": {
+    "text": "© 2024 FastIPTV. Alle rechten voorbehouden.",
+    "links": [
+      {
+        "name": "Privacybeleid",
+        "href": "/privacy"
+      },
+      {
+        "name": "Servicevoorwaarden",
+        "href": "/terms"
+      }
+    ]
+  }
+}

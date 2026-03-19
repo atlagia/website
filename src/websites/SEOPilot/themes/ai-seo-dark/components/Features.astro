@@ -1,0 +1,22 @@
+---
+import FeaturesIsland from './FeaturesIsland';
+
+interface Props {
+  title: string;
+  description: string;
+  features: {
+    icon: string;
+    title: string;
+    description: string;
+  }[];
+}
+
+const { title, description, features } = Astro.props;
+---
+
+<FeaturesIsland
+  client:visible
+  title={title}
+  description={description}
+  features={features}
+/>

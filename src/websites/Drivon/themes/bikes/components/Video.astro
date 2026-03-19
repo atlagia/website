@@ -22,6 +22,11 @@ const {
   textPosition = 'center'
 } = Astro.props;
 
+// Use youtube-nocookie.com for Best Practices (third-party cookies)
+const embedUrl = typeof videoUrl === 'string' && videoUrl.includes('youtube.com/embed')
+  ? videoUrl.replace('youtube.com/embed', 'youtube-nocookie.com/embed')
+  : videoUrl;
+
 const alignmentClasses = {
   left: 'text-left',
   center: 'text-center',
@@ -43,8 +48,9 @@ const alignmentClasses = {
 
     <div class="relative aspect-video rounded-xl overflow-hidden border border-[var(--drivon-border)] shadow-lg">
       <iframe
-        src={videoUrl}
+        src={embedUrl}
         class="absolute inset-0 w-full h-full"
+        loading="lazy"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
       ></iframe>

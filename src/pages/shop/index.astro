@@ -201,7 +201,11 @@ try {
 }
 ---
 
-<Layout title={`Shop | ${siteName}`} lang={lang}>
+<Layout 
+  title={`Shop | ${siteName}`} 
+  description={content.pageDescription || content.metaDescription || `Browse our complete collection. ${siteName}.`}
+  lang={lang}
+>
   <main class="max-w-7xl mx-auto px-4 pb-8 pt-[100px]">
     {/* Breadcrumbs */}
     <nav class="mb-8">

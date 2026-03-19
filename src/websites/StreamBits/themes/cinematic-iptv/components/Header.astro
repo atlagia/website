@@ -1,0 +1,88 @@
+---
+interface Props {
+  transparent?: boolean;
+  lang?: string;
+}
+const { transparent = true, lang = 'en' } = Astro.props;
+
+let headerData;
+try {
+  headerData = (await import(`../data/header/header_${lang}.json`)).default;
+} catch {
+  headerData = (await import(`../data/header/header_en.json`)).default;
+}
+
+const navItems = headerData.navigation.map((item: { text: string; href: string }) => ({
+  text: item.text,
+  href: `/${lang}${item.href}`
+}));
+
+const loginItem = headerData.auth.login;
+const signupItem = headerData.auth.signup;
+const isRTL = ['ar'].includes(lang);
+const siteName = lang === 'ar' ? (import.meta.env.PUBLIC_SITE_NAME_ARABIC || import.meta.env.PUBLIC_SITE_NAME || 'StreamBits') : (import.meta.env.PUBLIC_SITE_NAME || 'StreamBits');
+---
+
+<header
+  id="main-header"
+  class:list={[
+    'fixed w-full z-50 transition-all duration-300 backdrop-blur-xl',
+    transparent ? 'bg-transparent' : 'bg-[#0a0a0a]/90 border-b border-white/5',
+    isRTL ? 'rtl' : 'ltr'
+  ]}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+    <div class="flex justify-between items-center h-16 md:h-20 gap-2 min-w-0">
+      <a href={`/${lang}`} class="flex-shrink-0 text-xl sm:text-2xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+        {siteName}
+      </a>
+      <nav class="hidden md:flex items-center gap-6 lg:gap-8">
+        {navItems.map((item) => (
+          <a href={item.href} class="text-gray-300 hover:text-white transition-colors text-sm font-medium whitespace-nowrap">
+            {item.text}
+          </a>
+        ))}
+      </nav>
+      <div class="flex items-center gap-2 sm:gap-4 flex-shrink-0 min-w-0">
+        <a href={`/${lang}${loginItem.href}`} class="hidden sm:inline text-gray-300 hover:text-white transition-colors text-sm whitespace-nowrap">
+          {loginItem.text}
+        </a>
+        <a
+          href={`/${lang}${signupItem.href}`}
+          class="px-3 py-2 sm:px-4 rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 text-white text-sm font-semibold hover:opacity-90 transition-opacity whitespace-nowrap"
+        >
+          {signupItem.text}
+        </a>
+        <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-300 hover:text-white flex-shrink-0" aria-label="Menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden py-4 border-t border-white/10">
+      <div class="flex flex-col gap-2">
+        {navItems.map((item) => (
+          <a href={item.href} class="py-2 text-gray-300 hover:text-white">{item.text}</a>
+        ))}
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn?.addEventListener('click', () => menu?.classList.toggle('hidden'));
+
+  const header = document.getElementById('main-header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      header?.classList.remove('bg-transparent');
+      header?.classList.add('bg-[#0a0a0a]/90', 'border-b', 'border-white/5');
+    } else {
+      header?.classList.add('bg-transparent');
+      header?.classList.remove('bg-[#0a0a0a]/90', 'border-b', 'border-white/5');
+    }
+  });
+</script>

@@ -1,0 +1,22 @@
+---
+import DevicesIsland from './DevicesIsland';
+
+interface Props {
+  title: string;
+  description: string;
+  devices: {
+    name: string;
+    icon: string;
+    platforms: string[];
+  }[];
+}
+
+const { title, description, devices } = Astro.props;
+---
+
+<DevicesIsland
+  client:visible
+  title={title}
+  description={description}
+  devices={devices}
+/>

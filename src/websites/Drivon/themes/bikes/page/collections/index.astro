@@ -1,19 +1,19 @@
 ---
-import Layout from '../../../layouts/Layout.astro';
+import Layoutc from '@layouts/Layoutc.astro';
 import ProductCard from '../../../themes/default/components/ProductCard';
 import { getAllProducts } from '../../../lib/shopify';
 
-const theme = import.meta.env.THEME || 'default';
-
-// Properly handle dynamic imports with default exports
-const { default: BaseHead } = await import(`../../themes/${theme}/components/BaseHead.astro`);
-const { default: Header } = await import(`../../themes/${theme}/components/Header.astro`);
-const { default: Footer } = await import(`../../themes/${theme}/components/Footer.astro`);
+const storeName = import.meta.env.PUBLIC_SITE_NAME || import.meta.env.PUBLIC_BUSINESS_NAME || 'Drivon';
+const pathSegments = Astro.url.pathname.split('/').filter(Boolean);
+const allowedLangs = (import.meta.env.ALLOWED_LANGUAGES || 'en').split(',').map((l: string) => l.trim());
+const lang = pathSegments.length > 0 && allowedLangs.includes(pathSegments[0]) ? pathSegments[0] : 'en';
 
 const products = await getAllProducts();
+
+const seoTitle = `Collections | ${storeName}`;
+const seoDescription = `Browse our collections of premium automotive lifestyle and driver merchandise. Racing hoodies, car culture tees, and driver essentials. ${storeName}.`;
 ---
-<Layout title="Collections | RidWear">
-  <Header />
+<Layoutc title={seoTitle} description={seoDescription} lang={lang}>
   <main class="max-w-7xl mx-auto px-4 pb-8 pt-[100px]">
     <h1 class="text-3xl font-bold mb-8">Our Collections</h1>
 
@@ -31,5 +31,4 @@ const products = await getAllProducts();
       ))}
     </div>
   </main>
-  <Footer />
-</Layout>
+</Layoutc>

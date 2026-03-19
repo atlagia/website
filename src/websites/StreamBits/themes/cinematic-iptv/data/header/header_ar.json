@@ -1,0 +1,72 @@
+{
+  "navigation": [
+    {
+      "text": "القنوات",
+      "href": "/channels"
+    },
+    {
+      "text": "الأفلام", 
+      "href": "/movies"
+    },
+    {
+      "text": "المسلسلات التلفزيونية",
+      "href": "/shows"
+    },
+    {
+      "text": "الباقات",
+      "href": "/packages"
+    }
+  ],
+  "auth": {
+    "login": {
+      "text": "تسجيل الدخول",
+      "href": "/packages"
+    },
+    "signup": {
+      "text": "البدء",
+      "href": "/packages"
+    }
+  },
+  "languages": [
+    {
+      "code": "en",
+      "name": "English"
+    },
+    {
+      "code": "fr",
+      "name": "Français"
+    },
+    {
+      "code": "de",
+      "name": "Deutsch"
+    },
+    {
+      "code": "it",
+      "name": "Italiano"
+    },
+    {
+      "code": "nl",
+      "name": "Nederlands"
+    },
+    {
+      "code": "pt",
+      "name": "Português"
+    },
+    {
+      "code": "ar",
+      "name": "العربية"
+    },
+    {
+      "code": "es",
+      "name": "Español"
+    },
+    {
+      "code": "ru",
+      "name": "Русский"
+    },
+    {
+      "code": "zh",
+      "name": "中文"
+    }
+  ]
+} 

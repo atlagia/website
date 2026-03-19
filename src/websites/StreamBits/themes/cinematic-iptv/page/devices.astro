@@ -1,0 +1,242 @@
+---
+import { getLangFromUrl, useTranslations } from '@utils/i18n';
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+
+const lang = getLangFromUrl(Astro.url);
+const translations = await useTranslations(lang);
+const jsonData = translations.default;
+
+const SITE_TITLE = jsonData.siteTitle || 'FastIPTV';
+const PAGE_TITLE = 'Supported Devices | ' + SITE_TITLE;
+const PAGE_DESCRIPTION = 'Watch FastIPTV on all your favorite devices';
+
+const devices = [
+  {
+    category: 'Smart TV',
+    icon: '📺',
+    platforms: [
+      {
+        name: 'Samsung Smart TV',
+        features: ['Native App', 'Voice Control', '4K Support', 'Multi-Room'],
+        minVersion: '2018 or newer models'
+      },
+      {
+        name: 'LG Smart TV',
+        features: ['WebOS App', 'Magic Remote', '4K HDR', 'Dolby Vision'],
+        minVersion: '2018 or newer models'
+      },
+      {
+        name: 'Android TV',
+        features: ['Google Play App', 'Chromecast Built-in', '4K Support', 'Voice Search'],
+        minVersion: 'Android TV 8.0 or higher'
+      },
+      {
+        name: 'Apple TV',
+        features: ['Native tvOS App', 'Siri Control', '4K HDR', 'Family Sharing'],
+        minVersion: 'Apple TV 4K or HD'
+      }
+    ]
+  },
+  {
+    category: 'Mobile Devices',
+    icon: '📱',
+    platforms: [
+      {
+        name: 'iOS',
+        features: ['iPhone App', 'iPad App', 'Picture-in-Picture', 'Offline Downloads'],
+        minVersion: 'iOS 13.0 or higher'
+      },
+      {
+        name: 'Android',
+        features: ['Phone App', 'Tablet App', 'Background Play', 'SD Card Storage'],
+        minVersion: 'Android 8.0 or higher'
+      }
+    ]
+  },
+  {
+    category: 'Computers',
+    icon: '💻',
+    platforms: [
+      {
+        name: 'Windows',
+        features: ['Web Player', 'Desktop App', 'Multiple Monitors', 'Keyboard Shortcuts'],
+        minVersion: 'Windows 10 or higher'
+      },
+      {
+        name: 'macOS',
+        features: ['Web Player', 'Native App', 'Touch Bar Support', 'AirPlay'],
+        minVersion: 'macOS 10.15 or higher'
+      },
+      {
+        name: 'Linux',
+        features: ['Web Player', 'Chrome App', 'Firefox Support', 'Desktop Notifications'],
+        minVersion: 'Modern Linux distributions'
+      }
+    ]
+  },
+  {
+    category: 'Gaming Consoles',
+    icon: '🎮',
+    platforms: [
+      {
+        name: 'PlayStation',
+        features: ['Native App', '4K Streaming', 'Controller Navigation', 'PSN Integration'],
+        minVersion: 'PS4 and PS5'
+      },
+      {
+        name: 'Xbox',
+        features: ['Native App', '4K Support', 'Controller UI', 'Xbox Live Integration'],
+        minVersion: 'Xbox One and Series X|S'
+      }
+    ]
+  }
+];
+---
+
+<!doctype html>
+<html lang={lang} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
+  <head>
+    <BaseHead title={PAGE_TITLE} description={PAGE_DESCRIPTION} />
+  </head>
+  <body class="bg-[#0a0a0a] text-white">
+    <Header />
+    <main class="container mx-auto px-4 py-16 max-w-7xl">
+      <section class="space-y-12">
+        {/* Hero Section */}
+        <div class="text-center space-y-4">
+          <h1 class="text-4xl md:text-6xl font-bold gradient-text">
+            Watch Everywhere
+          </h1>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            Stream your favorite content on any device, anytime, anywhere.
+          </p>
+        </div>
+
+        {/* Device Categories */}
+        <div class="space-y-16">
+          {devices.map(category => (
+            <div class="space-y-8">
+              <div class="flex items-center gap-4">
+                <span class="text-4xl">{category.icon}</span>
+                <h2 class="text-3xl font-bold text-purple-400">{category.category}</h2>
+              </div>
+
+              <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {category.platforms.map(platform => (
+                  <div class="glass rounded-xl p-6 hover-scale hover-glow">
+                    <h3 class="text-xl font-bold mb-4">{platform.name}</h3>
+                    <div class="space-y-4">
+                      <div class="text-sm text-gray-400">
+                        Minimum version: {platform.minVersion}
+                      </div>
+                      <ul class="space-y-2">
+                        {platform.features.map(feature => (
+                          <li class="flex items-center gap-2">
+                            <span class="text-emerald-400">✓</span>
+                            <span class="text-gray-300">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Setup Instructions */}
+        <div class="glass rounded-2xl p-8 space-y-8">
+          <h2 class="text-2xl font-bold text-center text-purple-400">
+            Quick Setup Guide
+          </h2>
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="space-y-4 text-center">
+              <div class="text-4xl">1️⃣</div>
+              <h3 class="text-xl font-bold">Download</h3>
+              <p class="text-gray-300">
+                Get the FastIPTV app from your device's app store or visit our website.
+              </p>
+            </div>
+            <div class="space-y-4 text-center">
+              <div class="text-4xl">2️⃣</div>
+              <h3 class="text-xl font-bold">Sign In</h3>
+              <p class="text-gray-300">
+                Log in with your FastIPTV account or start your free trial.
+              </p>
+            </div>
+            <div class="space-y-4 text-center">
+              <div class="text-4xl">3️⃣</div>
+              <h3 class="text-xl font-bold">Start Watching</h3>
+              <p class="text-gray-300">
+                Choose your favorite content and enjoy streaming in high quality.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Download Links */}
+        <div class="text-center space-y-8">
+          <h2 class="text-2xl font-bold text-purple-400">
+            Download FastIPTV
+          </h2>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a
+              href="#"
+              class="glass rounded-lg px-6 py-3 flex items-center gap-2 hover-scale hover-glow"
+            >
+              <span>🍎</span>
+              App Store
+            </a>
+            <a
+              href="#"
+              class="glass rounded-lg px-6 py-3 flex items-center gap-2 hover-scale hover-glow"
+            >
+              <span>🤖</span>
+              Google Play
+            </a>
+            <a
+              href="#"
+              class="glass rounded-lg px-6 py-3 flex items-center gap-2 hover-scale hover-glow"
+            >
+              <span>🖥️</span>
+              Desktop App
+            </a>
+            <a
+              href="#"
+              class="glass rounded-lg px-6 py-3 flex items-center gap-2 hover-scale hover-glow"
+            >
+              <span>🌐</span>
+              Web Player
+            </a>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div class="glass rounded-2xl p-8 text-center space-y-6">
+          <h2 class="text-3xl font-bold gradient-text">Ready to Start Watching?</h2>
+          <p class="text-xl text-gray-300">
+            Try FastIPTV free for 7 days on any device.
+          </p>
+          <div class="flex justify-center gap-4">
+            <a
+              href="/signup"
+              class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg transition duration-200"
+            >
+              Start Free Trial
+            </a>
+            <a
+              href="/help"
+              class="bg-white/10 hover:bg-white/20 text-white font-bold py-3 px-8 rounded-lg transition duration-200"
+            >
+              Need Help?
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html> 

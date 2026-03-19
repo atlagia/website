@@ -1,0 +1,27 @@
+---
+import ChannelsIsland from './ChannelsIsland';
+
+interface Props {
+  title?: string;
+  description?: string;
+  channels?: {
+    title: string;
+    poster: string;
+    alt?: string;
+    category?: string;
+  }[];
+}
+
+const {
+  title = "Best Streaming IPTV Platforms of 2025",
+  description = "We are proud to offer the best IPTV service available",
+  channels = []
+} = Astro.props;
+---
+
+<ChannelsIsland
+  client:visible
+  title={title}
+  description={description}
+  channels={channels}
+/>

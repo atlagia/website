@@ -1,0 +1,100 @@
+{
+  "wrapper": "bg-[var(--seo-surface)]/95 backdrop-blur-md border-b border-[var(--seo-glass-border)] sticky top-0 z-50 transition-colors duration-150",
+  "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+  "nav": {
+    "wrapper": "flex items-center justify-between h-16",
+    "brand": "text-xl font-bold text-[var(--seo-text)] hover:opacity-90 transition-opacity duration-150",
+    "menu": {
+      "desktop": "hidden lg:flex lg:items-center lg:space-x-4",
+      "item": "text-[var(--seo-muted)] hover:text-[var(--seo-text)] px-3 py-2 rounded-md text-sm font-medium transition-colors duration-150"
+    }
+  },
+  "logo": {
+    "wrapper": "flex-1 lg:flex-none text-center lg:text-left"
+  },
+  "mobileButton": {
+    "wrapper": "flex lg:hidden",
+    "button": "p-2 text-[var(--seo-muted)] hover:text-[var(--seo-text)] transition-colors duration-150",
+    "iconClose": "text-2xl",
+    "iconOpen": "w-6 h-6"
+  },
+  "actions": {
+    "wrapper": "flex items-center space-x-4",
+    "search": {
+      "icon": "text-[var(--seo-text)]",
+      "button": "p-2 rounded-full transition-colors duration-150 text-[var(--seo-muted)] hover:text-[var(--seo-text)] hover:bg-[var(--seo-glass-bg)]",
+      "form": "absolute top-full right-0 mt-2 w-72 bg-[var(--seo-surface)]/95 backdrop-blur-md rounded-lg shadow-xl border border-[var(--seo-glass-border)] p-4 z-50",
+      "input": "w-full px-4 py-2 border border-[var(--seo-glass-border)] rounded-md bg-[var(--seo-glass-bg)] text-[var(--seo-text)] placeholder-[var(--seo-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--seo-accent)] focus:border-[var(--seo-accent)] transition-shadow duration-150"
+    },
+    "currency": {
+      "wrapper": "relative",
+      "button": "flex items-center space-x-1 px-3 py-2 text-sm font-medium text-[var(--seo-muted)] hover:text-[var(--seo-text)] transition-colors duration-150",
+      "text": "font-medium",
+      "dropdown": "absolute right-0 mt-2 w-32 bg-[var(--seo-surface)]/95 backdrop-blur-md rounded-md shadow-lg ring-1 ring-[var(--seo-glass-border)] z-50",
+      "option": "block w-full text-left px-4 py-2 text-sm text-[var(--seo-muted)] transition-colors duration-150",
+      "optionActive": "bg-[var(--seo-glass-bg)] text-[var(--seo-text)]",
+      "optionHover": "hover:bg-[var(--seo-glass-bg)]"
+    },
+    "language": {
+      "wrapper": "relative",
+      "button": "flex items-center space-x-1 px-3 py-2 text-sm font-medium text-[var(--seo-muted)] hover:text-[var(--seo-text)] transition-colors duration-150",
+      "text": "hidden sm:block text-[var(--seo-text)]",
+      "dropdown": "absolute right-0 mt-2 w-40 bg-[var(--seo-surface)]/95 backdrop-blur-md rounded-md shadow-lg ring-1 ring-[var(--seo-glass-border)] z-50",
+      "option": "block w-full text-left px-4 py-2 text-sm text-[var(--seo-muted)] transition-colors duration-150",
+      "optionActive": "bg-[var(--seo-glass-bg)] text-[var(--seo-text)]",
+      "optionHover": "hover:bg-[var(--seo-glass-bg)]"
+    },
+    "cart": {
+      "button": "relative p-2 text-[var(--seo-muted)] hover:text-[var(--seo-text)] transition-colors duration-150",
+      "count": "absolute -top-1 -right-1 bg-[var(--seo-accent)] text-[var(--seo-text)] text-xs rounded-full h-5 w-5 flex items-center justify-center"
+    }
+  },
+  "mobile": {
+    "menu": {
+      "wrapper": "lg:hidden fixed left-0 right-0 bg-[var(--seo-surface)]/95 backdrop-blur-md shadow-lg border-b border-[var(--seo-glass-border)] transition-all duration-200 ease-in-out",
+      "nav": "px-4 py-2",
+      "item": "block py-3 px-4 text-[var(--seo-muted)] hover:bg-[var(--seo-glass-bg)] border-b border-[var(--seo-glass-border)] last:border-0 transition-colors duration-150"
+    },
+    "backdrop": "lg:hidden fixed inset-0 bg-black/50 z-[98]"
+  },
+  "cart": {
+    "sidebar": "fixed inset-y-0 right-0 w-full max-w-md bg-[var(--seo-surface)]/95 backdrop-blur-md shadow-xl border-l border-[var(--seo-glass-border)] z-[100] transform transition-transform duration-200 ease-in-out",
+    "container": "h-full flex flex-col",
+    "header": "p-4 border-b border-[var(--seo-glass-border)]",
+    "headerContent": "flex justify-between items-center",
+    "iconWrapper": "w-8 h-8 bg-[var(--seo-glass-bg)] rounded-lg flex items-center justify-center",
+    "icon": "w-5 h-5 text-[var(--seo-text)]",
+    "title": "text-lg font-semibold text-[var(--seo-text)]",
+    "closeButton": "p-2 hover:bg-[var(--seo-glass-bg)] rounded-full transition-colors duration-150",
+    "closeIcon": "w-5 h-5 text-[var(--seo-muted)] hover:text-[var(--seo-text)] transition-colors duration-150",
+    "overlay": "fixed inset-0 bg-black/50 z-[90]",
+    "emptyWrap": "flex-1 flex flex-col items-center justify-center p-8 text-center",
+    "emptyIconWrap": "w-20 h-20 bg-[var(--seo-glass-bg)] rounded-full flex items-center justify-center mb-4",
+    "emptyIcon": "w-10 h-10 text-[var(--seo-muted)]",
+    "emptyTitle": "text-lg font-semibold text-[var(--seo-text)] mb-2",
+    "emptyText": "text-[var(--seo-muted)] text-sm",
+    "itemsWrap": "flex-1 overflow-y-auto p-6 space-y-4",
+    "itemCard": "group bg-[var(--seo-glass-bg)] rounded-xl border border-[var(--seo-glass-border)] p-4 hover:border-[var(--seo-accent)]/30 transition-all duration-200",
+    "itemImage": "w-16 h-16 object-cover rounded-lg border border-[var(--seo-glass-border)]",
+    "qtyBadge": "absolute -top-1 -right-1 w-5 h-5 bg-[var(--seo-accent)] rounded-full flex items-center justify-center",
+    "itemTitle": "font-semibold text-[var(--seo-text)] text-sm leading-tight mb-1 line-clamp-2",
+    "itemPrice": "text-lg font-bold text-[var(--seo-text)]",
+    "itemTotal": "text-xs text-[var(--seo-muted)]",
+    "qtyWrap": "flex items-center gap-1 bg-[var(--seo-glass-bg)] rounded-lg p-1",
+    "qtyBtn": "w-7 h-7 flex items-center justify-center hover:bg-[var(--seo-glass-border)] rounded-md disabled:opacity-50 transition-colors duration-150 text-[var(--seo-text)]",
+    "qtyText": "w-8 text-center text-sm font-medium text-[var(--seo-text)]",
+    "qtyIcon": "text-[var(--seo-muted)]",
+    "removeBtn": "p-1.5 text-red-400 hover:text-red-300 hover:bg-red-500/10 rounded-md disabled:opacity-50 transition-all duration-150",
+    "footerWrap": "border-t border-[var(--seo-glass-border)] p-6 bg-[var(--seo-bg)]/80",
+    "totalLabel": "text-lg font-semibold text-[var(--seo-text)]",
+    "totalCount": "text-xs text-[var(--seo-muted)]",
+    "totalAmount": "text-2xl font-bold text-[var(--seo-text)]",
+    "checkoutBtn": "w-full bg-[var(--seo-gradient-accent)] text-[var(--seo-text)] px-6 py-4 rounded-xl hover:opacity-90 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3 font-semibold text-lg",
+    "trustWrap": "flex items-center justify-center gap-4 mt-4 pt-4 border-t border-[var(--seo-glass-border)]",
+    "trustItem": "flex items-center gap-1 text-xs text-[var(--seo-muted)]"
+  },
+  "svg": {
+    "hamburger": "w-6 h-6",
+    "hamburgerPath": "M4 6h16M4 12h16M4 18h16"
+  }
+}

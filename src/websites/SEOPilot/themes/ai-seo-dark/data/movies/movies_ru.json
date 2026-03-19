@@ -1,0 +1,550 @@
+{
+  "pageTitle": "Фильмы",
+  "pageDescription": "Стримите тысячи фильмов в качестве HD и 4K",
+  "heroTitle": "Фильмы",
+  "heroDescription": "Стримите тысячи фильмов в качестве HD и 4K",
+  "movies": {
+    "featured": [
+      {
+        "title": "SuperMan",
+        "genre": "Супергерой",
+        "rating": "4.8",
+        "year": "2025",
+        "quality": "4K",
+        "duration": "2h 15m",
+        "image": "https://cdn.atlagia.com/FastIPTV/iptv/superman-2025-fast-iptv.webp",
+        "alt": "SuperMan on Fast IPTV"
+      },
+      {
+        "title": "Sinners",
+        "genre": "Драма",
+        "rating": "4.6",
+        "year": "2025",
+        "quality": "4K",
+        "duration": "1h 55m",
+        "image": "https://cdn.atlagia.com/FastIPTV/iptv/fast-iptv-sinners.webp",
+        "alt": "Sinners on Fast IPTV"
+      },
+      {
+        "title": "Mickey 17",
+        "genre": "Научная Фантастика",
+        "rating": "4.7",
+        "year": "2025",
+        "quality": "4K",
+        "duration": "2h 5m",
+        "image": "https://cdn.atlagia.com/FastIPTV/iptv/mickey-17-fast-iptv.webp",
+        "alt": "Mickey 17 on Fast IPTV"
+      }
+    ],
+    "categories": [
+      {
+        "name": "Супергерой",
+        "movies": [
+          {
+            "title": "SuperMan",
+            "rating": "4.8",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/FastIPTV/iptv/superman-2025-fast-iptv.webp",
+            "alt": "SuperMan - Супергерой on Fast IPTV"
+          },
+          {
+            "title": "Batman: The Brave and the Bold",
+            "rating": "4.7",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/batman-brave-bold-2025.jpg",
+            "alt": "Batman: The Brave and the Bold - Супергерой on Fast IPTV"
+          },
+          {
+            "title": "Spider-Man: Beyond the Spider-Verse",
+            "rating": "4.9",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/spiderman-beyond-spiderverse-2025.jpg",
+            "alt": "Spider-Man: Beyond the Spider-Verse - Супергерой on Fast IPTV"
+          },
+          {
+            "title": "Wonder Woman: New World",
+            "rating": "4.6",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/wonder-woman-new-world-2025.jpg",
+            "alt": "Wonder Woman: New World - Супергерой on Fast IPTV"
+          },
+          {
+            "title": "Black Panther: Wakanda Forever Part 2",
+            "rating": "4.8",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/black-panther-wakanda-forever-2-2025.jpg",
+            "alt": "Black Panther: Wakanda Forever Part 2 - Супергерой on Fast IPTV"
+          },
+          {
+            "title": "The Flash: Speed Force",
+            "rating": "4.5",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/flash-speed-force-2025.jpg",
+            "alt": "The Flash: Speed Force - Супергерой on Fast IPTV"
+          }
+        ]
+      },
+      {
+        "name": "Драма",
+        "movies": [
+          {
+            "title": "Sinners",
+            "rating": "4.6",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/FastIPTV/iptv/fast-iptv-sinners.webp",
+            "alt": "Sinners - Драма on Fast IPTV"
+          },
+          {
+            "title": "La jeune Femme à l'aiguille 2025",
+            "rating": "4.7",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/FastIPTV/iptv/la-jeune-femme-2025-fast-iptv.webp",
+            "alt": "La jeune Femme à l'aiguille 2025 - Драма on Fast IPTV"
+          },
+          {
+            "title": "The Last Letter",
+            "rating": "4.8",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/last-letter-2025.jpg",
+            "alt": "The Last Letter - Драма on Fast IPTV"
+          },
+          {
+            "title": "City Dreams",
+            "rating": "4.5",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/city-dreams-2025.jpg",
+            "alt": "City Dreams - Драма on Fast IPTV"
+          },
+          {
+            "title": "Broken Promises",
+            "rating": "4.7",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/broken-promises-2025.jpg",
+            "alt": "Broken Promises - Драма on Fast IPTV"
+          },
+          {
+            "title": "The Silent Echo",
+            "rating": "4.6",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/silent-echo-2025.jpg",
+            "alt": "The Silent Echo - Драма on Fast IPTV"
+          }
+        ]
+      },
+      {
+        "name": "Научная Фантастика",
+        "movies": [
+          {
+            "title": "Mickey 17",
+            "rating": "4.7",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/FastIPTV/iptv/mickey-17-fast-iptv.webp",
+            "alt": "Mickey 17 - Научная Фантастика on Fast IPTV"
+          },
+          {
+            "title": "Companion",
+            "rating": "4.8",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/FastIPTV/iptv/companion-fast-iptv.webp",
+            "alt": "Companion - Научная Фантастика on Fast IPTV"
+          },
+          {
+            "title": "Interstellar 2: Beyond Time",
+            "rating": "4.9",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/interstellar-2-beyond-time-2025.jpg",
+            "alt": "Interstellar 2: Beyond Time - Научная Фантастика on Fast IPTV"
+          },
+          {
+            "title": "The Martian Chronicles",
+            "rating": "4.7",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/martian-chronicles-2025.jpg",
+            "alt": "The Martian Chronicles - Научная Фантастика on Fast IPTV"
+          },
+          {
+            "title": "Quantum Leap: The Movie",
+            "rating": "4.6",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/quantum-leap-movie-2025.jpg",
+            "alt": "Quantum Leap: The Movie - Научная Фантастика on Fast IPTV"
+          },
+          {
+            "title": "AI: The Awakening",
+            "rating": "4.8",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/ai-awakening-2025.jpg",
+            "alt": "AI: The Awakening - Научная Фантастика on Fast IPTV"
+          }
+        ]
+      },
+      {
+        "name": "Боевик",
+        "movies": [
+          {
+            "title": "Mission Impossible: Dead Reckoning Part 3",
+            "rating": "4.8",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/mission-impossible-dead-reckoning-3-2025.jpg",
+            "alt": "Mission Impossible: Dead Reckoning Part 3 - Боевик on Fast IPTV"
+          },
+          {
+            "title": "Fast & Furious 12: Final Ride",
+            "rating": "4.6",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/fast-furious-12-final-ride-2025.jpg",
+            "alt": "Fast & Furious 12: Final Ride - Боевик on Fast IPTV"
+          },
+          {
+            "title": "John Wick: Chapter 6",
+            "rating": "4.9",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/john-wick-chapter-6-2025.jpg",
+            "alt": "John Wick: Chapter 6 - Боевик on Fast IPTV"
+          },
+          {
+            "title": "The Equalizer 4",
+            "rating": "4.7",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/equalizer-4-2025.jpg",
+            "alt": "The Equalizer 4 - Боевик on Fast IPTV"
+          },
+          {
+            "title": "Mad Max: Fury Road 2",
+            "rating": "4.8",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/mad-max-fury-road-2-2025.jpg",
+            "alt": "Mad Max: Fury Road 2 - Боевик on Fast IPTV"
+          },
+          {
+            "title": "The Expendables 5",
+            "rating": "4.5",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/expendables-5-2025.jpg",
+            "alt": "The Expendables 5 - Боевик on Fast IPTV"
+          }
+        ]
+      },
+      {
+        "name": "Комедия",
+        "movies": [
+          {
+            "title": "The Hangover 4: Last Call",
+            "rating": "4.4",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/hangover-4-last-call-2025.jpg",
+            "alt": "The Hangover 4: Last Call - Комедия on Fast IPTV"
+          },
+          {
+            "title": "Superbad 2: College Years",
+            "rating": "4.6",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/superbad-2-college-years-2025.jpg",
+            "alt": "Superbad 2: College Years - Комедия on Fast IPTV"
+          },
+          {
+            "title": "Bridesmaids 2: The Wedding Crashers",
+            "rating": "4.5",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/bridesmaids-2-wedding-crashers-2025.jpg",
+            "alt": "Bridesmaids 2: The Wedding Crashers - Комедия on Fast IPTV"
+          },
+          {
+            "title": "The 40-Year-Old Virgin 2",
+            "rating": "4.3",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/40-year-old-virgin-2-2025.jpg",
+            "alt": "The 40-Year-Old Virgin 2 - Комедия on Fast IPTV"
+          },
+          {
+            "title": "Step Brothers 2: The Reunion",
+            "rating": "4.7",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/step-brothers-2-reunion-2025.jpg",
+            "alt": "Step Brothers 2: The Reunion - Комедия on Fast IPTV"
+          },
+          {
+            "title": "Anchorman 3: The Legend Continues",
+            "rating": "4.5",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/anchorman-3-legend-continues-2025.jpg",
+            "alt": "Anchorman 3: The Legend Continues - Комедия on Fast IPTV"
+          }
+        ]
+      },
+      {
+        "name": "Ужасы",
+        "movies": [
+          {
+            "title": "The Conjuring: The Last Rites",
+            "rating": "4.7",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/conjuring-last-rites-2025.jpg",
+            "alt": "The Conjuring: The Last Rites - Ужасы on Fast IPTV"
+          },
+          {
+            "title": "Insidious: The Final Chapter",
+            "rating": "4.6",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/insidious-final-chapter-2025.jpg",
+            "alt": "Insidious: The Final Chapter - Ужасы on Fast IPTV"
+          },
+          {
+            "title": "A Quiet Place: Day One",
+            "rating": "4.8",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/quiet-place-day-one-2025.jpg",
+            "alt": "A Quiet Place: Day One - Ужасы on Fast IPTV"
+          },
+          {
+            "title": "The Nun 3: The Final Exorcism",
+            "rating": "4.5",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/nun-3-final-exorcism-2025.jpg",
+            "alt": "The Nun 3: The Final Exorcism - Ужасы on Fast IPTV"
+          },
+          {
+            "title": "Halloween Ends: The Beginning",
+            "rating": "4.7",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/halloween-ends-beginning-2025.jpg",
+            "alt": "Halloween Ends: The Beginning - Ужасы on Fast IPTV"
+          },
+          {
+            "title": "It: Chapter Three",
+            "rating": "4.6",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/it-chapter-three-2025.jpg",
+            "alt": "It: Chapter Three - Ужасы on Fast IPTV"
+          }
+        ]
+      },
+      {
+        "name": "Романтика",
+        "movies": [
+          {
+            "title": "The Notebook 2: A New Chapter",
+            "rating": "4.8",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/notebook-2-new-chapter-2025.jpg",
+            "alt": "The Notebook 2: A New Chapter - Романтика on Fast IPTV"
+          },
+          {
+            "title": "Titanic: The Return",
+            "rating": "4.9",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/titanic-return-2025.jpg",
+            "alt": "Titanic: The Return - Романтика on Fast IPTV"
+          },
+          {
+            "title": "La La Land 2: Another Day of Sun",
+            "rating": "4.7",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/la-la-land-2-another-day-2025.jpg",
+            "alt": "La La Land 2: Another Day of Sun - Романтика on Fast IPTV"
+          },
+          {
+            "title": "The Fault in Our Stars 2",
+            "rating": "4.6",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/fault-in-our-stars-2-2025.jpg",
+            "alt": "The Fault in Our Stars 2 - Романтика on Fast IPTV"
+          },
+          {
+            "title": "500 Days of Summer 2",
+            "rating": "4.5",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/500-days-summer-2-2025.jpg",
+            "alt": "500 Days of Summer 2 - Романтика on Fast IPTV"
+          },
+          {
+            "title": "Eternal Sunshine 2",
+            "rating": "4.8",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/eternal-sunshine-2-2025.jpg",
+            "alt": "Eternal Sunshine 2 - Романтика on Fast IPTV"
+          }
+        ]
+      },
+      {
+        "name": "Спортивный Документальный",
+        "movies": [
+          {
+            "title": "F1 2025",
+            "rating": "4.5",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/FastIPTV/iptv/f1-2025-fast-iptv.webp",
+            "alt": "F1 2025 - Спортивный Документальный on Fast IPTV"
+          },
+          {
+            "title": "The Last Dance 2: The Return",
+            "rating": "4.8",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/last-dance-2-return-2025.jpg",
+            "alt": "The Last Dance 2: The Return - Спортивный Документальный on Fast IPTV"
+          },
+          {
+            "title": "Beckham: The Legacy",
+            "rating": "4.7",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/beckham-legacy-2025.jpg",
+            "alt": "Beckham: The Legacy - Спортивный Документальный on Fast IPTV"
+          },
+          {
+            "title": "Messi: The GOAT",
+            "rating": "4.9",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/messi-goat-2025.jpg",
+            "alt": "Messi: The GOAT - Спортивный Документальный on Fast IPTV"
+          },
+          {
+            "title": "Ronaldo: The Phenomenon",
+            "rating": "4.8",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/ronaldo-phenomenon-2025.jpg",
+            "alt": "Ronaldo: The Phenomenon - Спортивный Документальный on Fast IPTV"
+          },
+          {
+            "title": "Tiger Woods: The Comeback",
+            "rating": "4.6",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/tiger-woods-comeback-2025.jpg",
+            "alt": "Tiger Woods: The Comeback - Спортивный Документальный on Fast IPTV"
+          }
+        ]
+      },
+      {
+        "name": "Триллер",
+        "movies": [
+          {
+            "title": "The Insider 2025",
+            "rating": "4.7",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/FastIPTV/iptv/the-insider-2025-fast-iptv.webp",
+            "alt": "The Insider 2025 - Триллер on Fast IPTV"
+          },
+          {
+            "title": "Gone Girl 2: The Return",
+            "rating": "4.8",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/gone-girl-2-return-2025.jpg",
+            "alt": "Gone Girl 2: The Return - Триллер on Fast IPTV"
+          },
+          {
+            "title": "The Silence of the Lambs 2",
+            "rating": "4.9",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/silence-lambs-2-2025.jpg",
+            "alt": "The Silence of the Lambs 2 - Триллер on Fast IPTV"
+          },
+          {
+            "title": "Se7en 2: The Eighth Sin",
+            "rating": "4.7",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/se7en-2-eighth-sin-2025.jpg",
+            "alt": "Se7en 2: The Eighth Sin - Триллер on Fast IPTV"
+          },
+          {
+            "title": "Fight Club 2: The Rules",
+            "rating": "4.8",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/fight-club-2-rules-2025.jpg",
+            "alt": "Fight Club 2: The Rules - Триллер on Fast IPTV"
+          },
+          {
+            "title": "The Usual Suspects 2",
+            "rating": "4.6",
+            "year": "2025",
+            "quality": "4K",
+            "image": "https://cdn.atlagia.com/fastiptv/usual-suspects-2-2025.jpg",
+            "alt": "The Usual Suspects 2 - Триллер on Fast IPTV"
+          }
+        ]
+      }
+    ]
+  },
+  "genres": [
+    "Супергерой",
+    "Драма",
+    "Научная Фантастика",
+    "Боевик",
+    "Комедия",
+    "Ужасы",
+    "Романтика",
+    "Спортивный Документальный",
+    "Триллер",
+    "Приключения",
+    "Анимация",
+    "Криминал",
+    "Документальный",
+    "Семейный",
+    "Фэнтези",
+    "Мистика",
+    "Война",
+    "Вестерн"
+  ],
+  "years": [
+    "2025",
+    "2024",
+    "2023",
+    "2022",
+    "2021"
+  ],
+  "qualities": [
+    "4K",
+    "HD"
+  ]
+}

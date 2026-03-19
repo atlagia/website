@@ -1,0 +1,76 @@
+{
+  "navigation": [ 
+    {
+    "text": "Setup",
+    "href": "/setup"
+    },
+    {
+      "text": "Channels",
+      "href": "/channels"
+    },
+    {
+      "text": "Movies", 
+      "href": "/movies"
+    },
+    {
+      "text": "TV Shows",
+      "href": "/shows"
+    },
+    {
+      "text": "Packages",
+      "href": "/packages"
+    }
+  ],
+  "auth": {
+    "login": {
+      "text": "Login",
+      "href": "/packages"
+    },
+    "signup": {
+      "text": "Get Started",
+      "href": "/packages"
+    }
+  },
+  "languages": [
+    {
+      "code": "en",
+      "name": "English"
+    },
+    {
+      "code": "fr",
+      "name": "Français"
+    },
+    {
+      "code": "de",
+      "name": "Deutsch"
+    },
+    {
+      "code": "it",
+      "name": "Italiano"
+    },
+    {
+      "code": "nl",
+      "name": "Nederlands"
+    },
+    {
+      "code": "pt",
+      "name": "Português"
+    },
+    {
+      "code": "ar",
+      "name": "العربية"
+    },
+    {
+      "code": "es",
+      "name": "Español"
+    },
+    {
+      "code": "ru",
+      "name": "Русский"
+    },
+    {
+      "code": "zh",
+      "name": "中文"
+    }
+  ]
+} 

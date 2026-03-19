@@ -1,0 +1,169 @@
+{
+  "pageTitle": "Setup Your IPTV",
+  "pageDescription": "Set up your IPTV subscription in just 3 minutes. Choose your device and follow the simple steps.",
+  "heroSection": {
+    "title": "Setup Your IPTV",
+    "subtitle": "Set up your IPTV subscription in just 3 minutes. Choose your device and follow the simple steps."
+  },
+  "devices": [
+    {
+      "id": "pc-mac",
+      "title": "PC or Mac",
+      "description": "Multiple free applications to enjoy your IPTV subscription",
+      "apps": [
+        {
+          "name": "VLC Media Player",
+          "link": "https://www.videolan.org/vlc/",
+          "description": "Free, open-source media player with IPTV support"
+        },
+        {
+          "name": "IPTV Smarters",
+          "link": "https://www.iptvsmarters.com/",
+          "description": "Professional IPTV player with advanced features"
+        },
+        {
+          "name": "GSE SMART IPTV",
+          "link": "https://www.gse-iptv.com/",
+          "description": "Multi-platform IPTV player with EPG support"
+        }
+      ]
+    },
+    {
+      "id": "smart-tv",
+      "title": "Smart TV",
+      "description": "Set up IPTV on your Smart TV with these simple steps",
+      "steps": [
+        "Download IPTV app from your TV's app store",
+        "Enter your subscription credentials",
+        "Start streaming your favorite channels"
+      ]
+    },
+    {
+      "id": "iphone",
+      "title": "iPhone",
+      "description": "Watch IPTV on your iPhone with these apps",
+      "apps": [
+        {
+          "name": "IPTV Smarters Pro",
+          "link": "https://apps.apple.com/app/iptv-smarters-pro/id1220941015",
+          "description": "Professional IPTV player for iOS"
+        },
+        {
+          "name": "GSE SMART IPTV",
+          "link": "https://apps.apple.com/app/gse-smart-iptv/id1028734023",
+          "description": "Advanced IPTV player with EPG"
+        }
+      ]
+    },
+    {
+      "id": "android",
+      "title": "Android",
+      "description": "Set up IPTV on your Android device",
+      "apps": [
+        {
+          "name": "IPTV Smarters Pro",
+          "link": "https://play.google.com/store/apps/details?id=com.nst.iptvsmarterstvbox",
+          "description": "Professional IPTV player for Android"
+        },
+        {
+          "name": "TiviMate",
+          "link": "https://play.google.com/store/apps/details?id=ar.tvplayer.tv",
+          "description": "Premium IPTV player with advanced features"
+        }
+      ]
+    },
+    {
+      "id": "mag",
+      "title": "Mag Device",
+      "description": "Configure your MAG device for IPTV streaming",
+      "steps": [
+        "Go to Settings > Servers > Portals",
+        "Add your portal URL",
+        "Enter your username and password",
+        "Save and restart the device"
+      ]
+    },
+    {
+      "id": "android-box",
+      "title": "Android Box",
+      "description": "Set up IPTV on your Android TV box",
+      "apps": [
+        {
+          "name": "IPTV Smarters Pro",
+          "link": "https://play.google.com/store/apps/details?id=com.nst.iptvsmarterstvbox",
+          "description": "Professional IPTV player for Android TV"
+        },
+        {
+          "name": "TiviMate",
+          "link": "https://play.google.com/store/apps/details?id=ar.tvplayer.tv",
+          "description": "Premium IPTV player with advanced features"
+        }
+      ]
+    },
+    {
+      "id": "apple-tv",
+      "title": "Apple TV",
+      "description": "Watch IPTV on your Apple TV",
+      "apps": [
+        {
+          "name": "IPTV Smarters Pro",
+          "link": "https://apps.apple.com/app/iptv-smarters-pro/id1220941015",
+          "description": "Professional IPTV player for tvOS"
+        },
+        {
+          "name": "GSE SMART IPTV",
+          "link": "https://apps.apple.com/app/gse-smart-iptv/id1028734023",
+          "description": "Advanced IPTV player with EPG"
+        }
+      ]
+    },
+    {
+      "id": "amazon-fire",
+      "title": "Amazon Fire Stick",
+      "description": "Set up IPTV on your Amazon Fire Stick",
+      "apps": [
+        {
+          "name": "IPTV Smarters Pro",
+          "link": "https://www.amazon.com/dp/B07P1Q1J9Q",
+          "description": "Professional IPTV player for Fire TV"
+        },
+        {
+          "name": "TiviMate",
+          "link": "https://www.amazon.com/dp/B07P1Q1J9Q",
+          "description": "Premium IPTV player with advanced features"
+        }
+      ]
+    }
+  ],
+  "helpSection": {
+    "title": "Need Help?",
+    "options": [
+      {
+        "title": "Live Support",
+        "description": "Get instant help from our support team",
+        "link": "/contact",
+        "buttonText": "Contact Support"
+      },
+      {
+        "title": "Setup FAQ",
+        "description": "Find answers to common setup questions",
+        "link": "/faq",
+        "buttonText": "View FAQ"
+      }
+    ]
+  },
+  "ctaSection": {
+    "title": "Ready to Stream?",
+    "description": "If you need additional assistance, our support team is here to help.",
+    "buttons": [
+      {
+        "text": "Contact Support",
+        "link": "/contact"
+      },
+      {
+        "text": "View FAQ",
+        "link": "/faq"
+      }
+    ]
+  }
+}

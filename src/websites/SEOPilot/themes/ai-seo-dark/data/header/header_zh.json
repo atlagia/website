@@ -1,0 +1,76 @@
+{
+  "navigation": [
+    {
+      "text": "设置",
+      "href": "/setup"
+    },
+    {
+      "text": "频道",
+      "href": "/channels"
+    },
+    {
+      "text": "电影", 
+      "href": "/movies"
+    },
+    {
+      "text": "电视节目",
+      "href": "/shows"
+    },
+    {
+      "text": "套餐",
+      "href": "/packages"
+    }
+  ],
+  "auth": {
+    "login": {
+      "text": "登录",
+      "href": "/packages"
+    },
+    "signup": {
+      "text": "开始使用",
+      "href": "/packages"
+    }
+  },
+  "languages": [
+    {
+      "code": "en",
+      "name": "English"
+    },
+    {
+      "code": "fr",
+      "name": "Français"
+    },
+    {
+      "code": "de",
+      "name": "Deutsch"
+    },
+    {
+      "code": "it",
+      "name": "Italiano"
+    },
+    {
+      "code": "nl",
+      "name": "Nederlands"
+    },
+    {
+      "code": "pt",
+      "name": "Português"
+    },
+    {
+      "code": "ar",
+      "name": "العربية"
+    },
+    {
+      "code": "es",
+      "name": "Español"
+    },
+    {
+      "code": "ru",
+      "name": "Русский"
+    },
+    {
+      "code": "zh",
+      "name": "中文"
+    }
+  ]
+}

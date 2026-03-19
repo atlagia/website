@@ -1,0 +1,69 @@
+{
+  "pageTitle": "Giriş Yap",
+  "pageDescription": "FastIPTV hesabınıza giriş yapın ve kişiselleştirilmiş panonuzu kullanarak aboneliklerinizi yönetin.",
+  "heroTitle": "Tekrar Hoş Geldiniz!",
+  "heroDescription": "FastIPTV ile sınırsız eğlenceye devam etmek için hesabınıza giriş yapın.",
+  "form": {
+    "emailLabel": "E-posta Adresi",
+    "emailPlaceholder": "E-postanızı girin",
+    "passwordLabel": "Şifre",
+    "passwordPlaceholder": "Şifrenizi girin",
+    "rememberMe": "Beni hatırla",
+    "forgotPassword": "Şifremi unuttum?",
+    "submitButton": "Giriş Yap",
+    "noAccount": "Hesabınız yok mu?",
+    "signupLink": "Buradan kayıt olun"
+  },
+  "benefits": {
+    "title": "Neden Giriş Yapmalısınız?",
+    "list": [
+      {
+        "icon": "📊",
+        "title": "Pano Erişimi",
+        "description": "Aboneliklerinizi ve faturalandırmanızı yönetin"
+      },
+      {
+        "icon": "📱",
+        "title": "Çoklu Cihaz",
+        "description": "5 cihazda aynı anda izleyin"
+      },
+      {
+        "icon": "⚡",
+        "title": "Anında Erişim",
+        "description": "Beklemeden hemen izlemeye başlayın"
+      },
+      {
+        "icon": "🛡️",
+        "title": "Güvenli Hesap",
+        "description": "Verileriniz korunur ve şifrelenir"
+      }
+    ]
+  },
+  "socialProof": {
+    "title": "Binlerce memnun müşteriye katılın",
+    "rating": "4.9/5",
+    "users": "100.000+ kullanıcı",
+    "channels": "10.000+ kanal"
+  },
+  "faq": {
+    "title": "Sık Sorulan Sorular",
+    "questions": [
+      {
+        "question": "Şifremi unuttum. Nasıl sıfırlayabilirim?",
+        "answer": "Yukarıdaki 'Şifremi unuttum?' bağlantısına tıklayın ve e-posta adresinizi girin. Size sıfırlama bağlantısı göndereceğiz."
+      },
+      {
+        "question": "Hesabımı birden fazla cihazda kullanabilir miyim?",
+        "answer": "Evet! FastIPTV hesabınızı aynı anda 5 cihazda kullanabilirsiniz."
+      },
+      {
+        "question": "Abonelik planımı nasıl değiştirebilirim?",
+        "answer": "Giriş yaptıktan sonra panonuza gidin ve planınızı yükseltmek veya düşürmek için 'Aboneliği Yönet' seçeneğini seçin."
+      },
+      {
+        "question": "Ödeme bilgilerim güvenli mi?",
+        "answer": "Kesinlikle! Tüm kişisel ve ödeme bilgilerinizi korumak için endüstri standardı şifreleme kullanıyoruz."
+      }
+    ]
+  }
+}

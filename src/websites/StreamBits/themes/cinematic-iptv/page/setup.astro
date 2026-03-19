@@ -1,0 +1,132 @@
+---
+import { getLangFromUrl, useTranslations } from '@utils/i18n';
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+
+const lang = getLangFromUrl(Astro.url);
+const translations = await useTranslations(lang);
+const jsonData = translations.default;
+
+// Import setup data
+const setupData = await import(`../data/setup/setup_en.json`);
+
+const SITE_TITLE = jsonData.siteTitle || 'FastIPTV';
+const PAGE_TITLE = setupData.pageTitle + ' | ' + SITE_TITLE;
+const PAGE_DESCRIPTION = setupData.pageDescription;
+---
+
+<!doctype html>
+<html lang={lang} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
+  <head>
+    <BaseHead title={PAGE_TITLE} description={PAGE_DESCRIPTION} />
+  </head>
+  <body class="bg-[#0a0a0a] text-white">
+    <Header />
+    <main class="pt-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Hero Section */}
+        <div class="text-center space-y-4 mb-12">
+          <h1 class="text-4xl md:text-6xl font-bold gradient-text">
+            {setupData.heroSection.title}
+          </h1>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            {setupData.heroSection.subtitle}
+          </p>
+        </div>
+
+        {/* Device Setup Sections */}
+        <div class="space-y-8 mb-12">
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {setupData.devices.map((device, index) => (
+              <div class="glass rounded-2xl p-6 space-y-6 hover:scale-105 transition-transform">
+                <div class="flex items-center justify-between">
+                  <h2 class="text-xl font-bold text-purple-400">{device.title}</h2>
+                  <span class="text-gray-400 text-sm">Step {index + 1}</span>
+                </div>
+                
+                <p class="text-gray-300 text-sm">{device.description}</p>
+                
+                {device.apps && (
+                  <div class="space-y-4">
+                    {device.apps.map(app => (
+                      <div class="bg-white/5 rounded-xl p-4 hover:bg-white/10 transition-colors">
+                        <div class="flex justify-between items-start">
+                          <div>
+                            <h3 class="font-bold text-md">{app.name}</h3>
+                            <p class="text-gray-400 text-xs">{app.description}</p>
+                          </div>
+                          <a 
+                            href={app.link} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            class="text-blue-400 hover:text-blue-300 transition-colors"
+                          >
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+                
+                {device.steps && (
+                  <div class="space-y-3">
+                    {device.steps.map((step, stepIndex) => (
+                      <div class="flex items-center gap-3">
+                        <div class="w-6 h-6 bg-purple-600 text-white rounded-full flex items-center justify-center text-xs font-bold">
+                          {stepIndex + 1}
+                        </div>
+                        <p class="text-gray-300 text-sm">{step}</p>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Help Section */}
+        <div class="glass rounded-2xl p-8 space-y-6 mb-12">
+          <h2 class="text-2xl font-bold text-center text-purple-400">{setupData.helpSection.title}</h2>
+          <div class="grid md:grid-cols-2 gap-8">
+            {setupData.helpSection.options.map(option => (
+              <div class="text-center space-y-4">
+                <h3 class="text-xl font-bold">{option.title}</h3>
+                <p class="text-gray-300">{option.description}</p>
+                <a
+                  href={option.link}
+                  class="inline-block bg-white/10 hover:bg-white/20 text-white font-bold py-3 px-8 rounded-lg transition duration-200"
+                >
+                  {option.buttonText}
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div class="glass rounded-2xl p-8 text-center space-y-6">
+          <h2 class="text-3xl font-bold gradient-text">{setupData.ctaSection.title}</h2>
+          <p class="text-xl text-gray-300">
+            {setupData.ctaSection.description}
+          </p>
+          <div class="flex justify-center gap-4">
+            {setupData.ctaSection.buttons.map(button => (
+              <a
+                href={button.link}
+                class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg transition duration-200"
+              >
+                {button.text}
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html> 

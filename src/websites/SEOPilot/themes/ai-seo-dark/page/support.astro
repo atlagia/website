@@ -1,0 +1,488 @@
+---
+import { getLangFromUrl, useTranslations } from '@utils/i18n';
+
+const { lang } = Astro.params;
+
+// Import components
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+
+// Get translations
+const translations = await useTranslations(lang);
+const jsonData = translations.default;
+
+// Get site title and description from language-specific data
+const SITE_TITLE = jsonData.siteTitle || 'FastIPTV';
+const SITE_DESCRIPTION = jsonData.siteDescription || 'Premium IPTV Streaming Service';
+
+// Generate static paths for all supported languages
+export async function getStaticPaths() {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  const languages = allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+  
+  return languages.map(lang => ({
+    params: { lang }
+  }));
+}
+---
+
+<!doctype html>
+<html lang={lang} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
+  <BaseHead 
+    title={`Support | ${SITE_TITLE}`}
+    description="Get help and support for your FastIPTV streaming service. Contact our support team for assistance."
+    lang={lang}
+  />
+  <body class="bg-gray-50">
+    <Header lang={lang} />
+    
+    <main class="pt-20">
+      <!-- Hero Section -->
+      <section class="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4">
+          <div class="text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">
+              {lang === 'en' && 'Support'}
+              {lang === 'fr' && 'Support'}
+              {lang === 'de' && 'Support'}
+              {lang === 'es' && 'Soporte'}
+              {lang === 'it' && 'Supporto'}
+              {lang === 'pt' && 'Suporte'}
+              {lang === 'nl' && 'Ondersteuning'}
+              {lang === 'zh' && '支持'}
+              {lang === 'ar' && 'الدعم'}
+              {lang === 'tr' && 'Destek'}
+            </h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto opacity-90">
+              {lang === 'en' && 'We\'re here to help you get the most out of your FastIPTV experience'}
+              {lang === 'fr' && 'Nous sommes là pour vous aider à tirer le meilleur parti de votre expérience FastIPTV'}
+              {lang === 'de' && 'Wir sind hier, um Ihnen zu helfen, das Beste aus Ihrer FastIPTV-Erfahrung herauszuholen'}
+              {lang === 'es' && 'Estamos aquí para ayudarte a aprovechar al máximo tu experiencia FastIPTV'}
+              {lang === 'it' && 'Siamo qui per aiutarti a ottenere il massimo dalla tua esperienza FastIPTV'}
+              {lang === 'pt' && 'Estamos aqui para ajudá-lo a aproveitar ao máximo sua experiência FastIPTV'}
+              {lang === 'nl' && 'We zijn er om je te helpen het beste uit je FastIPTV-ervaring te halen'}
+              {lang === 'zh' && '我们在这里帮助您充分利用FastIPTV体验'}
+              {lang === 'ar' && 'نحن هنا لمساعدتك في الحصول على أقصى استفادة من تجربة FastIPTV'}
+              {lang === 'tr' && 'FastIPTV deneyiminizden en iyi şekilde yararlanmanıza yardımcı olmak için buradayız'}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Support Options Section -->
+      <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
+            {lang === 'en' && 'How Can We Help?'}
+            {lang === 'fr' && 'Comment Pouvons-Nous Vous Aider?'}
+            {lang === 'de' && 'Wie Können Wir Helfen?'}
+            {lang === 'es' && '¿Cómo Podemos Ayudarte?'}
+            {lang === 'it' && 'Come Possiamo Aiutarti?'}
+            {lang === 'pt' && 'Como Podemos Ajudar?'}
+            {lang === 'nl' && 'Hoe Kunnen We Helpen?'}
+            {lang === 'zh' && '我们如何帮助您？'}
+            {lang === 'ar' && 'كيف يمكننا مساعدتك؟'}
+            {lang === 'tr' && 'Nasıl Yardımcı Olabiliriz?'}
+          </h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white rounded-lg shadow-md p-8 text-center hover:shadow-lg transition-shadow">
+              <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold mb-4">
+                {lang === 'en' && 'FAQ'}
+                {lang === 'fr' && 'FAQ'}
+                {lang === 'de' && 'FAQ'}
+                {lang === 'es' && 'Preguntas Frecuentes'}
+                {lang === 'it' && 'Domande Frequenti'}
+                {lang === 'pt' && 'Perguntas Frequentes'}
+                {lang === 'nl' && 'Veelgestelde Vragen'}
+                {lang === 'zh' && '常见问题'}
+                {lang === 'ar' && 'الأسئلة الشائعة'}
+                {lang === 'tr' && 'Sık Sorulan Sorular'}
+              </h3>
+              <p class="text-gray-600 mb-6">
+                {lang === 'en' && 'Find quick answers to common questions about your IPTV service.'}
+                {lang === 'fr' && 'Trouvez des réponses rapides aux questions courantes sur votre service IPTV.'}
+                {lang === 'de' && 'Finden Sie schnelle Antworten auf häufige Fragen zu Ihrem IPTV-Service.'}
+                {lang === 'es' && 'Encuentra respuestas rápidas a preguntas comunes sobre tu servicio IPTV.'}
+                {lang === 'it' && 'Trova risposte rapide alle domande comuni sul tuo servizio IPTV.'}
+                {lang === 'pt' && 'Encontre respostas rápidas para perguntas comuns sobre seu serviço IPTV.'}
+                {lang === 'nl' && 'Vind snelle antwoorden op veelgestelde vragen over je IPTV-service.'}
+                {lang === 'zh' && '找到关于您的IPTV服务的常见问题的快速答案。'}
+                {lang === 'ar' && 'ابحث عن إجابات سريعة للأسئلة الشائعة حول خدمة IPTV الخاصة بك.'}
+                {lang === 'tr' && 'IPTV hizmetiniz hakkında yaygın sorulara hızlı cevaplar bulun.'}
+              </p>
+              <a href={`/${lang}/faq`} class="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+                {lang === 'en' && 'View FAQ'}
+                {lang === 'fr' && 'Voir la FAQ'}
+                {lang === 'de' && 'FAQ Ansehen'}
+                {lang === 'es' && 'Ver FAQ'}
+                {lang === 'it' && 'Visualizza FAQ'}
+                {lang === 'pt' && 'Ver FAQ'}
+                {lang === 'nl' && 'Bekijk FAQ'}
+                {lang === 'zh' && '查看常见问题'}
+                {lang === 'ar' && 'عرض الأسئلة الشائعة'}
+                {lang === 'tr' && 'SSS Görüntüle'}
+              </a>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-8 text-center hover:shadow-lg transition-shadow">
+              <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold mb-4">
+                {lang === 'en' && 'Email Support'}
+                {lang === 'fr' && 'Support par Email'}
+                {lang === 'de' && 'E-Mail-Support'}
+                {lang === 'es' && 'Soporte por Email'}
+                {lang === 'it' && 'Supporto Email'}
+                {lang === 'pt' && 'Suporte por Email'}
+                {lang === 'nl' && 'E-mail Ondersteuning'}
+                {lang === 'zh' && '邮件支持'}
+                {lang === 'ar' && 'دعم البريد الإلكتروني'}
+                {lang === 'tr' && 'E-posta Desteği'}
+              </h3>
+              <p class="text-gray-600 mb-6">
+                {lang === 'en' && 'Send us an email and we\'ll get back to you within 24 hours.'}
+                {lang === 'fr' && 'Envoyez-nous un e-mail et nous vous répondrons dans les 24 heures.'}
+                {lang === 'de' && 'Senden Sie uns eine E-Mail und wir melden uns innerhalb von 24 Stunden bei Ihnen.'}
+                {lang === 'es' && 'Envíanos un correo electrónico y te responderemos en 24 horas.'}
+                {lang === 'it' && 'Inviaci un\'e-mail e ti risponderemo entro 24 ore.'}
+                {lang === 'pt' && 'Envie-nos um e-mail e responderemos em 24 horas.'}
+                {lang === 'nl' && 'Stuur ons een e-mail en we reageren binnen 24 uur.'}
+                {lang === 'zh' && '给我们发邮件，我们会在24小时内回复您。'}
+                {lang === 'ar' && 'أرسل لنا بريداً إلكترونياً وسنرد عليك خلال 24 ساعة.'}
+                {lang === 'tr' && 'Bize e-posta gönderin ve 24 saat içinde size dönüş yapalım.'}
+              </p>
+              <a href="mailto:support@fastiptv.com" class="bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors">
+                {lang === 'en' && 'Send Email'}
+                {lang === 'fr' && 'Envoyer un Email'}
+                {lang === 'de' && 'E-Mail Senden'}
+                {lang === 'es' && 'Enviar Email'}
+                {lang === 'it' && 'Invia Email'}
+                {lang === 'pt' && 'Enviar Email'}
+                {lang === 'nl' && 'E-mail Verzenden'}
+                {lang === 'zh' && '发送邮件'}
+                {lang === 'ar' && 'إرسال بريد إلكتروني'}
+                {lang === 'tr' && 'E-posta Gönder'}
+              </a>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-8 text-center hover:shadow-lg transition-shadow">
+              <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold mb-4">
+                {lang === 'en' && 'Live Chat'}
+                {lang === 'fr' && 'Chat en Direct'}
+                {lang === 'de' && 'Live-Chat'}
+                {lang === 'es' && 'Chat en Vivo'}
+                {lang === 'it' && 'Chat dal Vivo'}
+                {lang === 'pt' && 'Chat ao Vivo'}
+                {lang === 'nl' && 'Live Chat'}
+                {lang === 'zh' && '在线聊天'}
+                {lang === 'ar' && 'الدردشة المباشرة'}
+                {lang === 'tr' && 'Canlı Sohbet'}
+              </h3>
+              <p class="text-gray-600 mb-6">
+                {lang === 'en' && 'Chat with our support team in real-time for immediate assistance.'}
+                {lang === 'fr' && 'Discutez avec notre équipe de support en temps réel pour une assistance immédiate.'}
+                {lang === 'de' && 'Chatten Sie in Echtzeit mit unserem Support-Team für sofortige Hilfe.'}
+                {lang === 'es' && 'Chatea con nuestro equipo de soporte en tiempo real para asistencia inmediata.'}
+                {lang === 'it' && 'Chatta con il nostro team di supporto in tempo reale per assistenza immediata.'}
+                {lang === 'pt' && 'Converse com nossa equipe de suporte em tempo real para assistência imediata.'}
+                {lang === 'nl' && 'Chat in realtime met ons ondersteuningsteam voor directe hulp.'}
+                {lang === 'zh' && '与我们的支持团队实时聊天以获得即时帮助。'}
+                {lang === 'ar' && 'تحدث مع فريق الدعم لدينا في الوقت الفعلي للحصول على مساعدة فورية.'}
+                {lang === 'tr' && 'Anında yardım için destek ekibimizle gerçek zamanlı sohbet edin.'}
+              </p>
+              <button class="bg-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-purple-700 transition-colors">
+                {lang === 'en' && 'Start Chat'}
+                {lang === 'fr' && 'Commencer le Chat'}
+                {lang === 'de' && 'Chat Starten'}
+                {lang === 'es' && 'Iniciar Chat'}
+                {lang === 'it' && 'Avvia Chat'}
+                {lang === 'pt' && 'Iniciar Chat'}
+                {lang === 'nl' && 'Start Chat'}
+                {lang === 'zh' && '开始聊天'}
+                {lang === 'ar' && 'بدء الدردشة'}
+                {lang === 'tr' && 'Sohbeti Başlat'}
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Form Section -->
+      <section class="bg-white py-20">
+        <div class="max-w-4xl mx-auto px-4">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              {lang === 'en' && 'Contact Support'}
+              {lang === 'fr' && 'Contacter le Support'}
+              {lang === 'de' && 'Support Kontaktieren'}
+              {lang === 'es' && 'Contactar Soporte'}
+              {lang === 'it' && 'Contatta Supporto'}
+              {lang === 'pt' && 'Contatar Suporte'}
+              {lang === 'nl' && 'Contact Ondersteuning'}
+              {lang === 'zh' && '联系支持'}
+              {lang === 'ar' && 'اتصل بالدعم'}
+              {lang === 'tr' && 'Destekle İletişime Geç'}
+            </h2>
+            <p class="text-lg text-gray-600">
+              {lang === 'en' && 'Fill out the form below and we\'ll get back to you as soon as possible.'}
+              {lang === 'fr' && 'Remplissez le formulaire ci-dessous et nous vous répondrons dès que possible.'}
+              {lang === 'de' && 'Füllen Sie das untenstehende Formular aus und wir melden uns so schnell wie möglich bei Ihnen.'}
+              {lang === 'es' && 'Completa el formulario a continuación y te responderemos lo antes posible.'}
+              {lang === 'it' && 'Compila il modulo qui sotto e ti risponderemo il prima possibile.'}
+              {lang === 'pt' && 'Preencha o formulário abaixo e responderemos o mais rápido possível.'}
+              {lang === 'nl' && 'Vul het onderstaande formulier in en we nemen zo snel mogelijk contact met je op.'}
+              {lang === 'zh' && '填写下面的表格，我们会尽快回复您。'}
+              {lang === 'ar' && 'املأ النموذج أدناه وسنرد عليك في أقرب وقت ممكن.'}
+              {lang === 'tr' && 'Aşağıdaki formu doldurun ve en kısa sürede size dönüş yapalım.'}
+            </p>
+          </div>
+          
+          <form class="bg-gray-50 rounded-lg p-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">
+                  {lang === 'en' && 'Name'}
+                  {lang === 'fr' && 'Nom'}
+                  {lang === 'de' && 'Name'}
+                  {lang === 'es' && 'Nombre'}
+                  {lang === 'it' && 'Nome'}
+                  {lang === 'pt' && 'Nome'}
+                  {lang === 'nl' && 'Naam'}
+                  {lang === 'zh' && '姓名'}
+                  {lang === 'ar' && 'الاسم'}
+                  {lang === 'tr' && 'Ad'}
+                </label>
+                <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" required>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">
+                  {lang === 'en' && 'Email'}
+                  {lang === 'fr' && 'Email'}
+                  {lang === 'de' && 'E-Mail'}
+                  {lang === 'es' && 'Correo'}
+                  {lang === 'it' && 'Email'}
+                  {lang === 'pt' && 'Email'}
+                  {lang === 'nl' && 'E-mail'}
+                  {lang === 'zh' && '邮箱'}
+                  {lang === 'ar' && 'البريد الإلكتروني'}
+                  {lang === 'tr' && 'E-posta'}
+                </label>
+                <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" required>
+              </div>
+            </div>
+            
+            <div class="mb-6">
+              <label class="block text-sm font-medium text-gray-700 mb-2">
+                {lang === 'en' && 'Subject'}
+                {lang === 'fr' && 'Sujet'}
+                {lang === 'de' && 'Betreff'}
+                {lang === 'es' && 'Asunto'}
+                {lang === 'it' && 'Oggetto'}
+                {lang === 'pt' && 'Assunto'}
+                {lang === 'nl' && 'Onderwerp'}
+                {lang === 'zh' && '主题'}
+                {lang === 'ar' && 'الموضوع'}
+                {lang === 'tr' && 'Konu'}
+              </label>
+              <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" required>
+            </div>
+            
+            <div class="mb-6">
+              <label class="block text-sm font-medium text-gray-700 mb-2">
+                {lang === 'en' && 'Message'}
+                {lang === 'fr' && 'Message'}
+                {lang === 'de' && 'Nachricht'}
+                {lang === 'es' && 'Mensaje'}
+                {lang === 'it' && 'Messaggio'}
+                {lang === 'pt' && 'Mensagem'}
+                {lang === 'nl' && 'Bericht'}
+                {lang === 'zh' && '消息'}
+                {lang === 'ar' && 'الرسالة'}
+                {lang === 'tr' && 'Mesaj'}
+              </label>
+              <textarea rows="6" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" required></textarea>
+            </div>
+            
+            <button type="submit" class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+              {lang === 'en' && 'Send Message'}
+              {lang === 'fr' && 'Envoyer le Message'}
+              {lang === 'de' && 'Nachricht Senden'}
+              {lang === 'es' && 'Enviar Mensaje'}
+              {lang === 'it' && 'Invia Messaggio'}
+              {lang === 'pt' && 'Enviar Mensagem'}
+              {lang === 'nl' && 'Bericht Verzenden'}
+              {lang === 'zh' && '发送消息'}
+              {lang === 'ar' && 'إرسال الرسالة'}
+              {lang === 'tr' && 'Mesaj Gönder'}
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Help Resources Section -->
+      <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
+            {lang === 'en' && 'Help Resources'}
+            {lang === 'fr' && 'Ressources d\'Aide'}
+            {lang === 'de' && 'Hilfe-Ressourcen'}
+            {lang === 'es' && 'Recursos de Ayuda'}
+            {lang === 'it' && 'Risorse di Aiuto'}
+            {lang === 'pt' && 'Recursos de Ajuda'}
+            {lang === 'nl' && 'Hulpbronnen'}
+            {lang === 'zh' && '帮助资源'}
+            {lang === 'ar' && 'موارد المساعدة'}
+            {lang === 'tr' && 'Yardım Kaynakları'}
+          </h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="text-center">
+              <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold mb-2">
+                {lang === 'en' && 'Setup Guide'}
+                {lang === 'fr' && 'Guide d\'Installation'}
+                {lang === 'de' && 'Einrichtungsanleitung'}
+                {lang === 'es' && 'Guía de Configuración'}
+                {lang === 'it' && 'Guida di Configurazione'}
+                {lang === 'pt' && 'Guia de Configuração'}
+                {lang === 'nl' && 'Installatiegids'}
+                {lang === 'zh' && '设置指南'}
+                {lang === 'ar' && 'دليل الإعداد'}
+                {lang === 'tr' && 'Kurulum Kılavuzu'}
+              </h3>
+              <p class="text-gray-600 text-sm">
+                {lang === 'en' && 'Step-by-step setup instructions for all devices'}
+                {lang === 'fr' && 'Instructions d\'installation étape par étape pour tous les appareils'}
+                {lang === 'de' && 'Schritt-für-Schritt Einrichtungsanleitungen für alle Geräte'}
+                {lang === 'es' && 'Instrucciones de configuración paso a paso para todos los dispositivos'}
+                {lang === 'it' && 'Istruzioni di configurazione passo-passo per tutti i dispositivi'}
+                {lang === 'pt' && 'Instruções de configuração passo a passo para todos os dispositivos'}
+                {lang === 'nl' && 'Stap-voor-stap installatie-instructies voor alle apparaten'}
+                {lang === 'zh' && '所有设备的分步设置说明'}
+                {lang === 'ar' && 'تعليمات الإعداد خطوة بخطوة لجميع الأجهزة'}
+                {lang === 'tr' && 'Tüm cihazlar için adım adım kurulum talimatları'}
+              </p>
+            </div>
+
+            <div class="text-center">
+              <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold mb-2">
+                {lang === 'en' && 'Device Support'}
+                {lang === 'fr' && 'Support d\'Appareils'}
+                {lang === 'de' && 'Geräte-Support'}
+                {lang === 'es' && 'Soporte de Dispositivos'}
+                {lang === 'it' && 'Supporto Dispositivi'}
+                {lang === 'pt' && 'Suporte de Dispositivos'}
+                {lang === 'nl' && 'Apparaat Ondersteuning'}
+                {lang === 'zh' && '设备支持'}
+                {lang === 'ar' && 'دعم الأجهزة'}
+                {lang === 'tr' && 'Cihaz Desteği'}
+              </h3>
+              <p class="text-gray-600 text-sm">
+                {lang === 'en' && 'Compatible devices and troubleshooting tips'}
+                {lang === 'fr' && 'Appareils compatibles et conseils de dépannage'}
+                {lang === 'de' && 'Kompatible Geräte und Fehlerbehebungstipps'}
+                {lang === 'es' && 'Dispositivos compatibles y consejos de solución de problemas'}
+                {lang === 'it' && 'Dispositivi compatibili e suggerimenti per la risoluzione dei problemi'}
+                {lang === 'pt' && 'Dispositivos compatíveis e dicas de solução de problemas'}
+                {lang === 'nl' && 'Compatibele apparaten en troubleshooting tips'}
+                {lang === 'zh' && '兼容设备和故障排除提示'}
+                {lang === 'ar' && 'الأجهزة المتوافقة ونصائح استكشاف الأخطاء وإصلاحها'}
+                {lang === 'tr' && 'Uyumlu cihazlar ve sorun giderme ipuçları'}
+              </p>
+            </div>
+
+            <div class="text-center">
+              <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold mb-2">
+                {lang === 'en' && 'Troubleshooting'}
+                {lang === 'fr' && 'Dépannage'}
+                {lang === 'de' && 'Fehlerbehebung'}
+                {lang === 'es' && 'Solución de Problemas'}
+                {lang === 'it' && 'Risoluzione Problemi'}
+                {lang === 'pt' && 'Solução de Problemas'}
+                {lang === 'nl' && 'Probleemoplossing'}
+                {lang === 'zh' && '故障排除'}
+                {lang === 'ar' && 'استكشاف الأخطاء وإصلاحها'}
+                {lang === 'tr' && 'Sorun Giderme'}
+              </h3>
+              <p class="text-gray-600 text-sm">
+                {lang === 'en' && 'Common issues and their solutions'}
+                {lang === 'fr' && 'Problèmes courants et leurs solutions'}
+                {lang === 'de' && 'Häufige Probleme und ihre Lösungen'}
+                {lang === 'es' && 'Problemas comunes y sus soluciones'}
+                {lang === 'it' && 'Problemi comuni e le loro soluzioni'}
+                {lang === 'pt' && 'Problemas comuns e suas soluções'}
+                {lang === 'nl' && 'Veelvoorkomende problemen en hun oplossingen'}
+                {lang === 'zh' && '常见问题及其解决方案'}
+                {lang === 'ar' && 'المشاكل الشائعة وحلولها'}
+                {lang === 'tr' && 'Yaygın sorunlar ve çözümleri'}
+              </p>
+            </div>
+
+            <div class="text-center">
+              <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold mb-2">
+                {lang === 'en' && '24/7 Support'}
+                {lang === 'fr' && 'Support 24/7'}
+                {lang === 'de' && '24/7 Support'}
+                {lang === 'es' && 'Soporte 24/7'}
+                {lang === 'it' && 'Supporto 24/7'}
+                {lang === 'pt' && 'Suporte 24/7'}
+                {lang === 'nl' && '24/7 Ondersteuning'}
+                {lang === 'zh' && '24/7支持'}
+                {lang === 'ar' && 'دعم على مدار الساعة'}
+                {lang === 'tr' && '7/24 Destek'}
+              </h3>
+              <p class="text-gray-600 text-sm">
+                {lang === 'en' && 'Round-the-clock assistance for all your needs'}
+                {lang === 'fr' && 'Assistance 24h/24 pour tous vos besoins'}
+                {lang === 'de' && 'Rund-um-die-Uhr-Unterstützung für alle Ihre Bedürfnisse'}
+                {lang === 'es' && 'Asistencia las 24 horas para todas tus necesidades'}
+                {lang === 'it' && 'Assistenza 24 ore su 24 per tutte le tue esigenze'}
+                {lang === 'pt' && 'Assistência 24 horas para todas as suas necessidades'}
+                {lang === 'nl' && 'Rond-de-klok ondersteuning voor al je behoeften'}
+                {lang === 'zh' && '全天候满足您所有需求的协助'}
+                {lang === 'ar' && 'مساعدة على مدار الساعة لجميع احتياجاتك'}
+                {lang === 'tr' && 'Tüm ihtiyaçlarınız için 7/24 yardım'}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <Footer lang={lang} />
+  </body>
+</html>

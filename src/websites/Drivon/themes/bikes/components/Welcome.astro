@@ -11,6 +11,8 @@ interface BackgroundVideo {
   type?: 'youtube';
   videoId?: string;
   fallbackImage: string;
+  /** Alt text for fallback/poster image (SEO). */
+  fallbackImageAlt?: string;
   /** Single MP4 URL (used if slides not provided). */
   videoUrl?: string;
   videoUrlWebm?: string;
@@ -29,7 +31,7 @@ interface Props {
 const { title, description, blogLink, blogLinkText, backgroundVideo } = Astro.props;
 const useYoutube = backgroundVideo?.type === 'youtube' && backgroundVideo?.videoId;
 const youtubeEmbedUrl = useYoutube
-  ? `https://www.youtube.com/embed/${backgroundVideo.videoId}?autoplay=1&mute=1&loop=1&playlist=${backgroundVideo.videoId}&controls=0&showinfo=0&rel=0&playsinline=1&background=1`
+  ? `https://www.youtube-nocookie.com/embed/${backgroundVideo.videoId}?autoplay=1&mute=1&loop=1&playlist=${backgroundVideo.videoId}&controls=0&showinfo=0&rel=0&playsinline=1&background=1`
   : '';
 const slides = backgroundVideo?.slides?.length
   ? backgroundVideo.slides
@@ -89,9 +91,11 @@ const hasVideoSlider = !useYoutube && slides.length > 0;
     <div class="hero-bg-video absolute inset-0 z-0" aria-hidden="true">
       <img
         src={fallbackImg}
-        alt=""
+        alt={backgroundVideo?.fallbackImageAlt ?? 'Drivon automotive lifestyle hero background'}
         class="absolute inset-0 w-full h-full object-cover"
         fetchpriority="high"
+        width="1920"
+        height="1080"
       />
     </div>
   ) : null}

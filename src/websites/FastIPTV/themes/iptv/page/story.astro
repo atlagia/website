@@ -31,13 +31,13 @@ export async function getStaticPaths() {
 <html lang={lang} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
   <BaseHead 
     title={`Our Story | ${SITE_TITLE}`}
-    description="Learn about FastIPTV's journey to becoming the leading IPTV streaming service provider."
+    description={jsonData.storyPageDescription || "Learn about FastIPTV's journey to becoming the leading IPTV streaming service provider."}
     lang={lang}
   />
   <body class="bg-gray-50">
     <Header lang={lang} />
     
-    <main class="pt-20">
+    <main id="main-content" class="pt-20">
       <!-- Hero Section -->
       <section class="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
         <div class="max-w-7xl mx-auto px-4">

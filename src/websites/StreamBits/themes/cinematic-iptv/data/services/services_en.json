@@ -1,0 +1,95 @@
+{
+  "hero": {
+    "subtitle": "OUR SERVICES",
+    "title": "Comprehensive Dental Care for Your Entire Family",
+    "description": "Experience exceptional dental care with our range of services designed to maintain, restore, and enhance your smile. Our team of experienced professionals uses the latest technology to provide comfortable and effective treatments.",
+    "image": "https://cdn.atlagia.com/kepart_A_professional_and_inviting_dental_clinic_banner_featuri_ff02d49f-09d7-4eec-80dd-7dfc5f60a122.png"
+  },
+  "stats": [
+    {
+      "value": "15K+",
+      "label": "Happy Patients"
+    },
+    {
+      "value": "98%",
+      "label": "Patient Satisfaction"
+    }
+  ],
+  "services": [
+    {
+      "icon": "Tooth",
+      "title": "Preventive Dentistry",
+      "description": "Regular check-ups, cleanings, and preventive treatments to maintain your oral health and prevent future dental problems.",
+      "link": "/services/preventive",
+      "image": "https://cdn.atlagia.com/preventive-dentistry.png"
+    },
+    {
+      "icon": "Sparkles",
+      "title": "Cosmetic Dentistry",
+      "description": "Transform your smile with our range of cosmetic treatments including teeth whitening, veneers, and smile makeovers.",
+      "link": "/services/cosmetic",
+      "image": "https://cdn.atlagia.com/cosmetic-dentistry.png"
+    },
+    {
+      "icon": "HeartPulse",
+      "title": "Restorative Dentistry",
+      "description": "Restore damaged or missing teeth with crowns, bridges, implants, and other advanced restorative procedures.",
+      "link": "/services/restorative",
+      "image": "https://cdn.atlagia.com/restorative-dentistry.png"
+    }
+  ],
+  "awards": [
+    {
+      "title": "Excellence in Patient Care",
+      "description": "Recognized for our commitment to providing exceptional patient care and comfort during dental treatments.",
+      "year": "2023",
+      "image": "https://cdn.atlagia.com/award-patient-care.png"
+    },
+    {
+      "title": "Advanced Dental Technology",
+      "description": "Award for implementing cutting-edge dental technology to improve diagnosis, treatment, and patient experience.",
+      "year": "2023",
+      "image": "https://cdn.atlagia.com/award-technology.png"
+    },
+    {
+      "title": "Best Family Dental Practice",
+      "description": "Voted as the best family dental practice for providing comprehensive care for patients of all ages.",
+      "year": "2023",
+      "image": "https://cdn.atlagia.com/award-family.png"
+    },
+    {
+      "title": "Community Service Excellence",
+      "description": "Recognized for our commitment to community dental health education and outreach programs.",
+      "year": "2023",
+      "image": "https://cdn.atlagia.com/award-community.png"
+    }
+  ],
+  "workflow": {
+    "subtitle": "OUR APPROACH",
+    "title": "Patient-Centered Dental Care",
+    "description": "We believe in a personalized approach to dental care. Our team takes the time to understand your unique needs and concerns, creating customized treatment plans that prioritize your comfort and long-term oral health.",
+    "image": "https://cdn.atlagia.com/dental-approach.png",
+    "cta": {
+      "text": "Book an Appointment",
+      "link": "/appointment"
+    }
+  },
+  "platforms": [
+    {
+      "name": "American Dental Association",
+      "logo": "https://cdn.atlagia.com/ada-logo.png"
+    },
+    {
+      "name": "Academy of General Dentistry",
+      "logo": "https://cdn.atlagia.com/agd-logo.png"
+    },
+    {
+      "name": "American Academy of Pediatric Dentistry",
+      "logo": "https://cdn.atlagia.com/aapd-logo.png"
+    },
+    {
+      "name": "American Academy of Cosmetic Dentistry",
+      "logo": "https://cdn.atlagia.com/aacd-logo.png"
+    }
+  ]
+}

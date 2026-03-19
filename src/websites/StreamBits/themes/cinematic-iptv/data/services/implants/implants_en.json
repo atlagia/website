@@ -1,0 +1,241 @@
+{
+  "hero": {
+    "subtitle": "RESTORATIVE DENTISTRY",
+    "title": "Dental Implants",
+    "description": "Restore your smile with permanent, natural-looking dental implants - the gold standard in tooth replacement."
+  },
+  "overview": {
+    "title": "Advanced Implant Solutions",
+    "description": "Our state-of-the-art dental implant treatments provide a permanent solution for missing teeth, restoring both function and aesthetics.",
+    "features": [
+      {
+        "icon": "check-circle",
+        "title": "Permanent Solution",
+        "description": "Long-lasting tooth replacement"
+      },
+      {
+        "icon": "smile",
+        "title": "Natural Look",
+        "description": "Matches your existing teeth"
+      },
+      {
+        "icon": "zap",
+        "title": "Restored Function",
+        "description": "Eat and speak normally"
+      },
+      {
+        "icon": "shield",
+        "title": "Bone Preservation",
+        "description": "Prevents jaw bone loss"
+      }
+    ]
+  },
+  "types": {
+    "title": "Implant Solutions",
+    "description": "Customized treatments for your specific needs",
+    "options": [
+      {
+        "name": "Single Tooth Implant",
+        "description": "Replace individual missing teeth",
+        "features": [
+          "Natural-looking crown",
+          "Preserves adjacent teeth",
+          "Prevents bone loss",
+          "Lifetime solution"
+        ],
+        "price": "From $3,000",
+        "duration": "3-6 months",
+        "image": "/images/single-implant.jpg"
+      },
+      {
+        "name": "Multiple Teeth Implants",
+        "description": "Replace several missing teeth",
+        "features": [
+          "Implant-supported bridge",
+          "Improved stability",
+          "Natural function",
+          "Cost-effective solution"
+        ],
+        "price": "From $6,000",
+        "duration": "4-8 months",
+        "image": "/images/multiple-implants.jpg"
+      },
+      {
+        "name": "Full Arch Restoration",
+        "description": "Complete smile restoration",
+        "features": [
+          "All-on-4 technique",
+          "Immediate function",
+          "Full arch stability",
+          "Permanent solution"
+        ],
+        "price": "From $15,000",
+        "duration": "4-6 months",
+        "image": "/images/full-arch.jpg"
+      }
+    ]
+  },
+  "process": {
+    "title": "Implant Treatment Process",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Consultation",
+        "description": "Comprehensive evaluation and 3D imaging"
+      },
+      {
+        "number": "02",
+        "title": "Treatment Planning",
+        "description": "Custom implant placement strategy"
+      },
+      {
+        "number": "03",
+        "title": "Implant Surgery",
+        "description": "Precise implant placement"
+      },
+      {
+        "number": "04",
+        "title": "Healing Period",
+        "description": "Osseointegration process"
+      },
+      {
+        "number": "05",
+        "title": "Final Restoration",
+        "description": "Crown or prosthetic placement"
+      }
+    ]
+  },
+  "technology": {
+    "title": "Advanced Technology",
+    "description": "State-of-the-art tools for precise treatment",
+    "features": [
+      {
+        "title": "3D Imaging",
+        "description": "Precise treatment planning",
+        "icon": "scan"
+      },
+      {
+        "title": "Computer-Guided Surgery",
+        "description": "Accurate implant placement",
+        "icon": "cpu"
+      },
+      {
+        "title": "Digital Impressions",
+        "description": "Comfortable, accurate fitting",
+        "icon": "camera"
+      },
+      {
+        "title": "CAD/CAM Technology",
+        "description": "Custom prosthetic design",
+        "icon": "layers"
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Why Choose Dental Implants",
+    "items": [
+      {
+        "title": "Permanent Solution",
+        "description": "Long-lasting tooth replacement",
+        "icon": "clock"
+      },
+      {
+        "title": "Natural Function",
+        "description": "Eat and speak normally",
+        "icon": "utensils"
+      },
+      {
+        "title": "Bone Health",
+        "description": "Prevents jaw deterioration",
+        "icon": "activity"
+      },
+      {
+        "title": "Improved Confidence",
+        "description": "Beautiful, natural smile",
+        "icon": "star"
+      }
+    ]
+  },
+  "candidacy": {
+    "title": "Are You a Candidate?",
+    "requirements": [
+      "Healthy gums",
+      "Adequate bone density",
+      "Good overall health",
+      "Non-smoker or willing to quit",
+      "Commitment to oral hygiene"
+    ]
+  },
+  "care": {
+    "title": "Implant Care Instructions",
+    "description": "Maintain your implants for long-term success",
+    "instructions": [
+      "Brush twice daily",
+      "Floss around implants",
+      "Use recommended cleaning tools",
+      "Regular dental check-ups",
+      "Avoid hard foods initially"
+    ]
+  },
+  "faq": {
+    "title": "Common Questions About Implants",
+    "questions": [
+      {
+        "question": "How long do dental implants last?",
+        "answer": "With proper care, dental implants can last a lifetime. The crown may need replacement after 10-15 years due to normal wear."
+      },
+      {
+        "question": "Is the implant procedure painful?",
+        "answer": "The procedure is performed under local anesthesia, ensuring you're comfortable. Any post-procedure discomfort can be managed with prescribed medication."
+      },
+      {
+        "question": "How long is the recovery period?",
+        "answer": "Initial healing takes 1-2 weeks, but complete osseointegration (bone fusion) takes 3-6 months."
+      },
+      {
+        "question": "Will insurance cover implants?",
+        "answer": "Many dental insurance plans provide partial coverage for implants. We offer financing options to help make treatment affordable."
+      }
+    ]
+  },
+  "financing": {
+    "title": "Investment in Your Smile",
+    "description": "Flexible payment options available",
+    "options": [
+      "0% interest payment plans",
+      "Major insurance accepted",
+      "FSA/HSA eligible",
+      "CareCredit financing",
+      "Multiple payment options"
+    ]
+  },
+  "testimonials": {
+    "title": "Patient Success Stories",
+    "reviews": [
+      {
+        "name": "Robert M.",
+        "rating": 5,
+        "comment": "My implant feels and looks just like a natural tooth. Best decision I've made for my dental health!",
+        "date": "2 weeks ago"
+      },
+      {
+        "name": "Linda K.",
+        "rating": 5,
+        "comment": "The entire process was smooth and professional. I can finally eat normally again!",
+        "date": "1 month ago"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Restore Your Smile?",
+    "description": "Schedule your consultation today to learn if dental implants are right for you.",
+    "primaryButton": {
+      "text": "Book Consultation",
+      "href": "/booking"
+    },
+    "secondaryButton": {
+      "text": "Learn More",
+      "href": "/contact"
+    }
+  }
+} 

@@ -1,0 +1,209 @@
+{
+  "hero": {
+    "title": "Resources & Learning Center",
+    "description": "Explore our comprehensive collection of guides, tutorials, and tools to help you master digital marketing and grow your business."
+  },
+  "featuredSection": {
+    "title": "Featured Resources"
+  },
+  "featuredResources": [
+    {
+      "title": "Digital Marketing Playbook",
+      "description": "A comprehensive guide to building and executing successful digital marketing strategies.",
+      "icon": "BookOpen",
+      "link": "/resources/digital-marketing-playbook"
+    },
+    {
+      "title": "SEO Best Practices 2024",
+      "description": "Learn the latest SEO techniques and strategies to improve your website's visibility.",
+      "icon": "Target",
+      "link": "/resources/seo-best-practices"
+    },
+    {
+      "title": "Social Media Strategy Kit",
+      "description": "Templates and tools to create engaging social media content and grow your audience.",
+      "icon": "Users",
+      "link": "/resources/social-media-kit"
+    }
+  ],
+  "categoriesSection": {
+    "title": "Browse by Category"
+  },
+  "categories": [
+    {
+      "title": "Getting Started",
+      "icon": "Rocket",
+      "resources": [
+        {
+          "title": "Digital Marketing Fundamentals",
+          "link": "/resources/digital-marketing-fundamentals"
+        },
+        {
+          "title": "Website Optimization Guide",
+          "link": "/resources/website-optimization"
+        },
+        {
+          "title": "Content Strategy Basics",
+          "link": "/resources/content-strategy"
+        }
+      ]
+    },
+    {
+      "title": "Analytics & Data",
+      "icon": "BarChart",
+      "resources": [
+        {
+          "title": "Google Analytics Setup",
+          "link": "/resources/google-analytics"
+        },
+        {
+          "title": "Data-Driven Decision Making",
+          "link": "/resources/data-driven-decisions"
+        },
+        {
+          "title": "Conversion Tracking Guide",
+          "link": "/resources/conversion-tracking"
+        }
+      ]
+    },
+    {
+      "title": "Content Creation",
+      "icon": "FileText",
+      "resources": [
+        {
+          "title": "Content Writing Tips",
+          "link": "/resources/content-writing"
+        },
+        {
+          "title": "Visual Content Guide",
+          "link": "/resources/visual-content"
+        },
+        {
+          "title": "Video Marketing Basics",
+          "link": "/resources/video-marketing"
+        }
+      ]
+    },
+    {
+      "title": "Social Media",
+      "icon": "MessageSquare",
+      "resources": [
+        {
+          "title": "Platform-specific Strategies",
+          "link": "/resources/social-platforms"
+        },
+        {
+          "title": "Community Management",
+          "link": "/resources/community-management"
+        },
+        {
+          "title": "Social Media Calendar",
+          "link": "/resources/social-calendar"
+        }
+      ]
+    },
+    {
+      "title": "Technical SEO",
+      "icon": "FileCode",
+      "resources": [
+        {
+          "title": "Technical Audit Checklist",
+          "link": "/resources/technical-audit"
+        },
+        {
+          "title": "Schema Markup Guide",
+          "link": "/resources/schema-markup"
+        },
+        {
+          "title": "Mobile Optimization",
+          "link": "/resources/mobile-optimization"
+        }
+      ]
+    },
+    {
+      "title": "Growth Strategies",
+      "icon": "Lightbulb",
+      "resources": [
+        {
+          "title": "Lead Generation Guide",
+          "link": "/resources/lead-generation"
+        },
+        {
+          "title": "Email Marketing Strategy",
+          "link": "/resources/email-marketing"
+        },
+        {
+          "title": "Marketing Automation",
+          "link": "/resources/marketing-automation"
+        }
+      ]
+    }
+  ],
+  "articlesSection": {
+    "title": "Latest Articles"
+  },
+  "latestArticles": [
+    {
+      "title": "10 SEO Trends to Watch in 2024",
+      "excerpt": "Stay ahead of the curve with these emerging SEO trends that will shape the digital landscape in 2024.",
+      "category": "SEO",
+      "readTime": 8,
+      "image": "/images/blog/seo-trends.jpg",
+      "link": "/blog/seo-trends-2024"
+    },
+    {
+      "title": "The Ultimate Guide to Content Marketing",
+      "excerpt": "Learn how to create and distribute valuable content that attracts and retains your target audience.",
+      "category": "Content",
+      "readTime": 12,
+      "image": "/images/blog/content-marketing.jpg",
+      "link": "/blog/content-marketing-guide"
+    },
+    {
+      "title": "Social Media Analytics: Measuring Success",
+      "excerpt": "Discover the key metrics and tools to measure and improve your social media performance.",
+      "category": "Social Media",
+      "readTime": 10,
+      "image": "/images/blog/social-analytics.jpg",
+      "link": "/blog/social-media-analytics"
+    }
+  ],
+  "downloadablesSection": {
+    "title": "Free Resources"
+  },
+  "downloadables": [
+    {
+      "title": "Social Media Calendar Template",
+      "description": "Plan and organize your social media content with our easy-to-use template.",
+      "icon": "Calendar",
+      "fileType": "Excel Template",
+      "link": "/downloads/social-media-calendar.xlsx"
+    },
+    {
+      "title": "SEO Audit Checklist",
+      "description": "Comprehensive checklist to evaluate and improve your website's SEO performance.",
+      "icon": "CheckCircle",
+      "fileType": "PDF Guide",
+      "link": "/downloads/seo-audit-checklist.pdf"
+    },
+    {
+      "title": "Marketing Plan Template",
+      "description": "Strategic template to plan and execute your digital marketing campaigns.",
+      "icon": "Target",
+      "fileType": "PowerPoint Template",
+      "link": "/downloads/marketing-plan-template.pptx"
+    }
+  ],
+  "cta": {
+    "title": "Ready to Level Up Your Digital Marketing?",
+    "description": "Get started with our comprehensive resources and expert guidance",
+    "primaryButton": {
+      "text": "Browse Resources",
+      "link": "/resources"
+    },
+    "secondaryButton": {
+      "text": "Contact Us",
+      "link": "/contact"
+    }
+  }
+} 

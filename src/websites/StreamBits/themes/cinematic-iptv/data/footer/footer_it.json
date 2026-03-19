@@ -1,0 +1,156 @@
+{
+  "company": {
+    "title": "Azienda",
+    "links": [
+      {
+        "name": "Chi Siamo",
+        "href": "/about"
+      },
+      {
+        "name": "La Nostra Storia",
+        "href": "/story"
+      },
+      {
+        "name": "Stampa",
+        "href": "/press"
+      },
+      {
+        "name": "Blog",
+        "href": "/blog"
+      },
+      {
+        "name": "Contatto",
+        "href": "/contact"
+      }
+    ]
+  },
+  "services": {
+    "title": "Servizi",
+    "links": [
+      {
+        "name": "TV dal Vivo",
+        "href": "/channels"
+      },
+      {
+        "name": "Film",
+        "href": "/movies"
+      },
+      {
+        "name": "Programmi TV",
+        "href": "/shows"
+      },
+      {
+        "name": "Sport",
+        "href": "/sports"
+      },
+      {
+        "name": "Notizie",
+        "href": "/news"
+      }
+    ]
+  },
+  "support": {
+    "title": "Supporto",
+    "links": [
+      {
+        "name": "Centro Assistenza",
+        "href": "/help"
+      },
+      {
+        "name": "Guida Installazione",
+        "href": "/setup"
+      },
+      {
+        "name": "FAQ",
+        "href": "/faq"
+      },
+      {
+        "name": "Contatta Supporto",
+        "href": "/support"
+      },
+      {
+        "name": "Status",
+        "href": "/status"
+      }
+    ]
+  },
+  "legal": {
+    "title": "Legale",
+    "links": [
+      {
+        "name": "Informativa Privacy",
+        "href": "/privacy"
+      },
+      {
+        "name": "Termini di Servizio",
+        "href": "/terms"
+      },
+      {
+        "name": "Informativa Cookie",
+        "href": "/cookie-policy"
+      },
+      {
+        "name": "DMCA",
+        "href": "/dmca"
+      },
+      {
+        "name": "Politica Rimborsi",
+        "href": "/refund"
+      }
+    ]
+  },
+  "social": {
+    "title": "Seguici",
+    "links": [
+      {
+        "name": "Facebook",
+        "href": "https://facebook.com/fastiptv",
+        "icon": "facebook"
+      },
+      {
+        "name": "Twitter",
+        "href": "https://twitter.com/fastiptv",
+        "icon": "twitter"
+      },
+      {
+        "name": "Instagram",
+        "href": "https://instagram.com/fastiptv",
+        "icon": "instagram"
+      },
+      {
+        "name": "YouTube",
+        "href": "https://youtube.com/fastiptv",
+        "icon": "youtube"
+      },
+      {
+        "name": "Telegram",
+        "href": "https://t.me/fastiptv",
+        "icon": "telegram"
+      },
+      {
+        "name": "GitHub",
+        "href": "https://github.com/fastiptv",
+        "icon": "github"
+      }
+    ]
+  },
+  "newsletter": {
+    "title": "Rimani Aggiornato",
+    "description": "Ricevi gli ultimi aggiornamenti su nuovi canali, funzionalità e offerte esclusive.",
+    "buttonText": "Iscriviti",
+    "placeholderText": "Inserisci la tua email"
+  },
+  "copyright": {
+    "text": "© 2024 FastIPTV. Tutti i diritti riservati.",
+    "links": [
+      {
+        "name": "Informativa Privacy",
+        "href": "/privacy"
+      },
+      {
+        "name": "Termini di Servizio",
+        "href": "/terms"
+      }
+    ]
+  }
+}

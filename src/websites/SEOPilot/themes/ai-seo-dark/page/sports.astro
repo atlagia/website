@@ -1,0 +1,578 @@
+---
+import { getLangFromUrl, useTranslations } from '@utils/i18n';
+
+const { lang } = Astro.params;
+
+// Import components
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+
+// Get translations
+const translations = await useTranslations(lang);
+const jsonData = translations.default;
+
+// Get site title and description from language-specific data
+const SITE_TITLE = jsonData.siteTitle || 'FastIPTV';
+const SITE_DESCRIPTION = jsonData.siteDescription || 'Premium IPTV Streaming Service';
+
+// Generate static paths for all supported languages
+export async function getStaticPaths() {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  const languages = allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+  
+  return languages.map(lang => ({
+    params: { lang }
+  }));
+}
+---
+
+<!doctype html>
+<html lang={lang} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
+  <BaseHead 
+    title={`Sports | ${SITE_TITLE}`}
+    description="Watch live sports, matches, and tournaments from around the world with FastIPTV."
+    lang={lang}
+  />
+  <body class="bg-gray-50">
+    <Header lang={lang} />
+    
+    <main class="pt-20">
+      <!-- Hero Section -->
+      <section class="bg-gradient-to-r from-green-600 to-blue-700 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4">
+          <div class="text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">
+              {lang === 'en' && 'Sports'}
+              {lang === 'fr' && 'Sport'}
+              {lang === 'de' && 'Sport'}
+              {lang === 'es' && 'Deportes'}
+              {lang === 'it' && 'Sport'}
+              {lang === 'pt' && 'Esportes'}
+              {lang === 'nl' && 'Sport'}
+              {lang === 'zh' && '体育'}
+              {lang === 'ar' && 'الرياضة'}
+              {lang === 'tr' && 'Spor'}
+            </h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto opacity-90">
+              {lang === 'en' && 'Never miss a game with live sports streaming from around the world'}
+              {lang === 'fr' && 'Ne manquez jamais un match avec le streaming sportif en direct du monde entier'}
+              {lang === 'de' && 'Verpassen Sie nie ein Spiel mit Live-Sport-Streaming aus der ganzen Welt'}
+              {lang === 'es' && 'Nunca te pierdas un juego con transmisión deportiva en vivo de todo el mundo'}
+              {lang === 'it' && 'Non perdere mai una partita con lo streaming sportivo in diretta da tutto il mondo'}
+              {lang === 'pt' && 'Nunca perca um jogo com transmissão esportiva ao vivo de todo o mundo'}
+              {lang === 'nl' && 'Mis nooit een wedstrijd met live sportstreaming van over de hele wereld'}
+              {lang === 'zh' && '通过来自世界各地的现场体育流媒体，永远不要错过比赛'}
+              {lang === 'ar' && 'لا تفوت أبداً مباراة مع البث الرياضي المباشر من جميع أنحاء العالم'}
+              {lang === 'tr' && 'Dünya çapında canlı spor yayını ile asla bir maçı kaçırmayın'}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Live Sports Section -->
+      <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
+            {lang === 'en' && 'Live Sports'}
+            {lang === 'fr' && 'Sports en Direct'}
+            {lang === 'de' && 'Live-Sport'}
+            {lang === 'es' && 'Deportes en Vivo'}
+            {lang === 'it' && 'Sport in Diretta'}
+            {lang === 'pt' && 'Esportes ao Vivo'}
+            {lang === 'nl' && 'Live Sport'}
+            {lang === 'zh' && '现场体育'}
+            {lang === 'ar' && 'الرياضة المباشرة'}
+            {lang === 'tr' && 'Canlı Spor'}
+          </h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+              <div class="h-48 bg-gradient-to-br from-green-400 to-blue-500 flex items-center justify-center">
+                <div class="text-center text-white">
+                  <div class="text-4xl font-bold mb-2">⚽</div>
+                  <h3 class="text-xl font-semibold">
+                    {lang === 'en' && 'Football'}
+                    {lang === 'fr' && 'Football'}
+                    {lang === 'de' && 'Fußball'}
+                    {lang === 'es' && 'Fútbol'}
+                    {lang === 'it' && 'Calcio'}
+                    {lang === 'pt' && 'Futebol'}
+                    {lang === 'nl' && 'Voetbal'}
+                    {lang === 'zh' && '足球'}
+                    {lang === 'ar' && 'كرة القدم'}
+                    {lang === 'tr' && 'Futbol'}
+                  </h3>
+                </div>
+              </div>
+              <div class="p-6">
+                <p class="text-gray-600 mb-4">
+                  {lang === 'en' && 'Premier League, Champions League, World Cup, and more'}
+                  {lang === 'fr' && 'Premier League, Ligue des Champions, Coupe du Monde, et plus'}
+                  {lang === 'de' && 'Premier League, Champions League, Weltmeisterschaft und mehr'}
+                  {lang === 'es' && 'Premier League, Champions League, Copa del Mundo y más'}
+                  {lang === 'it' && 'Premier League, Champions League, Coppa del Mondo e altro'}
+                  {lang === 'pt' && 'Premier League, Champions League, Copa do Mundo e mais'}
+                  {lang === 'nl' && 'Premier League, Champions League, Wereldkampioenschap en meer'}
+                  {lang === 'zh' && '英超联赛、冠军联赛、世界杯等'}
+                  {lang === 'ar' && 'الدوري الإنجليزي، دوري الأبطال، كأس العالم، والمزيد'}
+                  {lang === 'tr' && 'Premier League, Şampiyonlar Ligi, Dünya Kupası ve daha fazlası'}
+                </p>
+                <a href={`/${lang}/channels`} class="text-blue-600 hover:text-blue-800 font-medium">
+                  {lang === 'en' && 'Watch Now →'}
+                  {lang === 'fr' && 'Regarder Maintenant →'}
+                  {lang === 'de' && 'Jetzt Ansehen →'}
+                  {lang === 'es' && 'Ver Ahora →'}
+                  {lang === 'it' && 'Guarda Ora →'}
+                  {lang === 'pt' && 'Assistir Agora →'}
+                  {lang === 'nl' && 'Bekijk Nu →'}
+                  {lang === 'zh' && '立即观看 →'}
+                  {lang === 'ar' && 'شاهد الآن →'}
+                  {lang === 'tr' && 'Şimdi İzle →'}
+                </a>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+              <div class="h-48 bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center">
+                <div class="text-center text-white">
+                  <div class="text-4xl font-bold mb-2">🏀</div>
+                  <h3 class="text-xl font-semibold">
+                    {lang === 'en' && 'Basketball'}
+                    {lang === 'fr' && 'Basketball'}
+                    {lang === 'de' && 'Basketball'}
+                    {lang === 'es' && 'Baloncesto'}
+                    {lang === 'it' && 'Pallacanestro'}
+                    {lang === 'pt' && 'Basquete'}
+                    {lang === 'nl' && 'Basketbal'}
+                    {lang === 'zh' && '篮球'}
+                    {lang === 'ar' && 'كرة السلة'}
+                    {lang === 'tr' && 'Basketbol'}
+                  </h3>
+                </div>
+              </div>
+              <div class="p-6">
+                <p class="text-gray-600 mb-4">
+                  {lang === 'en' && 'NBA, EuroLeague, NCAA, and international tournaments'}
+                  {lang === 'fr' && 'NBA, EuroLeague, NCAA et tournois internationaux'}
+                  {lang === 'de' && 'NBA, EuroLeague, NCAA und internationale Turniere'}
+                  {lang === 'es' && 'NBA, EuroLeague, NCAA y torneos internacionales'}
+                  {lang === 'it' && 'NBA, EuroLeague, NCAA e tornei internazionali'}
+                  {lang === 'pt' && 'NBA, EuroLeague, NCAA e torneios internacionais'}
+                  {lang === 'nl' && 'NBA, EuroLeague, NCAA en internationale toernooien'}
+                  {lang === 'zh' && 'NBA、欧洲联赛、NCAA和国际锦标赛'}
+                  {lang === 'ar' && 'NBA، الدوري الأوروبي، NCAA، والبطولات الدولية'}
+                  {lang === 'tr' && 'NBA, EuroLeague, NCAA ve uluslararası turnuvalar'}
+                </p>
+                <a href={`/${lang}/channels`} class="text-blue-600 hover:text-blue-800 font-medium">
+                  {lang === 'en' && 'Watch Now →'}
+                  {lang === 'fr' && 'Regarder Maintenant →'}
+                  {lang === 'de' && 'Jetzt Ansehen →'}
+                  {lang === 'es' && 'Ver Ahora →'}
+                  {lang === 'it' && 'Guarda Ora →'}
+                  {lang === 'pt' && 'Assistir Agora →'}
+                  {lang === 'nl' && 'Bekijk Nu →'}
+                  {lang === 'zh' && '立即观看 →'}
+                  {lang === 'ar' && 'شاهد الآن →'}
+                  {lang === 'tr' && 'Şimdi İzle →'}
+                </a>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+              <div class="h-48 bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center">
+                <div class="text-center text-white">
+                  <div class="text-4xl font-bold mb-2">🏈</div>
+                  <h3 class="text-xl font-semibold">
+                    {lang === 'en' && 'American Football'}
+                    {lang === 'fr' && 'Football Américain'}
+                    {lang === 'de' && 'American Football'}
+                    {lang === 'es' && 'Fútbol Americano'}
+                    {lang === 'it' && 'Football Americano'}
+                    {lang === 'pt' && 'Futebol Americano'}
+                    {lang === 'nl' && 'American Football'}
+                    {lang === 'zh' && '美式足球'}
+                    {lang === 'ar' && 'كرة القدم الأمريكية'}
+                    {lang === 'tr' && 'Amerikan Futbolu'}
+                  </h3>
+                </div>
+              </div>
+              <div class="p-6">
+                <p class="text-gray-600 mb-4">
+                  {lang === 'en' && 'NFL, College Football, and Super Bowl coverage'}
+                  {lang === 'fr' && 'NFL, Football Universitaire et couverture du Super Bowl'}
+                  {lang === 'de' && 'NFL, College Football und Super Bowl Berichterstattung'}
+                  {lang === 'es' && 'NFL, Fútbol Universitario y cobertura del Super Bowl'}
+                  {lang === 'it' && 'NFL, College Football e copertura del Super Bowl'}
+                  {lang === 'pt' && 'NFL, Futebol Universitário e cobertura do Super Bowl'}
+                  {lang === 'nl' && 'NFL, College Football en Super Bowl dekking'}
+                  {lang === 'zh' && 'NFL、大学橄榄球和超级碗报道'}
+                  {lang === 'ar' && 'NFL، كرة القدم الجامعية، وتغطية السوبر بول'}
+                  {lang === 'tr' && 'NFL, Üniversite Futbolu ve Super Bowl kapsamı'}
+                </p>
+                <a href={`/${lang}/channels`} class="text-blue-600 hover:text-blue-800 font-medium">
+                  {lang === 'en' && 'Watch Now →'}
+                  {lang === 'fr' && 'Regarder Maintenant →'}
+                  {lang === 'de' && 'Jetzt Ansehen →'}
+                  {lang === 'es' && 'Ver Ahora →'}
+                  {lang === 'it' && 'Guarda Ora →'}
+                  {lang === 'pt' && 'Assistir Agora →'}
+                  {lang === 'nl' && 'Bekijk Nu →'}
+                  {lang === 'zh' && '立即观看 →'}
+                  {lang === 'ar' && 'شاهد الآن →'}
+                  {lang === 'tr' && 'Şimdi İzle →'}
+                </a>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+              <div class="h-48 bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center">
+                <div class="text-center text-white">
+                  <div class="text-4xl font-bold mb-2">🎾</div>
+                  <h3 class="text-xl font-semibold">
+                    {lang === 'en' && 'Tennis'}
+                    {lang === 'fr' && 'Tennis'}
+                    {lang === 'de' && 'Tennis'}
+                    {lang === 'es' && 'Tenis'}
+                    {lang === 'it' && 'Tennis'}
+                    {lang === 'pt' && 'Tênis'}
+                    {lang === 'nl' && 'Tennis'}
+                    {lang === 'zh' && '网球'}
+                    {lang === 'ar' && 'التنس'}
+                    {lang === 'tr' && 'Tenis'}
+                  </h3>
+                </div>
+              </div>
+              <div class="p-6">
+                <p class="text-gray-600 mb-4">
+                  {lang === 'en' && 'Wimbledon, US Open, French Open, Australian Open'}
+                  {lang === 'fr' && 'Wimbledon, US Open, Roland Garros, Open d\'Australie'}
+                  {lang === 'de' && 'Wimbledon, US Open, French Open, Australian Open'}
+                  {lang === 'es' && 'Wimbledon, US Open, Roland Garros, Abierto de Australia'}
+                  {lang === 'it' && 'Wimbledon, US Open, Roland Garros, Australian Open'}
+                  {lang === 'pt' && 'Wimbledon, US Open, Roland Garros, Australian Open'}
+                  {lang === 'nl' && 'Wimbledon, US Open, Roland Garros, Australian Open'}
+                  {lang === 'zh' && '温布尔登、美网、法网、澳网'}
+                  {lang === 'ar' && 'ويمبلدون، أمريكا المفتوحة، فرنسا المفتوحة، أستراليا المفتوحة'}
+                  {lang === 'tr' && 'Wimbledon, US Open, Fransa Açık, Avustralya Açık'}
+                </p>
+                <a href={`/${lang}/channels`} class="text-blue-600 hover:text-blue-800 font-medium">
+                  {lang === 'en' && 'Watch Now →'}
+                  {lang === 'fr' && 'Regarder Maintenant →'}
+                  {lang === 'de' && 'Jetzt Ansehen →'}
+                  {lang === 'es' && 'Ver Ahora →'}
+                  {lang === 'it' && 'Guarda Ora →'}
+                  {lang === 'pt' && 'Assistir Agora →'}
+                  {lang === 'nl' && 'Bekijk Nu →'}
+                  {lang === 'zh' && '立即观看 →'}
+                  {lang === 'ar' && 'شاهد الآن →'}
+                  {lang === 'tr' && 'Şimdi İzle →'}
+                </a>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+              <div class="h-48 bg-gradient-to-br from-red-400 to-pink-500 flex items-center justify-center">
+                <div class="text-center text-white">
+                  <div class="text-4xl font-bold mb-2">🏎️</div>
+                  <h3 class="text-xl font-semibold">
+                    {lang === 'en' && 'Formula 1'}
+                    {lang === 'fr' && 'Formule 1'}
+                    {lang === 'de' && 'Formel 1'}
+                    {lang === 'es' && 'Fórmula 1'}
+                    {lang === 'it' && 'Formula 1'}
+                    {lang === 'pt' && 'Fórmula 1'}
+                    {lang === 'nl' && 'Formule 1'}
+                    {lang === 'zh' && '一级方程式'}
+                    {lang === 'ar' && 'فورمولا 1'}
+                    {lang === 'tr' && 'Formula 1'}
+                  </h3>
+                </div>
+              </div>
+              <div class="p-6">
+                <p class="text-gray-600 mb-4">
+                  {lang === 'en' && 'F1 races, qualifying, and practice sessions'}
+                  {lang === 'fr' && 'Courses F1, qualifications et séances d\'entraînement'}
+                  {lang === 'de' && 'F1-Rennen, Qualifikation und Trainingssitzungen'}
+                  {lang === 'es' && 'Carreras F1, clasificación y sesiones de práctica'}
+                  {lang === 'it' && 'Gare F1, qualifiche e sessioni di pratica'}
+                  {lang === 'pt' && 'Corridas F1, classificação e sessões de treino'}
+                  {lang === 'nl' && 'F1-races, kwalificatie en trainingssessies'}
+                  {lang === 'zh' && 'F1比赛、排位赛和练习赛'}
+                  {lang === 'ar' && 'سباقات F1، التصفيات، وجلسات التدريب'}
+                  {lang === 'tr' && 'F1 yarışları, eleme ve antrenman seansları'}
+                </p>
+                <a href={`/${lang}/channels`} class="text-blue-600 hover:text-blue-800 font-medium">
+                  {lang === 'en' && 'Watch Now →'}
+                  {lang === 'fr' && 'Regarder Maintenant →'}
+                  {lang === 'de' && 'Jetzt Ansehen →'}
+                  {lang === 'es' && 'Ver Ahora →'}
+                  {lang === 'it' && 'Guarda Ora →'}
+                  {lang === 'pt' && 'Assistir Agora →'}
+                  {lang === 'nl' && 'Bekijk Nu →'}
+                  {lang === 'zh' && '立即观看 →'}
+                  {lang === 'ar' && 'شاهد الآن →'}
+                  {lang === 'tr' && 'Şimdi İzle →'}
+                </a>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+              <div class="h-48 bg-gradient-to-br from-indigo-400 to-blue-500 flex items-center justify-center">
+                <div class="text-center text-white">
+                  <div class="text-4xl font-bold mb-2">🏒</div>
+                  <h3 class="text-xl font-semibold">
+                    {lang === 'en' && 'Hockey'}
+                    {lang === 'fr' && 'Hockey'}
+                    {lang === 'de' && 'Hockey'}
+                    {lang === 'es' && 'Hockey'}
+                    {lang === 'it' && 'Hockey'}
+                    {lang === 'pt' && 'Hóquei'}
+                    {lang === 'nl' && 'Hockey'}
+                    {lang === 'zh' && '曲棍球'}
+                    {lang === 'ar' && 'الهوكي'}
+                    {lang === 'tr' && 'Hokey'}
+                  </h3>
+                </div>
+              </div>
+              <div class="p-6">
+                <p class="text-gray-600 mb-4">
+                  {lang === 'en' && 'NHL, World Championships, and Olympic coverage'}
+                  {lang === 'fr' && 'LNH, Championnats du Monde et couverture olympique'}
+                  {lang === 'de' && 'NHL, Weltmeisterschaften und Olympia-Berichterstattung'}
+                  {lang === 'es' && 'NHL, Campeonatos del Mundo y cobertura olímpica'}
+                  {lang === 'it' && 'NHL, Campionati del Mondo e copertura olimpica'}
+                  {lang === 'pt' && 'NHL, Campeonatos Mundiais e cobertura olímpica'}
+                  {lang === 'nl' && 'NHL, Wereldkampioenschappen en Olympische dekking'}
+                  {lang === 'zh' && 'NHL、世界锦标赛和奥运会报道'}
+                  {lang === 'ar' && 'NHL، بطولات العالم، وتغطية الأولمبياد'}
+                  {lang === 'tr' && 'NHL, Dünya Şampiyonaları ve Olimpiyat kapsamı'}
+                </p>
+                <a href={`/${lang}/channels`} class="text-blue-600 hover:text-blue-800 font-medium">
+                  {lang === 'en' && 'Watch Now →'}
+                  {lang === 'fr' && 'Regarder Maintenant →'}
+                  {lang === 'de' && 'Jetzt Ansehen →'}
+                  {lang === 'es' && 'Ver Ahora →'}
+                  {lang === 'it' && 'Guarda Ora →'}
+                  {lang === 'pt' && 'Assistir Agora →'}
+                  {lang === 'nl' && 'Bekijk Nu →'}
+                  {lang === 'zh' && '立即观看 →'}
+                  {lang === 'ar' && 'شاهد الآن →'}
+                  {lang === 'tr' && 'Şimdi İzle →'}
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section class="bg-white py-20">
+        <div class="max-w-7xl mx-auto px-4">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              {lang === 'en' && 'Why Choose FastIPTV for Sports?'}
+              {lang === 'fr' && 'Pourquoi Choisir FastIPTV pour le Sport?'}
+              {lang === 'de' && 'Warum FastIPTV für Sport Wählen?'}
+              {lang === 'es' && '¿Por Qué Elegir FastIPTV para Deportes?'}
+              {lang === 'it' && 'Perché Scegliere FastIPTV per lo Sport?'}
+              {lang === 'pt' && 'Por Que Escolher FastIPTV para Esportes?'}
+              {lang === 'nl' && 'Waarom FastIPTV Kiezen voor Sport?'}
+              {lang === 'zh' && '为什么选择FastIPTV观看体育？'}
+              {lang === 'ar' && 'لماذا تختار FastIPTV للرياضة؟'}
+              {lang === 'tr' && 'Spor için Neden FastIPTV Seçmelisiniz?'}
+            </h2>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="text-center">
+              <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold mb-2">
+                {lang === 'en' && 'Live Streaming'}
+                {lang === 'fr' && 'Streaming en Direct'}
+                {lang === 'de' && 'Live-Streaming'}
+                {lang === 'es' && 'Transmisión en Vivo'}
+                {lang === 'it' && 'Streaming in Diretta'}
+                {lang === 'pt' && 'Transmissão ao Vivo'}
+                {lang === 'nl' && 'Live Streaming'}
+                {lang === 'zh' && '现场直播'}
+                {lang === 'ar' && 'البث المباشر'}
+                {lang === 'tr' && 'Canlı Yayın'}
+              </h3>
+              <p class="text-gray-600">
+                {lang === 'en' && 'Watch games as they happen with zero delay'}
+                {lang === 'fr' && 'Regardez les matchs en temps réel sans délai'}
+                {lang === 'de' && 'Sehen Sie Spiele in Echtzeit ohne Verzögerung'}
+                {lang === 'es' && 'Mira los juegos en tiempo real sin retraso'}
+                {lang === 'it' && 'Guarda le partite in tempo reale senza ritardo'}
+                {lang === 'pt' && 'Assista aos jogos em tempo real sem atraso'}
+                {lang === 'nl' && 'Bekijk wedstrijden in realtime zonder vertraging'}
+                {lang === 'zh' && '零延迟观看实时比赛'}
+                {lang === 'ar' && 'شاهد المباريات كما تحدث بدون تأخير'}
+                {lang === 'tr' && 'Oyunları gecikme olmadan gerçek zamanlı izleyin'}
+              </p>
+            </div>
+
+            <div class="text-center">
+              <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold mb-2">
+                {lang === 'en' && 'HD Quality'}
+                {lang === 'fr' && 'Qualité HD'}
+                {lang === 'de' && 'HD-Qualität'}
+                {lang === 'es' && 'Calidad HD'}
+                {lang === 'it' && 'Qualità HD'}
+                {lang === 'pt' && 'Qualidade HD'}
+                {lang === 'nl' && 'HD Kwaliteit'}
+                {lang === 'zh' && '高清质量'}
+                {lang === 'ar' && 'جودة عالية'}
+                {lang === 'tr' && 'HD Kalite'}
+              </h3>
+              <p class="text-gray-600">
+                {lang === 'en' && 'Crystal clear HD and 4K streaming quality'}
+                {lang === 'fr' && 'Qualité de streaming HD et 4K cristalline'}
+                {lang === 'de' && 'Kristallklare HD- und 4K-Streaming-Qualität'}
+                {lang === 'es' && 'Calidad de transmisión HD y 4K cristalina'}
+                {lang === 'it' && 'Qualità di streaming HD e 4K cristallina'}
+                {lang === 'pt' && 'Qualidade de transmissão HD e 4K cristalina'}
+                {lang === 'nl' && 'Kristalheldere HD en 4K streaming kwaliteit'}
+                {lang === 'zh' && '水晶般清晰的HD和4K流媒体质量'}
+                {lang === 'ar' && 'جودة بث HD و 4K واضحة كالبلور'}
+                {lang === 'tr' && 'Kristal netliğinde HD ve 4K yayın kalitesi'}
+              </p>
+            </div>
+
+            <div class="text-center">
+              <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold mb-2">
+                {lang === 'en' && 'All Sports'}
+                {lang === 'fr' && 'Tous les Sports'}
+                {lang === 'de' && 'Alle Sportarten'}
+                {lang === 'es' && 'Todos los Deportes'}
+                {lang === 'it' && 'Tutti gli Sport'}
+                {lang === 'pt' && 'Todos os Esportes'}
+                {lang === 'nl' && 'Alle Sporten'}
+                {lang === 'zh' && '所有运动'}
+                {lang === 'ar' && 'جميع الرياضات'}
+                {lang === 'tr' && 'Tüm Sporlar'}
+              </h3>
+              <p class="text-gray-600">
+                {lang === 'en' && 'From football to tennis, we cover it all'}
+                {lang === 'fr' && 'Du football au tennis, nous couvrons tout'}
+                {lang === 'de' && 'Von Fußball bis Tennis, wir decken alles ab'}
+                {lang === 'es' && 'Del fútbol al tenis, lo cubrimos todo'}
+                {lang === 'it' && 'Dal calcio al tennis, copriamo tutto'}
+                {lang === 'pt' && 'Do futebol ao tênis, cobrimos tudo'}
+                {lang === 'nl' && 'Van voetbal tot tennis, we dekken alles af'}
+                {lang === 'zh' && '从足球到网球，我们涵盖一切'}
+                {lang === 'ar' && 'من كرة القدم إلى التنس، نغطي كل شيء'}
+                {lang === 'tr' && 'Futboldan tenise, hepsini kapsıyoruz'}
+              </p>
+            </div>
+
+            <div class="text-center">
+              <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold mb-2">
+                {lang === 'en' && 'Fast & Reliable'}
+                {lang === 'fr' && 'Rapide et Fiable'}
+                {lang === 'de' && 'Schnell & Zuverlässig'}
+                {lang === 'es' && 'Rápido y Confiable'}
+                {lang === 'it' && 'Veloce e Affidabile'}
+                {lang === 'pt' && 'Rápido e Confiável'}
+                {lang === 'nl' && 'Snel en Betrouwbaar'}
+                {lang === 'zh' && '快速可靠'}
+                {lang === 'ar' && 'سريع وموثوق'}
+                {lang === 'tr' && 'Hızlı ve Güvenilir'}
+              </h3>
+              <p class="text-gray-600">
+                {lang === 'en' && '99.9% uptime with lightning-fast streaming'}
+                {lang === 'fr' && '99,9% de disponibilité avec streaming ultra-rapide'}
+                {lang === 'de' && '99,9% Verfügbarkeit mit blitzschnellem Streaming'}
+                {lang === 'es' && '99.9% de tiempo de actividad con transmisión ultrarrápida'}
+                {lang === 'it' && '99,9% di uptime con streaming velocissimo'}
+                {lang === 'pt' && '99,9% de tempo de atividade com transmissão ultrarrápida'}
+                {lang === 'nl' && '99,9% uptime met bliksemsnel streaming'}
+                {lang === 'zh' && '99.9%正常运行时间，闪电般快速流媒体'}
+                {lang === 'ar' && '99.9% وقت تشغيل مع بث سريع جداً'}
+                {lang === 'tr' && 'Şimşek hızında yayın ile %99.9 çalışma süresi'}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="bg-gradient-to-r from-green-600 to-blue-700 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            {lang === 'en' && 'Never Miss a Game Again'}
+            {lang === 'fr' && 'Ne Manquez Plus Jamais un Match'}
+            {lang === 'de' && 'Verpassen Sie Nie Wieder ein Spiel'}
+            {lang === 'es' && 'Nunca Te Pierdas un Juego Otra Vez'}
+            {lang === 'it' && 'Non Perdere Mai Più una Partita'}
+            {lang === 'pt' && 'Nunca Mais Perca um Jogo'}
+            {lang === 'nl' && 'Mis Nooit Meer een Wedstrijd'}
+            {lang === 'zh' && '再也不要错过比赛'}
+            {lang === 'ar' && 'لا تفوت مباراة مرة أخرى'}
+            {lang === 'tr' && 'Bir Daha Asla Maç Kaçırmayın'}
+          </h2>
+          <p class="text-xl mb-8 max-w-2xl mx-auto opacity-90">
+            {lang === 'en' && 'Start your sports streaming journey with FastIPTV today'}
+            {lang === 'fr' && 'Commencez votre voyage de streaming sportif avec FastIPTV aujourd\'hui'}
+            {lang === 'de' && 'Beginnen Sie heute Ihre Sport-Streaming-Reise mit FastIPTV'}
+            {lang === 'es' && 'Comienza tu viaje de transmisión deportiva con FastIPTV hoy'}
+            {lang === 'it' && 'Inizia oggi il tuo viaggio nello streaming sportivo con FastIPTV'}
+            {lang === 'pt' && 'Comece sua jornada de transmissão esportiva com FastIPTV hoje'}
+            {lang === 'nl' && 'Begin vandaag je sportstreaming reis met FastIPTV'}
+            {lang === 'zh' && '今天就开始你的体育流媒体之旅'}
+            {lang === 'ar' && 'ابدأ رحلة البث الرياضي مع FastIPTV اليوم'}
+            {lang === 'tr' && 'Bugün FastIPTV ile spor yayın yolculuğunuza başlayın'}
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href={`/${lang}/packages`} class="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+              {lang === 'en' && 'Get Started'}
+              {lang === 'fr' && 'Commencer'}
+              {lang === 'de' && 'Loslegen'}
+              {lang === 'es' && 'Comenzar'}
+              {lang === 'it' && 'Inizia'}
+              {lang === 'pt' && 'Começar'}
+              {lang === 'nl' && 'Aan de Slag'}
+              {lang === 'zh' && '开始使用'}
+              {lang === 'ar' && 'ابدأ'}
+              {lang === 'tr' && 'Başla'}
+            </a>
+            <a href={`/${lang}/channels`} class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors">
+              {lang === 'en' && 'Browse Channels'}
+              {lang === 'fr' && 'Parcourir les Chaînes'}
+              {lang === 'de' && 'Kanäle Durchsuchen'}
+              {lang === 'es' && 'Explorar Canales'}
+              {lang === 'it' && 'Sfoglia i Canali'}
+              {lang === 'pt' && 'Navegar Canais'}
+              {lang === 'nl' && 'Blader door Kanalen'}
+              {lang === 'zh' && '浏览频道'}
+              {lang === 'ar' && 'تصفح القنوات'}
+              {lang === 'tr' && 'Kanalları Göz At'}
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <Footer lang={lang} />
+  </body>
+</html>

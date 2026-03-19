@@ -12,6 +12,7 @@
         "type": "youtube",
         "videoId": "liT2Z3wFW1Y",
         "fallbackImage": "/images/driver-culture-fallback.jpg",
+        "fallbackImageAlt": "Drivon automotive lifestyle hero — car culture and racing heritage",
         "videoUrl": "https://cdn.pixabay.com/video/2020/07/28/31670-475348943_large.mp4"
       }
     },
@@ -35,6 +36,7 @@
           "name": "Hoodie da Corsa",
           "description": "Hoodie ispirati alle corse con design automobilistici autentici e comfort premium.",
           "image": "https://ih1.redbubble.net/image.4762044220.4515/ssrco,mhoodie,mens,fafafa:ca443f4786,front,tall_three_quarter,x1000-bg,f8f8f8.1.webp",
+          "alt": "Racing hoodies — automotive culture merchandise",
           "link": "/racing-hoodies"
         },
         {
@@ -42,6 +44,7 @@
           "name": "Magliette Cultura Auto",
           "description": "Magliette classiche della cultura automobilistica con marchi iconici di auto e leggende delle corse.",
           "image": "https://ih1.redbubble.net/image.4762044220.4515/ssrco,classic_tee,mens_02,fafafa:ca443f4786,front,close_portrait,x1000.webp",
+          "alt": "Car culture tees — iconic car brands and racing legends",
           "link": "/car-culture-tees"
         },
         {
@@ -49,6 +52,7 @@
           "name": "Accessori Pilota",
           "description": "Accessori essenziali per completare il tuo look e stile della cultura automobilistica.",
           "image": "https://ih1.redbubble.net/image.4762043914.4515/ssrco,dad_hat,product,FFFDF5:8c3db69414,front_three_quarter,wide_portrait,750x1000-bg,f8f8f8.webp",
+          "alt": "Driver accessories — automotive culture caps and gear",
           "link": "/driver-accessories"
         }
       ]
@@ -72,6 +76,7 @@
           "description": "Hoodie premium con la leggendaria Supra alimentata dal 2JZ con styling JDM autentico.",
           "price": "89.99",
           "image": "/images/products/supra-drift-hoodie.jpg",
+          "alt": "Toyota Supra drift hoodie — JDM motorsport style",
           "category": "Hoodie JDM"
         },
         {
@@ -80,6 +85,7 @@
           "description": "Maglietta classica che celebra il Godzilla delle auto sportive giapponesi con design iconico GT-R.",
           "price": "29.99",
           "image": "/images/products/skyline-gtr-tee.jpg",
+          "alt": "Nissan Skyline GT-R tee — iconic JDM sports car",
           "category": "Magliette JDM"
         }
       ]

@@ -1,0 +1,135 @@
+{
+  "pageTitle": "Pakketten & Bundles",
+  "pageDescription": "Kies het perfecte FastIPTV-pakket voor je entertainmentbehoeften",
+  "heroTitle": "Pakketten & Bundles",
+  "heroDescription": "Kies uit onze gecureerde pakketten of maak je eigen aangepaste bundle.",
+  "packages": {
+    "featured": {
+      "name": "12 Maanden Stronger IPTV",
+      "price": "59.99",
+      "duration": "jaar",
+      "description": "Beste waarde met jaarlijkse facturering - bespaar veel op premium IPTV-service",
+      "features": [
+        "+32,000 Premium IPTV-kanalen",
+        "+140,000 Fast IPTV-films & series",
+        "8K/4K/Ultra HD Stronger IPTV-kwaliteit",
+        "Catch Up/EPG voor alle Fast IPTV-kanalen",
+        "GRATIS Premium IPTV-kanalen & VOD-updates",
+        "99.9% Fast IPTV-server uptime",
+        "Alle apparaten ondersteund voor Stronger IPTV",
+        "AntiFreeze-technologie voor Fast IPTV",
+        "24/7 Premium IPTV-technische ondersteuning"
+      ],
+      "savings": "Beste Waarde",
+      "checkoutUrl": "https://wa.me/16058466377?text=Hallo%21%20Ik%20wil%20me%20abonneren%20op%20het%2012%20maanden%20IPTV%20pakket"
+    },
+    "bundles": [
+      {
+        "name": "1 Maand Fast IPTV",
+        "price": "16.99",
+        "duration": "maand",
+        "description": "Perfect om onze premium IPTV-service uit te proberen",
+        "features": [
+          "+32,000 Fast IPTV-kanalen",
+          "+140,000 Premium IPTV-films & series",
+          "8K/4K/Ultra HD Stronger IPTV-kwaliteit",
+          "Catch Up/EPG voor alle Fast IPTV-kanalen",
+          "GRATIS Premium IPTV-kanalen & VOD-updates",
+          "99.9% Fast IPTV-server uptime",
+          "Alle apparaten ondersteund voor Stronger IPTV",
+          "AntiFreeze-technologie voor Fast IPTV",
+          "24/7 Premium IPTV-technische ondersteuning"
+        ],
+        "highlight": "Meest Populair",
+        "checkoutUrl": "https://wa.me/16058466377?text=Hallo%21%20Ik%20wil%20me%20abonneren%20op%20het%201%20maand%20IPTV%20pakket"
+      },
+      {
+        "name": "3 Maanden Fast IPTV",
+        "price": "29.99",
+        "duration": "kwartaal",
+        "description": "Uitstekende waarde voor een driemaandelijks premium IPTV-abonnement",
+        "features": [
+          "+32,000 Stronger IPTV-kanalen",
+          "+140,000 Premium IPTV-films & series",
+          "8K/4K/Ultra HD Fast IPTV-kwaliteit",
+          "Catch Up/EPG voor alle Premium IPTV-kanalen",
+          "GRATIS Fast IPTV-kanalen & VOD-updates",
+          "99.9% Stronger IPTV-server uptime",
+          "Alle apparaten ondersteund voor Fast IPTV",
+          "AntiFreeze-technologie voor Premium IPTV",
+          "24/7 Stronger IPTV-technische ondersteuning"
+        ],
+        "highlight": "Best voor Sport",
+        "checkoutUrl": "https://wa.me/16058466377?text=Hallo%21%20Ik%20wil%20me%20abonneren%20op%20het%203%20maanden%20IPTV%20pakket"
+      }
+    ],
+    "addons": [
+      {
+        "name": "Extra Apparaat",
+        "price": "4.99",
+        "description": "Voeg nog een apparaat toe aan elk pakket"
+      },
+      {
+        "name": "Premium Sport",
+        "price": "9.99",
+        "description": "Voeg premium sportkanalen toe aan elk pakket"
+      },
+      {
+        "name": "4K Upgrade",
+        "price": "5.99",
+        "description": "Upgrade naar 4K-kwaliteit waar beschikbaar"
+      },
+      {
+        "name": "Internationaal",
+        "price": "7.99",
+        "description": "Voeg internationale kanalen toe uit geselecteerde regio's"
+      }
+    ]
+  },
+  "specialOffers": [
+    {
+      "name": "Jaarabonnement",
+      "description": "Bespaar 20% met jaarlijkse facturering",
+      "badge": "Beste Waarde"
+    },
+    {
+      "name": "Studentenkorting",
+      "description": "50% korting voor geverifieerde studenten",
+      "badge": "Beperkte Tijd"
+    },
+    {
+      "name": "Familie Delen",
+      "description": "Voeg tot 5 familieleden toe met 50% korting",
+      "badge": "Populair"
+    }
+  ],
+  "faq": {
+    "title": "Veelgestelde Vragen",
+    "questions": [
+      {
+        "question": "Kan ik mijn pakket later wijzigen?",
+        "answer": "Ja, je kunt je pakket op elk moment upgraden, downgraden of aanpassen. Wijzigingen worden van kracht in je volgende factureringscyclus."
+      },
+      {
+        "question": "Hoe werken add-ons?",
+        "answer": "Add-ons kunnen aan elk pakket worden toegevoegd en worden maandelijks gefactureerd. Je kunt ze op elk moment toevoegen of verwijderen."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Klaar om te Beginnen?",
+    "description": "Probeer elk pakket 7 dagen gratis. Op elk moment opzegbaar.",
+    "buttons": [
+      {
+        "text": "Start Gratis Proefperiode",
+        "link": "/signup",
+        "style": "primary"
+      },
+      {
+        "text": "Neem Contact op met Verkoop",
+        "link": "/contact",
+        "style": "secondary"
+      }
+    ]
+  }
+}

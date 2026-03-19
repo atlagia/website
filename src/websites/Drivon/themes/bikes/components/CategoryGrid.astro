@@ -4,6 +4,7 @@ interface Category {
   name: string;
   description: string;
   image: string;
+  alt?: string;
   link: string;
 }
 
@@ -32,8 +33,12 @@ const { title, description, categories } = Astro.props;
         >
           <img
             src={category.image}
-            alt={category.name}
+            alt={category.alt ?? category.name}
             class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+            width="800"
+            height="1000"
+            loading="lazy"
+            decoding="async"
           />
           <div class="absolute inset-0 bg-gradient-to-t from-[var(--drivon-bg)]/95 via-[var(--drivon-bg)]/20 to-transparent"></div>
           <div class="absolute inset-0 flex flex-col justify-end p-8 lg:p-12">

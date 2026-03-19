@@ -1,0 +1,160 @@
+{
+  "page": {
+    "wrapper": "min-h-screen bg-[var(--sbi-bg)]",
+    "main": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20",
+    "breadcrumbNav": "mt-6 mb-8 text-xs sm:text-sm text-[var(--sbi-muted)] uppercase tracking-wide",
+    "breadcrumbList": "flex items-center gap-2",
+    "breadcrumbLink": "hover:text-[var(--sbi-text)] text-[var(--sbi-muted)] transition-colors duration-150",
+    "breadcrumbCurrent": "text-[var(--sbi-text)] font-medium",
+    "header": "text-center mb-12 sm:mb-14",
+    "headerImageWrap": "relative h-[240px] sm:h-[280px] mb-6 overflow-hidden rounded-xl border border-[var(--sbi-glass-border)]",
+    "headerImage": "w-full h-full object-cover object-center",
+    "headerOverlay": "absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent",
+    "headerTitleOnImage": "absolute bottom-5 left-0 right-0 text-2xl sm:text-3xl font-semibold text-[var(--sbi-text)] px-4 drop-shadow-lg",
+    "headerTitleNoImage": "text-2xl sm:text-3xl font-semibold text-[var(--sbi-text)] mb-2",
+    "headerDescription": "font-body text-base text-[var(--sbi-muted)] max-w-xl mx-auto leading-relaxed",
+    "mobileFilterWrap": "lg:hidden mb-5",
+    "mobileFilterBtn": "w-full flex items-center justify-center gap-2 px-4 py-3 bg-[var(--sbi-glass-bg)] border border-[var(--sbi-glass-border)] text-[var(--sbi-text)] text-sm font-medium rounded-lg hover:bg-[var(--sbi-surface)] transition-colors duration-200 backdrop-blur-xl",
+    "contentWrap": "flex flex-col lg:flex-row gap-8",
+    "overlay": "fixed inset-0 bg-black/70 backdrop-blur-sm z-40 hidden lg:hidden",
+    "sidebar": "w-full lg:w-72 flex-shrink-0 fixed lg:relative top-0 left-0 h-full lg:h-auto bg-[var(--sbi-surface)]/95 backdrop-blur-xl border-r border-[var(--sbi-glass-border)] z-40 lg:z-auto transform -translate-x-full lg:translate-x-0 transition-transform duration-200 ease-in-out lg:block",
+    "sidebarInner": "p-4 lg:py-0 lg:pr-6",
+    "sidebarTitleRow": "flex items-center justify-between mb-4 lg:hidden",
+    "sidebarTitle": "font-body text-sm font-semibold uppercase tracking-wide text-[var(--sbi-text)]",
+    "closeBtn": "p-2 hover:bg-[var(--sbi-glass-bg)] rounded-lg transition-colors duration-150 text-[var(--sbi-muted)] hover:text-[var(--sbi-text)]",
+    "filterSidebarRoot": "bg-[var(--sbi-glass-bg)] rounded-lg border border-[var(--sbi-glass-border)] p-6 backdrop-blur-xl",
+    "sortDropdownSelect": "appearance-none bg-[var(--sbi-glass-bg)] border border-[var(--sbi-glass-border)] rounded-lg px-4 py-2 pr-8 font-body text-sm font-medium text-[var(--sbi-text)] hover:border-[var(--sbi-accent)]/50 focus:outline-none focus:ring-2 focus:ring-[var(--sbi-accent)] focus:border-transparent transition-all duration-150 cursor-pointer backdrop-blur-xl",
+    "sortDropdownLabel": "font-body text-sm font-medium text-[var(--sbi-muted)]",
+    "mainContent": "flex-1 min-w-0",
+    "topBar": "flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-6",
+    "countText": "font-body text-xs sm:text-sm text-[var(--sbi-muted)] uppercase tracking-wide",
+    "viewToggleWrap": "flex items-center gap-2 w-full sm:w-auto",
+    "viewToggleGroup": "flex items-center gap-0.5 rounded-lg border border-[var(--sbi-glass-border)] p-0.5 bg-[var(--sbi-glass-bg)]",
+    "gridBtnActive": "p-2 rounded-md bg-[var(--sbi-surface)] text-[var(--sbi-text)]",
+    "listBtn": "p-2 rounded-md text-[var(--sbi-muted)] hover:text-[var(--sbi-text)] transition-colors duration-150",
+    "mobileCount": "font-body text-xs text-[var(--sbi-muted)] uppercase tracking-wide mb-4 sm:hidden",
+    "productGrid": "grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 lg:gap-6 items-start collection-product-grid",
+    "loadMoreWrap": "text-center mt-12",
+    "loadMoreText": "mb-4 font-body text-sm text-[var(--sbi-muted)]",
+    "loadMoreBtn": "bg-[var(--sbi-glass-bg)] border border-[var(--sbi-glass-border)] text-[var(--sbi-text)] px-6 py-3 rounded-lg hover:bg-[var(--sbi-surface)] transition-colors duration-200 font-medium backdrop-blur-xl",
+    "emptyWrap": "text-center py-16 bg-[var(--sbi-glass-bg)] rounded-2xl border border-[var(--sbi-glass-border)] backdrop-blur-xl",
+    "emptyContent": "max-w-md mx-auto",
+    "emptyTitle": "font-display text-2xl font-semibold text-[var(--sbi-text)] mb-2",
+    "emptyDescription": "font-body text-[var(--sbi-muted)]",
+    "breadcrumbSepIcon": "w-4 h-4 text-[var(--sbi-muted)]",
+    "mobileFilterBtnIcon": "w-4 h-4 text-[var(--sbi-muted)]",
+    "closeBtnIcon": "w-5 h-5 text-[var(--sbi-muted)]",
+    "filterIcon": "w-5 h-5 text-[var(--sbi-muted)]",
+    "viewToggleIcon": "w-4 h-4 text-[var(--sbi-muted)]",
+    "paginationWrap": "flex justify-center items-center gap-4 mt-12",
+    "paginationPrev": "px-4 py-2 rounded-lg transition-colors duration-150 bg-[var(--sbi-glass-bg)] border border-[var(--sbi-glass-border)] text-[var(--sbi-muted)] hover:text-[var(--sbi-text)] hover:bg-[var(--sbi-surface)]",
+    "paginationInfo": "font-body text-sm font-medium text-[var(--sbi-muted)]",
+    "paginationNext": "px-4 py-2 rounded-lg transition-colors duration-150 bg-[var(--sbi-glass-bg)] border border-[var(--sbi-glass-border)] text-[var(--sbi-muted)] hover:text-[var(--sbi-text)] hover:bg-[var(--sbi-surface)]",
+    "paginationFooter": "text-center font-body text-sm text-[var(--sbi-muted)] mt-4"
+  },
+  "container": {
+    "maxWidth": "min-h-screen bg-[var(--sbi-bg)]",
+    "margin": "max-w-7xl mx-auto",
+    "padding": "px-4 pt-24 pb-16",
+    "background": "bg-[var(--sbi-bg)]",
+    "textColor": "text-[var(--sbi-text)]"
+  },
+  "breadcrumb": {
+    "container": "flex mb-8 text-sm",
+    "list": "flex items-center space-x-2",
+    "homeLink": "text-[var(--sbi-muted)] hover:text-[var(--sbi-text)] transition-colors duration-150",
+    "separator": "text-[var(--sbi-muted)]",
+    "currentPage": "text-[var(--sbi-text)] font-medium"
+  },
+  "header": {
+    "background": "bg-[var(--sbi-bg)]",
+    "padding": "py-16",
+    "textAlign": "text-center",
+    "container": "text-center mb-16 relative overflow-hidden rounded-2xl border border-[var(--sbi-glass-border)]",
+    "imageOverlay": "absolute inset-0 z-0 bg-black/50",
+    "image": "w-full h-full object-cover opacity-60",
+    "contentContainer": "relative z-10 py-16 px-4"
+  },
+  "title": {
+    "fontSize": "text-4xl",
+    "fontWeight": "font-bold",
+    "color": "text-[var(--sbi-text)]",
+    "textShadow": "drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)]",
+    "margin": "mb-4"
+  },
+  "subtitle": {
+    "fontSize": "text-lg",
+    "color": "text-[var(--sbi-muted)]",
+    "maxWidth": "max-w-2xl",
+    "margin": "mx-auto"
+  },
+  "grid": {
+    "columns": "grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4",
+    "gap": "gap-6",
+    "background": "bg-[var(--sbi-glass-bg)]",
+    "padding": "p-4",
+    "container": "mb-12 rounded-xl border border-[var(--sbi-glass-border)] backdrop-blur-xl"
+  },
+  "card": {
+    "container": "block",
+    "productCard": {
+      "background": "bg-[var(--sbi-glass-bg)] backdrop-blur-xl",
+      "border": "rounded-xl border border-[var(--sbi-glass-border)]",
+      "shadow": "hover:shadow-[0_0_30px_rgba(139,92,246,0.15)]",
+      "transition": "transition-all duration-200"
+    },
+    "imageContainer": {
+      "aspectRatio": "aspect-[3/4]",
+      "background": "bg-[var(--sbi-glass-bg)]",
+      "overflow": "overflow-hidden",
+      "position": "relative"
+    },
+    "image": {
+      "sizing": "w-full h-full object-contain p-4",
+      "hover": "group-hover:scale-105",
+      "transition": "transition-transform duration-200"
+    },
+    "noImagePlaceholder": "w-full h-full flex items-center justify-center text-[var(--sbi-muted)]",
+    "content": "p-4",
+    "title": {
+      "fontSize": "text-lg",
+      "fontWeight": "font-medium",
+      "color": "text-[var(--sbi-text)]",
+      "hover": "group-hover:text-[var(--sbi-accent)] transition-colors duration-150",
+      "truncate": "truncate mb-1"
+    },
+    "price": {
+      "fontSize": "text-sm",
+      "fontWeight": "font-semibold",
+      "color": "text-[var(--sbi-muted)]"
+    }
+  },
+  "quickAddButton": {
+    "base": "absolute bottom-2 left-2 right-2 bg-[var(--sbi-gradient-accent)] text-[var(--sbi-text)] py-2 rounded-lg text-sm font-medium transition-opacity duration-200",
+    "hover": "hover:opacity-90",
+    "visibility": "opacity-0 group-hover:opacity-100",
+    "transition": "transition-opacity duration-200",
+    "focus": "focus:outline-none focus:ring-2 focus:ring-[var(--sbi-accent)] focus:ring-opacity-50"
+  },
+  "pagination": {
+    "container": "flex justify-between items-center bg-[var(--sbi-glass-bg)] rounded-lg border border-[var(--sbi-glass-border)] p-4 backdrop-blur-xl",
+    "button": "flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors duration-150 text-[var(--sbi-muted)] hover:text-[var(--sbi-text)]",
+    "text": "font-body text-sm font-medium text-[var(--sbi-muted)]"
+  },
+  "emptyState": {
+    "background": "bg-[var(--sbi-glass-bg)]",
+    "padding": "py-16",
+    "textAlign": "text-center",
+    "borderRadius": "rounded-2xl",
+    "shadow": "border border-[var(--sbi-glass-border)]",
+    "container": "max-w-md mx-auto",
+    "title": "font-display text-2xl font-semibold text-[var(--sbi-text)] mb-2",
+    "description": "font-body text-[var(--sbi-muted)]"
+  },
+  "footer": {
+    "textAlign": "text-center",
+    "textSize": "text-sm",
+    "textColor": "text-[var(--sbi-muted)]",
+    "margin": "mt-8 pt-4"
+  }
+}

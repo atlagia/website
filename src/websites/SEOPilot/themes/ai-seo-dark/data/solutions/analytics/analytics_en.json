@@ -1,0 +1,164 @@
+{
+  "hero": {
+    "subtitle": "Business Analytics Platform",
+    "title": "Turn Data into Actionable Insights",
+    "description": "Powerful analytics tools that help you understand your business performance and make data-driven decisions",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=example",
+      "alt": "Analytics Platform Demo"
+    },
+    "stats": [
+      {
+        "value": "500M+",
+        "label": "Data Points Analyzed"
+      },
+      {
+        "value": "99.9%",
+        "label": "Uptime"
+      },
+      {
+        "value": "60%",
+        "label": "Faster Insights"
+      }
+    ]
+  },
+  "features": {
+    "subtitle": "Analytics Features",
+    "title": "Comprehensive Analytics Tools",
+    "description": "Everything you need to analyze and visualize your business data",
+    "items": [
+      {
+        "icon": "chart",
+        "category": "Dashboards",
+        "title": "Custom Dashboards",
+        "description": "Create personalized dashboards with drag-and-drop simplicity",
+        "image": "/images/solutions/analytics/dashboards.jpg",
+        "highlights": [
+          "Real-time updates",
+          "Interactive charts",
+          "Custom widgets",
+          "Data filtering"
+        ]
+      },
+      {
+        "icon": "brain",
+        "category": "AI Analytics",
+        "title": "Predictive Analytics",
+        "description": "Use AI to forecast trends and predict future outcomes",
+        "image": "/images/solutions/analytics/predictive.jpg",
+        "highlights": [
+          "Trend forecasting",
+          "Anomaly detection",
+          "Pattern recognition",
+          "Risk analysis"
+        ]
+      },
+      {
+        "icon": "trending-up",
+        "category": "Reporting",
+        "title": "Automated Reports",
+        "description": "Generate and schedule comprehensive reports automatically",
+        "image": "/images/solutions/analytics/reports.jpg",
+        "highlights": [
+          "Scheduled reports",
+          "Custom templates",
+          "Multi-format export",
+          "Data visualization"
+        ]
+      },
+      {
+        "icon": "insights",
+        "category": "Integration",
+        "title": "Data Integration",
+        "description": "Connect and analyze data from multiple sources",
+        "image": "/images/solutions/analytics/integration.jpg",
+        "highlights": [
+          "Multiple data sources",
+          "Real-time sync",
+          "API integration",
+          "Data warehousing"
+        ]
+      }
+    ]
+  },
+  "benefits": {
+    "subtitle": "Platform Benefits",
+    "title": "Why Choose Our Analytics Platform",
+    "description": "Experience the power of modern analytics with our comprehensive solution",
+    "items": [
+      {
+        "icon": "chart",
+        "color": "blue",
+        "title": "Data Accuracy",
+        "description": "Ensure your decisions are based on accurate, real-time data",
+        "stats": {
+          "value": "99.9%",
+          "label": "Data Accuracy"
+        },
+        "highlights": [
+          "Data validation",
+          "Quality checks",
+          "Error detection"
+        ]
+      },
+      {
+        "icon": "brain",
+        "color": "purple",
+        "title": "Smart Insights",
+        "description": "Get AI-powered recommendations and insights",
+        "stats": {
+          "value": "24/7",
+          "label": "Analysis"
+        },
+        "highlights": [
+          "AI recommendations",
+          "Automated insights",
+          "Smart alerts"
+        ]
+      },
+      {
+        "icon": "trending-up",
+        "color": "green",
+        "title": "Fast Performance",
+        "description": "Lightning-fast query processing and visualization",
+        "stats": {
+          "value": "<1s",
+          "label": "Query Time"
+        },
+        "highlights": [
+          "Quick loading",
+          "Real-time updates",
+          "Efficient processing"
+        ]
+      },
+      {
+        "icon": "users",
+        "color": "yellow",
+        "title": "Team Collaboration",
+        "description": "Work together effectively with shared analytics",
+        "stats": {
+          "value": "100+",
+          "label": "Team Members"
+        },
+        "highlights": [
+          "Shared dashboards",
+          "Team permissions",
+          "Collaborative analysis"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Transform Your Data Analysis?",
+    "description": "Join thousands of businesses making smarter decisions with our analytics platform",
+    "background": "/images/solutions/analytics/cta-background.jpg",
+    "primaryButton": {
+      "text": "Start Free Trial",
+      "link": "/signup"
+    },
+    "secondaryButton": {
+      "text": "Watch Demo",
+      "link": "/demo"
+    }
+  }
+} 

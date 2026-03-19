@@ -1,0 +1,29 @@
+---
+description: When the user wants to build the SEOPilot SaaS dashboard, use the build-seopilot orchestrator skill and delegate each phase to specialist subagents
+globs: seopilot/**/*
+alwaysApply: false
+---
+
+When the user asks to **build SEOPilot**, **create the SEOPilot dashboard**, **build the SaaS platform**, or requests the full SEOPilot development:
+
+1. Read and follow `.cursor/skills/build-seopilot/SKILL.md`
+2. Also read the reference files:
+   - `.cursor/skills/build-seopilot/tech-stack.md` (technology decisions)
+   - `.cursor/skills/build-seopilot/architecture.md` (system design, DB schema, API)
+3. Run Phase 0 (validate prerequisites, build context payload, create todo) in this agent
+4. Delegate Phases 1–9 to subagents in order using the Task tool:
+   - `seopilot-scaffold` → `seopilot-backend-api` → `seopilot-crawler-engine` → `seopilot-ai-agents` → `seopilot-dashboard-ui` → `seopilot-realtime` → `seopilot-integrations` → `seopilot-workers` → `seopilot-verify`
+5. Each subagent has a detailed spec in `.cursor/skills/build-seopilot/subagents/`
+6. Pass the context payload (and previous subagent summary) in each task prompt
+7. Wait for each subagent to finish before starting the next
+8. MCP verification is mandatory after Phase 1 (scaffold boots), Phase 5 (UI renders), and Phase 9 (E2E)
+9. After Phase 9 passes, report the full platform status to the user
+
+**Technology stack (research-backed, March 2026):**
+- Frontend: Next.js 16 + shadcn/ui + TanStack Query + tRPC + Recharts + Tailwind v4
+- Backend: Hono.js + Drizzle ORM + Neon PostgreSQL + Better Auth + Stripe
+- AI: LangGraph + Claude/GPT-4o + Crawlee + Playwright
+- Infra: Turborepo + Trigger.dev v3 + Upstash Redis + Cloudflare R2
+- Real-time: SSE via tRPC subscriptions + Redis pub/sub
+
+Do not run Phases 1–9 yourself; the specialist subagents handle them.

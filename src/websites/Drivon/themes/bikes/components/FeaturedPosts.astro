@@ -30,6 +30,10 @@ const hasContent = posts && posts.length > 0;
                   src={post.image?.src || '/images/placeholder.jpg'}
                   alt={post.title}
                   class="w-full aspect-[16/9] object-cover transition-transform duration-300 group-hover:scale-105"
+                  width="600"
+                  height="338"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <h3 class="font-display text-lg font-semibold mb-2 text-[var(--drivon-text)] group-hover:text-[var(--drivon-accent)] transition-colors uppercase tracking-wide">

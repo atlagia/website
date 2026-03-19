@@ -1,0 +1,390 @@
+---
+import { getLangFromUrl, useTranslations } from '@utils/i18n';
+
+const { lang } = Astro.params;
+
+// Import components
+const { default: BaseHead } = await import(`../components/BaseHead.astro`);
+const { default: Header } = await import(`../components/Header.astro`);
+const { default: Footer } = await import(`../components/Footer.astro`);
+
+// Get translations
+const translations = await useTranslations(lang);
+const jsonData = translations.default;
+
+// Get site title and description from language-specific data
+const SITE_TITLE = jsonData.siteTitle || 'FastIPTV';
+const SITE_DESCRIPTION = jsonData.siteDescription || 'Premium IPTV Streaming Service';
+
+// Generate static paths for all supported languages
+export async function getStaticPaths() {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  const languages = allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+  
+  return languages.map(lang => ({
+    params: { lang }
+  }));
+}
+---
+
+<!doctype html>
+<html lang={lang} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
+  <BaseHead 
+    title={`News | ${SITE_TITLE}`}
+    description="Latest news and updates from FastIPTV - your premier IPTV streaming service."
+    lang={lang}
+  />
+  <body class="bg-gray-50">
+    <Header lang={lang} />
+    
+    <main class="pt-20">
+      <!-- Hero Section -->
+      <section class="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4">
+          <div class="text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">
+              {lang === 'en' && 'News'}
+              {lang === 'fr' && 'Actualités'}
+              {lang === 'de' && 'Nachrichten'}
+              {lang === 'es' && 'Noticias'}
+              {lang === 'it' && 'Notizie'}
+              {lang === 'pt' && 'Notícias'}
+              {lang === 'nl' && 'Nieuws'}
+              {lang === 'zh' && '新闻'}
+              {lang === 'ar' && 'الأخبار'}
+              {lang === 'tr' && 'Haberler'}
+            </h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto opacity-90">
+              {lang === 'en' && 'Stay updated with the latest news and announcements from FastIPTV'}
+              {lang === 'fr' && 'Restez informé des dernières nouvelles et annonces de FastIPTV'}
+              {lang === 'de' && 'Bleiben Sie auf dem Laufenden mit den neuesten Nachrichten und Ankündigungen von FastIPTV'}
+              {lang === 'es' && 'Mantente actualizado con las últimas noticias y anuncios de FastIPTV'}
+              {lang === 'it' && 'Rimani aggiornato con le ultime notizie e annunci di FastIPTV'}
+              {lang === 'pt' && 'Mantenha-se atualizado com as últimas notícias e anúncios da FastIPTV'}
+              {lang === 'nl' && 'Blijf op de hoogte van het laatste nieuws en aankondigingen van FastIPTV'}
+              {lang === 'zh' && '通过FastIPTV的最新新闻和公告保持更新'}
+              {lang === 'ar' && 'ابق على اطلاع بأحدث الأخبار والإعلانات من FastIPTV'}
+              {lang === 'tr' && 'FastIPTV\'den en son haberler ve duyurularla güncel kalın'}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- News Articles Section -->
+      <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4">
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Main Article -->
+            <article class="lg:col-span-2 bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+              <div class="h-64 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+                <div class="text-center text-white">
+                  <div class="text-4xl font-bold mb-2">📺</div>
+                  <h2 class="text-2xl font-semibold">
+                    {lang === 'en' && 'FastIPTV Reaches 2 Million Subscribers'}
+                    {lang === 'fr' && 'FastIPTV Atteint 2 Millions d\'Abonnés'}
+                    {lang === 'de' && 'FastIPTV Erreicht 2 Millionen Abonnenten'}
+                    {lang === 'es' && 'FastIPTV Alcanza 2 Millones de Suscriptores'}
+                    {lang === 'it' && 'FastIPTV Raggiunge 2 Milioni di Abbonati'}
+                    {lang === 'pt' && 'FastIPTV Atinge 2 Milhões de Assinantes'}
+                    {lang === 'nl' && 'FastIPTV Bereikt 2 Miljoen Abonnees'}
+                    {lang === 'zh' && 'FastIPTV达到200万订阅者'}
+                    {lang === 'ar' && 'FastIPTV تصل إلى مليوني مشترك'}
+                    {lang === 'tr' && 'FastIPTV 2 Milyon Aboneye Ulaştı'}
+                  </h2>
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="text-sm text-gray-500 mb-4">January 15, 2025</div>
+                <p class="text-gray-600 mb-4">
+                  {lang === 'en' && 'FastIPTV celebrates a major milestone as it reaches 2 million active subscribers worldwide. This achievement solidifies our position as one of the leading IPTV streaming platforms in the industry.'}
+                  {lang === 'fr' && 'FastIPTV célèbre une étape majeure en atteignant 2 millions d\'abonnés actifs dans le monde. Cette réalisation consolide notre position de l\'une des principales plateformes de streaming IPTV de l\'industrie.'}
+                  {lang === 'de' && 'FastIPTV feiert einen wichtigen Meilenstein mit 2 Millionen aktiven Abonnenten weltweit. Diese Leistung festigt unsere Position als eine der führenden IPTV-Streaming-Plattformen der Branche.'}
+                  {lang === 'es' && 'FastIPTV celebra un hito importante al alcanzar 2 millones de suscriptores activos en todo el mundo. Este logro consolida nuestra posición como una de las principales plataformas de streaming IPTV de la industria.'}
+                  {lang === 'it' && 'FastIPTV celebra una pietra miliare importante raggiungendo 2 milioni di abbonati attivi in tutto il mondo. Questo risultato consolida la nostra posizione come una delle principali piattaforme di streaming IPTV del settore.'}
+                  {lang === 'pt' && 'FastIPTV celebra um marco importante ao atingir 2 milhões de assinantes ativos em todo o mundo. Esta conquista solidifica nossa posição como uma das principais plataformas de streaming IPTV da indústria.'}
+                  {lang === 'nl' && 'FastIPTV viert een belangrijke mijlpaal door 2 miljoen actieve abonnees wereldwijd te bereiken. Deze prestatie versterkt onze positie als een van de leidende IPTV streaming platforms in de industrie.'}
+                  {lang === 'zh' && 'FastIPTV庆祝了一个重要里程碑，在全球达到200万活跃订阅者。这一成就巩固了我们作为行业领先IPTV流媒体平台之一的地位。'}
+                  {lang === 'ar' && 'تحتفل FastIPTV بمعلم مهم بوصولها إلى مليوني مشترك نشط في جميع أنحاء العالم. هذا الإنجاز يعزز موقعنا كواحدة من منصات البث التلفزيوني الرائدة في الصناعة.'}
+                  {lang === 'tr' && 'FastIPTV dünya çapında 2 milyon aktif aboneye ulaşarak önemli bir dönüm noktasını kutluyor. Bu başarı, endüstrideki önde gelen IPTV yayın platformlarından biri olarak konumumuzu güçlendiriyor.'}
+                </p>
+                <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">
+                  {lang === 'en' && 'Read Full Article →'}
+                  {lang === 'fr' && 'Lire l\'Article Complet →'}
+                  {lang === 'de' && 'Vollständigen Artikel Lesen →'}
+                  {lang === 'es' && 'Leer Artículo Completo →'}
+                  {lang === 'it' && 'Leggi Articolo Completo →'}
+                  {lang === 'pt' && 'Ler Artigo Completo →'}
+                  {lang === 'nl' && 'Volledig Artikel Lezen →'}
+                  {lang === 'zh' && '阅读完整文章 →'}
+                  {lang === 'ar' && 'اقرأ المقال كاملاً →'}
+                  {lang === 'tr' && 'Tam Makaleyi Oku →'}
+                </a>
+              </div>
+            </article>
+
+            <!-- Sidebar -->
+            <div class="space-y-6">
+              <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-lg font-semibold mb-4">
+                  {lang === 'en' && 'Latest Updates'}
+                  {lang === 'fr' && 'Dernières Mises à Jour'}
+                  {lang === 'de' && 'Neueste Updates'}
+                  {lang === 'es' && 'Últimas Actualizaciones'}
+                  {lang === 'it' && 'Ultimi Aggiornamenti'}
+                  {lang === 'pt' && 'Últimas Atualizações'}
+                  {lang === 'nl' && 'Laatste Updates'}
+                  {lang === 'zh' && '最新更新'}
+                  {lang === 'ar' && 'أحدث التحديثات'}
+                  {lang === 'tr' && 'Son Güncellemeler'}
+                </h3>
+                <div class="space-y-4">
+                  <div class="border-l-4 border-blue-500 pl-4">
+                    <h4 class="font-medium text-sm">
+                      {lang === 'en' && '4K Streaming Launched'}
+                      {lang === 'fr' && 'Streaming 4K Lancé'}
+                      {lang === 'de' && '4K-Streaming Gestartet'}
+                      {lang === 'es' && 'Streaming 4K Lanzado'}
+                      {lang === 'it' && 'Streaming 4K Lanciato'}
+                      {lang === 'pt' && 'Streaming 4K Lançado'}
+                      {lang === 'nl' && '4K Streaming Gelanceerd'}
+                      {lang === 'zh' && '4K流媒体已推出'}
+                      {lang === 'ar' && 'تم إطلاق البث 4K'}
+                      {lang === 'tr' && '4K Yayın Başlatıldı'}
+                    </h4>
+                    <p class="text-xs text-gray-500">Dec 20, 2024</p>
+                  </div>
+                  <div class="border-l-4 border-green-500 pl-4">
+                    <h4 class="font-medium text-sm">
+                      {lang === 'en' && 'New Channel Packages'}
+                      {lang === 'fr' && 'Nouveaux Forfaits de Chaînes'}
+                      {lang === 'de' && 'Neue Kanalpakete'}
+                      {lang === 'es' && 'Nuevos Paquetes de Canales'}
+                      {lang === 'it' && 'Nuovi Pacchetti Canali'}
+                      {lang === 'pt' && 'Novos Pacotes de Canais'}
+                      {lang === 'nl' && 'Nieuwe Kanaalpakketten'}
+                      {lang === 'zh' && '新频道套餐'}
+                      {lang === 'ar' && 'حزم قنوات جديدة'}
+                      {lang === 'tr' && 'Yeni Kanal Paketleri'}
+                    </h4>
+                    <p class="text-xs text-gray-500">Dec 15, 2024</p>
+                  </div>
+                  <div class="border-l-4 border-purple-500 pl-4">
+                    <h4 class="font-medium text-sm">
+                      {lang === 'en' && 'Mobile App Update'}
+                      {lang === 'fr' && 'Mise à Jour de l\'App Mobile'}
+                      {lang === 'de' && 'Mobile App Update'}
+                      {lang === 'es' && 'Actualización de App Móvil'}
+                      {lang === 'it' && 'Aggiornamento App Mobile'}
+                      {lang === 'pt' && 'Atualização do App Móvel'}
+                      {lang === 'nl' && 'Mobiele App Update'}
+                      {lang === 'zh' && '移动应用更新'}
+                      {lang === 'ar' && 'تحديث التطبيق المحمول'}
+                      {lang === 'tr' && 'Mobil Uygulama Güncellemesi'}
+                    </h4>
+                    <p class="text-xs text-gray-500">Dec 10, 2024</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-lg font-semibold mb-4">
+                  {lang === 'en' && 'Newsletter'}
+                  {lang === 'fr' && 'Newsletter'}
+                  {lang === 'de' && 'Newsletter'}
+                  {lang === 'es' && 'Boletín'}
+                  {lang === 'it' && 'Newsletter'}
+                  {lang === 'pt' && 'Newsletter'}
+                  {lang === 'nl' && 'Nieuwsbrief'}
+                  {lang === 'zh' && '通讯'}
+                  {lang === 'ar' && 'النشرة الإخبارية'}
+                  {lang === 'tr' && 'Bülten'}
+                </h3>
+                <p class="text-sm text-gray-600 mb-4">
+                  {lang === 'en' && 'Subscribe to get the latest news delivered to your inbox.'}
+                  {lang === 'fr' && 'Abonnez-vous pour recevoir les dernières nouvelles dans votre boîte de réception.'}
+                  {lang === 'de' && 'Abonnieren Sie, um die neuesten Nachrichten in Ihrem Posteingang zu erhalten.'}
+                  {lang === 'es' && 'Suscríbete para recibir las últimas noticias en tu bandeja de entrada.'}
+                  {lang === 'it' && 'Iscriviti per ricevere le ultime notizie nella tua casella di posta.'}
+                  {lang === 'pt' && 'Inscreva-se para receber as últimas notícias em sua caixa de entrada.'}
+                  {lang === 'nl' && 'Abonneer je om het laatste nieuws in je inbox te ontvangen.'}
+                  {lang === 'zh' && '订阅以获取发送到您收件箱的最新新闻。'}
+                  {lang === 'ar' && 'اشترك للحصول على أحدث الأخبار في صندوق الوارد الخاص بك.'}
+                  {lang === 'tr' && 'Gelen kutunuza en son haberleri almak için abone olun.'}
+                </p>
+                <div class="flex">
+                  <input type="email" placeholder={lang === 'en' ? 'Your email' : lang === 'fr' ? 'Votre email' : lang === 'de' ? 'Ihre E-Mail' : lang === 'es' ? 'Tu email' : lang === 'it' ? 'La tua email' : lang === 'pt' ? 'Seu email' : lang === 'nl' ? 'Uw email' : lang === 'zh' ? '您的邮箱' : lang === 'ar' ? 'بريدك الإلكتروني' : 'E-postanız'} class="flex-1 px-3 py-2 border border-gray-300 rounded-l-md text-sm">
+                  <button class="bg-blue-600 text-white px-4 py-2 rounded-r-md text-sm hover:bg-blue-700 transition-colors">
+                    {lang === 'en' ? 'Subscribe' : lang === 'fr' ? 'S\'abonner' : lang === 'de' ? 'Abonnieren' : lang === 'es' ? 'Suscribirse' : lang === 'it' ? 'Iscriviti' : lang === 'pt' ? 'Inscrever-se' : lang === 'nl' ? 'Abonneren' : lang === 'zh' ? '订阅' : lang === 'ar' ? 'اشتراك' : 'Abone Ol'}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- More News Section -->
+      <section class="bg-white py-20">
+        <div class="max-w-7xl mx-auto px-4">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
+            {lang === 'en' && 'More News'}
+            {lang === 'fr' && 'Plus de Nouvelles'}
+            {lang === 'de' && 'Weitere Nachrichten'}
+            {lang === 'es' && 'Más Noticias'}
+            {lang === 'it' && 'Altre Notizie'}
+            {lang === 'pt' && 'Mais Notícias'}
+            {lang === 'nl' && 'Meer Nieuws'}
+            {lang === 'zh' && '更多新闻'}
+            {lang === 'ar' && 'المزيد من الأخبار'}
+            {lang === 'tr' && 'Daha Fazla Haber'}
+          </h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <article class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+              <div class="h-48 bg-gradient-to-br from-green-400 to-blue-500 flex items-center justify-center">
+                <div class="text-center text-white">
+                  <div class="text-3xl font-bold mb-2">🌍</div>
+                  <h3 class="text-lg font-semibold">
+                    {lang === 'en' && 'Global Expansion'}
+                    {lang === 'fr' && 'Expansion Mondiale'}
+                    {lang === 'de' && 'Globale Expansion'}
+                    {lang === 'es' && 'Expansión Global'}
+                    {lang === 'it' && 'Espansione Globale'}
+                    {lang === 'pt' && 'Expansão Global'}
+                    {lang === 'nl' && 'Wereldwijde Uitbreiding'}
+                    {lang === 'zh' && '全球扩张'}
+                    {lang === 'ar' && 'التوسع العالمي'}
+                    {lang === 'tr' && 'Küresel Genişleme'}
+                  </h3>
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="text-sm text-gray-500 mb-2">November 10, 2024</div>
+                <p class="text-gray-600 mb-4">
+                  {lang === 'en' && 'FastIPTV announces expansion into 50+ new countries across Europe, Asia, and Latin America.'}
+                  {lang === 'fr' && 'FastIPTV annonce son expansion dans plus de 50 nouveaux pays en Europe, en Asie et en Amérique latine.'}
+                  {lang === 'de' && 'FastIPTV kündigt die Expansion in über 50 neue Länder in Europa, Asien und Lateinamerika an.'}
+                  {lang === 'es' && 'FastIPTV anuncia expansión a más de 50 nuevos países en Europa, Asia y América Latina.'}
+                  {lang === 'it' && 'FastIPTV annuncia l\'espansione in oltre 50 nuovi paesi in Europa, Asia e America Latina.'}
+                  {lang === 'pt' && 'FastIPTV anuncia expansão para mais de 50 novos países na Europa, Ásia e América Latina.'}
+                  {lang === 'nl' && 'FastIPTV kondigt uitbreiding aan naar 50+ nieuwe landen in Europa, Azië en Latijns-Amerika.'}
+                  {lang === 'zh' && 'FastIPTV宣布扩展到欧洲、亚洲和拉丁美洲的50多个新国家。'}
+                  {lang === 'ar' && 'تعلن FastIPTV عن التوسع في أكثر من 50 دولة جديدة عبر أوروبا وآسيا وأمريكا اللاتينية.'}
+                  {lang === 'tr' && 'FastIPTV, Avrupa, Asya ve Latin Amerika\'da 50+ yeni ülkeye genişleme duyurusu yapıyor.'}
+                </p>
+                <a href="#" class="text-blue-600 hover:text-blue-800 font-medium text-sm">
+                  {lang === 'en' && 'Read More →'}
+                  {lang === 'fr' && 'Lire Plus →'}
+                  {lang === 'de' && 'Mehr Lesen →'}
+                  {lang === 'es' && 'Leer Más →'}
+                  {lang === 'it' && 'Leggi di Più →'}
+                  {lang === 'pt' && 'Leia Mais →'}
+                  {lang === 'nl' && 'Lees Meer →'}
+                  {lang === 'zh' && '阅读更多 →'}
+                  {lang === 'ar' && 'اقرأ المزيد →'}
+                  {lang === 'tr' && 'Devamını Oku →'}
+                </a>
+              </div>
+            </article>
+
+            <article class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+              <div class="h-48 bg-gradient-to-br from-purple-400 to-pink-500 flex items-center justify-center">
+                <div class="text-center text-white">
+                  <div class="text-3xl font-bold mb-2">📱</div>
+                  <h3 class="text-lg font-semibold">
+                    {lang === 'en' && 'Mobile App 2.0'}
+                    {lang === 'fr' && 'App Mobile 2.0'}
+                    {lang === 'de' && 'Mobile App 2.0'}
+                    {lang === 'es' && 'App Móvil 2.0'}
+                    {lang === 'it' && 'App Mobile 2.0'}
+                    {lang === 'pt' && 'App Móvel 2.0'}
+                    {lang === 'nl' && 'Mobiele App 2.0'}
+                    {lang === 'zh' && '移动应用2.0'}
+                    {lang === 'ar' && 'التطبيق المحمول 2.0'}
+                    {lang === 'tr' && 'Mobil Uygulama 2.0'}
+                  </h3>
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="text-sm text-gray-500 mb-2">October 25, 2024</div>
+                <p class="text-gray-600 mb-4">
+                  {lang === 'en' && 'The new mobile app brings enhanced features, better performance, and improved user experience.'}
+                  {lang === 'fr' && 'La nouvelle application mobile apporte des fonctionnalités améliorées, de meilleures performances et une expérience utilisateur améliorée.'}
+                  {lang === 'de' && 'Die neue mobile App bringt erweiterte Funktionen, bessere Leistung und verbesserte Benutzererfahrung.'}
+                  {lang === 'es' && 'La nueva aplicación móvil trae características mejoradas, mejor rendimiento y experiencia de usuario mejorada.'}
+                  {lang === 'it' && 'La nuova app mobile porta funzionalità migliorate, prestazioni migliori e un\'esperienza utente migliorata.'}
+                  {lang === 'pt' && 'O novo aplicativo móvel traz recursos aprimorados, melhor desempenho e experiência do usuário melhorada.'}
+                  {lang === 'nl' && 'De nieuwe mobiele app brengt verbeterde functies, betere prestaties en verbeterde gebruikerservaring.'}
+                  {lang === 'zh' && '新的移动应用带来了增强的功能、更好的性能和改进的用户体验。'}
+                  {lang === 'ar' && 'التطبيق المحمول الجديد يجلب ميزات محسنة وأداء أفضل وتجربة مستخدم محسنة.'}
+                  {lang === 'tr' && 'Yeni mobil uygulama gelişmiş özellikler, daha iyi performans ve gelişmiş kullanıcı deneyimi getiriyor.'}
+                </p>
+                <a href="#" class="text-blue-600 hover:text-blue-800 font-medium text-sm">
+                  {lang === 'en' && 'Read More →'}
+                  {lang === 'fr' && 'Lire Plus →'}
+                  {lang === 'de' && 'Mehr Lesen →'}
+                  {lang === 'es' && 'Leer Más →'}
+                  {lang === 'it' && 'Leggi di Più →'}
+                  {lang === 'pt' && 'Leia Mais →'}
+                  {lang === 'nl' && 'Lees Meer →'}
+                  {lang === 'zh' && '阅读更多 →'}
+                  {lang === 'ar' && 'اقرأ المزيد →'}
+                  {lang === 'tr' && 'Devamını Oku →'}
+                </a>
+              </div>
+            </article>
+
+            <article class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+              <div class="h-48 bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center">
+                <div class="text-center text-white">
+                  <div class="text-3xl font-bold mb-2">🏆</div>
+                  <h3 class="text-lg font-semibold">
+                    {lang === 'en' && 'Industry Award'}
+                    {lang === 'fr' && 'Prix de l\'Industrie'}
+                    {lang === 'de' && 'Branchenpreis'}
+                    {lang === 'es' && 'Premio de la Industria'}
+                    {lang === 'it' && 'Premio del Settore'}
+                    {lang === 'pt' && 'Prêmio da Indústria'}
+                    {lang === 'nl' && 'Industrieprijs'}
+                    {lang === 'zh' && '行业奖项'}
+                    {lang === 'ar' && 'جائزة الصناعة'}
+                    {lang === 'tr' && 'Endüstri Ödülü'}
+                  </h3>
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="text-sm text-gray-500 mb-2">September 15, 2024</div>
+                <p class="text-gray-600 mb-4">
+                  {lang === 'en' && 'FastIPTV wins "Best IPTV Service 2024" award at the Streaming Technology Conference.'}
+                  {lang === 'fr' && 'FastIPTV remporte le prix "Meilleur Service IPTV 2024" à la Conférence sur la Technologie de Streaming.'}
+                  {lang === 'de' && 'FastIPTV gewinnt den Preis "Bester IPTV-Service 2024" auf der Streaming-Technologie-Konferenz.'}
+                  {lang === 'es' && 'FastIPTV gana el premio "Mejor Servicio IPTV 2024" en la Conferencia de Tecnología de Streaming.'}
+                  {lang === 'it' && 'FastIPTV vince il premio "Miglior Servizio IPTV 2024" alla Conferenza sulla Tecnologia di Streaming.'}
+                  {lang === 'pt' && 'FastIPTV ganha o prêmio "Melhor Serviço IPTV 2024" na Conferência de Tecnologia de Streaming.'}
+                  {lang === 'nl' && 'FastIPTV wint de "Beste IPTV Service 2024" award op de Streaming Technology Conference.'}
+                  {lang === 'zh' && 'FastIPTV在流媒体技术会议上获得"2024年最佳IPTV服务"奖。'}
+                  {lang === 'ar' && 'FastIPTV تفوز بجائزة "أفضل خدمة IPTV 2024" في مؤتمر تكنولوجيا البث.'}
+                  {lang === 'tr' && 'FastIPTV, Streaming Technology Conference\'da "En İyi IPTV Hizmeti 2024" ödülünü kazandı.'}
+                </p>
+                <a href="#" class="text-blue-600 hover:text-blue-800 font-medium text-sm">
+                  {lang === 'en' && 'Read More →'}
+                  {lang === 'fr' && 'Lire Plus →'}
+                  {lang === 'de' && 'Mehr Lesen →'}
+                  {lang === 'es' && 'Leer Más →'}
+                  {lang === 'it' && 'Leggi di Più →'}
+                  {lang === 'pt' && 'Leia Mais →'}
+                  {lang === 'nl' && 'Lees Meer →'}
+                  {lang === 'zh' && '阅读更多 →'}
+                  {lang === 'ar' && 'اقرأ المزيد →'}
+                  {lang === 'tr' && 'Devamını Oku →'}
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <Footer lang={lang} />
+  </body>
+</html>

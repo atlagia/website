@@ -1,0 +1,18 @@
+---
+import BannerIsland from './BannerIsland';
+
+interface Props {
+  title: string;
+  description: string;
+  cta: { text: string; link: string };
+}
+
+const { title, description, cta } = Astro.props;
+---
+
+<BannerIsland
+  client:visible
+  title={title}
+  description={description}
+  cta={cta}
+/>

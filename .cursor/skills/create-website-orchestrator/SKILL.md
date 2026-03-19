@@ -15,7 +15,7 @@ This skill runs the same workflow as [create-website](../create-website/SKILL.md
 
 1. **Parse the brief** exactly as in create-website Phase 0:
    - Store name (PascalCase), theme name (kebab-case), design direction, palette, typography, homepage sections (ordered), nav items, tagline.
-   - Apply AIDA + visual rhythm from [world-class-homepage-builder](../world-class-homepage-builder/SKILL.md); validate section order.
+   - Apply AIDA + visual rhythm from [premium-homepage](../premium-homepage/SKILL.md); validate section order.
    - Find closest niche reference from [create-website examples.md](../create-website/examples.md) and note: **referenceStore**, **referenceTheme** (e.g. DesignerWatch, luxury-watches).
 2. **Build context payload** for subagents (use this exact shape in every delegation):
 

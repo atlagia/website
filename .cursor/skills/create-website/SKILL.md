@@ -28,7 +28,7 @@ Extract from the user's instructions before writing any code:
 
 ### 0.1 Apply the AIDA Homepage Framework
 
-Before finalising sections, map them to the **AIDA funnel** and verify **visual rhythm**. Read the [world-class-homepage-builder](../world-class-homepage-builder/SKILL.md) skill for the full framework, then apply these rules:
+Before finalising sections, map them to the **AIDA funnel** and verify **visual rhythm**. Read the [premium-homepage](../premium-homepage/SKILL.md) skill for the full framework, then apply these rules:
 
 **AIDA stages — every homepage must cover all four:**
 
@@ -57,7 +57,7 @@ Before finalising sections, map them to the **AIDA funnel** and verify **visual 
 11. Newsletter signup      [CONTAINED]      ACTION
 ```
 
-If the brief has fewer sections, use the 8-section minimum. If more content, use the 14-section rich variant. See [world-class-homepage-builder examples](../world-class-homepage-builder/examples.md).
+If the brief has fewer sections, use the 8-section minimum. If more content, use the 14-section rich variant. See [premium-homepage examples](../premium-homepage/examples.md).
 
 **Anti-patterns to avoid:**
 - Two full-bleed sections back-to-back
@@ -78,9 +78,10 @@ Before scaffolding, find the closest existing store to use as inspiration. See [
 | Luxury handbags, designer bags, accessories | **RepBag** |
 | Luxury sneakers, designer shoes, footwear | **DesignerShoes** |
 | Luxury watches, jewelry, timepieces | **DesignerWatch** |
-| IPTV, streaming, digital subscriptions | **FastIPTV** |
+| IPTV, streaming, digital subscriptions | **StreamBits** (cinematic-iptv) — React Bits animated |
 | Digital gift cards, vouchers, fintech marketplace | **GlobalGiftCards** |
-| SaaS, dental, clinic, agency | **Atlagia / Dentagia** |
+| **SaaS, landing page, subscription, digital service** | **StreamBits** (cinematic-iptv) — React Bits animated |
+| Dental, clinic, agency (traditional) | **Atlagia / Dentagia** |
 
 Clone the **closest match** theme folder instead of Abstract when a close niche exists. This gives you niche-specific components, section order, and design tokens as a head start.
 
@@ -260,9 +261,8 @@ For every section in the homepage brief, create a matching component. Check [exa
 | Automotive / F1 | `CarBrandsStrip`, `ManifestoSection`, `SeasonDrop`, `RacingArchive`, `Marquee` |
 | Luxury (watches/jewelry) | `HeritageBlock`, `CraftsmanshipVideo`, `FeaturedHighlight`, `DividerBlock` |
 | Luxury (shoes/bags/fashion) | `BrandStory`, `SocialGallery`, `LifestyleBanner`, `WhyChoose[StoreName]` |
-| IPTV / streaming | `Features`, `Channels`, `VideoDemo`, `Pricing`, `Devices`, `CTA` |
+| IPTV / streaming / SaaS / subscription / digital service | Clone **StreamBits** — `Welcome`, `Features`, `Channels`, `VideoDemo`, `Pricing`, `Devices`, `Testimonials`, `FAQ`, `CTA` + full React Bits animated islands. See **Appendix A** below. |
 | Digital gift cards / vouchers / fintech marketplace | `PopularCategories`, `GiftIdeas`, `FeaturedDeals`, `WhyChoose[StoreName]`, `CategoryStrip` — clone from **GlobalGiftCards** |
-| SaaS / digital | `Pricing`, `Process`, `Technologies`, `IndustryFeatures` |
 
 ### Header pattern
 
@@ -343,7 +343,7 @@ MCP: `browser_navigate` + `browser_take_screenshot` — full homepage should ren
 
 ## Phase 6.5 — Homepage Quality Gate (AIDA + Rhythm Audit)
 
-After all sections render, run the [world-class-homepage-builder](../world-class-homepage-builder/SKILL.md) audit:
+After all sections render, run the [premium-homepage](../premium-homepage/SKILL.md) audit:
 
 1. **Map every section** to its AIDA stage (Attention / Interest / Desire / Action).
 2. **Check funnel coverage** — every stage must have at least one section.
@@ -505,4 +505,187 @@ When the site or product page uses a **dark background** (e.g. `bodyClass` or pr
 8. Follow [atlagia-ecommerce-frontend](../atlagia-ecommerce-frontend/SKILL.md) for design direction, header pattern, and style file requirements.
 9. **After Phase 8**, run the full [website-audit](../website-audit/SKILL.md) to verify homepage sections, collections, product pages, slide cart, and pillar pages. Fix every issue before reporting done.
 10. **Style completeness:** Use Abstract theme styles as the template for all JSON/mjs keys. Respect the rules above (dark theme, header actions, Related Products, slide cart) so the new store does not regress.
-11. **Homepage quality:** Every homepage must pass the AIDA + visual rhythm audit from [world-class-homepage-builder](../world-class-homepage-builder/SKILL.md). No two full-bleed sections adjacent, all four funnel stages covered, testimonials enriched (3+ quotes with names/cities), brand story present.
+11. **Homepage quality:** Every homepage must pass the AIDA + visual rhythm audit from [premium-homepage](../premium-homepage/SKILL.md). No two full-bleed sections adjacent, all four funnel stages covered, testimonials enriched (3+ quotes with names/cities), brand story present.
+12. **SaaS / IPTV / subscription sites:** Always clone **StreamBits** and use React Bits animated components. Follow **Appendix A** below.
+
+---
+
+## Appendix A — SaaS / Subscription / IPTV Websites (React Bits)
+
+When the brief describes a **SaaS product, subscription service, IPTV platform, streaming service, or any modern digital landing page**, clone **StreamBits** (`src/websites/StreamBits/themes/cinematic-iptv/`) and follow this appendix. StreamBits uses [React Bits](https://reactbits.dev/) animated components inside Astro Islands for a premium, cinematic experience.
+
+### A.1 Why StreamBits as the Template
+
+StreamBits provides a production-ready architecture for animated SaaS/subscription sites:
+
+- **12 React Bits components** already implemented as local `.tsx` files (no npm dependency on reactbits — components are self-contained)
+- **8 React Island wrappers** that bridge Astro SSR with React client-side interactivity
+- **8 Astro wrapper components** that use `client:load` / `client:visible` for optimal hydration
+- **Dark cinematic UI** with glassmorphism, gradient highlights, and high-contrast typography
+- **Complete homepage** with 10 sections mapped to AIDA funnel
+- **25+ inner pages** (pricing, channels, FAQ, about, contact, setup, etc.)
+- **Full styles/ folder** with all core JSON/mjs keys
+
+### A.2 Required Dependencies
+
+Ensure these are installed in the project root (already present if StreamBits was previously built):
+
+```bash
+npm install three postprocessing
+npm install @types/three --save-dev
+```
+
+The Astro project must have `@astrojs/react` integration enabled in `astro.config.mjs` (already present in this codebase).
+
+### A.3 React Bits Component Library (components/reactbits/)
+
+Clone the entire `components/reactbits/` directory from StreamBits. It contains **12 self-contained React components** — no external `reactbits` npm package needed:
+
+| Component | File | Props | Use For |
+|-----------|------|-------|---------|
+| **SplitText** | `SplitText.tsx` | `text, className?, delay?, as?` | Headlines — reveals text character-by-character on scroll |
+| **GradientText** | `GradientText.tsx` | `children, colors?, className?, animationSpeed?` | Accent words in headings — animated gradient text |
+| **AnimatedContent** | `AnimatedContent.tsx` | `children, direction?, delay?, duration?, className?, distance?` | Scroll-triggered fade/slide for any content block |
+| **SpotlightCard** | `SpotlightCard.tsx` | `children, className?, spotlightColor?, spotlightSize?` | Feature cards, pricing cards — mouse-follow spotlight |
+| **CountUp** | `CountUp.tsx` | `from?, to, duration?, separator?, suffix?, className?` | Statistics — scroll-triggered number animation |
+| **StarBorder** | `StarBorder.tsx` | `children, color?, speed?, className?, borderRadius?` | Popular plan badge — rotating conic-gradient border |
+| **InfiniteScroll** | `InfiniteScroll.tsx` | `children, speed?, direction?, pauseOnHover?, className?` | Channel categories — horizontal marquee |
+| **ShinyText** | `ShinyText.tsx` | `text, className?, speed?, shineColor?` | CTA labels, badges — moving shine overlay |
+| **DecryptedText** | `DecryptedText.tsx` | `text, speed?, className?, characters?` | Hero badges — matrix-style character scramble |
+| **Aurora** | `Aurora.tsx` | `colorStops?, speed?, blend?, className?` | CTA section background — animated gradient blobs |
+| **LiquidEther** | `LiquidEther.tsx` | `mouseForce?, cursorSize?, colors?, autoDemo?, ...` | Hero background — WebGL fluid simulation (needs `three`) |
+| **Hyperspeed** | `Hyperspeed.tsx` | `effectOptions?` | Alternative hero bg — 3D highway with car lights (needs `three`, `postprocessing`) |
+
+**Barrel export:** `components/reactbits/index.ts` re-exports all components for convenience.
+
+### A.4 Architecture Pattern: Astro Islands with React Bits
+
+StreamBits uses a **three-layer architecture** to combine Astro SSR with React animations:
+
+```
+Layer 1: Astro page (page/index.astro)
+  └── dynamically imports Astro wrapper components
+      └── Layer 2: Astro wrapper (e.g. Welcome.astro)
+          └── imports React Island with client:load or client:visible
+              └── Layer 3: React Island (e.g. HeroIsland.tsx)
+                  └── uses reactbits/* components for animations
+```
+
+**Why three layers?** Astro's `[...slug].astro` router dynamically imports page files. If the page file directly imports React `.tsx` components, Vite's static analysis fails with `Unknown variable dynamic import`. The Astro wrapper layer solves this — the page dynamically imports `.astro` files, which then statically import `.tsx` React Islands.
+
+**Hydration strategy:**
+- **`client:load`** — Only for the Hero section (above the fold, must be interactive immediately)
+- **`client:visible`** — All other sections (hydrate only when scrolled into view, saves JS payload)
+
+### A.5 Section → Island → ReactBits Mapping
+
+Each homepage section follows this pattern. When creating a new SaaS site from StreamBits, adapt the content but keep the component architecture:
+
+| Section | Astro Wrapper | React Island | React Bits Used | Hydration |
+|---------|--------------|--------------|-----------------|-----------|
+| **Hero** | `Welcome.astro` | `HeroIsland.tsx` | LiquidEther (bg), SplitText, GradientText, CountUp, AnimatedContent, DecryptedText | `client:load` |
+| **Features** | `Features.astro` | `FeaturesIsland.tsx` | SpotlightCard, AnimatedContent, GradientText | `client:visible` |
+| **Content Grid** | `Channels.astro` | `ChannelsIsland.tsx` | InfiniteScroll, AnimatedContent, GradientText | `client:visible` |
+| **Pricing** | `Pricing.astro` | `PricingIsland.tsx` | SpotlightCard, StarBorder, AnimatedContent, GradientText, ShinyText | `client:visible` |
+| **Devices / Platforms** | `Devices.astro` | `DevicesIsland.tsx` | SpotlightCard, AnimatedContent, GradientText | `client:visible` |
+| **Testimonials** | `Testimonials.astro` | `TestimonialsIsland.tsx` | SpotlightCard, AnimatedContent, GradientText | `client:visible` |
+| **FAQ** | `FAQ.astro` | `FAQIsland.tsx` | AnimatedContent, GradientText | `client:visible` |
+| **CTA** | `CTA.astro` | `CTAIsland.tsx` | Aurora (bg), AnimatedContent, GradientText, ShinyText | `client:visible` |
+| **Video Demo** | `VideoDemo.astro` | — (pure Astro) | None (static section) | N/A |
+
+### A.6 Creating a New SaaS Site from StreamBits
+
+Follow the main skill phases (0-8) with these StreamBits-specific overrides:
+
+**Phase 1 (Scaffold):** Clone `src/websites/StreamBits/themes/cinematic-iptv/` instead of Abstract. This gives you the full `reactbits/` library, all Island components, Astro wrappers, and the three-layer architecture.
+
+**Phase 2 (Theme):** Update CSS variables in `BaseHead.astro` with the new brand's `--<prefix>-*` tokens. Change colors in the React Islands — each Island has hardcoded theme colors (e.g. `THEME_COLORS`, `ETHER_COLORS`) that must match the new brand palette.
+
+**Phase 3 (BaseHead):** Keep the Google Fonts pattern (display + body). Update `theme-color` meta tag. StreamBits uses Syne (display) + DM Sans (body) — replace with the brief's fonts.
+
+**Phase 4 (Components):** Adapt the React Islands to the new product/service:
+- Rename section props to match the new domain (e.g. "channels" → "integrations" for a SaaS tool)
+- Update reactbits color props (e.g. `SpotlightCard spotlightColor`, `GradientText colors`, `Aurora colorStops`)
+- Keep the three-layer pattern: `.astro` wrapper → React Island → reactbits components
+- **To add a new section:** Create `NewSectionIsland.tsx` using reactbits, then `NewSection.astro` that imports it with `client:visible`, then add the dynamic import in `page/index.astro`
+
+**Phase 5 (page/index.astro):** The page must import only Astro wrappers (never React `.tsx` directly). Add section type matching for any new sections.
+
+**Phase 6 (data/index_en.json):** Section types must match: `welcome`, `features`, `channels`, `pricing`, `videoDemo`, `devices`, `testimonials`, `faq`, `cta`. Rename types if the domain changes (e.g. `channels` → `integrations`).
+
+### A.7 React Bits Best Practices
+
+**Performance:**
+- Always use `client:visible` for below-the-fold sections (only `client:load` for hero)
+- WebGL backgrounds (LiquidEther, Hyperspeed) are heavy — use only one per page, in the hero
+- Aurora is lighter than LiquidEther/Hyperspeed — prefer it for secondary sections (CTA)
+- All reactbits components respect `prefers-reduced-motion` — provide static fallbacks
+
+**Customization:**
+- Each component accepts color/style props — always match the site's theme
+- `SpotlightCard` `spotlightColor` should use the brand accent color
+- `GradientText` `colors` array should use brand gradient (e.g. `['#8b5cf6', '#6366f1', '#06b6d4']`)
+- `SplitText` `delay` controls stagger speed (25ms is smooth, 50ms is dramatic)
+- `AnimatedContent` `delay` should increase per item for cascade effect (e.g. 100, 250, 400, 550)
+- `CountUp` is best for stats with numbers ≥ 10; use plain text for non-numeric stats
+
+**Choosing a hero background:**
+
+| Background | Visual | Performance | Best For |
+|-----------|--------|-------------|----------|
+| **LiquidEther** | Fluid, organic, interactive | Medium (WebGL 2D) | SaaS, creative tools, agencies |
+| **Hyperspeed** | 3D highway with neon lights | Heavy (WebGL 3D + postprocessing) | Streaming, speed-focused, tech |
+| **Aurora** | Gradient blobs, subtle | Light (CSS/canvas) | Minimal SaaS, professional |
+
+**Adding new React Bits components:** Visit [reactbits.dev](https://reactbits.dev/) for the full catalog (110+ free components). To add a new one:
+1. Find the component on reactbits.dev, click "Code" tab, select "TS + Tailwind" variant
+2. Copy the source into `components/reactbits/NewComponent.tsx`
+3. Remove the CSS import line (replace with inline styles or Tailwind)
+4. Add `export { default as NewComponent } from './NewComponent';` to `reactbits/index.ts`
+5. Import and use in a React Island
+
+**React Bits component categories available at [reactbits.dev](https://reactbits.dev/):**
+
+| Category | Components |
+|----------|-----------|
+| **Text Animations** | Split Text, Gradient Text, Shiny Text, Decrypted Text, Text Pressure, Fuzzy Text, True Focus, Rotating Text, Counter, Scroll Float, Scroll Reveal, Scroll Velocity, Blur Text, Text Morph |
+| **Backgrounds** | Aurora, Hyperspeed, Liquid Ether, Pixel Blast, Beams, Pixel Snow, Lightning, Prismatic Burst, Galaxy, Dither, Faulty Terminal, Ripple Grid, Dot Grid, Threads, Iridescence, Waves, Grid Distortion, Ballpit, Orb, Letter Glitch, Grid Motion, Shape Grid, Liquid Chrome, Balatro, Silk, Floating Lines, Light Rays, Color Bends, Dark Veil, Light Pillar, Prism, Plasma, Particles, Gradient Blinds |
+| **Components** | Animated Content, Spotlight Card, Star Border, Infinite Scroll, Tilt Card, Elastic Slider, Counter, Bounce Cards, Stepper, Flowing Menu, Decay Card, Infinite Menu |
+
+### A.8 Example: Adapting StreamBits for a SaaS Analytics Tool
+
+```
+Clone: StreamBits/themes/cinematic-iptv/ → MyAnalytics/themes/analytics-dark/
+
+Rename sections:
+  channels → integrations
+  devices  → platforms
+  videoDemo → productDemo
+
+Update colors:
+  --sbi-* → --ma-* (my analytics prefix)
+  Hero LiquidEther colors: ['#00D4FF', '#7C3AED', '#0EA5E9']
+  GradientText: ['#00D4FF', '#7C3AED', '#06b6d4']
+
+Update content:
+  "10,000+ Live Channels" → "50M+ Data Points Processed"
+  "4K & HD Quality" → "Real-time Analytics"
+  pricing plans → SaaS tiers (Free / Pro / Enterprise)
+```
+
+### A.9 Checklist Addition for SaaS Sites
+
+Add these to the main Phase 4 checklist when building a SaaS/React Bits site:
+
+```
+Phase 4 (SaaS/React Bits additions):
+  - [ ] Clone reactbits/ folder from StreamBits
+  - [ ] Verify three/postprocessing installed
+  - [ ] Create React Island for each section
+  - [ ] Create Astro wrapper for each Island
+  - [ ] Hero uses client:load, all others use client:visible
+  - [ ] Only one WebGL background per page (hero only)
+  - [ ] All reactbits color props match new brand palette
+  - [ ] MCP verify: animations load, no console errors
+  - [ ] Test prefers-reduced-motion (animations should degrade gracefully)
+```

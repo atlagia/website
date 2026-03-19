@@ -40,6 +40,10 @@ const jsonData = translations.default;
 const SITE_TITLE = jsonData.siteTitle || 'Bikes';
 const SITE_DESCRIPTION = jsonData.siteDescription || 'Your ultimate cosplay destination';
 
+// LCP preload: hero fallback image from welcome section when present
+const welcomeSection = jsonData.sections?.find((s: { type?: string }) => s.type === 'welcomeSection');
+const heroPreloadImage = welcomeSection?.backgroundVideo?.fallbackImage || undefined;
+
 const blogId = '82152357935';
 let posts = [];
 
@@ -64,7 +68,7 @@ export async function getStaticPaths() {
     <BaseHead 
       title={SITE_TITLE} 
       description={SITE_DESCRIPTION} 
-      isHomePage={true}
+      preloadImage={heroPreloadImage}
       currentLang={lang}
     />
   </head>

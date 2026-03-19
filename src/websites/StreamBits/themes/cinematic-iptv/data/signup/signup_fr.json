@@ -1,0 +1,147 @@
+{
+  "pageTitle": "Sign Up - FastIPTV",
+  "pageDescription": "Join thousands of users enjoying premium IPTV service. Start your free trial today!",
+  "urgencyBadge": "🔥 LIMITED TIME: 50% OFF First Month",
+  "heroTitle": "Start Your Premium IPTV Journey Today",
+  "heroDescription": "Join over 100,000+ satisfied customers enjoying 32,000+ channels and 140,000+ movies & series in stunning 4K quality.",
+  "trustIndicators": {
+    "instant": "Instant Access",
+    "secure": "Secure Payment",
+    "support": "24/7 Support"
+  },
+  "socialProof": {
+    "title": "Trusted by 100,000+ Happy Customers",
+    "rating": "4.9/5",
+    "users": "100K+ Users",
+    "channels": "32K+ Channels"
+  },
+  "form": {
+    "title": "Create Your Account",
+    "emailLabel": "Email Address",
+    "emailPlaceholder": "Enter your email address",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "Create a strong password",
+    "firstNameLabel": "First Name",
+    "firstNamePlaceholder": "Enter your first name",
+    "lastNameLabel": "Last Name",
+    "lastNamePlaceholder": "Enter your last name",
+    "planLabel": "Choose Your Plan",
+    "submitButton": "Start Free Trial",
+    "termsText": "I agree to the",
+    "termsLink": "Terms of Service",
+    "loginText": "Already have an account?",
+    "loginLink": "Sign In"
+  },
+  "plans": [
+    {
+      "value": "1month",
+      "label": "1 Month - $16.99/month"
+    },
+    {
+      "value": "3months",
+      "label": "3 Months - $29.99 (Save $20)"
+    },
+    {
+      "value": "12months",
+      "label": "12 Months - $59.99 (Save $144)"
+    }
+  ],
+  "benefits": {
+    "title": "What You'll Get",
+    "list": [
+      "32,000+ Premium IPTV Channels",
+      "140,000+ Movies & TV Series",
+      "4K Ultra HD Quality Streaming",
+      "Catch Up & EPG for All Channels",
+      "Works on All Devices",
+      "24/7 Technical Support",
+      "No Hidden Fees or Contracts",
+      "30-Day Money Back Guarantee"
+    ]
+  },
+  "features": {
+    "title": "Premium Features",
+    "list": [
+      "Anti-Freeze Technology",
+      "99.9% Server Uptime",
+      "Multi-Device Support",
+      "Parental Controls",
+      "Favorites & Watchlist",
+      "Multi-Language Support",
+      "HD & 4K Quality",
+      "No Geographic Restrictions"
+    ]
+  },
+  "guarantee": {
+    "title": "Our Guarantee",
+    "description": "We're so confident you'll love our service that we offer a 30-day money-back guarantee. If you're not satisfied, we'll refund your payment, no questions asked.",
+    "badge": "30-Day Money Back Guarantee"
+  },
+  "testimonials": {
+    "title": "What Our Customers Say",
+    "list": [
+      {
+        "rating": "5.0",
+        "text": "Best IPTV service I've ever used! The quality is amazing and the channel selection is incredible. Highly recommended!",
+        "avatar": "JS",
+        "name": "John Smith",
+        "location": "New York, USA"
+      },
+      {
+        "rating": "5.0",
+        "text": "Switched from cable to FastIPTV and couldn't be happier. Saving $100+ per month and getting better content!",
+        "avatar": "MJ",
+        "name": "Maria Johnson",
+        "location": "Toronto, Canada"
+      },
+      {
+        "rating": "5.0",
+        "text": "The 4K quality is mind-blowing! Customer support is also top-notch. This is exactly what I was looking for.",
+        "avatar": "DL",
+        "name": "David Lee",
+        "location": "London, UK"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": [
+      {
+        "question": "How does the free trial work?",
+        "answer": "Start your free trial immediately after signup. You'll have full access to all features for 24 hours, no credit card required."
+      },
+      {
+        "question": "What devices are supported?",
+        "answer": "Our service works on Smart TVs, Android devices, iOS devices, Fire Stick, Roku, and web browsers."
+      },
+      {
+        "question": "Is there a contract or commitment?",
+        "answer": "No contracts or commitments. You can cancel anytime and we offer a 30-day money-back guarantee."
+      },
+      {
+        "question": "How many devices can I use?",
+        "answer": "Each plan includes support for multiple devices. Premium plans support up to 5 simultaneous streams."
+      },
+      {
+        "question": "What payment methods do you accept?",
+        "answer": "We accept all major credit cards, PayPal, and cryptocurrency payments for your convenience."
+      },
+      {
+        "question": "Is the service legal and safe?",
+        "answer": "Yes, our service is completely legal and safe. We use industry-standard encryption to protect your data."
+      }
+    ]
+  },
+  "finalCta": {
+    "title": "Ready to Transform Your Entertainment?",
+    "description": "Join thousands of satisfied customers and start enjoying premium content today.",
+    "primaryButton": {
+      "text": "Start Free Trial Now",
+      "link": "/checkout"
+    },
+    "secondaryButton": {
+      "text": "View All Plans",
+      "link": "/packages"
+    }
+  }
+}

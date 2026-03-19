@@ -4,23 +4,28 @@ import { generateCanonicalURL, generateSchema, type SEOProps } from '@utils/seo'
 import { getReviewStats, getReviews } from '@libs/db';
 import GoogleAnalytics from '@components/GoogleAnalytics.astro';
 import Hotjar from '@components/Hotjar.astro';
-import { SITE_TITLE } from '../consts';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 interface Props {
   title?: string;
   description?: string;
   image?: string;
+  /** Optional LCP image URL to preload (e.g. hero fallback). */
+  preloadImage?: string;
   type?: string;
   canonicalURL?: string;
   publishDate?: string;
   schemaMarkup?: object;
   currentLang?: string;
+  robotsNoindex?: boolean;
 }
 
 const {
   title = SITE_TITLE,
-  description = "Transform your business with our AI-powered solutions",
+  description = SITE_DESCRIPTION,
+  robotsNoindex = false,
   image = "/og-image.jpg",
+  preloadImage,
   type = "website",
   canonicalURL = Astro.url.href,
   publishDate = new Date().toISOString(),
@@ -33,7 +38,7 @@ const {
     url: canonicalURL,
     publisher: {
       "@type": "Organization",
-      name: import.meta.env.PUBLIC_BUSINESS_NAME || 'Atalsia',
+      name: import.meta.env.PUBLIC_BUSINESS_NAME || import.meta.env.PUBLIC_SITE_NAME || 'Drivon',
       logo: {
         "@type": "ImageObject",
         url: new URL("/logo.png", Astro.url)
@@ -185,8 +190,13 @@ if (Astro.url.pathname === '/') {
   }
 }
 
-// Generate breadcrumb schema
+// Generate breadcrumb schema; map known lang segments to human-readable names
 const pathSegments = Astro.url.pathname.split('/').filter(Boolean);
+const segmentLabel = (segment: string, index: number): string => {
+  const lower = segment.toLowerCase();
+  if (index === 0 && (lower === 'en' || lower === 'ar' || lower === 'zh' || lower === 'fr' || lower === 'de' || lower === 'es')) return 'Home';
+  return segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ');
+};
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -195,7 +205,7 @@ const breadcrumbSchema = {
     position: index + 1,
     item: {
       "@id": new URL('/' + pathSegments.slice(0, index + 1).join('/'), Astro.url),
-      name: segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ')
+      name: segmentLabel(segment, index)
     }
   }))
 };
@@ -218,19 +228,14 @@ const fullSchema = [schemaMarkup, breadcrumbSchema];
   <link rel="alternate" hreflang={lang} href={url} />
 ))}
 
-<!-- Debug: Current URL and Language -->
-<!-- Current URL: {selfUrl} -->
-<!-- Current Language: {currentLang || 'en'} -->
-<!-- Generated hreflang URLs: {JSON.stringify(hrefLangURLs)} -->
-
-<!-- Robots Meta Tag - Allow indexing of all language versions -->
-<meta name="robots" content="index, follow" />
+<!-- Robots Meta Tag -->
+<meta name="robots" content={robotsNoindex ? "noindex, follow" : "index, follow"} />
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
 <meta name="title" content={title} />
 <meta name="description" content={description} />
-<meta name="author" content={import.meta.env.PUBLIC_BUSINESS_NAME || 'Atalsia'} />
+<meta name="author" content={import.meta.env.PUBLIC_BUSINESS_NAME || import.meta.env.PUBLIC_SITE_NAME || 'Drivon'} />
 <meta name="publish_date" property="og:publish_date" content={publishDate} />
 
 <!-- Open Graph / Facebook -->
@@ -261,10 +266,13 @@ const fullSchema = [schemaMarkup, breadcrumbSchema];
   <script type="application/ld+json" set:html={JSON.stringify(reviewSchema)} />
 )}
 
-<!-- Fonts: Bebas Neue (headlines) + DM Sans (body) - motorsport editorial luxury -->
+<!-- Fonts: Bebas Neue (headlines) + DM Sans (body) - motorsport editorial luxury; non-blocking load with display=swap -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Noto+Kufi+Arabic:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Noto+Kufi+Arabic:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" as="style" />
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Noto+Kufi+Arabic:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+<noscript><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Noto+Kufi+Arabic:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
+{preloadImage && <link rel="preload" as="image" href={new URL(preloadImage, Astro.url).href} />}
 
 <ViewTransitions />
 
@@ -357,12 +365,8 @@ const fullSchema = [schemaMarkup, breadcrumbSchema];
   html[lang="ar"] p { line-height: 1.8; }
   html[lang="ar"] button, html[lang="ar"] .button { font-family: var(--font-arabic-primary); font-weight: 600; }
 </style>
-{import.meta.env.PUBLIC_GA_MEASUREMENT_ID && <GoogleAnalytics />}
-<Hotjar />
-
-<!-- Preload Critical Assets -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+{import.meta.env.PUBLIC_ALLOW_GA !== 'false' && import.meta.env.PUBLIC_GA_MEASUREMENT_ID && <GoogleAnalytics />}
+{import.meta.env.PUBLIC_ALLOW_HOTJAR !== 'false' && <Hotjar />}
 
 <!-- RSS Feed -->
 <link rel="alternate" type="application/rss+xml" title={`${SITE_TITLE} RSS Feed`} href="/rss.xml">

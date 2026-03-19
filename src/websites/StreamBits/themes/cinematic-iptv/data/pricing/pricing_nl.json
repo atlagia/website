@@ -1,0 +1,97 @@
+{
+  "hero": {
+    "title": "Kies Je Fast Stronger IPTV Plan",
+    "description": "Vind het perfecte Fast IPTV lidmaatschap voor je premium streaming behoeften"
+  },
+  "billing": {
+    "monthly": "Maandelijkse facturering",
+    "yearly": "Jaarlijkse facturering",
+    "saveText": "Bespaar 20%"
+  },
+  "plans": [
+    {
+      "name": "1 Maand Fast IPTV",
+      "price": "16.99",
+      "duration": "maand",
+      "checkoutUrl": "https://wa.me/16058466377",
+      "features": [
+        "+32,000 Fast IPTV-kanalen",
+        "+140,000 Premium IPTV-films & series",
+        "8K/4K/Ultra HD Stronger IPTV-kwaliteit",
+        "Catch Up/EPG voor alle Fast IPTV-kanalen",
+        "GRATIS Premium IPTV-kanalen & VOD-updates",
+        "99.9% Fast IPTV-server uptime",
+        "Alle apparaten ondersteund voor Stronger IPTV",
+        "AntiFreeze-technologie voor Fast IPTV",
+        "24/7 Premium IPTV-technische ondersteuning"
+      ],
+      "isPopular": false
+    },
+    {
+      "name": "12 Maanden Stronger IPTV",
+      "price": "59.99",
+      "duration": "jaar",
+      "checkoutUrl": "https://wa.me/16058466377",
+      "features": [
+        "+32,000 Premium IPTV-kanalen",
+        "+140,000 Fast IPTV-films & series",
+        "8K/4K/Ultra HD Stronger IPTV-kwaliteit",
+        "Catch Up/EPG voor alle Fast IPTV-kanalen",
+        "GRATIS Premium IPTV-kanalen & VOD-updates",
+        "99.9% Fast IPTV-server uptime",
+        "Alle apparaten ondersteund voor Stronger IPTV",
+        "AntiFreeze-technologie voor Fast IPTV",
+        "24/7 Premium IPTV-technische ondersteuning"
+      ],
+      "isPopular": true
+    },
+    {
+      "name": "3 Maanden Fast IPTV",
+      "price": "29.99",
+      "duration": "kwartaal",
+      "checkoutUrl": "https://wa.me/16058466377",
+      "features": [
+        "+32,000 Stronger IPTV-kanalen",
+        "+140,000 Premium IPTV-films & series",
+        "8K/4K/Ultra HD Fast IPTV-kwaliteit",
+        "Catch Up/EPG voor alle Premium IPTV-kanalen",
+        "GRATIS Fast IPTV-kanalen & VOD-updates",
+        "99.9% Stronger IPTV-server uptime",
+        "Alle apparaten ondersteund voor Fast IPTV",
+        "AntiFreeze-technologie voor Premium IPTV",
+        "24/7 Stronger IPTV-technische ondersteuning"
+      ],
+      "isPopular": false
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Welke betaalmethoden accepteer je?",
+      "answer": "We accepteren alle grote creditcards, PayPal en bankoverschrijvingen voor jaarlijkse plannen."
+    },
+    {
+      "question": "Kan ik later van plan veranderen?",
+      "answer": "Ja, je kunt je plan op elk moment upgraden of downgraden. Wijzigingen worden weergegeven in je volgende factureringscyclus."
+    },
+    {
+      "question": "Is er een gratis proefperiode?",
+      "answer": "Ja, we bieden een 14-daagse gratis proefperiode op alle plannen. Geen creditcard vereist."
+    },
+    {
+      "question": "Wat gebeurt er na het einde van mijn proefperiode?",
+      "answer": "Na het einde van je proefperiode kun je ervoor kiezen om je te abonneren op een van onze plannen of je account wordt automatisch gedowngrade naar een beperkte gratis versie."
+    }
+  ],
+  "cta": {
+    "title": "Klaar om te beginnen?",
+    "description": "Sluit je aan bij duizenden bedrijven die ons platform vertrouwen",
+    "primaryButton": {
+      "text": "Start Gratis Proefperiode",
+      "link": "/signup"
+    },
+    "secondaryButton": {
+      "text": "Neem Contact op met Verkoop",
+      "link": "/contact"
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "hero": {
+    "title": "اختر خطة Fast Stronger IPTV الخاصة بك",
+    "description": "اعثر على العضوية المثالية لـ Fast IPTV لاحتياجات البث المميزة"
+  },
+  "billing": {
+    "monthly": "الفوترة الشهرية",
+    "yearly": "الفوترة السنوية",
+    "saveText": "وفر 20%"
+  },
+  "plans": [
+    {
+      "name": "شهر واحد Fast IPTV",
+      "price": "16.99",
+      "duration": "شهر",
+      "checkoutUrl": "https://wa.me/16058466377",
+      "features": [
+        "+32,000 قناة Fast IPTV",
+        "+140,000 فيلم ومسلسل IPTV مميز",
+        "جودة Stronger IPTV 8K/4K/Ultra HD",
+        "إعادة المشاهدة/EPG لجميع قنوات Fast IPTV",
+        "تحديثات مجانية لقنوات IPTV المميزة و VOD",
+        "99.9% وقت تشغيل خادم Fast IPTV",
+        "جميع الأجهزة مدعومة لـ Stronger IPTV",
+        "تقنية AntiFreeze لـ Fast IPTV",
+        "مساعدة تقنية IPTV مميزة على مدار الساعة"
+      ],
+      "isPopular": false
+    },
+    {
+      "name": "12 شهر Stronger IPTV",
+      "price": "59.99",
+      "duration": "سنة",
+      "checkoutUrl": "https://wa.me/16058466377",
+      "features": [
+        "+32,000 قناة IPTV مميزة",
+        "+140,000 فيلم ومسلسل Fast IPTV",
+        "جودة Stronger IPTV 8K/4K/Ultra HD",
+        "إعادة المشاهدة/EPG لجميع قنوات Fast IPTV",
+        "تحديثات مجانية لقنوات IPTV المميزة و VOD",
+        "99.9% وقت تشغيل خادم Fast IPTV",
+        "جميع الأجهزة مدعومة لـ Stronger IPTV",
+        "تقنية AntiFreeze لـ Fast IPTV",
+        "مساعدة تقنية IPTV مميزة على مدار الساعة"
+      ],
+      "isPopular": true
+    },
+    {
+      "name": "3 أشهر Fast IPTV",
+      "price": "29.99",
+      "duration": "ربع سنة",
+      "checkoutUrl": "https://wa.me/16058466377",
+      "features": [
+        "+32,000 قناة Stronger IPTV",
+        "+140,000 فيلم ومسلسل IPTV مميز",
+        "جودة Fast IPTV 8K/4K/Ultra HD",
+        "إعادة المشاهدة/EPG لجميع قنوات IPTV المميزة",
+        "تحديثات مجانية لقنوات Fast IPTV و VOD",
+        "99.9% وقت تشغيل خادم Stronger IPTV",
+        "جميع الأجهزة مدعومة لـ Fast IPTV",
+        "تقنية AntiFreeze لـ IPTV المميز",
+        "مساعدة تقنية Stronger IPTV على مدار الساعة"
+      ],
+      "isPopular": false
+    }
+  ],
+  "faqs": [
+    {
+      "question": "ما طرق الدفع التي تقبلونها؟",
+      "answer": "نقبل جميع بطاقات الائتمان الرئيسية وPayPal والتحويلات المصرفية للخطط السنوية."
+    },
+    {
+      "question": "هل يمكنني تغيير الخطط لاحقاً؟",
+      "answer": "نعم، يمكنك ترقية أو تخفيض خطتك في أي وقت. ستظهر التغييرات في دورة الفوترة التالية."
+    },
+    {
+      "question": "هل هناك تجربة مجانية؟",
+      "answer": "نعم، نقدم تجربة مجانية لمدة 14 يوماً على جميع الخطط. لا حاجة لبطاقة ائتمان."
+    },
+    {
+      "question": "ماذا يحدث بعد انتهاء تجربتي؟",
+      "answer": "بعد انتهاء تجربتك، يمكنك اختيار الاشتراك في أي من خططنا أو سيتم تخفيض حسابك تلقائياً إلى نسخة مجانية محدودة."
+    }
+  ],
+  "cta": {
+    "title": "هل أنت مستعد للبدء؟",
+    "description": "انضم إلى آلاف الشركات التي تثق بمنصتنا",
+    "primaryButton": {
+      "text": "ابدأ التجربة المجانية",
+      "link": "/signup"
+    },
+    "secondaryButton": {
+      "text": "اتصل بالمبيعات",
+      "link": "/contact"
+    }
+  }
+}

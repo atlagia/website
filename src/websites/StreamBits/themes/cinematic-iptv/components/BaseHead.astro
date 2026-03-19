@@ -1,0 +1,394 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+import { generateCanonicalURL, generateSchema, type SEOProps } from '@utils/seo';
+import GoogleAnalytics from '@components/GoogleAnalytics.astro';
+// Reviews fetch removed to avoid Supabase/DB dependency and fetch failures
+// Analytics: GA + Hotjar run via Partytown (worker) to avoid document.write in main document (Best Practices).
+// Global styles inlined below to avoid render-blocking CSS; theme global.css kept for reference/override.
+
+const hotjarUrl = import.meta.env.PUBLIC_HOTJAR_ID && import.meta.env.PUBLIC_HOTJAR_VERSION
+  ? `https://static.hotjar.com/c/hotjar-${import.meta.env.PUBLIC_HOTJAR_ID}.js?sv=${import.meta.env.PUBLIC_HOTJAR_VERSION}`
+  : '';
+
+interface Props {
+  title: string;
+  description: string;
+  isHomePage?: boolean;
+  /** LCP image URL (e.g. hero) for preload; prefer WebP */
+  lcpImage?: string;
+  image?: string;
+  keywords?: string[];
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
+  /** Breadcrumb items for BreadcrumbList JSON-LD: [{ name, url }] */
+  breadcrumbs?: { name: string; url: string }[];
+}
+
+const { 
+  title, 
+  description, 
+  isHomePage = false, 
+  lcpImage,
+  image = '/og-image.jpg',
+  keywords = [
+    'StreamBits',
+    'IPTV streaming',
+    'live TV channels',
+    '10,000+ channels',
+    '4K HD streaming',
+    'Smart TV',
+    'Fire Stick',
+    'IPTV no cable',
+    'movie streaming',
+    'TV shows online',
+    'international channels',
+    'live sports',
+    'catch up TV',
+    'EPG guide',
+    'multi-device streaming',
+    '24/7 support'
+  ],
+  author = 'StreamBits',
+  publishedTime,
+  modifiedTime,
+  section = 'IPTV Services',
+  tags = ['IPTV', 'Streaming', 'Live TV', 'Movies', 'Sports'],
+  breadcrumbs
+} = Astro.props;
+
+// Get current language from URL
+const currentPath = Astro.url.pathname;
+const currentLang = currentPath.split('/')[1];
+
+// Get allowed languages from environment
+const getAllowedLanguages = () => {
+  const allowedLanguages = import.meta.env.ALLOWED_LANGUAGES || 'en';
+  return allowedLanguages.split(',').map(lang => lang.trim()).filter(lang => lang.length > 0);
+};
+
+const supportedLanguages = getAllowedLanguages();
+
+// Generate hreflang URLs - Fixed implementation
+const hrefLangURLs = [];
+
+// Determine the base path (without language prefix)
+let basePath = currentPath;
+if (currentLang && supportedLanguages.includes(currentLang)) {
+  // Remove language prefix from path
+  basePath = currentPath.substring(currentLang.length + 1) || '/';
+}
+
+// Generate hreflang URLs for each supported language
+const uniqueLangs = new Set();
+supportedLanguages.forEach(lang => {
+  let url;
+  
+  if (basePath === '/') {
+    // For home pages, each language gets its own home page
+    url = `${Astro.url.origin}/${lang}`;
+  } else {
+    // For other pages, add language prefix to the base path
+    url = `${Astro.url.origin}/${lang}${basePath}`;
+  }
+  
+  // Add all language variants, including self-referential
+  if (!uniqueLangs.has(lang)) {
+    uniqueLangs.add(lang);
+    hrefLangURLs.push({ lang, url });
+  }
+});
+
+// Add self-referential hreflang tag (required by Google)
+if (currentLang && supportedLanguages.includes(currentLang)) {
+  hrefLangURLs.push({ lang: currentLang, url: Astro.url.href });
+}
+
+// Add x-default pointing to English version (always)
+const xDefaultUrl = basePath === '/' 
+  ? `${Astro.url.origin}/en` 
+  : `${Astro.url.origin}/en${basePath}`;
+hrefLangURLs.push({ lang: 'x-default', url: xDefaultUrl });
+
+// Set canonical URL - each language should have its own canonical URL
+let canonicalURL;
+if (currentPath === '/') {
+  // Root path should redirect to English version
+  canonicalURL = `${Astro.url.origin}/en`;
+} else if (currentLang && supportedLanguages.includes(currentLang)) {
+  // Language-specific pages have their own canonical URL
+  canonicalURL = Astro.url.href;
+} else {
+  // Non-language pages should point to English version
+  canonicalURL = `${Astro.url.origin}/en${currentPath}`;
+}
+
+const currentYear = new Date().getFullYear();
+
+// Determine if the current language is RTL (ensure lang is never empty for PageSpeed / a11y)
+const lang = (currentLang && supportedLanguages.includes(currentLang)) ? currentLang : 'en';
+const isRTL = ['ar'].includes(lang);
+
+// Structured data for StreamBits
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "StreamBits",
+  "alternateName": ["StreamBits IPTV", "Unlimited IPTV Entertainment"],
+  "url": Astro.site,
+  "logo": `${Astro.site}logo.png`,
+  "description": "Premium IPTV streaming. 10,000+ live channels, 4K/HD, no cable. Watch on Smart TV, Fire Stick, mobile, and more.",
+  "foundingDate": "2023",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "email": "support@streambits.com",
+    "availableLanguage": ["English", "French", "Spanish", "German", "Dutch", "Italian", "Portuguese"]
+  },
+  "sameAs": [
+    "https://facebook.com/streambits",
+    "https://twitter.com/streambits",
+    "https://instagram.com/streambits",
+    "https://youtube.com/streambits"
+  ],
+  "address": { "@type": "PostalAddress", "addressCountry": "Global" }
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "OnlineService",
+  "name": "StreamBits — Unlimited IPTV Entertainment",
+  "alternateName": "StreamBits",
+  "url": Astro.site,
+  "description": description,
+  "provider": { "@type": "Organization", "name": "StreamBits" },
+  "serviceType": "IPTV Streaming",
+  "areaServed": "Worldwide"
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "StreamBits",
+  "url": Astro.site,
+  "description": "Premium IPTV streaming. 10,000+ live channels, 4K/HD, no cable.",
+  "publisher": { "@type": "Organization", "name": "StreamBits" }
+};
+
+const breadcrumbSchema = breadcrumbs?.length
+  ? {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": breadcrumbs.map((item, i) => ({
+        "@type": "ListItem",
+        "position": i + 1,
+        "name": item.name,
+        "item": item.url.startsWith('http') ? item.url : new URL(item.url, Astro.url.origin).href
+      }))
+    }
+  : null;
+
+// No review fetch - avoids Supabase/DB errors (fetch failed, ECONNREFUSED)
+const reviewStats = null;
+const reviews = null;
+---
+
+<!-- Charset and Viewport -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+<meta name="generator" content={Astro.generator} />
+
+<!-- Language and Direction -->
+<html lang={lang} dir={isRTL ? 'rtl' : 'ltr'}>
+  <head>
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords.join(', ')} />
+    <meta name="author" content={author} />
+    <!-- Robots Meta Tag - Allow indexing of all language versions -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="bingbot" content="index, follow" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content={isHomePage ? 'website' : 'article'} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="StreamBits — Unlimited IPTV Entertainment" />
+    <meta property="og:site_name" content="StreamBits" />
+    <meta property="og:locale" content={lang === 'en' ? 'en_US' : lang === 'fr' ? 'fr_FR' : lang === 'ar' ? 'ar_AR' : 'en_US'} />
+    {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+    {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+    {author && <meta property="article:author" content={author} />}
+    {section && <meta property="article:section" content={section} />}
+    {tags.map(tag => <meta property="article:tag" content={tag} />)}
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={image} />
+    <meta property="twitter:image:alt" content="StreamBits — Unlimited IPTV Entertainment" />
+    <meta name="twitter:site" content="@streambits" />
+    <meta name="twitter:creator" content="@streambits" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <meta name="color-scheme" content="dark" />
+
+    <!-- Preload LCP image (hero) and preconnect to CDN -->
+    {lcpImage && (
+      <>
+        <link rel="preconnect" href="https://cdn.atlagia.com" crossorigin />
+        <link rel="preload" as="image" href={lcpImage} />
+      </>
+    )}
+    <!-- Syne (display) + DM Sans (body) — streaming aesthetic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    {isRTL ? (
+      <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Syne:wght@400..800&family=Noto+Kufi+Arabic:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+      <noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000&family=Syne:wght@400..800&family=Noto+Kufi+Arabic:wght@400;600;700&display=swap" rel="stylesheet" /></noscript>
+    ) : (
+      <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Syne:wght@400..800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+      <noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000&family=Syne:wght@400..800&display=swap" rel="stylesheet" /></noscript>
+    )}
+
+    <!-- Verification and Ownership: add real codes when configured in Search Console / Bing / Yandex -->
+
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="Global" />
+    <meta name="geo.position" content="0;0" />
+    <meta name="ICBM" content="0, 0" />
+
+    <!-- Language Alternates (hreflang) -->
+    {hrefLangURLs.map(({ lang, url }) => (
+      <link rel="alternate" hreflang={lang} href={url} />
+    ))}
+
+    <!-- Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)}></script>
+    {breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>}
+
+    <!-- Review Schema -->
+    {reviews && reviews.length > 0 && (
+      <script type="application/ld+json" set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "StreamBits — Unlimited IPTV Entertainment",
+        "alternateName": "StreamBits",
+        "description": description,
+        "brand": {
+          "@type": "Brand",
+          "name": "StreamBits"
+        },
+        "category": "IPTV Streaming Service",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": reviewStats.averageRating,
+          "reviewCount": reviewStats.totalReviews,
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "review": reviews.slice(0, 10).map(review => ({
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": review.rating,
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "author": {
+            "@type": "Person",
+            "name": review.username
+          },
+          "reviewBody": review.comment,
+          "datePublished": review.created_at
+        }))
+      })}></script>
+    )}
+
+    <!-- Performance and Security Headers (X-Frame-Options must be set via HTTP headers, not meta) -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+
+    <!-- DNS Prefetch for performance -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="//cdn.atlagia.com" />
+
+    <!-- View Transitions -->
+    <ViewTransitions />
+
+    <!-- Analytics: GA + Hotjar only when allowed (Partytown triggers deprecated APIs if enabled) -->
+    {import.meta.env.PUBLIC_ALLOW_GA === 'true' && <GoogleAnalytics />}
+    {import.meta.env.PUBLIC_ALLOW_HOTJAR === 'true' && import.meta.env.PUBLIC_HOTJAR_ID && import.meta.env.PUBLIC_HOTJAR_VERSION && (
+      <>
+        <script define:vars={{ HJ_ID: import.meta.env.PUBLIC_HOTJAR_ID, HJ_VER: import.meta.env.PUBLIC_HOTJAR_VERSION }}>
+          window.hj = window.hj || function() { (window.hj.q = window.hj.q || []).push(arguments); };
+          window._hjSettings = { hjid: Number(HJ_ID), hjsv: Number(HJ_VER) };
+        </script>
+        <script type="text/partytown" src={hotjarUrl}></script>
+      </>
+    )}
+
+    <!-- Styles: --sbi-* prefix, dark cinematic, glassmorphism-ready -->
+    <style is:global>
+      :root {
+        --sbi-bg: #0a0a0a;
+        --sbi-surface: #141414;
+        --sbi-text: #fafafa;
+        --sbi-muted: #a1a1aa;
+        --sbi-accent: #8b5cf6;
+        --sbi-accentBlue: #6366f1;
+        --font-display: 'Syne', system-ui, sans-serif;
+        --font-body: 'DM Sans', system-ui, sans-serif;
+        /* Glassmorphism-ready */
+        --sbi-glass-bg: rgba(255, 255, 255, 0.04);
+        --sbi-glass-border: rgba(255, 255, 255, 0.08);
+        --sbi-gradient-accent: linear-gradient(135deg, var(--sbi-accent), var(--sbi-accentBlue));
+      }
+      * { box-sizing: border-box; }
+      body {
+        font-family: var(--font-body);
+        background: var(--sbi-bg);
+        color: var(--sbi-text);
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+      h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
+      img { max-width: 100%; height: auto; display: block; }
+      html { scroll-behavior: smooth; color-scheme: dark; }
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: var(--sbi-surface); }
+      ::-webkit-scrollbar-thumb { background: var(--sbi-gradient-accent); border-radius: 4px; }
+      ::-webkit-scrollbar-thumb:hover { background: var(--sbi-accent); }
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+      }
+    </style>
+  </head>
+</html>

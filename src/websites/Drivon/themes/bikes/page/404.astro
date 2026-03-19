@@ -36,6 +36,7 @@ const SITE_DESCRIPTION = '404 - Page Not Found';
       title={`404 - ${SITE_TITLE}`} 
       description={SITE_DESCRIPTION} 
       isHomePage={false}
+      robotsNoindex={true}
     />
     <style>
       .error-container {
@@ -81,10 +82,21 @@ const SITE_DESCRIPTION = '404 - Page Not Found';
         <div class="error-message">
           {jsonData.notFoundMessage || 'Oops! The page you are looking for does not exist.'}
         </div>
+        <div class="error-links flex flex-wrap justify-center gap-4">
         <a href={`/${lang}`} class="back-home">
           {jsonData.backToHomeText || 'Back to Home'}
         </a>
+        <a href={`/${lang}/shop`} class="back-home">
+          Shop
+        </a>
+        <a href={`/${lang}/collections`} class="back-home">
+          Collections
+        </a>
+        <a href={`/${lang}/contact`} class="back-home">
+          Contact
+        </a>
       </div>
+    </div>
     </main>
     <Footer />
   </body>

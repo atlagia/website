@@ -1,0 +1,36 @@
+---
+import FAQIsland from './FAQIsland';
+
+interface Props {
+  title: string;
+  description: string;
+  questions: {
+    question: string;
+    answer: string;
+  }[];
+}
+
+const { title, description, questions } = Astro.props;
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": questions.map((q) => ({
+    "@type": "Question",
+    "name": q.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": q.answer
+    }
+  }))
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+<FAQIsland
+  client:visible
+  title={title}
+  description={description}
+  questions={questions}
+/>

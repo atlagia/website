@@ -1,0 +1,18 @@
+---
+import HowItWorksIsland from './HowItWorksIsland';
+
+interface Props {
+  title: string;
+  description: string;
+  steps: { number: string; title: string; description: string }[];
+}
+
+const { title, description, steps } = Astro.props;
+---
+
+<HowItWorksIsland
+  client:visible
+  title={title}
+  description={description}
+  steps={steps}
+/>

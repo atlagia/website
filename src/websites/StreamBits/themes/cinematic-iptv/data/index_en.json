@@ -1,0 +1,220 @@
+{
+  "siteTitle": "StreamBits — Unlimited IPTV Entertainment",
+  "notFoundMessage": "This page could not be found. Explore our channels, pricing, or contact support.",
+  "backToHomeText": "Back to Home",
+  "siteDescription": "Premium IPTV streaming. 10,000+ live channels, 4K/HD, no cable. Watch on Smart TV, Fire Stick, mobile, and more.",
+  "sections": [
+    {
+      "type": "welcome",
+      "title": "Unlimited IPTV Entertainment",
+      "description": "Stream 10,000+ live channels in 4K and HD. No cable required. Watch on Smart TV, Fire Stick, mobile, and more. Instant activation and 24/7 support.",
+      "backgroundImages": [
+        "https://cdn.atlagia.com/StreamBits/iptv/streambits-hero-1.webp",
+        "https://cdn.atlagia.com/StreamBits/iptv/streambits-hero-2.webp"
+      ],
+      "backgroundImagesAlt": [
+        "StreamBits premium IPTV streaming",
+        "StreamBits live TV and on-demand entertainment"
+      ],
+      "stats": {
+        "channels": "10,000+ Live Channels",
+        "movies": "4K & HD Quality",
+        "shows": "No Cable Required"
+      },
+      "cta": {
+        "primary": {
+          "text": "Start Watching",
+          "link": "/en/pricing"
+        },
+        "secondary": {
+          "text": "View Plans",
+          "link": "/en/pricing"
+        }
+      }
+    },
+    {
+      "type": "features",
+      "title": "Why StreamBits",
+      "description": "Everything you need for the ultimate streaming experience",
+      "features": [
+        {"icon": "channels", "title": "10,000+ Live Channels", "description": "Sports, movies, TV, international, kids, and documentaries from around the world"},
+        {"icon": "quality", "title": "4K/HD Streaming", "description": "Crystal-clear picture quality with adaptive bitrate"},
+        {"icon": "device", "title": "No Cable Required", "description": "Stream over the internet. No contracts, no dish, no cable box"},
+        {"icon": "speed", "title": "Works on Smart TV, Mobile & PC", "description": "Watch on Smart TV, Fire Stick, Android, iOS, and web"},
+        {"icon": "record", "title": "Instant Activation", "description": "Start watching within minutes of signing up"},
+        {"icon": "support", "title": "24/7 Support", "description": "Expert help whenever you need it"}
+      ]
+    },
+    {
+      "type": "channels",
+      "title": "Live Channels & Content",
+      "description": "Premium categories for every viewer",
+      "channels": [
+        {"title": "Sports", "poster": "https://cdn.atlagia.com/StreamBits/channels/sports.webp", "alt": "Live sports on StreamBits", "category": "Sports"},
+        {"title": "Movies", "poster": "https://cdn.atlagia.com/StreamBits/channels/movies.webp", "alt": "Movies on StreamBits", "category": "Movies"},
+        {"title": "TV Channels", "poster": "https://cdn.atlagia.com/StreamBits/channels/tv.webp", "alt": "TV channels on StreamBits", "category": "TV"},
+        {"title": "International", "poster": "https://cdn.atlagia.com/StreamBits/channels/international.webp", "alt": "International channels", "category": "International"},
+        {"title": "Kids", "poster": "https://cdn.atlagia.com/StreamBits/channels/kids.webp", "alt": "Kids content on StreamBits", "category": "Kids"},
+        {"title": "Documentaries", "poster": "https://cdn.atlagia.com/StreamBits/channels/documentaries.webp", "alt": "Documentaries on StreamBits", "category": "Documentaries"}
+      ]
+    },
+    {
+      "type": "videoDemo",
+      "title": "See StreamBits in Action",
+      "description": "Watch how easy it is to stream 10,000+ channels in 4K on any device.",
+      "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "sectionTitle": "Why Choose StreamBits?",
+      "sectionDescription": "Premium IPTV built for reliability and performance. No cable. No hassle.",
+      "features": [
+        "10,000+ Live Channels",
+        "4K & HD Quality",
+        "24/7 Customer Support",
+        "Works on All Devices"
+      ],
+      "ctaButtons": {
+        "primary": {
+          "text": "Start Streaming Today",
+          "link": "/en/pricing"
+        },
+        "secondary": {
+          "text": "View Plans",
+          "link": "/en/pricing"
+        }
+      }
+    },
+    {
+      "type": "pricing",
+      "title": "Choose Your Plan",
+      "description": "Flexible plans for every viewer. No hidden fees.",
+      "plans": [
+        {
+          "name": "Starter",
+          "price": "14.99",
+          "duration": "month",
+          "checkoutUrl": "/en/pricing",
+          "features": [
+            "5,000+ Live Channels",
+            "HD Streaming",
+            "1 Device",
+            "24/7 Support",
+            "Instant Activation"
+          ],
+          "isPopular": false
+        },
+        {
+          "name": "Premium",
+          "price": "24.99",
+          "duration": "month",
+          "checkoutUrl": "/en/pricing",
+          "features": [
+            "10,000+ Live Channels",
+            "4K & HD Quality",
+            "2 Devices",
+            "24/7 Support",
+            "Catch-up TV & EPG"
+          ],
+          "isPopular": true
+        },
+        {
+          "name": "Ultimate",
+          "price": "34.99",
+          "duration": "month",
+          "checkoutUrl": "/en/pricing",
+          "features": [
+            "10,000+ Live Channels",
+            "4K & HD Quality",
+            "5 Devices",
+            "24/7 Priority Support",
+            "Catch-up, EPG & VOD"
+          ],
+          "isPopular": false
+        }
+      ]
+    },
+    {
+      "type": "devices",
+      "title": "Watch Anywhere",
+      "description": "Stream on the devices you already own",
+      "devices": [
+        {"name": "Smart TV", "icon": "tv", "platforms": ["Samsung", "LG", "Android TV", "Apple TV"]},
+        {"name": "Android TV & Fire Stick", "icon": "mobile", "platforms": ["Fire TV", "Android TV"]},
+        {"name": "Smartphones & Tablets", "icon": "mobile", "platforms": ["iOS", "Android"]},
+        {"name": "Web", "icon": "computer", "platforms": ["Chrome", "Safari", "Edge"]}
+      ]
+    },
+    {
+      "type": "features",
+      "title": "Why Choose Us",
+      "description": "Built for performance, designed for you",
+      "features": [
+        {"icon": "speed", "title": "Fast Servers", "description": "Low-latency streaming with anti-freeze technology"},
+        {"icon": "quality", "title": "Anti-Freeze", "description": "Smooth playback with minimal buffering"},
+        {"icon": "channels", "title": "Global Channels", "description": "Content from 50+ countries, all in one place"},
+        {"icon": "support", "title": "24/7 Support", "description": "Expert help whenever you need it"}
+      ]
+    },
+    {
+      "type": "testimonials",
+      "title": "What Our Customers Say",
+      "description": "Join thousands of satisfied StreamBits users worldwide",
+      "testimonials": [
+        {
+          "name": "James T.",
+          "location": "United States",
+          "rating": 5,
+          "comment": "Best IPTV I've tried. Picture quality is outstanding and setup took five minutes."
+        },
+        {
+          "name": "Maria L.",
+          "location": "Spain",
+          "rating": 5,
+          "comment": "So many channels and it works perfectly on my Fire Stick. Highly recommend."
+        },
+        {
+          "name": "David K.",
+          "location": "United Kingdom",
+          "rating": 5,
+          "comment": "No more cable bill. StreamBits has everything I need and support is always helpful."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "title": "Frequently Asked Questions",
+      "description": "Everything you need to know about StreamBits",
+      "questions": [
+        {
+          "question": "What is IPTV?",
+          "answer": "IPTV (Internet Protocol Television) delivers TV over the internet. You get live channels, catch-up TV, and on-demand content on Smart TV, phone, tablet, or computer—often in HD and 4K—without cable or satellite."
+        },
+        {
+          "question": "How fast is activation?",
+          "answer": "Most accounts are activated within minutes. After payment, you'll receive your login details and can start streaming right away."
+        },
+        {
+          "question": "What devices can I use?",
+          "answer": "StreamBits works on Smart TVs (Samsung, LG, Android TV, Apple TV), Fire Stick, Android and iOS phones and tablets, and any modern web browser."
+        },
+        {
+          "question": "Do you offer a free trial?",
+          "answer": "We offer risk-free satisfaction. Check our pricing page for current trial or money-back options."
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "title": "Start Streaming Today",
+      "description": "Get IPTV now. Watch 10,000+ channels in 4K on any device.",
+      "button": {
+        "text": "Get IPTV Now",
+        "link": "/en/pricing"
+      },
+      "features": [
+        "No Contract Required",
+        "Instant Access",
+        "24/7 Customer Support",
+        "View Pricing"
+      ]
+    }
+  ]
+}

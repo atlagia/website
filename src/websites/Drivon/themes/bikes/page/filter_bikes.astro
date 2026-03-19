@@ -32,10 +32,12 @@ if (config.filters.some(f => f.filterType === 'select')) {
 const { default: BaseHead } = await import(`../components/BaseHead.astro`);
 const { default: Header } = await import(`../components/Header.astro`);
 const { default: Footer } = await import(`../components/Footer.astro`);
+
+const lang = Astro.params?.lang ?? 'en';
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <BaseHead title={`Bike Information | ${SITE_TITLE}`} description="View detailed information about different bikes." />
   </head>

@@ -1,0 +1,269 @@
+{
+  "siteTitle": "SEOPilot — AI-Powered SEO That Fixes Itself",
+  "siteDescription": "SEOPilot is an AI-powered SEO automation platform that audits websites, detects issues, and fixes them automatically using intelligent agents.",
+  "sections": [
+    {
+      "type": "welcome",
+      "title": "AI-Powered SEO: That Fixes Itself",
+      "description": "SEOPilot deploys intelligent AI agents that crawl your site, detect technical and content issues, and apply fixes automatically. Stop wasting hours on manual audits.",
+      "stats": {
+        "sites": "10,000+ Sites Audited",
+        "issues": "50M+ Issues Fixed",
+        "uptime": "99.9% Uptime"
+      },
+      "cta": {
+        "primary": { "text": "Start Free Audit", "link": "#pricing" },
+        "secondary": { "text": "See How It Works", "link": "#how-it-works" }
+      }
+    },
+    {
+      "type": "features",
+      "title": "Meet Your AI SEO Team",
+      "description": "Six specialized AI agents work together to audit, analyze, and fix your website's SEO automatically.",
+      "features": [
+        {
+          "icon": "crawler",
+          "title": "Website Crawler Agent",
+          "description": "Crawls your entire site, maps page structure, extracts metadata, detects broken links, and identifies duplicate pages."
+        },
+        {
+          "icon": "technical",
+          "title": "Technical SEO Agent",
+          "description": "Finds missing meta titles, broken canonicals, slow pages, image issues, sitemap problems, and robots.txt errors."
+        },
+        {
+          "icon": "content",
+          "title": "Content SEO Agent",
+          "description": "Analyzes keyword opportunities, thin content, heading structure, schema markup gaps, and weak internal linking."
+        },
+        {
+          "icon": "fix",
+          "title": "Auto-Fix Agent",
+          "description": "Generates optimized meta tags, adds schema markup, improves headings, compresses images, and fixes alt tags automatically."
+        },
+        {
+          "icon": "performance",
+          "title": "Performance Agent",
+          "description": "Analyzes Core Web Vitals, page speed, lazy loading, script optimization, and generates performance fixes."
+        },
+        {
+          "icon": "monitor",
+          "title": "Monitoring Agent",
+          "description": "Runs weekly SEO scans, tracks ranking improvements, monitors SEO score, and alerts you when issues appear."
+        }
+      ]
+    },
+    {
+      "type": "howItWorks",
+      "title": "How SEOPilot Works",
+      "description": "From URL to optimized site in minutes. Our AI agent pipeline handles everything.",
+      "steps": [
+        {
+          "number": "01",
+          "title": "Submit Your URL",
+          "description": "Enter your website URL and SEOPilot begins a comprehensive crawl of every page."
+        },
+        {
+          "number": "02",
+          "title": "AI Agents Analyze",
+          "description": "Six specialized agents scan technical SEO, content quality, performance, and structure simultaneously."
+        },
+        {
+          "number": "03",
+          "title": "Issues Detected",
+          "description": "Get a prioritized list of SEO problems with severity ratings and impact scores."
+        },
+        {
+          "number": "04",
+          "title": "Auto-Fix Applied",
+          "description": "AI generates and applies fixes for meta tags, schema, headings, images, and more."
+        },
+        {
+          "number": "05",
+          "title": "Monitor & Improve",
+          "description": "Continuous monitoring tracks your SEO health and applies improvements automatically."
+        }
+      ]
+    },
+    {
+      "type": "dashboardPreview",
+      "title": "Your SEO Command Center",
+      "description": "A powerful dashboard that gives you complete visibility into your website's SEO health, AI agent activity, and improvement history.",
+      "features": [
+        "Real-time SEO score tracking",
+        "AI agent activity log",
+        "Issue detection timeline",
+        "One-click auto-fix controls",
+        "Competitor SEO comparison",
+        "Downloadable SEO reports"
+      ]
+    },
+    {
+      "type": "integrations",
+      "title": "Works With Your Stack",
+      "description": "SEOPilot integrates seamlessly with the platforms you already use.",
+      "platforms": [
+        { "name": "Shopify", "icon": "shopify" },
+        { "name": "WordPress", "icon": "wordpress" },
+        { "name": "Webflow", "icon": "webflow" },
+        { "name": "Google Search Console", "icon": "google" },
+        { "name": "Google Analytics", "icon": "analytics" },
+        { "name": "Custom Websites", "icon": "custom" }
+      ]
+    },
+    {
+      "type": "pricing",
+      "title": "Simple, Transparent Pricing",
+      "description": "Start free. Scale as you grow. No hidden fees.",
+      "plans": [
+        {
+          "name": "Starter",
+          "price": "$0",
+          "period": "/month",
+          "description": "Perfect for personal sites",
+          "features": [
+            "1 Website",
+            "Monthly SEO Audit",
+            "Basic Issue Detection",
+            "Email Reports",
+            "Community Support"
+          ],
+          "cta": { "text": "Get Started Free", "link": "/signup" },
+          "popular": false
+        },
+        {
+          "name": "Pro",
+          "price": "$49",
+          "period": "/month",
+          "description": "For growing businesses",
+          "features": [
+            "5 Websites",
+            "Weekly SEO Audits",
+            "AI Auto-Fix Engine",
+            "Competitor Analysis",
+            "Priority Support",
+            "API Access"
+          ],
+          "cta": { "text": "Start 14-Day Trial", "link": "/signup?plan=pro" },
+          "popular": true
+        },
+        {
+          "name": "Enterprise",
+          "price": "$199",
+          "period": "/month",
+          "description": "For agencies & large teams",
+          "features": [
+            "Unlimited Websites",
+            "Daily SEO Audits",
+            "Advanced Auto-Fix",
+            "White-Label Reports",
+            "Dedicated Account Manager",
+            "Custom Integrations",
+            "SLA Guarantee"
+          ],
+          "cta": { "text": "Contact Sales", "link": "/contact" },
+          "popular": false
+        }
+      ]
+    },
+    {
+      "type": "banner",
+      "title": "Let AI Fix Your SEO While You Sleep",
+      "description": "SEOPilot's autonomous agents work 24/7, continuously monitoring and improving your website's search performance.",
+      "cta": { "text": "Start Your Free Audit", "link": "/signup" }
+    },
+    {
+      "type": "whyChoose",
+      "title": "Why Teams Choose SEOPilot",
+      "description": "Built by SEO engineers, powered by AI, trusted by thousands.",
+      "reasons": [
+        {
+          "icon": "autonomous",
+          "title": "Fully Autonomous",
+          "description": "AI agents detect and fix issues without human intervention. Set it and forget it."
+        },
+        {
+          "icon": "accurate",
+          "title": "99.7% Accuracy",
+          "description": "Our detection engine is trained on millions of SEO audits for industry-leading precision."
+        },
+        {
+          "icon": "fast",
+          "title": "10x Faster",
+          "description": "What takes an SEO consultant weeks, SEOPilot does in minutes."
+        },
+        {
+          "icon": "secure",
+          "title": "Enterprise Secure",
+          "description": "SOC 2 compliant, encrypted connections, and read-only access by default."
+        }
+      ]
+    },
+    {
+      "type": "testimonials",
+      "title": "Trusted by SEO Professionals",
+      "description": "Join thousands of teams who automated their SEO with SEOPilot.",
+      "testimonials": [
+        {
+          "quote": "SEOPilot found 847 issues on our Shopify store that we missed for months. The auto-fix feature saved us 40+ hours.",
+          "author": "Sarah Chen",
+          "role": "Head of Growth",
+          "company": "TechStart Inc.",
+          "location": "San Francisco, CA"
+        },
+        {
+          "quote": "We manage 200+ client sites. SEOPilot's automation replaced three full-time SEO analysts and improved results.",
+          "author": "Marcus Rivera",
+          "role": "Agency Director",
+          "company": "Altitude Digital",
+          "location": "Austin, TX"
+        },
+        {
+          "quote": "The monitoring agent caught a critical indexing issue at 2 AM that would have cost us thousands in lost traffic.",
+          "author": "Emily Nakamura",
+          "role": "VP of Marketing",
+          "company": "Greenleaf Commerce",
+          "location": "London, UK"
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "title": "Frequently Asked Questions",
+      "description": "Everything you need to know about SEOPilot.",
+      "questions": [
+        {
+          "question": "How does SEOPilot's AI audit work?",
+          "answer": "SEOPilot deploys six specialized AI agents that crawl your entire website, analyze technical SEO, content quality, performance, and more. Each agent produces structured findings that are prioritized by impact and severity."
+        },
+        {
+          "question": "Can SEOPilot automatically fix issues?",
+          "answer": "Yes. The Auto-Fix Agent generates optimized meta tags, schema markup, heading structures, alt tags, and more. For supported platforms like Shopify and WordPress, fixes can be applied automatically via API."
+        },
+        {
+          "question": "What platforms does SEOPilot support?",
+          "answer": "SEOPilot works with Shopify, WordPress, Webflow, custom websites, and any platform accessible via URL. We also integrate with Google Search Console and Google Analytics for deeper insights."
+        },
+        {
+          "question": "Is there a free plan?",
+          "answer": "Yes! Our Starter plan is completely free and includes monthly SEO audits for one website. Upgrade to Pro for weekly audits, auto-fix, and competitor analysis."
+        },
+        {
+          "question": "How is SEOPilot different from other SEO tools?",
+          "answer": "Most SEO tools only detect problems. SEOPilot goes further by automatically generating and applying fixes using AI agents. It's like having an autonomous SEO engineer working on your site 24/7."
+        },
+        {
+          "question": "Is my website data secure?",
+          "answer": "Absolutely. SEOPilot is SOC 2 compliant, uses encrypted connections, and operates with read-only access by default. We never store your website credentials."
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "title": "Ready to Automate Your SEO?",
+      "description": "Join 10,000+ websites using AI to fix their SEO. Start your free audit in under 60 seconds.",
+      "button": { "text": "Start Free Audit", "link": "/signup" },
+      "features": ["No credit card required", "10,000+ sites audited", "50M+ issues auto-fixed"]
+    }
+  ]
+}

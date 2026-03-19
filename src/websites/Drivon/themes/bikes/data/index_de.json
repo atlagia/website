@@ -12,6 +12,7 @@
         "type": "youtube",
         "videoId": "liT2Z3wFW1Y",
         "fallbackImage": "/images/driver-culture-fallback.jpg",
+        "fallbackImageAlt": "Drivon automotive lifestyle hero — car culture and racing heritage",
         "videoUrl": "https://cdn.pixabay.com/video/2020/07/28/31670-475348943_large.mp4"
       }
     },
@@ -35,6 +36,7 @@
           "name": "Renn Hoodies",
           "description": "Renninspirierte Hoodies mit authentischen Automobildesigns und Premium-Komfort.",
           "image": "https://ih1.redbubble.net/image.4762044220.4515/ssrco,mhoodie,mens,fafafa:ca443f4786,front,tall_three_quarter,x1000-bg,f8f8f8.1.webp",
+          "alt": "Racing hoodies — automotive culture merchandise",
           "link": "/racing-hoodies"
         },
         {
@@ -42,6 +44,7 @@
           "name": "Auto-Kultur Shirts",
           "description": "Klassische Automobilkultur Shirts mit ikonischen Automarken und Rennlegenden.",
           "image": "https://ih1.redbubble.net/image.4762044220.4515/ssrco,classic_tee,mens_02,fafafa:ca443f4786,front,close_portrait,x1000.webp",
+          "alt": "Car culture tees — iconic car brands and racing legends",
           "link": "/car-culture-tees"
         },
         {
@@ -49,6 +52,7 @@
           "name": "Fahrer Accessoires",
           "description": "Essentielle Accessoires um Ihren Automobilkultur Look und Stil zu vervollständigen.",
           "image": "https://ih1.redbubble.net/image.4762043914.4515/ssrco,dad_hat,product,FFFDF5:8c3db69414,front_three_quarter,wide_portrait,750x1000-bg,f8f8f8.webp",
+          "alt": "Driver accessories — automotive culture caps and gear",
           "link": "/driver-accessories"
         }
       ]
@@ -72,6 +76,7 @@
           "description": "Multi-layer carbon fiber reinforced protective suit with integrated cooling system.",
           "price": "1,299.99",
           "image": "/images/products/pro-racing-suit.jpg",
+          "alt": "Pro racing suit — carbon fiber protective gear",
           "category": "Racing Suits"
         },
         {
@@ -80,6 +85,7 @@
           "description": "Nano-engineered grip technology with advanced impact absorption.",
           "price": "349.99",
           "image": "/images/products/precision-gloves.jpg",
+          "alt": "Precision control gloves — performance driving gear",
           "category": "Performance Gloves"
         }
       ]

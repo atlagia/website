@@ -1,5 +1,5 @@
 ---
-import Layout from '../../../layouts/LayoutP.astro';
+import Layoutc from '@layouts/Layoutc.astro';
 import { shopifyFetch } from '../../../lib/shopify';
 import AddToCart from '../../../themes/default/components/AddToCart';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
@@ -119,9 +119,16 @@ if (!product || images.length === 0 || variants.length === 0) {
 }
 
 const PROJECT_TYPE = import.meta.env.PROJECT_TYPE || 'physical';
+
+const storeName = import.meta.env.PUBLIC_SITE_NAME || import.meta.env.PUBLIC_BUSINESS_NAME || 'Drivon';
+const pathSegments = Astro.url.pathname.split('/').filter(Boolean);
+const allowedLangs = (import.meta.env.ALLOWED_LANGUAGES || 'en').split(',').map((l: string) => l.trim());
+const lang = pathSegments.length > 0 && allowedLangs.includes(pathSegments[0]) ? pathSegments[0] : 'en';
+const seoTitle = `${product.title} | ${storeName}`;
+const seoDescription = product.description?.slice(0, 160) || `Shop ${product.title} at ${storeName}. Premium automotive lifestyle and driver merchandise.`;
 ---
 
-<Layout title={`${product.title} | RidWear`}>
+<Layoutc title={seoTitle} description={seoDescription} lang={lang}>
   <main class="max-w-7xl mx-auto px-4 py-12">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
       <!-- Image Gallery -->
@@ -133,6 +140,9 @@ const PROJECT_TYPE = import.meta.env.PROJECT_TYPE || 'physical';
               src={images[0].url}
               alt={images[0].altText}
               class="w-full h-full object-contain"
+              width="800"
+              height="800"
+              fetchpriority="high"
             />
           </div>
           {images.length > 1 && (
@@ -167,6 +177,10 @@ const PROJECT_TYPE = import.meta.env.PROJECT_TYPE || 'physical';
                   src={image.url}
                   alt={image.altText}
                   class="w-full h-full object-cover"
+                  width="80"
+                  height="80"
+                  loading="lazy"
+                  decoding="async"
                 />
               </button>
             ))}
@@ -325,7 +339,7 @@ const PROJECT_TYPE = import.meta.env.PROJECT_TYPE || 'physical';
       </div>
     </div>
   </main>
-</Layout>
+</Layoutc>
 
 <script>
   class ImageGallery {

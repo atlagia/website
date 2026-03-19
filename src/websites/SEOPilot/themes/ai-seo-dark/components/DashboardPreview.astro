@@ -1,0 +1,18 @@
+---
+import DashboardPreviewIsland from './DashboardPreviewIsland';
+
+interface Props {
+  title: string;
+  description: string;
+  features: string[];
+}
+
+const { title, description, features } = Astro.props;
+---
+
+<DashboardPreviewIsland
+  client:visible
+  title={title}
+  description={description}
+  features={features}
+/>

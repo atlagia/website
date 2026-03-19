@@ -1,0 +1,74 @@
+/* StreamBits cinematic-iptv — theme styles */
+/* --sbi-* and fonts defined in BaseHead; microinteractions 150–200ms in style JSON/mjs */
+
+:root {
+  --bg-primary: var(--sbi-bg, #0a0a0a);
+  --bg-secondary: var(--sbi-surface, #141414);
+  --bg-tertiary: #141414;
+  --accent-purple: var(--sbi-accent, #8b5cf6);
+  --accent-blue: var(--sbi-accentBlue, #6366f1);
+  --accent-cyan: #06b6d4;
+  --accent-red: #ef4444;
+  --accent-emerald: #10b981;
+  --glass-bg: var(--sbi-glass-bg, rgba(255, 255, 255, 0.04));
+  --glass-border: var(--sbi-glass-border, rgba(255, 255, 255, 0.08));
+  --glass-blur: 20px;
+}
+
+/* Font utility classes (Syne display, DM Sans body — set in BaseHead) */
+.font-display {
+  font-family: var(--font-display, 'Syne', system-ui, sans-serif);
+}
+
+.font-body {
+  font-family: var(--font-body, 'DM Sans', system-ui, sans-serif);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--sbi-bg);
+  color: var(--sbi-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Microinteractions: buttons and interactive elements use 150–200ms in component/Header/products styles */
+a, button {
+  transition-duration: 150ms;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--sbi-surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--sbi-gradient-accent);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--sbi-accent);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -292,8 +292,13 @@ const paymentConfig = {
     <!-- PWA Tags -->
     <meta name="theme-color" content={themeColor} />
     <link rel="manifest" href="/manifest.json" />
+    <style>
+      .skip-link { position: absolute; top: -100px; left: 0; background: #000; color: #fff; padding: 8px 16px; z-index: 9999; transition: top 0.2s; }
+      .skip-link:focus { top: 0; }
+    </style>
   </head>
   <body class={bodyClass}>
+    <a href="#app" class="skip-link">Skip to main content</a>
     <!-- Header -->
     <Header
       client:load

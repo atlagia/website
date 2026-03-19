@@ -1,0 +1,72 @@
+{
+  "navigation": [
+    {
+      "text": "Canais",
+      "href": "/channels"
+    },
+    {
+      "text": "Filmes", 
+      "href": "/movies"
+    },
+    {
+      "text": "Séries de TV",
+      "href": "/shows"
+    },
+    {
+      "text": "Pacotes",
+      "href": "/packages"
+    }
+  ],
+  "auth": {
+    "login": {
+      "text": "Entrar",
+      "href": "/packages"
+    },
+    "signup": {
+      "text": "Começar",
+      "href": "/packages"
+    }
+  },
+  "languages": [
+    {
+      "code": "en",
+      "name": "English"
+    },
+    {
+      "code": "fr",
+      "name": "Français"
+    },
+    {
+      "code": "de",
+      "name": "Deutsch"
+    },
+    {
+      "code": "it",
+      "name": "Italiano"
+    },
+    {
+      "code": "nl",
+      "name": "Nederlands"
+    },
+    {
+      "code": "pt",
+      "name": "Português"
+    },
+    {
+      "code": "ar",
+      "name": "العربية"
+    },
+    {
+      "code": "es",
+      "name": "Español"
+    },
+    {
+      "code": "ru",
+      "name": "Русский"
+    },
+    {
+      "code": "zh",
+      "name": "中文"
+    }
+  ]
+} 

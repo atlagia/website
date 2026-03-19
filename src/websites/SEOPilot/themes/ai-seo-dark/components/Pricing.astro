@@ -1,0 +1,25 @@
+---
+import PricingIsland from './PricingIsland';
+
+interface Props {
+  title: string;
+  description: string;
+  plans: {
+    name: string;
+    price: string;
+    duration: string;
+    checkoutUrl: string;
+    features: string[];
+    isPopular: boolean;
+  }[];
+}
+
+const { title, description, plans } = Astro.props;
+---
+
+<PricingIsland
+  client:visible
+  title={title}
+  description={description}
+  plans={plans}
+/>
