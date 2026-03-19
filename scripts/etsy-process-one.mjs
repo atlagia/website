@@ -13,6 +13,7 @@ import { spawnSync } from 'child_process';
 import { resolve } from 'path';
 import { tmpdir } from 'os';
 import { randomBytes } from 'crypto';
+import { loadRootAndStoreEnv } from './load-root-and-store-env.mjs';
 
 function run(cmd, args, input) {
   const r = spawnSync(cmd, args, {
@@ -44,6 +45,8 @@ async function main() {
     process.exit(1);
   }
 
+  loadRootAndStoreEnv(target);
+
   const listingId = listingPath.replace(/^.*[/\\]/, '').replace(/\.json$/i, '') || null;
 
   const listing = JSON.parse(readFileSync(resolve(process.cwd(), listingPath), 'utf8'));
@@ -74,6 +77,7 @@ async function main() {
   const geminiArgs = [
     resolve(process.cwd(), 'scripts/shopify-gemini-enhance.mjs'),
     oldTitle,
+    '--env-store', target,
     '--description-file', tmpDesc,
     '--tags', tagsStr,
     '--site-name', siteName,

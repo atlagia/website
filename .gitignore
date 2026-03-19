@@ -9,12 +9,19 @@ pnpm-debug.log*
 dist/
 .astro/
 
-# Environment variables
+# Environment variables & per-store secrets (never commit real keys)
 .env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
+.env.*
+!.env.example
+!.env.default
+
+# Store clones that keep a local .env
+stores/**/.env
+stores/**/.env.*
 
 # macOS
 .DS_Store

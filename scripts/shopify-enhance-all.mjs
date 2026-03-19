@@ -15,6 +15,7 @@ import { spawnSync } from 'child_process';
 import { resolve } from 'path';
 import { tmpdir } from 'os';
 import { randomBytes } from 'crypto';
+import { loadRootAndStoreEnv } from './load-root-and-store-env.mjs';
 
 const STATE_DIR = 'data/shopify-enhance';
 
@@ -124,13 +125,14 @@ function buildEnhancedDescription(title, oldDescriptionHtml, siteName) {
 }
 
 /** Call Gemini script; returns { title, metaTitle, metaDescription, descriptionHtml } or null on failure */
-function callGeminiEnhance(oldTitle, oldDescriptionHtml, tags, siteName) {
+function callGeminiEnhance(oldTitle, oldDescriptionHtml, tags, siteName, envTarget) {
   const tmpPath = resolve(tmpdir(), `desc-${randomBytes(8).toString('hex')}.txt`);
   try {
     writeFileSync(tmpPath, oldDescriptionHtml || '', 'utf8');
     const args = [
       resolve(process.cwd(), 'scripts/shopify-gemini-enhance.mjs'),
       oldTitle,
+      '--env-store', envTarget,
       '--description-file', tmpPath,
       '--tags', Array.isArray(tags) ? tags.join(', ') : (tags || ''),
       '--site-name', siteName,
@@ -161,6 +163,8 @@ async function main() {
     console.error('Usage: node scripts/shopify-enhance-all.mjs <target-website> [--limit N] [--use-gemini] [--reset] [--descriptions-file path.json] [--site-name "Site Name"]');
     process.exit(1);
   }
+
+  loadRootAndStoreEnv(target);
 
   const storeName = target.replace(/^./, (c) => c.toUpperCase());
   const prefix = `${storeName}/products`;
@@ -232,7 +236,7 @@ async function main() {
       metaDesc = prebuilt.metaDescription ?? '';
       descriptionHtml = prebuilt.descriptionHtml ?? '';
     } else if (useGemini) {
-      const gemini = callGeminiEnhance(oldTitle, p.descriptionHtml, tags, siteName);
+      const gemini = callGeminiEnhance(oldTitle, p.descriptionHtml, tags, siteName, target);
       if (gemini?.title && gemini?.descriptionHtml) {
         title = truncate(gemini.title, 60);
         metaTitle = truncate(gemini.metaTitle ?? `${title} | ${siteName}`, 60);

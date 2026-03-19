@@ -3,46 +3,68 @@
  * Use Gemini and/or OpenAI to generate SEO-enhanced title and description.
  * API key rotation: random start, then sequential fallback. Gemini keys + OpenAI (gpt-3.5-turbo) in rotation.
  *
+ * Secrets: set in `.env` (root) and/or `.env.<Store>` — never commit keys.
+ *   OPENAI_API_KEY=sk-...
+ *   GEMINI_API_KEYS=key1,key2,...   (or GEMINI_API_KEY for a single key)
+ *
+ * Optional: load a store env file before reading keys:
+ *   node scripts/shopify-gemini-enhance.mjs "Title" --env-store FastIPTV ...
+ *
  * Usage:
- *   node scripts/shopify-gemini-enhance.mjs <oldTitle> [--description "html"] [--description-file path] [--tags "t1,t2"] [--site-name "Site"]
+ *   node scripts/shopify-gemini-enhance.mjs <oldTitle> [--env-store TargetWebsite] [--description "html"] [--description-file path] [--tags "t1,t2"] [--site-name "Site"]
  *
  * Output: JSON stdout { "title", "descriptionHtml", "metaTitle", "metaDescription", "productType", "tags" }
  */
 
 import { readFileSync, existsSync } from 'fs';
 import { resolve } from 'path';
-
-const GEMINI_KEYS = [
-  'AIzaSyDwX9bfEHACz1I_MqtZhWWNeEdPGca1vzc',
-  'AIzaSyDc1A1bjSih0nNJUt1s3l64wzPqFmLPVFQ',
-  'AIzaSyCjGWHo_WD_xJvRREODhh7oBaIryJpFO_M',
-  'AIzaSyAkp0gc3VWLdD3ljwXpgF-q6wpAft4_qAU',
-  'AIzaSyDmcImMnzXdG5-5uEx244sj1dV0lnha_hA',
-  'AIzaSyCapEMPfQ8Y6I5tLad-8ujHGZriqw1wUmU',
-  'AIzaSyAI8Tf_UZ2bTIRwskUK27UG5kcHVx9VzDA',
-  'AIzaSyAXTvUFPpp3YhnwQQNHngoUio3Q74pZlk0',
-  'AIzaSyD_NgvEb9Perh7cBX97CMtQ6G8Nd6qJRA8',
-  'AIzaSyBh_PPqzkoN_pbYTblT5qy-DAS2JPFA97o',
-  'AIzaSyCX-yWD_h5kytReRfCmufa7TpPEq_17OhI',
-];
+import { loadRootAndStoreEnv } from './load-root-and-store-env.mjs';
 
 const GEMINI_MODEL = 'gemini-2.5-flash';
 const GEMINI_BASE = 'https://generativelanguage.googleapis.com/v1beta/models';
 const OPENAI_MODEL = 'gpt-3.5-turbo';
 const OPENAI_URL = 'https://api.openai.com/v1/chat/completions';
-const OPENAI_API_KEY = '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';
+
+function peekEnvStoreArg() {
+  const args = process.argv.slice(2);
+  const i = args.indexOf('--env-store');
+  if (i >= 0 && args[i + 1] && !args[i + 1].startsWith('--')) return args[i + 1];
+  return null;
+}
+
+function collectGeminiKeysFromEnv() {
+  const seen = new Set();
+  const add = (k) => {
+    const t = (k || '').trim();
+    if (t) seen.add(t);
+  };
+  const listRaw = process.env.GEMINI_API_KEYS || process.env.GOOGLE_AI_API_KEYS || '';
+  for (const part of listRaw.split(/[\n,]+/)) add(part);
+  add(process.env.GEMINI_API_KEY);
+  add(process.env.GOOGLE_API_KEY);
+  for (let n = 1; n <= 20; n++) {
+    add(process.env[`GEMINI_API_KEY_${n}`]);
+  }
+  return [...seen];
+}
+
+function getOpenAiKey() {
+  return (process.env.OPENAI_API_KEY || '').trim();
+}
 
 /** Build list of backends: Gemini keys + OpenAI. Shuffled for rotation. */
 function getBackends() {
   const list = [
-    ...GEMINI_KEYS.map((apiKey) => ({ type: 'gemini', apiKey })),
-    { type: 'openai', apiKey: OPENAI_API_KEY },
-  ].filter((b) => b.apiKey);
-  for (let i = list.length - 1; i > 0; i--) {
+    ...collectGeminiKeysFromEnv().map((apiKey) => ({ type: 'gemini', apiKey })),
+  ];
+  const openaiKey = getOpenAiKey();
+  if (openaiKey) list.push({ type: 'openai', apiKey: openaiKey });
+  const filtered = list.filter((b) => b.apiKey);
+  for (let i = filtered.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-    [list[i], list[j]] = [list[j], list[i]];
+    [filtered[i], filtered[j]] = [filtered[j], filtered[i]];
   }
-  return list;
+  return filtered;
 }
 
 function parseArgs() {
@@ -52,6 +74,10 @@ function parseArgs() {
   let tags = '';
   let siteName = 'Global Gift Cards';
   for (let i = 1; i < args.length; i++) {
+    if (args[i] === '--env-store' && args[i + 1]) {
+      i++;
+      continue;
+    }
     if (args[i] === '--description' && args[i + 1]) { description = args[i + 1]; i++; }
     else if (args[i] === '--description-file' && args[i + 1]) {
       const p = resolve(process.cwd(), args[i + 1]);
@@ -176,16 +202,19 @@ async function callOpenAI(apiKey, prompt) {
 }
 
 async function main() {
+  loadRootAndStoreEnv(peekEnvStoreArg());
+
   const opts = parseArgs();
   if (!opts.title) {
-    console.error('Usage: node scripts/shopify-gemini-enhance.mjs <oldTitle> [--description "html"] [--tags "t1,t2"] [--site-name "Site"]');
+    console.error('Usage: node scripts/shopify-gemini-enhance.mjs <oldTitle> [--env-store TargetWebsite] [--description "html"] [--description-file path] [--tags "t1,t2"] [--site-name "Site"]');
+    console.error('Requires OPENAI_API_KEY and/or GEMINI_API_KEYS in .env (see .env.example).');
     process.exit(1);
   }
 
   const prompt = buildPrompt(opts);
   const backends = getBackends();
   if (backends.length === 0) {
-    console.error('No API keys configured (Gemini keys or OPENAI_API_KEY)');
+    console.error('No API keys configured. Set OPENAI_API_KEY and/or GEMINI_API_KEYS (or GEMINI_API_KEY) in .env — see .env.example');
     process.exit(1);
   }
   let lastError;

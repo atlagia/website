@@ -81,7 +81,7 @@ Etsy Shop → MCP scrape_etsy_shop_data → shop-data.json
 
 - **etsy-process-one.mjs** — One listing JSON → Gemini enhance → convert images → create product
 - **shopify-create-product.mjs** — Shopify productCreate + media + variants + inventory disable + dedup tag check
-- **shopify-gemini-enhance.mjs** — AI enhance: Gemini (11 keys) + OpenAI (gpt-3.5-turbo) rotation
+- **shopify-gemini-enhance.mjs** — AI enhance: Gemini + OpenAI (gpt-3.5-turbo) rotation; keys from `.env` (`GEMINI_API_KEYS`, `OPENAI_API_KEY`), see repo `.env.example`
 - **shopify-convert-upload-product-image.mjs** — URL → WebP → R2 (metadata: title, tags)
 - **etsy-import-from-shop-data.mjs** — Legacy ingest: write listings, enqueue in import-state
 - **etsy-import-run-until-done.mjs** — Legacy: process queued listings sequentially
